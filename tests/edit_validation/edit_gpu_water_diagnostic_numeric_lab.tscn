@@ -1,0 +1,5 @@
+[gd_scene load_steps=3 format=3]
+[ext_resource type="PackedScene" path="res://tests/edit_validation/edit_numeric_lab.tscn" id="1"]
+[ext_resource type="Script" path="res://tests/edit_validation/gpu_water_diagnostic_lab_entry.gd" id="2"]
+[node name="EditGpuWaterDiagnosticNumericLab" instance=ExtResource("1")]
+script = ExtResource("2")

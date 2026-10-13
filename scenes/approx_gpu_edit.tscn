@@ -1,0 +1,98 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/sandcastle_test1_beach_coupled.tscn" id="1_beach"]
+[ext_resource type="Script" path="res://scripts/experiments/approx_gpu_edit/trial_entry.gd" id="2_entry"]
+[ext_resource type="Resource" path="res://assets/approx_gpu_edit/trial_profile.tres" id="3_profile"]
+[ext_resource type="ArrayMesh" path="res://assets/approx_gpu_edit/grid_mesh.res" id="4_grid"]
+
+[node name="ApproxGpuEditTrial" instance=ExtResource("1_beach")]
+script = ExtResource("2_entry")
+trial_profile = ExtResource("3_profile")
+style_profile_path = "res://assets/water_material_natural_candidate/rdc_style_v1.json"
+compiled_bundle_path = "res://assets/water_material_natural_candidate/rdc_bundle_v1.json"
+compiled_bundle_sha256 = "92ba9e4a11295790084966356af7f130d5473af5df14f81ff63adcc1e5f2d88f"
+staging_wave_workload = "continuous_packets_v1"
+hide_hud = false
+use_player_camera = true
+player_camera_position = Vector3(-6,6,10)
+player_camera_target = Vector3(0,0,0)
+
+[node name="GpuPlayerCamera" parent="."]
+position = Vector3(-6,6,10)
+rotation_degrees = Vector3(-27.2256,-30.9638,0)
+
+[node name="GpuSandTerrain" parent="."]
+mesh = ExtResource("4_grid")
+
+[node name="GpuWaterSurface" parent="."]
+mesh = ExtResource("4_grid")
+
+[node name="ShoreContactOverlay" parent="."]
+mesh = ExtResource("4_grid")
+
+[node name="BrushIndicator" parent="."]
+scale = Vector3(0.789474,1,0.789474)
+
+[node name="StatusLabel" parent="Interface"]
+mouse_filter = 2
+
+[node name="TrialPanel" type="VBoxContainer" parent="Interface"]
+offset_left = 990.0
+offset_top = 20.0
+offset_right = 1260.0
+offset_bottom = 240.0
+
+[node name="Help" type="Label" parent="Interface/TrialPanel"]
+layout_mode = 2
+text = "固定高度平面定位 · 估算库存\n左键拖动编辑 · 空格暂停\n复位回到固定初态 · 不支持存档"
+
+[node name="Dig" type="Button" parent="Interface/TrialPanel"]
+layout_mode = 2
+text = "挖沙"
+
+[node name="Fill" type="Button" parent="Interface/TrialPanel"]
+layout_mode = 2
+text = "填沙"
+
+[node name="Pause" type="Button" parent="Interface/TrialPanel"]
+layout_mode = 2
+text = "暂停 / 继续"
+
+[node name="DigAmount" type="SpinBox" parent="Interface/TrialPanel"]
+layout_mode = 2
+min_value = 0.0001
+max_value = 0.06
+step = 0.0001
+value = 0.015
+prefix = "挖 m³ "
+
+[node name="FillAmount" type="SpinBox" parent="Interface/TrialPanel"]
+layout_mode = 2
+min_value = 0.0001
+max_value = 0.06
+step = 0.0001
+value = 0.015
+prefix = "填 m³ "
+
+[node name="WaterMode" type="OptionButton" parent="Interface/TrialPanel"]
+layout_mode = 2
+selected = 2
+item_count = 3
+popup/item_0/text = "仅沙编辑"
+popup/item_0/id = 0
+popup/item_1/text = "水量模板"
+popup/item_1/id = 1
+popup/item_2/text = "水量与速度模板"
+popup/item_2/id = 2
+
+[node name="Reset" type="Button" parent="Interface/TrialPanel"]
+layout_mode = 2
+text = "复位"
+
+[connection signal="pressed" from="Interface/TrialPanel/Dig" to="." method="_select_dig"]
+[connection signal="pressed" from="Interface/TrialPanel/Fill" to="." method="_select_fill"]
+[connection signal="pressed" from="Interface/TrialPanel/Pause" to="." method="_toggle_trial_pause"]
+[connection signal="pressed" from="Interface/TrialPanel/Reset" to="." method="_reset_trial"]
+[connection signal="value_changed" from="Interface/TrialPanel/DigAmount" to="." method="_dig_amount_changed"]
+[connection signal="value_changed" from="Interface/TrialPanel/FillAmount" to="." method="_fill_amount_changed"]
+[connection signal="item_selected" from="Interface/TrialPanel/WaterMode" to="." method="_water_mode_changed"]

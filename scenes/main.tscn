@@ -1,0 +1,252 @@
+[gd_scene load_steps=9 format=3 uid="uid://bovjuhcrpaoaf"]
+
+[ext_resource type="PackedScene" path="res://scenes/sandcastle_test1_beach_coupled.tscn" id="1_beach"]
+[ext_resource type="Script" path="res://scripts/beach/beach_playable_entry.gd" id="2_runtime"]
+[ext_resource type="Script" path="res://scripts/simulation/edit_validation/collision_proxy.gd" id="3_collision"]
+[ext_resource type="Script" path="res://scripts/beach/free_camera.gd" id="4_camera"]
+[ext_resource type="Script" path="res://scripts/beach/performance_panel.gd" id="5_profile"]
+[ext_resource type="PackedScene" path="res://scenes/components/scene_switch_panel.tscn" id="6_switch"]
+
+[sub_resource type="StyleBoxFlat" id="Style_edit_panel"]
+bg_color = Color(0.06, 0.09, 0.12, 0.92)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_left = 10
+corner_radius_bottom_right = 10
+
+[sub_resource type="ButtonGroup" id="SandToolGroup"]
+
+[node name="SandcastleMain" instance=ExtResource("1_beach")]
+script = ExtResource("2_runtime")
+style_profile_path = "res://assets/water_material_natural_candidate/rdc_style_v1.json"
+compiled_bundle_path = "res://assets/water_material_natural_candidate/rdc_bundle_v1.json"
+compiled_bundle_sha256 = "92ba9e4a11295790084966356af7f130d5473af5df14f81ff63adcc1e5f2d88f"
+staging_wave_workload = "continuous_packets_v1"
+water_policy = 3
+unrestricted_sand_tools = true
+signed_speed_m_s = 0.25
+hide_hud = false
+use_player_camera = true
+player_camera_position = Vector3(-6, 6, 10)
+player_camera_target = Vector3(0, 0, 0)
+
+[node name="GpuCollisionProxy" parent="." index="5"]
+script = ExtResource("3_collision")
+
+[node name="GpuPlayerCamera" parent="." index="3"]
+script = ExtResource("4_camera")
+move_speed_m_s = 5.0
+mouse_sensitivity = 0.003
+
+[node name="StatusLabel" parent="Interface"]
+mouse_filter = 2
+
+[node name="EditPanel" type="PanelContainer" parent="Interface"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -300.0
+offset_top = 18.0
+offset_right = -18.0
+offset_bottom = 278.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("Style_edit_panel")
+
+[node name="Margin" type="MarginContainer" parent="Interface/EditPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 14
+
+[node name="Controls" type="VBoxContainer" parent="Interface/EditPanel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Title" type="Label" parent="Interface/EditPanel/Margin/Controls"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "沙量 · 波浪 · 视角"
+
+[node name="SceneSwitcher" parent="Interface/EditPanel/Margin/Controls" instance=ExtResource("6_switch")]
+layout_mode = 2
+
+[node name="Tools" type="HBoxContainer" parent="Interface/EditPanel/Margin/Controls"]
+layout_mode = 2
+
+[node name="DigTool" type="Button" parent="Interface/EditPanel/Margin/Controls/Tools"]
+layout_mode = 2
+focus_mode = 0
+size_flags_horizontal = 3
+toggle_mode = true
+button_pressed = true
+button_group = SubResource("SandToolGroup")
+text = "挖沙"
+
+[node name="FillTool" type="Button" parent="Interface/EditPanel/Margin/Controls/Tools"]
+layout_mode = 2
+focus_mode = 0
+size_flags_horizontal = 3
+toggle_mode = true
+button_group = SubResource("SandToolGroup")
+text = "填沙"
+
+[node name="DigLabel" type="Label" parent="Interface/EditPanel/Margin/Controls"]
+layout_mode = 2
+text = "挖沙量（m³ / 次）"
+
+[node name="DigAmount" type="SpinBox" parent="Interface/EditPanel/Margin/Controls"]
+layout_mode = 2
+min_value = 0.01
+max_value = 1.0
+step = 0.01
+value = 0.10
+suffix = "m³"
+
+[node name="FillLabel" type="Label" parent="Interface/EditPanel/Margin/Controls"]
+layout_mode = 2
+text = "填沙量（m³ / 次）"
+
+[node name="FillAmount" type="SpinBox" parent="Interface/EditPanel/Margin/Controls"]
+layout_mode = 2
+min_value = 0.01
+max_value = 1.0
+step = 0.01
+value = 0.10
+suffix = "m³"
+
+[node name="WaveSeparator" type="HSeparator" parent="Interface/EditPanel/Margin/Controls"]
+layout_mode = 2
+
+[node name="WaveLabel" type="Label" parent="Interface/EditPanel/Margin/Controls"]
+layout_mode = 2
+text = "波浪量：波幅（m）"
+
+[node name="WaveAmount" type="SpinBox" parent="Interface/EditPanel/Margin/Controls"]
+layout_mode = 2
+min_value = 0.01
+max_value = 0.20
+step = 0.01
+value = 0.10
+suffix = "m"
+
+[node name="TriggerWave" type="Button" parent="Interface/EditPanel/Margin/Controls"]
+layout_mode = 2
+focus_mode = 0
+disabled = true
+text = "触发波浪"
+
+[node name="WaveStatus" type="Label" parent="Interface/EditPanel/Margin/Controls"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "点击触发一波；暂停时等待继续"
+
+[node name="Help" type="Label" parent="Interface/EditPanel/Margin/Controls"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "左键使用选定工具 · 拖动连续编辑\nWASD 移动 · 右键按住转向\nQ/E 升降 · Shift 加速 · Esc 释放鼠标"
+
+[node name="PerformancePanel" type="PanelContainer" parent="Interface"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = -398.0
+offset_right = 410.0
+offset_bottom = -18.0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("Style_edit_panel")
+script = ExtResource("5_profile")
+
+[node name="Margin" type="MarginContainer" parent="Interface/PerformancePanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 10
+
+[node name="Rows" type="VBoxContainer" parent="Interface/PerformancePanel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="Header" type="HBoxContainer" parent="Interface/PerformancePanel/Margin/Rows"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Interface/PerformancePanel/Margin/Rows/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 18
+text = "性能 / Profile"
+
+[node name="Sampling" type="CheckButton" parent="Interface/PerformancePanel/Margin/Rows/Header"]
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 14
+button_pressed = true
+text = "分阶段采样"
+tooltip_text = "读取已完成的 GPU 时间戳；关闭或 F6 隐藏面板可停止采样。"
+
+[node name="Summary" type="Label" parent="Interface/PerformancePanel/Margin/Rows"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "FPS —  |  帧 — ms"
+
+[node name="Cpu" type="Label" parent="Interface/PerformancePanel/Margin/Rows"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "引擎 CPU — ms · 物理 — ms"
+tooltip_text = "Godot Performance 的处理与物理监视器；刷新频率由引擎决定，物理时间不与处理时间相加。"
+
+[node name="RenderTime" type="Label" parent="Interface/PerformancePanel/Margin/Rows"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "渲染 CPU — ms · GPU — ms"
+tooltip_text = "当前主视口渲染时间；独立计算阶段与渲染可能交错，不能和下方阶段直接相加。"
+
+[node name="Simulation" type="Label" parent="Interface/PerformancePanel/Margin/Rows"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "模拟 — tick/s · —× · 子步 —"
+
+[node name="Separator" type="HSeparator" parent="Interface/PerformancePanel/Margin/Rows"]
+layout_mode = 2
+
+[node name="StageHeading" type="Label" parent="Interface/PerformancePanel/Margin/Rows"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "GPU 分阶段 · ms / 含该阶段的采样帧"
+tooltip_text = "每帧内重复的子步累加，再取半秒采样均值；无新样本保留上次。各行与渲染耗时不直接相加。"
+
+[node name="Stages" type="HBoxContainer" parent="Interface/PerformancePanel/Margin/Rows"]
+layout_mode = 2
+
+[node name="Names" type="Label" parent="Interface/PerformancePanel/Margin/Rows/Stages"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 14
+
+[node name="Values" type="Label" parent="Interface/PerformancePanel/Margin/Rows/Stages"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+horizontal_alignment = 2
+
+[node name="Collision" type="Label" parent="Interface/PerformancePanel/Margin/Rows"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "碰撞回读 / CPU 替换：—"
+tooltip_text = "回读是 GPU 请求到回调的等待时间；CPU 替换是最近一批碰撞形状重建时间。"
+
+[node name="State" type="Label" parent="Interface/PerformancePanel/Margin/Rows"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.62, 0.75, 0.82, 1)
+theme_override_font_sizes/font_size = 13
+text = "准备中 · 每 0.5 秒刷新"
+
+[connection signal="toggled" from="Interface/PerformancePanel/Margin/Rows/Header/Sampling" to="Interface/PerformancePanel" method="_on_sampling_toggled"]
+[connection signal="value_changed" from="Interface/EditPanel/Margin/Controls/DigAmount" to="." method="_on_dig_amount_changed"]
+[connection signal="value_changed" from="Interface/EditPanel/Margin/Controls/FillAmount" to="." method="_on_fill_amount_changed"]
+[connection signal="look_started" from="GpuPlayerCamera" to="." method="_on_camera_look_started"]
+[connection signal="value_changed" from="Interface/EditPanel/Margin/Controls/WaveAmount" to="." method="_on_wave_amount_changed"]
+[connection signal="pressed" from="Interface/EditPanel/Margin/Controls/TriggerWave" to="." method="_on_trigger_wave_pressed"]
+[connection signal="pressed" from="Interface/EditPanel/Margin/Controls/Tools/DigTool" to="." method="_on_dig_tool_pressed"]
+[connection signal="pressed" from="Interface/EditPanel/Margin/Controls/Tools/FillTool" to="." method="_on_fill_tool_pressed"]

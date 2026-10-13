@@ -1,0 +1,123 @@
+{
+  "scope": "main-thread process frame intervals, not GPU duration or first-visible latency",
+  "clean_close": true,
+  "configuration": {
+    "adapter": "NVIDIA GeForce GTX 1050",
+    "arguments": [
+      "--output=D:/godot/project/sandcastle/task/sandcastle_gpu_edit_validation/evidence/20261011_164621_beach_cost_gpu_B0",
+      "--backend=gpu",
+      "--policy=0",
+      "--warmup=2",
+      "--seconds=22",
+      "--beach-staged-slope",
+      "--compensated-capacity",
+      "--packed-runs",
+      "--cached-capacity",
+      "--prefetch-velocity",
+      "--beach-no-parameter-trace"
+    ],
+    "backend": "gpu",
+    "engine": {
+      "build": "steam",
+      "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+      "hex": 263938,
+      "major": 4,
+      "minor": 7,
+      "patch": 2,
+      "status": "stable",
+      "string": "4.7.2-stable (steam)",
+      "timestamp": 0
+    },
+    "erosion": true,
+    "initial_tick": 60,
+    "policy": 0,
+    "scope": "full beach wall-clock input; no per-frame GPU state capture; original CPU baseline semantics retained",
+    "seconds": 22.0,
+    "start_us": 10464754,
+    "trace_version": 2,
+    "type": "configuration",
+    "vsync": 0,
+    "warm_ticks": 60,
+    "warmup_s": 2.0,
+    "wave_count": 80,
+    "window_size": "(1920, 1080)"
+  },
+  "functional": {
+    "admitted": 75,
+    "all_admitted_terminal": true,
+    "backend": "gpu",
+    "completed": 438,
+    "completed_hz": 19.9020835663952,
+    "duration_s": 22.007746,
+    "error": "",
+    "pass": true,
+    "pending": 0,
+    "performance_verdict": "pending offline frame quantiles; baseline does not require candidate thresholds",
+    "policy": 0,
+    "rejected": 0,
+    "slots_consumed": 110,
+    "slots_expected": 110,
+    "start_us": 10464754,
+    "stop_us": 32472500
+  },
+  "frames": 1680,
+  "frame_ms": {
+    "p50": 12.82,
+    "p95": 21.236,
+    "p99": 24.296,
+    "p999": 33.212,
+    "maximum": 36.101
+  },
+  "input_kinds": [
+    "place_sand",
+    "remove_sand"
+  ],
+  "input_shapes": [
+    "circle",
+    "swept_segment"
+  ],
+  "acceptance": "user_v1.58",
+  "candidate_performance_pass": true,
+  "formal_window": false,
+  "paused_feedback": "separate probe required; not inferred from this run",
+  "segments": {
+    "idle": {
+      "frames": 528,
+      "p99_ms": 24.581,
+      "maximum_ms": 36.101
+    },
+    "dig": {
+      "frames": 391,
+      "p99_ms": 24.039,
+      "maximum_ms": 26.501
+    },
+    "place": {
+      "frames": 386,
+      "p99_ms": 24.043,
+      "maximum_ms": 26.998
+    },
+    "drag": {
+      "frames": 375,
+      "p99_ms": 24.407,
+      "maximum_ms": 30.103
+    }
+  },
+  "gpu_callback_phase_ms": {
+    "input_to_settle": {
+      "samples": 75,
+      "p99": 61.002,
+      "maximum": 61.002
+    },
+    "settle_to_publish": {
+      "samples": 75,
+      "p99": 15.161,
+      "maximum": 15.161
+    },
+    "publish_to_terminal": {
+      "samples": 75,
+      "p99": 113.634,
+      "maximum": 113.634
+    }
+  },
+  "callback_scope": "main-thread timestamps; includes queued waiting, not exclusive GPU pass duration"
+}

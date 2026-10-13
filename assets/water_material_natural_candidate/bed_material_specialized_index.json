@@ -1,0 +1,25 @@
+{
+  "source": "D:\\godot\\project\\sandcastle\\assets\\water_material_natural_candidate\\bed_geometry_specialized.gdshader",
+  "source_sha256": "77bd0939f5523e1cacb1461f13cc4db647f6941c0f8832ae5940779ce32fdc5f",
+  "generated": "D:\\godot\\project\\sandcastle\\assets\\water_material_natural_candidate\\bed_material_specialized.gdshader",
+  "generated_sha256": "c9176f1ed527d7e3851115514acb299aa57d5fb7bda48a835f3b87e210e59261",
+  "constants": {
+    "use_grain": true,
+    "use_grain_normal": true,
+    "use_wet_finish": true,
+    "use_compaction_tint": true,
+    "phase2_caustics": true,
+    "prototype_texture_caustics": true,
+    "natural_caustic_override": true
+  },
+  "value_sources": {
+    "use_grain": "shader_default",
+    "use_grain_normal": "shader_default",
+    "use_wet_finish": "shader_default",
+    "use_compaction_tint": "shader_default",
+    "phase2_caustics": "actual_uniform",
+    "prototype_texture_caustics": "actual_uniform",
+    "natural_caustic_override": "actual_uniform"
+  },
+  "scope": "Bed fixed material route only over fixed grid candidate. Actual fields and caustic control remain dynamic, NOT selected."
+}

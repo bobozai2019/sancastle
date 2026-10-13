@@ -1,0 +1,63 @@
+# 竞品GPU编辑计算与当前项目对照
+
+更新：2026-10-12。范围：沙、水编辑核及必要采样；不涉及业务代码。此次复取实际Compute Shader、常量字节与资源绑定，未运行原游戏或测量其真实性能。
+
+## EDIT-COMPUTE-REVERIFY-01：test41实际编辑核复验
+
+- 分类/可信度：观察事实C3，本次直接复验；仅限test41 E863、E878、E1210。
+- 来源：`sandcastlegame/test41.rdc`，256177273字节，SHA256 `f1794a7235a79f7a73bd6f4085bef7ecbb3a7dc39ce8a8a7aac955ee5beb3c0d`。取数前后身份相同，原文件只读。
+- 工具：RenderDoc1.46，[reverify_edit_compute.py](tools/reverify_edit_compute.py)。命令：`D:/other_software/RenderDoc/qrenderdoc.exe --python D:/godot/project/sandcastle/docs/competitor/tools/reverify_edit_compute.py`。
+- 证据：[完整新索引](../../test_output/competitor_edit_compute_20261012_v2/manifest.json)，包含selector、输出字节数、工具/源/产物hash。保存实际DXBC、派生反汇编、完整绑定常量块与资源描述；没有导出沙水完整前后buffer、印章像素或32/36字节笔刷参数内容，因此不宣称编辑数据全量恢复。
+
+| 事件 | 实际派发组数 | 每组线程 | 实际资源绑定 | 有效模式 |
+|---|---|---|---|---|
+| E863 / Ground.Paint | 32×16×1 | 32×32×1 | 印章578、32字节参数30348、8MiB沙床30347 | cb0[141].z=3 |
+| E878 / Water.Paint | 16×8×1 | 32×32×1 | 印章578、36字节参数30350、2MiB水状态30349 | cb0[138]=(2,1,0,0) |
+| E1210 / Water.Paint | 16×8×1 | 32×32×1 | 印章556、36字节参数30350、2MiB水状态30349 | cb0[138]=(6,0,0,0) |
+
+ResourceId仅在此捕帧有效。E1210的印章实际绑定556，不能沿用E878的578像素解释它；该资源差异是本次新增明确定位，未恢复556像素。
+
+E863的完整shader SHA256为`d37af2736147fd90f62ecbf8230bb0162a961ba2b16bce44a29d02fb2cdb30aa`，与历史EDIT-SAND-01匹配。E878/E1210均为`f0dea026bdaa1f44ce30dc973c7e1603fd0625c270805744e69039facf55e714`，两事件为同一编译核的不同有效模式。实际反汇编为`cs_5_0`，明确是Compute Shader，不是把像素着色器绘制结果推测为compute。
+
+复验：按manifest重新打开同hash捕帧，选择对应事件后取Compute reflection、dispatchDimension、dispatchThreadsDimension、GetConstantBlock及resource descriptors，比较完整bytecode hash。模式整数分别从cb字节偏移2264（141×16+8）、2208（138×16）读取；这些偏移相对本次导出的cb0，不能跨捕帧直接套用。
+
+反证与边界：全域派发不等于全部单元产生非零变化；反汇编是派生指令，不是原始HLSL。首次工具尝试无manifest，状态保存在`test_output/competitor_edit_compute_20261012/attempt_status.json`及源码副本；第二次改为显式工具路径后完成，不覆盖首次失败。当前另有主场景probe负载，因此此次不讨论重放或游戏帧成本。
+
+## EDIT-COMPUTE-REVERIFY-02：这些Paint核是按单元修改，不含本项目式全域顺序归约
+
+分类：指令观察C3；“更适合并行、可能更便宜”的性能解释为C1待测。
+
+- E863反汇编指令0以ThreadID.xy形成单元索引；指令14采样印章；指令136读取对应stride16沙记录；指令149–151读取笔刷第0条记录字段；最终指令286写回对应记录。整个核包含多个模式分支，不能把所有分支都归入当前mode3。
+- E878/E1210指令189选择mode6/7/8/2；190–193处理mode6速度，202–205处理mode2量字段；237写回对应水记录。
+- 这两个完整编译核中没有`loop/endloop`、`sync`、原子归约或`dcl_tgsm`声明。结合ThreadID单元索引与输出，未见本项目index6那种单workgroup遍历65536格、lane0顺序补偿累加的算法。
+- 沙Paint派发524288线程、水Paint派发131072线程，覆盖本帧整域；效果由印章、范围、权重和模式选择。不能称其为局部脏区派发。
+
+复验：查本次e863/e878/e1210完整反汇编、manifest实际模式和线程规模；按有效分支核对输入输出，不凭核名下结论。
+
+反证：这里只覆盖两个Paint核。别的compute pass、CPU准备、粒子处理或辅助采样可能承担额外工作；不能宣称整个原作没有归约、没有体积管理或零同步。指令数量/并行结构不能替代原生GPU时间戳。
+
+## 原作计算含义与本项目差别
+
+以下算法含义沿用[模拟与编辑方案](模拟与编辑方案.md)的EDIT-SAND-01、EDIT-WATER-01；完整前后快照仍是历史确认，本次只恢复核、绑定与常量，未重新证明整域变化及体积。
+
+已捕获的Ground.Paint mode3按高度印章让沙高趋向目标高度，再按权重混合和限高；历史目标形式包含`center_y + 1.2×(2R−1)`。这不等同于“严格挖取指定m³并分配到桶内”。Water.Paint mode2让量字段趋向指定值，mode6按有符号模板修改速度；物理单位、原作全局水量结算与动作关联未知。
+
+常规Water.UpdateFloor、VelocityIntegration、HeightIntegration、Advection等核是另一条更新链；不能用它们的存在证明上述两笔水编辑之后已经按真实秒数自然扩散，也不能把test41不同mode绑定的纹理当成同一印章。
+
+| 比较项 | 竞品已确认范围 | 当前Godot项目 |
+|---|---|---|
+| GPU执行方式 | 实际cs_5_0 Compute Shader；Unity包内ComputeShader对象与历史字节码匹配 | GLSL `#[compute]`，RDShaderFile取得SPIR-V，经RenderingDevice compute pipeline执行 |
+| 沙编辑 | 本帧高度印章＋少量参数，直接修改GPU结构化沙床 | 指定体积命令，局部权重/容量计算，多轮分配，再提交GPU状态 |
+| 水编辑 | 本帧逐格量字段与速度模板修改 | E3守恒水位移、速度响应、全域检查与回执合并 |
+| 主要并行结构 | Paint覆盖整域，按ThreadID修改单元；两核没有全域循环归约指令 | index6/7只派发一个workgroup；index6对全域分块加载、lane0顺序归约，index7处理湿分量与容量 |
+| 可见状态 | 历史证据：编辑后的GPU沙床随后供沙面VS读取 | CPU结算授权后发布稳定沙/水/动量纹理，避免未结算状态可见 |
+| CPU边界 | 已证实AsyncGPUReadback缓存、同步GetData入口、碰撞网格更新；是否每笔等待未知 | 每笔128字节回执、CPU账本结算、碰撞更新及两个物理帧后释放事务 |
+| 性能 | 原生实际毫秒数未知 | 本项目旧短测挖沙GPU约24–29ms，其中沙约0.4ms，水两重核各约12ms；非此次复测 |
+
+Godot源码定位：[沙核派发](../../scripts/simulation/edit_validation/gpu_sand_editor.gd)、[水核派发](../../scripts/simulation/edit_validation/gpu_water_editor.gd)、[顺序速度归约](../../shaders/simulation/edit_validation/water_velocity_prefetch.glsl)、[湿分量位移](../../shaders/simulation/edit_validation/water_packed_cached.glsl)。CPU边界参照[命中与Readback代码补证](笔刷命中检测_代码补证.md)HIT-PATH-03/04；不调查库存等竞品业务流程。
+
+## 对性能取舍的意义
+
+不是“本项目没有使用Compute Shader”，而是当前shader承担了更多精确结算与全域归约工作。竞品Paint提供了“按单元高度印章和局部速度模板”的明确参考，可以为[性能取舍方案](../sandcastle性能取舍分析.md)提供候选方向。
+
+若选择这种方向，应先把本项目的局部近似候选单独实现和计时，规定沙量、水量及库存误差；不能把竞品的0.045、速度5或场景单位直接当本项目米制参数，也不能从没有观测到回执推断可以删除所有同步。现有生产算法与冻结契约此次未改变。

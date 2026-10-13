@@ -1,0 +1,75 @@
+{
+  "profile_id": "water_render_staging_v8",
+  "schema_version": 8,
+  "phase": "staging",
+  "target_fixture_ids": [
+    "water_render_demo_v2",
+    "water_render_coupled_v2"
+  ],
+  "grid_size": 256,
+  "cell_size_m": 0.125,
+  "sim_hz": 30,
+  "render_subdivision": 2,
+  "surface_bias_m": 0.003,
+  "reference_bed": "estuary_branched_v1",
+  "resources": {
+    "water_shader": "res://assets/water_material_natural_candidate/water_engine_light.gdshader",
+    "terrain_fixed_shader": "res://assets/test1_beach/test1_bed_lit_fast.gdshader",
+    "terrain_coupled_shader": "res://assets/test1_beach/test1_bed_lit_fast.gdshader",
+    "caustic_pattern": "res://tests/visual_water_alignment/prototypes/caustic_fold_v1.png",
+    "reflection_environment_scene": "res://tests/visual_water_alignment/prototypes/reflection_rock_environment.tscn"
+  },
+  "visual": {
+    "face_normal": true,
+    "depth_write": true,
+    "crest_height_m": 0.25,
+    "shallow_extinction_m": 0.25,
+    "refraction_scale": 0.02,
+    "offshore_core": false,
+    "offshore_core_broken": false,
+    "offshore_core_crown": false,
+    "shallow_preserve": true,
+    "caustic_softness": 1.0,
+    "caustic_strength": 0.8,
+    "caustic_uv_scale": 2.0,
+    "reflection_strength": 1.0
+  },
+  "capabilities": {
+    "eta_normals": {
+      "status": "implemented",
+      "enabled": true
+    },
+    "screen_optics": {
+      "status": "implemented",
+      "enabled": true
+    },
+    "main_foam": {
+      "status": "implemented",
+      "enabled": true
+    },
+    "fold_caustics": {
+      "status": "implemented",
+      "enabled": true
+    },
+    "local_front": {
+      "status": "implemented",
+      "enabled": true
+    },
+    "planar_reflection": {
+      "status": "implemented",
+      "enabled": true
+    },
+    "shore_contact": {
+      "status": "implemented",
+      "enabled": true
+    },
+    "foam_splats": {
+      "status": "implemented",
+      "enabled": true
+    }
+  },
+  "test1_visual": {
+    "whitewater_gain": 0.32,
+    "splat_diameter_px": 3.5
+  }
+}

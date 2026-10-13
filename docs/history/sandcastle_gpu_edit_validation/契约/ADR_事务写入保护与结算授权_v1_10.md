@@ -1,0 +1,14 @@
+# ADR：事务写入保护与结算授权 v1.10
+
+日期2026-10-11。T05。落实v1已有串行与发布边界，未修改数值算法、容差或正式原求解器。
+
+此前Lab.busy阻止了正常入口推进，但候选后端继承的raw dispatch_substep、CFL tick、boundary、obstacle及旧absolute patch仍能被直接调用。仅依赖上层busy不足以维护input revision；新增候选后端写保护：receipt_pending或publication_pending时上述调用返回false，second_edit已有同样保护。
+
+GPU回执完成不等于CPU结算完成。新增authorize_publication(ticket, output_revision, generation)，由render bridge仅在匹配回执的CPU结算成功后调用；错误身份/代际/版本、重复授权拒绝。publish_sand/water在receipt_pending或未获结算授权的publication_pending阶段拒绝发布；匹配授权后同时发布，解除保护。初始化及正常完整水tick后无编辑publication_pending的发布沿旧路径。
+
+此API是可信调用方的协议，不声称能防止恶意调用方伪造“已结算”。CPU账本、预留、队列、退出的恰好一次门仍由T05进一步验证。授权返回成功也不等于显示已post_draw，成本仍须分开测。
+
+043743_scenes两域实际原生GPU事务验证：receipt等待和回执已到但CPU尚未结算的两阶段，各8条有效写调用均被拒绝，revision及pingpong index不动；提前发布没有改变任何private display纹理，库存尚未动。错误ticket/revision/generation及重复授权拒绝；人工按真实receipt结算后正确授权，两张发布纹理与完成态逐位相同，随后3tick可正常完成。该探针直接测试后端协议，人工结算不当成正式队列验收。
+
+043623原20项速度/CFL负例回归通过。G3数值算法和历史证据保留；T05真实输入、碰撞、64命令队列、撤销、保存恢复及退出仍未完成。
+

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/water_render_coupled.tscn" id="1_base"]
+
+[node name="WaterRenderContinuousCoupled" instance=ExtResource("1_base")]
+staging_wave_workload = "continuous_packets_v1"

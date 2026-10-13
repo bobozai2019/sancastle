@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/water_render_coupled_v8_preview.tscn" id="1_base"]
+[ext_resource type="Script" path="res://scripts/visual/test1_beach_edit_worker_entry.gd" id="2_entry"]
+[ext_resource type="Shader" path="res://tests/visual_water_alignment/prototypes/reference_shore_contact_overlay.gdshader" id="3_contact"]
+[ext_resource type="Shader" path="res://assets/test1_beach/test1_front_foam_splats.gdshader" id="4_splats"]
+[ext_resource type="ArrayMesh" path="res://assets/test1_beach/test1_front_foam_sparse_mesh.tres" id="5_sparse_mesh"]
+
+[sub_resource type="ShaderMaterial" id="Material_contact"]
+resource_local_to_scene = true
+render_priority = 1
+shader = ExtResource("3_contact")
+shader_parameter/enabled = false
+
+[sub_resource type="ShaderMaterial" id="Material_test1_splats"]
+resource_local_to_scene = true
+render_priority = 2
+shader = ExtResource("4_splats")
+shader_parameter/front_local_dense = true
+shader_parameter/raised_local_front = true
+shader_parameter/splat_jitter_m = 0.02
+shader_parameter/splat_half_width_m = 0.018
+shader_parameter/target_diameter_px = 3.5
+
+[node name="SandcastleTest1BeachCoupled" instance=ExtResource("1_base")]
+script = ExtResource("2_entry")
+render_profile_path = "res://assets/test1_beach/test1_beach_release.json"
+prototype_test1_sand_forms = true
+
+[node name="SandFixtureSun" parent="." index="4"]
+rotation_degrees = Vector3(-52, 35, 0)
+light_energy = 0.85
+shadow_enabled = false
+directional_shadow_mode = 0
+
+[node name="ShoreContactOverlay" type="MeshInstance3D" parent="."]
+material_override = SubResource("Material_contact")
+custom_aabb = AABB(-16.1, -1, -16.1, 32.2, 3, 32.2)
+
+[node name="PrototypeFrontFoamDense" parent="." index="8"]
+mesh = ExtResource("5_sparse_mesh")
+material_override = SubResource("Material_test1_splats")
+
+[node name="CameraAnchors" type="Node3D" parent="."]
+
+[node name="Oblique" type="Camera3D" parent="CameraAnchors"]
+position = Vector3(-1, 13, 22)
+rotation = Vector3(-0.53, 0, 0)
+fov = 55.0
+
+[node name="Close" type="Camera3D" parent="CameraAnchors"]
+position = Vector3(0, 3.0, 8.0)
+rotation = Vector3(-0.25, -0.35, 0)
+fov = 58.0
+
+[node name="Grazing" type="Camera3D" parent="CameraAnchors"]
+position = Vector3(-4, 1.8, 5.5)
+rotation = Vector3(-0.10, -0.45, 0)
+fov = 54.0
+

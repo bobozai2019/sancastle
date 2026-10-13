@@ -1,0 +1,60 @@
+{
+  "capture_manifest": "test_output/test1_water_motion/capture_v1/manifest.json",
+  "source_sha256": "761aa980c2426f75a1fa7364bf6d2655ff4dd20ea76566e630ee5b53ea0ec5b2",
+  "state_selector": "test1 E6083 VS ResourceId::139573 offset0 bytes2097152",
+  "aux_selectors": [
+    "E1537 ResourceId::139573 bits28..31 and bits24..27 of uint3",
+    "E1537 ResourceId::139590 bytes8192, 32x16 stride16",
+    "E1537 ResourceId::139724 mip0 RG16F G channel"
+  ],
+  "dimensions": [
+    512,
+    256
+  ],
+  "fields": [
+    "velocity_x",
+    "velocity_z",
+    "amount_with_0.05_bias",
+    "water_floor"
+  ],
+  "aux_fields": [
+    "boundary_weight_uint4",
+    "local_source_uint4",
+    "sampled_air_field",
+    "obstacle_height"
+  ],
+  "domain_origin": [
+    -15,
+    0,
+    -7.5
+  ],
+  "domain_extent": [
+    30,
+    10,
+    15
+  ],
+  "coordinate_adaptation": "Unity (x,y,z) -> Godot (x,y,-z). Scene-unit length preserved; physical meter calibration unknown.",
+  "integration_dt": 0.00732421875,
+  "source_dt": 0.025,
+  "substeps_per_capture": 3,
+  "default_temporal_adaptation": {
+    "hold_s": 2,
+    "fall_s": 4,
+    "override_start": 1.6163164377212524,
+    "override_end": 0,
+    "clock_origin": 284.71783447265625
+  },
+  "temporal_scope": "Kernel coefficients confirmed in captured frame. Parameter fall duration and future clock progression are Godot experimental adaptations; not recovered original time series.",
+  "artifacts": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\assets\\test1_water_motion\\capture_state.rgba32f",
+      "bytes": 2097152,
+      "sha256": "06540acafd57583465e0d5e3926819f27b33e51afb3134a700d684cc52fa8523"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\assets\\test1_water_motion\\capture_aux.rgba32f",
+      "bytes": 2097152,
+      "sha256": "3a19b6641139f883763961892bc94628d05259513857213d05dcf9954a44b7db"
+    }
+  ]
+}

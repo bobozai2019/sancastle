@@ -1,0 +1,19 @@
+{
+  "actions_indexed": 1686,
+  "draw_dispatch_io_indexed": 1546,
+  "key_events": 9,
+  "key_bindings": 48,
+  "snapshots": 82,
+  "shader_snapshots": 16,
+  "constant_snapshots": 25,
+  "texture_snapshots": 16,
+  "post_vs_snapshots": 7,
+  "unmapped_asset_rdc_candidates": 30,
+  "texture_failures": [],
+  "limits": [
+    "Draw/dispatch input/output resource IDs cover all 1546 actions; detailed register bindings cover nine P0 events.",
+    "No verified package-to-RDC resource mapping yet.",
+    "Two 1920x1080 swap buffers were exported; Present event 6645 names ResourceId::427 as active target.",
+    "Shader bytecode is compiled, not original source code."
+  ]
+}

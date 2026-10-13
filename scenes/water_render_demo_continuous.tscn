@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/water_render_demo.tscn" id="1_base"]
+
+[node name="WaterRenderContinuousFixed" instance=ExtResource("1_base")]
+staging_wave_workload = "continuous_packets_v1"

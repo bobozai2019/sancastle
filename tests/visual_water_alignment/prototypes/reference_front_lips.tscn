@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Shader" path="res://tests/visual_water_alignment/prototypes/reference_crest_continuous_lip.gdshader" id="1_lip"]
+[ext_resource type="ArrayMesh" path="res://tests/visual_water_alignment/prototypes/reference_front_lip_row_mesh.tres" id="2_row"]
+[ext_resource type="ArrayMesh" path="res://tests/visual_water_alignment/prototypes/reference_front_lip_branch_mesh.tres" id="3_branch"]
+[ext_resource type="ArrayMesh" path="res://tests/visual_water_alignment/prototypes/reference_front_lip_patch_mesh.tres" id="4_patch"]
+
+[sub_resource type="ShaderMaterial" id="Material_front_lip"]
+resource_local_to_scene = true
+render_priority = 1
+shader = ExtResource("1_lip")
+
+[node name="PrototypeFrontLips" type="Node3D"]
+
+[node name="RowFrontLip" type="MeshInstance3D" parent="."]
+visible = false
+mesh = ExtResource("2_row")
+material_override = SubResource("Material_front_lip")
+custom_aabb = AABB(-16.5, -2, -16.5, 33, 6, 33)
+
+[node name="BranchFrontLip" type="MeshInstance3D" parent="."]
+visible = false
+mesh = ExtResource("3_branch")
+material_override = SubResource("Material_front_lip")
+custom_aabb = AABB(-16.5, -2, -16.5, 33, 6, 33)
+
+[node name="PatchFrontLip" type="MeshInstance3D" parent="."]
+visible = false
+mesh = ExtResource("4_patch")
+material_override = SubResource("Material_front_lip")
+custom_aabb = AABB(-16.5, -2, -16.5, 33, 6, 33)

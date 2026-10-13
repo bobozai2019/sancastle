@@ -1,0 +1,13 @@
+{
+  "source_worker": "D:\\godot\\project\\sandcastle\\scripts\\visual\\test1_beach_edit_worker_entry.gd",
+  "source_worker_sha256": "c9b4a4d15b9fe1df97f653df9330a08ccf54312fa275f9d505873f850f9c0582",
+  "candidate_worker": "D:\\godot\\project\\sandcastle\\assets\\water_material_natural_candidate\\style_worker_entry.gd",
+  "candidate_worker_sha256": "e4c37f4c511090aa57a74fb93267748a7759379a134e117205afc3f11bd96b28",
+  "unchanged_worker_body_sha256": "516fb1bcda3431cb8c422f0ca9f0cc7ad5b0691425e6840253b6406f44ad6d55",
+  "source_fixed_candidate": "D:\\godot\\project\\sandcastle\\scenes\\water_material_natural_candidate\\style_combination.tscn",
+  "source_fixed_candidate_sha256": "56c93eccdca7cb33aeb1ddd0645ffd7c2972910648f5d6a5b78adfcd60afa61e",
+  "coupled_candidate": "D:\\godot\\project\\sandcastle\\scenes\\water_material_natural_candidate\\style_coupled_candidate.tscn",
+  "coupled_candidate_sha256": "1b7a87e0ce0a6a573422cc45610e4f30d6fd16885497985d7e1ea06e0841cff5",
+  "command": "python tests/water_material_natural/build_coupled_style_candidate.py",
+  "scope": "Only extends parent and packed-scene base change; existing worker body preserved exactly. Prepared for post-G3 integration checks, no formal files changed and no validation claimed."
+}

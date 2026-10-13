@@ -1,0 +1,13 @@
+# ADR v1.42：编辑帧分流与初态取数
+
+2026-10-11，T05取证扩展，默认算法与逐位门槛不变。
+
+编辑帧内visual front与editor prepare可以交错，不能因合并后的全序列不匹配就宣称shader不同。以实际reflection资源签名区分物理、编辑、视觉流，分别保留原始event顺序、所有排除事件和未分流的失败比较。native字节、实际常量及RW descriptor资源别名图按各流比较；此图不替代所有readonly buffer内容验证。
+
+sand_prepare单事件取数必须校验readonly Command的128字节长度，记录真实resource、offset、size、原字节/hash；整数按冻结协议offset解码。回放worker generation可以不同，原始字节差异保留；仅为该已约定身份字段做归一化比较，不改变任何数值容差。
+
+post-prepare sand来源于重放，prepare本身readonly，但此前pass可能已经重演，不能直接当成原live snapshot。可另在同一捕获的event0选择器读取同一source RID，标记为帧初态恢复数据；校验格式、字节数、有限/非空以及初态至prepare的变化，避免把未重置的post状态冒称初态。ResourceId仅在本捕获内关联，例如首waterflow sand_state与prepare sand_in是否是同一RID。
+
+此取数证明窗口开头和prepare的已观察差异，不能证明最早差异tick或pass，也不能把另一运行的同tick结果并入本次因果链。第二笔编辑只有实际事件进入窗口才有覆盖证据。
+
+取数工具：renderdoc_edit_input_probe.py，分析compare_edit_prepare_inputs.py；分流比较compare_owned_replay_bindings.py的--group physics/editor/visual。所有自有PID、工具hash、失败和部分结果保留。

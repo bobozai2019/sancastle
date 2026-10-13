@@ -1,0 +1,17 @@
+# ADR v1.19：完成态重演与跨 tick 撤销/重做
+
+2026-10-11。numeric候选；G4未放行。
+
+冷初始化和setup seed完成后、开放输入前，捕获一致完整初态checkpoint作为RAM replay anchor；保存时将anchor纳入原有checksummed envelope。恢复校验anchor的字段、投影、配置、tick与存活prefix关系，禁止递归anchor。旧文件没有早期anchor时只能将其保存态作为重演起点，不假称能撤销更早命令。
+
+native执行记录增加实际execution_tick、原CPU double available_m3和stock_before。requested sim_tick/receipt.applied_tick不替代实际执行边界；original native ID执行顺序可能非单调。重演消费已验证接受记录，在隔离节点的队首按原实际执行顺序执行，不重新施加当前公开admission高水位和当前库存预留。使用原wire available、几何、seed、策略/速度，核对前库存以及实际物理回执标量、mask/rect和applied/rejected终态。代码不伪造GPU回执。
+
+跨tick undo须暂停、idle、空pending/零预留。先从anchor重演完整存活prefix到当前tick，十权威字段与五账本逐位等于当前完成态才继续。再从同anchor重演截断至最后applied之前的prefix，并仍推进至当前tick；后续rejected尾部随该撤销分支截断，先前rejected保留。新分支经过实际restore候选提交/代际切换/碰撞恢复，不用逆笔刷。高水位不倒退。
+
+跨tick redo先严格重演核对当前分支，再重演保存的目标prefix；目标字段/账本须匹配撤销前记录后才能提交。支持连续undo/redo及已淘汰快速GPU前态的回退。redo RAM记录最多32笔；磁盘redo分支重建仍未完成。
+
+隔离重演节点使用已保存场景层级、隐藏canvas/geometry、禁用鼠标和碰撞层；历史capture关闭，记录的额外GPU history为0，不与主域32笔记录叠加超出64MiB。两次重演串行，前一个shutdown归还回读后才创建后一个；主域关闭时同步关闭活动worker。该运行时资源/成本仍须T06，不能把隐藏验证节点当正式可见性能。
+
+恢复关闭有明确阶段：building关闭保留旧账本并释放未提交候选；CPU metadata已提交或publication已切换后关闭分别报告closed_after_restore_metadata/closed_after_restore_publish，不能把已发生的恢复标作未结算取消。观察信号默认关闭。
+
+未知/未完成：legacy smooth/compact及外部边界输入完整时间线、磁盘redo、完整沙滩foam/front history、重演中关闭专门覆盖及长稳/成本。缺重演输入或原/目标分支不配对时，拒绝提交并保留当前分支。不得据本ADR完成T05 G03或宣称正式入口已替换。

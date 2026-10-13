@@ -1,0 +1,77 @@
+{
+  "scope": "仍由数值回归使用的12份固定输入；不是保留中间输出",
+  "files": [
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_121215_beach_feedback_probe/initial_compaction.bin",
+      "fixture": "tests/fixtures/gpu_edit_validation/natural_snapshot/initial_compaction.bin",
+      "bytes": 131072,
+      "sha256": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de"
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_121215_beach_feedback_probe/initial_flux.bin",
+      "fixture": "tests/fixtures/gpu_edit_validation/natural_snapshot/initial_flux.bin",
+      "bytes": 1048576,
+      "sha256": "cb7e3802129c32e20e272a1d81733f82e5a914c9a8fa0c60badaba3f3a4bf109"
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_121215_beach_feedback_probe/initial_momentum_x.bin",
+      "fixture": "tests/fixtures/gpu_edit_validation/natural_snapshot/initial_momentum_x.bin",
+      "bytes": 262144,
+      "sha256": "5882bfbc0122cac00939737fafcdfc58996d124591bdecb212307dfd42d40687"
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_121215_beach_feedback_probe/initial_momentum_z.bin",
+      "fixture": "tests/fixtures/gpu_edit_validation/natural_snapshot/initial_momentum_z.bin",
+      "bytes": 262144,
+      "sha256": "e33a0e0754eef22f52d023439f54ca4993769a15588b28ca59e9b9d3c8617850"
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_121215_beach_feedback_probe/initial_obstacle.bin",
+      "fixture": "tests/fixtures/gpu_edit_validation/natural_snapshot/initial_obstacle.bin",
+      "bytes": 65536,
+      "sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_121215_beach_feedback_probe/initial_rock.bin",
+      "fixture": "tests/fixtures/gpu_edit_validation/natural_snapshot/initial_rock.bin",
+      "bytes": 262144,
+      "sha256": "e5bebff58c79121549c5d1fbd484f90280de59fb99e1940fd8d54502cce0ad6c"
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_121215_beach_feedback_probe/initial_sand.bin",
+      "fixture": "tests/fixtures/gpu_edit_validation/natural_snapshot/initial_sand.bin",
+      "bytes": 262144,
+      "sha256": "3670dd368323583bb800bf7c0bba96200b89fca8b57b7cab6537c85682d2b457"
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_121215_beach_feedback_probe/initial_sediment.bin",
+      "fixture": "tests/fixtures/gpu_edit_validation/natural_snapshot/initial_sediment.bin",
+      "bytes": 262144,
+      "sha256": "c9c2e3e5875379797b9bfe6dff25ebbc1f4010ce74f8aa121e7ba9fd3f787bed"
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_121215_beach_feedback_probe/initial_water.bin",
+      "fixture": "tests/fixtures/gpu_edit_validation/natural_snapshot/initial_water.bin",
+      "bytes": 262144,
+      "sha256": "e76df8fd02a671f02c1371a1db6413a2cc7ff5eeb7ba1ba33c64a799a279b5fc"
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_121215_beach_feedback_probe/initial_wetness.bin",
+      "fixture": "tests/fixtures/gpu_edit_validation/natural_snapshot/initial_wetness.bin",
+      "bytes": 131072,
+      "sha256": "86462517a34d2fddf30060d7b76a027a734797536d4527c3919bc346a6c2de8f"
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_015841_scenes/mixed_compact_256_compaction.bin",
+      "fixture": "tests/fixtures/gpu_edit_validation/compact_encoding/mixed_compact_256_compaction.bin",
+      "bytes": 131072,
+      "sha256": "3ff720b66684fe88421d19e8faede31663c483a3f40ccf694fd99db7b995978c"
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_015841_scenes/mixed_compact_64_compaction.bin",
+      "fixture": "tests/fixtures/gpu_edit_validation/compact_encoding/mixed_compact_64_compaction.bin",
+      "bytes": 8192,
+      "sha256": "71772e69500b3482b8ab56d3e95d93f69da2af8fd3c3027c9f289576714765bc"
+    }
+  ]
+}

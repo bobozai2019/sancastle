@@ -1,0 +1,258 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "label": "material",
+      "id": "asset:6dd7bb6bc7d926fd43c08d22c9c767b7edf531cf11a4a555fcd41830f2f9c721:20",
+      "exit_code": 0,
+      "result": {
+        "ok": true,
+        "code": "ok",
+        "id": "asset:6dd7bb6bc7d926fd43c08d22c9c767b7edf531cf11a4a555fcd41830f2f9c721:20",
+        "artifact_path": "D:\\godot\\project\\sandcastle\\task\\sandcastle_test1_reverse_rebuild\\evidence\\g05_retrieved\\material.bin",
+        "sha256": "068e0a86c50fdc8f05990ac651c8ad5e5104bc54203f6bc3d7e3eda07eb8e6f9",
+        "source": {
+          "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+          "sha256": "6dd7bb6bc7d926fd43c08d22c9c767b7edf531cf11a4a555fcd41830f2f9c721",
+          "offset": "334976",
+          "length": "1080"
+        },
+        "limitations": []
+      },
+      "command": [
+        "C:\\Python313\\python.exe",
+        "D:\\godot\\project\\sandcastle\\task\\sandcastle_test1_reverse_rebuild\\tools\\get_raw.py",
+        "--root",
+        "D:\\godot\\project\\sandcastle\\task\\sandcastle_test1_reverse_rebuild",
+        "--id",
+        "asset:6dd7bb6bc7d926fd43c08d22c9c767b7edf531cf11a4a555fcd41830f2f9c721:20",
+        "--out",
+        "D:\\godot\\project\\sandcastle\\task\\sandcastle_test1_reverse_rebuild\\evidence\\g05_retrieved\\material.bin",
+        "--verify"
+      ]
+    },
+    {
+      "label": "streamed_texture_object",
+      "id": "asset:6dd7bb6bc7d926fd43c08d22c9c767b7edf531cf11a4a555fcd41830f2f9c721:232",
+      "exit_code": 0,
+      "result": {
+        "ok": true,
+        "code": "ok",
+        "id": "asset:6dd7bb6bc7d926fd43c08d22c9c767b7edf531cf11a4a555fcd41830f2f9c721:232",
+        "artifact_path": "D:\\godot\\project\\sandcastle\\task\\sandcastle_test1_reverse_rebuild\\evidence\\g05_retrieved\\streamed_texture_object.bin",
+        "sha256": "bce7c3f6ca78aada5df541cad3300219422c8cdc6b6a6833e67250c76cdc66cd",
+        "source": {
+          "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+          "sha256": "6dd7bb6bc7d926fd43c08d22c9c767b7edf531cf11a4a555fcd41830f2f9c721",
+          "offset": "38497888",
+          "length": "144"
+        },
+        "limitations": []
+      },
+      "command": [
+        "C:\\Python313\\python.exe",
+        "D:\\godot\\project\\sandcastle\\task\\sandcastle_test1_reverse_rebuild\\tools\\get_raw.py",
+        "--root",
+        "D:\\godot\\project\\sandcastle\\task\\sandcastle_test1_reverse_rebuild",
+        "--id",
+        "asset:6dd7bb6bc7d926fd43c08d22c9c767b7edf531cf11a4a555fcd41830f2f9c721:232",
+        "--out",
+        "D:\\godot\\project\\sandcastle\\task\\sandcastle_test1_reverse_rebuild\\evidence\\g05_retrieved\\streamed_texture_object.bin",
+        "--verify"
+      ]
+    },
+    {
+      "label": "streamed_texture_payload",
+      "id": "payload:5db9857c6c27ad5eef905e10428898c87cfbfaaac7c36f8d014fe77cf595c65c:97291664:4194303",
+      "exit_code": 0,
+      "result": {
+        "ok": true,
+        "code": "ok",
+        "id": "payload:5db9857c6c27ad5eef905e10428898c87cfbfaaac7c36f8d014fe77cf595c65c:97291664:4194303",
+        "artifact_path": "D:\\godot\\project\\sandcastle\\task\\sandcastle_test1_reverse_rebuild\\evidence\\g05_retrieved\\streamed_texture_payload.bin",
+        "sha256": "36f2c1f9af2be077ac0e5b5e11b30fea014b2a40dc31bda2fd0b85c160288261",
+        "source": {
+          "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets.resS",
+          "sha256": "5db9857c6c27ad5eef905e10428898c87cfbfaaac7c36f8d014fe77cf595c65c",
+          "offset": "97291664",
+          "length": "4194303"
+        },
+        "limitations": []
+      },
+      "command": [
+        "C:\\Python313\\python.exe",
+        "D:\\godot\\project\\sandcastle\\task\\sandcastle_test1_reverse_rebuild\\tools\\get_raw.py",
+        "--root",
+        "D:\\godot\\project\\sandcastle\\task\\sandcastle_test1_reverse_rebuild",
+        "--id",
+        "payload:5db9857c6c27ad5eef905e10428898c87cfbfaaac7c36f8d014fe77cf595c65c:97291664:4194303",
+        "--out",
+        "D:\\godot\\project\\sandcastle\\task\\sandcastle_test1_reverse_rebuild\\evidence\\g05_retrieved\\streamed_texture_payload.bin",
+        "--verify"
+      ]
+    },
+    {
+      "label": "shader",
+      "id": "asset:6dd7bb6bc7d926fd43c08d22c9c767b7edf531cf11a4a555fcd41830f2f9c721:587",
+      "exit_code": 0,
+      "result": {
+        "ok": true,
+        "code": "ok",
+        "id": "asset:6dd7bb6bc7d926fd43c08d22c9c767b7edf531cf11a4a555fcd41830f2f9c721:587",
+        "artifact_path": "D:\\godot\\project\\sandcastle\\task\\sandcastle_test1_reverse_rebuild\\evidence\\g05_retrieved\\shader.bin",
+        "sha256": "f1215e792599ec5f5dfc87d9b3a504db5952498d9c8acd698b1bdd8f05b3a272",
+        "source": {
+          "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+          "sha256": "6dd7bb6bc7d926fd43c08d22c9c767b7edf531cf11a4a555fcd41830f2f9c721",
+          "offset": "49499632",
+          "length": "7364"
+        },
+        "limitations": []
+      },
+      "command": [
+        "C:\\Python313\\python.exe",
+        "D:\\godot\\project\\sandcastle\\task\\sandcastle_test1_reverse_rebuild\\tools\\get_raw.py",
+        "--root",
+        "D:\\godot\\project\\sandcastle\\task\\sandcastle_test1_reverse_rebuild",
+        "--id",
+        "asset:6dd7bb6bc7d926fd43c08d22c9c767b7edf531cf11a4a555fcd41830f2f9c721:587",
+        "--out",
+        "D:\\godot\\project\\sandcastle\\task\\sandcastle_test1_reverse_rebuild\\evidence\\g05_retrieved\\shader.bin",
+        "--verify"
+      ]
+    },
+    {
+      "label": "compute",
+      "id": "asset:6dd7bb6bc7d926fd43c08d22c9c767b7edf531cf11a4a555fcd41830f2f9c721:647",
+      "exit_code": 0,
+      "result": {
+        "ok": true,
+        "code": "ok",
+        "id": "asset:6dd7bb6bc7d926fd43c08d22c9c767b7edf531cf11a4a555fcd41830f2f9c721:647",
+        "artifact_path": "D:\\godot\\project\\sandcastle\\task\\sandcastle_test1_reverse_rebuild\\evidence\\g05_retrieved\\compute.bin",
+        "sha256": "5d39646df079f44c25a3723efd0657d4e8f68421372048bdd38bc83a37765a7b",
+        "source": {
+          "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+          "sha256": "6dd7bb6bc7d926fd43c08d22c9c767b7edf531cf11a4a555fcd41830f2f9c721",
+          "offset": "51654224",
+          "length": "15188"
+        },
+        "limitations": []
+      },
+      "command": [
+        "C:\\Python313\\python.exe",
+        "D:\\godot\\project\\sandcastle\\task\\sandcastle_test1_reverse_rebuild\\tools\\get_raw.py",
+        "--root",
+        "D:\\godot\\project\\sandcastle\\task\\sandcastle_test1_reverse_rebuild",
+        "--id",
+        "asset:6dd7bb6bc7d926fd43c08d22c9c767b7edf531cf11a4a555fcd41830f2f9c721:647",
+        "--out",
+        "D:\\godot\\project\\sandcastle\\task\\sandcastle_test1_reverse_rebuild\\evidence\\g05_retrieved\\compute.bin",
+        "--verify"
+      ]
+    },
+    {
+      "label": "visual_config_raw",
+      "id": "asset:8c8f9cbc1b1bc03ff278154f93698295e5de5f4b078b46c3a9ccae70e70815a2:1612",
+      "exit_code": 0,
+      "result": {
+        "ok": true,
+        "code": "ok",
+        "id": "asset:8c8f9cbc1b1bc03ff278154f93698295e5de5f4b078b46c3a9ccae70e70815a2:1612",
+        "artifact_path": "D:\\godot\\project\\sandcastle\\task\\sandcastle_test1_reverse_rebuild\\evidence\\g05_retrieved\\visual_config_raw.bin",
+        "sha256": "3792c088b16aaea93850e164d696cb46be49b5e316a51786d0e00a039b6b2483",
+        "source": {
+          "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\globalgamemanagers.assets",
+          "sha256": "8c8f9cbc1b1bc03ff278154f93698295e5de5f4b078b46c3a9ccae70e70815a2",
+          "offset": "282144",
+          "length": "148"
+        },
+        "limitations": []
+      },
+      "command": [
+        "C:\\Python313\\python.exe",
+        "D:\\godot\\project\\sandcastle\\task\\sandcastle_test1_reverse_rebuild\\tools\\get_raw.py",
+        "--root",
+        "D:\\godot\\project\\sandcastle\\task\\sandcastle_test1_reverse_rebuild",
+        "--id",
+        "asset:8c8f9cbc1b1bc03ff278154f93698295e5de5f4b078b46c3a9ccae70e70815a2:1612",
+        "--out",
+        "D:\\godot\\project\\sandcastle\\task\\sandcastle_test1_reverse_rebuild\\evidence\\g05_retrieved\\visual_config_raw.bin",
+        "--verify"
+      ]
+    },
+    {
+      "label": "rdc_constant",
+      "id": "rdc:761aa980c2426f75a1fa7364bf6d2655ff4dd20ea76566e630ee5b53ea0ec5b2:6196:ResourceId::336:vertex:cbuffer:0",
+      "exit_code": 0,
+      "result": {
+        "ok": true,
+        "code": "ok",
+        "id": "rdc:761aa980c2426f75a1fa7364bf6d2655ff4dd20ea76566e630ee5b53ea0ec5b2:6196:ResourceId::336:vertex:cbuffer:0",
+        "artifact_path": "D:\\godot\\project\\sandcastle\\task\\sandcastle_test1_reverse_rebuild\\evidence\\g05_retrieved\\rdc_constant.bin",
+        "sha256": "be8b553a9fd2898d7e7aa892b7ef397c8966fec4f210c63072c9962527452b60",
+        "source": {
+          "capture_sha256": "761aa980c2426f75a1fa7364bf6d2655ff4dd20ea76566e630ee5b53ea0ec5b2",
+          "event": "6196",
+          "resource": "ResourceId::336",
+          "snapshot_path": "D:\\godot\\project\\sandcastle\\task\\sandcastle_test1_reverse_rebuild\\data\\raw\\rdc\\test1\\event_6196_vertex_cbuffer_0.bin"
+        },
+        "limitations": []
+      },
+      "command": [
+        "C:\\Python313\\python.exe",
+        "D:\\godot\\project\\sandcastle\\task\\sandcastle_test1_reverse_rebuild\\tools\\get_raw.py",
+        "--root",
+        "D:\\godot\\project\\sandcastle\\task\\sandcastle_test1_reverse_rebuild",
+        "--id",
+        "rdc:761aa980c2426f75a1fa7364bf6d2655ff4dd20ea76566e630ee5b53ea0ec5b2:6196:ResourceId::336:vertex:cbuffer:0",
+        "--out",
+        "D:\\godot\\project\\sandcastle\\task\\sandcastle_test1_reverse_rebuild\\evidence\\g05_retrieved\\rdc_constant.bin",
+        "--verify"
+      ]
+    },
+    {
+      "label": "rdc_vsout",
+      "id": "rdc:761aa980c2426f75a1fa7364bf6d2655ff4dd20ea76566e630ee5b53ea0ec5b2:6196:ResourceId::1000000000000000603:VSOut",
+      "exit_code": 0,
+      "result": {
+        "ok": true,
+        "code": "ok",
+        "id": "rdc:761aa980c2426f75a1fa7364bf6d2655ff4dd20ea76566e630ee5b53ea0ec5b2:6196:ResourceId::1000000000000000603:VSOut",
+        "artifact_path": "D:\\godot\\project\\sandcastle\\task\\sandcastle_test1_reverse_rebuild\\evidence\\g05_retrieved\\rdc_vsout.bin",
+        "sha256": "b25be6d62db89a6ed91cdf3704a5f052555092f9edefd0ea287b2ad359e5bc1f",
+        "source": {
+          "capture_sha256": "761aa980c2426f75a1fa7364bf6d2655ff4dd20ea76566e630ee5b53ea0ec5b2",
+          "event": "6196",
+          "resource": "ResourceId::1000000000000000603",
+          "snapshot_path": "D:\\godot\\project\\sandcastle\\task\\sandcastle_test1_reverse_rebuild\\data\\raw\\rdc\\test1\\event_6196_vsout.bin"
+        },
+        "limitations": []
+      },
+      "command": [
+        "C:\\Python313\\python.exe",
+        "D:\\godot\\project\\sandcastle\\task\\sandcastle_test1_reverse_rebuild\\tools\\get_raw.py",
+        "--root",
+        "D:\\godot\\project\\sandcastle\\task\\sandcastle_test1_reverse_rebuild",
+        "--id",
+        "rdc:761aa980c2426f75a1fa7364bf6d2655ff4dd20ea76566e630ee5b53ea0ec5b2:6196:ResourceId::1000000000000000603:VSOut",
+        "--out",
+        "D:\\godot\\project\\sandcastle\\task\\sandcastle_test1_reverse_rebuild\\evidence\\g05_retrieved\\rdc_vsout.bin",
+        "--verify"
+      ]
+    },
+    {
+      "label": "missing_id",
+      "exit_code": 1,
+      "result": {
+        "ok": false,
+        "code": "not_found",
+        "id": "not-an-id",
+        "artifact_path": null,
+        "sha256": null,
+        "source": {},
+        "limitations": []
+      }
+    }
+  ]
+}

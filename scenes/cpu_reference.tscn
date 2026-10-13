@@ -1,0 +1,79 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scripts/demo/sandcastle_demo.gd" id="1_demo"]
+[ext_resource type="PackedScene" path="res://scenes/editor_scene_preview.tscn" id="2_preview"]
+
+[sub_resource type="Environment" id="Environment_cpu"]
+background_mode = 1
+background_color = Color(0.73, 0.86, 0.93, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.8, 0.86, 0.88, 1)
+ambient_light_energy = 0.65
+
+[sub_resource type="StandardMaterial3D" id="Material_terrain"]
+vertex_color_use_as_albedo = true
+roughness = 0.94
+cull_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="Material_water"]
+transparency = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+cull_mode = 2
+depth_draw_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="Material_flow"]
+shading_mode = 0
+vertex_color_use_as_albedo = true
+no_depth_test = true
+
+[node name="SandcastleCpuReference" type="Node3D"]
+script = ExtResource("1_demo")
+
+[node name="EditorPreviewController" parent="." instance=ExtResource("2_preview")]
+preview_size_m = 8.0
+terrain_level_m = 0.05
+dune_center_m = Vector2(1.0, 0.2)
+dune_radius_x_m = 1.3
+dune_radius_z_m = 1.0
+dune_height_m = 0.45
+water_level_m = 0.13
+
+[node name="OverviewCamera" type="Camera3D" parent="."]
+position = Vector3(0, 9.5, 11)
+rotation = Vector3(-0.712357, 0, 0)
+current = true
+fov = 55.0
+
+[node name="Sunlight" type="DirectionalLight3D" parent="."]
+rotation_degrees = Vector3(-52, -35, 0)
+light_energy = 1.5
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_cpu")
+
+[node name="SandTerrain_0_0" type="MeshInstance3D" parent="."]
+material_override = SubResource("Material_terrain")
+
+[node name="SandTerrain_1_0" type="MeshInstance3D" parent="."]
+material_override = SubResource("Material_terrain")
+
+[node name="SandTerrain_0_1" type="MeshInstance3D" parent="."]
+material_override = SubResource("Material_terrain")
+
+[node name="SandTerrain_1_1" type="MeshInstance3D" parent="."]
+material_override = SubResource("Material_terrain")
+
+[node name="WaterSurface" type="MeshInstance3D" parent="."]
+material_override = SubResource("Material_water")
+
+[node name="FlowArrows" type="MeshInstance3D" parent="."]
+material_override = SubResource("Material_flow")
+
+[node name="Interface" type="CanvasLayer" parent="."]
+
+[node name="StatusLabel" type="Label" parent="Interface"]
+offset_left = 18.0
+offset_top = 18.0
+theme_override_colors/font_color = Color(0.08, 0.12, 0.16, 1)
+theme_override_font_sizes/font_size = 18

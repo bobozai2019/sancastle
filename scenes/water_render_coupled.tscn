@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://tests/visual_water_alignment/prototypes/reference_coupled.tscn" id="1_base"]
+[ext_resource type="Script" path="res://scripts/visual/water_render_staging_entry.gd" id="2_entry"]
+
+[node name="WaterRenderStagingCoupled" instance=ExtResource("1_base")]
+script = ExtResource("2_entry")
+visual_time_s = 0.0

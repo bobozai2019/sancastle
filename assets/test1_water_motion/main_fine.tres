@@ -1,0 +1,27 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://assets/water_material_natural_candidate/foam_distribution.gdshader" id="1_qe1am"]
+
+[resource]
+resource_local_to_scene = true
+render_priority = 2
+shader = ExtResource("1_qe1am")
+shader_parameter/display_reconstruction = true
+shader_parameter/front_concentrated = false
+shader_parameter/front_local_dense = true
+shader_parameter/front_smooth_support = false
+shader_parameter/raised_local_front = true
+shader_parameter/crest_height_m = 0.25
+shader_parameter/surface_bias_m = 0.018
+shader_parameter/splat_half_width_m = 0.018
+shader_parameter/splat_jitter_m = 0.05
+shader_parameter/target_diameter_px = 3.5
+shader_parameter/viewport_height_px = 1080.0
+shader_parameter/natural_foam_direct_fraction = 0.5
+shader_parameter/natural_lighting_debug = 0
+shader_parameter/natural_fine_enabled = true
+shader_parameter/natural_fine_size_mode = 1
+shader_parameter/natural_fine_size_range = Vector2(0.65, 2.2)
+shader_parameter/natural_fine_gain = 1.0
+shader_parameter/natural_cluster_strength = 0.35
+shader_parameter/natural_cluster_scale_per_m = 1.0

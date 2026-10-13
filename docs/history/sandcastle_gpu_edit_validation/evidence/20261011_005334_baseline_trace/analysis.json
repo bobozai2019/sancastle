@@ -1,0 +1,48 @@
+{
+  "missing": [
+    "exact_prefetch_request",
+    "gpu_patch_submit",
+    "gpu_patch_completion",
+    "pixel_confirmed_visibility",
+    "initial_state_binary_hash"
+  ],
+  "cpu_tool_ms": {
+    "max": 1.441,
+    "count": 20,
+    "p50": 0.264,
+    "p99": 1.441
+  },
+  "all_frame_ms": {
+    "max": 388.11,
+    "count": 1437,
+    "p50": 13.075,
+    "p99": 34.066
+  },
+  "other_frame_ms": {
+    "max": 388.11,
+    "count": 1145,
+    "p50": 13.221,
+    "p99": 33.909
+  },
+  "role": "diagnostic_analysis",
+  "cost_acceptance": "not_evaluated",
+  "submit_to_post_draw_ms": {
+    "max": 58.871,
+    "count": 20,
+    "p50": 45.709,
+    "p99": 58.871
+  },
+  "collision_ms": {
+    "max": 1.476,
+    "count": 20,
+    "p50": 0.702,
+    "p99": 1.476
+  },
+  "limitation": "post_draw is the first draw following CPU revision callback; it does not independently confirm changed pixels. Frame intervals include diagnostic overhead; no cost PASS.",
+  "edit_near_100ms_frame_ms": {
+    "max": 48.088,
+    "count": 292,
+    "p50": 12.491,
+    "p99": 34.922
+  }
+}

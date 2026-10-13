@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/water_material_natural_candidate/reference_v1_fixed.tscn" id="1_beach"]
+
+[node name="SandcastleNaturalBeach" instance=ExtResource("1_beach")]

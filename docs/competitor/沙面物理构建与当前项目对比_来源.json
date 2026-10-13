@@ -1,0 +1,219 @@
+{
+  "date": "2026-10-13",
+  "scope": "static current main wiring + scoped competitor archived runtime/instruction evidence; not new benchmark",
+  "files": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\project.godot",
+      "bytes": 2016,
+      "sha256": "673965691c63546745e3e79f70b73589ede19865afbe55b177925f2e68ff11bf",
+      "selectors": []
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scenes\\main.tscn",
+      "bytes": 9974,
+      "sha256": "91f763d569a433299bfa22531816f1e4843e67cd32a9c38603459d5754e3394c",
+      "selectors": []
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scenes\\sandcastle_test1_beach_coupled.tscn",
+      "bytes": 234,
+      "sha256": "10ac73d870d95d6ffea251c8016acf525fe9b229fce40f5422f0f22916687592",
+      "selectors": []
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\beach\\beach_recovery_entry.gd",
+      "bytes": 23937,
+      "sha256": "e9ab007aa6c951c2056dcb8162c3985547e6b8d3a78395b4560a51e5d2d0f9d1",
+      "selectors": []
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\beach\\beach_interaction_entry.gd",
+      "bytes": 10525,
+      "sha256": "e96969e9186c5f6349464f22dd32165bc3cbdb4a21c21d0072ed31eff7ed77c5",
+      "selectors": [
+        {
+          "line": 157,
+          "text": "func pick(screen: Vector2) -> Dictionary:"
+        },
+        {
+          "line": 163,
+          "text": "func _pick_current(hit: Dictionary) -> bool:"
+        },
+        {
+          "line": 190,
+          "text": "func execute_admitted_gpu_command(command: Dictionary, available_m3: float) -> Dictionary:"
+        }
+      ]
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\beach\\beach_gpu_entry.gd",
+      "bytes": 13728,
+      "sha256": "61c64d18e3dfe9188fbb2afd3492dc752c188c06407f562522e98012bc4ad0cb",
+      "selectors": [
+        {
+          "line": 68,
+          "text": "func _create_solver() -> SandcastleGpuShallowSolver:"
+        },
+        {
+          "line": 126,
+          "text": "func execute_admitted_gpu_command(command: Dictionary, available_m3: float) -> Dictionary:"
+        },
+        {
+          "line": 189,
+          "text": "func _render_gpu_publish(token: int) -> void:"
+        }
+      ]
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\beach\\beach_lab_entry.gd",
+      "bytes": 219,
+      "sha256": "e092c3626e29d88ae87733c85304922c6bde7d3b43d25bddcf30c216ed577c4c",
+      "selectors": [
+        {
+          "line": 3,
+          "text": "func _create_solver() -> SandcastleGpuShallowSolver:"
+        }
+      ]
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\beach\\release_config.gd",
+      "bytes": 448,
+      "sha256": "006e91856bd21ad9b002ac35ba3d4a3db43395c042e68c2ba6b4910acefd757e",
+      "selectors": [
+        {
+          "line": 5,
+          "text": "const ARGUMENTS = [\"--beach-staged-slope\", \"--compensated-capacity\", \"--packed-runs\", \"--cached-capacity\", \"--prefetch-velocity\"]"
+        }
+      ]
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\collision\\gpu_collision_proxy.gd",
+      "bytes": 10565,
+      "sha256": "47e0d057a3288c717aabe0b7bb88811e75d920b34db6b96239a030b56a305ada",
+      "selectors": [
+        {
+          "line": 7,
+          "text": "const CHUNK_SIZE := 32"
+        },
+        {
+          "line": 8,
+          "text": "const CHUNK_SAMPLES := CHUNK_SIZE + 1"
+        },
+        {
+          "line": 9,
+          "text": "const MAX_BATCH_CHUNKS := 16"
+        },
+        {
+          "line": 105,
+          "text": "func _dispatch_pending_render() -> void:"
+        },
+        {
+          "line": 233,
+          "text": "func _replace_chunk_shape(chunk_id: int, revision: int,"
+        }
+      ]
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\simulation\\edit_validation\\collision_proxy.gd",
+      "bytes": 2184,
+      "sha256": "62f5248f3e9df598138f61188d2fd44e791b6fb32155156d5ad90f70015c7be4",
+      "selectors": [
+        {
+          "line": 14,
+          "text": "func _dispatch_pending_render() -> void:"
+        },
+        {
+          "line": 44,
+          "text": "func _replace_chunk_shape(chunk_id: int, revision: int, values: PackedFloat32Array) -> void:"
+        }
+      ]
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\simulation\\edit_validation\\collision_chunk_selection.gd",
+      "bytes": 1225,
+      "sha256": "81ad1db63c6baf3ef876a8050ebe9550bd6130669cba810698049ddf70570892",
+      "selectors": []
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\simulation\\edit_validation\\gpu_sand_editor.gd",
+      "bytes": 9737,
+      "sha256": "42f46da585486752e942809e833356c3edc1b5194391ded18ce4a609be80c98f",
+      "selectors": []
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\simulation\\gpu_shallow_solver.gd",
+      "bytes": 21408,
+      "sha256": "21fa56232fc8ccf2bb10ea100d0b800eb83065eacc1185e478563c60d052940c",
+      "selectors": []
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\demo\\gpu_water_preview.gd",
+      "bytes": 81242,
+      "sha256": "c9edbd1f31ea076b0c74b5299f8a764c119367dd35c720b48e097e25ba563bb0",
+      "selectors": [
+        {
+          "line": 20,
+          "text": "const GRID_SIZE := 256"
+        },
+        {
+          "line": 21,
+          "text": "const CELL_SIZE_M := 0.125"
+        }
+      ]
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\shaders\\simulation\\shallow_collision_pack.glsl",
+      "bytes": 1113,
+      "sha256": "21e58b4e4bd906e98c0b0e894c514332a9a1b2ca9251c539275a209749ca9b9d",
+      "selectors": []
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\assets\\water_material_natural_candidate\\rdc_bed.gdshader",
+      "bytes": 11078,
+      "sha256": "e36bf7c1d44dbc38f50c46b7405cf439a48fd6f427df6f95a3d5e3e50d650abf",
+      "selectors": []
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\assets\\water_material_natural_candidate\\rdc_bundle_v1.json",
+      "bytes": 1230,
+      "sha256": "92ba9e4a11295790084966356af7f130d5473af5df14f81ff63adcc1e5f2d88f",
+      "selectors": []
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\assets\\water_material_natural_candidate\\compiled_worker_entry.gd",
+      "bytes": 3292,
+      "sha256": "3567965df037e4a3667723c8cc831aca29622dfd2c568c62006c51ff36613bd4",
+      "selectors": []
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\运行时碰撞网格取证.md",
+      "bytes": 18332,
+      "sha256": "256834b7f6d68c6c07ba5e94c20bc092f65a32c4865678a73ae9d75278c8a467",
+      "selectors": []
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\笔刷命中检测_代码补证.md",
+      "bytes": 11939,
+      "sha256": "73030f69eb68773c970283d2791f5b2036d8beb291552640aff5873dc8d13126",
+      "selectors": []
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\模拟与编辑方案.md",
+      "bytes": 10577,
+      "sha256": "11e82fad8b6b0c4ed16bda36cea76aefb070f682c1828253754e753e61dbe4ad",
+      "selectors": []
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\history\\sandcastle_gpu_edit_validation\\收尾记录.md",
+      "bytes": 5629,
+      "sha256": "394e5bdd667e9b1dabec7c3e56ae4a924cf66ba32b7e02ed052bbaaf20ea26ab",
+      "selectors": []
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\history\\sandcastle_gpu_edit_validation\\主场景整合与临时清理.md",
+      "bytes": 5103,
+      "sha256": "e3e1e721dec86b8d86e894622a2cbcf636b00f24bb3e55dd4d2983fa5f03dd8e",
+      "selectors": []
+    }
+  ]
+}

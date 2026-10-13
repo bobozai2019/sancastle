@@ -1,0 +1,17 @@
+{
+	"dimensions": [
+		256,
+		256,
+		64
+	],
+	"format": "R8",
+	"mip_count": 9,
+	"mipmaps": true,
+	"resource": "res://assets/water_material_natural_candidate/rdc_caustic_1105_mipped.res",
+	"resource_sha256": "2a80438ddc3a43ab3c335ed4f6412c3f0a6a0340f825030bf00eb537e20c7f25",
+	"scope": "All nine captured mip levels preserved exactly.",
+	"source": "res://test_output/competitor_water_material_20261011/replay_v5/event_5006_ps_texture_1105_mip0.bin",
+	"source_manifest": "res://test_output/water_material_rdc/caustic_mips_v1/manifest.json",
+	"source_sha256": "e5355399d7e4931291032ebd78d7b50dfe89cb7565dbda422f74e469769d3b0c",
+	"texel_roundtrip_exact": true
+}

@@ -1,0 +1,7 @@
+# GPU编辑复验工具
+
+从已结束的GPU专项迁出。历史工具源码与来源hash位于docs/history/sandcastle_gpu_edit_validation/tools及成果迁移清单。
+
+本目录脚本的工具引用已改为tools/gpu_edit_validation，新运行输出为test_output/gpu_edit_validation；不再创建task。主要入口：run_beach_recovery_probe.ps1、run_beach_cost_probe.ps1，分析入口analyze_beach_cost.py、compare_beach_cost.py。
+
+性能任务已停止，本迁移不会自动运行这些工具。部分一次性分析/RenderDoc脚本仍需要其记录的原始捕帧或旧bin；那些中间输入未保留，使用前先核对依赖并重新生成。本文不声称所有历史脚本无输入即可运行。

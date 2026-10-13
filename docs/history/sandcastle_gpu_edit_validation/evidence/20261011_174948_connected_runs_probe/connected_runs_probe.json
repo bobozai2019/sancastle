@@ -1,0 +1,1589 @@
+{
+	"error": "",
+	"pass": true,
+	"rows": [
+		{
+			"case": "coast_holes",
+			"closure": {
+				"momentum_x": {
+					"budget": 0.000000195306517387754,
+					"dry_loss": 0.00000000357627882863198,
+					"error": 0.000000023279280725319,
+					"unit": "m4/s"
+				},
+				"momentum_z": {
+					"budget": 0.0000001,
+					"dry_loss": -0.00000000178813941431599,
+					"error": 0.0000000116396403626595,
+					"unit": "m4/s"
+				},
+				"sediment": {
+					"budget": 0.0000001,
+					"dry_loss": 0.0,
+					"error": 0.00000000290991031270949,
+					"unit": "m3"
+				},
+				"water": {
+					"budget": 0.000000798650003960223,
+					"dry_loss": 0.0,
+					"error": 0.00000000908039510250092,
+					"unit": "m3"
+				}
+			},
+			"distribution": true,
+			"effective_profile": {
+				"boundary": "closed",
+				"cell_size_m": 0.125,
+				"erosion": false,
+				"flux": "initialized_zero",
+				"generation": 2,
+				"grid_size": 64,
+				"inventory_m3": 2.0,
+				"profile_id": "numeric_v1",
+				"sand_m": 0.0,
+				"seed": 101,
+				"setup_seed": {
+					"generation": 2,
+					"initial_field_sha256": {
+						"momentum_x": "3340b7fb4546117a05c5fc32d7edd91d57818fcc3fc76ed40c03f400ba600390",
+						"momentum_z": "a85d07bdbe3c0795fa48d3d20a8396135c9a4d18ef9547488803269bd41b0162",
+						"obstacle": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe",
+						"rock": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe",
+						"sand": "612d08da54122a8b28ca10e0b7695e253c881d0b78070302ae7c799e80f2f441",
+						"sediment": "15dfad11a0c809ab7785727e30ffac625ef64d401c9d291689295e6e7a51fa5e",
+						"water": "10c69d6bafe2808ff63b7feae251e67f4c4d858d141d59ce804bf3a16f8286c5"
+					},
+					"profile_scalar_fields_are_defaults": true,
+					"stock_m3": 2.0
+				},
+				"sim_hz": 30,
+				"water_m": 0.12
+			},
+			"emerged_dry": true,
+			"fast_path_used": 1,
+			"gpu_input_exact": true,
+			"grid": 64,
+			"immutable_fields": true,
+			"max_errors": {
+				"momentum_x": 0.00000000360468179610995,
+				"momentum_z": 0.00000000180234089805498,
+				"sediment": 0.000000000450585224513744,
+				"water": 0.0000000960881940959002
+			},
+			"pass": true,
+			"published": true,
+			"receipt": {
+				"actual_sand_m3": 0.479999989271164,
+				"applied_tick": 0,
+				"capacity_status": 0,
+				"clamp_count": 0,
+				"command_id": 1,
+				"dirty_mask": [
+					15,
+					0
+				],
+				"dirty_rect": "[P: (26, 26), S: (12, 12)]",
+				"displaced_water_m3": 0.182686313986778,
+				"edited_cells": 112,
+				"error_code": 0,
+				"generation": 2,
+				"impulse_x_m3_s": 0.0,
+				"impulse_x_m4_s": 0.0,
+				"impulse_z_m3_s": 0.0,
+				"impulse_z_m4_s": 0.0,
+				"input_revision": 0,
+				"invalid_flags": 0,
+				"nominal_sand_m3": 0.479999989271164,
+				"ok": true,
+				"output_revision": 1,
+				"retained_water_m3": 0.0000000149011611938477,
+				"status": 1,
+				"ticket_id": 1
+			},
+			"receipt_matches": true,
+			"right_pool_unchanged": true,
+			"sand_inventory_closed": true
+		},
+		{
+			"actual_sim_s": 0.1,
+			"case": "coast_holes_continue_3ticks",
+			"dry_momentum_zero": true,
+			"finite_nonnegative": true,
+			"grid": 64,
+			"max_substeps": 2,
+			"pass": true,
+			"scope": "existing water subsolver, erosion disabled",
+			"water_relative_error": 0.00000000153642562648492
+		},
+		{
+			"case": "island_pool",
+			"closure": {
+				"momentum_x": {
+					"budget": 0.000000205085491651111,
+					"dry_loss": 0.00000000357627882863198,
+					"error": 0.000000023279280725319,
+					"unit": "m4/s"
+				},
+				"momentum_z": {
+					"budget": 0.000000103830749392509,
+					"dry_loss": -0.00000000178813941431599,
+					"error": 0.0000000116396403626595,
+					"unit": "m4/s"
+				},
+				"sediment": {
+					"budget": 0.0000001,
+					"dry_loss": 0.0,
+					"error": 0.00000000290991031270949,
+					"unit": "m3"
+				},
+				"water": {
+					"budget": 0.000000837765988243691,
+					"dry_loss": 0.0,
+					"error": 0.00000000908039510250092,
+					"unit": "m3"
+				}
+			},
+			"distribution": true,
+			"effective_profile": {
+				"boundary": "closed",
+				"cell_size_m": 0.125,
+				"erosion": false,
+				"flux": "initialized_zero",
+				"generation": 3,
+				"grid_size": 64,
+				"inventory_m3": 2.0,
+				"profile_id": "numeric_v1",
+				"sand_m": 0.0,
+				"seed": 101,
+				"setup_seed": {
+					"generation": 3,
+					"initial_field_sha256": {
+						"momentum_x": "3605ef0787dc2d333efb1de49f57572fa11a4cd5daff7937d6db34145d70ab40",
+						"momentum_z": "2583cfd03bc61562f2d5f1e52dd0f9ef24aa7451b42a0ad7a8284b13c43b10e6",
+						"obstacle": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe",
+						"rock": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe",
+						"sand": "612d08da54122a8b28ca10e0b7695e253c881d0b78070302ae7c799e80f2f441",
+						"sediment": "95cfa3458fc468efa8197af5dd00817e00cadcbea551621fc59c501669db8ec0",
+						"water": "62d3cc6854b5484c46284604605135a94bac967983dce91f9b44848c746aaf3e"
+					},
+					"profile_scalar_fields_are_defaults": true,
+					"stock_m3": 2.0
+				},
+				"sim_hz": 30,
+				"water_m": 0.12
+			},
+			"emerged_dry": true,
+			"fast_path_used": 1,
+			"gpu_input_exact": true,
+			"grid": 64,
+			"immutable_fields": true,
+			"max_errors": {
+				"momentum_x": 0.00000000360468179610995,
+				"momentum_z": 0.00000000180234089805498,
+				"sediment": 0.000000000450585224513744,
+				"water": 0.0000000960881940959002
+			},
+			"pass": true,
+			"published": true,
+			"receipt": {
+				"actual_sand_m3": 0.479999989271164,
+				"applied_tick": 0,
+				"capacity_status": 0,
+				"clamp_count": 0,
+				"command_id": 1,
+				"dirty_mask": [
+					15,
+					0
+				],
+				"dirty_rect": "[P: (26, 26), S: (12, 12)]",
+				"displaced_water_m3": 0.182686313986778,
+				"edited_cells": 112,
+				"error_code": 0,
+				"generation": 3,
+				"impulse_x_m3_s": 0.0,
+				"impulse_x_m4_s": 0.0,
+				"impulse_z_m3_s": 0.0,
+				"impulse_z_m4_s": 0.0,
+				"input_revision": 0,
+				"invalid_flags": 0,
+				"nominal_sand_m3": 0.479999989271164,
+				"ok": true,
+				"output_revision": 1,
+				"retained_water_m3": 0.0000000149011611938477,
+				"status": 1,
+				"ticket_id": 2
+			},
+			"receipt_matches": true,
+			"right_pool_unchanged": true,
+			"sand_inventory_closed": true
+		},
+		{
+			"actual_sim_s": 0.1,
+			"case": "island_pool_continue_3ticks",
+			"dry_momentum_zero": true,
+			"finite_nonnegative": true,
+			"grid": 64,
+			"max_substeps": 2,
+			"pass": true,
+			"scope": "existing water subsolver, erosion disabled",
+			"water_relative_error": 0.00000000163233929611067
+		},
+		{
+			"case": "diagonal_pools",
+			"closure": {
+				"momentum_x": {
+					"budget": 0.000000129209289550781,
+					"dry_loss": 0.00000000178813941431599,
+					"error": 0.00000000768151942054374,
+					"unit": "m4/s"
+				},
+				"momentum_z": {
+					"budget": 0.0000001,
+					"dry_loss": -0.000000000894069707157996,
+					"error": 0.00000000384075971027187,
+					"unit": "m4/s"
+				},
+				"sediment": {
+					"budget": 0.0000001,
+					"dry_loss": 0.0,
+					"error": 0.00000000096019003859027,
+					"unit": "m3"
+				},
+				"water": {
+					"budget": 0.000000520395622874117,
+					"dry_loss": 0.0,
+					"error": 0.000000017927959561348,
+					"unit": "m3"
+				}
+			},
+			"distribution": true,
+			"effective_profile": {
+				"boundary": "closed",
+				"cell_size_m": 0.125,
+				"erosion": false,
+				"flux": "initialized_zero",
+				"generation": 4,
+				"grid_size": 64,
+				"inventory_m3": 2.0,
+				"profile_id": "numeric_v1",
+				"sand_m": 0.0,
+				"seed": 101,
+				"setup_seed": {
+					"generation": 4,
+					"initial_field_sha256": {
+						"momentum_x": "c19560c1a9d8f1dbedb1cc4f00560e8631e6d957de7c5be0b7b98b9bda907930",
+						"momentum_z": "b28205469f72286d5506ad9667847097a01c8b1928b7871fc749c4d3e6afc680",
+						"obstacle": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe",
+						"rock": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe",
+						"sand": "612d08da54122a8b28ca10e0b7695e253c881d0b78070302ae7c799e80f2f441",
+						"sediment": "344382c9873d0185672d5ce4d447614839a50089ca6f5bdcba75fc2c633fa846",
+						"water": "9a8bbf20c48842d5482c3b8fbf7ce22162d47aff7a978e76f8061e05e06dade7"
+					},
+					"profile_scalar_fields_are_defaults": true,
+					"stock_m3": 2.0
+				},
+				"sim_hz": 30,
+				"water_m": 0.12
+			},
+			"emerged_dry": true,
+			"fast_path_used": 1,
+			"gpu_input_exact": true,
+			"grid": 64,
+			"immutable_fields": true,
+			"max_errors": {
+				"momentum_x": 0.00000000360468179610995,
+				"momentum_z": 0.00000000180234089805498,
+				"sediment": 0.000000000450585224513744,
+				"water": 0.0000000934464385177192
+			},
+			"pass": true,
+			"published": true,
+			"receipt": {
+				"actual_sand_m3": 0.479999989271164,
+				"applied_tick": 0,
+				"capacity_status": 0,
+				"clamp_count": 0,
+				"command_id": 1,
+				"dirty_mask": [
+					15,
+					0
+				],
+				"dirty_rect": "[P: (26, 26), S: (12, 12)]",
+				"displaced_water_m3": 0.0913431569933891,
+				"edited_cells": 112,
+				"error_code": 0,
+				"generation": 4,
+				"impulse_x_m3_s": 0.0,
+				"impulse_x_m4_s": 0.0,
+				"impulse_z_m3_s": 0.0,
+				"impulse_z_m4_s": 0.0,
+				"input_revision": 0,
+				"invalid_flags": 0,
+				"nominal_sand_m3": 0.479999989271164,
+				"ok": true,
+				"output_revision": 1,
+				"retained_water_m3": 0.00000000745058059692383,
+				"status": 1,
+				"ticket_id": 3
+			},
+			"receipt_matches": true,
+			"right_pool_unchanged": true,
+			"sand_inventory_closed": true
+		},
+		{
+			"actual_sim_s": 0.1,
+			"case": "diagonal_pools_continue_3ticks",
+			"dry_momentum_zero": true,
+			"finite_nonnegative": true,
+			"grid": 64,
+			"max_substeps": 2,
+			"pass": true,
+			"scope": "existing water subsolver, erosion disabled",
+			"water_relative_error": 0.00000000370159409089865
+		},
+		{
+			"case": "run_overflow",
+			"closure": {
+				"momentum_x": {
+					"budget": 0.000000129209289550781,
+					"dry_loss": 0.0000000000894069679402421,
+					"error": 0.0000000033708638103036,
+					"unit": "m4/s"
+				},
+				"momentum_z": {
+					"budget": 0.0000001,
+					"dry_loss": -0.000000000044703483970121,
+					"error": 0.0000000016854319051518,
+					"unit": "m4/s"
+				},
+				"sediment": {
+					"budget": 0.0000001,
+					"dry_loss": 0.0,
+					"error": 0.00000000042135797628795,
+					"unit": "m3"
+				},
+				"water": {
+					"budget": 0.000000592271249846336,
+					"dry_loss": 0.0,
+					"error": 0.0000000181607902050018,
+					"unit": "m3"
+				}
+			},
+			"distribution": true,
+			"effective_profile": {
+				"boundary": "closed",
+				"cell_size_m": 0.125,
+				"erosion": false,
+				"flux": "initialized_zero",
+				"generation": 5,
+				"grid_size": 64,
+				"inventory_m3": 2.0,
+				"profile_id": "numeric_v1",
+				"sand_m": 0.0,
+				"seed": 101,
+				"setup_seed": {
+					"generation": 5,
+					"initial_field_sha256": {
+						"momentum_x": "d74b5754ed0e80b2692a450074e5fa8b6d259864e58f9f8e4f1e08075603ef35",
+						"momentum_z": "a1ef2d9561c115842ab501a295c510176dcee1f410b2fea42ac9b48a8bb5552e",
+						"obstacle": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe",
+						"rock": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe",
+						"sand": "612d08da54122a8b28ca10e0b7695e253c881d0b78070302ae7c799e80f2f441",
+						"sediment": "572c44e76d0d53e09826dcd1e2605115f6ddad6380b8b6195b954d136cf9bec4",
+						"water": "5ef3d029e97af62a191aa00aece579b40360d80c5f8813fa40cdd820c16dd5db"
+					},
+					"profile_scalar_fields_are_defaults": true,
+					"stock_m3": 2.0
+				},
+				"sim_hz": 30,
+				"water_m": 0.12
+			},
+			"emerged_dry": true,
+			"fast_path_used": 0,
+			"gpu_input_exact": true,
+			"grid": 64,
+			"immutable_fields": true,
+			"max_errors": {
+				"momentum_x": 0.00000000407479411324019,
+				"momentum_z": 0.00000000203739705662009,
+				"sediment": 0.000000000509349264155023,
+				"water": 0.0000000108481178345832
+			},
+			"pass": true,
+			"published": true,
+			"receipt": {
+				"actual_sand_m3": 0.479999989271164,
+				"applied_tick": 0,
+				"capacity_status": 1,
+				"clamp_count": 0,
+				"command_id": 1,
+				"dirty_mask": [
+					15,
+					0
+				],
+				"dirty_rect": "[P: (26, 26), S: (12, 12)]",
+				"displaced_water_m3": 0.0819215774536133,
+				"edited_cells": 112,
+				"error_code": 0,
+				"generation": 5,
+				"impulse_x_m3_s": 0.0,
+				"impulse_x_m4_s": 0.0,
+				"impulse_z_m3_s": 0.0,
+				"impulse_z_m4_s": 0.0,
+				"input_revision": 0,
+				"invalid_flags": 0,
+				"nominal_sand_m3": 0.479999989271164,
+				"ok": true,
+				"output_revision": 1,
+				"retained_water_m3": 0.00942158326506615,
+				"status": 1,
+				"ticket_id": 4
+			},
+			"receipt_matches": true,
+			"right_pool_unchanged": true,
+			"sand_inventory_closed": true
+		},
+		{
+			"actual_sim_s": 0.1,
+			"case": "run_overflow_continue_3ticks",
+			"dry_momentum_zero": true,
+			"finite_nonnegative": true,
+			"grid": 64,
+			"max_substeps": 2,
+			"pass": true,
+			"scope": "existing water subsolver, erosion disabled",
+			"water_relative_error": 0.0000000201983508511119
+		},
+		{
+			"case": "gap_rows",
+			"closure": {
+				"momentum_x": {
+					"budget": 0.000000238795116374612,
+					"dry_loss": 0.0000000011175871339475,
+					"error": 0.000000015442492395934,
+					"unit": "m4/s"
+				},
+				"momentum_z": {
+					"budget": 0.000000123621354103088,
+					"dry_loss": -0.000000000558793566973748,
+					"error": 0.00000000772124619796699,
+					"unit": "m4/s"
+				},
+				"sediment": {
+					"budget": 0.0000001,
+					"dry_loss": 0.0,
+					"error": 0.00000000193031127193599,
+					"unit": "m3"
+				},
+				"water": {
+					"budget": 0.000000966732891980757,
+					"dry_loss": 0.0,
+					"error": 0.000000000349245965480804,
+					"unit": "m3"
+				}
+			},
+			"distribution": true,
+			"effective_profile": {
+				"boundary": "closed",
+				"cell_size_m": 0.125,
+				"erosion": false,
+				"flux": "initialized_zero",
+				"generation": 6,
+				"grid_size": 64,
+				"inventory_m3": 2.0,
+				"profile_id": "numeric_v1",
+				"sand_m": 0.0,
+				"seed": 101,
+				"setup_seed": {
+					"generation": 6,
+					"initial_field_sha256": {
+						"momentum_x": "34ab1f2f4803496abfb16c5df24537ab067dd8ab273e80f332add64ae1001c73",
+						"momentum_z": "725042718aaf15de455e3c3646d27f260c5b9be8ce0fa7be0077335565373002",
+						"obstacle": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe",
+						"rock": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe",
+						"sand": "612d08da54122a8b28ca10e0b7695e253c881d0b78070302ae7c799e80f2f441",
+						"sediment": "4d50e45f3f9ac5ebc7f1a109a5a46d383a523f1449e3f5a999340f4cd23a886d",
+						"water": "fe6bb9593e1b945b2fca2e43e19795b34bc6c27a5b692305eee2ffe83f20c21c"
+					},
+					"profile_scalar_fields_are_defaults": true,
+					"stock_m3": 2.0
+				},
+				"sim_hz": 30,
+				"water_m": 0.12
+			},
+			"emerged_dry": true,
+			"fast_path_used": 1,
+			"gpu_input_exact": true,
+			"grid": 64,
+			"immutable_fields": true,
+			"max_errors": {
+				"momentum_x": 0.00000000122993610088273,
+				"momentum_z": 0.000000000614968050441367,
+				"sediment": 0.000000000178813935880484,
+				"water": 0.0000000950832342583308
+			},
+			"pass": true,
+			"published": true,
+			"receipt": {
+				"actual_sand_m3": 0.479999989271164,
+				"applied_tick": 0,
+				"capacity_status": 0,
+				"clamp_count": 0,
+				"command_id": 1,
+				"dirty_mask": [
+					15,
+					0
+				],
+				"dirty_rect": "[P: (26, 26), S: (12, 12)]",
+				"displaced_water_m3": 0.121121726930141,
+				"edited_cells": 112,
+				"error_code": 0,
+				"generation": 6,
+				"impulse_x_m3_s": 0.0,
+				"impulse_x_m4_s": 0.0,
+				"impulse_z_m3_s": 0.0,
+				"impulse_z_m4_s": 0.0,
+				"input_revision": 0,
+				"invalid_flags": 0,
+				"nominal_sand_m3": 0.479999989271164,
+				"ok": true,
+				"output_revision": 1,
+				"retained_water_m3": 0.0,
+				"status": 1,
+				"ticket_id": 5
+			},
+			"receipt_matches": true,
+			"right_pool_unchanged": true,
+			"sand_inventory_closed": true
+		},
+		{
+			"actual_sim_s": 0.1,
+			"case": "gap_rows_continue_3ticks",
+			"dry_momentum_zero": true,
+			"finite_nonnegative": true,
+			"grid": 64,
+			"max_substeps": 2,
+			"pass": true,
+			"scope": "existing water subsolver, erosion disabled",
+			"water_relative_error": 0.00000000157024512266688
+		},
+		{
+			"case": "one_cell_bridge",
+			"closure": {
+				"momentum_x": {
+					"budget": 0.000000250373417179282,
+					"dry_loss": 0.00000000158697366359206,
+					"error": 0.00000000886293127777549,
+					"unit": "m4/s"
+				},
+				"momentum_z": {
+					"budget": 0.000000127375748232007,
+					"dry_loss": -0.000000000793486831796031,
+					"error": 0.00000000443146563888774,
+					"unit": "m4/s"
+				},
+				"sediment": {
+					"budget": 0.0000001,
+					"dry_loss": 0.0,
+					"error": 0.00000000110786679829999,
+					"unit": "m3"
+				},
+				"water": {
+					"budget": 0.00000101711558089653,
+					"dry_loss": 0.0,
+					"error": 0.00000000861473381519318,
+					"unit": "m3"
+				}
+			},
+			"distribution": true,
+			"effective_profile": {
+				"boundary": "closed",
+				"cell_size_m": 0.125,
+				"erosion": false,
+				"flux": "initialized_zero",
+				"generation": 7,
+				"grid_size": 64,
+				"inventory_m3": 2.0,
+				"profile_id": "numeric_v1",
+				"sand_m": 0.0,
+				"seed": 101,
+				"setup_seed": {
+					"generation": 7,
+					"initial_field_sha256": {
+						"momentum_x": "f995b1fa16aab5a343731bb90549d5a8f977caf5ff1627f22b3d2e625f41421f",
+						"momentum_z": "7c47b952ac338868fae1ad477aadcdc51f647bc6f7dc300720f8cc3b03f464e9",
+						"obstacle": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe",
+						"rock": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe",
+						"sand": "612d08da54122a8b28ca10e0b7695e253c881d0b78070302ae7c799e80f2f441",
+						"sediment": "d877d41f76698efec8ccb7cc915bc656d261facb65c034c606cc19a04a58fdb6",
+						"water": "8b3313196e8f6407ef8d19cb73604bafb3a40708d0c2cc19e2c9f16e6f38c35a"
+					},
+					"profile_scalar_fields_are_defaults": true,
+					"stock_m3": 2.0
+				},
+				"sim_hz": 30,
+				"water_m": 0.12
+			},
+			"emerged_dry": true,
+			"fast_path_used": 1,
+			"gpu_input_exact": true,
+			"grid": 64,
+			"immutable_fields": true,
+			"max_errors": {
+				"momentum_x": 0.00000000122993610088273,
+				"momentum_z": 0.000000000614968050441367,
+				"sediment": 0.000000000178813935880484,
+				"water": 0.0000000962000320792189
+			},
+			"pass": true,
+			"published": true,
+			"receipt": {
+				"actual_sand_m3": 0.479999989271164,
+				"applied_tick": 0,
+				"capacity_status": 0,
+				"clamp_count": 0,
+				"command_id": 1,
+				"dirty_mask": [
+					15,
+					0
+				],
+				"dirty_rect": "[P: (26, 26), S: (12, 12)]",
+				"displaced_water_m3": 0.163788005709648,
+				"edited_cells": 112,
+				"error_code": 0,
+				"generation": 7,
+				"impulse_x_m3_s": 0.0,
+				"impulse_x_m4_s": 0.0,
+				"impulse_z_m3_s": 0.0,
+				"impulse_z_m4_s": 0.0,
+				"input_revision": 0,
+				"invalid_flags": 0,
+				"nominal_sand_m3": 0.479999989271164,
+				"ok": true,
+				"output_revision": 1,
+				"retained_water_m3": 0.0,
+				"status": 1,
+				"ticket_id": 6
+			},
+			"receipt_matches": true,
+			"right_pool_unchanged": true,
+			"sand_inventory_closed": true
+		},
+		{
+			"actual_sim_s": 0.1,
+			"case": "one_cell_bridge_continue_3ticks",
+			"dry_momentum_zero": true,
+			"finite_nonnegative": true,
+			"grid": 64,
+			"max_substeps": 2,
+			"pass": true,
+			"scope": "existing water subsolver, erosion disabled",
+			"water_relative_error": 0.000000000564324223304573
+		},
+		{
+			"case": "natural_snapshot",
+			"closure": {
+				"momentum_x": {
+					"budget": 0.0000001,
+					"dry_loss": -0.00000000000000000645933925250206,
+					"error": 0.00000000000671107613925415,
+					"unit": "m4/s"
+				},
+				"momentum_z": {
+					"budget": 0.0000001,
+					"dry_loss": -0.0000000000000000125744017981565,
+					"error": 0.0000000000166414334298436,
+					"unit": "m4/s"
+				},
+				"sediment": {
+					"budget": 0.0000001,
+					"dry_loss": 0.0,
+					"error": 0.00000000000332040352244573,
+					"unit": "m3"
+				},
+				"water": {
+					"budget": 0.00000169047278527446,
+					"dry_loss": 0.0,
+					"error": 0.00000000602449290454388,
+					"unit": "m3"
+				}
+			},
+			"distribution": true,
+			"effective_profile": {
+				"boundary": "closed",
+				"cell_size_m": 0.125,
+				"erosion": false,
+				"flux": "initialized_zero",
+				"generation": 8,
+				"grid_size": 64,
+				"inventory_m3": 2.0,
+				"profile_id": "numeric_v1",
+				"sand_m": 0.0,
+				"seed": 101,
+				"setup_seed": {
+					"generation": 8,
+					"initial_field_sha256": {
+						"momentum_x": "c8577b821c0e9fb54d3fe90fa861d297cb4b04bf7022ef33d1f49a14a9a54556",
+						"momentum_z": "a5147897c98e8c064ce604f8ea71bc51073ba4a01069fb1c2b18e13b526e9f4b",
+						"obstacle": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe",
+						"rock": "ec2a8ce1aca852111e7a99a08ffcbc4e99c4f440247bcd8c1f66a09c477ba30a",
+						"sand": "8973af72a6fa9534bf7284a8a31949977dde604cadf9957f1d9bbf9bf8f26ccd",
+						"sediment": "66487245833a523ad49b24814f3531bf360ea6dbed376d1d38aaf0158624da35",
+						"water": "345b8fb46324cd65aff23af336ab1b43522b7621d303c2d2d73932247a6ad568"
+					},
+					"profile_scalar_fields_are_defaults": true,
+					"stock_m3": 2.0
+				},
+				"sim_hz": 30,
+				"water_m": 0.12
+			},
+			"emerged_dry": true,
+			"fast_path_used": 1,
+			"gpu_input_exact": true,
+			"grid": 64,
+			"immutable_fields": true,
+			"max_errors": {
+				"momentum_x": 0.00000000000200164884667231,
+				"momentum_z": 0.0000000000116885146310072,
+				"sediment": 0.00000000000101899543490658,
+				"water": 0.000000480248022127761
+			},
+			"pass": true,
+			"published": true,
+			"receipt": {
+				"actual_sand_m3": 0.480000019073486,
+				"applied_tick": 0,
+				"capacity_status": 0,
+				"clamp_count": 0,
+				"command_id": 1,
+				"dirty_mask": [
+					15,
+					0
+				],
+				"dirty_rect": "[P: (26, 26), S: (12, 12)]",
+				"displaced_water_m3": 0.138383582234383,
+				"edited_cells": 112,
+				"error_code": 0,
+				"generation": 8,
+				"impulse_x_m3_s": 0.0,
+				"impulse_x_m4_s": 0.0,
+				"impulse_z_m3_s": 0.0,
+				"impulse_z_m4_s": 0.0,
+				"input_revision": 0,
+				"invalid_flags": 0,
+				"nominal_sand_m3": 0.479999989271164,
+				"ok": true,
+				"output_revision": 1,
+				"retained_water_m3": 0.0,
+				"status": 1,
+				"ticket_id": 7
+			},
+			"receipt_matches": true,
+			"right_pool_unchanged": true,
+			"sand_inventory_closed": true
+		},
+		{
+			"actual_sim_s": 0.1,
+			"case": "natural_snapshot_continue_3ticks",
+			"dry_momentum_zero": true,
+			"finite_nonnegative": true,
+			"grid": 64,
+			"max_substeps": 2,
+			"pass": true,
+			"scope": "existing water subsolver, erosion disabled",
+			"water_relative_error": 0.00000000218952934187012
+		},
+		{
+			"case": "coast_holes",
+			"closure": {
+				"momentum_x": {
+					"budget": 0.00000287753943506787,
+					"dry_loss": 0.00000000357627882863198,
+					"error": 0.000000120136828485329,
+					"unit": "m4/s"
+				},
+				"momentum_z": {
+					"budget": 0.00000144004581332207,
+					"dry_loss": -0.00000000178813941431599,
+					"error": 0.0000000600684142426644,
+					"unit": "m4/s"
+				},
+				"sediment": {
+					"budget": 0.000000367511453330517,
+					"dry_loss": 0.0,
+					"error": 0.0000000150171004520416,
+					"unit": "m3"
+				},
+				"water": {
+					"budget": 0.0000115276056887204,
+					"dry_loss": 0.0,
+					"error": 0.00000000942964106798172,
+					"unit": "m3"
+				}
+			},
+			"distribution": true,
+			"effective_profile": {
+				"boundary": "closed",
+				"cell_size_m": 0.125,
+				"erosion": false,
+				"flux": "initialized_zero",
+				"generation": 2,
+				"grid_size": 256,
+				"inventory_m3": 2.0,
+				"profile_id": "brush_v1",
+				"sand_m": 0.4,
+				"seed": 101,
+				"setup_seed": {
+					"generation": 2,
+					"initial_field_sha256": {
+						"momentum_x": "a2cca1922546e8b68e8fc4191a18e45130770ae550f226c8836eed9fd986c51d",
+						"momentum_z": "0b006ecb7dc7f6a00ece84948b013a9eedc7229cec7a0193c99d5fe4480d9180",
+						"obstacle": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+						"rock": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+						"sand": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e",
+						"sediment": "0793044c9de71bbf83769308de6c5f4b6072d16473a6a1df6ee31edd2fb11cfc",
+						"water": "b1a0279c99efc6b86e89d223e79703388892bd1260c9b45b057d3ba03742b7db"
+					},
+					"profile_scalar_fields_are_defaults": true,
+					"stock_m3": 2.0
+				},
+				"sim_hz": 30,
+				"water_m": 0.12
+			},
+			"emerged_dry": true,
+			"fast_path_used": 1,
+			"gpu_input_exact": true,
+			"grid": 256,
+			"immutable_fields": true,
+			"max_errors": {
+				"momentum_x": 0.00000000360468179610995,
+				"momentum_z": 0.00000000180234089805498,
+				"sediment": 0.000000000450585224513744,
+				"water": 0.0000000960478076239557
+			},
+			"pass": true,
+			"published": true,
+			"receipt": {
+				"actual_sand_m3": 0.479999989271164,
+				"applied_tick": 0,
+				"capacity_status": 0,
+				"clamp_count": 0,
+				"command_id": 1,
+				"dirty_mask": [
+					402653184,
+					24
+				],
+				"dirty_rect": "[P: (122, 122), S: (12, 12)]",
+				"displaced_water_m3": 0.182686313986778,
+				"edited_cells": 112,
+				"error_code": 0,
+				"generation": 2,
+				"impulse_x_m3_s": 0.0,
+				"impulse_x_m4_s": 0.0,
+				"impulse_z_m3_s": 0.0,
+				"impulse_z_m4_s": 0.0,
+				"input_revision": 0,
+				"invalid_flags": 0,
+				"nominal_sand_m3": 0.479999989271164,
+				"ok": true,
+				"output_revision": 1,
+				"retained_water_m3": 0.0000000149011611938477,
+				"status": 1,
+				"ticket_id": 1
+			},
+			"receipt_matches": true,
+			"right_pool_unchanged": true,
+			"sand_inventory_closed": true
+		},
+		{
+			"actual_sim_s": 0.1,
+			"case": "coast_holes_continue_3ticks",
+			"dry_momentum_zero": true,
+			"finite_nonnegative": true,
+			"grid": 256,
+			"max_substeps": 2,
+			"pass": true,
+			"scope": "existing water subsolver, erosion disabled",
+			"water_relative_error": 0.000000000211473657214455
+		},
+		{
+			"case": "island_pool",
+			"closure": {
+				"momentum_x": {
+					"budget": 0.00000303586568504416,
+					"dry_loss": 0.00000000357627882863198,
+					"error": 0.000000120136828485329,
+					"unit": "m4/s"
+				},
+				"momentum_z": {
+					"budget": 0.00000151920823216438,
+					"dry_loss": -0.00000000178813941431599,
+					"error": 0.0000000600684142426644,
+					"unit": "m4/s"
+				},
+				"sediment": {
+					"budget": 0.000000387302058041096,
+					"dry_loss": 0.0,
+					"error": 0.0000000150171004520416,
+					"unit": "m3"
+				},
+				"water": {
+					"budget": 0.0000121609121009286,
+					"dry_loss": 0.0,
+					"error": 0.00000000942964106798172,
+					"unit": "m3"
+				}
+			},
+			"distribution": true,
+			"effective_profile": {
+				"boundary": "closed",
+				"cell_size_m": 0.125,
+				"erosion": false,
+				"flux": "initialized_zero",
+				"generation": 3,
+				"grid_size": 256,
+				"inventory_m3": 2.0,
+				"profile_id": "brush_v1",
+				"sand_m": 0.4,
+				"seed": 101,
+				"setup_seed": {
+					"generation": 3,
+					"initial_field_sha256": {
+						"momentum_x": "63f4f1f58def381c660dd7ec944816dc154311baa7eb72df80238e42edca7f09",
+						"momentum_z": "0607bab7dcbe5dde28599eb90d8ee5e5f8cea0d59c9c3c50c516efaf1aca6579",
+						"obstacle": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+						"rock": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+						"sand": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e",
+						"sediment": "58868b404eca3e0cb42f794790c6048ddfdf67a9788175e0376feb758a83480c",
+						"water": "b8b591f8a9ef35e099a4b591781ad819bc17f1c407c0701c0e4471795dcab3a5"
+					},
+					"profile_scalar_fields_are_defaults": true,
+					"stock_m3": 2.0
+				},
+				"sim_hz": 30,
+				"water_m": 0.12
+			},
+			"emerged_dry": true,
+			"fast_path_used": 1,
+			"gpu_input_exact": true,
+			"grid": 256,
+			"immutable_fields": true,
+			"max_errors": {
+				"momentum_x": 0.00000000360468179610995,
+				"momentum_z": 0.00000000180234089805498,
+				"sediment": 0.000000000450585224513744,
+				"water": 0.0000000960478076239557
+			},
+			"pass": true,
+			"published": true,
+			"receipt": {
+				"actual_sand_m3": 0.479999989271164,
+				"applied_tick": 0,
+				"capacity_status": 0,
+				"clamp_count": 0,
+				"command_id": 1,
+				"dirty_mask": [
+					402653184,
+					24
+				],
+				"dirty_rect": "[P: (122, 122), S: (12, 12)]",
+				"displaced_water_m3": 0.182686313986778,
+				"edited_cells": 112,
+				"error_code": 0,
+				"generation": 3,
+				"impulse_x_m3_s": 0.0,
+				"impulse_x_m4_s": 0.0,
+				"impulse_z_m3_s": 0.0,
+				"impulse_z_m4_s": 0.0,
+				"input_revision": 0,
+				"invalid_flags": 0,
+				"nominal_sand_m3": 0.479999989271164,
+				"ok": true,
+				"output_revision": 1,
+				"retained_water_m3": 0.0000000149011611938477,
+				"status": 1,
+				"ticket_id": 2
+			},
+			"receipt_matches": true,
+			"right_pool_unchanged": true,
+			"sand_inventory_closed": true
+		},
+		{
+			"actual_sim_s": 0.1,
+			"case": "island_pool_continue_3ticks",
+			"dry_momentum_zero": true,
+			"finite_nonnegative": true,
+			"grid": 256,
+			"max_substeps": 2,
+			"pass": true,
+			"scope": "existing water subsolver, erosion disabled",
+			"water_relative_error": 0.000000000196606002814661
+		},
+		{
+			"case": "diagonal_pools",
+			"closure": {
+				"momentum_x": {
+					"budget": 0.0000019173486328125,
+					"dry_loss": 0.00000000178813941431599,
+					"error": 0.000000151574640838703,
+					"unit": "m4/s"
+				},
+				"momentum_z": {
+					"budget": 0.00000096367431640625,
+					"dry_loss": -0.000000000894069707157996,
+					"error": 0.0000000757873204193515,
+					"unit": "m4/s"
+				},
+				"sediment": {
+					"budget": 0.000000248418579101563,
+					"dry_loss": 0.0,
+					"error": 0.0000000189468316591501,
+					"unit": "m3"
+				},
+				"water": {
+					"budget": 0.00000767299287223031,
+					"dry_loss": 0.0,
+					"error": 0.0000000188592821359634,
+					"unit": "m3"
+				}
+			},
+			"distribution": true,
+			"effective_profile": {
+				"boundary": "closed",
+				"cell_size_m": 0.125,
+				"erosion": false,
+				"flux": "initialized_zero",
+				"generation": 4,
+				"grid_size": 256,
+				"inventory_m3": 2.0,
+				"profile_id": "brush_v1",
+				"sand_m": 0.4,
+				"seed": 101,
+				"setup_seed": {
+					"generation": 4,
+					"initial_field_sha256": {
+						"momentum_x": "2b6e71c69bc2207f278eb745997dce62294ea96701cb4a6b38533945bf31e63f",
+						"momentum_z": "a6b210da5130638b94b3663b1f0f1568fe39beea8838d1223d94736f6f26ba4d",
+						"obstacle": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+						"rock": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+						"sand": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e",
+						"sediment": "07b977347c25f92ae0b35de3bc38d5afbb6a24cb59f9e5c2fc725bb5456a9a50",
+						"water": "fc98bc8d865e7adeb6f26c34e887dd2a879f9819ff5d79a2506f893ad001b5ce"
+					},
+					"profile_scalar_fields_are_defaults": true,
+					"stock_m3": 2.0
+				},
+				"sim_hz": 30,
+				"water_m": 0.12
+			},
+			"emerged_dry": true,
+			"fast_path_used": 1,
+			"gpu_input_exact": true,
+			"grid": 256,
+			"immutable_fields": true,
+			"max_errors": {
+				"momentum_x": 0.00000000360468179610995,
+				"momentum_z": 0.00000000180234089805498,
+				"sediment": 0.000000000450585224513744,
+				"water": 0.0000000964585071261403
+			},
+			"pass": true,
+			"published": true,
+			"receipt": {
+				"actual_sand_m3": 0.479999989271164,
+				"applied_tick": 0,
+				"capacity_status": 0,
+				"clamp_count": 0,
+				"command_id": 1,
+				"dirty_mask": [
+					402653184,
+					24
+				],
+				"dirty_rect": "[P: (122, 122), S: (12, 12)]",
+				"displaced_water_m3": 0.0913431569933891,
+				"edited_cells": 112,
+				"error_code": 0,
+				"generation": 4,
+				"impulse_x_m3_s": 0.0,
+				"impulse_x_m4_s": 0.0,
+				"impulse_z_m3_s": 0.0,
+				"impulse_z_m4_s": 0.0,
+				"input_revision": 0,
+				"invalid_flags": 0,
+				"nominal_sand_m3": 0.479999989271164,
+				"ok": true,
+				"output_revision": 1,
+				"retained_water_m3": 0.00000000745058059692383,
+				"status": 1,
+				"ticket_id": 3
+			},
+			"receipt_matches": true,
+			"right_pool_unchanged": true,
+			"sand_inventory_closed": true
+		},
+		{
+			"actual_sim_s": 0.1,
+			"case": "diagonal_pools_continue_3ticks",
+			"dry_momentum_zero": true,
+			"finite_nonnegative": true,
+			"grid": 256,
+			"max_substeps": 2,
+			"pass": true,
+			"scope": "existing water subsolver, erosion disabled",
+			"water_relative_error": 0.000000000828604795905354
+		},
+		{
+			"case": "run_overflow",
+			"closure": {
+				"momentum_x": {
+					"budget": 0.0000019173486328125,
+					"dry_loss": 0.000000000894069707157996,
+					"error": 0.00000000280036971389563,
+					"unit": "m4/s"
+				},
+				"momentum_z": {
+					"budget": 0.00000096367431640625,
+					"dry_loss": -0.000000000447034853578998,
+					"error": 0.00000000140018485694782,
+					"unit": "m4/s"
+				},
+				"sediment": {
+					"budget": 0.000000248418579101563,
+					"dry_loss": 0.0,
+					"error": 0.000000000350047102415374,
+					"unit": "m3"
+				},
+				"water": {
+					"budget": 0.00000778661423605734,
+					"dry_loss": 0.0,
+					"error": 0.00000000884756445884705,
+					"unit": "m3"
+				}
+			},
+			"distribution": true,
+			"effective_profile": {
+				"boundary": "closed",
+				"cell_size_m": 0.125,
+				"erosion": false,
+				"flux": "initialized_zero",
+				"generation": 5,
+				"grid_size": 256,
+				"inventory_m3": 2.0,
+				"profile_id": "brush_v1",
+				"sand_m": 0.4,
+				"seed": 101,
+				"setup_seed": {
+					"generation": 5,
+					"initial_field_sha256": {
+						"momentum_x": "88b4a429e7e602a61f3909a8aa2ba8a0756589185ce77650fc3d91c9a2e3ab34",
+						"momentum_z": "9a3001026ff40c0ca8678da33308320241cee684c15e1f1f169a00386d4bec26",
+						"obstacle": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+						"rock": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+						"sand": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e",
+						"sediment": "7fc1e6531fe1730a15b8202f8bf5203c6ee32903f8e1c1b7cfa5541545f5d175",
+						"water": "05009b275af7be27961484b721d0ee11a1e9e9918081c750f4a24fbb89bf4015"
+					},
+					"profile_scalar_fields_are_defaults": true,
+					"stock_m3": 2.0
+				},
+				"sim_hz": 30,
+				"water_m": 0.12
+			},
+			"emerged_dry": true,
+			"fast_path_used": 0,
+			"gpu_input_exact": true,
+			"grid": 256,
+			"immutable_fields": true,
+			"max_errors": {
+				"momentum_x": 0.00000000122993610088273,
+				"momentum_z": 0.000000000614968050441367,
+				"sediment": 0.000000000178813935880484,
+				"water": 0.000000116827546498
+			},
+			"pass": true,
+			"published": true,
+			"receipt": {
+				"actual_sand_m3": 0.479999989271164,
+				"applied_tick": 0,
+				"capacity_status": 0,
+				"clamp_count": 0,
+				"command_id": 1,
+				"dirty_mask": [
+					402653184,
+					24
+				],
+				"dirty_rect": "[P: (122, 122), S: (12, 12)]",
+				"displaced_water_m3": 0.0913431644439697,
+				"edited_cells": 112,
+				"error_code": 0,
+				"generation": 5,
+				"impulse_x_m3_s": 0.0,
+				"impulse_x_m4_s": 0.0,
+				"impulse_z_m3_s": 0.0,
+				"impulse_z_m4_s": 0.0,
+				"input_revision": 0,
+				"invalid_flags": 0,
+				"nominal_sand_m3": 0.479999989271164,
+				"ok": true,
+				"output_revision": 1,
+				"retained_water_m3": 0.0,
+				"status": 1,
+				"ticket_id": 4
+			},
+			"receipt_matches": true,
+			"right_pool_unchanged": true,
+			"sand_inventory_closed": true
+		},
+		{
+			"actual_sim_s": 0.1,
+			"case": "run_overflow_continue_3ticks",
+			"dry_momentum_zero": true,
+			"finite_nonnegative": true,
+			"grid": 256,
+			"max_substeps": 2,
+			"pass": true,
+			"scope": "existing water subsolver, erosion disabled",
+			"water_relative_error": 0.00000000109505000109822
+		},
+		{
+			"case": "gap_rows",
+			"closure": {
+				"momentum_x": {
+					"budget": 0.00000378156696983239,
+					"dry_loss": 0.0000000011175871339475,
+					"error": 0.000000738498055596892,
+					"unit": "m4/s"
+				},
+				"momentum_z": {
+					"budget": 0.00000189499689102173,
+					"dry_loss": -0.000000000558793566973748,
+					"error": 0.000000369249027798446,
+					"unit": "m4/s"
+				},
+				"sediment": {
+					"budget": 0.000000481249222755432,
+					"dry_loss": 0.0,
+					"error": 0.0000000923122560614331,
+					"unit": "m3"
+				},
+				"water": {
+					"budget": 0.00001513784194919,
+					"dry_loss": 0.0,
+					"error": 0.000000000116415321826935,
+					"unit": "m3"
+				}
+			},
+			"distribution": true,
+			"effective_profile": {
+				"boundary": "closed",
+				"cell_size_m": 0.125,
+				"erosion": false,
+				"flux": "initialized_zero",
+				"generation": 6,
+				"grid_size": 256,
+				"inventory_m3": 2.0,
+				"profile_id": "brush_v1",
+				"sand_m": 0.4,
+				"seed": 101,
+				"setup_seed": {
+					"generation": 6,
+					"initial_field_sha256": {
+						"momentum_x": "f8b0a305bcf4998b75f1109f0a96a7e5b0c4d37fc4784e542b59f68dc551269f",
+						"momentum_z": "01aaa1ad6cfeea59ac1e1f84e8cc364e79c961bf473aca009cf3667d43ad2f3f",
+						"obstacle": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+						"rock": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+						"sand": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e",
+						"sediment": "1f3ebc0f4bb0d3c2fa495396991508dbe1e82e148e1074827ff262ed9cb25ff0",
+						"water": "563fc2384aa8c0c2b4778d27dde7dbfc2d613cc8559ff7bb8db1f6aa19c76303"
+					},
+					"profile_scalar_fields_are_defaults": true,
+					"stock_m3": 2.0
+				},
+				"sim_hz": 30,
+				"water_m": 0.12
+			},
+			"emerged_dry": true,
+			"fast_path_used": 1,
+			"gpu_input_exact": true,
+			"grid": 256,
+			"immutable_fields": true,
+			"max_errors": {
+				"momentum_x": 0.00000000122993610088273,
+				"momentum_z": 0.000000000614968050441367,
+				"sediment": 0.000000000178813935880484,
+				"water": 0.0000000939289931251031
+			},
+			"pass": true,
+			"published": true,
+			"receipt": {
+				"actual_sand_m3": 0.479999989271164,
+				"applied_tick": 0,
+				"capacity_status": 0,
+				"clamp_count": 0,
+				"command_id": 1,
+				"dirty_mask": [
+					402653184,
+					24
+				],
+				"dirty_rect": "[P: (122, 122), S: (12, 12)]",
+				"displaced_water_m3": 0.121121726930141,
+				"edited_cells": 112,
+				"error_code": 0,
+				"generation": 6,
+				"impulse_x_m3_s": 0.0,
+				"impulse_x_m4_s": 0.0,
+				"impulse_z_m3_s": 0.0,
+				"impulse_z_m4_s": 0.0,
+				"input_revision": 0,
+				"invalid_flags": 0,
+				"nominal_sand_m3": 0.479999989271164,
+				"ok": true,
+				"output_revision": 1,
+				"retained_water_m3": 0.0,
+				"status": 1,
+				"ticket_id": 5
+			},
+			"receipt_matches": true,
+			"right_pool_unchanged": true,
+			"sand_inventory_closed": true
+		},
+		{
+			"actual_sim_s": 0.1,
+			"case": "gap_rows_continue_3ticks",
+			"dry_momentum_zero": true,
+			"finite_nonnegative": true,
+			"grid": 256,
+			"max_substeps": 2,
+			"pass": true,
+			"scope": "existing water subsolver, erosion disabled",
+			"water_relative_error": 0.000000000636496520437919
+		},
+		{
+			"case": "one_cell_bridge",
+			"closure": {
+				"momentum_x": {
+					"budget": 0.00000381550464291042,
+					"dry_loss": 0.00000000158697366359206,
+					"error": 0.000000416751486653766,
+					"unit": "m4/s"
+				},
+				"momentum_z": {
+					"budget": 0.00000190992715604603,
+					"dry_loss": -0.000000000793486831796031,
+					"error": 0.000000208375743326883,
+					"unit": "m4/s"
+				},
+				"sediment": {
+					"budget": 0.000000484981789011508,
+					"dry_loss": 0.0,
+					"error": 0.0000000520939344994531,
+					"unit": "m3"
+				},
+				"water": {
+					"budget": 0.0000152776693978737,
+					"dry_loss": 0.0,
+					"error": 0.00000000977888703346252,
+					"unit": "m3"
+				}
+			},
+			"distribution": true,
+			"effective_profile": {
+				"boundary": "closed",
+				"cell_size_m": 0.125,
+				"erosion": false,
+				"flux": "initialized_zero",
+				"generation": 7,
+				"grid_size": 256,
+				"inventory_m3": 2.0,
+				"profile_id": "brush_v1",
+				"sand_m": 0.4,
+				"seed": 101,
+				"setup_seed": {
+					"generation": 7,
+					"initial_field_sha256": {
+						"momentum_x": "0a1ed4e7d4e3e70c6da035ee3790a2dc9dcaf38c04f4099a75a3bd0245f3138e",
+						"momentum_z": "e925c7a730a8a3263c3203becae1705e2f4027740da197f13fc2b77526f8d824",
+						"obstacle": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+						"rock": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+						"sand": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e",
+						"sediment": "ad76fe3c914db7229a45735bc899425c2dc14287cd1f52908661a6e5b534ac9c",
+						"water": "f138f164389590508385b789d02f8451c593c55db365b10c108e6c2f8400c11d"
+					},
+					"profile_scalar_fields_are_defaults": true,
+					"stock_m3": 2.0
+				},
+				"sim_hz": 30,
+				"water_m": 0.12
+			},
+			"emerged_dry": true,
+			"fast_path_used": 1,
+			"gpu_input_exact": true,
+			"grid": 256,
+			"immutable_fields": true,
+			"max_errors": {
+				"momentum_x": 0.00000000122993610088273,
+				"momentum_z": 0.000000000614968050441367,
+				"sediment": 0.000000000178813935880484,
+				"water": 0.0000000948076663703779
+			},
+			"pass": true,
+			"published": true,
+			"receipt": {
+				"actual_sand_m3": 0.479999989271164,
+				"applied_tick": 0,
+				"capacity_status": 0,
+				"clamp_count": 0,
+				"command_id": 1,
+				"dirty_mask": [
+					402653184,
+					24
+				],
+				"dirty_rect": "[P: (122, 122), S: (12, 12)]",
+				"displaced_water_m3": 0.163788005709648,
+				"edited_cells": 112,
+				"error_code": 0,
+				"generation": 7,
+				"impulse_x_m3_s": 0.0,
+				"impulse_x_m4_s": 0.0,
+				"impulse_z_m3_s": 0.0,
+				"impulse_z_m4_s": 0.0,
+				"input_revision": 0,
+				"invalid_flags": 0,
+				"nominal_sand_m3": 0.479999989271164,
+				"ok": true,
+				"output_revision": 1,
+				"retained_water_m3": 0.0,
+				"status": 1,
+				"ticket_id": 6
+			},
+			"receipt_matches": true,
+			"right_pool_unchanged": true,
+			"sand_inventory_closed": true
+		},
+		{
+			"actual_sim_s": 0.1,
+			"case": "one_cell_bridge_continue_3ticks",
+			"dry_momentum_zero": true,
+			"finite_nonnegative": true,
+			"grid": 256,
+			"max_substeps": 2,
+			"pass": true,
+			"scope": "existing water subsolver, erosion disabled",
+			"water_relative_error": 0.000000000922914950794752
+		},
+		{
+			"case": "natural_snapshot",
+			"closure": {
+				"momentum_x": {
+					"budget": 0.000000157693389071682,
+					"dry_loss": 0.000000000000232667129920067,
+					"error": 0.0000000000620909990090013,
+					"unit": "m4/s"
+				},
+				"momentum_z": {
+					"budget": 0.0000001,
+					"dry_loss": -0.000000000000220065488726849,
+					"error": 0.0000000000332043728450138,
+					"unit": "m4/s"
+				},
+				"sediment": {
+					"budget": 0.0000001,
+					"dry_loss": 0.0,
+					"error": 0.00000000000622145390760664,
+					"unit": "m3"
+				},
+				"water": {
+					"budget": 0.0000250865267052297,
+					"dry_loss": 0.0,
+					"error": 0.00000000701220415066928,
+					"unit": "m3"
+				}
+			},
+			"distribution": true,
+			"effective_profile": {
+				"boundary": "closed",
+				"cell_size_m": 0.125,
+				"erosion": false,
+				"flux": "initialized_zero",
+				"generation": 8,
+				"grid_size": 256,
+				"inventory_m3": 2.0,
+				"profile_id": "brush_v1",
+				"sand_m": 0.4,
+				"seed": 101,
+				"setup_seed": {
+					"generation": 8,
+					"initial_field_sha256": {
+						"momentum_x": "5882bfbc0122cac00939737fafcdfc58996d124591bdecb212307dfd42d40687",
+						"momentum_z": "e33a0e0754eef22f52d023439f54ca4993769a15588b28ca59e9b9d3c8617850",
+						"obstacle": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+						"rock": "e5bebff58c79121549c5d1fbd484f90280de59fb99e1940fd8d54502cce0ad6c",
+						"sand": "3670dd368323583bb800bf7c0bba96200b89fca8b57b7cab6537c85682d2b457",
+						"sediment": "c9c2e3e5875379797b9bfe6dff25ebbc1f4010ce74f8aa121e7ba9fd3f787bed",
+						"water": "e76df8fd02a671f02c1371a1db6413a2cc7ff5eeb7ba1ba33c64a799a279b5fc"
+					},
+					"profile_scalar_fields_are_defaults": true,
+					"stock_m3": 2.0
+				},
+				"sim_hz": 30,
+				"water_m": 0.12
+			},
+			"emerged_dry": true,
+			"fast_path_used": 1,
+			"gpu_input_exact": true,
+			"grid": 256,
+			"immutable_fields": true,
+			"max_errors": {
+				"momentum_x": 0.000000000000976399516794402,
+				"momentum_z": 0.000000000000625936965020085,
+				"sediment": 0.000000000000107256854764946,
+				"water": 0.000000506490820173511
+			},
+			"pass": true,
+			"published": true,
+			"receipt": {
+				"actual_sand_m3": 0.479999989271164,
+				"applied_tick": 0,
+				"capacity_status": 0,
+				"clamp_count": 0,
+				"command_id": 1,
+				"dirty_mask": [
+					402653184,
+					24
+				],
+				"dirty_rect": "[P: (122, 122), S: (12, 12)]",
+				"displaced_water_m3": 0.213651731610298,
+				"edited_cells": 112,
+				"error_code": 0,
+				"generation": 8,
+				"impulse_x_m3_s": 0.0,
+				"impulse_x_m4_s": 0.0,
+				"impulse_z_m3_s": 0.0,
+				"impulse_z_m4_s": 0.0,
+				"input_revision": 0,
+				"invalid_flags": 0,
+				"nominal_sand_m3": 0.479999989271164,
+				"ok": true,
+				"output_revision": 1,
+				"retained_water_m3": 0.0000000149011611938477,
+				"status": 1,
+				"ticket_id": 7
+			},
+			"receipt_matches": true,
+			"right_pool_unchanged": true,
+			"sand_inventory_closed": true
+		},
+		{
+			"actual_sim_s": 0.1,
+			"case": "natural_snapshot_continue_3ticks",
+			"dry_momentum_zero": true,
+			"finite_nonnegative": true,
+			"grid": 256,
+			"max_substeps": 2,
+			"pass": true,
+			"scope": "existing water subsolver, erosion disabled",
+			"water_relative_error": 0.00000000109583035824647
+		}
+	],
+	"scope": "native C topology and 3 tick continuation; original CPU oracle and binary baseline comparison; no performance"
+}

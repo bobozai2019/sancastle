@@ -1,0 +1,47 @@
+{
+  "cpu": "D:\\godot\\project\\sandcastle\\task\\sandcastle_gpu_edit_validation\\evidence\\20261011_164525_beach_cost_cpu_B0",
+  "gpu": "D:\\godot\\project\\sandcastle\\task\\sandcastle_gpu_edit_validation\\evidence\\20261011_164621_beach_cost_gpu_B0",
+  "states": {
+    "initial_rock.bin": true,
+    "initial_sand.bin": true,
+    "initial_water.bin": true,
+    "initial_momentum_x.bin": true,
+    "initial_momentum_z.bin": true,
+    "initial_sediment.bin": true,
+    "initial_wetness.bin": true,
+    "initial_compaction.bin": true,
+    "initial_obstacle.bin": true,
+    "initial_flux.bin": true,
+    "warm_rock.bin": true,
+    "warm_sand.bin": false,
+    "warm_water.bin": false,
+    "warm_momentum_x.bin": false,
+    "warm_momentum_z.bin": false,
+    "warm_sediment.bin": false,
+    "warm_wetness.bin": true,
+    "warm_compaction.bin": true,
+    "warm_obstacle.bin": true,
+    "warm_flux.bin": false
+  },
+  "configuration": {
+    "policy": true,
+    "warmup_s": true,
+    "warm_ticks": true,
+    "initial_tick": true,
+    "trace_version": true,
+    "seconds": true,
+    "window_size": true,
+    "vsync": true,
+    "engine": true,
+    "adapter": true,
+    "wave_count": true,
+    "erosion": true
+  },
+  "same_nominal_inputs": true,
+  "input_count": [
+    75,
+    75
+  ],
+  "scope": "current fields at initialization and warm completed state; nominal inputs exclude actual consumption tick; does not prove all runtime state or continued CPU/GPU numerical equivalence",
+  "pair_valid": false
+}

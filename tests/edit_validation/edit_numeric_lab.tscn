@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://tests/edit_validation/edit_lab.gd" id="1"]
+[ext_resource type="Resource" path="res://tests/edit_validation/numeric_profile.tres" id="2"]
+[ext_resource type="Shader" path="res://tests/edit_validation/lab_surface.gdshader" id="3"]
+[ext_resource type="PackedScene" path="res://scenes/gpu_collision_proxy.tscn" id="4"]
+
+[sub_resource type="PlaneMesh" id="Mesh"]
+size = Vector2(8, 8)
+subdivide_width = 63
+subdivide_depth = 63
+
+[sub_resource type="ShaderMaterial" id="SandMaterial"]
+resource_local_to_scene = true
+shader = ExtResource("3")
+
+[sub_resource type="ShaderMaterial" id="WaterMaterial"]
+resource_local_to_scene = true
+render_priority = 1
+shader = ExtResource("3")
+shader_parameter/is_water = true
+
+[sub_resource type="Environment" id="Environment"]
+background_mode = 1
+background_color = Color(0.18, 0.22, 0.27, 1)
+ambient_light_source = 3
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.6
+
+[node name="EditNumericLab" type="Node3D"]
+script = ExtResource("1")
+profile = ExtResource("2")
+
+[node name="Sand" type="MeshInstance3D" parent="."]
+mesh = SubResource("Mesh")
+material_override = SubResource("SandMaterial")
+custom_aabb = AABB(-4, -2, -4, 8, 10, 8)
+
+[node name="Water" type="MeshInstance3D" parent="."]
+mesh = SubResource("Mesh")
+material_override = SubResource("WaterMaterial")
+custom_aabb = AABB(-4, -2, -4, 8, 10, 8)
+
+[node name="Camera" type="Camera3D" parent="."]
+position = Vector3(0, 9.5, 11)
+rotation_degrees = Vector3(-40.8, 0, 0)
+projection = 1
+size = 10.0
+current = true
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+rotation_degrees = Vector3(-55, -30, 0)
+light_energy = 0.8
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment")
+
+[node name="CollisionProxy" parent="." instance=ExtResource("4")]

@@ -1,0 +1,69 @@
+{
+	"error": "",
+	"pass": true,
+	"rows": [
+		{
+			"case": "full_edited_anchor",
+			"pass": true
+		},
+		{
+			"case": "actual_metadata_close",
+			"error": "closed_after_restore_commit",
+			"observed": {
+				"accepting": false,
+				"at_us": 19474586,
+				"candidate_pending": 0,
+				"generation": 2,
+				"new_staged_buffer_live": true,
+				"old_released": false,
+				"old_staged_buffer_live": true,
+				"phase": "metadata_committed",
+				"ready": false,
+				"stage": "metadata",
+				"tick": 17
+			},
+			"pass": true,
+			"release_us": 19527083
+		},
+		{
+			"case": "actual_published_close",
+			"error": "closed_after_restore_commit",
+			"observed": {
+				"accepting": false,
+				"at_us": 27356891,
+				"candidate_pending": 0,
+				"generation": 2,
+				"new_staged_buffer_live": true,
+				"old_released": true,
+				"old_staged_buffer_live": false,
+				"phase": "published",
+				"ready": false,
+				"stage": "published",
+				"tick": 17
+			},
+			"pass": true,
+			"release_us": 27404313
+		},
+		{
+			"case": "actual_collision_close",
+			"error": "closed_after_restore_commit",
+			"observed": {
+				"accepting": false,
+				"at_us": 35085276,
+				"candidate_pending": 0,
+				"collision_exact": true,
+				"generation": 2,
+				"new_staged_buffer_live": true,
+				"old_released": true,
+				"old_staged_buffer_live": false,
+				"phase": "published",
+				"ready": false,
+				"stage": "collision",
+				"tick": 17
+			},
+			"pass": true,
+			"release_us": 35146332
+		}
+	],
+	"scope": "actual metadata/publication/collision boundaries during full beach restore close"
+}

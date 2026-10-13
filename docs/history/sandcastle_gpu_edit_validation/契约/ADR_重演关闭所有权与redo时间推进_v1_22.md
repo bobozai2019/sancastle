@@ -1,0 +1,9 @@
+# ADR v1.22：重演关闭所有权与 redo 时间推进
+
+2026-10-11。numeric候选，G4未放行。
+
+主域关闭时停止重演，等待当前临时worker的真实state/CFL/receipt及碰撞所有权归还，再释放worker和主域。已经开始关闭的worker仍须等待render_done，不能仅因closed标志就queue_free。异步步进后检查主域关闭、worker有效性和closed状态，避免继续访问即将释放的节点。观察信号默认关闭；销毁记录保留实际pending计数与callback/release时间，不推断GPU执行时长。
+
+对于带replay_target/checkpoint的跨tick redo，允许当前tick大于存档目标tick。先严格重演核对当前分支；目标prefix重演至存档tick，十原始字段hash及精确账本必须匹配，之后才推进至当前tick并提交。当前表现时钟不倒退，不把旧snapshot直接搬到新tick，也不省略中间物理演化。
+
+该推进暂仅支持有目标字段校验的重演redo记录；快速同tick redo记录随后跨时间的回退仍未实现，不能据此宣称所有redo时间边界已完成。完整沙滩history和T06仍待完成。

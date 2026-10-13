@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/experiments/approx_gpu_edit/trial_profile.gd" id="1_profile"]
+
+[resource]
+script = ExtResource("1_profile")
+reference_height_m = 0.0
+radius_m = 0.3
+dig_amount_m3 = 0.015
+fill_amount_m3 = 0.015
+water_mode = 2
+diagnostics = false

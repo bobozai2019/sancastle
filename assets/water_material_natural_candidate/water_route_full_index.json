@@ -1,0 +1,33 @@
+{
+  "source": "D:\\godot\\project\\sandcastle\\assets\\water_material_natural_candidate\\water_height.gdshader",
+  "source_sha256": "f7f9108fde01ee288349a2fdde9d57a003e457b25fc7cbea666f484d58ba151d",
+  "generated": "D:\\godot\\project\\sandcastle\\assets\\water_material_natural_candidate\\water_route_specialized.gdshader",
+  "generated_sha256": "7a225ea82c286b8d8be53f116a96e701b2773a7da25b6a8579ba6a7359789b2d",
+  "constants": {
+    "display_reconstruction": true,
+    "radial_shore": false,
+    "midpoint_clip": false,
+    "prototype_shore_unscaled_depth": false,
+    "prototype_shore_linear_weights": false,
+    "prototype_shared_bed_triangles": false,
+    "prototype_use_local_front": true,
+    "prototype_crest_span_smoothing": false,
+    "prototype_crest_depth_gate_bypass": false,
+    "prototype_broad_crest": false,
+    "prototype_rise_crest": false,
+    "prototype_use_front_field": false,
+    "prototype_curl_forward_m": 0.0,
+    "prototype_local_overturn_m": 0.0,
+    "natural_normal_mode": 2,
+    "natural_path_mode": 1,
+    "natural_path_unrefracted": true,
+    "natural_reflection_srgb": true,
+    "natural_reflection_flip_y": true,
+    "natural_reflection_protected": true
+  },
+  "composed_indices": [
+    "D:\\godot\\project\\sandcastle\\assets\\water_material_natural_candidate\\water_geometry_specialized_index.json",
+    "D:\\godot\\project\\sandcastle\\assets\\water_material_natural_candidate\\water_route_specialized_index.json"
+  ],
+  "scope": "Geometry14 + representation6 exact fixed constants; all twenty must match actual/default. Candidate NOT formally selected."
+}

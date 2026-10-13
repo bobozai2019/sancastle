@@ -1,0 +1,222 @@
+[
+  {
+    "path": "beach_cost_probe.json",
+    "size": 423,
+    "sha256": "f3d8c9bafe6ab54196f6065377f569fa5653ce751ad9c8c31a5f26ed2e1a383f"
+  },
+  {
+    "path": "closed.json",
+    "size": 33,
+    "sha256": "81f50ce802bf242a22974f6019f27f21784e6e666586f0623b3cbd84afab4729"
+  },
+  {
+    "path": "cost_analysis.json",
+    "size": 5521,
+    "sha256": "d289ce5d29723280ea20f7415194b82443ababcc6eec2ea33ca761cff2eb1fbc"
+  },
+  {
+    "path": "cost_trace.jsonl",
+    "size": 315659,
+    "sha256": "8350262eddfea9a1a9e04bd35a9d7f877ec364f3aa0612b0a220fa60df403278"
+  },
+  {
+    "path": "dump_window_alignment.json",
+    "size": 1365,
+    "sha256": "4be9616363ab7611681779cd97fc0ed409d766c5e05f8478fde80c30aa417318"
+  },
+  {
+    "path": "godot.log",
+    "size": 640,
+    "sha256": "70d8f042ea8fbc5fcf7187464c90efaec2c49237782c50a2f396c748f3c3a7fc"
+  },
+  {
+    "path": "hardware.json",
+    "size": 632,
+    "sha256": "2a3fc0aaa231a5c0cfe5535d47b1b07d314cdc28ab6a7c92fe18c8b1a05ebb3e"
+  },
+  {
+    "path": "initial_compaction.bin",
+    "size": 131072,
+    "sha256": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de"
+  },
+  {
+    "path": "initial_flux.bin",
+    "size": 1048576,
+    "sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+  },
+  {
+    "path": "initial_momentum_x.bin",
+    "size": 262144,
+    "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+  },
+  {
+    "path": "initial_momentum_z.bin",
+    "size": 262144,
+    "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+  },
+  {
+    "path": "initial_obstacle.bin",
+    "size": 65536,
+    "sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+  },
+  {
+    "path": "initial_rock.bin",
+    "size": 262144,
+    "sha256": "e5bebff58c79121549c5d1fbd484f90280de59fb99e1940fd8d54502cce0ad6c"
+  },
+  {
+    "path": "initial_sand.bin",
+    "size": 262144,
+    "sha256": "e4229dd131b89dc44a8f08df893d938028cda47737983b548d8e947cb2d0df74"
+  },
+  {
+    "path": "initial_sediment.bin",
+    "size": 262144,
+    "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+  },
+  {
+    "path": "initial_water.bin",
+    "size": 262144,
+    "sha256": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82"
+  },
+  {
+    "path": "initial_wetness.bin",
+    "size": 131072,
+    "sha256": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+  },
+  {
+    "path": "manifest.json",
+    "size": 92277,
+    "sha256": "dcfed6217aeb183cbd01d9e2cf0de40d3d90a7c17c5a6cf7ccfc5eb19ef3cefd"
+  },
+  {
+    "path": "native_frame_disassembly.json",
+    "size": 555642,
+    "sha256": "6cd353a26822b011ac125c182b1a8fffdc80122d48b8e3a497b716198ee61012"
+  },
+  {
+    "path": "native_heartbeat.bin",
+    "size": 16,
+    "sha256": "a29b2aa5c96777735b6f2ba6818b02f42240f9db488f316e47c72df9f74ff842"
+  },
+  {
+    "path": "native_negative_identity.dmp",
+    "size": 151782,
+    "sha256": "0352e35b495e514bd573313a685fe24e9d94626c6c86e796534335ee63171e8a"
+  },
+  {
+    "path": "native_negative_identity_unwind.json",
+    "size": 2413,
+    "sha256": "21166b6e85ea4486b193f435b711209ed39340bb1ebdc6106f88a7dd3b9daf3b"
+  },
+  {
+    "path": "native_negative_truncated_stack.dmp",
+    "size": 151782,
+    "sha256": "8ff5472d257ccd0dd6a5a244aca3da26d488f5f7164a6ffd00840b275fd7702e"
+  },
+  {
+    "path": "native_negative_truncated_stack_unwind.json",
+    "size": 1844,
+    "sha256": "9a5c5347b4177f97471e35e1cd27189dfb2de8fe79c6cfa0d4d246092c4cf0ce"
+  },
+  {
+    "path": "native_thread_contexts.json",
+    "size": 111634,
+    "sha256": "17808e0864dc479328c2adadf7af7cfccdc91ec1e2f83f20f55ddbfc433b7ddc"
+  },
+  {
+    "path": "native_unwind_verification.json",
+    "size": 4099,
+    "sha256": "ccc0077bf92b104ca6e07022225b96a365d10877190cb12441ff2046ecd6b90e"
+  },
+  {
+    "path": "native_unwind_verification_initial.json",
+    "size": 4101,
+    "sha256": "fdce7390455ab61c04e5d2ba01df99ce2a702019e7de645f86842fbb8933aa2d"
+  },
+  {
+    "path": "native_unwound_15016.json",
+    "size": 6563,
+    "sha256": "a6bbc88146b3736d9f1294e8c47b7dec1b597014646ab1d8d181f8f24e6e5def"
+  },
+  {
+    "path": "native_wait.dmp",
+    "size": 151782,
+    "sha256": "d72ad007860239e001fbcfeca5272a104875e7e5ef35b96c6984c332e3bf627f"
+  },
+  {
+    "path": "owner.json",
+    "size": 1186,
+    "sha256": "fd3c7906cebc3e553ab206ccc50ad566449ff0e56355451581d3bc9d7f670515"
+  },
+  {
+    "path": "process_cpu_samples.json",
+    "size": 1206580,
+    "sha256": "ead4f432498db4f8430cde0870b980082b68ff28b9c9765ad15257a8691c39fa"
+  },
+  {
+    "path": "progress.json",
+    "size": 79,
+    "sha256": "ba93c47a0d1f0ff721d4c41de91b5107fd013ea167d698d96d24c7daa9c09514"
+  },
+  {
+    "path": "sampler_error.log",
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "sampler_owner.json",
+    "size": 733,
+    "sha256": "5d79672de3f5bc7a8cc06b55154a2f94c81f278e41cab42fe13580dc5b34f1fd"
+  },
+  {
+    "path": "warm_compaction.bin",
+    "size": 131072,
+    "sha256": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de"
+  },
+  {
+    "path": "warm_flux.bin",
+    "size": 1048576,
+    "sha256": "54d741d8ad36721c63e8f146852d7e408577854ce0a895a45693bf2341e6ff90"
+  },
+  {
+    "path": "warm_momentum_x.bin",
+    "size": 262144,
+    "sha256": "b4ce17c7fd659600ee122ba025f85d4fa2bc739ae71a77c46e5f73ddf2e9826e"
+  },
+  {
+    "path": "warm_momentum_z.bin",
+    "size": 262144,
+    "sha256": "2fe3b983499b3e356b993895db43e1c113fa904fc58eaa94ec0333ddf4987489"
+  },
+  {
+    "path": "warm_obstacle.bin",
+    "size": 65536,
+    "sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+  },
+  {
+    "path": "warm_rock.bin",
+    "size": 262144,
+    "sha256": "e5bebff58c79121549c5d1fbd484f90280de59fb99e1940fd8d54502cce0ad6c"
+  },
+  {
+    "path": "warm_sand.bin",
+    "size": 262144,
+    "sha256": "ff135e548b4fdcd3a3d1bc55eeb2bb1268e34c7f7187ec09bcfcc120183091ee"
+  },
+  {
+    "path": "warm_sediment.bin",
+    "size": 262144,
+    "sha256": "e94d685c508c8309f3a5d8ea5353b65db7b09eb5199f45ea8eb6c7c76bbbc6e7"
+  },
+  {
+    "path": "warm_water.bin",
+    "size": 262144,
+    "sha256": "fa107e54d91541f7efd130941258b594576271474a6c95bacf88dee168c7ed35"
+  },
+  {
+    "path": "warm_wetness.bin",
+    "size": 131072,
+    "sha256": "4aacc07c687cfcce648b3ff45c6ab38cd7d7492e7b89c262a67028fb10fa1de8"
+  }
+]

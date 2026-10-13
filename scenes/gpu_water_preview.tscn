@@ -1,0 +1,66 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://scripts/demo/gpu_water_preview.gd" id="1_preview"]
+[ext_resource type="Shader" path="res://shaders/visual/gpu_terrain.gdshader" id="2_terrain"]
+[ext_resource type="Shader" path="res://shaders/visual/gpu_water.gdshader" id="3_water"]
+[ext_resource type="PackedScene" path="res://scenes/gpu_collision_proxy.tscn" id="4_collision"]
+[ext_resource type="PackedScene" path="res://scenes/brush_indicator.tscn" id="5_brush"]
+[ext_resource type="PackedScene" path="res://scenes/editor_scene_preview.tscn" id="6_preview"]
+
+[sub_resource type="Environment" id="Environment_gpu"]
+resource_local_to_scene = true
+background_mode = 1
+background_color = Color(0.73, 0.86, 0.93, 1)
+
+[sub_resource type="ShaderMaterial" id="Material_terrain"]
+resource_local_to_scene = true
+shader = ExtResource("2_terrain")
+
+[sub_resource type="ShaderMaterial" id="Material_water"]
+resource_local_to_scene = true
+shader = ExtResource("3_water")
+
+[node name="GpuWaterPreview" type="Node3D"]
+script = ExtResource("1_preview")
+
+[node name="EditorPreviewController" parent="." instance=ExtResource("6_preview")]
+
+[node name="GpuOverviewCamera" type="Camera3D" parent="."]
+position = Vector3(0, 38, 44)
+rotation = Vector3(-0.712357, 0, 0)
+current = true
+fov = 55.0
+
+[node name="GpuPlayerCamera" type="Camera3D" parent="."]
+position = Vector3(-6, 3.2, 7.5)
+rotation = Vector3(-0.300941, -0.872377, -0.230822)
+fov = 62.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_gpu")
+
+[node name="SandFixtureSun" type="DirectionalLight3D" parent="."]
+visible = false
+rotation_degrees = Vector3(-48, -31, 0)
+light_color = Color(1, 0.93, 0.82, 1)
+light_energy = 1.15
+
+[node name="GpuSandTerrain" type="MeshInstance3D" parent="."]
+material_override = SubResource("Material_terrain")
+custom_aabb = AABB(-16.1, -1, -16.1, 32.2, 3, 32.2)
+
+[node name="GpuWaterSurface" type="MeshInstance3D" parent="."]
+material_override = SubResource("Material_water")
+custom_aabb = AABB(-16.1, -1, -16.1, 32.2, 3, 32.2)
+
+[node name="GpuCollisionProxy" parent="." instance=ExtResource("4_collision")]
+
+[node name="BrushIndicator" parent="." instance=ExtResource("5_brush")]
+
+[node name="Interface" type="CanvasLayer" parent="."]
+
+[node name="StatusLabel" type="Label" parent="Interface"]
+offset_left = 18.0
+offset_top = 18.0
+theme_override_colors/font_color = Color(0.08, 0.12, 0.16, 1)
+theme_override_font_sizes/font_size = 18

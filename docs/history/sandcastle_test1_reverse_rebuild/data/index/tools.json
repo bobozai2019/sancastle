@@ -1,0 +1,30 @@
+{
+  "recorded_at": "2026-10-09T23:59:02.528446+08:00",
+  "environment": {
+    "os": "Windows-10-10.0.19045-SP0",
+    "python": "3.11.14",
+    "venv_python": "D:/godot/project/sandcastle/task/sandcastle_test1_reverse_rebuild/tools/.venv/Scripts/python.exe",
+    "venv_python_sha256": "aa036eebc90a3dcb4f47bcef2195ec3e2152bca85906941580b62925838f0c8c"
+  },
+  "unitypy": {
+    "version": "1.25.4",
+    "source": "PyPI via uv pip install UnityPy",
+    "probe_command": "D:/godot/project/sandcastle/task/sandcastle_test1_reverse_rebuild/tools/.venv/Scripts/python.exe D:/godot/project/sandcastle/task/sandcastle_test1_reverse_rebuild/tools/g01_unity_probe.py",
+    "probe_script_sha256": "de94ffdcc65f51767b1a1aacdb71295482b53dd3961be82e85dae4870490112c",
+    "probe_result": "object/raw/material/texture/shader/compute ok; sampled MonoBehaviour typetree failed",
+    "probe_evidence": "evidence/g01_unity_probe.json"
+  },
+  "renderdoc": {
+    "version": "1.46",
+    "commit": "e4bd23b671d3d5a747ff5221dbe08a63eb6ca200",
+    "source": "local installed RenderDoc",
+    "command_binary": "D:/other_software/RenderDoc/renderdoccmd.exe",
+    "command_sha256": "400cb013ea52b9baa818d69dc0a6341776d2a9560edad5bcc6e200fe8c03806d",
+    "gui_binary": "D:/other_software/RenderDoc/qrenderdoc.exe",
+    "gui_sha256": "c5e9d3f254d80a7649fbd9eae1c67618cb19278c603710370c220de469397277",
+    "probe_command": "D:/other_software/RenderDoc/qrenderdoc.exe --python D:/godot/project/sandcastle/task/sandcastle_test1_reverse_rebuild/tools/g01_rdc_probe.py",
+    "probe_script_sha256": "ad01cc19724235f11a3acf8b96f1028bb9054153bcc5bdeeb4b36c230ade8263",
+    "probe_result": "success",
+    "probe_evidence": "evidence/g01_rdc_probe.json"
+  }
+}

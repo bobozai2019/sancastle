@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "threshold_ms": 33.3,
+  "sources": {
+    "edits": {
+      "run_id": "release_edits_idle_60s",
+      "manifest_sha256": "9da6ce7c854c52af7013b962cfc22af6462155401f5bca77a8c0174d3df376f0",
+      "frames_sha256": "2284ce857e9788070e005a31a04a170778ec2e0f9de215b3c4882ab66580c0c0",
+      "requested_profile_sha256": "f07325a9eacbbfba293e2190107e2eb21982c60a638aef67980fad03f61d910a",
+      "edit_submit_ticks": [
+        357,
+        447,
+        537,
+        627,
+        717,
+        807,
+        897,
+        987,
+        1077,
+        1167,
+        1257,
+        1347,
+        1437,
+        1527,
+        1617,
+        1707,
+        1797,
+        1887,
+        1977,
+        2067
+      ],
+      "near_definition": "frame completed_tick is submit_tick or submit_tick+1",
+      "all": {
+        "frames": 3979,
+        "wall_p99_ms": 34.0,
+        "wall_max_ms": 79.878,
+        "frames_over_33_3_ms": 47
+      },
+      "near": {
+        "frames": 119,
+        "wall_p99_ms": 68.808,
+        "wall_max_ms": 79.878,
+        "frames_over_33_3_ms": 19
+      },
+      "far": {
+        "frames": 3860,
+        "wall_p99_ms": 30.564,
+        "wall_max_ms": 53.237,
+        "frames_over_33_3_ms": 28
+      }
+    },
+    "control": {
+      "run_id": "release_wave_idle_60s",
+      "manifest_sha256": "ee5d24815d1ac7986a40948c9afc0186e83099cbee5a318a637be682965f2a9f",
+      "frames_sha256": "db677f9b9a6479441ecdfc1ee4d8185783a62bf093bc3667fc794f2c61adb965",
+      "requested_profile_sha256": "f07325a9eacbbfba293e2190107e2eb21982c60a638aef67980fad03f61d910a",
+      "edit_submit_ticks": [],
+      "near_definition": "frame completed_tick is submit_tick or submit_tick+1",
+      "all": {
+        "frames": 3950,
+        "wall_p99_ms": 37.172,
+        "wall_max_ms": 58.621,
+        "frames_over_33_3_ms": 62
+      },
+      "near": null,
+      "far": {
+        "frames": 3950,
+        "wall_p99_ms": 37.172,
+        "wall_max_ms": 58.621,
+        "frames_over_33_3_ms": 62
+      }
+    }
+  },
+  "interpretation_limit": "Same-run association only; separate control run has different ambient timing."
+}

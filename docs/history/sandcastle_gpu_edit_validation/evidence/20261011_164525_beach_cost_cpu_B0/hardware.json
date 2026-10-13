@@ -1,0 +1,30 @@
+{
+  "resolution": "1920x1080",
+  "cpu": [
+    {
+      "Name": "Intel(R) Core(TM) i5-9300H CPU @ 2.40GHz",
+      "NumberOfCores": 4,
+      "NumberOfLogicalProcessors": 8
+    }
+  ],
+  "vsync": "off",
+  "os": [
+    {
+      "Caption": "Microsoft Windows 10 家庭中文版",
+      "Version": "10.0.19045"
+    }
+  ],
+  "backend": "d3d12",
+  "gpu": [
+    {
+      "Name": "NVIDIA GeForce GTX 1050",
+      "DriverVersion": "32.0.15.8183",
+      "AdapterRAM": 4293918720
+    },
+    {
+      "Name": "Intel(R) UHD Graphics 630",
+      "DriverVersion": "27.20.100.8476",
+      "AdapterRAM": 1073741824
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+"""GodotIQ MCP tool categories."""

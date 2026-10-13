@@ -1,0 +1,57 @@
+# Sandcastle 项目现状
+
+2026-10-13近似 GPU 编辑实验的可运行入口已迁至 [scenes/approx_gpu_edit.tscn](../scenes/approx_gpu_edit.tscn)，配套脚本、profile、网格和笔刷 shader 分别位于 `scripts/experiments/approx_gpu_edit/`、`assets/approx_gpu_edit/`、`shaders/experiments/approx_gpu_edit/`；`tests/experiments/approx_gpu_edit/` 保留复验探针。旧验收路径和 hash 均指迁移前内容。该入口仍是独立实验，不代替主场景权威模拟与保存恢复。
+
+2026-10-13已直接复核[三个可编辑场景的水材质与观感差异](场景切换与功能复用.md#水材质一致性与观感差异2026-10-13)：材质/固定参数/贴图一致，test1初态更深、流速和水面形状不同，默认机位也不同；30项冻结态核对通过，光学尺度和最终画面对齐尚未完成。
+
+2026-10-13 main新增[场景切换与功能复用](场景切换与功能复用.md)：主沙滩、test1捕帧沙床可编辑版、上滩回流可编辑适配版共享main挖填沙、库存、碰撞、相机、波浪、材质和保存恢复。切换自动保存并恢复本次运行各场景进度，等待在途操作；加载失败回退原场景。原512×256固定床面运动实验仍独立保留，可编辑版使用当前权威模拟与16秒项目水位曲线。
+
+2026-10-13新增[沙面物理构建与当前项目对比](competitor/沙面物理构建与当前项目对比.md)：以当前main实际接线比较GPU状态、分块碰撞、物理拾取和编辑完成等待；仅技术说明，暂停任务及性能判定不变。
+
+2026-10-12水体运动样片已按用户要求复用main的实际水、沙、细沫和岸脚材质、法线与3D焦散。增加512×256竞品水场到main显示契约的GPU转换；40实验秒回流退水、32实验秒循环、暂停/复位及光学负例通过，见[当前样片说明](水体运动_独立测试.md#当前版本复用-main-水沙材质)。这是优化现有水沙技术的对照入口；原作输入时序、显示精度/浪头形状和正式权威模拟接入仍待处理，旧母任务及成本判定不改变。
+
+2026-10-12新增[水体运动独立测试](水体运动_独立测试.md)：按test1实际水场床面与初始速度构建`scenes/test1_water_motion_trial.tscn`，解析并验证自由水面高差、量搬运、速度自平流与customWave海侧回设，已复现上滩→反向回流→退水。原作未来输入时序仍未知，试验时长为Godot适配；正式main水模拟及暂停的母任务保持原状态。
+
+固定方向玩法下的拾取简化、碰撞解耦、库存估算及局部水响应取舍见[sandcastle性能取舍分析](sandcastle性能取舍分析.md)。该文保留前置方案分析；2026-10-12已完成[独立近似GPU编辑实验](../task/sandcastle_approx_gpu_edit_trial/验收/README.md)的实现、功能与五分钟观察、CPU/GPU诊断和两组三对成本窗口。局部GPU成本改善有限定证据，整帧峰值和1–2帧真实反馈尚未解决；主场景未接入，旧性能失败不改判，test1母任务仍暂停。
+
+主场景现在提供挖沙/填沙量UI并默认启用自由相机，操作说明见[主场景操作](主场景操作.md)。
+
+主场景左下角已加入[性能面板](性能面板.md)，实时显示FPS、CPU/GPU耗时、模拟速度和GPU分阶段计时；可关闭采样或F6隐藏。它用于运行观察，不改变历史性能门槛和验收状态。
+
+水材质已按最新用户要求，在reference_v1基础上接入RDC材质适配：RGB分通道吸收透底、完整9级mip的三维焦散、流向/相位细法线、指数1500的窄高光与低俯视反射权重；静态Sun215、GPU堆挖v1.60/E3、自由相机及UI保留。三机位10模拟秒/暂停检查、干沙与前景负例、普通恢复及当前主场景12项功能回归通过，见[水材质RDC适配](水材质_RDC适配.md)。性能继续暂缓，旧成本FAIL与严格冷恢复未知保留。原正式fixed/coupled入口也已统一新材质，固定样片可运行scenes/sandcastle_test1_beach_fixed.tscn；原reference_v1与[旧整合验收](../task/sandcastle_water_material_natural/验收/T06_整合与回归.md)保留。assets/water_material_natural_candidate现是运行依赖，不可当临时内容删除。
+
+成果迁移：GPU堆挖专项的方案、契约、验收和关键摘要现位于[docs/history/sandcastle_gpu_edit_validation](history/sandcastle_gpu_edit_validation/README.md)，复验工具迁到tools/gpu_edit_validation；按用户要求不保留全量中间数据。主场景不依赖该task目录，可删除task/sandcastle_gpu_edit_validation。水材质自然感任务仍在执行，task/sandcastle_water_material_natural保持原位。
+
+最新收尾整合：用户授权将GPU堆挖方案整理到主场景，`scenes/main.tscn`已静态继承完整耦合沙滩，固定启用已验证v1.60/E3，普通保存恢复及入口功能十项验证通过。临时内容已按依赖标记待清理，尚未实际删除；性能工作仍停止、G5未完成。见[主场景整合与清理记录](history/sandcastle_gpu_edit_validation/主场景整合与临时清理.md)。下文尚未切换入口的描述是更早状态。
+
+竞品已知实现统一见[竞品技术知识](competitor/README.md)，包含沙/水/白沫渲染、GPU模拟与编辑、Readback、证据可用性及未知项；后续确认结论按[记录规范](competitor/记录规范.md)归档。
+
+2026-10-11 GPU堆挖专项已按用户要求结束执行，性能不再继续处理；完成度85.7%，G4只放行v1.60候选，G5未完成，正式默认入口未切换。最新候选22秒短测达到17.67次/秒、p99 60.60ms，仍缺完整候选恢复回归、同态正式成本和长稳。当前方案与留存问题见[专项收尾记录](history/sandcastle_gpu_edit_validation/收尾记录.md)。下文“已启动”是历史描述，母任务仍暂停。
+
+更新：2026-10-11。本文是当前状态入口；[当前项目技术方案](当前项目技术方案.md)说明实际架构与实现边界，[可复用技术契约](knowledge/README.md)保存仍有效的冻结接口，[分阶段执行计划 v1.1](Sandcastle_Godot水沙耦合_分阶段执行计划_v1.1.md)是早期规划，[调查报告](search/README.md)集中保存水中加沙与堆挖性能调查，[历史任务记录](history/README.md)保留各阶段原始判定。**test1 定向逆向母任务仍暂停，RG4 未通过；新的 [GPU 堆挖沙与水响应验证专项](history/sandcastle_gpu_edit_validation/执行状态.md)已启动，T00 基线与观测已冻结。**后续进度以专项执行状态为准；新专项尚未替换正式工具或水响应算法。
+
+## 已形成的项目能力
+
+- 已有 GPU 水沙耦合、堆沙/挖沙、潮水与侵蚀、湿度压实、局部支撑破坏、碰撞代理和检查点恢复。水沙耦合旧任务的 T00–T08 已完成，但其 Gate 4「无资源泄漏」当时未完全通过；旧结果不等于 test1 新目标通过。见[旧执行状态](history/sandcastle_water_sand_coupling/执行状态.md)。
+- 水沙视觉第二阶段的水体和沙体配置曾按其自身门槛完成 12/12；后续水体渲染对齐任务以 14/56 暂停，未达到最终视觉目标。这些结果分别见[第二阶段状态](history/sandcastle_visual_reconstruction_phase2/执行状态.md)和[水体对齐收尾](history/sandcastle_water_render_alignment/收尾说明.md)。
+- test1 定向任务完成资源取数与索引 RG1、证据分级与实现映射 RG2、固定沙滩样片 RG3，以及实时整合的小目标 P03 G04。正式场景为[固定沙滩](../scenes/sandcastle_test1_beach_fixed.tscn)和[实时耦合沙滩](../scenes/sandcastle_test1_beach_coupled.tscn)，资源与当前 profile 位于[assets/test1_beach](../assets/test1_beach/test1_beach_release.json)。最后任务判定为 **14/15，RG4 暂停且未通过**，见[收尾记录](history/sandcastle_test1_reverse_rebuild/收尾记录.md)及[RG4 验收](history/sandcastle_test1_reverse_rebuild/验收/RG4_实时沙滩与联合验收.md)。
+- 已记录的当前耦合入口验证覆盖三笔小体积堆挖、沙量库存闭合、碰撞与保存恢复、直接启动、三机位和无波/遮挡负例；一次 20 笔编辑反馈最大 60.818 ms，通过该次 100 ms 短反馈门。验证范围以[RG4 报告](history/sandcastle_test1_reverse_rebuild/验收/RG4_实时沙滩与联合验收.md)的输入、版本和证据为准。
+
+## 未完成和未知
+
+| 项目 | 当前判定 |
+|---|---|
+| 大块水中加沙的排水响应 | 当前旧求解器对平顶 20/80 cm 沙堆的排水响应饱和；正式物理尚未修复。局部水位移与守恒语义、障碍/沙形/撤销/恢复回归仍待决定和验证。[调查报告](search/underwater_deposit_report.md) |
+| 旧 S06 严格恢复差异 | 最近两轮严格脚本通过，历史间歇性逐位差异根因仍未知；不能以两轮通过抹掉旧失败。[收尾记录](history/sandcastle_test1_reverse_rebuild/收尾记录.md) |
+| 当前完整成本 | 同逻辑 60 秒、20 笔编辑测得 p99 36.937 ms、29.959 Hz，未过 33.3 ms / 30 Hz 门槛；跨负载冷首笔反馈稳定性未确认。性能工作按用户要求暂缓。[RG4 报告](history/sandcastle_test1_reverse_rebuild/验收/RG4_实时沙滩与联合验收.md) |
+| 原作动作时序与因果 | test41 捕帧证实一次 GPU 沙笔刷和两次专用水笔刷调用；捕帧不能给出真实动作耗时、秒级排水曲线或完整水量结算。[test41/test42 补充调查](search/edit_performance_test41_test42_v2.md) |
+
+因此，**非性能内容也尚未全部完成**；特别是大块水中加沙和旧 S06 风险。RG4 不因归档或性能暂缓而改判通过。
+
+## 目录迁移与验证边界
+
+2026-10-11 已把正式场景依赖的 shader、网格和 profile 从 `task/` 移至 `assets/test1_beach/`，把 432 份历史 Markdown、关键验收附件移至 `docs/history/`，并将测试输出改到 `test_output/`。固定参照图在 `tests/fixtures/visual_water_alignment/`。迁移详情和证据缺口见[历史归档说明](history/README.md)。`task/` 当前仍存放约 8.4 GiB 的原始取证与试验数据；若删除，未迁出的原始数据、索引配套内容和部分报告附件将失去本地复验条件。
+
+迁移后已检查场景与 profile 中的资源路径，Godot 编辑器扫描及两份正式场景的资源加载通过。无窗口运行在 GPU 求解器初始化处失败；**没有在迁移后重做可见窗口视觉、数值长稳或性能验收**。旧报告中的 `res://task/` 路径和 SHA256 对应迁移前文件；当前资源定位见[迁移清单](history/migration_manifest.json)。
+
+恢复开发时先确定保留的证据范围，核对当前文件和原始包/RDC 的 hash，再从上述未完成项选择目标；权威水沙、账本、碰撞及检查点契约见[状态与数据契约](knowledge/water_sand/状态与数据契约.md)。

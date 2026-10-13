@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3]
+[ext_resource type="PackedScene" path="res://tests/edit_validation/edit_feedback_lab.tscn" id="1"]
+[ext_resource type="Script" path="res://tests/edit_validation/interaction_lab_entry.gd" id="2"]
+[ext_resource type="Script" path="res://scripts/simulation/edit_validation/collision_proxy.gd" id="3"]
+[sub_resource type="PlaneMesh" id="CellCenteredMesh"]
+size = Vector2(31.875, 31.875)
+subdivide_width = 254
+subdivide_depth = 254
+[node name="EditInteractionLab" instance=ExtResource("1")]
+script = ExtResource("2")
+[node name="Sand" parent="." index="0"]
+mesh = SubResource("CellCenteredMesh")
+[node name="Water" parent="." index="1"]
+mesh = SubResource("CellCenteredMesh")
+[node name="CollisionProxy" parent="." index="5"]
+script = ExtResource("3")

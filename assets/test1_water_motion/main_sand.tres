@@ -1,0 +1,39 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://assets/water_material_natural_candidate/rdc_bed.gdshader" id="1_wanjk"]
+[ext_resource type="Texture2D" path="res://tests/visual_water_alignment/prototypes/caustic_fold_v1.png" id="2_6swg5"]
+[ext_resource type="ImageTexture3D" path="res://assets/water_material_natural_candidate/rdc_caustic_1105_mipped.res" id="3_brghb"]
+[ext_resource type="Texture2D" path="res://assets/water_material_natural_candidate/water_normal_681.png" id="4_0i6bo"]
+
+[resource]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("1_wanjk")
+shader_parameter/natural_caustic_override = true
+shader_parameter/natural_caustic_enabled = true
+shader_parameter/natural_caustic_strength = 0.8
+shader_parameter/natural_caustic_softness = 0.5
+shader_parameter/natural_caustic_uv_scale = 3.0
+shader_parameter/display_reconstruction = true
+shader_parameter/phase2_caustics = true
+shader_parameter/prototype_caustic_strength = 0.8
+shader_parameter/prototype_caustic_depth_decay_m = 0.17
+shader_parameter/prototype_caustic_uv_scale = 2.0
+shader_parameter/prototype_caustic_softness = 1.0
+shader_parameter/prototype_texture_caustics = true
+shader_parameter/caustic_pattern = ExtResource("2_6swg5")
+shader_parameter/visual_time_s = 0.0
+shader_parameter/use_grain = true
+shader_parameter/use_grain_normal = true
+shader_parameter/use_wet_finish = true
+shader_parameter/prototype_wet_trace_gain = 0.0
+shader_parameter/use_compaction_tint = true
+shader_parameter/debug_mode = 0
+shader_parameter/grid_size = 256.0
+shader_parameter/domain_size_m = 32.0
+shader_parameter/rdc_caustics_enabled = true
+shader_parameter/rdc_caustic_volume = ExtResource("3_brghb")
+shader_parameter/rdc_phase_texture = ExtResource("4_0i6bo")
+shader_parameter/rdc_caustic_scale = 0.25
+shader_parameter/rdc_caustic_depth_decay = 1.2
+shader_parameter/rdc_caustic_time_scale = 1.0

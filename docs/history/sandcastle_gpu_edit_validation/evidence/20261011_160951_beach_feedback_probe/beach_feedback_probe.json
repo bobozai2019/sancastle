@@ -1,0 +1,772 @@
+{
+	"checks": [
+		{
+			"detail": {
+				"chosen_cell": 8224,
+				"collision_feedback_ms": 85.218,
+				"collision_revisions_current": true,
+				"collision_us": 10181008,
+				"fast_path_used": 1,
+				"input": {
+					"admission_error": "",
+					"busy_at_capture": false,
+					"command": {
+						"amount_m3": 0.015,
+						"command_id": 1,
+						"domain_id": "main_beach",
+						"generation": 1,
+						"kind": "place_sand",
+						"radius_m": 0.3,
+						"seed": 101,
+						"shape": "circle",
+						"sim_tick": 15,
+						"strength": 1.0,
+						"transform": {
+							"end_position_m": "(-11.9375, -0.283865, -11.9375)",
+							"position_m": "(-11.9375, -0.283865, -11.9375)"
+						}
+					},
+					"configuration": {
+						"policy": 1,
+						"speed": 0.0
+					},
+					"input_us": 10095790,
+					"pick": "PhysicsRayQueryParameters3D"
+				},
+				"pass": true,
+				"policy": 1,
+				"publication_ms": 57.264,
+				"settlement_ms": 56.2,
+				"terminal": {
+					"at_us": 10202056,
+					"command": {
+						"amount_m3": 0.015,
+						"command_id": 1,
+						"domain_id": "main_beach",
+						"generation": 1,
+						"kind": "place_sand",
+						"radius_m": 0.3,
+						"seed": 101,
+						"shape": "circle",
+						"sim_tick": 15,
+						"strength": 1.0,
+						"transform": {
+							"end_position_m": "(-11.9375, -0.283865, -11.9375)",
+							"position_m": "(-11.9375, -0.283865, -11.9375)"
+						}
+					},
+					"configuration": {
+						"policy": 1,
+						"speed": 0.0
+					},
+					"publish_us": 10153054,
+					"result": {
+						"actual_sand_m3": 0.0149999987334013,
+						"applied_tick": 15,
+						"capacity_status": 0,
+						"clamp_count": 0,
+						"command_id": 1,
+						"dirty_mask": [
+							771,
+							0
+						],
+						"dirty_rect": "[P: (30, 30), S: (5, 5)]",
+						"displaced_water_m3": 0.0149999978020787,
+						"edited_cells": 21,
+						"error_code": 0,
+						"generation": 1,
+						"impulse_x_m3_s": 0.0,
+						"impulse_x_m4_s": 0.0,
+						"impulse_z_m3_s": 0.0,
+						"impulse_z_m4_s": 0.0,
+						"input_revision": 45,
+						"invalid_flags": 0,
+						"nominal_sand_m3": 0.0149999996647239,
+						"ok": true,
+						"output_revision": 46,
+						"retained_water_m3": 0.0,
+						"status": 1,
+						"ticket_id": 1
+					},
+					"settle_us": 10151990,
+					"stock": 0.185000001266599
+				},
+				"water_components": 2
+			},
+			"name": "policy_1_collision_feedback",
+			"pass": true
+		},
+		{
+			"detail": {
+				"chosen_cell": 8224,
+				"collision_feedback_ms": 53.599,
+				"collision_revisions_current": true,
+				"collision_us": 10444980,
+				"input": {
+					"admission_error": "",
+					"busy_at_capture": false,
+					"command": {
+						"amount_m3": 0.015,
+						"command_id": 2,
+						"domain_id": "main_beach",
+						"generation": 1,
+						"kind": "place_sand",
+						"radius_m": 0.3,
+						"seed": 101,
+						"shape": "circle",
+						"sim_tick": 17,
+						"strength": 1.0,
+						"transform": {
+							"end_position_m": "(-11.88468, -0.219718, -11.77362)",
+							"position_m": "(-11.88468, -0.219718, -11.77362)"
+						}
+					},
+					"configuration": {
+						"policy": 0,
+						"speed": 0.0
+					},
+					"input_us": 10391381,
+					"pick": "PhysicsRayQueryParameters3D"
+				},
+				"pass": true,
+				"policy": 0,
+				"publication_ms": 26.138,
+				"settlement_ms": 25.221,
+				"terminal": {
+					"at_us": 10466321,
+					"command": {
+						"amount_m3": 0.015,
+						"command_id": 2,
+						"domain_id": "main_beach",
+						"generation": 1,
+						"kind": "place_sand",
+						"radius_m": 0.3,
+						"seed": 101,
+						"shape": "circle",
+						"sim_tick": 17,
+						"strength": 1.0,
+						"transform": {
+							"end_position_m": "(-11.88468, -0.219718, -11.77362)",
+							"position_m": "(-11.88468, -0.219718, -11.77362)"
+						}
+					},
+					"configuration": {
+						"policy": 0,
+						"speed": 0.0
+					},
+					"publish_us": 10417519,
+					"result": {
+						"actual_sand_m3": 0.0149999996647239,
+						"applied_tick": 17,
+						"capacity_status": 0,
+						"clamp_count": 0,
+						"command_id": 2,
+						"dirty_mask": [
+							771,
+							0
+						],
+						"dirty_rect": "[P: (31, 31), S: (4, 5)]",
+						"displaced_water_m3": 0.0,
+						"edited_cells": 18,
+						"error_code": 0,
+						"generation": 1,
+						"impulse_x_m3_s": 0.0,
+						"impulse_x_m4_s": 0.0,
+						"impulse_z_m3_s": 0.0,
+						"impulse_z_m4_s": 0.0,
+						"input_revision": 52,
+						"invalid_flags": 0,
+						"nominal_sand_m3": 0.0149999996647239,
+						"ok": true,
+						"output_revision": 53,
+						"retained_water_m3": 0.0,
+						"status": 1,
+						"ticket_id": 2
+					},
+					"settle_us": 10416602,
+					"stock": 0.170000001601875
+				}
+			},
+			"name": "policy_0_collision_feedback",
+			"pass": true
+		},
+		{
+			"detail": {
+				"chosen_cell": 8224,
+				"collision_feedback_ms": 95.534,
+				"collision_revisions_current": true,
+				"collision_us": 10702124,
+				"fast_path_used": 0,
+				"input": {
+					"admission_error": "",
+					"busy_at_capture": false,
+					"command": {
+						"amount_m3": 0.015,
+						"command_id": 3,
+						"domain_id": "main_beach",
+						"generation": 1,
+						"kind": "place_sand",
+						"radius_m": 0.3,
+						"seed": 101,
+						"shape": "circle",
+						"sim_tick": 19,
+						"strength": 1.0,
+						"transform": {
+							"end_position_m": "(-11.84949, -0.176979, -11.66443)",
+							"position_m": "(-11.84949, -0.176979, -11.66443)"
+						}
+					},
+					"configuration": {
+						"policy": 2,
+						"speed": 0.25
+					},
+					"input_us": 10606590,
+					"pick": "PhysicsRayQueryParameters3D"
+				},
+				"pass": true,
+				"policy": 2,
+				"publication_ms": 62.682,
+				"settlement_ms": 61.859,
+				"terminal": {
+					"at_us": 10719115,
+					"command": {
+						"amount_m3": 0.015,
+						"command_id": 3,
+						"domain_id": "main_beach",
+						"generation": 1,
+						"kind": "place_sand",
+						"radius_m": 0.3,
+						"seed": 101,
+						"shape": "circle",
+						"sim_tick": 19,
+						"strength": 1.0,
+						"transform": {
+							"end_position_m": "(-11.84949, -0.176979, -11.66443)",
+							"position_m": "(-11.84949, -0.176979, -11.66443)"
+						}
+					},
+					"configuration": {
+						"policy": 2,
+						"speed": 0.25
+					},
+					"publish_us": 10669272,
+					"result": {
+						"actual_sand_m3": 0.0149999996647239,
+						"applied_tick": 19,
+						"capacity_status": 0,
+						"clamp_count": 0,
+						"command_id": 3,
+						"dirty_mask": [
+							771,
+							0
+						],
+						"dirty_rect": "[P: (31, 32), S: (5, 5)]",
+						"displaced_water_m3": 0.0,
+						"edited_cells": 18,
+						"error_code": 0,
+						"generation": 1,
+						"impulse_x_m3_s": 0.000503849354572594,
+						"impulse_x_m4_s": 0.000503849354572594,
+						"impulse_z_m3_s": 0.000472483283374459,
+						"impulse_z_m4_s": 0.000472483283374459,
+						"input_revision": 59,
+						"invalid_flags": 0,
+						"nominal_sand_m3": 0.0149999996647239,
+						"ok": true,
+						"output_revision": 60,
+						"retained_water_m3": 0.0,
+						"status": 1,
+						"ticket_id": 3
+					},
+					"settle_us": 10668449,
+					"stock": 0.155000001937151
+				},
+				"water_components": 0
+			},
+			"name": "policy_2_collision_feedback",
+			"pass": true
+		},
+		{
+			"detail": {
+				"chosen_cell": 8224,
+				"collision_feedback_ms": 93.253,
+				"collision_revisions_current": true,
+				"collision_us": 11014380,
+				"fast_path_used": 1,
+				"input": {
+					"admission_error": "",
+					"busy_at_capture": false,
+					"command": {
+						"amount_m3": 0.015,
+						"command_id": 4,
+						"domain_id": "main_beach",
+						"generation": 1,
+						"kind": "place_sand",
+						"radius_m": 0.3,
+						"seed": 101,
+						"shape": "circle",
+						"sim_tick": 21,
+						"strength": 1.0,
+						"transform": {
+							"end_position_m": "(-11.8168, -0.13728, -11.56301)",
+							"position_m": "(-11.8168, -0.13728, -11.56301)"
+						}
+					},
+					"configuration": {
+						"policy": 3,
+						"speed": 0.25
+					},
+					"input_us": 10921127,
+					"pick": "PhysicsRayQueryParameters3D"
+				},
+				"pass": true,
+				"policy": 3,
+				"publication_ms": 65.54,
+				"settlement_ms": 64.59,
+				"terminal": {
+					"at_us": 11035659,
+					"command": {
+						"amount_m3": 0.015,
+						"command_id": 4,
+						"domain_id": "main_beach",
+						"generation": 1,
+						"kind": "place_sand",
+						"radius_m": 0.3,
+						"seed": 101,
+						"shape": "circle",
+						"sim_tick": 21,
+						"strength": 1.0,
+						"transform": {
+							"end_position_m": "(-11.8168, -0.13728, -11.56301)",
+							"position_m": "(-11.8168, -0.13728, -11.56301)"
+						}
+					},
+					"configuration": {
+						"policy": 3,
+						"speed": 0.25
+					},
+					"publish_us": 10986667,
+					"result": {
+						"actual_sand_m3": 0.0149999978020787,
+						"applied_tick": 21,
+						"capacity_status": 0,
+						"clamp_count": 0,
+						"command_id": 4,
+						"dirty_mask": [
+							768,
+							0
+						],
+						"dirty_rect": "[P: (31, 33), S: (5, 5)]",
+						"displaced_water_m3": 0.0149999987334013,
+						"edited_cells": 21,
+						"error_code": 0,
+						"generation": 1,
+						"impulse_x_m3_s": 0.000881214218679816,
+						"impulse_x_m4_s": 0.000881214218679816,
+						"impulse_z_m3_s": 0.00113481329753995,
+						"impulse_z_m4_s": 0.00113481329753995,
+						"input_revision": 66,
+						"invalid_flags": 0,
+						"nominal_sand_m3": 0.0149999996647239,
+						"ok": true,
+						"output_revision": 67,
+						"retained_water_m3": 0.0,
+						"status": 1,
+						"ticket_id": 4
+					},
+					"settle_us": 10985717,
+					"stock": 0.140000004135072
+				},
+				"water_components": 2
+			},
+			"name": "policy_3_collision_feedback",
+			"pass": true
+		},
+		{
+			"detail": null,
+			"name": "last_edit_publication_and_collision",
+			"pass": true
+		},
+		{
+			"detail": null,
+			"name": "full_load_and_final_state",
+			"pass": true
+		}
+	],
+	"collision_candidate": {
+		"allocations": 467,
+		"reuse": false,
+		"reuses": 0
+	},
+	"pass": true,
+	"rows": [
+		{
+			"chosen_cell": 8224,
+			"collision_feedback_ms": 85.218,
+			"collision_revisions_current": true,
+			"collision_us": 10181008,
+			"fast_path_used": 1,
+			"input": {
+				"admission_error": "",
+				"busy_at_capture": false,
+				"command": {
+					"amount_m3": 0.015,
+					"command_id": 1,
+					"domain_id": "main_beach",
+					"generation": 1,
+					"kind": "place_sand",
+					"radius_m": 0.3,
+					"seed": 101,
+					"shape": "circle",
+					"sim_tick": 15,
+					"strength": 1.0,
+					"transform": {
+						"end_position_m": "(-11.9375, -0.283865, -11.9375)",
+						"position_m": "(-11.9375, -0.283865, -11.9375)"
+					}
+				},
+				"configuration": {
+					"policy": 1,
+					"speed": 0.0
+				},
+				"input_us": 10095790,
+				"pick": "PhysicsRayQueryParameters3D"
+			},
+			"pass": true,
+			"policy": 1,
+			"publication_ms": 57.264,
+			"settlement_ms": 56.2,
+			"terminal": {
+				"at_us": 10202056,
+				"command": {
+					"amount_m3": 0.015,
+					"command_id": 1,
+					"domain_id": "main_beach",
+					"generation": 1,
+					"kind": "place_sand",
+					"radius_m": 0.3,
+					"seed": 101,
+					"shape": "circle",
+					"sim_tick": 15,
+					"strength": 1.0,
+					"transform": {
+						"end_position_m": "(-11.9375, -0.283865, -11.9375)",
+						"position_m": "(-11.9375, -0.283865, -11.9375)"
+					}
+				},
+				"configuration": {
+					"policy": 1,
+					"speed": 0.0
+				},
+				"publish_us": 10153054,
+				"result": {
+					"actual_sand_m3": 0.0149999987334013,
+					"applied_tick": 15,
+					"capacity_status": 0,
+					"clamp_count": 0,
+					"command_id": 1,
+					"dirty_mask": [
+						771,
+						0
+					],
+					"dirty_rect": "[P: (30, 30), S: (5, 5)]",
+					"displaced_water_m3": 0.0149999978020787,
+					"edited_cells": 21,
+					"error_code": 0,
+					"generation": 1,
+					"impulse_x_m3_s": 0.0,
+					"impulse_x_m4_s": 0.0,
+					"impulse_z_m3_s": 0.0,
+					"impulse_z_m4_s": 0.0,
+					"input_revision": 45,
+					"invalid_flags": 0,
+					"nominal_sand_m3": 0.0149999996647239,
+					"ok": true,
+					"output_revision": 46,
+					"retained_water_m3": 0.0,
+					"status": 1,
+					"ticket_id": 1
+				},
+				"settle_us": 10151990,
+				"stock": 0.185000001266599
+			},
+			"water_components": 2
+		},
+		{
+			"chosen_cell": 8224,
+			"collision_feedback_ms": 53.599,
+			"collision_revisions_current": true,
+			"collision_us": 10444980,
+			"input": {
+				"admission_error": "",
+				"busy_at_capture": false,
+				"command": {
+					"amount_m3": 0.015,
+					"command_id": 2,
+					"domain_id": "main_beach",
+					"generation": 1,
+					"kind": "place_sand",
+					"radius_m": 0.3,
+					"seed": 101,
+					"shape": "circle",
+					"sim_tick": 17,
+					"strength": 1.0,
+					"transform": {
+						"end_position_m": "(-11.88468, -0.219718, -11.77362)",
+						"position_m": "(-11.88468, -0.219718, -11.77362)"
+					}
+				},
+				"configuration": {
+					"policy": 0,
+					"speed": 0.0
+				},
+				"input_us": 10391381,
+				"pick": "PhysicsRayQueryParameters3D"
+			},
+			"pass": true,
+			"policy": 0,
+			"publication_ms": 26.138,
+			"settlement_ms": 25.221,
+			"terminal": {
+				"at_us": 10466321,
+				"command": {
+					"amount_m3": 0.015,
+					"command_id": 2,
+					"domain_id": "main_beach",
+					"generation": 1,
+					"kind": "place_sand",
+					"radius_m": 0.3,
+					"seed": 101,
+					"shape": "circle",
+					"sim_tick": 17,
+					"strength": 1.0,
+					"transform": {
+						"end_position_m": "(-11.88468, -0.219718, -11.77362)",
+						"position_m": "(-11.88468, -0.219718, -11.77362)"
+					}
+				},
+				"configuration": {
+					"policy": 0,
+					"speed": 0.0
+				},
+				"publish_us": 10417519,
+				"result": {
+					"actual_sand_m3": 0.0149999996647239,
+					"applied_tick": 17,
+					"capacity_status": 0,
+					"clamp_count": 0,
+					"command_id": 2,
+					"dirty_mask": [
+						771,
+						0
+					],
+					"dirty_rect": "[P: (31, 31), S: (4, 5)]",
+					"displaced_water_m3": 0.0,
+					"edited_cells": 18,
+					"error_code": 0,
+					"generation": 1,
+					"impulse_x_m3_s": 0.0,
+					"impulse_x_m4_s": 0.0,
+					"impulse_z_m3_s": 0.0,
+					"impulse_z_m4_s": 0.0,
+					"input_revision": 52,
+					"invalid_flags": 0,
+					"nominal_sand_m3": 0.0149999996647239,
+					"ok": true,
+					"output_revision": 53,
+					"retained_water_m3": 0.0,
+					"status": 1,
+					"ticket_id": 2
+				},
+				"settle_us": 10416602,
+				"stock": 0.170000001601875
+			}
+		},
+		{
+			"chosen_cell": 8224,
+			"collision_feedback_ms": 95.534,
+			"collision_revisions_current": true,
+			"collision_us": 10702124,
+			"fast_path_used": 0,
+			"input": {
+				"admission_error": "",
+				"busy_at_capture": false,
+				"command": {
+					"amount_m3": 0.015,
+					"command_id": 3,
+					"domain_id": "main_beach",
+					"generation": 1,
+					"kind": "place_sand",
+					"radius_m": 0.3,
+					"seed": 101,
+					"shape": "circle",
+					"sim_tick": 19,
+					"strength": 1.0,
+					"transform": {
+						"end_position_m": "(-11.84949, -0.176979, -11.66443)",
+						"position_m": "(-11.84949, -0.176979, -11.66443)"
+					}
+				},
+				"configuration": {
+					"policy": 2,
+					"speed": 0.25
+				},
+				"input_us": 10606590,
+				"pick": "PhysicsRayQueryParameters3D"
+			},
+			"pass": true,
+			"policy": 2,
+			"publication_ms": 62.682,
+			"settlement_ms": 61.859,
+			"terminal": {
+				"at_us": 10719115,
+				"command": {
+					"amount_m3": 0.015,
+					"command_id": 3,
+					"domain_id": "main_beach",
+					"generation": 1,
+					"kind": "place_sand",
+					"radius_m": 0.3,
+					"seed": 101,
+					"shape": "circle",
+					"sim_tick": 19,
+					"strength": 1.0,
+					"transform": {
+						"end_position_m": "(-11.84949, -0.176979, -11.66443)",
+						"position_m": "(-11.84949, -0.176979, -11.66443)"
+					}
+				},
+				"configuration": {
+					"policy": 2,
+					"speed": 0.25
+				},
+				"publish_us": 10669272,
+				"result": {
+					"actual_sand_m3": 0.0149999996647239,
+					"applied_tick": 19,
+					"capacity_status": 0,
+					"clamp_count": 0,
+					"command_id": 3,
+					"dirty_mask": [
+						771,
+						0
+					],
+					"dirty_rect": "[P: (31, 32), S: (5, 5)]",
+					"displaced_water_m3": 0.0,
+					"edited_cells": 18,
+					"error_code": 0,
+					"generation": 1,
+					"impulse_x_m3_s": 0.000503849354572594,
+					"impulse_x_m4_s": 0.000503849354572594,
+					"impulse_z_m3_s": 0.000472483283374459,
+					"impulse_z_m4_s": 0.000472483283374459,
+					"input_revision": 59,
+					"invalid_flags": 0,
+					"nominal_sand_m3": 0.0149999996647239,
+					"ok": true,
+					"output_revision": 60,
+					"retained_water_m3": 0.0,
+					"status": 1,
+					"ticket_id": 3
+				},
+				"settle_us": 10668449,
+				"stock": 0.155000001937151
+			},
+			"water_components": 0
+		},
+		{
+			"chosen_cell": 8224,
+			"collision_feedback_ms": 93.253,
+			"collision_revisions_current": true,
+			"collision_us": 11014380,
+			"fast_path_used": 1,
+			"input": {
+				"admission_error": "",
+				"busy_at_capture": false,
+				"command": {
+					"amount_m3": 0.015,
+					"command_id": 4,
+					"domain_id": "main_beach",
+					"generation": 1,
+					"kind": "place_sand",
+					"radius_m": 0.3,
+					"seed": 101,
+					"shape": "circle",
+					"sim_tick": 21,
+					"strength": 1.0,
+					"transform": {
+						"end_position_m": "(-11.8168, -0.13728, -11.56301)",
+						"position_m": "(-11.8168, -0.13728, -11.56301)"
+					}
+				},
+				"configuration": {
+					"policy": 3,
+					"speed": 0.25
+				},
+				"input_us": 10921127,
+				"pick": "PhysicsRayQueryParameters3D"
+			},
+			"pass": true,
+			"policy": 3,
+			"publication_ms": 65.54,
+			"settlement_ms": 64.59,
+			"terminal": {
+				"at_us": 11035659,
+				"command": {
+					"amount_m3": 0.015,
+					"command_id": 4,
+					"domain_id": "main_beach",
+					"generation": 1,
+					"kind": "place_sand",
+					"radius_m": 0.3,
+					"seed": 101,
+					"shape": "circle",
+					"sim_tick": 21,
+					"strength": 1.0,
+					"transform": {
+						"end_position_m": "(-11.8168, -0.13728, -11.56301)",
+						"position_m": "(-11.8168, -0.13728, -11.56301)"
+					}
+				},
+				"configuration": {
+					"policy": 3,
+					"speed": 0.25
+				},
+				"publish_us": 10986667,
+				"result": {
+					"actual_sand_m3": 0.0149999978020787,
+					"applied_tick": 21,
+					"capacity_status": 0,
+					"clamp_count": 0,
+					"command_id": 4,
+					"dirty_mask": [
+						768,
+						0
+					],
+					"dirty_rect": "[P: (31, 33), S: (5, 5)]",
+					"displaced_water_m3": 0.0149999987334013,
+					"edited_cells": 21,
+					"error_code": 0,
+					"generation": 1,
+					"impulse_x_m3_s": 0.000881214218679816,
+					"impulse_x_m4_s": 0.000881214218679816,
+					"impulse_z_m3_s": 0.00113481329753995,
+					"impulse_z_m4_s": 0.00113481329753995,
+					"input_revision": 66,
+					"invalid_flags": 0,
+					"nominal_sand_m3": 0.0149999996647239,
+					"ok": true,
+					"output_revision": 67,
+					"retained_water_m3": 0.0,
+					"status": 1,
+					"ticket_id": 4
+				},
+				"settle_us": 10985717,
+				"stock": 0.140000004135072
+			},
+			"water_components": 2
+		}
+	],
+	"scope": "1080p full beach rendering; paused transaction phases, original coupled ticks between commands; collision feedback, not first-visible or continuous cost acceptance",
+	"timestamp_frames": []
+}

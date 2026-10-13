@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/gpu_water_preview.tscn" id="1_preview"]
+
+[node name="WaterVisualFixture" instance=ExtResource("1_preview")]
+fixture_id = &"water_v1"
+fixture_camera_id = &"oblique"
+visual_time_s = 6.0
+render_subdivision = 2
+enable_erosion = false
+enable_structures = false
+hide_hud = true
+show_brush_indicator = false

@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwfd5ajjw52qs"]
+
+[ext_resource type="PackedScene" path="res://scenes/gpu_water_preview.tscn" id="1_preview"]
+[ext_resource type="PackedScene" path="res://scenes/editor_scene_preview.tscn" id="2_visual_preview"]
+
+[node name="SandVisualFixture" unique_id=169683225 instance=ExtResource("1_preview")]
+enable_erosion = true
+sand_cohesion_yield_height_m = 2.0
+fixture_id = &"sand_v1"
+visual_time_s = 6.0
+render_subdivision = 2
+hide_hud = true
+show_brush_indicator = false
+
+[node name="EditorPreviewController" parent="." index="0"]
+visible = false
+
+[node name="VisualEditorPreview" parent="." index="1" instance=ExtResource("2_visual_preview")]
+terrain_color = Color(0.238, 0.23, 0.221, 1)
+dune_color = Color(0.78, 0.62, 0.37, 1)
+terrain_level_m = 0.2
+water_enabled = true
+water_level_m = 0.3
+water_coverage = 0.35
+water_color = Color(0.26, 0.66, 0.49, 0.68)
+deep_water_color = Color(0.11, 0.27, 0.26, 0.94)
+preview_water_depth_m = 0.12
+water_output_bias = Vector3(0.0425, 0.075, 0.1245)
+trigger_origin_m = Vector2(-10.0, 0.0)
+trigger_height_m = 0.2
+
+[node name="GpuOverviewCamera" parent="."]
+position = Vector3(0, 13, 19)
+rotation = Vector3(-0.567, 0, 0)
+fov = 52.0
+
+[editable path="VisualEditorPreview"]

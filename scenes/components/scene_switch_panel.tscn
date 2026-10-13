@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/beach/scene_switch_panel.gd" id="1_script"]
+
+[node name="SceneSwitcher" type="VBoxContainer"]
+layout_mode = 2
+script = ExtResource("1_script")
+
+[node name="Actions" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Targets" type="OptionButton" parent="Actions"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+item_count = 3
+selected = 0
+popup/item_0/text = "主沙滩"
+popup/item_0/id = 0
+popup/item_1/text = "test1 沙床 · 可编辑"
+popup/item_1/id = 1
+popup/item_2/text = "上滩回流 · 可编辑适配"
+popup/item_2/id = 2
+
+[node name="Switch" type="Button" parent="Actions"]
+layout_mode = 2
+focus_mode = 0
+text = "切换"
+
+[node name="Status" type="Label" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "切换保留各场景进度"
+autowrap_mode = 2
+mouse_filter = 2
+
+[connection signal="pressed" from="Actions/Switch" to="." method="_on_switch_pressed"]

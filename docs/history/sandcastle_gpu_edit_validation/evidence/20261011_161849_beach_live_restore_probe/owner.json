@@ -1,0 +1,25 @@
+{
+  "output": "D:\\godot\\project\\sandcastle\\task\\sandcastle_gpu_edit_validation\\evidence\\20261011_161849_beach_live_restore_probe",
+  "pid": 15800,
+  "arguments": [
+    "--path",
+    "D:/godot/project/sandcastle",
+    "--rendering-driver",
+    "d3d12",
+    "--resolution",
+    "1920x1080",
+    "--log-file",
+    "D:\\godot\\project\\sandcastle\\task\\sandcastle_gpu_edit_validation\\evidence\\20261011_161849_beach_live_restore_probe\\godot.log",
+    "--script",
+    "res://tests/edit_validation/beach_live_restore_probe.gd",
+    "--",
+    "--output=D:/godot/project/sandcastle/task/sandcastle_gpu_edit_validation/evidence/20261011_161849_beach_live_restore_probe",
+    "--beach-staged-slope",
+    "--cached-capacity",
+    "--compensated-capacity",
+    "--prefetch-velocity",
+    "--packed-runs"
+  ],
+  "scope": "functional complete beach recovery; no performance claim",
+  "executable": "D:/game/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe"
+}

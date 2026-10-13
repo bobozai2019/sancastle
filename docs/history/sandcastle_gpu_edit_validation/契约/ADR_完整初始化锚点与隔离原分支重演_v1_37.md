@@ -1,0 +1,11 @@
+# ADR v1.37：完整初始化锚点与隔离原分支重演
+
+2026-10-11，候选 `edit_beach_replay_lab.tscn`，不放行G4。
+
+直接入口在GPU初始化完成后保持tick/输入关闭，异步取得完整tick0原生检查点作为重演锚点；取得后才开放正常入口，不在每笔编辑热路径增加读回。新入口继承原完整undo场景，固定ReplayViewport保存在tscn中，own_world_3d=true；实际重演对象为数据驱动的临时完整场景，关闭渲染更新且不接受输入。
+
+重演使用原完整恢复/耦合/波计划及原GPU编辑实现。原接受记录按execution_tick推进，独立检查stock_before/available与各关键实际回执。worker使用其新generation执行，回执独立匹配后保留历史规范化身份，不伪造实际GPU回执。当前严格原分支证明要求23字段hash、index/foam_index、五账本及完整prefix相同；不相同则返回replay_current_mismatch，不提交目标、不修改活动authority。
+
+worker实际shader材料与活动场景分离，完成后等待原生回调归还并调用真实shutdown，再释放临时场景。当前仅实现锚点和原分支证明，目标分支、跨tick公开undo/redo、混合CPU工具与持久记录尚未接入。
+
+默认关闭的--beach-copy-sand-trace在完成tick后GPU复制R32沙字段，最终统一读回；不逐tick同步CPU读回。该诊断会增加GPU复制和改变调度，不将其结果冒称未观察版本的首分歧，也不把观察变体通过替代默认标准。

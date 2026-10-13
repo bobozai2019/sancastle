@@ -1,0 +1,27 @@
+{
+  "utc": "2026-10-11T18:40:53.941603+00:00",
+  "status": "prospective tool preparation, not runtime capture PASS",
+  "files": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\tests\\investigation\\brush_hit_competitor\\runtime_collider\\probe_export_agent.js",
+      "sha256": "14692048384e116257f5756f5597b779310e6cc9a34134d733d8467f859d66cd"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\tests\\investigation\\brush_hit_competitor\\runtime_collider\\verify_mesh.py",
+      "sha256": "f8d2711b6b56477acdb3f9dabb1179ede485413cde175dccda2c02faff090f3e"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\tests\\investigation\\brush_hit_competitor\\runtime_collider\\probe_runtime.py",
+      "sha256": "2ec631c706eae78e5c35c45a379a149100ed4e84a063481f2dde1e2d9fba9ec0"
+    }
+  ],
+  "checks": {
+    "node_syntax": "passed",
+    "python_compilation": "passed",
+    "CIM_live_self_and_absent_pid": "passed, read-only",
+    "archived_pair_index_bytes": "equal in verification_topology_audit.json",
+    "edge_candidates_runtime": "not tested",
+    "pressed_input_raw_runtime": "not tested"
+  },
+  "remaining": "operator readiness and one controlled normal edit, all correspondence gates must pass"
+}

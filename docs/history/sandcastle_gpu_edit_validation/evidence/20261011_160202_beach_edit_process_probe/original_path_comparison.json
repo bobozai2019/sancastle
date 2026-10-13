@@ -1,0 +1,31 @@
+{
+  "same_bin_count": 30,
+  "different": [
+    {
+      "file": "continued_bed_0.bin",
+      "count": 4,
+      "max_error": 5.960464477539063e-08,
+      "first_cells": [
+        25525,
+        27334,
+        28096,
+        40900
+      ]
+    },
+    {
+      "file": "continued_sand.bin",
+      "count": 4,
+      "max_error": 5.960464477539063e-08,
+      "first_cells": [
+        25525,
+        27334,
+        28096,
+        40900
+      ]
+    },
+    {
+      "file": "coupled_parameters.bin"
+    }
+  ],
+  "scope": "cross-implementation output comparison, not proof of root"
+}

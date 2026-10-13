@@ -1,0 +1,16 @@
+{
+  "gpu_source": "task\\sandcastle_gpu_edit_validation\\evidence\\20261011_164309_beach_cost_gpu_B3",
+  "fields": {
+    "warm_compaction.bin": true,
+    "warm_flux.bin": true,
+    "warm_momentum_x.bin": true,
+    "warm_momentum_z.bin": true,
+    "warm_obstacle.bin": true,
+    "warm_rock.bin": true,
+    "warm_sand.bin": true,
+    "warm_sediment.bin": true,
+    "warm_water.bin": true,
+    "warm_wetness.bin": true
+  },
+  "scope": "no-edit tick60 current fields only; E3 versus CPU B0 divergence after editing is expected"
+}

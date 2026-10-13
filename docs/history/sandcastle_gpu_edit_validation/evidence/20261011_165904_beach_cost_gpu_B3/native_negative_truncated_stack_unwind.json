@@ -1,0 +1,60 @@
+{
+  "dump": "D:\\godot\\project\\sandcastle\\task\\sandcastle_gpu_edit_validation\\evidence\\20261011_165904_beach_cost_gpu_B3\\native_negative_truncated_stack.dmp",
+  "dump_sha256": "8ff5472d257ccd0dd6a5a244aca3da26d488f5f7164a6ffd00840b275fd7702e",
+  "tid": 15016,
+  "method": "AMD64 DbgHelp StackWalk64; captured stack and matched local PE code/unwind metadata callbacks",
+  "frames": [
+    {
+      "pc": "0x7fffac02d624",
+      "sp": "0xd8e19feed8",
+      "return": "0x7fffa978b6ae",
+      "module": "ntdll.dll",
+      "rva": "0x9d624",
+      "runtime_function": [
+        "0x9d610",
+        "0x9d628",
+        "0x14d938"
+      ],
+      "memory_read_failures_this_step": [
+        {
+          "address": "0xd8e19feee0",
+          "size": 32
+        }
+      ]
+    }
+  ],
+  "stop_reason": "memory_missing_during_step",
+  "read_failures": [
+    {
+      "address": "0xd8e19feee0",
+      "size": 32
+    }
+  ],
+  "modules": [
+    {
+      "path": "C:\\Windows\\System32\\ntdll.dll",
+      "verified": true,
+      "checks": {
+        "timestamp": true,
+        "image_size": true,
+        "checksum": true
+      },
+      "sha256": "36b1a62e4bf6bf7d68458fff6e8a33b39f6527ec6a46e55ecdd12cde83894c8d"
+    },
+    {
+      "path": "C:\\Windows\\System32\\KERNELBASE.dll",
+      "verified": true,
+      "checks": {
+        "timestamp": true,
+        "image_size": true,
+        "checksum": true
+      },
+      "sha256": "b4ad8c8e3632104f4d2132ecb8979b8df279f0046dc42e79bed5acb744751871"
+    }
+  ],
+  "dbghelp": {
+    "path": "C:\\Program Files (x86)\\Windows Kits\\10\\Debuggers\\x64\\dbghelp.dll",
+    "sha256": "23d33e01020b6d1de7dd29cd737287042476a6e0a8deafdab68f01e61a801fcf"
+  },
+  "scope": "unwind frames, no private symbol names; inline calls and uncaptured memory are not reconstructed"
+}

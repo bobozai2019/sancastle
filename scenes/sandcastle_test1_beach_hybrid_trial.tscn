@@ -1,0 +1,229 @@
+[gd_scene format=3 uid="uid://ba3nt6aouyd1q"]
+
+[ext_resource type="PackedScene" path="res://scenes/sandcastle_test1_beach_coupled.tscn" id="1_base"]
+[ext_resource type="Script" uid="uid://b14lll7jqlwh5" path="res://scripts/visual/test1_beach_hybrid_trial_entry.gd" id="2_entry"]
+[ext_resource type="Shader" uid="uid://y1x0rnk6bs3o" path="res://shaders/visual/gpu_terrain.gdshader" id="3_mb7bt"]
+[ext_resource type="Shader" uid="uid://c6t584244v76" path="res://assets/test1_beach/test1_bed_dry_overlay_trial.gdshader" id="3_overlay"]
+[ext_resource type="Shader" uid="uid://snkxj43gevsa" path="res://shaders/visual/gpu_water.gdshader" id="4_ryss6"]
+[ext_resource type="Shader" uid="uid://byf53lo4wks8k" path="res://assets/test1_beach/test1_front_foam_splats.gdshader" id="5_p21gp"]
+[ext_resource type="Shader" uid="uid://cl34llp5vargo" path="res://tests/visual_water_alignment/prototypes/reference_shore_contact_overlay.gdshader" id="6_n612v"]
+
+[sub_resource type="Environment" id="Environment_43ang"]
+resource_local_to_scene = true
+background_mode = 1
+background_color = Color(0.73, 0.86, 0.93, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hevel"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("3_mb7bt")
+shader_parameter/flux_color_scale_m3_s = 0.001
+shader_parameter/debug_mode = 0
+shader_parameter/apply_underwater_tint = true
+shader_parameter/underwater_relief_boost = 0.0
+shader_parameter/phase2_caustics = false
+shader_parameter/visual_time_s = -1.0
+shader_parameter/display_reconstruction = false
+shader_parameter/grid_size = 256.0
+shader_parameter/domain_size_m = 32.0
+shader_parameter/sun_direction = Vector3(-0.42, 0.84, 0.34)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1t7yj"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("4_ryss6")
+shader_parameter/wet_epsilon_m = 0.001
+shader_parameter/water_surface_bias_m = 0.006
+shader_parameter/debug_mode = 0
+shader_parameter/extinction_depth_m = 0.09
+shader_parameter/shallow_tint = Vector3(0.36, 0.71, 0.76)
+shader_parameter/deep_tint = Vector3(0.045, 0.24, 0.5)
+shader_parameter/foam_tint = Vector3(0.93, 0.96, 0.97)
+shader_parameter/foam_speed_m_s = 0.85
+shader_parameter/foam_depth_m = 0.05
+shader_parameter/foam_strength = 0.55
+shader_parameter/ripple_frequency = 150.0
+shader_parameter/ripple_speed = 2.6
+shader_parameter/ripple_strength = 0.045
+shader_parameter/visual_time_s = -1.0
+shader_parameter/phase2_optics = false
+shader_parameter/phase2_foam = false
+shader_parameter/display_reconstruction = false
+shader_parameter/radial_shore = false
+shader_parameter/shoreline_debug = false
+shader_parameter/midpoint_clip = false
+shader_parameter/use_detail_normals = true
+shader_parameter/use_specular = true
+shader_parameter/use_caustics = true
+shader_parameter/phase2_extinction_m = 0.11
+shader_parameter/phase2_shallow_tint = Vector3(0.04, 0.72, 0.69)
+shader_parameter/phase2_deep_tint = Vector3(0.02, 0.29, 0.37)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d2kfu"]
+resource_local_to_scene = true
+transparency = 1
+no_depth_test = true
+shading_mode = 0
+albedo_color = Color(0.16, 0.18, 0.22, 0.75)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x7jvn"]
+resource_local_to_scene = true
+render_priority = 2
+shader = ExtResource("5_p21gp")
+shader_parameter/display_reconstruction = true
+shader_parameter/front_concentrated = false
+shader_parameter/front_local_dense = true
+shader_parameter/front_smooth_support = false
+shader_parameter/raised_local_front = true
+shader_parameter/crest_height_m = 0.0
+shader_parameter/surface_bias_m = 0.018
+shader_parameter/splat_half_width_m = 0.018
+shader_parameter/splat_jitter_m = 0.02
+shader_parameter/target_diameter_px = 3.5
+shader_parameter/viewport_height_px = 1080.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8vlke"]
+resource_local_to_scene = true
+render_priority = 1
+shader = ExtResource("6_n612v")
+shader_parameter/enabled = false
+shader_parameter/surface_offset_m = 0.016
+shader_parameter/wet_epsilon_m = 0.001
+
+[sub_resource type="ShaderMaterial" id="Material_overlay"]
+resource_local_to_scene = true
+render_priority = 1
+shader = ExtResource("3_overlay")
+shader_parameter/display_reconstruction = true
+shader_parameter/phase2_caustics = false
+shader_parameter/prototype_caustic_strength = 1.0
+shader_parameter/prototype_caustic_depth_decay_m = 0.17
+shader_parameter/prototype_caustic_uv_scale = 1.0
+shader_parameter/prototype_caustic_softness = 0.0
+shader_parameter/prototype_texture_caustics = false
+shader_parameter/visual_time_s = -1.0
+shader_parameter/use_grain = true
+shader_parameter/use_grain_normal = true
+shader_parameter/use_wet_finish = true
+shader_parameter/prototype_wet_trace_gain = 0.0
+shader_parameter/use_compaction_tint = true
+shader_parameter/debug_mode = 0
+shader_parameter/grid_size = 256.0
+shader_parameter/domain_size_m = 32.0
+
+[node name="SandcastleTest1BeachHybridTrial" unique_id=1866617788 instance=ExtResource("1_base")]
+script = ExtResource("2_entry")
+render_profile_path = "res://assets/test1_beach/g05_hybrid_trial.json"
+prototype_imported_caustic_pattern_path = ""
+prototype_coupled_caustics = false
+prototype_cell_caustics = false
+prototype_fold_caustics = false
+prototype_sync_boundary_readback = false
+prototype_crest_curtain = false
+prototype_crest_ribbon = false
+prototype_crest_ribbon_body = false
+prototype_crest_ribbon_attached = false
+prototype_crest_ribbon_smooth_mask = false
+prototype_crest_rise_ribbon = false
+prototype_rise_crest = false
+prototype_rise_front_field = false
+prototype_unified_adaptive_anchor = false
+prototype_local_front_field = false
+prototype_branch_face = false
+prototype_branch_face_capped = false
+prototype_branch_face_2d = false
+prototype_branch_face_patches = false
+prototype_branch_face_row_center = false
+prototype_branch_face_soft_material = false
+prototype_branch_face_surface_join = false
+prototype_offshore_foam_source = false
+prototype_front_band_foam_source = false
+prototype_contact_history_field = false
+prototype_local_front_wide_field = false
+prototype_crest_solid_lip = false
+prototype_crest_water_body = false
+prototype_crest_shared_profile = false
+prototype_crest_smoothed_lip = false
+prototype_crest_forward_toe = false
+prototype_unified_curl = false
+prototype_foam_splats = false
+prototype_foam_splats_jitter = false
+prototype_foam_front_splats = false
+prototype_foam_front_local_dense = false
+prototype_front_face_source_gate = false
+prototype_offshore_core_source_gate = false
+prototype_foam_front_local_diameter_px = 3.5
+prototype_foam_front_smooth = false
+prototype_foam_splats_fine = false
+prototype_foam_front_raised = false
+prototype_foam_front_pixel_sized = false
+prototype_foam_surface_lift_m = 0.0
+prototype_crest_volume = false
+prototype_crest_volume_debug = false
+prototype_local_front_volume = false
+prototype_local_front_segments = false
+prototype_local_front_continuous_lip = false
+prototype_unified_dense = false
+prototype_unified_smooth_profile = false
+prototype_unified_centered_base = false
+prototype_unified_monotonic_base = false
+prototype_crest_ribbon_depth_write = false
+prototype_crest_row_window = Vector2(0, 1)
+prototype_ledger_ring_capacity = 0
+prototype_ledger_batch_ticks = 0
+prototype_batched_ledger_bookkeeping = false
+prototype_fixed_substeps = 0
+prototype_fixed_cfl_audit = false
+prototype_smooth_reference_shore = false
+prototype_natural_reference_shore = false
+prototype_structured_reference_bed = false
+prototype_sculpted_reference_bed = false
+prototype_lobed_reference_bed = false
+prototype_branched_reference_bed = false
+prototype_estuary_reference_bed = false
+prototype_worker_handoff = false
+prefetch_sand_on_hover = false
+
+[node name="GpuOverviewCamera" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.7568234, 0.6536194, 0, -0.6536194, 0.7568234, 0, 38, 44)
+
+[node name="GpuPlayerCamera" parent="." index="2"]
+transform = Transform3D(0.5740184, 0.36810052, -0.73144025, -0.21849605, 0.92972857, 0.29641902, 0.789153, -0.0103331655, 0.6141099, -6, 3.2, 7.5)
+
+[node name="WorldEnvironment" parent="." index="3"]
+environment = SubResource("Environment_43ang")
+
+[node name="SandFixtureSun" parent="." index="4"]
+transform = Transform3D(-0.81915206, 0.45198435, -0.3531289, 0, 0.6156615, 0.7880107, 0.5735764, 0.6455006, -0.5043204, 0, 0, 0)
+
+[node name="GpuSandTerrain" parent="." index="5"]
+material_override = SubResource("ShaderMaterial_hevel")
+cast_shadow = 0
+
+[node name="GpuWaterSurface" parent="." index="6"]
+material_override = SubResource("ShaderMaterial_1t7yj")
+
+[node name="BrushIndicator" parent="." index="8"]
+material_override = SubResource("StandardMaterial3D_d2kfu")
+
+[node name="PrototypeFrontFoamDense" parent="." index="11"]
+material_override = SubResource("ShaderMaterial_x7jvn")
+
+[node name="ShoreContactOverlay" parent="." index="15"]
+material_override = SubResource("ShaderMaterial_8vlke")
+
+[node name="Oblique" parent="CameraAnchors" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.8628071, 0.50553334, 0, -0.50553334, 0.8628071, -1, 13, 22)
+
+[node name="Close" parent="CameraAnchors" index="1"]
+transform = Transform3D(0.9393727, 0.08483428, -0.33223793, 0, 0.9689124, 0.24740396, 0.3428978, -0.23240453, 0.9101699, 0, 3, 8)
+
+[node name="Grazing" parent="CameraAnchors" index="2"]
+transform = Transform3D(0.90044713, 0.043424096, -0.4327925, 0, 0.9950042, 0.09983342, 0.43496552, -0.08989472, 0.89594865, -4, 1.8, 5.5)
+
+[node name="LightFacing" parent="CameraAnchors" index="3"]
+transform = Transform3D(-0.81371, 0.45804787, -0.35786626, 0, 0.6156615, 0.7880107, 0.5812711, 0.64121217, -0.5009699, -10, 22, -14)
+
+[node name="DrySandLightOverlay" type="MeshInstance3D" parent="." index="17" unique_id=887159205]
+material_override = SubResource("Material_overlay")
+custom_aabb = AABB(-16.1, -1, -16.1, 32.2, 5, 32.2)

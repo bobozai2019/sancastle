@@ -1,0 +1,38 @@
+{
+  "profile_id": "water_render_staging_v3",
+  "schema_version": 3,
+  "phase": "staging",
+  "target_fixture_ids": ["water_render_demo_v2", "water_render_coupled_v2"],
+  "grid_size": 256,
+  "cell_size_m": 0.125,
+  "sim_hz": 30,
+  "render_subdivision": 2,
+  "surface_bias_m": 0.003,
+  "reference_bed": "natural_structured_v1",
+  "resources": {
+    "water_shader": "res://tests/visual_water_alignment/prototypes/reference_water_local_front.gdshader",
+    "terrain_fixed_shader": "res://tests/visual_water_alignment/prototypes/reference_terrain.gdshader",
+    "terrain_coupled_shader": "res://tests/visual_water_alignment/prototypes/reference_coupled_bed.gdshader",
+    "caustic_pattern": "res://tests/visual_water_alignment/prototypes/caustic_fold_v1.png"
+  },
+  "visual": {
+    "face_normal": true,
+    "depth_write": true,
+    "crest_height_m": 0.25,
+    "shallow_extinction_m": 0.25,
+    "refraction_scale": 0.02,
+    "offshore_core": true,
+    "offshore_core_broken": true,
+    "offshore_core_crown": true
+  },
+  "capabilities": {
+    "eta_normals": {"status": "implemented", "enabled": true},
+    "screen_optics": {"status": "implemented", "enabled": true},
+    "main_foam": {"status": "implemented", "enabled": true},
+    "fold_caustics": {"status": "implemented", "enabled": true},
+    "local_front": {"status": "implemented", "enabled": true},
+    "planar_reflection": {"status": "pending", "enabled": false},
+    "shore_contact": {"status": "pending", "enabled": false},
+    "foam_splats": {"status": "pending", "enabled": false}
+  }
+}

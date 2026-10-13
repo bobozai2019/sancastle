@@ -1,0 +1,385 @@
+{
+  "schema_version": 1,
+  "role": "current_project_technical_scheme_source_snapshot",
+  "document": "docs/当前项目技术方案.md",
+  "project_root": "D:/godot/project/sandcastle",
+  "verified_at": "2026-10-11T01:12:26+08:00",
+  "verification_scope": "Read-only source/configuration review, local link checks and SHA256 snapshot. No new formal visual, numerical endurance or performance acceptance was run by this documentation task.",
+  "task_status_scope": "Execution status is a snapshot; ongoing task progress may advance after verified_at. Baseline observation completion is not candidate correctness or performance acceptance.",
+  "files": [
+    {
+      "path": "project.godot",
+      "bytes": 2016,
+      "sha256": "673965691c63546745e3e79f70b73589ede19865afbe55b177925f2e68ff11bf"
+    },
+    {
+      "path": "scripts/demo/sandcastle_main.gd",
+      "bytes": 11405,
+      "sha256": "57cc2ecef3870fae87c3a849e80277a2276772f7cad2c75c9ec307fccc1008dc"
+    },
+    {
+      "path": "scripts/demo/gpu_water_preview.gd",
+      "bytes": 81242,
+      "sha256": "c9edbd1f31ea076b0c74b5299f8a764c119367dd35c720b48e097e25ba563bb0"
+    },
+    {
+      "path": "scripts/demo/sandcastle_demo.gd",
+      "bytes": 16167,
+      "sha256": "11311755ba929f9a79ec0b11114c87a55a10e467d9760c31276d3cefffb6c1bd"
+    },
+    {
+      "path": "scripts/simulation/sand_water_domain.gd",
+      "bytes": 16591,
+      "sha256": "449b69482a2de6347a3562b6610507b2669bb8bcdc34cb6e15e363946866cadc"
+    },
+    {
+      "path": "scripts/simulation/gpu_shallow_solver.gd",
+      "bytes": 21408,
+      "sha256": "21fa56232fc8ccf2bb10ea100d0b800eb83065eacc1185e478563c60d052940c"
+    },
+    {
+      "path": "scripts/sand/tool_command_queue.gd",
+      "bytes": 8774,
+      "sha256": "17c3dd19158edab5999374c1839a0e0fe8ed69d3f9f3b0579abc8fa59fc8777c"
+    },
+    {
+      "path": "scripts/simulation/erosion/gpu_sediment_coupler.gd",
+      "bytes": 6853,
+      "sha256": "786ccc46719dfc38fb028e1dc7888bda2a1b768a4df498fdc1e32e1a29b080b6"
+    },
+    {
+      "path": "scripts/simulation/material/gpu_material_coupler.gd",
+      "bytes": 7356,
+      "sha256": "456709bc61bc9d2b422f54a9b4cd0a71ba14334fdd4780349b7ae2a0ad9b3528"
+    },
+    {
+      "path": "scripts/collision/gpu_collision_proxy.gd",
+      "bytes": 10039,
+      "sha256": "3993a67b58abf8550f793a267405ff92b6e69afb013e27c653cbf0c05faf4f54"
+    },
+    {
+      "path": "scripts/structures/structure_field.gd",
+      "bytes": 6833,
+      "sha256": "94f35646a6ea9c4584d8a6ab6f8d52cdc3921c29514f9a7872665b994fd6e92e"
+    },
+    {
+      "path": "scripts/structures/gpu_obstacle_remap.gd",
+      "bytes": 6647,
+      "sha256": "cc6b54b4d7c147b07b56954abddd8a4756500413d6240c75c564c1a3a6a9a5a7"
+    },
+    {
+      "path": "scripts/simulation/checkpoint_store.gd",
+      "bytes": 14788,
+      "sha256": "c8897631c68cb7d277f53ebee54cc5db737bba600f0cffa61f7b301ee0d4f200"
+    },
+    {
+      "path": "scripts/visual/gpu_foam_field.gd",
+      "bytes": 5110,
+      "sha256": "330547d6b8764bf4997183d3905e8930248cd9f2dedd22e4dd92138a9fa695b6"
+    },
+    {
+      "path": "scripts/visual/test1_beach_fixed_entry.gd",
+      "bytes": 4132,
+      "sha256": "6049641488a29d08a13e22214186e134f4e2972916da69297fb8d2203e039bcc"
+    },
+    {
+      "path": "scripts/visual/test1_beach_edit_worker_entry.gd",
+      "bytes": 2384,
+      "sha256": "c9b4a4d15b9fe1df97f653df9330a08ccf54312fa275f9d505873f850f9c0582"
+    },
+    {
+      "path": "scripts/visual/water_render_staging_entry.gd",
+      "bytes": 8666,
+      "sha256": "acda944e1af905cc5cf40e19dc4459e3520b43a512a96b6099c0e743a6e10f2c"
+    },
+    {
+      "path": "scripts/visual/water_render_profile.gd",
+      "bytes": 16405,
+      "sha256": "033978698ceeca9b9365b01541196349f22094a448ed71766471a6f200e3e147"
+    },
+    {
+      "path": "scripts/visual/water_render_wave_workload.gd",
+      "bytes": 1492,
+      "sha256": "f16fbc73346c39aa57b6b13ec3824a8fcf63f12d1454cfe26fc1208b79233d21"
+    },
+    {
+      "path": "scripts/water/reference/shallow_water_solver.gd",
+      "bytes": 12304,
+      "sha256": "7ca778eb5dd98c8fb6a8c4c6ca804a436bcb607eea49a2852e54d9b2bd4fbdc2"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_preview.gd",
+      "bytes": 125750,
+      "sha256": "94252fb636a812dad96073606cbe12f35be6b2ffa216d67d04354bdf51ac7011"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_local_front_field.gd",
+      "bytes": 4910,
+      "sha256": "f791d419826f9797a7d12949a3aa50f08c3024460a58da2de0221c36cce2d276"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/rock_reflection_candidate_entry.gd",
+      "bytes": 2443,
+      "sha256": "c12d4058c796cfab94ea5cea7e86699021a91eed68262bcc62db61124cf79447"
+    },
+    {
+      "path": "scenes/main.tscn",
+      "bytes": 870,
+      "sha256": "1a12249daa44e0ba27583f02191a1c3295b21e1762fda945677a231cb65cc44a"
+    },
+    {
+      "path": "scenes/sandcastle_test1_beach_fixed.tscn",
+      "bytes": 2300,
+      "sha256": "7deba03457adfe1bc93d245576be2696c6faddadc1b0cbc0237d9513538f1662"
+    },
+    {
+      "path": "scenes/sandcastle_test1_beach_coupled.tscn",
+      "bytes": 2312,
+      "sha256": "0e322de1f462221f10e89ade7d0e887bd57f755065bb32e62034a3c534533570"
+    },
+    {
+      "path": "scenes/gpu_water_preview.tscn",
+      "bytes": 2488,
+      "sha256": "d9e34df4fd869fba098eb883a8623c52d2960520a59204ec232c4af7f006c251"
+    },
+    {
+      "path": "scenes/cpu_reference.tscn",
+      "bytes": 2514,
+      "sha256": "af32d0506264a3e125fe0fb2bf61c5c6c081034115de69e3870dde4954e63355"
+    },
+    {
+      "path": "assets/test1_beach/test1_beach_release.json",
+      "bytes": 1983,
+      "sha256": "f4eb200c58ed56358cf268edeba1042616ef29db09111c69c62487f9f86185ef"
+    },
+    {
+      "path": "assets/test1_beach/test1_bed_lit_fast.gdshader",
+      "bytes": 8826,
+      "sha256": "0e8340b6e20e3d5a8380549995610e5a442b04524ff72e50c996b5cb4f9e7366"
+    },
+    {
+      "path": "assets/test1_beach/test1_water_front.gdshader",
+      "bytes": 58684,
+      "sha256": "deac308744b85960c239d6722d59a3b12507ebc6741ec2b81600718d63b81017"
+    },
+    {
+      "path": "assets/test1_beach/test1_front_foam_splats.gdshader",
+      "bytes": 7453,
+      "sha256": "45a43cf1ea48a0913e2a06012f1eef90bac837ecc610319cab5718505075f03b"
+    },
+    {
+      "path": "assets/test1_beach/test1_front_foam_sparse_mesh.tres",
+      "bytes": 1354758,
+      "sha256": "f343b5354ad4b18da405bd538d79e021112f58b39d129f307d248a13261f7b1b"
+    },
+    {
+      "path": "shaders/simulation/shallow_edge_flux.glsl",
+      "bytes": 3985,
+      "sha256": "621bc8ec3738d896cdf68c2fe20d306f0d1bd87817f3e917214a9f91b84dea4e"
+    },
+    {
+      "path": "shaders/simulation/shallow_drain_scale.glsl",
+      "bytes": 1461,
+      "sha256": "f36e5a1a0b50f867ca89571a12033ba8dbb059a5a1a481bca07e43a1cf87fdbe"
+    },
+    {
+      "path": "shaders/simulation/shallow_update_state.glsl",
+      "bytes": 6286,
+      "sha256": "fe373e7d793d0cc126db241fe0c81e5b3aa2b7d70b37c7299f21418d81b76185"
+    },
+    {
+      "path": "shaders/simulation/shallow_tool_patch.glsl",
+      "bytes": 1287,
+      "sha256": "d0fbfea07be64cf31f7fabed61b7440b67d768657091d4287d976e8c313f4168"
+    },
+    {
+      "path": "shaders/simulation/erosion/sediment_step.glsl",
+      "bytes": 4853,
+      "sha256": "48c3bc74e8c4295ae1ff813e4d1796bb99945c5f56d6d77f63c376011eb62bdf"
+    },
+    {
+      "path": "shaders/simulation/material/material_step.glsl",
+      "bytes": 4129,
+      "sha256": "290b44d3fb13ab2b4d7da27e4fa4f93e070244ba11ad450b8356067280f60aef"
+    },
+    {
+      "path": "shaders/simulation/material/slope_relax.glsl",
+      "bytes": 4772,
+      "sha256": "3a84a74ea96425febabf5dcca59fdd5509a069c508d8702236e14de0a984ccfe"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_shore_contact_overlay.gdshader",
+      "bytes": 3295,
+      "sha256": "f9c2a6f778a3d75328fa960dad0d7787e02aae5e4c66fd486e81d23ad57143ec"
+    },
+    {
+      "path": "tests/run.ps1",
+      "bytes": 1460,
+      "sha256": "ea1f7821c6dfdeb2a7bc6d434d1362cfa7739e979cb6602afcc6c01ce923fad7"
+    },
+    {
+      "path": "tests/run_gpu_standard_scenario.ps1",
+      "bytes": 1922,
+      "sha256": "549cc2ebf4868eeab788a531164c442f6c01c63b5365c5fc36d5363ba415ba92"
+    },
+    {
+      "path": "tests/edit_validation/run_baseline_trace.ps1",
+      "bytes": 3086,
+      "sha256": "db639104cc5ad084efd247e00f4de974bdf2d1267d641cefeef5af9b7cd410df"
+    },
+    {
+      "path": "docs/knowledge/water_sand/状态与数据契约.md",
+      "bytes": 5964,
+      "sha256": "1e429a227ff4a0ed366c61a6d4febac54c3db6061f6acb7bf12ebcfc93d69c89"
+    },
+    {
+      "path": "docs/knowledge/water_sand/模块与命令接口契约.md",
+      "bytes": 4877,
+      "sha256": "9a1c158e4b657ced0a3c8a34a7e2e0b2b4459745ce20ac2bfd003541350c0933"
+    },
+    {
+      "path": "docs/history/sandcastle_test1_reverse_rebuild/收尾记录.md",
+      "bytes": 4359,
+      "sha256": "a4d2e867ea4d3fdd36770e793b99da3a0ef240635d0855fb03ffd872905ebee7"
+    },
+    {
+      "path": "docs/history/sandcastle_test1_reverse_rebuild/验收/RG3_固定沙滩浪与白沫样片.md",
+      "bytes": 2608,
+      "sha256": "e83fb1336bea05d68c071f7ca5b7ab1758e0d43c9d782455e1713db894e0a520"
+    },
+    {
+      "path": "docs/history/sandcastle_test1_reverse_rebuild/验收/RG4_实时沙滩与联合验收.md",
+      "bytes": 18588,
+      "sha256": "a26fea867a7096d935c2877d6138f203ac9bfe7f247f6a431eb76a756e893d6c"
+    },
+    {
+      "path": "docs/history/sandcastle_test1_reverse_rebuild/implementation/g05_edit_worker_integrated_feedback/manifest.json",
+      "bytes": 8209,
+      "sha256": "7aa2ce0ef34acb98e19176ed8209481f2ffe120a4f082b1a489011d6871d826d"
+    },
+    {
+      "path": "docs/history/sandcastle_test1_reverse_rebuild/implementation/g05_cost/release_edits_worker_sand_cleanup_60s_coupled_manifest.json",
+      "bytes": 22451,
+      "sha256": "a05039f08541e4d131ca14b0cfcf795cda2d5b337bb828312bb325fe87569fc5"
+    },
+    {
+      "path": "docs/history/sandcastle_test1_reverse_rebuild/implementation/g04_probe_worker_integrated/manifest.json",
+      "bytes": 1148,
+      "sha256": "2f2c732a9c72b6b89fd23300f882adfec2aa0f09838c30641989e7350911b4be"
+    },
+    {
+      "path": "docs/search/underwater_deposit_report.md",
+      "bytes": 14527,
+      "sha256": "781af555963c15e7fb04d3af5c72c81da52d5a8c08f9d14ae96599a149cbc4ae"
+    },
+    {
+      "path": "docs/search/edit_performance_test41_test42_v2.md",
+      "bytes": 9046,
+      "sha256": "b3dc82014cd0ac716f84373d3369b409ab2bea35783cd55031f4aac536f4ece5"
+    },
+    {
+      "path": "task/sandcastle_gpu_edit_validation/执行状态.md",
+      "bytes": 3217,
+      "sha256": "6d4a141a2609f9b10a07290c7433fb03f78f0c9a2892da7815e02a1fead3b1f7",
+      "current_location": "docs/history/sandcastle_gpu_edit_validation/执行状态.md",
+      "historical_hash_only": true
+    },
+    {
+      "path": "task/sandcastle_gpu_edit_validation/验收/T00_基线追踪_首轮.md",
+      "bytes": 2614,
+      "sha256": "148ed910e4f01e531092eec2077055cb3874e02bb15d922763afec30a8aa6cc3",
+      "current_location": "docs/history/sandcastle_gpu_edit_validation/验收/T00_基线追踪_首轮.md",
+      "historical_hash_only": true
+    },
+    {
+      "path": "task/sandcastle_gpu_edit_validation/evidence/20261011_005334_baseline_trace/runtime.json",
+      "bytes": 2113,
+      "sha256": "ca3f243100a30182a2cc39a5272964e0ef100a89982b2b97ab9c61aab82db35d",
+      "current_location": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_005334_baseline_trace/runtime.json",
+      "historical_hash_only": true
+    },
+    {
+      "path": "shaders/simulation/visual_foam_step.glsl",
+      "bytes": 4040,
+      "sha256": "19d7bec7f157791f75e0b4a63bd04c7ae8dc06eb82e016f1ea96ae8174e6edb0"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_local_front_x.glsl",
+      "bytes": 1639,
+      "sha256": "1ca06648fc517bc6d01b66780af1d1e66cfe2978ddd2f00e5ac763658799d13d"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_local_front_z.glsl",
+      "bytes": 933,
+      "sha256": "dc986bfa7e64e6f05f814a1eed3cef2eef1bd5e72025a1c9475d90c4855ddfae"
+    },
+    {
+      "path": "scenes/water_render_demo_continuous.tscn",
+      "bytes": 244,
+      "sha256": "49f3c32198e5bcd8c1c555a69d369d64243687d0c703973df1f3bd69346c6360"
+    },
+    {
+      "path": "scenes/water_render_coupled_continuous.tscn",
+      "bytes": 249,
+      "sha256": "8ba013fa1a40b4ea08432b911668f2f895241c9cf5b2d72c649d151f21a8fe5f"
+    },
+    {
+      "path": "scenes/water_render_demo_rock_reflection_candidate.tscn",
+      "bytes": 802,
+      "sha256": "109f9d0efeb861cf72b5c9f4f318a67326967b7fb06b4424b2ef50335eea72ec"
+    },
+    {
+      "path": "scenes/water_render_coupled_rock_reflection_candidate.tscn",
+      "bytes": 807,
+      "sha256": "46387cbd887635d1de05815d34d2a7fd4e9855556eaca210607b661a3eff44ae"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_fixed.tscn",
+      "bytes": 1201,
+      "sha256": "d5faa954e452dd5651709b9b0c64d5ab585b793bb8a63c93ea9825cd8c7cc158"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_coupled.tscn",
+      "bytes": 1205,
+      "sha256": "6395c3ad6cf2ab64e3bbf843fd7606fbb8693cb86b52906b2322ec97d581c545"
+    },
+    {
+      "path": "task/sandcastle_gpu_edit_validation/验收/T00_基线与观测冻结.md",
+      "bytes": 5969,
+      "sha256": "4992333f9e26391d7b901084c4b9f52727fc9e1eb7b605a35842b1b1dabc1427",
+      "current_location": "docs/history/sandcastle_gpu_edit_validation/验收/T00_基线与观测冻结.md",
+      "historical_hash_only": true
+    },
+    {
+      "path": "docs/history/sandcastle_water_sand_coupling/验收/T06_构件与支持破坏_20260929.md",
+      "bytes": 20690,
+      "sha256": "5a3839742b78364c80a9320e0adaad32bf87c9416e510c301145bfb5d9304801"
+    },
+    {
+      "path": "docs/history/sandcastle_water_sand_coupling/验收/T08_长稳与过载_20260929.md",
+      "bytes": 32472,
+      "sha256": "7420626ac611a191921bbff0796b78997c66890aa40ff652f79045b130d1afe8"
+    },
+    {
+      "path": "docs/history/sandcastle_water_sand_coupling/验收/T03_GPU迁移起步_20260928.md",
+      "bytes": 8041,
+      "sha256": "bfc279f352f28418b2ce095dce36d2ee24d0a04ea5658b1de85406e361e547f8"
+    }
+  ],
+  "engines": [
+    {
+      "path": "D:/godot/Godot_v4.6.2/godot.exe",
+      "version_verified_with": "--version",
+      "actual_version": "4.7.beta.custom_build.dff2b9bb6",
+      "bytes": 184472064,
+      "sha256": "624c5ff59d4aa2b91a2e8fe1cfa782926b258bd3dbba94e1cc2cf153a14a21c4"
+    },
+    {
+      "path": "D:/game/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe",
+      "version_verified_with": "--version",
+      "actual_version": "4.7.2.stable.steam.ed1daf0bf",
+      "bytes": 180860936,
+      "sha256": "12310c74bdda7dcd43f28e971f33047dcecadd436b68169d61ce41009006df38"
+    }
+  ]
+}

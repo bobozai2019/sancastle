@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/gpu_water_preview.tscn" id="1_base"]
+[ext_resource type="Script" path="res://tests/visual_water_alignment/prototypes/reference_preview.gd" id="2_preview"]
+[ext_resource type="PackedScene" path="res://tests/visual_water_alignment/prototypes/reference_front_lips.tscn" id="3_lips"]
+[ext_resource type="PackedScene" path="res://tests/visual_water_alignment/prototypes/reference_front_foam_dense.tscn" id="4_dense"]
+[ext_resource type="PackedScene" path="res://tests/visual_water_alignment/prototypes/reference_foreground_occluders.tscn" id="5_occluders"]
+
+[node name="ReferenceWaterFixedPrototype" instance=ExtResource("1_base")]
+script = ExtResource("2_preview")
+fixture_id = &"water_render_demo_v2"
+fixture_camera_id = &"oblique"
+visual_time_s = 6.0
+render_subdivision = 2
+enable_erosion = false
+enable_structures = false
+hide_hud = true
+show_brush_indicator = false
+
+[node name="PrototypeFrontLips" parent="." instance=ExtResource("3_lips")]
+
+[node name="PrototypeFrontFoamDense" parent="." instance=ExtResource("4_dense")]
+
+[node name="PrototypeForegroundOccluders" parent="." instance=ExtResource("5_occluders")]

@@ -1,0 +1,19 @@
+{
+  "reflection_schema_version": 3,
+  "foam_profile": "res://assets/water_material_natural_candidate/foam_combination.json",
+  "foam_profile_sha256": "c9967f42d5b0410b27b0c9c2cc6c11b01b602d672a97a91c91de15d8d4fef4d0",
+  "derived_foam_profile": "res://assets/water_material_natural_candidate/rdc_foam.json",
+  "base_profile": "res://assets/water_material_natural_candidate/rdc_base.json",
+  "water_shader": "res://assets/water_material_natural_candidate/rdc_water.gdshader",
+  "sampling_mode": "protected",
+  "perturbation_enabled": true,
+  "normal_shift_m": 0.25,
+  "uv_shift_limit": 0.03,
+  "edge_margin_px": 2.0,
+  "edge_fade_px": 8.0,
+  "reflection_strength": 1.0,
+  "softness_px": 0.0,
+  "color_mode": "srgb",
+  "sky_fallback": "environment_background",
+  "projection_y_mode": "viewport_top_left"
+}

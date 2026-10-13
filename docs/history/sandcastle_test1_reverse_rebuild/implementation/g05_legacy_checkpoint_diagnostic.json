@@ -1,0 +1,55 @@
+{
+  "continuation_seconds": 60.0,
+  "differences": {
+    "foam_history": {
+      "count_gt_1e_6": 0,
+      "max_abs": 0.000000268220901489258
+    },
+    "momentum_x": {
+      "count_gt_1e_6": 0,
+      "max_abs": 0.0000000670552253723145
+    },
+    "momentum_z": {
+      "count_gt_1e_6": 0,
+      "max_abs": 0.0000000530853867530823
+    },
+    "sand": {
+      "count_gt_1e_6": 0,
+      "max_abs": 0.000000238418579101562
+    },
+    "sediment": {
+      "count_gt_1e_6": 0,
+      "max_abs": 0.00000000302679836750031
+    },
+    "water": {
+      "count_gt_1e_6": 0,
+      "max_abs": 0.000000268220901489258
+    }
+  },
+  "end_tick": 2700,
+  "equal_gpu_fields": {
+    "compaction": true,
+    "foam_history": false,
+    "momentum_x": false,
+    "momentum_z": false,
+    "sand": false,
+    "sediment": false,
+    "water": false,
+    "wetness": true
+  },
+  "original_revision": 8896,
+  "restored_revision": 5400,
+  "save_tick": 900,
+  "support_event": {
+    "affected_cells": 102,
+    "cause": "erosion_toe_loss",
+    "compaction_after": 0.1,
+    "generation": 2,
+    "request_id": 1,
+    "revision": 1024,
+    "sensor_revision": 1023,
+    "tick": 270,
+    "toe_at_trigger_m3": 0.128336062654853,
+    "toe_initial_m3": 0.1434375
+  }
+}
