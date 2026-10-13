@@ -1,5 +1,0 @@
-[gd_scene load_steps=3 format=3]
-[ext_resource type="PackedScene" path="res://tests/edit_validation/edit_brush_lab.tscn" id="1"]
-[ext_resource type="Script" path="res://tests/edit_validation/scheduler_exit_lab.gd" id="2"]
-[node name="SchedulerExitLab" instance=ExtResource("1")]
-script = ExtResource("2")

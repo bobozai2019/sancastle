@@ -17,6 +17,32 @@ var generation_highwater := 1
 var serial := 0
 var session_directory := ""
 var inject_target_failure_once := false
+var release_records := []
+
+func _dispose_scene(scene) -> bool:
+	if scene == null:
+		return true
+	var identity: int = scene.get_instance_id()
+	var released := true
+	if scene.is_inside_tree():
+		var profiler: Node = scene.get_node_or_null("Interface/PerformancePanel")
+		if profiler != null:
+			await profiler.stop_sampling()
+		await scene.shutdown()
+		released = scene.gpu_release_done and (scene.solver == null or scene.solver.rd == null) and scene.collision_proxy.rd == null
+		scene.set_process(false)
+		scene.queue_free()
+		# Flush node destruction and renderer commands before constructing the
+		# replacement. Physics shapes and reflection viewports belong to nodes.
+		await get_tree().process_frame
+		await RenderingServer.frame_post_draw
+		await get_tree().process_frame
+	else:
+		scene.free()
+	var record := {"instance_id": identity, "gpu_released": released, "node_freed": not is_instance_id_valid(identity), "at_us": Time.get_ticks_usec()}
+	release_records.append(record)
+	if release_records.size() > 12: release_records.pop_front()
+	return released and record.node_freed
 
 func attach(scene: Node3D) -> void:
 	if busy:
@@ -86,7 +112,6 @@ func _switch(key: String) -> void:
 	if packed == null:
 		_finish("场景资源加载失败")
 		return
-	var candidate = packed.instantiate()
 	var old = active_scene
 	var old_key: String = old.scene_key
 	var old_settings := _settings(old)
@@ -104,7 +129,6 @@ func _switch(key: String) -> void:
 	var path := session_directory.path_join("%s_%04d.sandcp" % [old_key, serial])
 	var save_error: StringName = await old.save_gpu_checkpoint(path)
 	if not save_error.is_empty():
-		candidate.free()
 		old.playing = old_settings.playing
 		old.player_camera.set_process(true)
 		old.player_camera.set_process_input(true)
@@ -113,11 +137,14 @@ func _switch(key: String) -> void:
 		return
 	saved[old_key] = {"path": path, "settings": old_settings}
 	_set_message("正在切换场景…")
-	await old.shutdown()
 	generation_highwater = maxi(generation_highwater, old.generation)
 	active_scene = null
-	old.queue_free()
-	await get_tree().process_frame
+	get_tree().current_scene = null
+	if not await _dispose_scene(old):
+		_finish("旧场景释放未完成，已停止加载；进度保存在检查点中")
+		return
+	old = null
+	var candidate = packed.instantiate()
 	var target_settings: Dictionary = saved[key].settings if saved.has(key) else {"playing": old_settings.playing}
 	var error := ""
 	if inject_target_failure_once:
@@ -126,10 +153,8 @@ func _switch(key: String) -> void:
 	else:
 		error = await _prepare(candidate, key, target_settings)
 	if not error.is_empty():
-		if candidate.is_inside_tree():
-			await candidate.shutdown()
-		candidate.queue_free()
-		await get_tree().process_frame
+		await _dispose_scene(candidate)
+		candidate = null
 		_set_message("目标加载失败，正在恢复原场景…")
 		var rollback = load(SCENES[old_key]).instantiate()
 		var rollback_error := await _prepare(rollback, old_key, old_settings)

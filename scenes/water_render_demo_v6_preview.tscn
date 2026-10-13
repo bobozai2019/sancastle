@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3]
-
-[ext_resource type="PackedScene" path="res://scenes/water_render_demo_continuous.tscn" id="1_base"]
-
-[node name="WaterRenderV6PreviewFixed" instance=ExtResource("1_base")]
-render_profile_path = "res://tests/visual_water_alignment/prototypes/water_render_staging_v6.json"

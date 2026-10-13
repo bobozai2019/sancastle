@@ -8,7 +8,7 @@ out.mkdir(parents=True,exist_ok=False)
 paths=[]
 for folder in ['assets/water_material_natural_candidate','tests/water_material_natural','scenes/water_material_natural_candidate']:
  paths.extend(p for p in (root/folder).iterdir() if p.is_file() and not p.name.endswith('.uid'))
-paths.extend(root/p for p in ['assets/test1_beach/test1_beach_release.json','assets/test1_beach/test1_water_front.gdshader','assets/test1_beach/test1_front_foam_splats.gdshader','assets/test1_beach/test1_bed_lit_fast.gdshader','scripts/visual/test1_beach_fixed_entry.gd','scripts/visual/water_render_staging_entry.gd','scenes/sandcastle_test1_beach_fixed.tscn','scenes/sandcastle_test1_beach_coupled.tscn'])
+paths.extend(root/p for p in ['assets/test1_beach/test1_beach_release.json','assets/test1_beach/test1_water_front.gdshader','assets/test1_beach/test1_front_foam_splats.gdshader','assets/test1_beach/test1_bed_lit_fast.gdshader','scripts/visual/test1_beach_fixed_entry.gd','scripts/visual/water_render_staging_entry.gd','scenes/water_material_natural_candidate/rdc_v1_fixed.tscn','scenes/water_material_natural_candidate/rdc_v1_coupled.tscn'])
 index=[]
 for p in paths:
  q=out/'source_snapshot'/(str(p.relative_to(root))+'.source');q.parent.mkdir(parents=True,exist_ok=True);q.write_bytes(p.read_bytes());index.append({'path':str(p),'snapshot':str(q),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()})

@@ -47,7 +47,7 @@ profile={'lighting_schema_version':1,'normal_profile':'res://assets/water_materi
 (assets/'lighting_manual.json').write_text(json.dumps(profile,indent=2),encoding='utf-8')
 scene='''[gd_scene load_steps=3 format=3]
 
-[ext_resource type="PackedScene" path="res://scenes/sandcastle_test1_beach_fixed.tscn" id="1_base"]
+[ext_resource type="PackedScene" path="res://scenes/water_material_natural_candidate/rdc_v1_fixed.tscn" id="1_base"]
 [ext_resource type="Script" path="res://assets/water_material_natural_candidate/lighting_entry.gd" id="2_entry"]
 
 [node name="WaterMaterialNaturalLighting" instance=ExtResource("1_base")]

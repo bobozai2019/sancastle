@@ -22,7 +22,7 @@
 | 水 / 沙底shader | [rdc_water.gdshader](../assets/water_material_natural_candidate/rdc_water.gdshader)、[rdc_bed.gdshader](../assets/water_material_natural_candidate/rdc_bed.gdshader) |
 | 完整mip体纹理 | [rdc_caustic_1105_mipped.res](../assets/water_material_natural_candidate/rdc_caustic_1105_mipped.res)、[重载核对](../assets/water_material_natural_candidate/rdc_caustic_manifest.json) |
 | 生成/几何不变记录 | [生成器](../tests/water_material_natural/build_rdc_material.py)、[索引](../assets/water_material_natural_candidate/rdc_generation.json) |
-| 固定 / 耦合候选入口 | [固定](../scenes/water_material_natural_candidate/rdc_v1_fixed.tscn)、[耦合](../scenes/water_material_natural_candidate/rdc_v1_coupled.tscn) |
+| 固定 / 耦合候选入口 | 固定候选场景已在2026-10-14清理中删除；[耦合入口](../scenes/water_material_natural_candidate/rdc_v1_coupled.tscn)保留 |
 
 原reference_v1的shader/profile/bundle保留。修改前main及正式两入口的原字节与hash保存在[回滚索引](../test_output/water_material_rdc/prechange/source_index.json)。不要删除当前入口依赖的candidate目录。
 

@@ -1,7 +1,7 @@
 extends SceneTree
 
 const SCENE := preload("res://scenes/water_render_coupled_v7_preview.tscn")
-const ROCKS := preload("res://tests/visual_water_alignment/prototypes/reflection_rock_environment.tscn")
+const ROCKS := preload("res://scenes/components/water_visual/reflection_rock_environment.tscn")
 const PROFILE := "res://tests/visual_water_alignment/prototypes/water_render_staging_v7.json"
 const CAMERAS := [&"oblique", &"close", &"grazing"]
 const FIELDS := ["rock", "sand", "water"]

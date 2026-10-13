@@ -91,8 +91,13 @@ func _ready() -> void:
 	# The inherited beach fixture selects its fixed camera during setup.
 	if player_camera!=null and "look_active" in player_camera:
 		set_player_camera(true)
-	input_scheduler=Scheduler.new(self)
+	input_scheduler=_create_input_scheduler()
 	get_tree().auto_accept_quit=false
+
+func _create_input_scheduler():
+	var scheduler = Scheduler.new(self)
+	scheduler.history_limit = DIAGNOSTIC_HISTORY_LIMIT
+	return scheduler
 
 func _notification(what: int) -> void:
 	if what==NOTIFICATION_WM_CLOSE_REQUEST and not shutdown_requested: call_deferred("_close_window")
@@ -102,7 +107,7 @@ func _close_window() -> void:
 
 func _process(delta: float) -> void:
 	_update_manual_wave_ui()
-	if not shutdown_requested and not input_running and not busy and not command_queue.pending.is_empty() and command_queue.pending[0].sim_tick<=completed_ticks:
+	if not shutdown_requested and not input_running and not busy and command_queue != null and not command_queue.pending.is_empty() and command_queue.pending[0].sim_tick<=completed_ticks:
 		if playing: accumulator=minf(accumulator+delta,SIM_DELTA*4.0)
 		input_running=true;call_deferred("_drain_input");return
 	super._process(delta)
@@ -165,14 +170,14 @@ func _pick_current(hit: Dictionary) -> bool:
 	var x:=clampi(int((p.x+16)/0.125),0,255);var z:=clampi(int((p.z+16)/0.125),0,255)
 	var chunk: int=(z/32)*8+x/32
 	var current: bool=int(collision_proxy.applied_revisions.get(chunk,-1))>=int(collision_needed.get(chunk,0))
-	if not current: input_rejections.append({"error":"collision_pending","chunk":chunk,"at_us":Time.get_ticks_usec()})
+	if not current: _record_diagnostic(input_rejections, {"error":"collision_pending","chunk":chunk,"at_us":Time.get_ticks_usec()})
 	return current
 
 func _submit_gpu_input(kind: StringName, start: Vector3, end: Vector3, shape: StringName, amount: float) -> bool:
 	input_serial=maxi(input_serial,command_queue.last_command_id)+1
 	var command: Dictionary={"domain_id":domain.domain_id,"generation":generation,"sim_tick":completed_ticks,"command_id":input_serial,"kind":kind,"shape":shape,"transform":{"position_m":start,"end_position_m":end},"radius_m":0.3,"strength":1.0,"amount_m3":amount,"seed":101}
 	var error: StringName=input_scheduler.submit(command)
-	input_events.append({"command":command.duplicate(true),"input_us":Time.get_ticks_usec(),"pick":"PhysicsRayQueryParameters3D","admission_error":String(error),"busy_at_capture":busy,"configuration":{"policy":water_policy,"speed":signed_speed_m_s}})
+	_record_diagnostic(input_events, {"command":command.duplicate(true),"input_us":Time.get_ticks_usec(),"pick":"PhysicsRayQueryParameters3D","admission_error":String(error),"busy_at_capture":busy,"configuration":{"policy":water_policy,"speed":signed_speed_m_s}})
 	if not error.is_empty(): return false
 	if not input_running: input_running=true;call_deferred("_drain_input")
 	return true

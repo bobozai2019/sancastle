@@ -29,7 +29,7 @@ func _input(event: InputEvent) -> void:
 		get_viewport().set_input_as_handled()
 	elif event is InputEventMouseMotion:
 		# Captured mouse movement should not depend on viewport stretch/DPI.
-		var motion := event.screen_relative
+		var motion: Vector2 = event.screen_relative
 		if motion.is_zero_approx(): motion = event.relative
 		rotation.y-=motion.x*mouse_sensitivity
 		rotation.x=clampf(rotation.x-motion.y*mouse_sensitivity,deg_to_rad(-89.0),deg_to_rad(89.0))

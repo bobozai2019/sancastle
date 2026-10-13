@@ -64,7 +64,7 @@ def main():
         protected = ['assets/test1_beach/test1_beach_release.json', 'assets/test1_beach/test1_water_front.gdshader',
                      'assets/test1_beach/test1_front_foam_splats.gdshader','assets/test1_beach/test1_bed_lit_fast.gdshader',
                      'scripts/visual/test1_beach_fixed_entry.gd', 'scripts/visual/water_render_staging_entry.gd',
-                     'scenes/sandcastle_test1_beach_fixed.tscn','scenes/sandcastle_test1_beach_coupled.tscn']
+                     'scenes/water_material_natural_candidate/rdc_v1_fixed.tscn','scenes/water_material_natural_candidate/rdc_v1_coupled.tscn']
         result['protected_sources'] = [identity(ROOT/p) for p in protected]
         result['capture_tool'] = identity(ROOT/'tests/water_material_natural/capture.gd')
         result['images'] = [identity(Path(c['image'])) for c in first['cameras'].values()]

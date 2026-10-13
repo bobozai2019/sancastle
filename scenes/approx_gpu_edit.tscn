@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3]
 
-[ext_resource type="PackedScene" path="res://scenes/sandcastle_test1_beach_coupled.tscn" id="1_beach"]
+[ext_resource type="PackedScene" path="res://scenes/water_material_natural_candidate/rdc_v1_coupled.tscn" id="1_beach"]
 [ext_resource type="Script" path="res://scripts/experiments/approx_gpu_edit/trial_entry.gd" id="2_entry"]
 [ext_resource type="Resource" path="res://assets/approx_gpu_edit/trial_profile.tres" id="3_profile"]
 [ext_resource type="ArrayMesh" path="res://assets/approx_gpu_edit/grid_mesh.res" id="4_grid"]
@@ -10,7 +10,7 @@ script = ExtResource("2_entry")
 trial_profile = ExtResource("3_profile")
 style_profile_path = "res://assets/water_material_natural_candidate/rdc_style_v1.json"
 compiled_bundle_path = "res://assets/water_material_natural_candidate/rdc_bundle_v1.json"
-compiled_bundle_sha256 = "92ba9e4a11295790084966356af7f130d5473af5df14f81ff63adcc1e5f2d88f"
+compiled_bundle_sha256 = "13257a0fed0149b461e82e2ecaa18fa2814b8a50ccddd2dec42e87394d2bf267"
 staging_wave_workload = "continuous_packets_v1"
 hide_hud = false
 use_player_camera = true

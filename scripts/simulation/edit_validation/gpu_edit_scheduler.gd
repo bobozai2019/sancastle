@@ -13,6 +13,11 @@ var terminal := []
 var admissions := []
 var max_pending := 0
 var denied_tick_requests := 0
+var history_limit := 0 # Zero retains complete history for investigation labs.
+
+func _record(history: Array, item: Dictionary) -> void:
+	history.append(item)
+	if history_limit > 0 and history.size() > history_limit: history.pop_front()
 
 func _init(entry: Node3D) -> void:
 	lab=entry;generation=entry.generation
@@ -46,7 +51,7 @@ func submit(command: Dictionary, policy: int = -1, speed: float = NAN) -> String
 	reservations[command.command_id]=nominal
 	policies[command.command_id]={"policy":policy,"speed":speed}
 	max_pending=maxi(max_pending,lab.command_queue.pending.size())
-	admissions.append({"id":command.command_id,"tick":command.sim_tick,"generation":generation,"reserve":nominal,"at_us":Time.get_ticks_usec()})
+	_record(admissions, {"id":command.command_id,"tick":command.sim_tick,"generation":generation,"reserve":nominal,"at_us":Time.get_ticks_usec()})
 	return &""
 
 func drain_due() -> void:
@@ -64,7 +69,7 @@ func drain_due() -> void:
 		var result: Dictionary = await lab.execute_admitted_gpu_command(command,available)
 		if result.is_empty() and not lab.last_error.is_empty():
 			result={"cancelled":true,"transport_failed":true,"error":lab.last_error}
-		terminal.append({"command":command.duplicate(true),"result":result.duplicate(true),"configuration":configuration,
+		_record(terminal, {"command":command.duplicate(true),"result":result.duplicate(true),"configuration":configuration,
 			"settle_us":lab.settle_us,"publish_us":lab.publish_us,"at_us":Time.get_ticks_usec(),"stock":lab.domain.tool_inventory_m3})
 		reservations.erase(active_id);policies.erase(active_id);active_id=0
 	if not lab.last_error.is_empty(): cancel_pending("backend_failed")
@@ -82,7 +87,7 @@ func advance_ticks(count: int) -> void:
 
 func cancel_pending(reason: String) -> void:
 	for command in lab.command_queue.pending:
-		terminal.append({"command":command.duplicate(true),"result":{"cancelled":true,"error":reason},"at_us":Time.get_ticks_usec()})
+		_record(terminal, {"command":command.duplicate(true),"result":{"cancelled":true,"error":reason},"at_us":Time.get_ticks_usec()})
 		reservations.erase(command.command_id);policies.erase(command.command_id)
 	lab.command_queue.pending.clear()
 

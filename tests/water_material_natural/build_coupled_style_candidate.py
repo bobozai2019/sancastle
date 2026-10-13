@@ -10,7 +10,7 @@ candidate.write_text('extends "res://assets/water_material_natural_candidate/sty
 assert candidate.read_text(encoding='utf-8').split('\n',1)[1] == body
 fixed = root/'scenes/water_material_natural_candidate/style_combination.tscn'
 coupled = root/'scenes/water_material_natural_candidate/style_coupled_candidate.tscn'
-coupled.write_text(fixed.read_text(encoding='utf-8').replace('sandcastle_test1_beach_fixed.tscn','sandcastle_test1_beach_coupled.tscn').replace('/style_entry.gd','/style_worker_entry.gd'),encoding='utf-8')
+coupled.write_text(fixed.read_text(encoding='utf-8').replace('scenes/water_material_natural_candidate/rdc_v1_fixed.tscn','scenes/water_material_natural_candidate/rdc_v1_coupled.tscn').replace('/style_entry.gd','/style_worker_entry.gd'),encoding='utf-8')
 sha = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
 manifest = {'source_worker':str(worker),'source_worker_sha256':sha(worker),
     'candidate_worker':str(candidate),'candidate_worker_sha256':sha(candidate),

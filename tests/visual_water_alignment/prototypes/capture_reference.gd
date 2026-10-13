@@ -1,7 +1,7 @@
 extends SceneTree
 
 const WATER_SCENE := preload("res://tests/visual_water_alignment/prototypes/reference_fixed.tscn")
-const COUPLED_SCENE := preload("res://tests/visual_water_alignment/prototypes/reference_coupled.tscn")
+const COUPLED_SCENE := preload("res://scenes/components/water_visual/reference_coupled.tscn")
 const UniformSnapshot := preload("res://scripts/visual/water_render_uniform_snapshot.gd")
 const RenderProfile := preload("res://scripts/visual/water_render_profile.gd")
 const WaveWorkload := preload("res://scripts/visual/water_render_wave_workload.gd")

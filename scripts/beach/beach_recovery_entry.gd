@@ -260,7 +260,7 @@ func restore_gpu_checkpoint_data(checkpoint: Dictionary) -> StringName:
 	gpu_prefix=checkpoint.gpu_beach_edit.prefix.duplicate(true)
 	for item in gpu_prefix:
 		if item.result.status==1: command_queue.applied_log.append(item.command.duplicate(true))
-	input_scheduler=Scheduler.new(self);input_scheduler.accepting=false;input_serial=command_queue.last_command_id
+	input_scheduler=_create_input_scheduler();input_scheduler.accepting=false;input_serial=command_queue.last_command_id
 	water_policy=checkpoint.gpu_beach_edit.selection.policy;signed_speed_m_s=checkpoint.gpu_beach_edit.selection.speed
 	wave_requests.clear()
 	for original in checkpoint.wave_requests:

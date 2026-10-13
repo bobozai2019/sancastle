@@ -66,7 +66,7 @@ for mode in ('off','legacy_sine','texture_layers'):
     (assets/(mode+'.json')).write_text(json.dumps(p,indent=2),encoding='utf-8')
     scene='''[gd_scene load_steps=3 format=3]
 
-[ext_resource type="PackedScene" path="res://scenes/sandcastle_test1_beach_fixed.tscn" id="1_base"]
+[ext_resource type="PackedScene" path="res://scenes/water_material_natural_candidate/rdc_v1_fixed.tscn" id="1_base"]
 [ext_resource type="Script" path="res://assets/water_material_natural_candidate/normal_entry.gd" id="2_entry"]
 
 [node name="WaterMaterialNaturalFixed" instance=ExtResource("1_base")]

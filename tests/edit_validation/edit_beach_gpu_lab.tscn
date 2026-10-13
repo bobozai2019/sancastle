@@ -1,8 +1,0 @@
-[gd_scene load_steps=4 format=3]
-[ext_resource type="PackedScene" path="res://tests/edit_validation/edit_beach_checkpoint_lab.tscn" id="1"]
-[ext_resource type="Script" path="res://tests/edit_validation/beach_gpu_entry.gd" id="2"]
-[ext_resource type="Script" path="res://scripts/simulation/edit_validation/collision_proxy.gd" id="3"]
-[node name="EditBeachGpuLab" instance=ExtResource("1")]
-script = ExtResource("2")
-[node name="GpuCollisionProxy" parent="." index="5"]
-script = ExtResource("3")

@@ -1,7 +1,7 @@
 extends SceneTree
 
 const WATER_SCENE := preload("res://tests/visual_water_alignment/prototypes/reference_fixed.tscn")
-const COUPLED_SCENE := preload("res://tests/visual_water_alignment/prototypes/reference_coupled.tscn")
+const COUPLED_SCENE := preload("res://scenes/components/water_visual/reference_coupled.tscn")
 const GRID_SIZE := 256
 const SNAPSHOT_TICKS := [360, 900, 1500, 2100, 2700]
 

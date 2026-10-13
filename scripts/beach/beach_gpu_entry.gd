@@ -15,6 +15,11 @@ var gpu_receipt := {}
 var gpu_settled := false
 var gpu_published := false
 var gpu_events := []
+const DIAGNOSTIC_HISTORY_LIMIT := 128
+
+func _record_diagnostic(history: Array, item: Dictionary) -> void:
+	history.append(item)
+	if history.size() > DIAGNOSTIC_HISTORY_LIMIT: history.pop_front()
 var observe_gpu_wait_phases := false
 var gpu_wait_phases := []
 
@@ -186,7 +191,7 @@ func _settle_gpu_receipt(bytes: PackedByteArray, token: int) -> void:
 		collision_needed.clear()
 		for chunk in _gpu_chunks(receipt): collision_needed[chunk]=receipt.output_revision
 	gpu_settled=true;gpu_receipt=receipt
-	gpu_events.append({"phase":"settled","at_us":Time.get_ticks_usec(),"revision":receipt.output_revision,"stock":shadow_domain.tool_inventory_m3})
+	_record_diagnostic(gpu_events, {"phase":"settled","at_us":Time.get_ticks_usec(),"revision":receipt.output_revision,"stock":shadow_domain.tool_inventory_m3})
 
 func _gpu_chunks(receipt: Dictionary) -> PackedInt32Array:
 	if "--beach-bounded-collision" in ReleaseConfig.ARGUMENTS:
@@ -209,7 +214,7 @@ func _render_gpu_publish(token: int) -> void:
 
 func _gpu_publication_done(token: int) -> void:
 	if closing or token!=generation: return
-	gpu_published=true;gpu_events.append({"phase":"published","at_us":Time.get_ticks_usec(),"revision":solver.state_revision})
+	gpu_published=true;_record_diagnostic(gpu_events, {"phase":"published","at_us":Time.get_ticks_usec(),"revision":solver.state_revision})
 
 func _render_release() -> void:
 	if gpu_release_done: return

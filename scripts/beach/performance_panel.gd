@@ -41,6 +41,7 @@ var accepted_frames := 0
 var last_capture_frame := -1
 var snapshot := {}
 var hud_visible := true
+var stop_render_done := false
 
 func _ready() -> void:
 	stage_names.text = "\n".join(STAGE_LABELS)
@@ -217,6 +218,30 @@ func _refresh() -> void:
 func _exit_tree() -> void:
 	RenderingServer.viewport_set_measure_render_time(get_viewport().get_viewport_rid(), false)
 	RenderingServer.call_on_render_thread(_restore_flags.bind(saved_solver, saved_proxy, saved_solver_flag, saved_proxy_flag))
+
+func stop_sampling() -> void:
+	# Finish callbacks while this panel and its solver still exist. Removing a
+	# scene must not leave a queued profiler holding the old solver reference.
+	set_process(false)
+	sampling = false
+	sample_epoch += 1
+	RenderingServer.viewport_set_measure_render_time(get_viewport().get_viewport_rid(), false)
+	stop_render_done = false
+	RenderingServer.call_on_render_thread(_stop_sampling_render)
+	while not stop_render_done or collect_pending:
+		await get_tree().process_frame
+	saved_proxy = null
+	snapshot.clear()
+	last_stages.clear()
+	stage_sums.clear()
+	stage_counts.clear()
+
+func _stop_sampling_render() -> void:
+	_configure_render(false)
+	call_deferred("_sampling_stopped")
+
+func _sampling_stopped() -> void:
+	stop_render_done = true
 
 static func _restore_flags(solver, proxy, solver_flag: bool, proxy_flag: bool) -> void:
 	if solver != null: solver.profile_passes = solver_flag

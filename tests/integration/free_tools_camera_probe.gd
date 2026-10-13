@@ -173,7 +173,7 @@ func _run() -> void:
 	var controls: Node = scene.get_node("Interface/EditPanel/Margin/Controls")
 	for name in ["DigAmount", "FillAmount"]:
 		var box: SpinBox = controls.get_node(name)
-		check(name + "_range_and_default", box.min_value == 0.01 and box.max_value == 1.0 and box.step == 0.01 and box.value == 0.1)
+		check(name + "_range_and_default", is_equal_approx(box.min_value, 0.01) and box.max_value == 1.0 and is_equal_approx(box.step, 0.01) and is_equal_approx(box.value, 0.1), [box.min_value, box.max_value, box.step, box.value])
 	check("inventory_ui_removed", not controls.has_node("Stock") and not "桶" in scene.status_label.text)
 	await _camera()
 	var initial := await snapshot()
@@ -219,6 +219,16 @@ func _run() -> void:
 	await _switch("main")
 	check("scene_switch_restores_external_fields", after == await snapshot())
 	check("scene_switch_restores_external_ledger", scene.domain.sand_source_m3 == saved.shadow.sand_source_m3 and scene.domain.sand_sink_m3 == saved.shadow.sand_sink_m3)
+	service.inject_target_failure_once = true
+	check("failed_target_admitted", service.request_switch("test1_capture"))
+	while service.busy: await process_frame
+	scene = service.active_scene
+	check("failed_target_rolls_back", scene.scene_key == "main" and scene.ready_for_ticks and not service.last_error.is_empty())
+	check("rollback_ten_fields_exact", after == await snapshot())
+	check("rollback_ledger_exact", scene.domain.sand_source_m3 == saved.shadow.sand_source_m3 and scene.domain.sand_sink_m3 == saved.shadow.sand_sink_m3)
+	var fully_released := true
+	for record in service.release_records: fully_released = fully_released and record.gpu_released and record.node_freed
+	check("all_replaced_scene_releases_confirmed", fully_released)
 	await process_frame
 	await RenderingServer.frame_post_draw
 	root.get_texture().get_image().save_png(output.path_join("main_free_tools.png"))

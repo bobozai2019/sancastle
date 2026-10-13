@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://bovjuhcrpaoaf"]
 
-[ext_resource type="PackedScene" path="res://scenes/sandcastle_test1_beach_coupled.tscn" id="1_beach"]
+[ext_resource type="PackedScene" path="res://scenes/water_material_natural_candidate/rdc_v1_coupled.tscn" id="1_beach"]
 [ext_resource type="Script" path="res://scripts/beach/beach_playable_entry.gd" id="2_runtime"]
 [ext_resource type="Script" path="res://scripts/simulation/edit_validation/collision_proxy.gd" id="3_collision"]
 [ext_resource type="Script" path="res://scripts/beach/free_camera.gd" id="4_camera"]
@@ -20,7 +20,7 @@ corner_radius_bottom_right = 10
 script = ExtResource("2_runtime")
 style_profile_path = "res://assets/water_material_natural_candidate/rdc_style_v1.json"
 compiled_bundle_path = "res://assets/water_material_natural_candidate/rdc_bundle_v1.json"
-compiled_bundle_sha256 = "92ba9e4a11295790084966356af7f130d5473af5df14f81ff63adcc1e5f2d88f"
+compiled_bundle_sha256 = "13257a0fed0149b461e82e2ecaa18fa2814b8a50ccddd2dec42e87394d2bf267"
 staging_wave_workload = "continuous_packets_v1"
 water_policy = 3
 unrestricted_sand_tools = true

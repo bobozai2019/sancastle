@@ -1,5 +1,7 @@
 # 可复用技术契约
 
+2026-10-13 main及继承的可编辑场景按用户要求采用[自由挖填沙 external_v1](water_sand/ADR_自由挖填沙_external_v1.md)：无背包依赖，实际增减量记外部沙源汇，普通恢复header v3显式标记；原库存测试与其限制仍按旧契约执行。
+
 当前GPU编辑的字段、库存预留、结算发布、水策略及普通恢复约束见[GPU编辑冻结契约与修订](../history/sandcastle_gpu_edit_validation/契约/编辑事务与水响应契约.md)，适用范围以[主场景整合](../history/sandcastle_gpu_edit_validation/主场景整合与临时清理.md)和[归档证据边界](../history/sandcastle_gpu_edit_validation/证据保留说明.md)为准。
 
 竞品技术事实及未知项另见[统一知识入口](../competitor/README.md)，按其[记录规范](../competitor/记录规范.md)更新；本目录仍只保存项目已冻结技术契约。

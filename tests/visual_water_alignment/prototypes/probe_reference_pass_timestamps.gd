@@ -1,6 +1,6 @@
 extends SceneTree
 
-const SCENE := preload("res://tests/visual_water_alignment/prototypes/reference_coupled.tscn")
+const SCENE := preload("res://scenes/components/water_visual/reference_coupled.tscn")
 
 var output_dir := ""
 var run_id := ""

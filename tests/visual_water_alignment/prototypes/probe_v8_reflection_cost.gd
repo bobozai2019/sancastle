@@ -1,7 +1,7 @@
 extends SceneTree
 
 const WATER_SCENE := preload("res://tests/visual_water_alignment/prototypes/reference_fixed.tscn")
-const COUPLED_SCENE := preload("res://tests/visual_water_alignment/prototypes/reference_coupled.tscn")
+const COUPLED_SCENE := preload("res://scenes/components/water_visual/reference_coupled.tscn")
 const STAGING_WATER_SCENE := preload("res://scenes/water_render_demo_v8_preview.tscn")
 const STAGING_COUPLED_SCENE := preload("res://scenes/water_render_coupled_v8_preview.tscn")
 const STAGING_WATER_CONTINUOUS_SCENE := preload("res://scenes/water_render_demo_v8_preview.tscn")

@@ -1,5 +1,9 @@
 # Sandcastle 项目现状
 
+2026-10-13 主场景继承链中的 `reference_coupled`、`reflection_rock_environment` 及三个前缘子场景已从 `tests/visual_water_alignment/prototypes/` 迁至 [scenes/components/water_visual](../scenes/components/water_visual/)。场景、运行 profile 与测试代码均改用新路径；历史验收记录仍指迁移前文件，原字节可在 Git 提交 `7a1b60c` 中核对。脚本、shader、网格仍按现有资源路径读取。
+
+2026-10-13 main已支持WASD移动/右键按住转向，并按用户要求改为[自由挖填沙](knowledge/water_sand/ADR_自由挖填沙_external_v1.md)，无需背包库存，范围0.01–1.00m³、默认0.10；两个可编辑test1场景继承。实际沙增减记外部源汇，保存恢复和切换保留。67项功能、18项原契约、7项原库存模式检查通过。[操作说明](主场景操作.md)。
+
 2026-10-13近似 GPU 编辑实验的可运行入口已迁至 [scenes/approx_gpu_edit.tscn](../scenes/approx_gpu_edit.tscn)，配套脚本、profile、网格和笔刷 shader 分别位于 `scripts/experiments/approx_gpu_edit/`、`assets/approx_gpu_edit/`、`shaders/experiments/approx_gpu_edit/`；`tests/experiments/approx_gpu_edit/` 保留复验探针。旧验收路径和 hash 均指迁移前内容。该入口仍是独立实验，不代替主场景权威模拟与保存恢复。
 
 2026-10-13已直接复核[三个可编辑场景的水材质与观感差异](场景切换与功能复用.md#水材质一致性与观感差异2026-10-13)：材质/固定参数/贴图一致，test1初态更深、流速和水面形状不同，默认机位也不同；30项冻结态核对通过，光学尺度和最终画面对齐尚未完成。
@@ -18,7 +22,7 @@
 
 主场景左下角已加入[性能面板](性能面板.md)，实时显示FPS、CPU/GPU耗时、模拟速度和GPU分阶段计时；可关闭采样或F6隐藏。它用于运行观察，不改变历史性能门槛和验收状态。
 
-水材质已按最新用户要求，在reference_v1基础上接入RDC材质适配：RGB分通道吸收透底、完整9级mip的三维焦散、流向/相位细法线、指数1500的窄高光与低俯视反射权重；静态Sun215、GPU堆挖v1.60/E3、自由相机及UI保留。三机位10模拟秒/暂停检查、干沙与前景负例、普通恢复及当前主场景12项功能回归通过，见[水材质RDC适配](水材质_RDC适配.md)。性能继续暂缓，旧成本FAIL与严格冷恢复未知保留。原正式fixed/coupled入口也已统一新材质，固定样片可运行scenes/sandcastle_test1_beach_fixed.tscn；原reference_v1与[旧整合验收](../task/sandcastle_water_material_natural/验收/T06_整合与回归.md)保留。assets/water_material_natural_candidate现是运行依赖，不可当临时内容删除。
+水材质已按最新用户要求，在reference_v1基础上接入RDC材质适配：RGB分通道吸收透底、完整9级mip的三维焦散、流向/相位细法线、指数1500的窄高光与低俯视反射权重；静态Sun215、GPU堆挖v1.60/E3、自由相机及UI保留。三机位10模拟秒/暂停检查、干沙与前景负例、普通恢复及当前主场景12项功能回归通过，见[水材质RDC适配](水材质_RDC适配.md)。性能继续暂缓，旧成本FAIL与严格冷恢复未知保留。原正式fixed/coupled入口也已统一新材质；固定样片场景在2026-10-14清理中删除，原验收结果按当时源文件判定。原reference_v1与[旧整合验收](../task/sandcastle_water_material_natural/验收/T06_整合与回归.md)保留。assets/water_material_natural_candidate中的耦合链仍是运行依赖，不可当临时内容删除。
 
 成果迁移：GPU堆挖专项的方案、契约、验收和关键摘要现位于[docs/history/sandcastle_gpu_edit_validation](history/sandcastle_gpu_edit_validation/README.md)，复验工具迁到tools/gpu_edit_validation；按用户要求不保留全量中间数据。主场景不依赖该task目录，可删除task/sandcastle_gpu_edit_validation。水材质自然感任务仍在执行，task/sandcastle_water_material_natural保持原位。
 
@@ -34,7 +38,7 @@
 
 - 已有 GPU 水沙耦合、堆沙/挖沙、潮水与侵蚀、湿度压实、局部支撑破坏、碰撞代理和检查点恢复。水沙耦合旧任务的 T00–T08 已完成，但其 Gate 4「无资源泄漏」当时未完全通过；旧结果不等于 test1 新目标通过。见[旧执行状态](history/sandcastle_water_sand_coupling/执行状态.md)。
 - 水沙视觉第二阶段的水体和沙体配置曾按其自身门槛完成 12/12；后续水体渲染对齐任务以 14/56 暂停，未达到最终视觉目标。这些结果分别见[第二阶段状态](history/sandcastle_visual_reconstruction_phase2/执行状态.md)和[水体对齐收尾](history/sandcastle_water_render_alignment/收尾说明.md)。
-- test1 定向任务完成资源取数与索引 RG1、证据分级与实现映射 RG2、固定沙滩样片 RG3，以及实时整合的小目标 P03 G04。正式场景为[固定沙滩](../scenes/sandcastle_test1_beach_fixed.tscn)和[实时耦合沙滩](../scenes/sandcastle_test1_beach_coupled.tscn)，资源与当前 profile 位于[assets/test1_beach](../assets/test1_beach/test1_beach_release.json)。最后任务判定为 **14/15，RG4 暂停且未通过**，见[收尾记录](history/sandcastle_test1_reverse_rebuild/收尾记录.md)及[RG4 验收](history/sandcastle_test1_reverse_rebuild/验收/RG4_实时沙滩与联合验收.md)。
+- test1 定向任务完成资源取数与索引 RG1、证据分级与实现映射 RG2、固定沙滩样片 RG3，以及实时整合的小目标 P03 G04。历史正式固定/耦合入口已清理；当前耦合场景由[main.tscn](../scenes/main.tscn)直接继承[rdc_v1_coupled.tscn](../scenes/water_material_natural_candidate/rdc_v1_coupled.tscn)。资源与当前 profile 位于[assets/test1_beach](../assets/test1_beach/test1_beach_release.json)。最后任务判定为 **14/15，RG4 暂停且未通过**，见[收尾记录](history/sandcastle_test1_reverse_rebuild/收尾记录.md)及[RG4 验收](history/sandcastle_test1_reverse_rebuild/验收/RG4_实时沙滩与联合验收.md)。
 - 已记录的当前耦合入口验证覆盖三笔小体积堆挖、沙量库存闭合、碰撞与保存恢复、直接启动、三机位和无波/遮挡负例；一次 20 笔编辑反馈最大 60.818 ms，通过该次 100 ms 短反馈门。验证范围以[RG4 报告](history/sandcastle_test1_reverse_rebuild/验收/RG4_实时沙滩与联合验收.md)的输入、版本和证据为准。
 
 ## 未完成和未知

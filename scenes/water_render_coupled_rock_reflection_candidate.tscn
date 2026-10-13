@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" path="res://scenes/water_render_coupled_v7_preview.tscn" id="1_base"]
 [ext_resource type="Script" path="res://tests/visual_water_alignment/prototypes/rock_reflection_candidate_entry.gd" id="2_script"]
-[ext_resource type="PackedScene" path="res://tests/visual_water_alignment/prototypes/reflection_rock_environment.tscn" id="3_rocks"]
+[ext_resource type="PackedScene" path="res://scenes/components/water_visual/reflection_rock_environment.tscn" id="3_rocks"]
 
 [node name="WaterRenderRockReflectionCoupled" instance=ExtResource("1_base")]
 script = ExtResource("2_script")

@@ -2,7 +2,7 @@ extends SceneTree
 
 const Uniforms := preload("res://scripts/visual/water_render_uniform_snapshot.gd")
 var output := "D:/godot/project/sandcastle/test_output/water_material_natural/t00_baseline"
-var scene_path := "res://scenes/sandcastle_test1_beach_fixed.tscn"
+var scene_path := "res://scenes/water_material_natural_candidate/rdc_v1_fixed.tscn"
 var target_tick := 360
 var normal_debug := 0
 var normal_ablation := false
