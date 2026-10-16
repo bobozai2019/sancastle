@@ -1,0 +1,184 @@
+{
+  "created_utc": "2026-10-16T15:57:52.799852+00:00",
+  "git_head": "7a101b53c74a207a64554417064fc7d96da118af",
+  "sources": {
+    "scripts/simulation/edit_validation/frame_pipeline/editor.gd": {
+      "sha256": "b775e735e3427b52144d3c128b184191be14f8a363fde766944d0c17f2456403",
+      "bytes": 18356
+    },
+    "scripts/simulation/edit_validation/frame_pipeline/controller.gd": {
+      "sha256": "eba3874aac33266f449ccde99b56285aae7975345eb00fc8cc7f02655bd514f7",
+      "bytes": 8403
+    },
+    "tools/edit_stutter_diagnosis/drag_profile.gd": {
+      "sha256": "d02815debdec3c98cba52577a68ce5e7c08375e60ab42e2cb85e3479520a82fa",
+      "bytes": 9832
+    },
+    "tools/edit_stutter_diagnosis/analyze_drag_profile.py": {
+      "sha256": "83e1a99237fad8d1ced1cc6b78bdafa765eaefc9182cf47c26f0f5a933ab058f",
+      "bytes": 12623
+    },
+    "scenes/main.tscn": {
+      "sha256": "b6c946e61e81e562cdc4434440ad588440e3361a6d386ffbf53cf30eddd0e107",
+      "bytes": 67470
+    },
+    "scripts/beach/release_config.gd": {
+      "sha256": "006e91856bd21ad9b002ac35ba3d4a3db43395c042e68c2ba6b4910acefd757e",
+      "bytes": 448
+    },
+    "shaders/simulation/edit_validation/water_packed_cached.glsl": {
+      "sha256": "4b39cee87fcebcadaa0680652a0081524107bf17d1545b4d299b9559e38d7d5c",
+      "bytes": 14583
+    },
+    "shaders/simulation/edit_validation/water_velocity_prefetch.glsl": {
+      "sha256": "da8cc83ddc3f4a36a88b1a4eefead37a08e014a11d6ea7f6c09f1cf060c0b6c7",
+      "bytes": 2926
+    }
+  },
+  "report_sha256": "98aa989b91642f9c760348ebe22a73f750d5f6276c80043e2620bf883ce5d249",
+  "runs": [
+    {
+      "name": "drag_profile_20261016_04",
+      "checks": 22,
+      "source_changes_since_run": [],
+      "checked_sources": [
+        "scripts/simulation/edit_validation/frame_pipeline/editor.gd",
+        "scripts/simulation/edit_validation/frame_pipeline/controller.gd",
+        "tools/edit_stutter_diagnosis/drag_profile.gd",
+        "scenes/main.tscn",
+        "scripts/beach/release_config.gd",
+        "shaders/simulation/edit_validation/water_packed_cached.glsl",
+        "shaders/simulation/edit_validation/water_velocity_prefetch.glsl"
+      ],
+      "files": {
+        "result.json": {
+          "bytes": 3304737,
+          "sha256": "59bf5fdda77cc9272afb18b22788a93480ed48f693f0809de58b95f29396bf29"
+        },
+        "manifest.json": {
+          "bytes": 64751,
+          "sha256": "24513e0b583ebfa411e14aa975265cfc4f5109570201d7db755207f4bf899cb7"
+        },
+        "exit.json": {
+          "bytes": 255,
+          "sha256": "f371e6bbfe14fc489cc398f0aeb42cae67454b867757aa67b8a69051a20575be"
+        },
+        "runtime.log": {
+          "bytes": 1092,
+          "sha256": "ae6634582fc0151d8ef172ba8283b342332da6ebd82ea3923839d31d03f32407"
+        },
+        "telemetry.jsonl": {
+          "bytes": 17352,
+          "sha256": "68837cf5f9720a9a34392be11ca5915f406f426aa04ca317ea158d6f67b88db9"
+        }
+      },
+      "engine_sha256": "12310c74bdda7dcd43f28e971f33047dcecadd436b68169d61ce41009006df38",
+      "analysis_sha256": "0e8c492140cfe67a9bef09edc7d94f540159e2a7b95eeede67bc8235a818f877"
+    },
+    {
+      "name": "drag_profile_20261016_05",
+      "checks": 22,
+      "source_changes_since_run": [],
+      "checked_sources": [
+        "scripts/simulation/edit_validation/frame_pipeline/editor.gd",
+        "scripts/simulation/edit_validation/frame_pipeline/controller.gd",
+        "tools/edit_stutter_diagnosis/drag_profile.gd",
+        "scenes/main.tscn",
+        "scripts/beach/release_config.gd",
+        "shaders/simulation/edit_validation/water_packed_cached.glsl",
+        "shaders/simulation/edit_validation/water_velocity_prefetch.glsl"
+      ],
+      "files": {
+        "result.json": {
+          "bytes": 1127095,
+          "sha256": "ffbc856c3b27aadea728e478171999646921fa288056fc0f0c4f09715b2205b3"
+        },
+        "manifest.json": {
+          "bytes": 64732,
+          "sha256": "130bc2ba08732418c7295b3e3837f4c42f3dfe76b8c4061602295bf4af816397"
+        },
+        "exit.json": {
+          "bytes": 255,
+          "sha256": "78ce57bf4faee713bf8c5b0872fd16fc5e11f56d07670aa330fa703b2bacf94f"
+        },
+        "runtime.log": {
+          "bytes": 1092,
+          "sha256": "ae6634582fc0151d8ef172ba8283b342332da6ebd82ea3923839d31d03f32407"
+        },
+        "telemetry.jsonl": {
+          "bytes": 17349,
+          "sha256": "e49137cd7a67cb46398498157b1c4518cf71cd4f2248e892470a56f2ca6221d4"
+        }
+      },
+      "engine_sha256": "12310c74bdda7dcd43f28e971f33047dcecadd436b68169d61ce41009006df38",
+      "analysis_sha256": "bcc5cde066435b8ce4d019a3b50bf49fcf4af6e69e9542a11afb08be097d4335"
+    },
+    {
+      "name": "drag_profile_regression_20261016_01",
+      "checks": 96,
+      "source_changes_since_run": [],
+      "checked_sources": [
+        "scripts/simulation/edit_validation/frame_pipeline/editor.gd",
+        "scripts/simulation/edit_validation/frame_pipeline/controller.gd",
+        "scenes/main.tscn",
+        "scripts/beach/release_config.gd",
+        "shaders/simulation/edit_validation/water_packed_cached.glsl",
+        "shaders/simulation/edit_validation/water_velocity_prefetch.glsl"
+      ],
+      "files": {
+        "result.json": {
+          "bytes": 162206,
+          "sha256": "d3d4ccdaed247fe500b31d887964dfc001e5b8a819ce985609e0a008c437c9c0"
+        },
+        "manifest.json": {
+          "bytes": 68652,
+          "sha256": "792728848249d5d998230e595dc431adf96e8f0b6dbc80fa02ade95064d8aace"
+        },
+        "exit.json": {
+          "bytes": 266,
+          "sha256": "15b1317de9e070d6e6633b75b56418080f70548fa7739a9e516f094017a938f5"
+        },
+        "runtime.log": {
+          "bytes": 3688,
+          "sha256": "ce222f770b572cb0c23417c040346e01efbe288a203122d3842e68f538a7e7a1"
+        },
+        "telemetry.jsonl": {
+          "bytes": 8450,
+          "sha256": "3a0c6cd6a4480e21cf7b0e4fcbb04c2074208bd11c5f40582e333e754aedeff4"
+        }
+      },
+      "engine_sha256": "12310c74bdda7dcd43f28e971f33047dcecadd436b68169d61ce41009006df38"
+    }
+  ],
+  "report_links_verified": [
+    "test_output\\physics_threading\\drag_profile_20261016_04\\result.json",
+    "test_output\\physics_threading\\drag_profile_20261016_04\\analysis.json",
+    "test_output\\physics_threading\\drag_profile_20261016_05\\result.json",
+    "test_output\\physics_threading\\drag_profile_20261016_05\\analysis.json",
+    "test_output\\physics_threading\\drag_profile_regression_20261016_01\\result.json",
+    "tools\\edit_stutter_diagnosis\\drag_profile.gd",
+    "tools\\edit_stutter_diagnosis\\analyze_drag_profile.py",
+    "docs\\search\\README.md",
+    "docs\\search\\continuous_dig_stutter_20261016.md"
+  ],
+  "hardware": {
+    "cpu": "Intel Core i5-9300H",
+    "cores": 4,
+    "logical_processors": 8,
+    "gpu": "NVIDIA GeForce GTX 1050"
+  },
+  "other_process": {
+    "pid": 23948,
+    "command_line": "Godot --path D:/godot/project/sandcastle --editor",
+    "observed_during_all_measurement_windows": true,
+    "not_stopped": true
+  },
+  "limitations": [
+    "Not exclusive hardware; another Godot editor was present.",
+    "01 failed observer shutdown; 02/03 observer fingerprint hashing contaminated beginning of window; historical files retained.",
+    "04/05 move identity work outside timed window.",
+    "GPU and nested CPU spans cannot be summed indiscriminately.",
+    "No native fence/Present trace; no displayed scanout measurement.",
+    "No algorithm, scene setting, shader or scheduler semantic changes; diagnostics only."
+  ]
+}

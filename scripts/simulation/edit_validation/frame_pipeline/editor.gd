@@ -26,6 +26,24 @@ var rollback_callbacks: Array[Callable]=[]
 var rollback_remaining:=0
 var rollback_errors:=[]
 var rollback_hashes:={}
+var profile_sequence:=0
+var profile_starts:={}
+
+# Opt-in diagnostics. CPU spans measure command recording, GPU spans measure
+# the paired device timestamps; neither introduces a synchronous readback.
+func _profile_begin(stage: String) -> String:
+	if not profile_passes:return ""
+	profile_sequence+=1
+	var mark:="fp_%d_%d_%s"%[receipt_batch_serial,profile_sequence,stage]
+	profile_starts[mark]=Time.get_ticks_usec()
+	rd.capture_timestamp(mark+"_start")
+	return mark
+
+func _profile_end(mark: String) -> void:
+	if mark.is_empty():return
+	rd.capture_timestamp(mark+"_end")
+	receipt_batch_metrics.cpu_spans.append({"mark":mark,"start_us":profile_starts[mark],"end_us":Time.get_ticks_usec()})
+	profile_starts.erase(mark)
 
 func _initialize_helpers() -> String:
 	if not helper_pipelines.is_empty():
@@ -53,11 +71,13 @@ func _helper_set(index: int, buffers: Array) -> RID:
 	batch_sets.append(uniform_set);return uniform_set
 
 func _helper_dispatch(index: int, push: PackedByteArray) -> void:
+	var mark:=_profile_begin("helper_%d"%index)
 	var list:=rd.compute_list_begin()
 	rd.compute_list_bind_compute_pipeline(list,helper_pipelines[index])
 	rd.compute_list_bind_uniform_set(list,batch_sets[index],0)
 	if not push.is_empty():rd.compute_list_set_push_constant(list,push,push.size())
 	rd.compute_list_dispatch(list,1,1,1);rd.compute_list_end()
+	_profile_end(mark)
 
 func _copy_texture(source: RID, target: RID) -> Error:
 	return rd.texture_copy(source,target,Vector3.ZERO,Vector3.ZERO,Vector3(grid_size,grid_size,1),0,0,0,0)
@@ -118,8 +138,13 @@ func dispatch_receipt_batch(envelopes: Array, limit: int, tick: int, external_ac
 	pre_batch_ticket=active_ticket
 	receipt_batch_metrics={"command_upload_calls":1,"command_upload_bytes":plan.data.size(),"control_upload_calls":0,
 		"receipt_readback_calls":0,"cpu_ack_inside_batch":0,"scheduled_commands":plan.count,"passes":[],"backup_texture_count":0,"snapshots":snapshots}
+	if profile_passes:receipt_batch_metrics.cpu_spans=[]
+	var batch_mark:=_profile_begin("batch")
+	var backup_mark:=_profile_begin("backup")
 	if not _make_backups():_clear_receipt_batch();return {"error":"backup_create"}
+	_profile_end(backup_mark)
 	receipt_batch_metrics.backup_texture_count=batch_backups.size()
+	var setup_mark:=_profile_begin("setup")
 	for index in 4:
 		var size: int=[plan.data.size(),plan.count*128,48,16][index]
 		var data:=PackedByteArray()
@@ -132,10 +157,12 @@ func dispatch_receipt_batch(envelopes: Array, limit: int, tick: int, external_ac
 	var select_set:=_helper_set(0,[batch_buffers[0],command_buffer,control_buffer,batch_buffers[1],batch_indirect,batch_buffers[3]])
 	var capture_set:=_helper_set(1,[command_buffer,receipt_buffer,batch_buffers[1],batch_buffers[3]])
 	if not select_set.is_valid() or not capture_set.is_valid():_clear_receipt_batch();return {"error":"batch_uniform_set"}
+	_profile_end(setup_mark)
 	receipt_pending=true;settlement_authorized=false;recording_batch=true
 	# Original per-command sand/water order. Only selection and dispatch sizes
 	# move to the GPU. There is no readback/CPU continuation in this loop.
 	for index in plan.count:
+		var command_mark:=_profile_begin("command_%d"%index)
 		var data: PackedByteArray=plan.envelopes[index]
 		active_ticket=data.decode_s64(0);batch_pass_index=index;_set_batch_window(data)
 		suspended_edit=false;legacy_dispatch_indirect=batch_indirect
@@ -146,6 +173,7 @@ func dispatch_receipt_batch(envelopes: Array, limit: int, tick: int, external_ac
 		else:_dispatch_edit(2)
 		_dispatch_edit(1,3);_dispatch_extra_candidate(data);_dispatch_edit(3);_dispatch_extra_commit(0)
 		_helper_dispatch(1,PackedByteArray())
+		_profile_end(command_mark)
 		if snapshots and not _save_snapshot():
 			recording_batch=false
 			var rollback:=abort_receipt_batch()
@@ -154,10 +182,12 @@ func dispatch_receipt_batch(envelopes: Array, limit: int, tick: int, external_ac
 	var error: Error=rd.buffer_get_data_async(batch_buffers[1],_batch_receipt_ready.bind(callback,receipt_batch_serial))
 	if error!=OK:return {"error":"batch_readback_submit","rollback":abort_receipt_batch()}
 	receipt_batch_metrics.receipt_readback_calls=1
+	_profile_end(batch_mark)
 	return {"error":"","count":plan.count,"serial":receipt_batch_serial}
 
 func _dispatch_edit(index: int, mode: int=0) -> void:
 	if not recording_batch:super._dispatch_edit(index,mode);return
+	var mark:=_profile_begin("sand_%d_%d"%[index,mode])
 	receipt_batch_metrics.passes.append({"command":batch_pass_index,"pass":"sand_%d_%d"%[index,mode]})
 	var list:=rd.compute_list_begin()
 	rd.compute_list_bind_compute_pipeline(list,edit_pipelines[index])
@@ -165,9 +195,11 @@ func _dispatch_edit(index: int, mode: int=0) -> void:
 	rd.compute_list_set_push_constant(list,PackedInt32Array([mode,edit_window.position.x,edit_window.position.y,edit_window.size.x,edit_window.size.y,0,0,0]).to_byte_array(),32)
 	rd.compute_list_dispatch_indirect(list,batch_indirect,0 if index==1 else 12)
 	rd.compute_list_end()
+	_profile_end(mark)
 
 func _water_dispatch(index: int, mode: int=0) -> void:
 	if not recording_batch:super._water_dispatch(index,mode);return
+	var mark:=_profile_begin("water_%d_%d"%[index,mode])
 	receipt_batch_metrics.passes.append({"command":batch_pass_index,"pass":"water_%d_%d"%[index,mode]})
 	var list:=rd.compute_list_begin()
 	rd.compute_list_bind_compute_pipeline(list,water_pipelines[index])
@@ -182,6 +214,7 @@ func _water_dispatch(index: int, mode: int=0) -> void:
 	elif index==3:rd.compute_list_set_push_constant(list,PackedInt32Array([grid_size,mode,0,0]).to_byte_array(),16)
 	rd.compute_list_dispatch_indirect(list,batch_indirect,0 if index in [1,2,6,7] else 24)
 	rd.compute_list_end()
+	_profile_end(mark)
 
 func _batch_receipt_ready(bytes: PackedByteArray, callback: Callable, serial: int) -> void:
 	if rd==null or serial!=receipt_batch_serial or not receipt_batch_open or not receipt_pending:return
@@ -277,6 +310,7 @@ func _clear_receipt_batch() -> void:
 	for rid in batch_sets:
 		if rid.is_valid():rd.free_rid(rid)
 	batch_sets.clear()
+	profile_starts.clear()
 	for snapshot in batch_snapshots:
 		for rid in snapshot.values():rd.free_rid(rid)
 	batch_snapshots.clear()

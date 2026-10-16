@@ -14,7 +14,7 @@
 [ext_resource type="Shader" uid="uid://byf53lo4wks8k" path="res://assets/test1_beach/test1_front_foam_splats.gdshader" id="10_dp3eg"]
 [ext_resource type="PackedScene" path="res://scenes/components/ui_visibility.tscn" id="10_ui_visibility"]
 [ext_resource type="Shader" uid="uid://cl34llp5vargo" path="res://tests/visual_water_alignment/prototypes/reference_shore_contact_overlay.gdshader" id="11_0ld40"]
-[ext_resource type="Theme" path="res://assets/ui/main_explicit_font.tres" id="11_main_font"]
+[ext_resource type="Theme" uid="uid://cooha8cvpvhcl" path="res://assets/ui/main_explicit_font.tres" id="11_main_font"]
 [ext_resource type="Script" uid="uid://p7hwam3l8twq" path="res://scripts/beach/ui_drag.gd" id="11_ui_drag"]
 [ext_resource type="PackedScene" path="res://scenes/components/suspended_sand_cloud.tscn" id="12_suspended_cloud"]
 [ext_resource type="SphereMesh" path="res://assets/gravel/stone_mesh.tres" id="14_dp3eg"]

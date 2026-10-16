@@ -29,6 +29,7 @@ func poll() -> void:
 			if history.size()>128:history.pop_front()
 
 func execute(count: int, configurations: Array) -> Dictionary:
+	var encode_start_us:=Time.get_ticks_usec()
 	var commands:=[];var envelopes:=[];var selections:=[]
 	var execution_tick: int=owner.completed_ticks
 	var revision: int=owner.solver.state_revision
@@ -48,6 +49,9 @@ func execute(count: int, configurations: Array) -> Dictionary:
 	owner.pending_gpu_command=commands[0];owner.pending_gpu_revision=revision
 	var epoch: int=owner.generation
 	var item:={"batch":serial,"generation":epoch,"count":count,"submitted_us":Time.get_ticks_usec(),"submitted_frame":Engine.get_process_frames(),"collision_ready_us":-1,"physics_frame":-1,"done_us":-1,"targets":{},"metrics":{}}
+	if owner.solver.profile_passes:
+		item.command_ids=commands.map(func(command):return command.command_id)
+		item.encode_cpu_us=Time.get_ticks_usec()-encode_start_us
 	RenderingServer.call_on_render_thread(_submit_render.bind(envelopes,execution_tick,epoch,serial))
 	var deadline:=Time.get_ticks_msec()+15000
 	while reply.is_empty() and Time.get_ticks_msec()<deadline:await owner.get_tree().process_frame
@@ -57,6 +61,8 @@ func execute(count: int, configurations: Array) -> Dictionary:
 		owner.gpu_busy=false;owner.pending_gpu_command={};submitting=false
 		return {"error":owner.last_error,"results":[]}
 	item.receipt_us=Time.get_ticks_usec();item.metrics=reply.metrics
+	if owner.solver.profile_passes:item.callback_us=reply.get("callback_us",0)
+	var settle_start_us:=Time.get_ticks_usec()
 	var results:=[];var union_receipt: Dictionary={}
 	# Keep every original packet and the current v4 checkpoint prefix format.
 	var targets: Dictionary=owner.collision_needed.duplicate()
@@ -79,6 +85,7 @@ func execute(count: int, configurations: Array) -> Dictionary:
 		await _finish(false)
 	else:
 		owner.collision_needed=targets
+		if owner.solver.profile_passes:item.settle_cpu_us=Time.get_ticks_usec()-settle_start_us
 		if validated.accepted_count>0:
 			owner.gpu_receipt=union_receipt
 			owner.gpu_receipt.dirty_mask=validated.dirty_mask;owner.gpu_receipt.dirty_rect=validated.dirty_rect
@@ -96,17 +103,26 @@ func execute(count: int, configurations: Array) -> Dictionary:
 			deadline=Time.get_ticks_msec()+15000
 			while finish.is_empty() and Time.get_ticks_msec()<deadline:await owner.get_tree().process_frame
 		if not finish.get("error","").is_empty():owner._fail("frame batch cleanup: "+str(finish.error))
+		if owner.solver.profile_passes:item.finish_profile=finish.get("profile",{})
 	owner.ticket_id=first_ticket+count-1;owner.pending_gpu_command={};owner.gpu_busy=false
 	owner.edit_overlap_window_open=false;submitting=false
 	return {"error":owner.last_error,"results":results}
 
 func _submit_render(envelopes: Array, tick: int, epoch: int, request: int) -> void:
+	var begin_us:=Time.get_ticks_usec()
 	var started: Dictionary=owner.solver.dispatch_receipt_batch(envelopes,owner.edit_frame_batch_limit,tick,true,_arrived.bind(epoch,request))
+	if owner.solver.profile_passes:
+		owner.solver.receipt_batch_metrics.record_begin_us=begin_us
+		owner.solver.receipt_batch_metrics.record_end_us=Time.get_ticks_usec()
 	if not started.get("error","").is_empty():_arrived(started,epoch,request)
 
 func _publish_render(epoch: int) -> void:
+	var begin_us:=Time.get_ticks_usec()
 	owner._render_gpu_publish(epoch)
-	_finished(owner.solver.complete_receipt_batch())
+	var published_us:=Time.get_ticks_usec()
+	var result: Dictionary=owner.solver.complete_receipt_batch()
+	if owner.solver.profile_passes:result.profile={"publish_begin_us":begin_us,"publish_end_us":published_us,"cleanup_end_us":Time.get_ticks_usec()}
+	_finished(result)
 
 func _arrived(result: Dictionary, epoch: int, request: int) -> void:
 	call_deferred("_receive",result,epoch,request)
