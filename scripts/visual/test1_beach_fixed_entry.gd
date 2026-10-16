@@ -50,19 +50,6 @@ func set_fixture_camera(camera_id: StringName) -> bool:
 	return true
 
 
-func _mark_ready(token: int) -> void:
-	super._mark_ready(token)
-	if ready_for_ticks and last_error.is_empty():
-		_seal_test1_effective_profile()
-
-
-func _tick_finished(substeps: int, source_m3: float, sink_m3: float,
-		token: int) -> void:
-	super._tick_finished(substeps, source_m3, sink_m3, token)
-	if ready_for_ticks and last_error.is_empty() and token == generation:
-		_seal_test1_effective_profile()
-
-
 func _seal_test1_effective_profile() -> void:
 	var dense := $PrototypeFrontFoamDense as MeshInstance3D
 	var contact_material := ($ShoreContactOverlay as MeshInstance3D).material_override as ShaderMaterial
@@ -82,4 +69,4 @@ func _seal_test1_effective_profile() -> void:
 	effective_render_profile["test1_whitewater_gain"] = water_material.get_shader_parameter(
 		"test1_whitewater_gain")
 	effective_render_profile["test1_splat_diameter_px"] = prototype_foam_front_local_diameter_px
-	effective_render_profile_sha256 = JSON.stringify(effective_render_profile).sha256_text()
+	effective_profile_digest_dirty = true

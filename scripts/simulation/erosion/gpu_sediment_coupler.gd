@@ -5,14 +5,19 @@ extends RefCounted
 ## ping-pong index: old water/sand/sediment are at 1-current_index and the
 ## completed water/flux are at current_index.
 
-const CAPACITY_SCALE_S_PER_M := 0.08
-const EROSION_RATE_PER_S := 0.35
-const DEPOSITION_RATE_PER_S := 0.45
+# test1 E1478 local formula, adapted to meters and the project's water substeps.
+# Capacity is equivalent sand thickness / horizontal speed (seconds).
+# The captured 0.015/0.005 fractions are anchored to its 0.020716 s update;
+# that reference is an adaptation, not a recovered original wall-clock cadence.
+const CAPACITY_PER_SPEED_S := 0.003
+const EROSION_RATE_PER_S := 0.7295628483661365
+const DEPOSITION_RATE_PER_S := 0.2419645313921744
 const DRY_DEPTH_M := 0.001
+const CAPACITY_SATURATION_DEPTH_M := 1.0 / 30.0
 
 ## Mutable copies of the tuned constants so parameter probes can vary one term at
 ## a time without forking the shader. Production leaves them at the constants.
-var capacity_scale_s_per_m := CAPACITY_SCALE_S_PER_M
+var capacity_per_speed_s := CAPACITY_PER_SPEED_S
 var erosion_rate_per_s := EROSION_RATE_PER_S
 var deposition_rate_per_s := DEPOSITION_RATE_PER_S
 
@@ -26,6 +31,8 @@ var copy_pipeline := RID()
 var copy_sets: Array[RID] = []
 var dirty_max_texture := RID()
 var dirty_zero_bytes := PackedByteArray()
+var observe_pushes := false
+var bound_pushes := []
 var dirty_readback_pending := false
 
 
@@ -71,8 +78,8 @@ func initialize(p_solver: SandcastleGpuShallowSolver, spirv: RDShaderSPIRV,
 			solver.textures["flux"][output_index],
 			solver.textures["obstacle"],
 			solver.textures["sand"][input_index],
-			solver.textures["wetness"][input_index],
-			solver.textures["compaction"][input_index],
+			solver.textures["momentum_x"][output_index],
+			solver.textures["momentum_z"][output_index],
 			solver.textures["water"][output_index],
 			solver.textures["sand"][output_index],
 			solver.textures["sediment"][output_index],
@@ -162,15 +169,24 @@ func dispatch_after_water_substep(delta_s: float) -> bool:
 	var list := rd.compute_list_begin()
 	rd.compute_list_bind_compute_pipeline(list, pipeline)
 	rd.compute_list_bind_uniform_set(list, sets[solver.current_index], 0)
-	rd.compute_list_set_push_constant(list, PackedFloat32Array([
-		delta_s, solver.cell_size_m * solver.cell_size_m,
-		capacity_scale_s_per_m, erosion_rate_per_s,
-		deposition_rate_per_s, DRY_DEPTH_M, 0.0, 0.0]).to_byte_array(), 32)
+	var push:=_erosion_push(delta_s)
+	rd.compute_list_set_push_constant(list,push,32)
 	rd.compute_list_dispatch(list, solver.grid_size / 8, solver.grid_size / 8, 1)
 	rd.compute_list_end()
 	if solver.profile_passes:
 		rd.capture_timestamp("sandcastle_sediment_end")
 	return true
+
+func _erosion_push(delta_s: float) -> PackedByteArray:
+	var bytes:=PackedFloat32Array([
+		delta_s, solver.cell_size_m * solver.cell_size_m,
+		capacity_per_speed_s, 1.0 - exp(-erosion_rate_per_s * delta_s),
+		1.0 - exp(-deposition_rate_per_s * delta_s), DRY_DEPTH_M,
+		CAPACITY_SATURATION_DEPTH_M,
+		1.0 if solver.prescribed_tide_boundary else 0.0]).to_byte_array()
+	if observe_pushes and bound_pushes.size()<16:
+		bound_pushes.append({"revision":solver.state_revision,"index":solver.current_index,"bytes_hex":bytes.hex_encode(),"values":Array(bytes.to_float32_array())})
+	return bytes
 
 
 func release() -> void:

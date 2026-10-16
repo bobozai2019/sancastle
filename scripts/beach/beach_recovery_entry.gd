@@ -9,6 +9,7 @@ signal legacy_shadow_ready
 signal legacy_patch_submitted
 var inject_legacy_patch_failure_once := false
 var source_signature := {}
+const EXECUTION_BINARY_HASH_CACHE_KEY := &"_sandcastle_execution_binary_sha256_v1"
 const RestoreBundle=preload("res://scripts/simulation/edit_validation/beach_restore_bundle.gd")
 var beach_restore_running := false
 var beach_restore_candidate
@@ -26,13 +27,23 @@ var beach_restore_verifications := []
 static func _index_sources(path: String, result: Dictionary) -> void:
 	for directory in DirAccess.get_directories_at(path): _index_sources(path.path_join(directory),result)
 	for file in DirAccess.get_files_at(path):
-		if file.get_extension() in ["gd","glsl","gdshader","tscn","tres","json","png","jpg","webp"]:
+		if file.get_extension() in ["gd","glsl","gdshader","tscn","tres","json","png","jpg","webp","f32","rgba32f","bin"]:
 			var full:=path.path_join(file);result[full]=FileAccess.get_sha256(full)
 
 static func replay_capture_tick() -> int:
 	for arg in ReleaseConfig.ARGUMENTS:
 		if arg.begins_with("--beach-replay-capture-tick="): return clampi(arg.get_slice("=",1).to_int(),1,14)
 	return 5
+
+static func execution_binary_sha256() -> String:
+	# Version strings can be identical for different custom engine builds.
+	# Hash the actual process image once; wrapper paths and install paths are not identity.
+	# Keep only a String on Engine: a GDScript static variable retains its script.
+	var cached:Variant=Engine.get_meta(EXECUTION_BINARY_HASH_CACHE_KEY,"")
+	if cached is String and cached.length()==64:return cached
+	var digest:=FileAccess.get_sha256(OS.get_executable_path())
+	if digest.length()==64:Engine.set_meta(EXECUTION_BINARY_HASH_CACHE_KEY,digest)
+	return digest
 
 static func configuration_signature() -> Dictionary:
 	var sources:= {}
@@ -45,12 +56,14 @@ static func configuration_signature() -> Dictionary:
 	var trace_detail := 0
 	for arg in ReleaseConfig.ARGUMENTS:
 		if arg.begins_with("--beach-material-trace-detail-substep="): trace_detail=arg.get_slice("=",1).to_int()
-	return {"skip_idle_components_requested":"--skip-idle-components" in ReleaseConfig.ARGUMENTS,"bounded_collision_requested":"--beach-bounded-collision" in ReleaseConfig.ARGUMENTS,"staged_slope_requested":"--beach-staged-slope" in ReleaseConfig.ARGUMENTS,"slope_output_requested":"--beach-slope-output" in ReleaseConfig.ARGUMENTS,"slope_counter_requested":"--beach-slope-counter" in ReleaseConfig.ARGUMENTS,"slope_record_requested":"--beach-slope-record" in ReleaseConfig.ARGUMENTS,"gpu_validation_requested":"--gpu-validation" in OS.get_cmdline_args(),"sources":sources,"engine":Engine.get_version_info(),"adapter":RenderingServer.get_video_adapter_name(),"driver":driver,"material_barriers":"--beach-material-barriers" in ReleaseConfig.ARGUMENTS,"split_material_lists":"--beach-split-material-lists" in ReleaseConfig.ARGUMENTS,"replay_capture_tick":replay_capture_tick(),"replay_capture":"--beach-replay-capture" in ReleaseConfig.ARGUMENTS,"material_copy_fence":"--beach-material-copy-fence" in ReleaseConfig.ARGUMENTS,"material_trace_continuation_only":"--beach-material-trace-continuation-only" in ReleaseConfig.ARGUMENTS,"material_trace_detail_substep":trace_detail,"material_trace_commit_only":"--beach-material-trace-commit-only" in ReleaseConfig.ARGUMENTS,"material_stage_trace":"--beach-material-stage-trace" in ReleaseConfig.ARGUMENTS,"precise_slope":"--beach-precise-slope" in ReleaseConfig.ARGUMENTS,"reuse_collision_shapes":"--reuse-collision-shapes" in ReleaseConfig.ARGUMENTS,"cached_capacity":"--cached-capacity" in ReleaseConfig.ARGUMENTS,"compensated_capacity":"--compensated-capacity" in ReleaseConfig.ARGUMENTS,"prefetch_velocity":"--prefetch-velocity" in ReleaseConfig.ARGUMENTS,"packed_runs":"--packed-runs" in ReleaseConfig.ARGUMENTS,"connected_runs":"--connected-runs" in ReleaseConfig.ARGUMENTS,"fast_full_wet":"--fast-full-wet" in ReleaseConfig.ARGUMENTS,"profile_sha256":FileAccess.get_sha256("res://assets/test1_beach/test1_beach_release.json")}
+	return {"skip_idle_components_requested":"--skip-idle-components" in ReleaseConfig.ARGUMENTS,"bounded_collision_requested":"--beach-bounded-collision" in ReleaseConfig.ARGUMENTS,"staged_slope_requested":"--beach-staged-slope" in ReleaseConfig.ARGUMENTS,"slope_output_requested":"--beach-slope-output" in ReleaseConfig.ARGUMENTS,"slope_counter_requested":"--beach-slope-counter" in ReleaseConfig.ARGUMENTS,"slope_record_requested":"--beach-slope-record" in ReleaseConfig.ARGUMENTS,"gpu_validation_requested":"--gpu-validation" in OS.get_cmdline_args(),"sources":sources,"engine":Engine.get_version_info(),"engine_executable_sha256":execution_binary_sha256(),"adapter":RenderingServer.get_video_adapter_name(),"driver":driver,"material_barriers":"--beach-material-barriers" in ReleaseConfig.ARGUMENTS,"split_material_lists":"--beach-split-material-lists" in ReleaseConfig.ARGUMENTS,"replay_capture_tick":replay_capture_tick(),"replay_capture":"--beach-replay-capture" in ReleaseConfig.ARGUMENTS,"material_copy_fence":"--beach-material-copy-fence" in ReleaseConfig.ARGUMENTS,"material_trace_continuation_only":"--beach-material-trace-continuation-only" in ReleaseConfig.ARGUMENTS,"material_trace_detail_substep":trace_detail,"material_trace_commit_only":"--beach-material-trace-commit-only" in ReleaseConfig.ARGUMENTS,"material_stage_trace":"--beach-material-stage-trace" in ReleaseConfig.ARGUMENTS,"precise_slope":"--beach-precise-slope" in ReleaseConfig.ARGUMENTS,"reuse_collision_shapes":"--reuse-collision-shapes" in ReleaseConfig.ARGUMENTS,"cached_capacity":"--cached-capacity" in ReleaseConfig.ARGUMENTS,"compensated_capacity":"--compensated-capacity" in ReleaseConfig.ARGUMENTS,"prefetch_velocity":"--prefetch-velocity" in ReleaseConfig.ARGUMENTS,"packed_runs":"--packed-runs" in ReleaseConfig.ARGUMENTS,"connected_runs":"--connected-runs" in ReleaseConfig.ARGUMENTS,"fast_full_wet":"--fast-full-wet" in ReleaseConfig.ARGUMENTS,"profile_sha256":FileAccess.get_sha256("res://assets/test1_beach/test1_beach_release.json")}
 
 static func validate_gpu_checkpoint(checkpoint: Dictionary, signature: Dictionary) -> StringName:
 	var error:=BeachCodec.validate(checkpoint)
 	if not error.is_empty(): return error
 	var edit: Variant=checkpoint.get("gpu_beach_edit")
+	if edit is Dictionary and typeof(edit.get("version"))==TYPE_INT and edit.version==4:
+		return preload("res://scripts/simulation/brushes/brush_checkpoint_codec.gd").validate_edit(checkpoint,signature)
 	if not edit is Dictionary or edit.get("version") not in [2,3] or edit.get("configuration")!=signature or not edit.get("prefix") is Array or not edit.get("ledger") is Dictionary or edit.get("pending_count")!=0 or edit.get("reserved_m3")!=0.0: return &"invalid_beach_edit_header"
 	var selection: Variant=edit.get("selection")
 	if not selection is Dictionary or selection.get("policy") not in [0,1,2,3] or typeof(selection.get("speed")) not in [TYPE_FLOAT,TYPE_INT] or not is_finite(float(selection.speed)) or absf(float(selection.speed))>1.0: return &"invalid_beach_selection"
@@ -70,11 +83,23 @@ static func validate_gpu_checkpoint(checkpoint: Dictionary, signature: Dictionar
 		if edit.ledger[key]!=checkpoint[key]: return &"invalid_beach_ledger_projection"
 	return &""
 
+func _runtime_configuration_signature() -> Dictionary:
+	var signature:=configuration_signature()
+	signature.edit_frame_pipeline_enabled=edit_frame_pipeline_enabled
+	signature.edit_frame_batch_limit=edit_frame_batch_limit
+	return signature
+
+func _supports_edit_version(version:int) -> bool:return version in [2,3]
+
 func _ready() -> void:
-	source_signature=configuration_signature()
+	source_signature=_runtime_configuration_signature()
+	var binary_identity:Variant=source_signature.get("engine_executable_sha256")
+	if not binary_identity is String or binary_identity.length()!=64:
+		last_error="runtime_engine_identity_unavailable";push_error(last_error);return
 	if not replay_checkpoint.is_empty():
 		var error:=validate_gpu_checkpoint(replay_checkpoint,source_signature)
-		if error.is_empty() and (replay_checkpoint.gpu_beach_edit.version == 3) != unrestricted_sand_tools: error = &"sand_accounting_mismatch"
+		if error.is_empty() and not _supports_edit_version(replay_checkpoint.gpu_beach_edit.version):error=&"unsupported_edit_version"
+		if error.is_empty() and (replay_checkpoint.gpu_beach_edit.version in [3,4]) != unrestricted_sand_tools: error = &"sand_accounting_mismatch"
 		if not error.is_empty(): last_error=String(error);push_error(last_error);return
 		generation=maxi(generation,int(replay_checkpoint.shadow.generation)+1)
 	super._ready()
@@ -116,6 +141,8 @@ func save_gpu_checkpoint(path: String) -> StringName:
 	while busy or input_running or input_scheduler.pumping: await get_tree().process_frame
 	await input_scheduler.drain_due()
 	if not command_queue.pending.is_empty() or input_scheduler.reserved_total()!=0.0: return _finish_gpu_save(&"pending_commands",was_playing,was_accepting)
+	if collision_proxy.prepare_policy != "baseline":
+		while collision_proxy.staging_texture.is_valid() or not collision_proxy.pending_revisions.is_empty() or collision_proxy.has_prepare_in_flight(): await get_tree().process_frame
 	# Parent save freezes the original ledger/shadow and all visual histories.
 	pending_save_path=path;last_save_error=&"";_start_checkpoint_capture()
 	while not pending_save_path.is_empty() and last_error.is_empty() and not closing: await get_tree().process_frame
@@ -226,7 +253,9 @@ func restore_gpu_checkpoint_data(checkpoint: Dictionary) -> StringName:
 	checkpoint=checkpoint.duplicate(true)
 	var error:=Store._validate({"format_version":Store.FORMAT_VERSION,"enable_erosion":enable_erosion,"checkpoint":checkpoint,"prefix_commands":[]})
 	if error.is_empty(): error=validate_gpu_checkpoint(checkpoint,source_signature)
-	if error.is_empty() and (checkpoint.gpu_beach_edit.version == 3) != unrestricted_sand_tools: error = &"sand_accounting_mismatch"
+	if error.is_empty() and not _supports_native_version(checkpoint.gpu_beach_native.version): error=&"unsupported_native_version"
+	if error.is_empty() and not _supports_edit_version(checkpoint.gpu_beach_edit.version):error=&"unsupported_edit_version"
+	if error.is_empty() and (checkpoint.gpu_beach_edit.version in [3,4]) != unrestricted_sand_tools: error = &"sand_accounting_mismatch"
 	if not error.is_empty(): return error
 	# This bundle implements the current complete release profile. Reject other
 	# optional histories before touching the active branch.
@@ -234,7 +263,7 @@ func restore_gpu_checkpoint_data(checkpoint: Dictionary) -> StringName:
 	var accepting_before: bool=input_scheduler.accepting
 	beach_restore_running=true;input_scheduler.accepting=false;gpu_brush=&"";ready_for_ticks=false
 	beach_restore_phase="building"
-	while collision_proxy.staging_texture.is_valid() or not collision_proxy.pending_revisions.is_empty() or pending_beach_native_readbacks>0: await get_tree().process_frame
+	while collision_proxy.staging_texture.is_valid() or not collision_proxy.pending_revisions.is_empty() or pending_beach_native_readbacks>0 or collision_proxy.has_prepare_in_flight(): await get_tree().process_frame
 	var candidate_domain:=Domain.new(GRID_SIZE,CELL_SIZE_M)
 	if not candidate_domain.restore(checkpoint.shadow): return _finish_beach_restore(&"invalid_checkpoint_shadow",accepting_before)
 	var next_generation: int=maxi(generation,int(checkpoint.shadow.generation))+1
@@ -283,6 +312,7 @@ func restore_gpu_checkpoint_data(checkpoint: Dictionary) -> StringName:
 	if not collision_proxy.apply_shadow_chunks(chunks,solver.state_revision,generation,checkpoint.gpu_beach_native.fields.rock.to_float32_array(),checkpoint.gpu_beach_native.fields.sand.to_float32_array()):
 		_fail("full beach restore collision failed");return _finish_beach_restore(&"collision_restore_failed",false)
 	set_visual_time(float(completed_ticks)/30.0)
+	if not refresh_effective_render_profile(): return _finish_beach_restore(&"restore_profile_failed",false)
 	if observe_beach_restore: beach_restore_collision_ready.emit()
 	await get_tree().physics_frame;await get_tree().physics_frame
 	beach_restore_candidate=null;beach_restore_phase="complete"

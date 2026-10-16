@@ -53,7 +53,7 @@ func _ready_scene() -> bool:
 	return scene.ready_for_ticks
 
 func _pick_dry() -> Vector2:
-	while scene.collision_proxy.staging_texture.is_valid() or not scene.collision_proxy.pending_revisions.is_empty(): await process_frame
+	while scene.collision_proxy.staging_texture.is_valid() or not scene.collision_proxy.pending_revisions.is_empty() or scene.collision_proxy.has_prepare_in_flight(): await process_frame
 	await physics_frame
 	await physics_frame
 	for y in range(200, 660, 30):

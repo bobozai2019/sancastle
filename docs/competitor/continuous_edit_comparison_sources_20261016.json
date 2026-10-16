@@ -1,0 +1,93 @@
+{
+  "date": "2026-10-16",
+  "scope": "Read-only shader/data identity and existing evidence review; no new replay, original-game execution, GPU load or business analysis",
+  "capture": {
+    "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\test41.rdc",
+    "bytes": 256177273,
+    "sha256": "f1794a7235a79f7a73bd6f4085bef7ecbb3a7dc39ce8a8a7aac955ee5beb3c0d",
+    "matches_prior_manifest": true
+  },
+  "manifest": {
+    "path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_stamp_20261015\\replay_01\\manifest.json",
+    "bytes": 19035,
+    "sha256": "e6558d47bba01649b1eb2146ff4a423b339417ebbc66c1ae918022f9235e9214"
+  },
+  "exports": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_stamp_20261015\\replay_01\\paint.dxbc",
+      "bytes": 8916,
+      "sha256": "d37af2736147fd90f62ecbf8230bb0162a961ba2b16bce44a29d02fb2cdb30aa",
+      "matches_prior_manifest": true,
+      "selector": "test41 E863 CS rawBytes"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_stamp_20261015\\replay_01\\paint.asm",
+      "bytes": 12528,
+      "sha256": "7ba2525261dd9cefe754baa7c4c9d93d7f33da07afebfcf3f8f512aeef083e45",
+      "matches_prior_manifest": true,
+      "selector": "test41 E863 CS disassembly"
+    }
+  ],
+  "paint_asm_observations": {
+    "local_thread_group_32x32x1": true,
+    "loop_token_present": false,
+    "sync_token_present": false,
+    "shared_declaration_present": false,
+    "atomic_token_present": false
+  },
+  "project_sources": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\beach\\release_config.gd",
+      "bytes": 448,
+      "sha256": "006e91856bd21ad9b002ac35ba3d4a3db43395c042e68c2ba6b4910acefd757e"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\simulation\\edit_validation\\gpu_water_editor.gd",
+      "bytes": 6661,
+      "sha256": "3907e942d3910a0d0e39b97aa5f357eb748f1702da6b7d9076f91dd4703e02a9"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\simulation\\edit_validation\\frame_pipeline\\editor.gd",
+      "bytes": 17029,
+      "sha256": "1c7fc902cee855fa76a4e835a77688842cc3828695599d99161c87e65467828d"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\simulation\\edit_validation\\frame_pipeline\\controller.gd",
+      "bytes": 7446,
+      "sha256": "e28678fe7ce3813d8216cfc1a1c5ab2e5c12f3b5316b2b3f3c680018415c9194"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\beach\\beach_interaction_entry.gd",
+      "bytes": 12057,
+      "sha256": "60b70f73f4f65554545872dba43980b1c702d81f19e8881dad25e600ef6426f6"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\shaders\\simulation\\edit_validation\\water_velocity_prefetch.glsl",
+      "bytes": 2926,
+      "sha256": "da8cc83ddc3f4a36a88b1a4eefead37a08e014a11d6ea7f6c09f1cf060c0b6c7"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\shaders\\simulation\\edit_validation\\water_packed_cached.glsl",
+      "bytes": 14583,
+      "sha256": "4b39cee87fcebcadaa0680652a0081524107bf17d1545b4d299b9559e38d7d5c"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\shaders\\simulation\\edit_validation\\water_displace_compensated.glsl",
+      "bytes": 9790,
+      "sha256": "5ec2d3b2f7295e72948760f86d0fac3cc1c9a1f88c563e9f34206d7533b45e66"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\shaders\\simulation\\edit_validation\\sand_reduce.glsl",
+      "bytes": 5322,
+      "sha256": "a80849d71fee0d2a51d4be7f78fe99d3c274997aa324a7dadd57b83bc98d7211"
+    }
+  ],
+  "availability": {
+    "historical_edit_compute_manifest": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_edit_compute_20261012_v2\\manifest.json",
+      "exists": false
+    },
+    "water_paint_e878_e1210": "Historical confirmed report only in this pass; no fresh Water.Paint bytecode extraction or full timing verification"
+  },
+  "interpretation": "Parallel Paint structure is confirmed for this Ground shader; competitor continuous-frame performance, CPU scheduling and total synchronization remain unknown."
+}

@@ -2,6 +2,7 @@ extends PanelContainer
 
 ## Informational HUD only. Read completed timestamp results without GPU waits.
 const REFRESH_US := 500000
+const GPU_DRAIN_US := 250000
 const STAGES := ["boundary", "water", "sediment", "material", "foam", "audit", "edit", "collision"]
 const STAGE_LABELS := ["边界 / CFL", "水流更新", "侵蚀 / 沉积", "湿润 / 沙坡", "白沫更新", "统计 / 审计", "挖填沙", "碰撞打包"]
 
@@ -30,8 +31,6 @@ var window_frames := 0
 var window_tick := 0
 var frame_ms_sum := 0.0
 var frame_ms_max := 0.0
-var process_ms_sum := 0.0
-var physics_ms_sum := 0.0
 var render_cpu_sum := 0.0
 var render_gpu_sum := 0.0
 var stage_sums := {}
@@ -42,6 +41,11 @@ var last_capture_frame := -1
 var snapshot := {}
 var hud_visible := true
 var stop_render_done := false
+var last_gpu_work_us := 0
+var observed_tick := -1
+var observed_revision := -1
+var observed_collision_batches := -1
+var quiet_capture_frames := 0
 
 func _ready() -> void:
 	stage_names.text = "\n".join(STAGE_LABELS)
@@ -51,6 +55,7 @@ func _ready() -> void:
 func _on_sampling_toggled(_enabled: bool) -> void:
 	get_viewport().gui_release_focus()
 	_sync_sampling()
+	_refresh()
 
 func _sync_sampling() -> void:
 	visible = not beach.hide_hud
@@ -69,6 +74,11 @@ func _sync_sampling() -> void:
 		return
 	sampling = enabled
 	sample_epoch += 1
+	last_gpu_work_us = Time.get_ticks_usec()
+	quiet_capture_frames = 0
+	observed_tick = -1
+	observed_revision = -1
+	observed_collision_batches = -1
 	stage_sums.clear()
 	stage_counts.clear()
 	RenderingServer.viewport_set_measure_render_time(get_viewport().get_viewport_rid(), enabled)
@@ -98,22 +108,38 @@ func _process(_delta: float) -> void:
 		window_frames += 1
 		frame_ms_sum += elapsed_ms
 		frame_ms_max = maxf(frame_ms_max, elapsed_ms)
-		process_ms_sum += Performance.get_monitor(Performance.TIME_PROCESS) * 1000.0
-		physics_ms_sum += Performance.get_monitor(Performance.TIME_PHYSICS_PROCESS) * 1000.0
 		if sampling:
 			var viewport_rid := get_viewport().get_viewport_rid()
 			render_cpu_sum += RenderingServer.viewport_get_measured_render_time_cpu(viewport_rid)
 			render_gpu_sum += RenderingServer.viewport_get_measured_render_time_gpu(viewport_rid)
-			if not collect_pending:
+			if not collect_pending and _gpu_sample_due(now):
 				collect_pending = true
 				RenderingServer.call_on_render_thread(_collect_render.bind(sample_epoch, sample_generation))
 	if now - window_start_us >= REFRESH_US:
 		_refresh()
 		_reset_window(now)
 
+func _gpu_sample_due(now: int) -> bool:
+	if beach.solver == null: return false
+	var proxy: SandcastleGpuCollisionProxy = beach.collision_proxy
+	var revision: int = beach.solver.state_revision
+	var batches: int = proxy.completed_batches if proxy != null else -1
+	var active: bool = beach.playing or beach.tick_pending or beach.busy or beach.gpu_busy or beach.input_running
+	if proxy != null:
+		active = active or proxy.staging_texture.is_valid() or not proxy.pending_revisions.is_empty()
+	if active or observed_tick != beach.completed_ticks or observed_revision != revision or observed_collision_batches != batches:
+		last_gpu_work_us = now
+		quiet_capture_frames = 0
+		observed_tick = beach.completed_ticks
+		observed_revision = revision
+		observed_collision_batches = batches
+	# Consume the delayed tail, then wait for the next edit/tick/restore.
+	return now - last_gpu_work_us < GPU_DRAIN_US or quiet_capture_frames < 2
+
 func _collect_render(epoch: int, generation: int) -> void:
 	var groups := {}
 	var captured := -1
+	var valid_empty := false
 	if not beach.closing and beach.solver != null and beach.solver.rd != null and generation == beach.generation:
 		var rd: RenderingDevice = beach.solver.rd
 		# Tag the render frame so delayed results from a restored generation
@@ -146,8 +172,10 @@ func _collect_render(epoch: int, generation: int) -> void:
 					# the RenderingDevice class reference saying microseconds.
 					if duration >= 0 and not group.is_empty():
 						groups[group] = float(groups.get(group, 0.0)) + float(duration) / 1000000.0
+						groups["detail:"+key] = float(groups.get("detail:"+key, 0.0)) + float(duration) / 1000000.0
 			if not tagged_generation or mixed_generation: groups.clear()
-	call_deferred("_accept_sample", epoch, generation, captured, groups)
+			valid_empty = tagged_generation and not mixed_generation and groups.is_empty()
+	call_deferred("_accept_sample", epoch, generation, captured, groups, valid_empty)
 
 static func _stage_for(key: String) -> String:
 	if key.begins_with("edit_") or key == "sandcastle_tool": return "edit"
@@ -161,10 +189,12 @@ static func _stage_for(key: String) -> String:
 		"collision": return "collision"
 	return ""
 
-func _accept_sample(epoch: int, generation: int, captured: int, groups: Dictionary) -> void:
+func _accept_sample(epoch: int, generation: int, captured: int, groups: Dictionary, valid_empty: bool = false) -> void:
 	collect_pending = false
 	if epoch != sample_epoch or generation != sample_generation or not sampling:
 		return
+	if valid_empty: quiet_capture_frames += 1
+	elif not groups.is_empty(): quiet_capture_frames = 0
 	if not groups.is_empty():
 		accepted_frames += 1
 		last_capture_frame = captured
@@ -178,8 +208,6 @@ func _reset_window(now: int) -> void:
 	window_tick = beach.completed_ticks
 	frame_ms_sum = 0.0
 	frame_ms_max = 0.0
-	process_ms_sum = 0.0
-	physics_ms_sum = 0.0
 	render_cpu_sum = 0.0
 	render_gpu_sum = 0.0
 	stage_sums.clear()
@@ -193,7 +221,11 @@ func _refresh() -> void:
 	var fps := float(window_frames) / seconds if seconds > 0.0 else 0.0
 	var ticks_per_s := float(maxi(0, beach.completed_ticks - window_tick)) / seconds if seconds > 0.0 else 0.0
 	summary.text = "%.1f FPS  |  帧 %.2f ms  |  峰值 %.2f ms" % [fps, frame_ms_sum / count, frame_ms_max]
-	cpu.text = "引擎 CPU %.2f ms  ·  物理 %.2f ms" % [process_ms_sum / count, physics_ms_sum / count]
+	# Godot reports each monitor's maximum over its last ~1 second interval.
+	# Averaging repeated readings would not produce a mean physics-frame cost.
+	var process_peak_ms := Performance.get_monitor(Performance.TIME_PROCESS) * 1000.0
+	var physics_peak_ms := Performance.get_monitor(Performance.TIME_PHYSICS_PROCESS) * 1000.0
+	cpu.text = "CPU 峰值 %.2f ms  ·  物理峰值 %.2f ms" % [process_peak_ms, physics_peak_ms]
 	render_time.text = "渲染 CPU %.2f ms  ·  GPU %.2f ms" % [render_cpu_sum / count, render_gpu_sum / count] if sampling else "渲染 CPU / GPU：—（采样关闭）"
 	simulation.text = "模拟 %.1f tick/s  ·  %.2f×  ·  子步 %d" % [ticks_per_s, ticks_per_s / 30.0, beach.last_substeps]
 	var values := PackedStringArray()
@@ -206,14 +238,19 @@ func _refresh() -> void:
 			var last: Dictionary = last_stages[key]
 			values.append("%.3f%s" % [float(last.ms), " · 上次" if not stage_counts.has(key) else ""])
 	stage_values.text = "\n".join(values)
-	var proxy = beach.collision_proxy
-	collision.text = "碰撞回读 %.2f ms · CPU 替换 %.2f ms（上次）" % [proxy.last_readback_ms, proxy.last_replace_ms] if proxy != null and proxy.completed_batches > 0 else "碰撞回读 / CPU 替换：—"
+	var proxy: SandcastleGpuCollisionProxy = beach.collision_proxy
+	var current_collision: bool = proxy != null and proxy.completed_batches > 0 and proxy.last_apply_generation == beach.generation
+	collision.text = "回读 %.2f ms · 碰撞 CPU %.2f ms（上次）\n替换阶段 %.2f ms · 替换 %d / 跳过 %d 块" % [proxy.last_readback_ms, proxy.last_apply_ms, proxy.last_replace_ms, proxy.last_batch_replaced_chunks, proxy.last_batch_unchanged_chunks] if current_collision else "回读 — ms · 碰撞 CPU — ms\n替换阶段 — ms · 替换 — / 跳过 — 块"
 	var status := "运行" if beach.playing else "暂停 · 保留最后采样"
 	if not beach.ready_for_ticks: status = "准备 / 恢复中"
 	if not beach.last_error.is_empty(): status = "故障"
 	if not sample_toggle.button_pressed: status += " · 分阶段采样关闭"
 	state.text = status
-	snapshot.merge({"fps":fps,"frame_ms":frame_ms_sum / count,"ticks_per_s":ticks_per_s,"generation":sample_generation,"stages":last_stages.duplicate(true)}, true)
+	var details := {}
+	for key in stage_counts:
+		if key.begins_with("detail:"):
+			details[key.trim_prefix("detail:")]={"ms":float(stage_sums[key])/int(stage_counts[key]),"sample_frames":stage_counts[key]}
+	snapshot.merge({"fps":fps,"frame_ms":frame_ms_sum / count,"ticks_per_s":ticks_per_s,"process_peak_ms":process_peak_ms,"physics_peak_ms":physics_peak_ms,"generation":sample_generation,"stages":last_stages.duplicate(true),"stage_details":details}, true)
 
 func _exit_tree() -> void:
 	RenderingServer.viewport_set_measure_render_time(get_viewport().get_viewport_rid(), false)

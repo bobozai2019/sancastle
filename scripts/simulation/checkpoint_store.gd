@@ -294,4 +294,4 @@ static func _validate(envelope: Dictionary) -> StringName:
 				not commands[i].has("kind") or not commands[i].has("shape") or \
 				not commands[i].get("transform") is Dictionary:
 			return &"invalid_command_prefix"
-	return StringName()
+	return preload("res://scripts/visual/gravel_checkpoint_codec.gd").validate(checkpoint)

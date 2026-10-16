@@ -1,5 +1,7 @@
 # 竞品GPU编辑计算与当前项目对照
 
+2026-10-16补充：[连续挖填卡顿的结构对照](#edit-perf-structure-20261016连续挖填的并行结构与未知成本)已按现有test41 Ground.Paint导出和当前Godot合批源码复核。下方2026-10-12的项目表格属于当时版本，不能继续将“两物理帧、逐笔等待”作为当前main默认调度；最新实现见[项目技术方案](../当前项目技术方案.md#51-普通挖填合批流水线2026-10-16)。本次不启动竞品或GPU重放，不新增原作性能数字。
+
 更新：2026-10-12。范围：沙、水编辑核及必要采样；不涉及业务代码。此次复取实际Compute Shader、常量字节与资源绑定，未运行原游戏或测量其真实性能。
 
 ## EDIT-COMPUTE-REVERIFY-01：test41实际编辑核复验
@@ -61,3 +63,16 @@ Godot源码定位：[沙核派发](../../scripts/simulation/edit_validation/gpu_
 不是“本项目没有使用Compute Shader”，而是当前shader承担了更多精确结算与全域归约工作。竞品Paint提供了“按单元高度印章和局部速度模板”的明确参考，可以为[性能取舍方案](../sandcastle性能取舍分析.md)提供候选方向。
 
 若选择这种方向，应先把本项目的局部近似候选单独实现和计时，规定沙量、水量及库存误差；不能把竞品的0.045、速度5或场景单位直接当本项目米制参数，也不能从没有观测到回执推断可以删除所有同步。现有生产算法与冻结契约此次未改变。
+
+## EDIT-PERF-STRUCTURE-20261016：连续挖填的并行结构与未知成本
+
+- 更新日期：2026-10-16。范围：test41 E863 Ground.Paint已导出字节码及反汇编、当前main普通挖填合批的沙水计算；不读取或追踪竞品业务方法。
+- 来源身份：test41为256177273字节，SHA256 `f1794a7235a79f7a73bd6f4085bef7ecbb3a7dc39ce8a8a7aac955ee5beb3c0d`；本次流式只读hash与2026-10-15manifest一致。E863 DXBC为8916字节，SHA256 `d37af2736147fd90f62ecbf8230bb0162a961ba2b16bce44a29d02fb2cdb30aa`；反汇编12528字节，SHA256 `7ba2525261dd9cefe754baa7c4c9d93d7f33da07afebfcf3f8f512aeef083e45`。
+- 分类/可信度：Ground.Paint指令结构为C3，本次核对既有完整导出；“因此原作连续编辑更流畅”的性能因果仍为C1待测。Godot部分为当前项目源码和已有测试记录，不冒称原作实现。
+- 已确认：该Ground.Paint使用32×32×1线程组、按线程对应单元读写；完整编译核没有loop/endloop、sync、原子归约或线程组共享声明。它没有本项目速度审计中“单workgroup循环65536格、lane0顺序累加”的结构。该结论只限所选Ground.Paint，不证明整个原作没有归约或同步。
+- 当前项目：E3每笔仍执行全域水响应与速度检查，`water_velocity_prefetch`只派发一个64线程工作组，循环1024批加载65536格，lane0顺序完成补偿累加；`water_packed_cached`同样为单工作组、包含分量与容量处理。当前合批只减少上传/回执/收尾次数，没有把逐笔计算合成一个并行核。已有实际批次metrics记录挖/填核心沙水派发分别为23/12次，不含选取/回执helper、材料、发布和碰撞。
+- 证据定位：[本次身份和可用性索引](continuous_edit_comparison_sources_20261016.json)、`test_output/competitor_stamp_20261015/replay_01/manifest.json`与`paint.asm`；Godot源码和实际批次记录由索引关联。2026-10-12的`competitor_edit_compute_20261012_v2/manifest.json`当前路径缺失，本次未重新取Water.Paint E878/E1210，保留其历史确认范围，不声称本机导出链全部恢复。
+- 复验方法：先比较源RDC、DXBC及asm大小/hash，再核对`dcl_thread_group`、线程索引/输出及完整指令中的循环/同步/原子/共享声明；Godot核对release_config实际选核、间接派发参数和原始批次metrics。此次只读文件，未新开重放；今后重放需独立英文输出目录、同hash捕帧和对应事件。
+- 反证：竞品仍有AsyncGPUReadback缓存、同步消费入口、碰撞Job.Complete和MeshCollider发布的历史直接证据；不能据Paint并行就称其零CPU同步。高占用率不是低延迟的直接证明，CPU/GPU监控口径、帧尺寸、输入轨迹和画质也未配对。
+- 未知：用户观察到竞品连续编辑占用较高但不卡、本项目占用低而卡，是待定量的现象。原作同输入帧时间、每笔延迟、回读/碰撞节奏、GPU各核毫秒数，以及当前Godot长帧中各项精确占比仍未知。
+- Godot适配建议：优先定位单工作组长核、全局RD帧fence、每批资源分配和队列积压；保留守恒/下限/错误预算与碰撞版本边界。详细分析见[连续挖填卡顿分析](../search/continuous_dig_stutter_20261016.md)。旧RDC结论、旧FAIL和专项验收均不改写。

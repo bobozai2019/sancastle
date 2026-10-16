@@ -1,0 +1,8 @@
+[gd_resource type="Theme" format=3 uid="uid://cooha8cvpvhcl"]
+
+[sub_resource type="SystemFont" id="SystemFont_explicit"]
+font_names = PackedStringArray("Microsoft YaHei UI")
+allow_system_fallback = false
+
+[resource]
+default_font = SubResource("SystemFont_explicit")

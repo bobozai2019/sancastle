@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+[ext_resource type="PackedScene" path="res://tests/shape_brushes/legacy_playable_base.tscn" id="1"]
+[ext_resource type="Script" path="res://tests/shape_brushes/brush_lab.gd" id="2"]
+[node name="ShapeBrushLab" instance=ExtResource("1")]
+script = ExtResource("2")
+playing = false
+brush_fixture = "dry_flat"
+staging_wave_workload = "none"
+player_camera_position = Vector3(-6, 6, 10)
+player_camera_target = Vector3(0, 0, 0)

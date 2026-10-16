@@ -1,0 +1,519 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/sand/brushes/brush_tool_panel.gd" id="1"]
+
+[sub_resource type="ButtonGroup" id="Tools"]
+
+[sub_resource type="StyleBoxFlat" id="Panel"]
+
+bg_color = Color(0.06, 0.09, 0.12, 0.94)
+
+corner_radius_top_left = 10
+
+corner_radius_top_right = 10
+
+corner_radius_bottom_left = 10
+
+corner_radius_bottom_right = 10
+
+[node name="ShapeBrushPanel" type="PanelContainer"]
+
+custom_minimum_size = Vector2(296, 0)
+
+script = ExtResource("1")
+
+theme_override_styles/panel = SubResource("Panel")
+
+[node name="Margin" type="MarginContainer" parent="."]
+
+layout_mode = 2
+
+theme_override_constants/margin_left = 14
+
+theme_override_constants/margin_right = 14
+
+theme_override_constants/margin_top = 12
+
+theme_override_constants/margin_bottom = 12
+
+[node name="Controls" type="VBoxContainer" parent="Margin"]
+
+layout_mode = 2
+
+theme_override_constants/separation = 7
+
+[node name="Title" type="Label" parent="Margin/Controls"]
+
+layout_mode = 2
+
+text = "沙形工具"
+
+theme_override_font_sizes/font_size = 20
+
+[node name="Tools" type="GridContainer" parent="Margin/Controls"]
+
+layout_mode = 2
+
+columns = 3
+
+[node name="Dig" type="Button" parent="Margin/Controls/Tools"]
+
+unique_name_in_owner = true
+
+layout_mode = 2
+
+size_flags_horizontal = 3
+
+custom_minimum_size = Vector2(80, 36)
+
+focus_mode = 0
+
+toggle_mode = true
+
+button_group = SubResource("Tools")
+
+text = "挖沙"
+
+button_pressed = true
+
+[node name="Fill" type="Button" parent="Margin/Controls/Tools"]
+
+unique_name_in_owner = true
+
+layout_mode = 2
+
+size_flags_horizontal = 3
+
+custom_minimum_size = Vector2(80, 36)
+
+focus_mode = 0
+
+toggle_mode = true
+
+button_group = SubResource("Tools")
+
+text = "填沙床"
+tooltip_text = "直接填高沙床；可在水下使用"
+
+[node name="Castle" type="Button" parent="Margin/Controls/Tools"]
+
+unique_name_in_owner = true
+
+layout_mode = 2
+
+size_flags_horizontal = 3
+
+custom_minimum_size = Vector2(80, 36)
+
+focus_mode = 0
+
+toggle_mode = true
+
+button_group = SubResource("Tools")
+
+text = "城堡"
+
+[node name="Shovel" type="Button" parent="Margin/Controls/Tools"]
+
+unique_name_in_owner = true
+
+layout_mode = 2
+
+size_flags_horizontal = 3
+
+custom_minimum_size = Vector2(80, 36)
+
+focus_mode = 0
+
+toggle_mode = true
+
+button_group = SubResource("Tools")
+
+text = "铲子"
+
+[node name="Wall" type="Button" parent="Margin/Controls/Tools"]
+
+unique_name_in_owner = true
+
+layout_mode = 2
+
+size_flags_horizontal = 3
+
+custom_minimum_size = Vector2(80, 36)
+
+focus_mode = 0
+
+toggle_mode = true
+
+button_group = SubResource("Tools")
+
+text = "沙墙"
+
+[node name="SuspendedSand" type="Button" parent="Margin/Controls/Tools"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(80, 36)
+focus_mode = 0
+toggle_mode = true
+button_group = SubResource("Tools")
+text = "投流沙"
+tooltip_text = "投放随水流输运的悬沙，之后自然沉降；不直接抬高沙床"
+
+[node name="GravelDrop" type="Button" parent="Margin/Controls/Tools"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(80, 36)
+focus_mode = 0
+toggle_mode = true
+button_group = SubResource("Tools")
+text = "投碎石"
+tooltip_text = "在指定沙地或水中投放碎石，随水流搬运；不会挤掉已有碎石"
+
+[node name="GravelParams" type="VBoxContainer" parent="Margin/Controls"]
+unique_name_in_owner = true
+layout_mode = 2
+visible = false
+
+[node name="AmountLabel" type="Label" parent="Margin/Controls/GravelParams"]
+layout_mode = 2
+text = "碎石数量 · 颗 / 次"
+
+[node name="GravelCount" type="SpinBox" parent="Margin/Controls/GravelParams"]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = 1.0
+max_value = 128.0
+step = 1.0
+value = 16.0
+suffix = "颗"
+
+[node name="OrdinaryParams" type="VBoxContainer" parent="Margin/Controls"]
+
+unique_name_in_owner = true
+
+layout_mode = 2
+
+[node name="DigAmountLabel" type="Label" parent="Margin/Controls/OrdinaryParams"]
+
+layout_mode = 2
+
+text = "挖沙量 · m³ / 次"
+
+[node name="DigAmount" type="SpinBox" parent="Margin/Controls/OrdinaryParams"]
+
+unique_name_in_owner = true
+
+layout_mode = 2
+
+min_value = 0.01
+
+max_value = 1
+
+step = 0.01
+
+value = 0.1
+
+suffix = "m³"
+
+[node name="FillAmountLabel" type="Label" parent="Margin/Controls/OrdinaryParams"]
+
+layout_mode = 2
+
+text = "投沙量 · m³ / 次"
+
+[node name="FillAmount" type="SpinBox" parent="Margin/Controls/OrdinaryParams"]
+
+unique_name_in_owner = true
+
+layout_mode = 2
+
+min_value = 0.01
+
+max_value = 1
+
+step = 0.01
+
+value = 0.1
+
+suffix = "m³"
+
+[node name="CastleParams" type="VBoxContainer" parent="Margin/Controls"]
+
+unique_name_in_owner = true
+
+layout_mode = 2
+
+visible = false
+
+[node name="CastleScaleLabel" type="Label" parent="Margin/Controls/CastleParams"]
+
+layout_mode = 2
+
+text = "城堡尺寸 · 4–6 m"
+
+[node name="CastleScale" type="SpinBox" parent="Margin/Controls/CastleParams"]
+
+unique_name_in_owner = true
+
+layout_mode = 2
+
+min_value = 1
+
+max_value = 1.5
+
+step = 0.05
+
+value = 1
+
+suffix = "×"
+
+[node name="CastleHeightLabel" type="Label" parent="Margin/Controls/CastleParams"]
+
+layout_mode = 2
+
+text = "城堡固定标高（世界Y）"
+
+[node name="CastleHeight" type="SpinBox" parent="Margin/Controls/CastleParams"]
+
+unique_name_in_owner = true
+
+layout_mode = 2
+
+min_value = 0.5
+
+max_value = 1
+
+step = 0.05
+
+value = 0.7
+
+suffix = "m"
+
+[node name="CastleYawLabel" type="Label" parent="Margin/Controls/CastleParams"]
+
+layout_mode = 2
+
+text = "水平旋转"
+
+[node name="CastleYaw" type="SpinBox" parent="Margin/Controls/CastleParams"]
+
+unique_name_in_owner = true
+
+layout_mode = 2
+
+min_value = -180
+
+max_value = 180
+
+step = 15
+
+value = 0
+
+suffix = "°"
+
+[node name="WallParams" type="VBoxContainer" parent="Margin/Controls"]
+
+unique_name_in_owner = true
+
+layout_mode = 2
+
+visible = false
+
+[node name="WallHeightLabel" type="Label" parent="Margin/Controls/WallParams"]
+
+layout_mode = 2
+
+text = "墙高"
+
+[node name="WallHeight" type="SpinBox" parent="Margin/Controls/WallParams"]
+
+unique_name_in_owner = true
+
+layout_mode = 2
+
+min_value = 0.15
+
+max_value = 0.6
+
+step = 0.05
+
+value = 0.3
+
+suffix = "m"
+
+[node name="WallBottomLabel" type="Label" parent="Margin/Controls/WallParams"]
+
+layout_mode = 2
+
+text = "底宽"
+
+[node name="WallBottom" type="SpinBox" parent="Margin/Controls/WallParams"]
+
+unique_name_in_owner = true
+
+layout_mode = 2
+
+min_value = 1
+
+max_value = 2
+
+step = 0.125
+
+value = 1
+
+suffix = "m"
+
+[node name="WallTopLabel" type="Label" parent="Margin/Controls/WallParams"]
+
+layout_mode = 2
+
+text = "顶宽 · 不超过底宽"
+
+[node name="WallTop" type="SpinBox" parent="Margin/Controls/WallParams"]
+
+unique_name_in_owner = true
+
+layout_mode = 2
+
+min_value = 0.5
+
+max_value = 1.5
+
+step = 0.125
+
+value = 0.5
+
+suffix = "m"
+
+[node name="ShovelParams" type="VBoxContainer" parent="Margin/Controls"]
+
+unique_name_in_owner = true
+
+layout_mode = 2
+
+visible = false
+
+[node name="ShovelWidthLabel" type="Label" parent="Margin/Controls/ShovelParams"]
+
+layout_mode = 2
+
+text = "沟宽"
+
+[node name="ShovelWidth" type="SpinBox" parent="Margin/Controls/ShovelParams"]
+
+unique_name_in_owner = true
+
+layout_mode = 2
+
+min_value = 0.5
+
+max_value = 1
+
+step = 0.125
+
+value = 0.5
+
+suffix = "m"
+
+[node name="ShovelDepthLabel" type="Label" parent="Margin/Controls/ShovelParams"]
+
+layout_mode = 2
+
+text = "沟深"
+
+[node name="ShovelDepth" type="SpinBox" parent="Margin/Controls/ShovelParams"]
+
+unique_name_in_owner = true
+
+layout_mode = 2
+
+min_value = 0.05
+
+max_value = 0.3
+
+step = 0.05
+
+value = 0.15
+
+suffix = "m"
+
+[node name="ShovelShoulderLabel" type="Label" parent="Margin/Controls/ShovelParams"]
+
+layout_mode = 2
+
+text = "每侧肩部宽度"
+
+[node name="ShovelShoulder" type="SpinBox" parent="Margin/Controls/ShovelParams"]
+
+unique_name_in_owner = true
+
+layout_mode = 2
+
+min_value = 0.5
+
+max_value = 1
+
+step = 0.125
+
+value = 0.5
+
+suffix = "m"
+
+[node name="Help" type="Label" parent="Margin/Controls"]
+
+unique_name_in_owner = true
+
+layout_mode = 2
+
+autowrap_mode = 3
+
+text = "左键使用工具；右键转向"
+
+[node name="BrushStatus" type="Label" parent="Margin/Controls"]
+
+unique_name_in_owner = true
+
+layout_mode = 2
+
+autowrap_mode = 3
+
+text = "等待沙场准备"
+
+[connection signal="pressed" from="Margin/Controls/Tools/Dig" to="." method="_on_tool_pressed" binds= [ &"remove_sand" ]]
+
+[connection signal="pressed" from="Margin/Controls/Tools/Fill" to="." method="_on_tool_pressed" binds= [ &"place_sand" ]]
+
+[connection signal="pressed" from="Margin/Controls/Tools/SuspendedSand" to="." method="_on_tool_pressed" binds= [ &"suspended_sand" ]]
+
+[connection signal="pressed" from="Margin/Controls/Tools/GravelDrop" to="." method="_on_tool_pressed" binds= [ &"gravel_drop" ]]
+[connection signal="value_changed" from="Margin/Controls/GravelParams/GravelCount" to="." method="_on_value_changed"]
+
+[connection signal="pressed" from="Margin/Controls/Tools/Castle" to="." method="_on_tool_pressed" binds= [ &"castle_v1" ]]
+
+[connection signal="pressed" from="Margin/Controls/Tools/Shovel" to="." method="_on_tool_pressed" binds= [ &"shovel_v1" ]]
+
+[connection signal="pressed" from="Margin/Controls/Tools/Wall" to="." method="_on_tool_pressed" binds= [ &"wall_v1" ]]
+
+[connection signal="value_changed" from="Margin/Controls/OrdinaryParams/DigAmount" to="." method="_on_value_changed"]
+
+[connection signal="value_changed" from="Margin/Controls/OrdinaryParams/FillAmount" to="." method="_on_value_changed"]
+
+[connection signal="value_changed" from="Margin/Controls/CastleParams/CastleScale" to="." method="_on_value_changed"]
+
+[connection signal="value_changed" from="Margin/Controls/CastleParams/CastleHeight" to="." method="_on_value_changed"]
+
+[connection signal="value_changed" from="Margin/Controls/CastleParams/CastleYaw" to="." method="_on_value_changed"]
+
+[connection signal="value_changed" from="Margin/Controls/WallParams/WallHeight" to="." method="_on_value_changed"]
+
+[connection signal="value_changed" from="Margin/Controls/WallParams/WallBottom" to="." method="_on_value_changed"]
+
+[connection signal="value_changed" from="Margin/Controls/WallParams/WallTop" to="." method="_on_value_changed"]
+
+[connection signal="value_changed" from="Margin/Controls/ShovelParams/ShovelWidth" to="." method="_on_value_changed"]
+
+[connection signal="value_changed" from="Margin/Controls/ShovelParams/ShovelDepth" to="." method="_on_value_changed"]
+
+[connection signal="value_changed" from="Margin/Controls/ShovelParams/ShovelShoulder" to="." method="_on_value_changed"]

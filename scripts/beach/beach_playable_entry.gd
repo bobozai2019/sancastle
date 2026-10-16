@@ -18,11 +18,12 @@ func _ready() -> void:
 func _domain_id() -> StringName:
 	return &"main_beach" if scene_key == "main" else StringName(scene_key)
 
-func _update_status() -> void:
-	super._update_status()
-	if status_label != null and scene_key != "main":
+func _format_status_text(text: String) -> String:
+	text = super._format_status_text(text)
+	if scene_key != "main":
 		var title := "test1 捕帧沙床" if scene_key == "test1_capture" else "test1 上滩回流"
-		status_label.text = status_label.text.replace(Scenarios.NAMES[preset_index], title)
+		text = text.replace(Scenarios.NAMES[preset_index], title)
+	return text
 
 func restore_gpu_checkpoint_data(checkpoint: Dictionary) -> StringName:
 	if checkpoint.get("shadow", {}).get("domain_id") != _domain_id():

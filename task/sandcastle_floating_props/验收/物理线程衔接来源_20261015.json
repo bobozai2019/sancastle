@@ -1,0 +1,238 @@
+{
+  "schema_version": 1,
+  "role": "cross_plan_read_only_review_snapshot",
+  "observed_at": "2026-10-15T15:33:13.519501+00:00",
+  "physics_thread_id": "01a1379d-c386-7191-bd40-affacc84d2e4",
+  "chat_status_at_read": "active",
+  "limitations": [
+    "Point-in-time file review, not a new runtime validation.",
+    "Active worktree may continue changing after this snapshot.",
+    "Primary task status is stale; worktree status and its latest dated appendices take precedence."
+  ],
+  "comparisons": [
+    {
+      "relative_path": "scripts/collision/gpu_collision_proxy.gd",
+      "primary": {
+        "path": "D:/godot/project/sandcastle/scripts/collision/gpu_collision_proxy.gd",
+        "available": true,
+        "bytes": 20103,
+        "sha256": "e82fbdfffa7d8988b0fb03e870407e94eb4e374d7346246efd59d332f4618484"
+      },
+      "physics_worktree": {
+        "path": "C:/Users/18205/.codex/worktrees/sandcastle-physics-threading-6861/sandcastle/scripts/collision/gpu_collision_proxy.gd",
+        "available": true,
+        "bytes": 20103,
+        "sha256": "e82fbdfffa7d8988b0fb03e870407e94eb4e374d7346246efd59d332f4618484"
+      },
+      "identical": true
+    },
+    {
+      "relative_path": "scripts/collision/collision_prepare_scheduler.gd",
+      "primary": {
+        "path": "D:/godot/project/sandcastle/scripts/collision/collision_prepare_scheduler.gd",
+        "available": true,
+        "bytes": 3666,
+        "sha256": "e2dfe7c2acf3e330743c42ca3e3a6f010f8e18a9105d8a6779c5edac602d320c"
+      },
+      "physics_worktree": {
+        "path": "C:/Users/18205/.codex/worktrees/sandcastle-physics-threading-6861/sandcastle/scripts/collision/collision_prepare_scheduler.gd",
+        "available": true,
+        "bytes": 3666,
+        "sha256": "e2dfe7c2acf3e330743c42ca3e3a6f010f8e18a9105d8a6779c5edac602d320c"
+      },
+      "identical": true
+    },
+    {
+      "relative_path": "scripts/beach/beach_gpu_entry.gd",
+      "primary": {
+        "path": "D:/godot/project/sandcastle/scripts/beach/beach_gpu_entry.gd",
+        "available": true,
+        "bytes": 15141,
+        "sha256": "4501fee9b256a6b517529f13b2eb03022b6727590a75f62bfad67288a34e7184"
+      },
+      "physics_worktree": {
+        "path": "C:/Users/18205/.codex/worktrees/sandcastle-physics-threading-6861/sandcastle/scripts/beach/beach_gpu_entry.gd",
+        "available": true,
+        "bytes": 14926,
+        "sha256": "af4fa611a27def80af4629f3a02e8a7328c61e0c430222b5e131dd397484dd14"
+      },
+      "identical": false
+    },
+    {
+      "relative_path": "scripts/beach/beach_recovery_entry.gd",
+      "primary": {
+        "path": "D:/godot/project/sandcastle/scripts/beach/beach_recovery_entry.gd",
+        "available": true,
+        "bytes": 27135,
+        "sha256": "1c935ff47ef6cf3cf9feed27e99e86338cef6f45465af8e51db3b8a3e176feb8"
+      },
+      "physics_worktree": {
+        "path": "C:/Users/18205/.codex/worktrees/sandcastle-physics-threading-6861/sandcastle/scripts/beach/beach_recovery_entry.gd",
+        "available": true,
+        "bytes": 25661,
+        "sha256": "0c53d4e93c6bb6c95051b03a5c1f3a35cbf7e521160ad685dfdbd1d56d7ec804"
+      },
+      "identical": false
+    },
+    {
+      "relative_path": "scripts/beach/beach_interaction_entry.gd",
+      "primary": {
+        "path": "D:/godot/project/sandcastle/scripts/beach/beach_interaction_entry.gd",
+        "available": true,
+        "bytes": 11446,
+        "sha256": "8feff93cee1f88492adc4501c7cb3c4f03247621602f433cc38c143c9d666a7c"
+      },
+      "physics_worktree": {
+        "path": "C:/Users/18205/.codex/worktrees/sandcastle-physics-threading-6861/sandcastle/scripts/beach/beach_interaction_entry.gd",
+        "available": true,
+        "bytes": 19335,
+        "sha256": "844718aa847475c6196df89ddb89dfc37020cda722e65dc92322f4f42cacd6e0"
+      },
+      "identical": false
+    },
+    {
+      "relative_path": "scripts/beach/gravel_playable_entry.gd",
+      "primary": {
+        "path": "D:/godot/project/sandcastle/scripts/beach/gravel_playable_entry.gd",
+        "available": true,
+        "bytes": 11550,
+        "sha256": "6b93d1bf0b2f63bf84e5429bce14c8d92cfac59e574d9884629499ee26b9ea19"
+      },
+      "physics_worktree": {
+        "path": "C:/Users/18205/.codex/worktrees/sandcastle-physics-threading-6861/sandcastle/scripts/beach/gravel_playable_entry.gd",
+        "available": false
+      },
+      "identical": false
+    },
+    {
+      "relative_path": "scripts/beach/shape_brush_playable_entry.gd",
+      "primary": {
+        "path": "D:/godot/project/sandcastle/scripts/beach/shape_brush_playable_entry.gd",
+        "available": true,
+        "bytes": 14920,
+        "sha256": "a3f7fcec959686ee3490a7147ecd2449db1c3014ed04813cb5279e6e0795ff6c"
+      },
+      "physics_worktree": {
+        "path": "C:/Users/18205/.codex/worktrees/sandcastle-physics-threading-6861/sandcastle/scripts/beach/shape_brush_playable_entry.gd",
+        "available": false
+      },
+      "identical": false
+    },
+    {
+      "relative_path": "scenes/main.tscn",
+      "primary": {
+        "path": "D:/godot/project/sandcastle/scenes/main.tscn",
+        "available": true,
+        "bytes": 11427,
+        "sha256": "a12b654f5e38000c153ca84148a601003b7aa64574c4bfbf2947d1c53b5b4d81"
+      },
+      "physics_worktree": {
+        "path": "C:/Users/18205/.codex/worktrees/sandcastle-physics-threading-6861/sandcastle/scenes/main.tscn",
+        "available": true,
+        "bytes": 10325,
+        "sha256": "01f304fdad35253e743ccec28d2431fa4fb228e5eb55331f2086e46d7fa61e4d"
+      },
+      "identical": false
+    },
+    {
+      "relative_path": "project.godot",
+      "primary": {
+        "path": "D:/godot/project/sandcastle/project.godot",
+        "available": true,
+        "bytes": 2074,
+        "sha256": "b68d35517766c5f383a7195389dac848805f1480805284252905d881501352bb"
+      },
+      "physics_worktree": {
+        "path": "C:/Users/18205/.codex/worktrees/sandcastle-physics-threading-6861/sandcastle/project.godot",
+        "available": true,
+        "bytes": 2074,
+        "sha256": "b68d35517766c5f383a7195389dac848805f1480805284252905d881501352bb"
+      },
+      "identical": true
+    },
+    {
+      "relative_path": "task/sandcastle_physics_threading/执行状态.md",
+      "primary": {
+        "path": "D:/godot/project/sandcastle/task/sandcastle_physics_threading/执行状态.md",
+        "available": true,
+        "bytes": 8052,
+        "sha256": "745fa749dc86c487f3a816715ffc2a6d0dc02ffbdc632c871ae692aecbd86fa1"
+      },
+      "physics_worktree": {
+        "path": "C:/Users/18205/.codex/worktrees/sandcastle-physics-threading-6861/sandcastle/task/sandcastle_physics_threading/执行状态.md",
+        "available": true,
+        "bytes": 31533,
+        "sha256": "2f50b5efecaea430eb7727663f18176e2f0148da64ec5f54073c43151e316a42"
+      },
+      "identical": false
+    },
+    {
+      "relative_path": "task/sandcastle_physics_threading/契约/线程与完成态.md",
+      "primary": {
+        "path": "D:/godot/project/sandcastle/task/sandcastle_physics_threading/契约/线程与完成态.md",
+        "available": true,
+        "bytes": 5116,
+        "sha256": "d6cf08d63e202b27ec5904dad84d62f261f432e6bb8881f235796bc9ba9ee8f5"
+      },
+      "physics_worktree": {
+        "path": "C:/Users/18205/.codex/worktrees/sandcastle-physics-threading-6861/sandcastle/task/sandcastle_physics_threading/契约/线程与完成态.md",
+        "available": true,
+        "bytes": 5116,
+        "sha256": "d6cf08d63e202b27ec5904dad84d62f261f432e6bb8881f235796bc9ba9ee8f5"
+      },
+      "identical": true
+    },
+    {
+      "relative_path": "task/sandcastle_physics_threading/细则/T05_独立物理线程实验.md",
+      "primary": {
+        "path": "D:/godot/project/sandcastle/task/sandcastle_physics_threading/细则/T05_独立物理线程实验.md",
+        "available": true,
+        "bytes": 2021,
+        "sha256": "8c5ae737dfa73fbc1bae426443e734796bd02bf07263b34754182d5b4781ce3d"
+      },
+      "physics_worktree": {
+        "path": "C:/Users/18205/.codex/worktrees/sandcastle-physics-threading-6861/sandcastle/task/sandcastle_physics_threading/细则/T05_独立物理线程实验.md",
+        "available": true,
+        "bytes": 3162,
+        "sha256": "ac01ab145dc2d264c087e78090b87b066bd5a26d03f69ffa6989f7d934750a6d"
+      },
+      "identical": false
+    },
+    {
+      "relative_path": "task/sandcastle_physics_threading/验证计划.md",
+      "primary": {
+        "path": "D:/godot/project/sandcastle/task/sandcastle_physics_threading/验证计划.md",
+        "available": true,
+        "bytes": 8322,
+        "sha256": "a8b25386092806e05ec3f90c3b6eedad8a172eb20e4cb59bd785a8f60377ab1c"
+      },
+      "physics_worktree": {
+        "path": "C:/Users/18205/.codex/worktrees/sandcastle-physics-threading-6861/sandcastle/task/sandcastle_physics_threading/验证计划.md",
+        "available": true,
+        "bytes": 8322,
+        "sha256": "a8b25386092806e05ec3f90c3b6eedad8a172eb20e4cb59bd785a8f60377ab1c"
+      },
+      "identical": true
+    }
+  ],
+  "worktree_evidence": [
+    {
+      "path": "C:/Users/18205/.codex/worktrees/sandcastle-physics-threading-6861/sandcastle/task/sandcastle_physics_threading/验收/恢复运行与C拒绝.md",
+      "available": true,
+      "bytes": 5765,
+      "sha256": "4044f64f0adf7f44d6f5ee799bfe4863a9650b953b94a78c8d126b03fddb4bbc"
+    },
+    {
+      "path": "C:/Users/18205/.codex/worktrees/sandcastle-physics-threading-6861/sandcastle/task/sandcastle_physics_threading/验收/输入桥接实现与磁盘约束.md",
+      "available": true,
+      "bytes": 5009,
+      "sha256": "9a9680023500bf8967b625c99f739bf037a42495409c51b649a6a194d91a81b2"
+    },
+    {
+      "path": "C:/Users/18205/.codex/worktrees/sandcastle-physics-threading-6861/sandcastle/task/sandcastle_physics_threading/验收/worker回收时序验证与完整场景短对照.md",
+      "available": true,
+      "bytes": 6662,
+      "sha256": "c5af8c56982619f9100ee730265079382026b954d0d22c4e4298bb2a3d999e68"
+    }
+  ]
+}

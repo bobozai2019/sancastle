@@ -78,8 +78,22 @@ func set_fixture_camera(camera_id: StringName) -> bool:
 	set_player_camera(false)
 	return true
 
+var synced_sun_basis: Basis
+var synced_sun_material: ShaderMaterial
+var sun_synced := false
+
 func _sync_sun() -> void:
-	water_material.set_shader_parameter("prototype_light_direction_world", $SandFixtureSun.global_basis.z.normalized())
+	var basis: Basis = $SandFixtureSun.global_basis
+	if sun_synced and basis == synced_sun_basis and water_material == synced_sun_material:
+		return
+	synced_sun_basis = basis
+	synced_sun_material = water_material
+	sun_synced = true
+	var direction := basis.z.normalized()
+	water_material.set_shader_parameter("prototype_light_direction_world", direction)
+	if not effective_lighting.is_empty():
+		effective_lighting["sun_direction_world"] = str(direction)
+	invalidate_effective_render_profile()
 
 func _process(delta: float) -> void:
 	super._process(delta)

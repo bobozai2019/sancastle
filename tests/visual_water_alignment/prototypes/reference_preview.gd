@@ -1616,6 +1616,10 @@ func _dispatch_coupled_substep(delta_s: float) -> bool:
 	return material_coupler.dispatch_after_erosion(delta_s)
 
 
+func _dispatch_completed_visual_tick(_target_tick: int, _revision: int, _token: int, _dt: float) -> bool:
+	return true
+
+
 func _render_finish_tick(data: PackedByteArray, revision: int,
 		substeps: int, token: int) -> void:
 	if closing or token != generation:
@@ -1631,7 +1635,7 @@ func _render_finish_tick(data: PackedByteArray, revision: int,
 		dirty_ticks_covered += 1
 	var step_ok: bool = solver.call("dispatch_tick_fixed", SIM_DELTA,
 		substeps, revision, post_substep) if prototype_fixed_substeps > 0 else \
-		solver.dispatch_tick_with_cfl(SIM_DELTA, data, revision, post_substep)
+		solver.dispatch_tick_validated(SIM_DELTA, substeps, revision, post_substep)
 	if not step_ok:
 		call_deferred("_fail", "GPU shallow tick failed")
 		return
@@ -1659,6 +1663,9 @@ func _render_finish_tick(data: PackedByteArray, revision: int,
 			call_deferred("_fail", "debug audit request failed: %d" % audit_error)
 			return
 		_request_sand_audit_render(token)
+	if not _dispatch_completed_visual_tick(completed_ticks+1, solver.state_revision, token, SIM_DELTA):
+		call_deferred("_fail", "GPU completed visual tick failed")
+		return
 	_publish_textures()
 	if enable_erosion:
 		if ((last_tool_submit_usec >= 0 and \
@@ -2371,7 +2378,7 @@ func _update_status() -> void:
 	status_label.visible = not hide_hud
 	if hide_hud:
 		return
-	status_label.text = "GPU 水沙状态预览 | 256² | 场景 %d：%s | %s | 调试：%s\nTick %d  CFL 子步 %d  入水 %.4f m³  出水 %.4f m³  桶 %.4f m³\n左键挖沙 右键放沙 空格暂停 V 调试 F5 玩家视角 F6 隐藏 HUD%s；暂停后 Z/Y 撤销/重做。%s" % [
+	var text := "GPU 水沙状态预览 | 256² | 场景 %d：%s | %s | 调试：%s\nTick %d  CFL 子步 %d  入水 %.4f m³  出水 %.4f m³  桶 %.4f m³\n左键挖沙 右键放沙 空格暂停 V 调试 F5 玩家视角 F6 隐藏 HUD%s；暂停后 Z/Y 撤销/重做。%s" % [
 		preset_index + 1, Scenarios.NAMES[preset_index],
 		"故障" if not last_error.is_empty() else ("运行" if playing else "暂停"),
 		DEBUG_NAMES[debug_view],
@@ -2380,32 +2387,39 @@ func _update_status() -> void:
 		" B 建墙 N 建塔" if enable_structures else "",
 		"水沙耦合实验模式。" if enable_erosion else "侵蚀尚未接入。"]
 	if audit_revision >= 0:
-		status_label.text += "\nGPU 审计 r%d：水 %.4f m³  最小深 %.6f m  无效 %d  负水 %d" % [
+		text += "\nGPU 审计 r%d：水 %.4f m³  最小深 %.6f m  无效 %d  负水 %d" % [
 			audit_revision, audit_water_m3, audit_min_depth_m,
 			audit_invalid_cells, audit_negative_cells]
 	if audit_sand_revision >= 0:
-		status_label.text += "\nGPU 沙审计 r%d：沙 %.4f  悬 %.4f  连桶 %.4f m³  闭合差 %.6f m³  负沙 %d  无效 %d" % [
+		text += "\nGPU 沙审计 r%d：沙 %.4f  悬 %.4f  连桶 %.4f m³  闭合差 %.6f m³  负沙 %d  无效 %d" % [
 			audit_sand_revision, audit_sand_m3, audit_sediment_m3,
 			audit_sand_total_m3, audit_sand_closure_m3,
 			audit_sand_negative_cells, audit_sand_invalid_cells]
-		status_label.text += "\n沙源 %.4f  沙汇 %.4f m³  GPU NaN %d  GPU 超载 %d  CPU 截沙 %d" % [
+		text += "\n沙源 %.4f  沙汇 %.4f m³  GPU NaN %d  GPU 超载 %d  CPU 截沙 %d" % [
 			shadow_domain.sand_source_m3, shadow_domain.sand_sink_m3,
 			solver.nan_events if solver != null else 0,
 			solver.overload_events if solver != null else 0,
 			shadow_domain.clamped_sand_events]
 	if debug_view == 13 and collision_proxy != null:
-		status_label.text += "\n最近脏块 %d  待回读 %d  正在回读 %d" % [
+		text += "\n最近脏块 %d  待回读 %d  正在回读 %d" % [
 			last_dirty_chunks.size(), collision_proxy.pending_revisions.size(),
 			collision_proxy.active_chunks.size()]
 	elif debug_view == 14:
 		if proxy_debug_shadow_stale:
-			status_label.text += "\n碰撞差异待同步：GPU r%d，CPU 影子 r%d（运行中不做全域回读）" % [
+			text += "\n碰撞差异待同步：GPU r%d，CPU 影子 r%d（运行中不做全域回读）" % [
 				solver.state_revision, shadow_revision]
 		else:
-			status_label.text += "\n碰撞代理相对 CPU 影子床高：最大差 %.6f m  缺块 %d" % [
+			text += "\n碰撞代理相对 CPU 影子床高：最大差 %.6f m  缺块 %d" % [
 				proxy_debug_max_error_m, proxy_debug_missing_chunks]
 	if not last_error.is_empty():
-		status_label.text += "\n" + last_error
+		text += "\n" + last_error
+	text = _format_status_text(text)
+	if status_label.text != text:
+		status_label.text = text
+
+
+func _format_status_text(text: String) -> String:
+	return text
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -2899,4 +2913,3 @@ func _render_release() -> void:
 		wrapper.texture_rd_rid = RID()
 	if solver != null:
 		solver.release()
-

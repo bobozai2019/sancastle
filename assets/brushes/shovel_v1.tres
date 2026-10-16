@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="SandcastleBrushDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/sand/brushes/brush_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+brush_id = &"shovel_v1"
+operation = &"shovel_transfer"
+default_params = {"trench_width_m": 0.5, "depth_m": 0.15, "shoulder_width_m": 0.5}
+param_ranges = {"trench_width_m": [0.5, 1.0], "depth_m": [0.05, 0.3], "shoulder_width_m": [0.5, 1.0]}
+max_transfer_m3 = 1.0

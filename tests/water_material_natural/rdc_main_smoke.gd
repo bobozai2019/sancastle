@@ -25,7 +25,12 @@ func _ticks(count: int) -> void:
 	for i in count:
 		var before: int=preview.completed_ticks
 		preview._start_tick()
-		while preview.completed_ticks==before and preview.last_error.is_empty(): await process_frame
+		var deadline:int=Time.get_ticks_msec()+30000
+		while preview.completed_ticks==before and preview.last_error.is_empty() and Time.get_ticks_msec()<deadline: await process_frame
+		if preview.completed_ticks==before and preview.last_error.is_empty():
+			_check("tick_wait_timeout",false,{"tick":before,"generation":preview.generation})
+			preview._fail("test tick did not complete within 30 seconds")
+			return
 func _run() -> void:
 	var scene: PackedScene=load("res://scenes/main.tscn")
 	preview=scene.instantiate();preview.playing=false;root.add_child(preview)
@@ -61,5 +66,6 @@ func _finish() -> void:
 	var passed:=true
 	for row in checks: passed=passed and row.pass
 	var file:=FileAccess.open(output.path_join("main_smoke.json"),FileAccess.WRITE)
-	file.store_string(JSON.stringify({"pass":passed,"checks":checks},"\t"))
+	var executable:String=OS.get_executable_path()
+	file.store_string(JSON.stringify({"pass":passed,"checks":checks,"engine_identity":{"executable":executable,"sha256":FileAccess.get_sha256(executable),"version":Engine.get_version_info()}},"\t"))
 	print("MAIN_SMOKE_COMPLETE ",passed)

@@ -34,6 +34,7 @@ func submit(command: Dictionary, policy: int = -1, speed: float = NAN) -> String
 	if not accepting or lab.closed or not lab.ready_for_ticks or generation != lab.generation or not lab.last_error.is_empty(): return &"backend_unavailable"
 	if lab.command_queue.pending.size() >= MAX_PENDING: return &"backend_unavailable"
 	if not Protocol.finite_command(command) or command.get("kind") not in [&"place_sand",&"remove_sand"] or typeof(command.get("generation")) != TYPE_INT: return &"invalid_command"
+	if command.get("sand_destination") == "suspended_v1" and (not _external_sand() or not lab.enable_erosion): return &"backend_unavailable"
 	policy=lab.water_policy if policy<0 else policy
 	speed=lab.signed_speed_m_s if is_nan(speed) else speed
 	if policy not in [0,1,2,3] or not is_finite(speed) or absf(speed)>1.0: return &"invalid_command"
@@ -55,9 +56,30 @@ func submit(command: Dictionary, policy: int = -1, speed: float = NAN) -> String
 	return &""
 
 func drain_due() -> void:
-	if pumping or lab.busy or lab.closed or generation!=lab.generation: return
+	var pipeline: bool=lab.has_method("can_submit_frame_batch") and lab.can_submit_frame_batch()
+	if pumping or (lab.busy and not pipeline) or lab.closed or generation!=lab.generation: return
 	pumping=true
+	if pipeline and not lab.command_queue.pending.is_empty():
+		var selections:=[]
+		var first_policy: int=policies[lab.command_queue.pending[0].command_id].policy
+		for command in lab.command_queue.pending:
+			if selections.size()>=lab.edit_frame_batch_limit or command.sim_tick>lab.completed_ticks or command.get("schema_version",1)!=1 or command.get("sand_destination","")!="" or policies[command.command_id].policy!=first_policy:break
+			selections.append(policies[command.command_id].duplicate(true))
+		if not selections.is_empty():
+			var batch: Dictionary=await lab.execute_gpu_frame_batch(selections.size(),selections)
+			for row in batch.results:
+				_record(terminal,{"command":row.command,"result":row.result,"configuration":policies[row.command.command_id],"settle_us":Time.get_ticks_usec(),"publish_us":lab.publish_us,"stock":lab.domain.tool_inventory_m3})
+				reservations.erase(row.command.command_id);policies.erase(row.command.command_id)
+			if not batch.error.is_empty():cancel_pending("backend_failed")
+			pumping=false;return
+	# Shape/suspended commands keep their own transaction and collision boundary.
+	while lab.busy and not lab.closed and generation==lab.generation and lab.last_error.is_empty():await lab.get_tree().process_frame
 	while not lab.command_queue.pending.is_empty() and not lab.closed and generation==lab.generation and lab.last_error.is_empty():
+		# A completed edit may leave one published-state simulation tick in
+		# flight. Keep the next admitted edit queued until that tick completes.
+		while lab.busy and not lab.closed and generation==lab.generation and lab.last_error.is_empty():
+			await lab.get_tree().process_frame
+		if lab.closed or generation!=lab.generation or not lab.last_error.is_empty() or lab.command_queue.pending.is_empty(): break
 		var command: Dictionary = lab.command_queue.pending[0]
 		if command.sim_tick>lab.completed_ticks: break
 		active_id=command.command_id

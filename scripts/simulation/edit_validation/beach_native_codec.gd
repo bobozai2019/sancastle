@@ -5,6 +5,21 @@ const SPARE=["sand","water","momentum_x","momentum_z","sediment","wetness","comp
 
 static func validate(checkpoint: Dictionary) -> StringName:
 	var native: Variant=checkpoint.get("gpu_beach_native")
+	if native is Dictionary and native.get("version")==2:
+		var keys: Array=["version","fields","spare","foam","current_index","material"]
+		if native.size()!=keys.size(): return &"invalid_beach_header"
+		for key in keys:
+			if not native.has(key): return &"invalid_beach_header"
+		var projection: Dictionary=checkpoint.duplicate(false)
+		var old: Dictionary=native.duplicate(false);old.version=1;old.erase("material")
+		projection.gpu_beach_native=old
+		var error:=_validate_v1(projection)
+		if not error.is_empty(): return error
+		return preload("res://scripts/simulation/brushes/brush_material_state_codec.gd").validate(native.material,native.fields.sand,native.spare.sand,FileAccess.get_sha256("res://assets/brushes/molded_material_candidate.json"))
+	return _validate_v1(checkpoint)
+
+static func _validate_v1(checkpoint: Dictionary) -> StringName:
+	var native: Variant=checkpoint.get("gpu_beach_native")
 	if not native is Dictionary or native.get("version")!=1 or native.get("current_index") not in [0,1] or not native.get("fields") is Dictionary or not native.get("spare") is Dictionary or not native.get("foam") is Dictionary: return &"invalid_beach_header"
 	if native.fields.size()!=10 or native.spare.size()!=8 or native.foam.size()!=5 or native.foam.get("current_index") not in [0,1]: return &"invalid_beach_history"
 	for group in [native.fields,native.spare]:

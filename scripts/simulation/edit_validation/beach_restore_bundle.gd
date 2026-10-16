@@ -1,5 +1,8 @@
 extends RefCounted
 
+var gravel_field
+var gravel_initialization := ""
+
 const Foam=preload("res://scripts/simulation/edit_validation/checkpoint_foam_field.gd")
 const Front=preload("res://tests/visual_water_alignment/prototypes/reference_local_front_field.gd")
 const Audit=preload("res://scripts/simulation/gpu_sand_audit.gd")
@@ -27,6 +30,7 @@ func build(owner, checkpoint: Dictionary, domain) -> bool:
 	if not solver.initialize(RenderingServer.get_rendering_device(),domain,owner.spirvs[0],owner.spirvs[1],owner.spirvs[2],owner.spirvs[3],owner.spirvs[4],owner.spirvs[5],owner.spirvs[6],owner.spirvs[7],checkpoint.fields.momentum_x,checkpoint.fields.momentum_z): return false
 	var native: Dictionary=checkpoint.gpu_beach_native
 	if not solver.restore_native_fields(native.fields,checkpoint.revision,native.spare,native.current_index): return false
+	if not owner._restore_native_extensions(solver,native): return false
 	solver.water_source_m3=checkpoint.water_source_m3;solver.water_sink_m3=checkpoint.water_sink_m3
 	foam_field=Foam.new();foam_field.native_history=native.foam.duplicate(true)
 	var bed: PackedFloat32Array=native.fields.rock.to_float32_array()
@@ -56,6 +60,9 @@ func build(owner, checkpoint: Dictionary, domain) -> bool:
 	solver.publish_sand()
 	for field in native.fields: _verify(owner,solver.current_texture(field),"raw_"+field,native.fields[field])
 	for field in native.spare: _verify(owner,solver.textures[field][1-solver.current_index],"spare_"+field,native.spare[field])
+	if native.version==2:
+		_verify(owner,solver.textures.mold_support[solver.current_index],"material_current",native.material.current_support)
+		_verify(owner,solver.textures.mold_support[1-solver.current_index],"material_spare",native.material.spare_support)
 	for index in 2:
 		_verify(owner,foam_field.textures[index],"foam_%d"%index,native.foam["foam_%d"%index])
 		_verify(owner,foam_field.bed_textures[index],"bed_%d"%index,native.foam["bed_%d"%index])
@@ -78,6 +85,7 @@ func record(bytes: PackedByteArray, key: String) -> void:
 func release() -> void:
 	if released: return
 	assert(pending==0)
+	if gravel_field!=null: gravel_field.release(); gravel_field=null
 	if solver!=null:
 		# Free dependent uniforms/pipeline before their shader. Godot invalidates
 		# dependent RIDs when a shader is freed.

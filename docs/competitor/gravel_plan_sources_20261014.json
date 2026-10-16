@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-14",
+  "role": "historical_evidence_reuse_check",
+  "scope": "Source identities and selected artifact index availability only. No new RDC replay, raw-range verification, temporal trajectory, prop dynamics or performance validation.",
+  "reused_statement_ids": [
+    "GRAVEL-TRANSPORT-01",
+    "GRAVEL-TRANSPORT-02",
+    "PROP-BUOYANCY-01",
+    "PROP-COLLISION-01"
+  ],
+  "source_index": "docs/competitor/transport_evidence_inventory.json",
+  "method": "PowerShell Test-Path/Get-Item/Get-FileHash SHA256; compare with 2026-10-12 identity index",
+  "source_checks": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+      "expected_bytes": 47654400,
+      "expected_sha256": "147030ecf9527a25250238120364eb761390b99688b1812c4ea555b3b04e56a0",
+      "available": true,
+      "bytes": 47654400,
+      "sha256": "147030ecf9527a25250238120364eb761390b99688b1812c4ea555b3b04e56a0",
+      "identity_matches": true
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+      "expected_bytes": 8928184,
+      "expected_sha256": "aa4457307746c4552541b6cedd4809fdaccf33eef03964a9e2300de5a09e1606",
+      "available": true,
+      "bytes": 8928184,
+      "sha256": "aa4457307746c4552541b6cedd4809fdaccf33eef03964a9e2300de5a09e1606",
+      "identity_matches": true
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "expected_bytes": 96756,
+      "expected_sha256": "7e4fa0a38904d42243cec1f600f353c8adce0182fa5d9304f1023f2867243b6d",
+      "available": true,
+      "bytes": 96756,
+      "sha256": "7e4fa0a38904d42243cec1f600f353c8adce0182fa5d9304f1023f2867243b6d",
+      "identity_matches": true
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+      "expected_bytes": 76135784,
+      "expected_sha256": "6dd7bb6bc7d926fd43c08d22c9c767b7edf531cf11a4a555fcd41830f2f9c721",
+      "available": true,
+      "bytes": 76135784,
+      "sha256": "6dd7bb6bc7d926fd43c08d22c9c767b7edf531cf11a4a555fcd41830f2f9c721",
+      "identity_matches": true
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\resources.assets",
+      "expected_bytes": 363912,
+      "expected_sha256": "23f0612cdd41f53597ed1963bc63b79208f4a226f5677e2e27a7b13c2727085c",
+      "available": true,
+      "bytes": 363912,
+      "sha256": "23f0612cdd41f53597ed1963bc63b79208f4a226f5677e2e27a7b13c2727085c",
+      "identity_matches": true
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\globalgamemanagers.assets",
+      "expected_bytes": 282924,
+      "expected_sha256": "8c8f9cbc1b1bc03ff278154f93698295e5de5f4b078b46c3a9ccae70e70815a2",
+      "available": true,
+      "bytes": 282924,
+      "sha256": "8c8f9cbc1b1bc03ff278154f93698295e5de5f4b078b46c3a9ccae70e70815a2",
+      "identity_matches": true
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets.resS",
+      "expected_bytes": 167798272,
+      "expected_sha256": "5db9857c6c27ad5eef905e10428898c87cfbfaaac7c36f8d014fe77cf595c65c",
+      "available": true,
+      "bytes": 167798272,
+      "sha256": "5db9857c6c27ad5eef905e10428898c87cfbfaaac7c36f8d014fe77cf595c65c",
+      "identity_matches": true
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.resource",
+      "expected_bytes": 32401561,
+      "expected_sha256": "58f88f5ad1792a1a98905c3bd1ee49eb5176f8975bc9a6a4d847141f5ca241a8",
+      "available": true,
+      "bytes": 32401561,
+      "sha256": "58f88f5ad1792a1a98905c3bd1ee49eb5176f8975bc9a6a4d847141f5ca241a8",
+      "identity_matches": true
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\resources.assets.resS",
+      "expected_bytes": 16784448,
+      "expected_sha256": "32afea8f26e3c2567e028aca66895f2551f679346fe9563fa3ab59349cb8f8d0",
+      "available": true,
+      "bytes": 16784448,
+      "sha256": "32afea8f26e3c2567e028aca66895f2551f679346fe9563fa3ab59349cb8f8d0",
+      "identity_matches": true
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\globalgamemanagers.assets.resS",
+      "expected_bytes": 21970208,
+      "expected_sha256": "6f0a3eaa9b7ebe31e9026a2d2d1cc7167a294be83541103cd975bd5e615b69de",
+      "available": true,
+      "bytes": 21970208,
+      "sha256": "6f0a3eaa9b7ebe31e9026a2d2d1cc7167a294be83541103cd975bd5e615b69de",
+      "identity_matches": true
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\test1.rdc",
+      "expected_bytes": 225224034,
+      "expected_sha256": "761aa980c2426f75a1fa7364bf6d2655ff4dd20ea76566e630ee5b53ea0ec5b2",
+      "available": true,
+      "bytes": 225224034,
+      "sha256": "761aa980c2426f75a1fa7364bf6d2655ff4dd20ea76566e630ee5b53ea0ec5b2",
+      "identity_matches": true
+    }
+  ],
+  "selected_artifact_checks": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\package_v4\\source_manifest.json",
+      "available": true,
+      "bytes": 2192,
+      "sha256": "07d7b2f4bbf6a5d6504b357d0c48ada60384ecb4e431c34b94506dee349de30b",
+      "expected_sha256": "07d7b2f4bbf6a5d6504b357d0c48ada60384ecb4e431c34b94506dee349de30b",
+      "identity_matches": true
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\package_v4\\source_after.json",
+      "available": true,
+      "bytes": 2192,
+      "sha256": "07d7b2f4bbf6a5d6504b357d0c48ada60384ecb4e431c34b94506dee349de30b",
+      "expected_sha256": "07d7b2f4bbf6a5d6504b357d0c48ada60384ecb4e431c34b94506dee349de30b",
+      "identity_matches": true
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\package_v4\\raw_index.json",
+      "available": true,
+      "bytes": 1627361,
+      "sha256": "7d83e538b02182cd772be267bc1c74aa8d40260a73b9ae30bf5b0e098c38ef45",
+      "expected_sha256": "7d83e538b02182cd772be267bc1c74aa8d40260a73b9ae30bf5b0e098c38ef45",
+      "identity_matches": true
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\package_v4\\technical_fields.json",
+      "available": true,
+      "bytes": 37962,
+      "sha256": "84ef5136b8c06f0c2ce7aa0724031685528921c87493a5687a7ad38c1f225717",
+      "expected_sha256": "84ef5136b8c06f0c2ce7aa0724031685528921c87493a5687a7ad38c1f225717",
+      "identity_matches": true
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\analysis_v4\\shader_index.json",
+      "available": true,
+      "bytes": 47643,
+      "sha256": "9542a45cd3f52a4332417d278f6ec7a3d8b98c73d98e920ca38b12bc6a8e96e8",
+      "expected_sha256": "9542a45cd3f52a4332417d278f6ec7a3d8b98c73d98e920ca38b12bc6a8e96e8",
+      "identity_matches": true
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\readback_mapping_v2\\index.json",
+      "available": true,
+      "bytes": 2509,
+      "sha256": "5b2ed2b5e3b55dc7aaa10431f43f278154a1048a1d2965e7085a03115da14c6c",
+      "expected_sha256": "5b2ed2b5e3b55dc7aaa10431f43f278154a1048a1d2965e7085a03115da14c6c",
+      "identity_matches": true
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\replay_v2\\manifest.json",
+      "available": true,
+      "bytes": 8817,
+      "sha256": "ab16019d08aa2b7bf9bf43d58004daa9852597c823c32b5f2ce67230cd27b4a1",
+      "expected_sha256": "ab16019d08aa2b7bf9bf43d58004daa9852597c823c32b5f2ce67230cd27b4a1",
+      "identity_matches": true
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\replay_v2\\decoded_snapshot.json",
+      "available": true,
+      "bytes": 691,
+      "sha256": "6a3b8afce52418b6f8f9463c75203cb339cc5ece523cc198b3acc10622a367b6",
+      "expected_sha256": "6a3b8afce52418b6f8f9463c75203cb339cc5ece523cc198b3acc10622a367b6",
+      "identity_matches": true
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\verification.json",
+      "available": true,
+      "bytes": 1006,
+      "sha256": "f4c6406deeb679caf85f6af38ce896eb0885bf17a399a4e2db7a7878fa201efd",
+      "expected_sha256": "f4c6406deeb679caf85f6af38ce896eb0885bf17a399a4e2db7a7878fa201efd",
+      "identity_matches": true
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\artifact_index.json",
+      "available": true,
+      "bytes": 4435196,
+      "sha256": "11776dfcf1f6b835e3963ca5d9b42001ffcd8acf3224b2996ed9aff72d0ea599",
+      "expected_sha256": "11776dfcf1f6b835e3963ca5d9b42001ffcd8acf3224b2996ed9aff72d0ea599",
+      "identity_matches": true
+    }
+  ],
+  "disassembly": {
+    "path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\analysis_v4\\Gravel_Update_0.txt",
+    "bytes": 8447,
+    "sha256": "ed73f4138b4d467fe421ebe5efc620a7d3448d7ad180f36791635413cb7fcab8"
+  },
+  "limitations": [
+    "Only listed artifacts rehashed; all 4306 raw records were not reverified this time.",
+    "Historical integrity PASS is not a dynamics, visual or performance PASS.",
+    "No entire mesh/texture external payload exports or prop runtime contact verification added."
+  ]
+}

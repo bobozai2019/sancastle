@@ -1,0 +1,2491 @@
+{
+  "role": "shape_brush_release_candidate",
+  "status": "candidate_not_released",
+  "engine": {
+    "engine_path": "D:\\godot\\Godot_v4.6.2\\godot.exe",
+    "engine_sha256": "624c5ff59d4aa2b91a2e8fe1cfa782926b258bd3dbba94e1cc2cf153a14a21c4",
+    "engine_version": "4.7.beta.custom_build.dff2b9bb6"
+  },
+  "entries": [
+    "scenes/main.tscn",
+    "scenes/playable/test1_capture.tscn",
+    "scenes/playable/test1_backwash.tscn"
+  ],
+  "source_inventory_sha256": "f7b08e06e7a6c97bf31c8bd177e27c57bf7e753770e46e8c01af9d6977b41ca7",
+  "files": [
+    {
+      "path": "addons/godot_editor_logger/plugin.cfg",
+      "bytes": 133,
+      "sha256": "22eb90f4235fb3098b18ad7bca53b7351e867ac782b142d7239d02e3a6de7741"
+    },
+    {
+      "path": "addons/godotiq/plugin.cfg",
+      "bytes": 156,
+      "sha256": "dc79c3d11b3633b913951b71bb1b0621efcf7f28b9dd187eaa920241d2a66b1b"
+    },
+    {
+      "path": "assets/approx_gpu_edit/grid_mesh.res",
+      "bytes": 11510428,
+      "sha256": "53c51966168a5105215eeec743dbf0eabb9e47a31d8276d7465dc4dfae24b23a"
+    },
+    {
+      "path": "assets/approx_gpu_edit/trial_profile.tres",
+      "bytes": 345,
+      "sha256": "7d7bbc2ce5ce8a2e4f0a5dfcfe07a799631677a9dc6610d63a8402e530881981"
+    },
+    {
+      "path": "assets/brushes/castle/four_towers_preview.json",
+      "bytes": 783,
+      "sha256": "1fed13ef4887333574174b468eef21de229c54dc34870891ab7eddec0387c4ff"
+    },
+    {
+      "path": "assets/brushes/castle/four_towers_preview.tres",
+      "bytes": 247167,
+      "sha256": "51e5d6365711adaf4a43a88625417ac904b1f789775dd155bfc1d30f0fa149bc"
+    },
+    {
+      "path": "assets/brushes/castle/four_towers_v1.json",
+      "bytes": 889,
+      "sha256": "443165267184afe6cde31b705636e78da02ca0ff05ce9d7b84b9f12fe7359008"
+    },
+    {
+      "path": "assets/brushes/castle/four_towers_v1.rgba32f",
+      "bytes": 67600,
+      "sha256": "42f4654b2a40688fdfb936a790c1c08f0d2f4efbe6d1aa3bef91f2598089e833"
+    },
+    {
+      "path": "assets/brushes/castle_v1.tres",
+      "bytes": 575,
+      "sha256": "47b6f19647d04996d4be6f6df5b3b99f0bc76abd3a90a3e1792d26506b6b9a0b"
+    },
+    {
+      "path": "assets/brushes/molded_material_candidate.json",
+      "bytes": 576,
+      "sha256": "1936e7dfc654a7a5dc5e9307d880c85e7cc7f48b128372ec622f5b68b7af2890"
+    },
+    {
+      "path": "assets/brushes/protocol_v2.json",
+      "bytes": 7439,
+      "sha256": "305d215c39b20c0991cb738e6767e57e74b63ad255e514c2819f645e6c07e6f0"
+    },
+    {
+      "path": "assets/brushes/shovel_v1.tres",
+      "bytes": 482,
+      "sha256": "8681fbfe01a98a5af25ddbfe2a78bd747e43313174b4094db80176fb3c0fc343"
+    },
+    {
+      "path": "assets/brushes/wall_v1.tres",
+      "bytes": 462,
+      "sha256": "e65b5949fff433149f5274f289f12ff6cac4c924d39ae9b2a4dd350a28a9cf34"
+    },
+    {
+      "path": "assets/test1_beach/g05_hybrid_trial.json",
+      "bytes": 2022,
+      "sha256": "338e577b9d8b1f922847ac84a46ad418f48ba9e6eae91e8e0bc7a829659736ef"
+    },
+    {
+      "path": "assets/test1_beach/g05_vertex_light_trial.json",
+      "bytes": 1994,
+      "sha256": "22d0c4c5177304ff236d2930343fcfb9e913d427602613ec0af0519f81d25c7a"
+    },
+    {
+      "path": "assets/test1_beach/test1_beach_g03_entry.gd",
+      "bytes": 3989,
+      "sha256": "44cdd17732e3efe6e4d0189693f1c2c8023886796dbcac39bb2ccf3b4ad2befa"
+    },
+    {
+      "path": "assets/test1_beach/test1_beach_release.json",
+      "bytes": 1974,
+      "sha256": "4d9b2304154dc3d23344ce670c9d7fa1e1265f6738314a98fdde5e1043ff6dad"
+    },
+    {
+      "path": "assets/test1_beach/test1_beach_v8_base.json",
+      "bytes": 1964,
+      "sha256": "d5467a0a792150e52dcd73f9695e44254e686c48aee885bdba1b930590df3e3e"
+    },
+    {
+      "path": "assets/test1_beach/test1_bed_dry_overlay_trial.gdshader",
+      "bytes": 8894,
+      "sha256": "4f17c7b16b5b23928d9bd0298ce33b361eb6ffb27f0e68e8a2b91246efcd5530"
+    },
+    {
+      "path": "assets/test1_beach/test1_bed_dry_vertex_depth14_trial.gdshader",
+      "bytes": 8897,
+      "sha256": "185f75135e98faf65025498ae768a36bde484dc8fff6d55ca324c58ed693a534"
+    },
+    {
+      "path": "assets/test1_beach/test1_bed_dry_vertex_trial.gdshader",
+      "bytes": 8896,
+      "sha256": "869e178b39d54edcbfed60c5fdfa34ec749138f2d4d1e6f3d6c657b1227eacc4"
+    },
+    {
+      "path": "assets/test1_beach/test1_bed_lit.gdshader",
+      "bytes": 8788,
+      "sha256": "5eb82335a471c821cc2c10e9fd2590d979fa06ae62d317fe13574b40a2e7e6a2"
+    },
+    {
+      "path": "assets/test1_beach/test1_bed_lit_fast.gdshader",
+      "bytes": 8826,
+      "sha256": "0e8340b6e20e3d5a8380549995610e5a442b04524ff72e50c996b5cb4f9e7366"
+    },
+    {
+      "path": "assets/test1_beach/test1_bed_vertex_light_trial.gdshader",
+      "bytes": 8826,
+      "sha256": "0e8340b6e20e3d5a8380549995610e5a442b04524ff72e50c996b5cb4f9e7366"
+    },
+    {
+      "path": "assets/test1_beach/test1_front_foam_sparse32_mesh.tres",
+      "bytes": 677554,
+      "sha256": "2a58ea791c66a7de014178eb6e4c8a4a3e5c567eed37829a9edc22c34fc3e124"
+    },
+    {
+      "path": "assets/test1_beach/test1_front_foam_sparse_mesh.tres",
+      "bytes": 1354758,
+      "sha256": "f343b5354ad4b18da405bd538d79e021112f58b39d129f307d248a13261f7b1b"
+    },
+    {
+      "path": "assets/test1_beach/test1_front_foam_splats.gdshader",
+      "bytes": 7453,
+      "sha256": "45a43cf1ea48a0913e2a06012f1eef90bac837ecc610319cab5718505075f03b"
+    },
+    {
+      "path": "assets/test1_beach/test1_water_front.gdshader",
+      "bytes": 58684,
+      "sha256": "deac308744b85960c239d6722d59a3b12507ebc6741ec2b81600718d63b81017"
+    },
+    {
+      "path": "assets/test1_water_motion/bed.gdshader",
+      "bytes": 754,
+      "sha256": "8f5c0ce36782ca5d100f2a9279b1e1be84cd28ede5ee39461e4adcad90accf08"
+    },
+    {
+      "path": "assets/test1_water_motion/capture_aux.rgba32f",
+      "bytes": 2097152,
+      "sha256": "3a19b6641139f883763961892bc94628d05259513857213d05dcf9954a44b7db"
+    },
+    {
+      "path": "assets/test1_water_motion/capture_profile.json",
+      "bytes": 1923,
+      "sha256": "db03153237e0e52eeb156c7780a728fd927f803bc5f1f9272ce5a01044763445"
+    },
+    {
+      "path": "assets/test1_water_motion/capture_state.rgba32f",
+      "bytes": 2097152,
+      "sha256": "06540acafd57583465e0d5e3926819f27b33e51afb3134a700d684cc52fa8523"
+    },
+    {
+      "path": "assets/test1_water_motion/main_contact.tres",
+      "bytes": 1852,
+      "sha256": "07b68120a851c090b868b1c464dfcf4fcbcd8d9ed2392b5fd4ae6cec9a93260a"
+    },
+    {
+      "path": "assets/test1_water_motion/main_fine.tres",
+      "bytes": 1122,
+      "sha256": "6242897c61c4f06f710a6073e9453d31cd44165e0b2899e3e4570fc70e148b4f"
+    },
+    {
+      "path": "assets/test1_water_motion/main_presentation.json",
+      "bytes": 8801,
+      "sha256": "fba7477a176cb366d85e591ee8356f206da7ec5b637fd298b00d311024fb8b49"
+    },
+    {
+      "path": "assets/test1_water_motion/main_sand.tres",
+      "bytes": 1913,
+      "sha256": "30ec5914c3be29007fdb4a9c4cc4b27690da640e3902430634852be856d70b48"
+    },
+    {
+      "path": "assets/test1_water_motion/main_water.tres",
+      "bytes": 8667,
+      "sha256": "f93054625211decda3f0cbf1d944389c72f22f3925498afd17edca6758241bde"
+    },
+    {
+      "path": "assets/test1_water_motion/water.gdshader",
+      "bytes": 2337,
+      "sha256": "cb056818df603daeb483d9a8fa0b408d7b8af6b1733eef89586662ca66c3c4c9"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/base_v8_compiled_v1.json",
+      "bytes": 2076,
+      "sha256": "a3dafdfdde5f0977c3842d7a54f8ecfcec29b5a83b95b323c9b79403f5376cec"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/base_v8_compiled_v1_style.json",
+      "bytes": 2130,
+      "sha256": "68397de6694ecf9f009bd7f6d335b1d8a02303613b1081f3a8f197de5b5a769c"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/base_v8_engine_light.json",
+      "bytes": 2069,
+      "sha256": "d265a1a9804f1d842a23753d5f24ea75fdd03a1987f1120bd15d91d359b6eb0b"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/base_v8_engine_packed.json",
+      "bytes": 2076,
+      "sha256": "b8c4df259d8ea26dec6fe8026619980130de9cc2c2008c5530466da891617884"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/base_v8_foam.json",
+      "bytes": 1829,
+      "sha256": "4ef08fdd3fc3830b6de9278481145b6182c487142b8d36fee71f5091ff4acd86"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/base_v8_height.json",
+      "bytes": 1831,
+      "sha256": "56e1e56ab134d28412772b64d4e731f8a2a79cdbc8cdf9ef42682643b3784b4a"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/base_v8_height_style.json",
+      "bytes": 2089,
+      "sha256": "48a13d23349cf2171ef6c619616f32e182eade24c5451ec8340d6dc40c25428e"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/base_v8_manual_glint.json",
+      "bytes": 2069,
+      "sha256": "c06ba3efe6493a1e4d11bd87c68f63797070060099301455c977f99e76193a50"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/base_v8_normal.json",
+      "bytes": 2063,
+      "sha256": "459a4648ca58e4f20d83eb2579db9813ffadd75e7c51c837d8b2ede77b519a3c"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/base_v8_optics.json",
+      "bytes": 2063,
+      "sha256": "96f1d70b42f58658bf4f2e73512fb63d67892bc4ef8e0618c7ea82ded60982e3"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/base_v8_optics_unrefracted.json",
+      "bytes": 2075,
+      "sha256": "ebc5490547fa31f975ea570fbe571fc814b7447ff14d01d687981da8f26d9b63"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/base_v8_reflection.json",
+      "bytes": 2067,
+      "sha256": "4bc019688cb2e6950c1b40bc8ef31855ad22d49c373929ddfbdd1938403dd6ae"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/base_v8_style.json",
+      "bytes": 2091,
+      "sha256": "8d061ac83dd9b52b06cd4c136db2db807437270e1082fd10dbd2516efeccc685"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/bed_geometry_specialized.gdshader",
+      "bytes": 9282,
+      "sha256": "77bd0939f5523e1cacb1461f13cc4db647f6941c0f8832ae5940779ce32fdc5f"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/bed_geometry_specialized_index.json",
+      "bytes": 775,
+      "sha256": "3e86183671d6e17f9bce8d72beabe7e713219bff32c44e69acde3013682cdf44"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/bed_material_specialized.gdshader",
+      "bytes": 9045,
+      "sha256": "c9176f1ed527d7e3851115514acb299aa57d5fb7bda48a835f3b87e210e59261"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/bed_material_specialized_index.json",
+      "bytes": 1159,
+      "sha256": "93eee04dc5c67a0c0f918fca4a408875a04058c1220ec58005597220900a8651"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/bed_style.gdshader",
+      "bytes": 9343,
+      "sha256": "271b03cfa840795410a7165650de3e6ecff102e137eec910fb9ab9f57b759c11"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/bed_style_generation.json",
+      "bytes": 526,
+      "sha256": "a273e658201010a93a34e7cb6c72a877bda587265961cf53a5319a5c63a3e7bd"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/compiled_v1_bundle.json",
+      "bytes": 1284,
+      "sha256": "19b665f359c7a94e32989693b4bc625990f14eb9a87b5789e826e8fb673dbafe"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/compiled_worker_entry.gd",
+      "bytes": 3292,
+      "sha256": "3567965df037e4a3667723c8cc831aca29622dfd2c568c62006c51ff36613bd4"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/contact_compiled_v1_geometry.json",
+      "bytes": 3201,
+      "sha256": "972b918dfb30c973ca7fbf91087d184b93f89e90686dbae7546d5c4db977e01f"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/contact_foam.gdshader",
+      "bytes": 3551,
+      "sha256": "101325f41af40f36af1fef3288aeb618403ac59cb483e38065996fa985e6fa85"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/contact_geometry_bindings.json",
+      "bytes": 3186,
+      "sha256": "0dbcfec9907cd0e18eac41b891e29c7196845cc7db3bce405a2db539f646c3ba"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/contact_geometry_specialized.gdshader",
+      "bytes": 15689,
+      "sha256": "b51c5b11d063e2832290619262cda9054c4d4c44cda52c135f425bc680b0cdc6"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/contact_geometry_specialized_index.json",
+      "bytes": 1256,
+      "sha256": "6de00091de0c1a20d2d2d2f9a1eb31f5323ef3932e610331f764f48835b86036"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/contact_height_geometry.json",
+      "bytes": 3190,
+      "sha256": "82a3fa2e20eb8805273914df04893f7e4e0c1004f21948e5bedac62cbc534fae"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/contact_lazy.gdshader",
+      "bytes": 16748,
+      "sha256": "d5fc6f57690585e6679ab70e0fc3bbf9a1514f7abb073c657f300ebd00bcd8df"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/contact_reflection_geometry.json",
+      "bytes": 3192,
+      "sha256": "0c4c2c27848fccaa44462e2cd70125fb9bfd0966f66d1f9da318e5b9175416c0"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/contact_shape.gdshader",
+      "bytes": 16031,
+      "sha256": "f3c31f9efe150635c0475478a851277d9a8057a7edf4fb89c8d67c2571245e88"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/contact_shape_geometry.json",
+      "bytes": 3186,
+      "sha256": "096409ca006deaf9b382f527bb750fd2a2919c6777f3896056687bc33b8998f9"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/contact_shared.gdshader",
+      "bytes": 15218,
+      "sha256": "88f53f8cc33f0bf12b629b9352c541a063150189f6553359e6649bddce246c18"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/foam_baseline.json",
+      "bytes": 990,
+      "sha256": "58eaca5bc538b17ef9861c33f2f415670e9d0ec1ace085895d5e65d2aad9980f"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/foam_combination.json",
+      "bytes": 1224,
+      "sha256": "474dd58b1541ef01bd86ac76c31225b9618209a2893851ccbe5bdf85f1a1a65d"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/foam_compiled_v1_derived.json",
+      "bytes": 1252,
+      "sha256": "758b1e4d78eb0167ee72e3df6d881c9074f97e22843f8b7414fef672714beec1"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/foam_distribution.gdshader",
+      "bytes": 9274,
+      "sha256": "a3929fc0fe5c2b118ac25f24b7c4fc4a814ca24bbc9a805b9bd6578605564123"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/foam_engine_light.gdshader",
+      "bytes": 8385,
+      "sha256": "16e73f843c92b45ba1be07763e0c93c2f3e3184f093e7cf068ee84c699fe1b8b"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/foam_entry.gd",
+      "bytes": 8704,
+      "sha256": "8d00e87db797deb730baf01cdf4d295022fe6139ca6e1ac76db19d81c22da535"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/foam_height_derived.json",
+      "bytes": 1231,
+      "sha256": "d077f12e3c4a46e999056d61ca199e7b04dcf2329223d4420b2c670c3eee2bf6"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/foam_reflection_derived.json",
+      "bytes": 1241,
+      "sha256": "5cb696fc477deb89ed63875ab33667941718dbfddaf89918c5e93ac94dc78d77"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/foam_shape_baseline.json",
+      "bytes": 1217,
+      "sha256": "bcf2af3795055c7db5e457046ff88bac9746827bae4d2097603c2c8ff75f03e9"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/foam_shared_surface.json",
+      "bytes": 1057,
+      "sha256": "43f8aa947efd28fc9bd5ef6d703dcdbd828ebb6a91a3e4b77922e281f71a9e9d"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/height_normal_generation.json",
+      "bytes": 834,
+      "sha256": "0e48e807dedd9bbfc0262ba89e242a2f645828bd3ee32c840858c85859603e63"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/legacy_sine.json",
+      "bytes": 1223,
+      "sha256": "089ba7922f5e544b6c8b97e605fe5ebe0b3a9d88df9f70ff9594530a6f19d3ad"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/lighting_engine.json",
+      "bytes": 717,
+      "sha256": "51025aa2d19a0b91637c7097c2072553c0bcce9fb0e51ae7757e2b93df227886"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/lighting_entry.gd",
+      "bytes": 7505,
+      "sha256": "59bb263f29915b22bde1979bf7da037ef3b604ea7e9ebc92a96958189c5197e9"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/lighting_manual.json",
+      "bytes": 623,
+      "sha256": "d27ec7fae1eeeaac93fc1c16da76a8fb3852b427862293d23bea460610bb86b6"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/lighting_optics.json",
+      "bytes": 705,
+      "sha256": "166be6acbb061203c6fba04037281398bb4e23cc94f11a3760ce69ff3ffaec52"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/lighting_optics_unrefracted.json",
+      "bytes": 729,
+      "sha256": "111f131b00c3b9f166d4b3b307b2078d19fe8f8f59511808e2437b0dccffa132"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/lighting_packed.json",
+      "bytes": 725,
+      "sha256": "8c6600fe8f9cffa8770a5ca4e5d1ae779f491f00913643f3f3620fb4ed70da59"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/lighting_proxy.json",
+      "bytes": 842,
+      "sha256": "5907acd9407db28996ce1dbb59ab063ef0cecfe7c7711929a719e9c61671d053"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/normal_entry.gd",
+      "bytes": 7856,
+      "sha256": "ba6ca2a0bab787097a750a639be41a3a225bba8879f7fccf233d8d8044ac6dcd"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/off.json",
+      "bytes": 1215,
+      "sha256": "1fb7bed1dc04733a53018dc211b2aa844b410ca4a0b99e86b3a48b19187f1e05"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/optics_entry.gd",
+      "bytes": 3665,
+      "sha256": "a5497d51cc001b3e5aeb21f28f4fb3a5be551417706f64c8f1a8f073cd994046"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/optics_legacy.json",
+      "bytes": 405,
+      "sha256": "f5e628835a99e198a9e8e25c7ea13219ac42f25dd48222b51a49e19f4342c377"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/optics_reconstructed.json",
+      "bytes": 409,
+      "sha256": "90b88f3a76393ffba92f6e68fa464f7aa2e7d2eb1614453c598ce3b1e67dc079"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/optics_selected.json",
+      "bytes": 418,
+      "sha256": "e56df9bc4e907e1ca2be1fc579ec6a7288d12ffdc48073103cf705c9198cc29b"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/optics_unrefracted.json",
+      "bytes": 419,
+      "sha256": "5a3f4a95a956afebbb4d23b80c06defd22349c18366ff9dfc1e95b506bb8d2df"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/rdc_base.json",
+      "bytes": 2062,
+      "sha256": "1f59f38443267c9a6d8ab304ee73d065fe05a67f4cb714037a026165d3ab85ec"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/rdc_bed.gdshader",
+      "bytes": 11078,
+      "sha256": "e36bf7c1d44dbc38f50c46b7405cf439a48fd6f427df6f95a3d5e3e50d650abf"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/rdc_bed_index.json",
+      "bytes": 807,
+      "sha256": "71ae11192caa6e0dbae951506fb31d20e5079561e4373f8a2807a13e14035fc6"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/rdc_bundle_v1.json",
+      "bytes": 1230,
+      "sha256": "13257a0fed0149b461e82e2ecaa18fa2814b8a50ccddd2dec42e87394d2bf267"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/rdc_caustic_1105_mipped.res",
+      "bytes": 4819065,
+      "sha256": "2a80438ddc3a43ab3c335ed4f6412c3f0a6a0340f825030bf00eb537e20c7f25"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/rdc_caustic_manifest.json",
+      "bytes": 654,
+      "sha256": "eb1dd9cf1e2e795675478ed93abf57d621a3964f69aed8ee63a988f175f4a942"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/rdc_contact_geometry.json",
+      "bytes": 3187,
+      "sha256": "e1e47b7127eb05d2af6a7639e00a8e815a6cdd71ca9c36eac3d06a86ed12d31f"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/rdc_foam.json",
+      "bytes": 1219,
+      "sha256": "54af20fba3b92a02024c499f155a1bd07b9b267a609e2d85b9406ddbf0de2951"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/rdc_generation.json",
+      "bytes": 1104,
+      "sha256": "6a32000319d9e38651f2477199ae3cf2e34ede4c62a3aefc911330616afdc430"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/rdc_material_v1.json",
+      "bytes": 967,
+      "sha256": "e8afe1767c48d0daf8b27470b98f857390fd458a3ea88733430ee78c595b48c2"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/rdc_reflection.json",
+      "bytes": 822,
+      "sha256": "f399f59b423167abb3e8f9d23daa481f99fded27c7af3fec05a5feea5345c6ca"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/rdc_style_base.json",
+      "bytes": 2082,
+      "sha256": "35dee9bed6536e6dd5e672bac6205bb436acd2fcb429a66a4da82c7155a4580a"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/rdc_style_v1.json",
+      "bytes": 1157,
+      "sha256": "dae5eebb564ac2d853a7daae58bd1c93261d83239a3df1eeeeb13fdab2e79fd1"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/rdc_water.gdshader",
+      "bytes": 72149,
+      "sha256": "16a93e3d6942429073cbcbcba73b59bbe42e80c61bf776e9f15170ca69fd8b89"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/rdc_water_index.json",
+      "bytes": 1612,
+      "sha256": "d0ba20a7f2d1277b233852465757e07d481f2ee53b40779cdbf9f44ff78fc304"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/reference_v1_bundle.json",
+      "bytes": 1285,
+      "sha256": "4d87818a5f0258e6de578a63d6605dc5fe78596c67f43a07f471cdc29337c006"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/reflection_baseline.json",
+      "bytes": 735,
+      "sha256": "9e85e7df3e8460d2739fe9341dc9db42f3b837dfeb1b60fe59048d4388973eac"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/reflection_compiled_v1.json",
+      "bytes": 863,
+      "sha256": "7a59fd182045d7d3971c18e64160594b7980a7f31c652ecf0a1ff68d35619906"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/reflection_corrected.json",
+      "bytes": 807,
+      "sha256": "4945b9bfb2d4c32d61c3e9379cb0373115547202088fc3b80bd7128cb233d4d3"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/reflection_entry.gd",
+      "bytes": 6837,
+      "sha256": "2f6badee41a4d793879493be2abb9097e9e390aae9b1eb88d2ca18def8101f63"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/reflection_height.json",
+      "bytes": 842,
+      "sha256": "8cd74aa24c91cce940f0111ffd91fc108557d5c33535a286f9b2349bad137954"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/reflection_oriented.json",
+      "bytes": 852,
+      "sha256": "8e6cf9034808f3e7d8da00fa430cac698b7d59adc6d6183e3ae899d5d2568c88"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/shadow_grid257.res",
+      "bytes": 594150,
+      "sha256": "94fc7f90a69a2320f2444b9252a4c7c9b51ecc9e8db0dc69a7b7fc14ca3d9047"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/style_baseline.json",
+      "bytes": 880,
+      "sha256": "6f32185913e11ca947e178783593934bde9f55a2bbd73c50963c7c8c1d580815"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/style_combination.json",
+      "bytes": 880,
+      "sha256": "d4040501738db2bd9e38cbde384056e663522162bb0cfda6be2563c222f05a02"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/style_compiled_v1.json",
+      "bytes": 954,
+      "sha256": "a072e614ef2b5c349f4580819150af1eab2191d5842dbf2364d07d75bc74480e"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/style_entry.gd",
+      "bytes": 12443,
+      "sha256": "866dc7e5c3032c4dc6869ecb061432059fa5883d363ab3b9a7369b86ce66461e"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/style_height.json",
+      "bytes": 929,
+      "sha256": "369ac5a9657c0f9a0d818b0f3ac4932c74dc5f3698e9595686d0d6b5fc464eb6"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/style_height_baseline.json",
+      "bytes": 925,
+      "sha256": "c292a4938efd9c96082e809c407b343648eaa2a8954bd6935c60bcd834fdaf97"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/style_reference_v1.json",
+      "bytes": 994,
+      "sha256": "19980a7955633e155f5cf31d2c8d5a2d9c1cafc486d32c5e6e65ca630886315b"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/style_worker_entry.gd",
+      "bytes": 2397,
+      "sha256": "e4c37f4c511090aa57a74fb93267748a7759379a134e117205afc3f11bd96b28"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/style_worker_generation.json",
+      "bytes": 1271,
+      "sha256": "fb31083d7ec017db9dba3fa4317d913d64e141e2bd5a16afdadd2a763ec4583a"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/texture_layers.json",
+      "bytes": 1226,
+      "sha256": "88b6b3b2f9d9d8459d9bb3d8799e87b22341d1f3232161ecf2b1776c0eef1f14"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/water_debug_specialized.gdshader",
+      "bytes": 69016,
+      "sha256": "bd239c50be0177bbb5a16c39683d39bd87f70a7112e21240d305ac48071773c7"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/water_debug_specialized_index.json",
+      "bytes": 1510,
+      "sha256": "f0106d1e926f8993bc90bae59c6ddc777d8b68fa82ecaba1dd9e3ab566777583"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/water_engine_light.gdshader",
+      "bytes": 63617,
+      "sha256": "6a4db171e15a19a5b90f30b5e29497c7b1625fd4a6241b59a380a6a849397def"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/water_engine_light_no_standard_specular.gdshader",
+      "bytes": 63636,
+      "sha256": "5494ae1ad94bcffab292345c744725b5d7730078bcc306b3f979f1480788ffc4"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/water_engine_light_packed.gdshader",
+      "bytes": 63906,
+      "sha256": "832821660f3914169133bcb9c988cdfa7bd40ca9f57520bdd4602355a0dff8dd"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/water_engine_light_specialized.gdshader",
+      "bytes": 63896,
+      "sha256": "f17a029bc8486d97f48efe65ede283a226b07d2934b3ab3c9d65574f94f523b8"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/water_foam.gdshader",
+      "bytes": 65667,
+      "sha256": "b13ac3e56eecfe56adf427c06f0ec1442cd989bffddbd11fec36b0dea42d59ce"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/water_geometry_specialized.gdshader",
+      "bytes": 69664,
+      "sha256": "eb75e87315bf72fcf42d5911b85540dc63e556e23f02bd441f7ea2ad3dabd59f"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/water_geometry_specialized_index.json",
+      "bytes": 2019,
+      "sha256": "69d23d0fad4b860d1ed7f19d7f6ff25f09bddb757ee722b185de1b3139bec015"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/water_height.gdshader",
+      "bytes": 70188,
+      "sha256": "f7f9108fde01ee288349a2fdde9d57a003e457b25fc7cbea666f484d58ba151d"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/water_macro.gdshader",
+      "bytes": 71865,
+      "sha256": "530ccf9ef93d1b85cfa61b4b406c7a5d4a0fd94b1efe321aad1f44ce59526e78"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/water_macro_generation.json",
+      "bytes": 801,
+      "sha256": "28694442bf4b34b827a75b032abb80c6c1406902e73621b20e898f85fc5515ae"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/water_manual_glint.gdshader",
+      "bytes": 61122,
+      "sha256": "8eb8160e55cc0ec91fac6c04583b70794167ae924061f053c231de8f8261f487"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/water_normal.gdshader",
+      "bytes": 60582,
+      "sha256": "5a84c97bb21859a4064ed7933323fe53987029cd0056fb8da3a61a7ecafb6671"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/water_normal_681.png",
+      "bytes": 2401807,
+      "sha256": "09060fd043521aecffa7013184a7c8a9b3556df9148469a03cc88e8bbd84b548"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/water_optics.gdshader",
+      "bytes": 65368,
+      "sha256": "cc9d989dfc2be0c88e527a16bd32f6e29e1b4003da10b3554924d584ade55473"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/water_optics_unrefracted.gdshader",
+      "bytes": 65568,
+      "sha256": "70b415a9f3e68a724fe8f075c5588b52eddd32c5dda15544ba3d3b298e896ba6"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/water_path_diagnostic.gdshader",
+      "bytes": 65549,
+      "sha256": "f6e345959a4d466627bad923d732d9404ff4e37be35efb832ecb12ac3b87db57"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/water_reflection.gdshader",
+      "bytes": 70099,
+      "sha256": "92ffedb04d08672b09bc0dc4dabaada7066cb42bf87288c66bc2237a0ef2195c"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/water_reflection_flip_y_probe.gdshader",
+      "bytes": 69988,
+      "sha256": "e8eb22f171fc3049788dc6e42e1056f752fea8cc514e01b7cd2a203c4f18b497"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/water_reflection_specialized.gdshader",
+      "bytes": 69228,
+      "sha256": "69ffc455f6f8c384c6c5d6c61ee1222b979eb0500260d14c530808e072658f29"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/water_reflection_specialized_index.json",
+      "bytes": 1388,
+      "sha256": "9ef0935efeed47ba8def800eadf2b62e0cfb8f6f61a40ce9370f4ee5ffcb7446"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/water_reflection_srgb_probe.gdshader",
+      "bytes": 69699,
+      "sha256": "af3f018b6b1edff78e271d09c2cf1064a5cfdbc9286b254187650ff18fb7f97f"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/water_route_full_index.json",
+      "bytes": 1627,
+      "sha256": "eddf1c27d11579817b320cab44b589c503dd4b835ac2d4a723e0fb610dc44186"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/water_route_specialized.gdshader",
+      "bytes": 69459,
+      "sha256": "7a225ea82c286b8d8be53f116a96e701b2773a7da25b6a8579ba6a7359789b2d"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/water_route_specialized_index.json",
+      "bytes": 970,
+      "sha256": "878f4e0ef6b0919d2867b2a41bfad484fd4c06e37f31c29c4dbfb97d9a0a604a"
+    },
+    {
+      "path": "icon.svg",
+      "bytes": 995,
+      "sha256": "6c80384360a5b269d1054bfb27241258154e2cc8167c522016fdc1820e84e0f8"
+    },
+    {
+      "path": "project.godot",
+      "bytes": 2074,
+      "sha256": "b68d35517766c5f383a7195389dac848805f1480805284252905d881501352bb"
+    },
+    {
+      "path": "scenes/approx_gpu_edit.tscn",
+      "bytes": 3602,
+      "sha256": "fd3abe86c3c9a760b15549ce28e80fec18d13d43a1c551008591ecda3e60e926"
+    },
+    {
+      "path": "scenes/brush_indicator.tscn",
+      "bytes": 631,
+      "sha256": "e9856acb89eae8eb2b511b93758cde65f8cff3688fe9c13a38c058f26f8d49a8"
+    },
+    {
+      "path": "scenes/components/brushes/brush_preview.tscn",
+      "bytes": 1365,
+      "sha256": "71416823361c77badf81fca882aa1423607fa314ee473147cf4dcfd1c3531c18"
+    },
+    {
+      "path": "scenes/components/brushes/brush_tool_panel.tscn",
+      "bytes": 9322,
+      "sha256": "4f441ab13affd9a90a948c900550edb521806e798d9e267ca0b3b6446399f46c"
+    },
+    {
+      "path": "scenes/components/scene_switch_panel.tscn",
+      "bytes": 998,
+      "sha256": "aa3d5276e4cfa4ed407998552c8affdc4e4ee7c6ae36f6bf1610d78f1db04ff1"
+    },
+    {
+      "path": "scenes/components/water_visual/reference_coupled.tscn",
+      "bytes": 1178,
+      "sha256": "0fc8b4d2a7fc8b213960b79d82008ef6f4c7a663e909549d665bffd33009396e"
+    },
+    {
+      "path": "scenes/components/water_visual/reference_foreground_occluders.tscn",
+      "bytes": 1113,
+      "sha256": "e0fd715fc43d6a759ef4eca3d77a35046b65c947654c474050e7d2e73af0bcca"
+    },
+    {
+      "path": "scenes/components/water_visual/reference_front_foam_dense.tscn",
+      "bytes": 861,
+      "sha256": "bd8c12d5c02aacebebafc7e397a477f87382126784b40e015fff48724a6be2e7"
+    },
+    {
+      "path": "scenes/components/water_visual/reference_front_lips.tscn",
+      "bytes": 1386,
+      "sha256": "71dd667685df0833c58536b0ef81b74558698a74de52ea80d94c4cf6378906c6"
+    },
+    {
+      "path": "scenes/components/water_visual/reflection_rock_environment.tscn",
+      "bytes": 983,
+      "sha256": "6910e246c00e35d2c29e3982dd878cc0dadfeb93d651d961e538513b34dccd3f"
+    },
+    {
+      "path": "scenes/editor_scene_preview.tscn",
+      "bytes": 559,
+      "sha256": "8bc4c9e55a34171c21566079f3bbb765a2127b2083e8b4315711a44fd94f3be0"
+    },
+    {
+      "path": "scenes/gpu_collision_proxy.tscn",
+      "bytes": 275,
+      "sha256": "4dc48e7f01848866ddf990fdf0262b326835b7333fb01a136bfdaf107acdf8ce"
+    },
+    {
+      "path": "scenes/gpu_water_preview.tscn",
+      "bytes": 2488,
+      "sha256": "d9e34df4fd869fba098eb883a8623c52d2960520a59204ec232c4af7f006c251"
+    },
+    {
+      "path": "scenes/legacy/sandcastle_test1_beach_coupled_pre_natural.tscn",
+      "bytes": 2312,
+      "sha256": "0e322de1f462221f10e89ade7d0e887bd57f755065bb32e62034a3c534533570"
+    },
+    {
+      "path": "scenes/main.tscn",
+      "bytes": 11264,
+      "sha256": "265dc2eb40fab76b5a2d5f55daaa00c26a5538112f7aa095fa52e121e7ac3fbd"
+    },
+    {
+      "path": "scenes/playable/test1_backwash.tscn",
+      "bytes": 231,
+      "sha256": "c0f5308c933fb6b04447cabc778176d0038c71587b18caaeec8b07106ac59f80"
+    },
+    {
+      "path": "scenes/playable/test1_capture.tscn",
+      "bytes": 506,
+      "sha256": "400df22caf0bc0657cd9ac53a075bf30f90d2a2f2ef57fc0ce21abfed9f53921"
+    },
+    {
+      "path": "scenes/sandcastle_test1_beach_fixed.tscn",
+      "bytes": 6771,
+      "sha256": "8ba1707c02bab354f73af50dc5ecbea5f776e511b6b1919d730fb257a49a5c5b"
+    },
+    {
+      "path": "scenes/shape_brushes/brush_playable_candidate.tscn",
+      "bytes": 271,
+      "sha256": "bf2ee9665419981446a823ecf968e0303a489c60a465d74d37c608222d1a666a"
+    },
+    {
+      "path": "scenes/terrain_preview_mesh.tscn",
+      "bytes": 1016,
+      "sha256": "29cfba0b5179dd6d4f285fa240478ece983e459d76da8dc362f4e5536c01db33"
+    },
+    {
+      "path": "scenes/water_material_natural_candidate/rdc_v1_coupled.tscn",
+      "bytes": 499,
+      "sha256": "4aafc7e046b9cbe80aead54a4588a75d3219a6a07166c565ad06432b570952b7"
+    },
+    {
+      "path": "scenes/water_material_natural_candidate/reference_v1_coupled.tscn",
+      "bytes": 616,
+      "sha256": "1f28006b481d309b7ed5aa566e413615631dcf0d16a1bca11c5adec028ad2a60"
+    },
+    {
+      "path": "scenes/water_material_natural_candidate/style_compiled_v1_coupled.tscn",
+      "bytes": 675,
+      "sha256": "14ceb68148144fc0d74b551e5d49b1fcf1fd2fa630fd63717d870f52a547c795"
+    },
+    {
+      "path": "scenes/water_material_natural_candidate/style_height_coupled.tscn",
+      "bytes": 633,
+      "sha256": "ed9dad0c2adb3b4bdcb258c58e772929ab1faccefefa5aaf44a1e0bcc6ed7640"
+    },
+    {
+      "path": "scenes/water_preview_mesh.tscn",
+      "bytes": 1167,
+      "sha256": "21a0c4be933f29fd9e7aac65e5a4795d1a466e96b99d2c022eb21c0ec281be8e"
+    },
+    {
+      "path": "scenes/water_render_coupled.tscn",
+      "bytes": 371,
+      "sha256": "4169a5fe18d6fbebde61349e8fbb812f8e119673749d1d80f1dc4be3c0763b51"
+    },
+    {
+      "path": "scenes/water_render_coupled_continuous.tscn",
+      "bytes": 249,
+      "sha256": "8ba013fa1a40b4ea08432b911668f2f895241c9cf5b2d72c649d151f21a8fe5f"
+    },
+    {
+      "path": "scenes/water_render_coupled_rock_reflection_candidate.tscn",
+      "bytes": 798,
+      "sha256": "56622a93b0732139c7e3d366976dcbb11ff813f34261cab4e395434e2406445d"
+    },
+    {
+      "path": "scenes/water_render_coupled_v7_preview.tscn",
+      "bytes": 316,
+      "sha256": "c306db4b4b3da24cbb954dafa3967d658a5c287bdf2781e6a8d3188564b626fa"
+    },
+    {
+      "path": "scenes/water_render_coupled_v8_preview.tscn",
+      "bytes": 325,
+      "sha256": "561e5bfc35784cac2ce048296ede748535968e881d78d65300aff49c94e56fec"
+    },
+    {
+      "path": "scripts/audit/audit_recorder.gd",
+      "bytes": 1528,
+      "sha256": "0da4a1b1f80059946938be5cdc5e509c895afae5961f7461d0337e9bddf6a92d"
+    },
+    {
+      "path": "scripts/beach/beach_checkpoint_entry.gd",
+      "bytes": 7952,
+      "sha256": "596b27e55b54a5d741f263be71dba993edd5597d5337aef1e67c55ea036b628d"
+    },
+    {
+      "path": "scripts/beach/beach_gpu_entry.gd",
+      "bytes": 15141,
+      "sha256": "4501fee9b256a6b517529f13b2eb03022b6727590a75f62bfad67288a34e7184"
+    },
+    {
+      "path": "scripts/beach/beach_interaction_entry.gd",
+      "bytes": 11446,
+      "sha256": "8feff93cee1f88492adc4501c7cb3c4f03247621602f433cc38c143c9d666a7c"
+    },
+    {
+      "path": "scripts/beach/beach_lab_entry.gd",
+      "bytes": 219,
+      "sha256": "e092c3626e29d88ae87733c85304922c6bde7d3b43d25bddcf30c216ed577c4c"
+    },
+    {
+      "path": "scripts/beach/beach_playable_entry.gd",
+      "bytes": 2231,
+      "sha256": "0048150d9d8c4489a37af15ea8296145ec43397912484c43732aba02e5b0337d"
+    },
+    {
+      "path": "scripts/beach/beach_recovery_entry.gd",
+      "bytes": 27135,
+      "sha256": "1c935ff47ef6cf3cf9feed27e99e86338cef6f45465af8e51db3b8a3e176feb8"
+    },
+    {
+      "path": "scripts/beach/beach_scene_service.gd",
+      "bytes": 7299,
+      "sha256": "ae6105fc7216d9a50c842fbcef5734e7672c5b70acc918e55bf881fbab2bb846"
+    },
+    {
+      "path": "scripts/beach/free_camera.gd",
+      "bytes": 2654,
+      "sha256": "7bf190f5f8b8c6bcee670a15b7bf32cc883c93cf96090426f2b1a055c5dd3784"
+    },
+    {
+      "path": "scripts/beach/performance_panel.gd",
+      "bytes": 12869,
+      "sha256": "00767e4059a3523dc6dd5509cc4277538dbedd1d7aa7ffa2d0ca752cdee113c4"
+    },
+    {
+      "path": "scripts/beach/release_config.gd",
+      "bytes": 448,
+      "sha256": "006e91856bd21ad9b002ac35ba3d4a3db43395c042e68c2ba6b4910acefd757e"
+    },
+    {
+      "path": "scripts/beach/scene_switch_panel.gd",
+      "bytes": 1086,
+      "sha256": "00f22804953a622de0e237eebcb7e005d8d4cff080f290dd9d556fd625b6aafe"
+    },
+    {
+      "path": "scripts/beach/shape_brush_entry.gd",
+      "bytes": 13131,
+      "sha256": "557a85855f789211818539ded8f0b104cee008345fa2872a941ce5d77cf3dac1"
+    },
+    {
+      "path": "scripts/beach/shape_brush_playable_entry.gd",
+      "bytes": 14880,
+      "sha256": "52272c093229bea48c7924fa2184c7c312b32218d4fe4964c8ea293a1c2eba8e"
+    },
+    {
+      "path": "scripts/collision/collision_prepare_job.gd",
+      "bytes": 4362,
+      "sha256": "629fcfde9d4edb14e446ee1970f03b9ae9d4da364979150f35a0182aab46fb6b"
+    },
+    {
+      "path": "scripts/collision/collision_prepare_scheduler.gd",
+      "bytes": 3666,
+      "sha256": "e2dfe7c2acf3e330743c42ca3e3a6f010f8e18a9105d8a6779c5edac602d320c"
+    },
+    {
+      "path": "scripts/collision/gpu_collision_proxy.gd",
+      "bytes": 20103,
+      "sha256": "e82fbdfffa7d8988b0fb03e870407e94eb4e374d7346246efd59d332f4618484"
+    },
+    {
+      "path": "scripts/demo/gpu_water_preview.gd",
+      "bytes": 81242,
+      "sha256": "c9edbd1f31ea076b0c74b5299f8a764c119367dd35c720b48e097e25ba563bb0"
+    },
+    {
+      "path": "scripts/demo/sandcastle_demo.gd",
+      "bytes": 16167,
+      "sha256": "11311755ba929f9a79ec0b11114c87a55a10e467d9760c31276d3cefffb6c1bd"
+    },
+    {
+      "path": "scripts/demo/sandcastle_main.gd",
+      "bytes": 11405,
+      "sha256": "57cc2ecef3870fae87c3a849e80277a2276772f7cad2c75c9ec307fccc1008dc"
+    },
+    {
+      "path": "scripts/experiments/approx_gpu_edit/exact_dispatch_adapter.gd",
+      "bytes": 2533,
+      "sha256": "f3495410d6d2adc54ff1e4e8e066f36935c57c53f30169bbd614d8ddf3a53dc4"
+    },
+    {
+      "path": "scripts/experiments/approx_gpu_edit/exact_trial_solver.gd",
+      "bytes": 1890,
+      "sha256": "c8f7073f16a86b13070759c26f625a271c5c5d644eefbbfb6440a68bca42c646"
+    },
+    {
+      "path": "scripts/experiments/approx_gpu_edit/trial_entry.gd",
+      "bytes": 14966,
+      "sha256": "20c54cb09a140cdd626db154d8c141caec30bb41e7ae76e492e4f89542f50ce2"
+    },
+    {
+      "path": "scripts/experiments/approx_gpu_edit/trial_lifecycle.gd",
+      "bytes": 8629,
+      "sha256": "5206be916229c98d9ef012bd5ac24d7ae408a723d9c5b8d311d732a3483d5937"
+    },
+    {
+      "path": "scripts/experiments/approx_gpu_edit/trial_profile.gd",
+      "bytes": 433,
+      "sha256": "73c7c7fba408ee73967ae4c746ec6b64597af7d1e17380b6008b4a815b280890"
+    },
+    {
+      "path": "scripts/experiments/approx_gpu_edit/trial_solver.gd",
+      "bytes": 3053,
+      "sha256": "cfd46dc0fa8866befd4fba3692d27e9a9d6486c79566fa71f0d5c47fadc530d6"
+    },
+    {
+      "path": "scripts/sand/brushes/brush_command_queue.gd",
+      "bytes": 1285,
+      "sha256": "f08f39aa7b80fc99a6756ff195ae1481ab8d8bdb7a5a3efe6514eb9c23c77c7b"
+    },
+    {
+      "path": "scripts/sand/brushes/brush_definition.gd",
+      "bytes": 1531,
+      "sha256": "63f682e4f20161b4bbd193bd5264bd9f51cab79606ba38b9695d8b512d66c161"
+    },
+    {
+      "path": "scripts/sand/brushes/brush_preview_view.gd",
+      "bytes": 1567,
+      "sha256": "7ad3096626b81c6b831ef56188c1343b3f56c2f1e81e8667343b3829be7aad24"
+    },
+    {
+      "path": "scripts/sand/brushes/brush_registry.gd",
+      "bytes": 1292,
+      "sha256": "64d3520ce0c519cb34f46636ba59a6bcb3c8aae45edbcca2ae1ffecd10f35631"
+    },
+    {
+      "path": "scripts/sand/brushes/brush_spec.gd",
+      "bytes": 1750,
+      "sha256": "c4ecb5a1211516f645fccf19cb45b8d60e34a4856f485cb7f970243897a2d9cb"
+    },
+    {
+      "path": "scripts/sand/brushes/brush_tool_panel.gd",
+      "bytes": 2906,
+      "sha256": "b6844f8308c58c1bc00b9d22d97745fe920ac05879604ef353b1028042a21c9b"
+    },
+    {
+      "path": "scripts/sand/brushes/stroke_controller.gd",
+      "bytes": 5892,
+      "sha256": "29fdca82d9f4836760fa46bc3f120b70b3d55204cce14f97a8ea3804bcc4b45f"
+    },
+    {
+      "path": "scripts/sand/tool_command_queue.gd",
+      "bytes": 8774,
+      "sha256": "17c3dd19158edab5999374c1839a0e0fe8ed69d3f9f3b0579abc8fa59fc8777c"
+    },
+    {
+      "path": "scripts/scenarios/sand_visual_fixture.gd",
+      "bytes": 2401,
+      "sha256": "96cb265467869f245e89e41906399e8f72160a883f273d566796fe4e2dbc8bf3"
+    },
+    {
+      "path": "scripts/scenarios/standard_scenarios.gd",
+      "bytes": 1924,
+      "sha256": "3bf32552b7d9ea7a0e7a92aedba9bfb58e086c8cd98c14a58fd878c1d41c406e"
+    },
+    {
+      "path": "scripts/scenarios/test1_playable_layout.gd",
+      "bytes": 2387,
+      "sha256": "1adf4b860c50baa30223b9611e966284a9a47ba9789b00ad0ac96a93138ca8c0"
+    },
+    {
+      "path": "scripts/scenarios/water_visual_fixture.gd",
+      "bytes": 1838,
+      "sha256": "4d7d718a8644e62f20d0e1f979bbb81b6d52a5985e78dc05c1ba38e1281eaf8e"
+    },
+    {
+      "path": "scripts/simulation/brushes/brush_checkpoint_codec.gd",
+      "bytes": 8640,
+      "sha256": "40325229c0662d28c3d2b5d2826910b80a4d82da95629352b6484515e7858e3d"
+    },
+    {
+      "path": "scripts/simulation/brushes/brush_gpu.gd",
+      "bytes": 15060,
+      "sha256": "c85455ec5833372f205021bc6ecfc5079862f354669b8597d3d9aaaf8876af8a"
+    },
+    {
+      "path": "scripts/simulation/brushes/brush_material_coupler.gd",
+      "bytes": 11243,
+      "sha256": "f2d7a6f51319ce368b6297e4bc132f75ce76f1a92200b1902b710fb87fd6b687"
+    },
+    {
+      "path": "scripts/simulation/brushes/brush_material_solver.gd",
+      "bytes": 5243,
+      "sha256": "3cd273386083d9e69dc2d8543e9b9bb592e7a4716a21d3e5775f717b0685fecb"
+    },
+    {
+      "path": "scripts/simulation/brushes/brush_material_state_codec.gd",
+      "bytes": 3395,
+      "sha256": "c0d0394abc3b89c3587dc5057ae6a54e1458e97ab087a81a40bd4bde353b6ca4"
+    },
+    {
+      "path": "scripts/simulation/brushes/brush_material_transaction.gd",
+      "bytes": 5178,
+      "sha256": "962f6517c069af3eaebccbd9a5becaccf9888a40c3b74653c6c4f57a60adbcc8"
+    },
+    {
+      "path": "scripts/simulation/brushes/brush_preview_query.gd",
+      "bytes": 2495,
+      "sha256": "d2e4f842fa83633cc5ae60be653bbfbf5e09e2e31f85d7907195ee01c6d21978"
+    },
+    {
+      "path": "scripts/simulation/brushes/brush_protocol.gd",
+      "bytes": 10772,
+      "sha256": "9d04b7fadad072e96faf84c9528e6a8b31880c951e68a04693a518d66a3ed70d"
+    },
+    {
+      "path": "scripts/simulation/brushes/brush_scheduler.gd",
+      "bytes": 1763,
+      "sha256": "9e58c174cdc4cfcb961c547d69cc896440ca62a999d1b3fe8855a9f368b260a9"
+    },
+    {
+      "path": "scripts/simulation/brushes/brush_water_transaction.gd",
+      "bytes": 4477,
+      "sha256": "744e89495bb88958c2a056945f47fd94b44a7758a467e59d9c3b2c66a7ebb56e"
+    },
+    {
+      "path": "scripts/simulation/checkpoint_store.gd",
+      "bytes": 14788,
+      "sha256": "c8897631c68cb7d277f53ebee54cc5db737bba600f0cffa61f7b301ee0d4f200"
+    },
+    {
+      "path": "scripts/simulation/edit_validation/beach_gpu_edit_history.gd",
+      "bytes": 3313,
+      "sha256": "8878f88edb82d7e34be94577e5014691fb71aaefa00be9525e0eed1b223e5779"
+    },
+    {
+      "path": "scripts/simulation/edit_validation/beach_native_codec.gd",
+      "bytes": 3356,
+      "sha256": "ee0b3a5935a9d5dd1c2d1519b10754a9a31519e7b142bb827630b9578b23b243"
+    },
+    {
+      "path": "scripts/simulation/edit_validation/beach_restore_bundle.gd",
+      "bytes": 5518,
+      "sha256": "694a387725ab7de1a1e37a3c7f017ef179b39aac3b14c2ca227b8e1061fcf029"
+    },
+    {
+      "path": "scripts/simulation/edit_validation/beach_sand_copy_trace.gd",
+      "bytes": 2607,
+      "sha256": "80b5627ca6f9d2576524da89619d0a9e14362ac3a824cceae82a716c89312a48"
+    },
+    {
+      "path": "scripts/simulation/edit_validation/checkpoint_foam_field.gd",
+      "bytes": 351,
+      "sha256": "1cfaa95ec19bde30c6769a26746275994cb634efad4f760c4925f13945de74ce"
+    },
+    {
+      "path": "scripts/simulation/edit_validation/collision_chunk_selection.gd",
+      "bytes": 1225,
+      "sha256": "81ad1db63c6baf3ef876a8050ebe9550bd6130669cba810698049ddf70570892"
+    },
+    {
+      "path": "scripts/simulation/edit_validation/collision_proxy.gd",
+      "bytes": 2184,
+      "sha256": "62f5248f3e9df598138f61188d2fd44e791b6fb32155156d5ad90f70015c7be4"
+    },
+    {
+      "path": "scripts/simulation/edit_validation/edit_protocol.gd",
+      "bytes": 6152,
+      "sha256": "fbc1d838fd58d04693a05e3032cc3ecca6b0863247cccbde162467ede14e5ce5"
+    },
+    {
+      "path": "scripts/simulation/edit_validation/gpu_checkpoint_codec.gd",
+      "bytes": 9312,
+      "sha256": "43bf9c7929f68a848a37184d6df41e337171099bf09410d4181683e68b65a66f"
+    },
+    {
+      "path": "scripts/simulation/edit_validation/gpu_edit_history.gd",
+      "bytes": 3176,
+      "sha256": "37cd8136f38498a7931119ebc99d42396765620a802c55671423d4fd8e2e3163"
+    },
+    {
+      "path": "scripts/simulation/edit_validation/gpu_edit_scheduler.gd",
+      "bytes": 4960,
+      "sha256": "297aa532b026b88cc6680fe767815b807a5313195c66cf25a37b8c7f59b6c503"
+    },
+    {
+      "path": "scripts/simulation/edit_validation/gpu_redo_codec.gd",
+      "bytes": 4923,
+      "sha256": "d3b7c2481fa2df5be712f143dbaa6a99c44bae3c9c0cb2b63410241d240663b9"
+    },
+    {
+      "path": "scripts/simulation/edit_validation/gpu_sand_editor.gd",
+      "bytes": 10212,
+      "sha256": "39822c0728f2ed63dcb4f2011cb42a3730bc44120598282be1e45fceb13ee2d1"
+    },
+    {
+      "path": "scripts/simulation/edit_validation/gpu_water_diagnostic_editor.gd",
+      "bytes": 1811,
+      "sha256": "db60c7d733f31ed04b197d31002d81b3b9da07b457eb8148debee0416682f808"
+    },
+    {
+      "path": "scripts/simulation/edit_validation/gpu_water_editor.gd",
+      "bytes": 6638,
+      "sha256": "1296412876a9080dbe4dae06a77431a2423dafa294539c9d2b1e1d36e6e77d6f"
+    },
+    {
+      "path": "scripts/simulation/edit_validation/lab_solver.gd",
+      "bytes": 4235,
+      "sha256": "4bc319179b9699229f69bb6ba7e8b56e2255a65b39757090ffa221b6e9e8d8dc"
+    },
+    {
+      "path": "scripts/simulation/edit_validation/material_copy_fence.gd",
+      "bytes": 1742,
+      "sha256": "75af8340b0fbf6543356359d75e31bac1e58225b6805943561597c7c1e7bd827"
+    },
+    {
+      "path": "scripts/simulation/edit_validation/material_stage_trace.gd",
+      "bytes": 1801,
+      "sha256": "938f16fcdebb217869ec16acd04861a2b257ff8ff198034e6ca472596ceda124"
+    },
+    {
+      "path": "scripts/simulation/edit_validation/ordered_material_coupler.gd",
+      "bytes": 1636,
+      "sha256": "457da25beca5220c2fe3ed0e6efc5b6e5d564e99b1b718b8fb3545e445b9a712"
+    },
+    {
+      "path": "scripts/simulation/edit_validation/precise_material_coupler.gd",
+      "bytes": 659,
+      "sha256": "cd8d7cdb8266401b75393c17153fed064ed3d3a3caea91bedebd90de391fcc5e"
+    },
+    {
+      "path": "scripts/simulation/edit_validation/slope_record_coupler.gd",
+      "bytes": 2305,
+      "sha256": "ce43fb94b5aedcbabee84dd008c6e25def8716ee28ad785713316c59f2bda8da"
+    },
+    {
+      "path": "scripts/simulation/edit_validation/split_material_coupler.gd",
+      "bytes": 1884,
+      "sha256": "cd87f350c76226f4c6e9128f374e994ebbc16bf62699834f21a2c9c45a52f7f5"
+    },
+    {
+      "path": "scripts/simulation/edit_validation/staged_slope_coupler.gd",
+      "bytes": 5507,
+      "sha256": "3786237bafb640995bfabb66ef7a758bf9ceb892681e32a7df56399f136162d6"
+    },
+    {
+      "path": "scripts/simulation/edit_validation/traced_material_coupler.gd",
+      "bytes": 1935,
+      "sha256": "c1e2c4fe9f2572444d4f63c0e14e7429ca82d26229deb9a69ca1a290b80eac7e"
+    },
+    {
+      "path": "scripts/simulation/edit_validation/water_displacement_reference.gd",
+      "bytes": 4072,
+      "sha256": "9a159190c93113482c7880cd45cb06fb0448269fbf9c316b6203d30a1655b361"
+    },
+    {
+      "path": "scripts/simulation/erosion/gpu_sediment_coupler.gd",
+      "bytes": 7229,
+      "sha256": "73f31e9fdd25bef5ff93b50fba2528936fa6614b0c1c81fb6c0e2de34904b97d"
+    },
+    {
+      "path": "scripts/simulation/gpu_sand_audit.gd",
+      "bytes": 3750,
+      "sha256": "4e0c483ef76dba0d2862622ab4434fdbe1519d6d5fc6df76bb061031ec8d1588"
+    },
+    {
+      "path": "scripts/simulation/gpu_scalar_pingpong.gd",
+      "bytes": 3200,
+      "sha256": "e50431ba680e073d35dd5ea5fb7a6dc4595952d76d61580653f99c4aa05f6110"
+    },
+    {
+      "path": "scripts/simulation/gpu_shallow_solver.gd",
+      "bytes": 22285,
+      "sha256": "ada3029ee6bf71d185988a1587c8e71e8b54226e97503a9fe076e36e53058aab"
+    },
+    {
+      "path": "scripts/simulation/material/gpu_material_coupler.gd",
+      "bytes": 7819,
+      "sha256": "a6a529f09a14b571c88d0c2330c20fd0b7fc85dcc215dbe345df736043d55658"
+    },
+    {
+      "path": "scripts/simulation/sand_water_domain.gd",
+      "bytes": 16591,
+      "sha256": "449b69482a2de6347a3562b6610507b2669bb8bcdc34cb6e15e363946866cadc"
+    },
+    {
+      "path": "scripts/structures/gpu_obstacle_remap.gd",
+      "bytes": 6647,
+      "sha256": "cc6b54b4d7c147b07b56954abddd8a4756500413d6240c75c564c1a3a6a9a5a7"
+    },
+    {
+      "path": "scripts/structures/structure_field.gd",
+      "bytes": 6833,
+      "sha256": "94f35646a6ea9c4584d8a6ab6f8d52cdc3921c29514f9a7872665b994fd6e92e"
+    },
+    {
+      "path": "scripts/structures/structure_state.gd",
+      "bytes": 8885,
+      "sha256": "0dbaaa6a29933cf3f0d894e814ed503779fdbe5d5f20355f76b7803b945ebe48"
+    },
+    {
+      "path": "scripts/visual/bed_display_sampler.gd",
+      "bytes": 1837,
+      "sha256": "8aa3add12d5b74342464fc5d46d14bddc62354723bdcbc7ae86ab8a8b1fb3f32"
+    },
+    {
+      "path": "scripts/visual/brush_indicator.gd",
+      "bytes": 1168,
+      "sha256": "93c968eaa9283baf8340fc5b67d263eeb86c7d26bc8073907ab8c036bb93ef11"
+    },
+    {
+      "path": "scripts/visual/gpu_foam_field.gd",
+      "bytes": 5432,
+      "sha256": "61328906de62d414a197516d38895ae1a376eb45a6a4fe201a0b5598035a1cc4"
+    },
+    {
+      "path": "scripts/visual/sand_display_sampler.gd",
+      "bytes": 1544,
+      "sha256": "8f33423f0145c7e18957ae5983684a6133073ef3bd0f4ac3d3fb932c27e50ff1"
+    },
+    {
+      "path": "scripts/visual/scene_preview_controller.gd",
+      "bytes": 6367,
+      "sha256": "51ca5b8aecfbc315e5808dcc51262428c775c772099b115c0c677b5408511a93"
+    },
+    {
+      "path": "scripts/visual/test1_beach_edit_worker_entry.gd",
+      "bytes": 2384,
+      "sha256": "c9b4a4d15b9fe1df97f653df9330a08ccf54312fa275f9d505873f850f9c0582"
+    },
+    {
+      "path": "scripts/visual/test1_beach_fixed_entry.gd",
+      "bytes": 3748,
+      "sha256": "fb33d9826d3354f91d15c9ff25156955379cb2460391c4e4e869b3120aa6e681"
+    },
+    {
+      "path": "scripts/visual/test1_beach_hybrid_trial_entry.gd",
+      "bytes": 688,
+      "sha256": "53eb4e34fe47aac1cc009a6b280ad0dda07ed4777f2a800bd4c1af6c943b3ba2"
+    },
+    {
+      "path": "scripts/visual/test1_main_presentation.gd",
+      "bytes": 3903,
+      "sha256": "b4dde405588be136d8a230bb33e650cbbb70a8740252fd8707d4475d3974b421"
+    },
+    {
+      "path": "scripts/visual/test1_water_motion_trial.gd",
+      "bytes": 11366,
+      "sha256": "f1028ff065a6f1f7a0265cd420826292f65f47d21418373b14617a8249acdeac"
+    },
+    {
+      "path": "scripts/visual/water_render_profile.gd",
+      "bytes": 16405,
+      "sha256": "033978698ceeca9b9365b01541196349f22094a448ed71766471a6f200e3e147"
+    },
+    {
+      "path": "scripts/visual/water_render_staging_entry.gd",
+      "bytes": 11287,
+      "sha256": "5bc5f65d5743e985d58d7181166adce3d6033617eb521ad379628490f21518cf"
+    },
+    {
+      "path": "scripts/visual/water_render_uniform_snapshot.gd",
+      "bytes": 815,
+      "sha256": "fd5327458ee51ac092979c36cc2d94125a83af8bbcd3be3abafdbaf44cf772c0"
+    },
+    {
+      "path": "scripts/visual/water_render_wave_workload.gd",
+      "bytes": 1492,
+      "sha256": "f16fbc73346c39aa57b6b13ec3824a8fcf63f12d1454cfe26fc1208b79233d21"
+    },
+    {
+      "path": "scripts/water/reference/shallow_water_solver.gd",
+      "bytes": 12304,
+      "sha256": "7ca778eb5dd98c8fb6a8c4c6ca804a436bcb607eea49a2852e54d9b2bd4fbdc2"
+    },
+    {
+      "path": "shaders/benchmarks/checker_compute.glsl",
+      "bytes": 378,
+      "sha256": "8bb0bceae1675afdeab674386cf359e946392320d797bf9b32dec51ebf913996"
+    },
+    {
+      "path": "shaders/benchmarks/checker_display.gdshader",
+      "bytes": 224,
+      "sha256": "85e7626676495fe32d4fb01938a48ef0636867624f84e999fce3e93b8ed149da"
+    },
+    {
+      "path": "shaders/benchmarks/frame_value_compute.glsl",
+      "bytes": 452,
+      "sha256": "c3e39843c1dbc55b11dfb80fc67ff1f561363fca1c3622ae1d0efcdda9c94ef2"
+    },
+    {
+      "path": "shaders/benchmarks/pack_dirty_chunks.glsl",
+      "bytes": 816,
+      "sha256": "b2c18c1669bdf62f972793fd376fe62eb36e39802eff6a6e7ac1df0685b847fc"
+    },
+    {
+      "path": "shaders/brushes/castle_preview.gdshader",
+      "bytes": 536,
+      "sha256": "9d1c343fbf98e398ec98fd9194b99b03e97a98db97f1dcabb4ffe2e790978679"
+    },
+    {
+      "path": "shaders/brushes/footprint_preview.gdshader",
+      "bytes": 2006,
+      "sha256": "dfac831f9ab2cc6b890f9fd24c7cc1ac7dbb3f981b504b972bca946da93da6bf"
+    },
+    {
+      "path": "shaders/experiments/approx_gpu_edit/brush.glsl",
+      "bytes": 1691,
+      "sha256": "e5368847c767879571c4f1166029a8b9059766d7c8a788facb1d014ab0b0d81b"
+    },
+    {
+      "path": "shaders/simulation/brushes/begin.glsl",
+      "bytes": 931,
+      "sha256": "12126b800654cfbcb6512b1d61a785722808b6b52805e12ae25d0b1f5395e0e5"
+    },
+    {
+      "path": "shaders/simulation/brushes/commit.glsl",
+      "bytes": 850,
+      "sha256": "9bccb43c473dd835cc28161a0fb65a9231d6be03fb6a211dabfebf89ad16eab2"
+    },
+    {
+      "path": "shaders/simulation/brushes/legacy_material_transaction.glsl",
+      "bytes": 2699,
+      "sha256": "8453cb09251f4789f9f686acf535b7a5e53c23f5f0d7b949b5480c65870191fc"
+    },
+    {
+      "path": "shaders/simulation/brushes/material_transaction.glsl",
+      "bytes": 3203,
+      "sha256": "b9339e0506fd782df072276a21bace49304a824b9652602dab8cbeb6383bcbb9"
+    },
+    {
+      "path": "shaders/simulation/brushes/mold_support_step.glsl",
+      "bytes": 1578,
+      "sha256": "02b3dd96f818c304fa723336f4891c4666bf8562c9a874a737b6416a51324e03"
+    },
+    {
+      "path": "shaders/simulation/brushes/molded_slope.glsl",
+      "bytes": 5831,
+      "sha256": "808103f691329ca21bba69cc6e309c857134b5fe666d22a6a4a50c47abe0417d"
+    },
+    {
+      "path": "shaders/simulation/brushes/prepare.glsl",
+      "bytes": 5476,
+      "sha256": "ffd156180cffba8b478ed01d24cda9d6fcabef254b3cdadce280b2fc78f40242"
+    },
+    {
+      "path": "shaders/simulation/brushes/preview_base.glsl",
+      "bytes": 2085,
+      "sha256": "2286c1503caed087e690ed1a7e9dccd3b9fe8bd4614c34095f0765f8380810b6"
+    },
+    {
+      "path": "shaders/simulation/brushes/reduce.glsl",
+      "bytes": 1812,
+      "sha256": "7fc831d8009102fe8b0fc9734eef03e7db5b9c17cccfeff261c14984eec2d4fe"
+    },
+    {
+      "path": "shaders/simulation/brushes/rollback.glsl",
+      "bytes": 787,
+      "sha256": "7a1b409a3cd13ddc817c446b2a56cf9d0c64f674afad5bce9dc6cc1673ca98ff"
+    },
+    {
+      "path": "shaders/simulation/brushes/shovel_allocate.glsl",
+      "bytes": 4961,
+      "sha256": "c22323a34812e73deab3636c55b263d17b745715da1a3c97cf043e56dc0cfc8f"
+    },
+    {
+      "path": "shaders/simulation/brushes/validate.glsl",
+      "bytes": 2522,
+      "sha256": "7ee33b4d16acaa29baa464844f903d4baf12927999261f1b4a14625363f5b206"
+    },
+    {
+      "path": "shaders/simulation/brushes/water_commit.glsl",
+      "bytes": 2184,
+      "sha256": "e4ca3b23ee15a49c84861593c5f2fc240025199a3b2bcede0c6728eed82c9ade"
+    },
+    {
+      "path": "shaders/simulation/brushes/water_merge.glsl",
+      "bytes": 2274,
+      "sha256": "95b79fb07335f17fe2c1f734afacbc3ef479617dc94057a394df3ca303a8e43f"
+    },
+    {
+      "path": "shaders/simulation/brushes/water_prepare.glsl",
+      "bytes": 1532,
+      "sha256": "b83883b3e464978444683a109b99c0acd5fe056098243c0ab3478c692519b65e"
+    },
+    {
+      "path": "shaders/simulation/brushes/water_velocity.glsl",
+      "bytes": 1284,
+      "sha256": "8eb603352628990694c6726be12f2243d4ff46993dfb8fadcd851c1ffbf1f784"
+    },
+    {
+      "path": "shaders/simulation/edit_validation/precise_slope_relax.glsl",
+      "bytes": 4882,
+      "sha256": "bba97470ac846db8185ecbd476987a880c9a06ff438c47b6174b04e142a66b6c"
+    },
+    {
+      "path": "shaders/simulation/edit_validation/sand_apply.glsl",
+      "bytes": 1282,
+      "sha256": "ed863879d0a83f150b7932a1575ebea2f3677486c572660fab6ed2bc2d259d3d"
+    },
+    {
+      "path": "shaders/simulation/edit_validation/sand_commit.glsl",
+      "bytes": 1105,
+      "sha256": "02f1b912b03d69d28ddf7cf238c28d25ec884f1a20c8c06ba305c73353795a1e"
+    },
+    {
+      "path": "shaders/simulation/edit_validation/sand_prepare.glsl",
+      "bytes": 1154,
+      "sha256": "2372d60157eb0538cba3ce4d1d0141a6f2b12d217a4468722b314f8954a4ddb8"
+    },
+    {
+      "path": "shaders/simulation/edit_validation/sand_publish.glsl",
+      "bytes": 364,
+      "sha256": "d94074c81e66ad2a0060034c5b95951e472f3ac9903eeef5167a1ec31b17d0fd"
+    },
+    {
+      "path": "shaders/simulation/edit_validation/sand_reduce.glsl",
+      "bytes": 5288,
+      "sha256": "15535fbd6912084846e3ec7f76ae3f6b5f97449cdf0550077ff9d927ab9f136d"
+    },
+    {
+      "path": "shaders/simulation/edit_validation/sand_reduce_audit.glsl",
+      "bytes": 5593,
+      "sha256": "0d1b03b8c8117d49329a64ab5c737923439706aa4e1e2ce4c6ee4e2bf06743d5"
+    },
+    {
+      "path": "shaders/simulation/edit_validation/shallow_update_diagnostic.glsl",
+      "bytes": 7570,
+      "sha256": "afa5061db9efe652cb0908e8d1ac23c01b3304f23e3970c4c47136e7ba2c0464"
+    },
+    {
+      "path": "shaders/simulation/edit_validation/slope_counter.glsl",
+      "bytes": 5061,
+      "sha256": "1d9ca25f0b42f8869d4fff2fab60f562a9592470bd9c4eb3b78eca2f639ccefd"
+    },
+    {
+      "path": "shaders/simulation/edit_validation/slope_output_record.glsl",
+      "bytes": 5319,
+      "sha256": "52375b43f0dd48863ccb1ed5af2b025e8d571091dc0fe4af1760767076eb2f12"
+    },
+    {
+      "path": "shaders/simulation/edit_validation/slope_record.glsl",
+      "bytes": 6628,
+      "sha256": "989b016872974340db663d54b99d1a35559a63c8fe5f141de7d3173e0cda8602"
+    },
+    {
+      "path": "shaders/simulation/edit_validation/staged_slope.glsl",
+      "bytes": 4955,
+      "sha256": "8777b5baa680a9fb4d1eb66176a92b058972b2cb1fe713b49c07ae8d2d39bf00"
+    },
+    {
+      "path": "shaders/simulation/edit_validation/staged_slope_consume.glsl",
+      "bytes": 482,
+      "sha256": "da10584e13400f2c9e957ba32aa6dfecdc4cd08cf1bd07c74877028773ef83ba"
+    },
+    {
+      "path": "shaders/simulation/edit_validation/water_commit.glsl",
+      "bytes": 1446,
+      "sha256": "3c66875f4c2b2e193a95ab53bfe0072887fffaac9638249381b70cad3484e669"
+    },
+    {
+      "path": "shaders/simulation/edit_validation/water_connected_runs.glsl",
+      "bytes": 11227,
+      "sha256": "374496b6b992e31c0844fa3bbf0c1c2cf89c4dc72f7b7b253c1fc422ba27fe0e"
+    },
+    {
+      "path": "shaders/simulation/edit_validation/water_displace.glsl",
+      "bytes": 8727,
+      "sha256": "2cc36d4082d4dfb8234edb8599853278446c59701a5874acafdc87dc41506f5d"
+    },
+    {
+      "path": "shaders/simulation/edit_validation/water_displace_compensated.glsl",
+      "bytes": 9790,
+      "sha256": "5ec2d3b2f7295e72948760f86d0fac3cc1c9a1f88c563e9f34206d7533b45e66"
+    },
+    {
+      "path": "shaders/simulation/edit_validation/water_displace_compensated_audit.glsl",
+      "bytes": 9824,
+      "sha256": "5225c8c2b23dddec7c14a6580e544b49c689556a3022e060eaff4847af7e557a"
+    },
+    {
+      "path": "shaders/simulation/edit_validation/water_full_wet.glsl",
+      "bytes": 7749,
+      "sha256": "a7f1786415760e7b9399c11baa2f3d46e4c7d821e7bfb71a983ea1f306fae336"
+    },
+    {
+      "path": "shaders/simulation/edit_validation/water_merge_receipt.glsl",
+      "bytes": 731,
+      "sha256": "28d6d32fb7c87404f7c8d4057104def45ed2998b5dff4561563907cce48d0c65"
+    },
+    {
+      "path": "shaders/simulation/edit_validation/water_packed_cached.glsl",
+      "bytes": 14583,
+      "sha256": "4b39cee87fcebcadaa0680652a0081524107bf17d1545b4d299b9559e38d7d5c"
+    },
+    {
+      "path": "shaders/simulation/edit_validation/water_packed_cached_idle.glsl",
+      "bytes": 14762,
+      "sha256": "40888083334a7b4bd1b09a6e4f48f9283f3b278d2b0fc56fea2f8e0c5bd9944f"
+    },
+    {
+      "path": "shaders/simulation/edit_validation/water_packed_compensated.glsl",
+      "bytes": 14042,
+      "sha256": "398f720005d05580a73489bb93a79af2aeb3bbac2965dad9244db015d34e3422"
+    },
+    {
+      "path": "shaders/simulation/edit_validation/water_packed_runs.glsl",
+      "bytes": 13186,
+      "sha256": "a56fc8c05babcf9c82abb1707b324639dc28b4b794a3751d97f62c1bbefcfd98"
+    },
+    {
+      "path": "shaders/simulation/edit_validation/water_prepare.glsl",
+      "bytes": 1538,
+      "sha256": "c22dd62287e8a4fa3fa202cf5af89ecd37882cb5d762f914a231064848bef64a"
+    },
+    {
+      "path": "shaders/simulation/edit_validation/water_publish.glsl",
+      "bytes": 367,
+      "sha256": "92ea11794ce0c1b4dab367dd50a8f4f7887afd3d3485671b7157d18c2606f7f7"
+    },
+    {
+      "path": "shaders/simulation/edit_validation/water_velocity_apply.glsl",
+      "bytes": 2367,
+      "sha256": "596f7218795638eb4f780671eed62f2cffecf3ad9ebaf2177fe460927a55f0b7"
+    },
+    {
+      "path": "shaders/simulation/edit_validation/water_velocity_prefetch.glsl",
+      "bytes": 2926,
+      "sha256": "da8cc83ddc3f4a36a88b1a4eefead37a08e014a11d6ea7f6c09f1cf060c0b6c7"
+    },
+    {
+      "path": "shaders/simulation/edit_validation/water_velocity_reduce.glsl",
+      "bytes": 2307,
+      "sha256": "d73f86bfc1d13604c50171fa119eea6ed21c6165d79a85f1f477bca163f5d759"
+    },
+    {
+      "path": "shaders/simulation/erosion/copy_after_boundary.glsl",
+      "bytes": 697,
+      "sha256": "dbae28c2350fb4551bfb214a38c60ac90d2e660b2ad68575ab62cb5e04306282"
+    },
+    {
+      "path": "shaders/simulation/erosion/sediment_step.glsl",
+      "bytes": 4853,
+      "sha256": "48c3bc74e8c4295ae1ff813e4d1796bb99945c5f56d6d77f63c376011eb62bdf"
+    },
+    {
+      "path": "shaders/simulation/material/material_commit.glsl",
+      "bytes": 1354,
+      "sha256": "a5ecfc44668a97d519677fc9769eb22638cab5bd4b932e6e225abd4642977979"
+    },
+    {
+      "path": "shaders/simulation/material/material_step.glsl",
+      "bytes": 4129,
+      "sha256": "290b44d3fb13ab2b4d7da27e4fa4f93e070244ba11ad450b8356067280f60aef"
+    },
+    {
+      "path": "shaders/simulation/material/slope_relax.glsl",
+      "bytes": 4772,
+      "sha256": "3a84a74ea96425febabf5dcca59fdd5509a069c508d8702236e14de0a984ccfe"
+    },
+    {
+      "path": "shaders/simulation/scalar_pingpong.glsl",
+      "bytes": 547,
+      "sha256": "3ae534a8a661cdf984df699150a978c269683ff2c21effcb4a2e14195f1c6512"
+    },
+    {
+      "path": "shaders/simulation/shallow_audit_tiles.glsl",
+      "bytes": 1468,
+      "sha256": "f9deb50fd988d4db627a86fc42c6b57204298f8016c530762eef6e20f2a7f71f"
+    },
+    {
+      "path": "shaders/simulation/shallow_cfl_tiles.glsl",
+      "bytes": 1411,
+      "sha256": "bc636e57f1feb1d9e24606bc64b5753f07035925cb97882f09a0fec3c2a3833c"
+    },
+    {
+      "path": "shaders/simulation/shallow_collision_pack.glsl",
+      "bytes": 1113,
+      "sha256": "21e58b4e4bd906e98c0b0e894c514332a9a1b2ca9251c539275a209749ca9b9d"
+    },
+    {
+      "path": "shaders/simulation/shallow_drain_scale.glsl",
+      "bytes": 1461,
+      "sha256": "f36e5a1a0b50f867ca89571a12033ba8dbb059a5a1a481bca07e43a1cf87fdbe"
+    },
+    {
+      "path": "shaders/simulation/shallow_edge_flux.glsl",
+      "bytes": 3985,
+      "sha256": "621bc8ec3738d896cdf68c2fe20d306f0d1bd87817f3e917214a9f91b84dea4e"
+    },
+    {
+      "path": "shaders/simulation/shallow_gauge_depth.glsl",
+      "bytes": 484,
+      "sha256": "f9d9219e8957645c14708fe4f4ca1d88cb4bb4d0cd1c507c47fbd203db792790"
+    },
+    {
+      "path": "shaders/simulation/shallow_sand_audit_tiles.glsl",
+      "bytes": 1429,
+      "sha256": "40adab5f7447f987418daec6e6cfc64b866ae4894960cd7e6b8d89ba45d5e503"
+    },
+    {
+      "path": "shaders/simulation/shallow_tide_boundary.glsl",
+      "bytes": 2506,
+      "sha256": "e6911fc637aacfc1ded6f0eb002942aed06a79022eec4c65ce31db6270ce7835"
+    },
+    {
+      "path": "shaders/simulation/shallow_tool_patch.glsl",
+      "bytes": 1287,
+      "sha256": "d0fbfea07be64cf31f7fabed61b7440b67d768657091d4287d976e8c313f4168"
+    },
+    {
+      "path": "shaders/simulation/shallow_update_state.glsl",
+      "bytes": 6286,
+      "sha256": "fe373e7d793d0cc126db241fe0c81e5b3aa2b7d70b37c7299f21418d81b76185"
+    },
+    {
+      "path": "shaders/simulation/structures/obstacle_commit.glsl",
+      "bytes": 1617,
+      "sha256": "98afc576f237c5acac4ec0f09ee8d0c7d4ad59a1b0f480b4acb76ab842a3d655"
+    },
+    {
+      "path": "shaders/simulation/structures/obstacle_remap.glsl",
+      "bytes": 5743,
+      "sha256": "a54a87ec0b648ed1fed2053815082e4b395904d6ed664b953d4749f9cddb922a"
+    },
+    {
+      "path": "shaders/simulation/test1_main_display.glsl",
+      "bytes": 2076,
+      "sha256": "bb6cd5427b3f15a70daa1ace4eca7d58d21ce0f98695de3c86e769c13254d210"
+    },
+    {
+      "path": "shaders/simulation/test1_water_motion.glsl",
+      "bytes": 3168,
+      "sha256": "9f167d80fab66457d81b7dd27aaad14a8bbaf0901284e6b8b5a4f876496b45a0"
+    },
+    {
+      "path": "shaders/simulation/visual_foam_step.glsl",
+      "bytes": 4040,
+      "sha256": "19d7bec7f157791f75e0b4a63bd04c7ae8dc06eb82e016f1ea96ae8174e6edb0"
+    },
+    {
+      "path": "shaders/visual/editor_water_preview.gdshader",
+      "bytes": 3544,
+      "sha256": "7cbf3f7a678a75e6573ac4cc7c3e27e537965acfa55add8f959b8343d1de8022"
+    },
+    {
+      "path": "shaders/visual/gpu_sand_coupled_fast.gdshader",
+      "bytes": 6164,
+      "sha256": "86fafa25170e3fe45665562fa06d092a125fa616aa958e62dcc09949a378ceca"
+    },
+    {
+      "path": "shaders/visual/gpu_sand_phase2.gdshader",
+      "bytes": 5465,
+      "sha256": "b39e64d82d8b15f63e272ca3c4644232132a39b8bdd223a5161586bee2071663"
+    },
+    {
+      "path": "shaders/visual/gpu_terrain.gdshader",
+      "bytes": 8955,
+      "sha256": "20b5b3d8752e712997a14400befc9b2d5035f158307c5dbf0d2dcd778ff001ee"
+    },
+    {
+      "path": "shaders/visual/gpu_water.gdshader",
+      "bytes": 9538,
+      "sha256": "c8dd858f563d340dd1f5ebb9925f48e71eeba1fa1f649ec38628b7b5ac53c93a"
+    },
+    {
+      "path": "tests/shape_brushes/bake_castle_preview.gd",
+      "bytes": 414,
+      "sha256": "051a3d12f2632b2a65ec3861746a16877fbbdd772518837d089b55e879251dae"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/caustic_cells_v1.png",
+      "bytes": 535405,
+      "sha256": "ab1dc8e1964b9c52cf18aa285db2c7b9881443d18436d3dd9ebb954c4148ded7"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/caustic_fold_v1.png",
+      "bytes": 622495,
+      "sha256": "173b50e3e4e9fa143ae9b71867768e5b246a150a2be7a65a74c88d9a6c4b00ee"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_batched_ledger_solver.gd",
+      "bytes": 446,
+      "sha256": "9a2e37364476d817a2b38c1831660cee6dc71d3cd942257f1e0cb3820035170c"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_bed.gd",
+      "bytes": 8756,
+      "sha256": "c46756a6a1df97d559697d5a9742d33c3820df0eb1987d61c929fe414d3410e4"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_contact_history_field.gd",
+      "bytes": 3759,
+      "sha256": "a695507d79cdb6c177f2afe6bdb5c4fb082884445a229c0bf02b42655e44f7ad"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_contact_history_step.glsl",
+      "bytes": 2240,
+      "sha256": "bfec2a9f6c184d2a1164ff3f7a0b930f907609b40fbe4c716640850359db2c79"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_coupled_bed.gdshader",
+      "bytes": 8875,
+      "sha256": "b60f600299f006898e8258f27dfe9a7059e2aae3b7066c6c9e77624dbf6a2250"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_crest_continuous_lip.gdshader",
+      "bytes": 10737,
+      "sha256": "98b4def2f197b66791c5e12ace5f37a342dc3d1c5bea6f48f02b78d7946d3b11"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_crest_curtain.gdshader",
+      "bytes": 1955,
+      "sha256": "8a1ec383093276dfd6f034707fa9dfe10ae127c7e7c67e6e76b8845c746972f1"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_crest_forward_toe.gdshader",
+      "bytes": 10225,
+      "sha256": "b0b5f08eef4eeeb8e1449ae00a439940fce4a454e2058ddd605a060319e43ae6"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_crest_local_segments.gdshader",
+      "bytes": 4502,
+      "sha256": "92f66b265b96e23d0e602c2139dbc942482d5e064fe351940ab64e8b1f00187c"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_crest_local_volume.gdshader",
+      "bytes": 4607,
+      "sha256": "d6eaca6bbf27c7b21b8090e5deb6a950ae851ba5207dca2eb196f169acf9f53c"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_crest_ribbon.gdshader",
+      "bytes": 6285,
+      "sha256": "084f3391e8aa4dc4745d400342f0389c22bf2733be43f044c32db18f61267d6a"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_crest_rise_ribbon.gdshader",
+      "bytes": 9599,
+      "sha256": "2977f4dda77cb1beb4256bac0e2cc3d483315e3b9bf2cae3fd5d71eca5f00d8b"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_crest_rise_ribbon_depthwrite.gdshader",
+      "bytes": 9602,
+      "sha256": "8f13f413c2f87b766263d6cba5869d7436a4510a9cc51019cfee7474576472d5"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_crest_shared_front_lip.gdshader",
+      "bytes": 9727,
+      "sha256": "72968404b01ea6e6274c816e535d3032d699f989d20ce636be3cb838edb56d30"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_crest_smoothed_lip.gdshader",
+      "bytes": 10226,
+      "sha256": "66be7b4f462e781ff02eca43e58b512fb04df59cfc4b1401bf21f95a7b491d13"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_crest_volume.gdshader",
+      "bytes": 4262,
+      "sha256": "06a44a61cd3cab6e659746817fba3153a59a5a16abb21c47c315d9886103585f"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_fixed_substep_solver.gd",
+      "bytes": 736,
+      "sha256": "e85b5b16b7f247619221d5b69c3f8490f91d000392159a16a71131bc3a385a38"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_foam_splats.gdshader",
+      "bytes": 7186,
+      "sha256": "ed5d860f2254b65bfe0c98c5e9b3e6803d5e07f7debbe99e3a3d182130731a17"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_front_foam_dense_mesh.tres",
+      "bytes": 5942282,
+      "sha256": "42310f9ee1aa11b1b82dd7ad163f6f6cf88331eecf1dce214920966359731adb"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_front_lip_branch_mesh.tres",
+      "bytes": 6506077,
+      "sha256": "c23c6099ab61b7dc4a56330c2ad8c83e856fcd1abcb60b83f3f36fa9cb2ef7ed"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_front_lip_patch_mesh.tres",
+      "bytes": 10215765,
+      "sha256": "c1934c87582ebb73c83c1f8bc81c05c5cdedca5dbfd8675948ff4358831c9179"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_front_lip_row_mesh.tres",
+      "bytes": 94427,
+      "sha256": "54609c8270325c9efce2cf2f823a29d33448f2ce80a6f1e2800ee3a7689d8ae1"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_local_front_field.gd",
+      "bytes": 4910,
+      "sha256": "f791d419826f9797a7d12949a3aa50f08c3024460a58da2de0221c36cce2d276"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_local_front_x.glsl",
+      "bytes": 1639,
+      "sha256": "1ca06648fc517bc6d01b66780af1d1e66cfe2978ddd2f00e5ac763658799d13d"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_local_front_x_wide.glsl",
+      "bytes": 1709,
+      "sha256": "3e8c3729eb40b07a36772aa25ae8c3f10b5d3f137e7b19721669df6ed4098004"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_local_front_z.glsl",
+      "bytes": 933,
+      "sha256": "dc986bfa7e64e6f05f814a1eed3cef2eef1bd5e72025a1c9475d90c4855ddfae"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_preview.gd",
+      "bytes": 126057,
+      "sha256": "0c4eca6af73082d3a10f3e507ca775afad662bdba731c8b5ec4ec55a75f6bca1"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_rise_front_anchor.glsl",
+      "bytes": 1649,
+      "sha256": "26c735fbc43e23c27d54f4fe612418ce66ca87d4609ee2285e9cc0f9866c5935"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_rise_front_field.gd",
+      "bytes": 4834,
+      "sha256": "b539b5880a6602267be8fe6511db1f128aea85b4133678305d4a630a04d45b18"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_rise_front_field.glsl",
+      "bytes": 1811,
+      "sha256": "cc2c18d0d1680d0ec2d039d96cda592a6f49255ae44df0d40fd4ad4df557f35c"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_shore_contact_overlay.gdshader",
+      "bytes": 3295,
+      "sha256": "f9c2a6f778a3d75328fa960dad0d7787e02aae5e4c66fd486e81d23ad57143ec"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_sync_readback_solver.gd",
+      "bytes": 969,
+      "sha256": "9445031ef7ba468d6d32f6a5bab3afe96044037e2c31a649e9a9e2df59f2d610"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_terrain.gdshader",
+      "bytes": 9846,
+      "sha256": "bf77f94303c320a2dccda9a7194aa87fb8f71c582e159df3bc865ade97c3baec"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_tide_ledger_batches.gd",
+      "bytes": 3401,
+      "sha256": "d744528686b74639729f9f944b7e2958de93d3dcafca54c3d6c5df1775ff7f93"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_tide_ledger_ring.gd",
+      "bytes": 2512,
+      "sha256": "e5c382d288ddc06c5605917be5042e4d0d4e623143d13b487931894f3230c115"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_tide_ledger_ring.glsl",
+      "bytes": 602,
+      "sha256": "70afb76be87686985afd102eebab8a2971490be6315aaf71020470dcab08ce08"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_visual_foam_front_band.glsl",
+      "bytes": 4870,
+      "sha256": "ecfceac6836ddc67260d3eb91c9a4f8b9c2a412526b5c1ca466ea1f4c802ede6"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_visual_foam_offshore.glsl",
+      "bytes": 5068,
+      "sha256": "2ae3ed27fffce69c5913afee851f88f5b11bc45dc0e18eed15ea5d6f3e755b6e"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_water.gdshader",
+      "bytes": 20549,
+      "sha256": "d78958d8749b4313ebca55a5b10f5eb768eda044132f3444c423658b2fb5f999"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_water_local_front.gdshader",
+      "bytes": 57432,
+      "sha256": "d75afd108ca483b33c760a3a4257be9396eeaf390ed12b05a9f61bbb3b6cc405"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reflection_rock_0.tres",
+      "bytes": 31668,
+      "sha256": "89eab2c4076aebded99a45c8e780c03d09bad63dbb27148bfe215456782ca8eb"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reflection_rock_1.tres",
+      "bytes": 31668,
+      "sha256": "6fa8c12f7ef205991f0c78edc5f1116dac357d34c1adadecf5a0867fe313c8ce"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reflection_rock_2.tres",
+      "bytes": 31668,
+      "sha256": "617b46961fd33efa9a2075260dd703962aba96d1dfea93714c524a8150dd1939"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/rock_reflection_candidate_entry.gd",
+      "bytes": 8401,
+      "sha256": "4cf60c1290c0580b9290652cf66576222d0600e50dba71b03aa130794b58dc31"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/water_render_staging_v1.json",
+      "bytes": 1460,
+      "sha256": "b35b81cbd5831a48c361c98e8737096d7b5badd70db955429d5703cde179d8a7"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/water_render_staging_v7.json",
+      "bytes": 1889,
+      "sha256": "a7f6460d6b0b8951a38191bf9f757fe7fadb18054b0d73e4cbb8479db8ff30aa"
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/water_render_staging_v8.json",
+      "bytes": 2035,
+      "sha256": "82c54211c0d3e9e852e69e218f210af8787ca169cf1a580c9c3e97ae34be71c3"
+    }
+  ],
+  "text_reference_scan_missing": [
+    {
+      "source": "scripts/demo/sandcastle_main.gd",
+      "reference": "res://scenes/cpu_reference.tscn"
+    },
+    {
+      "source": "assets/water_material_natural_candidate/rdc_caustic_manifest.json",
+      "reference": "res://test_output/competitor_water_material_20261011/replay_v5/event_5006_ps_texture_1105_mip0.bin"
+    },
+    {
+      "source": "assets/water_material_natural_candidate/rdc_caustic_manifest.json",
+      "reference": "res://test_output/water_material_rdc/caustic_mips_v1/manifest.json"
+    },
+    {
+      "source": "scenes/sandcastle_test1_beach_fixed.tscn",
+      "reference": "res://scenes/water_material_natural_candidate/rdc_v1_fixed.tscn"
+    }
+  ],
+  "task_or_output_references": [
+    {
+      "source": "assets/water_material_natural_candidate/rdc_caustic_manifest.json",
+      "reference": "res://test_output/competitor_water_material_20261011/replay_v5/event_5006_ps_texture_1105_mip0.bin"
+    },
+    {
+      "source": "assets/water_material_natural_candidate/rdc_caustic_manifest.json",
+      "reference": "res://test_output/water_material_rdc/caustic_mips_v1/manifest.json"
+    }
+  ],
+  "entry_literal_files": [
+    "addons/godot_editor_logger/plugin.cfg",
+    "addons/godotiq/plugin.cfg",
+    "assets/brushes/castle/four_towers_preview.tres",
+    "assets/brushes/castle/four_towers_v1.rgba32f",
+    "assets/brushes/castle_v1.tres",
+    "assets/brushes/molded_material_candidate.json",
+    "assets/brushes/protocol_v2.json",
+    "assets/brushes/shovel_v1.tres",
+    "assets/brushes/wall_v1.tres",
+    "assets/test1_beach/test1_beach_release.json",
+    "assets/test1_beach/test1_bed_lit_fast.gdshader",
+    "assets/test1_beach/test1_front_foam_sparse_mesh.tres",
+    "assets/test1_beach/test1_front_foam_splats.gdshader",
+    "assets/test1_beach/test1_water_front.gdshader",
+    "assets/test1_water_motion/capture_state.rgba32f",
+    "assets/water_material_natural_candidate/base_v8_compiled_v1.json",
+    "assets/water_material_natural_candidate/base_v8_compiled_v1_style.json",
+    "assets/water_material_natural_candidate/base_v8_foam.json",
+    "assets/water_material_natural_candidate/base_v8_height.json",
+    "assets/water_material_natural_candidate/base_v8_height_style.json",
+    "assets/water_material_natural_candidate/base_v8_manual_glint.json",
+    "assets/water_material_natural_candidate/base_v8_normal.json",
+    "assets/water_material_natural_candidate/base_v8_optics.json",
+    "assets/water_material_natural_candidate/base_v8_optics_unrefracted.json",
+    "assets/water_material_natural_candidate/base_v8_reflection.json",
+    "assets/water_material_natural_candidate/base_v8_style.json",
+    "assets/water_material_natural_candidate/bed_geometry_specialized.gdshader",
+    "assets/water_material_natural_candidate/bed_geometry_specialized_index.json",
+    "assets/water_material_natural_candidate/bed_style.gdshader",
+    "assets/water_material_natural_candidate/compiled_v1_bundle.json",
+    "assets/water_material_natural_candidate/compiled_worker_entry.gd",
+    "assets/water_material_natural_candidate/contact_compiled_v1_geometry.json",
+    "assets/water_material_natural_candidate/contact_foam.gdshader",
+    "assets/water_material_natural_candidate/contact_geometry_bindings.json",
+    "assets/water_material_natural_candidate/contact_height_geometry.json",
+    "assets/water_material_natural_candidate/contact_reflection_geometry.json",
+    "assets/water_material_natural_candidate/contact_shape.gdshader",
+    "assets/water_material_natural_candidate/contact_shape_geometry.json",
+    "assets/water_material_natural_candidate/foam_baseline.json",
+    "assets/water_material_natural_candidate/foam_combination.json",
+    "assets/water_material_natural_candidate/foam_compiled_v1_derived.json",
+    "assets/water_material_natural_candidate/foam_distribution.gdshader",
+    "assets/water_material_natural_candidate/foam_engine_light.gdshader",
+    "assets/water_material_natural_candidate/foam_entry.gd",
+    "assets/water_material_natural_candidate/foam_height_derived.json",
+    "assets/water_material_natural_candidate/foam_reflection_derived.json",
+    "assets/water_material_natural_candidate/lighting_entry.gd",
+    "assets/water_material_natural_candidate/lighting_manual.json",
+    "assets/water_material_natural_candidate/lighting_optics.json",
+    "assets/water_material_natural_candidate/lighting_optics_unrefracted.json",
+    "assets/water_material_natural_candidate/normal_entry.gd",
+    "assets/water_material_natural_candidate/optics_entry.gd",
+    "assets/water_material_natural_candidate/optics_legacy.json",
+    "assets/water_material_natural_candidate/optics_selected.json",
+    "assets/water_material_natural_candidate/rdc_base.json",
+    "assets/water_material_natural_candidate/rdc_bed.gdshader",
+    "assets/water_material_natural_candidate/rdc_bed_index.json",
+    "assets/water_material_natural_candidate/rdc_bundle_v1.json",
+    "assets/water_material_natural_candidate/rdc_caustic_1105_mipped.res",
+    "assets/water_material_natural_candidate/rdc_contact_geometry.json",
+    "assets/water_material_natural_candidate/rdc_foam.json",
+    "assets/water_material_natural_candidate/rdc_material_v1.json",
+    "assets/water_material_natural_candidate/rdc_reflection.json",
+    "assets/water_material_natural_candidate/rdc_style_base.json",
+    "assets/water_material_natural_candidate/rdc_style_v1.json",
+    "assets/water_material_natural_candidate/rdc_water.gdshader",
+    "assets/water_material_natural_candidate/rdc_water_index.json",
+    "assets/water_material_natural_candidate/reference_v1_bundle.json",
+    "assets/water_material_natural_candidate/reflection_baseline.json",
+    "assets/water_material_natural_candidate/reflection_compiled_v1.json",
+    "assets/water_material_natural_candidate/reflection_entry.gd",
+    "assets/water_material_natural_candidate/reflection_height.json",
+    "assets/water_material_natural_candidate/reflection_oriented.json",
+    "assets/water_material_natural_candidate/style_baseline.json",
+    "assets/water_material_natural_candidate/style_compiled_v1.json",
+    "assets/water_material_natural_candidate/style_entry.gd",
+    "assets/water_material_natural_candidate/style_height.json",
+    "assets/water_material_natural_candidate/style_reference_v1.json",
+    "assets/water_material_natural_candidate/style_worker_entry.gd",
+    "assets/water_material_natural_candidate/texture_layers.json",
+    "assets/water_material_natural_candidate/water_foam.gdshader",
+    "assets/water_material_natural_candidate/water_height.gdshader",
+    "assets/water_material_natural_candidate/water_manual_glint.gdshader",
+    "assets/water_material_natural_candidate/water_normal.gdshader",
+    "assets/water_material_natural_candidate/water_normal_681.png",
+    "assets/water_material_natural_candidate/water_optics.gdshader",
+    "assets/water_material_natural_candidate/water_optics_unrefracted.gdshader",
+    "assets/water_material_natural_candidate/water_reflection.gdshader",
+    "assets/water_material_natural_candidate/water_route_full_index.json",
+    "assets/water_material_natural_candidate/water_route_specialized.gdshader",
+    "icon.svg",
+    "project.godot",
+    "scenes/brush_indicator.tscn",
+    "scenes/components/brushes/brush_preview.tscn",
+    "scenes/components/brushes/brush_tool_panel.tscn",
+    "scenes/components/scene_switch_panel.tscn",
+    "scenes/components/water_visual/reference_coupled.tscn",
+    "scenes/components/water_visual/reference_foreground_occluders.tscn",
+    "scenes/components/water_visual/reference_front_foam_dense.tscn",
+    "scenes/components/water_visual/reference_front_lips.tscn",
+    "scenes/components/water_visual/reflection_rock_environment.tscn",
+    "scenes/editor_scene_preview.tscn",
+    "scenes/gpu_collision_proxy.tscn",
+    "scenes/gpu_water_preview.tscn",
+    "scenes/legacy/sandcastle_test1_beach_coupled_pre_natural.tscn",
+    "scenes/main.tscn",
+    "scenes/playable/test1_backwash.tscn",
+    "scenes/playable/test1_capture.tscn",
+    "scenes/terrain_preview_mesh.tscn",
+    "scenes/water_material_natural_candidate/rdc_v1_coupled.tscn",
+    "scenes/water_material_natural_candidate/reference_v1_coupled.tscn",
+    "scenes/water_material_natural_candidate/style_compiled_v1_coupled.tscn",
+    "scenes/water_material_natural_candidate/style_height_coupled.tscn",
+    "scenes/water_preview_mesh.tscn",
+    "scenes/water_render_coupled.tscn",
+    "scenes/water_render_coupled_continuous.tscn",
+    "scenes/water_render_coupled_rock_reflection_candidate.tscn",
+    "scenes/water_render_coupled_v7_preview.tscn",
+    "scenes/water_render_coupled_v8_preview.tscn",
+    "scripts/beach/beach_checkpoint_entry.gd",
+    "scripts/beach/beach_gpu_entry.gd",
+    "scripts/beach/beach_interaction_entry.gd",
+    "scripts/beach/beach_lab_entry.gd",
+    "scripts/beach/beach_playable_entry.gd",
+    "scripts/beach/beach_recovery_entry.gd",
+    "scripts/beach/beach_scene_service.gd",
+    "scripts/beach/free_camera.gd",
+    "scripts/beach/performance_panel.gd",
+    "scripts/beach/release_config.gd",
+    "scripts/beach/scene_switch_panel.gd",
+    "scripts/beach/shape_brush_entry.gd",
+    "scripts/beach/shape_brush_playable_entry.gd",
+    "scripts/collision/collision_prepare_job.gd",
+    "scripts/collision/collision_prepare_scheduler.gd",
+    "scripts/collision/gpu_collision_proxy.gd",
+    "scripts/demo/gpu_water_preview.gd",
+    "scripts/sand/brushes/brush_command_queue.gd",
+    "scripts/sand/brushes/brush_definition.gd",
+    "scripts/sand/brushes/brush_preview_view.gd",
+    "scripts/sand/brushes/brush_registry.gd",
+    "scripts/sand/brushes/brush_spec.gd",
+    "scripts/sand/brushes/brush_tool_panel.gd",
+    "scripts/sand/brushes/stroke_controller.gd",
+    "scripts/sand/tool_command_queue.gd",
+    "scripts/scenarios/sand_visual_fixture.gd",
+    "scripts/scenarios/standard_scenarios.gd",
+    "scripts/scenarios/test1_playable_layout.gd",
+    "scripts/scenarios/water_visual_fixture.gd",
+    "scripts/simulation/brushes/brush_checkpoint_codec.gd",
+    "scripts/simulation/brushes/brush_gpu.gd",
+    "scripts/simulation/brushes/brush_material_coupler.gd",
+    "scripts/simulation/brushes/brush_material_solver.gd",
+    "scripts/simulation/brushes/brush_material_state_codec.gd",
+    "scripts/simulation/brushes/brush_material_transaction.gd",
+    "scripts/simulation/brushes/brush_preview_query.gd",
+    "scripts/simulation/brushes/brush_protocol.gd",
+    "scripts/simulation/brushes/brush_scheduler.gd",
+    "scripts/simulation/brushes/brush_water_transaction.gd",
+    "scripts/simulation/checkpoint_store.gd",
+    "scripts/simulation/edit_validation/beach_native_codec.gd",
+    "scripts/simulation/edit_validation/beach_restore_bundle.gd",
+    "scripts/simulation/edit_validation/checkpoint_foam_field.gd",
+    "scripts/simulation/edit_validation/collision_chunk_selection.gd",
+    "scripts/simulation/edit_validation/collision_proxy.gd",
+    "scripts/simulation/edit_validation/edit_protocol.gd",
+    "scripts/simulation/edit_validation/gpu_checkpoint_codec.gd",
+    "scripts/simulation/edit_validation/gpu_edit_scheduler.gd",
+    "scripts/simulation/edit_validation/gpu_sand_editor.gd",
+    "scripts/simulation/edit_validation/gpu_water_editor.gd",
+    "scripts/simulation/edit_validation/lab_solver.gd",
+    "scripts/simulation/edit_validation/staged_slope_coupler.gd",
+    "scripts/simulation/erosion/gpu_sediment_coupler.gd",
+    "scripts/simulation/gpu_sand_audit.gd",
+    "scripts/simulation/gpu_shallow_solver.gd",
+    "scripts/simulation/material/gpu_material_coupler.gd",
+    "scripts/simulation/sand_water_domain.gd",
+    "scripts/structures/gpu_obstacle_remap.gd",
+    "scripts/structures/structure_field.gd",
+    "scripts/structures/structure_state.gd",
+    "scripts/visual/brush_indicator.gd",
+    "scripts/visual/gpu_foam_field.gd",
+    "scripts/visual/scene_preview_controller.gd",
+    "scripts/visual/test1_beach_edit_worker_entry.gd",
+    "scripts/visual/test1_beach_fixed_entry.gd",
+    "scripts/visual/water_render_profile.gd",
+    "scripts/visual/water_render_staging_entry.gd",
+    "scripts/visual/water_render_wave_workload.gd",
+    "shaders/brushes/castle_preview.gdshader",
+    "shaders/brushes/footprint_preview.gdshader",
+    "shaders/simulation/brushes/legacy_material_transaction.glsl",
+    "shaders/simulation/brushes/material_transaction.glsl",
+    "shaders/simulation/brushes/mold_support_step.glsl",
+    "shaders/simulation/brushes/molded_slope.glsl",
+    "shaders/simulation/brushes/preview_base.glsl",
+    "shaders/simulation/erosion/copy_after_boundary.glsl",
+    "shaders/simulation/erosion/sediment_step.glsl",
+    "shaders/simulation/material/material_commit.glsl",
+    "shaders/simulation/material/material_step.glsl",
+    "shaders/simulation/material/slope_relax.glsl",
+    "shaders/simulation/shallow_audit_tiles.glsl",
+    "shaders/simulation/shallow_cfl_tiles.glsl",
+    "shaders/simulation/shallow_collision_pack.glsl",
+    "shaders/simulation/shallow_drain_scale.glsl",
+    "shaders/simulation/shallow_edge_flux.glsl",
+    "shaders/simulation/shallow_gauge_depth.glsl",
+    "shaders/simulation/shallow_sand_audit_tiles.glsl",
+    "shaders/simulation/shallow_tide_boundary.glsl",
+    "shaders/simulation/shallow_tool_patch.glsl",
+    "shaders/simulation/shallow_update_state.glsl",
+    "shaders/simulation/structures/obstacle_commit.glsl",
+    "shaders/simulation/structures/obstacle_remap.glsl",
+    "shaders/simulation/visual_foam_step.glsl",
+    "shaders/visual/editor_water_preview.gdshader",
+    "shaders/visual/gpu_sand_coupled_fast.gdshader",
+    "shaders/visual/gpu_sand_phase2.gdshader",
+    "shaders/visual/gpu_terrain.gdshader",
+    "shaders/visual/gpu_water.gdshader",
+    "tests/visual_water_alignment/prototypes/caustic_cells_v1.png",
+    "tests/visual_water_alignment/prototypes/caustic_fold_v1.png",
+    "tests/visual_water_alignment/prototypes/reference_batched_ledger_solver.gd",
+    "tests/visual_water_alignment/prototypes/reference_bed.gd",
+    "tests/visual_water_alignment/prototypes/reference_contact_history_field.gd",
+    "tests/visual_water_alignment/prototypes/reference_contact_history_step.glsl",
+    "tests/visual_water_alignment/prototypes/reference_coupled_bed.gdshader",
+    "tests/visual_water_alignment/prototypes/reference_crest_continuous_lip.gdshader",
+    "tests/visual_water_alignment/prototypes/reference_crest_curtain.gdshader",
+    "tests/visual_water_alignment/prototypes/reference_crest_forward_toe.gdshader",
+    "tests/visual_water_alignment/prototypes/reference_crest_local_segments.gdshader",
+    "tests/visual_water_alignment/prototypes/reference_crest_local_volume.gdshader",
+    "tests/visual_water_alignment/prototypes/reference_crest_ribbon.gdshader",
+    "tests/visual_water_alignment/prototypes/reference_crest_rise_ribbon.gdshader",
+    "tests/visual_water_alignment/prototypes/reference_crest_rise_ribbon_depthwrite.gdshader",
+    "tests/visual_water_alignment/prototypes/reference_crest_shared_front_lip.gdshader",
+    "tests/visual_water_alignment/prototypes/reference_crest_smoothed_lip.gdshader",
+    "tests/visual_water_alignment/prototypes/reference_crest_volume.gdshader",
+    "tests/visual_water_alignment/prototypes/reference_fixed_substep_solver.gd",
+    "tests/visual_water_alignment/prototypes/reference_foam_splats.gdshader",
+    "tests/visual_water_alignment/prototypes/reference_front_foam_dense_mesh.tres",
+    "tests/visual_water_alignment/prototypes/reference_front_lip_branch_mesh.tres",
+    "tests/visual_water_alignment/prototypes/reference_front_lip_patch_mesh.tres",
+    "tests/visual_water_alignment/prototypes/reference_front_lip_row_mesh.tres",
+    "tests/visual_water_alignment/prototypes/reference_local_front_field.gd",
+    "tests/visual_water_alignment/prototypes/reference_local_front_x.glsl",
+    "tests/visual_water_alignment/prototypes/reference_local_front_x_wide.glsl",
+    "tests/visual_water_alignment/prototypes/reference_local_front_z.glsl",
+    "tests/visual_water_alignment/prototypes/reference_preview.gd",
+    "tests/visual_water_alignment/prototypes/reference_rise_front_anchor.glsl",
+    "tests/visual_water_alignment/prototypes/reference_rise_front_field.gd",
+    "tests/visual_water_alignment/prototypes/reference_rise_front_field.glsl",
+    "tests/visual_water_alignment/prototypes/reference_shore_contact_overlay.gdshader",
+    "tests/visual_water_alignment/prototypes/reference_sync_readback_solver.gd",
+    "tests/visual_water_alignment/prototypes/reference_terrain.gdshader",
+    "tests/visual_water_alignment/prototypes/reference_tide_ledger_batches.gd",
+    "tests/visual_water_alignment/prototypes/reference_tide_ledger_ring.gd",
+    "tests/visual_water_alignment/prototypes/reference_tide_ledger_ring.glsl",
+    "tests/visual_water_alignment/prototypes/reference_visual_foam_front_band.glsl",
+    "tests/visual_water_alignment/prototypes/reference_visual_foam_offshore.glsl",
+    "tests/visual_water_alignment/prototypes/reference_water.gdshader",
+    "tests/visual_water_alignment/prototypes/reference_water_local_front.gdshader",
+    "tests/visual_water_alignment/prototypes/reflection_rock_0.tres",
+    "tests/visual_water_alignment/prototypes/reflection_rock_1.tres",
+    "tests/visual_water_alignment/prototypes/reflection_rock_2.tres",
+    "tests/visual_water_alignment/prototypes/rock_reflection_candidate_entry.gd",
+    "tests/visual_water_alignment/prototypes/water_render_staging_v1.json",
+    "tests/visual_water_alignment/prototypes/water_render_staging_v7.json",
+    "tests/visual_water_alignment/prototypes/water_render_staging_v8.json"
+  ],
+  "missing_in_entry_literal_sources": [],
+  "output_references_in_entry_literal_sources": [],
+  "dynamic_directory_references": [
+    {
+      "source": "scripts/beach/shape_brush_playable_entry.gd",
+      "reference": "res://assets/brushes"
+    },
+    {
+      "source": "scripts/beach/shape_brush_playable_entry.gd",
+      "reference": "res://shaders/brushes"
+    },
+    {
+      "source": "scripts/beach/shape_brush_entry.gd",
+      "reference": "res://assets/brushes"
+    },
+    {
+      "source": "scripts/beach/shape_brush_entry.gd",
+      "reference": "res://scripts/sand/brushes"
+    },
+    {
+      "source": "assets/brushes/protocol_v2.json",
+      "reference": "res://assets/brushes"
+    },
+    {
+      "source": "assets/brushes/protocol_v2.json",
+      "reference": "res://scripts/sand/brushes"
+    },
+    {
+      "source": "assets/brushes/protocol_v2.json",
+      "reference": "res://scripts/simulation/brushes"
+    },
+    {
+      "source": "assets/brushes/protocol_v2.json",
+      "reference": "res://shaders/simulation/brushes"
+    },
+    {
+      "source": "scripts/simulation/edit_validation/staged_slope_coupler.gd",
+      "reference": "res://shaders/simulation/edit_validation/"
+    },
+    {
+      "source": "scripts/simulation/brushes/brush_gpu.gd",
+      "reference": "res://shaders/simulation/brushes/"
+    },
+    {
+      "source": "scripts/simulation/brushes/brush_water_transaction.gd",
+      "reference": "res://shaders/simulation/brushes/"
+    },
+    {
+      "source": "scripts/beach/beach_recovery_entry.gd",
+      "reference": "res://assets/test1_beach"
+    },
+    {
+      "source": "scripts/beach/beach_recovery_entry.gd",
+      "reference": "res://assets/water_material_natural_candidate"
+    },
+    {
+      "source": "scripts/beach/beach_recovery_entry.gd",
+      "reference": "res://scenes"
+    },
+    {
+      "source": "scripts/beach/beach_recovery_entry.gd",
+      "reference": "res://scripts/beach"
+    },
+    {
+      "source": "scripts/beach/beach_recovery_entry.gd",
+      "reference": "res://scripts/collision"
+    },
+    {
+      "source": "scripts/beach/beach_recovery_entry.gd",
+      "reference": "res://scripts/simulation"
+    },
+    {
+      "source": "scripts/beach/beach_recovery_entry.gd",
+      "reference": "res://scripts/visual"
+    },
+    {
+      "source": "scripts/beach/beach_recovery_entry.gd",
+      "reference": "res://scripts/water/reference"
+    },
+    {
+      "source": "scripts/beach/beach_recovery_entry.gd",
+      "reference": "res://shaders/simulation"
+    },
+    {
+      "source": "scripts/beach/beach_recovery_entry.gd",
+      "reference": "res://tests/visual_water_alignment/prototypes"
+    },
+    {
+      "source": "scripts/beach/beach_gpu_entry.gd",
+      "reference": "res://shaders/simulation/edit_validation/"
+    }
+  ],
+  "scope": "Runtime text inventory and existing literal resource dependencies, including original tests/ prototype dependencies. Dynamic resource paths require runtime signature and actual-entry evidence; this index alone does not establish dependency closure or gate passage.",
+  "functional_run": "D:\\godot\\project\\sandcastle\\test_output\\shape_brushes\\20261015_012136_direct_entries_d2af4387",
+  "open_gates": [
+    "G4",
+    "G5",
+    "G6",
+    "G7",
+    "G8",
+    "G9"
+  ],
+  "performance_rounds": {
+    "used": 3,
+    "maximum": 3,
+    "status": "stopped_at_user_limit"
+  },
+  "remaining": [
+    "strict ordinary/zero-support equivalence",
+    "strict 300-tick continuation",
+    "checkpoint memory plateau",
+    "full release acceptance"
+  ]
+}

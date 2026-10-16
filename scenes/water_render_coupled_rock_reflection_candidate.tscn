@@ -11,7 +11,7 @@ script = ExtResource("2_script")
 
 [node name="ReflectionViewport" type="SubViewport" parent="."]
 size = Vector2i(960, 540)
-render_target_update_mode = 4
+render_target_update_mode = 1
 
 [node name="ReflectionCamera" type="Camera3D" parent="ReflectionViewport"]
 cull_mask = 4

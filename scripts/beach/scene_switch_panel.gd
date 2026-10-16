@@ -19,8 +19,9 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	if beach != null:
-		switch_button.disabled = service.busy or not beach.ready_for_ticks or beach.closing
-		targets.disabled = service.busy
+		var blocked: bool = service.busy or not beach.ready_for_ticks or beach.closing
+		if switch_button.disabled != blocked: switch_button.disabled = blocked
+		if targets.disabled != service.busy: targets.disabled = service.busy
 
 func _refresh() -> void:
 	$Status.text = service.message

@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-14",
+  "role": "planning_source_snapshot",
+  "scope": "Current workspace source reading and file identity at plan authoring, not implementation baseline or runtime verification",
+  "git_head": "dffe50e26280d55ef825dd52fae677a4ad599cd3",
+  "workspace_has_preexisting_uncommitted_changes": true,
+  "competitor_reuse_index": "docs/competitor/gravel_plan_sources_20261014.json",
+  "project_sources": [
+    {
+      "path": "AGENTS.md",
+      "absolute_path": "D:\\godot\\project\\sandcastle\\AGENTS.md",
+      "bytes": 8069,
+      "sha256": "5ebd41cf8d685aad4df97052bd5af10e68a21961a83cf7d7a9f9759384a8d38e",
+      "available": true
+    },
+    {
+      "path": "project.godot",
+      "absolute_path": "D:\\godot\\project\\sandcastle\\project.godot",
+      "bytes": 2074,
+      "sha256": "b68d35517766c5f383a7195389dac848805f1480805284252905d881501352bb",
+      "available": true
+    },
+    {
+      "path": "scenes/main.tscn",
+      "absolute_path": "D:\\godot\\project\\sandcastle\\scenes\\main.tscn",
+      "bytes": 10325,
+      "sha256": "01f304fdad35253e743ccec28d2431fa4fb228e5eb55331f2086e46d7fa61e4d",
+      "available": true
+    },
+    {
+      "path": "scenes/playable/test1_capture.tscn",
+      "absolute_path": "D:\\godot\\project\\sandcastle\\scenes\\playable\\test1_capture.tscn",
+      "bytes": 506,
+      "sha256": "400df22caf0bc0657cd9ac53a075bf30f90d2a2f2ef57fc0ce21abfed9f53921",
+      "available": true
+    },
+    {
+      "path": "scenes/playable/test1_backwash.tscn",
+      "absolute_path": "D:\\godot\\project\\sandcastle\\scenes\\playable\\test1_backwash.tscn",
+      "bytes": 231,
+      "sha256": "c0f5308c933fb6b04447cabc778176d0038c71587b18caaeec8b07106ac59f80",
+      "available": true
+    },
+    {
+      "path": "scripts/beach/beach_playable_entry.gd",
+      "absolute_path": "D:\\godot\\project\\sandcastle\\scripts\\beach\\beach_playable_entry.gd",
+      "bytes": 2231,
+      "sha256": "0048150d9d8c4489a37af15ea8296145ec43397912484c43732aba02e5b0337d",
+      "available": true
+    },
+    {
+      "path": "scripts/beach/beach_gpu_entry.gd",
+      "absolute_path": "D:\\godot\\project\\sandcastle\\scripts\\beach\\beach_gpu_entry.gd",
+      "bytes": 14609,
+      "sha256": "3555675f78be0caa716cb522d6d3259eba43ddaefec72a4302cc1b6b6c48d702",
+      "available": true
+    },
+    {
+      "path": "scripts/beach/beach_checkpoint_entry.gd",
+      "absolute_path": "D:\\godot\\project\\sandcastle\\scripts\\beach\\beach_checkpoint_entry.gd",
+      "bytes": 5830,
+      "sha256": "a24062ecef85cf0d1eddee2516082e3533da4c87f41345b02a3524b8574046f3",
+      "available": true
+    },
+    {
+      "path": "scripts/beach/beach_recovery_entry.gd",
+      "absolute_path": "D:\\godot\\project\\sandcastle\\scripts\\beach\\beach_recovery_entry.gd",
+      "bytes": 25116,
+      "sha256": "ec53c82fda5f9c38690480eb1d841a57d219608ff4bb3b4ceb9b5a3b6627d3a1",
+      "available": true
+    },
+    {
+      "path": "scripts/beach/beach_scene_service.gd",
+      "absolute_path": "D:\\godot\\project\\sandcastle\\scripts\\beach\\beach_scene_service.gd",
+      "bytes": 7005,
+      "sha256": "edc6e65001c2394d0b441646d668ba0193beaed89572a4c4cb394ad55be2dd7c",
+      "available": true
+    },
+    {
+      "path": "scripts/simulation/checkpoint_store.gd",
+      "absolute_path": "D:\\godot\\project\\sandcastle\\scripts\\simulation\\checkpoint_store.gd",
+      "bytes": 14788,
+      "sha256": "c8897631c68cb7d277f53ebee54cc5db737bba600f0cffa61f7b301ee0d4f200",
+      "available": true
+    },
+    {
+      "path": "scripts/simulation/edit_validation/beach_native_codec.gd",
+      "absolute_path": "D:\\godot\\project\\sandcastle\\scripts\\simulation\\edit_validation\\beach_native_codec.gd",
+      "bytes": 2451,
+      "sha256": "d032cd7d8e728bf355959dda0b282aa39c719da9edf5a8458118f27fd52219e9",
+      "available": true
+    },
+    {
+      "path": "scripts/simulation/edit_validation/beach_restore_bundle.gd",
+      "absolute_path": "D:\\godot\\project\\sandcastle\\scripts\\simulation\\edit_validation\\beach_restore_bundle.gd",
+      "bytes": 5189,
+      "sha256": "5a578a1d592990d4f82a9ffa2e183c43e028105edabe75a889d4d6c1d7f6d9e5",
+      "available": true
+    },
+    {
+      "path": "scripts/simulation/gpu_shallow_solver.gd",
+      "absolute_path": "D:\\godot\\project\\sandcastle\\scripts\\simulation\\gpu_shallow_solver.gd",
+      "bytes": 22285,
+      "sha256": "ada3029ee6bf71d185988a1587c8e71e8b54226e97503a9fe076e36e53058aab",
+      "available": true
+    },
+    {
+      "path": "scripts/simulation/edit_validation/gpu_sand_editor.gd",
+      "absolute_path": "D:\\godot\\project\\sandcastle\\scripts\\simulation\\edit_validation\\gpu_sand_editor.gd",
+      "bytes": 10212,
+      "sha256": "39822c0728f2ed63dcb4f2011cb42a3730bc44120598282be1e45fceb13ee2d1",
+      "available": true
+    },
+    {
+      "path": "scripts/collision/gpu_collision_proxy.gd",
+      "absolute_path": "D:\\godot\\project\\sandcastle\\scripts\\collision\\gpu_collision_proxy.gd",
+      "bytes": 11753,
+      "sha256": "b231701a5b8f676b450a5d3f4e1384b05e4110862cb3d7613f7fae79ec80499b",
+      "available": true
+    },
+    {
+      "path": "scripts/visual/gpu_foam_field.gd",
+      "absolute_path": "D:\\godot\\project\\sandcastle\\scripts\\visual\\gpu_foam_field.gd",
+      "bytes": 5432,
+      "sha256": "61328906de62d414a197516d38895ae1a376eb45a6a4fe201a0b5598035a1cc4",
+      "available": true
+    },
+    {
+      "path": "tests/visual_water_alignment/prototypes/reference_preview.gd",
+      "absolute_path": "D:\\godot\\project\\sandcastle\\tests\\visual_water_alignment\\prototypes\\reference_preview.gd",
+      "bytes": 126057,
+      "sha256": "0c4eca6af73082d3a10f3e507ca775afad662bdba731c8b5ec4ec55a75f6bca1",
+      "available": true
+    },
+    {
+      "path": "shaders/simulation/visual_foam_step.glsl",
+      "absolute_path": "D:\\godot\\project\\sandcastle\\shaders\\simulation\\visual_foam_step.glsl",
+      "bytes": 4040,
+      "sha256": "19d7bec7f157791f75e0b4a63bd04c7ae8dc06eb82e016f1ea96ae8174e6edb0",
+      "available": true
+    },
+    {
+      "path": "shaders/visual/gpu_sand_coupled_fast.gdshader",
+      "absolute_path": "D:\\godot\\project\\sandcastle\\shaders\\visual\\gpu_sand_coupled_fast.gdshader",
+      "bytes": 6164,
+      "sha256": "86fafa25170e3fe45665562fa06d092a125fa616aa958e62dcc09949a378ceca",
+      "available": true
+    },
+    {
+      "path": "assets/test1_beach/test1_front_foam_splats.gdshader",
+      "absolute_path": "D:\\godot\\project\\sandcastle\\assets\\test1_beach\\test1_front_foam_splats.gdshader",
+      "bytes": 7453,
+      "sha256": "45a43cf1ea48a0913e2a06012f1eef90bac837ecc610319cab5718505075f03b",
+      "available": true
+    },
+    {
+      "path": "assets/water_material_natural_candidate/rdc_bundle_v1.json",
+      "absolute_path": "D:\\godot\\project\\sandcastle\\assets\\water_material_natural_candidate\\rdc_bundle_v1.json",
+      "bytes": 1230,
+      "sha256": "13257a0fed0149b461e82e2ecaa18fa2814b8a50ccddd2dec42e87394d2bf267",
+      "available": true
+    },
+    {
+      "path": "docs/knowledge/README.md",
+      "absolute_path": "D:\\godot\\project\\sandcastle\\docs\\knowledge\\README.md",
+      "bytes": 1939,
+      "sha256": "7a2b483f4ebf3e7e198b931343ac38431d9573dee65b06cbfc46669de7224e7f",
+      "available": true
+    }
+  ],
+  "current_observations": [
+    "main uses beach_playable_entry; shared recovery/edit solver and three playable layouts",
+    "water/sand are authoritative GPU fields; momenta h*u and h*v available",
+    "reference_preview _render_finish_tick runs solver substeps then effects then publication",
+    "beach_gpu_entry publishes stable sand/water and copies stable momenta",
+    "beach_checkpoint_entry raw capture completion currently requires exactly 22 items",
+    "native codec has strict core fields/spare/foam layout",
+    "restore uses candidate bundle, verification and resource commit",
+    "scene service autosaves current progress and restores scenes; target failure rolls back from checkpoint"
+  ],
+  "limitations": [
+    "Preexisting code changes preserved; rehash and re-read affected paths in T00 before implementation.",
+    "No new Godot startup, shader compile, particle simulation, visual or cost check in plan authoring.",
+    "Shape-brush extensions and other in-progress changes must be merged using latest source contracts."
+  ]
+}

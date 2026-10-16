@@ -7,8 +7,8 @@ layout(r32f, set = 0, binding = 1) uniform restrict readonly image2D water_befor
 layout(rgba32f, set = 0, binding = 2) uniform restrict readonly image2D outgoing_flux;
 layout(r8, set = 0, binding = 3) uniform restrict readonly image2D obstacle_state;
 layout(r32f, set = 0, binding = 4) uniform restrict readonly image2D sand_in;
-layout(r16f, set = 0, binding = 5) uniform restrict readonly image2D wetness_state;
-layout(r16f, set = 0, binding = 6) uniform restrict readonly image2D compaction_state;
+layout(r32f, set = 0, binding = 5) uniform restrict readonly image2D momentum_x_after;
+layout(r32f, set = 0, binding = 6) uniform restrict readonly image2D momentum_z_after;
 layout(r32f, set = 0, binding = 7) uniform restrict readonly image2D water_after;
 layout(r32f, set = 0, binding = 8) uniform restrict writeonly image2D sand_out;
 layout(r32f, set = 0, binding = 9) uniform restrict writeonly image2D sediment_out;
@@ -17,12 +17,12 @@ layout(r32ui, set = 0, binding = 10) uniform restrict uimage2D dirty_max_um;
 layout(push_constant, std430) uniform Params {
     float delta_s;
     float cell_area_m2;
-    float capacity_scale_s_per_m;
-    float erosion_rate_per_s;
-    float deposition_rate_per_s;
+    float capacity_per_speed_s;
+    float erosion_fraction;
+    float deposition_fraction;
     float dry_depth_m;
-    float reserved_0;
-    float reserved_1;
+    float capacity_saturation_depth_m;
+    float ocean_boundary_enabled;
 } params;
 
 // Flux channels are -X/+X/-Z/+Z, each in m3/s. Every transfer is
@@ -77,27 +77,33 @@ void main() {
             next_suspended += transferred_sand(p + ivec2(0, 1), 2);
         }
         float depth_after = imageLoad(water_after, p).r;
-        if (depth_after <= params.dry_depth_m) {
-            bed_sand += next_suspended;
-            next_suspended = 0.0;
+        // Competitor SAND-EROSION-01: capacity uses speed magnitude and a
+        // saturating effective-water weight, without material-strength scaling.
+        // Our water already stores effective depth; do not subtract its encoded
+        // amount's 0.05 bias again. The meter scale is a Godot adaptation.
+        float capacity_m = 0.0;
+        if (depth_after > params.dry_depth_m) {
+            vec2 momentum = vec2(imageLoad(momentum_x_after, p).r,
+                imageLoad(momentum_z_after, p).r);
+            float speed_m_s = length(momentum) / max(depth_after, 0.005);
+            float water_weight = min(depth_after / params.capacity_saturation_depth_m, 1.0);
+            capacity_m = water_weight * params.capacity_per_speed_s * speed_m_s;
+        }
+        // Protect only our actual forced reservoir (x=0). We do not have the
+        // original packed, graded sea mask. Closed/injection domains are free.
+        float exchange_weight = params.ocean_boundary_enabled > 0.5 && p.x == 0 ? 0.0 : 1.0;
+        if (next_suspended < capacity_m) {
+            float eroded = min(bed_sand, (capacity_m - next_suspended)
+                * params.erosion_fraction * exchange_weight);
+            bed_sand -= eroded;
+            next_suspended += eroded;
         } else {
-            vec4 flux = max(imageLoad(outgoing_flux, p), vec4(0.0));
-            float speed_m_s = dot(flux, vec4(1.0)) / params.cell_area_m2;
-            float strength = mix(0.7, 1.8, imageLoad(compaction_state, p).r)
-                * mix(1.0, 1.25, imageLoad(wetness_state, p).r);
-            float capacity_m = speed_m_s * depth_after
-                * params.capacity_scale_s_per_m / strength;
-            if (next_suspended < capacity_m) {
-                float eroded = min(bed_sand, (capacity_m - next_suspended)
-                    * params.erosion_rate_per_s * params.delta_s);
-                bed_sand -= eroded;
-                next_suspended += eroded;
-            } else {
-                float deposited = min(next_suspended, (next_suspended - capacity_m)
-                    * params.deposition_rate_per_s * params.delta_s);
-                bed_sand += deposited;
-                next_suspended -= deposited;
-            }
+            // Dry cells have zero capacity and settle gradually by this same
+            // rule; retaining residual suspended stock preserves the ledger.
+            float deposited = min(next_suspended, (next_suspended - capacity_m)
+                * params.deposition_fraction * exchange_weight);
+            bed_sand += deposited;
+            next_suspended -= deposited;
         }
     }
     imageStore(sand_out, p, vec4(bed_sand, 0.0, 0.0, 1.0));

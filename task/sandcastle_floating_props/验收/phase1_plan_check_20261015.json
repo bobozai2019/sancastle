@@ -1,0 +1,107 @@
+{
+  "role": "phase1_plan_document_validation",
+  "date": "2026-10-15T15:52:47.523230+00:00",
+  "scope": "Current phase 1 documents and references only; historical drafts preserved with original contents, excluded from current scope checks. No runtime tests or implementation Gate passed.",
+  "active_markdown_files": 4,
+  "links_checked": 18,
+  "tasks": 4,
+  "subgoals": 12,
+  "checks": {
+    "four_tasks": true,
+    "twelve_subgoals": true,
+    "not_started_status": true,
+    "three_props_in_main": true,
+    "reset_semantics": true,
+    "archived_files_preserved": true
+  },
+  "old_file_deletion": "automatic_review_rejected_blocked_by_policy",
+  "alternative": "archived_13_files_without_deletion",
+  "archived_files": [
+    {
+      "original_path": "D:/godot/project/sandcastle/task/sandcastle_floating_props/决策记录.md",
+      "archive_path": "D:/godot/project/sandcastle/task/sandcastle_floating_props/历史草案/决策记录.md",
+      "bytes": 2137,
+      "sha256": "fc357518fae1f405654b9c09068e9bf0e1e842af386cdd19c6d0cf89d3fb337d"
+    },
+    {
+      "original_path": "D:/godot/project/sandcastle/task/sandcastle_floating_props/契约/README.md",
+      "archive_path": "D:/godot/project/sandcastle/task/sandcastle_floating_props/历史草案/契约/README.md",
+      "bytes": 707,
+      "sha256": "65df39b9a4646000e2c80006979a33a38838ae8c4ed74ea7fdb70053e0af343c"
+    },
+    {
+      "original_path": "D:/godot/project/sandcastle/task/sandcastle_floating_props/契约/保存与生命周期.md",
+      "archive_path": "D:/godot/project/sandcastle/task/sandcastle_floating_props/历史草案/契约/保存与生命周期.md",
+      "bytes": 5629,
+      "sha256": "76626bc8efce02df2d4dad549b765580e829074169f67681b3c81f8b679706ec"
+    },
+    {
+      "original_path": "D:/godot/project/sandcastle/task/sandcastle_floating_props/契约/受力与碰撞.md",
+      "archive_path": "D:/godot/project/sandcastle/task/sandcastle_floating_props/历史草案/契约/受力与碰撞.md",
+      "bytes": 4898,
+      "sha256": "8163a1b6c1ac5153aa7c48921845d5ca4549f40438cc2f0f66257122f4077fd3"
+    },
+    {
+      "original_path": "D:/godot/project/sandcastle/task/sandcastle_floating_props/契约/采样与同步.md",
+      "archive_path": "D:/godot/project/sandcastle/task/sandcastle_floating_props/历史草案/契约/采样与同步.md",
+      "bytes": 5797,
+      "sha256": "0734a09481ec2983654421d8677ceaf433432284396b009cb10df421e7c1d0c5"
+    },
+    {
+      "original_path": "D:/godot/project/sandcastle/task/sandcastle_floating_props/细则/README.md",
+      "archive_path": "D:/godot/project/sandcastle/task/sandcastle_floating_props/历史草案/细则/README.md",
+      "bytes": 667,
+      "sha256": "249466bd6736ed93870c1370cb8d5a8246f1a4b7a8f3c4a56c9d8fd9d260157f"
+    },
+    {
+      "original_path": "D:/godot/project/sandcastle/task/sandcastle_floating_props/细则/T00_基线与契约.md",
+      "archive_path": "D:/godot/project/sandcastle/task/sandcastle_floating_props/历史草案/细则/T00_基线与契约.md",
+      "bytes": 2705,
+      "sha256": "85e412b382322c0b32659d490fb3c405910d479964d7fe41edb410da31bc645e"
+    },
+    {
+      "original_path": "D:/godot/project/sandcastle/task/sandcastle_floating_props/细则/T01_批量水场采样.md",
+      "archive_path": "D:/godot/project/sandcastle/task/sandcastle_floating_props/历史草案/细则/T01_批量水场采样.md",
+      "bytes": 1677,
+      "sha256": "e889d2c796e1d22cbd172297f19cb30a02ab7d64380099214dd111837f4d7972"
+    },
+    {
+      "original_path": "D:/godot/project/sandcastle/task/sandcastle_floating_props/细则/T02_道具浮力.md",
+      "archive_path": "D:/godot/project/sandcastle/task/sandcastle_floating_props/历史草案/细则/T02_道具浮力.md",
+      "bytes": 1647,
+      "sha256": "95b0ca48e4c7f5ee4f69257bf3bfe3c685cc5a4fe4b74fa43cff3a268a2d98fa"
+    },
+    {
+      "original_path": "D:/godot/project/sandcastle/task/sandcastle_floating_props/细则/T03_碰撞与编辑.md",
+      "archive_path": "D:/godot/project/sandcastle/task/sandcastle_floating_props/历史草案/细则/T03_碰撞与编辑.md",
+      "bytes": 2346,
+      "sha256": "eae7b15462e7f724a3167180dcee59599a57ff3eb32c0ac7f6f3b6f19b3a231d"
+    },
+    {
+      "original_path": "D:/godot/project/sandcastle/task/sandcastle_floating_props/细则/T04_保存与切换.md",
+      "archive_path": "D:/godot/project/sandcastle/task/sandcastle_floating_props/历史草案/细则/T04_保存与切换.md",
+      "bytes": 2210,
+      "sha256": "5ee2818584f24c2599a8ee57312975725379cfc18406166a77ea21fc4a9b35e4"
+    },
+    {
+      "original_path": "D:/godot/project/sandcastle/task/sandcastle_floating_props/细则/T05_整合与验收.md",
+      "archive_path": "D:/godot/project/sandcastle/task/sandcastle_floating_props/历史草案/细则/T05_整合与验收.md",
+      "bytes": 2843,
+      "sha256": "06eeb869c568c74002c00b3c08f163edbeb6a756193fdda158aae782e85fe407"
+    },
+    {
+      "original_path": "D:/godot/project/sandcastle/task/sandcastle_floating_props/需求映射.md",
+      "archive_path": "D:/godot/project/sandcastle/task/sandcastle_floating_props/历史草案/需求映射.md",
+      "bytes": 1938,
+      "sha256": "50cb1b0db24611b9bbd3a01a9b88e0de343d848566aed112f528c3b64412cf4a"
+    }
+  ],
+  "current_document_sha256": {
+    "总纲.md": "c261325d0eb88a866aa5731114e4f9b66d7ed0111963fc9b43f3a750bb178375",
+    "实现约定.md": "458498b8be3b4073c64ff917ac2db4a5d95c2b4aac12915642836b47016b7caa",
+    "执行状态.md": "c29a25684a6dfb7f8411ddaeaa131194a30ba13147ef13cbfc5d74885910d8ec",
+    "验收/README.md": "dcb72ffdd393fff6011ba74fa35dab8c92b5418d3c2ecb879465fa912b0f993d"
+  },
+  "errors": [],
+  "result": "PASS"
+}

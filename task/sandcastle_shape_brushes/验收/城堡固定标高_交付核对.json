@@ -1,0 +1,49 @@
+{
+  "pass": true,
+  "runtime_files": 423,
+  "bad": [],
+  "entry_literal_files": 276,
+  "entry_missing": [],
+  "entry_output_refs": [],
+  "historical_wide_missing": [
+    {
+      "source": "scenes/sandcastle_test1_beach_fixed.tscn",
+      "reference": "res://scenes/water_material_natural_candidate/rdc_v1_fixed.tscn"
+    },
+    {
+      "source": "scripts/demo/sandcastle_main.gd",
+      "reference": "res://scenes/cpu_reference.tscn"
+    },
+    {
+      "source": "assets/water_material_natural_candidate/rdc_caustic_manifest.json",
+      "reference": "res://test_output/competitor_water_material_20261011/replay_v5/event_5006_ps_texture_1105_mip0.bin"
+    },
+    {
+      "source": "assets/water_material_natural_candidate/rdc_caustic_manifest.json",
+      "reference": "res://test_output/water_material_rdc/caustic_mips_v1/manifest.json"
+    }
+  ],
+  "direct_gpu_checks": 165,
+  "direct_failures": [],
+  "requirements": {
+    "deep_bottom_deficit_filled": true,
+    "mixed_higher_sand_rock_preserved": true,
+    "mixed_double_geometry": true,
+    "mixed_low_and_high_both_present": true,
+    "repeat_fixed_height_no_add": true,
+    "repeat_new_stroke_no_stack": true,
+    "steep_preview_fixed_target": true,
+    "mixed_preview_fixed_target": true,
+    "budget_atomic": true
+  },
+  "functional_runs": {
+    "20261015_225709_castle_e323d2da": true,
+    "20261015_225527_input_7d2f4995": true,
+    "20261015_230124_water_a8f521eb": true,
+    "20261015_230506_ui_a484ab97": true,
+    "20261015_230556_direct_entries_60904dff": true
+  },
+  "independent_direct_checks": 378,
+  "performance_measurements_added": false,
+  "scope": "Only the new fixed castle placement requirement; original unpassed strict/performance gates remain historical open issues."
+}

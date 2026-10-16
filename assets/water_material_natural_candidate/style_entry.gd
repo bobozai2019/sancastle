@@ -77,6 +77,22 @@ func _configure_scene() -> void:
 		water_material.set_shader_parameter("natural_height_surface_normal",style_profile.macro_normal_mode=="height_surface")
 	if style_profile.style_schema_version==4:_configure_rdc_material()
 
+var style_sun_transform: Transform3D
+
+func _sync_sun() -> void:
+	super._sync_sun()
+	var transform: Transform3D = $SandFixtureSun.global_transform
+	if transform != style_sun_transform:
+		style_sun_transform = transform
+		if not effective_style.is_empty():
+			effective_style["sun_transform"] = var_to_str(transform)
+			invalidate_effective_render_profile()
+
+func set_visual_time(seconds: float) -> void:
+	super.set_visual_time(seconds)
+	if not effective_style.is_empty():
+		effective_style["visual_time_s"] = seconds
+
 func _seal_test1_effective_profile() -> void:
 	super._seal_test1_effective_profile()
 	effective_style={"schema":style_profile.style_schema_version,"profile":style_profile_path,"profile_sha256":_candidate_digest(style_profile_path),

@@ -30,6 +30,7 @@ func _dispose_scene(scene) -> bool:
 			await profiler.stop_sampling()
 		await scene.shutdown()
 		released = scene.gpu_release_done and (scene.solver == null or scene.solver.rd == null) and scene.collision_proxy.rd == null
+		if "gravel_field" in scene: released=released and scene.gravel_field==null and scene.gravel_capture_callbacks==0
 		scene.set_process(false)
 		scene.queue_free()
 		# Flush node destruction and renderer commands before constructing the
@@ -66,12 +67,15 @@ func _set_message(value: String) -> void:
 	status_changed.emit()
 
 func _settings(scene) -> Dictionary:
-	return {"playing": scene.playing, "hide_hud": scene.hide_hud,
+	var settings := {"playing": scene.playing, "hide_hud": scene.hide_hud,
 		"selected_sand_tool": scene.selected_sand_tool,
 		"dig_amount_m3": scene.dig_amount_m3, "fill_amount_m3": scene.fill_amount_m3,
 		"manual_wave_amplitude_m": scene.manual_wave_amplitude_m,
 		"sampling": scene.get_node("Interface/PerformancePanel/Margin/Rows/Header/Sampling").button_pressed,
 		"camera": scene.player_camera.transform, "use_player_camera": scene.use_player_camera}
+	if scene.has_method("_capture_brush_selection"):
+		settings["brush_selection"]=scene._capture_brush_selection()
+	return settings
 
 func _apply_settings(scene, settings: Dictionary) -> void:
 	for key in ["dig_amount_m3", "fill_amount_m3", "manual_wave_amplitude_m", "selected_sand_tool", "hide_hud"]:
@@ -83,6 +87,8 @@ func _apply_settings(scene, settings: Dictionary) -> void:
 	controls.get_node("WaveAmount").value = scene.manual_wave_amplitude_m
 	controls.get_node("Tools/DigTool").button_pressed = scene.selected_sand_tool == &"remove_sand"
 	controls.get_node("Tools/FillTool").button_pressed = scene.selected_sand_tool == &"place_sand"
+	if shared_controls.has("brush_selection") and scene.has_method("_apply_brush_selection"):
+		scene._apply_brush_selection(shared_controls.brush_selection)
 	scene.get_node("Interface/PerformancePanel/Margin/Rows/Header/Sampling").button_pressed = shared_controls.get("sampling", true)
 	if settings.has("camera"):
 		scene.player_camera.transform = settings.camera

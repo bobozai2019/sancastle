@@ -48,6 +48,7 @@ func _process(delta: float) -> void:
 	if Input.is_physical_key_pressed(KEY_D): direction+=global_basis.x
 	if Input.is_physical_key_pressed(KEY_Q): direction-=Vector3.UP
 	if Input.is_physical_key_pressed(KEY_E): direction+=Vector3.UP
+	if direction.is_zero_approx(): return
 	var speed:=move_speed_m_s*(fast_multiplier if Input.is_physical_key_pressed(KEY_SHIFT) else 1.0)
 	global_position+=direction.normalized()*speed*delta
 

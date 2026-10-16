@@ -1,0 +1,146 @@
+{
+  "role": "current_project_source_and_existing_evidence_index",
+  "date": "2026-10-16",
+  "scope": "Ordinary GPU dig/fill batch pipeline; documentation update only, no new runtime or performance PASS",
+  "sources": [
+    {
+      "path": "scenes/main.tscn",
+      "bytes": 67470,
+      "sha256": "b6c946e61e81e562cdc4434440ad588440e3361a6d386ffbf53cf30eddd0e107",
+      "matches_run": true
+    },
+    {
+      "path": "scripts/beach/beach_gpu_entry.gd",
+      "bytes": 18817,
+      "sha256": "ee62687afc6558dda563f16318ecbcb8f6681da0426451b89d5fe706b832059f",
+      "matches_run": true
+    },
+    {
+      "path": "scripts/beach/beach_interaction_entry.gd",
+      "bytes": 12057,
+      "sha256": "60b70f73f4f65554545872dba43980b1c702d81f19e8881dad25e600ef6426f6",
+      "matches_run": true
+    },
+    {
+      "path": "scripts/beach/shape_brush_entry.gd",
+      "bytes": 13250,
+      "sha256": "a552320612c75c1aa99b48def562213075e94a1f75c52414edefa8823ca91bd6",
+      "matches_run": true
+    },
+    {
+      "path": "scripts/beach/beach_recovery_entry.gd",
+      "bytes": 27288,
+      "sha256": "238ea012bc1d2b281d2428c6c5ac4a6d8a7e81545bc522b42e572830585fd3c0",
+      "matches_run": true
+    },
+    {
+      "path": "scripts/simulation/edit_validation/gpu_edit_scheduler.gd",
+      "bytes": 6870,
+      "sha256": "88e251442e047d3c63d8216ce3d84c61ecd1c3ae80cb716cbcc8585c75936d10",
+      "matches_run": true
+    },
+    {
+      "path": "scripts/simulation/brushes/brush_material_solver.gd",
+      "bytes": 5464,
+      "sha256": "4229d6c9fc7321ce46ef93c742427c80e19f46a4c78b4a53138afc4461ccca6d",
+      "matches_run": true
+    },
+    {
+      "path": "scripts/simulation/brushes/brush_material_transaction.gd",
+      "bytes": 5383,
+      "sha256": "b28f0106f5d18c380725ae422086f161659b28449dafc764e39b05a8ba2a44a5",
+      "matches_run": true
+    },
+    {
+      "path": "tests/integration/frame_pipeline_probe.gd",
+      "bytes": 8005,
+      "sha256": "54255c4f9687d2cdcc120932b9d0682ee499243f515abe02691a1553f41a274e",
+      "matches_run": true
+    },
+    {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/capture.glsl",
+      "bytes": 943,
+      "sha256": "861e5463638fbead36e918884656f454b742608c464df2940bbbf40250a32fce",
+      "matches_run": true
+    },
+    {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/controller.gd",
+      "bytes": 7446,
+      "sha256": "e28678fe7ce3813d8216cfc1a1c5ab2e5c12f3b5316b2b3f3c680018415c9194",
+      "matches_run": true
+    },
+    {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/editor.gd",
+      "bytes": 17029,
+      "sha256": "1c7fc902cee855fa76a4e835a77688842cc3828695599d99161c87e65467828d",
+      "matches_run": true
+    },
+    {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/layout.gd",
+      "bytes": 3782,
+      "sha256": "4c3e25e5b803edc54ed954e711f59f21cb3cab92580fc888af0154dd2ecc52ad",
+      "matches_run": true
+    },
+    {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/select.glsl",
+      "bytes": 1461,
+      "sha256": "b9fd2ff6aeb24836cf809c28382ccd6356b7061d033cc91f5d8ea75e3f009acb",
+      "matches_run": true
+    },
+    {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/validation.gd",
+      "bytes": 690,
+      "sha256": "aa329de59d707ce5444906f2b93d57d17ed53d447ffa9ef4989f878c459e5dd9",
+      "matches_run": true
+    }
+  ],
+  "all_match_tested_sources": true,
+  "inherited_scenes": [
+    {
+      "path": "scenes/playable/test1_capture.tscn",
+      "bytes": 506,
+      "sha256": "400df22caf0bc0657cd9ac53a075bf30f90d2a2f2ef57fc0ce21abfed9f53921"
+    },
+    {
+      "path": "scenes/playable/test1_backwash.tscn",
+      "bytes": 231,
+      "sha256": "c0f5308c933fb6b04447cabc778176d0038c71587b18caaeec8b07106ac59f80"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "test_output/physics_threading/frame_pipeline_preview_20261016_03/manifest.json",
+      "bytes": 68228,
+      "sha256": "c1e1f785c60948b9427c52b6e7f0a8a8f175194ac19a1c98a52d25815e2ee6a5"
+    },
+    {
+      "path": "test_output/physics_threading/frame_pipeline_preview_20261016_03/exit.json",
+      "bytes": 265,
+      "sha256": "94ec9d6cb9eb96d9aac217988b7ff7f1c7a061a4875d3a4e0074428aad58009b"
+    },
+    {
+      "path": "test_output/physics_threading/frame_pipeline_preview_20261016_03/result.json",
+      "bytes": 66180,
+      "sha256": "27e92490f0fdc919bff645a0495e00cc5a33e8141f62c8c673aa7362bbbee7ce"
+    },
+    {
+      "path": "test_output/physics_threading/frame_pipeline_preview_20261016_03/preview_audit.json",
+      "bytes": 2884,
+      "sha256": "6ba3e19508e838e9e42be44c5400c492f16406c7e0a9f77bc1882844e716bece"
+    }
+  ],
+  "effective_main_options": {
+    "edit_frame_pipeline_enabled": true,
+    "edit_frame_batch_limit": 2,
+    "edit_physics_wait_count": 1,
+    "edit_tick_overlap_enabled": true
+  },
+  "existing_checks": 96,
+  "existing_run_pass": true,
+  "limitations": [
+    "Main-only new runtime verification; inherited settings are not three-scene regression proof.",
+    "Short paired elapsed time and maximum frame, not formal performance gate or long-term p99.",
+    "Complete new save/restore and long stability not rerun.",
+    "User reports severe continuous-dig stutter with low aggregate CPU/GPU usage; not yet measured or attributed."
+  ]
+}

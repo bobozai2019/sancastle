@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-14",
+  "claim": "SAND-EROSION-01",
+  "scope": "Ground.HeightIntegration compiled shader and test1 E1478 effective bindings; no gameplay methods; no continuous erosion performance or rate claim",
+  "indexes": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_erosion_20261014_probe01\\manifest.json",
+      "size": 18617,
+      "sha256": "7cebfe209a0b71fc3d30cd68897cdf8f98d64218aab822cf8878b8841c1cdffe"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_erosion_20261014_probe01\\replay\\manifest.json",
+      "size": 4049,
+      "sha256": "db4481d0aada0ee1dcb80ed0304a2c10740cb083b13795471a3bdd47986b9403"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_erosion_20261014_probe01\\analysis.json",
+      "size": 5057,
+      "sha256": "c9a9d2ae28b990bdec21fbf8b3a5fdb920230602df76dc783c26122e1ce71e1b"
+    }
+  ],
+  "upstream_wave_evidence": "D:\\godot\\project\\sandcastle\\test_output\\test1_water_motion\\analysis_v1\\e1537\\instructions_hex.txt",
+  "classification": "instructions and captured constants C3; erosion semantics C2; all standalone visual sand meshes C0",
+  "availability": "raw object, compiled DXBC, derived disassembly, selected complete water/ground buffers and constants available locally; originals unchanged"
+}

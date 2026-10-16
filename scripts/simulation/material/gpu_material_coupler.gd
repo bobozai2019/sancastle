@@ -30,8 +30,8 @@ const COMPACTION_REPOSE_GAIN := 0.3
 ## that a 30-cell pile settles in a few seconds rather than a minute.
 const RELAX_RATE_PER_S := 15.0
 const MIN_DROP_M := 0.0005
-## Same dry threshold the erosion pass uses, so "wet" means the same thing in
-## both the strength curve and the wetness curve.
+## Same wet/dry boundary as the erosion pass; material strength affects slope
+## relaxation, while sediment exchange uses the competitor capacity rule.
 const DRY_DEPTH_M := 0.001
 
 var solver: SandcastleGpuShallowSolver
@@ -141,6 +141,8 @@ func dispatch_after_erosion(delta_s: float) -> bool:
 	var spare_index := 1 - live_index
 	if solver.profile_passes:
 		rd.capture_timestamp("sandcastle_material_start")
+	# Resource access changes between dependent stages require separate lists.
+	# A single list cannot track the same image/buffer as both read and read-write.
 	var list := rd.compute_list_begin()
 	rd.compute_list_bind_compute_pipeline(list, step_pipeline)
 	rd.compute_list_bind_uniform_set(list, step_sets[live_index], 0)
@@ -149,6 +151,8 @@ func dispatch_after_erosion(delta_s: float) -> bool:
 		RESIDUAL_WETNESS, SOAK_DEPTH_M, DRY_DEPTH_M,
 		COMPACT_RATE_PER_S]).to_byte_array(), 32)
 	rd.compute_list_dispatch(list, solver.grid_size / 8, solver.grid_size / 8, 1)
+	rd.compute_list_end()
+	list = rd.compute_list_begin()
 
 	rd.compute_list_bind_compute_pipeline(list, slope_pipeline)
 	rd.compute_list_bind_uniform_set(list, slope_sets[live_index], 0)
@@ -157,6 +161,8 @@ func dispatch_after_erosion(delta_s: float) -> bool:
 		WET_REPOSE_TAN, COMPACTION_REPOSE_GAIN, MIN_DROP_M,
 		clampf(cohesion_yield_height_m, 0.0, 2.0)]).to_byte_array(), 32)
 	rd.compute_list_dispatch(list, solver.grid_size / 8, solver.grid_size / 8, 1)
+	rd.compute_list_end()
+	list = rd.compute_list_begin()
 
 	rd.compute_list_bind_compute_pipeline(list, commit_pipeline)
 	rd.compute_list_bind_uniform_set(list, commit_sets[live_index], 0)

@@ -1,7 +1,7 @@
 extends Node3D
 
 const GPU_SCENE := preload("res://scenes/gpu_water_preview.tscn")
-const CPU_SCENE := preload("res://scenes/cpu_reference.tscn")
+const CPU_SCENE_PATH := "res://scenes/cpu_reference.tscn"
 const CheckpointStore := preload("res://scripts/simulation/checkpoint_store.gd")
 
 var active_scene: Node3D
@@ -254,12 +254,21 @@ func _abort_gpu_history_replay(message: String) -> void:
 func _set_backend(use_gpu: bool) -> void:
 	if staging_scene != null:
 		return
+	# The legacy CPU scene was retired during cleanup. Keep the current GPU
+	# scene alive if an old shortcut still requests the removed backend.
+	if not use_gpu and not ResourceLoader.exists(CPU_SCENE_PATH):
+		mode_label.text = "旧 CPU 参考场景已清理，继续使用 GPU 场景"
+		return
+	var next_scene: PackedScene = GPU_SCENE if use_gpu else load(CPU_SCENE_PATH)
+	if next_scene == null:
+		mode_label.text = "目标场景加载失败，当前场景保留"
+		return
 	var new_generation := _next_generation()
 	if active_scene != null:
 		remove_child(active_scene)
 		active_scene.queue_free()
 	gpu_active = use_gpu
-	active_scene = (GPU_SCENE if gpu_active else CPU_SCENE).instantiate()
+	active_scene = next_scene.instantiate()
 	active_scene.name = "GpuProduction" if gpu_active else "CpuReference"
 	if gpu_active:
 		active_scene.preset_index = selected_preset

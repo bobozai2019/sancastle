@@ -37,7 +37,9 @@ func _begin() -> void:
 			var i: int = domain.index(x, z)
 			domain.water[i] = 0.45 if x < GRID / 2 else 0.10
 			domain.sand[i] = 0.08 if x < GRID / 2 else 0.0
-			domain.sediment[i] = 0.015 if x < GRID / 2 else 0.010 if x >= 48 else 0.0
+			# Dilute incoming load leaves capacity to erode; the downstream reach
+			# stays overloaded. The old 0.015 load saturates the new capacity.
+			domain.sediment[i] = 0.000015 if x < GRID / 2 else 0.010 if x >= 48 else 0.0
 			domain.wetness[i] = 0.2
 			domain.compaction[i] = 0.1
 	RenderingServer.call_on_render_thread(_render_run)

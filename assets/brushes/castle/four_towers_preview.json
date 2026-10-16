@@ -1,0 +1,13 @@
+{
+  "role": "derived_preview_texture",
+  "source": "assets\\brushes\\castle\\four_towers_v1.rgba32f",
+  "source_sha256": "42f4654b2a40688fdfb936a790c1c08f0d2f4efbe6d1aa3bef91f2598089e833",
+  "output": "assets\\brushes\\castle\\four_towers_preview.tres",
+  "output_bytes": 247167,
+  "output_sha256": "51e5d6365711adaf4a43a88625417ac904b1f789775dd155bfc1d30f0fa149bc",
+  "generator": "tests\\shape_brushes\\bake_castle_preview.gd",
+  "generator_sha256": "051a3d12f2632b2a65ec3861746a16877fbbdd772518837d089b55e879251dae",
+  "engine": "4.7.beta.custom_build.dff2b9bb6",
+  "command": "godot.exe --headless --path . --script res://tests/shape_brushes/bake_castle_preview.gd",
+  "verification": "ui 20261014_085320_ui_84545d1b preview_same_template_bytes exact RGBAF bytes"
+}

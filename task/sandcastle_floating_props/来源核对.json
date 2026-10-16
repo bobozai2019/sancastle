@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-15",
+  "role": "planning_source_snapshot",
+  "git_head": "dffe50e26280d55ef825dd52fae677a4ad599cd3",
+  "workspace_has_preexisting_uncommitted_changes": true,
+  "competitor_index": "docs/competitor/floating_props_evidence_20261015.json",
+  "project_sources": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\AGENTS.md",
+      "available": true,
+      "bytes": 8069,
+      "sha256": "5ebd41cf8d685aad4df97052bd5af10e68a21961a83cf7d7a9f9759384a8d38e"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\project.godot",
+      "available": true,
+      "bytes": 2074,
+      "sha256": "b68d35517766c5f383a7195389dac848805f1480805284252905d881501352bb"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scenes\\main.tscn",
+      "available": true,
+      "bytes": 11427,
+      "sha256": "a12b654f5e38000c153ca84148a601003b7aa64574c4bfbf2947d1c53b5b4d81"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scenes\\playable\\test1_capture.tscn",
+      "available": true,
+      "bytes": 506,
+      "sha256": "400df22caf0bc0657cd9ac53a075bf30f90d2a2f2ef57fc0ce21abfed9f53921"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scenes\\playable\\test1_backwash.tscn",
+      "available": true,
+      "bytes": 231,
+      "sha256": "c0f5308c933fb6b04447cabc778176d0038c71587b18caaeec8b07106ac59f80"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\beach\\gravel_playable_entry.gd",
+      "available": true,
+      "bytes": 11550,
+      "sha256": "6b93d1bf0b2f63bf84e5429bce14c8d92cfac59e574d9884629499ee26b9ea19"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\beach\\shape_brush_playable_entry.gd",
+      "available": true,
+      "bytes": 14920,
+      "sha256": "a3f7fcec959686ee3490a7147ecd2449db1c3014ed04813cb5279e6e0795ff6c"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\beach\\beach_playable_entry.gd",
+      "available": true,
+      "bytes": 2231,
+      "sha256": "0048150d9d8c4489a37af15ea8296145ec43397912484c43732aba02e5b0337d"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\beach\\beach_gpu_entry.gd",
+      "available": true,
+      "bytes": 15141,
+      "sha256": "4501fee9b256a6b517529f13b2eb03022b6727590a75f62bfad67288a34e7184"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\beach\\beach_checkpoint_entry.gd",
+      "available": true,
+      "bytes": 7952,
+      "sha256": "596b27e55b54a5d741f263be71dba993edd5597d5337aef1e67c55ea036b628d"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\beach\\beach_recovery_entry.gd",
+      "available": true,
+      "bytes": 27135,
+      "sha256": "1c935ff47ef6cf3cf9feed27e99e86338cef6f45465af8e51db3b8a3e176feb8"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\beach\\beach_scene_service.gd",
+      "available": true,
+      "bytes": 7414,
+      "sha256": "aee6c4006b526d0129200260004c61599236899f3b34db02b10fed6dba64b688"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\visual\\gravel_checkpoint_codec.gd",
+      "available": true,
+      "bytes": 3534,
+      "sha256": "e86467ba2a9afdffca19d913e7f196ce7cb8ad16d568cebd3d45b5fd12ae7dd5"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\visual\\gpu_gravel_field.gd",
+      "available": true,
+      "bytes": 11165,
+      "sha256": "17463b39c93c16280ee0038d2134e33085d939ca3ae6c6404795c26fe8b5d2a6"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\simulation\\checkpoint_store.gd",
+      "available": true,
+      "bytes": 14855,
+      "sha256": "cab0e52ee89bcd9fd08bf7265dd7b952dec2ba319e6c884796ac2ac9e32a459e"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\simulation\\edit_validation\\beach_restore_bundle.gd",
+      "available": true,
+      "bytes": 5634,
+      "sha256": "82eb4ae56d28300cc0e6d21a8024e88a4c66424f7eff080f0b3f3cbc251e37f0"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\simulation\\brushes\\brush_checkpoint_codec.gd",
+      "available": true,
+      "bytes": 8640,
+      "sha256": "40325229c0662d28c3d2b5d2826910b80a4d82da95629352b6484515e7858e3d"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\collision\\gpu_collision_proxy.gd",
+      "available": true,
+      "bytes": 20103,
+      "sha256": "e82fbdfffa7d8988b0fb03e870407e94eb4e374d7346246efd59d332f4618484"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\simulation\\edit_validation\\collision_proxy.gd",
+      "available": true,
+      "bytes": 2184,
+      "sha256": "62f5248f3e9df598138f61188d2fd44e791b6fb32155156d5ad90f70015c7be4"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\simulation\\gpu_shallow_solver.gd",
+      "available": true,
+      "bytes": 22285,
+      "sha256": "ada3029ee6bf71d185988a1587c8e71e8b54226e97503a9fe076e36e53058aab"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\tests\\visual_water_alignment\\prototypes\\reference_preview.gd",
+      "available": true,
+      "bytes": 126356,
+      "sha256": "e49adca0fa10a999e33fc8989c6a3cb4207bbffb5a40cbc7a60e6f6e8e9abe24"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\task\\sandcastle_gpu_gravel\\验收\\G5_交付.md",
+      "available": true,
+      "bytes": 7425,
+      "sha256": "052fca595e6c258f993206c053b4266b7884e9121995c0d48a70018abb30142b"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\task\\sandcastle_shape_brushes\\收尾记录.md",
+      "available": true,
+      "bytes": 3991,
+      "sha256": "1132ef8f3faa77308ef3996a661284c6d577e9e2a0e51287a79f54b06fa7c093"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\task\\sandcastle_physics_threading\\执行状态.md",
+      "available": true,
+      "bytes": 8052,
+      "sha256": "745fa749dc86c487f3a816715ffc2a6d0dc02ffbdc632c871ae692aecbd86fa1"
+    }
+  ],
+  "observations": [
+    "main now uses gravel_playable_entry extending shape_brush_playable_entry",
+    "gravel task G5 delivered 6/6; no old progress counted for props",
+    "current edit v4/native v2 shape-brush state must be preserved",
+    "gravel callback assigns entire visual_extensions dictionary",
+    "configuration signature includes runtime source identities; exact legacy mapping needed",
+    "chunk collision published revisions exist; prepare threading candidate defaults off",
+    "water SIM_DELTA=1/30; actual Jolt step clock coupling still to be validated"
+  ],
+  "limits": [
+    "Source review only, no new Godot launch or physics/runtime validation.",
+    "Re-read affected files and active locks before T00 implementation.",
+    "Existing shape strict continuation failures remain separate."
+  ]
+}

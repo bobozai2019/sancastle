@@ -1,0 +1,157 @@
+{
+  "role": "documentation_source_snapshot",
+  "scope": "Current sand implementation wiring and existing report boundaries; no new runtime or performance verification",
+  "git_head": "dffe50e26280d55ef825dd52fae677a4ad599cd3",
+  "document_targets": [
+    "docs/README.md",
+    "docs/当前项目技术方案.md",
+    "docs/主场景操作.md",
+    "docs/knowledge/README.md",
+    "docs/knowledge/water_sand/ADR_形状刷子_v2.md"
+  ],
+  "schema_version": 1,
+  "sources": [
+    {
+      "sha256": "b68d35517766c5f383a7195389dac848805f1480805284252905d881501352bb",
+      "path": "project.godot",
+      "bytes": 2074
+    },
+    {
+      "sha256": "a12b654f5e38000c153ca84148a601003b7aa64574c4bfbf2947d1c53b5b4d81",
+      "path": "scenes/main.tscn",
+      "bytes": 11427
+    },
+    {
+      "sha256": "400df22caf0bc0657cd9ac53a075bf30f90d2a2f2ef57fc0ce21abfed9f53921",
+      "path": "scenes/playable/test1_capture.tscn",
+      "bytes": 506
+    },
+    {
+      "sha256": "c0f5308c933fb6b04447cabc778176d0038c71587b18caaeec8b07106ac59f80",
+      "path": "scenes/playable/test1_backwash.tscn",
+      "bytes": 231
+    },
+    {
+      "sha256": "6b93d1bf0b2f63bf84e5429bce14c8d92cfac59e574d9884629499ee26b9ea19",
+      "path": "scripts/beach/gravel_playable_entry.gd",
+      "bytes": 11550
+    },
+    {
+      "sha256": "a3f7fcec959686ee3490a7147ecd2449db1c3014ed04813cb5279e6e0795ff6c",
+      "path": "scripts/beach/shape_brush_playable_entry.gd",
+      "bytes": 14920
+    },
+    {
+      "sha256": "557a85855f789211818539ded8f0b104cee008345fa2872a941ce5d77cf3dac1",
+      "path": "scripts/beach/shape_brush_entry.gd",
+      "bytes": 13131
+    },
+    {
+      "sha256": "4501fee9b256a6b517529f13b2eb03022b6727590a75f62bfad67288a34e7184",
+      "path": "scripts/beach/beach_gpu_entry.gd",
+      "bytes": 15141
+    },
+    {
+      "sha256": "1c935ff47ef6cf3cf9feed27e99e86338cef6f45465af8e51db3b8a3e176feb8",
+      "path": "scripts/beach/beach_recovery_entry.gd",
+      "bytes": 27135
+    },
+    {
+      "sha256": "006e91856bd21ad9b002ac35ba3d4a3db43395c042e68c2ba6b4910acefd757e",
+      "path": "scripts/beach/release_config.gd",
+      "bytes": 448
+    },
+    {
+      "sha256": "f08f39aa7b80fc99a6756ff195ae1481ab8d8bdb7a5a3efe6514eb9c23c77c7b",
+      "path": "scripts/sand/brushes/brush_command_queue.gd",
+      "bytes": 1285
+    },
+    {
+      "sha256": "c85455ec5833372f205021bc6ecfc5079862f354669b8597d3d9aaaf8876af8a",
+      "path": "scripts/simulation/brushes/brush_gpu.gd",
+      "bytes": 15060
+    },
+    {
+      "sha256": "9e58c174cdc4cfcb961c547d69cc896440ca62a999d1b3fe8855a9f368b260a9",
+      "path": "scripts/simulation/brushes/brush_scheduler.gd",
+      "bytes": 1763
+    },
+    {
+      "sha256": "962f6517c069af3eaebccbd9a5becaccf9888a40c3b74653c6c4f57a60adbcc8",
+      "path": "scripts/simulation/brushes/brush_material_transaction.gd",
+      "bytes": 5178
+    },
+    {
+      "sha256": "744e89495bb88958c2a056945f47fd94b44a7758a467e59d9c3b2c66a7ebb56e",
+      "path": "scripts/simulation/brushes/brush_water_transaction.gd",
+      "bytes": 4477
+    },
+    {
+      "sha256": "1296412876a9080dbe4dae06a77431a2423dafa294539c9d2b1e1d36e6e77d6f",
+      "path": "scripts/simulation/edit_validation/gpu_water_editor.gd",
+      "bytes": 6638
+    },
+    {
+      "sha256": "3786237bafb640995bfabb66ef7a758bf9ceb892681e32a7df56399f136162d6",
+      "path": "scripts/simulation/edit_validation/staged_slope_coupler.gd",
+      "bytes": 5507
+    },
+    {
+      "sha256": "82eb4ae56d28300cc0e6d21a8024e88a4c66424f7eff080f0b3f3cbc251e37f0",
+      "path": "scripts/simulation/edit_validation/beach_restore_bundle.gd",
+      "bytes": 5634
+    },
+    {
+      "sha256": "e82fbdfffa7d8988b0fb03e870407e94eb4e374d7346246efd59d332f4618484",
+      "path": "scripts/collision/gpu_collision_proxy.gd",
+      "bytes": 20103
+    },
+    {
+      "sha256": "2794b89aee803e86d3f2a3baeee15e58d82b2ac7906bafd477b172053dbde953",
+      "path": "shaders/simulation/brushes/prepare.glsl",
+      "bytes": 5494
+    },
+    {
+      "sha256": "1132ef8f3faa77308ef3996a661284c6d577e9e2a0e51287a79f54b06fa7c093",
+      "path": "task/sandcastle_shape_brushes/收尾记录.md",
+      "bytes": 3991
+    },
+    {
+      "sha256": "27ac996edfe4e38bb93d8246e148b1ac5309df569bfa863c0f4bdd8fd5aeb989",
+      "path": "task/sandcastle_shape_brushes/执行状态.md",
+      "bytes": 28916
+    },
+    {
+      "sha256": "38a3557a1efbb6bb7be2c3217e03f8f9c6b629ba4e908d28c43e72bc8022aa90",
+      "path": "task/sandcastle_shape_brushes/验收/G5_固定标高放置.md",
+      "bytes": 4541
+    },
+    {
+      "sha256": "03759d33ccb3aa241ebfab6f909437d2f4c1848a30cd51ecb40c0067950a6084",
+      "path": "task/sandcastle_shape_brushes/验收/G9_最终交付.md",
+      "bytes": 6318
+    },
+    {
+      "sha256": "af07e998d40353f8d94346dccdcdf43820686f68d184380645385daa2ebffc04",
+      "path": "task/sandcastle_shape_brushes/验收/G9_性能收尾.md",
+      "bytes": 3661
+    },
+    {
+      "path": "scripts/simulation/brushes/brush_material_solver.gd",
+      "bytes": 5243,
+      "sha256": "3cd273386083d9e69dc2d8543e9b9bb592e7a4716a21d3e5775f717b0685fecb"
+    },
+    {
+      "path": "scripts/simulation/brushes/brush_material_coupler.gd",
+      "bytes": 11243,
+      "sha256": "f2d7a6f51319ce368b6297e4bc132f75ce76f1a92200b1902b710fb87fd6b687"
+    }
+  ],
+  "preserved_status": [
+    "Shape brushes user-approved functionality closed; original technical 42/50 and G4/G8/G9 failures retained",
+    "Performance campaign stopped after 3/3 rounds; no rerun",
+    "Castle fixed-world-height follow-up verified separately",
+    "Parent test1 RG4 remains paused and not passed"
+  ],
+  "date": "2026-10-15"
+}

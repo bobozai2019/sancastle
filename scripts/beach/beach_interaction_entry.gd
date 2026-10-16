@@ -5,7 +5,7 @@ var input_scheduler
 var domain: SandWaterDomain:
 	get: return shadow_domain
 var busy: bool:
-	get: return gpu_busy or tick_pending or checkpoint_capture_pending or sand_prefetch_in_flight or not shadow_sync_reason.is_empty()
+	get: return gpu_busy or tick_pending or frame_collision_pending() or checkpoint_capture_pending or sand_prefetch_in_flight or not shadow_sync_reason.is_empty()
 var closed: bool:
 	get: return closing
 var settle_us := -1
@@ -49,11 +49,27 @@ func _on_trigger_wave_pressed() -> void:
 	manual_wave_message=("已触发 %.2f m 波浪%s" % [manual_wave_amplitude_m,"，继续后推进" if not playing else ""]) if result.ok else "触发失败，请检查波幅或稍后重试"
 	_update_manual_wave_ui()
 
+@onready var manual_wave_button: Button = get_node_or_null("Interface/EditPanel/Margin/Controls/TriggerWave")
+@onready var manual_wave_label: Label = get_node_or_null("Interface/EditPanel/Margin/Controls/WaveStatus")
+@onready var manual_edit_panel: Control = get_node_or_null("Interface/EditPanel")
+var manual_wave_ui_available := false
+var manual_wave_ui_message := ""
+var manual_wave_ui_initialized := false
+
+func _sync_manual_wave_ui() -> void:
+	var available := _manual_wave_available()
+	if not manual_wave_ui_initialized or available != manual_wave_ui_available or manual_wave_message != manual_wave_ui_message:
+		_update_manual_wave_ui()
+
 func _update_manual_wave_ui() -> void:
-	var button:=get_node_or_null("Interface/EditPanel/Margin/Controls/TriggerWave")
-	if button!=null: button.disabled=not _manual_wave_available()
-	var message:=get_node_or_null("Interface/EditPanel/Margin/Controls/WaveStatus")
-	if message!=null: message.text=manual_wave_message
+	manual_wave_ui_available = _manual_wave_available()
+	manual_wave_ui_message = manual_wave_message
+	manual_wave_ui_initialized = true
+	if manual_wave_button != null and manual_wave_button.disabled == manual_wave_ui_available:
+		manual_wave_button.disabled = not manual_wave_ui_available
+	if manual_wave_label != null and manual_wave_label.text != manual_wave_message:
+		manual_wave_label.text = manual_wave_message
+
 
 func _on_dig_amount_changed(value: float) -> void:
 	dig_amount_m3=value
@@ -78,13 +94,16 @@ func _input(event: InputEvent) -> void:
 
 func _update_status() -> void:
 	super._update_status()
-	_update_manual_wave_ui()
-	var panel:=get_node_or_null("Interface/EditPanel")
-	if panel!=null: panel.visible=not hide_hud
-	if status_label!=null:
-		status_label.text=status_label.text.replace("左键挖沙 右键放沙", "左键使用选定工具 右键转向 WASD移动").replace("F5 玩家视角", "F5 自由视角").replace("；暂停后 Z/Y 撤销/重做。", "。")
-		if unrestricted_sand_tools:
-			status_label.text = status_label.text.replace("  桶 %.4f m³" % shadow_domain.tool_inventory_m3, "").replace("连桶 ", "合计 ")
+	_sync_manual_wave_ui()
+	if manual_edit_panel != null and manual_edit_panel.visible == hide_hud:
+		manual_edit_panel.visible = not hide_hud
+
+func _format_status_text(text: String) -> String:
+	text = super._format_status_text(text).replace("左键挖沙 右键放沙", "左键使用选定工具 右键转向 WASD移动").replace("F5 玩家视角", "F5 自由视角").replace("；暂停后 Z/Y 撤销/重做。", "。")
+	if unrestricted_sand_tools:
+		text = text.replace("  桶 %.4f m³" % shadow_domain.tool_inventory_m3, "").replace("连桶 ", "合计 ")
+	return text
+
 
 func _ready() -> void:
 	super._ready()
@@ -106,8 +125,8 @@ func _close_window() -> void:
 	await shutdown();get_tree().quit()
 
 func _process(delta: float) -> void:
-	_update_manual_wave_ui()
-	if not shutdown_requested and not input_running and not busy and command_queue != null and not command_queue.pending.is_empty() and command_queue.pending[0].sim_tick<=completed_ticks:
+	_sync_manual_wave_ui()
+	if not shutdown_requested and not input_running and (not busy or can_submit_frame_batch()) and command_queue != null and not command_queue.pending.is_empty() and command_queue.pending[0].sim_tick<=completed_ticks:
 		if playing: accumulator=minf(accumulator+delta,SIM_DELTA*4.0)
 		input_running=true;call_deferred("_drain_input");return
 	super._process(delta)
@@ -142,14 +161,14 @@ func _unhandled_input(event: InputEvent) -> void:
 		get_viewport().gui_release_focus()
 		gpu_brush=selected_sand_tool
 		var hit:=pick(event.position)
-		if hit.is_empty() or not _pick_current(hit): gpu_brush=&"";return
+		if hit.is_empty() or not _pick_current(hit,edit_frame_pipeline_enabled and gpu_brush in [&"remove_sand",&"place_sand"]): gpu_brush=&"";return
 		if _submit_gpu_input(gpu_brush,hit.position,hit.position,&"circle",_brush_amount(gpu_brush)): last_input_hit=hit.position
 		else: gpu_brush=&""
 	elif event is InputEventMouseMotion and not gpu_brush.is_empty():
 		if get_viewport().gui_get_hovered_control()!=null: gpu_brush=&"";return
 		if shutdown_requested or closing or not ready_for_ticks: return
 		var hit:=pick(event.position)
-		if hit.is_empty() or not _pick_current(hit): return
+		if hit.is_empty() or not _pick_current(hit,edit_frame_pipeline_enabled and gpu_brush in [&"remove_sand",&"place_sand"]): return
 		var position: Vector3=hit.position
 		var distance:=last_input_hit.distance_to(position)
 		if distance>=0.025 and _submit_gpu_input(gpu_brush,last_input_hit,position,&"swept_segment",_brush_amount(gpu_brush,distance)): last_input_hit=position
@@ -164,18 +183,23 @@ func pick(screen: Vector2) -> Dictionary:
 	var origin:=camera.project_ray_origin(screen)
 	return get_world_3d().direct_space_state.intersect_ray(PhysicsRayQueryParameters3D.create(origin,origin+camera.project_ray_normal(screen)*100.0))
 
-func _pick_current(hit: Dictionary) -> bool:
+func _pick_current(hit: Dictionary, allow_completed_collision: bool=false) -> bool:
 	var p: Vector3=hit.position
 	if hit.get("collider")!=collision_proxy.body or p.x< -16 or p.x>=16 or p.z< -16 or p.z>=16: return false
 	var x:=clampi(int((p.x+16)/0.125),0,255);var z:=clampi(int((p.z+16)/0.125),0,255)
 	var chunk: int=(z/32)*8+x/32
 	var current: bool=int(collision_proxy.applied_revisions.get(chunk,-1))>=int(collision_needed.get(chunk,0))
+	if allow_completed_collision:return true
 	if not current: _record_diagnostic(input_rejections, {"error":"collision_pending","chunk":chunk,"at_us":Time.get_ticks_usec()})
 	return current
 
 func _submit_gpu_input(kind: StringName, start: Vector3, end: Vector3, shape: StringName, amount: float) -> bool:
 	input_serial=maxi(input_serial,command_queue.last_command_id)+1
 	var command: Dictionary={"domain_id":domain.domain_id,"generation":generation,"sim_tick":completed_ticks,"command_id":input_serial,"kind":kind,"shape":shape,"transform":{"position_m":start,"end_position_m":end},"radius_m":0.3,"strength":1.0,"amount_m3":amount,"seed":101}
+	if kind == &"suspended_sand":
+		command.kind = &"place_sand"
+		command.sand_destination = "suspended_v1"
+		command.radius_m = 0.75
 	var error: StringName=input_scheduler.submit(command)
 	_record_diagnostic(input_events, {"command":command.duplicate(true),"input_us":Time.get_ticks_usec(),"pick":"PhysicsRayQueryParameters3D","admission_error":String(error),"busy_at_capture":busy,"configuration":{"policy":water_policy,"speed":signed_speed_m_s}})
 	if not error.is_empty(): return false
@@ -184,9 +208,11 @@ func _submit_gpu_input(kind: StringName, start: Vector3, end: Vector3, shape: St
 
 func _drain_input() -> void:
 	while not closing and last_error.is_empty():
-		if busy: await get_tree().process_frame;continue
+		if busy and not can_submit_frame_batch(): await get_tree().process_frame;continue
 		await input_scheduler.drain_due()
 		if command_queue.pending.is_empty() or command_queue.pending[0].sim_tick>completed_ticks: break
+		# Batch recording already crossed a frame boundary while awaiting its
+		# readback. Do not add another frame before admitting the next snapshot.
 	input_results=input_scheduler.terminal.duplicate(true)
 	input_running=false
 	_update_status()

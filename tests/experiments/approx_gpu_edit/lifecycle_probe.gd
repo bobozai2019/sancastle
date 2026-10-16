@@ -5,9 +5,11 @@ var run_id := "lifecycle"
 var errors: Array[String] = []
 var started_us := 0
 var report := {}
+var report_output := ""
 
 func _initialize() -> void:
 	for arg in OS.get_cmdline_user_args():
+		if arg.begins_with("--output="): report_output=arg.trim_prefix("--output=")
 		if arg.begins_with("--run-id="): run_id = arg.get_slice("=",1)
 	started_us = Time.get_ticks_usec()
 	call_deferred("run")
@@ -60,5 +62,8 @@ func run() -> void:
 	quit(0 if errors.is_empty() else 1)
 
 func write_report() -> void:
-	var file := FileAccess.open("res://test_output/approx_gpu_edit_trial/"+run_id+"/result.json",FileAccess.WRITE)
+	var destination: String=report_output if not report_output.is_empty() else "res://test_output/approx_gpu_edit_trial/"+run_id
+	DirAccess.make_dir_recursive_absolute(destination)
+	report["pass"]=errors.is_empty()
+	var file := FileAccess.open(destination.path_join("result.json"),FileAccess.WRITE)
 	file.store_string(JSON.stringify(report,"\t"));file.close()

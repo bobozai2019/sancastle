@@ -109,7 +109,7 @@ func _supports_water_policy(policy: int) -> bool:
 
 func _dispatch_extra_candidate(data: PackedByteArray) -> void:
 	active_policy = data.decode_u32(84)
-	water_active = active_policy > 0
+	water_active = active_policy > 0 and not suspended_edit
 	if water_active:
 		_water_dispatch(0)
 		if fast_full_wet and active_policy != 2: _water_dispatch(7)

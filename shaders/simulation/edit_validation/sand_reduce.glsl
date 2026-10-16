@@ -39,7 +39,7 @@ void main() {
         if(c[8]!=s[10]||c[9]!=s[11]) { reject(7u,8u); return; }
         for(uint j=12u;j<=19u;j++) if(!finite(uintBitsToFloat(c[j]))) { reject(1u,1u); return; }
         float radius=uintBitsToFloat(c[16]), strength=uintBitsToFloat(c[17]), amount=uintBitsToFloat(c[18]);
-        if(radius<=0.0||radius>4.0||strength<0.0||strength>1.0||amount<=0.0||c[10]>1u||c[11]>1u||c[21]>3u) { reject(1u,0u); return; }
+        if(radius<=0.0||radius>4.0||strength<0.0||strength>1.0||amount<=0.0||c[10]>1u||c[11]>1u||c[21]>3u||c[28]>1u||(c[28]==1u&&c[10]!=1u)) { reject(1u,0u); return; }
         if(c[21]>=2u&&!finite(uintBitsToFloat(c[27]))) { reject(1u,1u);return; }
         if(c[21]>=2u&&abs(uintBitsToFloat(c[27]))>1.0) { reject(1u,0u);return; }
         float request=amount*strength;

@@ -75,6 +75,11 @@ func _configure_scene() -> void:
 		water_material.set_shader_parameter("natural_layer%d" % i, Vector4(layer.scale_per_m, layer.speed_m_s, layer.gain, 0.0))
 		water_material.set_shader_parameter("natural_direction%d" % i, Vector2(layer.direction_xz[0], layer.direction_xz[1]))
 
+func set_visual_time(seconds: float) -> void:
+	super.set_visual_time(seconds)
+	if not effective_candidate.is_empty():
+		effective_candidate["visual_time_s"] = seconds
+
 func _seal_test1_effective_profile() -> void:
 	super._seal_test1_effective_profile()
 	var n: Dictionary = candidate_profile.normal_detail

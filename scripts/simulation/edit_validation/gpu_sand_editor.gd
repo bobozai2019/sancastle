@@ -19,6 +19,7 @@ var active_ticket := -1
 var inject_receipt_failure_once := false
 var local_dispatch := false
 var edit_window := Rect2i()
+var suspended_edit := false
 
 func initialize(p_rd: RenderingDevice, domain: SandWaterDomain,
 		edge_spirv: RDShaderSPIRV, drain_spirv: RDShaderSPIRV,
@@ -44,11 +45,15 @@ func initialize(p_rd: RenderingDevice, domain: SandWaterDomain,
 		edit_shaders.append(shader)
 		edit_pipelines.append(rd.compute_pipeline_create(shader))
 	# A set for each physical ping-pong index when reading sand.
-	edit_sets.append([_make_edit_set(0, {0: command_buffer, 1: cells_buffer}, {4: textures.sand[0]}),
-		_make_edit_set(0, {0: command_buffer, 1: cells_buffer}, {4: textures.sand[1]})])
+	var prepares := []
+	for field in ["sand", "sediment"]:
+		for index in 2:
+			prepares.append(_make_edit_set(0, {0: command_buffer, 1: cells_buffer}, {4: textures[field][index], 5: textures.water[index], 6: textures.obstacle}))
+	edit_sets.append(prepares)
 	edit_sets.append([_make_edit_set(1, {0: command_buffer, 1: cells_buffer, 2: control_buffer, 3: receipt_buffer}, {})])
 	edit_sets.append([_make_edit_set(2, {0: command_buffer, 1: cells_buffer, 2: control_buffer, 3: receipt_buffer}, {})])
-	edit_sets.append([_make_edit_set(3, {0: command_buffer, 1: cells_buffer, 3: receipt_buffer}, {4: textures.sand[0], 5: textures.sand[1]})])
+	edit_sets.append([_make_edit_set(3, {0: command_buffer, 1: cells_buffer, 3: receipt_buffer}, {4: textures.sand[0], 5: textures.sand[1]}),
+		_make_edit_set(3, {0: command_buffer, 1: cells_buffer, 3: receipt_buffer}, {4: textures.sediment[0], 5: textures.sediment[1]})])
 	edit_sets.append([_make_edit_set(4, {}, {4: textures.sand[0], 6: published_sand}),
 		_make_edit_set(4, {}, {4: textures.sand[1], 6: published_sand})])
 	for sets in edit_sets:
@@ -78,7 +83,11 @@ func _dispatch_edit(index: int, mode: int = 0) -> void:
 	if profile_passes: rd.capture_timestamp(mark + "_start")
 	var list := rd.compute_list_begin()
 	rd.compute_list_bind_compute_pipeline(list, edit_pipelines[index])
-	rd.compute_list_bind_uniform_set(list, edit_sets[index][current_index if index in [0, 4] else 0], 0)
+	var slot := current_index if index in [0, 4] else 0
+	if suspended_edit:
+		if index == 0: slot += 2
+		if index == 3: slot = 1
+	rd.compute_list_bind_uniform_set(list, edit_sets[index][slot], 0)
 	if index != 4:
 		rd.compute_list_set_push_constant(list, PackedInt32Array([mode, edit_window.position.x,
 			edit_window.position.y, edit_window.size.x, edit_window.size.y, 0, 0, 0]).to_byte_array(), 32)
@@ -96,6 +105,8 @@ func dispatch_sand_command(data: PackedByteArray, callback: Callable) -> bool:
 		return false
 	if not _supports_water_policy(data.decode_u32(84)):
 		return false
+	if data.decode_u32(112) > 1 or (data.decode_u32(112) == 1 and data.decode_u32(40) != 1): return false
+	suspended_edit = data.decode_u32(112) == 1
 	edit_window = Rect2i(0, 0, grid_size, grid_size)
 	if local_dispatch:
 		var a := Vector2(data.decode_float(48), data.decode_float(52))
@@ -197,6 +208,9 @@ func dispatch_substep(delta: float, ocean_boundary_enabled: bool = false) -> boo
 
 func dispatch_tick_with_cfl(delta: float, tile_bytes: PackedByteArray, revision: int, post_water_substep: Callable = Callable()) -> bool:
 	return false if _writes_locked() else super.dispatch_tick_with_cfl(delta, tile_bytes, revision, post_water_substep)
+
+func dispatch_tick_validated(delta: float, substeps: int, revision: int, post_water_substep: Callable = Callable()) -> bool:
+	return false if _writes_locked() else super.dispatch_tick_validated(delta, substeps, revision, post_water_substep)
 
 func authorize_publication(ticket: int, output_revision: int, token: int) -> bool:
 	# Render-thread bridge calls this only after the matching CPU settlement.

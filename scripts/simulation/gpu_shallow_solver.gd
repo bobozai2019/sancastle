@@ -423,8 +423,14 @@ func dispatch_tick_with_cfl(delta: float, tile_bytes: PackedByteArray, revision:
 		post_water_substep: Callable = Callable()) -> bool:
 	if revision != state_revision:
 		return false
-	var substeps := substeps_from_cfl(delta, tile_bytes)
-	if substeps < 1:
+	return dispatch_tick_validated(delta, substeps_from_cfl(delta, tile_bytes),
+		revision, post_water_substep)
+
+
+## Reuse the validated CFL result for this same revision. No tile scan here.
+func dispatch_tick_validated(delta: float, substeps: int, revision: int,
+		post_water_substep: Callable = Callable()) -> bool:
+	if revision != state_revision or not is_finite(delta) or delta <= 0.0 or substeps < 1:
 		return false
 	if substeps > MAX_SUBSTEPS:
 		overload_events += 1

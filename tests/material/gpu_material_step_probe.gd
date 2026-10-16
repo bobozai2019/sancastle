@@ -7,8 +7,8 @@ extends SceneTree
 ##                  residual once the water is gone, stays inside [0, 1]
 ##   2. slope     — a steep dry pile slumps, settles onto the repose slope and
 ##                  stops, with the sand total unchanged to float precision
-##   3. strength  — the erosion strength curve responds to compaction and wetness
-##                  in the direction sediment_step.glsl assumes
+##   3. exchange  — isolated sediment exchange is independent of compaction and
+##                  wetness, which remain inputs to the material/slope passes
 ##
 ## The mesh is 64² because ADR-010 allows the cheaper development size; the
 ## passes are grid-size agnostic and run at 256² in the preview.
@@ -295,10 +295,8 @@ func _run_slope_case(spirvs: Array[RDShaderSPIRV],
 			closure, 1000000.0 * closure / initial_total])
 
 
-## Case 3: erosion strength curve. sediment_step.glsl scales capacity by
-## 1/strength with strength = mix(0.7, 1.8, compaction) * mix(1.0, 1.25, wetness),
-## so a compacted or wet bed must erode less than a loose dry one under the same
-## forcing.
+## Case 3: competitor exchange does not read wetness or compaction. Isolate
+## sediment from the material pass: identical water forcing must erode equally.
 func _run_strength_case(spirvs: Array[RDShaderSPIRV],
 		material_spirvs: Array[RDShaderSPIRV]) -> void:
 	var loose := _strength_erosion(spirvs, material_spirvs, 0.0, 0.0)
@@ -312,13 +310,13 @@ func _run_strength_case(spirvs: Array[RDShaderSPIRV],
 		return
 	if loose <= 0.0:
 		failures.append("strength case produced no erosion at all: %.9f" % loose)
-	elif compacted >= loose:
-		failures.append("compaction did not reduce erosion: loose=%.9f compacted=%.9f" % [
+	elif absf(compacted-loose)>0.0000001:
+		failures.append("compaction changed isolated exchange: loose=%.9f compacted=%.9f" % [
 			loose, compacted])
-	elif wet >= loose:
-		failures.append("wetness did not reduce erosion: loose=%.9f wet=%.9f" % [loose, wet])
+	elif absf(wet-loose)>0.0000001:
+		failures.append("wetness changed isolated exchange: loose=%.9f wet=%.9f" % [loose, wet])
 	else:
-		lines.append("STRENGTH_OK loose_m=%.9f compacted_m=%.9f wet_m=%.9f" % [
+		lines.append("EXCHANGE_MATERIAL_ISOLATION_OK loose_m=%.9f compacted_m=%.9f wet_m=%.9f" % [
 			loose, compacted, wet])
 
 

@@ -38,6 +38,8 @@ static func encode(command: Dictionary, ticket: int, revision: int,
 		data.encode_u32(92, data.decode_u32(92) + (1 if available_m3 < 0.0 else -1))
 	data.encode_float(104, DRY_DEPTH)
 	data.encode_float(108, speed_m_s)
+	# Destination extension v1: zero retains the frozen bed-edit behavior.
+	data.encode_u32(112, 1 if command.get("sand_destination", "bed") == "suspended_v1" else 0)
 	return data
 
 static func decode_receipt(data: PackedByteArray) -> Dictionary:
@@ -84,6 +86,10 @@ static func receipt_matches(receipt: Dictionary, ticket: int, command_id: int,
 		(receipt.status != 1 or receipt.output_revision == revision + 1)
 
 static func finite_command(command: Dictionary) -> bool:
+	if command.get("sand_destination", "bed") not in ["bed", "suspended_v1"]:
+		return false
+	if command.get("sand_destination") == "suspended_v1" and command.get("kind") != &"place_sand":
+		return false
 	for key in ["radius_m", "strength", "amount_m3"]:
 		if typeof(command.get(key)) not in [TYPE_FLOAT, TYPE_INT] or not is_finite(float(command[key])):
 			return false

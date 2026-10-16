@@ -1,0 +1,6 @@
+[gd_scene load_steps=3 format=3]
+[ext_resource type="PackedScene" path="res://tests/shape_brushes/checkpoint_v4_lab.tscn" id="1"]
+[ext_resource type="Script" path="res://tests/shape_brushes/water_lab.gd" id="2"]
+[node name="ShapeWaterLab" instance=ExtResource("1")]
+script = ExtResource("2")
+enable_brush_water = true

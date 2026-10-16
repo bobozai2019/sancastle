@@ -38,6 +38,7 @@ static func validate(sidecar: Dictionary) -> StringName:
 		var accounting: String = item.get("sand_accounting", "inventory")
 		if accounting not in ["inventory", "external_v1"] or (accounting == "external_v1" and backend != "gpu"): return &"invalid_sand_accounting"
 		var finite: Dictionary=command.duplicate(false)
+		if command.get("sand_destination") == "suspended_v1" and (backend != "gpu" or accounting != "external_v1"): return &"invalid_suspended_sand_input"
 		if backend=="legacy_cpu" and not finite.has("amount_m3"): finite.amount_m3=0.0
 		var kinds: Array=[&"smooth",&"compact"] if backend=="legacy_cpu" else [&"place_sand",&"remove_sand"]
 		if not Protocol.finite_command(finite) or typeof(command.get("command_id"))!=TYPE_INT or command.command_id<1 or command.command_id>sidecar.highwater_id or typeof(command.get("generation"))!=TYPE_INT or command.generation<1 or command.generation>sidecar.generation or typeof(command.get("sim_tick"))!=TYPE_INT or command.sim_tick<0 or command.sim_tick>sidecar.tick or command.get("kind") not in kinds: return &"invalid_native_command"

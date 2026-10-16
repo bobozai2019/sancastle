@@ -1,0 +1,386 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-15",
+  "scope": "Four buoyancy resource configurations, rigidbody scalar re-decode and selected raw/source-range verification; no game methods or runtime contact/force verification",
+  "result": "PASS",
+  "source_identity": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+      "bytes": 47654400,
+      "sha256": "147030ecf9527a25250238120364eb761390b99688b1812c4ea555b3b04e56a0",
+      "matches": true
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+      "bytes": 8928184,
+      "sha256": "aa4457307746c4552541b6cedd4809fdaccf33eef03964a9e2300de5a09e1606",
+      "matches": true
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+      "bytes": 76135784,
+      "sha256": "6dd7bb6bc7d926fd43c08d22c9c767b7edf531cf11a4a555fcd41830f2f9c721",
+      "matches": true
+    }
+  ],
+  "source_after": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+      "available": true,
+      "bytes": 47654400,
+      "sha256": "147030ecf9527a25250238120364eb761390b99688b1812c4ea555b3b04e56a0"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+      "available": true,
+      "bytes": 8928184,
+      "sha256": "aa4457307746c4552541b6cedd4809fdaccf33eef03964a9e2300de5a09e1606"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+      "available": true,
+      "bytes": 76135784,
+      "sha256": "6dd7bb6bc7d926fd43c08d22c9c767b7edf531cf11a4a555fcd41830f2f9c721"
+    }
+  ],
+  "historical_indices": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\package_v4\\physical_objects.json",
+      "bytes": 6848520,
+      "sha256": "1d39d5d0f146c281cb10318108171976c5d7327171ffa6415e846b21c7f1ff91",
+      "matches": true
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\package_v4\\raw_index.json",
+      "bytes": 1627361,
+      "sha256": "7d83e538b02182cd772be267bc1c74aa8d40260a73b9ae30bf5b0e098c38ef45",
+      "matches": true
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\package_v4\\technical_fields.json",
+      "bytes": 37962,
+      "sha256": "84ef5136b8c06f0c2ce7aa0724031685528921c87493a5687a7ad38c1f225717",
+      "matches": true
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\analysis_v4\\buoyancy_config.json",
+      "bytes": 91179,
+      "sha256": "c71aa712ff94bd3049c12ee78e9499939940eee83a9c54ce8f5ffdec452a2c6c",
+      "matches": true
+    }
+  ],
+  "outputs": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\floating_props_research_20261015\\config_v1\\configuration_check.json",
+      "available": true,
+      "bytes": 30838,
+      "sha256": "c42d3e6651cf578c9e19dbe86b891cab11ba48295867406af8b9833f33a52bb8"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\floating_props_research_20261015\\config_v1\\verify_prop_configuration.py",
+      "available": true,
+      "bytes": 7002,
+      "sha256": "d2957ae5d1c569d0f2ad736d257eb3954c6eb8fe9228660953bb22bb01b824b6"
+    }
+  ],
+  "tool": {
+    "path": "D:\\godot\\project\\sandcastle\\tests\\investigation\\competitor_transport\\verify_prop_configuration.py",
+    "available": true,
+    "bytes": 7002,
+    "sha256": "d2957ae5d1c569d0f2ad736d257eb3954c6eb8fe9228660953bb22bb01b824b6"
+  },
+  "python": "3.13.12",
+  "command": [
+    "D:/godot/project/sandcastle/tests/investigation/competitor_transport/verify_prop_configuration.py",
+    "--root",
+    "D:/godot/project/sandcastle",
+    "--out",
+    "D:/godot/project/sandcastle/test_output/floating_props_research_20261015/config_v1"
+  ],
+  "raw_count": 27,
+  "raw_records": [
+    {
+      "path_id": "10356",
+      "type": "MonoBehaviour",
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+      "offset": 75691248,
+      "bytes": 76,
+      "raw_path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\package_v4\\raw\\sharedassets0.assets_10356.raw",
+      "sha256": "245360db4c5f0dedddf053b1adbba1925eb0423438c3ee920f5a18307dac8cec",
+      "matches_source_range": true
+    },
+    {
+      "path_id": "4967",
+      "type": "Rigidbody",
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+      "offset": 72378816,
+      "bytes": 88,
+      "raw_path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\package_v4\\raw\\sharedassets0.assets_4967.raw",
+      "sha256": "b62fdfa7154a4d5727681530e9348c7951bc7696a48557a19652048d5ddd4a37",
+      "matches_source_range": true
+    },
+    {
+      "path_id": "4036",
+      "type": "Transform",
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+      "offset": 72286448,
+      "bytes": 68,
+      "raw_path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\package_v4\\raw\\sharedassets0.assets_4036.raw",
+      "sha256": "09c61b1f7d06de5aa8db76ad37598df6af7c696ed4df9d420b55d9c3097f8247",
+      "matches_source_range": true
+    },
+    {
+      "path_id": "3817",
+      "type": "Transform",
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+      "offset": 72267408,
+      "bytes": 128,
+      "raw_path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\package_v4\\raw\\sharedassets0.assets_3817.raw",
+      "sha256": "3e868075201d43ad277d2386c7f5b14671bed830ab988e662de09679c4e1ca11",
+      "matches_source_range": true
+    },
+    {
+      "path_id": "3738",
+      "type": "Transform",
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+      "offset": 72260272,
+      "bytes": 68,
+      "raw_path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\package_v4\\raw\\sharedassets0.assets_3738.raw",
+      "sha256": "d03861b66e9ea252800cebb7e9041d39eeddda931645a940b87e363935c3d177",
+      "matches_source_range": true
+    },
+    {
+      "path_id": "5471",
+      "type": "CapsuleCollider",
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+      "offset": 72431632,
+      "bytes": 68,
+      "raw_path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\package_v4\\raw\\sharedassets0.assets_5471.raw",
+      "sha256": "35d8d464036bb3888a24dc2d4e622be4ef0bd1b97aa18a800195a3ce6dc3df70",
+      "matches_source_range": true
+    },
+    {
+      "path_id": "5457",
+      "type": "CapsuleCollider",
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+      "offset": 72430512,
+      "bytes": 68,
+      "raw_path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\package_v4\\raw\\sharedassets0.assets_5457.raw",
+      "sha256": "9cd5aed1713a7f23d896f9754b44684c29118aed0c85c2f30302f66aac0495cc",
+      "matches_source_range": true
+    },
+    {
+      "path_id": "11919",
+      "type": "MonoBehaviour",
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+      "offset": 76026720,
+      "bytes": 88,
+      "raw_path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\package_v4\\raw\\sharedassets0.assets_11919.raw",
+      "sha256": "1e9dfaeb430d7d486b9e35fe1b902c8f989e06c64569c9b0fd05936e57a196d3",
+      "matches_source_range": true
+    },
+    {
+      "path_id": "4982",
+      "type": "Rigidbody",
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+      "offset": 72380256,
+      "bytes": 88,
+      "raw_path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\package_v4\\raw\\sharedassets0.assets_4982.raw",
+      "sha256": "54553b461ef7ade7c06b6408825d3134f57410db3085508eeaec32030fcda0f3",
+      "matches_source_range": true
+    },
+    {
+      "path_id": "3732",
+      "type": "Transform",
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+      "offset": 72259792,
+      "bytes": 68,
+      "raw_path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\package_v4\\raw\\sharedassets0.assets_3732.raw",
+      "sha256": "98b5e6813598ab238f8f7b9e3fe611e447cb93bf59784272cee3a1056142cb4f",
+      "matches_source_range": true
+    },
+    {
+      "path_id": "4184",
+      "type": "Transform",
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+      "offset": 72298688,
+      "bytes": 380,
+      "raw_path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\package_v4\\raw\\sharedassets0.assets_4184.raw",
+      "sha256": "fb370d146ec6d9a66ec7060677458eb03867ecd804c238dec1a0d84c50fe8bbb",
+      "matches_source_range": true
+    },
+    {
+      "path_id": "3903",
+      "type": "Transform",
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+      "offset": 72274832,
+      "bytes": 68,
+      "raw_path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\package_v4\\raw\\sharedassets0.assets_3903.raw",
+      "sha256": "d4cf803b30aeef7763ccbcdaa8c3da795817875a24da91f1d80b6ac52a32efd3",
+      "matches_source_range": true
+    },
+    {
+      "path_id": "3778",
+      "type": "Transform",
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+      "offset": 72263856,
+      "bytes": 68,
+      "raw_path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\package_v4\\raw\\sharedassets0.assets_3778.raw",
+      "sha256": "5f8075c5cf5f6b7b4e69a8f85ff713fae83898662e879b3bb5d20f0df66ba8f5",
+      "matches_source_range": true
+    },
+    {
+      "path_id": "5091",
+      "type": "BoxCollider",
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+      "offset": 72388960,
+      "bytes": 68,
+      "raw_path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\package_v4\\raw\\sharedassets0.assets_5091.raw",
+      "sha256": "1a2b4807a6bc9ab39fe63a42d14dd3e23d269af59eae230870ea43ed1ce6730b",
+      "matches_source_range": true
+    },
+    {
+      "path_id": "5467",
+      "type": "CapsuleCollider",
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+      "offset": 72431312,
+      "bytes": 68,
+      "raw_path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\package_v4\\raw\\sharedassets0.assets_5467.raw",
+      "sha256": "1d86cff7f51258946d639a4393ade3ea20a52dbe21670154dbf5a32423dc90e1",
+      "matches_source_range": true
+    },
+    {
+      "path_id": "11930",
+      "type": "MonoBehaviour",
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+      "offset": 76028624,
+      "bytes": 76,
+      "raw_path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\package_v4\\raw\\sharedassets0.assets_11930.raw",
+      "sha256": "ccc6ece9a93b0947b2767c6ffaa356b87f13ab421eced5788a7f233b961b45a5",
+      "matches_source_range": true
+    },
+    {
+      "path_id": "4987",
+      "type": "Rigidbody",
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+      "offset": 72380736,
+      "bytes": 88,
+      "raw_path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\package_v4\\raw\\sharedassets0.assets_4987.raw",
+      "sha256": "fc65be61e454ccc303749c9396f4d8e49ac94ba7ecaff28ac5c854b5e1362840",
+      "matches_source_range": true
+    },
+    {
+      "path_id": "3833",
+      "type": "Transform",
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+      "offset": 72268800,
+      "bytes": 68,
+      "raw_path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\package_v4\\raw\\sharedassets0.assets_3833.raw",
+      "sha256": "c33cbe1778fea9147abff4dfb0bd037f68787fe00cb9674cb507183a01576569",
+      "matches_source_range": true
+    },
+    {
+      "path_id": "3997",
+      "type": "Transform",
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+      "offset": 72283104,
+      "bytes": 152,
+      "raw_path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\package_v4\\raw\\sharedassets0.assets_3997.raw",
+      "sha256": "b6dde7f908b98a21ade77be86a63f9af357453affa78ee2541a9ad5dde501186",
+      "matches_source_range": true
+    },
+    {
+      "path_id": "4222",
+      "type": "Transform",
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+      "offset": 72302208,
+      "bytes": 68,
+      "raw_path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\package_v4\\raw\\sharedassets0.assets_4222.raw",
+      "sha256": "2fb7a4f472e5140f2686c9e99ec4dbbeea4e7ca74452fbe4c8927504087e3a4c",
+      "matches_source_range": true
+    },
+    {
+      "path_id": "5448",
+      "type": "CapsuleCollider",
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+      "offset": 72429792,
+      "bytes": 68,
+      "raw_path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\package_v4\\raw\\sharedassets0.assets_5448.raw",
+      "sha256": "f70d368b666de4df043fd570119be9bd88316fafcd1c4b87edac3963eeefde39",
+      "matches_source_range": true
+    },
+    {
+      "path_id": "12405",
+      "type": "MonoBehaviour",
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+      "offset": 76124160,
+      "bytes": 76,
+      "raw_path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\package_v4\\raw\\sharedassets0.assets_12405.raw",
+      "sha256": "44ed5c86a7a30a9691ca12a5767f908f448bb0fff8167a884dbd1b465dcca7cd",
+      "matches_source_range": true
+    },
+    {
+      "path_id": "4998",
+      "type": "Rigidbody",
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+      "offset": 72381792,
+      "bytes": 88,
+      "raw_path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\package_v4\\raw\\sharedassets0.assets_4998.raw",
+      "sha256": "9f2cd98912ddea02dc7f5ecc2915c5565480714b4f1f50d2bd0626d883027acc",
+      "matches_source_range": true
+    },
+    {
+      "path_id": "4288",
+      "type": "Transform",
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+      "offset": 72308576,
+      "bytes": 68,
+      "raw_path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\package_v4\\raw\\sharedassets0.assets_4288.raw",
+      "sha256": "b856d936481a1fdeac0c41222f62f6a07ccadbbaf069bb6a3ffb244f10c3c667",
+      "matches_source_range": true
+    },
+    {
+      "path_id": "3872",
+      "type": "Transform",
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+      "offset": 72272176,
+      "bytes": 140,
+      "raw_path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\package_v4\\raw\\sharedassets0.assets_3872.raw",
+      "sha256": "cf3a8f2dc6dd15bec692a9c0644cd5f19b1efa547e6aef5186822e36e0b4fa7d",
+      "matches_source_range": true
+    },
+    {
+      "path_id": "4139",
+      "type": "Transform",
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+      "offset": 72294960,
+      "bytes": 68,
+      "raw_path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\package_v4\\raw\\sharedassets0.assets_4139.raw",
+      "sha256": "55f46766df0f54ce1b4261837eb6b594e94cfe08e909f377d9dcb73552eb69e6",
+      "matches_source_range": true
+    },
+    {
+      "path_id": "5449",
+      "type": "CapsuleCollider",
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+      "offset": 72429872,
+      "bytes": 68,
+      "raw_path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\package_v4\\raw\\sharedassets0.assets_5449.raw",
+      "sha256": "a27e9b304e743681173826900399ae0c1c67ffb13571bd67460b9d6fb7e2b22d",
+      "matches_source_range": true
+    }
+  ],
+  "confidence": {
+    "serialized_buoyancy_redecode": "C3",
+    "rigidbody_mass_damping_com_redecode": "C3",
+    "collider_transform_tree": "historical C3 with raw identity/source range rechecked",
+    "buoyancy_sampling_and_force_methods": "C0 unknown",
+    "architecture": "C2 interpretation from independent configuration and existing terrain collision evidence"
+  },
+  "limits": [
+    "Package defaults, not runtime effective values.",
+    "No model/texture external payload or PhysX cooked data export.",
+    "Existing terrain collision reverse evidence is referenced, not rerun.",
+    "No dynamic beaching/refloating or performance proof."
+  ]
+}

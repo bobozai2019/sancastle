@@ -11,7 +11,28 @@ const WaveWorkload = preload("res://scripts/visual/water_render_wave_workload.gd
 var requested_render_profile := {}
 var requested_render_profile_sha256 := ""
 var effective_render_profile := {}
-var effective_render_profile_sha256 := ""
+# Fixed uniforms/resources are audited on startup, invalidation and restore.
+# Direct runtime uniform edits must invalidate explicitly (ShaderMaterial.changed
+# does not report set_shader_parameter). The clock and export digest stay current.
+var effective_profile_cache_enabled := true
+var effective_profile_dirty := true
+var effective_profile_generation := -1
+var effective_profile_revision := 0
+var effective_profile_digest_dirty := true
+var effective_profile_digest := ""
+var effective_profile_resources: Array[Resource] = []
+var effective_water_material: ShaderMaterial
+var effective_terrain_material: ShaderMaterial
+var effective_water_shader: Shader
+var effective_terrain_shader: Shader
+var effective_render_profile_sha256: String:
+	get:
+		if _effective_profile_needs_refresh() and ready_for_ticks:
+			refresh_effective_render_profile()
+		if effective_profile_digest_dirty:
+			effective_profile_digest = JSON.stringify(effective_render_profile).sha256_text()
+			effective_profile_digest_dirty = false
+		return effective_profile_digest
 
 
 func _ready() -> void:
@@ -136,15 +157,58 @@ func _mark_ready(token: int) -> void:
 		if not scheduled.get("ok", false):
 			_fail("staging wave workload: " + String(scheduled.get("code", "invalid")))
 			return
+	refresh_effective_render_profile()
+
+
+func invalidate_effective_render_profile() -> void:
+	effective_profile_dirty = true
+	effective_profile_digest_dirty = true
+
+
+func _effective_profile_needs_refresh() -> bool:
+	return effective_profile_dirty or effective_profile_generation != generation or \
+		water_material != effective_water_material or terrain_material != effective_terrain_material or \
+		water_material.shader != effective_water_shader or terrain_material.shader != effective_terrain_shader
+
+
+func refresh_effective_render_profile() -> bool:
+	# A forced call also audits direct uniform edits used by tools and probes.
 	effective_render_profile = RenderProfile.effective_from_materials(
 		requested_render_profile, fixture_id, water_material, terrain_material,
 		render_subdivision, visual_time_s, _effective_reference_bed())
 	if not RenderProfile.effective_matches_request(requested_render_profile,
 			fixture_id, effective_render_profile):
 		_fail("render profile effective values mismatch")
-		return
-	effective_render_profile_sha256 = JSON.stringify(
-		effective_render_profile).sha256_text()
+		return false
+	effective_profile_generation = generation
+	effective_profile_revision += 1
+	effective_water_material = water_material
+	effective_terrain_material = terrain_material
+	effective_water_shader = water_material.shader
+	effective_terrain_shader = terrain_material.shader
+	for resource in effective_profile_resources:
+		if resource.changed.is_connected(invalidate_effective_render_profile):
+			resource.changed.disconnect(invalidate_effective_render_profile)
+	effective_profile_resources.assign([water_material, terrain_material,
+		water_material.shader, terrain_material.shader])
+	for resource in effective_profile_resources:
+		if not resource.changed.is_connected(invalidate_effective_render_profile):
+			resource.changed.connect(invalidate_effective_render_profile)
+	effective_profile_dirty = false
+	_seal_test1_effective_profile()
+	effective_profile_digest_dirty = true
+	return last_error.is_empty()
+
+
+func _seal_test1_effective_profile() -> void:
+	pass
+
+
+func set_visual_time(seconds: float) -> void:
+	super.set_visual_time(seconds)
+	if not effective_render_profile.is_empty() and effective_render_profile.visual_time_s != seconds:
+		effective_render_profile.visual_time_s = seconds
+		effective_profile_digest_dirty = true
 
 
 func _tick_finished(substeps: int, source_m3: float, sink_m3: float,
@@ -152,15 +216,8 @@ func _tick_finished(substeps: int, source_m3: float, sink_m3: float,
 	super._tick_finished(substeps, source_m3, sink_m3, token)
 	if last_error.is_empty() and token == generation:
 		set_visual_time(float(completed_ticks) / 30.0)
-		effective_render_profile = RenderProfile.effective_from_materials(
-			requested_render_profile, fixture_id, water_material, terrain_material,
-			render_subdivision, visual_time_s, _effective_reference_bed())
-		if not RenderProfile.effective_matches_request(requested_render_profile,
-				fixture_id, effective_render_profile):
-			_fail("render profile effective values mismatch")
-			return
-		effective_render_profile_sha256 = JSON.stringify(
-			effective_render_profile).sha256_text()
+		if not effective_profile_cache_enabled or _effective_profile_needs_refresh():
+			refresh_effective_render_profile()
 
 
 func _effective_reference_bed() -> String:

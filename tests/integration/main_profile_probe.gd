@@ -7,7 +7,7 @@ func _frames(count: int = 8) -> void:
 
 func _settle() -> void:
 	var deadline := Time.get_ticks_msec() + 30000
-	while preview.busy or preview.input_running or preview.collision_proxy.staging_texture.is_valid() or not preview.collision_proxy.pending_revisions.is_empty():
+	while preview.busy or preview.input_running or preview.collision_proxy.staging_texture.is_valid() or not preview.collision_proxy.pending_revisions.is_empty() or preview.collision_proxy.has_prepare_in_flight():
 		await process_frame
 		if Time.get_ticks_msec() > deadline:
 			_check("settle_timeout", false)
@@ -29,6 +29,8 @@ func _run() -> void:
 	await _ticks(4)
 	await _settle()
 	await create_timer(0.65).timeout
+	_check("physics_monitor_label_identifies_peak", "物理峰值" in panel.cpu.text and panel.snapshot.get("physics_peak_ms", -1.0) >= 0.0)
+	_check("full_collision_callback_display", "碰撞 CPU" in panel.collision.text and "跳过" in panel.collision.text and preview.collision_proxy.last_apply_ms >= preview.collision_proxy.last_replace_ms and preview.collision_proxy.last_apply_generation == preview.generation)
 	var core_positive := true
 	for key in ["boundary", "water", "sediment", "material", "foam", "audit"]:
 		core_positive = core_positive and panel.last_stages.has(key) and float(panel.last_stages.get(key, {}).get("ms", 0.0)) > 0.0
@@ -64,8 +66,11 @@ func _run() -> void:
 	var previous_generation: int = preview.generation
 	var restore_error: StringName = await preview.restore_gpu_checkpoint(path)
 	await _frames(1)
+	panel._refresh()
+	_check("restore_hides_previous_collision_timing", "—" in panel.collision.text and preview.collision_proxy.last_apply_generation != preview.generation)
 	_check("restore_resets_timestamp_generation", restore_error.is_empty() and preview.generation != previous_generation and panel.sample_generation == preview.generation and panel.last_stages.is_empty(), {"error":String(restore_error),"old_generation":previous_generation,"new_generation":panel.sample_generation,"stages":panel.last_stages.duplicate(true)})
 	toggle.button_pressed = false
+	_check("sampling_toggle_feedback_immediate", "采样关闭" in panel.render_time.text)
 	await _frames()
 	_check("sampling_off_restores_flags", not panel.sampling and not preview.solver.profile_passes and not preview.collision_proxy.profile_passes)
 	var accepted: int = panel.accepted_frames
@@ -75,7 +80,7 @@ func _run() -> void:
 	var exact := true
 	for field in FIELDS: exact = exact and sampled[field] == unsampled[field]
 	_check("profiling_does_not_change_10_fields", exact)
-	_check("off_does_not_collect", panel.accepted_frames == accepted and "采样关闭" in panel.render_time.text)
+	_check("off_does_not_collect", panel.accepted_frames == accepted and "采样关闭" in panel.render_time.text, {"accepted_before":accepted,"accepted_after":panel.accepted_frames,"render_text":panel.render_time.text})
 	toggle.button_pressed = true
 	await _frames()
 	preview.hide_hud = true

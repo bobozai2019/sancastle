@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://shaders/visual/gpu_gravel.gdshader" id="1"]
+
+[resource]
+resource_local_to_scene = true
+shader = ExtResource("1")
+shader_parameter/seed = 57849
+shader_parameter/radius_min_m = 0.02
+shader_parameter/radius_max_m = 0.05

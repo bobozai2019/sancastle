@@ -9,7 +9,7 @@ extends SceneTree
 ##   2. rates     — the erosion/deposition rates are per-second, so a shorter
 ##                  substep must not change the outcome of a fixed simulated span
 ##   3. dry bound — a bed with no standing water keeps its sand (all suspended
-##                  load settles), so the pass cannot erode a dry cell
+##                  load settles exponentially), so the pass cannot erode a dry cell
 ##
 ## Runs on the render thread so RenderingDevice readback is synchronous.
 
@@ -115,7 +115,7 @@ func _simulate(domain: SandWaterDomain, spirvs: Array[RDShaderSPIRV], steps: int
 	var rig := _make(spirvs, domain)
 	if rig.is_empty():
 		return {}
-	rig.sediment.capacity_scale_s_per_m = capacity_scale
+	rig.sediment.capacity_per_speed_s = capacity_scale
 	rig.sediment.erosion_rate_per_s = erosion_rate
 	rig.sediment.deposition_rate_per_s = deposition_rate
 	var initial_water := 0.0
@@ -172,11 +172,11 @@ func _run_capacity_case(spirvs: Array[RDShaderSPIRV]) -> void:
 	var rate := SedimentCoupler.EROSION_RATE_PER_S
 	var deposit_rate := SedimentCoupler.DEPOSITION_RATE_PER_S
 	var base := _simulate(_make_domain(), spirvs, 600, 5.0,
-		SedimentCoupler.CAPACITY_SCALE_S_PER_M, rate, deposit_rate)
+		SedimentCoupler.CAPACITY_PER_SPEED_S, rate, deposit_rate)
 	if not failures.is_empty():
 		return
 	var doubled := _simulate(_make_domain(), spirvs, 600, 5.0,
-		2.0 * SedimentCoupler.CAPACITY_SCALE_S_PER_M, rate, deposit_rate)
+		2.0 * SedimentCoupler.CAPACITY_PER_SPEED_S, rate, deposit_rate)
 	if not failures.is_empty():
 		return
 	var zeroed := _simulate(_make_domain(), spirvs, 600, 5.0, 0.0, rate, deposit_rate)
@@ -198,7 +198,7 @@ func _run_capacity_case(spirvs: Array[RDShaderSPIRV]) -> void:
 ## Case 2: the rates are per second, so the same simulated span must give nearly
 ## the same result whether it is taken in 600 or 1200 substeps.
 func _run_timestep_case(spirvs: Array[RDShaderSPIRV]) -> void:
-	var scale := SedimentCoupler.CAPACITY_SCALE_S_PER_M
+	var scale := SedimentCoupler.CAPACITY_PER_SPEED_S
 	var rate := SedimentCoupler.EROSION_RATE_PER_S
 	var deposit_rate := SedimentCoupler.DEPOSITION_RATE_PER_S
 	var coarse := _simulate(_make_domain(), spirvs, 600, 5.0, scale, rate, deposit_rate)
@@ -259,9 +259,8 @@ func _run_dry_case(spirvs: Array[RDShaderSPIRV]) -> void:
 		var remaining := _total(sediment)
 		if eroded > 0.0000001:
 			failures.append("dry bed eroded %.9f m3" % eroded)
-		elif remaining > before * 0.01:
-			failures.append("dry bed did not settle its suspended load: %.9f of %.9f left" % [
-				remaining, before])
+		elif absf(remaining - before * exp(-SedimentCoupler.DEPOSITION_RATE_PER_S * 2.5)) > 0.00001:
+			failures.append("dry settling disagrees with exponential rate: %.9f of %.9f left" % [remaining, before])
 		else:
 			lines.append("DRY_OK eroded_m3=%.9f suspended_before_m3=%.9f suspended_after_m3=%.9f" % [
 				eroded, before, remaining])
