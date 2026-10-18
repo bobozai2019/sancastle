@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3]
+[ext_resource type="PackedScene" path="res://scenes/props/bottle.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/props/wood_plank.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/props/wood_stick.tscn" id="3"]
+[ext_resource type="Script" path="res://scripts/props/floating_props_service.gd" id="4"]
+[node name="FloatingProps" type="Node3D"]
+[node name="Bottle" parent="." instance=ExtResource("1")]
+position = Vector3(1.6, 0, -1.5)
+rotation_degrees = Vector3(0, 0, 8)
+[node name="WoodPlank" parent="." instance=ExtResource("2")]
+position = Vector3(1, 0, 0)
+rotation_degrees = Vector3(0, 8, 0)
+[node name="WoodStick" parent="." instance=ExtResource("3")]
+position = Vector3(1.6, 0, 1.5)
+rotation_degrees = Vector3(0, -12, 0)
+[node name="Service" type="Node3D" parent="."]
+script = ExtResource("4")
+body_paths = Array[NodePath]([NodePath("../Bottle"), NodePath("../WoodPlank"), NodePath("../WoodStick")])

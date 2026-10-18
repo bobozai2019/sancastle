@@ -151,7 +151,7 @@ static func decode_command(bytes: PackedByteArray, canonical: PackedByteArray=Pa
 			var limits: Array=profile._capability_limits(key)
 			if value[key]<PackedFloat32Array([limits[0]])[0] or value[key]>PackedFloat32Array([limits[1]])[0] or (key in ["radius_m","amount_m3"] and value[key]<=0.0):return {"error":&"command_parameters"}
 		if value.operation==P.Operation.TARGET_HEIGHT and value.shape==P.Shape.SWEPT_CAPSULE and value.top_width_m>value.bottom_width_m:return {"error":&"command_parameters"}
-		if value.water_policy!=3 and value.speed_m_s!=0.0:return {"error":&"command_parameters"}
+		if value.water_policy not in [2,3] and value.speed_m_s!=0.0:return {"error":&"command_parameters"}
 		var used: Array=profile.parameter_keys()+["start_x","start_z","end_x","end_z","add_budget_m3","transfer_budget_m3","available_m3","cell_size_m","legacy_epsilon_m3","dry_depth_m","template_spacing_m"]
 		if value.operation==P.Operation.TRANSFER:used.append("ridge_height_m")
 		for key in L.COMMAND_F32:

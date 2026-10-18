@@ -7,10 +7,12 @@ func _received(value: Dictionary) -> void:callback_count+=1;receipt=value
 
 func _run() -> void:
 	orphan_baseline=int(Performance.get_monitor(Performance.OBJECT_ORPHAN_NODE_COUNT))
-	scene=load("res://scenes/main.tscn").instantiate();scene.playing=false;root.add_child(scene)
+	# Public reader fault injection runs on an entry without the live prop
+	# consumer. Main's own unknown-reader retirement is covered by lifecycle_probe.
+	scene=load("res://scenes/unified_edit/playable/test1_capture.tscn").instantiate();scene.playing=false;root.add_child(scene)
 	var deadline:=Time.get_ticks_msec()+90000
 	while not scene.ready_for_ticks and scene.last_error.is_empty() and Time.get_ticks_msec()<deadline:await process_frame
-	check("formal_main_ready",scene.ready_for_ticks and scene.last_error.is_empty())
+	check("formal_entry_ready",scene.ready_for_ticks and scene.last_error.is_empty())
 	if not scene.ready_for_ticks:await _close();return
 	observations.sources=scene.configuration.sources.duplicate(true)
 	observations.engine=Engine.get_version_info()

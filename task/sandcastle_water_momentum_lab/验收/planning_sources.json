@@ -1,0 +1,124 @@
+{
+  "schema": 1,
+  "date": "2026-10-19",
+  "role": "planning_source_inventory",
+  "scope": "Planning-time availability and hash snapshot only; not competitor replay, implementation validation or a clean-worktree baseline.",
+  "files": [
+    {
+      "path": "project.godot",
+      "exists": true,
+      "bytes": 2173,
+      "sha256": "6ffd830959ed6630565cf9bdc3957b0ece379ce49be0cf0bc9db2b3c4ce941a3"
+    },
+    {
+      "path": "scenes/main.tscn",
+      "exists": true,
+      "bytes": 2782,
+      "sha256": "0f34fa95474df858644151043a7fbfcadf41bf9324db1ed26b217fd392bf6f7c"
+    },
+    {
+      "path": "scripts/beach/unified_playable_entry.gd",
+      "exists": true,
+      "bytes": 24728,
+      "sha256": "d9160d47d952ceb2aae10f57803e278cfcb4ef583e03c3317b348dce0afe482a"
+    },
+    {
+      "path": "scripts/beach/unified_scene_routes.gd",
+      "exists": true,
+      "bytes": 1150,
+      "sha256": "8b554be029c1948a4c741bbdc491aa0c51a8d768e7e8274dce7c59de44d8f32f"
+    },
+    {
+      "path": "scripts/beach/beach_scene_service.gd",
+      "exists": true,
+      "bytes": 8612,
+      "sha256": "27d984202c3db965c5502260534578b2920bc3855e2c294a4463d64c54aee6ca"
+    },
+    {
+      "path": "scripts/simulation/unified_edit/water_response.gd",
+      "exists": true,
+      "bytes": 7317,
+      "sha256": "dcaac3bda25c8d742e105d0fcbae287a4d2378612e7724a4adca6d17429691e1"
+    },
+    {
+      "path": "scripts/simulation/unified_edit/water_response.glsl",
+      "exists": true,
+      "bytes": 10670,
+      "sha256": "fcde586830e793490def32a6d193004bcd7f35522c830b168f4dd09ceb358d46"
+    },
+    {
+      "path": "scripts/simulation/unified_edit/water.gd",
+      "exists": true,
+      "bytes": 8804,
+      "sha256": "0a0cbedc11d9fcb4d55f53e75b99da537c4ed4a166945bffcad90cac69600903"
+    },
+    {
+      "path": "scripts/simulation/unified_edit/checkpoint_codec.gd",
+      "exists": true,
+      "bytes": 13524,
+      "sha256": "d02c6ed5f676067b3b7cebdcfdcfade4f19ed1dac56d24a1bf5992cf864213d2"
+    },
+    {
+      "path": "assets/unified_edit/default_catalog.tres",
+      "exists": true,
+      "bytes": 1398,
+      "sha256": "c4d517c1d778f92a560533b1f140f208d1eb035580fa5149f4a6e7597a2ccfd4"
+    },
+    {
+      "path": "docs/当前技术规格.md",
+      "exists": true,
+      "bytes": 15983,
+      "sha256": "2833021568a9b212e3f53a639e7279d824be731d27d9c126475fc93a7fd5ef4c"
+    },
+    {
+      "path": "docs/competitor/模拟与编辑方案.md",
+      "exists": true,
+      "bytes": 28836,
+      "sha256": "c53cdd5dfb0789f6038fe21fdf6cc8e209e63cfb296c9d70b76d47cf520939d0"
+    },
+    {
+      "path": "docs/competitor/GPU编辑计算_项目对照.md",
+      "exists": true,
+      "bytes": 11672,
+      "sha256": "02031c19a4fc22f427997cbc06b2e233a7b4cc162fe4a567d71111334a67da38"
+    },
+    {
+      "path": "docs/competitor/水体运动与回落.md",
+      "exists": true,
+      "bytes": 19599,
+      "sha256": "88b5c49b8a1a344237b273ff5fe0a25ac349a8f4b25873e5ae50421b20bd0d10"
+    },
+    {
+      "path": "docs/search/underwater_deposit_report.md",
+      "exists": true,
+      "bytes": 14659,
+      "sha256": "3fc0905b3da52f471ffc142ac5cf9a90115d39361e238263d553ea6c663afb5f"
+    },
+    {
+      "path": "scripts/visual/test1_water_motion_trial.gd",
+      "exists": true,
+      "bytes": 11366,
+      "sha256": "f1028ff065a6f1f7a0265cd420826292f65f47d21418373b14617a8249acdeac"
+    },
+    {
+      "path": "shaders/simulation/test1_water_motion.glsl",
+      "exists": true,
+      "bytes": 3168,
+      "sha256": "9f167d80fab66457d81b7dd27aaad14a8bbaf0901284e6b8b5a4f876496b45a0"
+    },
+    {
+      "path": "scenes/test1_water_motion_trial.tscn",
+      "exists": false
+    },
+    {
+      "path": "test_output/competitor_edit_compute_20261012_v2/manifest.json",
+      "exists": false
+    },
+    {
+      "path": "test_output/test1_water_motion/evidence_inventory.json",
+      "exists": true,
+      "bytes": 179559,
+      "sha256": "2dc7128c2d8f4f4f44611743197b98deda0274db96127e9cff45e5e738ee7d48"
+    }
+  ]
+}

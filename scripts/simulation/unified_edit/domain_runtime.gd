@@ -253,7 +253,7 @@ func retry_retirement() -> void:
 	# The front-end maintenance cadence also serves the live owner's readers.
 	# A failed registration retains ownership until this same proof/read retries.
 	if current!=null:
-		current.retry_checkpoint_lifetime();current.heights.retry_readbacks()
+		current.retry_checkpoint_lifetime();current.heights.retry_readbacks();current.views.retry_preview_readback()
 	if candidate!=null:
 		candidate.retry_initialization_cleanup();candidate.retry_checkpoint_lifetime();candidate.heights.retry_readbacks();candidate.views.retry_preview_readback()
 	for row in retired:

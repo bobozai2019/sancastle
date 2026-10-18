@@ -22,6 +22,7 @@ def main():
     parser.add_argument('--script', default='tests/floating_props/sample_probe.gd')
     parser.add_argument('--case', default='normal')
     parser.add_argument('--timeout', type=int, default=180)
+    parser.add_argument('--quit-after', type=int, default=12000)
     args = parser.parse_args()
     out = args.output.resolve()
     out.mkdir(parents=True, exist_ok=False)
@@ -33,7 +34,10 @@ def main():
     pending = [args.script, 'project.godot', 'tools/floating_props/run_probe.py',
                'tools/floating_props/verify_bottle.py', 'tools/floating_props/verify_sample.py',
                'task/sandcastle_floating_props/契约/probe_ABI_v1.json',
-               'task/sandcastle_floating_props/契约/probe_ABI_v2.json']
+               'task/sandcastle_floating_props/契约/probe_ABI_v2.json',
+               'task/sandcastle_floating_props/契约/probe_ABI_v3.json',
+               'task/sandcastle_floating_props/契约/height_snapshot_ABI_v3.json',
+               'tools/floating_props/verify_height_bounds.py']
     added = set()
     while pending:
         path = pending.pop()
@@ -51,7 +55,7 @@ def main():
         for path, data in sorted(sources.items()):
             archive.writestr(path, data)
     command = [str(ENGINE), '--path', str(ROOT), '--rendering-driver', 'd3d12',
-               '--script', 'res://'+args.script, '--quit-after', '12000',
+               '--script', 'res://'+args.script, '--quit-after', str(args.quit_after),
                '--log-file', str(out/'godot.log'), '--', '--output='+str(out/'probe.json'), '--case='+args.case]
     started = time.time()
     timed_out = False

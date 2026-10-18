@@ -20,7 +20,7 @@ def main():
         checks.append(dict(name=name, **{'pass': bool(passed)}))
 
     check('fixed_lengths', len(raw) == 3200 and len(req) == 1152)
-    check('schema_error', struct.unpack_from('<II', raw) == (2, 0))
+    check('schema_error', struct.unpack_from('<II', raw) == (3, 0))
     check('identity_and_int64_sentinels', struct.unpack_from('<4q', raw, 8) == (1, 9007199254740995, 9007199254740993, 1))
     check('complete_initial_identity', struct.unpack_from('<3qfI', raw, 40) == (0, 0, 0, 0.0, 32))
     check('domain_hash_and_reserved', raw[96:128] == hashlib.sha256(b'main_beach').digest() and raw[80:88] == bytes(8))

@@ -1,0 +1,73 @@
+{
+  "schema": 1,
+  "gate": "G4",
+  "status": "frozen",
+  "evidence": "test_output/floating_props/wave_final_20261018_01",
+  "engine": {
+    "version": "4.7.2.stable.steam.ed1daf0bf",
+    "sha256": "12310c74bdda7dcd43f28e971f33047dcecadd436b68169d61ce41009006df38"
+  },
+  "contact_tolerance_m": 0.005,
+  "jolt_penetration_slop_m": 0.002,
+  "maximum_edit_recovery_m": 2.0,
+  "maximum_sample_age_s": 0.15,
+  "maximum_pose_distance_m": 0.15,
+  "maximum_pose_angle_rad": 0.35,
+  "maximum_sample_history": 8,
+  "older_sample_bed_difference_m": 0.005,
+  "height": {
+    "slots": 2,
+    "output_schema": 2,
+    "maximum_chunks_per_snapshot": 16,
+    "maximum_priority_chunks": 12,
+    "ordinary_selection_opportunities_per_priority_batch": 4,
+    "push_bytes": 32,
+    "priority_lo_offset": 20,
+    "priority_hi_offset": 24,
+    "reserved_zero_offset": 28,
+    "shape_ready_phase": "assignment completed on physics thread before later same-notification grant; first world quantum callback observed frame+1"
+  },
+  "sleep_accounting": "native callbacks and explicitly proved resting world quanta separately labeled",
+  "sources": {
+    "scripts/simulation/unified_edit/height_stamp.gd": "a2b8d8d940f8ef7b2af13232c0f7bd0b1888e5ed8f1e074885f656b2203f48d0",
+    "project.godot": "6ffd830959ed6630565cf9bdc3957b0ece379ce49be0cf0bc9db2b3c4ce941a3",
+    "scripts/simulation/unified_edit/height_surface.gd": "257d20fce15c3090a01d8a18207e2176aba7d4be52b0426790073048ec72d716",
+    "scripts/simulation/unified_edit/height.gd": "f3c4466584144e21c0e0468872c6d7c4b46f98e24d546e7ec056af601fef2be0",
+    "scripts/simulation/unified_edit/height_codec.gd": "f4f0ac9cb9877c57b75b17825dc305d819769d268587cb6402b325fc840ff8ed",
+    "scripts/simulation/unified_edit/height.glsl": "d422c6d177563c222a32bedab34dda60e095b81a84fb7fe788a6f8db7c1a3ba1",
+    "scenes/props/wood_stick.tscn": "2a8b6f4089b9a354da84ca7f461a4549dfaa07396f44ca295b4d2f594d46b6da",
+    "assets/props/wood_stick_profile.tres": "71881e5177318a3aa5942087543fd4fd2e3f3450712a7781c164d885bc63a501",
+    "scripts/props/floating_prop_profile.gd": "73fb45e605d8d462763da73d3e5423acbefc0a95c1e7867ff3e796e34d146e35",
+    "scripts/props/floating_prop.gd": "6a794f8a4a15b4791593be4f2623147ffd26771610742f975e7686401cdf1acf",
+    "scenes/props/wood_plank.tscn": "6f08f5161d6815c74997ca74ecfe805facce698b7aec26d85e0e4cc975ffbc8f",
+    "assets/props/wood_plank_profile.tres": "709bcfb0af28dfab88dc09828b4d6cb821c15c2a5530c54642ad31e858f3de0f",
+    "scripts/props/floating_props_service.gd": "1102ca114bd8ce70aa0f8bac168a8eaa5d55615e6316c8fe21123ca62aa027f7",
+    "scripts/props/floating_prop_contact.gd": "e8fc1b39fee8d2af1bf6ee85ce95a01e7500a3b8b348f116c3df7f1350f81a55",
+    "scenes/props/bottle.tscn": "4ae799a270b29de188ae4db21ec2a1d849416fe55d564ef934927434a80cb32f",
+    "assets/props/bottle_profile.tres": "604d538ca40ea3c1d96fc0fc88b860c993f8d399ff167e2268776d15276cb714"
+  },
+  "wave": {
+    "same_instances": true,
+    "bed": "0.3+0.1*(x+16)",
+    "initial_x": -13.5,
+    "initial_z": [
+      -1.5,
+      0,
+      1.5
+    ],
+    "mean_level_m": 0.4,
+    "amplitude_m": 0.4,
+    "period_s": 12,
+    "following_packet": {
+      "after_s": 15,
+      "amplitude_m": 0.2,
+      "duration_s": 6,
+      "seed": 0
+    }
+  },
+  "limits": [
+    "Formal main lifecycle and costs excluded",
+    "Stick sleeps before first wave, not guaranteed asleep during every later beach interval",
+    "Historical source hashes; later lifecycle-only changes have separate manifests"
+  ]
+}

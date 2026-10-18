@@ -51,7 +51,7 @@ func capture_surface(label: String) -> Dictionary:
 		heights.append_array(shape.map_data)
 	var path: String=output.get_base_dir()+"/"+label+"_surface.bin"
 	FileAccess.open(path,FileAccess.WRITE).store_buffer(heights.to_byte_array())
-	return {"path":path,"bytes":heights.size()*4,"sha256":FileAccess.get_sha256(path),"versions":pipeline.heights.applied_state_seq.duplicate(),"ticks":pipeline.heights.applied_tick.duplicate(),"revisions":pipeline.heights.applied_revision.duplicate(),"shape_updates":surface.shape_updates,"unchanged_skips":surface.unchanged_skips}
+	return {"path":path,"bytes":heights.size()*4,"sha256":FileAccess.get_sha256(path),"versions":pipeline.heights.applied_state_seq.duplicate(),"change_bounds":pipeline.heights.applied_change_bounds.duplicate(),"ticks":pipeline.heights.applied_tick.duplicate(),"revisions":pipeline.heights.applied_revision.duplicate(),"shape_updates":surface.shape_updates,"unchanged_skips":surface.unchanged_skips}
 
 func ray_height() -> float:
 	return ray_at(Vector2(0.0625,0.0625))

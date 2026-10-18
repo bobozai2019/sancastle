@@ -10,11 +10,11 @@
       "reason": "Sealed dependency/inheritance declarations and fixed component constructors. G6: route factory requires exact unified root script, family-scoped save/restore and rollback; no old fallback."
     },
     "scripts/beach/beach_scene_service.gd::request_switch": {
-      "sha256": "f9dc19be602136b5cbc0589e19b189cb92897317006675946f25c3553043eafd",
+      "sha256": "3cc53612e4f0b86fe930ec1f86ca63a249f29785dfcc78592042c4a4fabc3759",
       "tokens": [
         "call_deferred("
       ],
-      "reason": "G6: route factory requires exact unified root script, family-scoped save/restore and rollback; no old fallback."
+      "reason": "Floating props G5/G6: cached restore waits completed boot; switch rejects during boot. Same unified factory and disposal proof; no consumer gate on producer."
     },
     "scripts/beach/beach_scene_service.gd::_switch": {
       "sha256": "66cc7e968838d6b2102a740ea887dd83aab7f5381587a58825cc509fe9f04a3e",
@@ -24,19 +24,19 @@
       "reason": "G6: route factory requires exact unified root script, family-scoped save/restore and rollback; no old fallback."
     },
     "scripts/beach/unified_playable_entry.gd::declarations": {
-      "sha256": "3307ffcdc21a262f97d47a2051bf600a13070937cc89318ef1715f015e307644",
+      "sha256": "97e6d732d555070eea11b9c3a381a809683c81557445b1bd48445e9d986ad5a2",
       "tokens": [
         "new(",
         "preload("
       ],
-      "reason": "Sealed dependency/inheritance declarations and fixed component constructors. G6: direct Node3D and only PlayerInput constructor; scene-authored Runtime owns actual backend."
+      "reason": "Floating props G5/G6: scene-authored optional service; exact dependency closure, terrain-only brush mask, independent holds, save/restore identity preflight and fault-safe held boundary. Shared drainage checkbox remains UI-only policy2/3 selection."
     },
     "scripts/beach/unified_playable_entry.gd::_ready": {
-      "sha256": "250d94c5cdcaf9154315847e45d25b56225d5ac07488c1c89da0e9b10d398f94",
+      "sha256": "7f6b60b5acb2f969f80afcc0eb0930a5a53ffc558febba6382fc261da81f74c2",
       "tokens": [
         "load("
       ],
-      "reason": "G6: direct Node3D and only PlayerInput constructor; scene-authored Runtime owns actual backend."
+      "reason": "Floating props G5/G6: scene-authored optional service; exact dependency closure, terrain-only brush mask, independent holds, save/restore identity preflight and fault-safe held boundary. Shared drainage checkbox remains UI-only policy2/3 selection."
     },
     "scripts/simulation/unified_edit/api_adapter.gd::declarations": {
       "sha256": "705952f17a827923d3630aab5f99f38cb94e235c5f3932c0f766b95b00f69e33",
@@ -145,26 +145,25 @@
       "reason": "G1/G6: data-only native/known legacy validation; wave IDs validate payload, no runtime restoration factory."
     },
     "scripts/simulation/unified_edit/checkpoint_codec.gd::load": {
-      "sha256": "22455d323439eddd3c480302c3166aad6b8ad6485a122fba3d7fa84e42086440",
+      "sha256": "12aff36cbeb8bde12cc0098b6f24c4848fc8b37ef60637202af62794075fcbd5",
       "tokens": [
         "load("
       ],
-      "reason": "G1/G6: data-only native/known legacy validation; wave IDs validate payload, no runtime restoration factory."
+      "reason": "Floating props G5/G6: strict container decoder retains size/checksum/non-object decoding; archival validation optionally skips current disk identity only, default stays strict. No prop native field."
     },
     "scripts/simulation/unified_edit/checkpoint_router.gd::declarations": {
-      "sha256": "c87944bd6be552eba001448a1a4f4801426d7b842a9734f55b1cc49318160765",
+      "sha256": "d586893b2292e84524615fd3cd60a0b04a33f5970f4e1824fbeeb4aa6939c3ef",
       "tokens": [
         "preload("
       ],
-      "reason": "Sealed dependency/inheritance declarations and fixed component constructors. G1/G6 shared protocol/configuration/checkpoint/presentation helper or completion-publication shader; data/allocation/readonly consumers remain within sealed owners, not a tool-specific scheduler."
+      "reason": "Floating props G5/G6: exact native configuration mismatch alone enters reviewed source projector; arbitrary unknown configurations still reject."
     },
     "scripts/simulation/unified_edit/checkpoint_router.gd::load_file": {
-      "sha256": "3056eef2196283341829de1d11735ce82a0bb558f4621816825b20faf89ed664",
+      "sha256": "ec47511822b6253047fb64289f443623bfe85eb37c6166172769ecb8e183f017",
       "tokens": [
-        "load(",
         "new("
       ],
-      "reason": "G1/G6 shared protocol/configuration/checkpoint/presentation helper or completion-publication shader; data/allocation/readonly consumers remain within sealed owners, not a tool-specific scheduler."
+      "reason": "Floating props G5/G6: exact native configuration mismatch alone enters reviewed source projector; arbitrary unknown configurations still reject."
     },
     "scripts/simulation/unified_edit/configuration.gd::declarations": {
       "sha256": "37d1407241f1e45f1949b7b7f09be10b2f86773b4f73774ea7567fbc43c6a7e4",
@@ -340,11 +339,11 @@
       "reason": "Common resource allocation/compiler/dispatch primitive inherited by stage owners; no independent scheduler."
     },
     "scripts/simulation/unified_edit/height.gd::declarations": {
-      "sha256": "62e006b3b7adbf6fe96cfc6770b1c039b866956f209a40a36939df06752655a2",
+      "sha256": "adb2a7b69b14d2630fe7d4fa80d3587caa7281138f85f0040badd285f5fb78a9",
       "tokens": [
         "preload("
       ],
-      "reason": "Sealed dependency/inheritance declarations and fixed component constructors. G5/G6: completion-reader and dirty acknowledgement; worker join only after is_task_completed in physics_consume; no work retirement wait. 2026-10-18 reviewed opt-in bounded diagnostic marks only; no changed authority writes, slot transitions, worker completion guard, scheduling, or release ordering. Numeric dispatches unchanged. See docs/\u8fde\u7eed\u94f2\u5b50\u5361\u987f\u5b9a\u4f4d.md."
+      "reason": "Floating props G4/G6: existing two-slot Height borrow/ack leases;12priority+4ordinary bounded scheduling, samegen applied shape metadata. Strict edit/initial readiness retained; force compatibility requires conservative combined5mm temporal bound; worker completion checked before join."
     },
     "scripts/simulation/unified_edit/height.gd::initialize": {
       "sha256": "6642ba452ed0a8ff772eccc1eb41d1274a4a296d1be22dccad40341ed4c91a13",
@@ -354,11 +353,11 @@
       "reason": "G5/G6: completion-reader and dirty acknowledgement; worker join only after is_task_completed in physics_consume; no work retirement wait."
     },
     "scripts/simulation/unified_edit/height.gd::pump": {
-      "sha256": "da4e05181e7c36ad46c69ffe710c0cc18e237aa0c78df080228f3ae093f05ad7",
+      "sha256": "cac82247fdf95e8055750543f62ba3d41750c8f60b71b1db5e085f13f9cda4ec",
       "tokens": [
         "call_on_render_thread("
       ],
-      "reason": "G5/G6: completion-reader and dirty acknowledgement; worker join only after is_task_completed in physics_consume; no work retirement wait."
+      "reason": "Floating props G4/G6: existing two-slot Height borrow/ack leases;12priority+4ordinary bounded scheduling, samegen applied shape metadata. Strict edit/initial readiness retained; force compatibility requires conservative combined5mm temporal bound; worker completion checked before join."
     },
     "scripts/simulation/unified_edit/height.gd::_read_render": {
       "sha256": "50a8861082cbe6127e896d1d48588a66c793f5759496f2b42512436cb78b90dc",
@@ -389,11 +388,11 @@
       "reason": "G5/G6: completion-reader and dirty acknowledgement; worker join only after is_task_completed in physics_consume; no work retirement wait. 2026-10-18 reviewed opt-in bounded diagnostic marks only; no changed authority writes, slot transitions, worker completion guard, scheduling, or release ordering. Numeric dispatches unchanged. See docs/\u8fde\u7eed\u94f2\u5b50\u5361\u987f\u5b9a\u4f4d.md."
     },
     "scripts/simulation/unified_edit/height.gd::physics_consume": {
-      "sha256": "1e24fc8cc57ff832ce84f9fed0c9d5a93a03f8cd833e00d0962c259b3dfd4af3",
+      "sha256": "d23eea5a1dc70a337e71abcb1baf8e13821c72cf7a68a94fea2384158cd30d0c",
       "tokens": [
         "wait_for_task_completion("
       ],
-      "reason": "G5/G6: completion-reader and dirty acknowledgement; worker join only after is_task_completed in physics_consume; no work retirement wait. 2026-10-18 reviewed opt-in bounded diagnostic marks only; no changed authority writes, slot transitions, worker completion guard, scheduling, or release ordering. Numeric dispatches unchanged. See docs/\u8fde\u7eed\u94f2\u5b50\u5361\u987f\u5b9a\u4f4d.md."
+      "reason": "Floating props G4/G6: existing two-slot Height borrow/ack leases;12priority+4ordinary bounded scheduling, samegen applied shape metadata. Strict edit/initial readiness retained; force compatibility requires conservative combined5mm temporal bound; worker completion checked before join."
     },
     "scripts/simulation/unified_edit/height.gd::_ack": {
       "sha256": "1ffecdc9867c837b1615e0b8b2087117a886944e8a453ab957458a9176a339e0",
@@ -410,14 +409,14 @@
       "reason": "G5/G6: completion-reader and dirty acknowledgement; worker join only after is_task_completed in physics_consume; no work retirement wait."
     },
     "scripts/simulation/unified_edit/height.glsl::shader": {
-      "sha256": "f7d513d34930938e24a7ccd3b8e0cd8a543914e1af33e6e7e8b17307ff293ff6",
+      "sha256": "9f08382aafd9706f017298cb9721b897b0fd3a4023a21c3e91510ab51650153d",
       "tokens": [
         "atomicCompSwap(",
         "atomicExchange(",
         "imageStore(",
         "indexed_shader_assignment"
       ],
-      "reason": "G1/G6 shared protocol/configuration/checkpoint/presentation helper or completion-publication shader; data/allocation/readonly consumers remain within sealed owners, not a tool-specific scheduler."
+      "reason": "Height ABI3: only private before/dirty/snapshot writes; complete33x33 shared vertex maximum temporal difference, outward rounding and +Inf saturation. TagID masked in borrow/ack; unchanged16capacity and ordinary fairness; no authority writes."
     },
     "scripts/simulation/unified_edit/height_stamp.gd::validated_snapshot": {
       "sha256": "80f558722a6d0232fbb9905ef0bb2de9f024c89ab0a3347a97bffc2418994032",
@@ -742,7 +741,7 @@
       "reason": "Sealed dependency/inheritance declarations and fixed component constructors. G1/G6 shared protocol/configuration/checkpoint/presentation helper or completion-publication shader; data/allocation/readonly consumers remain within sealed owners, not a tool-specific scheduler."
     },
     "scripts/simulation/unified_edit/tool_profile.gd::validated_snapshot": {
-      "sha256": "e8445d49b4deb978e1bb6a649324eceb7b92374ce06a3a1a14864b295fd7e1a6",
+      "sha256": "e49b75085b8399019f5d1b80c74881d3d2793ee920a3730e74bf108f8c4dabec",
       "tokens": [
         "load("
       ],
@@ -1062,14 +1061,11 @@
       "reason": "G2/G4/G6: water tick numerical recorder called only by Pipeline; fixed coupled/tail callbacks assigned during initialize_render."
     },
     "scripts/simulation/unified_edit/water_response.gd::initialize": {
-      "sha256": "358450378b29297f323e93392bb7614242cddafcf2133b4dc8facce879c63616",
-      "tokens": [
-        "storage_buffer_create("
-      ],
-      "reason": "G4: common water/sediment/momentum candidate/commit stages, policy enums only."
+      "sha256": "25d516416a57a334575f60e5e88d2d1acaf94af84dd260f39101db2fec9b2397",
+      "reason": "2026-10-18 velocity-only preparation: policy2 uses two GPU dispatches with group-uniform decision/control guard, private candidate/scratch and a 2048-byte first-error reduction. No authority stores, new CPU completion dependency, budget or connected-displacement semantic change. 21 fixed input pairs plus rejection/fatal guards passed 168 checks; common fill/shovel/toggle integration passed 92. Phase RIDs and private buffers use Response ownership and release."
     },
     "scripts/simulation/unified_edit/water_response.gd::_legacy_dispatch": {
-      "sha256": "18ef68b8dd1da2c6b306981458487fd00d63f734c3b883d6c372a4f1bb2d83d1",
+      "sha256": "8f2ae083100bdbea4c1ebee16c14fa03bc6075f4ba6d0d90e28b0879e32fc4b0",
       "tokens": [
         "compute_list_begin(",
         "compute_list_bind_compute_pipeline(",
@@ -1078,7 +1074,7 @@
         "compute_list_end(",
         "compute_list_set_push_constant("
       ],
-      "reason": "G4: common water/sediment/momentum candidate/commit stages, policy enums only."
+      "reason": "2026-10-18 packed water optimization: reviewed private topology/CSR, per-cell candidates and ordered compensated reductions; integer topology/dry-loss flags only, no new authority writer or CPU completion dependency. Frozen budgets, original generic fallback and common conditional commit retained; phase RIDs and scratch owned/released with Response."
     },
     "scripts/simulation/unified_edit/water_response.glsl::shader": {
       "sha256": "fcde586830e793490def32a6d193004bcd7f35522c830b168f4dd09ceb358d46",
@@ -1169,11 +1165,11 @@
       "reason": "G1: one bounded public read-only query owner under Views, writes only request/output SSBOs. Unknown registration retains slot, retries same output read without redispatch; exact serial/owner/pose and once terminal callback."
     },
     "scripts/simulation/unified_edit/probe.glsl::shader": {
-      "sha256": "62892ce5b08f23bb0672dbab743e3e6446c1757692c804f7f336971852702490",
+      "sha256": "ab45f4e46692b78f40d1c3329a23ecdd100b384de966dcc0aa80e19e50546d10",
       "tokens": [
         "indexed_shader_assignment"
       ],
-      "reason": "G1 ABI v2 reviewed thin-water correction: schema2 rejects v1 receipts, byte sizes/offsets unchanged. Read-only published q/h sampling now uses existing water DRY_DEPTH=0.001 and VELOCITY_DEPTH=0.005; CPU threshold is the exact float32 value. Writes remain restricted to owned output SSBO; no numerical authority writes or new resources."
+      "reason": "Floating props ABI3: ordered readonly complete fields and private Height last-change/cumulative bound; only bounded output SSBO writes. Exact int64 split words, bilinear fields and current dry/velocity constants."
     },
     "scripts/simulation/unified_edit/diagnostics.gd::declarations": {
       "sha256": "a930809a9ae9e3db6ca1de3ea137a67c77a1a4b8b95b00ab1a2dbca7f0d3c282",
@@ -1181,12 +1177,98 @@
         "new("
       ],
       "reason": " 2026-10-18 reviewed opt-in bounded diagnostic marks only; no changed authority writes, slot transitions, worker completion guard, scheduling, or release ordering. Numeric dispatches unchanged. See docs/\u8fde\u7eed\u94f2\u5b50\u5361\u987f\u5b9a\u4f4d.md."
+    },
+    "scripts/simulation/unified_edit/water_packed_parallel.glsl::shader": {
+      "sha256": "8e48a46ade6d9a608b9fe9aa5b10f1127f4b036b22a788f392c069d9585d481d",
+      "tokens": [
+        "atomicOr(",
+        "indexed_shader_assignment"
+      ],
+      "reason": "2026-10-18 packed water optimization: reviewed private topology/CSR, per-cell candidates and ordered compensated reductions; integer topology/dry-loss flags only, no new authority writer or CPU completion dependency. Frozen budgets, original generic fallback and common conditional commit retained; phase RIDs and scratch owned/released with Response."
+    },
+    "scripts/simulation/unified_edit/water_packed_topology.glsl::shader": {
+      "sha256": "876056fb1b25c7eaea97e513dddcc882b7ea2cd723abb5409828ea0d389710cf",
+      "tokens": [
+        "atomicAdd(",
+        "atomicCompSwap(",
+        "atomicOr(",
+        "indexed_shader_assignment"
+      ],
+      "reason": "2026-10-18 packed water optimization: reviewed private topology/CSR, per-cell candidates and ordered compensated reductions; integer topology/dry-loss flags only, no new authority writer or CPU completion dependency. Frozen budgets, original generic fallback and common conditional commit retained; phase RIDs and scratch owned/released with Response."
+    },
+    "scripts/simulation/unified_edit/water_response.gd::_initialize_packed_phases": {
+      "sha256": "c0e41b644deebd2e19409781de6377e3c4be27e3ff115c66119dde14fc35844f",
+      "tokens": [
+        "new("
+      ],
+      "reason": "2026-10-18 packed water optimization: reviewed private topology/CSR, per-cell candidates and ordered compensated reductions; integer topology/dry-loss flags only, no new authority writer or CPU completion dependency. Frozen budgets, original generic fallback and common conditional commit retained; phase RIDs and scratch owned/released with Response."
+    },
+    "scripts/simulation/unified_edit/water_response.gd::_packed_phase": {
+      "sha256": "44f34a5caca37008fd2b9b27896a8663d5bc1bb756d6766b990f7f2a37e66cbe",
+      "tokens": [
+        "compute_list_begin(",
+        "compute_list_bind_compute_pipeline(",
+        "compute_list_bind_uniform_set(",
+        "compute_list_dispatch(",
+        "compute_list_end(",
+        "compute_list_set_push_constant("
+      ],
+      "reason": "2026-10-18 packed water optimization: reviewed private topology/CSR, per-cell candidates and ordered compensated reductions; integer topology/dry-loss flags only, no new authority writer or CPU completion dependency. Frozen budgets, original generic fallback and common conditional commit retained; phase RIDs and scratch owned/released with Response."
+    },
+    "scripts/simulation/unified_edit/water_response.gd::_initialize_velocity_prepare_phases": {
+      "sha256": "66a4f6e0d161e50359e064182c96e01a50c756e89f89b205b983edac5f199356",
+      "reason": "2026-10-18 velocity-only preparation: policy2 uses two GPU dispatches with group-uniform decision/control guard, private candidate/scratch and a 2048-byte first-error reduction. No authority stores, new CPU completion dependency, budget or connected-displacement semantic change. 21 fixed input pairs plus rejection/fatal guards passed 168 checks; common fill/shovel/toggle integration passed 92. Phase RIDs and private buffers use Response ownership and release."
+    },
+    "scripts/simulation/unified_edit/water_response.gd::_velocity_only": {
+      "sha256": "af4cd20bc5f2754a7d74391f7e4050f9da59e30609ee1da0392c3ed9b3252957",
+      "reason": "2026-10-18 velocity-only preparation: policy2 uses two GPU dispatches with group-uniform decision/control guard, private candidate/scratch and a 2048-byte first-error reduction. No authority stores, new CPU completion dependency, budget or connected-displacement semantic change. 21 fixed input pairs plus rejection/fatal guards passed 168 checks; common fill/shovel/toggle integration passed 92. Phase RIDs and private buffers use Response ownership and release."
+    },
+    "scripts/simulation/unified_edit/water_velocity_prepare.glsl::shader": {
+      "sha256": "9ad4fb084b7e4713fcd0030f85e59b9af1b440e891a9ce5ee86201cfadd27a6c",
+      "reason": "2026-10-18 velocity-only preparation: policy2 uses two GPU dispatches with group-uniform decision/control guard, private candidate/scratch and a 2048-byte first-error reduction. No authority stores, new CPU completion dependency, budget or connected-displacement semantic change. 21 fixed input pairs plus rejection/fatal guards passed 168 checks; common fill/shovel/toggle integration passed 92. Phase RIDs and private buffers use Response ownership and release."
+    },
+    "scripts/props/floating_prop_contact.gd::project_above_support": {
+      "sha256": "eacf26ff7144402eadc4faf2d0b84360b733ca110b591be65a024eb338d5069b",
+      "tokens": [
+        "body_test_motion(",
+        "new("
+      ],
+      "reason": "Floating props G4/G6: analytic authored collider bounds; terrain-only downward recovery query excludes other props, bounded2m root displacement; upward obstruction propagates only actual terrain displacement through registered stack. Never normal-frame snapping or neighboring-prop leapfrog."
+    },
+    "scripts/props/floating_prop_contact.gd::recovery_plan": {
+      "sha256": "1acf440cb6aedef49b05031063be7a07919576c89a61d18b5ab39f9d549ddb22",
+      "tokens": [
+        "body_test_motion(",
+        "new("
+      ],
+      "reason": "Floating props G4/G6: analytic authored collider bounds; terrain-only downward recovery query excludes other props, bounded2m root displacement; upward obstruction propagates only actual terrain displacement through registered stack. Never normal-frame snapping or neighboring-prop leapfrog."
+    },
+    "scripts/props/floating_props_service.gd::declarations": {
+      "sha256": "11c290ac5e84b183f5e799f613b7886bc963926a17a446fed07e2f32870a8902",
+      "tokens": [
+        "preload("
+      ],
+      "reason": "Floating props G2-G6: generic data-only typed registry, collider envelope, public bounded readonly sample consumer; native gravity plus per-point buoyancy/relative drag; real granted quanta and explicit sleep proof. No RD, authority writer, private queue or type branching. Half-budget query forecast and full delivery guards; terrain-only bounded edit correction and independent lifecycle leases."
+    },
+    "scripts/props/floating_props_service.gd::_apply_forces": {
+      "sha256": "2103afdde1735841283d3aae47984a1ee27910a9212d46cb798786d3cbb0c5d7",
+      "tokens": [
+        "apply_force("
+      ],
+      "reason": "Floating props G2-G6: generic data-only typed registry, collider envelope, public bounded readonly sample consumer; native gravity plus per-point buoyancy/relative drag; real granted quanta and explicit sleep proof. No RD, authority writer, private queue or type branching. Half-budget query forecast and full delivery guards; terrain-only bounded edit correction and independent lifecycle leases."
+    },
+    "scripts/simulation/unified_edit/consumer_checkpoint_sources.gd::declarations": {
+      "sha256": "5ad4ef26eeb81dc15dc3a1f7093825d39c6664844f985d4d7348a0d8397013b9",
+      "tokens": [
+        "preload("
+      ],
+      "reason": "Floating props G5/G6: one offline catalog pins known source full configuration and exact reviewed target source map; compare all declarative profile data before derived source-hash rebinding. Native fields/ledger/clock preserved; no learned allowlist. G6 deterministic-hash compatibility: original FULL configuration must equal offline pinned source dictionary; validation copy rehashes only the derived configuration digest. Original source/provenance/native fields stay intact. Unknown sources and unreviewed targets reject."
     }
   },
   "sealed_boundaries": {
     "scripts/simulation/unified_edit/tool_profile.gd": {
-      "sha256": "ef5d2b4b6bdfee6d8d0a8d5ab76e80f10a64348acf62c133c75dfe057e03b844",
-      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
+      "sha256": "8d5f10e0150f208653087daeebb16ac561a85ba72e426317af16f0214e6099af",
+      "reason": "2026-10-18 drainage toggle: policy2 accepts a nonzero local impulse, matching existing GPU velocity-only semantics. Policies0/1 still reject speed; no writer, layout or ownership change. Profile/protocol and real GPU drainage probes passed."
     },
     "scripts/simulation/unified_edit/height_stamp.gd": {
       "sha256": "a2b8d8d940f8ef7b2af13232c0f7bd0b1888e5ed8f1e074885f656b2203f48d0",
@@ -1197,24 +1279,24 @@
       "reason": "G1: exact catalog script; builds data registry only."
     },
     "scripts/simulation/unified_edit/profile_registry.gd": {
-      "sha256": "bb9c304d1108c039183d246d119be5b0253636c9b3cc709cdb4b38dc5b1005fd",
-      "reason": "G1: exact Profile script; immutable data snapshots and SHA-checked payloads; no profile callbacks."
+      "sha256": "f1911785ae05e56816c63641fbd98ece60a9de323bd365962df9331246ba558b",
+      "reason": "G1: immutable Profile snapshots. 2026-10-18 policy2 local speed accepted for drainage toggle; selected policy and speed remain in effective_hash, no profile callbacks or audit bypass."
     },
     "scripts/simulation/unified_edit/layout.gd": {
       "sha256": "fc2460d63c51315c85a60680adb7ee62e2ce84868e8e44adb6992c146a27ee52",
       "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
     },
     "scripts/beach/beach_scene_service.gd": {
-      "sha256": "dc5d9008c655dca7cf74a4f19f69d9ec0bbeda21c8cc97ef4793791116a959a8",
-      "reason": "G6: route factory requires exact unified root script, family-scoped save/restore and rollback; no old fallback."
+      "sha256": "27d984202c3db965c5502260534578b2920bc3855e2c294a4463d64c54aee6ca",
+      "reason": "Floating props G5/G6: cached restore waits completed boot; switch rejects during boot. Same unified factory and disposal proof; no consumer gate on producer."
     },
     "scripts/beach/unified_playable_entry.gd": {
-      "sha256": "af5efb1520fb56c95f81b90228e6f28f30a204e8b8467b4e6d2c4328349d899d",
-      "reason": "G6: direct Node3D and only PlayerInput constructor; scene-authored Runtime owns actual backend."
+      "sha256": "d9160d47d952ceb2aae10f57803e278cfcb4ef583e03c3317b348dce0afe482a",
+      "reason": "Floating props G5/G6: scene-authored optional service; exact dependency closure, terrain-only brush mask, independent holds, save/restore identity preflight and fault-safe held boundary. Shared drainage checkbox remains UI-only policy2/3 selection."
     },
     "scenes/main.tscn": {
-      "sha256": "1104e4e22e88002083e793eaef19c6f898093b146b9596baf1e0d7536814fdf4",
-      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
+      "sha256": "0f34fa95474df858644151043a7fbfcadf41bf9324db1ed26b217fd392bf6f7c",
+      "reason": "Floating props: static authored main-only three bodies/service, fixed typed profile/shape/material bindings, Jolt layer2 mask3, exact one native world; no runtime recreation. Other formal entries contain no props."
     },
     "assets/unified_edit/presentation/main.json": {
       "sha256": "2704777896d1f933ec359e2dfdb7272558b5a2bb85362d8c3835acf1d5d0810f",
@@ -2077,8 +2159,8 @@
       "reason": "G5/G6: physics HeightMapShape3D consumer only, no authority write."
     },
     "scripts/simulation/unified_edit/domain_runtime.gd": {
-      "sha256": "3430bc79251b49fceed003c48855e4ecf00b980890b97322de723c3105f426af",
-      "reason": "G1: public probe callback checks current generation; retired owner retains in-flight readers; no writer or extra scheduler."
+      "sha256": "825d377324b9235dcfb9ab3fc965f5dfeaaa355e555d69b6e8905a0dfc5acd7a",
+      "reason": "Floating props G5: retirement retries current Views reader as well as retired domains; only existing boot/restore Pipeline factories. Public readonly probe wrappers preserve generation/ownership."
     },
     "scenes/unified_edit_height_surface.tscn": {
       "sha256": "76ec932ebd6694b9d4bfafa10ab94e0083e88ef85a3dc0669afd35b8d5559dd7",
@@ -2089,12 +2171,12 @@
       "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
     },
     "scripts/simulation/unified_edit/checkpoint_codec.gd": {
-      "sha256": "01dfb3288867d92f72928b50307f70702d2ef3150ccb092eac2a28b1dc261eaf",
-      "reason": "G1/G6: data-only native/known legacy validation; wave IDs validate payload, no runtime restoration factory."
+      "sha256": "d02c6ed5f676067b3b7cebdcfdcfade4f19ed1dac56d24a1bf5992cf864213d2",
+      "reason": "Floating props G5/G6: strict container decoder retains size/checksum/non-object decoding; archival validation optionally skips current disk identity only, default stays strict. No prop native field. G6 fix: compare expected configuration identity before validating a different archival source; exact known-source projector then validates every native/header/ledger field under a normalized derived-hash copy. Same-identity saves/loads retain full strict Config validation."
     },
     "scripts/simulation/unified_edit/protocol.gd": {
-      "sha256": "6cda6ca845e98a0104e98fb3ba2e62e0e6cf3551069aca787450999b35b0eeb7",
-      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
+      "sha256": "67d41c996ac567eeb7a9392bdf8ecb1b516a0804671c445385ee307e0734bdc7",
+      "reason": "2026-10-18 drainage toggle: wire validation accepts nonzero speed for existing policy2, with unchanged bounds, derived fields, effective hash, layouts and receipt audits. Policies0/1 retain rejection; protocol and real GPU probes passed."
     },
     "scripts/simulation/unified_edit/intent.gd": {
       "sha256": "347fbc161a5295d8c597dd2a5c6b2853fd146f9b9a45eaa6aefd7a7805f6319f",
@@ -2117,8 +2199,8 @@
       "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
     },
     "scripts/simulation/unified_edit/configuration.gd": {
-      "sha256": "2f86c5cc8b6f73ef69e1cd7ee789495bcb0ec254166bcefa000b36d4baccfc6f",
-      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
+      "sha256": "500287dc7cc6a5c30fd4144aa458a064d09416b53e5190c9a1607c803e04e00a",
+      "reason": "G6 deterministic source identity: recursively sort mixed String/StringName dictionary keys by String content before normalization and var_to_bytes. Preserves all configuration data/numerical values; prevents process interning order from changing the digest. Negative mutant restores unsafe Variant sort and must fail."
     },
     "scripts/simulation/unified_edit/protocol.glslinc": {
       "sha256": "fb80880bc8f8ebe9cdcee3e2c1427a7b0997d410146eaae23c52e97b963492ad",
@@ -2165,8 +2247,8 @@
       "reason": "G3/G4: single local-candidate recorder; modes12 material,5/6 validation,7 conditional commit,8 receipt. No tool identity branch."
     },
     "scripts/simulation/unified_edit/water_response.gd": {
-      "sha256": "138290d17361cadc5798a06de61d3bcf77408d234721e6acb69222b0d2413136",
-      "reason": "G4: common water/sediment/momentum candidate/commit stages, policy enums only."
+      "sha256": "dcaac3bda25c8d742e105d0fcbae287a4d2378612e7724a4adca6d17429691e1",
+      "reason": "2026-10-18 velocity-only preparation: policy2 uses two GPU dispatches with group-uniform decision/control guard, private candidate/scratch and a 2048-byte first-error reduction. No authority stores, new CPU completion dependency, budget or connected-displacement semantic change. 21 fixed input pairs plus rejection/fatal guards passed 168 checks; common fill/shovel/toggle integration passed 92. Phase RIDs and private buffers use Response ownership and release."
     },
     "shaders/simulation/edit_validation/water_velocity_prefetch.glsl": {
       "sha256": "9cf7459b99ae2932a63068416cac6875844e8582dc5e58a33771f0c595f3c77d",
@@ -2261,16 +2343,16 @@
       "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
     },
     "scripts/simulation/unified_edit/height.gd": {
-      "sha256": "083f6e5b461ff006c474f6ce6adb6af18c21800bee3b4be2debd3d00f9a2d502",
-      "reason": "G5/G6: completion-reader and dirty acknowledgement; worker join only after is_task_completed in physics_consume; no work retirement wait. 2026-10-18 diagnostic-only review: nullable typed observer; records CPU timestamps and optional GPU markers, never mutates simulation or ownership. diagnostics.gd uses a bounded mutex-protected event array and snapshot copies."
+      "sha256": "6d6b3e070667d9263687ceca33d169ae2ccc69381e29cb953d50c75fe0a77ff9",
+      "reason": "Floating props G4/G6: existing two-slot Height borrow/ack leases;12priority+4ordinary bounded scheduling, samegen applied shape metadata. Strict edit/initial readiness retained; force compatibility requires conservative combined5mm temporal bound; worker completion checked before join."
     },
     "scripts/simulation/unified_edit/height_codec.gd": {
-      "sha256": "f4f0ac9cb9877c57b75b17825dc305d819769d268587cb6402b325fc840ff8ed",
-      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
+      "sha256": "f8472a265358da3fb21c3a00f5f7598426bb32457b0a2cea8c314833c59f8fcd",
+      "reason": "Height ABI3: fixed69828-byte16chunk wire; tagged chunkID+outward cumulative bound interval, signed64 identities, finite/NaN/negative guards. Unknown bounds cannot authorize lagging geometry."
     },
     "scripts/simulation/unified_edit/height.glsl": {
-      "sha256": "f7d513d34930938e24a7ccd3b8e0cd8a543914e1af33e6e7e8b17307ff293ff6",
-      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
+      "sha256": "9f08382aafd9706f017298cb9721b897b0fd3a4023a21c3e91510ab51650153d",
+      "reason": "Height ABI3: only private before/dirty/snapshot writes; complete33x33 shared vertex maximum temporal difference, outward rounding and +Inf saturation. TagID masked in borrow/ack; unchanged16capacity and ordinary fairness; no authority writes."
     },
     "scripts/simulation/unified_edit/coupled.gd": {
       "sha256": "8da731de5d0b1d82e7579c4360a25e27534c574d9aa5f882dad27be2e6b94378",
@@ -3425,24 +3507,84 @@
       "reason": "G6: allowed tool-ID frontend translation into common Intent; no GPU recorder or runtime constructor."
     },
     "scripts/simulation/unified_edit/checkpoint_router.gd": {
-      "sha256": "c50e8f350d48f2fc02117ebc4d247fb8a4f13def45131e0729e2ef74ecf19310",
-      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
+      "sha256": "521c44828444976086fcc0d6b59c17bda40dc2474f03e5d4e10da8e88f67e849",
+      "reason": "Floating props G5/G6: exact native configuration mismatch alone enters reviewed source projector; arbitrary unknown configurations still reject."
     },
     "scripts/simulation/unified_edit/probe.gd": {
       "sha256": "de1a09c4c6a0f128d9461c91248edfb8ea2a01bccd4da49fd4478f92d6676645",
       "reason": "G1: one bounded public read-only query owner under Views, writes only request/output SSBOs. Unknown registration retains slot, retries same output read without redispatch; exact serial/owner/pose and once terminal callback."
     },
     "scripts/simulation/unified_edit/probe.glsl": {
-      "sha256": "62892ce5b08f23bb0672dbab743e3e6446c1757692c804f7f336971852702490",
-      "reason": "G1 ABI v2 reviewed thin-water correction: schema2 rejects v1 receipts, byte sizes/offsets unchanged. Read-only published q/h sampling now uses existing water DRY_DEPTH=0.001 and VELOCITY_DEPTH=0.005; CPU threshold is the exact float32 value. Writes remain restricted to owned output SSBO; no numerical authority writes or new resources."
+      "sha256": "ab45f4e46692b78f40d1c3329a23ecdd100b384de966dcc0aa80e19e50546d10",
+      "reason": "Floating props ABI3: ordered readonly complete fields and private Height last-change/cumulative bound; only bounded output SSBO writes. Exact int64 split words, bilinear fields and current dry/velocity constants."
     },
     "scripts/simulation/unified_edit/probe_codec.gd": {
-      "sha256": "1b9cee3eeae0483d62b3d9640f5d790ad14d4158b5653673b0be4bf2a32029c1",
-      "reason": "G1 ABI v2 exact float32 cutoff reviewed: binary ratios 8589935/2^33 and 5368709/2^30 avoid the observed 4.7.2 decimal-literal rounding mismatch. depth_constant_20261018_01 retains raw double bits, GPU/CPU equality and exact-boundary force regressions. Header/schema2 packing and readonly ownership unchanged."
+      "sha256": "577de99be1b546a29908df5392c10a0d7138e2e0aeda13e71deb58c3012c7441",
+      "reason": "Floating props ABI3: exact packet/schema/identities/length/domain/finite validation,32points and3footprints,64chunk metadata; +Inf temporal bound is unknown, no numerical authority write."
     },
     "scripts/simulation/unified_edit/diagnostics.gd": {
       "sha256": "c66cd305ced9e692b8739cd7aa124586cbcdfabca388a74c5425ebe05f3b5780",
       "reason": " 2026-10-18 diagnostic-only review: nullable typed observer; records CPU timestamps and optional GPU markers, never mutates simulation or ownership. diagnostics.gd uses a bounded mutex-protected event array and snapshot copies."
+    },
+    "scripts/simulation/unified_edit/water_packed_topology.glsl": {
+      "sha256": "876056fb1b25c7eaea97e513dddcc882b7ea2cd723abb5409828ea0d389710cf",
+      "reason": "2026-10-18 packed water optimization: reviewed private topology/CSR, per-cell candidates and ordered compensated reductions; integer topology/dry-loss flags only, no new authority writer or CPU completion dependency. Frozen budgets, original generic fallback and common conditional commit retained; phase RIDs and scratch owned/released with Response."
+    },
+    "scripts/simulation/unified_edit/water_packed_parallel.glsl": {
+      "sha256": "8e48a46ade6d9a608b9fe9aa5b10f1127f4b036b22a788f392c069d9585d481d",
+      "reason": "2026-10-18 packed water optimization: reviewed private topology/CSR, per-cell candidates and ordered compensated reductions; integer topology/dry-loss flags only, no new authority writer or CPU completion dependency. Frozen budgets, original generic fallback and common conditional commit retained; phase RIDs and scratch owned/released with Response."
+    },
+    "scripts/simulation/unified_edit/water_velocity_prepare.glsl": {
+      "sha256": "9ad4fb084b7e4713fcd0030f85e59b9af1b440e891a9ce5ee86201cfadd27a6c",
+      "reason": "2026-10-18 velocity-only preparation: policy2 uses two GPU dispatches with group-uniform decision/control guard, private candidate/scratch and a 2048-byte first-error reduction. No authority stores, new CPU completion dependency, budget or connected-displacement semantic change. 21 fixed input pairs plus rejection/fatal guards passed 168 checks; common fill/shovel/toggle integration passed 92. Phase RIDs and private buffers use Response ownership and release."
+    },
+    "scenes/components/floating_props.tscn": {
+      "sha256": "afa5cf8683e52e0111ae0db256969274cf3759049c2a9b1d0574d0f31a241b1d",
+      "reason": "Floating props: static authored main-only three bodies/service, fixed typed profile/shape/material bindings, Jolt layer2 mask3, exact one native world; no runtime recreation. Other formal entries contain no props."
+    },
+    "scripts/props/floating_props_service.gd": {
+      "sha256": "3f727ad8d9d07c2aa81ec657c24488633c3074586593d2b27fe522bd42c68e49",
+      "reason": "Floating props G2-G6: generic data-only typed registry, collider envelope, public bounded readonly sample consumer; native gravity plus per-point buoyancy/relative drag; real granted quanta and explicit sleep proof. No RD, authority writer, private queue or type branching. Half-budget query forecast and full delivery guards; terrain-only bounded edit correction and independent lifecycle leases. G6 recovery: eligible root pending versions are strictly installed; terrain query uses actual assigned HeightMap snapshot, not unrelated edge chunks of force-compatible water packet. Successful reset clears old consumer fault hold."
+    },
+    "scripts/props/floating_prop_contact.gd": {
+      "sha256": "a377b0ea1b1114b7d8d30cfa68b81e91223f8ac5dfbce5c4958fe6eb241035e1",
+      "reason": "Floating props G4/G6: analytic authored collider bounds; terrain-only downward recovery query excludes other props, bounded2m root displacement; upward obstruction propagates only actual terrain displacement through registered stack. Never normal-frame snapping or neighboring-prop leapfrog."
+    },
+    "scripts/props/floating_prop_profile.gd": {
+      "sha256": "0ac16e7ec8188e6cce91e1cf9adda75c4b6949fab2d1d0bcff3e52afd60f16b6",
+      "reason": "Floating props Profile v2: exact Resource script; finite typed data validation and immutable snapshot with sampling rank/axis; no dynamic behavior/callback/owner access."
+    },
+    "scripts/props/floating_prop.gd": {
+      "sha256": "6a794f8a4a15b4791593be4f2623147ffd26771610742f975e7686401cdf1acf",
+      "reason": "Floating props: native RigidBody3D integration observer forwards actual state.step/COM/contact data; no custom integrator, gravity duplicate, authority write or body factory."
+    },
+    "scenes/props/wood_stick.tscn": {
+      "sha256": "2a8b6f4089b9a354da84ca7f461a4549dfaa07396f44ca295b4d2f594d46b6da",
+      "reason": "Floating props: static authored main-only three bodies/service, fixed typed profile/shape/material bindings, Jolt layer2 mask3, exact one native world; no runtime recreation. Other formal entries contain no props."
+    },
+    "assets/props/wood_stick_profile.tres": {
+      "sha256": "1a5e2a3e32bfe7f9611500bfdacc6d5edac144d830e57a334815f5cdf90cbf71",
+      "reason": "Floating props Profile v2: reviewed fixed mass/COM/point volume/drag and observable direction budgets; full axial rolling bound derived from4m/s divided by collider radius. No executable callback."
+    },
+    "scenes/props/wood_plank.tscn": {
+      "sha256": "6f08f5161d6815c74997ca74ecfe805facce698b7aec26d85e0e4cc975ffbc8f",
+      "reason": "Floating props: static authored main-only three bodies/service, fixed typed profile/shape/material bindings, Jolt layer2 mask3, exact one native world; no runtime recreation. Other formal entries contain no props."
+    },
+    "assets/props/wood_plank_profile.tres": {
+      "sha256": "a103b604504b8ba8b2558c1d1cb8abfbb18bcb7f10761fb07dfbf1781759cd7d",
+      "reason": "Floating props Profile v2: reviewed fixed mass/COM/point volume/drag and observable direction budgets; full axial rolling bound derived from4m/s divided by collider radius. No executable callback."
+    },
+    "scenes/props/bottle.tscn": {
+      "sha256": "4ae799a270b29de188ae4db21ec2a1d849416fe55d564ef934927434a80cb32f",
+      "reason": "Floating props: static authored main-only three bodies/service, fixed typed profile/shape/material bindings, Jolt layer2 mask3, exact one native world; no runtime recreation. Other formal entries contain no props."
+    },
+    "assets/props/bottle_profile.tres": {
+      "sha256": "6e0b1ec936e7d204ea8bf996386ac022f3e626ce6b38470bd3824f17f9f97158",
+      "reason": "Floating props Profile v2: reviewed fixed mass/COM/point volume/drag and observable direction budgets; full axial rolling bound derived from4m/s divided by collider radius. No executable callback."
+    },
+    "scripts/simulation/unified_edit/consumer_checkpoint_sources.gd": {
+      "sha256": "463f0486aad144ed8e982ff4dc84d3ec8c0171cdff9116cf4769285f6365e072",
+      "reason": "Floating props G5/G6: one offline catalog pins known source full configuration and exact reviewed target source map; compare all declarative profile data before derived source-hash rebinding. Native fields/ledger/clock preserved; no learned allowlist. G6 deterministic-hash compatibility: original FULL configuration must equal offline pinned source dictionary; validation copy rehashes only the derived configuration digest. Original source/provenance/native fields stay intact. Unknown sources and unreviewed targets reject."
     }
   },
   "tool_ids": [
@@ -3498,8 +3640,8 @@
   },
   "startup_tooling_boundaries": {
     "project.godot": {
-      "sha256": "73b1d257c2ff3e83c28359bb779f3e89a2d91e5f2f3b3dace692be0512fe5c22",
-      "reason": "Existing project bootstrap or managed GodotIQ debugger autoload. Debugger actions are explicitly development tooling, not a player tool backend. No shared addon was changed."
+      "sha256": "6ffd830959ed6630565cf9bdc3957b0ece379ce49be0cf0bc9db2b3c4ce941a3",
+      "reason": "Existing project bootstrap and debugger tooling; Floating props contact calibration sets Jolt penetration_slop0.002m (default0.02 failed5mm contact budget). No authority/queue change."
     },
     "addons/godotiq/godotiq_runtime.gd": {
       "sha256": "2d67e5b72b2bdd3f6871d84d158bf273acb8a4b964c5f8804331345b8daf4cc5",
@@ -3511,7 +3653,7 @@
     }
   },
   "actual_nodes_evidence": {
-    "path": "test_output/unified_edit_pipeline/g6_final_static01/audit.json",
-    "sha256": "c671a07540093c511f4f4c57acd09f12edfb681b51f566d7ca0ba5038b786431"
+    "path": "test_output/floating_props/formal_nodes_g6_20261018_02/probe.json",
+    "sha256": "77ec1bd3102468062a6d40906b63a3845052f8c80295d3607af176e2bb3c06f0"
   }
 }

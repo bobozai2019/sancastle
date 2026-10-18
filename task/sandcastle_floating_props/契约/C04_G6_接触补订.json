@@ -1,0 +1,22 @@
+{
+  "schema": 2,
+  "status": "frozen",
+  "supersedes": "C04_G4_动态接触.json consumer synchronization and edit projection; historical G4 intact",
+  "contact_tolerance_m": 0.005,
+  "jolt_slop_m": 0.002,
+  "maximum_edit_correction_m": 2.0,
+  "probe_abi": 3,
+  "height_snapshot_abi": 3,
+  "bed_bound": "complete33x33 shared vertices; outward incremental rounding, cumulative max-variation bound; packed64-ULP interval lower endpoint used for older shape subtraction",
+  "strict_readiness": "initial placement and pending terrain-edit roots need same-generation required last-change version installed",
+  "force_compatibility": "older assigned shape and older water packet share a single5mm total temporal discrepancy budget; unknown/large changes hold; geometry ahead of a packet separately bounded by packed upper endpoint",
+  "edit_projection": "terrain-only downward root sweep excludes other props; actual upward obstruction propagates same bounded displacement through registered3body stack; query actual assigned HeightMap snapshot after required pending root readiness",
+  "footprints": "at most3 expanded rectangles; retain bounded8packet history edge-chunk observations only if total<=12; priority12 plus ordinary4 with16snapshot slots unchanged",
+  "evidence": [
+    "test_output/floating_props/height_compatible_20261018_01",
+    "test_output/floating_props/height_codec_v3_20261018_01",
+    "test_output/floating_props/main_temporal_extended_20261018_02"
+  ],
+  "frozen_date": "2026-10-19",
+  "final_regression": "test_output/floating_props/final_regressions_20261019_08/progress.json"
+}

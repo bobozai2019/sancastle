@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3]
+[ext_resource type="PackedScene" path="res://tests/floating_props/three_props_fixture.tscn" id="1"]
+[node name="WaveFixture" instance=ExtResource("1")]
+[node name="Bottle" parent="." index="1"]
+position = Vector3(-13.5, 0, -1.5)
+rotation = Vector3(0, 0, 0)
+[node name="WoodPlank" parent="."]
+position = Vector3(-13.5, 0, 0)
+rotation = Vector3(0, 0, 0)
+[node name="WoodStick" parent="."]
+position = Vector3(-13.5, 0, 1.5)
+rotation = Vector3(0, 0, 0)
+[node name="Camera" parent="." index="5"]
+position = Vector3(-9.5, 3.8, 5)
+rotation_degrees = Vector3(-25, 35, 0)

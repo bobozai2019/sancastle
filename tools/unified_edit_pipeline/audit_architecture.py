@@ -20,7 +20,7 @@ TEXT = {'.gd', '.tscn', '.tres', '.glsl', '.gdshader', '.glslinc', '.json', '.go
 PATH = re.compile(r'res://[A-Za-z0-9_./-]+\.[A-Za-z0-9]+')
 # lexical masking preserves line count and excludes comments/strings from code.
 TOKEN = re.compile(r'"""[\s\S]*?"""|\'\'\'[\s\S]*?\'\'\'|"(?:\\.|[^"\\])*"|\'(?:\\.|[^\'\\])*\'|\#[^\n]*|//[^\n]*|/\*[\s\S]*?\*/')
-SENSITIVE = re.compile(r'\b(?:imageStore|atomic\w*|buffer_update|texture_update|texture_create|storage_buffer_create|compute_list_\w+|call_on_render_thread|set_script|callv|load|preload|new|call|call_deferred|Callable|wait_for_task_completion|wait_to_finish)\s*\(')
+SENSITIVE = re.compile(r'\b(?:imageStore|atomic\w*|buffer_update|texture_update|texture_create|storage_buffer_create|compute_list_\w+|call_on_render_thread|set_script|callv|load|preload|new|call|call_deferred|Callable|wait_for_task_completion|wait_to_finish|apply_force|apply_impulse|body_test_motion)\s*\(')
 
 def sha(data): return hashlib.sha256(data).hexdigest()
 
@@ -60,7 +60,7 @@ def inventory(sources):
     output = {}
     for path, raw in sorted(sources.items()):
         if Path(path).suffix not in {'.gd', '.glsl', '.glslinc'}: continue
-        if not (path.startswith(PREFIX) or path in {'scripts/beach/unified_playable_entry.gd','scripts/beach/beach_scene_service.gd'}):continue
+        if not (path.startswith((PREFIX,'scripts/props/')) or path in {'scripts/beach/unified_playable_entry.gd','scripts/beach/beach_scene_service.gd'}):continue
         source = raw.decode('utf-8-sig')
         chunks = methods(source) if path.endswith('.gd') else [('shader', source)]
         for method, body in chunks:
@@ -101,8 +101,20 @@ def evaluate(sources, policy):
     check('registry_snapshot_not_callback', 'pending[key]=checked.value.duplicate(true)' in registry)
     profile = sources[PREFIX+'tool_profile.gd'].decode()
     check('template_exact_script', 'shape_resource.get_script()!=Stamp' in profile)
+    configuration=sources[PREFIX+'configuration.gd'].decode()
+    check('configuration_keys_sort_by_string_content','keys.sort_custom(func(first,second):return String(first)<String(second))' in configuration)
     runtime = sources[PREFIX+'domain_runtime.gd'].decode()
     check('boot_restore_only_pipeline_factories', re.findall(r'\b(\w+)\.new\s*\(',mask(runtime)) == ['Pipeline','Pipeline'])
+    prop_service=sources['scripts/props/floating_props_service.gd'].decode()
+    check('props_exact_body_and_profile_scripts','row.body.get_script()!=Body' in prop_service and 'row.profile.get_script()!=Profile' in prop_service)
+    check('props_collider_envelope_checked','Contact.enclosing_radius(row.body)' in prop_service and 'envelope.radius_m>row.body.footprint_radius_m' in prop_service)
+    for path,raw in sources.items():
+        if not path.startswith('scripts/props/') or not path.endswith('.gd'):continue
+        source=raw.decode('utf-8-sig');code=mask(source)
+        check('props_no_backend_or_authority_access:'+path,not re.search(r'\b(?:RenderingServer|RenderingDevice|WorkerThreadPool|executor|primary|spare|water_response|heights_rd|rd)\b|\.(?:fields|native_fields|dispatch|record_tick)\b',code))
+        check('props_no_type_literal_specialization:'+path,not any(re.search(r'["\']'+re.escape(item)+r'["\']',source) for item in ['bottle','wood_plank','wood_stick']))
+        if path.endswith('floating_prop_profile.gd'):
+            check('prop_profile_data_only',all(name in {'declarations','validate','snapshot'} for name,_ in methods(source)) and not re.search(r'\b(?:await|call|callv|Callable|new|load|preload|apply_force)\s*\(',code))
     # Structural source identities for factory/registration/resource gates are
     # reviewed too, so renamed writer APIs cannot bypass token detection.
     for path, value in policy.get('sealed_boundaries', {}).items():
@@ -114,6 +126,9 @@ def evaluate(sources, policy):
             text=sources[path].decode('utf-8-sig')
             scripts=re.findall(r'type="Script" path="res://([^"]+)"',text)
             check('typed_resource_binding:'+path,len(scripts)==1 and scripts[0] in {PREFIX+'tool_profile.gd',PREFIX+'height_stamp.gd',PREFIX+'profile_catalog.gd'})
+        if path.startswith('assets/props/') and path.endswith('.tres'):
+            scripts=re.findall(r'type="Script" path="res://([^"]+)"',sources[path].decode('utf-8-sig'))
+            check('typed_prop_resource_binding:'+path,scripts==['scripts/props/floating_prop_profile.gd'])
     for path,value in policy.get('startup_tooling_boundaries',{}).items():
         target=ROOT/path
         check('startup_tooling_boundary:'+path,target.is_file() and sha(target.read_bytes())==value['sha256'] and bool(value.get('reason')))
@@ -140,17 +155,26 @@ def main():
         ('dynamic_callback',PREFIX+'profile_registry.gd','\nfunc forbidden(resource):resource.call("execute",authority)\n'),
         ('inherited_writer',PREFIX+'tool_profile.gd','\nfunc forbidden():set_script(load("res://scripts/beach/async_pipeline_entry.gd"))\n'),
         ('renamed_writer',PREFIX+'domain_runtime.gd','\nfunc concealed():\n\tvar alias=current.executor\n\talias.record(a,b,c,d,e)\n'),
+        ('prop_private_writer','scripts/props/floating_props_service.gd','\nfunc forbidden():\n\truntime.current.executor.record(a,b,c,d,e)\n'),
+        ('prop_profile_callback','scripts/props/floating_prop_profile.gd','\nfunc forbidden(owner):owner.call("execute")\n'),
+        ('compatibility_bypass',PREFIX+'consumer_checkpoint_sources.gd','\nstatic func forbidden(value):return {"error":&"","checkpoint":value}\n'),
+        ('unstable_configuration_key_sort',PREFIX+'configuration.gd',''),
     ]
     negatives=[]
     for name,path,addition in mutants:
         changed=sources.copy();changed[path]=sources[path]+addition.encode()
         if name=='removed_worker_completion_guard':changed[path]=changed[path].replace(b'not WorkerThreadPool.is_task_completed(slot.task):continue',b'false:continue')
+        if name=='unstable_configuration_key_sort':changed[path]=changed[path].replace(b'keys.sort_custom(func(first,second):return String(first)<String(second))',b'keys.sort()')
         failures=[c['name'] for c in evaluate(changed,policy) if not c['pass']]
         negatives.append({'name':name,'pass':bool(failures),'failures':failures})
     changed=sources.copy();resource='assets/unified_edit/extensions/wide_fill_v1.tres'
     changed[resource]=changed[resource].replace(b'scripts/simulation/unified_edit/tool_profile.gd',b'scripts/beach/async_pipeline_entry.gd')
     failures=[c['name'] for c in evaluate(changed,policy) if not c['pass']]
     negatives.append({'name':'resource_private_writer_binding','pass':bool(failures),'failures':failures})
+    changed=sources.copy();resource='assets/props/bottle_profile.tres'
+    changed[resource]=changed[resource].replace(b'scripts/props/floating_prop_profile.gd',b'scripts/beach/async_pipeline_entry.gd')
+    failures=[c['name'] for c in evaluate(changed,policy) if not c['pass']]
+    negatives.append({'name':'prop_resource_writer_binding','pass':bool(failures),'failures':failures})
     checks.extend({'name':'reject_mutant:'+row['name'],'pass':row['pass']} for row in negatives)
     with zipfile.ZipFile(folder/'sources.zip','x',zipfile.ZIP_DEFLATED) as z:
         for path,raw in sorted(sources.items()):z.writestr(path,raw)

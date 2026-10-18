@@ -27,6 +27,7 @@ rotation_degrees = Vector3(0, 0, 15)
 [node name="Props" type="Node3D" parent="."]
 script = ExtResource("3")
 body_paths = Array[NodePath]([NodePath("../Bottle")])
+trace_enabled = true
 [node name="Bed" type="MeshInstance3D" parent="."]
 mesh = SubResource("Plane")
 material_override = SubResource("BedMat")

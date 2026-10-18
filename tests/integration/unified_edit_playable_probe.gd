@@ -27,7 +27,7 @@ func _run() -> void:
 	DisplayServer.window_set_size(Vector2i(1280,720))
 	scene=load(_entry_path(scene_key)).instantiate();scene.playing=false;scene.generation=1001;root.add_child(scene)
 	var start:=Time.get_ticks_msec()
-	while not scene.ready_for_ticks and scene.last_error.is_empty() and Time.get_ticks_msec()-start<90000:await process_frame
+	while (not scene.ready_for_ticks or scene._booting) and scene.last_error.is_empty() and Time.get_ticks_msec()-start<90000:await process_frame
 	check("actual_entry_ready",scene.ready_for_ticks and scene.last_error.is_empty())
 	if not scene.ready_for_ticks:await _close();return
 	check("new_root_has_no_legacy_base",scene.get_script().get_base_script()==null and not "solver" in scene and not scene.has_node("GpuCollisionProxy"))

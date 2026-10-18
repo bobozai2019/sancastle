@@ -39,6 +39,23 @@ BATCH_SPANS = {
 }
 
 
+def interval_overlap_query(intervals):
+    """Sum interval overlaps in O(log n), retaining nested-span accounting."""
+    intervals = list(intervals)
+    starts = sorted(a for a, _ in intervals)
+    ends = sorted(b for _, b in intervals)
+    def prefix(values):
+        result = [0]
+        for value in values:
+            result.append(result[-1] + value)
+        return result
+    start_sum, end_sum = prefix(starts), prefix(ends)
+    def integral(at):
+        a, b = bisect.bisect_right(starts, at), bisect.bisect_right(ends, at)
+        return at * (a-b) - start_sum[a] + end_sum[b]
+    return lambda begin, end: integral(end) - integral(begin)
+
+
 def analyze(path):
     data = json.loads(path.read_text(encoding="utf-8-sig"))
     log = path.with_suffix(".log").read_text(encoding="utf-8", errors="replace") if path.with_suffix(".log").exists() else ""
@@ -165,6 +182,8 @@ def analyze(path):
                 by_phase[row["phase"]][key.removesuffix("_us")].append(row[key]/1000)
     phase_frames = defaultdict(list)
     top_frames = []
+    overlap_queries = {name: interval_overlap_query(intervals) for name, intervals in cpu_spans.items()}
+    shape_overlap = interval_overlap_query((c["start_us"], c["start_us"]+c["elapsed_us"]) for c in obs["collision_calls"])
     for row in frames:
         if row["frame_us"] <= 0:
             continue
@@ -172,11 +191,11 @@ def analyze(path):
         phase_frames[tag].append(row)
         by_phase[tag]["frame"].append(duration/1000)
         contributions = {}
-        for name, intervals in cpu_spans.items():
-            value = sum(max(0, min(b, at)-max(a, at-duration)) for a, b in intervals)/1000
+        for name, overlap in overlap_queries.items():
+            value = overlap(at-duration, at)/1000
             contributions[name] = value
             by_phase[tag][name+"_per_frame_overlap"].append(value)
-        shape_us = sum(max(0, min(c["start_us"]+c["elapsed_us"], at)-max(c["start_us"], at-duration)) for c in obs["collision_calls"])
+        shape_us = shape_overlap(at-duration, at)
         by_phase[tag]["shape_cpu_per_frame_overlap"].append(shape_us/1000)
         top_frames.append({"phase": tag, "frame": row["frame_id"], "ms": duration/1000,
                            "pending": row["pending"], "slots": row["active_slots"],
@@ -212,6 +231,8 @@ def analyze(path):
                       "slot_blocked_states": dict(blocked[tag])}
     quality_errors = []
     options = obs["diagnostic_options"]
+    if options.get("manual") and not any(e["event"] == "enqueue" for e in events):
+        quality_errors.append("Manual capture contains no accepted edit commands; cannot attribute an editing stall.")
     if not options.get("manual") and (options.get("water_detail") or options.get("water_only")) and not gpu_groups.get("shovel_water_total"):
         quality_errors.append("Requested water-stage markers are absent; batch timers alone cannot validate water-stage attribution.")
     output = {"input": str(path), "pass": data["pass"], "measurement_valid": data["pass"] and not runtime_errors and not quality_errors,

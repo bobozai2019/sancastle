@@ -42,7 +42,7 @@ static func safe_data(value: Variant, depth: int=0) -> bool:
 
 static func canonical(value: Variant) -> Variant:
 	if value is Dictionary:
-		var result:={};var keys: Array=value.keys();keys.sort()
+		var result:={};var keys: Array=value.keys();keys.sort_custom(func(first,second):return String(first)<String(second))
 		for key in keys:result[String(key)]=canonical(value[key])
 		return result
 	if value is Array:

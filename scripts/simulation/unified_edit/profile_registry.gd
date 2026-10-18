@@ -64,7 +64,7 @@ func resolve(id: Variant, version: Variant, hash: Variant, overrides: Dictionary
 		var value: float=values[key]
 		if value<frozen.ranges[key][0] or value>frozen.ranges[key][1] or (key in ["radius_m","amount_m3"] and value<=0.0):return {"error":&"invalid_parameters"}
 	if values.has("top_width_m") and values.top_width_m>values.bottom_width_m:return {"error":&"invalid_parameters"}
-	if values.has("speed_m_s") and frozen.water_policy!=3 and values.speed_m_s!=0.0:return {"error":&"unsupported_combination"}
+	if values.has("speed_m_s") and frozen.water_policy not in [2,3] and values.speed_m_s!=0.0:return {"error":&"unsupported_combination"}
 	frozen.parameters=values
 	frozen.effective_hash=JSON.stringify(frozen,"",true).sha256_text()
 	return {"error":&"","value":frozen}

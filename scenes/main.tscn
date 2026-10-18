@@ -1,10 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://bovjuhcrpaoaf"]
+[gd_scene load_steps=5 format=3 uid="uid://bovjuhcrpaoaf"]
 
 [ext_resource type="PackedScene" path="res://scenes/unified_edit/presentation/main.tscn" id="1"]
 
 [ext_resource type="Script" path="res://scripts/beach/unified_playable_entry.gd" id="2"]
 
 [ext_resource type="Script" path="res://scripts/beach/unified_performance_panel.gd" id="3"]
+
+[ext_resource type="PackedScene" path="res://scenes/components/floating_props.tscn" id="4"]
 
 [node name="UnifiedBeach" instance=ExtResource("1")]
 
@@ -17,6 +19,24 @@ presentation_manifest = "res://assets/unified_edit/presentation/main.json"
 [node name="PerformancePanel" parent="Interface"]
 
 script = ExtResource("3")
+
+[node name="FloatingProps" parent="." instance=ExtResource("4")]
+
+[node name="ConnectedDrainage" type="CheckButton" parent="Interface/ShapeBrushPanel/Margin/Controls" index="1"]
+
+layout_mode = 2
+focus_mode = 0
+button_pressed = true
+text = "连通排水（实验对比）"
+tooltip_text = "关闭后不执行编辑时的连通排水，保留局部推水和常规水流模拟。切换结束当前拖拽，从下一笔操作生效。"
+
+[node name="DrainageHint" type="Label" parent="Interface/ShapeBrushPanel/Margin/Controls" index="2"]
+
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "关闭后保留推水，排水交给水流模拟"
+
+[connection signal="toggled" from="Interface/ShapeBrushPanel/Margin/Controls/ConnectedDrainage" to="." method="_on_connected_drainage_toggled"]
 
 [connection signal="look_started" from="GpuPlayerCamera" to="." method="_on_camera_look_started"]
 

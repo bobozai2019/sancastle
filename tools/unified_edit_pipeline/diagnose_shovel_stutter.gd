@@ -4,6 +4,10 @@ extends "res://tools/unified_edit_pipeline/current_cost_probe.gd"
 class TimedCollision extends RefCounted:
  var original
  var records: Array=[]
+ func _get(property: StringName) -> Variant:
+  # Consumers also read proxy state (for example floating-prop shape bounds).
+  return original.get(property)
+ func get_node(path: NodePath) -> Node:return original.get_node(path)
  func _replace_chunk_shape(chunk,version,heights,generation) -> bool:
   var started:=Time.get_ticks_usec()
   var accepted: bool=original._replace_chunk_shape(chunk,version,heights,generation)

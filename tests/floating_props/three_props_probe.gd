@@ -22,7 +22,7 @@ func _extra_final_checks() -> void:
 	for row in service.registry:
 		var prop: RigidBody3D=row.body
 		observations.all_bodies[row.body_id]={"position":prop.position,"rotation":prop.rotation,"velocity":service.saved[row.body_id].linear,"angular_velocity":service.saved[row.body_id].angular,"actual_time_s":service.actual_time[row.body_id]}
-		check("same_actual_clock_"+str(row.body_id),absf(service.actual_time[row.body_id]-service.admitted_time_s)<1e-6)
+		check("same_actual_clock_"+str(row.body_id),absf(service.actual_time[row.body_id]-service.admitted_time_s)<_clock_error_budget())
 		check("same_body_script_"+str(row.body_id),prop.get_script()==service.Body)
 		if probe_case in ["flow_positive","flow_negative"]:
 			var sign_flow:=1.0 if probe_case=="flow_positive" else -1.0

@@ -5,69 +5,87 @@
   "preview_final": false,
   "sources": {
     "assets/brushes/molded_material_candidate.json": "1936e7dfc654a7a5dc5e9307d880c85e7cc7f48b128372ec622f5b68b7af2890",
+    "assets/props/bottle_profile.tres": "6e0b1ec936e7d204ea8bf996386ac022f3e626ce6b38470bd3824f17f9f97158",
+    "assets/props/wood_plank_profile.tres": "a103b604504b8ba8b2558c1d1cb8abfbb18bcb7f10761fb07dfbf1781759cd7d",
+    "assets/props/wood_stick_profile.tres": "1a5e2a3e32bfe7f9611500bfdacc6d5edac144d830e57a334815f5cdf90cbf71",
     "assets/test1_geometry/water_cycle.json": "b95e55ec01bfe639ad58c757092b76c6f2f67bf63d6dd52cd8b4ea0fc9a561c9",
     "assets/unified_edit/default_catalog.tres": "c4d517c1d778f92a560533b1f140f208d1eb035580fa5149f4a6e7597a2ccfd4",
     "assets/unified_edit/presentation/main.json": "2704777896d1f933ec359e2dfdb7272558b5a2bb85362d8c3835acf1d5d0810f",
     "assets/unified_edit/presentation/test1_backwash.json": "931a6cfdb1750df1cbca7208b1f3d7e06f68f0ae89211db57913f1fe5c773732",
     "assets/unified_edit/presentation/test1_capture.json": "91ee7fc0b73c5273c78ba069e148af9ba8f3db16cd753f896fa233c932310737",
     "assets/unified_edit/presentation/test1_geometry.json": "3300d495b670f6f0e84a8a264cffa36633ed3b15306c2a3c42d08f14d9544af3",
-    "docs/README.md": "88e7ec0f98d3b674c06e2b2b9e92af1725282330503251d9d157a50f666dad54",
+    "docs/README.md": "70c04063bbcd43fa7b5870d863366b8f6769b14295f1b1954d8cbb61e1b91bd8",
     "docs/knowledge/README.md": "b582dcf3801544f56ef74ac6068851762fa4851a8e5263280f89bfb7c22ad8e7",
-    "docs/unified-edit-extension-guide.md": "9b33167f23965d03e2157241e8b3479c40bd9ad16946805c2551b2bc3fd5762c",
-    "docs/主场景操作.md": "956364f8df56e59d1ad81478c62b21095a0b1a0c8472502f165d8fbf8146345e",
-    "docs/场景切换与功能复用.md": "5c03f94a236281c6c84f8276291b2024959007429cd22ea92fdd19dba1af3a09",
-    "docs/当前技术规格.md": "c4671d420c71c87c4e10c6f0ea8fa9cc2c6c4e807e7ff964ad1a7b0e443e361c",
-    "docs/当前项目技术方案.md": "2515445f2f275df97ffd62f340b6f61cdccaa86ea06773d4a749c2c103bc107b",
-    "docs/性能面板.md": "967587378d42f55ae2a67dce8e894c5dc95556b5b314e385008bf330cbeea3b5",
-    "project.godot": "73b1d257c2ff3e83c28359bb779f3e89a2d91e5f2f3b3dace692be0512fe5c22",
+    "docs/unified-edit-extension-guide.md": "350386c27b70aa13e6ee7ac2adf549a46e5f5ec26b3b091d4b49411a0deca0ef",
+    "docs/主场景操作.md": "935e0dc43a0415fd9893c1520c748194659c48179dd7aceaba9062127924f489",
+    "docs/场景切换与功能复用.md": "4a541d2a3a96e67735a73e87ed1f5733a484ecc944331b40fad4bd2d15378e7d",
+    "docs/当前技术规格.md": "2833021568a9b212e3f53a639e7279d824be731d27d9c126475fc93a7fd5ef4c",
+    "docs/当前项目技术方案.md": "8419205c3797a1723209c29bbf70f7705e3db106e744286bbb47cf0891f0578e",
+    "docs/性能面板.md": "597dbb1e22fabed0c116db5c45514405175d0d22f385cef91044347c51179b03",
+    "docs/漂浮道具.md": "bee8ed2bea7241e4072d006323ad44b5d3fc38ef039388e9e61d229dbbaf64b3",
+    "project.godot": "6ffd830959ed6630565cf9bdc3957b0ece379ce49be0cf0bc9db2b3c4ce941a3",
+    "scenes/components/floating_props.tscn": "afa5cf8683e52e0111ae0db256969274cf3759049c2a9b1d0574d0f31a241b1d",
     "scenes/components/water_boundary_sides.tscn": "613f98726654fb43bbd47ecea32e085806a1eddfc5747dc558856f2495011524",
-    "scenes/main.tscn": "1104e4e22e88002083e793eaef19c6f898093b146b9596baf1e0d7536814fdf4",
+    "scenes/main.tscn": "0f34fa95474df858644151043a7fbfcadf41bf9324db1ed26b217fd392bf6f7c",
     "scenes/playable/test1_backwash.tscn": "d7b8eb4a07e0a68dda94f7831afe5e36d6410404958cc2aa3fbe3618baab3a3c",
     "scenes/playable/test1_capture.tscn": "5e30d144d51cfb7515eea1091af8bf7623313011179dad69e7bafae9e010a199",
     "scenes/playable/test1_geometry.tscn": "c4e2574ef9fa2f4dd02b70d2aaecc265e369d9e17b2cfde5d63c6f5b3a641cc6",
+    "scenes/props/bottle.tscn": "4ae799a270b29de188ae4db21ec2a1d849416fe55d564ef934927434a80cb32f",
+    "scenes/props/wood_plank.tscn": "6f08f5161d6815c74997ca74ecfe805facce698b7aec26d85e0e4cc975ffbc8f",
+    "scenes/props/wood_stick.tscn": "2a8b6f4089b9a354da84ca7f461a4549dfaa07396f44ca295b4d2f594d46b6da",
     "scenes/unified_edit_height_surface.tscn": "76ec932ebd6694b9d4bfafa10ab94e0083e88ef85a3dc0669afd35b8d5559dd7",
     "scenes/unified_edit_runtime.tscn": "bbc141dba36f68247494840a42f6d29e76222eb4904d12eab4f28e5c8f5f9e34",
-    "scripts/beach/beach_scene_service.gd": "dc5d9008c655dca7cf74a4f19f69d9ec0bbeda21c8cc97ef4793791116a959a8",
+    "scripts/beach/beach_scene_service.gd": "27d984202c3db965c5502260534578b2920bc3855e2c294a4463d64c54aee6ca",
     "scripts/beach/unified_performance_panel.gd": "f5c9c835358f0434174147e9eb65a444fa39d7611bafb35cb0fd35d7879b2935",
-    "scripts/beach/unified_playable_entry.gd": "af5efb1520fb56c95f81b90228e6f28f30a204e8b8467b4e6d2c4328349d899d",
+    "scripts/beach/unified_playable_entry.gd": "d9160d47d952ceb2aae10f57803e278cfcb4ef583e03c3317b348dce0afe482a",
     "scripts/beach/unified_scene_routes.gd": "8b554be029c1948a4c741bbdc491aa0c51a8d768e7e8274dce7c59de44d8f32f",
+    "scripts/props/floating_prop.gd": "6a794f8a4a15b4791593be4f2623147ffd26771610742f975e7686401cdf1acf",
+    "scripts/props/floating_prop_contact.gd": "a377b0ea1b1114b7d8d30cfa68b81e91223f8ac5dfbce5c4958fe6eb241035e1",
+    "scripts/props/floating_prop_profile.gd": "0ac16e7ec8188e6cce91e1cf9adda75c4b6949fab2d1d0bcff3e52afd60f16b6",
+    "scripts/props/floating_props_service.gd": "3f727ad8d9d07c2aa81ec657c24488633c3074586593d2b27fe522bd42c68e49",
     "scripts/simulation/unified_edit/boundary.gd": "98ac2a4d90ba7c35e1a6a411b6b1f2b7ab6de7285ef17301c7c8298b7f49ea78",
     "scripts/simulation/unified_edit/cfl_decide.glsl": "8d246db53a1d2b72ae252e68d906b71166b64bc7782244c4f3c6c47757e19e5e",
-    "scripts/simulation/unified_edit/checkpoint_codec.gd": "01dfb3288867d92f72928b50307f70702d2ef3150ccb092eac2a28b1dc261eaf",
-    "scripts/simulation/unified_edit/checkpoint_router.gd": "c50e8f350d48f2fc02117ebc4d247fb8a4f13def45131e0729e2ef74ecf19310",
-    "scripts/simulation/unified_edit/configuration.gd": "2f86c5cc8b6f73ef69e1cd7ee789495bcb0ec254166bcefa000b36d4baccfc6f",
+    "scripts/simulation/unified_edit/checkpoint_codec.gd": "d02c6ed5f676067b3b7cebdcfdcfade4f19ed1dac56d24a1bf5992cf864213d2",
+    "scripts/simulation/unified_edit/checkpoint_router.gd": "521c44828444976086fcc0d6b59c17bda40dc2474f03e5d4e10da8e88f67e849",
+    "scripts/simulation/unified_edit/configuration.gd": "500287dc7cc6a5c30fd4144aa458a064d09416b53e5190c9a1607c803e04e00a",
+    "scripts/simulation/unified_edit/consumer_checkpoint_sources.gd": "463f0486aad144ed8e982ff4dc84d3ec8c0171cdff9116cf4769285f6365e072",
     "scripts/simulation/unified_edit/coupled.gd": "8da731de5d0b1d82e7579c4360a25e27534c574d9aa5f882dad27be2e6b94378",
     "scripts/simulation/unified_edit/display_intent.gd": "5ddd0f9019350efbe388c1862ecda7b4c44ba8b47682e93c60b36d0843d90f21",
-    "scripts/simulation/unified_edit/domain_runtime.gd": "645f61608dc69dcdbdf3ac654296fe953862665c03a1f1c775b0ba78c8e37d6b",
+    "scripts/simulation/unified_edit/domain_runtime.gd": "825d377324b9235dcfb9ab3fc965f5dfeaaa355e555d69b6e8905a0dfc5acd7a",
     "scripts/simulation/unified_edit/executor.gd": "f57c4bf157df609b9e922e038c7546914a9ae0d0cc76c7d23b9b92d270001751",
-    "scripts/simulation/unified_edit/height.gd": "757b00b1c9ff942d5d802b09a530e7f325a496d476137c7bd3fde459f0ca119e",
+    "scripts/simulation/unified_edit/height.gd": "6d6b3e070667d9263687ceca33d169ae2ccc69381e29cb953d50c75fe0a77ff9",
     "scripts/simulation/unified_edit/height_stamp.gd": "a2b8d8d940f8ef7b2af13232c0f7bd0b1888e5ed8f1e074885f656b2203f48d0",
     "scripts/simulation/unified_edit/layout.gd": "fc2460d63c51315c85a60680adb7ee62e2ce84868e8e44adb6992c146a27ee52",
     "scripts/simulation/unified_edit/legacy_sources.gd": "a53ddb381060b5c9e0f928db6fd22f83269992e6d5e356e271c85df961fcc567",
-    "scripts/simulation/unified_edit/pipeline.gd": "856e4e86495c7b51b708206041660c6ed64abb28e5c6f71721ca7bc14d96a6c6",
+    "scripts/simulation/unified_edit/pipeline.gd": "a60c7893dfc41ed9d310316ff7e1d28c3e971c007f8ea6b18b198e3a950e8ef8",
     "scripts/simulation/unified_edit/player_input.gd": "e368b682c09d8ecbb7b1424c876b5606662eefb331ee1c7c90bf729a42da5f35",
+    "scripts/simulation/unified_edit/probe_codec.gd": "577de99be1b546a29908df5392c10a0d7138e2e0aeda13e71deb58c3012c7441",
     "scripts/simulation/unified_edit/profile_catalog.gd": "6d4651c5d6cc5209cfe0696e3f6ef7375b9444ed2426fe94b1592c0b2473e0a4",
-    "scripts/simulation/unified_edit/profile_registry.gd": "bb9c304d1108c039183d246d119be5b0253636c9b3cc709cdb4b38dc5b1005fd",
+    "scripts/simulation/unified_edit/profile_registry.gd": "f1911785ae05e56816c63641fbd98ece60a9de323bd365962df9331246ba558b",
     "scripts/simulation/unified_edit/state.gd": "125b6317ebf10cf84df89fefb79c0ba0aa9a83a44ae5f890f5c4793a603421df",
-    "scripts/simulation/unified_edit/tool_profile.gd": "ef5d2b4b6bdfee6d8d0a8d5ab76e80f10a64348acf62c133c75dfe057e03b844",
+    "scripts/simulation/unified_edit/tool_profile.gd": "8d5f10e0150f208653087daeebb16ac561a85ba72e426317af16f0214e6099af",
     "scripts/simulation/unified_edit/unit_half.gd": "3d0d323b653df1f9237525e3b42a2c395ffe3a585ecb68ab8a5bd0d9a03e573a",
     "scripts/simulation/unified_edit/visuals.gd": "f3df8c141caaac2096763ccf28ba972b865c60da40d701e80829df734201928a",
     "scripts/simulation/unified_edit/water.gd": "0a0cbedc11d9fcb4d55f53e75b99da537c4ed4a166945bffcad90cac69600903",
-    "scripts/simulation/unified_edit/water_response.gd": "138290d17361cadc5798a06de61d3bcf77408d234721e6acb69222b0d2413136",
+    "scripts/simulation/unified_edit/water_packed_parallel.glsl": "8e48a46ade6d9a608b9fe9aa5b10f1127f4b036b22a788f392c069d9585d481d",
+    "scripts/simulation/unified_edit/water_packed_topology.glsl": "876056fb1b25c7eaea97e513dddcc882b7ea2cd723abb5409828ea0d389710cf",
+    "scripts/simulation/unified_edit/water_response.gd": "dcaac3bda25c8d742e105d0fcbae287a4d2378612e7724a4adca6d17429691e1",
     "scripts/visual/water_boundary_sides.gd": "cc6cb7cdd2bc92560c94551e3d220705feccc2249f51fbd46eb6cc4ad277ab64",
+    "task/sandcastle_floating_props/契约/height_snapshot_ABI_v3.json": "1ff5a1ea03e247eb863ac221e1fcde0c2037489a053e569d97a332bfd50f5077",
+    "task/sandcastle_floating_props/契约/probe_ABI_v3.json": "68e1f489a6f00c261677c84bdc667bfb5c07e5f34366fb02954bd0bff28a3b95",
     "task/sandcastle_unified_edit_pipeline/验收/G8_联合门.json": "4fe21829a1e6f88d149244e4adffba7010fcda09bec6c39e6743de4e08085859",
     "tools/docs/build_execution_guide.py": "a8a698c14749ebd63c8595ef6ab7683a51ed8d05bc90cb78d0a7faa1bfd84df6",
-    "tools/docs/build_unified_execution_guide.py": "ee4d14676c08f24f1931a2cd07efff94ca1947d353726cd8b1b0704591d20357",
-    "tools/unified_edit_pipeline/architecture_policy.json": "6f14440dc3e07d4db9adf1e306b931d2c8c9a77ae0c16467a3025838426dcfe6"
+    "tools/docs/build_unified_execution_guide.py": "923c160968aaf137f0ff51c6e42b9e0ee42d668c02e4bb20d9f8283c453e4deb",
+    "tools/unified_edit_pipeline/architecture_policy.json": "391d7e1a88ace19ab31fe241ae1d60b2d9969459b27a41241d0180a41edd9ce4"
   },
   "anchors": [
     {
       "title": "入口",
       "path": "scripts/beach/unified_playable_entry.gd",
       "symbol": "_ready",
-      "line": 68,
-      "sha256": "af5efb1520fb56c95f81b90228e6f28f30a204e8b8467b4e6d2c4328349d899d",
-      "excerpt": "  68 func _ready() -> void:\n  69 \tget_tree().auto_accept_quit=false\n  70 \t$GravelLayer.visible=false\n  71 \tvar read:=Presentation.read(presentation_manifest)\n  72 \tif not read.error.is_empty():_fail(read.error);return\n  73 \tvar data: Dictionary=read.metadata\n  74 \tif data.settings.scene_key!=scene_key:_fail(&\"presentation_scene_mismatch\");return\n  75 \tvar plan:=Presentation.material_plan(self,data,get_script())\n  76 \tif not plan.error.is_empty():_fail(plan.error);return\n  77 \tmaterial_bindings=plan.bindings"
+      "line": 70,
+      "sha256": "d9160d47d952ceb2aae10f57803e278cfcb4ef583e03c3317b348dce0afe482a",
+      "excerpt": "  70 func _ready() -> void:\n  71 \tget_tree().auto_accept_quit=false\n  72 \t$GravelLayer.visible=false\n  73 \tvar read:=Presentation.read(presentation_manifest)\n  74 \tif not read.error.is_empty():_fail(read.error);return\n  75 \tvar data: Dictionary=read.metadata\n  76 \tif data.settings.scene_key!=scene_key:_fail(&\"presentation_scene_mismatch\");return\n  77 \tvar plan:=Presentation.material_plan(self,data,get_script())\n  78 \tif not plan.error.is_empty():_fail(plan.error);return\n  79 \tmaterial_bindings=plan.bindings"
     },
     {
       "title": "声明",
@@ -82,7 +100,7 @@
       "path": "scripts/simulation/unified_edit/profile_registry.gd",
       "symbol": "resolve",
       "line": 49,
-      "sha256": "bb9c304d1108c039183d246d119be5b0253636c9b3cc709cdb4b38dc5b1005fd",
+      "sha256": "f1911785ae05e56816c63641fbd98ece60a9de323bd365962df9331246ba558b",
       "excerpt": "  49 func resolve(id: Variant, version: Variant, hash: Variant, overrides: Dictionary={}, features: Dictionary={}) -> Dictionary:\n  50 \tif typeof(id) not in [TYPE_STRING,TYPE_STRING_NAME] or typeof(version)!=TYPE_INT or typeof(hash)!=TYPE_STRING:return {\"error\":&\"invalid_profile\"}\n  51 \tvar frozen:=profile(id)\n  52 \tif frozen.is_empty():return {\"error\":&\"invalid_profile\"}\n  53 \tif frozen.version!=version or frozen.profile_hash!=hash:return {\"error\":&\"profile_identity_mismatch\"}\n  54 \tfor key in features:\n  55 \t\tif typeof(key) not in [TYPE_STRING,TYPE_STRING_NAME] or not frozen.allowed_features.has(String(key)) or typeof(features[key])!=TYPE_INT or features[key] not in frozen.allowed_features[String(key)]:return {\"error\":&\"unsupported_combination\"}\n  56 \t\tfrozen[String(key)]=features[key]\n  57 \tfrozen.selected_features={\"water_policy\":frozen.water_policy,\"material_policy\":frozen.material_policy}\n  58 \tfrozen.derived_fields=Profile.fields_for(frozen.operation,frozen.destination,frozen.water_policy,frozen.stroke_policy)"
     },
     {
@@ -90,24 +108,24 @@
       "path": "scripts/simulation/unified_edit/configuration.gd",
       "symbol": "freeze",
       "line": 71,
-      "sha256": "2f86c5cc8b6f73ef69e1cd7ee789495bcb0ec254166bcefa000b36d4baccfc6f",
+      "sha256": "500287dc7cc6a5c30fd4144aa458a064d09416b53e5190c9a1607c803e04e00a",
       "excerpt": "  71 static func freeze(registry, domain: Variant, simulation: Dictionary, effects: Dictionary={}, diagnostics: Dictionary={}, environment: Dictionary={}, extra_sources: PackedStringArray=PackedStringArray()) -> Dictionary:\n  72 \tif typeof(domain) not in [TYPE_STRING,TYPE_STRING_NAME] or String(domain).is_empty() or String(domain).length()>128:return {\"error\":&\"invalid_configuration_domain\"}\n  73 \tif not exact(simulation,SIMULATION_KEYS):return {\"error\":&\"invalid_simulation_flags\"}\n  74 \tfor value in simulation.values():\n  75 \t\tif typeof(value)!=TYPE_BOOL:return {\"error\":&\"invalid_simulation_flags\"}\n  76 \tif not simulation.unrestricted_sand_tools:return {\"error\":&\"unsupported_inventory_accounting\"}\n  77 \tfor key in [\"enable_structures\",\"rise_front_history\",\"contact_history\"]:\n  78 \t\tif simulation[key]:return {\"error\":&\"unsupported_history_capability\"}\n  79 \tvar effect:=_flags(effects,EFFECT_DEFAULTS);var diagnostic:=_flags(diagnostics,DIAGNOSTIC_DEFAULTS)\n  80 \tif not effect.error.is_empty():return effect"
     },
     {
       "title": "主调度",
       "path": "scripts/simulation/unified_edit/pipeline.gd",
       "symbol": "pump",
-      "line": 302,
-      "sha256": "856e4e86495c7b51b708206041660c6ed64abb28e5c6f71721ca7bc14d96a6c6",
-      "excerpt": " 302 func pump() -> void:\n 303 \tif not _ready or not _fault.is_empty():\n 304 \t\t_checkpoint_progress();return\n 305 \t_poll()\n 306 \tif not _fault.is_empty():\n 307 \t\t_checkpoint_progress();return\n 308 \theights.pump()\n 309 \t_checkpoint_progress()\n 310 \t# All ready work may record ahead; no per-command CPU completion gate.\n 311 \twhile not _pending.is_empty():"
+      "line": 305,
+      "sha256": "a60c7893dfc41ed9d310316ff7e1d28c3e971c007f8ea6b18b198e3a950e8ef8",
+      "excerpt": " 305 func pump() -> void:\n 306 \tif not _ready or not _fault.is_empty():\n 307 \t\t_checkpoint_progress();return\n 308 \tif diagnostics!=null:diagnostics.mark(&\"pump_begin\",0,{\"pending\":_pending.size(),\"active\":active_count()})\n 309 \t_poll()\n 310 \tif not _fault.is_empty():\n 311 \t\t_checkpoint_progress();return\n 312 \theights.pump()\n 313 \t_checkpoint_progress()\n 314 \t# All ready work may record ahead; no per-command CPU completion gate."
     },
     {
       "title": "唯一录制",
       "path": "scripts/simulation/unified_edit/pipeline.gd",
       "symbol": "_submit_render",
-      "line": 338,
-      "sha256": "856e4e86495c7b51b708206041660c6ed64abb28e5c6f71721ca7bc14d96a6c6",
-      "excerpt": " 338 func _submit_render(id: Dictionary, packet: PackedByteArray, kind: int, dt: float, wave_packets: Array=[]) -> void:\n 339 \tif kind==L.WorkKind.WATER_TICK and boundary.enabled and not water.configure_boundary(water.tide,wave_packets):\n 340 \t\tcall_deferred(\"_submission_failed\",id,{\"recorded\":false,\"error\":&\"boundary_wave_upload\"});return\n 341 \tvar decoded:=W.decode_batch(packet,id)\n 342 \tvar recorder: Callable=_record_work.bind(kind,dt,decoded.commands)\n 343 \tvar submitted:=transport.submit(id,packet,recorder,_arrived_render,_finish_work)\n 344 \tif submitted.recorded:call_deferred(\"_recording_known\",id)\n 345 \tif not submitted.error.is_empty():call_deferred(\"_submission_failed\",id,submitted)\n 346 \n 347 func _recording_known(id: Dictionary) -> void:"
+      "line": 346,
+      "sha256": "a60c7893dfc41ed9d310316ff7e1d28c3e971c007f8ea6b18b198e3a950e8ef8",
+      "excerpt": " 346 func _submit_render(id: Dictionary, packet: PackedByteArray, kind: int, dt: float, wave_packets: Array=[]) -> void:\n 347 \tif diagnostics!=null:diagnostics.mark(&\"submit_begin\",id.batch_seq)\n 348 \tif kind==L.WorkKind.WATER_TICK and boundary.enabled and not water.configure_boundary(water.tide,wave_packets):\n 349 \t\tcall_deferred(\"_submission_failed\",id,{\"recorded\":false,\"error\":&\"boundary_wave_upload\"});return\n 350 \tvar decoded:=W.decode_batch(packet,id)\n 351 \tvar recorder: Callable=_record_work.bind(kind,dt,decoded.commands)\n 352 \tif diagnostics!=null and state.profile_passes:state.rd.capture_timestamp(\"ue_batch_\"+str(id.batch_seq)+\"_start\")\n 353 \tvar submitted:=transport.submit(id,packet,recorder,_arrived_render,_finish_work)\n 354 \tif diagnostics!=null and state.profile_passes:state.rd.capture_timestamp(\"ue_batch_\"+str(id.batch_seq)+\"_end\")\n 355 \tif diagnostics!=null:diagnostics.mark(&\"submit_end\",id.batch_seq,{\"recorded\":submitted.recorded,\"error\":submitted.error})"
     },
     {
       "title": "编辑骨架",
@@ -121,17 +139,33 @@
       "title": "公共水响应",
       "path": "scripts/simulation/unified_edit/water_response.gd",
       "symbol": "record",
-      "line": 33,
-      "sha256": "138290d17361cadc5798a06de61d3bcf77408d234721e6acb69222b0d2413136",
-      "excerpt": "  33 func record(policy: int) -> Array:\n  34 \tvar inject:=inject_water_loss_once;inject_water_loss_once=false\n  35 \tdispatch(\"response\",sets.response,Vector3i(256,1,1),PackedInt32Array([0,0,0,0]).to_byte_array())\n  36 \tvar push:=PackedFloat32Array([0,0.125,0,0]).to_byte_array();push.encode_u32(0,256)\n  37 \tif policy!=2 and not inject:_legacy_dispatch(\"packed\",push)\n  38 \tpush.encode_u32(8,1 if inject else 0);push.encode_u32(12,1 if policy==2 else (0 if inject else 2));_legacy_dispatch(\"displace\",push)\n  39 \tdispatch(\"response\",sets.response,Vector3i(256,1,1),PackedInt32Array([1,0,0,0]).to_byte_array())\n  40 \t_legacy_dispatch(\"velocity_reduce\",PackedByteArray())\n  41 \tdispatch(\"response\",sets.response,Vector3i(256,1,1),PackedInt32Array([2,0,0,0]).to_byte_array())\n  42 \tdispatch(\"response\",sets.response,Vector3i(1,1,1),PackedInt32Array([3,0,0,0]).to_byte_array())"
+      "line": 87,
+      "sha256": "dcaac3bda25c8d742e105d0fcbae287a4d2378612e7724a4adca6d17429691e1",
+      "excerpt": "  87 func record(policy: int) -> Array:\n  88 \tvar inject:=inject_water_loss_once;inject_water_loss_once=false\n  89 \tdispatch(\"response\",sets.response,Vector3i(256,1,1),PackedInt32Array([0,0,0,0]).to_byte_array())\n  90 \tvar push:=PackedFloat32Array([0,0.125,0,0]).to_byte_array();push.encode_u32(0,256)\n  91 \tif policy==2:_velocity_only()\n  92 \telse:\n  93 \t\tif not inject:_legacy_dispatch(\"packed\",push)\n  94 \t\tpush.encode_u32(8,1 if inject else 0);push.encode_u32(12,0 if inject else 2);_legacy_dispatch(\"displace\",push)\n  95 \tdispatch(\"response\",sets.response,Vector3i(256,1,1),PackedInt32Array([1,0,0,0]).to_byte_array())\n  96 \t_legacy_dispatch(\"velocity_reduce\",PackedByteArray())"
     },
     {
       "title": "水条件提交",
       "path": "scripts/simulation/unified_edit/water_response.gd",
       "symbol": "commit",
-      "line": 45,
-      "sha256": "138290d17361cadc5798a06de61d3bcf77408d234721e6acb69222b0d2413136",
-      "excerpt": "  45 func commit() -> void:\n  46 \tdispatch(\"response\",sets.response,Vector3i(256,1,1),PackedInt32Array([4,0,0,0]).to_byte_array())\n  47 \n  48 func release() -> void:\n  49 \tsets.clear();buffers.clear();state=null;owner=null;super.release()"
+      "line": 101,
+      "sha256": "dcaac3bda25c8d742e105d0fcbae287a4d2378612e7724a4adca6d17429691e1",
+      "excerpt": " 101 func commit() -> void:\n 102 \tdispatch(\"response\",sets.response,Vector3i(256,1,1),PackedInt32Array([4,0,0,0]).to_byte_array())\n 103\n 104 func release() -> void:\n 105 \tsets.clear();buffers.clear();state=null;owner=null;super.release()"
+    },
+    {
+      "title": "排水分阶段录制",
+      "path": "scripts/simulation/unified_edit/water_response.gd",
+      "symbol": "_packed_math",
+      "line": 52,
+      "sha256": "dcaac3bda25c8d742e105d0fcbae287a4d2378612e7724a4adca6d17429691e1",
+      "excerpt": "  52 func _packed_math(push: PackedByteArray) -> void:\n  53 \t# GPU-only phase boundaries. Per-cell math spans all SMs; component reductions\n  54 \t# retain the reference's row-major compensated order and bounded repair.\n  55 \tvar phase_push:=push.duplicate()\n  56 \tfor mode in 11:\n  57 \t\tphase_push.encode_u32(8,mode)\n  58 \t\t_packed_phase(mode,phase_push)\n  59\n  60 func _packed_phase(mode: int, push: PackedByteArray) -> void:\n  61 \tvar groups:=1024 if mode in [1,3,5,8] else (1 if mode==10 else 32)"
+    },
+    {
+      "title": "排水特化阶段",
+      "path": "scripts/simulation/unified_edit/water_response.gd",
+      "symbol": "_packed_phase",
+      "line": 60,
+      "sha256": "dcaac3bda25c8d742e105d0fcbae287a4d2378612e7724a4adca6d17429691e1",
+      "excerpt": "  60 func _packed_phase(mode: int, push: PackedByteArray) -> void:\n  61 \tvar groups:=1024 if mode in [1,3,5,8] else (1 if mode==10 else 32)\n  62 \tvar list:=rd.compute_list_begin()\n  63 \trd.compute_list_bind_compute_pipeline(list,kernels.packed_math.phases[mode])\n  64 \trd.compute_list_bind_uniform_set(list,sets.packed_math,0)\n  65 \trd.compute_list_set_push_constant(list,push,push.size())\n  66 \trd.compute_list_dispatch(list,groups,1,1);rd.compute_list_end()\n  67\n  68 func _initialize_velocity_prepare_phases() -> bool:\n  69 \tkernels.velocity_prepare.phases=[]"
     },
     {
       "title": "水tick",
@@ -153,24 +187,24 @@
       "title": "碰撞消费",
       "path": "scripts/simulation/unified_edit/height.gd",
       "symbol": "physics_consume",
-      "line": 145,
-      "sha256": "757b00b1c9ff942d5d802b09a530e7f325a496d476137c7bd3fde459f0ca119e",
-      "excerpt": " 145 func physics_consume(order: PackedInt32Array=PackedInt32Array([0,1])) -> int:\n 146 \tif hold_physics:return 0\n 147 \tvar count:=0\n 148 \tfor index in order:\n 149 \t\tif index<0 or index>=slots.size():continue\n 150 \t\tvar slot: Dictionary=slots[index]\n 151 \t\tif slot.phase!=&\"worker\" or not WorkerThreadPool.is_task_completed(slot.task):continue\n 152 \t\tWorkerThreadPool.wait_for_task_completion(slot.task)\n 153 \t\tvar prepared: Dictionary=slot.job.result();var id: Dictionary=slot.identity\n 154 \t\tif prepared.status!=&\"prepared\":_invalid(id,&\"height_nonfinite\");continue"
+      "line": 164,
+      "sha256": "6d6b3e070667d9263687ceca33d169ae2ccc69381e29cb953d50c75fe0a77ff9",
+      "excerpt": " 164 func physics_consume(order: PackedInt32Array=PackedInt32Array([0,1])) -> int:\n 165 \tif hold_physics:return 0\n 166 \tvar count:=0\n 167 \tfor index in order:\n 168 \t\tif index<0 or index>=slots.size():continue\n 169 \t\tvar slot: Dictionary=slots[index]\n 170 \t\tif slot.phase!=&\"worker\" or not WorkerThreadPool.is_task_completed(slot.task):continue\n 171 \t\tWorkerThreadPool.wait_for_task_completion(slot.task)\n 172 \t\tvar prepared: Dictionary=slot.job.result();var id: Dictionary=slot.identity\n 173 \t\tif diagnostics!=null:diagnostics.mark(&\"height_apply_begin\",id.snapshot_seq,{\"timings\":prepared.timings,\"chunks\":slot.result.chunks.size(),\"state_seq\":slot.result.state_seq})"
     },
     {
       "title": "换代提交",
       "path": "scripts/simulation/unified_edit/domain_runtime.gd",
       "symbol": "_physics_process",
-      "line": 175,
-      "sha256": "645f61608dc69dcdbdf3ac654296fe953862665c03a1f1c775b0ba78c8e37d6b",
-      "excerpt": " 175 func _physics_process(_delta: float) -> void:\n 176 \tif closing:\n 177 \t\tfor surface in surfaces:surface.set_collision_enabled(false)\n 178 \t\treturn\n 179 \tif phase!=&\"commit_ready\" or candidate==null or _discarding:return\n 180 \tif current!=null and (current.active_count()!=0 or current.pending_count()!=0 or current.checkpoint_capture!=null):return\n 181 \tvar error:=_validate_bindings(candidate)\n 182 \tif inject_commit_validation_failure:error=&\"injected_commit_preflight\"\n 183 \tif not error.is_empty():_reject_candidate(error);return\n 184 \tvar previous=current;var previous_index:=current_index"
+      "line": 186,
+      "sha256": "825d377324b9235dcfb9ab3fc965f5dfeaaa355e555d69b6e8905a0dfc5acd7a",
+      "excerpt": " 186 func _physics_process(_delta: float) -> void:\n 187 \tif closing:\n 188 \t\tfor surface in surfaces:surface.set_collision_enabled(false)\n 189 \t\treturn\n 190 \tif phase!=&\"commit_ready\" or candidate==null or _discarding:return\n 191 \tif current!=null and (current.active_count()!=0 or current.pending_count()!=0 or current.checkpoint_capture!=null):return\n 192 \tvar error:=_validate_bindings(candidate)\n 193 \tif inject_commit_validation_failure:error=&\"injected_commit_preflight\"\n 194 \tif not error.is_empty():_reject_candidate(error);return\n 195 \tvar previous=current;var previous_index:=current_index"
     },
     {
       "title": "恢复工厂",
       "path": "scripts/simulation/unified_edit/domain_runtime.gd",
       "symbol": "restore_checkpoint",
       "line": 50,
-      "sha256": "645f61608dc69dcdbdf3ac654296fe953862665c03a1f1c775b0ba78c8e37d6b",
+      "sha256": "825d377324b9235dcfb9ab3fc965f5dfeaaa355e555d69b6e8905a0dfc5acd7a",
       "excerpt": "  50 func restore_checkpoint(checkpoint: Dictionary, callback: Callable) -> StringName:\n  51 \tif closing or current==null:return &\"runtime_unavailable\"\n  52 \tif candidate!=null or not retired.is_empty() or current.checkpoint_capture!=null:return &\"transition_busy\"\n  53 \tif not callback.is_valid():return &\"invalid_transition_callback\"\n  54 \tvar error:=Codec.validate(checkpoint,configuration)\n  55 \tif not error.is_empty():return error\n  56 \tvar epoch:=Intent.next_identity(maxi(epoch_highwater,checkpoint.generation))\n  57 \tif not epoch.error.is_empty():return epoch.error\n  58 \tvar next:=Pipeline.new();error=next.configure_restore(registry,configuration,epoch.value,checkpoint)\n  59 \tif not error.is_empty():return error"
     },
     {
@@ -178,24 +212,88 @@
       "path": "scripts/simulation/unified_edit/checkpoint_codec.gd",
       "symbol": "validate",
       "line": 19,
-      "sha256": "01dfb3288867d92f72928b50307f70702d2ef3150ccb092eac2a28b1dc261eaf",
-      "excerpt": "  19 static func validate(value: Dictionary, configuration: Dictionary) -> StringName:\n  20 \tvar error:=Config.validate(configuration,true)\n  21 \tif not error.is_empty():return error\n  22 \tif not Config.exact(value,KEYS) or typeof(value.version)!=TYPE_INT or value.version!=VERSION or value.protocol_family!=Config.FAMILY or typeof(value.pipeline_protocol_version)!=TYPE_INT or value.pipeline_protocol_version!=L.VERSION or typeof(value.grid_size)!=TYPE_INT or value.grid_size!=256 or value.cell_size_m!=0.125:return &\"invalid_unified_checkpoint_header\"\n  23 \tif value.domain_id!=configuration.domain_id or typeof(value.domain_id)!=TYPE_STRING:return &\"checkpoint_domain_mismatch\"\n  24 \tfor key in [\"generation\",\"state_seq\",\"sim_tick\",\"revision\",\"highwater_id\",\"ticket_id\",\"wave_highwater_id\"]:\n  25 \t\tif not I.counter(value[key],1 if key==\"generation\" else 0):return &\"invalid_checkpoint_counter\"\n  26 \terror=Config.validate(value.configuration)\n  27 \tif not error.is_empty():return error\n  28 \tif value.configuration.configuration_hash!=configuration.configuration_hash:return &\"checkpoint_configuration_mismatch\""
+      "sha256": "d02c6ed5f676067b3b7cebdcfdcfade4f19ed1dac56d24a1bf5992cf864213d2",
+      "excerpt": "  19 static func validate(value: Dictionary, configuration: Dictionary, verify_configuration_disk: bool=true) -> StringName:\n  20 \tvar error:=Config.validate(configuration,verify_configuration_disk)\n  21 \tif not error.is_empty():return error\n  22 \tif not Config.exact(value,KEYS) or typeof(value.version)!=TYPE_INT or value.version!=VERSION or value.protocol_family!=Config.FAMILY or typeof(value.pipeline_protocol_version)!=TYPE_INT or value.pipeline_protocol_version!=L.VERSION or typeof(value.grid_size)!=TYPE_INT or value.grid_size!=256 or value.cell_size_m!=0.125:return &\"invalid_unified_checkpoint_header\"\n  23 \tif value.domain_id!=configuration.domain_id or typeof(value.domain_id)!=TYPE_STRING:return &\"checkpoint_domain_mismatch\"\n  24 \tfor key in [\"generation\",\"state_seq\",\"sim_tick\",\"revision\",\"highwater_id\",\"ticket_id\",\"wave_highwater_id\"]:\n  25 \t\tif not I.counter(value[key],1 if key==\"generation\" else 0):return &\"invalid_checkpoint_counter\"\n  26 \tif not value.configuration is Dictionary:return &\"invalid_configuration\"\n  27 \tif value.configuration.get(\"configuration_hash\")!=configuration.configuration_hash:return &\"checkpoint_configuration_mismatch\"\n  28 \terror=Config.validate(value.configuration)"
     },
     {
       "title": "存档路由",
       "path": "scripts/simulation/unified_edit/checkpoint_router.gd",
       "symbol": "load_file",
-      "line": 11,
-      "sha256": "c50e8f350d48f2fc02117ebc4d247fb8a4f13def45131e0729e2ef74ecf19310",
-      "excerpt": "  11 static func load_file(path: String, configuration: Dictionary) -> Dictionary:\n  12 \tvar file:=FileAccess.open(path,FileAccess.READ)\n  13 \tif file==null:return {\"error\":&\"open_failed\"}\n  14 \tif file.get_length()<48:return {\"error\":&\"invalid_file_size\"}\n  15 \tvar magic:=file.get_buffer(8).get_string_from_ascii();file.close()\n  16 \tif magic==Codec.MAGIC:return Codec.load(path,configuration)\n  17 \tif magic!=Legacy.Old.MAGIC and magic!=Legacy.Store.MAGIC:return {\"error\":&\"unsupported_checkpoint_family\"}\n  18 \tvar source:=Legacy.new()\n  19 \tvar error:=source.initialize_catalog(CATALOG,CATALOG_SHA256)\n  20 \tif not error.is_empty():return {\"error\":error}"
+      "line": 12,
+      "sha256": "521c44828444976086fcc0d6b59c17bda40dc2474f03e5d4e10da8e88f67e849",
+      "excerpt": "  12 static func load_file(path: String, configuration: Dictionary) -> Dictionary:\n  13 \tvar file:=FileAccess.open(path,FileAccess.READ)\n  14 \tif file==null:return {\"error\":&\"open_failed\"}\n  15 \tif file.get_length()<48:return {\"error\":&\"invalid_file_size\"}\n  16 \tvar magic:=file.get_buffer(8).get_string_from_ascii();file.close()\n  17 \tif magic==Codec.MAGIC:\n  18 \t\tvar loaded:=Codec.read_container(path)\n  19 \t\tif not loaded.error.is_empty():return loaded\n  20 \t\tvar error:=Codec.validate(loaded.checkpoint,configuration)\n  21 \t\tif error.is_empty():return loaded"
     },
     {
       "title": "正式切换",
       "path": "scripts/beach/beach_scene_service.gd",
       "symbol": "_switch",
-      "line": 126,
-      "sha256": "dc5d9008c655dca7cf74a4f19f69d9ec0bbeda21c8cc97ef4793791116a959a8",
-      "excerpt": " 126 func _switch(key: String) -> void:\n 127 \tvar old = active_scene\n 128 \tvar target_path: String=old.playable_scene_path(key)\n 129 \tvar rollback_path: String=old.playable_scene_path(old.scene_key)\n 130 \tvar packed: PackedScene = load(target_path)\n 131 \tif packed == null:\n 132 \t\t_finish(\"场景资源加载失败\")\n 133 \t\treturn\n 134 \tvar old_key: String = old.scene_key\n 135 \tvar old_settings := _settings(old)"
+      "line": 127,
+      "sha256": "27d984202c3db965c5502260534578b2920bc3855e2c294a4463d64c54aee6ca",
+      "excerpt": " 127 func _switch(key: String) -> void:\n 128 \tvar old = active_scene\n 129 \tvar target_path: String=old.playable_scene_path(key)\n 130 \tvar rollback_path: String=old.playable_scene_path(old.scene_key)\n 131 \tvar packed: PackedScene = load(target_path)\n 132 \tif packed == null:\n 133 \t\t_finish(\"场景资源加载失败\")\n 134 \t\treturn\n 135 \tvar old_key: String = old.scene_key\n 136 \tvar old_settings := _settings(old)"
+    },
+    {
+      "title": "公共道具采样",
+      "path": "scripts/simulation/unified_edit/probe_codec.gd",
+      "symbol": "decode",
+      "line": 73,
+      "sha256": "577de99be1b546a29908df5392c10a0d7138e2e0aeda13e71deb58c3012c7441",
+      "excerpt": "  73 static func decode(bytes: PackedByteArray, request: Dictionary, serial: int) -> Dictionary:\n  74 \tvar result:={\"error\":&\"readback_failed\",\"raw\":bytes.duplicate()}\n  75 \tif bytes.size()!=OUTPUT_BYTES or bytes.decode_u32(0)!=VERSION or bytes.decode_s64(88)!=serial:return result\n  76 \tresult.schema=VERSION\n  77 \tfor key in I64_FIELDS:\n  78 \t\tresult[key]=bytes.decode_s64(I64_FIELDS[key])\n  79 \t\tif result[key]!=request[key]:return result\n  80 \tresult.domain_id=request.domain_id\n  81 \tif bytes.slice(96,128)!=String(request.domain_id).sha256_text().hex_decode():return result\n  82 \tif bytes.decode_u32(68)!=request.points.size() or bytes.decode_u32(80)!=0 or bytes.decode_u32(84)!=0:return result"
+    },
+    {
+      "title": "碰撞差异证明",
+      "path": "scripts/simulation/unified_edit/height.gd",
+      "symbol": "footprint_compatible",
+      "line": 232,
+      "sha256": "6d6b3e070667d9263687ceca33d169ae2ccc69381e29cb953d50c75fe0a77ff9",
+      "excerpt": " 232 func footprint_compatible(required: Dictionary, bounds: Dictionary, epoch: int, tolerance_m: float) -> Dictionary:\n 233 \tvar strict:=footprint_ready(required,epoch)\n 234 \tif not strict.error.is_empty() or tolerance_m<0.0 or not is_finite(tolerance_m):return {\"ready\":false,\"error\":strict.error}\n 235 \tvar maximum:=0.0;var differences:={}\n 236 \tfor chunk in required:\n 237 \t\tvar applied: int=applied_state_seq.get(chunk,-1)\n 238 \t\tif applied<0 or int(applied_physics_frame.get(chunk,-1))<0:return {\"ready\":false,\"error\":&\"support_not_ready\"}\n 239 \t\tif applied>=required[chunk]:continue\n 240 \t\tvar upper: float=applied_change_bounds.get(chunk,-1.0);var lower:=Codec.lower_change_bound(upper);var newer: float=bounds.get(chunk,-1.0)\n 241 \t\tif lower<0.0 or newer<0.0 or newer<lower or newer-lower>tolerance_m:return {\"ready\":false,\"error\":&\"support_change_bound\"}"
+    },
+    {
+      "title": "道具接入",
+      "path": "scripts/props/floating_props_service.gd",
+      "symbol": "attach",
+      "line": 118,
+      "sha256": "3f727ad8d9d07c2aa81ec657c24488633c3074586593d2b27fe522bd42c68e49",
+      "excerpt": " 118 func attach(owner, rows: Array, positions: Dictionary) -> Dictionary:\n 119 \tif closing:return _result(0,&\"closing\")\n 120 \tif busy or active:return _result(0,&\"busy\")\n 121 \tvar error:=_validate(rows,positions)\n 122 \tif not error.is_empty():return _result(0,error)\n 123 \tif owner==null or not owner.ready_for_input():return _result(0,&\"backend_failed\")\n 124 \tvar id:=_next_operation()\n 125 \tif id==0:return _result(0,&\"identity_exhausted\")\n 126 \tbusy=true\n 127 \truntime=owner;registry=rows.duplicate();layout=positions.duplicate(true)"
+    },
+    {
+      "title": "样本准入",
+      "path": "scripts/props/floating_props_service.gd",
+      "symbol": "_candidate_usable",
+      "line": 304,
+      "sha256": "3f727ad8d9d07c2aa81ec657c24488633c3074586593d2b27fe522bd42c68e49",
+      "excerpt": " 304 func _candidate_usable(value: Dictionary, poses: Dictionary) -> bool:\n 305 \tif value.is_empty() or not _initialized_pose:return false\n 306 \tfor row in registry:\n 307 \t\tvar data: Dictionary=profiles[row.body_id];var body: RigidBody3D=row.body\n 308 \t\tif maxf(runtime.current.advanced_time_s,last_sample_time_s)-value.captured_time_s>data.max_sample_age_s:return _reject_sample(&\"age\",value,{\"body_id\":row.body_id})\n 309 \t\tvar pose: Transform3D=poses[row.body_id]\n 310 \t\tif body.global_position.distance_to(pose.origin)>data.max_pose_distance_m:return _reject_sample(&\"root_distance\",value,{\"body_id\":row.body_id})\n 311 \t\tif _orientation_error(data,body.global_basis,pose.basis)>data.max_pose_angle_rad:return _reject_sample(&\"cloud_angle\",value,{\"body_id\":row.body_id})\n 312 \t\t# Query data observes the sampling cloud, not invisible axial twist of a\n 313 \t\t# collinear cloud. Point displacement also bounds translation+rotation"
+    },
+    {
+      "title": "通用浮力与流阻",
+      "path": "scripts/props/floating_props_service.gd",
+      "symbol": "_apply_forces",
+      "line": 416,
+      "sha256": "3f727ad8d9d07c2aa81ec657c24488633c3074586593d2b27fe522bd42c68e49",
+      "excerpt": " 416 func _apply_forces(body: RigidBody3D, data: Dictionary) -> void:\n 417 \tvar gravity: float=ProjectSettings.get_setting(\"physics/3d/default_gravity\",9.8)\n 418 \tvar center: Vector3=body.to_global(data.center_of_mass_m)\n 419 \tfor point in sample.points:\n 420 \t\tif point.body_id!=body.body_id:continue\n 421 \t\tvar config: Dictionary=data.points[point.point_id-1];var position:=body.to_global(config.local_position_m)\n 422 \t\tvar half: float=config.half_height_m\n 423 \t\tvar wet: bool=point.h>ProbeCodec.DRY_DEPTH_M\n 424 \t\tvar fraction:=clampf((minf(position.y+half,point.eta)-maxf(position.y-half,point.bed))/(2.0*half),0,1) if wet else 0.0\n 425 \t\tvar velocity:=body.linear_velocity+body.angular_velocity.cross(position-center)"
+    },
+    {
+      "title": "恢复重置",
+      "path": "scripts/props/floating_props_service.gd",
+      "symbol": "reset",
+      "line": 494,
+      "sha256": "3f727ad8d9d07c2aa81ec657c24488633c3074586593d2b27fe522bd42c68e49",
+      "excerpt": " 494 func reset(positions: Dictionary, domain: StringName, epoch: int) -> Dictionary:\n 495 \tif closing:return _result(0,&\"closing\")\n 496 \tif busy or pending:return _result(0,&\"busy\")\n 497 \tif runtime.current==null or runtime.generation()!=epoch or String(runtime.configuration.domain_id)!=String(domain):return _result(0,&\"stale_generation\")\n 498 \t_finalize_resting_steps()\n 499 \tif not expected_steps.is_empty():return _result(0,&\"busy\")\n 500 \tvar error:=_validate(registry,positions)\n 501 \tif not error.is_empty():return _result(0,error)\n 502 \tif owner_token==9223372036854775807:return _result(0,&\"identity_exhausted\")\n 503 \tvar id:=_next_operation()"
+    },
+    {
+      "title": "道具安全关闭",
+      "path": "scripts/props/floating_props_service.gd",
+      "symbol": "shutdown",
+      "line": 514,
+      "sha256": "3f727ad8d9d07c2aa81ec657c24488633c3074586593d2b27fe522bd42c68e49",
+      "excerpt": " 514 func shutdown() -> Dictionary:\n 515 \tif closed:return _result(operation_id,&\"\")\n 516 \tif closing:\n 517 \t\twhile not closed:await get_tree().physics_frame\n 518 \t\treturn _result(operation_id,&\"\")\n 519 \t# Shutdown must still retire leases when the diagnostic operation counter is\n 520 \t# exhausted. Reuse its final identity instead of overflowing signed int64.\n 521 \tclosing=true;var id:=_next_operation(true)\n 522 \tif id==0:id=operation_id\n 523 \tif not _has_current_grant():_hold_all()"
+    },
+    {
+      "title": "精确旧来源投影",
+      "path": "scripts/simulation/unified_edit/consumer_checkpoint_sources.gd",
+      "symbol": "project",
+      "line": 22,
+      "sha256": "463f0486aad144ed8e982ff4dc84d3ec8c0171cdff9116cf4769285f6365e072",
+      "excerpt": "  22 static func project(value: Dictionary, target: Dictionary, path: String) -> Dictionary:\n  23 \tif not FileAccess.file_exists(CATALOG) or FileAccess.get_sha256(CATALOG)!=CATALOG_SHA256:return {\"error\":&\"consumer_source_catalog_identity_mismatch\"}\n  24 \tvar bytes:=FileAccess.get_file_as_bytes(CATALOG)\n  25 \tif bytes.is_empty() or bytes.size()>1048576:return {\"error\":&\"invalid_consumer_source_catalog\"}\n  26 \tvar catalog: Variant=bytes_to_var(bytes)\n  27 \tif not Config.exact(catalog,[\"schema\",\"id\",\"source_configuration\",\"fixture\",\"target_sources\",\"target_parameters\",\"review\"]) or catalog.schema!=2 or catalog.id!=\"floating_props_consumer_v2\" or not catalog.source_configuration is Dictionary or not catalog.target_sources is Dictionary:return {\"error\":&\"invalid_consumer_source_catalog\"}\n  28 \tif value.get(\"configuration\",{}).get(\"configuration_hash\")!=catalog.source_configuration.get(\"configuration_hash\"):return {\"error\":&\"unknown_native_source_configuration\"}\n  29 \tif value.configuration!=catalog.source_configuration:return {\"error\":&\"unknown_native_source_configuration\"}\n  30 \t# The source disk is archival, so validate its known configuration and ALL\n  31 \t# native fields/counters/ledger/provenance without comparing to today's disk."
     }
   ],
   "limitations": "Documentation/source evidence only; execution, functional and cost verdicts belong to the linked gates. Preview-final prepares identical completion HTML for visual QA before the gate is issued."

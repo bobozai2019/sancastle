@@ -42,6 +42,15 @@ func _extra_sources() -> PackedStringArray:return PackedStringArray()
 func _configure_domain(_domain) -> void:pass
 func _target_time() -> float:return 6.0 if probe_case in ["normal","deep","tipped"] else 4.0
 func _extra_final_checks() -> void:pass
+func _environment() -> Dictionary:return {"engine":Engine.get_version_info().string,"probe":probe_case}
+func _configure_flags(flags: Dictionary) -> Dictionary:return flags
+func _after_attach() -> void:pass
+func _scenario_extension() -> Dictionary:return {}
+func _capture_events() -> Array:return service.events.duplicate(true)
+func _clock_error_budget() -> float:
+	# Actual Jolt step is float32; admission delta is double 1/60. Allow its
+	# accumulated representation error, independently reconstructed per quantum.
+	return maxf(1e-6,service.admitted_time_s*1e-7)
 
 func _run() -> void:
 	DisplayServer.window_set_size(Vector2i(1280,720))
@@ -50,10 +59,12 @@ func _run() -> void:
 	check("CPU_GPU_dry_cutoff_exact",service.ProbeCodec.DRY_DEPTH_M==PackedFloat32Array([0.001])[0])
 	var created: Dictionary=load("res://assets/unified_edit/default_catalog.tres").instantiate_registry()
 	var flags:={"enable_erosion":false,"enable_brush_water":true,"unrestricted_sand_tools":true,"enable_structures":false,"local_front_history":false,"rise_front_history":false,"contact_history":false}
+	flags=_configure_flags(flags)
 	var paths:=PackedStringArray(Pipeline.SOURCE_PATHS+Pipeline.ADAPTER_SOURCES+runtime.SOURCES)
 	paths.append_array(PackedStringArray(["res://tests/floating_props/bottle_fixture.tscn","res://tests/floating_props/fixture_surface.gdshader","res://tests/floating_props/fixture_bed.gdshader","res://scenes/props/bottle.tscn","res://assets/props/bottle_profile.tres","res://scripts/props/floating_prop.gd","res://scripts/props/floating_prop_profile.gd","res://scripts/props/floating_props_service.gd"]))
 	paths.append_array(_extra_sources())
-	var config:=Config.freeze(created.registry,"main_beach",flags,{"foam_enabled":false,"gravel_enabled":false},{},{"engine":Engine.get_version_info().string,"probe":probe_case},paths)
+	paths.append_array(PackedStringArray(service.SOURCES))
+	var config:=Config.freeze(created.registry,"main_beach",flags,{"foam_enabled":false,"gravel_enabled":false},{},_environment(),paths)
 	check("configuration",config.error.is_empty())
 	if not config.error.is_empty():finish();return
 	observations.sources=config.value.sources.duplicate(true)
@@ -80,6 +91,7 @@ func _run() -> void:
 	# Initial-condition fixtures change pose only while held, before any step.
 	if probe_case=="deep":body.position.y-=0.1;service.sample={}
 	if probe_case=="tipped":body.rotation.z=1.0;service.sample={}
+	_after_attach()
 	observations.profile=service.profiles.duplicate(true)
 	observations.initial={"position":body.position,"rotation":body.rotation,"velocity":body.linear_velocity}
 	if probe_case=="cfl":
@@ -100,10 +112,11 @@ func _run() -> void:
 	if probe_case=="delay":await _delayed_window()
 	if probe_case=="collision_delay":await _delayed_collision()
 	if probe_case=="slow_frame":check("real_slow_frame_injected",slow_frame_injected)
+	await _scenario_extension()
 	var paused: Dictionary=await service.set_paused(true,&"user")
 	await physics_frame;await physics_frame
 	check("common_pause_boundary",paused.error.is_empty() and runtime.current.advanced_time_s-service.origin_time_s-service.admitted_time_s<1.0/60.0+1e-6)
-	check("actual_Jolt_time_matches_admission",absf(service.actual_time[1]-service.admitted_time_s)<1e-6)
+	check("actual_Jolt_time_matches_admission",absf(service.actual_time[1]-service.admitted_time_s)<_clock_error_budget())
 	check("no_ungranted_or_mismatched_physics_step",service.last_error.is_empty())
 	var time_before: float=service.actual_time[1];var pose_before: Transform3D=body.global_transform
 	for frame in 15:await physics_frame
@@ -113,7 +126,7 @@ func _run() -> void:
 	check("resume_does_not_spend_pause_wall_time",service.actual_time[1]==time_before)
 	check("post_pause_water_tick",runtime.request_tick(1.0/30.0).is_empty());await _idle()
 	check("post_pause_common_boundary",(await service.set_paused(true,&"user")).error.is_empty())
-	check("pause_result_settles_all_granted_records",service.expected_steps.is_empty() and absf(service.actual_time[1]-service.admitted_time_s)<1e-6)
+	check("pause_result_settles_all_granted_records",service.expected_steps.is_empty() and absf(service.actual_time[1]-service.admitted_time_s)<_clock_error_budget())
 	check("post_pause_only_real_budget_consumed",service.actual_time[1]-time_before<=1.0/30.0+1e-6)
 	observations.final={"position":body.position,"rotation":body.rotation,"velocity":body.linear_velocity,"saved":service.saved.duplicate(true),"actual_time_s":service.actual_time.duplicate(true),"admitted_time_s":service.admitted_time_s,"advanced_time_s":runtime.current.advanced_time_s,"state_seq":runtime.current.completed_state_seq,"tick":runtime.current.completed_tick}
 	var start: Transform3D=service.layout[1]
@@ -171,7 +184,7 @@ func _idle() -> void:
 func _close() -> void:
 	if service.active:
 		var result: Dictionary=await service.shutdown();check("service_reader_shutdown",result.error.is_empty() and service.closed and not service.pending)
-	observations.events=service.events.duplicate(true)
+	observations.events=_capture_events()
 	runtime.shutdown()
 	var deadline:=Time.get_ticks_msec()+20000;var retry_at:=Time.get_ticks_msec()
 	while not runtime.closed and Time.get_ticks_msec()<deadline:

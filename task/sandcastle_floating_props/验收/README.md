@@ -33,7 +33,7 @@ V14计划预算：新增整帧P95不超过max(2ms、无道具P95的10%、相同�
 3. 每次控制一个可归因因素；固定seed、实际完成时间/状态、相机、输出尺寸和有效profile。延迟注入属于验证夹具，不作为生产后端替代。
 4. 失败原报告保留，修复另开新的英文目录；Gate报告只引用真实存在的输出。
 
-入口（前三个已实现，其余计划中）：tests/floating_props/sample_probe.gd、bottle_clock_probe.gd、three_props_probe.gd、contact_probe.gd、lifecycle_probe.gd、main_cost_probe.gd。这些当前未实现，不提前写“已运行”。执行时记录实际Godot可执行文件路径、版本、hash、图形后端、硬件和物理设置；解析检查不替代GPU功能。
+已实施的验证入口：tests/floating_props/sample_probe.gd、bottle_clock_probe.gd、three_props_probe.gd、contact_probe.gd、lifecycle_probe.gd、main_cost_probe.gd。完整命令与结果见各Gate报告及机器索引。执行时记录实际Godot可执行文件路径、版本、hash、图形后端、硬件和物理设置；解析检查不替代GPU功能。
 
 每次运行写test_output/floating_props/<fresh_run_id>/：来源清单、有效Profile、原始请求/结果字节、domain/generation/state_seq/revision、actual_dt/累计时钟、每件ID/姿态/速度/睡眠/接触、碰撞块版本、暂停原因、资源基线、截图/连续录像及测量原始样本。原始记录和可读摘要分开保存。Gate报告分别为本目录G1_公共采样.md至G6_交付.md，未执行前不生成空PASS报告。
 
@@ -49,4 +49,10 @@ python tools/unified_edit_pipeline/audit_architecture.py --policy tools/unified_
 - [G2水瓶与时钟](G2_水瓶与时钟.md)。
 - [G3三类道具](G3_三类道具.md)。
 
-G4–G6尚未通过，不能从上述夹具推导正式main生命周期或成本完成。
+G1–G6已通过；各报告区分历史来源、最终补订与成本范围。
+
+- [G4动态接触与搁浅](G4_接触与搁浅.md)。
+
+- [G5正式main与生命周期](G5_main与生命周期.md)。
+
+- [G6回归、成本与交付](G6_交付.md)，已通过；功能1478项、独立复算833项，成本三对通过。

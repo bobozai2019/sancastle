@@ -3,6 +3,8 @@
 [resource]
 script = ExtResource("1")
 type_id = &"wood_stick"
+version = 2
+max_angular_speed_rad_s = 115.0
 mass_kg = 1.5
 center_of_mass_m = Vector3(0, -0.005, 0)
 point_positions_m = Array[Vector3]([Vector3(-0.32, 0, 0), Vector3(0, 0, 0), Vector3(0.32, 0, 0)])

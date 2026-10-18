@@ -16,16 +16,17 @@ const MAX_BYTES:=32*1024*1024
 const KEYS=["version","protocol_family","pipeline_protocol_version","grid_size","cell_size_m","domain_id","generation","state_seq","sim_tick","revision","advanced_time_s","highwater_id","ticket_id","configuration","simulation","ledger_precision","ledger","initial_sand_total_m3","nominal_upper_supply","selection","cohesion_yield_height_m","wave_requests","wave_highwater_id","wave_start_times","native","visual_extensions","source_provenance"]
 const PRECISION="mixed_operation_v1"
 
-static func validate(value: Dictionary, configuration: Dictionary) -> StringName:
-	var error:=Config.validate(configuration,true)
+static func validate(value: Dictionary, configuration: Dictionary, verify_configuration_disk: bool=true) -> StringName:
+	var error:=Config.validate(configuration,verify_configuration_disk)
 	if not error.is_empty():return error
 	if not Config.exact(value,KEYS) or typeof(value.version)!=TYPE_INT or value.version!=VERSION or value.protocol_family!=Config.FAMILY or typeof(value.pipeline_protocol_version)!=TYPE_INT or value.pipeline_protocol_version!=L.VERSION or typeof(value.grid_size)!=TYPE_INT or value.grid_size!=256 or value.cell_size_m!=0.125:return &"invalid_unified_checkpoint_header"
 	if value.domain_id!=configuration.domain_id or typeof(value.domain_id)!=TYPE_STRING:return &"checkpoint_domain_mismatch"
 	for key in ["generation","state_seq","sim_tick","revision","highwater_id","ticket_id","wave_highwater_id"]:
 		if not I.counter(value[key],1 if key=="generation" else 0):return &"invalid_checkpoint_counter"
+	if not value.configuration is Dictionary:return &"invalid_configuration"
+	if value.configuration.get("configuration_hash")!=configuration.configuration_hash:return &"checkpoint_configuration_mismatch"
 	error=Config.validate(value.configuration)
 	if not error.is_empty():return error
-	if value.configuration.configuration_hash!=configuration.configuration_hash:return &"checkpoint_configuration_mismatch"
 	if not Config.exact(value.simulation,Old.SIMULATION_KEYS):return &"invalid_checkpoint_simulation"
 	for key in Old.SIMULATION_KEYS:
 		if typeof(value.simulation[key])!=TYPE_BOOL:return &"invalid_checkpoint_simulation"
@@ -129,7 +130,7 @@ static func save(path: String, value: Dictionary, configuration: Dictionary) -> 
 		DirAccess.remove_absolute(ProjectSettings.globalize_path(temporary));return &"rename_failed"
 	return &""
 
-static func load(path: String, configuration: Dictionary) -> Dictionary:
+static func read_container(path: String) -> Dictionary:
 	var file:=FileAccess.open(path,FileAccess.READ)
 	if file==null:return {"error":&"open_failed"}
 	if file.get_length()<48 or file.get_length()>48+MAX_BYTES:return {"error":&"invalid_file_size"}
@@ -139,5 +140,10 @@ static func load(path: String, configuration: Dictionary) -> Dictionary:
 	if checksum!=Old.digest(payload):return {"error":&"checksum_mismatch"}
 	var value: Variant=bytes_to_var(payload) # Object deserialization stays disabled.
 	if not value is Dictionary:return {"error":&"invalid_checkpoint_payload"}
-	var error:=validate(value,configuration)
-	return {"error":error,"checkpoint":value} if error.is_empty() else {"error":error}
+	return {"error":&"","checkpoint":value}
+
+static func load(path: String, configuration: Dictionary) -> Dictionary:
+	var loaded:=read_container(path)
+	if not loaded.error.is_empty():return loaded
+	var error:=validate(loaded.checkpoint,configuration)
+	return loaded if error.is_empty() else {"error":error}

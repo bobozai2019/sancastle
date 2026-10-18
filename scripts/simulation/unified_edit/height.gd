@@ -21,6 +21,9 @@ var applied_state_seq: Dictionary={}
 var applied_tick: Dictionary={}
 var applied_revision: Dictionary={}
 var applied_physics_frame: Dictionary={}
+var applied_change_bounds: Dictionary={}
+var priority_owner:=0
+var priority_mask:=PackedByteArray()
 var events: Array[Dictionary]=[]
 var invalid_results:=0
 var inject_readback_failure_once:=false
@@ -31,6 +34,7 @@ var hold_physics:=false
 var diagnostics: Diagnostics
 
 func _init() -> void:
+	priority_mask.resize(8)
 	for index in L.HEIGHT_SLOTS:slots.append(_free())
 
 func _free() -> Dictionary:return {"identity":{},"phase":&"free","result":{},"job":null,"task":-1}
@@ -51,11 +55,14 @@ func initialize(bundle, channel, epoch: int) -> bool:
 	dispatch("height",gpu_slots[0].set,Vector3i.ONE,_push(0))
 	return true
 
-func _push(mode: int, snapshot: int=0) -> PackedByteArray:
-	var push:=PackedByteArray();push.resize(32);push.encode_u32(0,mode);push.encode_s64(4,generation);push.encode_s64(12,snapshot);return push
+func _push(mode: int, snapshot: int=0, priority: PackedByteArray=PackedByteArray()) -> PackedByteArray:
+	var push:=PackedByteArray();push.resize(32);push.encode_u32(0,mode);push.encode_s64(4,generation);push.encode_s64(12,snapshot)
+	if priority.size()==8:
+		push.encode_u32(20,priority.decode_u32(0));push.encode_u32(24,priority.decode_u32(4))
+	return push
 
 func begin_work() -> void:dispatch("height",gpu_slots[0].set,Vector3i(1024,1,1),_push(1))
-func finish_work() -> void:dispatch("height",gpu_slots[0].set,Vector3i(1024,1,1),_push(2))
+func finish_work() -> void:dispatch("height",gpu_slots[0].set,Vector3i(64,1,1),_push(2))
 
 func notify_complete() -> void:hinted=true
 
@@ -75,15 +82,19 @@ func pump() -> int:
 		var id:={"generation":generation,"snapshot_seq":serial,"slot_id":index}
 		slots[index]={"identity":id,"phase":&"read_pending","result":{},"job":null,"task":-1}
 		_event(&"request",id)
-		RenderingServer.call_on_render_thread(_capture_render.bind(id.duplicate(true)))
+		RenderingServer.call_on_render_thread(_capture_priority_render.bind(id.duplicate(true),priority_mask.duplicate()))
 		submitted+=1
 	if submitted>0:hinted=false
 	return submitted
 
+func _capture_priority_render(id: Dictionary, priority: PackedByteArray) -> void:
+	gpu_slots[id.slot_id].priority=priority
+	_capture_render(id)
+
 func _capture_render(id: Dictionary) -> void:
 	if diagnostics!=null:diagnostics.mark(&"height_capture_render",id.snapshot_seq)
 	var slot: Dictionary=gpu_slots[id.slot_id];slot.identity=id.duplicate(true);slot.phase=&"read"
-	dispatch("height",slot.set,Vector3i.ONE,_push(3,id.snapshot_seq))
+	dispatch("height",slot.set,Vector3i.ONE,_push(3,id.snapshot_seq,slot.get("priority",PackedByteArray())))
 	dispatch("height",slot.set,Vector3i(273,1,1),_push(4,id.snapshot_seq))
 	_read_render(id)
 
@@ -168,6 +179,7 @@ func physics_consume(order: PackedInt32Array=PackedInt32Array([0,1])) -> int:
 				if version<int(applied_state_seq.get(chunk_id,-1)):continue
 				if not proxy._replace_chunk_shape(chunk_id,version,chunk.heights,generation):accepted=false;break
 				applied_state_seq[chunk_id]=version;applied_tick[chunk_id]=slot.result.sim_tick;applied_revision[chunk_id]=slot.result.revision;applied_physics_frame[chunk_id]=Engine.get_physics_frames();count+=1
+				applied_change_bounds[chunk_id]=slot.result.change_bounds[chunk_id]
 			if not accepted:_invalid(id,&"height_proxy_rejected");continue
 			_event(&"physics",id,{"state_seq":slot.result.state_seq,"chunks":slot.result.chunks})
 		_ack(id,false)
@@ -200,8 +212,10 @@ func active_count() -> int:
 		if not slot.identity.is_empty():count+=1
 	return count
 
-# A shape assignment in this physics notification becomes usable after that
-# world's simulation boundary. Only relevant last-change versions are required.
+# Shape assignment and motion queries are synchronous on the physics thread.
+# A grant made later in this notification uses that shape in its next world
+# quantum (completion callback is numbered frame+1). Native phase probe proves
+# both immediate queries and first-quantum contact; no extra idle frame needed.
 func footprint_ready(required: Dictionary, epoch: int) -> Dictionary:
 	if epoch!=generation:return {"ready":false,"error":&"stale_generation","waiting":[]}
 	if required.is_empty() or required.size()>64:return {"ready":false,"error":&"invalid_footprint","waiting":[]}
@@ -209,8 +223,42 @@ func footprint_ready(required: Dictionary, epoch: int) -> Dictionary:
 	for chunk in required:
 		if typeof(chunk)!=TYPE_INT or chunk<0 or chunk>=64 or typeof(required[chunk])!=TYPE_INT or required[chunk]<0:return {"ready":false,"error":&"invalid_footprint","waiting":[]}
 		var applied: int=applied_state_seq.get(chunk,-1);var assigned_frame: int=applied_physics_frame.get(chunk,-1)
-		if applied<required[chunk] or assigned_frame<0 or frame<=assigned_frame:waiting.append({"chunk":chunk,"required":required[chunk],"applied":applied,"assigned_frame":assigned_frame,"current_frame":frame})
+		if applied<required[chunk] or assigned_frame<0 or frame<assigned_frame:waiting.append({"chunk":chunk,"required":required[chunk],"applied":applied,"assigned_frame":assigned_frame,"current_frame":frame})
 	return {"ready":waiting.is_empty(),"error":&"","waiting":waiting,"physics_frame":frame}
+
+# A force may use an older assigned shape only with an independently bounded
+# temporal discrepancy inside the already frozen contact tolerance. Initial
+# placement and edit recovery still require strict footprint_ready().
+func footprint_compatible(required: Dictionary, bounds: Dictionary, epoch: int, tolerance_m: float) -> Dictionary:
+	var strict:=footprint_ready(required,epoch)
+	if not strict.error.is_empty() or tolerance_m<0.0 or not is_finite(tolerance_m):return {"ready":false,"error":strict.error}
+	var maximum:=0.0;var differences:={}
+	for chunk in required:
+		var applied: int=applied_state_seq.get(chunk,-1)
+		if applied<0 or int(applied_physics_frame.get(chunk,-1))<0:return {"ready":false,"error":&"support_not_ready"}
+		if applied>=required[chunk]:continue
+		var upper: float=applied_change_bounds.get(chunk,-1.0);var lower:=Codec.lower_change_bound(upper);var newer: float=bounds.get(chunk,-1.0)
+		if lower<0.0 or newer<0.0 or newer<lower or newer-lower>tolerance_m:return {"ready":false,"error":&"support_change_bound"}
+		maximum=maxf(maximum,newer-lower)
+		differences[chunk]=newer-lower
+	return {"ready":true,"error":&"","maximum_temporal_difference_m":maximum,"older_shape_differences_m":differences,"strict_versions_ready":strict.ready}
+
+# At most twelve chunks for the three MVP footprints. Captures still contain
+# at most sixteen chunks and always reserve four selections for the ordinary
+# fair cursor when live footprints are present (up to twelve priority chunks).
+# The mask is frozen into each existing reader lease's push constants.
+func set_footprint_priority(chunks: Array[int], epoch: int, owner: int) -> StringName:
+	if closing:return &"closing"
+	if epoch!=generation:return &"stale_generation"
+	if owner<1 or owner<priority_owner:return &"stale_owner"
+	if chunks.size()>12:return &"invalid_footprint"
+	var seen:={};var masks:=[0,0]
+	for chunk in chunks:
+		if chunk<0 or chunk>=64 or seen.has(chunk):return &"invalid_footprint"
+		seen[chunk]=true;masks[chunk/32]=int(masks[chunk/32])|(1<<(chunk%32))
+	var bytes:=PackedByteArray();bytes.resize(8);bytes.encode_u32(0,masks[0]);bytes.encode_u32(4,masks[1])
+	priority_owner=owner;priority_mask=bytes
+	return &""
 
 # Read the existing collision consumer data, never a second CPU terrain state.
 # Includes adjacent vertices so the result bounds the triangles in the rect.

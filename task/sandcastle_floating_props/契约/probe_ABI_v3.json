@@ -1,0 +1,243 @@
+{
+  "schema": 3,
+  "status": "frozen",
+  "byte_order": "little",
+  "max_points": 32,
+  "input_bytes": 1152,
+  "output_bytes": 3200,
+  "header_bytes": 128,
+  "input_point_stride": 32,
+  "output_point_stride": 64,
+  "chunk_offset": 2176,
+  "chunk_count": 64,
+  "chunk_stride": 16,
+  "header": [
+    {
+      "name": "schema",
+      "offset": 0,
+      "type": "u32"
+    },
+    {
+      "name": "error_bits",
+      "offset": 4,
+      "type": "u32"
+    },
+    {
+      "name": "request_id",
+      "offset": 8,
+      "type": "i64"
+    },
+    {
+      "name": "owner_token",
+      "offset": 16,
+      "type": "i64"
+    },
+    {
+      "name": "generation",
+      "offset": 24,
+      "type": "i64"
+    },
+    {
+      "name": "pose_seq",
+      "offset": 32,
+      "type": "i64"
+    },
+    {
+      "name": "minimum_or_captured_state_seq",
+      "offset": 40,
+      "type": "i64"
+    },
+    {
+      "name": "captured_tick",
+      "offset": 48,
+      "type": "i64"
+    },
+    {
+      "name": "captured_revision",
+      "offset": 56,
+      "type": "i64"
+    },
+    {
+      "name": "captured_time_s",
+      "offset": 64,
+      "type": "f32"
+    },
+    {
+      "name": "point_count",
+      "offset": 68,
+      "type": "u32"
+    },
+    {
+      "name": "chunk_mask_low",
+      "offset": 72,
+      "type": "u32"
+    },
+    {
+      "name": "chunk_mask_high",
+      "offset": 76,
+      "type": "u32"
+    },
+    {
+      "name": "reserved0",
+      "offset": 80,
+      "type": "u32"
+    },
+    {
+      "name": "reserved1",
+      "offset": 84,
+      "type": "u32"
+    },
+    {
+      "name": "reader_serial",
+      "offset": 88,
+      "type": "i64"
+    },
+    {
+      "name": "domain_sha256",
+      "offset": 96,
+      "type": "bytes32"
+    }
+  ],
+  "input_point": [
+    {
+      "name": "body_id",
+      "offset": 0,
+      "type": "i64"
+    },
+    {
+      "name": "point_id",
+      "offset": 8,
+      "type": "i64"
+    },
+    {
+      "name": "world_x",
+      "offset": 16,
+      "type": "f32"
+    },
+    {
+      "name": "world_y",
+      "offset": 20,
+      "type": "f32"
+    },
+    {
+      "name": "world_z",
+      "offset": 24,
+      "type": "f32"
+    },
+    {
+      "name": "reserved",
+      "offset": 28,
+      "type": "u32"
+    }
+  ],
+  "output_point": [
+    {
+      "name": "body_id",
+      "offset": 0,
+      "type": "i64"
+    },
+    {
+      "name": "point_id",
+      "offset": 8,
+      "type": "i64"
+    },
+    {
+      "name": "world_x",
+      "offset": 16,
+      "type": "f32"
+    },
+    {
+      "name": "world_y",
+      "offset": 20,
+      "type": "f32"
+    },
+    {
+      "name": "world_z",
+      "offset": 24,
+      "type": "f32"
+    },
+    {
+      "name": "bed",
+      "offset": 28,
+      "type": "f32"
+    },
+    {
+      "name": "h",
+      "offset": 32,
+      "type": "f32"
+    },
+    {
+      "name": "eta",
+      "offset": 36,
+      "type": "f32"
+    },
+    {
+      "name": "u_x",
+      "offset": 40,
+      "type": "f32"
+    },
+    {
+      "name": "u_z",
+      "offset": 44,
+      "type": "f32"
+    },
+    {
+      "name": "valid",
+      "offset": 48,
+      "type": "u32"
+    },
+    {
+      "name": "reserved0",
+      "offset": 52,
+      "type": "u32"
+    },
+    {
+      "name": "reserved1",
+      "offset": 56,
+      "type": "u32"
+    },
+    {
+      "name": "reserved2",
+      "offset": 60,
+      "type": "u32"
+    }
+  ],
+  "chunk": [
+    {
+      "name": "chunk_id",
+      "offset": 0,
+      "type": "u32"
+    },
+    {
+      "name": "cumulative_bed_change_bound_m",
+      "offset": 4,
+      "type": "f32_nonnegative_or_positive_infinity"
+    },
+    {
+      "name": "last_changed_state_seq",
+      "offset": 8,
+      "type": "i64"
+    }
+  ],
+  "error_bits": {
+    "1": "stale_generation",
+    "2": "minimum_state_seq_not_reached",
+    "4": "invalid_sample"
+  },
+  "int64": "positive signed int64 identities, nonnegative counters; GPU low uint32 then high uint32; no float conversion",
+  "reserved": "zero except newly defined chunk offset4; all unused points/chunks zero",
+  "domain": "XZ [-16,16), positions finite, outside rejected before GPU. Bilinear grid=world/0.125+127.5, neighbors clamped only inside boundary half cells.",
+  "sampling": "interpolate bed,h,qx,qz; eta=bed+h; u=q/max(h,0.005) for h>float32(0.001), else zero; raw h preserved",
+  "chunk_versions": "same ordered query reads Height dirty last-change seq, not current global seq; consumer compares same generation applied chunk >= required version; strict readiness for initialization/edit recovery; force-only bounded temporal compatibility exception is specified by C04_G6_接触补订.json",
+  "limits": "Profile time/pose limits are consumer-side C03; neither client nor GPU can override them in this raw sampling ABI",
+  "dry_depth_m": 0.001,
+  "velocity_depth_m": 0.005,
+  "dry_depth_float32": 0.0010000000474974513,
+  "velocity_depth_float32": 0.004999999888241291,
+  "supersedes": "v2 chunk offset4 reserved word now carries a temporal bed-change upper bound; byte capacities and water numeric semantics unchanged; v1/v2 receipts rejected",
+  "cpu_exact_constants": "dry=8589935/2^33; velocity=5368709/2^30; avoids recorded GDScript decimal-literal mismatch",
+  "chunk_change_bound": "Private Height metadata sums outward-rounded per-complete-work maximum absolute sand changes over all33x33 shared vertices. Between two samples, bound_after-bound_before conservatively bounds every vertex temporal bed displacement in that chunk. Rock is immutable within a generation. Positive infinity decodes to CPU -1.0 unknown and cannot authorize an old sample.",
+  "bound_computation": "One64-lane workgroup per chunk; scan1089 shared vertices, reduce positive float bits by max, round increment upward one float32 ULP, add to previous cumulative bound and round upward one ULP, saturate to positive infinity. No authority writes or additional GPU resources.",
+  "frozen_date": "2026-10-19",
+  "final_regression": "test_output/floating_props/final_regressions_20261019_08/progress.json"
+}

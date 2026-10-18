@@ -61,6 +61,7 @@ func request_switch(key: String) -> bool:
 	if busy or not SCENES.has(key) or not is_instance_valid(active_scene) or not _unified_factory(active_scene) or not active_scene.ready_for_ticks:
 		return false
 	if active_scene.shutdown_requested or active_scene.closing:return false
+	if active_scene._booting:return false
 	if not active_scene.runtime.ready_for_input():return false
 	if active_scene.scene_key == key:
 		return true
@@ -112,9 +113,9 @@ func _prepare(scene, key: String, settings: Dictionary) -> String:
 	scene.playing = false
 	get_tree().root.add_child(scene)
 	var deadline := Time.get_ticks_msec() + 90000
-	while not scene.ready_for_ticks and scene.last_error.is_empty() and Time.get_ticks_msec() < deadline:
+	while (not scene.ready_for_ticks or scene._booting) and scene.last_error.is_empty() and Time.get_ticks_msec() < deadline:
 		await get_tree().process_frame
-	if not scene.ready_for_ticks or not scene.last_error.is_empty():
+	if not scene.ready_for_ticks or scene._booting or not scene.last_error.is_empty():
 		return "场景初始化失败：" + scene.last_error
 	if saved.has(cache_key):
 		var error: StringName = await scene.restore_gpu_checkpoint(saved[cache_key].path)

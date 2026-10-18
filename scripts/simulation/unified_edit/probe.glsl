@@ -39,6 +39,6 @@ void main(){
  }
  for(uint i=0u;i<64u;i++){
   if((req[18u+i/32u]&(1u<<(i%32u)))==0u)continue;
-  uint b=544u+i*4u;res[b]=i;res[b+2u]=dirty[i*4u+1u];res[b+3u]=dirty[i*4u+2u];
+  uint b=544u+i*4u;res[b]=i;res[b+1u]=dirty[i*4u+3u];res[b+2u]=dirty[i*4u+1u];res[b+3u]=dirty[i*4u+2u];
  }
 }

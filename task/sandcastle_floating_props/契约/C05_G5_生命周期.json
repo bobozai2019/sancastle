@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "gate": "G5",
+  "status": "frozen",
+  "source_configuration_hash": "201980cf41bb9b743d70a44b1097d47e786193c955a62e67db01f471fde2a82c",
+  "source_fixture_sha256": "9c8a637e4ea9536b605201908b17484367b5c91c3522d041d5175f8160c9f38f",
+  "catalog_sha256": "a1fb95c652380ed5f4b9a35e51ab763d659f6e2d9984dba57f22a580a4d7ef2e",
+  "checkpoint_version": 6,
+  "native_version": 3,
+  "props_serialized": false,
+  "holds": [
+    "user",
+    "save",
+    "restore"
+  ],
+  "restore_success": "new generation/owner, authored layout, zero linear/angular/sleep/sample/budget",
+  "restore_failure": "preserve old held pose, velocity and sleep",
+  "close": "stop admission, complete granted world boundary and actual registered reads before domain release",
+  "sources": {
+    "scripts/beach/beach_scene_service.gd": "27d984202c3db965c5502260534578b2920bc3855e2c294a4463d64c54aee6ca",
+    "scripts/beach/unified_playable_entry.gd": "b85c45f9eca1a7be6a531a25b9778dd59e4d1cf5fbfc49ffd21a8c6de8485d3d",
+    "scenes/main.tscn": "969204f5932c2b954b1cd61890712a016fb28df53ff3d0062ac27d7633605fa4",
+    "scripts/simulation/unified_edit/domain_runtime.gd": "825d377324b9235dcfb9ab3fc965f5dfeaaa355e555d69b6e8905a0dfc5acd7a",
+    "scripts/simulation/unified_edit/checkpoint_codec.gd": "581b906ad994f4851f2bd01a9b28ee63014fe80df3a0e94af0dfb3194b633e2a",
+    "scripts/simulation/unified_edit/checkpoint_capture.gd": "84c81124e7f00f1b4be4129e26267c7a577cc181a85e3f56faa471d14563e630",
+    "scripts/simulation/unified_edit/checkpoint_accounting.gd": "1499528bc012a12cbdcad48dab2236d88f70b2e1e95bfc7ded9c0ee6af58ac39",
+    "scenes/components/floating_props.tscn": "d58ebab4491b6b4d23259ce61691e39363ea0ef10e52782c370056852c3c5fde",
+    "scripts/props/floating_props_service.gd": "e3cd3056afaa7dd4fe5878bee80023db38242a6ac39f5accb77c912eccf4ab4e",
+    "scripts/props/floating_prop_contact.gd": "e8fc1b39fee8d2af1bf6ee85ce95a01e7500a3b8b348f116c3df7f1350f81a55",
+    "scripts/props/floating_prop_profile.gd": "73fb45e605d8d462763da73d3e5423acbefc0a95c1e7867ff3e796e34d146e35",
+    "scripts/props/floating_prop.gd": "6a794f8a4a15b4791593be4f2623147ffd26771610742f975e7686401cdf1acf",
+    "scripts/simulation/unified_edit/checkpoint_router.gd": "521c44828444976086fcc0d6b59c17bda40dc2474f03e5d4e10da8e88f67e849",
+    "scripts/simulation/unified_edit/consumer_checkpoint_sources.gd": "a90c3f145e533a3d80a7916079bc37f0f183893d46078e70dfb935d595592e60",
+    "assets/unified_edit/floating_props_source_catalog.variant": "a1fb95c652380ed5f4b9a35e51ab763d659f6e2d9984dba57f22a580a4d7ef2e"
+  }
+}

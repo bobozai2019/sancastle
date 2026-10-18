@@ -1,0 +1,19 @@
+{
+  "schema": 2,
+  "status": "frozen",
+  "supersedes": "C05_G5_生命周期.json target source pin and hash normalization only; historical G5 intact",
+  "catalog_path": "assets/unified_edit/floating_props_source_catalog.variant",
+  "catalog_sha256": "ee2c2b862101110c323e0280bb2b97a2a2e345dddbfb3b08a4d7ee61b84c9991",
+  "catalog_id": "floating_props_consumer_v2",
+  "known_source_configuration_hash": "201980cf41bb9b743d70a44b1097d47e786193c955a62e67db01f471fde2a82c",
+  "fixture_sha256": "9c8a637e4ea9536b605201908b17484367b5c91c3522d041d5175f8160c9f38f",
+  "target": "exact full runtime source map, excluding catalog and its constant-bearing helper only to avoid hash cycle; helper exact catalog SHA is itself configuration source",
+  "parameters": "exact all declared profile values/environment/material/ledger/features; model source SHA and derived profile_hash rebound only after full target source review",
+  "source_validation": "original full configuration must equal offline pinned known dictionary; normalize derived stable hash only inside validation copy; validate ALL native/header/clock/ledger/provenance; preserve original source/native data and file",
+  "canonical_hash_fix": "sort dictionary keys by String content before converting StringName keys; process interning order is not source identity",
+  "shared_changes": "separately reviewed packed parallel and policy2 velocity preparation products match final archives, fixed-input byte-equivalence proofs and390 targeted checks; no claim that foreign authority changes are consumer-only",
+  "fault_recovery": "latched prop fault may save/restore authority only at independently proved held world boundary; successful reset clears fault hold; no prop pose serialized",
+  "identity_preflight": "core save/restore reject before domain commit if insufficient consumer operation identities; last positive int64 reserved for retirement",
+  "frozen_date": "2026-10-19",
+  "final_regression": "test_output/floating_props/final_regressions_20261019_08/progress.json"
+}

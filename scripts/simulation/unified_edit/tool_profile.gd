@@ -127,7 +127,7 @@ func validated_snapshot() -> Dictionary:
 		if ranges[key][0]<limits[0] or ranges[key][1]>limits[1]:return {"error":&"unsupported_parameter_range"}
 	error=parameter_error(defaults)
 	if not error.is_empty():return {"error":error}
-	if defaults.has("speed_m_s") and water_policy!=3 and defaults.speed_m_s!=0.0:return {"error":&"unsupported_combination"}
+	if defaults.has("speed_m_s") and water_policy not in [2,3] and defaults.speed_m_s!=0.0:return {"error":&"unsupported_combination"}
 	var template: Dictionary={}
 	if shape_resource!=null:
 		var checked: Dictionary=shape_resource.validated_snapshot()

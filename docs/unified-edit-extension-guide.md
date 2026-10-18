@@ -5,7 +5,7 @@
 ## 仅配置新增玩法
 
 1. 在 `assets/unified_edit/` 新增 ToolProfile `.tres`，script 必须精确绑定 `scripts/simulation/unified_edit/tool_profile.gd`。从现有合法 operation/shape/destination/material/water/stroke 组合选择，不为工具增加 executor、shader 路径或 Callable。
-2. 使用唯一 profile_id、递增 version、带单位的 defaults/ranges，以及已验证能力范围内的 allowed_water_policies/allowed_material_policies。除策略3以外，speed_m_s 必须为0。目标高度/搬运使用公共 BEGIN/sample/END 和固定 baseline/coverage。
+2. 使用唯一 profile_id、递增 version、带单位的 defaults/ranges，以及已验证能力范围内的 allowed_water_policies/allowed_material_policies。策略2/3允许speed_m_s；策略0/1要求为0。目标高度/搬运使用公共 BEGIN/sample/END 和固定 baseline/coverage。
 3. 高度模板使用精确 `height_stamp.gd` 模型和有界 payload，登记尺寸、实际字节 SHA256 和占用 mask；不能用脚本回调代替模板。注册表复制并冻结 payload，运行中改文件不会更新已冻结域。
 4. 将资源绑定到新的 catalog。在新的 Runtime 初始化时冻结注册表、配置和实际来源 hash。已运行域不可私自替换注册表；原生恢复要求有效配置身份一致，变更后的配置须按明确迁移契约处理。
 5. 对基准与新配置固定初态、seed、tick、机位和配置，读取实际 GPU 结果与原始沙/水/材料字段，核对守恒预算及允许写字段，再比较同 operation 的标准化阶段轨迹。新数值应产生可解释的字段差异。
@@ -30,3 +30,7 @@ python tools/unified_edit_pipeline/audit_architecture.py --policy tools/unified_
 九个内存违规样例覆盖私有writer、工具ID分流、legacy fallback、阻塞等待、删除worker完成检查、动态profile回调、脚本替换、变量别名隐藏record调用和资源绑定旧writer；探针不写回生产文件。检查器采用保守封存与明确语义规则，不是对任意GDScript程序的通用调用图证明。
 
 配置扩展验收见[G7联合门](../task/sandcastle_unified_edit_pipeline/验收/G7_联合门.md)，最终功能、长稳与成本见[G8联合门](../task/sandcastle_unified_edit_pipeline/验收/G8_联合门.md)。当前字段、容量和兼容约束见[技术规格](当前技术规格.md)。
+
+## 新增漂浮道具配置
+
+使用精确floating_prop_profile.gd脚本的Resource和静态RigidBody3D预制体，绑定固定碰撞体、摩擦及采样云；统一服务不按类型名分流。碰撞体和点必须完全位于声明足迹半径内。当前main三件/32点/12优先块是容量边界，扩容前补ABI、所有权和性能证据。该消费者没有修改水沙的权限，不得通过Profile增加Callable、writer或私有调度。机制与复验见[漂浮道具](漂浮道具.md)。

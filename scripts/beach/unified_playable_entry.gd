@@ -57,9 +57,11 @@ var _preview_pending:=0
 var _preview_elapsed:=0.0
 var _preview_retry_elapsed:=0.0
 var _preview_exhausted:=false
+var _reported_props_error: StringName
 @onready var runtime=$UnifiedEditRuntime
 @onready var player_camera: Camera3D=$GpuPlayerCamera
 @onready var panel=$Interface/ShapeBrushPanel
+@onready var floating_props=get_node_or_null("FloatingProps/Service")
 
 func _domain_id() -> StringName:return &"main_beach" if scene_key=="main" else StringName(scene_key)
 func playable_scene_family() -> String:return SceneRoutes.family(scene_file_path,scene_key)
@@ -92,6 +94,7 @@ func _ready() -> void:
 	if not dependencies.error.is_empty():_fail(dependencies.error);return
 	var sources:=PackedStringArray(Pipeline.SOURCE_PATHS+Pipeline.ADAPTER_SOURCES+Runtime.SOURCES+Presentation.SOURCES+SOURCES)
 	sources.append_array(dependencies.sources)
+	if floating_props!=null:sources.append_array(PackedStringArray(floating_props.SOURCES))
 	sources.append_array(CheckpointRouter.SOURCES)
 	sources.append("res://scripts/beach/unified_scene_routes.gd")
 	sources.append("res://project.godot")
@@ -107,21 +110,52 @@ func _ready() -> void:
 	set_player_camera(use_player_camera);_update_status()
 
 func _transition(value: Dictionary) -> void:
-	_transition_result=value
 	if value.error.is_empty():
 		last_error=&""
 		generation=runtime.generation();input.restored();action_message="沙场已就绪";_accumulator=0.0;_last_reported_id=0
 		_sync_gravel_count()
 		_invalidate_preview()
+		if floating_props!=null:
+			var prop_result: Dictionary
+			if floating_props.active:prop_result=await floating_props.reset(floating_props.authored_layout() if floating_props.layout.is_empty() else floating_props.layout,_domain_id(),generation)
+			else:prop_result=await floating_props.attach(runtime,floating_props.authored_registry(),floating_props.authored_layout())
+			if not prop_result.error.is_empty():
+				value=value.duplicate();value.error=prop_result.error;action_message="道具准备失败："+String(prop_result.error)
+			elif not playing:await _props_hold(true,&"user")
 	elif _booting:_fail(value.error)
 	else:action_message="恢复失败："+String(value.error)
 	_booting=false
+	_transition_result=value
+
+func _props_hold(paused: bool, reason: StringName) -> StringName:
+	if floating_props==null:return &""
+	while floating_props.busy and not closing:await get_tree().physics_frame
+	if closing:return &"closing"
+	if not floating_props.active:return &""
+	var result: Dictionary=await floating_props.set_paused(paused,reason)
+	# Props are not serialized and never write authority. A latched consumer
+	# fault must not prevent preserving sand/water or restoring a clean domain.
+	# Accept only an independently confirmed held world boundary, including the
+	# registered read terminal proof required by restore.
+	if paused and not result.error.is_empty() and result.error==floating_props.last_error and floating_props.holds.has(reason):
+		for frame in 3:
+			await get_tree().physics_frame
+			if floating_props.is_held_at_boundary(reason):return &""
+	return result.error
+
+func _sync_props_user_hold() -> void:
+	if floating_props==null or not floating_props.active or floating_props.busy or _booting or _restoring:return
+	if floating_props.holds.has(&"user")!=not playing:await _props_hold(not playing,&"user")
 
 func _fail(error: StringName) -> void:
 	last_error=error;ready_for_ticks=false;playing=false;action_message="沙场准备失败："+String(error);_update_status()
 
 func _process(delta: float) -> void:
 	if closing:return
+	_sync_props_user_hold()
+	if floating_props!=null and floating_props.last_error!=_reported_props_error:
+		_reported_props_error=floating_props.last_error
+		if not _reported_props_error.is_empty():action_message="漂浮物已保持，可保存或恢复沙场："+String(_reported_props_error)
 	ready_for_ticks=not _saving and not _restoring and runtime.ready_for_input() and last_error.is_empty()
 	if registry!=null:
 		input.poll()
@@ -151,6 +185,10 @@ func _sync_gravel_count() -> void:
 	$GravelLayer.visible=visuals.gravel_enabled and visuals.active_count>0
 
 func _update_status() -> void:
+	var drainage=get_node_or_null("Interface/ShapeBrushPanel/Margin/Controls/ConnectedDrainage")
+	if drainage!=null:
+		drainage.set_pressed_no_signal((water_policy&1)!=0)
+		drainage.disabled=not ready_for_ticks
 	var label=get_node_or_null("Interface/StatusLabel")
 	if label==null:return
 	var phase:="运行" if playing else "暂停"
@@ -172,6 +210,13 @@ func _on_tool_changed(tool: StringName) -> void:
 	_update_status()
 func _on_parameters_changed() -> void:
 	_finish_ui_stroke(false);dig_amount_m3=panel.dig_amount();fill_amount_m3=panel.fill_amount()
+func _on_connected_drainage_toggled(enabled: bool) -> void:
+	# Policy is frozen into each queued command and its effective hash. Finish
+	# the gesture so a toggle cannot change an already submitted stroke.
+	_finish_ui_stroke(false)
+	water_policy=(water_policy|1) if enabled else (water_policy&~1)
+	action_message="连通排水已开启" if enabled else "连通排水已关闭 · 保留推水与水流模拟"
+	_update_status()
 func _on_dig_tool_pressed() -> void:_on_tool_changed(&"remove_sand")
 func _on_fill_tool_pressed() -> void:_on_tool_changed(&"place_sand")
 func _on_dig_amount_changed(value: float) -> void:dig_amount_m3=value
@@ -297,7 +342,7 @@ func pick(screen: Vector2) -> Dictionary:
 	if runtime.current==null or runtime.current_index<0:return {}
 	var camera:=get_viewport().get_camera_3d()
 	var origin:=camera.project_ray_origin(screen)
-	var hit:=get_world_3d().direct_space_state.intersect_ray(PhysicsRayQueryParameters3D.create(origin,origin+camera.project_ray_normal(screen)*100.0))
+	var hit:=get_world_3d().direct_space_state.intersect_ray(PhysicsRayQueryParameters3D.create(origin,origin+camera.project_ray_normal(screen)*100.0,1))
 	if hit.get("collider")!=runtime.surfaces[runtime.current_index].get_node("Terrain"):return {}
 	return hit
 
@@ -323,27 +368,35 @@ func _update_reflection() -> void:
 		material.set_shader_parameter("prototype_planar_view_projection",reflection.get_camera_projection()*Projection(reflection.global_transform.affine_inverse()))
 
 func save_gpu_checkpoint(path: String) -> StringName:
-	if _saving or _restoring or not ready_for_ticks:return &"transition_busy"
+	if _booting or _saving or _restoring or not ready_for_ticks:return &"transition_busy"
+	if floating_props!=null and floating_props.active and not floating_props.has_operation_room(3):return &"identity_exhausted"
 	_saving=true;_finish_ui_stroke(false);_saved={}
 	var start:=Time.get_ticks_msec()
 	while not input.end_requested.is_empty() and Time.get_ticks_msec()-start<30000:await get_tree().process_frame
 	if not input.end_requested.is_empty():_saving=false;return &"stroke_end_timeout"
+	var hold_error:=await _props_hold(true,&"save")
+	if not hold_error.is_empty():_saving=false;return hold_error
 	var admitted: Dictionary=runtime.save_checkpoint(path,{"policy":water_policy,"speed":signed_speed_m_s,"brush":_capture_brush_selection()},func(value: Dictionary):_saved=value)
-	if not admitted.accepted:_saving=false;return admitted.error
+	if not admitted.accepted:
+		await _props_hold(false,&"save");_saving=false;return admitted.error
 	while _saved.is_empty() and Time.get_ticks_msec()-start<60000:await get_tree().process_frame
-	_saving=false
+	await _props_hold(false,&"save");_saving=false
 	return _saved.get("error",&"checkpoint_wait_timeout")
 
 func restore_gpu_checkpoint(path: String) -> StringName:
-	if _saving or _restoring or closing or runtime.current==null:return &"transition_busy"
+	if _booting or _saving or _restoring or closing or runtime.current==null:return &"transition_busy"
+	if floating_props!=null and floating_props.active and not floating_props.has_operation_room(5,true):return &"identity_exhausted"
 	var loaded:=CheckpointRouter.load_file(path,configuration)
 	if not loaded.error.is_empty():return loaded.error
 	_restoring=true;_finish_ui_stroke(false);_transition_result={}
+	var hold_error:=await _props_hold(true,&"restore")
+	if not hold_error.is_empty():_restoring=false;return hold_error
 	var error: StringName=runtime.restore_checkpoint(loaded.checkpoint,_transition)
-	if not error.is_empty():_restoring=false;return error
+	if not error.is_empty():
+		await _props_hold(false,&"restore");_restoring=false;return error
 	var start:=Time.get_ticks_msec()
 	while _transition_result.is_empty() and Time.get_ticks_msec()-start<60000:await get_tree().process_frame
-	_restoring=false
+	await _props_hold(false,&"restore");_restoring=false
 	error=_transition_result.get("error",&"restore_wait_timeout")
 	if error.is_empty():
 		var selection: Dictionary=loaded.checkpoint.selection
@@ -352,9 +405,14 @@ func restore_gpu_checkpoint(path: String) -> StringName:
 
 func shutdown() -> void:
 	if gpu_release_done:return
+	if closing:
+		while not gpu_release_done:await get_tree().process_frame
+		return
 	shutdown_requested=true;closing=true;playing=false;ready_for_ticks=false
 	_invalidate_preview()
-	player_camera._release_mouse();runtime.shutdown()
+	player_camera._release_mouse()
+	if floating_props!=null and floating_props.active:await floating_props.shutdown()
+	runtime.shutdown()
 	var retry_at:=Time.get_ticks_msec()
 	while not runtime.closed:
 		if Time.get_ticks_msec()-retry_at>=500:runtime.retry_retirement();retry_at=Time.get_ticks_msec()

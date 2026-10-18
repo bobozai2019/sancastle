@@ -1,0 +1,39 @@
+{
+  "schema": 3,
+  "status": "frozen",
+  "byte_order": "little",
+  "output_bytes": 69828,
+  "prefix_bytes": 128,
+  "maximum_chunks": 16,
+  "samples_per_chunk": 1089,
+  "sample_type": "f32",
+  "header": {
+    "schema_u32": 0,
+    "error_u32": 4,
+    "generation_i64": 8,
+    "snapshot_seq_i64": 16,
+    "state_seq_i64": 24,
+    "tick_i64": 32,
+    "chunk_count_u32": 40,
+    "map_width_u32": 44,
+    "domain_width_u32": 48,
+    "cell_size_f32": 52,
+    "payload_bytes_u32": 56,
+    "revision_low_u32": 60,
+    "chunk_tags_16xu32": 64,
+    "revision_high_u32": 69824
+  },
+  "chunk_tag": "low6bits chunk ID; upper26bits float32 cumulative temporal change bound rounded upward to64-ULP boundary; payload order follows tag order",
+  "interval": "upper=bits(tag & 0xffffffc0), lower=bits(max(0,(tag & 0xffffffc0)-63)); nonnegative finite values enclose the original exact cumulative bound. +Inf is explicit unknown. NaN/negative rejected.",
+  "payload": "16 contiguous33x33 rock+sand height arrays; unused capacity retained; no shape or authority schema change",
+  "ownership": "existing two Height slots; borrow/ack tags masked to low6bits; count16 and priority12/ordinary4 bounds unchanged",
+  "compatibility": "schema2 rejected, native checkpoint and numeric authority schemas unchanged",
+  "evidence": [
+    "test_output/floating_props/height_bounds_packed_v3_20261018_01",
+    "test_output/floating_props/height_compatible_20261018_01",
+    "test_output/floating_props/height_codec_v3_20261018_01"
+  ],
+  "force_compatibility": "Strict version readiness remains for initialization/edit recovery. Force-only compatibility may accept an older assigned same-generation shape when its packed lower bound to the sample exact cumulative upper bound proves at most0.005m temporal difference. Older water-sample and older-shape differences share one0.005m total budget; unknown or larger changes hold the props. No water producer waits.",
+  "frozen_date": "2026-10-19",
+  "final_regression": "test_output/floating_props/final_regressions_20261019_08/progress.json"
+}

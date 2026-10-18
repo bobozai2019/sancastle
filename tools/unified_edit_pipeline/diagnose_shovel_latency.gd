@@ -78,6 +78,7 @@ func _observe() -> void:
 
 func finish() -> void:
 	observations.timeline=timeline.snapshot()
+	observations.packed_comparison={"reference_packed":"--reference-packed" in OS.get_cmdline_user_args(),"packed_phases":"--packed-phases" in OS.get_cmdline_user_args()}
 	observations.diagnostic_options={"manual":manual,"duration_s":duration_s,"wet":wet,"hold_height":hold_height,"water_detail":detail_gpu,"water_only":water_only,"sampling":sampling,"note":"water_only samples the first response in each process frame. hold_height also backpressures height captures; it is not a shape-only ablation. CPU callbacks are not GPU completion timestamps."}
 	var sources: Dictionary=hardware.get("configuration",{}).get("sources",{}).duplicate(true)
 	sources.merge(probe_sources)

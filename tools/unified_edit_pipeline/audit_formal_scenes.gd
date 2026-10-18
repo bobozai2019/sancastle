@@ -29,12 +29,21 @@ func _run() -> void:
 		var paths:={};_scripts(entry,paths)
 		var runtimes:=0;var authorized:=true
 		for script in paths.values():
-			authorized=authorized and script in ALLOWED
+			authorized=authorized and (script in ALLOWED or (key=="main" and script in ["res://scripts/props/floating_prop.gd","res://scripts/props/floating_props_service.gd"]))
 			if script==RUNTIME:runtimes+=1
 		check(key+"_exact_root",entry.get_script().resource_path==ENTRY and entry.get_script().get_base_script()==null and entry.scene_file_path==path)
 		check(key+"_one_scene_authored_runtime",runtimes==1 and entry.has_node("UnifiedEditRuntime"))
 		check(key+"_no_legacy_node_scripts",authorized)
 		check(key+"_no_old_collision_proxy",not entry.has_node("GpuCollisionProxy"))
+		if key=="main":
+			var props=entry.get_node_or_null("FloatingProps/Service")
+			var rows: Array=props.authored_registry() if props!=null else []
+			var local_layout:={}
+			for row in rows:local_layout[row.body_id]=row.body.transform
+			check("main_three_static_props",rows.size()==3 and props.get_script().resource_path=="res://scripts/props/floating_props_service.gd" and props._validate(rows,local_layout).is_empty())
+			check("main_exact_profile_bindings",rows.map(func(row):return row.profile.resource_path)==["res://assets/props/bottle_profile.tres","res://assets/props/wood_plank_profile.tres","res://assets/props/wood_stick_profile.tres"])
+			check("main_prop_layers",rows.all(func(row):return row.body.collision_layer==2 and row.body.collision_mask==3 and row.body.scale==Vector3.ONE))
+		else:check(key+"_no_props",not entry.has_node("FloatingProps"))
 		check(key+"_no_old_execution_flags_or_solver",not "async_pipeline_enabled" in entry and not "solver" in entry)
 		check(key+"_same_family_routes",entry.playable_scene_family()=="formal" and entry.playable_scene_path("main")==Routes.FORMAL.main)
 		var manifest: Dictionary=JSON.parse_string(FileAccess.get_file_as_string(entry.presentation_manifest))

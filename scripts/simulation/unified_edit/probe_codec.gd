@@ -1,7 +1,7 @@
 extends RefCounted
 
 # Little endian, fixed capacity; all identities stay int64 on both sides.
-const VERSION=2
+const VERSION=3
 # Exact float32 representation of the existing water kernel's 1 mm cutoff.
 const DRY_DEPTH_M=8589935.0/8589934592.0
 const VELOCITY_DEPTH_M=5368709.0/1073741824.0
@@ -82,7 +82,7 @@ static func decode(bytes: PackedByteArray, request: Dictionary, serial: int) -> 
 	if bytes.decode_u32(68)!=request.points.size() or bytes.decode_u32(80)!=0 or bytes.decode_u32(84)!=0:return result
 	var input:=encode(request,serial)
 	if bytes.slice(72,80)!=input.slice(72,80):return result
-	result.merge({"captured_state_seq":bytes.decode_s64(40),"captured_tick":bytes.decode_s64(48),"captured_revision":bytes.decode_s64(56),"captured_time_s":bytes.decode_float(64),"points":[],"footprint_versions":{}})
+	result.merge({"captured_state_seq":bytes.decode_s64(40),"captured_tick":bytes.decode_s64(48),"captured_revision":bytes.decode_s64(56),"captured_time_s":bytes.decode_float(64),"points":[],"footprint_versions":{},"footprint_change_bounds":{}})
 	if result.captured_state_seq<0 or result.captured_tick<0 or result.captured_revision<0 or not is_finite(result.captured_time_s) or result.captured_time_s<0:return result
 	var flags:=bytes.decode_u32(4)
 	if flags!=0:
@@ -105,8 +105,9 @@ static func decode(bytes: PackedByteArray, request: Dictionary, serial: int) -> 
 		result.points.append({"body_id":point.body_id,"point_id":point.point_id,"sample_position":position,"bed":values[3],"h":values[4],"eta":values[5],"u_xz":Vector2(values[6],values[7]),"valid":true})
 	for chunk in chunks(request):
 		var base: int=CHUNK_OFFSET+chunk*16
-		if bytes.decode_u32(base)!=chunk or bytes.decode_u32(base+4)!=0:return result
+		if bytes.decode_u32(base)!=chunk or bytes.decode_u32(base+4)>0x7f800000:return result
 		var version:=bytes.decode_s64(base+8)
 		if version<0 or version>result.captured_state_seq:return result
 		result.footprint_versions[chunk]=version
+		result.footprint_change_bounds[chunk]=bytes.decode_float(base+4) if bytes.decode_u32(base+4)<0x7f800000 else -1.0
 	result.error=&"";return result
