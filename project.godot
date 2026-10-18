@@ -52,6 +52,7 @@ compact_sand={
 [physics]
 
 3d/physics_engine="Jolt Physics"
+jolt_physics_3d/simulation/penetration_slop=0.002
 
 [rendering]
 

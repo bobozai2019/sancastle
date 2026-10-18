@@ -4,6 +4,7 @@ extends "res://scripts/simulation/unified_edit/gpu.gd"
 # owns dirty flags; borrowed flags are acknowledged only after the last consumer.
 const Codec=preload("res://scripts/simulation/unified_edit/height_codec.gd")
 const Job=preload("res://scripts/collision/collision_prepare_job.gd")
+const Diagnostics=preload("res://scripts/simulation/unified_edit/diagnostics.gd")
 const SOURCES=["res://scripts/simulation/unified_edit/height.gd","res://scripts/simulation/unified_edit/height.glsl","res://scripts/simulation/unified_edit/height_codec.gd","res://scripts/collision/collision_prepare_job.gd"]
 var proxy
 var state
@@ -19,6 +20,7 @@ var closing:=false
 var applied_state_seq: Dictionary={}
 var applied_tick: Dictionary={}
 var applied_revision: Dictionary={}
+var applied_physics_frame: Dictionary={}
 var events: Array[Dictionary]=[]
 var invalid_results:=0
 var inject_readback_failure_once:=false
@@ -26,6 +28,7 @@ var inject_packet_fault_once:=""
 var hold_readbacks:=false
 var held: Array[Dictionary]=[]
 var hold_physics:=false
+var diagnostics: Diagnostics
 
 func _init() -> void:
 	for index in L.HEIGHT_SLOTS:slots.append(_free())
@@ -57,6 +60,7 @@ func finish_work() -> void:dispatch("height",gpu_slots[0].set,Vector3i(1024,1,1)
 func notify_complete() -> void:hinted=true
 
 func _event(name: StringName, id: Dictionary, detail: Dictionary={}) -> void:
+	if diagnostics!=null:diagnostics.mark(StringName("height_"+String(name)),id.snapshot_seq,detail.duplicate(true))
 	var row:={"event":name,"identity":id.duplicate(true),"frame":Engine.get_process_frames(),"detail":detail.duplicate(true)}
 	events.append(row)
 	if events.size()>128:events.pop_front()
@@ -77,6 +81,7 @@ func pump() -> int:
 	return submitted
 
 func _capture_render(id: Dictionary) -> void:
+	if diagnostics!=null:diagnostics.mark(&"height_capture_render",id.snapshot_seq)
 	var slot: Dictionary=gpu_slots[id.slot_id];slot.identity=id.duplicate(true);slot.phase=&"read"
 	dispatch("height",slot.set,Vector3i.ONE,_push(3,id.snapshot_seq))
 	dispatch("height",slot.set,Vector3i(273,1,1),_push(4,id.snapshot_seq))
@@ -105,10 +110,12 @@ func retry_readbacks() -> void:
 			RenderingServer.call_on_render_thread(_read_render.bind(slot.identity.duplicate(true)))
 
 func _read_arrived(bytes: PackedByteArray, id: Dictionary) -> void:
+	if diagnostics!=null:diagnostics.mark(&"height_readback_callback",id.snapshot_seq)
 	if not _gpu_matches(id):return
 	call_deferred("_received",bytes,id)
 
 func _received(bytes: PackedByteArray, id: Dictionary) -> void:
+	if diagnostics!=null:diagnostics.mark(&"height_receive",id.snapshot_seq)
 	if not _matches(id) or slots[id.slot_id].phase!=&"read_pending":return
 	if hold_readbacks:
 		held.append({"bytes":bytes.duplicate(),"identity":id.duplicate(true)});return
@@ -130,6 +137,7 @@ func _received(bytes: PackedByteArray, id: Dictionary) -> void:
 	var error:=Job.validate(request)
 	if not error.is_empty():_invalid(id,error);return
 	var job:=Job.new(request);slot.job=job;slot.phase=&"worker"
+	if diagnostics!=null:diagnostics.mark(&"height_worker_queued",id.snapshot_seq)
 	slot.task=WorkerThreadPool.add_task(job.prepare_serial,false,"unified complete height")
 
 func deliver_held(reverse: bool=false) -> void:
@@ -151,6 +159,7 @@ func physics_consume(order: PackedInt32Array=PackedInt32Array([0,1])) -> int:
 		if slot.phase!=&"worker" or not WorkerThreadPool.is_task_completed(slot.task):continue
 		WorkerThreadPool.wait_for_task_completion(slot.task)
 		var prepared: Dictionary=slot.job.result();var id: Dictionary=slot.identity
+		if diagnostics!=null:diagnostics.mark(&"height_apply_begin",id.snapshot_seq,{"timings":prepared.timings,"chunks":slot.result.chunks.size(),"state_seq":slot.result.state_seq})
 		if prepared.status!=&"prepared":_invalid(id,&"height_nonfinite");continue
 		if not closing and proxy!=null:
 			var accepted:=true
@@ -158,10 +167,11 @@ func physics_consume(order: PackedInt32Array=PackedInt32Array([0,1])) -> int:
 				var version: int=slot.result.state_seq;var chunk_id: int=chunk.chunk_id
 				if version<int(applied_state_seq.get(chunk_id,-1)):continue
 				if not proxy._replace_chunk_shape(chunk_id,version,chunk.heights,generation):accepted=false;break
-				applied_state_seq[chunk_id]=version;applied_tick[chunk_id]=slot.result.sim_tick;applied_revision[chunk_id]=slot.result.revision;count+=1
+				applied_state_seq[chunk_id]=version;applied_tick[chunk_id]=slot.result.sim_tick;applied_revision[chunk_id]=slot.result.revision;applied_physics_frame[chunk_id]=Engine.get_physics_frames();count+=1
 			if not accepted:_invalid(id,&"height_proxy_rejected");continue
 			_event(&"physics",id,{"state_seq":slot.result.state_seq,"chunks":slot.result.chunks})
 		_ack(id,false)
+		if diagnostics!=null:diagnostics.mark(&"height_apply_end",id.snapshot_seq)
 	return count
 
 func _ack(id: Dictionary, retry: bool) -> void:
@@ -189,6 +199,45 @@ func active_count() -> int:
 	for slot in slots:
 		if not slot.identity.is_empty():count+=1
 	return count
+
+# A shape assignment in this physics notification becomes usable after that
+# world's simulation boundary. Only relevant last-change versions are required.
+func footprint_ready(required: Dictionary, epoch: int) -> Dictionary:
+	if epoch!=generation:return {"ready":false,"error":&"stale_generation","waiting":[]}
+	if required.is_empty() or required.size()>64:return {"ready":false,"error":&"invalid_footprint","waiting":[]}
+	var waiting: Array=[];var frame:=Engine.get_physics_frames()
+	for chunk in required:
+		if typeof(chunk)!=TYPE_INT or chunk<0 or chunk>=64 or typeof(required[chunk])!=TYPE_INT or required[chunk]<0:return {"ready":false,"error":&"invalid_footprint","waiting":[]}
+		var applied: int=applied_state_seq.get(chunk,-1);var assigned_frame: int=applied_physics_frame.get(chunk,-1)
+		if applied<required[chunk] or assigned_frame<0 or frame<=assigned_frame:waiting.append({"chunk":chunk,"required":required[chunk],"applied":applied,"assigned_frame":assigned_frame,"current_frame":frame})
+	return {"ready":waiting.is_empty(),"error":&"","waiting":waiting,"physics_frame":frame}
+
+# Read the existing collision consumer data, never a second CPU terrain state.
+# Includes adjacent vertices so the result bounds the triangles in the rect.
+func maximum_bed(bounds: Rect2, required: Dictionary, epoch: int) -> Dictionary:
+	var ready:=footprint_ready(required,epoch)
+	if not ready.ready:return {"error":&"support_not_ready"}
+	if proxy==null or not is_instance_valid(proxy) or not bounds.position.is_finite() or not bounds.size.is_finite() or bounds.size.x<=0 or bounds.size.y<=0:return {"error":&"invalid_footprint"}
+	var highest:=-INF;var count:=0
+	for chunk in required:
+		var node: CollisionShape3D=proxy.shapes[chunk];var shape: HeightMapShape3D=node.shape
+		if shape==null:return {"error":&"support_not_ready"}
+		var transform:=node.global_transform;var inverse:=transform.affine_inverse()
+		var low:=Vector2(INF,INF);var high:=Vector2(-INF,-INF)
+		for corner in [bounds.position,Vector2(bounds.end.x,bounds.position.y),bounds.end,Vector2(bounds.position.x,bounds.end.y)]:
+			var local: Vector3=inverse*Vector3(corner.x,transform.origin.y,corner.y)
+			low=low.min(Vector2(local.x,local.z));high=high.max(Vector2(local.x,local.z))
+		var half_x:=0.5*float(shape.map_width-1);var half_z:=0.5*float(shape.map_depth-1)
+		if high.x< -half_x or low.x>half_x or high.y< -half_z or low.y>half_z:continue
+		var x0:=clampi(floori(low.x+half_x),0,shape.map_width-1);var x1:=clampi(ceili(high.x+half_x),0,shape.map_width-1)
+		var z0:=clampi(floori(low.y+half_z),0,shape.map_depth-1);var z1:=clampi(ceili(high.y+half_z),0,shape.map_depth-1)
+		var data: PackedFloat32Array=shape.map_data
+		for z in range(z0,z1+1):
+			for x in range(x0,x1+1):
+				var world: Vector3=transform*Vector3(float(x)-half_x,data[z*shape.map_width+x],float(z)-half_z)
+				if not world.is_finite():return {"error":&"invalid_sample"}
+				highest=maxf(highest,world.y);count+=1
+	return {"error":&"" if count>0 else &"out_of_domain","maximum_m":highest,"vertices":count,"physics_frame":Engine.get_physics_frames()}
 
 func close() -> void:closing=true;hinted=false
 

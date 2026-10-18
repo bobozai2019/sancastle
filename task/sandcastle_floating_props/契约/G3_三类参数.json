@@ -1,0 +1,263 @@
+{
+  "schema": 1,
+  "status": "frozen_G3_20261018",
+  "service_sha256": "1e8db272df035c6d5eba8b1db4987b53c9268afccc08ddd5b43816f76d61dc5e",
+  "profiles": {
+    "bottle_profile.tres": "604d538ca40ea3c1d96fc0fc88b860c993f8d399ff167e2268776d15276cb714",
+    "wood_plank_profile.tres": "709bcfb0af28dfab88dc09828b4d6cb821c15c2a5530c54642ad31e858f3de0f",
+    "wood_stick_profile.tres": "71881e5177318a3aa5942087543fd4fd2e3f3450712a7781c164d885bc63a501"
+  },
+  "data": {
+    "bottle": {
+      "mass_kg": 0.65,
+      "volume_m3": 0.0026,
+      "point_count": 2,
+      "waterline_offset_m": 0.045
+    },
+    "wood_plank": {
+      "mass_kg": 14.4,
+      "volume_m3": 0.032,
+      "point_count": 4,
+      "waterline_offset_m": 0.004
+    },
+    "wood_stick": {
+      "mass_kg": 1.5,
+      "volume_m3": 0.003,
+      "point_count": 3,
+      "waterline_offset_m": 0.0
+    }
+  },
+  "pause_refinement": "Pause drain eligibility now uses the same remaining+1e-7>=step condition as admission; an exactly spendable float32 remainder is drained before hold. Verified by slope fixtures plus bottle delay regression.",
+  "records": [
+    {
+      "run": "three_normal_final_20261018_01",
+      "checks": 30,
+      "independent_checks": 13,
+      "metrics": {
+        "actual_time_s": 6.083333650603902,
+        "actual_by_body_s": {
+          "1": 6.083333650603902,
+          "2": 6.083333650603902,
+          "3": 6.083333650603902
+        },
+        "reserved_time_s": 6.0833333333333455,
+        "boundary_gap_s": 0.016661962494238125,
+        "actual_steps": 1095,
+        "max_step_s": 0.0166666675359011,
+        "rounding_budget_s": 3.5872141186482342e-06,
+        "max_force_reconstruction_error_n": 5.7946644034245764e-06,
+        "force_reconstruction_budget_n": 0.0002,
+        "max_capture_lag_s": 0.08333311875660998
+      },
+      "poses": {
+        "1": {
+          "actual_time_s": 6.08333365060389,
+          "angular_velocity": "(0.0, 0.0, -0.000025)",
+          "position": "(-1.397566, 1.245, 0.0)",
+          "rotation": "(-0.0, -0.0, 0.025693)",
+          "velocity": "(-0.000041, 0.000002, -0.0)"
+        },
+        "2": {
+          "actual_time_s": 6.08333365060389,
+          "angular_velocity": "(-0.0, -0.0, -0.0)",
+          "position": "(0.004853, 1.204, -0.001654)",
+          "rotation": "(0.0, -0.084914, 0.0)",
+          "velocity": "(0.000013, -0.000002, -0.000003)"
+        },
+        "3": {
+          "actual_time_s": 6.08333365060389,
+          "angular_velocity": "(-0.000017, -0.0, -0.000047)",
+          "position": "(1.398178, 1.2, 0.0)",
+          "rotation": "(0.0, 0.0, 0.000002)",
+          "velocity": "(-0.000002, 0.000003, 0.0)"
+        }
+      },
+      "source_zip_sha256": "8eb269c57c230e8eb0a2e6104c4d1666da559524c6d92fb8add2d4dd0be684d4",
+      "service_sha256": "1e8db272df035c6d5eba8b1db4987b53c9268afccc08ddd5b43816f76d61dc5e"
+    },
+    {
+      "run": "three_flow_positive_final_20261018_01",
+      "checks": 30,
+      "independent_checks": 13,
+      "metrics": {
+        "actual_time_s": 4.08333354629577,
+        "actual_by_body_s": {
+          "1": 4.08333354629577,
+          "2": 4.08333354629577,
+          "3": 4.08333354629577
+        },
+        "reserved_time_s": 4.083333333333342,
+        "boundary_gap_s": 0.016663974151009953,
+        "actual_steps": 735,
+        "max_step_s": 0.0166666675359011,
+        "rounding_budget_s": 3.3636966760658127e-06,
+        "max_force_reconstruction_error_n": 4.882122652816179e-06,
+        "force_reconstruction_budget_n": 0.0002,
+        "max_capture_lag_s": 0.08333311875660998
+      },
+      "poses": {
+        "1": {
+          "actual_time_s": 4.08333354629576,
+          "angular_velocity": "(-0.0, -0.0, 0.004442)",
+          "position": "(-0.689428, 1.244607, 0.0)",
+          "rotation": "(-0.0, -0.0, 0.026484)",
+          "velocity": "(0.261275, -0.002302, 0.0)"
+        },
+        "2": {
+          "actual_time_s": 4.08333354629576,
+          "angular_velocity": "(0.0, -0.000004, 0.00018)",
+          "position": "(0.909346, 1.203996, -0.00164)",
+          "rotation": "(0.000002, -0.083732, 0.000021)",
+          "velocity": "(0.292709, -0.000019, -0.000018)"
+        },
+        "3": {
+          "actual_time_s": 4.08333354629576,
+          "angular_velocity": "(-0.000001, -0.0, 0.004084)",
+          "position": "(2.324921, 1.20021, 0.0)",
+          "rotation": "(-0.0, -0.000001, 0.000544)",
+          "velocity": "(0.29488, 0.001662, 0.0)"
+        }
+      },
+      "source_zip_sha256": "e0395b700c870aaaeee10b3a48a5d99f27580a4d035f0466741836349645afc3",
+      "service_sha256": "1e8db272df035c6d5eba8b1db4987b53c9268afccc08ddd5b43816f76d61dc5e"
+    },
+    {
+      "run": "three_flow_negative_final_20261018_01",
+      "checks": 30,
+      "independent_checks": 13,
+      "metrics": {
+        "actual_time_s": 4.08333354629577,
+        "actual_by_body_s": {
+          "1": 4.08333354629577,
+          "2": 4.08333354629577,
+          "3": 4.08333354629577
+        },
+        "reserved_time_s": 4.083333333333342,
+        "boundary_gap_s": 0.016663974151009953,
+        "actual_steps": 735,
+        "max_step_s": 0.0166666675359011,
+        "rounding_budget_s": 3.3636966760658127e-06,
+        "max_force_reconstruction_error_n": 7.981968096260061e-06,
+        "force_reconstruction_budget_n": 0.0002,
+        "max_capture_lag_s": 0.08333308696747
+      },
+      "poses": {
+        "1": {
+          "actual_time_s": 4.08333354629576,
+          "angular_velocity": "(-0.0, -0.0, -0.002124)",
+          "position": "(-2.105444, 1.245099, 0.0)",
+          "rotation": "(-0.0, -0.0, 0.02548)",
+          "velocity": "(-0.261595, 0.000841, -0.0)"
+        },
+        "2": {
+          "actual_time_s": 4.08333354629576,
+          "angular_velocity": "(-0.000009, -0.000004, -0.000172)",
+          "position": "(-0.899776, 1.203996, -0.001635)",
+          "rotation": "(-0.000002, -0.086103, -0.000022)",
+          "velocity": "(-0.292544, -0.000021, -0.000018)"
+        },
+        "3": {
+          "actual_time_s": 4.08333354629576,
+          "angular_velocity": "(-0.000001, 0.0, -0.002783)",
+          "position": "(0.471476, 1.199742, 0.0)",
+          "rotation": "(0.0, -0.0, -0.000588)",
+          "velocity": "(-0.294878, -0.00138, 0.0)"
+        }
+      },
+      "source_zip_sha256": "9757e0bfca243c4da5562dfcb051a02446e1223f36e84fd612ef2df7e632cbce",
+      "service_sha256": "1e8db272df035c6d5eba8b1db4987b53c9268afccc08ddd5b43816f76d61dc5e"
+    },
+    {
+      "run": "three_tilt_width_20261018_02",
+      "checks": 27,
+      "independent_checks": 13,
+      "metrics": {
+        "actual_time_s": 1.483333410695198,
+        "actual_by_body_s": {
+          "1": 1.483333410695198,
+          "2": 1.483333410695198,
+          "3": 1.483333410695198
+        },
+        "reserved_time_s": 1.4833333333333365,
+        "boundary_gap_s": 0.01666647009551192,
+        "actual_steps": 267,
+        "max_step_s": 0.0166666675359011,
+        "rounding_budget_s": 1.64261257548201e-06,
+        "max_force_reconstruction_error_n": 6.6763573869366155e-06,
+        "force_reconstruction_budget_n": 0.0002,
+        "max_capture_lag_s": 0.06666702429453497
+      },
+      "poses": {
+        "1": {
+          "actual_time_s": 1.4833334106952,
+          "angular_velocity": "(-0.039556, -0.001957, -0.008391)",
+          "position": "(-1.400203, 2.501231, -0.199392)",
+          "rotation": "(-0.043777, -0.001965, 0.026495)",
+          "velocity": "(0.000093, 0.044797, -0.365552)"
+        },
+        "2": {
+          "actual_time_s": 1.4833334106952,
+          "angular_velocity": "(-0.00027, -0.0, -0.0)",
+          "position": "(-0.0, 2.451288, -0.318785)",
+          "rotation": "(-0.079343, -0.0, -0.0)",
+          "velocity": "(-0.0, 0.024611, -0.559747)"
+        },
+        "3": {
+          "actual_time_s": 1.4833334106952,
+          "angular_velocity": "(0.02271, 0.0, 0.0)",
+          "position": "(1.4, 2.445452, -0.343313)",
+          "rotation": "(-0.056093, -0.0, -0.0)",
+          "velocity": "(-0.0, 0.020848, -0.597883)"
+        }
+      },
+      "source_zip_sha256": "600c836dbd7d207d43ac1381f8a1ef29d612d7b7eae30347007292354396b0a8",
+      "service_sha256": "1e8db272df035c6d5eba8b1db4987b53c9268afccc08ddd5b43816f76d61dc5e"
+    },
+    {
+      "run": "three_tilt_length_20261018_01",
+      "checks": 29,
+      "independent_checks": 13,
+      "metrics": {
+        "actual_time_s": 1.483333410695198,
+        "actual_by_body_s": {
+          "1": 1.483333410695198,
+          "2": 1.483333410695198,
+          "3": 1.483333410695198
+        },
+        "reserved_time_s": 1.4833333333333365,
+        "boundary_gap_s": 0.01666647009551192,
+        "actual_steps": 267,
+        "max_step_s": 0.0166666675359011,
+        "rounding_budget_s": 1.64261257548201e-06,
+        "max_force_reconstruction_error_n": 5.4963613393965716e-06,
+        "force_reconstruction_budget_n": 0.0002,
+        "max_capture_lag_s": 0.06666702429453497
+      },
+      "poses": {
+        "1": {
+          "actual_time_s": 1.4833334106952,
+          "angular_velocity": "(-0.0, -0.0, -0.002639)",
+          "position": "(-1.600318, 2.389135, 0.0)",
+          "rotation": "(-0.0, -0.0, 0.105288)",
+          "velocity": "(-0.365622, 0.043839, 0.0)"
+        },
+        "2": {
+          "actual_time_s": 1.4833334106952,
+          "angular_velocity": "(0.0, -0.0, 0.000033)",
+          "position": "(-0.319408, 2.451238, -0.0)",
+          "rotation": "(-0.0, -0.0, 0.079787)",
+          "velocity": "(-0.56012, 0.02458, 0.0)"
+        },
+        "3": {
+          "actual_time_s": 1.4833334106952,
+          "angular_velocity": "(-0.000002, -0.0, 0.000025)",
+          "position": "(1.055944, 2.557381, -0.0)",
+          "rotation": "(0.0, 0.0, 0.079772)",
+          "velocity": "(-0.598263, 0.020772, -0.0)"
+        }
+      },
+      "source_zip_sha256": "ae70faccdafbaed7bc475914dcf870505b85f6943ad2e17a6c41c92cc2e89589",
+      "service_sha256": "1e8db272df035c6d5eba8b1db4987b53c9268afccc08ddd5b43816f76d61dc5e"
+    }
+  ]
+}

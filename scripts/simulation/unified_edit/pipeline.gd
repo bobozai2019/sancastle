@@ -5,6 +5,7 @@ const I=preload("res://scripts/simulation/unified_edit/intent.gd")
 const W=preload("res://scripts/simulation/unified_edit/protocol.gd")
 const C=preload("res://scripts/simulation/unified_edit/configuration.gd")
 const Slots=preload("res://scripts/simulation/unified_edit/slots.gd")
+const Diagnostics=preload("res://scripts/simulation/unified_edit/diagnostics.gd")
 const Transport=preload("res://scripts/simulation/unified_edit/transport.gd")
 const State=preload("res://scripts/simulation/unified_edit/state.gd")
 const Executor=preload("res://scripts/simulation/unified_edit/executor.gd")
@@ -23,7 +24,7 @@ const Capture=preload("res://scripts/simulation/unified_edit/checkpoint_capture.
 const Display=preload("res://scripts/simulation/unified_edit/display_intent.gd")
 const MAX_PENDING:=64
 const MAX_RESULTS:=512
-const SOURCE_PATHS=["res://scripts/simulation/unified_edit/checkpoint_accounting.gd","res://scripts/simulation/unified_edit/checkpoint_capture.gd","res://scripts/simulation/unified_edit/restore_verifier.gd","res://scripts/simulation/unified_edit/idle_fence.glsl","res://scripts/simulation/unified_edit/gpu.gd","res://scripts/simulation/unified_edit/slots.gd","res://scripts/simulation/unified_edit/transport.gd","res://scripts/simulation/unified_edit/state.gd","res://scripts/simulation/unified_edit/unit_half.gd","res://scripts/simulation/unified_edit/publish.glsl","res://scripts/simulation/unified_edit/water.gd","res://scripts/simulation/unified_edit/executor.gd","res://scripts/simulation/unified_edit/pipeline.gd","res://scripts/simulation/unified_edit/work_begin.glsl","res://scripts/simulation/unified_edit/work_seal.glsl","res://scripts/simulation/unified_edit/edit.glsl","res://scripts/simulation/unified_edit/cfl_decide.glsl","res://scripts/simulation/edit_validation/frame_pipeline/async_cfl_tiles.glsl","res://scripts/simulation/edit_validation/frame_pipeline/async_sim_finish.glsl","res://scripts/simulation/edit_validation/frame_pipeline/async_normalize.glsl","res://scripts/simulation/edit_validation/frame_pipeline/async_boundary.glsl","res://shaders/simulation/shallow_edge_flux.glsl","res://shaders/simulation/shallow_drain_scale.glsl","res://shaders/simulation/shallow_update_state.glsl"]+Coupled.SOURCES+Executor.Response.SOURCES+Height.SOURCES+Views.SOURCES+Visuals.SOURCES+Boundary.SOURCES+Display.SOURCES
+const SOURCE_PATHS=["res://scripts/simulation/unified_edit/diagnostics.gd","res://scripts/simulation/unified_edit/checkpoint_accounting.gd","res://scripts/simulation/unified_edit/checkpoint_capture.gd","res://scripts/simulation/unified_edit/restore_verifier.gd","res://scripts/simulation/unified_edit/idle_fence.glsl","res://scripts/simulation/unified_edit/gpu.gd","res://scripts/simulation/unified_edit/slots.gd","res://scripts/simulation/unified_edit/transport.gd","res://scripts/simulation/unified_edit/state.gd","res://scripts/simulation/unified_edit/unit_half.gd","res://scripts/simulation/unified_edit/publish.glsl","res://scripts/simulation/unified_edit/water.gd","res://scripts/simulation/unified_edit/executor.gd","res://scripts/simulation/unified_edit/pipeline.gd","res://scripts/simulation/unified_edit/work_begin.glsl","res://scripts/simulation/unified_edit/work_seal.glsl","res://scripts/simulation/unified_edit/edit.glsl","res://scripts/simulation/unified_edit/cfl_decide.glsl","res://scripts/simulation/edit_validation/frame_pipeline/async_cfl_tiles.glsl","res://scripts/simulation/edit_validation/frame_pipeline/async_sim_finish.glsl","res://scripts/simulation/edit_validation/frame_pipeline/async_normalize.glsl","res://scripts/simulation/edit_validation/frame_pipeline/async_boundary.glsl","res://shaders/simulation/shallow_edge_flux.glsl","res://shaders/simulation/shallow_drain_scale.glsl","res://shaders/simulation/shallow_update_state.glsl"]+Coupled.SOURCES+Executor.Response.SOURCES+Height.SOURCES+Views.SOURCES+Visuals.SOURCES+Boundary.SOURCES+Display.SOURCES
 var visuals:=Visuals.new()
 var boundary:=Boundary.new()
 var accounting:=Accounting.new()
@@ -71,6 +72,7 @@ var initialization_ownership: Dictionary={}
 var inject_initialization_failure_after: StringName=&""
 var hold_completions:=false
 var arrival_order: Array[int]=[]
+var diagnostics: Diagnostics
 
 func configure(registry, configuration: Dictionary, generation: Variant) -> StringName:
 	if _registry!=null or released or initialization_started or _closing:return &"pipeline_already_configured"
@@ -152,7 +154,7 @@ func initialize_render(domain) -> void:
 
 func _initialize_views() -> bool:
 	views.visual_textures=visuals.published.duplicate()
-	return views.initialize(state,executor,transport,_registry,_configuration,_generation)
+	return views.initialize(state,executor,transport,_registry,_configuration,_generation,heights.dirty)
 
 func _restore_verified_render(error: StringName) -> void:
 	# RD readback callbacks can still be inside the device's callback delivery
@@ -183,7 +185,7 @@ func cancel_initialization() -> bool:
 	_closing=true;views.close_preview();return true
 
 func ownership_counts() -> Dictionary:
-	return {"transport":transport.owned.size(),"state":state.owned.size(),"executor":executor.owned.size(),"water_response":executor.response.owned.size(),"water":water.owned.size(),"coupled":coupled.owned.size(),"height":heights.owned.size(),"views":views.owned.size()}
+	return {"transport":transport.owned.size(),"state":state.owned.size(),"executor":executor.owned.size(),"water_response":executor.response.owned.size(),"water":water.owned.size(),"coupled":coupled.owned.size(),"height":heights.owned.size(),"views":views.owned.size(),"probe":views.probe.owned.size()}
 
 func _request_initialization_cleanup_render() -> void:
 	if initialization_error.is_empty() or initialization_cleanup_pending:return
@@ -242,6 +244,7 @@ func _enqueue(frozen: Dictionary) -> Dictionary:
 	var at:=_pending.size()
 	while frozen.control_kind==0 and at>0 and _pending[at-1].kind==L.WorkKind.EDIT and _pending[at-1].command.control_kind==0 and _pending[at-1].command.sim_tick>frozen.sim_tick:at-=1
 	_pending.insert(at,{"kind":L.WorkKind.EDIT,"command":frozen.duplicate(true),"boundary_packets":boundary.packets()})
+	if diagnostics!=null:diagnostics.mark(&"enqueue",frozen.command_id,{"control":frozen.control_kind,"pending":_pending.size()})
 	return {"accepted":true,"error":&"","command_id":_highwater}
 
 func submit_legacy(command: Dictionary, policy: Variant=3, speed: Variant=0.0) -> Dictionary:
@@ -302,6 +305,7 @@ func cancel_pending(command_id: int) -> bool:
 func pump() -> void:
 	if not _ready or not _fault.is_empty():
 		_checkpoint_progress();return
+	if diagnostics!=null:diagnostics.mark(&"pump_begin",0,{"pending":_pending.size(),"active":active_count()})
 	_poll()
 	if not _fault.is_empty():
 		_checkpoint_progress();return
@@ -311,9 +315,11 @@ func pump() -> void:
 	while not _pending.is_empty():
 		var acquired:=slots.acquire()
 		if not acquired.error.is_empty():
+			if diagnostics!=null:diagnostics.mark(&"slot_blocked",0,{"pending":_pending.size(),"states":slots._slots.map(func(value):return value.state)})
 			if acquired.error==&"identity_exhausted":_fail(acquired.error)
 			break
 		var id: Dictionary=acquired.identity
+		if diagnostics!=null:diagnostics.mark(&"batch_build",id.batch_seq,{"slot":id.slot_id})
 		var kind: int=_pending[0].kind
 		var commands: Array=[];var encoded: Array[PackedByteArray]=[];var dt:=0.0
 		var wave_packets: Array=_pending[0].get("boundary_packets",boundary.packets()).duplicate()
@@ -333,14 +339,20 @@ func pump() -> void:
 		if packet.is_empty() or not slots.queued(id,commands,kind).is_empty():
 			slots.cancel_unsubmitted(id);_fail(&"internal_batch_invalid");return
 		_records[id.batch_seq]={"identity":id.duplicate(true),"commands":commands.duplicate(true),"kind":kind,"booked":false}
+		if diagnostics!=null:diagnostics.mark(&"batch_queued",id.batch_seq,{"kind":kind,"slot":id.slot_id,"commands":commands.map(func(value):return value.command_id)})
 		RenderingServer.call_on_render_thread(_submit_render.bind(id,packet,kind,dt,wave_packets))
+	if diagnostics!=null:diagnostics.mark(&"pump_end")
 
 func _submit_render(id: Dictionary, packet: PackedByteArray, kind: int, dt: float, wave_packets: Array=[]) -> void:
+	if diagnostics!=null:diagnostics.mark(&"submit_begin",id.batch_seq)
 	if kind==L.WorkKind.WATER_TICK and boundary.enabled and not water.configure_boundary(water.tide,wave_packets):
 		call_deferred("_submission_failed",id,{"recorded":false,"error":&"boundary_wave_upload"});return
 	var decoded:=W.decode_batch(packet,id)
 	var recorder: Callable=_record_work.bind(kind,dt,decoded.commands)
+	if diagnostics!=null and state.profile_passes:state.rd.capture_timestamp("ue_batch_"+str(id.batch_seq)+"_start")
 	var submitted:=transport.submit(id,packet,recorder,_arrived_render,_finish_work)
+	if diagnostics!=null and state.profile_passes:state.rd.capture_timestamp("ue_batch_"+str(id.batch_seq)+"_end")
+	if diagnostics!=null:diagnostics.mark(&"submit_end",id.batch_seq,{"recorded":submitted.recorded,"error":submitted.error})
 	if submitted.recorded:call_deferred("_recording_known",id)
 	if not submitted.error.is_empty():call_deferred("_submission_failed",id,submitted)
 
@@ -370,12 +382,15 @@ func _finish_work() -> void:
 	if state.profile_passes:state.rd.capture_timestamp("sandcastle_async_publish_end")
 
 func _arrived_render(bytes: PackedByteArray, id: Dictionary) -> void:
+	if diagnostics!=null:diagnostics.mark(&"readback_callback",id.batch_seq)
 	call_deferred("_receive",bytes,id)
 
 func _receive(bytes: PackedByteArray, id: Dictionary) -> void:
+	if diagnostics!=null:diagnostics.mark(&"receive_begin",id.batch_seq)
 	arrival_order.append(id.batch_seq)
 	if arrival_order.size()>128:arrival_order.pop_front()
 	var error:=slots.completed(bytes,id)
+	if diagnostics!=null:diagnostics.mark(&"receive_end",id.batch_seq,{"error":error})
 	if not error.is_empty() and error not in [&"stale_lease",&"duplicate_or_wrong_state"]:_fail(error)
 
 func _submission_failed(id: Dictionary, result: Dictionary) -> void:
@@ -393,7 +408,10 @@ func _poll() -> void:
 	var batches:=_records.keys();batches.sort()
 	for batch in batches:
 		var record: Dictionary=_records[batch];var id: Dictionary=record.identity
-		if slots.slot_snapshot(id.slot_id).state!=Slots.State.GPU_COMPLETE:break
+		if slots.slot_snapshot(id.slot_id).state!=Slots.State.GPU_COMPLETE:
+			if diagnostics!=null:diagnostics.mark(&"ordered_wait",id.batch_seq,{"states":slots._slots.map(func(value):return value.state)})
+			break
+		if diagnostics!=null:diagnostics.mark(&"consume_begin",id.batch_seq)
 		var completion:=slots.consume(id)
 		_book_record(record)
 		var header: Dictionary=completion.header
@@ -409,14 +427,17 @@ func _poll() -> void:
 				_checkpoint_end_ids.erase(command.command_id)
 				if checkpoint_capture!=null:checkpoint_capture.metadata.end_result=value.duplicate(true)
 			else:_results[command.command_id]=value.duplicate(true)
+		if diagnostics!=null:diagnostics.mark(&"settle_end",id.batch_seq,{"state_seq":completed_state_seq,"tick":completed_tick})
 		RenderingServer.call_on_render_thread(_retire_render.bind(id))
 		_records.erase(batch)
 
 func _retire_render(id: Dictionary) -> void:
+	if diagnostics!=null:diagnostics.mark(&"retire_render",id.batch_seq)
 	call_deferred("_retired",id,transport.retire(id))
 
 func _retired(id: Dictionary, success: bool) -> void:
 	if not success or not slots.retired(id):_fail(&"retirement_failed")
+	if diagnostics!=null:diagnostics.mark(&"slot_free",id.batch_seq,{"success":success,"fault":_fault})
 
 func _fail(error: StringName) -> void:
 	if _fault.is_empty():_fault=error
@@ -434,6 +455,7 @@ func take_result(command_id: int) -> Dictionary:
 	if not _results.has(command_id):return {}
 	var value: Dictionary=_results[command_id].duplicate(true)
 	_results.erase(command_id);_reserved_ids.erase(command_id);_result_reservations-=1
+	if diagnostics!=null:diagnostics.mark(&"result_taken",command_id,{"outcome":value.get("outcome",-1)})
 	return value
 
 func result_reservations() -> int:return _result_reservations

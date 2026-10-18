@@ -5,7 +5,8 @@ extends "res://scripts/simulation/unified_edit/gpu.gd"
 const Intent=preload("res://scripts/simulation/unified_edit/intent.gd")
 const Wire=preload("res://scripts/simulation/unified_edit/protocol.gd")
 const Configuration=preload("res://scripts/simulation/unified_edit/configuration.gd")
-const SOURCES=["res://scripts/simulation/unified_edit/views.gd","res://scripts/simulation/unified_edit/view_publish.glsl","res://scripts/simulation/unified_edit/view_query.glsl"]
+const Probe=preload("res://scripts/simulation/unified_edit/probe.gd")
+const SOURCES=["res://scripts/simulation/unified_edit/views.gd","res://scripts/simulation/unified_edit/view_publish.glsl","res://scripts/simulation/unified_edit/view_query.glsl"]+Probe.SOURCES
 const FIELDS=["sediment","momentum_x","momentum_z","wetness","compaction","mold_support","flux","baseline"]
 enum Freshness { CURRENT, SNAPSHOT }
 signal detach_finished(success: bool)
@@ -33,8 +34,9 @@ var held: Dictionary={}
 var inject_readback_failure_once:=false
 var inject_detach_failure_once:=false
 var _query: Dictionary={}
+var probe:=Probe.new()
 
-func initialize(bundle, executor, channel, catalog, config: Dictionary, epoch: int) -> bool:
+func initialize(bundle, executor, channel, catalog, config: Dictionary, epoch: int, height_dirty: RID) -> bool:
 	state=bundle;transport=channel;registry=catalog;configuration=config.duplicate(true);generation=epoch;rd=channel.rd
 	textures={"rock":state.textures.rock,"obstacle":state.textures.obstacle,"sand":state.published_sand,"water":state.published_water,"clock":transport.clock_texture}
 	textures.merge(visual_textures)
@@ -53,6 +55,7 @@ func initialize(bundle, executor, channel, catalog, config: Dictionary, epoch: i
 	sets.query=binding("query",{0:buffers.command,1:state.published_stamp,2:executor.buffers.templates,3:buffers.blocks,4:buffers.result,5:buffers.identity,11:buffers.stroke},{6:textures.rock,7:textures.sand,8:textures.water,9:textures.obstacle,10:textures.baseline,12:textures.clock})
 	for set in sets.values():
 		if not set.is_valid():last_error="view_binding";return false
+	if not probe.initialize(self,height_dirty):last_error="probe/"+probe.last_error;return false
 	return true
 
 func publish() -> void:dispatch("publish",sets.publish,Vector3i(1024,1,1))
@@ -127,6 +130,7 @@ func _unknown(serial: int) -> void:
 	if pending and _query.serial==serial:_query.unknown=true
 
 func retry_preview_readback() -> void:
+	probe.retry_readback()
 	if pending and _query.get("unknown",false):
 		_query.unknown=false;RenderingServer.call_on_render_thread(_read_render.bind(_query.serial))
 
@@ -156,7 +160,11 @@ func _complete(value: Dictionary) -> void:
 	var callback: Callable=_query.callback;pending=false;_query={}
 	if callback.is_valid():callback.call(value)
 
-func close_preview() -> void:closing=true;invalidate_preview()
+func close_preview() -> void:closing=true;invalidate_preview();probe.close()
+
+func request_probe(request: Dictionary, callback: Callable) -> Dictionary:
+	if closing:return {"accepted":false,"error":&"closing"}
+	return probe.request(request,callback)
 
 # Restore all caller parameters, wait until render bindings pass a frame
 # boundary, then obtain an ordered real-device proof before freeing resources.
@@ -195,8 +203,9 @@ func _detach_result(success: bool) -> void:
 	if success:wrappers.clear()
 	detach_finished.emit(success)
 
-func can_release() -> bool:return not pending and bindings.is_empty() and detached_confirmed and not detach_pending
+func can_release() -> bool:return not pending and probe.can_release() and bindings.is_empty() and detached_confirmed and not detach_pending
 
 func release_if_idle() -> bool:
 	if not can_release():return false
+	if not probe.release_if_idle():return false
 	sets.clear();buffers.clear();textures.clear();visual_textures.clear();state=null;transport=null;registry=null;super.release();return true

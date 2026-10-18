@@ -1,0 +1,370 @@
+{
+  "date": "2026-10-18",
+  "role": "documentation_validation",
+  "scope": "Plan scope/links/progress/archived bytes only; no Godot, GPU, physics, runtime implementation or performance validation",
+  "pass": true,
+  "task_count": 6,
+  "goal_count": 18,
+  "gate_count": 6,
+  "runtime_progress": {
+    "tasks": 0,
+    "goals": 0,
+    "gates": 0
+  },
+  "checks": [
+    {
+      "name": "active_file_count",
+      "pass": true,
+      "detail": 11
+    },
+    {
+      "name": "utf8_no_replacement:总纲.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "utf8_no_replacement:实现约定.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "utf8_no_replacement:执行状态.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "utf8_no_replacement:README.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "utf8_no_replacement:README.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "utf8_no_replacement:T01_公共接口与批量采样.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "utf8_no_replacement:T02_水瓶与实际时钟.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "utf8_no_replacement:T03_木板与木棍.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "utf8_no_replacement:T04_动态沙床接触.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "utf8_no_replacement:T05_main与生命周期.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "utf8_no_replacement:T06_回归成本与交付.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "active_markdown_local_links",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "six_tasks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "task_number:T01_公共接口与批量采样.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "three_unstarted_goals:T01_公共接口与批量采样.md",
+      "pass": true,
+      "detail": 3
+    },
+    {
+      "name": "task_owner_boundaries:T01_公共接口与批量采样.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "task_number:T02_水瓶与实际时钟.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "three_unstarted_goals:T02_水瓶与实际时钟.md",
+      "pass": true,
+      "detail": 3
+    },
+    {
+      "name": "task_owner_boundaries:T02_水瓶与实际时钟.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "task_number:T03_木板与木棍.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "three_unstarted_goals:T03_木板与木棍.md",
+      "pass": true,
+      "detail": 3
+    },
+    {
+      "name": "task_owner_boundaries:T03_木板与木棍.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "task_number:T04_动态沙床接触.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "three_unstarted_goals:T04_动态沙床接触.md",
+      "pass": true,
+      "detail": 3
+    },
+    {
+      "name": "task_owner_boundaries:T04_动态沙床接触.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "task_number:T05_main与生命周期.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "three_unstarted_goals:T05_main与生命周期.md",
+      "pass": true,
+      "detail": 3
+    },
+    {
+      "name": "task_owner_boundaries:T05_main与生命周期.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "task_number:T06_回归成本与交付.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "three_unstarted_goals:T06_回归成本与交付.md",
+      "pass": true,
+      "detail": 3
+    },
+    {
+      "name": "task_owner_boundaries:T06_回归成本与交付.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "zero_progress:总纲.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "zero_progress:执行状态.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "requirements_8",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "six_gates",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "six_contracts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "actual_time_not_fixed_tick",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "type_scope",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "archive_byte_identity:总纲.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "archive_byte_identity:执行状态.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "archive_byte_identity:实现约定.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "archive_byte_identity:README.md",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "plans": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\task\\sandcastle_floating_props\\总纲.md",
+      "bytes": 9025,
+      "sha256": "c29ff0a2bd4c96aebe0449bbc299581c8ef80dc59d31d118f6231b2c2bff9a0f"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\task\\sandcastle_floating_props\\实现约定.md",
+      "bytes": 10924,
+      "sha256": "7d30df2260d86ba90e38b64c28ab477fda639a65f54af5b6b4415964f7052b53"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\task\\sandcastle_floating_props\\执行状态.md",
+      "bytes": 3361,
+      "sha256": "13418e252b2f9f0da3dabedd68f441d311a3bd17d621c92a69a6212d035924de"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\task\\sandcastle_floating_props\\验收\\README.md",
+      "bytes": 5638,
+      "sha256": "072b1372e85257d91d71f10761a4ab9f072b4dfeba58e5eca71bdfaba8d396bb"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\task\\sandcastle_floating_props\\细则\\README.md",
+      "bytes": 1161,
+      "sha256": "2db52da7f980b6623704c5d2eabd6fdba93762420f6b8ac700d63d250d93c8fe"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\task\\sandcastle_floating_props\\细则\\T01_公共接口与批量采样.md",
+      "bytes": 2742,
+      "sha256": "c7e572089924649d0ba9ac106cd5f42fb1a5eb7843dad3b247597f83dddcd0cb"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\task\\sandcastle_floating_props\\细则\\T02_水瓶与实际时钟.md",
+      "bytes": 2809,
+      "sha256": "2b7ab01082032f016f35c01094cdfec36a3a90f468849e1c5cfafeaca8054060"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\task\\sandcastle_floating_props\\细则\\T03_木板与木棍.md",
+      "bytes": 2486,
+      "sha256": "aecc7f361923095e97b5ab01296902d7929a3d5078651ab83b14838fc456a4ef"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\task\\sandcastle_floating_props\\细则\\T04_动态沙床接触.md",
+      "bytes": 2524,
+      "sha256": "412d0cc823e3d7411fe4fb4615274b8264d554d5f0de3b33edd00ffe0d72ed82"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\task\\sandcastle_floating_props\\细则\\T05_main与生命周期.md",
+      "bytes": 2935,
+      "sha256": "615201de9c00304da00108d8537daee9cf5854349db4c1b6c0772a2aae70a1a1"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\task\\sandcastle_floating_props\\细则\\T06_回归成本与交付.md",
+      "bytes": 2768,
+      "sha256": "6ee17c0d8be9bc5d1ad6286735a1e7f96914340d1869aae4dc0a0395d7641ebb"
+    }
+  ],
+  "source_snapshot": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\AGENTS.md",
+      "bytes": 8206,
+      "sha256": "db0d11c949d7dea82a6745b72403cde69f827d0c4142ed56cf73c5d2be54d1c5"
+    },
+    {
+      "path": "D:\\AIprogram\\myaitool\\skills\\myplan\\SKILL.md",
+      "bytes": 3010,
+      "sha256": "37e5bee35e55cd1a69ea15ff253975ad8ebf715013df2401d1118fbb96e0280d"
+    },
+    {
+      "path": "D:\\AIprogram\\myaitool\\skills\\myplan\\references\\execution-plan-template.md",
+      "bytes": 13072,
+      "sha256": "9690d06caad828c6d5d787fac54db8ab90b6ab081fe24c4f79c1f9bb66877d2e"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\当前项目技术方案.md",
+      "bytes": 9174,
+      "sha256": "2515445f2f275df97ffd62f340b6f61cdccaa86ea06773d4a749c2c103bc107b"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\当前技术规格.md",
+      "bytes": 12078,
+      "sha256": "c4671d420c71c87c4e10c6f0ea8fa9cc2c6c4e807e7ff964ad1a7b0e443e361c"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\unified-edit-extension-guide.md",
+      "bytes": 4546,
+      "sha256": "9b33167f23965d03e2157241e8b3479c40bd9ad16946805c2551b2bc3fd5762c"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\漂浮道具种类与实现分析.md",
+      "bytes": 22479,
+      "sha256": "7d2221a3b683526d640500bd7f0e6831f4d70d23f8a1bd08ce4b6e4eb111cbd1"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\floating_props_sources_20261018.json",
+      "bytes": 16256,
+      "sha256": "82d30f4eefd5384e62e497f915879ab0dbdd257094f335590b721b10fad48146"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\simulation\\unified_edit\\views.gd",
+      "bytes": 11233,
+      "sha256": "9db089af76bfcafa17a935a82620b18f29aaf675bd564e3cf6e236c6efac5646"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\simulation\\unified_edit\\height.gd",
+      "bytes": 9469,
+      "sha256": "757b00b1c9ff942d5d802b09a530e7f325a496d476137c7bd3fde459f0ca119e"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\simulation\\unified_edit\\domain_runtime.gd",
+      "bytes": 14719,
+      "sha256": "645f61608dc69dcdbdf3ac654296fe953862665c03a1f1c775b0ba78c8e37d6b"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\simulation\\unified_edit\\checkpoint_codec.gd",
+      "bytes": 13222,
+      "sha256": "01dfb3288867d92f72928b50307f70702d2ef3150ccb092eac2a28b1dc261eaf"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\simulation\\unified_edit\\cfl_decide.glsl",
+      "bytes": 2123,
+      "sha256": "8d246db53a1d2b72ae252e68d906b71166b64bc7782244c4f3c6c47757e19e5e"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\beach\\unified_playable_entry.gd",
+      "bytes": 21101,
+      "sha256": "af5efb1520fb56c95f81b90228e6f28f30a204e8b8467b4e6d2c4328349d899d"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\tools\\unified_edit_pipeline\\audit_architecture.py",
+      "bytes": 12185,
+      "sha256": "3b89c25cf05548eab1a62e2921e2049bf40ea41ae6aac2f578b0dc1032ae2969"
+    }
+  ],
+  "archive_manifest": {
+    "path": "D:\\godot\\project\\sandcastle\\task\\sandcastle_floating_props\\归档\\20261018_旧三件计划\\manifest.json",
+    "bytes": 1670,
+    "sha256": "2990b314fe30462233f37e894717836e1b318e17b0cba9eb35aa84eac3a4b98f"
+  }
+}

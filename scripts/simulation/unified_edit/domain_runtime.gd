@@ -129,6 +129,17 @@ func invalidate_preview() -> void:
 func retry_preview_readback() -> void:
 	if current!=null:current.views.retry_preview_readback()
 
+func request_probe(request: Dictionary, callback: Callable) -> Dictionary:
+	if closing or current==null:return {"accepted":false,"error":&"closing"}
+	if not ready_for_input():return {"accepted":false,"error":&"busy"}
+	if not callback.is_valid():return {"accepted":false,"error":&"invalid_request"}
+	return current.views.request_probe(request,_probe_received.bind(current._generation,callback))
+
+func _probe_received(value: Dictionary, epoch: int, callback: Callable) -> void:
+	if not callback.is_valid():return
+	if current==null or current._generation!=epoch:value.error=&"stale_generation"
+	callback.call(value)
+
 func _preview_received(value: Dictionary, epoch: int, callback: Callable) -> void:
 	if not callback.is_valid():return
 	if current==null or current._generation!=epoch:callback.call({"error":&"stale_generation","generation":epoch});return

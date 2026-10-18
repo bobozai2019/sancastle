@@ -1,0 +1,239 @@
+{
+  "schema": 2,
+  "status": "frozen_G1_v2_20261018",
+  "byte_order": "little",
+  "max_points": 32,
+  "input_bytes": 1152,
+  "output_bytes": 3200,
+  "header_bytes": 128,
+  "input_point_stride": 32,
+  "output_point_stride": 64,
+  "chunk_offset": 2176,
+  "chunk_count": 64,
+  "chunk_stride": 16,
+  "header": [
+    {
+      "name": "schema",
+      "offset": 0,
+      "type": "u32"
+    },
+    {
+      "name": "error_bits",
+      "offset": 4,
+      "type": "u32"
+    },
+    {
+      "name": "request_id",
+      "offset": 8,
+      "type": "i64"
+    },
+    {
+      "name": "owner_token",
+      "offset": 16,
+      "type": "i64"
+    },
+    {
+      "name": "generation",
+      "offset": 24,
+      "type": "i64"
+    },
+    {
+      "name": "pose_seq",
+      "offset": 32,
+      "type": "i64"
+    },
+    {
+      "name": "minimum_or_captured_state_seq",
+      "offset": 40,
+      "type": "i64"
+    },
+    {
+      "name": "captured_tick",
+      "offset": 48,
+      "type": "i64"
+    },
+    {
+      "name": "captured_revision",
+      "offset": 56,
+      "type": "i64"
+    },
+    {
+      "name": "captured_time_s",
+      "offset": 64,
+      "type": "f32"
+    },
+    {
+      "name": "point_count",
+      "offset": 68,
+      "type": "u32"
+    },
+    {
+      "name": "chunk_mask_low",
+      "offset": 72,
+      "type": "u32"
+    },
+    {
+      "name": "chunk_mask_high",
+      "offset": 76,
+      "type": "u32"
+    },
+    {
+      "name": "reserved0",
+      "offset": 80,
+      "type": "u32"
+    },
+    {
+      "name": "reserved1",
+      "offset": 84,
+      "type": "u32"
+    },
+    {
+      "name": "reader_serial",
+      "offset": 88,
+      "type": "i64"
+    },
+    {
+      "name": "domain_sha256",
+      "offset": 96,
+      "type": "bytes32"
+    }
+  ],
+  "input_point": [
+    {
+      "name": "body_id",
+      "offset": 0,
+      "type": "i64"
+    },
+    {
+      "name": "point_id",
+      "offset": 8,
+      "type": "i64"
+    },
+    {
+      "name": "world_x",
+      "offset": 16,
+      "type": "f32"
+    },
+    {
+      "name": "world_y",
+      "offset": 20,
+      "type": "f32"
+    },
+    {
+      "name": "world_z",
+      "offset": 24,
+      "type": "f32"
+    },
+    {
+      "name": "reserved",
+      "offset": 28,
+      "type": "u32"
+    }
+  ],
+  "output_point": [
+    {
+      "name": "body_id",
+      "offset": 0,
+      "type": "i64"
+    },
+    {
+      "name": "point_id",
+      "offset": 8,
+      "type": "i64"
+    },
+    {
+      "name": "world_x",
+      "offset": 16,
+      "type": "f32"
+    },
+    {
+      "name": "world_y",
+      "offset": 20,
+      "type": "f32"
+    },
+    {
+      "name": "world_z",
+      "offset": 24,
+      "type": "f32"
+    },
+    {
+      "name": "bed",
+      "offset": 28,
+      "type": "f32"
+    },
+    {
+      "name": "h",
+      "offset": 32,
+      "type": "f32"
+    },
+    {
+      "name": "eta",
+      "offset": 36,
+      "type": "f32"
+    },
+    {
+      "name": "u_x",
+      "offset": 40,
+      "type": "f32"
+    },
+    {
+      "name": "u_z",
+      "offset": 44,
+      "type": "f32"
+    },
+    {
+      "name": "valid",
+      "offset": 48,
+      "type": "u32"
+    },
+    {
+      "name": "reserved0",
+      "offset": 52,
+      "type": "u32"
+    },
+    {
+      "name": "reserved1",
+      "offset": 56,
+      "type": "u32"
+    },
+    {
+      "name": "reserved2",
+      "offset": 60,
+      "type": "u32"
+    }
+  ],
+  "chunk": [
+    {
+      "name": "chunk_id",
+      "offset": 0,
+      "type": "u32"
+    },
+    {
+      "name": "reserved",
+      "offset": 4,
+      "type": "u32"
+    },
+    {
+      "name": "last_changed_state_seq",
+      "offset": 8,
+      "type": "i64"
+    }
+  ],
+  "error_bits": {
+    "1": "stale_generation",
+    "2": "minimum_state_seq_not_reached",
+    "4": "invalid_sample"
+  },
+  "int64": "positive signed int64 identities, nonnegative counters; GPU low uint32 then high uint32; no float conversion",
+  "reserved": "zero, input captured tick/revision/time and all unused points/chunks zero",
+  "domain": "XZ [-16,16), positions finite, outside rejected before GPU. Bilinear grid=world/0.125+127.5, neighbors clamped only inside boundary half cells.",
+  "sampling": "interpolate bed,h,qx,qz; eta=bed+h; u=q/max(h,0.005) for h>float32(0.001), else zero; raw h preserved",
+  "chunk_versions": "same ordered query reads Height dirty last-change seq, not current global seq; consumer compares same generation applied chunk >= required version",
+  "limits": "Profile time/pose limits are consumer-side C03; neither client nor GPU can override them in this raw sampling ABI",
+  "dry_depth_m": 0.001,
+  "velocity_depth_m": 0.005,
+  "dry_depth_float32": 0.0010000000474974513,
+  "velocity_depth_float32": 0.004999999888241291,
+  "supersedes": "v1 sampling semantics only; byte offsets and capacities unchanged; v1 receipts rejected",
+  "cpu_exact_constants": "dry=8589935/2^33; velocity=5368709/2^30; avoids recorded GDScript decimal-literal mismatch"
+}

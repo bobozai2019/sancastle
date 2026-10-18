@@ -1,0 +1,225 @@
+{
+  "schema": 1,
+  "status": "frozen_G2_20261018",
+  "bottle_profile_sha256": "604d538ca40ea3c1d96fc0fc88b860c993f8d399ff167e2268776d15276cb714",
+  "service_sha256": "847de3438c8be2fa23111cd0f49520c2c9d22cbe06ca4bd3aded74d4c26639f3",
+  "mass_kg": 0.65,
+  "point_count": 2,
+  "total_effective_volume_m3": 0.0026,
+  "point_half_height_m": 0.09,
+  "horizontal_drag_time_s": 0.5,
+  "vertical_drag_time_s": 0.04,
+  "max_sample_age_s": 0.15,
+  "max_pose_distance_m": 0.15,
+  "max_pose_angle_rad": 0.35,
+  "max_speed_m_s": 4.0,
+  "max_angular_speed_rad_s": 8.0,
+  "static_waterline_y_m": 1.245,
+  "static_water_eta_m": 1.2,
+  "static_height_error_m": 0.04,
+  "static_vertical_speed_m_s": 0.08,
+  "static_pitch_error_rad": 0.2,
+  "time_policy": "consume a common positive complete-GPU-time budget in actual Jolt steps, retain local velocity when held; no gravity/contact integration without a grant. Caller stops producing for common pause and drains accepted water plus local budget before hold. Live lag remains logged.",
+  "clock_rounding_budget": "4*ulp32(completed_clock)+actual_step_count*ulp32(max_actual_step)+1e-6 seconds; at common boundary remaining gap < one actual step + rounding.",
+  "sample_age_policy": "current completed water time minus captured sample time <=0.15 s. Pose displacement/rotation measured between query pose and current pose. A future-in-consumer-time complete sample may be held; all unconsumed time stays explicit in the common budget.",
+  "records": [
+    {
+      "run": "bottle_normal_final_20261018_01",
+      "checks": 20,
+      "independent_checks": 13,
+      "metrics": {
+        "actual_time_s": 6.083333650603902,
+        "reserved_time_s": 6.0833333333333455,
+        "boundary_gap_s": 0.016661962494238125,
+        "actual_steps": 365,
+        "max_step_s": 0.0166666675359011,
+        "rounding_budget_s": 3.5872141186482342e-06,
+        "max_force_reconstruction_error_n": 4.6236466270777044e-05,
+        "max_capture_lag_s": 0.08333311875660998
+      },
+      "source_zip_sha256": "e611ef4c60e7f6f438da7376c63ec3170a2d45cb2d6360da08e95bdd878af6f4",
+      "sources": {
+        "scripts/simulation/unified_edit/pipeline.gd": "a60c7893dfc41ed9d310316ff7e1d28c3e971c007f8ea6b18b198e3a950e8ef8",
+        "scripts/props/floating_props_service.gd": "847de3438c8be2fa23111cd0f49520c2c9d22cbe06ca4bd3aded74d4c26639f3",
+        "scripts/props/floating_prop.gd": "6a794f8a4a15b4791593be4f2623147ffd26771610742f975e7686401cdf1acf",
+        "scripts/props/floating_prop_profile.gd": "73fb45e605d8d462763da73d3e5423acbefc0a95c1e7867ff3e796e34d146e35"
+      }
+    },
+    {
+      "run": "bottle_deep_20261018_01",
+      "checks": 20,
+      "independent_checks": 13,
+      "metrics": {
+        "actual_time_s": 6.083333650603902,
+        "reserved_time_s": 6.0833333333333455,
+        "boundary_gap_s": 0.016661962494238125,
+        "actual_steps": 365,
+        "max_step_s": 0.0166666675359011,
+        "rounding_budget_s": 3.5872141186482342e-06,
+        "max_force_reconstruction_error_n": 4.1928147747949396e-05,
+        "max_capture_lag_s": 0.08333311875660998
+      },
+      "source_zip_sha256": "528f8d2b5b32b04de55aee19df97ed3a0481ccd2e2367e0b3394079d6445083c",
+      "sources": {
+        "scripts/simulation/unified_edit/pipeline.gd": "a60c7893dfc41ed9d310316ff7e1d28c3e971c007f8ea6b18b198e3a950e8ef8",
+        "scripts/props/floating_props_service.gd": "847de3438c8be2fa23111cd0f49520c2c9d22cbe06ca4bd3aded74d4c26639f3",
+        "scripts/props/floating_prop.gd": "6a794f8a4a15b4791593be4f2623147ffd26771610742f975e7686401cdf1acf",
+        "scripts/props/floating_prop_profile.gd": "73fb45e605d8d462763da73d3e5423acbefc0a95c1e7867ff3e796e34d146e35"
+      }
+    },
+    {
+      "run": "bottle_tipped_20261018_01",
+      "checks": 20,
+      "independent_checks": 13,
+      "metrics": {
+        "actual_time_s": 6.183333655819308,
+        "reserved_time_s": 6.183333333333346,
+        "boundary_gap_s": 0.016661861911401843,
+        "actual_steps": 371,
+        "max_step_s": 0.0166666675359011,
+        "rounding_budget_s": 3.5983899822508425e-06,
+        "max_force_reconstruction_error_n": 5.642042295583849e-05,
+        "max_capture_lag_s": 0.23332999547322952
+      },
+      "source_zip_sha256": "249699ddc7a4075e832e34039a9e25ccd3e153ea46af276a4d259a1b4cb1bfcf",
+      "sources": {
+        "scripts/simulation/unified_edit/pipeline.gd": "a60c7893dfc41ed9d310316ff7e1d28c3e971c007f8ea6b18b198e3a950e8ef8",
+        "scripts/props/floating_props_service.gd": "847de3438c8be2fa23111cd0f49520c2c9d22cbe06ca4bd3aded74d4c26639f3",
+        "scripts/props/floating_prop.gd": "6a794f8a4a15b4791593be4f2623147ffd26771610742f975e7686401cdf1acf",
+        "scripts/props/floating_prop_profile.gd": "73fb45e605d8d462763da73d3e5423acbefc0a95c1e7867ff3e796e34d146e35"
+      }
+    },
+    {
+      "run": "bottle_flow_negative_final_20261018_01",
+      "checks": 20,
+      "independent_checks": 13,
+      "metrics": {
+        "actual_time_s": 4.08333354629577,
+        "reserved_time_s": 4.083333333333342,
+        "boundary_gap_s": 0.016663974151009953,
+        "actual_steps": 245,
+        "max_step_s": 0.0166666675359011,
+        "rounding_budget_s": 3.3636966760658127e-06,
+        "max_force_reconstruction_error_n": 4.3867194008617716e-05,
+        "max_capture_lag_s": 0.08333308696747
+      },
+      "source_zip_sha256": "f2092c08466727a5a6694cf061272345ab1a1492d7365759fcd366f95ed6c168",
+      "sources": {
+        "scripts/simulation/unified_edit/pipeline.gd": "a60c7893dfc41ed9d310316ff7e1d28c3e971c007f8ea6b18b198e3a950e8ef8",
+        "scripts/props/floating_props_service.gd": "847de3438c8be2fa23111cd0f49520c2c9d22cbe06ca4bd3aded74d4c26639f3",
+        "scripts/props/floating_prop.gd": "6a794f8a4a15b4791593be4f2623147ffd26771610742f975e7686401cdf1acf",
+        "scripts/props/floating_prop_profile.gd": "73fb45e605d8d462763da73d3e5423acbefc0a95c1e7867ff3e796e34d146e35"
+      }
+    },
+    {
+      "run": "bottle_flow_positive_final_20261018_01",
+      "checks": 20,
+      "independent_checks": 13,
+      "metrics": {
+        "actual_time_s": 4.08333354629577,
+        "reserved_time_s": 4.083333333333342,
+        "boundary_gap_s": 0.016663974151009953,
+        "actual_steps": 245,
+        "max_step_s": 0.0166666675359011,
+        "rounding_budget_s": 3.3636966760658127e-06,
+        "max_force_reconstruction_error_n": 4.622156567890556e-05,
+        "max_capture_lag_s": 0.08333311875660998
+      },
+      "source_zip_sha256": "2a59ef94389fe3f6349c1f63bd6f457ccac243d99cc8b99bb1d9bcf138d4372f",
+      "sources": {
+        "scripts/simulation/unified_edit/pipeline.gd": "a60c7893dfc41ed9d310316ff7e1d28c3e971c007f8ea6b18b198e3a950e8ef8",
+        "scripts/props/floating_props_service.gd": "847de3438c8be2fa23111cd0f49520c2c9d22cbe06ca4bd3aded74d4c26639f3",
+        "scripts/props/floating_prop.gd": "6a794f8a4a15b4791593be4f2623147ffd26771610742f975e7686401cdf1acf",
+        "scripts/props/floating_prop_profile.gd": "73fb45e605d8d462763da73d3e5423acbefc0a95c1e7867ff3e796e34d146e35"
+      }
+    },
+    {
+      "run": "bottle_delay_final_20261018_01",
+      "checks": 42,
+      "independent_checks": 13,
+      "metrics": {
+        "actual_time_s": 4.4166668970137914,
+        "reserved_time_s": 4.416666666666676,
+        "boundary_gap_s": 0.01666363887487865,
+        "actual_steps": 265,
+        "max_step_s": 0.0166666675359011,
+        "rounding_budget_s": 3.4009495961894997e-06,
+        "max_force_reconstruction_error_n": 4.6236466270777044e-05,
+        "max_capture_lag_s": 0.38333056767781937
+      },
+      "source_zip_sha256": "b8883e7fca75643a0946d65355bc669e4ceaa4610059db26840a37c91d364a6d",
+      "sources": {
+        "scripts/simulation/unified_edit/pipeline.gd": "a60c7893dfc41ed9d310316ff7e1d28c3e971c007f8ea6b18b198e3a950e8ef8",
+        "scripts/props/floating_props_service.gd": "847de3438c8be2fa23111cd0f49520c2c9d22cbe06ca4bd3aded74d4c26639f3",
+        "scripts/props/floating_prop.gd": "6a794f8a4a15b4791593be4f2623147ffd26771610742f975e7686401cdf1acf",
+        "scripts/props/floating_prop_profile.gd": "73fb45e605d8d462763da73d3e5423acbefc0a95c1e7867ff3e796e34d146e35"
+      }
+    },
+    {
+      "run": "bottle_cfl_final_20261018_01",
+      "checks": 59,
+      "independent_checks": 13,
+      "metrics": {
+        "actual_time_s": 0.666666701436044,
+        "reserved_time_s": 0.6666666666666681,
+        "boundary_gap_s": 0.0002240389585479452,
+        "actual_steps": 40,
+        "max_step_s": 0.0166666675359011,
+        "rounding_budget_s": 1.3129243851540675e-06,
+        "max_force_reconstruction_error_n": 4.6236466270777044e-05,
+        "max_capture_lag_s": 0.03355740706125798
+      },
+      "source_zip_sha256": "f69ff1526d291b9f7479605b906b3f5d2ca190ee2186018b7c53ab176115dff4",
+      "sources": {
+        "scripts/simulation/unified_edit/pipeline.gd": "a60c7893dfc41ed9d310316ff7e1d28c3e971c007f8ea6b18b198e3a950e8ef8",
+        "scripts/props/floating_props_service.gd": "847de3438c8be2fa23111cd0f49520c2c9d22cbe06ca4bd3aded74d4c26639f3",
+        "scripts/props/floating_prop.gd": "6a794f8a4a15b4791593be4f2623147ffd26771610742f975e7686401cdf1acf",
+        "scripts/props/floating_prop_profile.gd": "73fb45e605d8d462763da73d3e5423acbefc0a95c1e7867ff3e796e34d146e35"
+      }
+    },
+    {
+      "run": "bottle_dry_final_20261018_01",
+      "checks": 20,
+      "independent_checks": 13,
+      "metrics": {
+        "actual_time_s": 4.08333354629577,
+        "reserved_time_s": 4.083333333333342,
+        "boundary_gap_s": 0.016663974151009953,
+        "actual_steps": 245,
+        "max_step_s": 0.0166666675359011,
+        "rounding_budget_s": 3.3636966760658127e-06,
+        "max_force_reconstruction_error_n": 0.0,
+        "max_capture_lag_s": 0.08333311875660998
+      },
+      "source_zip_sha256": "b122c97cb3df31a8ddb5dece4219028d8b2edbea66e288f5aec03687e1e90d6f",
+      "sources": {
+        "scripts/simulation/unified_edit/pipeline.gd": "a60c7893dfc41ed9d310316ff7e1d28c3e971c007f8ea6b18b198e3a950e8ef8",
+        "scripts/props/floating_props_service.gd": "847de3438c8be2fa23111cd0f49520c2c9d22cbe06ca4bd3aded74d4c26639f3",
+        "scripts/props/floating_prop.gd": "6a794f8a4a15b4791593be4f2623147ffd26771610742f975e7686401cdf1acf",
+        "scripts/props/floating_prop_profile.gd": "73fb45e605d8d462763da73d3e5423acbefc0a95c1e7867ff3e796e34d146e35"
+      }
+    },
+    {
+      "run": "bottle_slow_frame_final_20261018_01",
+      "checks": 20,
+      "independent_checks": 13,
+      "metrics": {
+        "actual_time_s": 4.116666881367572,
+        "reserved_time_s": 4.116666666666675,
+        "boundary_gap_s": 0.016663940623398155,
+        "actual_steps": 247,
+        "max_step_s": 0.0166666675359011,
+        "rounding_budget_s": 3.367421962749111e-06,
+        "max_force_reconstruction_error_n": 4.6236466270777044e-05,
+        "max_capture_lag_s": 0.20000000397364298
+      },
+      "source_zip_sha256": "b207f9cd62870d08d9eedbd3ed571ac382b9d306a7b113c494f0a6d737a29bf5",
+      "sources": {
+        "scripts/simulation/unified_edit/pipeline.gd": "a60c7893dfc41ed9d310316ff7e1d28c3e971c007f8ea6b18b198e3a950e8ef8",
+        "scripts/props/floating_props_service.gd": "847de3438c8be2fa23111cd0f49520c2c9d22cbe06ca4bd3aded74d4c26639f3",
+        "scripts/props/floating_prop.gd": "6a794f8a4a15b4791593be4f2623147ffd26771610742f975e7686401cdf1acf",
+        "scripts/props/floating_prop_profile.gd": "73fb45e605d8d462763da73d3e5423acbefc0a95c1e7867ff3e796e34d146e35"
+      }
+    }
+  ]
+}
