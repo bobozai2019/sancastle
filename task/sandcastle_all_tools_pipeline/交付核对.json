@@ -1,0 +1,359 @@
+{
+  "date": "2026-10-17",
+  "scope": "all seven legacy tools migrated; functional verification only; no performance approval",
+  "evidence_root": "D:\\godot\\project\\sandcastle\\test_output\\all_tools_pipeline",
+  "groups": [
+    {
+      "name": "final01",
+      "manifest": "D:\\godot\\project\\sandcastle\\test_output\\all_tools_pipeline\\final01\\run-manifest.json",
+      "manifest_sha256": "786b071fac3c5c706c5a0a96c0404a2e17603dfba781b9c9bed0d1cee826e82e",
+      "source_count": 57,
+      "current_source_differences": [
+        {
+          "path": "scripts/beach/async_pipeline_entry.gd",
+          "tested_sha256": "dfeea6ad2a7947785b0a351d3a227fe501ed5ee3006b242278fc1b8d893129c7",
+          "current_sha256": "4e5a675369c7c5379ae9737c183c8d94bb0c044c3e9103f45cfe3713ab488e38"
+        },
+        {
+          "path": "scripts/simulation/edit_validation/frame_pipeline/async_coupled.gd",
+          "tested_sha256": "6814033323b3700094d09ed13971725ee7c535eb5afc2a255ac667cf115f71ec",
+          "current_sha256": "779f48e98f58d4818a0b1d6b5aeec28bbc5b32dfe6019a63c5f722dac62c3aa3"
+        },
+        {
+          "path": "scripts/simulation/edit_validation/frame_pipeline/async_water.gd",
+          "tested_sha256": "ce517ba17ee68dca25173d68983f2729a81f917da03272a31c4760e7d950d42d",
+          "current_sha256": "82f3d2a13987fb704b9f13ea8898df056c427f78b02416cd7818adbd5fde17a4"
+        },
+        {
+          "path": "scripts/simulation/edit_validation/frame_pipeline/async_controller.gd",
+          "tested_sha256": "0e4ce40ccedf7d50bb3294439f3c3fd1aa9bcd2c03cf232809352be33d3574d2",
+          "current_sha256": "47e501eb87402a9e23bed34bd0df232f6c5e818df4bf4f6d4bfa512ee2227470"
+        }
+      ],
+      "runs": [
+        {
+          "name": "tools_main",
+          "result": "D:\\godot\\project\\sandcastle\\test_output\\all_tools_pipeline\\final01\\tools_main.json",
+          "sha256": "22f953e2e45a14a0f0459898f06c9c21d6c5fd88f2d9fe848de875c74e74c300",
+          "checks": 189,
+          "verified": true,
+          "recorded_source_drift": null
+        },
+        {
+          "name": "tools_capture",
+          "result": "D:\\godot\\project\\sandcastle\\test_output\\all_tools_pipeline\\final01\\tools_capture.json",
+          "sha256": "6c1b133351b89679a4050ca23e51df75522a1b6c9214102c715d6289dc8b0479",
+          "checks": 151,
+          "verified": true,
+          "recorded_source_drift": null
+        },
+        {
+          "name": "tools_backwash",
+          "result": "D:\\godot\\project\\sandcastle\\test_output\\all_tools_pipeline\\final01\\tools_backwash.json",
+          "sha256": "bd50516ab8727662eaac13899268f7df9cba1209010624473750a7a9160acdb1",
+          "checks": 150,
+          "verified": true,
+          "recorded_source_drift": null
+        },
+        {
+          "name": "main_regression",
+          "result": "D:\\godot\\project\\sandcastle\\test_output\\all_tools_pipeline\\final01\\main_regression.json",
+          "sha256": "bbdf5b29784824e2dc92933a2115a7f8882e6cae88ad35fc1a9d3dacb780d701",
+          "checks": 147,
+          "verified": true,
+          "recorded_source_drift": null
+        },
+        {
+          "name": "tool_upload",
+          "result": "D:\\godot\\project\\sandcastle\\test_output\\all_tools_pipeline\\final01\\tool_upload.json",
+          "sha256": "2926fffc70ba84fa79effc64850bae67bdf6eed22935f7dc555de7456fe3dd20",
+          "checks": 11,
+          "verified": true,
+          "recorded_source_drift": null
+        },
+        {
+          "name": "tool_register",
+          "result": "D:\\godot\\project\\sandcastle\\test_output\\all_tools_pipeline\\final01\\tool_register.json",
+          "sha256": "d0acee56e8fbc381ed442d8c26140188e7a95d5585fc245efb3c7f2ae21dd493",
+          "checks": 11,
+          "verified": true,
+          "recorded_source_drift": null
+        },
+        {
+          "name": "tool_unknown",
+          "result": "D:\\godot\\project\\sandcastle\\test_output\\all_tools_pipeline\\final01\\tool_unknown.json",
+          "sha256": "43ce9f5cb708416f82840496ad1bdd677a60907e6682a852971887a750a62978",
+          "checks": 14,
+          "verified": true,
+          "recorded_source_drift": null
+        },
+        {
+          "name": "tool_bad_identity",
+          "result": "D:\\godot\\project\\sandcastle\\test_output\\all_tools_pipeline\\final01\\tool_bad_identity.json",
+          "sha256": "f0b3987b3b4323a20e50830173f9cb863bd8b7784ab61f0c9e7867d108737d15",
+          "checks": 11,
+          "verified": true,
+          "recorded_source_drift": null
+        },
+        {
+          "name": "tool_bad_tick",
+          "result": "D:\\godot\\project\\sandcastle\\test_output\\all_tools_pipeline\\final01\\tool_bad_tick.json",
+          "sha256": "0972ab0dae78163f15bc57125c3665ad599e6d8f3f941aae0b841370c19cf5d9",
+          "checks": 11,
+          "verified": true,
+          "recorded_source_drift": null
+        },
+        {
+          "name": "ordinary_unknown",
+          "result": "D:\\godot\\project\\sandcastle\\test_output\\all_tools_pipeline\\final01\\ordinary_unknown.json",
+          "sha256": "a08174c46c1894138fe55a8e23d99b00f838f90a8c1cffef244467c773ed77f6",
+          "checks": 19,
+          "verified": true,
+          "recorded_source_drift": null
+        },
+        {
+          "name": "public_suspended",
+          "result": "D:\\godot\\project\\sandcastle\\test_output\\all_tools_pipeline\\final01\\public_suspended.json",
+          "sha256": "a4a031960ff03f8d69e578e2cfd1cca866248e3dbfa330bb903acf68a767db05",
+          "checks": 11,
+          "verified": true,
+          "recorded_source_drift": null
+        },
+        {
+          "name": "partial_bootstrap",
+          "result": "D:\\godot\\project\\sandcastle\\test_output\\all_tools_pipeline\\final01\\partial_bootstrap.json",
+          "sha256": "928b66140e3a80af52dde9fb893358210246c98cb6e6b3530fe3afe0007c6f15",
+          "checks": 6,
+          "verified": true,
+          "recorded_source_drift": null
+        },
+        {
+          "name": "candidate_cleanup",
+          "result": "D:\\godot\\project\\sandcastle\\test_output\\all_tools_pipeline\\final01\\candidate_cleanup.json",
+          "sha256": "8bdd8534a91839d9dcd1a8732ad98bca55d085ad43349d079da85f322c0fc269",
+          "checks": 19,
+          "verified": true,
+          "recorded_source_drift": null
+        },
+        {
+          "name": "checkpoint",
+          "result": "D:\\godot\\project\\sandcastle\\test_output\\all_tools_pipeline\\final01\\checkpoint.json",
+          "sha256": "0cee97d1e4ef3dcc586a6bdfe2eae3033c06014457fb53725cd2bcb7f2310fb7",
+          "checks": 95,
+          "verified": true,
+          "recorded_source_drift": null
+        }
+      ],
+      "total_checks": 845
+    },
+    {
+      "name": "final02",
+      "manifest": "D:\\godot\\project\\sandcastle\\test_output\\all_tools_pipeline\\final02\\run-manifest.json",
+      "manifest_sha256": "168420e40d187440e9d64f38e2f26a8e1113741d6c9866a14c8950e88cb89608",
+      "source_count": 57,
+      "current_source_differences": [],
+      "runs": [
+        {
+          "name": "main_regression",
+          "result": "D:\\godot\\project\\sandcastle\\test_output\\all_tools_pipeline\\final02\\main_regression.json",
+          "sha256": "0d7efffe970adec6de2338be9d5e5d18541c190d03185cb19c288ec04f2c016f",
+          "checks": 147,
+          "verified": true,
+          "recorded_source_drift": null
+        },
+        {
+          "name": "tools_boundary",
+          "result": "D:\\godot\\project\\sandcastle\\test_output\\all_tools_pipeline\\final02\\tools_boundary.json",
+          "sha256": "d6ed86df6116a062d8711d7c714ca4dae470de0ec2cb4c2534bb81a76d1372ed",
+          "checks": 57,
+          "verified": true,
+          "recorded_source_drift": null
+        }
+      ],
+      "total_checks": 204
+    },
+    {
+      "name": "final03",
+      "manifest": "D:\\godot\\project\\sandcastle\\test_output\\all_tools_pipeline\\final03\\run-manifest.json",
+      "manifest_sha256": "c5c1149ba91deb8e88882ffd3af6b6be5e7583499f3d642b96293bd5ec77ed12",
+      "source_count": 57,
+      "current_source_differences": [],
+      "runs": [
+        {
+          "name": "tools_main",
+          "result": "D:\\godot\\project\\sandcastle\\test_output\\all_tools_pipeline\\final03\\tools_main.json",
+          "sha256": "b3c1bd26ba8d3c7e1929d50edd8ddb9dba332dbea63fd2ff0f079a3c014b041f",
+          "checks": 189,
+          "verified": true,
+          "recorded_source_drift": []
+        },
+        {
+          "name": "tools_capture",
+          "result": "D:\\godot\\project\\sandcastle\\test_output\\all_tools_pipeline\\final03\\tools_capture.json",
+          "sha256": "6cb502d18bba1e8374ec8f50814448d30e7e8fc319444b5acc619e4b33610154",
+          "checks": 132,
+          "verified": true,
+          "recorded_source_drift": []
+        },
+        {
+          "name": "tools_backwash",
+          "result": "D:\\godot\\project\\sandcastle\\test_output\\all_tools_pipeline\\final03\\tools_backwash.json",
+          "sha256": "f6e89f163c4f8745f6c613b8248ce1323badb900fba7fb98b4459f16da732b34",
+          "checks": 150,
+          "verified": true,
+          "recorded_source_drift": []
+        },
+        {
+          "name": "water_full",
+          "result": "D:\\godot\\project\\sandcastle\\test_output\\all_tools_pipeline\\final03\\water_full.json",
+          "sha256": "9f29b2cdf8b83b6a87049039f46f9abd6bea236d6dadb7eeea9e877e1cc89194",
+          "checks": 155,
+          "verified": true,
+          "recorded_source_drift": []
+        }
+      ],
+      "total_checks": 626
+    }
+  ],
+  "engine": {
+    "path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+    "sha256": "12310c74bdda7dcd43f28e971f33047dcecadd436b68169d61ce41009006df38"
+  },
+  "visible_play": {
+    "path": "D:\\godot\\project\\sandcastle\\test_output\\all_tools_pipeline\\final03\\play.json",
+    "sha256": "85e675283d13e80c10986a1797531eb2f81d1f38d62ff12ed9d60a0de7bf12be",
+    "checks": 141,
+    "hardware": {
+      "driver": "d3d12",
+      "engine": {
+        "build": "steam",
+        "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+        "hex": 263938,
+        "major": 4,
+        "minor": 7,
+        "patch": 2,
+        "status": "stable",
+        "string": "4.7.2-stable (steam)",
+        "timestamp": 0
+      },
+      "gpu": "NVIDIA GeForce GTX 1050",
+      "profile_passes": true,
+      "visible": true,
+      "vsync": 1,
+      "window": "(1280, 720)"
+    },
+    "wall": {
+      "advanced_time_s": 1.33333330601454,
+      "drained_tick": 51,
+      "effective_parameters": {
+        "bottom_width_m": 1.0,
+        "height_m": 0.2,
+        "top_width_m": 0.5
+      },
+      "frames": 65,
+      "max_frame_ms": 195.361,
+      "measured_window_ms": 4037.493,
+      "open_end_tick": 42,
+      "p50_frame_ms": 61.751,
+      "p95_frame_ms": 82.234,
+      "scope": "short visible-window observation, open-stroke tick window excludes drain; no before/after performance claim",
+      "screenshot": "D:/godot/project/sandcastle/test_output/all_tools_pipeline/final03/play_wall_v1.png",
+      "start_tick": 2,
+      "water_ticks_during_open_stroke": 40
+    },
+    "shovel": {
+      "advanced_time_s": 0.999999165534973,
+      "drained_tick": 95,
+      "effective_parameters": {
+        "depth_m": 0.05,
+        "shoulder_width_m": 0.5,
+        "trench_width_m": 0.5
+      },
+      "frames": 59,
+      "max_frame_ms": 101.358,
+      "measured_window_ms": 4057.991,
+      "open_end_tick": 83,
+      "p50_frame_ms": 65.094,
+      "p95_frame_ms": 89.442,
+      "scope": "short visible-window observation, open-stroke tick window excludes drain; no before/after performance claim",
+      "screenshot": "D:/godot/project/sandcastle/test_output/all_tools_pipeline/final03/play_shovel_v1.png",
+      "start_tick": 53,
+      "water_ticks_during_open_stroke": 30
+    }
+  },
+  "delivery_sources": {
+    "scripts/simulation/edit_validation/frame_pipeline/select.glsl": "b9fd2ff6aeb24836cf809c28382ccd6356b7061d033cc91f5d8ea75e3f009acb",
+    "scripts/simulation/edit_validation/frame_pipeline/async_shadow_read.gd": "40c7669054d467d12d82d582884e8ba3b2064687e4d7d4945466fd05cacb0533",
+    "scripts/simulation/edit_validation/frame_pipeline/async_editor.gd": "1a7bd53a0d2bff0154993f9cd172edb07d1121b05e41c32c46514f931aee2b7e",
+    "scripts/simulation/edit_validation/frame_pipeline/layout.gd": "4c3e25e5b803edc54ed954e711f59f21cb3cab92580fc888af0154dd2ecc52ad",
+    "scripts/simulation/edit_validation/frame_pipeline/async_coupled.gd": "779f48e98f58d4818a0b1d6b5aeec28bbc5b32dfe6019a63c5f722dac62c3aa3",
+    "scripts/simulation/edit_validation/frame_pipeline/async_checkpoint_capture.gd": "558544b896d6069f973b3f2e8568bb6ca9fa9cd8d3370b33065deacda9c865b9",
+    "scripts/simulation/edit_validation/frame_pipeline/async_cfl_tiles.glsl": "06875caf6af822cb96ee8f1f009e246ec689a0a1feba4aaf73bebfb3f3824ac1",
+    "scripts/simulation/edit_validation/frame_pipeline/async_protocol.gd": "312ed81688880954a12c1e6d4df3c34ca7d9f22ca0c9e184b8e2e9f4925e6750",
+    "scripts/simulation/edit_validation/frame_pipeline/async_restore_bundle.gd": "bd57e8138ed0627847071d1cff8007519a0d544eb17a1c662b13f0e70c7add09",
+    "scripts/simulation/edit_validation/frame_pipeline/async_boundary.glsl": "ec1685d3c83e3ccf59b648b0f71d28061101bbb274ce9493baade264eba0872d",
+    "scripts/simulation/edit_validation/frame_pipeline/async_slots.gd": "7dbad972285e515eeea88d5586e149536b27444eb869ca8061ab8b98314ac2ba",
+    "scripts/simulation/edit_validation/frame_pipeline/async_collision.gd": "53779ff2e4cbc2bc52fc4c3b84cb75a0f68df6b2c45e1e28a0f8c274dc96b36d",
+    "scripts/beach/ui_drag.gd": "0e81b46fe7c887e18d4a00e7c4747eae2df804b903f063c3105f9afcfe67460b",
+    "scripts/simulation/edit_validation/frame_pipeline/async_height_pack.glsl": "f0e0674b4676d990916776bbac5cd71b96fdae31d0500f9ba83218516d1ae32a",
+    "scripts/simulation/edit_validation/frame_pipeline/async_transport.gd": "bd1fad594d7cdff8b6225850b644672d3c95f3f26c8f36b9b791fd57a05221be",
+    "scripts/simulation/edit_validation/frame_pipeline/capture.glsl": "861e5463638fbead36e918884656f454b742608c464df2940bbbf40250a32fce",
+    "scripts/simulation/edit_validation/frame_pipeline/validation.gd": "aa329de59d707ce5444906f2b93d57d17ed53d447ffa9ef4989f878c459e5dd9",
+    "scripts/simulation/edit_validation/frame_pipeline/async_smooth.glsl": "787d664ce2a6762bc9b4d526357d6d2f63241a8e8ff33e6e723abf2a4c95320a",
+    "scripts/beach/beach_playable_entry.gd": "0048150d9d8c4489a37af15ea8296145ec43397912484c43732aba02e5b0337d",
+    "scripts/beach/beach_interaction_entry.gd": "60b70f73f4f65554545872dba43980b1c702d81f19e8881dad25e600ef6426f6",
+    "scripts/simulation/edit_validation/frame_pipeline/async_normalize.glsl": "52cca694a0bf455d386541782ed2d765d05541ffd19c2f235390c0d6f3fc75ba",
+    "scripts/simulation/edit_validation/frame_pipeline/async_tool_capture.glsl": "07b77d4c0cfea25e0dbc80bc8e5fee98876885d8d7aef92182bb975756b71630",
+    "scripts/simulation/edit_validation/frame_pipeline/async_bridge.glsl": "5d12ebefb8ebbd3a86a77ffeabd7dea3fe6d923b412d7951dcbac74ee927f960",
+    "scripts/simulation/edit_validation/frame_pipeline/async_capture.glsl": "9cf9a6f9caed1835e7adce9ee76f1b3331ce613e295fe483a77dc45e6a4db780",
+    "scripts/simulation/edit_validation/frame_pipeline/async_cfl_decide.glsl": "e7dfb3973a447415ddca4a0d6f19ad496dc5499d025016d804d9d4ee96a6c6b6",
+    "scripts/beach/beach_checkpoint_entry.gd": "9939e0442c08c9b6f0988ee85ef8735e16bef615522a339bf0896405ca2b49d6",
+    "scripts/beach/beach_gpu_entry.gd": "ee62687afc6558dda563f16318ecbcb8f6681da0426451b89d5fe706b832059f",
+    "scripts/beach/beach_lab_entry.gd": "e092c3626e29d88ae87733c85304922c6bde7d3b43d25bddcf30c216ed577c4c",
+    "scripts/simulation/edit_validation/frame_pipeline/async_height_codec.gd": "d5e5b03c8ae9a1c77fb3c458ff6886676126c77c666eb79c1d195c5485c9588e",
+    "scripts/simulation/edit_validation/frame_pipeline/async_clock_variants.gd": "3c96c317fb78116f57ad3e3f8bf39d23486de303a82e8d2a9be73ff7be1f0d73",
+    "scripts/simulation/edit_validation/frame_pipeline/controller.gd": "eba3874aac33266f449ccde99b56285aae7975345eb00fc8cc7f02655bd514f7",
+    "scripts/beach/release_config.gd": "006e91856bd21ad9b002ac35ba3d4a3db43395c042e68c2ba6b4910acefd757e",
+    "scripts/simulation/edit_validation/frame_pipeline/async_select.glsl": "95436c3861967f9a67c17eca18563fb26a48de613878784d9bde286ff8c35043",
+    "scripts/simulation/edit_validation/frame_pipeline/editor.gd": "ff306de8483aa9b244c1465e4167653176d4670ccadf6531fd79204954702160",
+    "scripts/simulation/edit_validation/frame_pipeline/async_controller.gd": "47e501eb87402a9e23bed34bd0df232f6c5e818df4bf4f6d4bfa512ee2227470",
+    "scripts/simulation/edit_validation/frame_pipeline/async_checkpoint_codec.gd": "a1b8c82c71e41476fb4a2b4df835a6fdb9cdd62897c47ebae5168f160a3506ff",
+    "scripts/simulation/edit_validation/frame_pipeline/async_terminal_guard.gd": "08c47247c2a6f7a4d8a0c7937d580cb575ca28e23c02c8e0f388d7b1cfef518c",
+    "scripts/beach/free_camera.gd": "7bf190f5f8b8c6bcee670a15b7bf32cc883c93cf96090426f2b1a055c5dd3784",
+    "scripts/simulation/edit_validation/frame_pipeline/async_visuals.gd": "246712a7dde239f6312c4fe52267bdcfc3b55cdb833fbc07547873d5668a1856",
+    "scripts/simulation/edit_validation/frame_pipeline/async_gravel_normalize.glsl": "19ad04695cb760264e6080bb46c9b00d4b07ff5cb6ebaa124458566c5e4d17a0",
+    "scripts/beach/beach_scene_service.gd": "3d3702326237b6513bd649d9657d6285c32a9c0cdefc7be30a0785d1efcf0f1c",
+    "scripts/beach/async_pipeline_entry.gd": "4e5a675369c7c5379ae9737c183c8d94bb0c044c3e9103f45cfe3713ab488e38",
+    "scripts/beach/shape_brush_entry.gd": "a552320612c75c1aa99b48def562213075e94a1f75c52414edefa8823ca91bd6",
+    "scripts/beach/gravel_playable_entry.gd": "157785de185399cb0f566777df9f89aa70d916dea84d0cecdad9e07ca26cb62b",
+    "scripts/simulation/edit_validation/frame_pipeline/async_legacy_migration.gd": "4609f53f315a2688e7ff368ba0b198881069739abaab31c2d3ee879ddb3f9fc1",
+    "scripts/simulation/edit_validation/frame_pipeline/async_visual_normalize.glsl": "ba58d5b1739cb5078e5eb87438ba101e8df5f8adac0f3acfb80b8149e96a39d8",
+    "scripts/simulation/edit_validation/frame_pipeline/async_tool_select.glsl": "ae6be9e16289e1a2766a0448c41640192833a6bec23a0b90420ae06766168059",
+    "scripts/beach/shape_brush_playable_entry.gd": "1e254c0b318e7fcfb44b89f6af455a402256736b382278906742c14800231323",
+    "scripts/beach/performance_panel.gd": "a909de8156725999f0c0db29cddb3fb0223ad02c2faf5d0b273f677826630d8d",
+    "scripts/simulation/edit_validation/frame_pipeline/async_seal.glsl": "11ab3b18d815e81a2b1906ff27b894ce8225c512962881bd6ec995365037d098",
+    "scripts/beach/ui_visibility.gd": "d89b99bab669376a089ff39647160669b10ecec0b04eaeaa22dd75f8d1efe5f5",
+    "scripts/beach/scene_switch_panel.gd": "00f22804953a622de0e237eebcb7e005d8d4cff080f290dd9d556fd625b6aafe",
+    "scripts/simulation/edit_validation/frame_pipeline/async_scheduler.gd": "bb143cbb8142648cebf7d0c156d35cd399df4be99c378f9fd4432fd9fca98fba",
+    "scripts/simulation/edit_validation/frame_pipeline/async_tools.gd": "7ac26ea4c5d5f0020c5a6f5afeb04652cbe7fe66c0895d3d017159bfdc817451",
+    "scripts/beach/beach_recovery_entry.gd": "238ea012bc1d2b281d2428c6c5ac4a6d8a7e81545bc522b42e572830585fd3c0",
+    "scripts/simulation/edit_validation/frame_pipeline/async_water.gd": "82f3d2a13987fb704b9f13ea8898df056c427f78b02416cd7818adbd5fde17a4",
+    "scripts/simulation/edit_validation/frame_pipeline/async_sim_finish.glsl": "71229a60bbea62762a77ae3ee481819792eae4cf6ff11ea30a7ebb833be87a8a"
+  },
+  "delivery_file_hashes": {
+    "tests/integration/async_pipeline_all_tools_probe.gd": "c5a1ec13c63120cdad44a7c567d77671921dcc7bd36f30735ca7563a0a48e78e",
+    "tests/integration/async_pipeline_tools_boundary_probe.gd": "477f3a84142e5d655a08ca8709c331d1893e25fd4cf671d8843349a3d322d008",
+    "tests/integration/async_pipeline_tools_fault_probe.gd": "5af5a3c0c8c73a34fce5f2741f0fc1d0b1d24dd53e60671441d341fd2f8d19ec",
+    "tests/integration/async_pipeline_tools_play_probe.gd": "5a3b525def033d4d6e703f28ed4ed956267d6028174ac1ac6977bfffa75e4ee3",
+    "tools/gpu_pipeline/run_all_tools.ps1": "8cbf5324e79cb4a8c6e84bdc6b8936b95782d0f7128918c557d43ae9679c13a8",
+    "docs/project-execution-guide.html": "b91ebe706f3d68722fca71e44c5b21af6549a695acafb410dc6c012cff8c910f",
+    "docs/project-execution-guide.sources.json": "32e79d04a55e1462a69780e6e80a1766c02aefc6a0078dfe5029b3bb2f8a00a8",
+    "task/sandcastle_all_tools_pipeline/验收.md": "bc7a2be01713aabb27c4626f57e99d084ccd8e22b24181bc7fcaa7f87e82ca36",
+    "task/sandcastle_all_tools_pipeline/接口与验证.md": "a0f222707e1a2d14cd5c06db92411dcb67d94f3ab1cfa7930cdaeaa0ed8a7eb5",
+    "task/sandcastle_all_tools_pipeline/执行状态.md": "a9271aa2054617c7683b0fadc6ea5be95cb78883c2c14463ad8f0e168b60df35"
+  },
+  "screenshots": {
+    "D:\\godot\\project\\sandcastle\\test_output\\all_tools_pipeline\\final03\\play_shovel_v1.png": "5bc7bd5c634046be5c5ad3eb8f45e8b3a4197182d9ac0da30c82b4865e26cc8a",
+    "D:\\godot\\project\\sandcastle\\test_output\\all_tools_pipeline\\final03\\play_wall_v1.png": "ea10a539d451da6e74158d180a6695f816e6ece8a464b23072432a7960ca0659"
+  }
+}

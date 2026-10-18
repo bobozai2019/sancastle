@@ -13,7 +13,7 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
-item_count = 3
+item_count = 4
 selected = 0
 popup/item_0/text = "主沙滩"
 popup/item_0/id = 0
@@ -21,6 +21,8 @@ popup/item_1/text = "test1 沙床 · 可编辑"
 popup/item_1/id = 1
 popup/item_2/text = "上滩回流 · 可编辑适配"
 popup/item_2/id = 2
+popup/item_3/text = "test1 原比例沙滩 · 30×15"
+popup/item_3/id = 3
 
 [node name="Switch" type="Button" parent="Actions"]
 layout_mode = 2

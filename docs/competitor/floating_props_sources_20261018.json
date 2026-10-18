@@ -1,0 +1,516 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-18",
+  "scope": "sharedassets0.assets Buoyancy census, engine physics trees and source-range validation; no game methods, live trajectories or model/texture payload export",
+  "result": "PASS_STATIC_CONFIGURATION_ONLY",
+  "summary": {
+    "props": 29,
+    "raw_objects": 685,
+    "sampling_points": 49,
+    "point_count_histogram": {
+      "2": 14,
+      "1": 12,
+      "3": 3
+    },
+    "solid_collider_types": {
+      "BoxCollider": 44,
+      "SphereCollider": 1,
+      "CapsuleCollider": 9,
+      "MeshCollider": 16
+    }
+  },
+  "census": {
+    "container": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+    "unity_version": "6000.4.10f1",
+    "script_container": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\globalgamemanagers.assets",
+    "script_reference": [
+      1,
+      448
+    ],
+    "buoyancy_script_path_id": "448",
+    "buoyancy_path_ids": [
+      "10356",
+      "10893",
+      "11049",
+      "11150",
+      "11208",
+      "11234",
+      "11246",
+      "11335",
+      "11462",
+      "11688",
+      "11689",
+      "11690",
+      "11691",
+      "11692",
+      "11693",
+      "11694",
+      "11919",
+      "11930",
+      "12062",
+      "12290",
+      "12405",
+      "8889",
+      "8919",
+      "8960",
+      "9334",
+      "9719",
+      "9805",
+      "9870",
+      "9957"
+    ],
+    "count": 29,
+    "unique_root_names": 29
+  },
+  "sources": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+      "bytes": 47654400,
+      "sha256": "147030ecf9527a25250238120364eb761390b99688b1812c4ea555b3b04e56a0"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+      "bytes": 8928184,
+      "sha256": "aa4457307746c4552541b6cedd4809fdaccf33eef03964a9e2300de5a09e1606"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+      "bytes": 76135784,
+      "sha256": "6dd7bb6bc7d926fd43c08d22c9c767b7edf531cf11a4a555fcd41830f2f9c721"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\globalgamemanagers.assets",
+      "bytes": 282924,
+      "sha256": "8c8f9cbc1b1bc03ff278154f93698295e5de5f4b078b46c3a9ccae70e70815a2"
+    }
+  ],
+  "source_after": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+      "bytes": 47654400,
+      "sha256": "147030ecf9527a25250238120364eb761390b99688b1812c4ea555b3b04e56a0"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+      "bytes": 8928184,
+      "sha256": "aa4457307746c4552541b6cedd4809fdaccf33eef03964a9e2300de5a09e1606"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+      "bytes": 76135784,
+      "sha256": "6dd7bb6bc7d926fd43c08d22c9c767b7edf531cf11a4a555fcd41830f2f9c721"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\globalgamemanagers.assets",
+      "bytes": 282924,
+      "sha256": "8c8f9cbc1b1bc03ff278154f93698295e5de5f4b078b46c3a9ccae70e70815a2"
+    }
+  ],
+  "historical_artifacts": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\package_v4\\physical_objects.json",
+      "bytes": 6848520,
+      "sha256": "1d39d5d0f146c281cb10318108171976c5d7327171ffa6415e846b21c7f1ff91"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\package_v4\\raw_index.json",
+      "bytes": 1627361,
+      "sha256": "7d83e538b02182cd772be267bc1c74aa8d40260a73b9ae30bf5b0e098c38ef45"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\package_v4\\technical_fields.json",
+      "bytes": 37962,
+      "sha256": "84ef5136b8c06f0c2ce7aa0724031685528921c87493a5687a7ad38c1f225717"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\analysis_v4\\buoyancy_config.json",
+      "bytes": 91179,
+      "sha256": "c71aa712ff94bd3049c12ee78e9499939940eee83a9c54ce8f5ffdec452a2c6c"
+    }
+  ],
+  "tool": {
+    "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\tools\\analyze_floating_props.py",
+    "available": true,
+    "bytes": 11997,
+    "sha256": "55c7cce80e3004fcb40b1a667aed549f92c7c9dbd243e91450923f591e77e4af"
+  },
+  "report": {
+    "path": "D:\\godot\\project\\sandcastle\\test_output\\floating_props_catalog_20261018\\v2\\catalog.json",
+    "available": true,
+    "bytes": 685716,
+    "sha256": "c1b7d64911d2b875b075ee67adac8b80154f64f91f0496103f7001c4ce26b2f9"
+  },
+  "preserved_failed_attempt": {
+    "path": "D:\\godot\\project\\sandcastle\\test_output\\floating_props_catalog_20261018\\v1\\catalog.json",
+    "available": true,
+    "bytes": 2556,
+    "sha256": "6f49e9189a09e2dfc1610d0085cd7b231f92e3bb9f36c90904dc8c3e9887b9fa"
+  },
+  "preserved_failed_tool": {
+    "path": "D:\\godot\\project\\sandcastle\\test_output\\floating_props_catalog_20261018\\v1\\analyze_floating_props.py",
+    "available": true,
+    "bytes": 10711,
+    "sha256": "54558d5dad6ab99479316c56e331e6849759d69ce9aec487351e2cda72f25aff"
+  },
+  "project_source_snapshot": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\project.godot",
+      "available": true,
+      "bytes": 2123,
+      "sha256": "73b1d257c2ff3e83c28359bb779f3e89a2d91e5f2f3b3dace692be0512fe5c22"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\beach\\unified_playable_entry.gd",
+      "available": true,
+      "bytes": 21101,
+      "sha256": "af5efb1520fb56c95f81b90228e6f28f30a204e8b8467b4e6d2c4328349d899d"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\simulation\\unified_edit\\pipeline.gd",
+      "available": true,
+      "bytes": 37406,
+      "sha256": "856e4e86495c7b51b708206041660c6ed64abb28e5c6f71721ca7bc14d96a6c6"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\simulation\\unified_edit\\views.gd",
+      "available": true,
+      "bytes": 11233,
+      "sha256": "9db089af76bfcafa17a935a82620b18f29aaf675bd564e3cf6e236c6efac5646"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\simulation\\unified_edit\\height_surface.gd",
+      "available": true,
+      "bytes": 1822,
+      "sha256": "257d20fce15c3090a01d8a18207e2176aba7d4be52b0426790073048ec72d716"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\simulation\\unified_edit\\domain_runtime.gd",
+      "available": true,
+      "bytes": 14719,
+      "sha256": "645f61608dc69dcdbdf3ac654296fe953862665c03a1f1c775b0ba78c8e37d6b"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\统一沙水主流程.md",
+      "available": true,
+      "bytes": 322,
+      "sha256": "5adf55403d47e6d211ce3f30579fec739ed9f46c1b46eea2d0f6ec41b7d1da3c"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\task\\sandcastle_floating_props\\总纲.md",
+      "available": true,
+      "bytes": 5569,
+      "sha256": "34a86f3374da78cd2c7d20260533beb64440fe7a35a372d9385d1bb412d1eedb"
+    }
+  ],
+  "catalog": [
+    {
+      "name": "Anchor",
+      "game_object_path_id": "2389",
+      "buoyancy_path_id": "8919",
+      "rigidbody_path_id": "4986",
+      "point_count": 2,
+      "mass": 4.0,
+      "numbered_model_nodes": 0,
+      "runtime_float_or_sink": "unknown"
+    },
+    {
+      "name": "Beachball",
+      "game_object_path_id": "2671",
+      "buoyancy_path_id": "9870",
+      "rigidbody_path_id": "5001",
+      "point_count": 1,
+      "mass": 3.0,
+      "numbered_model_nodes": 0,
+      "runtime_float_or_sink": "unknown"
+    },
+    {
+      "name": "Boat",
+      "game_object_path_id": "2437",
+      "buoyancy_path_id": "11930",
+      "rigidbody_path_id": "4987",
+      "point_count": 2,
+      "mass": 1.5,
+      "numbered_model_nodes": 0,
+      "runtime_float_or_sink": "unknown"
+    },
+    {
+      "name": "Bolt",
+      "game_object_path_id": "1886",
+      "buoyancy_path_id": "8889",
+      "rigidbody_path_id": "4977",
+      "point_count": 1,
+      "mass": 0.5,
+      "numbered_model_nodes": 0,
+      "runtime_float_or_sink": "unknown"
+    },
+    {
+      "name": "Bottle",
+      "game_object_path_id": "2384",
+      "buoyancy_path_id": "12405",
+      "rigidbody_path_id": "4998",
+      "point_count": 2,
+      "mass": 2.0,
+      "numbered_model_nodes": 0,
+      "runtime_float_or_sink": "unknown"
+    },
+    {
+      "name": "BottleCap",
+      "game_object_path_id": "2860",
+      "buoyancy_path_id": "12290",
+      "rigidbody_path_id": "4979",
+      "point_count": 1,
+      "mass": 0.25,
+      "numbered_model_nodes": 0,
+      "runtime_float_or_sink": "unknown"
+    },
+    {
+      "name": "Buoy",
+      "game_object_path_id": "1989",
+      "buoyancy_path_id": "11462",
+      "rigidbody_path_id": "4978",
+      "point_count": 2,
+      "mass": 2.0,
+      "numbered_model_nodes": 0,
+      "runtime_float_or_sink": "unknown"
+    },
+    {
+      "name": "CalicoScallopShell",
+      "game_object_path_id": "2380",
+      "buoyancy_path_id": "11692",
+      "rigidbody_path_id": "4993",
+      "point_count": 2,
+      "mass": 0.5,
+      "numbered_model_nodes": 3,
+      "runtime_float_or_sink": "unknown"
+    },
+    {
+      "name": "ClamShell",
+      "game_object_path_id": "2382",
+      "buoyancy_path_id": "11694",
+      "rigidbody_path_id": "4995",
+      "point_count": 2,
+      "mass": 0.5,
+      "numbered_model_nodes": 3,
+      "runtime_float_or_sink": "unknown"
+    },
+    {
+      "name": "Coin",
+      "game_object_path_id": "3515",
+      "buoyancy_path_id": "8960",
+      "rigidbody_path_id": "4969",
+      "point_count": 1,
+      "mass": 0.5,
+      "numbered_model_nodes": 0,
+      "runtime_float_or_sink": "unknown"
+    },
+    {
+      "name": "CoinGolden",
+      "game_object_path_id": "2714",
+      "buoyancy_path_id": "11335",
+      "rigidbody_path_id": "4985",
+      "point_count": 1,
+      "mass": 0.5,
+      "numbered_model_nodes": 0,
+      "runtime_float_or_sink": "unknown"
+    },
+    {
+      "name": "CommonMusselShell",
+      "game_object_path_id": "2376",
+      "buoyancy_path_id": "11688",
+      "rigidbody_path_id": "4989",
+      "point_count": 2,
+      "mass": 0.5,
+      "numbered_model_nodes": 3,
+      "runtime_float_or_sink": "unknown"
+    },
+    {
+      "name": "Gemstone",
+      "game_object_path_id": "2869",
+      "buoyancy_path_id": "11234",
+      "rigidbody_path_id": "4997",
+      "point_count": 1,
+      "mass": 1.0,
+      "numbered_model_nodes": 0,
+      "runtime_float_or_sink": "unknown"
+    },
+    {
+      "name": "HermitCrab",
+      "game_object_path_id": "2996",
+      "buoyancy_path_id": "9957",
+      "rigidbody_path_id": "4974",
+      "point_count": 3,
+      "mass": 8.0,
+      "numbered_model_nodes": 0,
+      "runtime_float_or_sink": "unknown"
+    },
+    {
+      "name": "IncongruousArkShell",
+      "game_object_path_id": "2377",
+      "buoyancy_path_id": "11689",
+      "rigidbody_path_id": "4990",
+      "point_count": 2,
+      "mass": 0.5,
+      "numbered_model_nodes": 3,
+      "runtime_float_or_sink": "unknown"
+    },
+    {
+      "name": "MiterShell",
+      "game_object_path_id": "2379",
+      "buoyancy_path_id": "11691",
+      "rigidbody_path_id": "4992",
+      "point_count": 2,
+      "mass": 0.5,
+      "numbered_model_nodes": 1,
+      "runtime_float_or_sink": "unknown"
+    },
+    {
+      "name": "MoonSnailShell",
+      "game_object_path_id": "2378",
+      "buoyancy_path_id": "11690",
+      "rigidbody_path_id": "4991",
+      "point_count": 1,
+      "mass": 0.5,
+      "numbered_model_nodes": 1,
+      "runtime_float_or_sink": "unknown"
+    },
+    {
+      "name": "Pebble",
+      "game_object_path_id": "1288",
+      "buoyancy_path_id": "10893",
+      "rigidbody_path_id": "4984",
+      "point_count": 1,
+      "mass": 2.0,
+      "numbered_model_nodes": 6,
+      "runtime_float_or_sink": "unknown"
+    },
+    {
+      "name": "RocketToy",
+      "game_object_path_id": "1483",
+      "buoyancy_path_id": "12062",
+      "rigidbody_path_id": "4999",
+      "point_count": 2,
+      "mass": 1.5,
+      "numbered_model_nodes": 0,
+      "runtime_float_or_sink": "unknown"
+    },
+    {
+      "name": "Seaglass",
+      "game_object_path_id": "2136",
+      "buoyancy_path_id": "11208",
+      "rigidbody_path_id": "4968",
+      "point_count": 1,
+      "mass": 0.5,
+      "numbered_model_nodes": 6,
+      "runtime_float_or_sink": "unknown"
+    },
+    {
+      "name": "Shoe",
+      "game_object_path_id": "3507",
+      "buoyancy_path_id": "11246",
+      "rigidbody_path_id": "4965",
+      "point_count": 2,
+      "mass": 2.0,
+      "numbered_model_nodes": 0,
+      "runtime_float_or_sink": "unknown"
+    },
+    {
+      "name": "Starfish",
+      "game_object_path_id": "3588",
+      "buoyancy_path_id": "11150",
+      "rigidbody_path_id": "4980",
+      "point_count": 1,
+      "mass": 1.0,
+      "numbered_model_nodes": 0,
+      "runtime_float_or_sink": "unknown"
+    },
+    {
+      "name": "SundialShell",
+      "game_object_path_id": "2381",
+      "buoyancy_path_id": "11693",
+      "rigidbody_path_id": "4994",
+      "point_count": 3,
+      "mass": 0.6000000238418579,
+      "numbered_model_nodes": 2,
+      "runtime_float_or_sink": "unknown"
+    },
+    {
+      "name": "ToyCar",
+      "game_object_path_id": "2577",
+      "buoyancy_path_id": "9334",
+      "rigidbody_path_id": "4975",
+      "point_count": 2,
+      "mass": 2.0,
+      "numbered_model_nodes": 0,
+      "runtime_float_or_sink": "unknown"
+    },
+    {
+      "name": "TreasureChest",
+      "game_object_path_id": "1313",
+      "buoyancy_path_id": "11049",
+      "rigidbody_path_id": "4983",
+      "point_count": 1,
+      "mass": 6.0,
+      "numbered_model_nodes": 0,
+      "runtime_float_or_sink": "unknown"
+    },
+    {
+      "name": "WineCork",
+      "game_object_path_id": "1563",
+      "buoyancy_path_id": "9719",
+      "rigidbody_path_id": "4963",
+      "point_count": 1,
+      "mass": 1.0,
+      "numbered_model_nodes": 0,
+      "runtime_float_or_sink": "unknown"
+    },
+    {
+      "name": "WoodPlank",
+      "game_object_path_id": "1352",
+      "buoyancy_path_id": "9805",
+      "rigidbody_path_id": "5000",
+      "point_count": 2,
+      "mass": 2.0,
+      "numbered_model_nodes": 10,
+      "runtime_float_or_sink": "unknown"
+    },
+    {
+      "name": "WoodStick",
+      "game_object_path_id": "1714",
+      "buoyancy_path_id": "11919",
+      "rigidbody_path_id": "4982",
+      "point_count": 3,
+      "mass": 0.5,
+      "numbered_model_nodes": 10,
+      "runtime_float_or_sink": "unknown"
+    },
+    {
+      "name": "WoodenBoat",
+      "game_object_path_id": "1516",
+      "buoyancy_path_id": "10356",
+      "rigidbody_path_id": "4967",
+      "point_count": 2,
+      "mass": 1.0,
+      "numbered_model_nodes": 0,
+      "runtime_float_or_sink": "unknown"
+    }
+  ],
+  "limits": [
+    "One identified container census; not a count of live instances or menu entries",
+    "No game CPU methods analyzed",
+    "Meshes/textures/external payload not exported by this task",
+    "No runtime flotation, contacts, water feedback, foam wakes or performance proof",
+    "Godot force formulas and integration are proposals, not implemented features"
+  ],
+  "web_api_references": [
+    {
+      "url": "https://docs.godotengine.org/en/stable/classes/class_rigidbody3d.html",
+      "checked_date": "2026-10-18",
+      "scope": "Godot force/offset/integration API semantics only"
+    },
+    {
+      "url": "https://docs.godotengine.org/en/stable/classes/class_physicsdirectbodystate3d.html",
+      "checked_date": "2026-10-18",
+      "scope": "Godot step and sleeping API semantics only"
+    }
+  ]
+}

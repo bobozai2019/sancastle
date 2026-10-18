@@ -9,7 +9,7 @@ layout(set=0,binding=3,std430) buffer Receipt { uint receipt[]; };
 layout(push_constant,std430) uniform Params { uint size; float cell_size; uint pad0; uint pad1; } params;
 shared vec4 v[64], f[64], o[64];
 shared vec2 dry_loss[64];
-shared uint bad,wet_count,component_count,current_component;
+shared uint bad,wet_count,component_count,current_component,has_demand;
 shared uint starts[32],cell_ids[64];
 // At most eight horizontal wet runs per row, <=256 rows. Shared footprint <32KiB.
 shared uint runs[2048], ranks[2048], sizes[2048], row_count[256];
@@ -76,11 +76,12 @@ void load_tile(uint base) {
 void main() {
     count=params.size*params.size;lane=gl_LocalInvocationID.x;area=params.cell_size*params.cell_size;
     if(params.size>256u||params.size<1u) { if(lane==0u) receipt[27]=0u;return; }
-    if(lane==0u) { bad=0u;wet_count=0u;component_count=0u;receipt[27]=0u; } barrier();
+    if(lane==0u) { bad=0u;wet_count=0u;component_count=0u;has_demand=0u;receipt[27]=0u; } barrier();
     for(uint j=lane;j<2048u;j+=64u) { runs[j]=(j<<16u);ranks[j]=0u;sizes[j]=0u; }
     for(uint j=lane;j<count;j+=64u) {
         vec4 a=input_cells[j].bed_water,b=input_cells[j].flow;
         if(!finite(a.x)||!finite(a.y)||!finite(a.z)||!finite(a.w)||!finite(b.x)||!finite(b.y)||!finite(b.z)||a.z<0.0||a.w<0.0) atomicOr(bad,1u);
+        if(wet(a,b)&&a.y>a.x) atomicOr(has_demand,1u);
     }
     for(uint row=lane;row<params.size;row+=64u) {
         uint members=0u,start=0u,number=0u;bool in_run=false;
@@ -166,6 +167,7 @@ void main() {
         total_moved=0.0;tmc=0.0;total_retained=0.0;trc=0.0;
         loss_x=0.0;lxc=0.0;loss_z=0.0;lzc=0.0;
     } barrier();
+    if(has_demand==0u) { if(lane==0u) receipt[0]=1u;return; }
     for(uint component=0u;component<component_count;component++) {
         if(lane==0u) {
             current_component=component;wet_count=sizes[component];eta_pair=vec2(-3.402823466e38,0.0);

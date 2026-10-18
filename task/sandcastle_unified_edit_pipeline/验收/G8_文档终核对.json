@@ -1,0 +1,1114 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "name": "completion_html_status",
+      "pass": true
+    },
+    {
+      "name": "correct_preview_or_final_role",
+      "pass": true
+    },
+    {
+      "name": "document_source:assets/unified_edit/default_catalog.tres",
+      "pass": true
+    },
+    {
+      "name": "document_source:docs/unified-edit-extension-guide.md",
+      "pass": true
+    },
+    {
+      "name": "document_source:docs/\u7edf\u4e00\u6c99\u6c34\u4e3b\u6d41\u7a0b.md",
+      "pass": true
+    },
+    {
+      "name": "document_source:project.godot",
+      "pass": true
+    },
+    {
+      "name": "document_source:scenes/main.tscn",
+      "pass": true
+    },
+    {
+      "name": "document_source:scenes/playable/test1_backwash.tscn",
+      "pass": true
+    },
+    {
+      "name": "document_source:scenes/playable/test1_capture.tscn",
+      "pass": true
+    },
+    {
+      "name": "document_source:scenes/playable/test1_geometry.tscn",
+      "pass": true
+    },
+    {
+      "name": "document_source:scripts/beach/beach_scene_service.gd",
+      "pass": true
+    },
+    {
+      "name": "document_source:scripts/beach/unified_playable_entry.gd",
+      "pass": true
+    },
+    {
+      "name": "document_source:scripts/simulation/unified_edit/checkpoint_codec.gd",
+      "pass": true
+    },
+    {
+      "name": "document_source:scripts/simulation/unified_edit/checkpoint_router.gd",
+      "pass": true
+    },
+    {
+      "name": "document_source:scripts/simulation/unified_edit/configuration.gd",
+      "pass": true
+    },
+    {
+      "name": "document_source:scripts/simulation/unified_edit/domain_runtime.gd",
+      "pass": true
+    },
+    {
+      "name": "document_source:scripts/simulation/unified_edit/executor.gd",
+      "pass": true
+    },
+    {
+      "name": "document_source:scripts/simulation/unified_edit/height.gd",
+      "pass": true
+    },
+    {
+      "name": "document_source:scripts/simulation/unified_edit/pipeline.gd",
+      "pass": true
+    },
+    {
+      "name": "document_source:scripts/simulation/unified_edit/player_input.gd",
+      "pass": true
+    },
+    {
+      "name": "document_source:scripts/simulation/unified_edit/profile_registry.gd",
+      "pass": true
+    },
+    {
+      "name": "document_source:scripts/simulation/unified_edit/state.gd",
+      "pass": true
+    },
+    {
+      "name": "document_source:scripts/simulation/unified_edit/water.gd",
+      "pass": true
+    },
+    {
+      "name": "document_source:scripts/simulation/unified_edit/water_response.gd",
+      "pass": true
+    },
+    {
+      "name": "document_source:task/sandcastle_unified_edit_pipeline/\u9a8c\u6536/G8_\u8054\u5408\u95e8.json",
+      "pass": true
+    },
+    {
+      "name": "document_source:tools/docs/build_execution_guide.py",
+      "pass": true
+    },
+    {
+      "name": "document_source:tools/docs/build_unified_execution_guide.py",
+      "pass": true
+    },
+    {
+      "name": "document_source:tools/unified_edit_pipeline/architecture_policy.json",
+      "pass": true
+    },
+    {
+      "name": "seventeen_actual_code_anchors",
+      "pass": true
+    },
+    {
+      "name": "anchor:scripts/beach/unified_playable_entry.gd::_ready",
+      "pass": true
+    },
+    {
+      "name": "anchor:scripts/simulation/unified_edit/player_input.gd::begin",
+      "pass": true
+    },
+    {
+      "name": "anchor:scripts/simulation/unified_edit/profile_registry.gd::resolve",
+      "pass": true
+    },
+    {
+      "name": "anchor:scripts/simulation/unified_edit/configuration.gd::freeze",
+      "pass": true
+    },
+    {
+      "name": "anchor:scripts/simulation/unified_edit/pipeline.gd::pump",
+      "pass": true
+    },
+    {
+      "name": "anchor:scripts/simulation/unified_edit/pipeline.gd::_submit_render",
+      "pass": true
+    },
+    {
+      "name": "anchor:scripts/simulation/unified_edit/executor.gd::record",
+      "pass": true
+    },
+    {
+      "name": "anchor:scripts/simulation/unified_edit/water_response.gd::record",
+      "pass": true
+    },
+    {
+      "name": "anchor:scripts/simulation/unified_edit/water_response.gd::commit",
+      "pass": true
+    },
+    {
+      "name": "anchor:scripts/simulation/unified_edit/water.gd::record_tick",
+      "pass": true
+    },
+    {
+      "name": "anchor:scripts/simulation/unified_edit/state.gd::initialize",
+      "pass": true
+    },
+    {
+      "name": "anchor:scripts/simulation/unified_edit/height.gd::physics_consume",
+      "pass": true
+    },
+    {
+      "name": "anchor:scripts/simulation/unified_edit/domain_runtime.gd::_physics_process",
+      "pass": true
+    },
+    {
+      "name": "anchor:scripts/simulation/unified_edit/domain_runtime.gd::restore_checkpoint",
+      "pass": true
+    },
+    {
+      "name": "anchor:scripts/simulation/unified_edit/checkpoint_codec.gd::validate",
+      "pass": true
+    },
+    {
+      "name": "anchor:scripts/simulation/unified_edit/checkpoint_router.gd::load_file",
+      "pass": true
+    },
+    {
+      "name": "anchor:scripts/beach/beach_scene_service.gd::_switch",
+      "pass": true
+    },
+    {
+      "name": "local_link:unified-edit-extension-guide.md",
+      "pass": true
+    },
+    {
+      "name": "local_link:../task/sandcastle_unified_edit_pipeline/\u9a8c\u6536/README.md",
+      "pass": true
+    },
+    {
+      "name": "actual_component:G8_\u529f\u80fd\u7ec4\u4ef6.json",
+      "pass": true
+    },
+    {
+      "name": "actual_component:G8_\u957f\u7a33\u7ec4\u4ef6.json",
+      "pass": true
+    },
+    {
+      "name": "actual_component:G8_\u6210\u672c\u7ec4\u4ef6.json",
+      "pass": true
+    },
+    {
+      "name": "independent_cost_pass",
+      "pass": true
+    },
+    {
+      "name": "current_architecture_and_mutants",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:.godot/imported/caustic_fold_v1.png-7c71edde5ae0fb95f331d63ef8c4f0e7.s3tc.ctex",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:.godot/imported/water_normal_681.png-edb114f206e59783a34091a9ee5c5942.ctex",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/brushes/castle/four_towers_preview.tres",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/brushes/castle/four_towers_v1.rgba32f",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/brushes/castle_v1.tres",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/brushes/molded_material_candidate.json",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/brushes/protocol_v2.json",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/brushes/shovel_v1.tres",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/brushes/wall_v1.tres",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/gravel/stone_material.tres",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/gravel/stone_mesh.tres",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/test1_beach/test1_front_foam_sparse_mesh.tres",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/test1_geometry/initial_state.f32",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/test1_geometry/sand_sides.gdshader",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/test1_geometry/sand_sides.res",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/test1_geometry/visible_grid.res",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/test1_geometry/water_cycle.json",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/test1_water_motion/capture_state.rgba32f",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/ui/main_explicit_font.tres",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/unified_edit/castle_v1.tres",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/unified_edit/compact_v1.tres",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/unified_edit/dig_sweep_v1.tres",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/unified_edit/dig_v1.tres",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/unified_edit/extensions/extension_catalog.tres",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/unified_edit/extensions/fixture_identity.json",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/unified_edit/extensions/stepped_mound_tool_v1.tres",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/unified_edit/extensions/stepped_mound_v1.rgba32f",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/unified_edit/extensions/stepped_mound_v1.tres",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/unified_edit/extensions/wide_fill_v1.tres",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/unified_edit/extensions/wide_transfer_v1.tres",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/unified_edit/fill_sweep_v1.tres",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/unified_edit/fill_v1.tres",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/unified_edit/four_towers_v1.tres",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/unified_edit/legacy_source_catalog.variant",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/unified_edit/presentation/main.json",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/unified_edit/presentation/main.variant",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/unified_edit/presentation/test1_backwash.json",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/unified_edit/presentation/test1_backwash.variant",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/unified_edit/presentation/test1_capture.json",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/unified_edit/presentation/test1_capture.variant",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/unified_edit/presentation/test1_geometry.json",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/unified_edit/presentation/test1_geometry.variant",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/unified_edit/shovel_v1.tres",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/unified_edit/smooth_v1.tres",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/unified_edit/suspended_sweep_v1.tres",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/unified_edit/suspended_v1.tres",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/unified_edit/wall_v1.tres",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/water_material_natural_candidate/async_rdc_bed.gdshader",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/water_material_natural_candidate/async_rdc_water.gdshader",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/water_material_natural_candidate/contact_shape.gdshader",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/water_material_natural_candidate/foam_distribution.gdshader",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/water_material_natural_candidate/rdc_caustic_1105_mipped.res",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/water_material_natural_candidate/water_normal_681.png",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/water_material_natural_candidate/water_normal_681.png.import",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/water_sides/geometry_manifest.json",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/water_sides/main_boundary.res",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/water_sides/test1_boundary.res",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:assets/water_sides/water_sides.gdshader",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:project.godot",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scenes/main.tscn",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scenes/playable/test1_backwash.tscn",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scenes/playable/test1_capture.tscn",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scenes/playable/test1_geometry.tscn",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scenes/unified_edit/playable/main.tscn",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scenes/unified_edit/playable/test1_capture.tscn",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scenes/unified_edit/presentation/main.tscn",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scenes/unified_edit/presentation/test1_backwash.tscn",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scenes/unified_edit/presentation/test1_capture.tscn",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scenes/unified_edit/presentation/test1_geometry.tscn",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scenes/unified_edit_height_surface.tscn",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scenes/unified_edit_runtime.tscn",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/beach/beach_recovery_entry.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/beach/beach_scene_service.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/beach/free_camera.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/beach/scene_switch_panel.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/beach/ui_drag.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/beach/ui_visibility.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/beach/unified_performance_panel.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/beach/unified_playable_entry.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/beach/unified_scene_routes.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/collision/collision_prepare_job.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/sand/brushes/brush_definition.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/sand/brushes/brush_preview_view.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/sand/brushes/brush_registry.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/sand/brushes/brush_spec.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/sand/brushes/brush_tool_panel.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/scenarios/test1_geometry_layout.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/scenarios/test1_playable_layout.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/brushes/brush_checkpoint_codec.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/brushes/brush_material_state_codec.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/brushes/brush_protocol.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/checkpoint_store.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/edit_validation/frame_pipeline/async_boundary.glsl",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/edit_validation/frame_pipeline/async_cfl_tiles.glsl",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/edit_validation/frame_pipeline/async_checkpoint_codec.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/edit_validation/frame_pipeline/async_normalize.glsl",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/edit_validation/frame_pipeline/async_sim_finish.glsl",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/api_adapter.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/boundary.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/cfl_decide.glsl",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/checkpoint_accounting.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/checkpoint_capture.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/checkpoint_codec.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/checkpoint_router.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/configuration.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/coupled.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/display_emit.glsl",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/display_intent.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/domain_runtime.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/edit.glsl",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/executor.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/gpu.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/height.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/height.glsl",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/height_codec.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/height_stamp.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/height_surface.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/idle_fence.glsl",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/intent.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/layout.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/legacy_sources.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/pipeline.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/player_input.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/presentation.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/profile_catalog.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/profile_registry.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/protocol.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/protocol.glslinc",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/publish.glsl",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/restore_verifier.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/slots.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/state.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/tool_profile.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/transport.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/unit_half.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/view_publish.glsl",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/view_query.glsl",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/views.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/visual_edit_finish.glsl",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/visual_finish.glsl",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/visual_publish.glsl",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/visuals.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/water.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/water_response.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/water_response.glsl",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/work_begin.glsl",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/simulation/unified_edit/work_seal.glsl",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/visual/brush_indicator.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/visual/gpu_gravel_field.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/visual/gravel_checkpoint_codec.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:scripts/visual/water_boundary_sides.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:shaders/brushes/castle_preview.gdshader",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:shaders/brushes/footprint_preview.gdshader",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:shaders/simulation/brushes/mold_support_step.glsl",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:shaders/simulation/brushes/molded_slope.glsl",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:shaders/simulation/edit_validation/staged_slope.glsl",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:shaders/simulation/edit_validation/staged_slope_consume.glsl",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:shaders/simulation/edit_validation/water_displace_compensated.glsl",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:shaders/simulation/edit_validation/water_packed_cached.glsl",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:shaders/simulation/edit_validation/water_velocity_prefetch.glsl",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:shaders/simulation/erosion/sediment_step.glsl",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:shaders/simulation/material/material_commit.glsl",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:shaders/simulation/material/material_step.glsl",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:shaders/simulation/shallow_drain_scale.glsl",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:shaders/simulation/shallow_edge_flux.glsl",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:shaders/simulation/shallow_update_state.glsl",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:shaders/simulation/visual_foam_step.glsl",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:shaders/simulation/visual_gravel_step.glsl",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:shaders/visual/gpu_gravel.gdshader",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:shaders/visual/suspended_sand_cloud.gdshader",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tests/fixtures/unified_edit/view_consumer.gdshader",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tests/fixtures/unified_edit/view_consumer.tscn",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tests/integration/unified_edit_boundary_probe.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tests/integration/unified_edit_display_probe.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tests/integration/unified_edit_extension_features_probe.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tests/integration/unified_edit_extension_probe.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tests/integration/unified_edit_extension_runtime_probe.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tests/integration/unified_edit_formal_boundary_probe.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tests/integration/unified_edit_formal_candidate_fail_probe.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tests/integration/unified_edit_formal_completion_probe.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tests/integration/unified_edit_formal_final_lifecycle_probe.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tests/integration/unified_edit_formal_front_probe.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tests/integration/unified_edit_formal_gravel_probe.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tests/integration/unified_edit_formal_migration_probe.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tests/integration/unified_edit_formal_preview_probe.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tests/integration/unified_edit_formal_probe.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tests/integration/unified_edit_formal_service_probe.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tests/integration/unified_edit_formal_startup_probe.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tests/integration/unified_edit_front_lifecycle_probe.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tests/integration/unified_edit_gpu_probe.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tests/integration/unified_edit_gravel_entry_probe.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tests/integration/unified_edit_handoff_probe.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tests/integration/unified_edit_live_preview_probe.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tests/integration/unified_edit_migration_entry_probe.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tests/integration/unified_edit_playable_probe.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tests/integration/unified_edit_pointer_probe.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tests/integration/unified_edit_restore_probe.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tests/integration/unified_edit_scene_service_probe.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tests/integration/unified_edit_visuals_probe.gd",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tests/visual_water_alignment/prototypes/caustic_fold_v1.png",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tests/visual_water_alignment/prototypes/caustic_fold_v1.png.import",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tests/visual_water_alignment/prototypes/reference_crest_continuous_lip.gdshader",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tests/visual_water_alignment/prototypes/reference_front_lip_branch_mesh.tres",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tests/visual_water_alignment/prototypes/reference_front_lip_patch_mesh.tres",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tests/visual_water_alignment/prototypes/reference_front_lip_row_mesh.tres",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tests/visual_water_alignment/prototypes/reference_local_front_x.glsl",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tests/visual_water_alignment/prototypes/reference_local_front_x_wide.glsl",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tests/visual_water_alignment/prototypes/reference_local_front_z.glsl",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tests/visual_water_alignment/prototypes/reflection_rock_0.tres",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tests/visual_water_alignment/prototypes/reflection_rock_1.tres",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tests/visual_water_alignment/prototypes/reflection_rock_2.tres",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tools/unified_edit_pipeline/run_display.py",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tools/unified_edit_pipeline/run_extension_features.py",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tools/unified_edit_pipeline/run_extension_runtime.py",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tools/unified_edit_pipeline/run_formal.py",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tools/unified_edit_pipeline/run_formal_boundaries.py",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tools/unified_edit_pipeline/run_formal_completions.py",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tools/unified_edit_pipeline/run_formal_remaining.py",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tools/unified_edit_pipeline/run_g8_regressions.py",
+      "pass": true
+    },
+    {
+      "name": "frozen_runtime_source:tools/unified_edit_pipeline/run_presentation.py",
+      "pass": true
+    },
+    {
+      "name": "gate_all_thirty_six",
+      "pass": true
+    },
+    {
+      "name": "all_thirty_six_state_rows_completed",
+      "pass": true
+    },
+    {
+      "name": "same_visually_inspected_html_bytes",
+      "pass": true
+    }
+  ],
+  "html_sha256": "01a952c4365f951cbea634996f74cc2e931b62ddcdd59b9234c1777280c1f0f4",
+  "source_index_sha256": "bb337b13f0a51cd1ca1a813bc1ad5b7e4a0202b07673128eb1527eb1f8dfffcf",
+  "auditor_sha256": "6cb71506a7c6eff45bf5654d23f16649e95ecd8b580b4dc7d20403615da0e5df",
+  "final": true,
+  "scope": "Source/anchor/link and actual completed-component consistency for final HTML/delivery. Browser visual/interactive QA is separate; this does not invent runtime or performance evidence."
+}

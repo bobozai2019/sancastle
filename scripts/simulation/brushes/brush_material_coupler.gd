@@ -94,6 +94,17 @@ func _support_dispatch(phase: int) -> void:
 	else: rd.compute_list_dispatch(list,solver.grid_size/8,solver.grid_size/8,1)
 	rd.compute_list_end()
 
+func reconcile_external_sand_patch() -> bool:
+	if rd==null or solver==null or not support_set.is_valid():return false
+	# Same upper-tag loss/reference rule used before every material step.
+	# A paused CPU patch already changed sand, so reconcile before publication
+	# without advancing moisture, slope, sand, the clock, or any source ledger.
+	_support_dispatch(2)
+	_support_dispatch(0)
+	_support_dispatch(3)
+	var live: int=solver.current_index
+	return rd.texture_copy(solver.textures.mold_support[1-live],solver.textures.mold_support[live],Vector3.ZERO,Vector3.ZERO,Vector3(solver.grid_size,solver.grid_size,1),0,0,0,0)==OK
+
 func dispatch_after_erosion(delta_s: float) -> bool:
 	if rd==null or solver._writes_locked(): return false
 	if solver.profile_passes: rd.capture_timestamp("sandcastle_material_start")

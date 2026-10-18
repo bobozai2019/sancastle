@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-18",
+  "scope": "test1 static sand extent, surface height, sampled wet/dry boundary; no gameplay investigation",
+  "identities": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\test1.rdc",
+      "bytes": 225224034,
+      "sha256": "761aa980c2426f75a1fa7364bf6d2655ff4dd20ea76566e630ee5b53ea0ec5b2"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_erosion_20261014_probe01\\replay\\manifest.json",
+      "bytes": 4049,
+      "sha256": "db4481d0aada0ee1dcb80ed0304a2c10740cb083b13795471a3bdd47986b9403"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_erosion_20261014_probe01\\HeightIntegration_0_hex.txt",
+      "bytes": 13385,
+      "sha256": "51c591391179eb3a59cc7413e957755105c372689fab9b5dca5c304a2c625bca"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\tools\\export_test1_geometry.py",
+      "bytes": 5721,
+      "sha256": "4eadd2e0d6e71ff11e847735b067b87eca728ee6a198dca27f5c3ebd194e7edb"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\tools\\analyze_test1_geometry.py",
+      "bytes": 9161,
+      "sha256": "9e4113c6610dcb5d62e90520fbd9deef5e01082987f20a2511a91e5054d0ffdd"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\assets\\test1_water_motion\\capture_profile.json",
+      "bytes": 1923,
+      "sha256": "db03153237e0e52eeb156c7780a728fd927f803bc5f1f9272ce5a01044763445"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\assets\\test1_water_motion\\capture_state.rgba32f",
+      "bytes": 2097152,
+      "sha256": "06540acafd57583465e0d5e3926819f27b33e51afb3134a700d684cc52fa8523"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\水体运动与回落.md",
+      "bytes": 19445,
+      "sha256": "1788b72547f4127a70c248b985e31a4da77b9d14d1f2dfd08258e9156edbc860"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\模拟与编辑方案.md",
+      "bytes": 28836,
+      "sha256": "c53cdd5dfb0789f6038fe21fdf6cc8e209e63cfb296c9d70b76d47cf520939d0"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\test1_geometry_20261018\\replay_v3\\manifest.json",
+      "bytes": 165562,
+      "sha256": "8652e0dbfe53c7943192db28f35d7c806324e671067ce39dfa3c0e85a1bdb575"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\test1_geometry_20261018\\analysis_v1\\analysis.json",
+      "bytes": 13123,
+      "sha256": "56e9e51b5ea4a3814cfd2459e86d52c8a92d273dbb2202dae9f989c74e55d584"
+    },
+    {
+      "path": "D:\\other_software\\RenderDoc\\qrenderdoc.exe",
+      "bytes": 13629080,
+      "sha256": "c5e9d3f254d80a7649fbd9eae1c67618cb19278c603710370c220de469397277"
+    },
+    {
+      "path": "C:\\WINDOWS\\SYSTEM32\\d3dcompiler_47.dll",
+      "bytes": 4517376,
+      "sha256": "f642940ffb5dca7e548ba2270686798cf6b4c74b60e88bbb22f0991868cae3e5"
+    }
+  ],
+  "legacy_erosion_exports_verified": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_erosion_20261014_probe01\\replay\\ground_height.dxbc",
+      "bytes": 7844,
+      "sha256": "3fef86f5de5380fa58d06f8cafe3614aaac1e63081247f807082f6eded113f83"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_erosion_20261014_probe01\\replay\\cb0.raw",
+      "bytes": 2544,
+      "sha256": "b95861a6730b129eeaaea9d675c4895455e5400e121cab819a060ac91eab3ac9"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_erosion_20261014_probe01\\replay\\readonly_0.raw",
+      "bytes": 2097152,
+      "sha256": "389811c23a3f1d6d8cc36195472ddf201513310dcbdb533c328cecd84915016f"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_erosion_20261014_probe01\\replay\\readwrite_0.raw",
+      "bytes": 8388608,
+      "sha256": "458d6df27e58b22a400b3d0cc04c524d5d458315d17e91301ca70698b27e3602"
+    }
+  ],
+  "legacy_effective_bounds": {
+    "cb0_114": [
+      -15.0,
+      0.0,
+      -7.5,
+      0.0
+    ],
+    "cb0_115": [
+      15.0,
+      10.0,
+      7.5,
+      0.0
+    ]
+  },
+  "data_status": {
+    "new_replay": "complete selected buffers, four selected VSOut and shader/consumed constant ranges; not all draws or entire game",
+    "historical_patch_summary": "docs/history/sandcastle_test1_reverse_rebuild/evidence/p02_sand_patches.json missing",
+    "failures": [
+      "replay_v1 bootstrap no exports, suspected __file__ issue; failure.json retained",
+      "replay_v2 GetAction unsupported; manifest.json retained"
+    ],
+    "analysis": "full 524288 sand samples; plots decimated only for display"
+  },
+  "python": "3.13.12 (tags/v3.13.12:1cbe481, Feb  3 2026, 18:22:25) [MSC v.1944 64 bit (AMD64)]"
+}

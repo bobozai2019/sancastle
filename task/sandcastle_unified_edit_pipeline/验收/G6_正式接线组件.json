@@ -1,0 +1,84 @@
+{
+  "schema": 1,
+  "status": "component_pass",
+  "date": "2026-10-18",
+  "overall_completed": 25,
+  "overall_total": 36,
+  "T06_completed": 1,
+  "T06_total": 4,
+  "completed_subgoals": [
+    "T06.1"
+  ],
+  "formal_cutover": true,
+  "G6_pass": false,
+  "retirement_full_audit_complete": false,
+  "scope": "Four formal static factories create only unified runtime, real native init/restore/close, actual default project-entry initialization, family-scoped routing/cache and failed-target rollback. Full formal in-flight matrix and G7 executable writer audit remain.",
+  "gpu_runs": 7,
+  "gpu_checks": 215,
+  "case_checks": {
+    "startup": 12,
+    "formal_main": 34,
+    "formal_test1_capture": 34,
+    "formal_test1_backwash": 34,
+    "formal_test1_geometry": 34,
+    "formal_service": 46,
+    "candidate_service": 21
+  },
+  "independent_checks": 1642,
+  "static_checks": 33,
+  "gpu_source_members": 191,
+  "verification_source_members": 194,
+  "evidence": [
+    {
+      "path": "test_output/unified_edit_pipeline/g6_formal_entry01/report.json",
+      "sha256": "03b870a79b8c711c86d047bd3e752711c5ad9c9f380ea23790144da9cb9111f8",
+      "bytes": 32048
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g6_formal_entry01/audit.json",
+      "sha256": "aecb6af9000a6588681156cbe336c2cad099bd0c5707b4876b183c6f91e17348",
+      "bytes": 206347
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g6_formal_entry01/artifact-index.json",
+      "sha256": "d48becac417b6c3f8745be825d87322eed44c5b7046c8a3addd30f9465427ce2",
+      "bytes": 9815
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g6_formal_entry01/sources.zip",
+      "sha256": "36e385adb202dcd06a8872941b146d3995d402699a63b434d8772964d81f1261",
+      "bytes": 25770581
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g6_formal_static01/audit.json",
+      "sha256": "c671a07540093c511f4f4c57acd09f12edfb681b51f566d7ca0ba5038b786431",
+      "bytes": 9121
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g6_formal_static01/verification_sources.zip",
+      "sha256": "0584bb386b5f73ed88735c098f0dd8607eaa3aeeadc106327f2494ed7f6c9193",
+      "bytes": 25776252
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g6_formal_cutover_sources01/before.json",
+      "sha256": "77cceee5093b498e293afdc2b4c8a24d939a06f0841a639b205dfa1ff00749b0",
+      "bytes": 1255
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g6_formal_cutover_sources01/before.zip",
+      "sha256": "b74b5d9d9a7ae511d4e0acc1c4b103e1ac632632fbb8ca08b43837d87fbee67f",
+      "bytes": 20726
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g6_formal_cutover_sources01/after.json",
+      "sha256": "ff0439e8cccad12b3d5e412df7f03a2ce6171f917e94b26b373b95fa0a746c2e",
+      "bytes": 1675
+    }
+  ],
+  "remaining": [
+    "formal entry in-flight save/close/failure boundary matrix",
+    "full old execution retirement and reachable-call audit",
+    "G7 configuration-only extensions and writer audit",
+    "G8 final functional/cost/sustained evidence and documentation"
+  ]
+}

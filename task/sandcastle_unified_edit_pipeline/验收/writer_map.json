@@ -1,0 +1,27 @@
+{
+  "role": "G0 migration inventory; not architecture validation",
+  "source_identity": "test_output/unified_edit_pipeline/g0_20261017_initial/baseline_manifest.json",
+  "entry_edges": [
+    ["scenes/playable/test1_backwash.tscn", "scenes/playable/test1_capture.tscn"],
+    ["scenes/playable/test1_capture.tscn", "scenes/main.tscn"],
+    ["scenes/main.tscn", "scripts/beach/async_pipeline_entry.gd"]
+  ],
+  "dispatcher": "scripts/simulation/edit_validation/frame_pipeline/async_controller.gd",
+  "forks": [
+    {"selector": "ordinary(command)", "target": "async_editor.gd:_record_async", "command_bytes": 128, "completion_bytes": 80},
+    {"selector": "Tools.mode(command)", "target": "async_tools.gd:_record", "command_bytes": 256, "completion_bytes": 336}
+  ],
+  "writer_families": [
+    {"family": "ordinary edit", "record": "async_editor.gd:_record_async", "writes": ["sand or sediment double slots", "water/flow candidates on bed edits", "material"], "publication": "publish_sand batch end"},
+    {"family": "shape edit", "record": "async_tools.gd:_record SHAPE", "kernels": ["shaders/simulation/brushes/commit.glsl", "shaders/simulation/brushes/material_transaction.glsl", "shaders/simulation/brushes/water_commit.glsl"], "writes": ["sand double slots", "coverage", "mold_support", "compaction", "water", "sediment", "momentum"], "publication": "publish_sand tool end"},
+    {"family": "smooth and compact", "record": "async_tools.gd:_record SMOOTH/COMPACT", "kernels": ["scripts/simulation/edit_validation/frame_pipeline/async_smooth.glsl"], "writes": ["phase1 sand and support or compaction double slots"], "publication": "publish_sand tool end"},
+    {"family": "simulation", "record": "async_water.gd and async_coupled.gd", "kernels": ["shallow_*", "sediment_step", "material_step", "staged_slope", "molded_slope", "async_normalize"], "writes": ["water", "momentum", "sand", "sediment", "material", "clock/control"], "restriction": "same RD ordered work, preserve existing numerical phases"},
+    {"family": "restore", "record": "async_restore_bundle.gd and entry restore commit", "writes": ["independent candidate textures and control, then domain swap"], "restriction": "validate and prove consumers before replacing/releasing"},
+    {"family": "legacy reachable", "record": "entry superclass methods, async_bridge, old CPU patch and old editor dispatch", "writes": ["potential sand/water/material and revision writers"], "restriction": "retire at G6; public API names alone do not prove old path executes"},
+    {"family": "visual consumers", "record": "async_visuals.gd and async_tools.gd:_record_gravel", "writes": ["gravel/foam/front fields"], "restriction": "not authority sand inventory"}
+  ],
+  "retained_optimizations": ["P01 velocity reduction", "P02 same tick parameter reuse", "P03 zero-demand displacement path", "P05 collision request rotation"],
+  "excluded_optimization_candidates": ["P04 reverted max tree", "P06 and P07 previously skipped"],
+  "serial_structures_to_measure": ["brushes/water_merge local_size_x=1 full-domain loop", "brushes/shovel_allocate local_size_x=1"],
+  "limits": ["Family inventory backed by frozen source and binding code, not a generated call graph.", "Literal dependency inventory includes unresolved dynamic prefixes.", "G7 must implement executable reachability and writer negative fixtures."]
+}

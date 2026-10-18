@@ -1,0 +1,59 @@
+{
+  "schema": 1,
+  "status": "component_pass",
+  "date": "2026-10-18",
+  "overall_completed": 29,
+  "overall_total": 36,
+  "T07_completed": 1,
+  "T07_total": 4,
+  "completed_subgoals": [
+    "T07.2"
+  ],
+  "G7_pass": false,
+  "scope": "Three original config-only fixtures and real GPU baseline/variant comparison; normalized phases, actual fields and immutable core source evidence. Capability matrix/runtime lifecycle and full writer audit remain.",
+  "gpu_runs": 6,
+  "gpu_checks": 110,
+  "independent_checks": 748,
+  "source_members": 123,
+  "verification_source_members": 124,
+  "core_unchanged_count": 51,
+  "product_catalog_changed": false,
+  "evidence": [
+    {
+      "path": "test_output/unified_edit_pipeline/g7_extensions_final01/report.json",
+      "sha256": "a07ffc22f7a953e1be0d3bb2810c9d52180405f8134fca7b888d8e3975e6a072",
+      "bytes": 22260
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g7_extensions_final01/audit.json",
+      "sha256": "68746073922d94aac216b71732fa19eb8958c90b39a12cebdd9eee3f7a99d76a",
+      "bytes": 72661
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g7_extensions_final01/sources.zip",
+      "sha256": "cb106eeb108b4048e30aea9e35699cf8593fe3b381392a477a8353309baa539e",
+      "bytes": 1870036
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g7_extensions_final01/verification_sources.zip",
+      "sha256": "d2c9a19ef928c59f949f14c0522924dc1218b37b8d76d432da530f174da6802f",
+      "bytes": 1872773
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g7_extensions_final01/artifact-index.json",
+      "sha256": "9acd21bf72466b7ba6f463dce40002c5717113ce6fef9aac429573a39a208711",
+      "bytes": 62436
+    }
+  ],
+  "fixtures": {
+    "path": "assets/unified_edit/extensions/fixture_identity.json",
+    "sha256": "7a5cb67fce77e3dbb46e3261ebd5d374063abe1354962481d6ad5b7d85698d21",
+    "bytes": 7119
+  },
+  "remaining": [
+    "T07.1 formal dependency/authority writer/tool-id branch audit",
+    "T07.3 full legal capability/value and runtime lifecycle comparison",
+    "T07.4 adversarial checker cases and extension guide",
+    "T08 final four goals"
+  ]
+}

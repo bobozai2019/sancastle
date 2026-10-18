@@ -18,7 +18,7 @@
 | 每批重复分配备份 | 批后端每次新建、复制、释放14张备份纹理，以及4个buffer和uniform sets。按当前格式/256²逻辑大小约3.75MiB纹理payload/批，不等于驱动实际分配或已测耗时 |
 | 输入是有界队列 | 普通拖动每移动至少0.025m可生成笔段，队列最多64笔、当前每批最多2笔；新输入可能快于消费，产生拖尾甚至容量拒绝 |
 
-来源：[当前接线与配置](../当前项目技术方案.md#51-普通挖填合批流水线2026-10-16)、[15项代码及4项证据身份](../edit_pipeline_sources_20261016.json)、[短测原始结果](../../test_output/physics_threading/frame_pipeline_preview_20261016_03/result.json)。上述运行发生于文档同步之前，本轮没有新增运行PASS。
+来源：[当前接线与配置](../当前项目技术方案.md)、[15项代码及4项证据身份](../history/project_snapshots/edit_pipeline_sources_20261016.json)、[短测原始结果](../../test_output/physics_threading/frame_pipeline_preview_20261016_03/result.json)。上述运行发生于文档同步之前，本轮没有新增运行PASS。
 
 ## 2. 为什么占用低也会卡
 

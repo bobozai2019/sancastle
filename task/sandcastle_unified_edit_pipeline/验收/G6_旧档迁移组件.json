@@ -1,0 +1,61 @@
+{
+  "schema": 1,
+  "status": "component_pass",
+  "date": "2026-10-18",
+  "overall_completed": 24,
+  "overall_total": 36,
+  "T06_completed": 0,
+  "T06_total": 4,
+  "formal_cutover": false,
+  "G6_pass": false,
+  "scope": "Known edit5/native3 and edit4/native2 files routed through unified candidate build/verify/swap; source allowlist, same-domain raw preservation, foreign-domain rejection and native fault recovery regression",
+  "gpu_runs": 6,
+  "gpu_checks": 174,
+  "independent_checks": 156,
+  "cpu_checks": 87,
+  "source_members_gpu": 187,
+  "source_members_cpu": 191,
+  "evidence": [
+    {
+      "path": "test_output/unified_edit_pipeline/g6_migration_final01/report.json",
+      "sha256": "c066a8355a288204e8ca25f9a3e469d6608a71efb2d7f48c8496f639defb0789"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g6_migration_final01/independent_audit.json",
+      "sha256": "0531521facc80b80ffc903f25d1845f5732346a97dcd383832a32581d0c701b3"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g6_migration_final01/auditor_source.gd",
+      "sha256": "923549b739fefa443dffbf59e43ceff719721d3eed50be2e1bdfc562e66ec9f5"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g6_migration_final01/sources.zip",
+      "sha256": "f24dd9b89c14c641d60ecd0605e183f596b826fa398dcb6796ada06a2236cb22"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g6_migration_data01/report.json",
+      "sha256": "891af9ab13421c58000c72bad069fb4297a2e94caa4f054c2f9a04323a8c7c31"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g6_migration_data01/configuration.json",
+      "sha256": "0faf09dca9553c4b80b02885b097e1c6e088ec28828dc72b2ad0af4825f0b3a8"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g6_migration_data01/sources.zip",
+      "sha256": "2348702f5b6282c802b07a750ee21836d39258da60e52008469bcf8b27cd2422"
+    }
+  ],
+  "catalog": {
+    "path": "assets/unified_edit/legacy_source_catalog.variant",
+    "sha256": "cbac0b2c091c09f3506d0a15723d0ff7cd962104918b8eb3827a44a7b57942ff"
+  },
+  "failures_retained": [
+    "test_output/unified_edit_pipeline/g6_migration_entry01"
+  ],
+  "remaining": [
+    "all-tool and in-flight lifecycle combinations",
+    "formal entry cutover and old execution retirement",
+    "G7 configuration extension/reachable writer audit",
+    "G8 final visible cost and sustained lifecycle validation"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "role": "G0 frozen source drift observation; not a replacement baseline",
+  "policy": "Preserve concurrent geometry scene additions; old cost applies to pinned source. Verify affected shared paths at integration; do not rewrite original evidence.",
+  "observed_at": "2026-10-18T01:36:26.3174809+08:00",
+  "changed_sources": [
+    {
+      "current_sha256": "17b2b2d0d76571b100d3fce92f3c118bd0089ed63d267940681054c85f278200",
+      "path": "scenes/components/scene_switch_panel.tscn",
+      "g0_sha256": "aa3d5276e4cfa4ed407998552c8affdc4e4ee7c6ae36f6bf1610d78f1db04ff1"
+    },
+    {
+      "current_sha256": "cb74ed9266f814aa9a5db821d0503e2c163caa66521aa586155426250eb1f3f9",
+      "path": "scripts/beach/beach_playable_entry.gd",
+      "g0_sha256": "0048150d9d8c4489a37af15ea8296145ec43397912484c43732aba02e5b0337d"
+    },
+    {
+      "current_sha256": "0bca778d84ea3eb42cec6a1aadcc0234b883a546ab6afeeac4b07819593bde6d",
+      "path": "scripts/beach/beach_scene_service.gd",
+      "g0_sha256": "3d3702326237b6513bd649d9657d6285c32a9c0cdefc7be30a0785d1efcf0f1c"
+    },
+    {
+      "current_sha256": "1fa397e5aead27229743c8a8df7b15b6e22189487ddd85ddc800a1f49b576126",
+      "path": "scripts/beach/scene_switch_panel.gd",
+      "g0_sha256": "00f22804953a622de0e237eebcb7e005d8d4cff080f290dd9d556fd625b6aafe"
+    },
+    {
+      "current_sha256": "26dbc0f0efca000e27f7a320bc032b2ae2b6e33cc5577e9599e38e3833aa3be0",
+      "path": "scripts/scenarios/test1_playable_layout.gd",
+      "g0_sha256": "1adf4b860c50baa30223b9611e966284a9a47ba9789b00ad0ac96a93138ca8c0"
+    },
+    {
+      "current_sha256": "ce55a7f3ece5d8cd7fba15b9a8d1cd16a66612a927f1133143807a683d211cb5",
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_boundary.glsl",
+      "g0_sha256": "ec1685d3c83e3ccf59b648b0f71d28061101bbb274ce9493baade264eba0872d"
+    },
+    {
+      "current_sha256": "ef0e368736579cc6a1a6a11eb10d2c7bf6c92d2db4d2836c67578da3c444765a",
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_checkpoint_codec.gd",
+      "g0_sha256": "a1b8c82c71e41476fb4a2b4df835a6fdb9cdd62897c47ebae5168f160a3506ff"
+    },
+    {
+      "current_sha256": "a7352e8e9f9d2b9c4a79b0988c741330c268ee4bdde66ceca50feb486609e29f",
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_controller.gd",
+      "g0_sha256": "47e501eb87402a9e23bed34bd0df232f6c5e818df4bf4f6d4bfa512ee2227470"
+    }
+  ],
+  "baseline": "g0_final_reference_20261018/baseline_manifest.json"
+}

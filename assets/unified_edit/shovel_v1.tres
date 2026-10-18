@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/simulation/unified_edit/tool_profile.gd" id="1"]
+[resource]
+script = ExtResource("1")
+profile_id = &"shovel_v1"
+operation = 2
+shape = 1
+destination = 0
+height_reference = 2
+transfer_policy = 1
+material_policy = 2
+stroke_policy = 1
+defaults = {"depth_m": 0.15, "shoulder_width_m": 0.5, "speed_m_s": 0.0, "trench_width_m": 0.5}
+ranges = {"depth_m": [0.05, 0.3], "shoulder_width_m": [0.5, 1.0], "speed_m_s": [-1.0, 1.0], "trench_width_m": [0.5, 1.0]}
+allowed_water_policies = PackedInt32Array(0, 1, 2, 3)
+allowed_material_policies = PackedInt32Array(2)

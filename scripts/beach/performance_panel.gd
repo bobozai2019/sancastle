@@ -3,8 +3,8 @@ extends PanelContainer
 ## Informational HUD only. Read completed timestamp results without GPU waits.
 const REFRESH_US := 500000
 const GPU_DRAIN_US := 250000
-const STAGES := ["boundary", "water", "sediment", "material", "foam", "audit", "edit", "collision"]
-const STAGE_LABELS := ["边界 / CFL", "水流更新", "侵蚀 / 沉积", "湿润 / 沙坡", "白沫更新", "统计 / 审计", "挖填沙", "碰撞打包"]
+const STAGES := ["boundary", "water", "sediment", "material", "foam", "audit", "edit", "edit_water", "water_tick", "publish", "collision"]
+const STAGE_LABELS := ["边界 / CFL", "水流更新", "侵蚀 / 沉积", "湿润 / 沙坡", "白沫更新", "统计 / 审计", "挖填沙", "编辑水核", "完整水 tick", "沙面发布", "碰撞打包"]
 
 @onready var beach = get_parent().get_parent()
 @onready var summary: Label = $Margin/Rows/Summary
@@ -157,7 +157,7 @@ func _collect_render(epoch: int, generation: int) -> void:
 					tagged_generation = true
 				elif name.begins_with("sandcastle_profile_generation_"):
 					mixed_generation = true
-				if not name.begins_with("sandcastle_") and not name.begins_with("edit_"):
+				if not name.begins_with("sandcastle_") and not name.begins_with("edit_") and not name.begins_with("fp_"):
 					continue
 				var gpu_ns := rd.get_captured_timestamp_gpu_time(i)
 				if name.ends_with("_start"):
@@ -170,16 +170,22 @@ func _collect_render(epoch: int, generation: int) -> void:
 					var group := _stage_for(key)
 					# Godot 4.7 D3D12/Vulkan drivers return nanoseconds, despite
 					# the RenderingDevice class reference saying microseconds.
-					if duration >= 0 and not group.is_empty():
-						groups[group] = float(groups.get(group, 0.0)) + float(duration) / 1000000.0
+					if duration >= 0:
+						if not group.is_empty(): groups[group] = float(groups.get(group, 0.0)) + float(duration) / 1000000.0
 						groups["detail:"+key] = float(groups.get("detail:"+key, 0.0)) + float(duration) / 1000000.0
 			if not tagged_generation or mixed_generation: groups.clear()
 			valid_empty = tagged_generation and not mixed_generation and groups.is_empty()
 	call_deferred("_accept_sample", epoch, generation, captured, groups, valid_empty)
 
 static func _stage_for(key: String) -> String:
+	if key.begins_with("fp_"):
+		if key.contains("_water_"): return "edit_water"
+		if key.contains("_sand_") or key.contains("_helper_"): return "edit"
+		return ""
 	if key.begins_with("edit_") or key == "sandcastle_tool": return "edit"
 	match key.trim_prefix("sandcastle_"):
+		"async_water_tick": return "water_tick"
+		"async_publish": return "publish"
 		"tide", "cfl": return "boundary"
 		"edge", "drain", "update": return "water"
 		"sediment": return "sediment"

@@ -1,0 +1,455 @@
+{
+  "role": "partial_T06_enabled_display_stage_component",
+  "component_pass": true,
+  "G6_pass": false,
+  "completed_objectives": 24,
+  "total_objectives": 36,
+  "T06_completed": 0,
+  "runs": [
+    {
+      "label": "visuals",
+      "manifest": {
+        "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_visual_matrix03\\run-manifest.json",
+        "bytes": 34769,
+        "sha256": "0e5fe965dbc2bdab977ad699b714b70cb8c499b2808098fd7a07842ea6dccd25"
+      },
+      "cases": [
+        "visual_all",
+        "visual_foam",
+        "visual_gravel",
+        "visual_front",
+        "visual_wide",
+        "visual_indices",
+        "visual_edit",
+        "visual_fatal",
+        "visual_bad_cfl",
+        "visual_init_failure",
+        "visual_init_unknown",
+        "visual_capture_unknown",
+        "visual_restore_failure"
+      ],
+      "checks": 657
+    },
+    {
+      "label": "handoff",
+      "manifest": {
+        "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_visual_handoff03\\run-manifest.json",
+        "bytes": 25784,
+        "sha256": "3bd448ca20e4fd765188f70184f0b80089afe99771821b6fda6c787b20dffced"
+      },
+      "cases": [
+        "handoff_visuals",
+        "handoff_preview",
+        "handoff_detach"
+      ],
+      "checks": 171
+    },
+    {
+      "label": "spine",
+      "manifest": {
+        "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_visual_spine03\\run-manifest.json",
+        "bytes": 26319,
+        "sha256": "e0e2bb52a424187128f8229c51c9b6b543c247b9be23f8be3367334d4f77f0f6"
+      },
+      "cases": [
+        "normal",
+        "upload",
+        "fatal",
+        "bad_cfl"
+      ],
+      "checks": 180
+    },
+    {
+      "label": "capture",
+      "manifest": {
+        "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_visual_capture03\\run-manifest.json",
+        "bytes": 25867,
+        "sha256": "7fc2e48ede7fe9d50f07fc654f5faecd4a2cb830c9b87032f049589c7aa74e47"
+      },
+      "cases": [
+        "checkpoint_queued",
+        "checkpoint_capacity",
+        "checkpoint_unknown"
+      ],
+      "checks": 654
+    },
+    {
+      "label": "coupled",
+      "manifest": {
+        "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_visual_coupled03\\run-manifest.json",
+        "bytes": 23835,
+        "sha256": "02729ec6b471d2685338dcc30ad0fd8e8548db6d0c2361c1076be569839e59c2"
+      },
+      "cases": [
+        "coupled_3_molded"
+      ],
+      "checks": 23
+    },
+    {
+      "label": "views",
+      "manifest": {
+        "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_visual_views03\\run-manifest.json",
+        "bytes": 24815,
+        "sha256": "fc6a6dea25a6f879da6f2bbbbce1d23cf56ed2fe7cd6841a00b4d9b2057f5ea1"
+      },
+      "cases": [
+        "views_core",
+        "views_fatal"
+      ],
+      "checks": 452
+    }
+  ],
+  "GPU_cases": 26,
+  "GPU_probe_checks": 2137,
+  "common_runtime_source_count": 170,
+  "common_runtime_source_hashes": {
+    "assets/brushes/castle/four_towers_v1.rgba32f": "42f4654b2a40688fdfb936a790c1c08f0d2f4efbe6d1aa3bef91f2598089e833",
+    "assets/brushes/castle_v1.tres": "47b6f19647d04996d4be6f6df5b3b99f0bc76abd3a90a3e1792d26506b6b9a0b",
+    "assets/brushes/molded_material_candidate.json": "1936e7dfc654a7a5dc5e9307d880c85e7cc7f48b128372ec622f5b68b7af2890",
+    "assets/brushes/protocol_v2.json": "c74983277c081285385896b7d91b52e2b83b212444086a18e2dd007445aeb507",
+    "assets/brushes/shovel_v1.tres": "8681fbfe01a98a5af25ddbfe2a78bd747e43313174b4094db80176fb3c0fc343",
+    "assets/brushes/wall_v1.tres": "e65b5949fff433149f5274f289f12ff6cac4c924d39ae9b2a4dd350a28a9cf34",
+    "assets/unified_edit/castle_v1.tres": "4944fa37e4d037a96ab2bc8c41191b4590c6778ddb56d4bf03b43472cce3520d",
+    "assets/unified_edit/compact_v1.tres": "4054a6df232ea8eb63e69fb20284d98cd7dbba945cab6ee2cf6518379fb37802",
+    "assets/unified_edit/default_catalog.tres": "c4d517c1d778f92a560533b1f140f208d1eb035580fa5149f4a6e7597a2ccfd4",
+    "assets/unified_edit/dig_sweep_v1.tres": "f24798e571f6cb309292ff78b0fdfb4cc93b480739fbf200acd873e6b1749cd5",
+    "assets/unified_edit/dig_v1.tres": "c282b0206f1961e6ed43fd7d4a7bd983ab847057da54502917fcfea0bc97e136",
+    "assets/unified_edit/fill_sweep_v1.tres": "9be98ddd1489278f7544b7bb8555018b8668c3e203d1b291cc23b8dfbe014fff",
+    "assets/unified_edit/fill_v1.tres": "59ab1c2ac14b40b20fc082c0ab13d783c28167da89c652ee03cf178d9e81d49e",
+    "assets/unified_edit/four_towers_v1.tres": "4a0a2b40adca14741b5365a1b25736e2d4e21778f1576d1455792eda0b1b98f9",
+    "assets/unified_edit/shovel_v1.tres": "346826e4f0e5203b8425ef854be79be5a49e8a50c796ea6eac772f50a9756f38",
+    "assets/unified_edit/smooth_v1.tres": "01731a291186884bd9cebaa76babd7acf09c9cc6fa2db82c4b243f06b0160fb7",
+    "assets/unified_edit/suspended_sweep_v1.tres": "d1551bb2e05169355778754f8fa38469ace041f035fbcaf460c32bf37c6d4c9d",
+    "assets/unified_edit/suspended_v1.tres": "587a3926894f434d1a95a41ab91b56559b4d70f25913982c59ba817cd45eb90a",
+    "assets/unified_edit/wall_v1.tres": "181374910e104a061a37ac78520881f3a70741248f49fcfb94931daab66f17ad",
+    "scenes/unified_edit_height_surface.tscn": "76ec932ebd6694b9d4bfafa10ab94e0083e88ef85a3dc0669afd35b8d5559dd7",
+    "scenes/unified_edit_runtime.tscn": "bbc141dba36f68247494840a42f6d29e76222eb4904d12eab4f28e5c8f5f9e34",
+    "scripts/collision/collision_prepare_job.gd": "629fcfde9d4edb14e446ee1970f03b9ae9d4da364979150f35a0182aab46fb6b",
+    "scripts/sand/brushes/brush_command_queue.gd": "f08f39aa7b80fc99a6756ff195ae1481ab8d8bdb7a5a3efe6514eb9c23c77c7b",
+    "scripts/sand/brushes/brush_definition.gd": "63f682e4f20161b4bbd193bd5264bd9f51cab79606ba38b9695d8b512d66c161",
+    "scripts/sand/brushes/brush_preview_view.gd": "7ad3096626b81c6b831ef56188c1343b3f56c2f1e81e8667343b3829be7aad24",
+    "scripts/sand/brushes/brush_registry.gd": "64d3520ce0c519cb34f46636ba59a6bcb3c8aae45edbcca2ae1ffecd10f35631",
+    "scripts/sand/brushes/brush_spec.gd": "2532c325b5ad6a615731830a08d86b2c33dd446e8a115aa336b9371b539d644c",
+    "scripts/sand/brushes/brush_tool_panel.gd": "4e54c2a19f25d3ac564db57a44be7df2bd80baa54b10e4956e8f2a0005c37b68",
+    "scripts/sand/brushes/stroke_controller.gd": "29fdca82d9f4836760fa46bc3f120b70b3d55204cce14f97a8ea3804bcc4b45f",
+    "scripts/simulation/brushes/brush_checkpoint_codec.gd": "382a60b69ed7b0930099142d56c2adbbe54d58753d217aa7a8112c984798adab",
+    "scripts/simulation/brushes/brush_gpu.gd": "a9ff955f47af20516ab358edd40d021e0dabb4754a8dd1e412d323b8238397d1",
+    "scripts/simulation/brushes/brush_material_coupler.gd": "2a5b99a4fd8774eed32b46d59ab6ec81fe070b329c6b1cbf8ea88063f6c1e6a8",
+    "scripts/simulation/brushes/brush_material_solver.gd": "4229d6c9fc7321ce46ef93c742427c80e19f46a4c78b4a53138afc4461ccca6d",
+    "scripts/simulation/brushes/brush_material_state_codec.gd": "c0d0394abc3b89c3587dc5057ae6a54e1458e97ab087a81a40bd4bde353b6ca4",
+    "scripts/simulation/brushes/brush_material_transaction.gd": "b28f0106f5d18c380725ae422086f161659b28449dafc764e39b05a8ba2a44a5",
+    "scripts/simulation/brushes/brush_preview_query.gd": "d2e4f842fa83633cc5ae60be653bbfbf5e09e2e31f85d7907195ee01c6d21978",
+    "scripts/simulation/brushes/brush_protocol.gd": "94083fc3cd6869a28bb2b68b024e469781ae2b6cb54f16d1b79ecd672f8ad463",
+    "scripts/simulation/brushes/brush_scheduler.gd": "9e58c174cdc4cfcb961c547d69cc896440ca62a999d1b3fe8855a9f368b260a9",
+    "scripts/simulation/brushes/brush_water_transaction.gd": "744e89495bb88958c2a056945f47fd94b44a7758a467e59d9c3b2c66a7ebb56e",
+    "scripts/simulation/edit_validation/checkpoint_foam_field.gd": "1cfaa95ec19bde30c6769a26746275994cb634efad4f760c4925f13945de74ce",
+    "scripts/simulation/edit_validation/edit_protocol.gd": "7c00201b41929064945fa502bcb9f28cc9d60d346941091c1b4abb9d58e33de6",
+    "scripts/simulation/edit_validation/frame_pipeline/async_boundary.glsl": "a6226484e71e726a1ba7d68bc3d50a8ff89891904eeef6d71a659be484203477",
+    "scripts/simulation/edit_validation/frame_pipeline/async_bridge.glsl": "5d12ebefb8ebbd3a86a77ffeabd7dea3fe6d923b412d7951dcbac74ee927f960",
+    "scripts/simulation/edit_validation/frame_pipeline/async_capture.glsl": "9cf9a6f9caed1835e7adce9ee76f1b3331ce613e295fe483a77dc45e6a4db780",
+    "scripts/simulation/edit_validation/frame_pipeline/async_cfl_decide.glsl": "e7dfb3973a447415ddca4a0d6f19ad496dc5499d025016d804d9d4ee96a6c6b6",
+    "scripts/simulation/edit_validation/frame_pipeline/async_cfl_tiles.glsl": "06875caf6af822cb96ee8f1f009e246ec689a0a1feba4aaf73bebfb3f3824ac1",
+    "scripts/simulation/edit_validation/frame_pipeline/async_checkpoint_capture.gd": "558544b896d6069f973b3f2e8568bb6ca9fa9cd8d3370b33065deacda9c865b9",
+    "scripts/simulation/edit_validation/frame_pipeline/async_checkpoint_codec.gd": "ef0e368736579cc6a1a6a11eb10d2c7bf6c92d2db4d2836c67578da3c444765a",
+    "scripts/simulation/edit_validation/frame_pipeline/async_clock_variants.gd": "3c96c317fb78116f57ad3e3f8bf39d23486de303a82e8d2a9be73ff7be1f0d73",
+    "scripts/simulation/edit_validation/frame_pipeline/async_collision.gd": "d5a83fbee79228128fd3307535b46817ddb3b18dfbb7f819dd465f7e8ca5c6c1",
+    "scripts/simulation/edit_validation/frame_pipeline/async_controller.gd": "562cd38053e8c5f7fef96d70268b0e4f17f5f3ef9a121c9b94b93c37cdbbabc4",
+    "scripts/simulation/edit_validation/frame_pipeline/async_coupled.gd": "779f48e98f58d4818a0b1d6b5aeec28bbc5b32dfe6019a63c5f722dac62c3aa3",
+    "scripts/simulation/edit_validation/frame_pipeline/async_editor.gd": "1a7bd53a0d2bff0154993f9cd172edb07d1121b05e41c32c46514f931aee2b7e",
+    "scripts/simulation/edit_validation/frame_pipeline/async_gravel_normalize.glsl": "19ad04695cb760264e6080bb46c9b00d4b07ff5cb6ebaa124458566c5e4d17a0",
+    "scripts/simulation/edit_validation/frame_pipeline/async_height_codec.gd": "d5e5b03c8ae9a1c77fb3c458ff6886676126c77c666eb79c1d195c5485c9588e",
+    "scripts/simulation/edit_validation/frame_pipeline/async_height_pack.glsl": "f0e0674b4676d990916776bbac5cd71b96fdae31d0500f9ba83218516d1ae32a",
+    "scripts/simulation/edit_validation/frame_pipeline/async_legacy_migration.gd": "4609f53f315a2688e7ff368ba0b198881069739abaab31c2d3ee879ddb3f9fc1",
+    "scripts/simulation/edit_validation/frame_pipeline/async_normalize.glsl": "52cca694a0bf455d386541782ed2d765d05541ffd19c2f235390c0d6f3fc75ba",
+    "scripts/simulation/edit_validation/frame_pipeline/async_protocol.gd": "312ed81688880954a12c1e6d4df3c34ca7d9f22ca0c9e184b8e2e9f4925e6750",
+    "scripts/simulation/edit_validation/frame_pipeline/async_restore_bundle.gd": "bd57e8138ed0627847071d1cff8007519a0d544eb17a1c662b13f0e70c7add09",
+    "scripts/simulation/edit_validation/frame_pipeline/async_scheduler.gd": "bb143cbb8142648cebf7d0c156d35cd399df4be99c378f9fd4432fd9fca98fba",
+    "scripts/simulation/edit_validation/frame_pipeline/async_seal.glsl": "11ab3b18d815e81a2b1906ff27b894ce8225c512962881bd6ec995365037d098",
+    "scripts/simulation/edit_validation/frame_pipeline/async_select.glsl": "95436c3861967f9a67c17eca18563fb26a48de613878784d9bde286ff8c35043",
+    "scripts/simulation/edit_validation/frame_pipeline/async_shadow_read.gd": "40c7669054d467d12d82d582884e8ba3b2064687e4d7d4945466fd05cacb0533",
+    "scripts/simulation/edit_validation/frame_pipeline/async_sim_finish.glsl": "71229a60bbea62762a77ae3ee481819792eae4cf6ff11ea30a7ebb833be87a8a",
+    "scripts/simulation/edit_validation/frame_pipeline/async_slots.gd": "7dbad972285e515eeea88d5586e149536b27444eb869ca8061ab8b98314ac2ba",
+    "scripts/simulation/edit_validation/frame_pipeline/async_smooth.glsl": "787d664ce2a6762bc9b4d526357d6d2f63241a8e8ff33e6e723abf2a4c95320a",
+    "scripts/simulation/edit_validation/frame_pipeline/async_terminal_guard.gd": "08c47247c2a6f7a4d8a0c7937d580cb575ca28e23c02c8e0f388d7b1cfef518c",
+    "scripts/simulation/edit_validation/frame_pipeline/async_tool_capture.glsl": "07b77d4c0cfea25e0dbc80bc8e5fee98876885d8d7aef92182bb975756b71630",
+    "scripts/simulation/edit_validation/frame_pipeline/async_tool_select.glsl": "ae6be9e16289e1a2766a0448c41640192833a6bec23a0b90420ae06766168059",
+    "scripts/simulation/edit_validation/frame_pipeline/async_tools.gd": "7ac26ea4c5d5f0020c5a6f5afeb04652cbe7fe66c0895d3d017159bfdc817451",
+    "scripts/simulation/edit_validation/frame_pipeline/async_transport.gd": "bd1fad594d7cdff8b6225850b644672d3c95f3f26c8f36b9b791fd57a05221be",
+    "scripts/simulation/edit_validation/frame_pipeline/async_visual_normalize.glsl": "ba58d5b1739cb5078e5eb87438ba101e8df5f8adac0f3acfb80b8149e96a39d8",
+    "scripts/simulation/edit_validation/frame_pipeline/async_visuals.gd": "246712a7dde239f6312c4fe52267bdcfc3b55cdb833fbc07547873d5668a1856",
+    "scripts/simulation/edit_validation/frame_pipeline/async_water.gd": "82f3d2a13987fb704b9f13ea8898df056c427f78b02416cd7818adbd5fde17a4",
+    "scripts/simulation/edit_validation/frame_pipeline/capture.glsl": "861e5463638fbead36e918884656f454b742608c464df2940bbbf40250a32fce",
+    "scripts/simulation/edit_validation/frame_pipeline/controller.gd": "eba3874aac33266f449ccde99b56285aae7975345eb00fc8cc7f02655bd514f7",
+    "scripts/simulation/edit_validation/frame_pipeline/editor.gd": "ff306de8483aa9b244c1465e4167653176d4670ccadf6531fd79204954702160",
+    "scripts/simulation/edit_validation/frame_pipeline/layout.gd": "4c3e25e5b803edc54ed954e711f59f21cb3cab92580fc888af0154dd2ecc52ad",
+    "scripts/simulation/edit_validation/frame_pipeline/select.glsl": "b9fd2ff6aeb24836cf809c28382ccd6356b7061d033cc91f5d8ea75e3f009acb",
+    "scripts/simulation/edit_validation/frame_pipeline/validation.gd": "aa329de59d707ce5444906f2b93d57d17ed53d447ffa9ef4989f878c459e5dd9",
+    "scripts/simulation/edit_validation/staged_slope_coupler.gd": "3786237bafb640995bfabb66ef7a758bf9ceb892681e32a7df56399f136162d6",
+    "scripts/simulation/erosion/gpu_sediment_coupler.gd": "9d5dc9449f3d722cb981204f90bf9b033136914ce61959c3f62e821c6d79381e",
+    "scripts/simulation/gpu_shallow_solver.gd": "ada3029ee6bf71d185988a1587c8e71e8b54226e97503a9fe076e36e53058aab",
+    "scripts/simulation/material/gpu_material_coupler.gd": "81bd1712b4f3d6923848387b625a0933fe6669ecb3dd1b4eac95f25816cb0e7e",
+    "scripts/simulation/sand_water_domain.gd": "449b69482a2de6347a3562b6610507b2669bb8bcdc34cb6e15e363946866cadc",
+    "scripts/simulation/unified_edit/api_adapter.gd": "a12f2df91586143a6c69fa89249d121a03c0dd3265d7feeb42bee12542f5834e",
+    "scripts/simulation/unified_edit/cfl_decide.glsl": "8d246db53a1d2b72ae252e68d906b71166b64bc7782244c4f3c6c47757e19e5e",
+    "scripts/simulation/unified_edit/checkpoint_accounting.gd": "1499528bc012a12cbdcad48dab2236d88f70b2e1e95bfc7ded9c0ee6af58ac39",
+    "scripts/simulation/unified_edit/checkpoint_capture.gd": "5d8888272efaddae1c9f39e406ac1f310fe7c470a5d6bf49ce5d34ed818ee29c",
+    "scripts/simulation/unified_edit/checkpoint_codec.gd": "01dfb3288867d92f72928b50307f70702d2ef3150ccb092eac2a28b1dc261eaf",
+    "scripts/simulation/unified_edit/configuration.gd": "2f86c5cc8b6f73ef69e1cd7ee789495bcb0ec254166bcefa000b36d4baccfc6f",
+    "scripts/simulation/unified_edit/coupled.gd": "8da731de5d0b1d82e7579c4360a25e27534c574d9aa5f882dad27be2e6b94378",
+    "scripts/simulation/unified_edit/domain_runtime.gd": "478b473dbce2671a66532eff9a3516a7b26ae17dc6b3e1d2105df56d07f582b5",
+    "scripts/simulation/unified_edit/edit.glsl": "e893acf357c0859f3881c8dcb58a55440fbd370ba8a27b045acffeba576bcec3",
+    "scripts/simulation/unified_edit/executor.gd": "f57c4bf157df609b9e922e038c7546914a9ae0d0cc76c7d23b9b92d270001751",
+    "scripts/simulation/unified_edit/gpu.gd": "fcb28e68b22c0b29b31d2d7c4c20822782018ddc3f7a55e107e3c2fb54926f68",
+    "scripts/simulation/unified_edit/height.gd": "757b00b1c9ff942d5d802b09a530e7f325a496d476137c7bd3fde459f0ca119e",
+    "scripts/simulation/unified_edit/height.glsl": "f7d513d34930938e24a7ccd3b8e0cd8a543914e1af33e6e7e8b17307ff293ff6",
+    "scripts/simulation/unified_edit/height_codec.gd": "f4f0ac9cb9877c57b75b17825dc305d819769d268587cb6402b325fc840ff8ed",
+    "scripts/simulation/unified_edit/height_stamp.gd": "a2b8d8d940f8ef7b2af13232c0f7bd0b1888e5ed8f1e074885f656b2203f48d0",
+    "scripts/simulation/unified_edit/height_surface.gd": "257d20fce15c3090a01d8a18207e2176aba7d4be52b0426790073048ec72d716",
+    "scripts/simulation/unified_edit/idle_fence.glsl": "1268fcb20b1d592fac6b71fb68ddeca4eae63a23bcf217b02161cebb44005e77",
+    "scripts/simulation/unified_edit/intent.gd": "347fbc161a5295d8c597dd2a5c6b2853fd146f9b9a45eaa6aefd7a7805f6319f",
+    "scripts/simulation/unified_edit/layout.gd": "fc2460d63c51315c85a60680adb7ee62e2ce84868e8e44adb6992c146a27ee52",
+    "scripts/simulation/unified_edit/legacy_sources.gd": "b282e4605fa51ee419768e7f23aebccb2679514d026d41e671e164f5443311a0",
+    "scripts/simulation/unified_edit/pipeline.gd": "a7c0d29f1c4b2cf01124391df3d02240caa5c8cb9961c1d6d6d8a43f48913efd",
+    "scripts/simulation/unified_edit/profile_catalog.gd": "6d4651c5d6cc5209cfe0696e3f6ef7375b9444ed2426fe94b1592c0b2473e0a4",
+    "scripts/simulation/unified_edit/profile_registry.gd": "bb9c304d1108c039183d246d119be5b0253636c9b3cc709cdb4b38dc5b1005fd",
+    "scripts/simulation/unified_edit/protocol.gd": "b34365c5f3172d957dbdf251fba9796e966fc9cdadf322cc0d8153b74b375e2d",
+    "scripts/simulation/unified_edit/protocol.glslinc": "fb80880bc8f8ebe9cdcee3e2c1427a7b0997d410146eaae23c52e97b963492ad",
+    "scripts/simulation/unified_edit/publish.glsl": "84f60cbb6d59a60e5481b2ce7b00ce438ff90f659c03d2bf7ad3971308dba0f8",
+    "scripts/simulation/unified_edit/restore_verifier.gd": "47f2e8b5693a830b15cc60f0ce91b4e59fd4b23c6cc8085953b72dc91c98c0f2",
+    "scripts/simulation/unified_edit/slots.gd": "72aaa139c95b1e352bf9ae1a5f56e8dfd9855ce6abd6fc0740ddd3da3e9f82f1",
+    "scripts/simulation/unified_edit/state.gd": "125b6317ebf10cf84df89fefb79c0ba0aa9a83a44ae5f890f5c4793a603421df",
+    "scripts/simulation/unified_edit/tool_profile.gd": "ef5d2b4b6bdfee6d8d0a8d5ab76e80f10a64348acf62c133c75dfe057e03b844",
+    "scripts/simulation/unified_edit/transport.gd": "060e00341524fd7605def902e2936449c839e57722c7fe56ffd79d1e8adedc78",
+    "scripts/simulation/unified_edit/unit_half.gd": "3d0d323b653df1f9237525e3b42a2c395ffe3a585ecb68ab8a5bd0d9a03e573a",
+    "scripts/simulation/unified_edit/view_publish.glsl": "56160ffa358b59456f754126204042edf3e3cea77fc3d505e43fb5891fdc9816",
+    "scripts/simulation/unified_edit/view_query.glsl": "9a1c36a38c6c02107aa60d499018635b85ae76849aa11788ff47af8e09ad24fa",
+    "scripts/simulation/unified_edit/views.gd": "15865a8b71286699c7f858ee6c04fba8595a190a0dd12e866b2c1c548b6c61b7",
+    "scripts/simulation/unified_edit/visual_edit_finish.glsl": "0a6c2a1ef102918ed5b234f85cd859048d1a8d3befcef5f189809a7361f4f987",
+    "scripts/simulation/unified_edit/visual_finish.glsl": "10f2a79bec43f77b80d77f674e60df7123876931d1473a5cf38c47182b38e5c7",
+    "scripts/simulation/unified_edit/visual_publish.glsl": "e517e7dd58218ee764a1d773c20e2c714e880dfc01f151188834c43cfa70967d",
+    "scripts/simulation/unified_edit/visuals.gd": "34922c5dfbf2424dcac203dec7af6b51610082401f12422e61e3c628f55d86bb",
+    "scripts/simulation/unified_edit/water.gd": "c70e882249044aab7518691ae6238cc15ff2be115329ecf5a08be1155c35296d",
+    "scripts/simulation/unified_edit/water_response.gd": "138290d17361cadc5798a06de61d3bcf77408d234721e6acb69222b0d2413136",
+    "scripts/simulation/unified_edit/water_response.glsl": "fcde586830e793490def32a6d193004bcd7f35522c830b168f4dd09ceb358d46",
+    "scripts/simulation/unified_edit/work_begin.glsl": "e2335d7b64007e6f0d60591db2106526f7c9cc295db63444f0f1339aa86f52b9",
+    "scripts/simulation/unified_edit/work_seal.glsl": "26434191421521492b5a63160cb4ae8674b1b8773205cb868b083bc1f8d6866e",
+    "scripts/visual/gpu_foam_field.gd": "61328906de62d414a197516d38895ae1a376eb45a6a4fe201a0b5598035a1cc4",
+    "scripts/visual/gpu_gravel_field.gd": "f634064e9f279faf16827229157b7435f12903579324fbefe64b07f2e42b367d",
+    "shaders/simulation/brushes/mold_support_step.glsl": "02b3dd96f818c304fa723336f4891c4666bf8562c9a874a737b6416a51324e03",
+    "shaders/simulation/brushes/molded_slope.glsl": "808103f691329ca21bba69cc6e309c857134b5fe666d22a6a4a50c47abe0417d",
+    "shaders/simulation/brushes/water_velocity.glsl": "8eb603352628990694c6726be12f2243d4ff46993dfb8fadcd851c1ffbf1f784",
+    "shaders/simulation/edit_validation/staged_slope.glsl": "8777b5baa680a9fb4d1eb66176a92b058972b2cb1fe713b49c07ae8d2d39bf00",
+    "shaders/simulation/edit_validation/staged_slope_consume.glsl": "da10584e13400f2c9e957ba32aa6dfecdc4cd08cf1bd07c74877028773ef83ba",
+    "shaders/simulation/edit_validation/water_displace_compensated.glsl": "8b161dbf853c8916de189f745e1573380fcd2f687680cbe83887d5e8867c0641",
+    "shaders/simulation/edit_validation/water_packed_cached.glsl": "cd8dd0f5419d1b423158caf004ed3d5a297ee51e801159748005ad49103cd543",
+    "shaders/simulation/edit_validation/water_velocity_apply.glsl": "596f7218795638eb4f780671eed62f2cffecf3ad9ebaf2177fe460927a55f0b7",
+    "shaders/simulation/edit_validation/water_velocity_prefetch.glsl": "9cf7459b99ae2932a63068416cac6875844e8582dc5e58a33771f0c595f3c77d",
+    "shaders/simulation/erosion/copy_after_boundary.glsl": "dbae28c2350fb4551bfb214a38c60ac90d2e660b2ad68575ab62cb5e04306282",
+    "shaders/simulation/erosion/sediment_step.glsl": "02ff254c037da330de571d2ecc2edc13711295a44d226917fcfdb98412c743c9",
+    "shaders/simulation/material/material_commit.glsl": "a5ecfc44668a97d519677fc9769eb22638cab5bd4b932e6e225abd4642977979",
+    "shaders/simulation/material/material_step.glsl": "290b44d3fb13ab2b4d7da27e4fa4f93e070244ba11ad450b8356067280f60aef",
+    "shaders/simulation/shallow_drain_scale.glsl": "f36e5a1a0b50f867ca89571a12033ba8dbb059a5a1a481bca07e43a1cf87fdbe",
+    "shaders/simulation/shallow_edge_flux.glsl": "621bc8ec3738d896cdf68c2fe20d306f0d1bd87817f3e917214a9f91b84dea4e",
+    "shaders/simulation/shallow_update_state.glsl": "fe373e7d793d0cc126db241fe0c81e5b3aa2b7d70b37c7299f21418d81b76185",
+    "shaders/simulation/visual_foam_step.glsl": "19d7bec7f157791f75e0b4a63bd04c7ae8dc06eb82e016f1ea96ae8174e6edb0",
+    "shaders/simulation/visual_gravel_step.glsl": "187e52c7ae677aba712bf441c29fe4268578327dab6fb19186a2439c5e0e6799",
+    "tests/fixtures/unified_edit/view_consumer.gdshader": "5e6023297811f0ba24f34f610786a3bd98319b044cf14219e6552e4d4c426428",
+    "tests/fixtures/unified_edit/view_consumer.tscn": "beebf16e69502f7180ab69d193efa3341e0130ebaa70ca4ed002f9865088c280",
+    "tests/fixtures/unified_edit/visual_consumer.gdshader": "42ecbf783fd25393a8c7e778f858825202cb2833f898cc8eede7ad777f17f74f",
+    "tests/fixtures/unified_edit/visual_consumer.tscn": "92ab2cf007a2dff63204a91f2c74e2c62a92a9e01f9dfe209aecac4c2b3815af",
+    "tests/fixtures/unified_edit/wall_small_buffer.tres": "582e51d3488442bfe193f377159550c6894edfd9e6917af05c580f51a0704626",
+    "tests/integration/unified_edit_failed_views.gd": "efe57c13371b13ce9b4bbc0ead2f453d7ddf149bb4e2fa7e202e18312ae11a61",
+    "tests/integration/unified_edit_gpu_probe.gd": "bb44c9335be9aaa2322511e7085548f073e89a156a6f18460cb53dcfa314c8d7",
+    "tests/integration/unified_edit_height_probe.gd": "c0a88ece8d3043ec4c509624fbc7951f4a125bbf5b9049614703b6ae7aec49b4",
+    "tests/integration/unified_edit_legacy_coupled_reference.gd": "4f71e1a28c8fc68fc903ebddc5fa9000f9802caab7c7271365b63bf131b1b78d",
+    "tests/integration/unified_edit_legacy_response_reference.gd": "9e192b77b5e39e2fafcea14d24cddbcc2dfca6a5f750ac37539c4bcd947bc5a9",
+    "tests/integration/unified_edit_legacy_visual_reference.gd": "65557c7c244a2989e9ec77b054fd5eaaab73b5a70708965f7dfe7b72cd634fd9",
+    "tests/integration/unified_edit_observed_executor.gd": "47cc04d2c61beb86f7c163306793648e0c2043086856a4669b3014f6e3f7f828",
+    "tests/integration/unified_edit_restore_probe.gd": "6c2e3447dae2cf89f7823ecabc925f93f43ecfc3a69ec44ef63bf4997c0e9acd",
+    "tests/integration/unified_edit_suspended_probe.gd": "e1d12458f55398d3cb969524dd6226daaad21937303d461cb80ed1abbf7d6f1d",
+    "tests/integration/unified_edit_target_probe.gd": "fb305e344053bf5fea755c2dfae913522ed102438f7868bd449c8f1f8f2d59a9",
+    "tests/integration/unified_edit_timed_pipeline.gd": "1b8389084b9a0876cab596d7ff53f6728aafb0131bb7d511e0eb966a859eb3e2",
+    "tests/visual_water_alignment/prototypes/reference_local_front_field.gd": "f791d419826f9797a7d12949a3aa50f08c3024460a58da2de0221c36cce2d276",
+    "tests/visual_water_alignment/prototypes/reference_local_front_x.glsl": "1ca06648fc517bc6d01b66780af1d1e66cfe2978ddd2f00e5ac763658799d13d",
+    "tests/visual_water_alignment/prototypes/reference_local_front_x_wide.glsl": "3e8c3729eb40b07a36772aa25ae8c3f10b5d3f137e7b19721669df6ed4098004",
+    "tests/visual_water_alignment/prototypes/reference_local_front_z.glsl": "dc986bfa7e64e6f05f814a1eed3cef2eef1bd5e72025a1c9475d90c4855ddfae"
+  },
+  "independent_audits": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_visual_independent03.json",
+      "bytes": 464003,
+      "sha256": "cde3f0c0b835d17de17b262f0a62bc719224d21ae43587f6145d4b7b329f4448",
+      "checks": 4843,
+      "raw_cases": 0
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_visual_handoff_independent03.json",
+      "bytes": 40299,
+      "sha256": "5a7923174f875f4fc45da0603af7d6fc7e85f9a16e94759e8683282b7d11ce6b",
+      "checks": 432,
+      "raw_cases": 0
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_visual_spine_independent03.json",
+      "bytes": 1360,
+      "sha256": "94017c78e22bce344786ea7f57c557c04a644a77d1b15a566a3ffd2cc2d32c0d",
+      "checks": 0,
+      "raw_cases": 4
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_visual_capture_independent03.json",
+      "bytes": 87048,
+      "sha256": "44ac58392766e7af3cee92f20e4477adcc608e9c8cb0882e5edffbe30a941bd3",
+      "checks": 806,
+      "raw_cases": 0
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_visual_coupled_independent03\\result.json",
+      "bytes": 4128,
+      "sha256": "525fbcb5973e880547709ec370b4a0c45f3faa4fa79ccf4dcb5e4d6eb9351625",
+      "checks": 28,
+      "raw_cases": 0
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_visual_views_independent03\\result.json",
+      "bytes": 98174,
+      "sha256": "9891c3fd41dcd77942f1c17f8d953c2d8be4906bf1cc266c822332d33f8ac2a0",
+      "checks": 793,
+      "raw_cases": 0
+    }
+  ],
+  "cpu_regressions": [
+    {
+      "label": "protocol",
+      "manifest": {
+        "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_visual_protocol03\\run-manifest.json",
+        "bytes": 13965,
+        "sha256": "ee72a73a1801fcb8d11c8b22cd2f5104535fed7dc323f7f7b950a7a0bd26a923"
+      },
+      "checks": 212
+    },
+    {
+      "label": "configuration",
+      "manifest": {
+        "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_visual_configuration03\\run-manifest.json",
+        "bytes": 15420,
+        "sha256": "7c7a1743a447e46bd8d4d07b5fa88357c1566b4c97dd86b81f05c0f81258d23f"
+      },
+      "checks": 87
+    },
+    {
+      "label": "runtime_parameter_boundaries",
+      "probe": {
+        "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_visual_parameters03\\probe.json",
+        "bytes": 15700,
+        "sha256": "3c800df7e7c5ac68de87905817c0e226eebe4e962d3acd38940071e2ab1e85d5"
+      },
+      "checks": 49,
+      "source": {
+        "path": "D:\\godot\\project\\sandcastle\\tests\\integration\\unified_edit_runtime_configuration_probe.gd",
+        "bytes": 3762,
+        "sha256": "82c7704fd130808f6743b10126b316ebef83f43d0aa4a3cbc679d4ebfa6b6967"
+      }
+    }
+  ],
+  "source_archives": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_visual_final_sources03\\visuals.zip",
+      "bytes": 398596,
+      "sha256": "3d130b6ad877fbe3016116cb537cff0e5aa5f7b385039cd0e81f95437b66b62e",
+      "sources": 192,
+      "all_members_verified": true
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_visual_final_sources03\\handoff.zip",
+      "bytes": 400724,
+      "sha256": "779b546d9ecfd19b99d12c286f8cc983b2b57dac38276c7d92af265cb890f2f5",
+      "sources": 193,
+      "all_members_verified": true
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_visual_final_sources03\\spine.zip",
+      "bytes": 396151,
+      "sha256": "8535e51620a06dc041b6ef402d62e662173d26f1a56f03f1645bf8c4b3375be5",
+      "sources": 192,
+      "all_members_verified": true
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_visual_final_sources03\\capture.zip",
+      "bytes": 402496,
+      "sha256": "f8b4fd7b877f922ce21d26893ec8abacb5152eb1a56d33d58479959c5b232ab7",
+      "sources": 193,
+      "all_members_verified": true
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_visual_final_sources03\\coupled.zip",
+      "bytes": 395914,
+      "sha256": "8b8fcc1e3bcf932fbdb4fa613fcb02b52351272fae26f1d3ae7d4f88b96f77b4",
+      "sources": 192,
+      "all_members_verified": true
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_visual_final_sources03\\views.zip",
+      "bytes": 400373,
+      "sha256": "20a2ef731729949e60def5ea6b14b9fb3df18240f70429895b3211899c308404",
+      "sources": 193,
+      "all_members_verified": true
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_visual_final_sources03\\protocol.zip",
+      "bytes": 205528,
+      "sha256": "a432b3199d397b5d2d5c464abd67581274ed593c14b9ff32058e0d005d8f55f4",
+      "sources": 125,
+      "all_members_verified": true
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_visual_final_sources03\\configuration.zip",
+      "bytes": 8118789,
+      "sha256": "3719becbfc7e018ce044486f557fa24dc377cb6130cbb28b9052641841a0b673",
+      "sources": 135,
+      "all_members_verified": true
+    }
+  ],
+  "builder": {
+    "path": "D:\\godot\\project\\sandcastle\\tools\\unified_edit_pipeline\\build_g6_visual_component.py",
+    "bytes": 7031,
+    "sha256": "81f7b71fdec6c0e3c5356c8af42c81f941a22c955e318ba567c4b904fbc041fc"
+  },
+  "verified_scope": [
+    "Optional foam/local-front/narrow-or-wide/gravel stages use retained shaders once per actual GPU water tick under the common decision",
+    "All stage RIDs belong to existing Water lifetime ownership; no second simulation pump or tool-private publication loop",
+    "Published read-only visual clones share the same sealed state as sand/water and stay unchanged on fatal, including earlier partial private physical edits",
+    "Original standalone visual recorder classes independently match the common stage bytes on the same physical inputs",
+    "Pure edit completion reprojects gravel onto the visible final bed without advancing time; guarded common copy protects stable visual slots on fatal",
+    "Enabled capture reads actual history and publication bytes, restores both visual slots including index=1 and distinct inactive bytes, and verifies actual registered candidate readers before admission",
+    "Actual PNG materials, continued edits/ticks, enabled two-slot domain handoff and generation ownership are checked",
+    "Optional-stage initialization failure/unknown cleanup, bad CFL, midbatch revision exhaustion, failed candidate and capture registration/unknown boundaries return all eight owner types to zero",
+    "Typed wide flag and gravel count boundaries reject invalid runtime configuration before RD allocation"
+  ],
+  "provisional_evidence": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_visual_boot01_sources.zip",
+      "bytes": 389999,
+      "sha256": "7874614040696722b3c0ed2655b0ccaaaef7c03650cbcc5644f3d20b54e882c8"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_visual_matrix02_sources.zip",
+      "bytes": 395032,
+      "sha256": "6e1a70d678bb282dbb0465555924b7edd50880410ffed15a1a85c897b2812a19"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_visual_independent02.json",
+      "bytes": 283757,
+      "sha256": "9f7cbe760986d2402a1d8721d76782c718e1029e743500e988c3cce5e4472398"
+    }
+  ],
+  "source_tool_difference": "Visual matrix runner was archived before adding only the handoff_visuals whitelist label. Current runtime source hashes match across all groups; each archive retains its actual runner.",
+  "pending": [
+    "Prescribed tide/wave native capture/restore and actual geometry-backed tide_mode3 boundary",
+    "Formal main/test1 three-entry and UI wiring; legacy writer/fallback retirement; gravel spawn intent integration",
+    "Continuously advancing preview readiness and full formal open-stroke/close/unknown lifecycle matrix",
+    "G7 configuration-only extension audit and G8 full visible load cost/long stability"
+  ],
+  "formal_entries_changed": false,
+  "performance_pass": false
+}

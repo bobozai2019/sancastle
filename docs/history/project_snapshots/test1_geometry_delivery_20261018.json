@@ -1,0 +1,208 @@
+{
+  "date": "2026-10-18",
+  "scope": "New main scene-menu option: original-aspect 30x15 captured sand geometry with main editing, simulation and recovery",
+  "pass": true,
+  "capture": {
+    "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\test1.rdc",
+    "bytes": 225224034,
+    "sha256": "761aa980c2426f75a1fa7364bf6d2655ff4dd20ea76566e630ee5b53ea0ec5b2"
+  },
+  "sources": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scenes\\playable\\test1_geometry.tscn",
+      "bytes": 1336,
+      "sha256": "ec36b303740662bceb34025f6ec79261a4b02b26e0ddc889da2e679b2863ec1a"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scenes\\components\\scene_switch_panel.tscn",
+      "bytes": 1072,
+      "sha256": "17b2b2d0d76571b100d3fce92f3c118bd0089ed63d267940681054c85f278200"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\beach\\test1_geometry_entry.gd",
+      "bytes": 1558,
+      "sha256": "e5e86e0f817ab61e205fd5f7c66327bd024a88f2502b39831df8f1a622a93d50"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\scenarios\\test1_geometry_layout.gd",
+      "bytes": 1243,
+      "sha256": "415e8a77dcde6b47f97a3e68d10a0955c69a9231b23ed48da254cd16d1f227e3"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\beach\\beach_playable_entry.gd",
+      "bytes": 2328,
+      "sha256": "cb74ed9266f814aa9a5db821d0503e2c163caa66521aa586155426250eb1f3f9"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\beach\\beach_scene_service.gd",
+      "bytes": 8574,
+      "sha256": "0bca778d84ea3eb42cec6a1aadcc0234b883a546ab6afeeac4b07819593bde6d"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\beach\\scene_switch_panel.gd",
+      "bytes": 1104,
+      "sha256": "1fa397e5aead27229743c8a8df7b15b6e22189487ddd85ddc800a1f49b576126"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\scenarios\\test1_playable_layout.gd",
+      "bytes": 2500,
+      "sha256": "26dbc0f0efca000e27f7a320bc032b2ae2b6e33cc5577e9599e38e3833aa3be0"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\simulation\\edit_validation\\frame_pipeline\\async_controller.gd",
+      "bytes": 20004,
+      "sha256": "a7352e8e9f9d2b9c4a79b0988c741330c268ee4bdde66ceca50feb486609e29f"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\simulation\\edit_validation\\frame_pipeline\\async_checkpoint_codec.gd",
+      "bytes": 12233,
+      "sha256": "ef0e368736579cc6a1a6a11eb10d2c7bf6c92d2db4d2836c67578da3c444765a"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\simulation\\edit_validation\\frame_pipeline\\async_boundary.glsl",
+      "bytes": 2364,
+      "sha256": "ce55a7f3ece5d8cd7fba15b9a8d1cd16a66612a927f1133143807a683d211cb5"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\assets\\test1_geometry\\initial_state.f32",
+      "bytes": 1310720,
+      "sha256": "b1bc67b7fba0a34fc4cdcd97c89a012dfed45667e1f3f013dab2b3c4b23ab8ba"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\assets\\test1_geometry\\initial_state.json",
+      "bytes": 2459,
+      "sha256": "2b5148df0c09d751386b4f690db99298785baddd0d35524c1ba923515b833657"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\assets\\test1_geometry\\source_sand_1024x512.f32",
+      "bytes": 2097152,
+      "sha256": "954e9ce7fa17992cc7c6eb632349d8fae94e7c72eb05f622a2466f848efaeb51"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\assets\\test1_geometry\\visible_grid.res",
+      "bytes": 1120789,
+      "sha256": "ee77523656cbf756df6e88f03a4c8839c8a256a03459b8f5236f174415a42ed0"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\assets\\test1_geometry\\sand_sides.res",
+      "bytes": 19765,
+      "sha256": "a38859835f41bca1c2f7a7b37c12cdc4c666ea6338a852f295ab673839361639"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\assets\\test1_geometry\\sand_sides.gdshader",
+      "bytes": 987,
+      "sha256": "0e5a93f7918069b224e28818970bee1e3469649a6cdf0de5acb66afbddcae0f5"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\tools\\test1_geometry\\build_initial_state.py",
+      "bytes": 3973,
+      "sha256": "f266003dc742447f576f2874e232767d3414fe7ac328dc5625b335499b22cf96"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\tools\\test1_geometry\\bake_meshes.gd",
+      "bytes": 2309,
+      "sha256": "ab8599822d0d843cad8c1e7d5db788103541c00a3f05bb48e7d66c7175ecfe6f"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\tests\\integration\\test1_geometry_probe.gd",
+      "bytes": 8651,
+      "sha256": "18809272f9bac75f86c1044ef80cc1cab7ce526abfb201857e7c1256a57f387a"
+    }
+  ],
+  "runtime_profile_identity_matches": [
+    "res://scenes/playable/test1_geometry.tscn",
+    "res://scenes/components/scene_switch_panel.tscn",
+    "res://scripts/beach/test1_geometry_entry.gd",
+    "res://scripts/scenarios/test1_geometry_layout.gd",
+    "res://scripts/beach/beach_playable_entry.gd",
+    "res://scripts/beach/beach_scene_service.gd",
+    "res://scripts/beach/scene_switch_panel.gd",
+    "res://scripts/simulation/edit_validation/frame_pipeline/async_controller.gd",
+    "res://scripts/simulation/edit_validation/frame_pipeline/async_checkpoint_codec.gd",
+    "res://scripts/simulation/edit_validation/frame_pipeline/async_boundary.glsl",
+    "res://assets/test1_geometry/initial_state.f32",
+    "res://assets/test1_geometry/initial_state.json",
+    "res://assets/test1_geometry/source_sand_1024x512.f32",
+    "res://assets/test1_geometry/visible_grid.res",
+    "res://assets/test1_geometry/sand_sides.res",
+    "res://assets/test1_geometry/sand_sides.gdshader"
+  ],
+  "functional": {
+    "run": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\test1_geometry_20261018\\playable_v5\\result.json",
+      "bytes": 73414,
+      "sha256": "7875ee91953842930ae147007b24826ba6b6f1eb41c60fdfe3daebbb4e42d961"
+    },
+    "checks": 62,
+    "log": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\test1_geometry_20261018\\playable_v5\\run.log",
+      "bytes": 2745,
+      "sha256": "9f6a1d8999bf6d7869e80d968a4a322cd479839e7e2c6338aff21e823f382ceb"
+    },
+    "engine": {
+      "build": "steam",
+      "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+      "hex": 263938,
+      "major": 4,
+      "minor": 7,
+      "patch": 2,
+      "status": "stable",
+      "string": "4.7.2-stable (steam)",
+      "timestamp": 0
+    },
+    "adapter": "NVIDIA GeForce GTX 1050",
+    "driver": "d3d12",
+    "window": "(1280, 720)",
+    "frames": "20 or more completed ticks; functional check only, not performance acceptance"
+  },
+  "direct_start": {
+    "result": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\test1_geometry_20261018\\direct_start.json",
+      "bytes": 41,
+      "sha256": "3efdc0993876d1e3b1d35e80c6d84d33d1c460dcd55d420910dc804cbaa860d9"
+    },
+    "log": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\test1_geometry_20261018\\direct_start.log",
+      "bytes": 144,
+      "sha256": "60d067faa47ee91092fce18f3a2c3aa04f18cb67d98e2deb3a0b22ec90aea99d"
+    },
+    "exit_code": 0,
+    "command": "Godot Engine/godot.windows.opt.tools.64.exe --path D:/godot/project/sandcastle res://scenes/playable/test1_geometry.tscn --quit-after 100"
+  },
+  "artifacts": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\test1_geometry_20261018\\playable_v5\\initial_original_camera.png",
+      "bytes": 435134,
+      "sha256": "3dfb663ef27043c9d4cc37cb05097ab957c953d96d0ac18682f7a5b0052be002"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\test1_geometry_20261018\\playable_v5\\after_simulation.png",
+      "bytes": 535021,
+      "sha256": "8fc22d36bf1c7521a1495b72ffeb6277d33415c84f719b0c42de142a71946aa4"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\test1_geometry_20261018\\playable_v5\\returned.png",
+      "bytes": 535021,
+      "sha256": "8fc22d36bf1c7521a1495b72ffeb6277d33415c84f719b0c42de142a71946aa4"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\test1_geometry_20261018\\playable_v5\\geometry.sandcp",
+      "bytes": 8824864,
+      "sha256": "0770253efb1ce8b254c631c9d917ab15f46b4afe267db540c5902807a2944afe"
+    }
+  ],
+  "attempts": {
+    "playable_v1": "parse failure in probe PackedFloat32Array.max; log and probe source retained",
+    "playable_v2": "new scene disabled gravel but existing async visual recorder requires a gravel field; rollback succeeded; source configuration changed to real zero active count",
+    "playable_v3": "59 functional checks passed; narrower camera and inherited showcase rocks present",
+    "playable_v4": "61 functional checks passed; wider camera and UI-free captures; inherited showcase rocks identified",
+    "playable_v5": "62 checks passed after hiding inherited rocks; final implementation",
+    "godotiq_direct_verifier": "INCONCLUSIVE: GodotIQSession has no attribute root; direct CLI launch used and passed"
+  },
+  "limits": [
+    "Full source height 1024x512 preserved; existing authority is resampled 256x256 at 0.125m/cell, visible cells240x120.",
+    "Rock Y=0, units, tide schedule, edge padding and cohesion are Godot adaptations.",
+    "No long stability or representative performance acceptance performed.",
+    "Existing modified workspace files retained; no commit or reset."
+  ]
+}

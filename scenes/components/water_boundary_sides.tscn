@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/visual/water_boundary_sides.gd" id="1_script"]
+[ext_resource type="ArrayMesh" path="res://assets/water_sides/main_boundary.res" id="2_mesh"]
+[ext_resource type="Shader" path="res://assets/water_sides/water_sides.gdshader" id="3_shader"]
+
+[sub_resource type="ShaderMaterial" id="SideMaterial"]
+resource_local_to_scene = true
+shader = ExtResource("3_shader")
+
+[node name="WaterSides" type="MeshInstance3D"]
+visible = false
+cast_shadow = 0
+mesh = ExtResource("2_mesh")
+material_override = SubResource("SideMaterial")
+custom_aabb = AABB(-16, -32, -16, 32, 96, 32)
+script = ExtResource("1_script")

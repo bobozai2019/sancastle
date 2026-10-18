@@ -118,7 +118,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	var hit := pick(event.position)
 	if hit.is_empty() or not _pick_current(hit): gravel_dragging = false; return
 	if pressed or hit.position.distance_to(gravel_drag_point) >= 0.6:
-		if gravel_drop_pending: return
+		if gravel_drop_pending and not ("async_pipeline_enabled" in self and get("async_pipeline_enabled")): return
 		gravel_dragging = true
 		gravel_drag_point = hit.position
 		drop_gravel(Vector2(hit.position.x, hit.position.z), int(brush_panel.parameters().count))

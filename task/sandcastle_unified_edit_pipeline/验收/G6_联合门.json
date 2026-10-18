@@ -1,0 +1,133 @@
+{
+  "schema": 1,
+  "status": "G6_pass",
+  "date": "2026-10-18",
+  "overall_completed": 28,
+  "overall_total": 36,
+  "T06_completed": 4,
+  "T06_total": 4,
+  "completed_this_delivery": [
+    "T06.3",
+    "T06.4"
+  ],
+  "overall_goal_complete": false,
+  "primary_gpu_runs": 43,
+  "primary_gpu_checks": 1355,
+  "independent_checks": 3379,
+  "packages": [
+    {
+      "name": "g6_formal_remaining01",
+      "runs": 16,
+      "checks": 284,
+      "audit_checks": 422,
+      "sources": 183,
+      "verification_sources": 185,
+      "evidence": [
+        {
+          "path": "test_output/unified_edit_pipeline/g6_formal_remaining01/report.json",
+          "sha256": "6351025fcc6aa1102879acd5f54e43f10b235919b85fc44961545bd6d7b96eaa",
+          "bytes": 40487
+        },
+        {
+          "path": "test_output/unified_edit_pipeline/g6_formal_remaining01/audit.json",
+          "sha256": "bf50daac8ae04c4103811a804aa30330e5bf70de29dcc390523554d38fecadfc",
+          "bytes": 42807
+        },
+        {
+          "path": "test_output/unified_edit_pipeline/g6_formal_remaining01/artifact-index.json",
+          "sha256": "a4e722e589ecb952159727a3bb654eee58b5777d9e209ee0b5b551a1bb93a902",
+          "bytes": 19425
+        },
+        {
+          "path": "test_output/unified_edit_pipeline/g6_formal_remaining01/sources.zip",
+          "sha256": "a902245e5e39fad8bd689511e105a6827defeda293caebcf201ecfc54833dd89",
+          "bytes": 17687877
+        },
+        {
+          "path": "test_output/unified_edit_pipeline/g6_formal_remaining01/verification_sources.zip",
+          "sha256": "4d23daed5561a4c7e1c35e00b54961ca9b5a59ba6dde024cf936e7423f6c6347",
+          "bytes": 17692564
+        }
+      ]
+    },
+    {
+      "name": "g6_formal_completions02",
+      "runs": 2,
+      "checks": 32,
+      "audit_checks": 205,
+      "sources": 178,
+      "verification_sources": 179,
+      "evidence": [
+        {
+          "path": "test_output/unified_edit_pipeline/g6_formal_completions02/report.json",
+          "sha256": "be2a5f797afcebc1f48dc21b5d0249ff8a4ab8cb555e1b57b34271433d590376",
+          "bytes": 25555
+        },
+        {
+          "path": "test_output/unified_edit_pipeline/g6_formal_completions02/audit.json",
+          "sha256": "9b205bd7bc96eca67392470732acb31eaa1c4dcb9b0363a01f70048b50390fd1",
+          "bytes": 22883
+        },
+        {
+          "path": "test_output/unified_edit_pipeline/g6_formal_completions02/artifact-index.json",
+          "sha256": "c53c8639be5be8bbdc3df3fd1f5abc333c58640501d729761a2ae2d943b7f73c",
+          "bytes": 3417
+        },
+        {
+          "path": "test_output/unified_edit_pipeline/g6_formal_completions02/sources.zip",
+          "sha256": "8353ccfb7e817468017a8b1d6366ceb84da1186bb20bfacf9581eb333b9f30b1",
+          "bytes": 17681374
+        },
+        {
+          "path": "test_output/unified_edit_pipeline/g6_formal_completions02/verification_sources.zip",
+          "sha256": "fac9a7ebc2556a3005223b8b21d660e3f56d1eba5b9950e5ac28e53884b5fbef",
+          "bytes": 17682934
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "path": "test_output/unified_edit_pipeline/g6_formal_entry01/report.json",
+      "sha256": "03b870a79b8c711c86d047bd3e752711c5ad9c9f380ea23790144da9cb9111f8",
+      "bytes": 32048
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g6_formal_boundaries_final02/report.json",
+      "sha256": "81609601fdc48eba9d2ee2e5a5a792b597e6d4cf1ea9d78d8a2c4a29fcdbdca4",
+      "bytes": 43495
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g6_formal_remaining01/independent_audit.json",
+      "sha256": "34964ead7d2b3bbdb02fae54cbc404b1dfc162a6640c4be974875a98d471a491",
+      "bytes": 12592
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g6_retirement_final01/report.json",
+      "sha256": "3aeaaaaa3809a1ac34bcacdd5c06f4d2758e2343716f5dfd08ca371e1763e90b",
+      "bytes": 6550
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g6_retirement_final01/sources.zip",
+      "sha256": "41daf881543fb032d89e99d91faf9cddb5c9fc98bb064ee23cade6d324260cc5",
+      "bytes": 93784
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g6_retirement_final01/method-identity.json",
+      "sha256": "32e44977dccfa020252d38e656b67c56dbfaf38b9c2a1977b45de18fc0380e92",
+      "bytes": 3113
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g6_final_static01/audit.json",
+      "sha256": "c671a07540093c511f4f4c57acd09f12edfb681b51f566d7ca0ba5038b786431",
+      "bytes": 9121
+    }
+  ],
+  "scope": "Formal unique backend and retired entry fallback, required lifecycle ownership boundaries and explicit old/native compatibility. No G7 configuration-extension or G8 cost/stability acceptance.",
+  "production_change_this_turn": false,
+  "metadata_only_followup": "After runs, outdated scope prose in two inherited integration helpers was corrected; archived run helper versions retained. No production code or assertions changed.",
+  "remaining": [
+    "T07 four configuration extension/writer audit goals",
+    "T08 four final function/lifecycle/cost/documentation goals"
+  ]
+}

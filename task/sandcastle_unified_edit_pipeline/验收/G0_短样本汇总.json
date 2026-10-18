@@ -1,0 +1,722 @@
+{
+  "role": "exploratory baseline summary; not G0 PASS",
+  "analyzer_sha256": "6c3d2c5af8a89217085d884410e92a33b3510f934e449962d7b47d1854189dd7",
+  "runs": [
+    {
+      "manifest": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_exploratory_sampling_03\\run-manifest.json",
+      "manifest_sha256": "9583513918e9a4748c698b1cba42005d27e6fcde7ff188be3697c32dbd7a3e07",
+      "pass": true,
+      "classification": "contended_or_unknown_gpu_activity",
+      "sampling": true,
+      "cases": {
+        "dig": {
+          "pass": true,
+          "result_sha256": "97483bb74322dbe7e9f0bc236080c294f519bcfd545764ac12538b079d7a1ab5",
+          "check_count": 78,
+          "command_count": 20,
+          "frame_ms_exploratory_all_frames": {
+            "n": 65,
+            "p50": 68.548,
+            "p95": 75.211,
+            "p99": null,
+            "max": 78.53,
+            "p99_reason": "insufficient_samples"
+          },
+          "wall_ms_including_observer_drain": {
+            "n": 20,
+            "p50": 171.9195,
+            "p95": 192.795,
+            "p99": null,
+            "max": 213.82,
+            "p99_reason": "insufficient_samples"
+          },
+          "queue_peak_at_frame_observation": 0,
+          "gpu_stage_ms_per_dispatch": {
+            "edit": {
+              "n": 360,
+              "p50": 0.026624,
+              "p95": 0.060416,
+              "p99": null,
+              "max": 0.06656,
+              "p99_reason": "insufficient_samples"
+            },
+            "edit_water": {
+              "n": 140,
+              "p50": 0.047104,
+              "p95": 2.151424,
+              "p99": null,
+              "max": 2.176,
+              "p99_reason": "insufficient_samples"
+            },
+            "collision": {
+              "n": 20,
+              "p50": 0.01024,
+              "p95": 0.01024,
+              "p99": null,
+              "max": 0.01024,
+              "p99_reason": "insufficient_samples"
+            }
+          },
+          "initial_sha256": {
+            "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+            "compaction": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de",
+            "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+            "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+            "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+            "obstacle": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+            "rock": "e5bebff58c79121549c5d1fbd484f90280de59fb99e1940fd8d54502cce0ad6c",
+            "sand": "e4229dd131b89dc44a8f08df893d938028cda47737983b548d8e947cb2d0df74",
+            "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+            "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+            "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+          },
+          "final_sha256": {
+            "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+            "compaction": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de",
+            "momentum_x": "75497fcda640a529efad18c2ea84e814733cd7933ca3d668fe0c78fb8111b8aa",
+            "momentum_z": "931f03147ee9fd7ab6a2261bf3ed3e25a0f2150c255736ea3ff1a390e67dcafb",
+            "sand": "30da793939076d82a68307fcbf8399e4e77e43fa8b1f6c32a5f2e78c1c1fddad",
+            "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+            "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+            "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+          },
+          "limitations": [
+            "No stable-window or cold-window separation.",
+            "No first-visible or collision-application latency.",
+            "Queue is observed per process frame, not every admission.",
+            "Final hashes cover only witness fields, not all double slots/material."
+          ]
+        },
+        "fill": {
+          "pass": true,
+          "result_sha256": "2cfc9837417898973f43ddc422f68d99117864532d62b293f438373485c7a767",
+          "check_count": 78,
+          "command_count": 20,
+          "frame_ms_exploratory_all_frames": {
+            "n": 65,
+            "p50": 68.57,
+            "p95": 77.793,
+            "p99": null,
+            "max": 101.654,
+            "p99_reason": "insufficient_samples"
+          },
+          "wall_ms_including_observer_drain": {
+            "n": 20,
+            "p50": 174.037,
+            "p95": 217.741,
+            "p99": null,
+            "max": 226.067,
+            "p99_reason": "insufficient_samples"
+          },
+          "queue_peak_at_frame_observation": 0,
+          "gpu_stage_ms_per_dispatch": {
+            "edit": {
+              "n": 140,
+              "p50": 0.01536,
+              "p95": 0.062464,
+              "p99": null,
+              "max": 0.068608,
+              "p99_reason": "insufficient_samples"
+            },
+            "edit_water": {
+              "n": 140,
+              "p50": 0.047104,
+              "p95": 2.014208,
+              "p99": null,
+              "max": 28.62592,
+              "p99_reason": "insufficient_samples"
+            },
+            "collision": {
+              "n": 20,
+              "p50": 0.01024,
+              "p95": 0.013312,
+              "p99": null,
+              "max": 0.013312,
+              "p99_reason": "insufficient_samples"
+            }
+          },
+          "initial_sha256": {
+            "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+            "compaction": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de",
+            "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+            "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+            "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+            "obstacle": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+            "rock": "e5bebff58c79121549c5d1fbd484f90280de59fb99e1940fd8d54502cce0ad6c",
+            "sand": "e4229dd131b89dc44a8f08df893d938028cda47737983b548d8e947cb2d0df74",
+            "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+            "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+            "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+          },
+          "final_sha256": {
+            "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+            "compaction": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de",
+            "momentum_x": "1dd36005c57809fcb54ead1b3a63eec52473381c8fdf528bb4896109a8923dc0",
+            "momentum_z": "2aa57390f4fd75c83f5ef373744dd976b8c65979c737f19636a7e517cd72045f",
+            "sand": "570cf42fb9fa941228162099dd431cac1403ef943cdf942dd7f880d112fe37fc",
+            "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+            "water": "4a39314ca70eb38ce88252eb9b97ca9d5679f75c053df90edc0f1cc865fefe4c",
+            "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+          },
+          "limitations": [
+            "No stable-window or cold-window separation.",
+            "No first-visible or collision-application latency.",
+            "Queue is observed per process frame, not every admission.",
+            "Final hashes cover only witness fields, not all double slots/material."
+          ]
+        },
+        "wall": {
+          "pass": true,
+          "result_sha256": "33c7521bad9678450fbf2179316376de81a29059698176b2114b9c113cb83913",
+          "check_count": 99,
+          "command_count": 20,
+          "frame_ms_exploratory_all_frames": {
+            "n": 125,
+            "p50": 69.489,
+            "p95": 120.932,
+            "p99": null,
+            "max": 136.852,
+            "p99_reason": "insufficient_samples"
+          },
+          "wall_ms_including_observer_drain": {
+            "n": 20,
+            "p50": 414.611,
+            "p95": 441.9,
+            "p99": null,
+            "max": 456.589,
+            "p99_reason": "insufficient_samples"
+          },
+          "queue_peak_at_frame_observation": 0,
+          "gpu_stage_ms_per_dispatch": {
+            "edit_shape_stage_1": {
+              "n": 20,
+              "p50": 0.155136,
+              "p95": 0.159744,
+              "p99": null,
+              "max": 0.159744,
+              "p99_reason": "insufficient_samples"
+            },
+            "edit_shape_material_0": {
+              "n": 20,
+              "p50": 0.07424,
+              "p95": 0.078848,
+              "p99": null,
+              "max": 0.118784,
+              "p99_reason": "insufficient_samples"
+            },
+            "edit_shape_stage_2": {
+              "n": 20,
+              "p50": 0.203776,
+              "p95": 0.208896,
+              "p99": null,
+              "max": 0.20992,
+              "p99_reason": "insufficient_samples"
+            },
+            "edit_shape_stage_3": {
+              "n": 20,
+              "p50": 0.053248,
+              "p95": 0.05632,
+              "p99": null,
+              "max": 0.058368,
+              "p99_reason": "insufficient_samples"
+            },
+            "edit_shape_water_0_0": {
+              "n": 20,
+              "p50": 0.118784,
+              "p95": 0.121856,
+              "p99": null,
+              "max": 0.121856,
+              "p99_reason": "insufficient_samples"
+            },
+            "edit": {
+              "n": 100,
+              "p50": 0.016384,
+              "p95": 28.499968,
+              "p99": null,
+              "max": 28.685312,
+              "p99_reason": "insufficient_samples"
+            },
+            "edit_shape_water_1_0": {
+              "n": 20,
+              "p50": 0.094208,
+              "p95": 0.108544,
+              "p99": null,
+              "max": 0.109568,
+              "p99_reason": "insufficient_samples"
+            },
+            "edit_shape_water_2_0": {
+              "n": 20,
+              "p50": 36.44416,
+              "p95": 36.540416,
+              "p99": null,
+              "max": 36.550656,
+              "p99_reason": "insufficient_samples"
+            },
+            "edit_shape_stage_4": {
+              "n": 20,
+              "p50": 0.064512,
+              "p95": 0.065536,
+              "p99": null,
+              "max": 0.065536,
+              "p99_reason": "insufficient_samples"
+            },
+            "edit_shape_material_1": {
+              "n": 20,
+              "p50": 0.033792,
+              "p95": 0.034816,
+              "p99": null,
+              "max": 0.034816,
+              "p99_reason": "insufficient_samples"
+            },
+            "edit_shape_water_3_0": {
+              "n": 20,
+              "p50": 0.048128,
+              "p95": 0.049152,
+              "p99": null,
+              "max": 0.053248,
+              "p99_reason": "insufficient_samples"
+            },
+            "collision": {
+              "n": 80,
+              "p50": 0.016896,
+              "p95": 0.023552,
+              "p99": null,
+              "max": 0.038912,
+              "p99_reason": "insufficient_samples"
+            }
+          },
+          "initial_sha256": {
+            "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+            "compaction": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de",
+            "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+            "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+            "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+            "obstacle": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+            "rock": "e5bebff58c79121549c5d1fbd484f90280de59fb99e1940fd8d54502cce0ad6c",
+            "sand": "e4229dd131b89dc44a8f08df893d938028cda47737983b548d8e947cb2d0df74",
+            "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+            "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+            "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+          },
+          "final_sha256": {
+            "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+            "compaction": "2d7d4009e0d2c456e655d34c91aedc440b6a1cf786e0779c2a04807c7c975ca6",
+            "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+            "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+            "sand": "c1aafcb61fd28114cfd951a53b3844baa7e2afd6866518d53809435297b543e0",
+            "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+            "water": "821c27e90315c652f257a98c528f9dc95dacc6966a05761610f291df4d74a0c9",
+            "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+          },
+          "limitations": [
+            "No stable-window or cold-window separation.",
+            "No first-visible or collision-application latency.",
+            "Queue is observed per process frame, not every admission.",
+            "Final hashes cover only witness fields, not all double slots/material."
+          ]
+        },
+        "shovel": {
+          "pass": true,
+          "result_sha256": "f0bbfed31076e0dc8106a9452c32f902f7e2a80e13df84548b89009c908b72b5",
+          "check_count": 99,
+          "command_count": 20,
+          "frame_ms_exploratory_all_frames": {
+            "n": 125,
+            "p50": 69.073,
+            "p95": 145.882,
+            "p99": null,
+            "max": 149.353,
+            "p99_reason": "insufficient_samples"
+          },
+          "wall_ms_including_observer_drain": {
+            "n": 20,
+            "p50": 425.0085,
+            "p95": 447.306,
+            "p99": null,
+            "max": 459.068,
+            "p99_reason": "insufficient_samples"
+          },
+          "queue_peak_at_frame_observation": 0,
+          "gpu_stage_ms_per_dispatch": {
+            "edit_shape_stage_1": {
+              "n": 20,
+              "p50": 0.155648,
+              "p95": 0.15872,
+              "p99": null,
+              "max": 0.15872,
+              "p99_reason": "insufficient_samples"
+            },
+            "edit_shape_stage_6": {
+              "n": 20,
+              "p50": 2.542592,
+              "p95": 2.584576,
+              "p99": null,
+              "max": 2.60096,
+              "p99_reason": "insufficient_samples"
+            },
+            "edit_shape_material_0": {
+              "n": 20,
+              "p50": 0.067584,
+              "p95": 0.068608,
+              "p99": null,
+              "max": 0.113664,
+              "p99_reason": "insufficient_samples"
+            },
+            "edit_shape_stage_2": {
+              "n": 20,
+              "p50": 0.203264,
+              "p95": 0.207872,
+              "p99": null,
+              "max": 0.208896,
+              "p99_reason": "insufficient_samples"
+            },
+            "edit_shape_stage_3": {
+              "n": 20,
+              "p50": 0.052224,
+              "p95": 0.054272,
+              "p99": null,
+              "max": 0.06144,
+              "p99_reason": "insufficient_samples"
+            },
+            "edit_shape_water_0_0": {
+              "n": 20,
+              "p50": 0.109568,
+              "p95": 0.113664,
+              "p99": null,
+              "max": 0.114688,
+              "p99_reason": "insufficient_samples"
+            },
+            "edit": {
+              "n": 100,
+              "p50": 0.016384,
+              "p95": 28.734464,
+              "p99": null,
+              "max": 28.99968,
+              "p99_reason": "insufficient_samples"
+            },
+            "edit_shape_water_1_0": {
+              "n": 20,
+              "p50": 0.096256,
+              "p95": 0.103424,
+              "p99": null,
+              "max": 0.10752,
+              "p99_reason": "insufficient_samples"
+            },
+            "edit_shape_water_2_0": {
+              "n": 20,
+              "p50": 42.573312,
+              "p95": 42.708992,
+              "p99": null,
+              "max": 42.853376,
+              "p99_reason": "insufficient_samples"
+            },
+            "edit_shape_stage_4": {
+              "n": 20,
+              "p50": 0.064512,
+              "p95": 0.067584,
+              "p99": null,
+              "max": 0.082944,
+              "p99_reason": "insufficient_samples"
+            },
+            "edit_shape_material_1": {
+              "n": 20,
+              "p50": 0.033792,
+              "p95": 0.034816,
+              "p99": null,
+              "max": 0.036864,
+              "p99_reason": "insufficient_samples"
+            },
+            "edit_shape_water_3_0": {
+              "n": 20,
+              "p50": 0.048128,
+              "p95": 0.049152,
+              "p99": null,
+              "max": 0.050176,
+              "p99_reason": "insufficient_samples"
+            },
+            "collision": {
+              "n": 80,
+              "p50": 0.017408,
+              "p95": 0.022528,
+              "p99": null,
+              "max": 0.030208,
+              "p99_reason": "insufficient_samples"
+            }
+          },
+          "initial_sha256": {
+            "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+            "compaction": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de",
+            "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+            "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+            "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+            "obstacle": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+            "rock": "e5bebff58c79121549c5d1fbd484f90280de59fb99e1940fd8d54502cce0ad6c",
+            "sand": "e4229dd131b89dc44a8f08df893d938028cda47737983b548d8e947cb2d0df74",
+            "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+            "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+            "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+          },
+          "final_sha256": {
+            "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+            "compaction": "f2ff4f1752b3b28333fefcc53e91ec45d79f3f46c150c62b8c1d9edf4670ff85",
+            "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+            "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+            "sand": "7c33b11396e7d1d3773a2ecc52eab2811acf304337cb9288eca828d63791e5fb",
+            "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+            "water": "5d819dd23ed1f1250a5c1f2f59cbe626432c64d19831078d3d5cc4b8de407b51",
+            "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+          },
+          "limitations": [
+            "No stable-window or cold-window separation.",
+            "No first-visible or collision-application latency.",
+            "Queue is observed per process frame, not every admission.",
+            "Final hashes cover only witness fields, not all double slots/material."
+          ]
+        }
+      }
+    },
+    {
+      "manifest": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_exploratory_coarse_01\\run-manifest.json",
+      "manifest_sha256": "25fcb6b5b85a04ddf4a0baa9de6a1686f3b6bcd2cade0d0c54af379310bb55fb",
+      "pass": true,
+      "classification": "contended_or_unknown_gpu_activity",
+      "sampling": false,
+      "cases": {
+        "dig": {
+          "pass": true,
+          "result_sha256": "575b55221811aa0a9776adc12d978ad62baf95b1d568595861f9aa64ede544e7",
+          "check_count": 78,
+          "command_count": 20,
+          "frame_ms_exploratory_all_frames": {
+            "n": 65,
+            "p50": 68.374,
+            "p95": 73.465,
+            "p99": null,
+            "max": 75.477,
+            "p99_reason": "insufficient_samples"
+          },
+          "wall_ms_including_observer_drain": {
+            "n": 20,
+            "p50": 170.1615,
+            "p95": 211.94,
+            "p99": null,
+            "max": 214.29,
+            "p99_reason": "insufficient_samples"
+          },
+          "queue_peak_at_frame_observation": 0,
+          "gpu_stage_ms_per_dispatch": {},
+          "initial_sha256": {
+            "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+            "compaction": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de",
+            "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+            "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+            "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+            "obstacle": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+            "rock": "e5bebff58c79121549c5d1fbd484f90280de59fb99e1940fd8d54502cce0ad6c",
+            "sand": "e4229dd131b89dc44a8f08df893d938028cda47737983b548d8e947cb2d0df74",
+            "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+            "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+            "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+          },
+          "final_sha256": {
+            "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+            "compaction": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de",
+            "momentum_x": "75497fcda640a529efad18c2ea84e814733cd7933ca3d668fe0c78fb8111b8aa",
+            "momentum_z": "931f03147ee9fd7ab6a2261bf3ed3e25a0f2150c255736ea3ff1a390e67dcafb",
+            "sand": "30da793939076d82a68307fcbf8399e4e77e43fa8b1f6c32a5f2e78c1c1fddad",
+            "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+            "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+            "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+          },
+          "limitations": [
+            "No stable-window or cold-window separation.",
+            "No first-visible or collision-application latency.",
+            "Queue is observed per process frame, not every admission.",
+            "Final hashes cover only witness fields, not all double slots/material."
+          ]
+        },
+        "fill": {
+          "pass": true,
+          "result_sha256": "ba2bbb626f28c48bbc908ac771d92b913e36d3f2ca4d8e5fcd150ba2a44e12d1",
+          "check_count": 78,
+          "command_count": 20,
+          "frame_ms_exploratory_all_frames": {
+            "n": 65,
+            "p50": 67.317,
+            "p95": 76.61,
+            "p99": null,
+            "max": 97.734,
+            "p99_reason": "insufficient_samples"
+          },
+          "wall_ms_including_observer_drain": {
+            "n": 20,
+            "p50": 170.822,
+            "p95": 206.484,
+            "p99": null,
+            "max": 210.161,
+            "p99_reason": "insufficient_samples"
+          },
+          "queue_peak_at_frame_observation": 0,
+          "gpu_stage_ms_per_dispatch": {},
+          "initial_sha256": {
+            "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+            "compaction": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de",
+            "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+            "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+            "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+            "obstacle": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+            "rock": "e5bebff58c79121549c5d1fbd484f90280de59fb99e1940fd8d54502cce0ad6c",
+            "sand": "e4229dd131b89dc44a8f08df893d938028cda47737983b548d8e947cb2d0df74",
+            "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+            "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+            "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+          },
+          "final_sha256": {
+            "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+            "compaction": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de",
+            "momentum_x": "1dd36005c57809fcb54ead1b3a63eec52473381c8fdf528bb4896109a8923dc0",
+            "momentum_z": "2aa57390f4fd75c83f5ef373744dd976b8c65979c737f19636a7e517cd72045f",
+            "sand": "570cf42fb9fa941228162099dd431cac1403ef943cdf942dd7f880d112fe37fc",
+            "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+            "water": "4a39314ca70eb38ce88252eb9b97ca9d5679f75c053df90edc0f1cc865fefe4c",
+            "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+          },
+          "limitations": [
+            "No stable-window or cold-window separation.",
+            "No first-visible or collision-application latency.",
+            "Queue is observed per process frame, not every admission.",
+            "Final hashes cover only witness fields, not all double slots/material."
+          ]
+        },
+        "wall": {
+          "pass": true,
+          "result_sha256": "b099a1469b97f9d7dc290b9347210d0c1bef3193b91bcfac266d195763c629ca",
+          "check_count": 99,
+          "command_count": 20,
+          "frame_ms_exploratory_all_frames": {
+            "n": 125,
+            "p50": 67.981,
+            "p95": 134.953,
+            "p99": null,
+            "max": 139.261,
+            "p99_reason": "insufficient_samples"
+          },
+          "wall_ms_including_observer_drain": {
+            "n": 20,
+            "p50": 405.494,
+            "p95": 445.51,
+            "p99": null,
+            "max": 446.455,
+            "p99_reason": "insufficient_samples"
+          },
+          "queue_peak_at_frame_observation": 0,
+          "gpu_stage_ms_per_dispatch": {},
+          "initial_sha256": {
+            "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+            "compaction": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de",
+            "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+            "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+            "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+            "obstacle": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+            "rock": "e5bebff58c79121549c5d1fbd484f90280de59fb99e1940fd8d54502cce0ad6c",
+            "sand": "e4229dd131b89dc44a8f08df893d938028cda47737983b548d8e947cb2d0df74",
+            "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+            "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+            "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+          },
+          "final_sha256": {
+            "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+            "compaction": "2d7d4009e0d2c456e655d34c91aedc440b6a1cf786e0779c2a04807c7c975ca6",
+            "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+            "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+            "sand": "c1aafcb61fd28114cfd951a53b3844baa7e2afd6866518d53809435297b543e0",
+            "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+            "water": "821c27e90315c652f257a98c528f9dc95dacc6966a05761610f291df4d74a0c9",
+            "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+          },
+          "limitations": [
+            "No stable-window or cold-window separation.",
+            "No first-visible or collision-application latency.",
+            "Queue is observed per process frame, not every admission.",
+            "Final hashes cover only witness fields, not all double slots/material."
+          ]
+        },
+        "shovel": {
+          "pass": true,
+          "result_sha256": "e62ee2980fa4ce59794b6ed0f01ae40f4ce209e9ca539ff4492216264072e4c3",
+          "check_count": 99,
+          "command_count": 20,
+          "frame_ms_exploratory_all_frames": {
+            "n": 125,
+            "p50": 68.472,
+            "p95": 138.476,
+            "p99": null,
+            "max": 145.094,
+            "p99_reason": "insufficient_samples"
+          },
+          "wall_ms_including_observer_drain": {
+            "n": 20,
+            "p50": 407.725,
+            "p95": 449.964,
+            "p99": null,
+            "max": 452.527,
+            "p99_reason": "insufficient_samples"
+          },
+          "queue_peak_at_frame_observation": 0,
+          "gpu_stage_ms_per_dispatch": {},
+          "initial_sha256": {
+            "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+            "compaction": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de",
+            "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+            "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+            "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+            "obstacle": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+            "rock": "e5bebff58c79121549c5d1fbd484f90280de59fb99e1940fd8d54502cce0ad6c",
+            "sand": "e4229dd131b89dc44a8f08df893d938028cda47737983b548d8e947cb2d0df74",
+            "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+            "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+            "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+          },
+          "final_sha256": {
+            "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+            "compaction": "f2ff4f1752b3b28333fefcc53e91ec45d79f3f46c150c62b8c1d9edf4670ff85",
+            "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+            "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+            "sand": "7c33b11396e7d1d3773a2ecc52eab2811acf304337cb9288eca828d63791e5fb",
+            "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+            "water": "5d819dd23ed1f1250a5c1f2f59cbe626432c64d19831078d3d5cc4b8de407b51",
+            "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+          },
+          "limitations": [
+            "No stable-window or cold-window separation.",
+            "No first-visible or collision-application latency.",
+            "Queue is observed per process frame, not every admission.",
+            "Final hashes cover only witness fields, not all double slots/material."
+          ]
+        }
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "case": "wall",
+      "initial_recorded_fields_equal": true,
+      "final_recorded_fields_equal": true
+    },
+    {
+      "case": "dig",
+      "initial_recorded_fields_equal": true,
+      "final_recorded_fields_equal": true
+    },
+    {
+      "case": "shovel",
+      "initial_recorded_fields_equal": true,
+      "final_recorded_fields_equal": true
+    },
+    {
+      "case": "fill",
+      "initial_recorded_fields_equal": true,
+      "final_recorded_fields_equal": true
+    }
+  ]
+}

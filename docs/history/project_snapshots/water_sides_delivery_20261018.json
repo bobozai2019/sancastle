@@ -1,0 +1,221 @@
+{
+  "date": "2026-10-18",
+  "scope": "Godot water boundary sidewalls in main/test1_capture/test1_backwash/test1_geometry; visual-only, no competitor sidewall algorithm claim",
+  "pass": true,
+  "checks": 205,
+  "runs": [
+    {
+      "run": "geometry_v5",
+      "report": "test_output/water_sides_20261018/geometry_v5/report.json",
+      "report_sha256": "5162ee0e30d4f6eab949a9b7502a8c301be6b5caebed4654478c51ad6bff7f29",
+      "checks": 71,
+      "pass": true,
+      "no_engine_errors": true,
+      "production_sources_match_current": true,
+      "images": [
+        {
+          "path": "test_output/water_sides_20261018/geometry_v5/01_sides_on.png",
+          "sha256": "226d7850f573f8d2dd0d1ee75dd3c952fbe673b9a8aa44dafd466b7d4a44f395"
+        },
+        {
+          "path": "test_output/water_sides_20261018/geometry_v5/02_sides_off.png",
+          "sha256": "a73ffd7f7f08558da51dea39ea4cb8cd0d5b3290d19c32c5413658ac756d2a50"
+        },
+        {
+          "path": "test_output/water_sides_20261018/geometry_v5/03_side_mask.png",
+          "sha256": "6e7ebc875723c4cd416508f5aeddb2d4c129c329fe78aca1a8d3fae1e052433f"
+        },
+        {
+          "path": "test_output/water_sides_20261018/geometry_v5/04_dry_negative.png",
+          "sha256": "a73ffd7f7f08558da51dea39ea4cb8cd0d5b3290d19c32c5413658ac756d2a50"
+        },
+        {
+          "path": "test_output/water_sides_20261018/geometry_v5/05_after_wave_and_edge_edits.png",
+          "sha256": "63e36d56590b75182f5e02a8f7564cacd49f422463396e24510af2f04dcada5b"
+        },
+        {
+          "path": "test_output/water_sides_20261018/geometry_v5/06_restored.png",
+          "sha256": "8883af381aa11f04d3434428ef1fda64bb00b87023ef328c49754aea1b2c9599"
+        },
+        {
+          "path": "test_output/water_sides_20261018/geometry_v5/cycle_04.png",
+          "sha256": "7f2060eadf550c0d62c2e2ea7f20fc1df696232b535a8c78e777de022d9c2af5"
+        },
+        {
+          "path": "test_output/water_sides_20261018/geometry_v5/cycle_07.png",
+          "sha256": "2811dcec4413959494fc6a1b8e43c73bf42208c304dc1754adf69efb37e0a92f"
+        },
+        {
+          "path": "test_output/water_sides_20261018/geometry_v5/cycle_11.png",
+          "sha256": "dbb15a6f8d153718eb7a0c9ee8c0f4767670909452f6bdf52fc8d092d649b056"
+        },
+        {
+          "path": "test_output/water_sides_20261018/geometry_v5/cycle_16.png",
+          "sha256": "8883af381aa11f04d3434428ef1fda64bb00b87023ef328c49754aea1b2c9599"
+        }
+      ]
+    },
+    {
+      "run": "main_v1",
+      "report": "test_output/water_sides_20261018/main_v1/report.json",
+      "report_sha256": "06c72aaee2d70749a6f7b577d4920f4f822d56ead99d5d86de40c47beaaa9bb7",
+      "checks": 63,
+      "pass": true,
+      "no_engine_errors": true,
+      "production_sources_match_current": true,
+      "images": [
+        {
+          "path": "test_output/water_sides_20261018/main_v1/01_sides_on.png",
+          "sha256": "39103f136e143a3680a697ff1c747b7d1e37b4b1bacd931a37d5220de1b13b4b"
+        },
+        {
+          "path": "test_output/water_sides_20261018/main_v1/02_sides_off.png",
+          "sha256": "354c1b619c29d8b5f2abadda3b3a6d73f61d4220f752f6183a24d163fba2fb85"
+        },
+        {
+          "path": "test_output/water_sides_20261018/main_v1/03_side_mask.png",
+          "sha256": "26877256bf4529630437205b2a5b70f0905e999bd51a9177ce5d06bc4ef66034"
+        },
+        {
+          "path": "test_output/water_sides_20261018/main_v1/04_dry_negative.png",
+          "sha256": "354c1b619c29d8b5f2abadda3b3a6d73f61d4220f752f6183a24d163fba2fb85"
+        },
+        {
+          "path": "test_output/water_sides_20261018/main_v1/05_after_wave_and_edge_edits.png",
+          "sha256": "3d1568e88440b18ac02665589e04ceac99aa43c85ad89f1f049222a883b40bd6"
+        },
+        {
+          "path": "test_output/water_sides_20261018/main_v1/06_restored.png",
+          "sha256": "3d1568e88440b18ac02665589e04ceac99aa43c85ad89f1f049222a883b40bd6"
+        }
+      ]
+    },
+    {
+      "run": "switch_v1",
+      "report": "test_output/water_sides_20261018/switch_v1/report.json",
+      "report_sha256": "8be84525642572dd3f64eaeb81f04c594a4b358c58b69a50c57dc79970288254",
+      "checks": 71,
+      "pass": true,
+      "no_engine_errors": true,
+      "production_sources_match_current": true,
+      "images": [
+        {
+          "path": "test_output/water_sides_20261018/switch_v1/main_sides.png",
+          "sha256": "39103f136e143a3680a697ff1c747b7d1e37b4b1bacd931a37d5220de1b13b4b"
+        },
+        {
+          "path": "test_output/water_sides_20261018/switch_v1/test1_backwash_sides.png",
+          "sha256": "f3d18da6fe73f85be23b11d836fcda39c59cd047e7ade1c20c687426181dd417"
+        },
+        {
+          "path": "test_output/water_sides_20261018/switch_v1/test1_capture_sides.png",
+          "sha256": "f3d18da6fe73f85be23b11d836fcda39c59cd047e7ade1c20c687426181dd417"
+        },
+        {
+          "path": "test_output/water_sides_20261018/switch_v1/test1_geometry_sides.png",
+          "sha256": "226d7850f573f8d2dd0d1ee75dd3c952fbe673b9a8aa44dafd466b7d4a44f395"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "path": "scripts/visual/water_boundary_sides.gd",
+      "sha256": "cc6cb7cdd2bc92560c94551e3d220705feccc2249f51fbd46eb6cc4ad277ab64",
+      "bytes": 2884
+    },
+    {
+      "path": "scripts/beach/async_pipeline_entry.gd",
+      "sha256": "d77d1a28f02c65e57a8cdc56021c2d88ce9e22e6e0563f1b0cf784d31c8d656b",
+      "bytes": 50834
+    },
+    {
+      "path": "scenes/components/water_boundary_sides.tscn",
+      "sha256": "613f98726654fb43bbd47ecea32e085806a1eddfc5747dc558856f2495011524",
+      "bytes": 675
+    },
+    {
+      "path": "scenes/main.tscn",
+      "sha256": "5b7b49be7db8f981df14af2d8f9f1799652ca4908d6fb79deb409a786cf99c4b",
+      "bytes": 68045
+    },
+    {
+      "path": "scenes/playable/test1_geometry.tscn",
+      "sha256": "fa727d2efa1255b2b1a41eb1c63ced303dfdcc16f42efd792b8ab20aa14d5e1c",
+      "bytes": 1628
+    },
+    {
+      "path": "assets/water_sides/geometry_manifest.json",
+      "sha256": "9722976bfbc3563e41ea6da983e9033a78478b2bbb4bbb0be87d41ff5f5d6ac4",
+      "bytes": 1134
+    },
+    {
+      "path": "assets/water_sides/water_sides.gdshader",
+      "sha256": "d69f77b8bd03a78461fb29ff5fd8084e1fc68b43b30ac9c0319a9b6dee757462",
+      "bytes": 43287
+    },
+    {
+      "path": "assets/water_sides/main_boundary.res",
+      "sha256": "6ed5bc7cd495f34d04e90b0f1bf98222cb74e5edf648e914c3a964e6625bcb69",
+      "bytes": 21181
+    },
+    {
+      "path": "assets/water_sides/test1_boundary.res",
+      "sha256": "7660646be9f1c2eb914d09c8e4efebda9cf79464a068ae5aac8b615fc6b5510c",
+      "bytes": 15152
+    },
+    {
+      "path": "tools/water_sides/build_shader.py",
+      "sha256": "b999d74a30d7c1ac42e4739aa54725dd7705ece28063d2f1f899d37a2d99e8dd",
+      "bytes": 4472
+    },
+    {
+      "path": "tools/water_sides/bake_mesh.gd",
+      "sha256": "54349e0ecb3215b34cf4f33923f89a3cd032cb92c706a93a8e303b15519d8805",
+      "bytes": 2264
+    },
+    {
+      "path": "tools/water_sides/fragment.gdshaderinc",
+      "sha256": "d5885353e3bcd99ab3f8a3cbcf8b7b6421c2ddd7efe53df711d18c6989a5ee2b",
+      "bytes": 3158
+    },
+    {
+      "path": "tests/integration/water_sides_probe.gd",
+      "sha256": "120d4fa614b766c270ce9585283f4f2f63d9af5592163bad51c31e1b6e387324",
+      "bytes": 9042
+    },
+    {
+      "path": "tests/integration/water_sides_switch_probe.gd",
+      "sha256": "0fb513421fbfb5673df399497329f1550e9a260a1db76fe85249ca3ed446678c",
+      "bytes": 1862
+    }
+  ],
+  "unchanged_water_bed_sources": {
+    "schema": 1,
+    "water": "res://assets/water_material_natural_candidate/async_rdc_water.gdshader",
+    "water_sha256": "26a503bd375f88e43f7b1a7fdac1812fd2d7da4ad4217423aa5ae6d398ed0a61",
+    "bed": "res://assets/water_material_natural_candidate/async_rdc_bed.gdshader",
+    "bed_sha256": "aefafca7ae8c6ea6131b6fae4dc712ca8e18916c72f97cbde338d5ce7bdf5977",
+    "shader": "res://assets/water_sides/water_sides.gdshader",
+    "shader_sha256": "d69f77b8bd03a78461fb29ff5fd8084e1fc68b43b30ac9c0319a9b6dee757462",
+    "water_vertex_sha256": "f16c11f00c5b063d70c5b83e8a96c717313d45b700e5bcd4e1d95b1f49215d0e",
+    "bed_functions_sha256": "21f8748ebf0149f6a16f3d2a3f9414465686f01dfe4ff6b9b4a67b2633fd70bf",
+    "equivalent_sources": {
+      "res://assets/water_material_natural_candidate/rdc_water.gdshader": "16a93e3d6942429073cbcbcba73b59bbe42e80c61bf776e9f15170ca69fd8b89",
+      "res://assets/water_material_natural_candidate/rdc_bed.gdshader": "e36bf7c1d44dbc38f50c46b7405cf439a48fd6f427df6f95a3d5e3e50d650abf"
+    },
+    "scope": "Godot visual boundary adaptation; verbatim water vertex body and bed sampling, independent side optics; no physics writes."
+  },
+  "limits": [
+    "Exterior boundary only; no full underwater camera optics",
+    "Local plane and opaque depth bound approximate optical path; no arbitrary heightfield ray tracing",
+    "Functional visible-window checks, not a performance or long-soak acceptance",
+    "Old failures retained in geometry_v1..v4; geometry_v3 passed only its narrower checks"
+  ],
+  "reproduce": [
+    "python tools/water_sides/build_shader.py --check",
+    "godot --headless --path . --script res://tools/water_sides/bake_mesh.gd",
+    "godot --path . --rendering-method forward_plus --rendering-driver vulkan --resolution 1280x720 --log-file <new-directory>/run.log --script res://tests/integration/water_sides_probe.gd -- --cycle --scene=res://scenes/playable/test1_geometry.tscn --output=<new-directory>/report.json",
+    "godot --path . --rendering-method forward_plus --rendering-driver vulkan --resolution 1280x720 --log-file <new-directory>/run.log --script res://tests/integration/water_sides_switch_probe.gd -- --output=<new-directory>/report.json"
+  ]
+}

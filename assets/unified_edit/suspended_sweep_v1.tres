@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/simulation/unified_edit/tool_profile.gd" id="1"]
+[resource]
+script = ExtResource("1")
+profile_id = &"suspended_sweep_v1"
+operation = 0
+shape = 1
+destination = 1
+volume_sign = 1
+water_policy = 0
+defaults = {"amount_m3": 0.1, "radius_m": 0.75, "speed_m_s": 0.0, "strength": 1.0}
+ranges = {"amount_m3": [0.01, 1.0], "radius_m": [0.0, 4.0], "speed_m_s": [0.0, 0.0], "strength": [0.0, 1.0]}
+max_segment_m = 64.0
+allowed_water_policies = PackedInt32Array(0)
+allowed_material_policies = PackedInt32Array(0)

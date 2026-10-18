@@ -1,0 +1,264 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/simulation/unified_edit/height_surface.gd" id="1"]
+
+[node name="HeightSurface" type="Node3D"]
+script = ExtResource("1")
+
+[node name="Terrain" type="StaticBody3D" parent="."]
+
+[node name="Chunk_0" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(-13.9375, 0, -13.9375)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_1" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(-9.9375, 0, -13.9375)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_2" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(-5.9375, 0, -13.9375)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_3" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(-1.9375, 0, -13.9375)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_4" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(2.0625, 0, -13.9375)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_5" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(6.0625, 0, -13.9375)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_6" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(10.0625, 0, -13.9375)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_7" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(14.0625, 0, -13.9375)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_8" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(-13.9375, 0, -9.9375)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_9" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(-9.9375, 0, -9.9375)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_10" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(-5.9375, 0, -9.9375)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_11" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(-1.9375, 0, -9.9375)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_12" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(2.0625, 0, -9.9375)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_13" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(6.0625, 0, -9.9375)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_14" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(10.0625, 0, -9.9375)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_15" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(14.0625, 0, -9.9375)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_16" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(-13.9375, 0, -5.9375)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_17" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(-9.9375, 0, -5.9375)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_18" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(-5.9375, 0, -5.9375)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_19" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(-1.9375, 0, -5.9375)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_20" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(2.0625, 0, -5.9375)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_21" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(6.0625, 0, -5.9375)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_22" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(10.0625, 0, -5.9375)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_23" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(14.0625, 0, -5.9375)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_24" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(-13.9375, 0, -1.9375)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_25" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(-9.9375, 0, -1.9375)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_26" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(-5.9375, 0, -1.9375)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_27" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(-1.9375, 0, -1.9375)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_28" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(2.0625, 0, -1.9375)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_29" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(6.0625, 0, -1.9375)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_30" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(10.0625, 0, -1.9375)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_31" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(14.0625, 0, -1.9375)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_32" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(-13.9375, 0, 2.0625)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_33" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(-9.9375, 0, 2.0625)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_34" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(-5.9375, 0, 2.0625)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_35" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(-1.9375, 0, 2.0625)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_36" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(2.0625, 0, 2.0625)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_37" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(6.0625, 0, 2.0625)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_38" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(10.0625, 0, 2.0625)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_39" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(14.0625, 0, 2.0625)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_40" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(-13.9375, 0, 6.0625)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_41" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(-9.9375, 0, 6.0625)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_42" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(-5.9375, 0, 6.0625)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_43" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(-1.9375, 0, 6.0625)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_44" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(2.0625, 0, 6.0625)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_45" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(6.0625, 0, 6.0625)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_46" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(10.0625, 0, 6.0625)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_47" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(14.0625, 0, 6.0625)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_48" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(-13.9375, 0, 10.0625)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_49" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(-9.9375, 0, 10.0625)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_50" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(-5.9375, 0, 10.0625)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_51" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(-1.9375, 0, 10.0625)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_52" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(2.0625, 0, 10.0625)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_53" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(6.0625, 0, 10.0625)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_54" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(10.0625, 0, 10.0625)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_55" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(14.0625, 0, 10.0625)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_56" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(-13.9375, 0, 14.0625)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_57" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(-9.9375, 0, 14.0625)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_58" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(-5.9375, 0, 14.0625)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_59" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(-1.9375, 0, 14.0625)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_60" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(2.0625, 0, 14.0625)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_61" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(6.0625, 0, 14.0625)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_62" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(10.0625, 0, 14.0625)
+scale = Vector3(0.125, 1, 0.125)
+
+[node name="Chunk_63" type="CollisionShape3D" parent="Terrain"]
+position = Vector3(14.0625, 0, 14.0625)
+scale = Vector3(0.125, 1, 0.125)

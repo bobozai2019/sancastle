@@ -1,0 +1,88 @@
+{
+  "role": "T03.3 conservative-transfer component evidence; G3 overall incomplete",
+  "component_pass": true,
+  "T03_3_complete": true,
+  "G3_complete": false,
+  "total_completed": 14,
+  "total_objectives": 36,
+  "gpu_run": "g3_transfer_delivery07",
+  "gpu_cases": [
+    "transfer",
+    "transfer_reverse",
+    "transfer_capacity",
+    "transfer_limited",
+    "transfer_stress",
+    "transfer_empty",
+    "transfer_invalid"
+  ],
+  "gpu_transfer_checks": 492,
+  "independent_transfer_checks": 821,
+  "related_target_gpu_checks": 232,
+  "related_local_gpu_checks": 315,
+  "related_target_independent_checks": 1115,
+  "related_local_independent_checks": 493,
+  "related_normal_checks": 104,
+  "same_input_repeat_gpu_checks": 122,
+  "same_input_determinism_checks": 112,
+  "common_pinned_source_count": 107,
+  "source_drift": [],
+  "reports": {
+    "g3_transfer_delivery07/run-manifest.json": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g3_transfer_delivery07\\run-manifest.json",
+      "sha256": "51d6dc5d7f1171422fb00407ad4f0e758e6a66efc5e126904b412fb8752286ac"
+    },
+    "g3_transfer_normal07/run-manifest.json": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g3_transfer_normal07\\run-manifest.json",
+      "sha256": "4d6734b80ed5faca1a212249c143d26f713d02bfd71af639f04587fb493f74b4"
+    },
+    "g3_transfer_repeat07/run-manifest.json": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g3_transfer_repeat07\\run-manifest.json",
+      "sha256": "af1798a76f00d58ef648d1b7cedc6b9ad26b9be032a4875d2e566ac36709c813"
+    },
+    "g3_transfer_reference08/result.json": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g3_transfer_reference08\\result.json",
+      "sha256": "adbfc958bbacf68827180087cc136f16de5c9de901e6c84bd3ee669a95c0d1a8"
+    },
+    "g3_transfer_target_reference07/result.json": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g3_transfer_target_reference07\\result.json",
+      "sha256": "d040c84cfc1529579aa8464ed19641b4751c5ce0ca6c45a71b27fdd0ef21684b"
+    },
+    "g3_transfer_local_reference07/result.json": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g3_transfer_local_reference07\\result.json",
+      "sha256": "58d0207351b978e38dce3e41ddefc0b0117552ad8417fb380e6217f8ea7bd7a2"
+    },
+    "g3_transfer_determinism07/result.json": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g3_transfer_determinism07\\result.json",
+      "sha256": "fe601c72f2d7c3f3fca9cfbfee48d60e803ba5c73690ee3e9dd5685239f2d313"
+    }
+  },
+  "algorithm": "Fixed-baseline capsule cut, min donor/authorization/both-side capacity, native donor quantization, stable 256-cell per-side ratio sort and compensated prefixes, capped-weight lambda queries, frozen two deterministic row-major one-ULP residual rounds; material mixture and conditional common commit. No private authority writer.",
+  "frozen_numeric_contract": "Base eps from actual R32F ULP/absolute/touched formula. Net/side/transfer balance <=2*base eps; authorization <= budget+base eps. Result eps_sand/eps_transfer report 2*base eps, not a widened physical bound.",
+  "edge_evidence": {
+    "zero_donor": "Exact lambda zero, no receiver or material change; failed delivery05 raw phantom values retained.",
+    "native_repeat": "Max diagonal crossing repeat: 7 donor cells, 4.0745362639427185e-10 m3, exactly native old world-coverage minus rock formula; real APPLIED retained.",
+    "material_half": "Device-native positive truncation on previously measured GTX1050/D3D12, not a cross-backend claim.",
+    "determinism": "Same 107 source pins, actual initial fields, canonical wires and 9 ordered commands in two separately initialized runs; actual physical/coverage/published bytes and public quantities identical."
+  },
+  "retained_failed_or_partial_runs": [
+    "g3_transfer_attempt01",
+    "g3_transfer_capacity02",
+    "g3_transfer_stress04",
+    "g3_transfer_delivery05",
+    "g3_transfer_reference01",
+    "g3_transfer_capacity_reference03",
+    "g3_transfer_reference02",
+    "g3_transfer_capacity_reference04",
+    "g3_transfer_reference05_partial",
+    "g3_transfer_reference06_partial"
+  ],
+  "pending": [
+    "T03.1 suspended wet admission and coupled state",
+    "T03.4 complete all-profile common-candidate audit",
+    "T04 full material/water response",
+    "T05 batching/consumers/long saturated drags",
+    "T06 restore/lifecycle/formal entries",
+    "T07 configuration extension and writer audit",
+    "T08 final visible cost and long stability"
+  ]
+}

@@ -1,0 +1,243 @@
+{
+  "date": "2026-10-18",
+  "scope": "Fix excessive water, free camera, and periodic runup/backwash in test1_geometry only",
+  "pass": true,
+  "sources": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\beach\\test1_geometry_entry.gd",
+      "bytes": 1626,
+      "sha256": "faa8715add9cb617655d2b890bd57768098bdef1f4d152844297e988639b39be"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\scenarios\\test1_geometry_layout.gd",
+      "bytes": 2584,
+      "sha256": "80a3241eebec98159109df76e68f623e0ffebab2ef3f0bcd32ac9d0c836e5695"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\scenarios\\test1_playable_layout.gd",
+      "bytes": 2567,
+      "sha256": "96d0f46fec8f86cfad5d47a38572c957359e78f3be65739baee805f80848375e"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\simulation\\edit_validation\\frame_pipeline\\async_controller.gd",
+      "bytes": 20240,
+      "sha256": "562cd38053e8c5f7fef96d70268b0e4f17f5f3ef9a121c9b94b93c37cdbbabc4"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\simulation\\edit_validation\\frame_pipeline\\async_boundary.glsl",
+      "bytes": 2555,
+      "sha256": "a6226484e71e726a1ba7d68bc3d50a8ff89891904eeef6d71a659be484203477"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scenes\\playable\\test1_geometry.tscn",
+      "bytes": 1335,
+      "sha256": "87afcb42d1b7e3a5db7516042c643592531f175c8bf9813529781ecc3e037713"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\assets\\test1_geometry\\initial_state.f32",
+      "bytes": 1310720,
+      "sha256": "0d2afa78195b675600e2d36bf4dc4539b9575bb7fd5e25019c43b5df341bd3b3"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\assets\\test1_geometry\\initial_state.json",
+      "bytes": 2676,
+      "sha256": "c48e9885ecb0df42c13c59a32872214ca626a984ae1936f253e92b6717619732"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\assets\\test1_geometry\\water_cycle.json",
+      "bytes": 258,
+      "sha256": "b95e55ec01bfe639ad58c757092b76c6f2f67bf63d6dd52cd8b4ea0fc9a561c9"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\tools\\test1_geometry\\build_initial_state.py",
+      "bytes": 4403,
+      "sha256": "d69286cbb47a284116be79449658397cc4542e3e488a77764d0613925d2d0cfc"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\tests\\integration\\test1_geometry_probe.gd",
+      "bytes": 8957,
+      "sha256": "f454513adda54a58bdc272d8b22c9919767e01e01802ca21d9d214b5d16ec0fc"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\tests\\integration\\test1_geometry_runup_probe.gd",
+      "bytes": 7990,
+      "sha256": "5223e792900342aedae4b2b8cfdeb10c2675eb099693d87ab1f91b290164a8b3"
+    }
+  ],
+  "final_runtime_source_matches": [
+    "res://scripts/beach/test1_geometry_entry.gd",
+    "res://scripts/scenarios/test1_geometry_layout.gd",
+    "res://scripts/simulation/edit_validation/frame_pipeline/async_controller.gd",
+    "res://scripts/simulation/edit_validation/frame_pipeline/async_boundary.glsl",
+    "res://scenes/playable/test1_geometry.tscn",
+    "res://assets/test1_geometry/initial_state.f32",
+    "res://assets/test1_geometry/initial_state.json",
+    "res://assets/test1_geometry/water_cycle.json"
+  ],
+  "baseline": {
+    "path": "D:\\godot\\project\\sandcastle\\test_output\\test1_geometry_20261018\\runup_fix_v1\\before\\manifest.json",
+    "bytes": 1763,
+    "sha256": "9e35e7d543033717a107598ca3608a6d67d7abe9a0fa6dacced45dcb6614b157"
+  },
+  "static_comparison": {
+    "path": "D:\\godot\\project\\sandcastle\\test_output\\test1_geometry_20261018\\runup_fix_v1\\baseline_comparison.json",
+    "bytes": 316,
+    "sha256": "a48e00ad4578595fb39358737b4e1a0b7635d2f305a9d4a20e1aaa86f38eba72"
+  },
+  "camera_and_cycle_regression": {
+    "checks": 65,
+    "result": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\test1_geometry_20261018\\runup_fix_v1\\candidate_b\\result.json",
+      "bytes": 86584,
+      "sha256": "3a44d13fbf1cf4c9ca722cf19ff034ee257cea0fb790c6214a4e450410e055d0"
+    },
+    "log": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\test1_geometry_20261018\\runup_fix_v1\\candidate_b\\run.log",
+      "bytes": 6054,
+      "sha256": "af5bf2c6bda3e9debe653cb954eafb3996ac8987869d1f7cc4582e1e645e0464"
+    }
+  },
+  "edit_and_recovery_regression": {
+    "checks": 62,
+    "result": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\test1_geometry_20261018\\runup_fix_v1\\edit_regression\\result.json",
+      "bytes": 78396,
+      "sha256": "776254f541bdb0797012ca8ccc02172e3e4ba85b5a1d95dee410e778e6fd1344"
+    },
+    "log": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\test1_geometry_20261018\\runup_fix_v1\\edit_regression\\run.log",
+      "bytes": 2757,
+      "sha256": "df80bb4e37ab6b544f735f656cfd1bc02e16cb98cc3311f371001004922d7f0c"
+    }
+  },
+  "two_cycle_observation": {
+    "samples": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\test1_geometry_20261018\\runup_fix_v1\\candidate_a\\samples.json",
+      "bytes": 6818,
+      "sha256": "c0bc7e3cb8782445565768795dbce2a9073a481a8c715c11848827808d321a91"
+    },
+    "original_result": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\test1_geometry_20261018\\runup_fix_v1\\candidate_a\\result.json",
+      "bytes": 94399,
+      "sha256": "6de8ec653d333cec3276a46ab116bd0243bfaf17c9d859b0cdbef207bc6e26e6"
+    },
+    "completed_simulation_s": 40.0663986206055,
+    "completed_ticks": 1202,
+    "periods": [
+      {
+        "peak": {
+          "boundary_level": 0.949999988079071,
+          "dry_fraction": 0.315451388888889,
+          "mean_shore_qx": -0.00807018717291483,
+          "sea_eta_error_from_rest": 0.0971315882168711,
+          "seconds": 14.0334072113037,
+          "shore_cells": 7476,
+          "shore_water_m3": 9.09121748227249,
+          "tick": 421,
+          "upper_dry_fraction": 1.0,
+          "wet_shore_cells": 5754
+        },
+        "retreat": {
+          "boundary_level": 1.32542932033539,
+          "dry_fraction": 0.461180555555556,
+          "mean_shore_qx": -0.00818209316518373,
+          "sea_eta_error_from_rest": 0.248610097169876,
+          "seconds": 26.0666122436523,
+          "shore_cells": 7429,
+          "shore_water_m3": 0.879185070629197,
+          "tick": 782,
+          "upper_dry_fraction": 1.0,
+          "wet_shore_cells": 1882
+        },
+        "reduction_fraction": 0.9032929228298
+      },
+      {
+        "peak": {
+          "boundary_level": 0.949999988079071,
+          "dry_fraction": 0.308819444444444,
+          "mean_shore_qx": -0.0143211450104467,
+          "sea_eta_error_from_rest": 0.102673349622637,
+          "seconds": 34.0664901733398,
+          "shore_cells": 7403,
+          "shore_water_m3": 9.65571820115281,
+          "tick": 1022,
+          "upper_dry_fraction": 1.0,
+          "wet_shore_cells": 5675
+        },
+        "retreat": {
+          "boundary_level": 0.949999988079071,
+          "dry_fraction": 0.374479166666667,
+          "mean_shore_qx": -0.0278042796621627,
+          "sea_eta_error_from_rest": 0.0878449857234955,
+          "seconds": 40.0663986206055,
+          "shore_cells": 7377,
+          "shore_water_m3": 3.00568088420826,
+          "tick": 1202,
+          "upper_dry_fraction": 1.0,
+          "wet_shore_cells": 4152
+        },
+        "reduction_fraction": 0.6887149333076635
+      }
+    ],
+    "min_exposed_fraction": 0.307361111111111,
+    "min_upper_exposed_fraction": 1.0,
+    "raw_failures_retained": [
+      {
+        "name": "boundary_level_within_profile",
+        "pass": false
+      },
+      {
+        "name": "menu_switch_complete_main",
+        "pass": false
+      }
+    ],
+    "failure_causes": [
+      "Initial boundary diagnostic control[24] unset at tick0; fixed probe criterion excludes pre-dispatch diagnostic.",
+      "Concurrent external change to scripts/simulation/unified_edit/visuals.gd caused valid checkpoint source-identity rejection on return; unchanged by this task. Stable-source rerun passed."
+    ]
+  },
+  "hardware": {
+    "engine": {
+      "build": "steam",
+      "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+      "hex": 263938,
+      "major": 4,
+      "minor": 7,
+      "patch": 2,
+      "status": "stable",
+      "string": "4.7.2-stable (steam)",
+      "timestamp": 0
+    },
+    "adapter": "NVIDIA GeForce GTX 1050",
+    "driver": "d3d12",
+    "window": "(1280, 720)"
+  },
+  "artifacts": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\test1_geometry_20261018\\runup_fix_v1\\runup_verified.png",
+      "bytes": 421160,
+      "sha256": "46c19b941a67556269414cf668458c119993ef55eda7dedf801059f6f9a98ef6"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\test1_geometry_20261018\\runup_fix_v1\\candidate_a\\cycle_00.png",
+      "bytes": 403758,
+      "sha256": "485de14f621a9814971f7d04fb4c839d25a2921badfe571113341e6604dc6bc1"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\test1_geometry_20261018\\runup_fix_v1\\candidate_a\\cycle_12.png",
+      "bytes": 415620,
+      "sha256": "1d0bb02eedc6b43bb95317a58294cfcbe832da9b042cb84673232990c1a90fb2"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\test1_geometry_20261018\\runup_fix_v1\\candidate_a\\cycle_24.png",
+      "bytes": 417086,
+      "sha256": "45158783053584c36083013362f450de4241f1e30134267df0c4ea06893d9954"
+    }
+  ],
+  "limits": [
+    "20-second cycle, levels and calm initial water are Godot adaptation; original future timing unknown.",
+    "Samples are completed GPU states every about2 simulation seconds, not continuous dry-coverage guarantee.",
+    "Previous raw failures and historical delivery results retained.",
+    "No long stability or performance acceptance claim."
+  ]
+}

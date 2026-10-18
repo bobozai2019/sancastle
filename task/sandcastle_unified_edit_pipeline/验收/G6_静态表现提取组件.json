@@ -1,0 +1,376 @@
+{
+  "component": "static_presentation_extraction_and_actual_material_handoff",
+  "pass": true,
+  "goal_complete": false,
+  "overall_progress": "24/36",
+  "T06_progress": "0/4",
+  "G6_pass": false,
+  "formal_cutover": false,
+  "direct_checks": 144,
+  "audit_checks": 628,
+  "source_count": 560,
+  "source_zip": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_presentation_final01\\sources.zip",
+  "source_zip_sha256": "4f5eb7e7cacd24f9c18005328401507dd6c1869569114770194b60bdd1b09164",
+  "scenes": {
+    "main": {
+      "materials": 10,
+      "bound_materials": 9,
+      "samplers": 50,
+      "images": {
+        "unified": {
+          "sha256": "127508290f49870243ea6053711376750ea02cf7e6f26e3da003ffa8bf709fff",
+          "mean_absolute_rgb_difference": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "unified_tick": {
+          "sha256": "b93a31d08ce67fa557377ecf9b5ddb7c945f3f1f48747eca8c3b296fc1640cbd",
+          "mean_absolute_rgb_difference": [
+            4.363186848958334,
+            2.6563541666666666,
+            1.4600249565972223
+          ]
+        },
+        "unified_restored": {
+          "sha256": "127508290f49870243ea6053711376750ea02cf7e6f26e3da003ffa8bf709fff",
+          "mean_absolute_rgb_difference": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "test1_backwash": {
+      "materials": 10,
+      "bound_materials": 9,
+      "samplers": 50,
+      "images": {
+        "unified": {
+          "sha256": "3eb1ffb823dad4a048c98d4be113b8c4cc682f755023396cca501db293a6a91f",
+          "mean_absolute_rgb_difference": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "unified_tick": {
+          "sha256": "98d1278f1c78bbd6074b72642de497e516d62317c6832d12703460dcdf6e2def",
+          "mean_absolute_rgb_difference": [
+            9.780220269097223,
+            5.418799913194444,
+            3.824213324652778
+          ]
+        },
+        "unified_restored": {
+          "sha256": "3eb1ffb823dad4a048c98d4be113b8c4cc682f755023396cca501db293a6a91f",
+          "mean_absolute_rgb_difference": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "test1_capture": {
+      "materials": 10,
+      "bound_materials": 9,
+      "samplers": 50,
+      "images": {
+        "unified": {
+          "sha256": "2e07959589e40ed9db0398ee207c8867ebe055fdfa546f2cc4e0a5d402ea3ffa",
+          "mean_absolute_rgb_difference": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "unified_tick": {
+          "sha256": "c25543a62ccbd2740530a204c1d525e629aa64eee9e60bdc55343aba34c745f5",
+          "mean_absolute_rgb_difference": [
+            9.779338107638889,
+            5.418597005208333,
+            3.8239290364583334
+          ]
+        },
+        "unified_restored": {
+          "sha256": "2e07959589e40ed9db0398ee207c8867ebe055fdfa546f2cc4e0a5d402ea3ffa",
+          "mean_absolute_rgb_difference": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "test1_geometry": {
+      "materials": 11,
+      "bound_materials": 10,
+      "samplers": 52,
+      "images": {
+        "unified": {
+          "sha256": "c41d9da9875cde09a1f1a73ed286454cfa50325cf6a62e3bc5b0c6039d0be4da",
+          "mean_absolute_rgb_difference": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "unified_tick": {
+          "sha256": "6857d0f2cf79ee33b2bdf7ea0ea31d90aeffa2d7f11bd1ab5b69aa87dfa6b064",
+          "mean_absolute_rgb_difference": [
+            2.1883116319444444,
+            1.9228352864583333,
+            0.8949001736111111
+          ]
+        },
+        "unified_restored": {
+          "sha256": "c41d9da9875cde09a1f1a73ed286454cfa50325cf6a62e3bc5b0c6039d0be4da",
+          "mean_absolute_rgb_difference": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    }
+  },
+  "evidence": {
+    "report.json": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_presentation_final01\\report.json",
+      "sha256": "33435686ff25d7fa5c67b4fc07111b91ab1f8335f5e080445f391164b2858660"
+    },
+    "audit.json": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_presentation_final01\\audit.json",
+      "sha256": "39326aed40eabdeb592937b331ad31814aa44cf0e668574d057db11acb9caf84"
+    },
+    "auditor_source.py": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_presentation_final01\\auditor_source.py",
+      "sha256": "f38d6b73d4bace6895c4fbc5dac3a0effbbf67a4dafe4546586c81d170610481"
+    }
+  },
+  "runs": [
+    {
+      "scene": "main",
+      "phase": "bake",
+      "pass": true,
+      "exit_code": 0,
+      "command": [
+        "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+        "--path",
+        "D:\\godot\\project\\sandcastle",
+        "--script",
+        "res://tools/unified_edit_pipeline/bake_presentation.gd",
+        "--quit-after",
+        "10800",
+        "--log-file",
+        "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_presentation_final01\\main_bake\\probe.log",
+        "--",
+        "--output=D:/godot/project/sandcastle/test_output/unified_edit_pipeline/g6_presentation_final01/main_bake",
+        "--scene=res://scenes/main.tscn"
+      ],
+      "evidence": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_presentation_final01\\main_bake\\bake.json",
+      "evidence_sha256": "860d3d4e0533404ea45517b1f0c24530df248286d8f94074a7759328527ea664",
+      "clean_logs": true
+    },
+    {
+      "scene": "main",
+      "phase": "runtime",
+      "pass": true,
+      "exit_code": 0,
+      "command": [
+        "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+        "--path",
+        "D:\\godot\\project\\sandcastle",
+        "--script",
+        "res://tests/integration/unified_edit_presentation_probe.gd",
+        "--quit-after",
+        "10800",
+        "--log-file",
+        "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_presentation_final01\\main_runtime\\probe.log",
+        "--",
+        "--output=D:/godot/project/sandcastle/test_output/unified_edit_pipeline/g6_presentation_final01/main_runtime",
+        "--manifest=D:/godot/project/sandcastle/test_output/unified_edit_pipeline/g6_presentation_final01/main_bake/bake.json"
+      ],
+      "evidence": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_presentation_final01\\main_runtime\\probe.json",
+      "evidence_sha256": "b10aef09d3c244935f71370bddeb64d25349c8cb0769706242cd099b7c1a9a62",
+      "clean_logs": true
+    },
+    {
+      "scene": "test1_capture",
+      "phase": "bake",
+      "pass": true,
+      "exit_code": 0,
+      "command": [
+        "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+        "--path",
+        "D:\\godot\\project\\sandcastle",
+        "--script",
+        "res://tools/unified_edit_pipeline/bake_presentation.gd",
+        "--quit-after",
+        "10800",
+        "--log-file",
+        "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_presentation_final01\\test1_capture_bake\\probe.log",
+        "--",
+        "--output=D:/godot/project/sandcastle/test_output/unified_edit_pipeline/g6_presentation_final01/test1_capture_bake",
+        "--scene=res://scenes/playable/test1_capture.tscn"
+      ],
+      "evidence": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_presentation_final01\\test1_capture_bake\\bake.json",
+      "evidence_sha256": "1fe7d29bef7b97f975cf5c57c2ec00f39c6754161217ff27d43736ad40c02d68",
+      "clean_logs": true
+    },
+    {
+      "scene": "test1_capture",
+      "phase": "runtime",
+      "pass": true,
+      "exit_code": 0,
+      "command": [
+        "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+        "--path",
+        "D:\\godot\\project\\sandcastle",
+        "--script",
+        "res://tests/integration/unified_edit_presentation_probe.gd",
+        "--quit-after",
+        "10800",
+        "--log-file",
+        "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_presentation_final01\\test1_capture_runtime\\probe.log",
+        "--",
+        "--output=D:/godot/project/sandcastle/test_output/unified_edit_pipeline/g6_presentation_final01/test1_capture_runtime",
+        "--manifest=D:/godot/project/sandcastle/test_output/unified_edit_pipeline/g6_presentation_final01/test1_capture_bake/bake.json"
+      ],
+      "evidence": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_presentation_final01\\test1_capture_runtime\\probe.json",
+      "evidence_sha256": "67cfd78cc2ba3b79ac9dd46d9bdaa48f8538e1070ec90e7a03f4385dc4651a46",
+      "clean_logs": true
+    },
+    {
+      "scene": "test1_backwash",
+      "phase": "bake",
+      "pass": true,
+      "exit_code": 0,
+      "command": [
+        "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+        "--path",
+        "D:\\godot\\project\\sandcastle",
+        "--script",
+        "res://tools/unified_edit_pipeline/bake_presentation.gd",
+        "--quit-after",
+        "10800",
+        "--log-file",
+        "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_presentation_final01\\test1_backwash_bake\\probe.log",
+        "--",
+        "--output=D:/godot/project/sandcastle/test_output/unified_edit_pipeline/g6_presentation_final01/test1_backwash_bake",
+        "--scene=res://scenes/playable/test1_backwash.tscn"
+      ],
+      "evidence": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_presentation_final01\\test1_backwash_bake\\bake.json",
+      "evidence_sha256": "6cbfe09afa68ea9be6b9e9aa16113c97034200cfe2404a9df75a66ff4b79913e",
+      "clean_logs": true
+    },
+    {
+      "scene": "test1_backwash",
+      "phase": "runtime",
+      "pass": true,
+      "exit_code": 0,
+      "command": [
+        "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+        "--path",
+        "D:\\godot\\project\\sandcastle",
+        "--script",
+        "res://tests/integration/unified_edit_presentation_probe.gd",
+        "--quit-after",
+        "10800",
+        "--log-file",
+        "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_presentation_final01\\test1_backwash_runtime\\probe.log",
+        "--",
+        "--output=D:/godot/project/sandcastle/test_output/unified_edit_pipeline/g6_presentation_final01/test1_backwash_runtime",
+        "--manifest=D:/godot/project/sandcastle/test_output/unified_edit_pipeline/g6_presentation_final01/test1_backwash_bake/bake.json"
+      ],
+      "evidence": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_presentation_final01\\test1_backwash_runtime\\probe.json",
+      "evidence_sha256": "d89d501c83ec53c90fdb01a114a8e4a3da3af79ac199b0ceb7bc307e4caae99a",
+      "clean_logs": true
+    },
+    {
+      "scene": "test1_geometry",
+      "phase": "bake",
+      "pass": true,
+      "exit_code": 0,
+      "command": [
+        "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+        "--path",
+        "D:\\godot\\project\\sandcastle",
+        "--script",
+        "res://tools/unified_edit_pipeline/bake_presentation.gd",
+        "--quit-after",
+        "10800",
+        "--log-file",
+        "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_presentation_final01\\test1_geometry_bake\\probe.log",
+        "--",
+        "--output=D:/godot/project/sandcastle/test_output/unified_edit_pipeline/g6_presentation_final01/test1_geometry_bake",
+        "--scene=res://scenes/playable/test1_geometry.tscn"
+      ],
+      "evidence": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_presentation_final01\\test1_geometry_bake\\bake.json",
+      "evidence_sha256": "289686b6d5560ffbfa99e122d0a9bf683e696885d9a7e3e48affc45a5e66044d",
+      "clean_logs": true
+    },
+    {
+      "scene": "test1_geometry",
+      "phase": "runtime",
+      "pass": true,
+      "exit_code": 0,
+      "command": [
+        "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+        "--path",
+        "D:\\godot\\project\\sandcastle",
+        "--script",
+        "res://tests/integration/unified_edit_presentation_probe.gd",
+        "--quit-after",
+        "10800",
+        "--log-file",
+        "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_presentation_final01\\test1_geometry_runtime\\probe.log",
+        "--",
+        "--output=D:/godot/project/sandcastle/test_output/unified_edit_pipeline/g6_presentation_final01/test1_geometry_runtime",
+        "--manifest=D:/godot/project/sandcastle/test_output/unified_edit_pipeline/g6_presentation_final01/test1_geometry_bake/bake.json"
+      ],
+      "evidence": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_presentation_final01\\test1_geometry_runtime\\probe.json",
+      "evidence_sha256": "a14430c1d7016f8732fead618278b5bf53d48e5023dfd075255526f930e70faf",
+      "clean_logs": true
+    }
+  ],
+  "limitations": [
+    "UI behavior scripts disabled in probe; no interactive entry acceptance",
+    "Frozen old HUD is not candidate performance evidence",
+    "Pixel differences diagnostic only; temporal rendering not frozen",
+    "Imported .godot cache not sealed; promotion needs import identity checks",
+    "Preview/gravel spawn/full lifecycle/formal cutover and cost gates remain"
+  ],
+  "provisional_failures": [
+    {
+      "folder": "g6_presentation_runtime01",
+      "accepted": false,
+      "reason": "Engine resource leaks/orphan nodes despite local GPU checks"
+    },
+    {
+      "folder": "g6_presentation_runtime02",
+      "accepted": false,
+      "reason": "Engine resource leaks/orphan nodes despite local GPU checks"
+    },
+    {
+      "folder": "g6_presentation_runtime03",
+      "accepted": false,
+      "reason": "Engine resource leaks/orphan nodes despite local GPU checks"
+    },
+    {
+      "folder": "g6_presentation_runtime04",
+      "accepted": false,
+      "reason": "Engine resource leaks/orphan nodes despite local GPU checks"
+    }
+  ],
+  "sources": {
+    "tools/unified_edit_pipeline/bake_presentation.gd": "5ec55b74c2bbdd6c09e755394a382dfad033979b04889111bb071f9d0aa21880",
+    "scripts/simulation/unified_edit/presentation.gd": "d350b6c46bca104331070132896801ef48563681e948d45a0bf33df462e4cf1f",
+    "tests/integration/unified_edit_presentation_probe.gd": "0cfe2c4b4308ae4e7383d82281c8e08b9d140a5f561aa0085147f8218b6edcec",
+    "tools/unified_edit_pipeline/run_presentation.py": "7718355620c3a422a75939878b55aea56a85663efb0ec883d14734f18ab9c8be",
+    "tools/unified_edit_pipeline/audit_presentation.py": "f38d6b73d4bace6895c4fbc5dac3a0effbbf67a4dafe4546586c81d170610481"
+  }
+}

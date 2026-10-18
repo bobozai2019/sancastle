@@ -1,0 +1,91 @@
+{
+  "schema": 1,
+  "status": "component_pass",
+  "date": "2026-10-18",
+  "overall_completed": 26,
+  "overall_total": 36,
+  "T06_completed": 2,
+  "T06_total": 4,
+  "completed_subgoals": [
+    "T06.2"
+  ],
+  "G6_pass": false,
+  "formal_cutover": true,
+  "production_change": "Existing bounded maintenance retry now covers current height readers, current/candidate/retired checkpoint lifetime proofs; no new recording pump or authority/ABI/numerical change",
+  "scope": "Formal queued/recorded/GPU-done-not-consumed/physics-not-applied save and close; real unknown readers; all tool declarations; staged candidate failures and recovery",
+  "gpu_runs": 18,
+  "gpu_checks": 824,
+  "case_checks": {
+    "capture_main": 14,
+    "capture_test1_geometry": 14,
+    "height_main": 8,
+    "height_test1_geometry": 8,
+    "physics_main": 11,
+    "physics_test1_geometry": 11,
+    "recorded_main": 9,
+    "recorded_test1_geometry": 9,
+    "suite_main": 92,
+    "suite_test1_capture": 92,
+    "suite_test1_backwash": 92,
+    "suite_test1_geometry": 92,
+    "save_main": 140,
+    "save_test1_geometry": 140,
+    "close_main": 13,
+    "close_test1_geometry": 13,
+    "candidate_main": 33,
+    "candidate_test1_geometry": 33
+  },
+  "independent_checks": 892,
+  "source_members": 189,
+  "verification_source_members": 192,
+  "startup_observer_ms": 180000,
+  "startup_observed_ms": {
+    "min": 409,
+    "max": 1077
+  },
+  "performance_pass": false,
+  "evidence": [
+    {
+      "path": "test_output/unified_edit_pipeline/g6_formal_boundaries_final02/report.json",
+      "sha256": "81609601fdc48eba9d2ee2e5a5a792b597e6d4cf1ea9d78d8a2c4a29fcdbdca4",
+      "bytes": 43495
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g6_formal_boundaries_final02/audit.json",
+      "sha256": "14e2fafffe18d24812efce12f7805098be52a826191cd47e598d799515acffd5",
+      "bytes": 83591
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g6_formal_boundaries_final02/artifact-index.json",
+      "sha256": "884b905a07933fb393bb9020fa05f23ba959a5e9d12abc41614fced617408aa9",
+      "bytes": 16978
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g6_formal_boundaries_final02/sources.zip",
+      "sha256": "dff97ff6da2f2f11b1ce5c3c4a4b99f17cfbeef8b9482ab246b0af5cf1a29c87",
+      "bytes": 25773040
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g6_formal_boundaries_final02/verification_sources.zip",
+      "sha256": "e2e35e407948a4bfa05787d687096a0f9b606d6615dc920a70356cbe1ce3bdcc",
+      "bytes": 25780283
+    }
+  ],
+  "failures_retained": [
+    "test_output/unified_edit_pipeline/g6_formal_capture_unknown01",
+    "test_output/unified_edit_pipeline/g6_formal_height_unknown01",
+    "test_output/unified_edit_pipeline/g6_formal_unknown_fixed01",
+    "test_output/unified_edit_pipeline/g6_formal_boundaries_final01"
+  ],
+  "development_passes": [
+    "test_output/unified_edit_pipeline/g6_formal_height_retry02",
+    "test_output/unified_edit_pipeline/g6_formal_candidate01",
+    "test_output/unified_edit_pipeline/g6_formal_preflight01"
+  ],
+  "remaining": [
+    "formal preview/detach and earliest shutdown ownership checks",
+    "formal old recording fault recovery/close and cross-generation callback audit",
+    "full old execution reachability retirement audit",
+    "G7 configuration-only extensions and G8 final cost/sustained validation"
+  ]
+}

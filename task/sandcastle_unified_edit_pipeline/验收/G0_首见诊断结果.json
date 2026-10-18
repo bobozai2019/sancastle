@@ -1,0 +1,122 @@
+{
+  "role": "paused camera-aimed UI-hidden framebuffer diagnostic, not cost or scanout",
+  "manifest": "test_output\\unified_edit_pipeline\\g0_first_seen_final01\\run-manifest.json",
+  "manifest_sha256": "c65275eb696d45c705ca3d78a5be89285f3a993b00b493f4aaf5303d6f797783",
+  "pass": true,
+  "checks": 234,
+  "cases": [
+    {
+      "case": "dig",
+      "pass": true,
+      "checks": 57,
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_first_seen_final01\\visibility_dig_1.json",
+      "result_sha256": "7ac5baec7b12a57795a78af51b155d783641d5ee9b55e09c6e6da39fa18693c2",
+      "control_pixel_changes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "first_changed_pixels": 1366,
+      "admission_to_capture_done_upper_ms": 64.856,
+      "roi": "[P: (560, 279), S: (160, 160)]",
+      "before": {
+        "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_first_seen_final01\\visibility_dig_1_before.png",
+        "sha256": "c76987454b5eaab89019502ba9fbe546c9b9940ad515f7fe6e8a852be5ded51a"
+      },
+      "first_change": {
+        "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_first_seen_final01\\visibility_dig_1_first_change.png",
+        "sha256": "9ab303c723c2c8aadb4e47e969f8edb736ec05353d80bf55f081eb2e2ad052a4"
+      }
+    },
+    {
+      "case": "fill",
+      "pass": true,
+      "checks": 57,
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_first_seen_final01\\visibility_fill_1.json",
+      "result_sha256": "5c0fbf45a95acb389ae149060db126aeb0007a81616ab20cacec62d89cc908bf",
+      "control_pixel_changes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "first_changed_pixels": 1387,
+      "admission_to_capture_done_upper_ms": 43.462,
+      "roi": "[P: (560, 279), S: (160, 160)]",
+      "before": {
+        "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_first_seen_final01\\visibility_fill_1_before.png",
+        "sha256": "c76987454b5eaab89019502ba9fbe546c9b9940ad515f7fe6e8a852be5ded51a"
+      },
+      "first_change": {
+        "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_first_seen_final01\\visibility_fill_1_first_change.png",
+        "sha256": "f1405b540c1c8a70ed3d598f6a8629ee3f38da9c891318226f9a1d678c75fc6c"
+      }
+    },
+    {
+      "case": "wall",
+      "pass": true,
+      "checks": 60,
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_first_seen_final01\\visibility_wall_1.json",
+      "result_sha256": "30592c3926efa82a0355682bd16b0a42bd75556f02be3d7ad8f08fa89783b06e",
+      "control_pixel_changes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "first_changed_pixels": 3908,
+      "admission_to_capture_done_upper_ms": 77.396,
+      "roi": "[P: (560, 279), S: (160, 160)]",
+      "before": {
+        "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_first_seen_final01\\visibility_wall_1_before.png",
+        "sha256": "c76987454b5eaab89019502ba9fbe546c9b9940ad515f7fe6e8a852be5ded51a"
+      },
+      "first_change": {
+        "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_first_seen_final01\\visibility_wall_1_first_change.png",
+        "sha256": "3608e60eface99d6034bb043f1c7373eadfe577d31698234e546f3c536076356"
+      }
+    },
+    {
+      "case": "shovel",
+      "pass": true,
+      "checks": 60,
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_first_seen_final01\\visibility_shovel_1.json",
+      "result_sha256": "64a83196fea98bb162dce5f6d491344b2632ca4d460eb012028a298b75642f05",
+      "control_pixel_changes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "first_changed_pixels": 2385,
+      "admission_to_capture_done_upper_ms": 86.599,
+      "roi": "[P: (560, 279), S: (160, 160)]",
+      "before": {
+        "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_first_seen_final01\\visibility_shovel_1_before.png",
+        "sha256": "c76987454b5eaab89019502ba9fbe546c9b9940ad515f7fe6e8a852be5ded51a"
+      },
+      "first_change": {
+        "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_first_seen_final01\\visibility_shovel_1_first_change.png",
+        "sha256": "2ff27b8363e1cf7a567bde474e5b2b2bbcb1b1df201c586a265c8f79230b7c4b"
+      }
+    }
+  ],
+  "excluded_attempts": [
+    "attempt01 ROI occluded by performance UI",
+    "attempt02 UI restored each process frame"
+  ],
+  "limits": [
+    "Screenshot readback stalls excluded from cost runs.",
+    "No general realtime first-visible latency claim.",
+    "Upper bounds include capture readback availability, not monitor scanout."
+  ]
+}

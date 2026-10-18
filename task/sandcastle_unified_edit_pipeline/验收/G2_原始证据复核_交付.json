@@ -1,0 +1,170 @@
+{
+  "role": "independent SHA256/size/int64 and direct-reference-byte audit",
+  "run": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g2_gpu_delivery10",
+  "tool_sha256": "b0553a744d69e11ea512355e842c53ee5cd46ebc6a83c81c8f5066854e320237",
+  "pass": true,
+  "failures": [],
+  "records": [
+    {
+      "case": "normal",
+      "raw_fields": 6,
+      "error_flags": 0,
+      "generation": "9007199254740993",
+      "state_seq": "3",
+      "sim_tick": "1",
+      "revision": "6",
+      "time": 0.03333333507180214
+    },
+    {
+      "case": "water_1",
+      "raw_fields": 9,
+      "error_flags": 0,
+      "generation": "9007199254740993",
+      "state_seq": "1",
+      "sim_tick": "1",
+      "revision": "1",
+      "time": 0.0010000000474974513
+    },
+    {
+      "case": "water_2",
+      "raw_fields": 9,
+      "error_flags": 0,
+      "generation": "9007199254740993",
+      "state_seq": "1",
+      "sim_tick": "1",
+      "revision": "2",
+      "time": 0.0010000000474974513
+    },
+    {
+      "case": "water_3",
+      "raw_fields": 9,
+      "error_flags": 0,
+      "generation": "9007199254740993",
+      "state_seq": "1",
+      "sim_tick": "1",
+      "revision": "3",
+      "time": 0.0010000000474974513
+    },
+    {
+      "case": "water_64",
+      "raw_fields": 9,
+      "error_flags": 0,
+      "generation": "9007199254740993",
+      "state_seq": "1",
+      "sim_tick": "1",
+      "revision": "64",
+      "time": 0.0010000000474974513
+    },
+    {
+      "case": "water_100",
+      "raw_fields": 9,
+      "error_flags": 0,
+      "generation": "9007199254740993",
+      "state_seq": "1",
+      "sim_tick": "1",
+      "revision": "64",
+      "time": 0.0006416040123440325
+    },
+    {
+      "case": "upload",
+      "raw_fields": 6,
+      "error_flags": 0,
+      "generation": "9007199254740993",
+      "state_seq": "0",
+      "sim_tick": "0",
+      "revision": "0",
+      "time": 0.0
+    },
+    {
+      "case": "readback",
+      "raw_fields": 6,
+      "error_flags": 0,
+      "generation": "9007199254740993",
+      "state_seq": "1",
+      "sim_tick": "0",
+      "revision": "1",
+      "time": 0.0
+    },
+    {
+      "case": "truncate",
+      "raw_fields": 6,
+      "error_flags": 0,
+      "generation": "9007199254740993",
+      "state_seq": "1",
+      "sim_tick": "0",
+      "revision": "1",
+      "time": 0.0
+    },
+    {
+      "case": "identity",
+      "raw_fields": 6,
+      "error_flags": 0,
+      "generation": "9007199254740993",
+      "state_seq": "1",
+      "sim_tick": "0",
+      "revision": "1",
+      "time": 0.0
+    },
+    {
+      "case": "unknown_state",
+      "raw_fields": 6,
+      "error_flags": 0,
+      "generation": "9007199254740993",
+      "state_seq": "1",
+      "sim_tick": "0",
+      "revision": "1",
+      "time": 0.0
+    },
+    {
+      "case": "fatal",
+      "raw_fields": 6,
+      "error_flags": 8,
+      "generation": "9007199254740993",
+      "state_seq": "0",
+      "sim_tick": "0",
+      "revision": "0",
+      "time": 0.0
+    },
+    {
+      "case": "counter",
+      "raw_fields": 6,
+      "error_flags": 32,
+      "generation": "9007199254740993",
+      "state_seq": "9223372036854775807",
+      "sim_tick": "0",
+      "revision": "0",
+      "time": 0.0
+    },
+    {
+      "case": "tick_counter",
+      "raw_fields": 6,
+      "error_flags": 48,
+      "generation": "9007199254740993",
+      "state_seq": "0",
+      "sim_tick": "9223372036854775807",
+      "revision": "0",
+      "time": 0.0
+    },
+    {
+      "case": "revision_counter",
+      "raw_fields": 6,
+      "error_flags": 32,
+      "generation": "9007199254740993",
+      "state_seq": "0",
+      "sim_tick": "0",
+      "revision": "9223372036854775807",
+      "time": 0.0
+    },
+    {
+      "case": "bad_cfl",
+      "raw_fields": 6,
+      "error_flags": 16,
+      "generation": "9007199254740993",
+      "state_seq": "0",
+      "sim_tick": "0",
+      "revision": "0",
+      "time": 0.0
+    }
+  ],
+  "scope": "Saved observations only. Normal field capture predates later scheduling/64-command tests, as stated in typed evidence."
+}

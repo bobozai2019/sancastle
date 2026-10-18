@@ -1,0 +1,679 @@
+{
+  "role": "G0 workload coverage; not full G0 or performance PASS",
+  "coverage_pass": true,
+  "expected": 48,
+  "covered": 48,
+  "check_count": 3288,
+  "missing": [],
+  "errors": [],
+  "manifests": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_matrix01\\run-manifest.json",
+      "sha256": "146d5303fe2dd4b29eea3dc32a36f25017184ee14e548c380b176dd5dd1c3d67",
+      "pass": false,
+      "classification": "contended_or_unknown_gpu_activity"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_remainder01\\run-manifest.json",
+      "sha256": "a4263798cc05b89fdf131d70d891944c725a6ef7ffa6b87e171101b263678664",
+      "pass": true,
+      "classification": "contended_or_unknown_gpu_activity"
+    }
+  ],
+  "successful_cases": [
+    {
+      "case": [
+        "dig",
+        "corner",
+        "dry_paused"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_matrix01\\dig_corner_dry_paused_1.json",
+      "sha256": "91f6d82f4fc89ec8910814c969073a60e93d63598a9dbbc1d8b2490fa3be9307",
+      "checks": 66,
+      "input_open_tick_advance": 0,
+      "final_accepted": 24,
+      "final_rejected": 0
+    },
+    {
+      "case": [
+        "dig",
+        "corner",
+        "dry_realtime"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_matrix01\\dig_corner_dry_realtime_1.json",
+      "sha256": "161fb36b8fed673021f3b85698973bc42cceb17f6432b195c755bc7fb9fbbf64",
+      "checks": 67,
+      "input_open_tick_advance": 11,
+      "final_accepted": 24,
+      "final_rejected": 0
+    },
+    {
+      "case": [
+        "dig",
+        "corner",
+        "wet_paused"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_matrix01\\dig_corner_wet_paused_1.json",
+      "sha256": "7b1434f9436c19de3465aa604c6cc661532702e007187f782b652f2e0b99f740",
+      "checks": 66,
+      "input_open_tick_advance": 0,
+      "final_accepted": 24,
+      "final_rejected": 0
+    },
+    {
+      "case": [
+        "dig",
+        "corner",
+        "wet_realtime"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_matrix01\\dig_corner_wet_realtime_1.json",
+      "sha256": "685c9939de61a214bd5f46f2ec2988688b0770fa0575fae128a341026fe57a65",
+      "checks": 67,
+      "input_open_tick_advance": 11,
+      "final_accepted": 24,
+      "final_rejected": 0
+    },
+    {
+      "case": [
+        "dig",
+        "overlap",
+        "dry_paused"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_matrix01\\dig_overlap_dry_paused_1.json",
+      "sha256": "9463a20f9f7a925376c089395f7568f8f74656bc15dbe0bc0d138915a0bc7db7",
+      "checks": 66,
+      "input_open_tick_advance": 0,
+      "final_accepted": 24,
+      "final_rejected": 0
+    },
+    {
+      "case": [
+        "dig",
+        "overlap",
+        "dry_realtime"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_matrix01\\dig_overlap_dry_realtime_1.json",
+      "sha256": "f010da665c0d6d4f1bcead5370040516092dc7e96690780c2f4c2401e76e301f",
+      "checks": 67,
+      "input_open_tick_advance": 11,
+      "final_accepted": 24,
+      "final_rejected": 0
+    },
+    {
+      "case": [
+        "dig",
+        "overlap",
+        "wet_paused"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_matrix01\\dig_overlap_wet_paused_1.json",
+      "sha256": "616dfb7b571612e9726eb2769ebb155c5b9c44ca3e94134930c4cd0a70e9b108",
+      "checks": 66,
+      "input_open_tick_advance": 0,
+      "final_accepted": 24,
+      "final_rejected": 0
+    },
+    {
+      "case": [
+        "dig",
+        "overlap",
+        "wet_realtime"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_matrix01\\dig_overlap_wet_realtime_1.json",
+      "sha256": "0b0e84a0da1c326ee8467d766d275117eda56f2ce5451c2522b03fe5df8b9b83",
+      "checks": 67,
+      "input_open_tick_advance": 11,
+      "final_accepted": 24,
+      "final_rejected": 0
+    },
+    {
+      "case": [
+        "dig",
+        "straight",
+        "dry_paused"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_matrix01\\dig_straight_dry_paused_1.json",
+      "sha256": "be9f25e9d969de91a8a662aabd1e10768a5e848f926348af402c9e96f673cd66",
+      "checks": 66,
+      "input_open_tick_advance": 0,
+      "final_accepted": 24,
+      "final_rejected": 0
+    },
+    {
+      "case": [
+        "dig",
+        "straight",
+        "dry_realtime"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_matrix01\\dig_straight_dry_realtime_1.json",
+      "sha256": "aebcd4726219d2d941531a89713f8b771542fbaff867e8994ce6ce8652448506",
+      "checks": 67,
+      "input_open_tick_advance": 11,
+      "final_accepted": 24,
+      "final_rejected": 0
+    },
+    {
+      "case": [
+        "dig",
+        "straight",
+        "wet_paused"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_matrix01\\dig_straight_wet_paused_1.json",
+      "sha256": "0afbef5fea8637e179ce01cf6ab1f2608ceddc6896993336ab60c78a4bbe4aed",
+      "checks": 66,
+      "input_open_tick_advance": 0,
+      "final_accepted": 24,
+      "final_rejected": 0
+    },
+    {
+      "case": [
+        "dig",
+        "straight",
+        "wet_realtime"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_matrix01\\dig_straight_wet_realtime_1.json",
+      "sha256": "00071a0125b34bcb065440a299aab35b4e5991875980315289b01ebad0311fcb",
+      "checks": 67,
+      "input_open_tick_advance": 11,
+      "final_accepted": 24,
+      "final_rejected": 0
+    },
+    {
+      "case": [
+        "fill",
+        "corner",
+        "dry_paused"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_matrix01\\fill_corner_dry_paused_1.json",
+      "sha256": "0456695e1c071d9a086cb56e108dfe77c9cfc976fcaee42a1b7d018b3f6cb08f",
+      "checks": 66,
+      "input_open_tick_advance": 0,
+      "final_accepted": 24,
+      "final_rejected": 0
+    },
+    {
+      "case": [
+        "fill",
+        "corner",
+        "dry_realtime"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_matrix01\\fill_corner_dry_realtime_1.json",
+      "sha256": "b2fdbdf042cec0b1999a09d8b9084da3d98da143abac5fc7a3db0b7985ae9e08",
+      "checks": 67,
+      "input_open_tick_advance": 11,
+      "final_accepted": 24,
+      "final_rejected": 0
+    },
+    {
+      "case": [
+        "fill",
+        "corner",
+        "wet_paused"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_matrix01\\fill_corner_wet_paused_1.json",
+      "sha256": "1e9ed3a6d399247a436e937259eb6f9c94019150ec746d802cd114b86b093548",
+      "checks": 66,
+      "input_open_tick_advance": 0,
+      "final_accepted": 24,
+      "final_rejected": 0
+    },
+    {
+      "case": [
+        "fill",
+        "corner",
+        "wet_realtime"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_matrix01\\fill_corner_wet_realtime_1.json",
+      "sha256": "13ef95c0dd06a13b84fd7730feba66b9f79b022b74d1499500e5c0d8450d608b",
+      "checks": 67,
+      "input_open_tick_advance": 11,
+      "final_accepted": 24,
+      "final_rejected": 0
+    },
+    {
+      "case": [
+        "fill",
+        "overlap",
+        "dry_paused"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_matrix01\\fill_overlap_dry_paused_1.json",
+      "sha256": "3c21248e2b24387921242b9ae9a091c6cfaf35b27c810d1bf812fc53c27ed151",
+      "checks": 66,
+      "input_open_tick_advance": 0,
+      "final_accepted": 24,
+      "final_rejected": 0
+    },
+    {
+      "case": [
+        "fill",
+        "overlap",
+        "dry_realtime"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_matrix01\\fill_overlap_dry_realtime_1.json",
+      "sha256": "c13157a7a1d257e51511131372cf54f4c11f5e3b1b966aca263e7d6ab9546408",
+      "checks": 67,
+      "input_open_tick_advance": 11,
+      "final_accepted": 24,
+      "final_rejected": 0
+    },
+    {
+      "case": [
+        "fill",
+        "overlap",
+        "wet_paused"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_matrix01\\fill_overlap_wet_paused_1.json",
+      "sha256": "ea7d332245de7a7c1b85c29e2699ece55f9cdf89b1373696ead897f317a3cb4e",
+      "checks": 66,
+      "input_open_tick_advance": 0,
+      "final_accepted": 24,
+      "final_rejected": 0
+    },
+    {
+      "case": [
+        "fill",
+        "overlap",
+        "wet_realtime"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_matrix01\\fill_overlap_wet_realtime_1.json",
+      "sha256": "f4ce5fb7c14fa047f8023af15745f4c027ccc2eec23de1405af03f529e520a1c",
+      "checks": 67,
+      "input_open_tick_advance": 11,
+      "final_accepted": 24,
+      "final_rejected": 0
+    },
+    {
+      "case": [
+        "fill",
+        "straight",
+        "dry_paused"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_matrix01\\fill_straight_dry_paused_1.json",
+      "sha256": "c37a05ff80df994c78123c74da565469b1c2b0be497c9d98a2dcb249a55921d5",
+      "checks": 66,
+      "input_open_tick_advance": 0,
+      "final_accepted": 24,
+      "final_rejected": 0
+    },
+    {
+      "case": [
+        "fill",
+        "straight",
+        "dry_realtime"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_matrix01\\fill_straight_dry_realtime_1.json",
+      "sha256": "e7baf15cc892c753a33279ece98742c784e6d9a503a5d0c8d3ffa47b40dac849",
+      "checks": 67,
+      "input_open_tick_advance": 11,
+      "final_accepted": 24,
+      "final_rejected": 0
+    },
+    {
+      "case": [
+        "fill",
+        "straight",
+        "wet_paused"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_matrix01\\fill_straight_wet_paused_1.json",
+      "sha256": "bcff140e7b054cbf5f5258640f953e5ef765e55a10fc433d5ba167206aa8feba",
+      "checks": 66,
+      "input_open_tick_advance": 0,
+      "final_accepted": 24,
+      "final_rejected": 0
+    },
+    {
+      "case": [
+        "fill",
+        "straight",
+        "wet_realtime"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_matrix01\\fill_straight_wet_realtime_1.json",
+      "sha256": "29b97b9c244c46d8690e99bd93a2a762d2a588bd49fa5e848e05831780acf95a",
+      "checks": 67,
+      "input_open_tick_advance": 11,
+      "final_accepted": 24,
+      "final_rejected": 0
+    },
+    {
+      "case": [
+        "shovel",
+        "corner",
+        "dry_paused"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_remainder01\\shovel_corner_dry_paused_1.json",
+      "sha256": "ba0c8190c33b4dba80d67870aaa1cabab0aa17f7644bdc89faa0c9f1fea3c21b",
+      "checks": 70,
+      "input_open_tick_advance": 0,
+      "final_accepted": 23,
+      "final_rejected": 1
+    },
+    {
+      "case": [
+        "shovel",
+        "corner",
+        "dry_realtime"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_remainder01\\shovel_corner_dry_realtime_1.json",
+      "sha256": "678f79753948b297bb73b2adac69a48fb4f85d960ca6d141cc2796622378345d",
+      "checks": 71,
+      "input_open_tick_advance": 11,
+      "final_accepted": 23,
+      "final_rejected": 1
+    },
+    {
+      "case": [
+        "shovel",
+        "corner",
+        "wet_paused"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_remainder01\\shovel_corner_wet_paused_1.json",
+      "sha256": "d909f95b77f090c94fe81f81f5dd6f691781622af138e04f02a791247e7a67ee",
+      "checks": 70,
+      "input_open_tick_advance": 0,
+      "final_accepted": 23,
+      "final_rejected": 1
+    },
+    {
+      "case": [
+        "shovel",
+        "corner",
+        "wet_realtime"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_remainder01\\shovel_corner_wet_realtime_1.json",
+      "sha256": "74660beaf67b5dac255b3c2feb9b7d03e6b782342a082acdfddabd9284a04f54",
+      "checks": 71,
+      "input_open_tick_advance": 11,
+      "final_accepted": 23,
+      "final_rejected": 1
+    },
+    {
+      "case": [
+        "shovel",
+        "overlap",
+        "dry_paused"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_remainder01\\shovel_overlap_dry_paused_1.json",
+      "sha256": "354f7654e4033116babeacee178ca55a530fedf92e1d3ab8411360a053c164fa",
+      "checks": 70,
+      "input_open_tick_advance": 0,
+      "final_accepted": 12,
+      "final_rejected": 12
+    },
+    {
+      "case": [
+        "shovel",
+        "overlap",
+        "dry_realtime"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_remainder01\\shovel_overlap_dry_realtime_1.json",
+      "sha256": "c0663f0d7b18948d4c92b49b509a54cc383af2a6c9a983a50855ebcf53ccc312",
+      "checks": 71,
+      "input_open_tick_advance": 11,
+      "final_accepted": 12,
+      "final_rejected": 12
+    },
+    {
+      "case": [
+        "shovel",
+        "overlap",
+        "wet_paused"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_remainder01\\shovel_overlap_wet_paused_1.json",
+      "sha256": "f20d3a136d86f480f68a66fc97dfa3d683da9e3c477cd765109023e57ea6e4c3",
+      "checks": 70,
+      "input_open_tick_advance": 0,
+      "final_accepted": 12,
+      "final_rejected": 12
+    },
+    {
+      "case": [
+        "shovel",
+        "overlap",
+        "wet_realtime"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_remainder01\\shovel_overlap_wet_realtime_1.json",
+      "sha256": "49650b78031645f99e3f6a06c3b3f3d1871a84d03e666bea01a6d4bc90deb1f0",
+      "checks": 71,
+      "input_open_tick_advance": 11,
+      "final_accepted": 12,
+      "final_rejected": 12
+    },
+    {
+      "case": [
+        "shovel",
+        "straight",
+        "dry_paused"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_matrix01\\shovel_straight_dry_paused_1.json",
+      "sha256": "04e7ec3504bf2d987c648d866a7dc0da9b1be126157bfb5c1b38b18097e9ddbd",
+      "checks": 70,
+      "input_open_tick_advance": 0,
+      "final_accepted": 23,
+      "final_rejected": 1
+    },
+    {
+      "case": [
+        "shovel",
+        "straight",
+        "dry_realtime"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_matrix01\\shovel_straight_dry_realtime_1.json",
+      "sha256": "a62a311a12e9df4066ecca0c9d709af399b2223f023321e48bb6f5b6bdf5e163",
+      "checks": 71,
+      "input_open_tick_advance": 11,
+      "final_accepted": 23,
+      "final_rejected": 1
+    },
+    {
+      "case": [
+        "shovel",
+        "straight",
+        "wet_paused"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_matrix01\\shovel_straight_wet_paused_1.json",
+      "sha256": "47e796c005877b8cc2f0e8b34fbc64826646aecd4b36ac135620eeaf616282b0",
+      "checks": 70,
+      "input_open_tick_advance": 0,
+      "final_accepted": 23,
+      "final_rejected": 1
+    },
+    {
+      "case": [
+        "shovel",
+        "straight",
+        "wet_realtime"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_matrix01\\shovel_straight_wet_realtime_1.json",
+      "sha256": "70def4bfb7b949bba9727d9f9b6ff3679057470ca4b9523a4b9da51583997c91",
+      "checks": 71,
+      "input_open_tick_advance": 11,
+      "final_accepted": 23,
+      "final_rejected": 1
+    },
+    {
+      "case": [
+        "wall",
+        "corner",
+        "dry_paused"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_matrix01\\wall_corner_dry_paused_1.json",
+      "sha256": "4fcdacc0a47114f8044a06c539e4b9744cde63939e59b3c24ccfcf21d590817a",
+      "checks": 70,
+      "input_open_tick_advance": 0,
+      "final_accepted": 23,
+      "final_rejected": 1
+    },
+    {
+      "case": [
+        "wall",
+        "corner",
+        "dry_realtime"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_matrix01\\wall_corner_dry_realtime_1.json",
+      "sha256": "229c551d539586c614dd25688f1c26e5109a8ec9356f6de58fb9a5c3165ba8cd",
+      "checks": 71,
+      "input_open_tick_advance": 11,
+      "final_accepted": 23,
+      "final_rejected": 1
+    },
+    {
+      "case": [
+        "wall",
+        "corner",
+        "wet_paused"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_matrix01\\wall_corner_wet_paused_1.json",
+      "sha256": "483f925a069a64952d0d89a31c4ec2d4628cbfc5f6c42777f1c0bb07ceeb5280",
+      "checks": 70,
+      "input_open_tick_advance": 0,
+      "final_accepted": 23,
+      "final_rejected": 1
+    },
+    {
+      "case": [
+        "wall",
+        "corner",
+        "wet_realtime"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_matrix01\\wall_corner_wet_realtime_1.json",
+      "sha256": "4a22f865ece064139bf018a7bd04018de4eb4f8f8f1e26cf6ea0520dcdd3ecef",
+      "checks": 71,
+      "input_open_tick_advance": 11,
+      "final_accepted": 23,
+      "final_rejected": 1
+    },
+    {
+      "case": [
+        "wall",
+        "overlap",
+        "dry_paused"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_matrix01\\wall_overlap_dry_paused_1.json",
+      "sha256": "01bf93dbe400993d58549dc54b254befcce2f354404f7ca46e3b38487dd03eb9",
+      "checks": 70,
+      "input_open_tick_advance": 0,
+      "final_accepted": 12,
+      "final_rejected": 12
+    },
+    {
+      "case": [
+        "wall",
+        "overlap",
+        "dry_realtime"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_matrix01\\wall_overlap_dry_realtime_1.json",
+      "sha256": "68799e4b13ed3c6fa103f2fe0c6ad6af759f6ff8269092ba8b1fd9a3b6e9bd52",
+      "checks": 71,
+      "input_open_tick_advance": 11,
+      "final_accepted": 12,
+      "final_rejected": 12
+    },
+    {
+      "case": [
+        "wall",
+        "overlap",
+        "wet_paused"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_matrix01\\wall_overlap_wet_paused_1.json",
+      "sha256": "25c3a94deaf7a22a82be051873ac98213d1f7492f550e36a379064205049641c",
+      "checks": 70,
+      "input_open_tick_advance": 0,
+      "final_accepted": 12,
+      "final_rejected": 12
+    },
+    {
+      "case": [
+        "wall",
+        "overlap",
+        "wet_realtime"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_matrix01\\wall_overlap_wet_realtime_1.json",
+      "sha256": "8b1c82f859b0b9df6b12e6438afb170a562b5d914bd1b14d6207ec24c86e0a9e",
+      "checks": 71,
+      "input_open_tick_advance": 11,
+      "final_accepted": 18,
+      "final_rejected": 6
+    },
+    {
+      "case": [
+        "wall",
+        "straight",
+        "dry_paused"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_matrix01\\wall_straight_dry_paused_1.json",
+      "sha256": "28ea4d9b2f39fd0bcfb3c6cffd845d2931d51504efac6e1191969043e9673da6",
+      "checks": 70,
+      "input_open_tick_advance": 0,
+      "final_accepted": 23,
+      "final_rejected": 1
+    },
+    {
+      "case": [
+        "wall",
+        "straight",
+        "dry_realtime"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_matrix01\\wall_straight_dry_realtime_1.json",
+      "sha256": "45e2b8f121ec95b2522b96095a54645a1940f5a7c705aef42fe39940b4bfeda1",
+      "checks": 71,
+      "input_open_tick_advance": 11,
+      "final_accepted": 23,
+      "final_rejected": 1
+    },
+    {
+      "case": [
+        "wall",
+        "straight",
+        "wet_paused"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_matrix01\\wall_straight_wet_paused_1.json",
+      "sha256": "70b0cf44dcfa32945f9053438ada19bfe7ca97438af31c6f22488a0c1d8dfb51",
+      "checks": 70,
+      "input_open_tick_advance": 0,
+      "final_accepted": 23,
+      "final_rejected": 1
+    },
+    {
+      "case": [
+        "wall",
+        "straight",
+        "wet_realtime"
+      ],
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_matrix01\\wall_straight_wet_realtime_1.json",
+      "sha256": "d3262dd0a7da60cc1b82800a965a930d2f70b6f54256935c956a296968346350",
+      "checks": 71,
+      "input_open_tick_advance": 11,
+      "final_accepted": 23,
+      "final_rejected": 1
+    }
+  ],
+  "failed_attempts": [
+    {
+      "case": [
+        "shovel",
+        "corner",
+        "dry_paused"
+      ],
+      "exit_code": -1073741819,
+      "result_exists": false,
+      "stdout": "test_output\\unified_edit_pipeline\\g0_workload_matrix01\\shovel_corner_dry_paused_1.stdout.txt"
+    }
+  ],
+  "common_initial_fields_sha256": {
+    "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+    "compaction": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de",
+    "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+    "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+    "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+    "obstacle": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+    "rock": "e5bebff58c79121549c5d1fbd484f90280de59fb99e1940fd8d54502cce0ad6c",
+    "sand": "e4229dd131b89dc44a8f08df893d938028cda47737983b548d8e947cb2d0df74",
+    "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+    "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+    "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+  },
+  "limits": [
+    "An unreproduced native startup crash is preserved; it has not been diagnosed.",
+    "Focus/CPU marker/ordinary chunk observations were added in a separate later probe.",
+    "No per-case P99 claim from these short windows."
+  ]
+}

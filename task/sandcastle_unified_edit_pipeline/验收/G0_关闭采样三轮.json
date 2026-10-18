@@ -1,0 +1,4258 @@
+{
+  "role": "G0 workload observations, not final performance PASS",
+  "manifest": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_observed_coarse01\\run-manifest.json",
+  "manifest_sha256": "c260f3d465530cfaca66aa0a1bbcf2826102383c0052ff2cb8d8c8b07583e535",
+  "analyzer_sha256": "44602d014c6f56f619a010b6475b2d46eed5e2b8fab1b64ebaff397d9ae5f0cd",
+  "classification": "contended_or_unknown_gpu_activity",
+  "run_manifest_complete": true,
+  "runs": [
+    {
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_observed_coarse01\\workload_dig_1.json",
+      "sha256": "be26f21f82366376d2483644014df1a2f41cce18195a767a93b3eed11bd10f7e",
+      "pass": true,
+      "case": "dig",
+      "pattern": "straight",
+      "wet": false,
+      "realtime": false,
+      "sampling": false,
+      "checks": 66,
+      "target": {
+        "cell": "(224, 184)",
+        "checked_cell_rect": "[P: (208, 164), S: (33, 41)]",
+        "obstacle": false,
+        "sand_min_m": 0.78647792339325,
+        "water_max_m": 0.0,
+        "water_min_m": 0.0
+      },
+      "cold_load_to_ready_ms": 9759.611,
+      "warmup_frames": 30,
+      "frame_ms": {
+        "n": 45,
+        "p50": 16.712,
+        "p95": 18.447,
+        "p99": null,
+        "max": 23.876,
+        "p99_reason": "insufficient_samples"
+      },
+      "input_only_frame_ms": {
+        "n": 23,
+        "p50": 16.831,
+        "p95": 20.646,
+        "p99": null,
+        "max": 23.876,
+        "p99_reason": "insufficient_samples"
+      },
+      "focus_states": [
+        true
+      ],
+      "max_fps_values": [
+        0
+      ],
+      "low_processor_usage_values": [
+        false
+      ],
+      "low_processor_sleep_us_values": [
+        6900
+      ],
+      "input_open_ms": 412.349,
+      "input_open_tick_advance": 0,
+      "input_open_sim_seconds": 0.0,
+      "queue_peak_at_observation": 0,
+      "oldest_age_ms_at_observation": 55.177,
+      "drain_ms": 39.175,
+      "command_timings": [
+        {
+          "command_id": 1,
+          "admitted_at_us": 12996533,
+          "terminal_observed_at_us": 13051710,
+          "terminal_notice_ms": 55.177,
+          "state_seq": 1,
+          "gpu_notice_observed_at_us": 13034199,
+          "gpu_notice_ms": 37.666,
+          "collision_observed_at_us": 13051710,
+          "collision_notice_ms": 55.177
+        },
+        {
+          "command_id": 2,
+          "admitted_at_us": 13013680,
+          "terminal_observed_at_us": 13067084,
+          "terminal_notice_ms": 53.404,
+          "state_seq": 2,
+          "gpu_notice_observed_at_us": 13051710,
+          "gpu_notice_ms": 38.03,
+          "collision_observed_at_us": 13067084,
+          "collision_notice_ms": 53.404
+        },
+        {
+          "command_id": 3,
+          "admitted_at_us": 13034603,
+          "terminal_observed_at_us": 13083915,
+          "terminal_notice_ms": 49.312,
+          "state_seq": 3,
+          "gpu_notice_observed_at_us": 13067084,
+          "gpu_notice_ms": 32.481,
+          "collision_observed_at_us": 13101268,
+          "collision_notice_ms": 66.665
+        },
+        {
+          "command_id": 4,
+          "admitted_at_us": 13051852,
+          "terminal_observed_at_us": 13101268,
+          "terminal_notice_ms": 49.416,
+          "state_seq": 4,
+          "gpu_notice_observed_at_us": 13083915,
+          "gpu_notice_ms": 32.063,
+          "collision_observed_at_us": 13101268,
+          "collision_notice_ms": 49.416
+        },
+        {
+          "command_id": 5,
+          "admitted_at_us": 13067249,
+          "terminal_observed_at_us": 13118526,
+          "terminal_notice_ms": 51.277,
+          "state_seq": 5,
+          "gpu_notice_observed_at_us": 13101268,
+          "gpu_notice_ms": 34.019,
+          "collision_observed_at_us": 13118526,
+          "collision_notice_ms": 51.277
+        },
+        {
+          "command_id": 6,
+          "admitted_at_us": 13084258,
+          "terminal_observed_at_us": 13134553,
+          "terminal_notice_ms": 50.295,
+          "state_seq": 6,
+          "gpu_notice_observed_at_us": 13118526,
+          "gpu_notice_ms": 34.268,
+          "collision_observed_at_us": 13153000,
+          "collision_notice_ms": 68.742
+        },
+        {
+          "command_id": 7,
+          "admitted_at_us": 13101753,
+          "terminal_observed_at_us": 13153000,
+          "terminal_notice_ms": 51.247,
+          "state_seq": 7,
+          "gpu_notice_observed_at_us": 13134553,
+          "gpu_notice_ms": 32.8,
+          "collision_observed_at_us": 13153000,
+          "collision_notice_ms": 51.247
+        },
+        {
+          "command_id": 8,
+          "admitted_at_us": 13118730,
+          "terminal_observed_at_us": 13168515,
+          "terminal_notice_ms": 49.785,
+          "state_seq": 8,
+          "gpu_notice_observed_at_us": 13153000,
+          "gpu_notice_ms": 34.27,
+          "collision_observed_at_us": 13168515,
+          "collision_notice_ms": 49.785
+        },
+        {
+          "command_id": 9,
+          "admitted_at_us": 13135722,
+          "terminal_observed_at_us": 13183666,
+          "terminal_notice_ms": 47.944,
+          "state_seq": 9,
+          "gpu_notice_observed_at_us": 13168515,
+          "gpu_notice_ms": 32.793,
+          "collision_observed_at_us": 13201122,
+          "collision_notice_ms": 65.4
+        },
+        {
+          "command_id": 10,
+          "admitted_at_us": 13153441,
+          "terminal_observed_at_us": 13201122,
+          "terminal_notice_ms": 47.681,
+          "state_seq": 10,
+          "gpu_notice_observed_at_us": 13183666,
+          "gpu_notice_ms": 30.225,
+          "collision_observed_at_us": 13201122,
+          "collision_notice_ms": 47.681
+        },
+        {
+          "command_id": 11,
+          "admitted_at_us": 13168987,
+          "terminal_observed_at_us": 13217195,
+          "terminal_notice_ms": 48.208,
+          "state_seq": 11,
+          "gpu_notice_observed_at_us": 13201122,
+          "gpu_notice_ms": 32.135,
+          "collision_observed_at_us": 13217195,
+          "collision_notice_ms": 48.208
+        },
+        {
+          "command_id": 12,
+          "admitted_at_us": 13184164,
+          "terminal_observed_at_us": 13233940,
+          "terminal_notice_ms": 49.776,
+          "state_seq": 12,
+          "gpu_notice_observed_at_us": 13217195,
+          "gpu_notice_ms": 33.031,
+          "collision_observed_at_us": 13251733,
+          "collision_notice_ms": 67.569
+        },
+        {
+          "command_id": 13,
+          "admitted_at_us": 13201627,
+          "terminal_observed_at_us": 13251733,
+          "terminal_notice_ms": 50.106,
+          "state_seq": 13,
+          "gpu_notice_observed_at_us": 13233940,
+          "gpu_notice_ms": 32.313,
+          "collision_observed_at_us": 13251733,
+          "collision_notice_ms": 50.106
+        },
+        {
+          "command_id": 14,
+          "admitted_at_us": 13217743,
+          "terminal_observed_at_us": 13267513,
+          "terminal_notice_ms": 49.77,
+          "state_seq": 14,
+          "gpu_notice_observed_at_us": 13251733,
+          "gpu_notice_ms": 33.99,
+          "collision_observed_at_us": 13267513,
+          "collision_notice_ms": 49.77
+        },
+        {
+          "command_id": 15,
+          "admitted_at_us": 13234867,
+          "terminal_observed_at_us": 13284932,
+          "terminal_notice_ms": 50.065,
+          "state_seq": 15,
+          "gpu_notice_observed_at_us": 13267513,
+          "gpu_notice_ms": 32.646,
+          "collision_observed_at_us": 13300890,
+          "collision_notice_ms": 66.023
+        },
+        {
+          "command_id": 16,
+          "admitted_at_us": 13252076,
+          "terminal_observed_at_us": 13300890,
+          "terminal_notice_ms": 48.814,
+          "state_seq": 16,
+          "gpu_notice_observed_at_us": 13284932,
+          "gpu_notice_ms": 32.856,
+          "collision_observed_at_us": 13300890,
+          "collision_notice_ms": 48.814
+        },
+        {
+          "command_id": 17,
+          "admitted_at_us": 13268351,
+          "terminal_observed_at_us": 13317243,
+          "terminal_notice_ms": 48.892,
+          "state_seq": 17,
+          "gpu_notice_observed_at_us": 13300890,
+          "gpu_notice_ms": 32.539,
+          "collision_observed_at_us": 13317243,
+          "collision_notice_ms": 48.892
+        },
+        {
+          "command_id": 18,
+          "admitted_at_us": 13285365,
+          "terminal_observed_at_us": 13335291,
+          "terminal_notice_ms": 49.926,
+          "state_seq": 18,
+          "gpu_notice_observed_at_us": 13317243,
+          "gpu_notice_ms": 31.878,
+          "collision_observed_at_us": 13352224,
+          "collision_notice_ms": 66.859
+        },
+        {
+          "command_id": 19,
+          "admitted_at_us": 13301547,
+          "terminal_observed_at_us": 13352224,
+          "terminal_notice_ms": 50.677,
+          "state_seq": 19,
+          "gpu_notice_observed_at_us": 13335291,
+          "gpu_notice_ms": 33.744,
+          "collision_observed_at_us": 13352224,
+          "collision_notice_ms": 50.677
+        },
+        {
+          "command_id": 20,
+          "admitted_at_us": 13318178,
+          "terminal_observed_at_us": 13367122,
+          "terminal_notice_ms": 48.944,
+          "state_seq": 20,
+          "gpu_notice_observed_at_us": 13352224,
+          "gpu_notice_ms": 34.046,
+          "collision_observed_at_us": 13367122,
+          "collision_notice_ms": 48.944
+        },
+        {
+          "command_id": 21,
+          "admitted_at_us": 13337534,
+          "terminal_observed_at_us": 13383609,
+          "terminal_notice_ms": 46.075,
+          "state_seq": 21,
+          "gpu_notice_observed_at_us": 13367122,
+          "gpu_notice_ms": 29.588,
+          "collision_observed_at_us": 13407485,
+          "collision_notice_ms": 69.951
+        },
+        {
+          "command_id": 22,
+          "admitted_at_us": 13352575,
+          "terminal_observed_at_us": 13407485,
+          "terminal_notice_ms": 54.91,
+          "state_seq": 22,
+          "gpu_notice_observed_at_us": 13383609,
+          "gpu_notice_ms": 31.034,
+          "collision_observed_at_us": 13407485,
+          "collision_notice_ms": 54.91
+        },
+        {
+          "command_id": 23,
+          "admitted_at_us": 13367894,
+          "terminal_observed_at_us": 13424326,
+          "terminal_notice_ms": 56.432,
+          "state_seq": 23,
+          "gpu_notice_observed_at_us": 13407485,
+          "gpu_notice_ms": 39.591,
+          "collision_observed_at_us": 13424326,
+          "collision_notice_ms": 56.432
+        },
+        {
+          "command_id": 24,
+          "admitted_at_us": 13384439,
+          "terminal_observed_at_us": 13432084,
+          "terminal_notice_ms": 47.645,
+          "state_seq": 24,
+          "gpu_notice_observed_at_us": 13424326,
+          "gpu_notice_ms": 39.887,
+          "collision_observed_at_us": 13447547,
+          "collision_notice_ms": 63.108
+        }
+      ],
+      "gpu_stage_dispatch_ms": {},
+      "cpu_marker_stage_ms": {},
+      "initial_sha256": {
+        "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "compaction": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de",
+        "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "obstacle": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+        "rock": "e5bebff58c79121549c5d1fbd484f90280de59fb99e1940fd8d54502cce0ad6c",
+        "sand": "e4229dd131b89dc44a8f08df893d938028cda47737983b548d8e947cb2d0df74",
+        "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+        "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+      },
+      "final_sha256": {
+        "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "compaction": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de",
+        "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "sand": "a5854f4b3cd1bb3df0641bba7fbe41cdba885d1833c7e3f76050231d13a68271",
+        "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+        "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+      },
+      "limitations": [
+        "Notification times are CPU observation upper bounds, not GPU duration.",
+        "Physics shape replacement is observed; monitor scanout is not measured.",
+        "This workload contains 24 offered commands and is not a 1000-frame tail test."
+      ],
+      "name": "workload_dig_1",
+      "source_drift": []
+    },
+    {
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_observed_coarse01\\workload_fill_1.json",
+      "sha256": "a05a1ca0f61f14c7488b0a23d2c402c907824963ef82477a4fee5685e3ddf35c",
+      "pass": true,
+      "case": "fill",
+      "pattern": "straight",
+      "wet": false,
+      "realtime": false,
+      "sampling": false,
+      "checks": 66,
+      "target": {
+        "cell": "(224, 184)",
+        "checked_cell_rect": "[P: (208, 164), S: (33, 41)]",
+        "obstacle": false,
+        "sand_min_m": 0.78647792339325,
+        "water_max_m": 0.0,
+        "water_min_m": 0.0
+      },
+      "cold_load_to_ready_ms": 10030.022,
+      "warmup_frames": 30,
+      "frame_ms": {
+        "n": 45,
+        "p50": 16.574,
+        "p95": 18.168,
+        "p99": null,
+        "max": 20.352,
+        "p99_reason": "insufficient_samples"
+      },
+      "input_only_frame_ms": {
+        "n": 23,
+        "p50": 16.666,
+        "p95": 20.095,
+        "p99": null,
+        "max": 20.352,
+        "p99_reason": "insufficient_samples"
+      },
+      "focus_states": [
+        true
+      ],
+      "max_fps_values": [
+        0
+      ],
+      "low_processor_usage_values": [
+        false
+      ],
+      "low_processor_sleep_us_values": [
+        6900
+      ],
+      "input_open_ms": 405.177,
+      "input_open_tick_advance": 0,
+      "input_open_sim_seconds": 0.0,
+      "queue_peak_at_observation": 0,
+      "oldest_age_ms_at_observation": 54.955,
+      "drain_ms": 46.54,
+      "command_timings": [
+        {
+          "command_id": 1,
+          "admitted_at_us": 13130627,
+          "terminal_observed_at_us": 13185582,
+          "terminal_notice_ms": 54.955,
+          "state_seq": 1,
+          "gpu_notice_observed_at_us": 13167522,
+          "gpu_notice_ms": 36.895,
+          "collision_observed_at_us": 13185582,
+          "collision_notice_ms": 54.955
+        },
+        {
+          "command_id": 2,
+          "admitted_at_us": 13147268,
+          "terminal_observed_at_us": 13201725,
+          "terminal_notice_ms": 54.457,
+          "state_seq": 2,
+          "gpu_notice_observed_at_us": 13185582,
+          "gpu_notice_ms": 38.314,
+          "collision_observed_at_us": 13201725,
+          "collision_notice_ms": 54.457
+        },
+        {
+          "command_id": 3,
+          "admitted_at_us": 13167715,
+          "terminal_observed_at_us": 13216987,
+          "terminal_notice_ms": 49.272,
+          "state_seq": 3,
+          "gpu_notice_observed_at_us": 13201725,
+          "gpu_notice_ms": 34.01,
+          "collision_observed_at_us": 13234342,
+          "collision_notice_ms": 66.627
+        },
+        {
+          "command_id": 4,
+          "admitted_at_us": 13185800,
+          "terminal_observed_at_us": 13234342,
+          "terminal_notice_ms": 48.542,
+          "state_seq": 4,
+          "gpu_notice_observed_at_us": 13216987,
+          "gpu_notice_ms": 31.187,
+          "collision_observed_at_us": 13234342,
+          "collision_notice_ms": 48.542
+        },
+        {
+          "command_id": 5,
+          "admitted_at_us": 13202212,
+          "terminal_observed_at_us": 13250800,
+          "terminal_notice_ms": 48.588,
+          "state_seq": 5,
+          "gpu_notice_observed_at_us": 13234342,
+          "gpu_notice_ms": 32.13,
+          "collision_observed_at_us": 13250800,
+          "collision_notice_ms": 48.588
+        },
+        {
+          "command_id": 6,
+          "admitted_at_us": 13217163,
+          "terminal_observed_at_us": 13266786,
+          "terminal_notice_ms": 49.623,
+          "state_seq": 6,
+          "gpu_notice_observed_at_us": 13250800,
+          "gpu_notice_ms": 33.637,
+          "collision_observed_at_us": 13284195,
+          "collision_notice_ms": 67.032
+        },
+        {
+          "command_id": 7,
+          "admitted_at_us": 13234708,
+          "terminal_observed_at_us": 13284195,
+          "terminal_notice_ms": 49.487,
+          "state_seq": 7,
+          "gpu_notice_observed_at_us": 13266786,
+          "gpu_notice_ms": 32.078,
+          "collision_observed_at_us": 13284195,
+          "collision_notice_ms": 49.487
+        },
+        {
+          "command_id": 8,
+          "admitted_at_us": 13251031,
+          "terminal_observed_at_us": 13301220,
+          "terminal_notice_ms": 50.189,
+          "state_seq": 8,
+          "gpu_notice_observed_at_us": 13284195,
+          "gpu_notice_ms": 33.164,
+          "collision_observed_at_us": 13301220,
+          "collision_notice_ms": 50.189
+        },
+        {
+          "command_id": 9,
+          "admitted_at_us": 13266956,
+          "terminal_observed_at_us": 13317102,
+          "terminal_notice_ms": 50.146,
+          "state_seq": 9,
+          "gpu_notice_observed_at_us": 13301220,
+          "gpu_notice_ms": 34.264,
+          "collision_observed_at_us": 13334186,
+          "collision_notice_ms": 67.23
+        },
+        {
+          "command_id": 10,
+          "admitted_at_us": 13284464,
+          "terminal_observed_at_us": 13334186,
+          "terminal_notice_ms": 49.722,
+          "state_seq": 10,
+          "gpu_notice_observed_at_us": 13317102,
+          "gpu_notice_ms": 32.638,
+          "collision_observed_at_us": 13334186,
+          "collision_notice_ms": 49.722
+        },
+        {
+          "command_id": 11,
+          "admitted_at_us": 13302009,
+          "terminal_observed_at_us": 13350852,
+          "terminal_notice_ms": 48.843,
+          "state_seq": 11,
+          "gpu_notice_observed_at_us": 13334186,
+          "gpu_notice_ms": 32.177,
+          "collision_observed_at_us": 13350852,
+          "collision_notice_ms": 48.843
+        },
+        {
+          "command_id": 12,
+          "admitted_at_us": 13317309,
+          "terminal_observed_at_us": 13367426,
+          "terminal_notice_ms": 50.117,
+          "state_seq": 12,
+          "gpu_notice_observed_at_us": 13350852,
+          "gpu_notice_ms": 33.543,
+          "collision_observed_at_us": 13385117,
+          "collision_notice_ms": 67.808
+        },
+        {
+          "command_id": 13,
+          "admitted_at_us": 13334597,
+          "terminal_observed_at_us": 13385117,
+          "terminal_notice_ms": 50.52,
+          "state_seq": 13,
+          "gpu_notice_observed_at_us": 13367426,
+          "gpu_notice_ms": 32.829,
+          "collision_observed_at_us": 13385117,
+          "collision_notice_ms": 50.52
+        },
+        {
+          "command_id": 14,
+          "admitted_at_us": 13351205,
+          "terminal_observed_at_us": 13400854,
+          "terminal_notice_ms": 49.649,
+          "state_seq": 14,
+          "gpu_notice_observed_at_us": 13385117,
+          "gpu_notice_ms": 33.912,
+          "collision_observed_at_us": 13400854,
+          "collision_notice_ms": 49.649
+        },
+        {
+          "command_id": 15,
+          "admitted_at_us": 13368250,
+          "terminal_observed_at_us": 13417228,
+          "terminal_notice_ms": 48.978,
+          "state_seq": 15,
+          "gpu_notice_observed_at_us": 13400854,
+          "gpu_notice_ms": 32.604,
+          "collision_observed_at_us": 13434176,
+          "collision_notice_ms": 65.926
+        },
+        {
+          "command_id": 16,
+          "admitted_at_us": 13385656,
+          "terminal_observed_at_us": 13434176,
+          "terminal_notice_ms": 48.52,
+          "state_seq": 16,
+          "gpu_notice_observed_at_us": 13417228,
+          "gpu_notice_ms": 31.572,
+          "collision_observed_at_us": 13434176,
+          "collision_notice_ms": 48.52
+        },
+        {
+          "command_id": 17,
+          "admitted_at_us": 13401280,
+          "terminal_observed_at_us": 13452344,
+          "terminal_notice_ms": 51.064,
+          "state_seq": 17,
+          "gpu_notice_observed_at_us": 13434176,
+          "gpu_notice_ms": 32.896,
+          "collision_observed_at_us": 13452344,
+          "collision_notice_ms": 51.064
+        },
+        {
+          "command_id": 18,
+          "admitted_at_us": 13417929,
+          "terminal_observed_at_us": 13467043,
+          "terminal_notice_ms": 49.114,
+          "state_seq": 18,
+          "gpu_notice_observed_at_us": 13452344,
+          "gpu_notice_ms": 34.415,
+          "collision_observed_at_us": 13487138,
+          "collision_notice_ms": 69.209
+        },
+        {
+          "command_id": 19,
+          "admitted_at_us": 13434807,
+          "terminal_observed_at_us": 13487138,
+          "terminal_notice_ms": 52.331,
+          "state_seq": 19,
+          "gpu_notice_observed_at_us": 13467043,
+          "gpu_notice_ms": 32.236,
+          "collision_observed_at_us": 13487138,
+          "collision_notice_ms": 52.331
+        },
+        {
+          "command_id": 20,
+          "admitted_at_us": 13453407,
+          "terminal_observed_at_us": 13500856,
+          "terminal_notice_ms": 47.449,
+          "state_seq": 20,
+          "gpu_notice_observed_at_us": 13487138,
+          "gpu_notice_ms": 33.731,
+          "collision_observed_at_us": 13500856,
+          "collision_notice_ms": 47.449
+        },
+        {
+          "command_id": 21,
+          "admitted_at_us": 13467330,
+          "terminal_observed_at_us": 13517522,
+          "terminal_notice_ms": 50.192,
+          "state_seq": 21,
+          "gpu_notice_observed_at_us": 13500856,
+          "gpu_notice_ms": 33.526,
+          "collision_observed_at_us": 13535143,
+          "collision_notice_ms": 67.813
+        },
+        {
+          "command_id": 22,
+          "admitted_at_us": 13488064,
+          "terminal_observed_at_us": 13535143,
+          "terminal_notice_ms": 47.079,
+          "state_seq": 22,
+          "gpu_notice_observed_at_us": 13517522,
+          "gpu_notice_ms": 29.458,
+          "collision_observed_at_us": 13535143,
+          "collision_notice_ms": 47.079
+        },
+        {
+          "command_id": 23,
+          "admitted_at_us": 13501431,
+          "terminal_observed_at_us": 13550943,
+          "terminal_notice_ms": 49.512,
+          "state_seq": 23,
+          "gpu_notice_observed_at_us": 13535143,
+          "gpu_notice_ms": 33.712,
+          "collision_observed_at_us": 13550943,
+          "collision_notice_ms": 49.512
+        },
+        {
+          "command_id": 24,
+          "admitted_at_us": 13519356,
+          "terminal_observed_at_us": 13564573,
+          "terminal_notice_ms": 45.217,
+          "state_seq": 24,
+          "gpu_notice_observed_at_us": 13550943,
+          "gpu_notice_ms": 31.587,
+          "collision_observed_at_us": 13581689,
+          "collision_notice_ms": 62.333
+        }
+      ],
+      "gpu_stage_dispatch_ms": {},
+      "cpu_marker_stage_ms": {},
+      "initial_sha256": {
+        "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "compaction": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de",
+        "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "obstacle": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+        "rock": "e5bebff58c79121549c5d1fbd484f90280de59fb99e1940fd8d54502cce0ad6c",
+        "sand": "e4229dd131b89dc44a8f08df893d938028cda47737983b548d8e947cb2d0df74",
+        "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+        "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+      },
+      "final_sha256": {
+        "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "compaction": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de",
+        "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "sand": "ae7af88387d4d5095920635055cee1f01ba6dde75378714a4fa91368c645b8e9",
+        "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+        "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+      },
+      "limitations": [
+        "Notification times are CPU observation upper bounds, not GPU duration.",
+        "Physics shape replacement is observed; monitor scanout is not measured.",
+        "This workload contains 24 offered commands and is not a 1000-frame tail test."
+      ],
+      "name": "workload_fill_1",
+      "source_drift": []
+    },
+    {
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_observed_coarse01\\workload_wall_1.json",
+      "sha256": "931669776be8a7e22c079153f0e64c96193202fe6851b4833aa6ff6aaadd0ae5",
+      "pass": true,
+      "case": "wall",
+      "pattern": "straight",
+      "wet": false,
+      "realtime": false,
+      "sampling": false,
+      "checks": 70,
+      "target": {
+        "cell": "(224, 184)",
+        "checked_cell_rect": "[P: (208, 164), S: (33, 41)]",
+        "obstacle": false,
+        "sand_min_m": 0.78647792339325,
+        "water_max_m": 0.0,
+        "water_min_m": 0.0
+      },
+      "cold_load_to_ready_ms": 9770.098,
+      "warmup_frames": 30,
+      "frame_ms": {
+        "n": 51,
+        "p50": 16.914,
+        "p95": 51.423,
+        "p99": null,
+        "max": 54.532,
+        "p99_reason": "insufficient_samples"
+      },
+      "input_only_frame_ms": {
+        "n": 23,
+        "p50": 50.315,
+        "p95": 52.136,
+        "p99": null,
+        "max": 54.532,
+        "p99_reason": "insufficient_samples"
+      },
+      "focus_states": [
+        true
+      ],
+      "max_fps_values": [
+        0
+      ],
+      "low_processor_usage_values": [
+        false
+      ],
+      "low_processor_sleep_us_values": [
+        6900
+      ],
+      "input_open_ms": 1180.789,
+      "input_open_tick_advance": 0,
+      "input_open_sim_seconds": 0.0,
+      "queue_peak_at_observation": 0,
+      "oldest_age_ms_at_observation": 153.479,
+      "drain_ms": 46.787,
+      "command_timings": [
+        {
+          "command_id": 2,
+          "admitted_at_us": 12691909,
+          "terminal_observed_at_us": 12809688,
+          "terminal_notice_ms": 117.779,
+          "state_seq": 2,
+          "gpu_notice_observed_at_us": 12759530,
+          "gpu_notice_ms": 67.621,
+          "collision_observed_at_us": 12961273,
+          "collision_notice_ms": 269.364
+        },
+        {
+          "command_id": 3,
+          "admitted_at_us": 12709254,
+          "terminal_observed_at_us": 12861824,
+          "terminal_notice_ms": 152.57,
+          "state_seq": 3,
+          "gpu_notice_observed_at_us": 12809688,
+          "gpu_notice_ms": 100.434,
+          "collision_observed_at_us": 13111028,
+          "collision_notice_ms": 401.774
+        },
+        {
+          "command_id": 4,
+          "admitted_at_us": 12760412,
+          "terminal_observed_at_us": 12910967,
+          "terminal_notice_ms": 150.555,
+          "state_seq": 4,
+          "gpu_notice_observed_at_us": 12861824,
+          "gpu_notice_ms": 101.412,
+          "collision_observed_at_us": 13111028,
+          "collision_notice_ms": 350.616
+        },
+        {
+          "command_id": 5,
+          "admitted_at_us": 12811110,
+          "terminal_observed_at_us": 12961273,
+          "terminal_notice_ms": 150.163,
+          "state_seq": 5,
+          "gpu_notice_observed_at_us": 12910967,
+          "gpu_notice_ms": 99.857,
+          "collision_observed_at_us": 13111028,
+          "collision_notice_ms": 299.918
+        },
+        {
+          "command_id": 6,
+          "admitted_at_us": 12863540,
+          "terminal_observed_at_us": 13010052,
+          "terminal_notice_ms": 146.512,
+          "state_seq": 6,
+          "gpu_notice_observed_at_us": 12961273,
+          "gpu_notice_ms": 97.733,
+          "collision_observed_at_us": 13262162,
+          "collision_notice_ms": 398.622
+        },
+        {
+          "command_id": 7,
+          "admitted_at_us": 12912105,
+          "terminal_observed_at_us": 13060367,
+          "terminal_notice_ms": 148.262,
+          "state_seq": 7,
+          "gpu_notice_observed_at_us": 13010052,
+          "gpu_notice_ms": 97.947,
+          "collision_observed_at_us": 13262162,
+          "collision_notice_ms": 350.057
+        },
+        {
+          "command_id": 8,
+          "admitted_at_us": 12962186,
+          "terminal_observed_at_us": 13111028,
+          "terminal_notice_ms": 148.842,
+          "state_seq": 8,
+          "gpu_notice_observed_at_us": 13060367,
+          "gpu_notice_ms": 98.181,
+          "collision_observed_at_us": 13262162,
+          "collision_notice_ms": 299.976
+        },
+        {
+          "command_id": 9,
+          "admitted_at_us": 13011552,
+          "terminal_observed_at_us": 13160669,
+          "terminal_notice_ms": 149.117,
+          "state_seq": 9,
+          "gpu_notice_observed_at_us": 13111028,
+          "gpu_notice_ms": 99.476,
+          "collision_observed_at_us": 13411443,
+          "collision_notice_ms": 399.891
+        },
+        {
+          "command_id": 10,
+          "admitted_at_us": 13061930,
+          "terminal_observed_at_us": 13210862,
+          "terminal_notice_ms": 148.932,
+          "state_seq": 10,
+          "gpu_notice_observed_at_us": 13160669,
+          "gpu_notice_ms": 98.739,
+          "collision_observed_at_us": 13411443,
+          "collision_notice_ms": 349.513
+        },
+        {
+          "command_id": 11,
+          "admitted_at_us": 13112249,
+          "terminal_observed_at_us": 13262162,
+          "terminal_notice_ms": 149.913,
+          "state_seq": 11,
+          "gpu_notice_observed_at_us": 13210862,
+          "gpu_notice_ms": 98.613,
+          "collision_observed_at_us": 13411443,
+          "collision_notice_ms": 299.194
+        },
+        {
+          "command_id": 12,
+          "admitted_at_us": 13162276,
+          "terminal_observed_at_us": 13311050,
+          "terminal_notice_ms": 148.774,
+          "state_seq": 12,
+          "gpu_notice_observed_at_us": 13262162,
+          "gpu_notice_ms": 99.886,
+          "collision_observed_at_us": 13566353,
+          "collision_notice_ms": 404.077
+        },
+        {
+          "command_id": 13,
+          "admitted_at_us": 13212463,
+          "terminal_observed_at_us": 13361391,
+          "terminal_notice_ms": 148.928,
+          "state_seq": 13,
+          "gpu_notice_observed_at_us": 13311050,
+          "gpu_notice_ms": 98.587,
+          "collision_observed_at_us": 13566353,
+          "collision_notice_ms": 353.89
+        },
+        {
+          "command_id": 14,
+          "admitted_at_us": 13263183,
+          "terminal_observed_at_us": 13411443,
+          "terminal_notice_ms": 148.26,
+          "state_seq": 14,
+          "gpu_notice_observed_at_us": 13361391,
+          "gpu_notice_ms": 98.208,
+          "collision_observed_at_us": 13566353,
+          "collision_notice_ms": 303.17
+        },
+        {
+          "command_id": 15,
+          "admitted_at_us": 13312636,
+          "terminal_observed_at_us": 13461324,
+          "terminal_notice_ms": 148.688,
+          "state_seq": 15,
+          "gpu_notice_observed_at_us": 13411443,
+          "gpu_notice_ms": 98.807,
+          "collision_observed_at_us": 13712884,
+          "collision_notice_ms": 400.248
+        },
+        {
+          "command_id": 16,
+          "admitted_at_us": 13362981,
+          "terminal_observed_at_us": 13511821,
+          "terminal_notice_ms": 148.84,
+          "state_seq": 16,
+          "gpu_notice_observed_at_us": 13461324,
+          "gpu_notice_ms": 98.343,
+          "collision_observed_at_us": 13712884,
+          "collision_notice_ms": 349.903
+        },
+        {
+          "command_id": 17,
+          "admitted_at_us": 13412874,
+          "terminal_observed_at_us": 13566353,
+          "terminal_notice_ms": 153.479,
+          "state_seq": 17,
+          "gpu_notice_observed_at_us": 13511821,
+          "gpu_notice_ms": 98.947,
+          "collision_observed_at_us": 13712884,
+          "collision_notice_ms": 300.01
+        },
+        {
+          "command_id": 18,
+          "admitted_at_us": 13462898,
+          "terminal_observed_at_us": 13611912,
+          "terminal_notice_ms": 149.014,
+          "state_seq": 18,
+          "gpu_notice_observed_at_us": 13566353,
+          "gpu_notice_ms": 103.455,
+          "collision_observed_at_us": 13864704,
+          "collision_notice_ms": 401.806
+        },
+        {
+          "command_id": 19,
+          "admitted_at_us": 13513384,
+          "terminal_observed_at_us": 13662386,
+          "terminal_notice_ms": 149.002,
+          "state_seq": 19,
+          "gpu_notice_observed_at_us": 13611912,
+          "gpu_notice_ms": 98.528,
+          "collision_observed_at_us": 13864704,
+          "collision_notice_ms": 351.32
+        },
+        {
+          "command_id": 20,
+          "admitted_at_us": 13569099,
+          "terminal_observed_at_us": 13712884,
+          "terminal_notice_ms": 143.785,
+          "state_seq": 20,
+          "gpu_notice_observed_at_us": 13662386,
+          "gpu_notice_ms": 93.287,
+          "collision_observed_at_us": 13864704,
+          "collision_notice_ms": 295.605
+        },
+        {
+          "command_id": 21,
+          "admitted_at_us": 13613310,
+          "terminal_observed_at_us": 13764307,
+          "terminal_notice_ms": 150.997,
+          "state_seq": 21,
+          "gpu_notice_observed_at_us": 13712884,
+          "gpu_notice_ms": 99.574,
+          "collision_observed_at_us": 13911726,
+          "collision_notice_ms": 298.416
+        },
+        {
+          "command_id": 22,
+          "admitted_at_us": 13664187,
+          "terminal_observed_at_us": 13815066,
+          "terminal_notice_ms": 150.879,
+          "state_seq": 22,
+          "gpu_notice_observed_at_us": 13764307,
+          "gpu_notice_ms": 100.12,
+          "collision_observed_at_us": 13911726,
+          "collision_notice_ms": 247.539
+        },
+        {
+          "command_id": 23,
+          "admitted_at_us": 13714353,
+          "terminal_observed_at_us": 13864704,
+          "terminal_notice_ms": 150.351,
+          "state_seq": 23,
+          "gpu_notice_observed_at_us": 13815066,
+          "gpu_notice_ms": 100.713,
+          "collision_observed_at_us": 13911726,
+          "collision_notice_ms": 197.373
+        },
+        {
+          "command_id": 24,
+          "admitted_at_us": 13768828,
+          "terminal_observed_at_us": 13877941,
+          "terminal_notice_ms": 109.113,
+          "state_seq": 24,
+          "gpu_notice_observed_at_us": 13864704,
+          "gpu_notice_ms": 95.876,
+          "collision_observed_at_us": 13946589,
+          "collision_notice_ms": 177.761
+        },
+        {
+          "command_id": 25,
+          "admitted_at_us": 13818779,
+          "terminal_observed_at_us": 13888760,
+          "terminal_notice_ms": 69.981,
+          "state_seq": 25,
+          "gpu_notice_observed_at_us": 13877941,
+          "gpu_notice_ms": 59.162,
+          "collision_observed_at_us": 13946589,
+          "collision_notice_ms": 127.81
+        }
+      ],
+      "gpu_stage_dispatch_ms": {},
+      "cpu_marker_stage_ms": {},
+      "initial_sha256": {
+        "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "compaction": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de",
+        "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "obstacle": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+        "rock": "e5bebff58c79121549c5d1fbd484f90280de59fb99e1940fd8d54502cce0ad6c",
+        "sand": "e4229dd131b89dc44a8f08df893d938028cda47737983b548d8e947cb2d0df74",
+        "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+        "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+      },
+      "final_sha256": {
+        "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "compaction": "c4160965c7a92f17e4633550a98a7754709411fb79a0f60535ae4c90ce5f5fec",
+        "mold_support": "7061584ca3c50cf53a990882ea6b59fc92ffc63ae7b8e213f4db40b572a83952",
+        "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "sand": "7a448879c18f30bebbeb135418b26513a733263ec99e0ccd12417db1c9ceb597",
+        "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+        "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+      },
+      "limitations": [
+        "Notification times are CPU observation upper bounds, not GPU duration.",
+        "Physics shape replacement is observed; monitor scanout is not measured.",
+        "This workload contains 24 offered commands and is not a 1000-frame tail test."
+      ],
+      "name": "workload_wall_1",
+      "source_drift": []
+    },
+    {
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_observed_coarse01\\workload_shovel_1.json",
+      "sha256": "f9061ff59e3441519a8967f5ffe7ea27aef1d461b285aa4ca6dbdc3ae635be11",
+      "pass": true,
+      "case": "shovel",
+      "pattern": "straight",
+      "wet": false,
+      "realtime": false,
+      "sampling": false,
+      "checks": 70,
+      "target": {
+        "cell": "(224, 184)",
+        "checked_cell_rect": "[P: (208, 164), S: (33, 41)]",
+        "obstacle": false,
+        "sand_min_m": 0.78647792339325,
+        "water_max_m": 0.0,
+        "water_min_m": 0.0
+      },
+      "cold_load_to_ready_ms": 9688.583,
+      "warmup_frames": 30,
+      "frame_ms": {
+        "n": 51,
+        "p50": 16.878,
+        "p95": 53.551,
+        "p99": null,
+        "max": 59.148,
+        "p99_reason": "insufficient_samples"
+      },
+      "input_only_frame_ms": {
+        "n": 23,
+        "p50": 51.956,
+        "p95": 58.589,
+        "p99": null,
+        "max": 59.148,
+        "p99_reason": "insufficient_samples"
+      },
+      "focus_states": [
+        true
+      ],
+      "max_fps_values": [
+        0
+      ],
+      "low_processor_usage_values": [
+        false
+      ],
+      "low_processor_sleep_us_values": [
+        6900
+      ],
+      "input_open_ms": 1220.48,
+      "input_open_tick_advance": 0,
+      "input_open_sim_seconds": 0.0,
+      "queue_peak_at_observation": 0,
+      "oldest_age_ms_at_observation": 161.954,
+      "drain_ms": 34.797,
+      "command_timings": [
+        {
+          "command_id": 2,
+          "admitted_at_us": 12544131,
+          "terminal_observed_at_us": 12669613,
+          "terminal_notice_ms": 125.482,
+          "state_seq": 2,
+          "gpu_notice_observed_at_us": 12617551,
+          "gpu_notice_ms": 73.42,
+          "collision_observed_at_us": 12826923,
+          "collision_notice_ms": 282.792
+        },
+        {
+          "command_id": 3,
+          "admitted_at_us": 12559852,
+          "terminal_observed_at_us": 12721416,
+          "terminal_notice_ms": 161.564,
+          "state_seq": 3,
+          "gpu_notice_observed_at_us": 12669613,
+          "gpu_notice_ms": 109.761,
+          "collision_observed_at_us": 12981794,
+          "collision_notice_ms": 421.942
+        },
+        {
+          "command_id": 4,
+          "admitted_at_us": 12618451,
+          "terminal_observed_at_us": 12773372,
+          "terminal_notice_ms": 154.921,
+          "state_seq": 4,
+          "gpu_notice_observed_at_us": 12721416,
+          "gpu_notice_ms": 102.965,
+          "collision_observed_at_us": 12981794,
+          "collision_notice_ms": 363.343
+        },
+        {
+          "command_id": 5,
+          "admitted_at_us": 12671022,
+          "terminal_observed_at_us": 12826923,
+          "terminal_notice_ms": 155.901,
+          "state_seq": 5,
+          "gpu_notice_observed_at_us": 12773372,
+          "gpu_notice_ms": 102.35,
+          "collision_observed_at_us": 12981794,
+          "collision_notice_ms": 310.772
+        },
+        {
+          "command_id": 6,
+          "admitted_at_us": 12722753,
+          "terminal_observed_at_us": 12878790,
+          "terminal_notice_ms": 156.037,
+          "state_seq": 6,
+          "gpu_notice_observed_at_us": 12826923,
+          "gpu_notice_ms": 104.17,
+          "collision_observed_at_us": 13139023,
+          "collision_notice_ms": 416.27
+        },
+        {
+          "command_id": 7,
+          "admitted_at_us": 12774779,
+          "terminal_observed_at_us": 12929986,
+          "terminal_notice_ms": 155.207,
+          "state_seq": 7,
+          "gpu_notice_observed_at_us": 12878790,
+          "gpu_notice_ms": 104.011,
+          "collision_observed_at_us": 13139023,
+          "collision_notice_ms": 364.244
+        },
+        {
+          "command_id": 8,
+          "admitted_at_us": 12827829,
+          "terminal_observed_at_us": 12981794,
+          "terminal_notice_ms": 153.965,
+          "state_seq": 8,
+          "gpu_notice_observed_at_us": 12929986,
+          "gpu_notice_ms": 102.157,
+          "collision_observed_at_us": 13139023,
+          "collision_notice_ms": 311.194
+        },
+        {
+          "command_id": 9,
+          "admitted_at_us": 12881865,
+          "terminal_observed_at_us": 13033370,
+          "terminal_notice_ms": 151.505,
+          "state_seq": 9,
+          "gpu_notice_observed_at_us": 12981794,
+          "gpu_notice_ms": 99.929,
+          "collision_observed_at_us": 13293824,
+          "collision_notice_ms": 411.959
+        },
+        {
+          "command_id": 10,
+          "admitted_at_us": 12931683,
+          "terminal_observed_at_us": 13085860,
+          "terminal_notice_ms": 154.177,
+          "state_seq": 10,
+          "gpu_notice_observed_at_us": 13033370,
+          "gpu_notice_ms": 101.687,
+          "collision_observed_at_us": 13293824,
+          "collision_notice_ms": 362.141
+        },
+        {
+          "command_id": 11,
+          "admitted_at_us": 12983030,
+          "terminal_observed_at_us": 13139023,
+          "terminal_notice_ms": 155.993,
+          "state_seq": 11,
+          "gpu_notice_observed_at_us": 13085860,
+          "gpu_notice_ms": 102.83,
+          "collision_observed_at_us": 13293824,
+          "collision_notice_ms": 310.794
+        },
+        {
+          "command_id": 12,
+          "admitted_at_us": 13034800,
+          "terminal_observed_at_us": 13189594,
+          "terminal_notice_ms": 154.794,
+          "state_seq": 12,
+          "gpu_notice_observed_at_us": 13139023,
+          "gpu_notice_ms": 104.223,
+          "collision_observed_at_us": 13457175,
+          "collision_notice_ms": 422.375
+        },
+        {
+          "command_id": 13,
+          "admitted_at_us": 13087367,
+          "terminal_observed_at_us": 13241739,
+          "terminal_notice_ms": 154.372,
+          "state_seq": 13,
+          "gpu_notice_observed_at_us": 13189594,
+          "gpu_notice_ms": 102.227,
+          "collision_observed_at_us": 13457175,
+          "collision_notice_ms": 369.808
+        },
+        {
+          "command_id": 14,
+          "admitted_at_us": 13140032,
+          "terminal_observed_at_us": 13293824,
+          "terminal_notice_ms": 153.792,
+          "state_seq": 14,
+          "gpu_notice_observed_at_us": 13241739,
+          "gpu_notice_ms": 101.707,
+          "collision_observed_at_us": 13457175,
+          "collision_notice_ms": 317.143
+        },
+        {
+          "command_id": 15,
+          "admitted_at_us": 13191226,
+          "terminal_observed_at_us": 13345644,
+          "terminal_notice_ms": 154.418,
+          "state_seq": 15,
+          "gpu_notice_observed_at_us": 13293824,
+          "gpu_notice_ms": 102.598,
+          "collision_observed_at_us": 13605953,
+          "collision_notice_ms": 414.727
+        },
+        {
+          "command_id": 16,
+          "admitted_at_us": 13243215,
+          "terminal_observed_at_us": 13398027,
+          "terminal_notice_ms": 154.812,
+          "state_seq": 16,
+          "gpu_notice_observed_at_us": 13345644,
+          "gpu_notice_ms": 102.429,
+          "collision_observed_at_us": 13605953,
+          "collision_notice_ms": 362.738
+        },
+        {
+          "command_id": 17,
+          "admitted_at_us": 13295221,
+          "terminal_observed_at_us": 13457175,
+          "terminal_notice_ms": 161.954,
+          "state_seq": 17,
+          "gpu_notice_observed_at_us": 13398027,
+          "gpu_notice_ms": 102.806,
+          "collision_observed_at_us": 13605953,
+          "collision_notice_ms": 310.732
+        },
+        {
+          "command_id": 18,
+          "admitted_at_us": 13347687,
+          "terminal_observed_at_us": 13503406,
+          "terminal_notice_ms": 155.719,
+          "state_seq": 18,
+          "gpu_notice_observed_at_us": 13457175,
+          "gpu_notice_ms": 109.488,
+          "collision_observed_at_us": 13762465,
+          "collision_notice_ms": 414.778
+        },
+        {
+          "command_id": 19,
+          "admitted_at_us": 13399817,
+          "terminal_observed_at_us": 13554813,
+          "terminal_notice_ms": 154.996,
+          "state_seq": 19,
+          "gpu_notice_observed_at_us": 13503406,
+          "gpu_notice_ms": 103.589,
+          "collision_observed_at_us": 13762465,
+          "collision_notice_ms": 362.648
+        },
+        {
+          "command_id": 20,
+          "admitted_at_us": 13461283,
+          "terminal_observed_at_us": 13605953,
+          "terminal_notice_ms": 144.67,
+          "state_seq": 20,
+          "gpu_notice_observed_at_us": 13554813,
+          "gpu_notice_ms": 93.53,
+          "collision_observed_at_us": 13762465,
+          "collision_notice_ms": 301.182
+        },
+        {
+          "command_id": 21,
+          "admitted_at_us": 13506970,
+          "terminal_observed_at_us": 13657193,
+          "terminal_notice_ms": 150.223,
+          "state_seq": 21,
+          "gpu_notice_observed_at_us": 13605953,
+          "gpu_notice_ms": 98.983,
+          "collision_observed_at_us": 13799242,
+          "collision_notice_ms": 292.272
+        },
+        {
+          "command_id": 22,
+          "admitted_at_us": 13556722,
+          "terminal_observed_at_us": 13709252,
+          "terminal_notice_ms": 152.53,
+          "state_seq": 22,
+          "gpu_notice_observed_at_us": 13657193,
+          "gpu_notice_ms": 100.471,
+          "collision_observed_at_us": 13799242,
+          "collision_notice_ms": 242.52
+        },
+        {
+          "command_id": 23,
+          "admitted_at_us": 13607554,
+          "terminal_observed_at_us": 13762465,
+          "terminal_notice_ms": 154.911,
+          "state_seq": 23,
+          "gpu_notice_observed_at_us": 13709252,
+          "gpu_notice_ms": 101.698,
+          "collision_observed_at_us": 13799242,
+          "collision_notice_ms": 191.688
+        },
+        {
+          "command_id": 24,
+          "admitted_at_us": 13658989,
+          "terminal_observed_at_us": 13776758,
+          "terminal_notice_ms": 117.769,
+          "state_seq": 24,
+          "gpu_notice_observed_at_us": 13762465,
+          "gpu_notice_ms": 103.476,
+          "collision_observed_at_us": 13834095,
+          "collision_notice_ms": 175.106
+        },
+        {
+          "command_id": 25,
+          "admitted_at_us": 13711010,
+          "terminal_observed_at_us": 13788159,
+          "terminal_notice_ms": 77.149,
+          "state_seq": 25,
+          "gpu_notice_observed_at_us": 13776758,
+          "gpu_notice_ms": 65.748,
+          "collision_observed_at_us": 13834095,
+          "collision_notice_ms": 123.085
+        }
+      ],
+      "gpu_stage_dispatch_ms": {},
+      "cpu_marker_stage_ms": {},
+      "initial_sha256": {
+        "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "compaction": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de",
+        "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "obstacle": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+        "rock": "e5bebff58c79121549c5d1fbd484f90280de59fb99e1940fd8d54502cce0ad6c",
+        "sand": "e4229dd131b89dc44a8f08df893d938028cda47737983b548d8e947cb2d0df74",
+        "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+        "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+      },
+      "final_sha256": {
+        "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "compaction": "cacdebf5138ebdf6f16fe9cb81056a921120a035efa07b34ed5a3a3ff85faf7d",
+        "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "sand": "83fe40fb283bfd1d557b294a209fb7712b2249b12bbb86164125ffadb2614a46",
+        "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+        "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+      },
+      "limitations": [
+        "Notification times are CPU observation upper bounds, not GPU duration.",
+        "Physics shape replacement is observed; monitor scanout is not measured.",
+        "This workload contains 24 offered commands and is not a 1000-frame tail test."
+      ],
+      "name": "workload_shovel_1",
+      "source_drift": []
+    },
+    {
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_observed_coarse01\\workload_dig_2.json",
+      "sha256": "72d4761fbeab89d5535302709d2dd47fc9e2f5651ff4eaef0641fef893816c5b",
+      "pass": true,
+      "case": "dig",
+      "pattern": "straight",
+      "wet": false,
+      "realtime": false,
+      "sampling": false,
+      "checks": 66,
+      "target": {
+        "cell": "(224, 184)",
+        "checked_cell_rect": "[P: (208, 164), S: (33, 41)]",
+        "obstacle": false,
+        "sand_min_m": 0.78647792339325,
+        "water_max_m": 0.0,
+        "water_min_m": 0.0
+      },
+      "cold_load_to_ready_ms": 11137.619,
+      "warmup_frames": 30,
+      "frame_ms": {
+        "n": 46,
+        "p50": 16.448999999999998,
+        "p95": 19.293,
+        "p99": null,
+        "max": 37.314,
+        "p99_reason": "insufficient_samples"
+      },
+      "input_only_frame_ms": {
+        "n": 23,
+        "p50": 16.895,
+        "p95": 19.293,
+        "p99": null,
+        "max": 20.956,
+        "p99_reason": "insufficient_samples"
+      },
+      "focus_states": [
+        false
+      ],
+      "max_fps_values": [
+        0
+      ],
+      "low_processor_usage_values": [
+        false
+      ],
+      "low_processor_sleep_us_values": [
+        6900
+      ],
+      "input_open_ms": 406.533,
+      "input_open_tick_advance": 0,
+      "input_open_sim_seconds": 0.0,
+      "queue_peak_at_observation": 0,
+      "oldest_age_ms_at_observation": 56.274,
+      "drain_ms": 81.891,
+      "command_timings": [
+        {
+          "command_id": 1,
+          "admitted_at_us": 14082068,
+          "terminal_observed_at_us": 14138342,
+          "terminal_notice_ms": 56.274,
+          "state_seq": 1,
+          "gpu_notice_observed_at_us": 14119230,
+          "gpu_notice_ms": 37.162,
+          "collision_observed_at_us": 14138342,
+          "collision_notice_ms": 56.274
+        },
+        {
+          "command_id": 2,
+          "admitted_at_us": 14098419,
+          "terminal_observed_at_us": 14153331,
+          "terminal_notice_ms": 54.912,
+          "state_seq": 2,
+          "gpu_notice_observed_at_us": 14138342,
+          "gpu_notice_ms": 39.923,
+          "collision_observed_at_us": 14153331,
+          "collision_notice_ms": 54.912
+        },
+        {
+          "command_id": 3,
+          "admitted_at_us": 14119802,
+          "terminal_observed_at_us": 14168119,
+          "terminal_notice_ms": 48.317,
+          "state_seq": 3,
+          "gpu_notice_observed_at_us": 14153331,
+          "gpu_notice_ms": 33.529,
+          "collision_observed_at_us": 14187282,
+          "collision_notice_ms": 67.48
+        },
+        {
+          "command_id": 4,
+          "admitted_at_us": 14138526,
+          "terminal_observed_at_us": 14187282,
+          "terminal_notice_ms": 48.756,
+          "state_seq": 4,
+          "gpu_notice_observed_at_us": 14168119,
+          "gpu_notice_ms": 29.593,
+          "collision_observed_at_us": 14187282,
+          "collision_notice_ms": 48.756
+        },
+        {
+          "command_id": 5,
+          "admitted_at_us": 14153770,
+          "terminal_observed_at_us": 14203488,
+          "terminal_notice_ms": 49.718,
+          "state_seq": 5,
+          "gpu_notice_observed_at_us": 14187282,
+          "gpu_notice_ms": 33.512,
+          "collision_observed_at_us": 14203488,
+          "collision_notice_ms": 49.718
+        },
+        {
+          "command_id": 6,
+          "admitted_at_us": 14168341,
+          "terminal_observed_at_us": 14218437,
+          "terminal_notice_ms": 50.096,
+          "state_seq": 6,
+          "gpu_notice_observed_at_us": 14203488,
+          "gpu_notice_ms": 35.147,
+          "collision_observed_at_us": 14236830,
+          "collision_notice_ms": 68.489
+        },
+        {
+          "command_id": 7,
+          "admitted_at_us": 14187667,
+          "terminal_observed_at_us": 14236830,
+          "terminal_notice_ms": 49.163,
+          "state_seq": 7,
+          "gpu_notice_observed_at_us": 14218437,
+          "gpu_notice_ms": 30.77,
+          "collision_observed_at_us": 14236830,
+          "collision_notice_ms": 49.163
+        },
+        {
+          "command_id": 8,
+          "admitted_at_us": 14204017,
+          "terminal_observed_at_us": 14254007,
+          "terminal_notice_ms": 49.99,
+          "state_seq": 8,
+          "gpu_notice_observed_at_us": 14236830,
+          "gpu_notice_ms": 32.813,
+          "collision_observed_at_us": 14254007,
+          "collision_notice_ms": 49.99
+        },
+        {
+          "command_id": 9,
+          "admitted_at_us": 14218806,
+          "terminal_observed_at_us": 14269288,
+          "terminal_notice_ms": 50.482,
+          "state_seq": 9,
+          "gpu_notice_observed_at_us": 14254007,
+          "gpu_notice_ms": 35.201,
+          "collision_observed_at_us": 14287071,
+          "collision_notice_ms": 68.265
+        },
+        {
+          "command_id": 10,
+          "admitted_at_us": 14237430,
+          "terminal_observed_at_us": 14287071,
+          "terminal_notice_ms": 49.641,
+          "state_seq": 10,
+          "gpu_notice_observed_at_us": 14269288,
+          "gpu_notice_ms": 31.858,
+          "collision_observed_at_us": 14287071,
+          "collision_notice_ms": 49.641
+        },
+        {
+          "command_id": 11,
+          "admitted_at_us": 14254586,
+          "terminal_observed_at_us": 14303653,
+          "terminal_notice_ms": 49.067,
+          "state_seq": 11,
+          "gpu_notice_observed_at_us": 14287071,
+          "gpu_notice_ms": 32.485,
+          "collision_observed_at_us": 14303653,
+          "collision_notice_ms": 49.067
+        },
+        {
+          "command_id": 12,
+          "admitted_at_us": 14270078,
+          "terminal_observed_at_us": 14318563,
+          "terminal_notice_ms": 48.485,
+          "state_seq": 12,
+          "gpu_notice_observed_at_us": 14303653,
+          "gpu_notice_ms": 33.575,
+          "collision_observed_at_us": 14337856,
+          "collision_notice_ms": 67.778
+        },
+        {
+          "command_id": 13,
+          "admitted_at_us": 14287526,
+          "terminal_observed_at_us": 14337856,
+          "terminal_notice_ms": 50.33,
+          "state_seq": 13,
+          "gpu_notice_observed_at_us": 14318563,
+          "gpu_notice_ms": 31.037,
+          "collision_observed_at_us": 14337856,
+          "collision_notice_ms": 50.33
+        },
+        {
+          "command_id": 14,
+          "admitted_at_us": 14304264,
+          "terminal_observed_at_us": 14354751,
+          "terminal_notice_ms": 50.487,
+          "state_seq": 14,
+          "gpu_notice_observed_at_us": 14337856,
+          "gpu_notice_ms": 33.592,
+          "collision_observed_at_us": 14354751,
+          "collision_notice_ms": 50.487
+        },
+        {
+          "command_id": 15,
+          "admitted_at_us": 14319662,
+          "terminal_observed_at_us": 14370037,
+          "terminal_notice_ms": 50.375,
+          "state_seq": 15,
+          "gpu_notice_observed_at_us": 14354751,
+          "gpu_notice_ms": 35.089,
+          "collision_observed_at_us": 14388398,
+          "collision_notice_ms": 68.736
+        },
+        {
+          "command_id": 16,
+          "admitted_at_us": 14338445,
+          "terminal_observed_at_us": 14388398,
+          "terminal_notice_ms": 49.953,
+          "state_seq": 16,
+          "gpu_notice_observed_at_us": 14370037,
+          "gpu_notice_ms": 31.592,
+          "collision_observed_at_us": 14388398,
+          "collision_notice_ms": 49.953
+        },
+        {
+          "command_id": 17,
+          "admitted_at_us": 14355788,
+          "terminal_observed_at_us": 14405455,
+          "terminal_notice_ms": 49.667,
+          "state_seq": 17,
+          "gpu_notice_observed_at_us": 14388398,
+          "gpu_notice_ms": 32.61,
+          "collision_observed_at_us": 14405455,
+          "collision_notice_ms": 49.667
+        },
+        {
+          "command_id": 18,
+          "admitted_at_us": 14370690,
+          "terminal_observed_at_us": 14420166,
+          "terminal_notice_ms": 49.476,
+          "state_seq": 18,
+          "gpu_notice_observed_at_us": 14405455,
+          "gpu_notice_ms": 34.765,
+          "collision_observed_at_us": 14439097,
+          "collision_notice_ms": 68.407
+        },
+        {
+          "command_id": 19,
+          "admitted_at_us": 14389086,
+          "terminal_observed_at_us": 14439097,
+          "terminal_notice_ms": 50.011,
+          "state_seq": 19,
+          "gpu_notice_observed_at_us": 14420166,
+          "gpu_notice_ms": 31.08,
+          "collision_observed_at_us": 14439097,
+          "collision_notice_ms": 50.011
+        },
+        {
+          "command_id": 20,
+          "admitted_at_us": 14406175,
+          "terminal_observed_at_us": 14455104,
+          "terminal_notice_ms": 48.929,
+          "state_seq": 20,
+          "gpu_notice_observed_at_us": 14439097,
+          "gpu_notice_ms": 32.922,
+          "collision_observed_at_us": 14455104,
+          "collision_notice_ms": 48.929
+        },
+        {
+          "command_id": 21,
+          "admitted_at_us": 14421326,
+          "terminal_observed_at_us": 14469480,
+          "terminal_notice_ms": 48.154,
+          "state_seq": 21,
+          "gpu_notice_observed_at_us": 14455104,
+          "gpu_notice_ms": 33.778,
+          "collision_observed_at_us": 14487694,
+          "collision_notice_ms": 66.368
+        },
+        {
+          "command_id": 22,
+          "admitted_at_us": 14439993,
+          "terminal_observed_at_us": 14487694,
+          "terminal_notice_ms": 47.701,
+          "state_seq": 22,
+          "gpu_notice_observed_at_us": 14469480,
+          "gpu_notice_ms": 29.487,
+          "collision_observed_at_us": 14487694,
+          "collision_notice_ms": 47.701
+        },
+        {
+          "command_id": 23,
+          "admitted_at_us": 14456129,
+          "terminal_observed_at_us": 14503743,
+          "terminal_notice_ms": 47.614,
+          "state_seq": 23,
+          "gpu_notice_observed_at_us": 14487694,
+          "gpu_notice_ms": 31.565,
+          "collision_observed_at_us": 14503743,
+          "collision_notice_ms": 47.614
+        },
+        {
+          "command_id": 24,
+          "admitted_at_us": 14470854,
+          "terminal_observed_at_us": 14515699,
+          "terminal_notice_ms": 44.845,
+          "state_seq": 24,
+          "gpu_notice_observed_at_us": 14503743,
+          "gpu_notice_ms": 32.889,
+          "collision_observed_at_us": 14533080,
+          "collision_notice_ms": 62.226
+        }
+      ],
+      "gpu_stage_dispatch_ms": {},
+      "cpu_marker_stage_ms": {},
+      "initial_sha256": {
+        "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "compaction": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de",
+        "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "obstacle": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+        "rock": "e5bebff58c79121549c5d1fbd484f90280de59fb99e1940fd8d54502cce0ad6c",
+        "sand": "e4229dd131b89dc44a8f08df893d938028cda47737983b548d8e947cb2d0df74",
+        "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+        "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+      },
+      "final_sha256": {
+        "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "compaction": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de",
+        "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "sand": "a5854f4b3cd1bb3df0641bba7fbe41cdba885d1833c7e3f76050231d13a68271",
+        "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+        "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+      },
+      "limitations": [
+        "Notification times are CPU observation upper bounds, not GPU duration.",
+        "Physics shape replacement is observed; monitor scanout is not measured.",
+        "This workload contains 24 offered commands and is not a 1000-frame tail test."
+      ],
+      "name": "workload_dig_2",
+      "source_drift": []
+    },
+    {
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_observed_coarse01\\workload_fill_2.json",
+      "sha256": "d4912db02b5c7a2a26d7a377fedd5fb539d9e51b8dd27d77e3d678dd68a34e1d",
+      "pass": true,
+      "case": "fill",
+      "pattern": "straight",
+      "wet": false,
+      "realtime": false,
+      "sampling": false,
+      "checks": 66,
+      "target": {
+        "cell": "(224, 184)",
+        "checked_cell_rect": "[P: (208, 164), S: (33, 41)]",
+        "obstacle": false,
+        "sand_min_m": 0.78647792339325,
+        "water_max_m": 0.0,
+        "water_min_m": 0.0
+      },
+      "cold_load_to_ready_ms": 10749.497,
+      "warmup_frames": 30,
+      "frame_ms": {
+        "n": 45,
+        "p50": 16.602,
+        "p95": 18.338,
+        "p99": null,
+        "max": 20.868,
+        "p99_reason": "insufficient_samples"
+      },
+      "input_only_frame_ms": {
+        "n": 23,
+        "p50": 16.627,
+        "p95": 19.479,
+        "p99": null,
+        "max": 20.868,
+        "p99_reason": "insufficient_samples"
+      },
+      "focus_states": [
+        false
+      ],
+      "max_fps_values": [
+        0
+      ],
+      "low_processor_usage_values": [
+        false
+      ],
+      "low_processor_sleep_us_values": [
+        6900
+      ],
+      "input_open_ms": 404.405,
+      "input_open_tick_advance": 0,
+      "input_open_sim_seconds": 0.0,
+      "queue_peak_at_observation": 0,
+      "oldest_age_ms_at_observation": 56.929,
+      "drain_ms": 46.023,
+      "command_timings": [
+        {
+          "command_id": 1,
+          "admitted_at_us": 13919488,
+          "terminal_observed_at_us": 13976417,
+          "terminal_notice_ms": 56.929,
+          "state_seq": 1,
+          "gpu_notice_observed_at_us": 13955549,
+          "gpu_notice_ms": 36.061,
+          "collision_observed_at_us": 13976417,
+          "collision_notice_ms": 56.929
+        },
+        {
+          "command_id": 2,
+          "admitted_at_us": 13936381,
+          "terminal_observed_at_us": 13991766,
+          "terminal_notice_ms": 55.385,
+          "state_seq": 2,
+          "gpu_notice_observed_at_us": 13976417,
+          "gpu_notice_ms": 40.036,
+          "collision_observed_at_us": 13991766,
+          "collision_notice_ms": 55.385
+        },
+        {
+          "command_id": 3,
+          "admitted_at_us": 13955810,
+          "terminal_observed_at_us": 14005271,
+          "terminal_notice_ms": 49.461,
+          "state_seq": 3,
+          "gpu_notice_observed_at_us": 13991766,
+          "gpu_notice_ms": 35.956,
+          "collision_observed_at_us": 14022728,
+          "collision_notice_ms": 66.918
+        },
+        {
+          "command_id": 4,
+          "admitted_at_us": 13977181,
+          "terminal_observed_at_us": 14022728,
+          "terminal_notice_ms": 45.547,
+          "state_seq": 4,
+          "gpu_notice_observed_at_us": 14005271,
+          "gpu_notice_ms": 28.09,
+          "collision_observed_at_us": 14022728,
+          "collision_notice_ms": 45.547
+        },
+        {
+          "command_id": 5,
+          "admitted_at_us": 13991887,
+          "terminal_observed_at_us": 14041066,
+          "terminal_notice_ms": 49.179,
+          "state_seq": 5,
+          "gpu_notice_observed_at_us": 14022728,
+          "gpu_notice_ms": 30.841,
+          "collision_observed_at_us": 14041066,
+          "collision_notice_ms": 49.179
+        },
+        {
+          "command_id": 6,
+          "admitted_at_us": 14005421,
+          "terminal_observed_at_us": 14055986,
+          "terminal_notice_ms": 50.565,
+          "state_seq": 6,
+          "gpu_notice_observed_at_us": 14041066,
+          "gpu_notice_ms": 35.645,
+          "collision_observed_at_us": 14072532,
+          "collision_notice_ms": 67.111
+        },
+        {
+          "command_id": 7,
+          "admitted_at_us": 14022943,
+          "terminal_observed_at_us": 14072532,
+          "terminal_notice_ms": 49.589,
+          "state_seq": 7,
+          "gpu_notice_observed_at_us": 14055986,
+          "gpu_notice_ms": 33.043,
+          "collision_observed_at_us": 14072532,
+          "collision_notice_ms": 49.589
+        },
+        {
+          "command_id": 8,
+          "admitted_at_us": 14041515,
+          "terminal_observed_at_us": 14090448,
+          "terminal_notice_ms": 48.933,
+          "state_seq": 8,
+          "gpu_notice_observed_at_us": 14072532,
+          "gpu_notice_ms": 31.017,
+          "collision_observed_at_us": 14090448,
+          "collision_notice_ms": 48.933
+        },
+        {
+          "command_id": 9,
+          "admitted_at_us": 14056614,
+          "terminal_observed_at_us": 14106234,
+          "terminal_notice_ms": 49.62,
+          "state_seq": 9,
+          "gpu_notice_observed_at_us": 14090448,
+          "gpu_notice_ms": 33.834,
+          "collision_observed_at_us": 14122637,
+          "collision_notice_ms": 66.023
+        },
+        {
+          "command_id": 10,
+          "admitted_at_us": 14073106,
+          "terminal_observed_at_us": 14122637,
+          "terminal_notice_ms": 49.531,
+          "state_seq": 10,
+          "gpu_notice_observed_at_us": 14106234,
+          "gpu_notice_ms": 33.128,
+          "collision_observed_at_us": 14122637,
+          "collision_notice_ms": 49.531
+        },
+        {
+          "command_id": 11,
+          "admitted_at_us": 14091109,
+          "terminal_observed_at_us": 14139757,
+          "terminal_notice_ms": 48.648,
+          "state_seq": 11,
+          "gpu_notice_observed_at_us": 14122637,
+          "gpu_notice_ms": 31.528,
+          "collision_observed_at_us": 14139757,
+          "collision_notice_ms": 48.648
+        },
+        {
+          "command_id": 12,
+          "admitted_at_us": 14106961,
+          "terminal_observed_at_us": 14155010,
+          "terminal_notice_ms": 48.049,
+          "state_seq": 12,
+          "gpu_notice_observed_at_us": 14139757,
+          "gpu_notice_ms": 32.796,
+          "collision_observed_at_us": 14173229,
+          "collision_notice_ms": 66.268
+        },
+        {
+          "command_id": 13,
+          "admitted_at_us": 14123361,
+          "terminal_observed_at_us": 14173229,
+          "terminal_notice_ms": 49.868,
+          "state_seq": 13,
+          "gpu_notice_observed_at_us": 14155010,
+          "gpu_notice_ms": 31.649,
+          "collision_observed_at_us": 14173229,
+          "collision_notice_ms": 49.868
+        },
+        {
+          "command_id": 14,
+          "admitted_at_us": 14140368,
+          "terminal_observed_at_us": 14188735,
+          "terminal_notice_ms": 48.367,
+          "state_seq": 14,
+          "gpu_notice_observed_at_us": 14173229,
+          "gpu_notice_ms": 32.861,
+          "collision_observed_at_us": 14188735,
+          "collision_notice_ms": 48.367
+        },
+        {
+          "command_id": 15,
+          "admitted_at_us": 14155255,
+          "terminal_observed_at_us": 14205174,
+          "terminal_notice_ms": 49.919,
+          "state_seq": 15,
+          "gpu_notice_observed_at_us": 14188735,
+          "gpu_notice_ms": 33.48,
+          "collision_observed_at_us": 14222567,
+          "collision_notice_ms": 67.312
+        },
+        {
+          "command_id": 16,
+          "admitted_at_us": 14173868,
+          "terminal_observed_at_us": 14222567,
+          "terminal_notice_ms": 48.699,
+          "state_seq": 16,
+          "gpu_notice_observed_at_us": 14205174,
+          "gpu_notice_ms": 31.306,
+          "collision_observed_at_us": 14222567,
+          "collision_notice_ms": 48.699
+        },
+        {
+          "command_id": 17,
+          "admitted_at_us": 14189071,
+          "terminal_observed_at_us": 14238625,
+          "terminal_notice_ms": 49.554,
+          "state_seq": 17,
+          "gpu_notice_observed_at_us": 14222567,
+          "gpu_notice_ms": 33.496,
+          "collision_observed_at_us": 14238625,
+          "collision_notice_ms": 49.554
+        },
+        {
+          "command_id": 18,
+          "admitted_at_us": 14205533,
+          "terminal_observed_at_us": 14255265,
+          "terminal_notice_ms": 49.732,
+          "state_seq": 18,
+          "gpu_notice_observed_at_us": 14238625,
+          "gpu_notice_ms": 33.092,
+          "collision_observed_at_us": 14272381,
+          "collision_notice_ms": 66.848
+        },
+        {
+          "command_id": 19,
+          "admitted_at_us": 14223286,
+          "terminal_observed_at_us": 14272381,
+          "terminal_notice_ms": 49.095,
+          "state_seq": 19,
+          "gpu_notice_observed_at_us": 14255265,
+          "gpu_notice_ms": 31.979,
+          "collision_observed_at_us": 14272381,
+          "collision_notice_ms": 49.095
+        },
+        {
+          "command_id": 20,
+          "admitted_at_us": 14239036,
+          "terminal_observed_at_us": 14288910,
+          "terminal_notice_ms": 49.874,
+          "state_seq": 20,
+          "gpu_notice_observed_at_us": 14272381,
+          "gpu_notice_ms": 33.345,
+          "collision_observed_at_us": 14288910,
+          "collision_notice_ms": 49.874
+        },
+        {
+          "command_id": 21,
+          "admitted_at_us": 14255860,
+          "terminal_observed_at_us": 14305537,
+          "terminal_notice_ms": 49.677,
+          "state_seq": 21,
+          "gpu_notice_observed_at_us": 14288910,
+          "gpu_notice_ms": 33.05,
+          "collision_observed_at_us": 14323386,
+          "collision_notice_ms": 67.526
+        },
+        {
+          "command_id": 22,
+          "admitted_at_us": 14273080,
+          "terminal_observed_at_us": 14323386,
+          "terminal_notice_ms": 50.306,
+          "state_seq": 22,
+          "gpu_notice_observed_at_us": 14305537,
+          "gpu_notice_ms": 32.457,
+          "collision_observed_at_us": 14323386,
+          "collision_notice_ms": 50.306
+        },
+        {
+          "command_id": 23,
+          "admitted_at_us": 14289677,
+          "terminal_observed_at_us": 14339988,
+          "terminal_notice_ms": 50.311,
+          "state_seq": 23,
+          "gpu_notice_observed_at_us": 14323386,
+          "gpu_notice_ms": 33.709,
+          "collision_observed_at_us": 14339988,
+          "collision_notice_ms": 50.311
+        },
+        {
+          "command_id": 24,
+          "admitted_at_us": 14306912,
+          "terminal_observed_at_us": 14352051,
+          "terminal_notice_ms": 45.139,
+          "state_seq": 24,
+          "gpu_notice_observed_at_us": 14339988,
+          "gpu_notice_ms": 33.076,
+          "collision_observed_at_us": 14369471,
+          "collision_notice_ms": 62.559
+        }
+      ],
+      "gpu_stage_dispatch_ms": {},
+      "cpu_marker_stage_ms": {},
+      "initial_sha256": {
+        "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "compaction": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de",
+        "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "obstacle": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+        "rock": "e5bebff58c79121549c5d1fbd484f90280de59fb99e1940fd8d54502cce0ad6c",
+        "sand": "e4229dd131b89dc44a8f08df893d938028cda47737983b548d8e947cb2d0df74",
+        "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+        "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+      },
+      "final_sha256": {
+        "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "compaction": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de",
+        "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "sand": "ae7af88387d4d5095920635055cee1f01ba6dde75378714a4fa91368c645b8e9",
+        "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+        "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+      },
+      "limitations": [
+        "Notification times are CPU observation upper bounds, not GPU duration.",
+        "Physics shape replacement is observed; monitor scanout is not measured.",
+        "This workload contains 24 offered commands and is not a 1000-frame tail test."
+      ],
+      "name": "workload_fill_2",
+      "source_drift": []
+    },
+    {
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_observed_coarse01\\workload_wall_2.json",
+      "sha256": "febe13a7ff8639d12991dea26967e59846fff5397755043c66dc9bba7ec9fef8",
+      "pass": true,
+      "case": "wall",
+      "pattern": "straight",
+      "wet": false,
+      "realtime": false,
+      "sampling": false,
+      "checks": 70,
+      "target": {
+        "cell": "(224, 184)",
+        "checked_cell_rect": "[P: (208, 164), S: (33, 41)]",
+        "obstacle": false,
+        "sand_min_m": 0.78647792339325,
+        "water_max_m": 0.0,
+        "water_min_m": 0.0
+      },
+      "cold_load_to_ready_ms": 11140.836,
+      "warmup_frames": 30,
+      "frame_ms": {
+        "n": 52,
+        "p50": 16.9085,
+        "p95": 57.739,
+        "p99": null,
+        "max": 62.746,
+        "p99_reason": "insufficient_samples"
+      },
+      "input_only_frame_ms": {
+        "n": 23,
+        "p50": 56.482,
+        "p95": 58.687,
+        "p99": null,
+        "max": 62.746,
+        "p99_reason": "insufficient_samples"
+      },
+      "focus_states": [
+        false
+      ],
+      "max_fps_values": [
+        0
+      ],
+      "low_processor_usage_values": [
+        false
+      ],
+      "low_processor_sleep_us_values": [
+        6900
+      ],
+      "input_open_ms": 1316.444,
+      "input_open_tick_advance": 0,
+      "input_open_sim_seconds": 0.0,
+      "queue_peak_at_observation": 0,
+      "oldest_age_ms_at_observation": 173.503,
+      "drain_ms": 46.368,
+      "command_timings": [
+        {
+          "command_id": 2,
+          "admitted_at_us": 14291394,
+          "terminal_observed_at_us": 14425465,
+          "terminal_notice_ms": 134.071,
+          "state_seq": 2,
+          "gpu_notice_observed_at_us": 14369013,
+          "gpu_notice_ms": 77.619,
+          "collision_observed_at_us": 14594930,
+          "collision_notice_ms": 303.536
+        },
+        {
+          "command_id": 3,
+          "admitted_at_us": 14307206,
+          "terminal_observed_at_us": 14480709,
+          "terminal_notice_ms": 173.503,
+          "state_seq": 3,
+          "gpu_notice_observed_at_us": 14425465,
+          "gpu_notice_ms": 118.259,
+          "collision_observed_at_us": 14763380,
+          "collision_notice_ms": 456.174
+        },
+        {
+          "command_id": 4,
+          "admitted_at_us": 14369844,
+          "terminal_observed_at_us": 14537191,
+          "terminal_notice_ms": 167.347,
+          "state_seq": 4,
+          "gpu_notice_observed_at_us": 14480709,
+          "gpu_notice_ms": 110.865,
+          "collision_observed_at_us": 14763380,
+          "collision_notice_ms": 393.536
+        },
+        {
+          "command_id": 5,
+          "admitted_at_us": 14427105,
+          "terminal_observed_at_us": 14594930,
+          "terminal_notice_ms": 167.825,
+          "state_seq": 5,
+          "gpu_notice_observed_at_us": 14537191,
+          "gpu_notice_ms": 110.086,
+          "collision_observed_at_us": 14763380,
+          "collision_notice_ms": 336.275
+        },
+        {
+          "command_id": 6,
+          "admitted_at_us": 14481915,
+          "terminal_observed_at_us": 14649892,
+          "terminal_notice_ms": 167.977,
+          "state_seq": 6,
+          "gpu_notice_observed_at_us": 14594930,
+          "gpu_notice_ms": 113.015,
+          "collision_observed_at_us": 14932691,
+          "collision_notice_ms": 450.776
+        },
+        {
+          "command_id": 7,
+          "admitted_at_us": 14538532,
+          "terminal_observed_at_us": 14706680,
+          "terminal_notice_ms": 168.148,
+          "state_seq": 7,
+          "gpu_notice_observed_at_us": 14649892,
+          "gpu_notice_ms": 111.36,
+          "collision_observed_at_us": 14932691,
+          "collision_notice_ms": 394.159
+        },
+        {
+          "command_id": 8,
+          "admitted_at_us": 14596035,
+          "terminal_observed_at_us": 14763380,
+          "terminal_notice_ms": 167.345,
+          "state_seq": 8,
+          "gpu_notice_observed_at_us": 14706680,
+          "gpu_notice_ms": 110.645,
+          "collision_observed_at_us": 14932691,
+          "collision_notice_ms": 336.656
+        },
+        {
+          "command_id": 9,
+          "admitted_at_us": 14651245,
+          "terminal_observed_at_us": 14818750,
+          "terminal_notice_ms": 167.505,
+          "state_seq": 9,
+          "gpu_notice_observed_at_us": 14763380,
+          "gpu_notice_ms": 112.135,
+          "collision_observed_at_us": 15099915,
+          "collision_notice_ms": 448.67
+        },
+        {
+          "command_id": 10,
+          "admitted_at_us": 14708183,
+          "terminal_observed_at_us": 14876451,
+          "terminal_notice_ms": 168.268,
+          "state_seq": 10,
+          "gpu_notice_observed_at_us": 14818750,
+          "gpu_notice_ms": 110.567,
+          "collision_observed_at_us": 15099915,
+          "collision_notice_ms": 391.732
+        },
+        {
+          "command_id": 11,
+          "admitted_at_us": 14764371,
+          "terminal_observed_at_us": 14932691,
+          "terminal_notice_ms": 168.32,
+          "state_seq": 11,
+          "gpu_notice_observed_at_us": 14876451,
+          "gpu_notice_ms": 112.08,
+          "collision_observed_at_us": 15099915,
+          "collision_notice_ms": 335.544
+        },
+        {
+          "command_id": 12,
+          "admitted_at_us": 14820354,
+          "terminal_observed_at_us": 14987156,
+          "terminal_notice_ms": 166.802,
+          "state_seq": 12,
+          "gpu_notice_observed_at_us": 14932691,
+          "gpu_notice_ms": 112.337,
+          "collision_observed_at_us": 15269352,
+          "collision_notice_ms": 448.998
+        },
+        {
+          "command_id": 13,
+          "admitted_at_us": 14878333,
+          "terminal_observed_at_us": 15044067,
+          "terminal_notice_ms": 165.734,
+          "state_seq": 13,
+          "gpu_notice_observed_at_us": 14987156,
+          "gpu_notice_ms": 108.823,
+          "collision_observed_at_us": 15269352,
+          "collision_notice_ms": 391.019
+        },
+        {
+          "command_id": 14,
+          "admitted_at_us": 14933774,
+          "terminal_observed_at_us": 15099915,
+          "terminal_notice_ms": 166.141,
+          "state_seq": 14,
+          "gpu_notice_observed_at_us": 15044067,
+          "gpu_notice_ms": 110.293,
+          "collision_observed_at_us": 15269352,
+          "collision_notice_ms": 335.578
+        },
+        {
+          "command_id": 15,
+          "admitted_at_us": 14988676,
+          "terminal_observed_at_us": 15155654,
+          "terminal_notice_ms": 166.978,
+          "state_seq": 15,
+          "gpu_notice_observed_at_us": 15099915,
+          "gpu_notice_ms": 111.239,
+          "collision_observed_at_us": 15439274,
+          "collision_notice_ms": 450.598
+        },
+        {
+          "command_id": 16,
+          "admitted_at_us": 15045745,
+          "terminal_observed_at_us": 15212154,
+          "terminal_notice_ms": 166.409,
+          "state_seq": 16,
+          "gpu_notice_observed_at_us": 15155654,
+          "gpu_notice_ms": 109.909,
+          "collision_observed_at_us": 15439274,
+          "collision_notice_ms": 393.529
+        },
+        {
+          "command_id": 17,
+          "admitted_at_us": 15101363,
+          "terminal_observed_at_us": 15269352,
+          "terminal_notice_ms": 167.989,
+          "state_seq": 17,
+          "gpu_notice_observed_at_us": 15212154,
+          "gpu_notice_ms": 110.791,
+          "collision_observed_at_us": 15439274,
+          "collision_notice_ms": 337.911
+        },
+        {
+          "command_id": 18,
+          "admitted_at_us": 15157211,
+          "terminal_observed_at_us": 15324474,
+          "terminal_notice_ms": 167.263,
+          "state_seq": 18,
+          "gpu_notice_observed_at_us": 15269352,
+          "gpu_notice_ms": 112.141,
+          "collision_observed_at_us": 15605837,
+          "collision_notice_ms": 448.626
+        },
+        {
+          "command_id": 19,
+          "admitted_at_us": 15213801,
+          "terminal_observed_at_us": 15380587,
+          "terminal_notice_ms": 166.786,
+          "state_seq": 19,
+          "gpu_notice_observed_at_us": 15324474,
+          "gpu_notice_ms": 110.673,
+          "collision_observed_at_us": 15605837,
+          "collision_notice_ms": 392.036
+        },
+        {
+          "command_id": 20,
+          "admitted_at_us": 15270348,
+          "terminal_observed_at_us": 15439274,
+          "terminal_notice_ms": 168.926,
+          "state_seq": 20,
+          "gpu_notice_observed_at_us": 15380587,
+          "gpu_notice_ms": 110.239,
+          "collision_observed_at_us": 15605837,
+          "collision_notice_ms": 335.489
+        },
+        {
+          "command_id": 21,
+          "admitted_at_us": 15326271,
+          "terminal_observed_at_us": 15492164,
+          "terminal_notice_ms": 165.893,
+          "state_seq": 21,
+          "gpu_notice_observed_at_us": 15439274,
+          "gpu_notice_ms": 113.003,
+          "collision_observed_at_us": 15652370,
+          "collision_notice_ms": 326.099
+        },
+        {
+          "command_id": 22,
+          "admitted_at_us": 15382129,
+          "terminal_observed_at_us": 15548834,
+          "terminal_notice_ms": 166.705,
+          "state_seq": 22,
+          "gpu_notice_observed_at_us": 15492164,
+          "gpu_notice_ms": 110.035,
+          "collision_observed_at_us": 15652370,
+          "collision_notice_ms": 270.241
+        },
+        {
+          "command_id": 23,
+          "admitted_at_us": 15444037,
+          "terminal_observed_at_us": 15605837,
+          "terminal_notice_ms": 161.8,
+          "state_seq": 23,
+          "gpu_notice_observed_at_us": 15548834,
+          "gpu_notice_ms": 104.797,
+          "collision_observed_at_us": 15652370,
+          "collision_notice_ms": 208.333
+        },
+        {
+          "command_id": 24,
+          "admitted_at_us": 15493958,
+          "terminal_observed_at_us": 15618378,
+          "terminal_notice_ms": 124.42,
+          "state_seq": 24,
+          "gpu_notice_observed_at_us": 15605837,
+          "gpu_notice_ms": 111.879,
+          "collision_observed_at_us": 15686976,
+          "collision_notice_ms": 193.018
+        },
+        {
+          "command_id": 25,
+          "admitted_at_us": 15550283,
+          "terminal_observed_at_us": 15630030,
+          "terminal_notice_ms": 79.747,
+          "state_seq": 25,
+          "gpu_notice_observed_at_us": 15618378,
+          "gpu_notice_ms": 68.095,
+          "collision_observed_at_us": 15686976,
+          "collision_notice_ms": 136.693
+        }
+      ],
+      "gpu_stage_dispatch_ms": {},
+      "cpu_marker_stage_ms": {},
+      "initial_sha256": {
+        "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "compaction": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de",
+        "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "obstacle": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+        "rock": "e5bebff58c79121549c5d1fbd484f90280de59fb99e1940fd8d54502cce0ad6c",
+        "sand": "e4229dd131b89dc44a8f08df893d938028cda47737983b548d8e947cb2d0df74",
+        "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+        "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+      },
+      "final_sha256": {
+        "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "compaction": "c4160965c7a92f17e4633550a98a7754709411fb79a0f60535ae4c90ce5f5fec",
+        "mold_support": "7061584ca3c50cf53a990882ea6b59fc92ffc63ae7b8e213f4db40b572a83952",
+        "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "sand": "7a448879c18f30bebbeb135418b26513a733263ec99e0ccd12417db1c9ceb597",
+        "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+        "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+      },
+      "limitations": [
+        "Notification times are CPU observation upper bounds, not GPU duration.",
+        "Physics shape replacement is observed; monitor scanout is not measured.",
+        "This workload contains 24 offered commands and is not a 1000-frame tail test."
+      ],
+      "name": "workload_wall_2",
+      "source_drift": []
+    },
+    {
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_observed_coarse01\\workload_shovel_2.json",
+      "sha256": "66ac8241cdf6504793b85f352e13064ac0f01ecf21254a00abbed7138d72d8ef",
+      "pass": true,
+      "case": "shovel",
+      "pattern": "straight",
+      "wet": false,
+      "realtime": false,
+      "sampling": false,
+      "checks": 70,
+      "target": {
+        "cell": "(224, 184)",
+        "checked_cell_rect": "[P: (208, 164), S: (33, 41)]",
+        "obstacle": false,
+        "sand_min_m": 0.78647792339325,
+        "water_max_m": 0.0,
+        "water_min_m": 0.0
+      },
+      "cold_load_to_ready_ms": 9930.22,
+      "warmup_frames": 30,
+      "frame_ms": {
+        "n": 52,
+        "p50": 17.328,
+        "p95": 54.2,
+        "p99": null,
+        "max": 55.075,
+        "p99_reason": "insufficient_samples"
+      },
+      "input_only_frame_ms": {
+        "n": 23,
+        "p50": 52.166,
+        "p95": 54.254,
+        "p99": null,
+        "max": 55.075,
+        "p99_reason": "insufficient_samples"
+      },
+      "focus_states": [
+        true
+      ],
+      "max_fps_values": [
+        0
+      ],
+      "low_processor_usage_values": [
+        false
+      ],
+      "low_processor_sleep_us_values": [
+        6900
+      ],
+      "input_open_ms": 1222.831,
+      "input_open_tick_advance": 0,
+      "input_open_sim_seconds": 0.0,
+      "queue_peak_at_observation": 0,
+      "oldest_age_ms_at_observation": 159.206,
+      "drain_ms": 58.607,
+      "command_timings": [
+        {
+          "command_id": 2,
+          "admitted_at_us": 12794512,
+          "terminal_observed_at_us": 12912262,
+          "terminal_notice_ms": 117.75,
+          "state_seq": 2,
+          "gpu_notice_observed_at_us": 12860183,
+          "gpu_notice_ms": 65.671,
+          "collision_observed_at_us": 13070935,
+          "collision_notice_ms": 276.423
+        },
+        {
+          "command_id": 3,
+          "admitted_at_us": 12807404,
+          "terminal_observed_at_us": 12964376,
+          "terminal_notice_ms": 156.972,
+          "state_seq": 3,
+          "gpu_notice_observed_at_us": 12912262,
+          "gpu_notice_ms": 104.858,
+          "collision_observed_at_us": 13226091,
+          "collision_notice_ms": 418.687
+        },
+        {
+          "command_id": 4,
+          "admitted_at_us": 12861084,
+          "terminal_observed_at_us": 13016997,
+          "terminal_notice_ms": 155.913,
+          "state_seq": 4,
+          "gpu_notice_observed_at_us": 12964376,
+          "gpu_notice_ms": 103.292,
+          "collision_observed_at_us": 13226091,
+          "collision_notice_ms": 365.007
+        },
+        {
+          "command_id": 5,
+          "admitted_at_us": 12913611,
+          "terminal_observed_at_us": 13070935,
+          "terminal_notice_ms": 157.324,
+          "state_seq": 5,
+          "gpu_notice_observed_at_us": 13016997,
+          "gpu_notice_ms": 103.386,
+          "collision_observed_at_us": 13226091,
+          "collision_notice_ms": 312.48
+        },
+        {
+          "command_id": 6,
+          "admitted_at_us": 12965691,
+          "terminal_observed_at_us": 13120500,
+          "terminal_notice_ms": 154.809,
+          "state_seq": 6,
+          "gpu_notice_observed_at_us": 13070935,
+          "gpu_notice_ms": 105.244,
+          "collision_observed_at_us": 13383068,
+          "collision_notice_ms": 417.377
+        },
+        {
+          "command_id": 7,
+          "admitted_at_us": 13018616,
+          "terminal_observed_at_us": 13174754,
+          "terminal_notice_ms": 156.138,
+          "state_seq": 7,
+          "gpu_notice_observed_at_us": 13120500,
+          "gpu_notice_ms": 101.884,
+          "collision_observed_at_us": 13383068,
+          "collision_notice_ms": 364.452
+        },
+        {
+          "command_id": 8,
+          "admitted_at_us": 13071767,
+          "terminal_observed_at_us": 13226091,
+          "terminal_notice_ms": 154.324,
+          "state_seq": 8,
+          "gpu_notice_observed_at_us": 13174754,
+          "gpu_notice_ms": 102.987,
+          "collision_observed_at_us": 13383068,
+          "collision_notice_ms": 311.301
+        },
+        {
+          "command_id": 9,
+          "admitted_at_us": 13121727,
+          "terminal_observed_at_us": 13277059,
+          "terminal_notice_ms": 155.332,
+          "state_seq": 9,
+          "gpu_notice_observed_at_us": 13226091,
+          "gpu_notice_ms": 104.364,
+          "collision_observed_at_us": 13539640,
+          "collision_notice_ms": 417.913
+        },
+        {
+          "command_id": 10,
+          "admitted_at_us": 13176150,
+          "terminal_observed_at_us": 13330902,
+          "terminal_notice_ms": 154.752,
+          "state_seq": 10,
+          "gpu_notice_observed_at_us": 13277059,
+          "gpu_notice_ms": 100.909,
+          "collision_observed_at_us": 13539640,
+          "collision_notice_ms": 363.49
+        },
+        {
+          "command_id": 11,
+          "admitted_at_us": 13227215,
+          "terminal_observed_at_us": 13383068,
+          "terminal_notice_ms": 155.853,
+          "state_seq": 11,
+          "gpu_notice_observed_at_us": 13330902,
+          "gpu_notice_ms": 103.687,
+          "collision_observed_at_us": 13539640,
+          "collision_notice_ms": 312.425
+        },
+        {
+          "command_id": 12,
+          "admitted_at_us": 13278638,
+          "terminal_observed_at_us": 13433774,
+          "terminal_notice_ms": 155.136,
+          "state_seq": 12,
+          "gpu_notice_observed_at_us": 13383068,
+          "gpu_notice_ms": 104.43,
+          "collision_observed_at_us": 13696747,
+          "collision_notice_ms": 418.109
+        },
+        {
+          "command_id": 13,
+          "admitted_at_us": 13331925,
+          "terminal_observed_at_us": 13486628,
+          "terminal_notice_ms": 154.703,
+          "state_seq": 13,
+          "gpu_notice_observed_at_us": 13433774,
+          "gpu_notice_ms": 101.849,
+          "collision_observed_at_us": 13696747,
+          "collision_notice_ms": 364.822
+        },
+        {
+          "command_id": 14,
+          "admitted_at_us": 13384057,
+          "terminal_observed_at_us": 13539640,
+          "terminal_notice_ms": 155.583,
+          "state_seq": 14,
+          "gpu_notice_observed_at_us": 13486628,
+          "gpu_notice_ms": 102.571,
+          "collision_observed_at_us": 13696747,
+          "collision_notice_ms": 312.69
+        },
+        {
+          "command_id": 15,
+          "admitted_at_us": 13435212,
+          "terminal_observed_at_us": 13592279,
+          "terminal_notice_ms": 157.067,
+          "state_seq": 15,
+          "gpu_notice_observed_at_us": 13539640,
+          "gpu_notice_ms": 104.428,
+          "collision_observed_at_us": 13851550,
+          "collision_notice_ms": 416.338
+        },
+        {
+          "command_id": 16,
+          "admitted_at_us": 13488148,
+          "terminal_observed_at_us": 13647354,
+          "terminal_notice_ms": 159.206,
+          "state_seq": 16,
+          "gpu_notice_observed_at_us": 13592279,
+          "gpu_notice_ms": 104.131,
+          "collision_observed_at_us": 13851550,
+          "collision_notice_ms": 363.402
+        },
+        {
+          "command_id": 17,
+          "admitted_at_us": 13540708,
+          "terminal_observed_at_us": 13696747,
+          "terminal_notice_ms": 156.039,
+          "state_seq": 17,
+          "gpu_notice_observed_at_us": 13647354,
+          "gpu_notice_ms": 106.646,
+          "collision_observed_at_us": 13851550,
+          "collision_notice_ms": 310.842
+        },
+        {
+          "command_id": 18,
+          "admitted_at_us": 13593398,
+          "terminal_observed_at_us": 13747228,
+          "terminal_notice_ms": 153.83,
+          "state_seq": 18,
+          "gpu_notice_observed_at_us": 13696747,
+          "gpu_notice_ms": 103.349,
+          "collision_observed_at_us": 14009037,
+          "collision_notice_ms": 415.639
+        },
+        {
+          "command_id": 19,
+          "admitted_at_us": 13651878,
+          "terminal_observed_at_us": 13801414,
+          "terminal_notice_ms": 149.536,
+          "state_seq": 19,
+          "gpu_notice_observed_at_us": 13747228,
+          "gpu_notice_ms": 95.35,
+          "collision_observed_at_us": 14009037,
+          "collision_notice_ms": 357.159
+        },
+        {
+          "command_id": 20,
+          "admitted_at_us": 13697729,
+          "terminal_observed_at_us": 13851550,
+          "terminal_notice_ms": 153.821,
+          "state_seq": 20,
+          "gpu_notice_observed_at_us": 13801414,
+          "gpu_notice_ms": 103.685,
+          "collision_observed_at_us": 14009037,
+          "collision_notice_ms": 311.308
+        },
+        {
+          "command_id": 21,
+          "admitted_at_us": 13749037,
+          "terminal_observed_at_us": 13903665,
+          "terminal_notice_ms": 154.628,
+          "state_seq": 21,
+          "gpu_notice_observed_at_us": 13851550,
+          "gpu_notice_ms": 102.513,
+          "collision_observed_at_us": 14060153,
+          "collision_notice_ms": 311.116
+        },
+        {
+          "command_id": 22,
+          "admitted_at_us": 13802553,
+          "terminal_observed_at_us": 13957865,
+          "terminal_notice_ms": 155.312,
+          "state_seq": 22,
+          "gpu_notice_observed_at_us": 13903665,
+          "gpu_notice_ms": 101.112,
+          "collision_observed_at_us": 14060153,
+          "collision_notice_ms": 257.6
+        },
+        {
+          "command_id": 23,
+          "admitted_at_us": 13853030,
+          "terminal_observed_at_us": 14009037,
+          "terminal_notice_ms": 156.007,
+          "state_seq": 23,
+          "gpu_notice_observed_at_us": 13957865,
+          "gpu_notice_ms": 104.835,
+          "collision_observed_at_us": 14060153,
+          "collision_notice_ms": 207.123
+        },
+        {
+          "command_id": 24,
+          "admitted_at_us": 13905265,
+          "terminal_observed_at_us": 14023675,
+          "terminal_notice_ms": 118.41,
+          "state_seq": 24,
+          "gpu_notice_observed_at_us": 14009037,
+          "gpu_notice_ms": 103.772,
+          "collision_observed_at_us": 14104563,
+          "collision_notice_ms": 199.298
+        },
+        {
+          "command_id": 25,
+          "admitted_at_us": 13959162,
+          "terminal_observed_at_us": 14035305,
+          "terminal_notice_ms": 76.143,
+          "state_seq": 25,
+          "gpu_notice_observed_at_us": 14023675,
+          "gpu_notice_ms": 64.513,
+          "collision_observed_at_us": 14104563,
+          "collision_notice_ms": 145.401
+        }
+      ],
+      "gpu_stage_dispatch_ms": {},
+      "cpu_marker_stage_ms": {},
+      "initial_sha256": {
+        "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "compaction": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de",
+        "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "obstacle": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+        "rock": "e5bebff58c79121549c5d1fbd484f90280de59fb99e1940fd8d54502cce0ad6c",
+        "sand": "e4229dd131b89dc44a8f08df893d938028cda47737983b548d8e947cb2d0df74",
+        "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+        "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+      },
+      "final_sha256": {
+        "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "compaction": "cacdebf5138ebdf6f16fe9cb81056a921120a035efa07b34ed5a3a3ff85faf7d",
+        "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "sand": "83fe40fb283bfd1d557b294a209fb7712b2249b12bbb86164125ffadb2614a46",
+        "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+        "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+      },
+      "limitations": [
+        "Notification times are CPU observation upper bounds, not GPU duration.",
+        "Physics shape replacement is observed; monitor scanout is not measured.",
+        "This workload contains 24 offered commands and is not a 1000-frame tail test."
+      ],
+      "name": "workload_shovel_2",
+      "source_drift": []
+    },
+    {
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_observed_coarse01\\workload_dig_3.json",
+      "sha256": "22d1e933a38fb54a4cc1e1000158dcd8e4979543167f530a4ac931d74e272b35",
+      "pass": true,
+      "case": "dig",
+      "pattern": "straight",
+      "wet": false,
+      "realtime": false,
+      "sampling": false,
+      "checks": 66,
+      "target": {
+        "cell": "(224, 184)",
+        "checked_cell_rect": "[P: (208, 164), S: (33, 41)]",
+        "obstacle": false,
+        "sand_min_m": 0.78647792339325,
+        "water_max_m": 0.0,
+        "water_min_m": 0.0
+      },
+      "cold_load_to_ready_ms": 9626.473,
+      "warmup_frames": 30,
+      "frame_ms": {
+        "n": 45,
+        "p50": 16.734,
+        "p95": 19.947,
+        "p99": null,
+        "max": 20.908,
+        "p99_reason": "insufficient_samples"
+      },
+      "input_only_frame_ms": {
+        "n": 23,
+        "p50": 16.949,
+        "p95": 18.651,
+        "p99": null,
+        "max": 19.947,
+        "p99_reason": "insufficient_samples"
+      },
+      "focus_states": [
+        true
+      ],
+      "max_fps_values": [
+        0
+      ],
+      "low_processor_usage_values": [
+        false
+      ],
+      "low_processor_sleep_us_values": [
+        6900
+      ],
+      "input_open_ms": 405.619,
+      "input_open_tick_advance": 0,
+      "input_open_sim_seconds": 0.0,
+      "queue_peak_at_observation": 0,
+      "oldest_age_ms_at_observation": 53.938,
+      "drain_ms": 47.872,
+      "command_timings": [
+        {
+          "command_id": 1,
+          "admitted_at_us": 12475844,
+          "terminal_observed_at_us": 12529622,
+          "terminal_notice_ms": 53.778,
+          "state_seq": 1,
+          "gpu_notice_observed_at_us": 12512477,
+          "gpu_notice_ms": 36.633,
+          "collision_observed_at_us": 12529622,
+          "collision_notice_ms": 53.778
+        },
+        {
+          "command_id": 2,
+          "admitted_at_us": 12492633,
+          "terminal_observed_at_us": 12546571,
+          "terminal_notice_ms": 53.938,
+          "state_seq": 2,
+          "gpu_notice_observed_at_us": 12529622,
+          "gpu_notice_ms": 36.989,
+          "collision_observed_at_us": 12546571,
+          "collision_notice_ms": 53.938
+        },
+        {
+          "command_id": 3,
+          "admitted_at_us": 12512598,
+          "terminal_observed_at_us": 12564125,
+          "terminal_notice_ms": 51.527,
+          "state_seq": 3,
+          "gpu_notice_observed_at_us": 12546571,
+          "gpu_notice_ms": 33.973,
+          "collision_observed_at_us": 12582425,
+          "collision_notice_ms": 69.827
+        },
+        {
+          "command_id": 4,
+          "admitted_at_us": 12529752,
+          "terminal_observed_at_us": 12582425,
+          "terminal_notice_ms": 52.673,
+          "state_seq": 4,
+          "gpu_notice_observed_at_us": 12564125,
+          "gpu_notice_ms": 34.373,
+          "collision_observed_at_us": 12582425,
+          "collision_notice_ms": 52.673
+        },
+        {
+          "command_id": 5,
+          "admitted_at_us": 12546871,
+          "terminal_observed_at_us": 12597457,
+          "terminal_notice_ms": 50.586,
+          "state_seq": 5,
+          "gpu_notice_observed_at_us": 12582425,
+          "gpu_notice_ms": 35.554,
+          "collision_observed_at_us": 12597457,
+          "collision_notice_ms": 50.586
+        },
+        {
+          "command_id": 6,
+          "admitted_at_us": 12564864,
+          "terminal_observed_at_us": 12614282,
+          "terminal_notice_ms": 49.418,
+          "state_seq": 6,
+          "gpu_notice_observed_at_us": 12597457,
+          "gpu_notice_ms": 32.593,
+          "collision_observed_at_us": 12631954,
+          "collision_notice_ms": 67.09
+        },
+        {
+          "command_id": 7,
+          "admitted_at_us": 12582856,
+          "terminal_observed_at_us": 12631954,
+          "terminal_notice_ms": 49.098,
+          "state_seq": 7,
+          "gpu_notice_observed_at_us": 12614282,
+          "gpu_notice_ms": 31.426,
+          "collision_observed_at_us": 12631954,
+          "collision_notice_ms": 49.098
+        },
+        {
+          "command_id": 8,
+          "admitted_at_us": 12597705,
+          "terminal_observed_at_us": 12647020,
+          "terminal_notice_ms": 49.315,
+          "state_seq": 8,
+          "gpu_notice_observed_at_us": 12631954,
+          "gpu_notice_ms": 34.249,
+          "collision_observed_at_us": 12647020,
+          "collision_notice_ms": 49.315
+        },
+        {
+          "command_id": 9,
+          "admitted_at_us": 12615461,
+          "terminal_observed_at_us": 12662547,
+          "terminal_notice_ms": 47.086,
+          "state_seq": 9,
+          "gpu_notice_observed_at_us": 12647020,
+          "gpu_notice_ms": 31.559,
+          "collision_observed_at_us": 12679812,
+          "collision_notice_ms": 64.351
+        },
+        {
+          "command_id": 10,
+          "admitted_at_us": 12632517,
+          "terminal_observed_at_us": 12679812,
+          "terminal_notice_ms": 47.295,
+          "state_seq": 10,
+          "gpu_notice_observed_at_us": 12662547,
+          "gpu_notice_ms": 30.03,
+          "collision_observed_at_us": 12679812,
+          "collision_notice_ms": 47.295
+        },
+        {
+          "command_id": 11,
+          "admitted_at_us": 12647542,
+          "terminal_observed_at_us": 12696248,
+          "terminal_notice_ms": 48.706,
+          "state_seq": 11,
+          "gpu_notice_observed_at_us": 12679812,
+          "gpu_notice_ms": 32.27,
+          "collision_observed_at_us": 12696248,
+          "collision_notice_ms": 48.706
+        },
+        {
+          "command_id": 12,
+          "admitted_at_us": 12662788,
+          "terminal_observed_at_us": 12712654,
+          "terminal_notice_ms": 49.866,
+          "state_seq": 12,
+          "gpu_notice_observed_at_us": 12696248,
+          "gpu_notice_ms": 33.46,
+          "collision_observed_at_us": 12729747,
+          "collision_notice_ms": 66.959
+        },
+        {
+          "command_id": 13,
+          "admitted_at_us": 12680439,
+          "terminal_observed_at_us": 12729747,
+          "terminal_notice_ms": 49.308,
+          "state_seq": 13,
+          "gpu_notice_observed_at_us": 12712654,
+          "gpu_notice_ms": 32.215,
+          "collision_observed_at_us": 12729747,
+          "collision_notice_ms": 49.308
+        },
+        {
+          "command_id": 14,
+          "admitted_at_us": 12696577,
+          "terminal_observed_at_us": 12746482,
+          "terminal_notice_ms": 49.905,
+          "state_seq": 14,
+          "gpu_notice_observed_at_us": 12729747,
+          "gpu_notice_ms": 33.17,
+          "collision_observed_at_us": 12746482,
+          "collision_notice_ms": 49.905
+        },
+        {
+          "command_id": 15,
+          "admitted_at_us": 12712932,
+          "terminal_observed_at_us": 12764250,
+          "terminal_notice_ms": 51.318,
+          "state_seq": 15,
+          "gpu_notice_observed_at_us": 12746482,
+          "gpu_notice_ms": 33.55,
+          "collision_observed_at_us": 12779786,
+          "collision_notice_ms": 66.854
+        },
+        {
+          "command_id": 16,
+          "admitted_at_us": 12730408,
+          "terminal_observed_at_us": 12779786,
+          "terminal_notice_ms": 49.378,
+          "state_seq": 16,
+          "gpu_notice_observed_at_us": 12764250,
+          "gpu_notice_ms": 33.842,
+          "collision_observed_at_us": 12779786,
+          "collision_notice_ms": 49.378
+        },
+        {
+          "command_id": 17,
+          "admitted_at_us": 12747251,
+          "terminal_observed_at_us": 12796101,
+          "terminal_notice_ms": 48.85,
+          "state_seq": 17,
+          "gpu_notice_observed_at_us": 12779786,
+          "gpu_notice_ms": 32.535,
+          "collision_observed_at_us": 12796101,
+          "collision_notice_ms": 48.85
+        },
+        {
+          "command_id": 18,
+          "admitted_at_us": 12764759,
+          "terminal_observed_at_us": 12812803,
+          "terminal_notice_ms": 48.044,
+          "state_seq": 18,
+          "gpu_notice_observed_at_us": 12796101,
+          "gpu_notice_ms": 31.342,
+          "collision_observed_at_us": 12829757,
+          "collision_notice_ms": 64.998
+        },
+        {
+          "command_id": 19,
+          "admitted_at_us": 12780405,
+          "terminal_observed_at_us": 12829757,
+          "terminal_notice_ms": 49.352,
+          "state_seq": 19,
+          "gpu_notice_observed_at_us": 12812803,
+          "gpu_notice_ms": 32.398,
+          "collision_observed_at_us": 12829757,
+          "collision_notice_ms": 49.352
+        },
+        {
+          "command_id": 20,
+          "admitted_at_us": 12796480,
+          "terminal_observed_at_us": 12847242,
+          "terminal_notice_ms": 50.762,
+          "state_seq": 20,
+          "gpu_notice_observed_at_us": 12829757,
+          "gpu_notice_ms": 33.277,
+          "collision_observed_at_us": 12847242,
+          "collision_notice_ms": 50.762
+        },
+        {
+          "command_id": 21,
+          "admitted_at_us": 12813478,
+          "terminal_observed_at_us": 12862334,
+          "terminal_notice_ms": 48.856,
+          "state_seq": 21,
+          "gpu_notice_observed_at_us": 12847242,
+          "gpu_notice_ms": 33.764,
+          "collision_observed_at_us": 12880985,
+          "collision_notice_ms": 67.507
+        },
+        {
+          "command_id": 22,
+          "admitted_at_us": 12830620,
+          "terminal_observed_at_us": 12880985,
+          "terminal_notice_ms": 50.365,
+          "state_seq": 22,
+          "gpu_notice_observed_at_us": 12862334,
+          "gpu_notice_ms": 31.714,
+          "collision_observed_at_us": 12880985,
+          "collision_notice_ms": 50.365
+        },
+        {
+          "command_id": 23,
+          "admitted_at_us": 12847791,
+          "terminal_observed_at_us": 12901208,
+          "terminal_notice_ms": 53.417,
+          "state_seq": 23,
+          "gpu_notice_observed_at_us": 12880985,
+          "gpu_notice_ms": 33.194,
+          "collision_observed_at_us": 12901208,
+          "collision_notice_ms": 53.417
+        },
+        {
+          "command_id": 24,
+          "admitted_at_us": 12862677,
+          "terminal_observed_at_us": 12910120,
+          "terminal_notice_ms": 47.443,
+          "state_seq": 24,
+          "gpu_notice_observed_at_us": 12901208,
+          "gpu_notice_ms": 38.531,
+          "collision_observed_at_us": 12928548,
+          "collision_notice_ms": 65.871
+        }
+      ],
+      "gpu_stage_dispatch_ms": {},
+      "cpu_marker_stage_ms": {},
+      "initial_sha256": {
+        "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "compaction": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de",
+        "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "obstacle": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+        "rock": "e5bebff58c79121549c5d1fbd484f90280de59fb99e1940fd8d54502cce0ad6c",
+        "sand": "e4229dd131b89dc44a8f08df893d938028cda47737983b548d8e947cb2d0df74",
+        "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+        "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+      },
+      "final_sha256": {
+        "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "compaction": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de",
+        "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "sand": "a5854f4b3cd1bb3df0641bba7fbe41cdba885d1833c7e3f76050231d13a68271",
+        "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+        "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+      },
+      "limitations": [
+        "Notification times are CPU observation upper bounds, not GPU duration.",
+        "Physics shape replacement is observed; monitor scanout is not measured.",
+        "This workload contains 24 offered commands and is not a 1000-frame tail test."
+      ],
+      "name": "workload_dig_3",
+      "source_drift": []
+    },
+    {
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_observed_coarse01\\workload_fill_3.json",
+      "sha256": "ad0c8b57e8b6bac3c3955b130972882fe0db15fe0716e64226c10673f754b8da",
+      "pass": true,
+      "case": "fill",
+      "pattern": "straight",
+      "wet": false,
+      "realtime": false,
+      "sampling": false,
+      "checks": 66,
+      "target": {
+        "cell": "(224, 184)",
+        "checked_cell_rect": "[P: (208, 164), S: (33, 41)]",
+        "obstacle": false,
+        "sand_min_m": 0.78647792339325,
+        "water_max_m": 0.0,
+        "water_min_m": 0.0
+      },
+      "cold_load_to_ready_ms": 9598.418,
+      "warmup_frames": 30,
+      "frame_ms": {
+        "n": 45,
+        "p50": 16.742,
+        "p95": 18.806,
+        "p99": null,
+        "max": 20.409,
+        "p99_reason": "insufficient_samples"
+      },
+      "input_only_frame_ms": {
+        "n": 23,
+        "p50": 17.103,
+        "p95": 18.806,
+        "p99": null,
+        "max": 20.409,
+        "p99_reason": "insufficient_samples"
+      },
+      "focus_states": [
+        true
+      ],
+      "max_fps_values": [
+        0
+      ],
+      "low_processor_usage_values": [
+        false
+      ],
+      "low_processor_sleep_us_values": [
+        6900
+      ],
+      "input_open_ms": 405.617,
+      "input_open_tick_advance": 0,
+      "input_open_sim_seconds": 0.0,
+      "queue_peak_at_observation": 0,
+      "oldest_age_ms_at_observation": 55.28,
+      "drain_ms": 46.567,
+      "command_timings": [
+        {
+          "command_id": 1,
+          "admitted_at_us": 12450600,
+          "terminal_observed_at_us": 12504935,
+          "terminal_notice_ms": 54.335,
+          "state_seq": 1,
+          "gpu_notice_observed_at_us": 12487119,
+          "gpu_notice_ms": 36.519,
+          "collision_observed_at_us": 12504935,
+          "collision_notice_ms": 54.335
+        },
+        {
+          "command_id": 2,
+          "admitted_at_us": 12466857,
+          "terminal_observed_at_us": 12522137,
+          "terminal_notice_ms": 55.28,
+          "state_seq": 2,
+          "gpu_notice_observed_at_us": 12504935,
+          "gpu_notice_ms": 38.078,
+          "collision_observed_at_us": 12522137,
+          "collision_notice_ms": 55.28
+        },
+        {
+          "command_id": 3,
+          "admitted_at_us": 12487278,
+          "terminal_observed_at_us": 12537218,
+          "terminal_notice_ms": 49.94,
+          "state_seq": 3,
+          "gpu_notice_observed_at_us": 12522137,
+          "gpu_notice_ms": 34.859,
+          "collision_observed_at_us": 12555595,
+          "collision_notice_ms": 68.317
+        },
+        {
+          "command_id": 4,
+          "admitted_at_us": 12505317,
+          "terminal_observed_at_us": 12555595,
+          "terminal_notice_ms": 50.278,
+          "state_seq": 4,
+          "gpu_notice_observed_at_us": 12537218,
+          "gpu_notice_ms": 31.901,
+          "collision_observed_at_us": 12555595,
+          "collision_notice_ms": 50.278
+        },
+        {
+          "command_id": 5,
+          "admitted_at_us": 12522338,
+          "terminal_observed_at_us": 12570637,
+          "terminal_notice_ms": 48.299,
+          "state_seq": 5,
+          "gpu_notice_observed_at_us": 12555595,
+          "gpu_notice_ms": 33.257,
+          "collision_observed_at_us": 12570637,
+          "collision_notice_ms": 48.299
+        },
+        {
+          "command_id": 6,
+          "admitted_at_us": 12537512,
+          "terminal_observed_at_us": 12587192,
+          "terminal_notice_ms": 49.68,
+          "state_seq": 6,
+          "gpu_notice_observed_at_us": 12570637,
+          "gpu_notice_ms": 33.125,
+          "collision_observed_at_us": 12605766,
+          "collision_notice_ms": 68.254
+        },
+        {
+          "command_id": 7,
+          "admitted_at_us": 12555826,
+          "terminal_observed_at_us": 12605766,
+          "terminal_notice_ms": 49.94,
+          "state_seq": 7,
+          "gpu_notice_observed_at_us": 12587192,
+          "gpu_notice_ms": 31.366,
+          "collision_observed_at_us": 12605766,
+          "collision_notice_ms": 49.94
+        },
+        {
+          "command_id": 8,
+          "admitted_at_us": 12570979,
+          "terminal_observed_at_us": 12622038,
+          "terminal_notice_ms": 51.059,
+          "state_seq": 8,
+          "gpu_notice_observed_at_us": 12605766,
+          "gpu_notice_ms": 34.787,
+          "collision_observed_at_us": 12622038,
+          "collision_notice_ms": 51.059
+        },
+        {
+          "command_id": 9,
+          "admitted_at_us": 12587614,
+          "terminal_observed_at_us": 12636914,
+          "terminal_notice_ms": 49.3,
+          "state_seq": 9,
+          "gpu_notice_observed_at_us": 12622038,
+          "gpu_notice_ms": 34.424,
+          "collision_observed_at_us": 12654789,
+          "collision_notice_ms": 67.175
+        },
+        {
+          "command_id": 10,
+          "admitted_at_us": 12606428,
+          "terminal_observed_at_us": 12654789,
+          "terminal_notice_ms": 48.361,
+          "state_seq": 10,
+          "gpu_notice_observed_at_us": 12636914,
+          "gpu_notice_ms": 30.486,
+          "collision_observed_at_us": 12654789,
+          "collision_notice_ms": 48.361
+        },
+        {
+          "command_id": 11,
+          "admitted_at_us": 12622459,
+          "terminal_observed_at_us": 12671879,
+          "terminal_notice_ms": 49.42,
+          "state_seq": 11,
+          "gpu_notice_observed_at_us": 12654789,
+          "gpu_notice_ms": 32.33,
+          "collision_observed_at_us": 12671879,
+          "collision_notice_ms": 49.42
+        },
+        {
+          "command_id": 12,
+          "admitted_at_us": 12637252,
+          "terminal_observed_at_us": 12686899,
+          "terminal_notice_ms": 49.647,
+          "state_seq": 12,
+          "gpu_notice_observed_at_us": 12671879,
+          "gpu_notice_ms": 34.627,
+          "collision_observed_at_us": 12705332,
+          "collision_notice_ms": 68.08
+        },
+        {
+          "command_id": 13,
+          "admitted_at_us": 12655514,
+          "terminal_observed_at_us": 12705332,
+          "terminal_notice_ms": 49.818,
+          "state_seq": 13,
+          "gpu_notice_observed_at_us": 12686899,
+          "gpu_notice_ms": 31.385,
+          "collision_observed_at_us": 12705332,
+          "collision_notice_ms": 49.818
+        },
+        {
+          "command_id": 14,
+          "admitted_at_us": 12672514,
+          "terminal_observed_at_us": 12720814,
+          "terminal_notice_ms": 48.3,
+          "state_seq": 14,
+          "gpu_notice_observed_at_us": 12705332,
+          "gpu_notice_ms": 32.818,
+          "collision_observed_at_us": 12720814,
+          "collision_notice_ms": 48.3
+        },
+        {
+          "command_id": 15,
+          "admitted_at_us": 12687279,
+          "terminal_observed_at_us": 12736626,
+          "terminal_notice_ms": 49.347,
+          "state_seq": 15,
+          "gpu_notice_observed_at_us": 12720814,
+          "gpu_notice_ms": 33.535,
+          "collision_observed_at_us": 12754843,
+          "collision_notice_ms": 67.564
+        },
+        {
+          "command_id": 16,
+          "admitted_at_us": 12705851,
+          "terminal_observed_at_us": 12754843,
+          "terminal_notice_ms": 48.992,
+          "state_seq": 16,
+          "gpu_notice_observed_at_us": 12736626,
+          "gpu_notice_ms": 30.775,
+          "collision_observed_at_us": 12754843,
+          "collision_notice_ms": 48.992
+        },
+        {
+          "command_id": 17,
+          "admitted_at_us": 12721863,
+          "terminal_observed_at_us": 12771946,
+          "terminal_notice_ms": 50.083,
+          "state_seq": 17,
+          "gpu_notice_observed_at_us": 12754843,
+          "gpu_notice_ms": 32.98,
+          "collision_observed_at_us": 12771946,
+          "collision_notice_ms": 50.083
+        },
+        {
+          "command_id": 18,
+          "admitted_at_us": 12736908,
+          "terminal_observed_at_us": 12786633,
+          "terminal_notice_ms": 49.725,
+          "state_seq": 18,
+          "gpu_notice_observed_at_us": 12771946,
+          "gpu_notice_ms": 35.038,
+          "collision_observed_at_us": 12803802,
+          "collision_notice_ms": 66.894
+        },
+        {
+          "command_id": 19,
+          "admitted_at_us": 12755466,
+          "terminal_observed_at_us": 12803802,
+          "terminal_notice_ms": 48.336,
+          "state_seq": 19,
+          "gpu_notice_observed_at_us": 12786633,
+          "gpu_notice_ms": 31.167,
+          "collision_observed_at_us": 12803802,
+          "collision_notice_ms": 48.336
+        },
+        {
+          "command_id": 20,
+          "admitted_at_us": 12772931,
+          "terminal_observed_at_us": 12822020,
+          "terminal_notice_ms": 49.089,
+          "state_seq": 20,
+          "gpu_notice_observed_at_us": 12803802,
+          "gpu_notice_ms": 30.871,
+          "collision_observed_at_us": 12822020,
+          "collision_notice_ms": 49.089
+        },
+        {
+          "command_id": 21,
+          "admitted_at_us": 12786931,
+          "terminal_observed_at_us": 12836347,
+          "terminal_notice_ms": 49.416,
+          "state_seq": 21,
+          "gpu_notice_observed_at_us": 12822020,
+          "gpu_notice_ms": 35.089,
+          "collision_observed_at_us": 12855153,
+          "collision_notice_ms": 68.222
+        },
+        {
+          "command_id": 22,
+          "admitted_at_us": 12804401,
+          "terminal_observed_at_us": 12855153,
+          "terminal_notice_ms": 50.752,
+          "state_seq": 22,
+          "gpu_notice_observed_at_us": 12836347,
+          "gpu_notice_ms": 31.946,
+          "collision_observed_at_us": 12855153,
+          "collision_notice_ms": 50.752
+        },
+        {
+          "command_id": 23,
+          "admitted_at_us": 12822506,
+          "terminal_observed_at_us": 12871371,
+          "terminal_notice_ms": 48.865,
+          "state_seq": 23,
+          "gpu_notice_observed_at_us": 12855153,
+          "gpu_notice_ms": 32.647,
+          "collision_observed_at_us": 12871371,
+          "collision_notice_ms": 48.865
+        },
+        {
+          "command_id": 24,
+          "admitted_at_us": 12836817,
+          "terminal_observed_at_us": 12883646,
+          "terminal_notice_ms": 46.829,
+          "state_seq": 24,
+          "gpu_notice_observed_at_us": 12871371,
+          "gpu_notice_ms": 34.554,
+          "collision_observed_at_us": 12902070,
+          "collision_notice_ms": 65.253
+        }
+      ],
+      "gpu_stage_dispatch_ms": {},
+      "cpu_marker_stage_ms": {},
+      "initial_sha256": {
+        "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "compaction": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de",
+        "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "obstacle": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+        "rock": "e5bebff58c79121549c5d1fbd484f90280de59fb99e1940fd8d54502cce0ad6c",
+        "sand": "e4229dd131b89dc44a8f08df893d938028cda47737983b548d8e947cb2d0df74",
+        "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+        "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+      },
+      "final_sha256": {
+        "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "compaction": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de",
+        "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "sand": "ae7af88387d4d5095920635055cee1f01ba6dde75378714a4fa91368c645b8e9",
+        "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+        "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+      },
+      "limitations": [
+        "Notification times are CPU observation upper bounds, not GPU duration.",
+        "Physics shape replacement is observed; monitor scanout is not measured.",
+        "This workload contains 24 offered commands and is not a 1000-frame tail test."
+      ],
+      "name": "workload_fill_3",
+      "source_drift": []
+    },
+    {
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_observed_coarse01\\workload_wall_3.json",
+      "sha256": "860adce68972a82b2ff728f0cb249c0b80428c815903a33cc2f4b50fec36bfc4",
+      "pass": true,
+      "case": "wall",
+      "pattern": "straight",
+      "wet": false,
+      "realtime": false,
+      "sampling": false,
+      "checks": 70,
+      "target": {
+        "cell": "(224, 184)",
+        "checked_cell_rect": "[P: (208, 164), S: (33, 41)]",
+        "obstacle": false,
+        "sand_min_m": 0.78647792339325,
+        "water_max_m": 0.0,
+        "water_min_m": 0.0
+      },
+      "cold_load_to_ready_ms": 11328.324,
+      "warmup_frames": 30,
+      "frame_ms": {
+        "n": 50,
+        "p50": 17.342,
+        "p95": 55.04,
+        "p99": null,
+        "max": 56.217,
+        "p99_reason": "insufficient_samples"
+      },
+      "input_only_frame_ms": {
+        "n": 23,
+        "p50": 50.169,
+        "p95": 55.994,
+        "p99": null,
+        "max": 56.217,
+        "p99_reason": "insufficient_samples"
+      },
+      "focus_states": [
+        true
+      ],
+      "max_fps_values": [
+        0
+      ],
+      "low_processor_usage_values": [
+        false
+      ],
+      "low_processor_sleep_us_values": [
+        6900
+      ],
+      "input_open_ms": 1179.284,
+      "input_open_tick_advance": 0,
+      "input_open_sim_seconds": 0.0,
+      "queue_peak_at_observation": 0,
+      "oldest_age_ms_at_observation": 154.974,
+      "drain_ms": 32.999,
+      "command_timings": [
+        {
+          "command_id": 2,
+          "admitted_at_us": 14779313,
+          "terminal_observed_at_us": 14901234,
+          "terminal_notice_ms": 121.921,
+          "state_seq": 2,
+          "gpu_notice_observed_at_us": 14851097,
+          "gpu_notice_ms": 71.784,
+          "collision_observed_at_us": 15052863,
+          "collision_notice_ms": 273.55
+        },
+        {
+          "command_id": 3,
+          "admitted_at_us": 14800386,
+          "terminal_observed_at_us": 14951137,
+          "terminal_notice_ms": 150.751,
+          "state_seq": 3,
+          "gpu_notice_observed_at_us": 14901234,
+          "gpu_notice_ms": 100.848,
+          "collision_observed_at_us": 15202751,
+          "collision_notice_ms": 402.365
+        },
+        {
+          "command_id": 4,
+          "admitted_at_us": 14852013,
+          "terminal_observed_at_us": 15001306,
+          "terminal_notice_ms": 149.293,
+          "state_seq": 4,
+          "gpu_notice_observed_at_us": 14951137,
+          "gpu_notice_ms": 99.124,
+          "collision_observed_at_us": 15202751,
+          "collision_notice_ms": 350.738
+        },
+        {
+          "command_id": 5,
+          "admitted_at_us": 14902681,
+          "terminal_observed_at_us": 15052863,
+          "terminal_notice_ms": 150.182,
+          "state_seq": 5,
+          "gpu_notice_observed_at_us": 15001306,
+          "gpu_notice_ms": 98.625,
+          "collision_observed_at_us": 15202751,
+          "collision_notice_ms": 300.07
+        },
+        {
+          "command_id": 6,
+          "admitted_at_us": 14952979,
+          "terminal_observed_at_us": 15101665,
+          "terminal_notice_ms": 148.686,
+          "state_seq": 6,
+          "gpu_notice_observed_at_us": 15052863,
+          "gpu_notice_ms": 99.884,
+          "collision_observed_at_us": 15358855,
+          "collision_notice_ms": 405.876
+        },
+        {
+          "command_id": 7,
+          "admitted_at_us": 15002784,
+          "terminal_observed_at_us": 15155325,
+          "terminal_notice_ms": 152.541,
+          "state_seq": 7,
+          "gpu_notice_observed_at_us": 15101665,
+          "gpu_notice_ms": 98.881,
+          "collision_observed_at_us": 15358855,
+          "collision_notice_ms": 356.071
+        },
+        {
+          "command_id": 8,
+          "admitted_at_us": 15053909,
+          "terminal_observed_at_us": 15202751,
+          "terminal_notice_ms": 148.842,
+          "state_seq": 8,
+          "gpu_notice_observed_at_us": 15155325,
+          "gpu_notice_ms": 101.416,
+          "collision_observed_at_us": 15358855,
+          "collision_notice_ms": 304.946
+        },
+        {
+          "command_id": 9,
+          "admitted_at_us": 15103384,
+          "terminal_observed_at_us": 15252035,
+          "terminal_notice_ms": 148.651,
+          "state_seq": 9,
+          "gpu_notice_observed_at_us": 15202751,
+          "gpu_notice_ms": 99.367,
+          "collision_observed_at_us": 15503992,
+          "collision_notice_ms": 400.608
+        },
+        {
+          "command_id": 10,
+          "admitted_at_us": 15158742,
+          "terminal_observed_at_us": 15302638,
+          "terminal_notice_ms": 143.896,
+          "state_seq": 10,
+          "gpu_notice_observed_at_us": 15252035,
+          "gpu_notice_ms": 93.293,
+          "collision_observed_at_us": 15503992,
+          "collision_notice_ms": 345.25
+        },
+        {
+          "command_id": 11,
+          "admitted_at_us": 15203881,
+          "terminal_observed_at_us": 15358855,
+          "terminal_notice_ms": 154.974,
+          "state_seq": 11,
+          "gpu_notice_observed_at_us": 15302638,
+          "gpu_notice_ms": 98.757,
+          "collision_observed_at_us": 15503992,
+          "collision_notice_ms": 300.111
+        },
+        {
+          "command_id": 12,
+          "admitted_at_us": 15253574,
+          "terminal_observed_at_us": 15402497,
+          "terminal_notice_ms": 148.923,
+          "state_seq": 12,
+          "gpu_notice_observed_at_us": 15358855,
+          "gpu_notice_ms": 105.281,
+          "collision_observed_at_us": 15654848,
+          "collision_notice_ms": 401.274
+        },
+        {
+          "command_id": 13,
+          "admitted_at_us": 15304437,
+          "terminal_observed_at_us": 15453002,
+          "terminal_notice_ms": 148.565,
+          "state_seq": 13,
+          "gpu_notice_observed_at_us": 15402497,
+          "gpu_notice_ms": 98.06,
+          "collision_observed_at_us": 15654848,
+          "collision_notice_ms": 350.411
+        },
+        {
+          "command_id": 14,
+          "admitted_at_us": 15362469,
+          "terminal_observed_at_us": 15503992,
+          "terminal_notice_ms": 141.523,
+          "state_seq": 14,
+          "gpu_notice_observed_at_us": 15453002,
+          "gpu_notice_ms": 90.533,
+          "collision_observed_at_us": 15654848,
+          "collision_notice_ms": 292.379
+        },
+        {
+          "command_id": 15,
+          "admitted_at_us": 15403935,
+          "terminal_observed_at_us": 15553485,
+          "terminal_notice_ms": 149.55,
+          "state_seq": 15,
+          "gpu_notice_observed_at_us": 15503992,
+          "gpu_notice_ms": 100.057,
+          "collision_observed_at_us": 15805170,
+          "collision_notice_ms": 401.235
+        },
+        {
+          "command_id": 16,
+          "admitted_at_us": 15454584,
+          "terminal_observed_at_us": 15603644,
+          "terminal_notice_ms": 149.06,
+          "state_seq": 16,
+          "gpu_notice_observed_at_us": 15553485,
+          "gpu_notice_ms": 98.901,
+          "collision_observed_at_us": 15805170,
+          "collision_notice_ms": 350.586
+        },
+        {
+          "command_id": 17,
+          "admitted_at_us": 15505337,
+          "terminal_observed_at_us": 15654848,
+          "terminal_notice_ms": 149.511,
+          "state_seq": 17,
+          "gpu_notice_observed_at_us": 15603644,
+          "gpu_notice_ms": 98.307,
+          "collision_observed_at_us": 15805170,
+          "collision_notice_ms": 299.833
+        },
+        {
+          "command_id": 18,
+          "admitted_at_us": 15555605,
+          "terminal_observed_at_us": 15703622,
+          "terminal_notice_ms": 148.017,
+          "state_seq": 18,
+          "gpu_notice_observed_at_us": 15654848,
+          "gpu_notice_ms": 99.243,
+          "collision_observed_at_us": 15956593,
+          "collision_notice_ms": 400.988
+        },
+        {
+          "command_id": 19,
+          "admitted_at_us": 15605251,
+          "terminal_observed_at_us": 15758662,
+          "terminal_notice_ms": 153.411,
+          "state_seq": 19,
+          "gpu_notice_observed_at_us": 15703622,
+          "gpu_notice_ms": 98.371,
+          "collision_observed_at_us": 15956593,
+          "collision_notice_ms": 351.342
+        },
+        {
+          "command_id": 20,
+          "admitted_at_us": 15655861,
+          "terminal_observed_at_us": 15805170,
+          "terminal_notice_ms": 149.309,
+          "state_seq": 20,
+          "gpu_notice_observed_at_us": 15758662,
+          "gpu_notice_ms": 102.801,
+          "collision_observed_at_us": 15956593,
+          "collision_notice_ms": 300.732
+        },
+        {
+          "command_id": 21,
+          "admitted_at_us": 15705140,
+          "terminal_observed_at_us": 15856435,
+          "terminal_notice_ms": 151.295,
+          "state_seq": 21,
+          "gpu_notice_observed_at_us": 15805170,
+          "gpu_notice_ms": 100.03,
+          "collision_observed_at_us": 15993652,
+          "collision_notice_ms": 288.512
+        },
+        {
+          "command_id": 22,
+          "admitted_at_us": 15763907,
+          "terminal_observed_at_us": 15904589,
+          "terminal_notice_ms": 140.682,
+          "state_seq": 22,
+          "gpu_notice_observed_at_us": 15856435,
+          "gpu_notice_ms": 92.528,
+          "collision_observed_at_us": 15993652,
+          "collision_notice_ms": 229.745
+        },
+        {
+          "command_id": 23,
+          "admitted_at_us": 15806280,
+          "terminal_observed_at_us": 15956593,
+          "terminal_notice_ms": 150.313,
+          "state_seq": 23,
+          "gpu_notice_observed_at_us": 15904589,
+          "gpu_notice_ms": 98.309,
+          "collision_observed_at_us": 15993652,
+          "collision_notice_ms": 187.372
+        },
+        {
+          "command_id": 24,
+          "admitted_at_us": 15860488,
+          "terminal_observed_at_us": 15969628,
+          "terminal_notice_ms": 109.14,
+          "state_seq": 24,
+          "gpu_notice_observed_at_us": 15956593,
+          "gpu_notice_ms": 96.105,
+          "collision_observed_at_us": 16026661,
+          "collision_notice_ms": 166.173
+        },
+        {
+          "command_id": 25,
+          "admitted_at_us": 15906320,
+          "terminal_observed_at_us": 15981083,
+          "terminal_notice_ms": 74.763,
+          "state_seq": 25,
+          "gpu_notice_observed_at_us": 15969628,
+          "gpu_notice_ms": 63.308,
+          "collision_observed_at_us": 16026661,
+          "collision_notice_ms": 120.341
+        }
+      ],
+      "gpu_stage_dispatch_ms": {},
+      "cpu_marker_stage_ms": {},
+      "initial_sha256": {
+        "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "compaction": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de",
+        "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "obstacle": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+        "rock": "e5bebff58c79121549c5d1fbd484f90280de59fb99e1940fd8d54502cce0ad6c",
+        "sand": "e4229dd131b89dc44a8f08df893d938028cda47737983b548d8e947cb2d0df74",
+        "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+        "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+      },
+      "final_sha256": {
+        "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "compaction": "c4160965c7a92f17e4633550a98a7754709411fb79a0f60535ae4c90ce5f5fec",
+        "mold_support": "7061584ca3c50cf53a990882ea6b59fc92ffc63ae7b8e213f4db40b572a83952",
+        "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "sand": "7a448879c18f30bebbeb135418b26513a733263ec99e0ccd12417db1c9ceb597",
+        "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+        "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+      },
+      "limitations": [
+        "Notification times are CPU observation upper bounds, not GPU duration.",
+        "Physics shape replacement is observed; monitor scanout is not measured.",
+        "This workload contains 24 offered commands and is not a 1000-frame tail test."
+      ],
+      "name": "workload_wall_3",
+      "source_drift": []
+    },
+    {
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_observed_coarse01\\workload_shovel_3.json",
+      "sha256": "1a3e85d550cc8cce3f31bdd84ee76be20c1c78310c80f5a4b9ac630c1a4bc7d6",
+      "pass": true,
+      "case": "shovel",
+      "pattern": "straight",
+      "wet": false,
+      "realtime": false,
+      "sampling": false,
+      "checks": 70,
+      "target": {
+        "cell": "(224, 184)",
+        "checked_cell_rect": "[P: (208, 164), S: (33, 41)]",
+        "obstacle": false,
+        "sand_min_m": 0.78647792339325,
+        "water_max_m": 0.0,
+        "water_min_m": 0.0
+      },
+      "cold_load_to_ready_ms": 10009.285,
+      "warmup_frames": 30,
+      "frame_ms": {
+        "n": 51,
+        "p50": 16.986,
+        "p95": 55.609,
+        "p99": null,
+        "max": 61.907,
+        "p99_reason": "insufficient_samples"
+      },
+      "input_only_frame_ms": {
+        "n": 23,
+        "p50": 52.002,
+        "p95": 57.171,
+        "p99": null,
+        "max": 61.907,
+        "p99_reason": "insufficient_samples"
+      },
+      "focus_states": [
+        true
+      ],
+      "max_fps_values": [
+        0
+      ],
+      "low_processor_usage_values": [
+        false
+      ],
+      "low_processor_sleep_us_values": [
+        6900
+      ],
+      "input_open_ms": 1220.972,
+      "input_open_tick_advance": 0,
+      "input_open_sim_seconds": 0.0,
+      "queue_peak_at_observation": 0,
+      "oldest_age_ms_at_observation": 163.119,
+      "drain_ms": 44.772,
+      "command_timings": [
+        {
+          "command_id": 2,
+          "admitted_at_us": 13028045,
+          "terminal_observed_at_us": 13150075,
+          "terminal_notice_ms": 122.03,
+          "state_seq": 2,
+          "gpu_notice_observed_at_us": 13100903,
+          "gpu_notice_ms": 72.858,
+          "collision_observed_at_us": 13256199,
+          "collision_notice_ms": 228.154
+        },
+        {
+          "command_id": 3,
+          "admitted_at_us": 13039840,
+          "terminal_observed_at_us": 13202959,
+          "terminal_notice_ms": 163.119,
+          "state_seq": 3,
+          "gpu_notice_observed_at_us": 13150075,
+          "gpu_notice_ms": 110.235,
+          "collision_observed_at_us": 13411845,
+          "collision_notice_ms": 372.005
+        },
+        {
+          "command_id": 4,
+          "admitted_at_us": 13101783,
+          "terminal_observed_at_us": 13256199,
+          "terminal_notice_ms": 154.416,
+          "state_seq": 4,
+          "gpu_notice_observed_at_us": 13202959,
+          "gpu_notice_ms": 101.176,
+          "collision_observed_at_us": 13411845,
+          "collision_notice_ms": 310.062
+        },
+        {
+          "command_id": 5,
+          "admitted_at_us": 13151557,
+          "terminal_observed_at_us": 13306116,
+          "terminal_notice_ms": 154.559,
+          "state_seq": 5,
+          "gpu_notice_observed_at_us": 13256199,
+          "gpu_notice_ms": 104.642,
+          "collision_observed_at_us": 13569023,
+          "collision_notice_ms": 417.466
+        },
+        {
+          "command_id": 6,
+          "admitted_at_us": 13204046,
+          "terminal_observed_at_us": 13359843,
+          "terminal_notice_ms": 155.797,
+          "state_seq": 6,
+          "gpu_notice_observed_at_us": 13306116,
+          "gpu_notice_ms": 102.07,
+          "collision_observed_at_us": 13569023,
+          "collision_notice_ms": 364.977
+        },
+        {
+          "command_id": 7,
+          "admitted_at_us": 13257125,
+          "terminal_observed_at_us": 13411845,
+          "terminal_notice_ms": 154.72,
+          "state_seq": 7,
+          "gpu_notice_observed_at_us": 13359843,
+          "gpu_notice_ms": 102.718,
+          "collision_observed_at_us": 13569023,
+          "collision_notice_ms": 311.898
+        },
+        {
+          "command_id": 8,
+          "admitted_at_us": 13307508,
+          "terminal_observed_at_us": 13462618,
+          "terminal_notice_ms": 155.11,
+          "state_seq": 8,
+          "gpu_notice_observed_at_us": 13411845,
+          "gpu_notice_ms": 104.337,
+          "collision_observed_at_us": 13724601,
+          "collision_notice_ms": 417.093
+        },
+        {
+          "command_id": 9,
+          "admitted_at_us": 13361610,
+          "terminal_observed_at_us": 13518227,
+          "terminal_notice_ms": 156.617,
+          "state_seq": 9,
+          "gpu_notice_observed_at_us": 13462618,
+          "gpu_notice_ms": 101.008,
+          "collision_observed_at_us": 13724601,
+          "collision_notice_ms": 362.991
+        },
+        {
+          "command_id": 10,
+          "admitted_at_us": 13412882,
+          "terminal_observed_at_us": 13569023,
+          "terminal_notice_ms": 156.141,
+          "state_seq": 10,
+          "gpu_notice_observed_at_us": 13518227,
+          "gpu_notice_ms": 105.345,
+          "collision_observed_at_us": 13724601,
+          "collision_notice_ms": 311.719
+        },
+        {
+          "command_id": 11,
+          "admitted_at_us": 13463970,
+          "terminal_observed_at_us": 13619442,
+          "terminal_notice_ms": 155.472,
+          "state_seq": 11,
+          "gpu_notice_observed_at_us": 13569023,
+          "gpu_notice_ms": 105.053,
+          "collision_observed_at_us": 13830507,
+          "collision_notice_ms": 366.537
+        },
+        {
+          "command_id": 12,
+          "admitted_at_us": 13521574,
+          "terminal_observed_at_us": 13672894,
+          "terminal_notice_ms": 151.32,
+          "state_seq": 12,
+          "gpu_notice_observed_at_us": 13619442,
+          "gpu_notice_ms": 97.868,
+          "collision_observed_at_us": 13830507,
+          "collision_notice_ms": 308.933
+        },
+        {
+          "command_id": 13,
+          "admitted_at_us": 13570224,
+          "terminal_observed_at_us": 13724601,
+          "terminal_notice_ms": 154.377,
+          "state_seq": 13,
+          "gpu_notice_observed_at_us": 13672894,
+          "gpu_notice_ms": 102.67,
+          "collision_observed_at_us": 13830507,
+          "collision_notice_ms": 260.283
+        },
+        {
+          "command_id": 14,
+          "admitted_at_us": 13621072,
+          "terminal_observed_at_us": 13775845,
+          "terminal_notice_ms": 154.773,
+          "state_seq": 14,
+          "gpu_notice_observed_at_us": 13724601,
+          "gpu_notice_ms": 103.529,
+          "collision_observed_at_us": 13984478,
+          "collision_notice_ms": 363.406
+        },
+        {
+          "command_id": 15,
+          "admitted_at_us": 13674341,
+          "terminal_observed_at_us": 13830507,
+          "terminal_notice_ms": 156.166,
+          "state_seq": 15,
+          "gpu_notice_observed_at_us": 13775845,
+          "gpu_notice_ms": 101.504,
+          "collision_observed_at_us": 13984478,
+          "collision_notice_ms": 310.137
+        },
+        {
+          "command_id": 16,
+          "admitted_at_us": 13726305,
+          "terminal_observed_at_us": 13879826,
+          "terminal_notice_ms": 153.521,
+          "state_seq": 16,
+          "gpu_notice_observed_at_us": 13830507,
+          "gpu_notice_ms": 104.202,
+          "collision_observed_at_us": 13984478,
+          "collision_notice_ms": 258.173
+        },
+        {
+          "command_id": 17,
+          "admitted_at_us": 13777896,
+          "terminal_observed_at_us": 13932054,
+          "terminal_notice_ms": 154.158,
+          "state_seq": 17,
+          "gpu_notice_observed_at_us": 13879826,
+          "gpu_notice_ms": 101.93,
+          "collision_observed_at_us": 14142085,
+          "collision_notice_ms": 364.189
+        },
+        {
+          "command_id": 18,
+          "admitted_at_us": 13832087,
+          "terminal_observed_at_us": 13984478,
+          "terminal_notice_ms": 152.391,
+          "state_seq": 18,
+          "gpu_notice_observed_at_us": 13932054,
+          "gpu_notice_ms": 99.967,
+          "collision_observed_at_us": 14142085,
+          "collision_notice_ms": 309.998
+        },
+        {
+          "command_id": 19,
+          "admitted_at_us": 13881495,
+          "terminal_observed_at_us": 14036162,
+          "terminal_notice_ms": 154.667,
+          "state_seq": 19,
+          "gpu_notice_observed_at_us": 13984478,
+          "gpu_notice_ms": 102.983,
+          "collision_observed_at_us": 14260656,
+          "collision_notice_ms": 379.161
+        },
+        {
+          "command_id": 20,
+          "admitted_at_us": 13933622,
+          "terminal_observed_at_us": 14093333,
+          "terminal_notice_ms": 159.711,
+          "state_seq": 20,
+          "gpu_notice_observed_at_us": 14036162,
+          "gpu_notice_ms": 102.54,
+          "collision_observed_at_us": 14260656,
+          "collision_notice_ms": 327.034
+        },
+        {
+          "command_id": 21,
+          "admitted_at_us": 13985948,
+          "terminal_observed_at_us": 14142085,
+          "terminal_notice_ms": 156.137,
+          "state_seq": 21,
+          "gpu_notice_observed_at_us": 14093333,
+          "gpu_notice_ms": 107.385,
+          "collision_observed_at_us": 14260656,
+          "collision_notice_ms": 274.708
+        },
+        {
+          "command_id": 22,
+          "admitted_at_us": 14037846,
+          "terminal_observed_at_us": 14197280,
+          "terminal_notice_ms": 159.434,
+          "state_seq": 22,
+          "gpu_notice_observed_at_us": 14142085,
+          "gpu_notice_ms": 104.239,
+          "collision_observed_at_us": 14294931,
+          "collision_notice_ms": 257.085
+        },
+        {
+          "command_id": 23,
+          "admitted_at_us": 14097175,
+          "terminal_observed_at_us": 14244726,
+          "terminal_notice_ms": 147.551,
+          "state_seq": 23,
+          "gpu_notice_observed_at_us": 14197280,
+          "gpu_notice_ms": 100.105,
+          "collision_observed_at_us": 14294931,
+          "collision_notice_ms": 197.756
+        },
+        {
+          "command_id": 24,
+          "admitted_at_us": 14143379,
+          "terminal_observed_at_us": 14260656,
+          "terminal_notice_ms": 117.277,
+          "state_seq": 24,
+          "gpu_notice_observed_at_us": 14244726,
+          "gpu_notice_ms": 101.347,
+          "collision_observed_at_us": 14294931,
+          "collision_notice_ms": 151.552
+        },
+        {
+          "command_id": 25,
+          "admitted_at_us": 14198524,
+          "terminal_observed_at_us": 14270947,
+          "terminal_notice_ms": 72.423,
+          "state_seq": 25,
+          "gpu_notice_observed_at_us": 14260656,
+          "gpu_notice_ms": 62.132,
+          "collision_observed_at_us": 14327449,
+          "collision_notice_ms": 128.925
+        }
+      ],
+      "gpu_stage_dispatch_ms": {},
+      "cpu_marker_stage_ms": {},
+      "initial_sha256": {
+        "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "compaction": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de",
+        "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "obstacle": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+        "rock": "e5bebff58c79121549c5d1fbd484f90280de59fb99e1940fd8d54502cce0ad6c",
+        "sand": "e4229dd131b89dc44a8f08df893d938028cda47737983b548d8e947cb2d0df74",
+        "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+        "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+      },
+      "final_sha256": {
+        "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "compaction": "cacdebf5138ebdf6f16fe9cb81056a921120a035efa07b34ed5a3a3ff85faf7d",
+        "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "sand": "83fe40fb283bfd1d557b294a209fb7712b2249b12bbb86164125ffadb2614a46",
+        "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+        "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+      },
+      "limitations": [
+        "Notification times are CPU observation upper bounds, not GPU duration.",
+        "Physics shape replacement is observed; monitor scanout is not measured.",
+        "This workload contains 24 offered commands and is not a 1000-frame tail test."
+      ],
+      "name": "workload_shovel_3",
+      "source_drift": []
+    }
+  ]
+}

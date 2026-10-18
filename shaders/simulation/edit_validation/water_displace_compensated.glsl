@@ -53,12 +53,14 @@ void reject(uint error) {
 void main() {
     if(params.pad1==2u&&receipt[27]==1u) return; // proven full-wet candidate already processed
     count=params.size*params.size; area=params.cell_size*params.cell_size;
+    bool has_demand=false;
     for(uint j=0u;j<32u;j++) receipt[j]=0u;
     for(uint i=0u;i<count;i++) {
         output_cells[i]=before(i); scratch[i]=-1; scratch[2u*count+i]=-1; scratch[3u*count+i]=-1; scratch[4u*count+i]=-1;
         vec4 v=input_cells[i].bed_water, f=input_cells[i].flow;
         if(!finite(v.x)||!finite(v.y)||!finite(v.z)||!finite(v.w)||!finite(f.x)||!finite(f.y)||!finite(f.z)) { reject(1u); return; }
         if(v.z<0.0||v.w<0.0) { reject(2u); return; }
+        has_demand=has_demand||(wet(i)&&v.y>v.x);
     }
     if(params.pad1==1u) { receipt[0]=1u; return; } // velocity-only: preserve depth and carried sand
     uint components=0u;
@@ -81,6 +83,7 @@ void main() {
         receipt[11]=max(receipt[11],tail);
         components++;
     }
+    if(!has_demand) { receipt[0]=1u;receipt[2]=components;return; }
     // Linked lists are assembled in row-major order, independent of BFS visitation.
     for(uint i=0u;i<count;i++) {
         int label=scratch[i]; if(label<0) continue;

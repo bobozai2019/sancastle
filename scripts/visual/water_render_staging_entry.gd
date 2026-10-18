@@ -171,12 +171,16 @@ func _effective_profile_needs_refresh() -> bool:
 		water_material.shader != effective_water_shader or terrain_material.shader != effective_terrain_shader
 
 
+func _effective_profile_request() -> Dictionary:
+	return requested_render_profile
+
 func refresh_effective_render_profile() -> bool:
 	# A forced call also audits direct uniform edits used by tools and probes.
+	var effective_request:=_effective_profile_request()
 	effective_render_profile = RenderProfile.effective_from_materials(
-		requested_render_profile, fixture_id, water_material, terrain_material,
+		effective_request, fixture_id, water_material, terrain_material,
 		render_subdivision, visual_time_s, _effective_reference_bed())
-	if not RenderProfile.effective_matches_request(requested_render_profile,
+	if not RenderProfile.effective_matches_request(effective_request,
 			fixture_id, effective_render_profile):
 		_fail("render profile effective values mismatch")
 		return false

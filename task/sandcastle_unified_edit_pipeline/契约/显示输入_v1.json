@@ -1,0 +1,71 @@
+{
+  "schema": "display_input",
+  "version": 1,
+  "physical_abi_version": 1,
+  "physical_abi_layout_changed": false,
+  "work_kind": 2,
+  "batch": {
+    "magic": 826426453,
+    "bytes": 96,
+    "request_count": 1
+  },
+  "request": {
+    "magic": 826491989,
+    "bytes": 512,
+    "u32": {
+      "magic": 0,
+      "version": 4,
+      "stride": 8,
+      "primitive": 12,
+      "count": 16
+    },
+    "i64": {
+      "command_id": 32,
+      "generation": 40,
+      "sim_tick": 72,
+      "seed": 320
+    },
+    "hash": {
+      "domain_hash": 96,
+      "effective_hash": 128,
+      "profile_hash": 160
+    },
+    "f32": {
+      "point_x": 192,
+      "point_z": 196
+    },
+    "all_other_bytes": "zero"
+  },
+  "result": {
+    "magic": 827475029,
+    "bytes": 384,
+    "common_identity_offsets": "ABI_v1.json/result",
+    "u32": {
+      "emitted_count": 120,
+      "active_count": 124
+    },
+    "applied": {
+      "authority_revision_delta": 0,
+      "physical_changed_fields": 0,
+      "physical_amounts": "zero",
+      "ledger": "unchanged"
+    },
+    "result_namespace": "UDR1; physical codec rejects"
+  },
+  "primitive": {
+    "id": 1,
+    "name": "gravel_mode3_emit",
+    "count": [
+      1,
+      128
+    ],
+    "capacity": 1024,
+    "radius_m": 0.45,
+    "point_abs_max_m": 15.55,
+    "seed": "frozen original gravel profile"
+  },
+  "owner": "Water; common Pipeline/Slots/Transport lifecycle",
+  "gpu_meta_bytes": 80,
+  "save_count_proof_bytes": 4,
+  "callback_unknown": "retain; no GPU outcome or replay permission"
+}

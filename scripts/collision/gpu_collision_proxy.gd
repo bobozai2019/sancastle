@@ -286,9 +286,12 @@ func _dispatch_pending_render() -> void:
 		rd.capture_timestamp("sandcastle_collision_end")
 	active_generation = generation
 	request_started_usec = Time.get_ticks_usec()
-	var error := rd.texture_get_data_async(staging_texture, 0, _on_data_render)
+	var error := _request_staging_readback()
 	if error != OK:
 		call_deferred("_report_failure", "collision readback request failed: %d" % error)
+
+func _request_staging_readback() -> Error:
+	return rd.texture_get_data_async(staging_texture, 0, _on_data_render)
 
 
 func _on_data_render(data: PackedByteArray) -> void:

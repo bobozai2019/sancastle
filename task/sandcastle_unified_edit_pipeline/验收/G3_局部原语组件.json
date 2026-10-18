@@ -1,0 +1,56 @@
+{
+  "role": "T03.4 local primitives component evidence; full-profile criterion incomplete; not a G3 gate PASS",
+  "component_pass": true,
+  "T03_4_complete": false,
+  "G3_complete": false,
+  "total_completed": 13,
+  "total_objectives": 36,
+  "gpu_run": "g3_local_delivery05",
+  "gpu_cases": [
+    "smooth",
+    "compact",
+    "local_mixed",
+    "local_invalid"
+  ],
+  "gpu_local_checks": 385,
+  "independent_local_checks": 589,
+  "related_target_gpu_checks": 232,
+  "related_target_independent_checks": 1115,
+  "related_normal_checks": 104,
+  "source_drift": [],
+  "common_source_count": 107,
+  "native_half_evidence": "Isolated retained async_smooth.glsl compact, unrounded proposal and native R16F output. Positive values truncate toward zero on this GTX1050/D3D12 run; new/retained full texture bytes match for every valid compact case. No cross-device claim.",
+  "retained_failure_runs": [
+    "g3_local_attempt01",
+    "g3_local_reference01",
+    "g3_local_native02",
+    "g3_local_reference02",
+    "g3_local_reference03"
+  ],
+  "intermediate_partial_reference": "g3_local_reference04: only compact/local_mixed, 479 checks",
+  "reports": {
+    "g3_local_delivery05/run-manifest.json": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g3_local_delivery05\\run-manifest.json",
+      "sha256": "ff3e643e4edd952ac9ec481dd71ba3a841a4ea3459aa0b9575dc046a673197f1"
+    },
+    "g3_local_normal05/run-manifest.json": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g3_local_normal05\\run-manifest.json",
+      "sha256": "56538401b1b744c90746a64dc89fc7c8453ea5f825c1392e988b509518a50b5b"
+    },
+    "g3_local_reference05/result.json": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g3_local_reference05\\result.json",
+      "sha256": "8af3825305fefb83b23fac54180bb6dbdb4710786563716298ff880ab1b76588"
+    },
+    "g3_local_target_reference05/result.json": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g3_local_target_reference05\\result.json",
+      "sha256": "7d8591920fb8b93758a409a58ead73ce8a940d8918b9263ec1a8cacbd312f7e5"
+    }
+  },
+  "pending": [
+    "suspended wet admission and coupled state",
+    "deterministic conservative transfer",
+    "all profile common-candidate trace",
+    "full material/water stages",
+    "restore/consumers/formal entry/cost"
+  ]
+}

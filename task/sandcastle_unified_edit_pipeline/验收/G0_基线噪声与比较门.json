@@ -1,0 +1,1286 @@
+{
+  "role": "G0 empirical comparison guards, not final performance acceptance",
+  "pass": true,
+  "errors": [],
+  "detailed_manifest_sha256": "c3e76f5c32316b0492cf459186c9ad819416723541afb10443493ff9ab27cd9c",
+  "coarse_manifest_sha256": "c260f3d465530cfaca66aa0a1bbcf2826102383c0052ff2cb8d8c8b07583e535",
+  "pairs": [
+    {
+      "case": "dig",
+      "repeat": 1,
+      "initial_equal": true,
+      "final_recorded_fields_equal": true,
+      "detailed_focus": [
+        true
+      ],
+      "coarse_focus": [
+        true
+      ],
+      "detail_sha256": "4f875cbdd7581ef1c3ecc1fba7981e62ca277d48f5ae0399932066bb1e0da75e",
+      "coarse_sha256": "be26f21f82366376d2483644014df1a2f41cce18195a767a93b3eed11bd10f7e"
+    },
+    {
+      "case": "dig",
+      "repeat": 2,
+      "initial_equal": true,
+      "final_recorded_fields_equal": true,
+      "detailed_focus": [
+        true
+      ],
+      "coarse_focus": [
+        false
+      ],
+      "detail_sha256": "1562ef25a5ecd41ac3ec59d3b73fae16f69e0881654bd997ee743fe60cba1371",
+      "coarse_sha256": "72d4761fbeab89d5535302709d2dd47fc9e2f5651ff4eaef0641fef893816c5b"
+    },
+    {
+      "case": "dig",
+      "repeat": 3,
+      "initial_equal": true,
+      "final_recorded_fields_equal": true,
+      "detailed_focus": [
+        false
+      ],
+      "coarse_focus": [
+        true
+      ],
+      "detail_sha256": "afeb89150da2e28591156744683273a4014ffea4e8383636eac1e559ac433403",
+      "coarse_sha256": "22d1e933a38fb54a4cc1e1000158dcd8e4979543167f530a4ac931d74e272b35"
+    },
+    {
+      "case": "fill",
+      "repeat": 1,
+      "initial_equal": true,
+      "final_recorded_fields_equal": true,
+      "detailed_focus": [
+        true
+      ],
+      "coarse_focus": [
+        true
+      ],
+      "detail_sha256": "239a409d9ed53a0fe3d8290133815430967101fac7ff5eef1ccc84933f04fc86",
+      "coarse_sha256": "a05a1ca0f61f14c7488b0a23d2c402c907824963ef82477a4fee5685e3ddf35c"
+    },
+    {
+      "case": "fill",
+      "repeat": 2,
+      "initial_equal": true,
+      "final_recorded_fields_equal": true,
+      "detailed_focus": [
+        true
+      ],
+      "coarse_focus": [
+        false
+      ],
+      "detail_sha256": "820d7b22b4a3b9e04b935e3bbe6030fa988f575d6094079ade6383c6f53b62fd",
+      "coarse_sha256": "d4912db02b5c7a2a26d7a377fedd5fb539d9e51b8dd27d77e3d678dd68a34e1d"
+    },
+    {
+      "case": "fill",
+      "repeat": 3,
+      "initial_equal": true,
+      "final_recorded_fields_equal": true,
+      "detailed_focus": [
+        false
+      ],
+      "coarse_focus": [
+        true
+      ],
+      "detail_sha256": "be197244befe528704851500a2b8f37693e0b15fd981c678ca79e1755de5f5d7",
+      "coarse_sha256": "ad0c8b57e8b6bac3c3955b130972882fe0db15fe0716e64226c10673f754b8da"
+    },
+    {
+      "case": "wall",
+      "repeat": 1,
+      "initial_equal": true,
+      "final_recorded_fields_equal": true,
+      "detailed_focus": [
+        true
+      ],
+      "coarse_focus": [
+        true
+      ],
+      "detail_sha256": "19b85bd1b3f5932c11d0029c33bdd33781123ee96ac773466ad6aed29bb98d7e",
+      "coarse_sha256": "931669776be8a7e22c079153f0e64c96193202fe6851b4833aa6ff6aaadd0ae5"
+    },
+    {
+      "case": "wall",
+      "repeat": 2,
+      "initial_equal": true,
+      "final_recorded_fields_equal": true,
+      "detailed_focus": [
+        true
+      ],
+      "coarse_focus": [
+        false
+      ],
+      "detail_sha256": "f590bb50ec8d0660cf8af5624e09a2288b18448a7f409f1e62a34accf97a669b",
+      "coarse_sha256": "febe13a7ff8639d12991dea26967e59846fff5397755043c66dc9bba7ec9fef8"
+    },
+    {
+      "case": "wall",
+      "repeat": 3,
+      "initial_equal": true,
+      "final_recorded_fields_equal": true,
+      "detailed_focus": [
+        false
+      ],
+      "coarse_focus": [
+        true
+      ],
+      "detail_sha256": "1fa5692b6d060cffb78f12b1e50f0dde894e22fc75602e63844a002ad0be3a7a",
+      "coarse_sha256": "860adce68972a82b2ff728f0cb249c0b80428c815903a33cc2f4b50fec36bfc4"
+    },
+    {
+      "case": "shovel",
+      "repeat": 1,
+      "initial_equal": true,
+      "final_recorded_fields_equal": true,
+      "detailed_focus": [
+        true
+      ],
+      "coarse_focus": [
+        true
+      ],
+      "detail_sha256": "65b74f696793181810aa282f51cbf4634929ba783e98bb9f61db5a295254397c",
+      "coarse_sha256": "f9061ff59e3441519a8967f5ffe7ea27aef1d461b285aa4ca6dbdc3ae635be11"
+    },
+    {
+      "case": "shovel",
+      "repeat": 2,
+      "initial_equal": true,
+      "final_recorded_fields_equal": true,
+      "detailed_focus": [
+        true
+      ],
+      "coarse_focus": [
+        true
+      ],
+      "detail_sha256": "22e7e65b1db7ff0a54f05f303080155d49bed4823c50ba39abf3c5d101d4d2b1",
+      "coarse_sha256": "66ac8241cdf6504793b85f352e13064ac0f01ecf21254a00abbed7138d72d8ef"
+    },
+    {
+      "case": "shovel",
+      "repeat": 3,
+      "initial_equal": true,
+      "final_recorded_fields_equal": true,
+      "detailed_focus": [
+        true
+      ],
+      "coarse_focus": [
+        true
+      ],
+      "detail_sha256": "6c31fdd3887ac7fe4648e081542093c8ebafa177dc9d2841fb39373d6d796fd6",
+      "coarse_sha256": "1a3e85d550cc8cce3f31bdd84ee76be20c1c78310c80f5a4b9ac630c1a4bc7d6"
+    }
+  ],
+  "cases": {
+    "dig": {
+      "coarse_input_frame_p50": {
+        "replicate_values_ms": [
+          16.831,
+          16.895,
+          16.949
+        ],
+        "baseline_median_ms": 16.895,
+        "full_range_ms": 0.1180000000000021,
+        "guard_ms": 0.2360000000000042,
+        "guard_relative": 0.013968629772122178,
+        "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+      },
+      "coarse_input_frame_p95": {
+        "replicate_values_ms": [
+          20.646,
+          19.293,
+          18.651
+        ],
+        "baseline_median_ms": 19.293,
+        "full_range_ms": 1.995000000000001,
+        "guard_ms": 3.990000000000002,
+        "guard_relative": 0.20681076037941235,
+        "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+      },
+      "detailed_input_frame_p50": {
+        "replicate_values_ms": [
+          16.393,
+          16.316,
+          16.791
+        ],
+        "baseline_median_ms": 16.393,
+        "full_range_ms": 0.4750000000000014,
+        "guard_ms": 0.9500000000000028,
+        "guard_relative": 0.05795156469224686,
+        "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+      },
+      "gpu_cpu_stages": {
+        "collision": {
+          "gpu_ms": {
+            "replicate_values_ms": [
+              0.009216,
+              0.009216,
+              0.01024
+            ],
+            "baseline_median_ms": 0.009216,
+            "full_range_ms": 0.0010240000000000006,
+            "guard_ms": 0.002048000000000001,
+            "guard_relative": 0.22222222222222235,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          },
+          "cpu_marker_ms": {
+            "replicate_values_ms": [
+              0.004,
+              0.004,
+              0.004
+            ],
+            "baseline_median_ms": 0.004,
+            "full_range_ms": 0.0,
+            "guard_ms": 0.002,
+            "guard_relative": 0.5,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          }
+        },
+        "edit": {
+          "gpu_ms": {
+            "replicate_values_ms": [
+              0.0256,
+              0.0256,
+              0.026624
+            ],
+            "baseline_median_ms": 0.0256,
+            "full_range_ms": 0.0010239999999999971,
+            "guard_ms": 0.002048,
+            "guard_relative": 0.07999999999999999,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          },
+          "cpu_marker_ms": {
+            "replicate_values_ms": [
+              0.007,
+              0.008,
+              0.008
+            ],
+            "baseline_median_ms": 0.008,
+            "full_range_ms": 0.001,
+            "guard_ms": 0.002,
+            "guard_relative": 0.25,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          }
+        },
+        "edit_water": {
+          "gpu_ms": {
+            "replicate_values_ms": [
+              0.047616,
+              0.047104,
+              0.047104
+            ],
+            "baseline_median_ms": 0.047104,
+            "full_range_ms": 0.0005119999999999986,
+            "guard_ms": 0.002048,
+            "guard_relative": 0.043478260869565216,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          },
+          "cpu_marker_ms": {
+            "replicate_values_ms": [
+              0.008,
+              0.009,
+              0.009
+            ],
+            "baseline_median_ms": 0.009,
+            "full_range_ms": 0.0009999999999999992,
+            "guard_ms": 0.002,
+            "guard_relative": 0.22222222222222224,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          }
+        }
+      },
+      "focused_states_by_repeat": [
+        [
+          true
+        ],
+        [
+          false
+        ],
+        [
+          true
+        ]
+      ],
+      "max_fps_values_by_repeat": [
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ]
+      ],
+      "low_processor_values_by_repeat": [
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ]
+      ]
+    },
+    "fill": {
+      "coarse_input_frame_p50": {
+        "replicate_values_ms": [
+          16.666,
+          16.627,
+          17.103
+        ],
+        "baseline_median_ms": 16.666,
+        "full_range_ms": 0.47600000000000264,
+        "guard_ms": 0.9520000000000053,
+        "guard_relative": 0.05712228489139597,
+        "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+      },
+      "coarse_input_frame_p95": {
+        "replicate_values_ms": [
+          20.095,
+          19.479,
+          18.806
+        ],
+        "baseline_median_ms": 19.479,
+        "full_range_ms": 1.288999999999998,
+        "guard_ms": 2.577999999999996,
+        "guard_relative": 0.13234765645053626,
+        "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+      },
+      "detailed_input_frame_p50": {
+        "replicate_values_ms": [
+          16.228,
+          16.438,
+          16.562
+        ],
+        "baseline_median_ms": 16.438,
+        "full_range_ms": 0.33399999999999963,
+        "guard_ms": 0.6679999999999993,
+        "guard_relative": 0.04063754714685481,
+        "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+      },
+      "gpu_cpu_stages": {
+        "collision": {
+          "gpu_ms": {
+            "replicate_values_ms": [
+              0.01024,
+              0.01024,
+              0.009216
+            ],
+            "baseline_median_ms": 0.01024,
+            "full_range_ms": 0.0010240000000000006,
+            "guard_ms": 0.002048000000000001,
+            "guard_relative": 0.2000000000000001,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          },
+          "cpu_marker_ms": {
+            "replicate_values_ms": [
+              0.006,
+              0.007,
+              0.004
+            ],
+            "baseline_median_ms": 0.006,
+            "full_range_ms": 0.003,
+            "guard_ms": 0.006,
+            "guard_relative": 1.0,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          }
+        },
+        "edit": {
+          "gpu_ms": {
+            "replicate_values_ms": [
+              0.01536,
+              0.01536,
+              0.01536
+            ],
+            "baseline_median_ms": 0.01536,
+            "full_range_ms": 0.0,
+            "guard_ms": 0.001024,
+            "guard_relative": 0.06666666666666667,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          },
+          "cpu_marker_ms": {
+            "replicate_values_ms": [
+              0.011,
+              0.008,
+              0.007
+            ],
+            "baseline_median_ms": 0.008,
+            "full_range_ms": 0.003999999999999999,
+            "guard_ms": 0.007999999999999998,
+            "guard_relative": 0.9999999999999998,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          }
+        },
+        "edit_water": {
+          "gpu_ms": {
+            "replicate_values_ms": [
+              0.047104,
+              0.047104,
+              0.047104
+            ],
+            "baseline_median_ms": 0.047104,
+            "full_range_ms": 0.0,
+            "guard_ms": 0.001024,
+            "guard_relative": 0.021739130434782608,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          },
+          "cpu_marker_ms": {
+            "replicate_values_ms": [
+              0.012,
+              0.009,
+              0.008
+            ],
+            "baseline_median_ms": 0.009,
+            "full_range_ms": 0.004,
+            "guard_ms": 0.008,
+            "guard_relative": 0.888888888888889,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          }
+        }
+      },
+      "focused_states_by_repeat": [
+        [
+          true
+        ],
+        [
+          false
+        ],
+        [
+          true
+        ]
+      ],
+      "max_fps_values_by_repeat": [
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ]
+      ],
+      "low_processor_values_by_repeat": [
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ]
+      ]
+    },
+    "wall": {
+      "coarse_input_frame_p50": {
+        "replicate_values_ms": [
+          50.315,
+          56.482,
+          50.169
+        ],
+        "baseline_median_ms": 50.315,
+        "full_range_ms": 6.313000000000002,
+        "guard_ms": 12.626000000000005,
+        "guard_relative": 0.250939083772235,
+        "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+      },
+      "coarse_input_frame_p95": {
+        "replicate_values_ms": [
+          52.136,
+          58.687,
+          55.994
+        ],
+        "baseline_median_ms": 55.994,
+        "full_range_ms": 6.550999999999995,
+        "guard_ms": 13.10199999999999,
+        "guard_relative": 0.23398935600242865,
+        "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+      },
+      "detailed_input_frame_p50": {
+        "replicate_values_ms": [
+          50.509,
+          50.623,
+          50.814
+        ],
+        "baseline_median_ms": 50.623,
+        "full_range_ms": 0.3049999999999997,
+        "guard_ms": 0.6099999999999994,
+        "guard_relative": 0.01204985875985223,
+        "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+      },
+      "gpu_cpu_stages": {
+        "collision": {
+          "gpu_ms": {
+            "replicate_values_ms": [
+              0.016128,
+              0.014592,
+              0.014976
+            ],
+            "baseline_median_ms": 0.014976,
+            "full_range_ms": 0.0015359999999999992,
+            "guard_ms": 0.0030719999999999983,
+            "guard_relative": 0.205128205128205,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          },
+          "cpu_marker_ms": {
+            "replicate_values_ms": [
+              0.003,
+              0.0035,
+              0.0035
+            ],
+            "baseline_median_ms": 0.0035,
+            "full_range_ms": 0.0005,
+            "guard_ms": 0.002,
+            "guard_relative": 0.5714285714285714,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          }
+        },
+        "edit": {
+          "gpu_ms": {
+            "replicate_values_ms": [
+              0.015872,
+              0.01536,
+              0.016384
+            ],
+            "baseline_median_ms": 0.015872,
+            "full_range_ms": 0.0010239999999999989,
+            "guard_ms": 0.0020479999999999977,
+            "guard_relative": 0.129032258064516,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          },
+          "cpu_marker_ms": {
+            "replicate_values_ms": [
+              0.004,
+              0.004,
+              0.004
+            ],
+            "baseline_median_ms": 0.004,
+            "full_range_ms": 0.0,
+            "guard_ms": 0.002,
+            "guard_relative": 0.5,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          }
+        },
+        "edit_shape_material_0": {
+          "gpu_ms": {
+            "replicate_values_ms": [
+              0.072192,
+              0.072704,
+              0.069632
+            ],
+            "baseline_median_ms": 0.072192,
+            "full_range_ms": 0.0030720000000000053,
+            "guard_ms": 0.0061440000000000106,
+            "guard_relative": 0.08510638297872354,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          },
+          "cpu_marker_ms": {
+            "replicate_values_ms": [
+              0.007,
+              0.007,
+              0.007
+            ],
+            "baseline_median_ms": 0.007,
+            "full_range_ms": 0.0,
+            "guard_ms": 0.002,
+            "guard_relative": 0.2857142857142857,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          }
+        },
+        "edit_shape_material_1": {
+          "gpu_ms": {
+            "replicate_values_ms": [
+              0.034816,
+              0.034816,
+              0.033792
+            ],
+            "baseline_median_ms": 0.034816,
+            "full_range_ms": 0.0010239999999999971,
+            "guard_ms": 0.0020479999999999943,
+            "guard_relative": 0.05882352941176454,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          },
+          "cpu_marker_ms": {
+            "replicate_values_ms": [
+              0.005,
+              0.005,
+              0.005
+            ],
+            "baseline_median_ms": 0.005,
+            "full_range_ms": 0.0,
+            "guard_ms": 0.002,
+            "guard_relative": 0.4,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          }
+        },
+        "edit_shape_stage_1": {
+          "gpu_ms": {
+            "replicate_values_ms": [
+              0.146432,
+              0.149504,
+              0.146432
+            ],
+            "baseline_median_ms": 0.146432,
+            "full_range_ms": 0.0030719999999999914,
+            "guard_ms": 0.006143999999999983,
+            "guard_relative": 0.04195804195804184,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          },
+          "cpu_marker_ms": {
+            "replicate_values_ms": [
+              0.008,
+              0.008,
+              0.008
+            ],
+            "baseline_median_ms": 0.008,
+            "full_range_ms": 0.0,
+            "guard_ms": 0.002,
+            "guard_relative": 0.25,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          }
+        },
+        "edit_shape_stage_2": {
+          "gpu_ms": {
+            "replicate_values_ms": [
+              0.203264,
+              0.20992,
+              0.20992
+            ],
+            "baseline_median_ms": 0.20992,
+            "full_range_ms": 0.006655999999999995,
+            "guard_ms": 0.01331199999999999,
+            "guard_relative": 0.06341463414634142,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          },
+          "cpu_marker_ms": {
+            "replicate_values_ms": [
+              0.004,
+              0.004,
+              0.004
+            ],
+            "baseline_median_ms": 0.004,
+            "full_range_ms": 0.0,
+            "guard_ms": 0.002,
+            "guard_relative": 0.5,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          }
+        },
+        "edit_shape_stage_3": {
+          "gpu_ms": {
+            "replicate_values_ms": [
+              0.052224,
+              0.054272,
+              0.054272
+            ],
+            "baseline_median_ms": 0.054272,
+            "full_range_ms": 0.002048000000000001,
+            "guard_ms": 0.004096000000000002,
+            "guard_relative": 0.07547169811320759,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          },
+          "cpu_marker_ms": {
+            "replicate_values_ms": [
+              0.004,
+              0.004,
+              0.004
+            ],
+            "baseline_median_ms": 0.004,
+            "full_range_ms": 0.0,
+            "guard_ms": 0.002,
+            "guard_relative": 0.5,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          }
+        },
+        "edit_shape_stage_4": {
+          "gpu_ms": {
+            "replicate_values_ms": [
+              0.065536,
+              0.045056,
+              0.045056
+            ],
+            "baseline_median_ms": 0.045056,
+            "full_range_ms": 0.020479999999999998,
+            "guard_ms": 0.040959999999999996,
+            "guard_relative": 0.9090909090909091,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          },
+          "cpu_marker_ms": {
+            "replicate_values_ms": [
+              0.005,
+              0.0045000000000000005,
+              0.005
+            ],
+            "baseline_median_ms": 0.005,
+            "full_range_ms": 0.0004999999999999996,
+            "guard_ms": 0.002,
+            "guard_relative": 0.4,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          }
+        },
+        "edit_shape_water_0_0": {
+          "gpu_ms": {
+            "replicate_values_ms": [
+              0.115712,
+              0.088576,
+              0.088064
+            ],
+            "baseline_median_ms": 0.088576,
+            "full_range_ms": 0.027647999999999992,
+            "guard_ms": 0.055295999999999984,
+            "guard_relative": 0.6242774566473986,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          },
+          "cpu_marker_ms": {
+            "replicate_values_ms": [
+              0.005,
+              0.005,
+              0.005
+            ],
+            "baseline_median_ms": 0.005,
+            "full_range_ms": 0.0,
+            "guard_ms": 0.002,
+            "guard_relative": 0.4,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          }
+        },
+        "edit_shape_water_1_0": {
+          "gpu_ms": {
+            "replicate_values_ms": [
+              0.097792,
+              0.077824,
+              0.077824
+            ],
+            "baseline_median_ms": 0.077824,
+            "full_range_ms": 0.019968,
+            "guard_ms": 0.039936,
+            "guard_relative": 0.513157894736842,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          },
+          "cpu_marker_ms": {
+            "replicate_values_ms": [
+              0.004,
+              0.004,
+              0.004
+            ],
+            "baseline_median_ms": 0.004,
+            "full_range_ms": 0.0,
+            "guard_ms": 0.002,
+            "guard_relative": 0.5,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          }
+        },
+        "edit_shape_water_2_0": {
+          "gpu_ms": {
+            "replicate_values_ms": [
+              35.187200000000004,
+              35.13856,
+              35.126784
+            ],
+            "baseline_median_ms": 35.13856,
+            "full_range_ms": 0.06041600000000358,
+            "guard_ms": 0.12083200000000716,
+            "guard_relative": 0.003438729418621798,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          },
+          "cpu_marker_ms": {
+            "replicate_values_ms": [
+              0.003,
+              0.003,
+              0.0035
+            ],
+            "baseline_median_ms": 0.003,
+            "full_range_ms": 0.0005,
+            "guard_ms": 0.002,
+            "guard_relative": 0.6666666666666666,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          }
+        },
+        "edit_shape_water_3_0": {
+          "gpu_ms": {
+            "replicate_values_ms": [
+              0.044032,
+              0.044032,
+              0.044032
+            ],
+            "baseline_median_ms": 0.044032,
+            "full_range_ms": 0.0,
+            "guard_ms": 0.000512,
+            "guard_relative": 0.011627906976744186,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          },
+          "cpu_marker_ms": {
+            "replicate_values_ms": [
+              0.005,
+              0.005,
+              0.005
+            ],
+            "baseline_median_ms": 0.005,
+            "full_range_ms": 0.0,
+            "guard_ms": 0.002,
+            "guard_relative": 0.4,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          }
+        }
+      },
+      "focused_states_by_repeat": [
+        [
+          true
+        ],
+        [
+          false
+        ],
+        [
+          true
+        ]
+      ],
+      "max_fps_values_by_repeat": [
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ]
+      ],
+      "low_processor_values_by_repeat": [
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ]
+      ]
+    },
+    "shovel": {
+      "coarse_input_frame_p50": {
+        "replicate_values_ms": [
+          51.956,
+          52.166,
+          52.002
+        ],
+        "baseline_median_ms": 52.002,
+        "full_range_ms": 0.20999999999999375,
+        "guard_ms": 0.4199999999999875,
+        "guard_relative": 0.008076612437982914,
+        "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+      },
+      "coarse_input_frame_p95": {
+        "replicate_values_ms": [
+          58.589,
+          54.254,
+          57.171
+        ],
+        "baseline_median_ms": 57.171,
+        "full_range_ms": 4.335000000000001,
+        "guard_ms": 8.670000000000002,
+        "guard_relative": 0.15165031222123107,
+        "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+      },
+      "detailed_input_frame_p50": {
+        "replicate_values_ms": [
+          52.412,
+          52.476,
+          52.496
+        ],
+        "baseline_median_ms": 52.476,
+        "full_range_ms": 0.08400000000000318,
+        "guard_ms": 0.16800000000000637,
+        "guard_relative": 0.0032014635261835194,
+        "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+      },
+      "gpu_cpu_stages": {
+        "collision": {
+          "gpu_ms": {
+            "replicate_values_ms": [
+              0.014208,
+              0.013696,
+              0.014848
+            ],
+            "baseline_median_ms": 0.014208,
+            "full_range_ms": 0.0011520000000000002,
+            "guard_ms": 0.0023040000000000005,
+            "guard_relative": 0.1621621621621622,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          },
+          "cpu_marker_ms": {
+            "replicate_values_ms": [
+              0.004,
+              0.004,
+              0.003
+            ],
+            "baseline_median_ms": 0.004,
+            "full_range_ms": 0.001,
+            "guard_ms": 0.002,
+            "guard_relative": 0.5,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          }
+        },
+        "edit": {
+          "gpu_ms": {
+            "replicate_values_ms": [
+              0.016384,
+              0.016384,
+              0.016384
+            ],
+            "baseline_median_ms": 0.016384,
+            "full_range_ms": 0.0,
+            "guard_ms": 0.000512,
+            "guard_relative": 0.03125,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          },
+          "cpu_marker_ms": {
+            "replicate_values_ms": [
+              0.0045000000000000005,
+              0.006,
+              0.004
+            ],
+            "baseline_median_ms": 0.0045000000000000005,
+            "full_range_ms": 0.002,
+            "guard_ms": 0.004,
+            "guard_relative": 0.8888888888888888,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          }
+        },
+        "edit_shape_material_0": {
+          "gpu_ms": {
+            "replicate_values_ms": [
+              0.067584,
+              0.067584,
+              0.067584
+            ],
+            "baseline_median_ms": 0.067584,
+            "full_range_ms": 0.0,
+            "guard_ms": 0.000512,
+            "guard_relative": 0.007575757575757575,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          },
+          "cpu_marker_ms": {
+            "replicate_values_ms": [
+              0.0085,
+              0.009999999999999998,
+              0.006500000000000001
+            ],
+            "baseline_median_ms": 0.0085,
+            "full_range_ms": 0.003499999999999998,
+            "guard_ms": 0.006999999999999996,
+            "guard_relative": 0.8235294117647053,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          }
+        },
+        "edit_shape_material_1": {
+          "gpu_ms": {
+            "replicate_values_ms": [
+              0.034816,
+              0.034816,
+              0.034816
+            ],
+            "baseline_median_ms": 0.034816,
+            "full_range_ms": 0.0,
+            "guard_ms": 0.000512,
+            "guard_relative": 0.014705882352941176,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          },
+          "cpu_marker_ms": {
+            "replicate_values_ms": [
+              0.005,
+              0.0085,
+              0.005
+            ],
+            "baseline_median_ms": 0.005,
+            "full_range_ms": 0.0035000000000000005,
+            "guard_ms": 0.007000000000000001,
+            "guard_relative": 1.4000000000000001,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          }
+        },
+        "edit_shape_stage_1": {
+          "gpu_ms": {
+            "replicate_values_ms": [
+              0.149504,
+              0.150528,
+              0.146432
+            ],
+            "baseline_median_ms": 0.149504,
+            "full_range_ms": 0.0040959999999999885,
+            "guard_ms": 0.008191999999999977,
+            "guard_relative": 0.05479452054794505,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          },
+          "cpu_marker_ms": {
+            "replicate_values_ms": [
+              0.009,
+              0.012,
+              0.008
+            ],
+            "baseline_median_ms": 0.009,
+            "full_range_ms": 0.004,
+            "guard_ms": 0.008,
+            "guard_relative": 0.888888888888889,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          }
+        },
+        "edit_shape_stage_2": {
+          "gpu_ms": {
+            "replicate_values_ms": [
+              0.198656,
+              0.198656,
+              0.199168
+            ],
+            "baseline_median_ms": 0.198656,
+            "full_range_ms": 0.0005120000000000124,
+            "guard_ms": 0.0010240000000000249,
+            "guard_relative": 0.005154639175257858,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          },
+          "cpu_marker_ms": {
+            "replicate_values_ms": [
+              0.005,
+              0.0055,
+              0.004
+            ],
+            "baseline_median_ms": 0.005,
+            "full_range_ms": 0.0014999999999999996,
+            "guard_ms": 0.002999999999999999,
+            "guard_relative": 0.5999999999999999,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          }
+        },
+        "edit_shape_stage_3": {
+          "gpu_ms": {
+            "replicate_values_ms": [
+              0.0512,
+              0.0512,
+              0.0512
+            ],
+            "baseline_median_ms": 0.0512,
+            "full_range_ms": 0.0,
+            "guard_ms": 0.000512,
+            "guard_relative": 0.009999999999999998,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          },
+          "cpu_marker_ms": {
+            "replicate_values_ms": [
+              0.0045000000000000005,
+              0.005,
+              0.004
+            ],
+            "baseline_median_ms": 0.0045000000000000005,
+            "full_range_ms": 0.001,
+            "guard_ms": 0.002,
+            "guard_relative": 0.4444444444444444,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          }
+        },
+        "edit_shape_stage_4": {
+          "gpu_ms": {
+            "replicate_values_ms": [
+              0.065024,
+              0.064512,
+              0.065536
+            ],
+            "baseline_median_ms": 0.065024,
+            "full_range_ms": 0.0010239999999999971,
+            "guard_ms": 0.0020479999999999943,
+            "guard_relative": 0.031496062992125894,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          },
+          "cpu_marker_ms": {
+            "replicate_values_ms": [
+              0.005,
+              0.0075,
+              0.005
+            ],
+            "baseline_median_ms": 0.005,
+            "full_range_ms": 0.0024999999999999996,
+            "guard_ms": 0.004999999999999999,
+            "guard_relative": 0.9999999999999998,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          }
+        },
+        "edit_shape_stage_6": {
+          "gpu_ms": {
+            "replicate_values_ms": [
+              2.095104,
+              2.09152,
+              2.1345280000000004
+            ],
+            "baseline_median_ms": 2.095104,
+            "full_range_ms": 0.04300800000000038,
+            "guard_ms": 0.08601600000000076,
+            "guard_relative": 0.04105571847507367,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          },
+          "cpu_marker_ms": {
+            "replicate_values_ms": [
+              0.006,
+              0.008,
+              0.005
+            ],
+            "baseline_median_ms": 0.006,
+            "full_range_ms": 0.003,
+            "guard_ms": 0.006,
+            "guard_relative": 1.0,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          }
+        },
+        "edit_shape_water_0_0": {
+          "gpu_ms": {
+            "replicate_values_ms": [
+              0.108032,
+              0.10752,
+              0.10752
+            ],
+            "baseline_median_ms": 0.10752,
+            "full_range_ms": 0.0005119999999999986,
+            "guard_ms": 0.0010239999999999971,
+            "guard_relative": 0.009523809523809497,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          },
+          "cpu_marker_ms": {
+            "replicate_values_ms": [
+              0.005,
+              0.007,
+              0.005
+            ],
+            "baseline_median_ms": 0.005,
+            "full_range_ms": 0.002,
+            "guard_ms": 0.004,
+            "guard_relative": 0.8,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          }
+        },
+        "edit_shape_water_1_0": {
+          "gpu_ms": {
+            "replicate_values_ms": [
+              0.096256,
+              0.097792,
+              0.09728
+            ],
+            "baseline_median_ms": 0.09728,
+            "full_range_ms": 0.0015360000000000096,
+            "guard_ms": 0.003072000000000019,
+            "guard_relative": 0.03157894736842125,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          },
+          "cpu_marker_ms": {
+            "replicate_values_ms": [
+              0.004,
+              0.005,
+              0.004
+            ],
+            "baseline_median_ms": 0.004,
+            "full_range_ms": 0.001,
+            "guard_ms": 0.002,
+            "guard_relative": 0.5,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          }
+        },
+        "edit_shape_water_2_0": {
+          "gpu_ms": {
+            "replicate_values_ms": [
+              35.220992,
+              35.173888,
+              35.176448
+            ],
+            "baseline_median_ms": 35.176448,
+            "full_range_ms": 0.047104000000004476,
+            "guard_ms": 0.09420800000000895,
+            "guard_relative": 0.00267815556590617,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          },
+          "cpu_marker_ms": {
+            "replicate_values_ms": [
+              0.004,
+              0.0055,
+              0.004
+            ],
+            "baseline_median_ms": 0.004,
+            "full_range_ms": 0.0014999999999999996,
+            "guard_ms": 0.002999999999999999,
+            "guard_relative": 0.7499999999999998,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          }
+        },
+        "edit_shape_water_3_0": {
+          "gpu_ms": {
+            "replicate_values_ms": [
+              0.044032,
+              0.044032,
+              0.044032
+            ],
+            "baseline_median_ms": 0.044032,
+            "full_range_ms": 0.0,
+            "guard_ms": 0.000512,
+            "guard_relative": 0.011627906976744186,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          },
+          "cpu_marker_ms": {
+            "replicate_values_ms": [
+              0.005,
+              0.006,
+              0.005
+            ],
+            "baseline_median_ms": 0.005,
+            "full_range_ms": 0.001,
+            "guard_ms": 0.002,
+            "guard_relative": 0.4,
+            "rule": "2*observed replicate range, minimum 2 timestamp quanta; not a statistical CI"
+          }
+        }
+      },
+      "focused_states_by_repeat": [
+        [
+          true
+        ],
+        [
+          true
+        ],
+        [
+          true
+        ]
+      ],
+      "max_fps_values_by_repeat": [
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ]
+      ],
+      "low_processor_values_by_repeat": [
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ]
+      ]
+    }
+  },
+  "rules": [
+    "Final comparison requires at least three alternating old/new pairs per case with recorded identical inputs/configuration.",
+    "Per metric, claim a gain only beyond its empirical guard and with direction consistent across the three pairs.",
+    "Ordinary dig/fill regressions beyond guard require attribution and repair; changing numerical tolerances is prohibited.",
+    "GPU/CPU marker dispatch samples are not whole-work totals; compare matched stage and operation.",
+    "Match or explicitly stratify focus/max_fps/low_processor/contending processes; unmatched conditions cannot prove an overall gain.",
+    "For P99, collect at least 1000 frames per condition or report unknown; these short baselines do not certify tail behavior.",
+    "Final field hash comparisons cover recorded fields, not every texture double slot or full correctness suite."
+  ]
+}

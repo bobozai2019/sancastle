@@ -8,8 +8,8 @@ layout(set=0,binding=3,std430) buffer Receipt { uint w[]; };
 void add(inout float sum,inout float correction,float v) {
     precise float y=v-correction;precise float next=sum+y;correction=(next-sum)-y;sum=next;
 }
-shared vec4 tile_values[64];
-shared vec2 tile_before[64],tile_raw[64];
+shared vec4 partial_impulse[64];
+shared vec4 partial_energy[64];
 shared uint bad;
 void main() {
     if(w[0]!=1u) return;
@@ -19,17 +19,11 @@ void main() {
     float max_signal=0.01;
     uint lane=gl_LocalInvocationID.x;
     if(lane==0u) bad=0u;barrier();
-    for(uint base=0u;base<count;base+=64u) {
-        uint index=base+lane;
-        tile_values[lane]=index<count?values[index]:vec4(0.0);
-        tile_before[lane]=index<count?vec2(intBitsToFloat(scratch[index]),intBitsToFloat(scratch[count+index])):vec2(0.0);
-        tile_raw[lane]=index<count?vec2(intBitsToFloat(scratch[2u*count+index]),intBitsToFloat(scratch[3u*count+index])):vec2(0.0);
-        barrier();
-        if(lane==0u) for(uint k=0u;k<64u&&base+k<count;k++) {
-        vec4 value=tile_values[k];
-        if(any(isnan(value))||any(isinf(value))||value.x<0.0||value.y<0.0) { w[0]=2u;w[1]=4u;bad=1u;break; }
-        vec2 before=tile_before[k];
-        vec2 raw=tile_raw[k];
+    for(uint index=lane;index<count;index+=64u) {
+        vec4 value=values[index];
+        if(any(isnan(value))||any(isinf(value))||value.x<0.0||value.y<0.0) { atomicOr(bad,1u);continue; }
+        vec2 before=vec2(intBitsToFloat(scratch[index]),intBitsToFloat(scratch[count+index]));
+        vec2 raw=vec2(intBitsToFloat(scratch[2u*count+index]),intBitsToFloat(scratch[3u*count+index]));
         add(ix,ixc,(value.z-before.x)*area);add(iz,izc,(value.w-before.y)*area);
         add(lx,lxc,(raw.x-value.z)*area);add(lz,lzc,(raw.y-value.w)*area);
         if(value.x>0.001) {
@@ -38,9 +32,18 @@ void main() {
             max_signal=max(max_signal,max(abs(value.z),abs(value.w))/max(value.x,0.005)+sqrt(9.81*value.x));
         }
     }
-        barrier();if(bad!=0u) return;
-    }
+    partial_impulse[lane]=vec4(ix,iz,lx,lz);
+    partial_energy[lane]=vec4(energy,removed,max_signal,0.0);
+    barrier();
     if(lane!=0u) return;
+    if(bad!=0u) { w[0]=2u;w[1]=4u;return; }
+    ix=0.0;ixc=0.0;iz=0.0;izc=0.0;lx=0.0;lxc=0.0;lz=0.0;lzc=0.0;energy=0.0;ec=0.0;removed=0.0;rc=0.0;max_signal=0.01;
+    for(uint index=0u;index<64u;index++) {
+        vec4 impulse=partial_impulse[index];
+        vec4 summary=partial_energy[index];
+        add(ix,ixc,impulse.x);add(iz,izc,impulse.y);add(lx,lxc,impulse.z);add(lz,lzc,impulse.w);
+        add(energy,ec,summary.x);add(removed,rc,summary.y);max_signal=max(max_signal,summary.z);
+    }
     w[17]=floatBitsToUint(ix);w[18]=floatBitsToUint(iz);w[19]=floatBitsToUint(lx);w[20]=floatBitsToUint(lz);
     w[22]=floatBitsToUint(energy);w[23]=floatBitsToUint(removed);w[24]=floatBitsToUint(energy-removed);
     w[30]=floatBitsToUint(max_signal);

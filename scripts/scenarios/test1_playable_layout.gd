@@ -56,6 +56,8 @@ static func initialize(target: SandWaterDomain, key: String) -> bool:
 static func sea_level(key: String, seconds: float) -> float:
 	# Godot schedule; original future customWave timing is not recovered.
 	var offset := SEA_OFFSET
+	if key == "test1_geometry":
+		return preload("res://scripts/scenarios/test1_geometry_layout.gd").sea_level(seconds)
 	if key == "test1_backwash":
 		offset *= 0.5 + 0.5 * cos(TAU * seconds / 16.0)
 	return offset + 0.049701884388923645 * sin(284.71783447265625 + seconds)

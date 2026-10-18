@@ -1,0 +1,52 @@
+{
+  "schema": 1,
+  "date": "2026-10-18",
+  "pass": true,
+  "scope": "Offline HTML source consistency, local targets and actual in-app browser rendering/interaction QA; not runtime or cost evidence.",
+  "visual_inspected": true,
+  "observed_title": "Sandcastle · 统一沙水执行指南",
+  "observed_viewport": [
+    1265,
+    712
+  ],
+  "default_operation": "体积增沙",
+  "default_water": 3,
+  "changed_operation": "守恒搬运",
+  "changed_water": 0,
+  "observed_transfer_phases": [
+    0,
+    1,
+    2,
+    3,
+    9,
+    4,
+    2,
+    3,
+    10,
+    4,
+    11,
+    4,
+    12,
+    5,
+    6,
+    7,
+    8
+  ],
+  "observed_disabled_water_text": "水响应关闭，水/悬沙/动量不因该编辑被改写。",
+  "source_consistency_command": "python -X utf8 tools/docs/build_execution_guide.py --check",
+  "temporary_browser_and_server_closed": true,
+  "files": {
+    "docs/project-execution-guide.html": {
+      "sha256": "b37f29cf017d1d73657960569af55074814d021859679e3160ada63135221632"
+    },
+    "docs/project-execution-guide.sources.json": {
+      "sha256": "4cf818e26bc73848f7091dd944696df3470b59ea5efeaa1552a6c214937c958f"
+    },
+    "tools/docs/build_execution_guide.py": {
+      "sha256": "a8a698c14749ebd63c8595ef6ab7683a51ed8d05bc90cb78d0a7faa1bfd84df6"
+    },
+    "tools/docs/build_unified_execution_guide.py": {
+      "sha256": "98d8637cdfb3e61ea6cef316bf51f50ad689c9070342d6ea065c110d93b8a2cc"
+    }
+  }
+}

@@ -1,0 +1,360 @@
+{
+  "batch_header": {
+    "i64": {
+      "batch_seq": 40,
+      "generation": 32,
+      "lease_id": 48
+    },
+    "sha256": {
+      "domain_hash": 56
+    },
+    "u32": {
+      "command_count": 12,
+      "command_stride": 16,
+      "magic": 0,
+      "result_stride": 20,
+      "slot_id": 24,
+      "stride": 8,
+      "version": 4,
+      "work_kind": 28
+    }
+  },
+  "batch_header_bytes": 96,
+  "cell_bytes": 64,
+  "cell_words": {
+    "baseline": 10,
+    "direction_x": 13,
+    "direction_z": 14,
+    "flags": 15,
+    "new_compaction": 5,
+    "new_reference": 9,
+    "new_tag": 8,
+    "new_value": 1,
+    "old_compaction": 4,
+    "old_reference": 7,
+    "old_tag": 6,
+    "old_value": 0,
+    "rock": 2,
+    "target_height": 11,
+    "water": 3,
+    "weight": 12
+  },
+  "command": {
+    "f32": {
+      "add_budget_m3": 260,
+      "amount_m3": 248,
+      "available_m3": 268,
+      "bottom_width_m": 228,
+      "cell_size_m": 272,
+      "datum_y_m": 256,
+      "depth_m": 236,
+      "dry_depth_m": 284,
+      "end_x": 200,
+      "end_z": 204,
+      "height_m": 224,
+      "legacy_epsilon_m3": 280,
+      "radius_m": 216,
+      "ridge_height_m": 276,
+      "scale_xz": 212,
+      "shoulder_width_m": 244,
+      "speed_m_s": 252,
+      "start_x": 192,
+      "start_z": 196,
+      "strength": 220,
+      "template_spacing_m": 352,
+      "top_width_m": 232,
+      "transfer_budget_m3": 264,
+      "trench_width_m": 240,
+      "yaw_rad": 208
+    },
+    "i64": {
+      "baseline_token": 56,
+      "command_id": 32,
+      "generation": 40,
+      "sample_index": 64,
+      "seed": 320,
+      "sim_tick": 72,
+      "stroke_id": 48
+    },
+    "sha256": {
+      "domain_hash": 96,
+      "effective_hash": 128,
+      "template_hash": 160
+    },
+    "u32": {
+      "capabilities": 28,
+      "control_kind": 92,
+      "destination": 20,
+      "fields": 24,
+      "grid_size": 360,
+      "height_reference": 292,
+      "ledger": 312,
+      "magic": 0,
+      "material_policy": 88,
+      "operation": 12,
+      "profile_version": 80,
+      "rect_h": 340,
+      "rect_w": 336,
+      "rect_x": 328,
+      "rect_z": 332,
+      "shape": 16,
+      "stride": 8,
+      "stroke_policy": 304,
+      "target_rule": 296,
+      "template_channels": 356,
+      "template_height": 348,
+      "template_index": 308,
+      "template_width": 344,
+      "transfer_policy": 300,
+      "version": 4,
+      "volume_sign": 288,
+      "water_policy": 84
+    }
+  },
+  "command_bytes": 512,
+  "completion_header": {
+    "f32": {
+      "actual_dt": 84,
+      "advanced_time_s": 80
+    },
+    "i64": {
+      "batch_seq": 24,
+      "generation": 16,
+      "lease_id": 32,
+      "revision": 56,
+      "sim_tick": 48,
+      "state_seq": 40
+    },
+    "u32": {
+      "accepted_count": 88,
+      "error_flags": 72,
+      "magic": 0,
+      "rejected_count": 92,
+      "result_count": 12,
+      "result_stride": 76,
+      "slot_id": 64,
+      "state": 68,
+      "stride": 8,
+      "version": 4
+    }
+  },
+  "completion_header_bytes": 96,
+  "endianness": "little",
+  "enums": {
+    "candidate_flag": {
+      "DONOR": 2,
+      "EMPTY_TEMPLATE": 4096,
+      "INVALID_VALUE": 256,
+      "INVALID_WATER": 512,
+      "LEFT": 4,
+      "OBSTACLE": 1024,
+      "RIGHT": 8,
+      "TOUCHED": 1,
+      "UNSUPPORTED": 2048
+    },
+    "completion_state": {
+      "COMPLETE": 1,
+      "FATAL": 2
+    },
+    "control_kind": {
+      "BEGIN": 1,
+      "CANCEL": 3,
+      "END": 2,
+      "NONE": 0
+    },
+    "destination": {
+      "BED_SAND": 0,
+      "MATERIAL": 2,
+      "SUSPENDED_SAND": 1
+    },
+    "error_code": {
+      "BACKEND_UNAVAILABLE": 4,
+      "BUDGET_EXCEEDED": 9,
+      "CANDIDATE_INVALID": 16,
+      "COLLISION_PENDING": 12,
+      "INVALID_BASELINE": 14,
+      "INVALID_COMMAND": 1,
+      "INVALID_PLACEMENT": 8,
+      "INVALID_RECEIPT": 15,
+      "MATERIAL_CANDIDATE_INVALID": 18,
+      "NONE": 0,
+      "OUT_OF_DOMAIN": 3,
+      "RECEIVER_CAPACITY": 10,
+      "STALE_GENERATION": 2,
+      "STALE_TICK": 13,
+      "STROKE_BUFFER_FULL": 11,
+      "TEMPLATE_MISMATCH": 7,
+      "UNKNOWN_PROFILE": 6,
+      "UNSUPPORTED_PROFILE": 5,
+      "WATER_CANDIDATE_INVALID": 17
+    },
+    "height_reference": {
+      "FIXED_WORLD": 1,
+      "NONE": 0,
+      "STROKE_BASELINE": 2
+    },
+    "ledger": {
+      "APPROXIMATE_EXTERNAL": 0,
+      "CONSERVATIVE_TRANSFER": 2,
+      "EXACT_EXTERNAL": 1,
+      "UNCHANGED": 3
+    },
+    "material_policy": {
+      "MOLDED": 1,
+      "PLAIN": 0,
+      "PRESERVE": 2
+    },
+    "operation": {
+      "FIELD_ADJUST": 4,
+      "REDISTRIBUTE": 3,
+      "TARGET_HEIGHT": 1,
+      "TRANSFER": 2,
+      "VOLUME_DELTA": 0
+    },
+    "outcome": {
+      "APPLIED": 1,
+      "NO_CHANGE": 2,
+      "REJECTED": 3
+    },
+    "shape": {
+      "DISK": 0,
+      "HEIGHT_STAMP": 2,
+      "SWEPT_CAPSULE": 1
+    },
+    "stroke_policy": {
+      "FIXED_BASELINE_COVERAGE": 1,
+      "NONE": 0
+    },
+    "target_rule": {
+      "FILL_TO": 1,
+      "NONE": 0
+    },
+    "transfer_policy": {
+      "BALANCED_SHOULDERS": 1,
+      "NONE": 0
+    },
+    "volume_sign": {
+      "ADD": 1,
+      "NONE": 0,
+      "REMOVE": 2
+    },
+    "work_kind": {
+      "EDIT": 0,
+      "WATER_TICK": 1
+    }
+  },
+  "family": "unified_edit",
+  "fatal_flags_mask": 63,
+  "height_slots": 2,
+  "input_slot_bytes": 32864,
+  "int64_transport": "two uint32 low/high words; never float or shaderInt64",
+  "max_commands": 64,
+  "max_profiles": 64,
+  "max_templates": 16,
+  "native_control_bytes": 128,
+  "output_slot_bytes": 24672,
+  "positive_int64_max": "9223372036854775807",
+  "reduction_block_bytes": 128,
+  "reduction_blocks": 256,
+  "result": {
+    "f32": {
+      "absolute_volume_delta_m3": 284,
+      "added_m3": 128,
+      "displaced_water_m3": 272,
+      "eps_sand_m3": 160,
+      "eps_sediment_m3": 180,
+      "eps_transfer_m3": 164,
+      "eps_water_m3": 172,
+      "impulse_x_m4_s": 184,
+      "impulse_z_m4_s": 188,
+      "left_received_m3": 140,
+      "max_cell_delta_m": 280,
+      "removed_m3": 132,
+      "retained_water_m3": 276,
+      "right_received_m3": 144,
+      "sand_error_m3": 156,
+      "sediment_error_m3": 176,
+      "sink_m3": 152,
+      "source_m3": 148,
+      "transferred_m3": 136,
+      "water_error_m3": 168
+    },
+    "i64": {
+      "applied_tick": 64,
+      "baseline_token": 40,
+      "batch_seq": 80,
+      "command_id": 16,
+      "generation": 24,
+      "input_revision": 48,
+      "lease_id": 88,
+      "output_revision": 56,
+      "sample_index": 304,
+      "state_seq": 72,
+      "stroke_id": 32
+    },
+    "sha256": {
+      "domain_hash": 208,
+      "effective_hash": 240
+    },
+    "u32": {
+      "changed_cells": 120,
+      "changed_fields": 100,
+      "completion_phase": 108,
+      "coverage_changed": 296,
+      "dirty_high": 116,
+      "dirty_low": 112,
+      "error_code": 104,
+      "invalid_flags": 292,
+      "ledger": 288,
+      "magic": 0,
+      "outcome": 12,
+      "profile_version": 312,
+      "rect_h": 204,
+      "rect_w": 200,
+      "rect_x": 192,
+      "rect_z": 196,
+      "slot_id": 96,
+      "stride": 8,
+      "touched_cells": 124,
+      "version": 4
+    }
+  },
+  "result_bytes": 384,
+  "summary_buffer_bytes": 32896,
+  "summary_words": {
+    "changed_cells": 13,
+    "changed_fields": 23,
+    "coverage_changed": 25,
+    "dirty_high": 21,
+    "dirty_low": 20,
+    "donor_compaction_sum": 29,
+    "donor_moved": 27,
+    "donor_tagged": 28,
+    "invalid_flags": 22,
+    "left_received": 2,
+    "material_changed": 26,
+    "max_delta": 12,
+    "net_volume": 0,
+    "nominal_cut": 30,
+    "rect_max_x": 18,
+    "rect_max_z": 19,
+    "rect_min_x": 16,
+    "rect_min_z": 17,
+    "removed": 1,
+    "reserved_zero": 31,
+    "right_received": 3,
+    "sand_absolute_delta": 5,
+    "sand_ulp_budget": 4,
+    "sediment_absolute_delta": 11,
+    "sediment_error": 9,
+    "sediment_touched": 24,
+    "sediment_ulp_budget": 10,
+    "touched_cells": 14,
+    "water_absolute_delta": 8,
+    "water_error": 6,
+    "water_touched": 15,
+    "water_ulp_budget": 7
+  },
+  "version": 1,
+  "work_slots": 3
+}

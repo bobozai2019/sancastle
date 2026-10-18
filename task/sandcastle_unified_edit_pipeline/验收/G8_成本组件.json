@@ -1,0 +1,193 @@
+{
+  "schema": 1,
+  "status": "component_pass",
+  "date": "2026-10-18",
+  "G8_pass": false,
+  "performance_pass": true,
+  "overall_completed": 35,
+  "overall_total": 36,
+  "T08_completed": 3,
+  "completed_subgoals": [
+    "T08.1",
+    "T08.2",
+    "T08.3"
+  ],
+  "cost_runs": 48,
+  "independent_checks": 8409,
+  "metrics": {
+    "dig": {
+      "old_coarse_p50_ms": [
+        15.679,
+        15.799,
+        15.538
+      ],
+      "current_coarse_p50_ms": [
+        15.789,
+        15.591,
+        15.523
+      ],
+      "old_coarse_median_of_p50_ms": 15.679,
+      "current_coarse_median_of_p50_ms": 15.591,
+      "frozen_guard_ms": 0.2360000000000042,
+      "judgment": "no_beyond_guard_regression",
+      "old_tagged_gpu_ms_per_command": [
+        0.4232106666666667,
+        0.436096,
+        0.423424
+      ],
+      "current_complete_executor_gpu_ms_per_command": [
+        3.2181333333333337,
+        3.240448,
+        3.210752
+      ]
+    },
+    "fill": {
+      "old_coarse_p50_ms": [
+        15.672,
+        15.671,
+        15.534
+      ],
+      "current_coarse_p50_ms": [
+        15.588,
+        15.455,
+        15.85
+      ],
+      "old_coarse_median_of_p50_ms": 15.671,
+      "current_coarse_median_of_p50_ms": 15.588,
+      "frozen_guard_ms": 0.9520000000000053,
+      "judgment": "no_beyond_guard_regression",
+      "old_tagged_gpu_ms_per_command": [
+        0.16098133333333334,
+        0.15889066666666665,
+        0.158208
+      ],
+      "current_complete_executor_gpu_ms_per_command": [
+        3.133013333333333,
+        3.1234986666666664,
+        3.146069333333333
+      ]
+    },
+    "wall": {
+      "old_coarse_p50_ms": [
+        50.261,
+        53.281,
+        50.267
+      ],
+      "current_coarse_p50_ms": [
+        16.377,
+        16.369,
+        16.29
+      ],
+      "old_coarse_median_of_p50_ms": 50.267,
+      "current_coarse_median_of_p50_ms": 16.369,
+      "frozen_guard_ms": 12.626000000000005,
+      "judgment": "consistent_beyond_guard_gain",
+      "old_tagged_gpu_ms_per_command": [
+        39.747583999999996,
+        37.01883733333333,
+        37.047466666666665
+      ],
+      "current_complete_executor_gpu_ms_per_command": [
+        4.570112,
+        4.55296,
+        4.553770666666667
+      ]
+    },
+    "shovel": {
+      "old_coarse_p50_ms": [
+        52.386,
+        52.258,
+        52.634
+      ],
+      "current_coarse_p50_ms": [
+        15.656,
+        15.775,
+        15.89
+      ],
+      "old_coarse_median_of_p50_ms": 52.386,
+      "current_coarse_median_of_p50_ms": 15.775,
+      "frozen_guard_ms": 0.4199999999999875,
+      "judgment": "consistent_beyond_guard_gain",
+      "old_tagged_gpu_ms_per_command": [
+        39.040298666666665,
+        39.06756266666667,
+        38.991872
+      ],
+      "current_complete_executor_gpu_ms_per_command": [
+        4.178346666666667,
+        4.044458666666666,
+        4.182016
+      ]
+    }
+  },
+  "evidence": [
+    {
+      "path": "test_output/unified_edit_pipeline/g8_cost_joint02/report.json",
+      "bytes": 96525,
+      "sha256": "a626a1bdad0e6716fd9d71769c41c62439f629c54675651c1166909dbcf912fc"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g8_cost_joint02/audit.json",
+      "bytes": 928903,
+      "sha256": "773570b8646d94ad6f22af9246b3431e7fceb4cfc5bc760f8a45fa652f3a0bee"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g8_cost_joint02/seal.json",
+      "bytes": 407,
+      "sha256": "830e51e1fe97c55568db07a2e0f0cc48870ac1ea88cd371a98865fbe4a5d6a8e"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g8_cost_joint02/sources.zip",
+      "bytes": 78383071,
+      "sha256": "38eb7c8b1ec2e98d588f167bb79214f7ba2dc020a84b086a1fd5231882a108b3"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g8_cost_joint02/artifact-index.json",
+      "bytes": 228006,
+      "sha256": "eec861702e9b40f008175c59a6d00f323b936a336c043263161b2c2b100082a1"
+    }
+  ],
+  "excluded_failed_starts": [
+    {
+      "name": "detailed_fill_0_old",
+      "mode": "detailed",
+      "tool": "fill",
+      "repeat": 0,
+      "family": "old",
+      "command": [
+        "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+        "--path",
+        "D:\\godot\\test_runs\\uep_g8_reference01",
+        "--rendering-driver",
+        "d3d12",
+        "--script",
+        "res://tools/unified_edit_pipeline/reference_cost_probe.gd",
+        "--log-file",
+        "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g8_cost_final01\\detailed_fill_0_old\\probe.log",
+        "--",
+        "--output=D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g8_cost_final01\\detailed_fill_0_old\\probe.json",
+        "--case=fill",
+        "--sampling"
+      ],
+      "exit_code": 1,
+      "clean_logs": true,
+      "pass": false,
+      "evidence": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g8_cost_final01\\detailed_fill_0_old\\probe.json",
+      "evidence_sha256": "4c83b55b6c28e789b5dbfd365a9f5d0fba67b546a52130fc8aab611babe64a07",
+      "reason": "Original observer startup limit reached before any input/cost window; raw failed report retained",
+      "source_report": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g8_cost_final01\\report.json",
+      "source_report_sha256": "4987985d08503724db0b030d0e636e9c1c7b1b450238a1e7d8416ad0b84700b2"
+    }
+  ],
+  "scope": "Same eleven initial raw fields/camera/grid/visual values/current water-side geometry; three alternating pairs for each of four tools in detailed and coarse modes. Coarse input-window P50 judged independently using frozen G0 guards. Exact input declarations and actual real GPU terminals checked.",
+  "limitations": [
+    "P99 remains unknown per condition because each has fewer than 1000 input intervals.",
+    "CPU notification bounds are not GPU elapsed time, first visible pixels or display scanout.",
+    "Old GPU tagged sums omit untagged dispatch work; current decorator records the whole unchanged executor. No exact whole-CPU gain is asserted.",
+    "Original and current product HUD layouts differ; actual primitives/draw-call counts are retained. Full 3D scene/effects were preserved and no numerical precision or workload was lowered.",
+    "User editor PID23948 remains present; no isolated GPU claim."
+  ],
+  "remaining": [
+    "T08.4 final current architecture/source/docs/HTML/36-goal delivery"
+  ]
+}

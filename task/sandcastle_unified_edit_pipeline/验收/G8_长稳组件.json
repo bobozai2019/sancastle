@@ -1,0 +1,53 @@
+{
+  "schema": 1,
+  "status": "component_pass",
+  "date": "2026-10-18",
+  "G8_pass": false,
+  "overall_completed": 34,
+  "overall_total": 36,
+  "T08_completed": 2,
+  "completed_subgoals": [
+    "T08.1",
+    "T08.2"
+  ],
+  "gpu_runs": 1,
+  "gpu_checks": 475,
+  "independent_checks": 239,
+  "actual_input_span_ms": 180557,
+  "max_input_gap_ms": 529,
+  "mixed_gestures": 355,
+  "real_gpu_receipts": 909,
+  "lifecycle_rounds": 10,
+  "evidence": [
+    {
+      "path": "test_output/unified_edit_pipeline/g8_endurance01/report.json",
+      "bytes": 23952,
+      "sha256": "49dd587cd2da710a468561755f848bf943c8c552be3e9314ad9ef41c5bb0bf94"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g8_endurance01/audit.json",
+      "bytes": 25290,
+      "sha256": "0f911c34c486cfe660856cbe40f49967d899558f8a72cd9b66cbce70b764b722"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g8_endurance01/sources.zip",
+      "bytes": 21092738,
+      "sha256": "30d40df27e0926bc6cf6c2d128abc361d08b1a0c0ff583782a58b972a1413504"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g8_endurance01/verification_sources.zip",
+      "bytes": 21097359,
+      "sha256": "1ec90597173c896a6e7a025a06d7fafc9b9717cc7404311fac0564871404c64a"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g8_endurance01/artifact-index.json",
+      "bytes": 4195,
+      "sha256": "1317dc39ebb2f69933ae16082fdb0e08363be3bef48bcbb608521260227d81b0"
+    }
+  ],
+  "scope": "Actual mixed declarations and water ticks followed by ten full native save/restore/formal switch/old-root close rounds. Lifecycle duration excluded from actual input span. Live fixed GPU ownership and terminal release verified; process memory includes retained observer evidence. No final cost acceptance.",
+  "remaining": [
+    "T08.3 matched visible alternating old/current cost comparison",
+    "T08.4 final unique-path/source/docs/HTML/36-goal delivery"
+  ]
+}

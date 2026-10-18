@@ -1,0 +1,169 @@
+{
+  "role": "independent Python SHA256/size/int64 and direct-reference-byte audit",
+  "run": "g2_gpu_delivery10",
+  "pass": true,
+  "failures": [],
+  "records": [
+    {
+      "case": "normal",
+      "raw_fields": 6,
+      "error_flags": 0,
+      "generation": "9007199254740993",
+      "state_seq": "3",
+      "sim_tick": "1",
+      "time": 0.03333333507180214,
+      "revision": "6"
+    },
+    {
+      "case": "water_1",
+      "raw_fields": 9,
+      "error_flags": 0,
+      "generation": "9007199254740993",
+      "state_seq": "1",
+      "sim_tick": "1",
+      "time": 0.0010000000474974513,
+      "revision": "1"
+    },
+    {
+      "case": "water_2",
+      "raw_fields": 9,
+      "error_flags": 0,
+      "generation": "9007199254740993",
+      "state_seq": "1",
+      "sim_tick": "1",
+      "time": 0.0010000000474974513,
+      "revision": "2"
+    },
+    {
+      "case": "water_3",
+      "raw_fields": 9,
+      "error_flags": 0,
+      "generation": "9007199254740993",
+      "state_seq": "1",
+      "sim_tick": "1",
+      "time": 0.0010000000474974513,
+      "revision": "3"
+    },
+    {
+      "case": "water_64",
+      "raw_fields": 9,
+      "error_flags": 0,
+      "generation": "9007199254740993",
+      "state_seq": "1",
+      "sim_tick": "1",
+      "time": 0.0010000000474974513,
+      "revision": "64"
+    },
+    {
+      "case": "water_100",
+      "raw_fields": 9,
+      "error_flags": 0,
+      "generation": "9007199254740993",
+      "state_seq": "1",
+      "sim_tick": "1",
+      "time": 0.0006416040123440325,
+      "revision": "64"
+    },
+    {
+      "case": "upload",
+      "raw_fields": 6,
+      "error_flags": 0,
+      "generation": "9007199254740993",
+      "state_seq": "0",
+      "sim_tick": "0",
+      "time": 0.0,
+      "revision": "0"
+    },
+    {
+      "case": "readback",
+      "raw_fields": 6,
+      "error_flags": 0,
+      "generation": "9007199254740993",
+      "state_seq": "1",
+      "sim_tick": "0",
+      "time": 0.0,
+      "revision": "1"
+    },
+    {
+      "case": "truncate",
+      "raw_fields": 6,
+      "error_flags": 0,
+      "generation": "9007199254740993",
+      "state_seq": "1",
+      "sim_tick": "0",
+      "time": 0.0,
+      "revision": "1"
+    },
+    {
+      "case": "identity",
+      "raw_fields": 6,
+      "error_flags": 0,
+      "generation": "9007199254740993",
+      "state_seq": "1",
+      "sim_tick": "0",
+      "time": 0.0,
+      "revision": "1"
+    },
+    {
+      "case": "unknown_state",
+      "raw_fields": 6,
+      "error_flags": 0,
+      "generation": "9007199254740993",
+      "state_seq": "1",
+      "sim_tick": "0",
+      "time": 0.0,
+      "revision": "1"
+    },
+    {
+      "case": "fatal",
+      "raw_fields": 6,
+      "error_flags": 8,
+      "generation": "9007199254740993",
+      "state_seq": "0",
+      "sim_tick": "0",
+      "time": 0.0,
+      "revision": "0"
+    },
+    {
+      "case": "counter",
+      "raw_fields": 6,
+      "error_flags": 32,
+      "generation": "9007199254740993",
+      "state_seq": "9223372036854775807",
+      "sim_tick": "0",
+      "time": 0.0,
+      "revision": "0"
+    },
+    {
+      "case": "tick_counter",
+      "raw_fields": 6,
+      "error_flags": 48,
+      "generation": "9007199254740993",
+      "state_seq": "0",
+      "sim_tick": "9223372036854775807",
+      "time": 0.0,
+      "revision": "0"
+    },
+    {
+      "case": "revision_counter",
+      "raw_fields": 6,
+      "error_flags": 32,
+      "generation": "9007199254740993",
+      "state_seq": "0",
+      "sim_tick": "0",
+      "time": 0.0,
+      "revision": "9223372036854775807"
+    },
+    {
+      "case": "bad_cfl",
+      "raw_fields": 6,
+      "error_flags": 16,
+      "generation": "9007199254740993",
+      "state_seq": "0",
+      "sim_tick": "0",
+      "time": 0.0,
+      "revision": "0"
+    }
+  ],
+  "scope": "only actual saved observations; normal raw capture predates later scheduling/64-command tests, as stated in typed evidence"
+}

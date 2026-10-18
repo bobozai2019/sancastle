@@ -1,0 +1,142 @@
+{
+  "role": "T03.1 volume/suspended component evidence; G3 overall incomplete",
+  "component_pass": true,
+  "T03_1_complete": true,
+  "G3_complete": false,
+  "total_completed": 15,
+  "total_objectives": 36,
+  "gpu_run": "g3_suspended_delivery05",
+  "gpu_cases": [
+    "suspended",
+    "suspended_sweep",
+    "suspended_disabled",
+    "suspended_invalid",
+    "coupled_1",
+    "coupled_1_molded",
+    "coupled_2",
+    "coupled_3_molded",
+    "coupled_64"
+  ],
+  "gpu_checks": 471,
+  "independent_checks": 376,
+  "regression_gpu_checks": 617,
+  "basic_gpu_checks": [
+    [
+      "normal",
+      112
+    ],
+    [
+      "water_3",
+      12
+    ]
+  ],
+  "regression_independent_checks": {
+    "transfer": 142,
+    "targets": 1179,
+    "local": 493
+  },
+  "common_pinned_source_count": 122,
+  "source_drift": [],
+  "reports": {
+    "g3_suspended_delivery05/run-manifest.json": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g3_suspended_delivery05\\run-manifest.json",
+      "sha256": "f4925ad1ba1ab10aedb13abdd8ade44b2ddeddc02b58da00de17620e63dd6e12"
+    },
+    "g3_suspended_regression05/run-manifest.json": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g3_suspended_regression05\\run-manifest.json",
+      "sha256": "24366be3fb047de0f7b59fa59876eade5016137f4198b6b3c8283ca75186eab9"
+    },
+    "g3_suspended_basic05/run-manifest.json": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g3_suspended_basic05\\run-manifest.json",
+      "sha256": "4c3a0e8e25ddba074c2f45a8c60c1f62f383193a2e7030646cf1ac14e775b1db"
+    },
+    "g3_suspended_independent05/result.json": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g3_suspended_independent05\\result.json",
+      "sha256": "57a9dd11d29ebe0bc6dac654f4a70d063b1455147fd805995038a28de93c4960"
+    },
+    "g3_suspended_transfer_reference05/result.json": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g3_suspended_transfer_reference05\\result.json",
+      "sha256": "22c730a6c8b77e32a24cfb64a73e856cd090d59f19601aaa174b43e277ce20d9"
+    },
+    "g3_suspended_target_reference05/result.json": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g3_suspended_target_reference05\\result.json",
+      "sha256": "834af5c495317b3ff3a63f2bbd183f3a1dfe60fb67784d3ecd20300590624d06"
+    },
+    "g3_suspended_local_reference05/result.json": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g3_suspended_local_reference05\\result.json",
+      "sha256": "cb2e469c5e49f98c676a0b28c8e37205347e2d77f02c5709ed32e4f20c5765bb"
+    }
+  },
+  "suspended_contract": "VOLUME_DELTA ADD only, actual current water strictly > wire dry_depth and obstacle <0.5; common candidate/ULP reduction/conditional sediment twin commit; no bed/material/water/momentum changes. Approximate nominal external ledger on known recording, including business rejection.",
+  "capability_contract": "enable_erosion requires real sediment/material/support stages on actual GPU CFL substeps; disabled flag still rejects suspended admission. Other unimplemented capabilities remain explicit rejects.",
+  "coupled_reference": "Retained legacy binding constructors and async_coupled numerical recorder on isolated private State/Transport. Old solver object only borrows typed resource fields; no old solver initialize/dispatch/release, editor, queue, publication or production path. Nine logical-live native fields exact in each recorded coupled case.",
+  "fixed_coefficients": {
+    "capacity_per_speed_s": 0.003,
+    "erosion_rate_per_s": 0.7295628483661365,
+    "deposition_rate_per_s": 0.2419645313921744,
+    "global_cohesion_yield_height_m": 0.0,
+    "molded_local_cohesion_m": 0.9,
+    "molded_saturation_depth_m": 0.125,
+    "scope": "Frozen default numerical sources/profile only; production environment/checkpoint tuning mapping pending T06."
+  },
+  "coupled_measured_diagnostics": {
+    "coupled_1_coupled_actual_advancement": {
+      "total_sand_before_m3": 235.91270143701695,
+      "total_sand_after_m3": 235.91269576409832,
+      "measured_drift_m3": -5.6729186326265335e-06,
+      "wetness_changed": true,
+      "wetness_increment_before_R16_store": 0.001500000071246177,
+      "initial_wetness_R16_quantum": 6.103515625e-05,
+      "scope": "Measured diagnostic; full coupled conservation/long-run gate remains T04/T08, not inferred solely from endpoint sums. R16F may swallow each tiny substep even while dt accumulates."
+    },
+    "coupled_1_molded_coupled_actual_advancement": {
+      "total_sand_before_m3": 235.91270143701695,
+      "total_sand_after_m3": 235.91269576409832,
+      "measured_drift_m3": -5.6729186326265335e-06,
+      "wetness_changed": true,
+      "wetness_increment_before_R16_store": 0.001500000071246177,
+      "initial_wetness_R16_quantum": 6.103515625e-05,
+      "scope": "Measured diagnostic; full coupled conservation/long-run gate remains T04/T08, not inferred solely from endpoint sums. R16F may swallow each tiny substep even while dt accumulates."
+    },
+    "coupled_2_coupled_actual_advancement": {
+      "total_sand_before_m3": 235.91270143701695,
+      "total_sand_after_m3": 235.9126939033158,
+      "measured_drift_m3": -7.53370113670826e-06,
+      "wetness_changed": true,
+      "wetness_increment_before_R16_store": 0.0007500000356230885,
+      "initial_wetness_R16_quantum": 6.103515625e-05,
+      "scope": "Measured diagnostic; full coupled conservation/long-run gate remains T04/T08, not inferred solely from endpoint sums. R16F may swallow each tiny substep even while dt accumulates."
+    },
+    "coupled_3_molded_coupled_actual_advancement": {
+      "total_sand_before_m3": 235.91270143701695,
+      "total_sand_after_m3": 235.9126939411508,
+      "measured_drift_m3": -7.495866157114506e-06,
+      "wetness_changed": true,
+      "wetness_increment_before_R16_store": 0.0005000000383006409,
+      "initial_wetness_R16_quantum": 6.103515625e-05,
+      "scope": "Measured diagnostic; full coupled conservation/long-run gate remains T04/T08, not inferred solely from endpoint sums. R16F may swallow each tiny substep even while dt accumulates."
+    },
+    "coupled_64_coupled_actual_advancement": {
+      "total_sand_before_m3": 235.91270143701695,
+      "total_sand_after_m3": 235.91238575073658,
+      "measured_drift_m3": -0.0003156862803734839,
+      "wetness_changed": false,
+      "wetness_increment_before_R16_store": 2.3437501113221515e-05,
+      "initial_wetness_R16_quantum": 6.103515625e-05,
+      "scope": "Measured diagnostic; full coupled conservation/long-run gate remains T04/T08, not inferred solely from endpoint sums. R16F may swallow each tiny substep even while dt accumulates."
+    }
+  },
+  "retained_failures": [
+    "g3_suspended_reference01",
+    "g3_coupled_reference02/coupled_64: wetness must-change fixture assumption only; nine native fields still exact",
+    "g3_suspended_affected03: GDScript local PackedByteArray type inference parse failure"
+  ],
+  "pending": [
+    "T03.4 all-profile joint candidate/trace verification",
+    "T04 complete common water policies/material/conservation invariants",
+    "T05 mixed batches/dirty consumers/long saturated drags",
+    "T06 real configuration mapping/restore/lifecycle/formal entries",
+    "T07 config expansion and writer reachability",
+    "T08 full functional/cost/long-stability delivery"
+  ]
+}

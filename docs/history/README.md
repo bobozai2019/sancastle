@@ -1,6 +1,8 @@
 # 历史任务记录与迁移说明
 
-2026-10-11 GPU堆挖专项成果已迁入[专项归档](sandcastle_gpu_edit_validation/README.md)，方案、契约、验收和关键结果摘要保留；按用户要求不保留全量中间数据。当前主场景不依赖task，复验工具在tools/gpu_edit_validation。水材质自然感任务仍在task中运行，本次未迁移。
+2026-10-18文档整理：[旧项目文档快照](project_snapshots/README.md)收纳已退出当前入口的规划、源码索引及阶段交付。当前方案/规格见[项目入口](../README.md)。下文目录数量、数据量和路径可用性按2026-10-11迁移时记录，使用前重新核对。
+
+2026-10-11 GPU堆挖专项成果已迁入[专项归档](sandcastle_gpu_edit_validation/README.md)，方案、契约、验收和关键结果摘要保留；按用户要求不保留全量中间数据。该专项运行资源当时已退出task依赖，复验工具在tools/gpu_edit_validation。水材质自然感任务当时仍在task中，本次迁移未包含它；此句仅记录2026-10-11范围。
 
 竞品已确认技术的统一检索入口为[docs/competitor](../competitor/README.md)，整理正文与本机证据可用性分开记录；这里的历史报告和原始验收判定保留。
 

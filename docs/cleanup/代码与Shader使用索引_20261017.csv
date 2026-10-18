@@ -1,0 +1,834 @@
+﻿代码/Shader路径,类型,主场景关系,参与存档源码签名,显式引用方数量,引用方示例（最多5项）,清理判断
+assets/test1_beach/test1_beach_g03_entry.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+assets/test1_beach/test1_bed_dry_overlay_trial.gdshader,.gdshader,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+assets/test1_beach/test1_bed_dry_vertex_depth14_trial.gdshader,.gdshader,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+assets/test1_beach/test1_bed_dry_vertex_trial.gdshader,.gdshader,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+assets/test1_beach/test1_bed_lit.gdshader,.gdshader,其他代码/配置引用,是,1,assets/test1_beach/test1_beach_v8_base.json,暂留：参与存档源码签名
+assets/test1_beach/test1_bed_lit_fast.gdshader,.gdshader,main静态依赖,是,20,assets/test1_beach/test1_beach_release.json; assets/water_material_natural_candidate/base_v8_compiled_v1.json; assets/water_material_natural_candidate/base_v8_engine_light.json; assets/water_material_natural_candidate/base_v8_engine_packed.json; assets/water_material_natural_candidate/base_v8_foam.json,保留：main静态引用链
+assets/test1_beach/test1_bed_vertex_light_trial.gdshader,.gdshader,其他代码/配置引用,是,1,assets/test1_beach/g05_vertex_light_trial.json,暂留：参与存档源码签名
+assets/test1_beach/test1_front_foam_splats.gdshader,.gdshader,main静态依赖,是,4,scenes/legacy/sandcastle_test1_beach_coupled_pre_natural.tscn; scenes/main.tscn; tests/water_material_natural/filter_cost.gd; tests/water_material_natural/lighting_cost.gd,保留：main静态引用链
+assets/test1_beach/test1_water_front.gdshader,.gdshader,main静态依赖,是,5,assets/test1_beach/g05_hybrid_trial.json; assets/test1_beach/g05_vertex_light_trial.json; assets/test1_beach/test1_beach_release.json; assets/test1_beach/test1_beach_v8_base.json; tests/water_material_natural/style_seam_probe.gd,保留：main静态引用链
+assets/test1_water_motion/bed.gdshader,.gdshader,其他代码/配置引用,否,1,tests/investigation/test1_water_motion/capture_trial.gd,单独评估：仍有其他调用方
+assets/test1_water_motion/water.gdshader,.gdshader,其他代码/配置引用,否,1,tests/investigation/test1_water_motion/capture_trial.gd,单独评估：仍有其他调用方
+assets/water_material_natural_candidate/async_rdc_bed.gdshader,.gdshader,main静态依赖,是,2,assets/water_material_natural_candidate/async_clock_variants_v1.json; scenes/main.tscn,保留：main静态引用链
+assets/water_material_natural_candidate/async_rdc_water.gdshader,.gdshader,main静态依赖,是,2,assets/water_material_natural_candidate/async_clock_variants_v1.json; scenes/main.tscn,保留：main静态引用链
+assets/water_material_natural_candidate/bed_geometry_specialized.gdshader,.gdshader,main静态依赖,是,7,assets/water_material_natural_candidate/base_v8_compiled_v1_style.json; assets/water_material_natural_candidate/compiled_v1_bundle.json; assets/water_material_natural_candidate/reference_v1_bundle.json; assets/water_material_natural_candidate/style_compiled_v1.json; assets/water_material_natural_candidate/style_reference_v1.json,保留：main静态引用链
+assets/water_material_natural_candidate/bed_material_specialized.gdshader,.gdshader,其他代码/配置引用,是,1,tests/water_material_natural/bed_material_specialized_probe.gd,暂留：参与存档源码签名
+assets/water_material_natural_candidate/bed_style.gdshader,.gdshader,main静态依赖,是,8,assets/water_material_natural_candidate/base_v8_height_style.json; assets/water_material_natural_candidate/base_v8_style.json; assets/water_material_natural_candidate/style_baseline.json; assets/water_material_natural_candidate/style_combination.json; assets/water_material_natural_candidate/style_height.json,保留：main静态引用链
+assets/water_material_natural_candidate/compiled_worker_entry.gd,.gd,main静态依赖,是,5,scenes/water_material_natural_candidate/style_compiled_v1_coupled.tscn; scripts/beach/beach_lab_entry.gd; scripts/experiments/approx_gpu_edit/trial_lifecycle.gd; tests/water_material_natural/build_compiled_candidate.py; tools/approx_gpu_edit_trial/build_adapter.py,保留：main静态引用链
+assets/water_material_natural_candidate/contact_foam.gdshader,.gdshader,main静态依赖,是,2,assets/water_material_natural_candidate/foam_baseline.json; tests/water_material_natural/build_foam_candidate.py,保留：main静态引用链
+assets/water_material_natural_candidate/contact_geometry_specialized.gdshader,.gdshader,其他代码/配置引用,是,1,tests/water_material_natural/contact_geometry_specialized_probe.gd,暂留：参与存档源码签名
+assets/water_material_natural_candidate/contact_lazy.gdshader,.gdshader,其他代码/配置引用,是,1,tests/water_material_natural/contact_lazy_probe.gd,暂留：参与存档源码签名
+assets/water_material_natural_candidate/contact_shape.gdshader,.gdshader,main静态依赖,是,10,assets/test1_water_motion/main_contact.tres; assets/test1_water_motion/main_presentation.json; assets/water_material_natural_candidate/foam_combination.json; assets/water_material_natural_candidate/foam_compiled_v1_derived.json; assets/water_material_natural_candidate/foam_height_derived.json,保留：main静态引用链
+assets/water_material_natural_candidate/contact_shared.gdshader,.gdshader,其他代码/配置引用,是,2,assets/water_material_natural_candidate/foam_shared_surface.json; tests/water_material_natural/build_contact_shared.py,暂留：参与存档源码签名
+assets/water_material_natural_candidate/foam_distribution.gdshader,.gdshader,main静态依赖,是,12,assets/test1_water_motion/main_fine.tres; assets/test1_water_motion/main_presentation.json; assets/water_material_natural_candidate/foam_baseline.json; assets/water_material_natural_candidate/foam_combination.json; assets/water_material_natural_candidate/foam_compiled_v1_derived.json,保留：main静态引用链
+assets/water_material_natural_candidate/foam_engine_light.gdshader,.gdshader,main静态依赖,是,8,assets/water_material_natural_candidate/lighting_engine.json; assets/water_material_natural_candidate/lighting_optics.json; assets/water_material_natural_candidate/lighting_optics_unrefracted.json; assets/water_material_natural_candidate/lighting_packed.json; assets/water_material_natural_candidate/lighting_proxy.json,保留：main静态引用链
+assets/water_material_natural_candidate/foam_entry.gd,.gd,main静态依赖,是,1,assets/water_material_natural_candidate/reflection_entry.gd,保留：main静态引用链
+assets/water_material_natural_candidate/lighting_entry.gd,.gd,main静态依赖,是,2,assets/water_material_natural_candidate/optics_entry.gd; tests/water_material_natural/build_lighting_candidate.py,保留：main静态引用链
+assets/water_material_natural_candidate/normal_entry.gd,.gd,main静态依赖,是,2,assets/water_material_natural_candidate/lighting_entry.gd; tests/water_material_natural/build_normal_candidate.py,保留：main静态引用链
+assets/water_material_natural_candidate/optics_entry.gd,.gd,main静态依赖,是,1,assets/water_material_natural_candidate/foam_entry.gd,保留：main静态引用链
+assets/water_material_natural_candidate/rdc_bed.gdshader,.gdshader,main静态依赖,是,7,assets/test1_water_motion/main_presentation.json; assets/test1_water_motion/main_sand.tres; assets/water_material_natural_candidate/async_clock_variants_v1.json; assets/water_material_natural_candidate/rdc_bundle_v1.json; assets/water_material_natural_candidate/rdc_style_base.json,保留：main静态引用链
+assets/water_material_natural_candidate/rdc_water.gdshader,.gdshader,main静态依赖,是,10,assets/test1_water_motion/main_presentation.json; assets/test1_water_motion/main_water.tres; assets/water_material_natural_candidate/async_clock_variants_v1.json; assets/water_material_natural_candidate/rdc_base.json; assets/water_material_natural_candidate/rdc_bundle_v1.json,保留：main静态引用链
+assets/water_material_natural_candidate/reflection_entry.gd,.gd,main静态依赖,是,1,assets/water_material_natural_candidate/style_entry.gd,保留：main静态引用链
+assets/water_material_natural_candidate/style_entry.gd,.gd,main静态依赖,是,4,assets/water_material_natural_candidate/style_worker_entry.gd; tests/water_material_natural/build_coupled_style_candidate.py; tests/water_material_natural/rdc_schema_probe.gd; tests/water_material_natural/reference_schema_guard_probe.gd,保留：main静态引用链
+assets/water_material_natural_candidate/style_worker_entry.gd,.gd,main静态依赖,是,2,assets/water_material_natural_candidate/compiled_worker_entry.gd; scenes/water_material_natural_candidate/style_height_coupled.tscn,保留：main静态引用链
+assets/water_material_natural_candidate/water_debug_specialized.gdshader,.gdshader,其他代码/配置引用,是,1,tests/water_material_natural/debug_specialized_probe.gd,暂留：参与存档源码签名
+assets/water_material_natural_candidate/water_engine_light.gdshader,.gdshader,其他代码/配置引用,是,8,assets/water_material_natural_candidate/base_v8_engine_light.json; assets/water_material_natural_candidate/lighting_engine.json; assets/water_material_natural_candidate/lighting_proxy.json; tests/water_material_natural/build_engine_light.py; tests/water_material_natural/filter_cost.gd,暂留：参与存档源码签名
+assets/water_material_natural_candidate/water_engine_light_no_standard_specular.gdshader,.gdshader,其他代码/配置引用,是,1,tests/water_material_natural/filter_cost.gd,暂留：参与存档源码签名
+assets/water_material_natural_candidate/water_engine_light_packed.gdshader,.gdshader,其他代码/配置引用,是,4,assets/water_material_natural_candidate/base_v8_engine_packed.json; assets/water_material_natural_candidate/lighting_packed.json; tests/water_material_natural/build_packed_light.py; tests/water_material_natural/packed_light_probe.gd,暂留：参与存档源码签名
+assets/water_material_natural_candidate/water_engine_light_specialized.gdshader,.gdshader,其他代码/配置引用,是,1,tests/water_material_natural/packed_light_probe.gd,暂留：参与存档源码签名
+assets/water_material_natural_candidate/water_foam.gdshader,.gdshader,main静态依赖,是,9,assets/water_material_natural_candidate/base_v8_foam.json; assets/water_material_natural_candidate/contact_geometry_bindings.json; assets/water_material_natural_candidate/contact_shape_geometry.json; assets/water_material_natural_candidate/foam_baseline.json; assets/water_material_natural_candidate/foam_combination.json,保留：main静态引用链
+assets/water_material_natural_candidate/water_geometry_specialized.gdshader,.gdshader,其他代码/配置引用,是,3,tests/water_material_natural/geometry_specialized_probe.gd; tests/water_material_natural/geometry_specialized_sequence.gd; tests/water_material_natural/route_specialized_probe.gd,暂留：参与存档源码签名
+assets/water_material_natural_candidate/water_height.gdshader,.gdshader,main静态依赖,是,8,assets/water_material_natural_candidate/base_v8_height.json; assets/water_material_natural_candidate/base_v8_height_style.json; assets/water_material_natural_candidate/contact_height_geometry.json; assets/water_material_natural_candidate/foam_height_derived.json; assets/water_material_natural_candidate/reflection_height.json,保留：main静态引用链
+assets/water_material_natural_candidate/water_macro.gdshader,.gdshader,其他代码/配置引用,是,1,tests/water_material_natural/macro_normal_probe.gd,暂留：参与存档源码签名
+assets/water_material_natural_candidate/water_manual_glint.gdshader,.gdshader,main静态依赖,是,3,assets/water_material_natural_candidate/base_v8_manual_glint.json; assets/water_material_natural_candidate/lighting_manual.json; tests/water_material_natural/build_lighting_candidate.py,保留：main静态引用链
+assets/water_material_natural_candidate/water_normal.gdshader,.gdshader,main静态依赖,是,5,assets/water_material_natural_candidate/base_v8_normal.json; assets/water_material_natural_candidate/normal_entry.gd; tests/water_material_natural/build_normal_candidate.py; tests/water_material_natural/filter_cost.gd; tests/water_material_natural/lighting_cost.gd,保留：main静态引用链
+assets/water_material_natural_candidate/water_optics.gdshader,.gdshader,main静态依赖,是,4,assets/water_material_natural_candidate/base_v8_optics.json; assets/water_material_natural_candidate/lighting_optics.json; tests/water_material_natural/build_optics.py; tests/water_material_natural/optics_path_probe.gd,保留：main静态引用链
+assets/water_material_natural_candidate/water_optics_unrefracted.gdshader,.gdshader,main静态依赖,是,3,assets/water_material_natural_candidate/base_v8_optics_unrefracted.json; assets/water_material_natural_candidate/lighting_optics_unrefracted.json; tests/water_material_natural/build_unrefracted_optics.py,保留：main静态引用链
+assets/water_material_natural_candidate/water_path_diagnostic.gdshader,.gdshader,其他代码/配置引用,是,1,tests/water_material_natural/path_boundary_probe.gd,暂留：参与存档源码签名
+assets/water_material_natural_candidate/water_reflection.gdshader,.gdshader,main静态依赖,是,10,assets/water_material_natural_candidate/base_v8_reflection.json; assets/water_material_natural_candidate/base_v8_style.json; assets/water_material_natural_candidate/contact_reflection_geometry.json; assets/water_material_natural_candidate/foam_reflection_derived.json; assets/water_material_natural_candidate/reflection_baseline.json,保留：main静态引用链
+assets/water_material_natural_candidate/water_reflection_flip_y_probe.gdshader,.gdshader,其他代码/配置引用,是,1,tests/water_material_natural/reflection_orientation_probe.gd,暂留：参与存档源码签名
+assets/water_material_natural_candidate/water_reflection_specialized.gdshader,.gdshader,其他代码/配置引用,是,1,tests/water_material_natural/reflection_specialized_probe.gd,暂留：参与存档源码签名
+assets/water_material_natural_candidate/water_reflection_srgb_probe.gdshader,.gdshader,其他代码/配置引用,是,1,tests/water_material_natural/reflection_color_probe.gd,暂留：参与存档源码签名
+assets/water_material_natural_candidate/water_route_specialized.gdshader,.gdshader,main静态依赖,是,11,assets/water_material_natural_candidate/base_v8_compiled_v1.json; assets/water_material_natural_candidate/base_v8_compiled_v1_style.json; assets/water_material_natural_candidate/compiled_v1_bundle.json; assets/water_material_natural_candidate/contact_compiled_v1_geometry.json; assets/water_material_natural_candidate/foam_compiled_v1_derived.json,保留：main静态引用链
+scripts/audit/audit_recorder.gd,.gd,其他代码/配置引用,否,2,scripts/demo/sandcastle_demo.gd; tests/run_tests.gd,单独评估：仍有其他调用方
+scripts/beach/async_pipeline_entry.gd,.gd,main静态依赖,是,1,scenes/main.tscn,保留：main静态引用链
+scripts/beach/beach_checkpoint_entry.gd,.gd,main静态依赖,是,1,scripts/beach/beach_gpu_entry.gd,保留：main静态引用链
+scripts/beach/beach_gpu_entry.gd,.gd,main静态依赖,是,1,scripts/beach/beach_interaction_entry.gd,保留：main静态引用链
+scripts/beach/beach_interaction_entry.gd,.gd,main静态依赖,是,1,scripts/beach/beach_recovery_entry.gd,保留：main静态引用链
+scripts/beach/beach_lab_entry.gd,.gd,main静态依赖,是,1,scripts/beach/beach_checkpoint_entry.gd,保留：main静态引用链
+scripts/beach/beach_playable_entry.gd,.gd,main静态依赖,是,3,scripts/beach/shape_brush_entry.gd; tests/shape_brushes/legacy_lab.gd; tests/shape_brushes/legacy_playable_base.tscn,保留：main静态引用链
+scripts/beach/beach_recovery_entry.gd,.gd,main静态依赖,是,2,scripts/beach/beach_playable_entry.gd; scripts/simulation/edit_validation/frame_pipeline/async_legacy_migration.gd,保留：main静态引用链
+scripts/beach/beach_scene_service.gd,.gd,main静态依赖,是,1,project.godot,保留：main静态引用链
+scripts/beach/free_camera.gd,.gd,main静态依赖,是,2,scenes/main.tscn; tests/shape_brushes/legacy_playable_base.tscn,保留：main静态引用链
+scripts/beach/gravel_playable_entry.gd,.gd,main静态依赖,是,2,scripts/beach/async_pipeline_entry.gd; tests/gravel/gravel_header_probe.gd,保留：main静态引用链
+scripts/beach/performance_panel.gd,.gd,main静态依赖,是,3,scenes/main.tscn; tests/shape_brushes/legacy_playable_base.tscn; tools/gpu_optimization/profile.gd,保留：main静态引用链
+scripts/beach/release_config.gd,.gd,main静态依赖,是,1,scripts/beach/beach_gpu_entry.gd,保留：main静态引用链
+scripts/beach/scene_switch_panel.gd,.gd,main静态依赖,是,1,scenes/components/scene_switch_panel.tscn,保留：main静态引用链
+scripts/beach/shape_brush_entry.gd,.gd,main静态依赖,是,2,scripts/beach/shape_brush_playable_entry.gd; tests/shape_brushes/brush_lab.gd,保留：main静态引用链
+scripts/beach/shape_brush_playable_entry.gd,.gd,main静态依赖,是,2,scripts/beach/gravel_playable_entry.gd; tests/shape_brushes/ui_lab.gd,保留：main静态引用链
+scripts/beach/ui_drag.gd,.gd,main静态依赖,是,1,scenes/main.tscn,保留：main静态引用链
+scripts/beach/ui_visibility.gd,.gd,main静态依赖,是,1,scenes/components/ui_visibility.tscn,保留：main静态引用链
+scripts/collision/collision_prepare_job.gd,.gd,main静态依赖,是,6,scripts/collision/collision_prepare_scheduler.gd; scripts/collision/gpu_collision_proxy.gd; scripts/simulation/edit_validation/frame_pipeline/async_collision.gd; tests/integration/collision_lifecycle_window_probe.gd; tests/integration/collision_thread_lifecycle_probe.gd,保留：main静态引用链
+scripts/collision/collision_prepare_scheduler.gd,.gd,main静态依赖,是,4,scripts/collision/gpu_collision_proxy.gd; tests/integration/collision_lifecycle_window_probe.gd; tests/integration/collision_thread_lifecycle_probe.gd; tests/integration/collision_worker_probe.gd,保留：main静态引用链
+scripts/collision/gpu_collision_proxy.gd,.gd,main静态依赖,是,9,scenes/gpu_collision_proxy.tscn; scripts/beach/performance_panel.gd; scripts/demo/gpu_water_preview.gd; scripts/demo/sandcastle_main.gd; scripts/simulation/edit_validation/beach_restore_bundle.gd,保留：main静态引用链
+scripts/demo/gpu_water_preview.gd,.gd,main静态依赖,否,1,scenes/gpu_water_preview.tscn,保留：main静态引用链
+scripts/demo/sandcastle_demo.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+scripts/demo/sandcastle_main.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+scripts/experiments/approx_gpu_edit/exact_dispatch_adapter.gd,.gd,其他代码/配置引用,否,1,scripts/experiments/approx_gpu_edit/exact_trial_solver.gd,单独评估：仍有其他调用方
+scripts/experiments/approx_gpu_edit/exact_trial_solver.gd,.gd,其他代码/配置引用,否,1,scripts/experiments/approx_gpu_edit/trial_entry.gd,单独评估：仍有其他调用方
+scripts/experiments/approx_gpu_edit/trial_entry.gd,.gd,其他代码/配置引用,否,1,scenes/approx_gpu_edit.tscn,单独评估：仍有其他调用方
+scripts/experiments/approx_gpu_edit/trial_lifecycle.gd,.gd,其他代码/配置引用,否,1,scripts/experiments/approx_gpu_edit/trial_entry.gd,单独评估：仍有其他调用方
+scripts/experiments/approx_gpu_edit/trial_profile.gd,.gd,其他代码/配置引用,否,1,assets/approx_gpu_edit/trial_profile.tres,单独评估：仍有其他调用方
+scripts/experiments/approx_gpu_edit/trial_solver.gd,.gd,其他代码/配置引用,否,1,scripts/experiments/approx_gpu_edit/trial_entry.gd,单独评估：仍有其他调用方
+scripts/sand/brushes/brush_command_queue.gd,.gd,main静态依赖,否,1,scripts/beach/shape_brush_entry.gd,保留：main静态引用链
+scripts/sand/brushes/brush_definition.gd,.gd,main静态依赖,否,4,assets/brushes/castle_v1.tres; assets/brushes/shovel_v1.tres; assets/brushes/wall_v1.tres; scripts/sand/brushes/brush_registry.gd,保留：main静态引用链
+scripts/sand/brushes/brush_preview_view.gd,.gd,main静态依赖,否,1,scenes/components/brushes/brush_preview.tscn,保留：main静态引用链
+scripts/sand/brushes/brush_registry.gd,.gd,main静态依赖,否,2,scripts/simulation/brushes/brush_protocol.gd; tests/shape_brushes/input_contract_probe.gd,保留：main静态引用链
+scripts/sand/brushes/brush_spec.gd,.gd,main静态依赖,否,4,scripts/sand/brushes/brush_definition.gd; scripts/sand/brushes/stroke_controller.gd; scripts/simulation/brushes/brush_protocol.gd; tests/shape_brushes/input_contract_probe.gd,保留：main静态引用链
+scripts/sand/brushes/brush_tool_panel.gd,.gd,main静态依赖,否,2,scenes/components/brushes/brush_tool_panel.tscn; tests/shape_brushes/generate_brush_ui_scene.py,保留：main静态引用链
+scripts/sand/brushes/stroke_controller.gd,.gd,main静态依赖,否,4,scripts/beach/shape_brush_entry.gd; tests/shape_brushes/input_contract_probe.gd; tests/shape_brushes/shovel_path_probe.gd; tests/shape_brushes/wall_probe.gd,保留：main静态引用链
+scripts/sand/tool_command_queue.gd,.gd,main静态依赖,否,15,scripts/demo/gpu_water_preview.gd; scripts/demo/sandcastle_demo.gd; scripts/sand/brushes/brush_command_queue.gd; tests/edit_validation/checkpoint_lab_entry.gd; tests/edit_validation/contract_probe.gd,保留：main静态引用链
+scripts/scenarios/sand_visual_fixture.gd,.gd,main静态依赖,否,1,scripts/demo/gpu_water_preview.gd,保留：main静态引用链
+scripts/scenarios/standard_scenarios.gd,.gd,main静态依赖,否,7,scripts/demo/gpu_water_preview.gd; scripts/demo/sandcastle_demo.gd; tests/erosion/gpu_num09_probe.gd; tests/gpu_standard_scenario_probe.gd; tests/run_scene_tests.gd,保留：main静态引用链
+scripts/scenarios/test1_playable_layout.gd,.gd,main静态依赖,否,1,scripts/beach/beach_playable_entry.gd,保留：main静态引用链
+scripts/scenarios/water_visual_fixture.gd,.gd,main静态依赖,否,4,scripts/demo/gpu_water_preview.gd; tests/visual_phase2/capture_water_fixture.gd; tests/visual_phase2/probe_bed_sampler.gd; tests/visual_phase2/probe_water_foam.gd,保留：main静态引用链
+scripts/simulation/brushes/brush_checkpoint_codec.gd,.gd,main静态依赖,是,3,scripts/beach/beach_recovery_entry.gd; scripts/beach/shape_brush_entry.gd; scripts/simulation/edit_validation/frame_pipeline/async_checkpoint_codec.gd,保留：main静态引用链
+scripts/simulation/brushes/brush_gpu.gd,.gd,main静态依赖,是,4,scripts/beach/shape_brush_entry.gd; scripts/simulation/edit_validation/frame_pipeline/async_restore_bundle.gd; tests/shape_brushes/castle_resource_probe.gd; tests/shape_brushes/lab_entry_probe.gd,保留：main静态引用链
+scripts/simulation/brushes/brush_material_coupler.gd,.gd,main静态依赖,是,4,scripts/beach/shape_brush_entry.gd; tests/integration/async_pipeline_collision_probe.gd; tests/integration/async_pipeline_water_probe.gd; tests/shape_brushes/local_retention_lab.gd,保留：main静态引用链
+scripts/simulation/brushes/brush_material_solver.gd,.gd,main静态依赖,是,3,scripts/beach/shape_brush_entry.gd; scripts/simulation/edit_validation/frame_pipeline/editor.gd; tests/shape_brushes/material_state_probe.gd,保留：main静态引用链
+scripts/simulation/brushes/brush_material_state_codec.gd,.gd,main静态依赖,是,7,scripts/beach/shape_brush_entry.gd; scripts/simulation/brushes/brush_material_solver.gd; scripts/simulation/edit_validation/beach_native_codec.gd; scripts/simulation/edit_validation/frame_pipeline/async_checkpoint_capture.gd; scripts/simulation/edit_validation/frame_pipeline/async_checkpoint_codec.gd,保留：main静态引用链
+scripts/simulation/brushes/brush_material_transaction.gd,.gd,main静态依赖,是,2,scripts/simulation/brushes/brush_gpu.gd; scripts/simulation/brushes/brush_material_solver.gd,保留：main静态引用链
+scripts/simulation/brushes/brush_preview_query.gd,.gd,main静态依赖,是,3,scripts/beach/shape_brush_playable_entry.gd; scripts/simulation/edit_validation/frame_pipeline/async_restore_bundle.gd; tests/shape_brushes/castle_probe.gd,保留：main静态引用链
+scripts/simulation/brushes/brush_protocol.gd,.gd,main静态依赖,是,13,scripts/beach/shape_brush_entry.gd; scripts/sand/brushes/brush_command_queue.gd; scripts/simulation/brushes/brush_checkpoint_codec.gd; scripts/simulation/brushes/brush_gpu.gd; scripts/simulation/brushes/brush_scheduler.gd,保留：main静态引用链
+scripts/simulation/brushes/brush_scheduler.gd,.gd,main静态依赖,是,2,scripts/beach/shape_brush_entry.gd; scripts/simulation/edit_validation/frame_pipeline/async_scheduler.gd,保留：main静态引用链
+scripts/simulation/brushes/brush_water_transaction.gd,.gd,main静态依赖,是,1,scripts/simulation/brushes/brush_gpu.gd,保留：main静态引用链
+scripts/simulation/checkpoint_store.gd,.gd,main静态依赖,是,36,scripts/beach/beach_recovery_entry.gd; scripts/demo/gpu_water_preview.gd; scripts/demo/sandcastle_main.gd; scripts/simulation/edit_validation/frame_pipeline/async_legacy_migration.gd; scripts/simulation/edit_validation/gpu_checkpoint_codec.gd,保留：main静态引用链
+scripts/simulation/edit_validation/beach_gpu_edit_history.gd,.gd,其他代码/配置引用,是,2,tests/edit_validation/beach_history_storage_probe.gd; tests/edit_validation/beach_undo_entry.gd,暂留：参与存档源码签名
+scripts/simulation/edit_validation/beach_native_codec.gd,.gd,main静态依赖,是,3,scripts/beach/beach_checkpoint_entry.gd; tests/edit_validation/beach_checkpoint_entry.gd; tests/edit_validation/beach_history_process_probe.gd,保留：main静态引用链
+scripts/simulation/edit_validation/beach_restore_bundle.gd,.gd,main静态依赖,是,3,scripts/beach/beach_recovery_entry.gd; scripts/simulation/edit_validation/frame_pipeline/async_restore_bundle.gd; tests/edit_validation/beach_recovery_entry.gd,保留：main静态引用链
+scripts/simulation/edit_validation/beach_sand_copy_trace.gd,.gd,其他代码/配置引用,是,3,scripts/simulation/edit_validation/material_stage_trace.gd; tests/edit_validation/beach_replay_entry.gd; tests/edit_validation/beach_replay_worker.gd,暂留：参与存档源码签名
+scripts/simulation/edit_validation/checkpoint_foam_field.gd,.gd,main静态依赖,是,4,scripts/beach/beach_checkpoint_entry.gd; scripts/simulation/edit_validation/beach_restore_bundle.gd; tests/edit_validation/beach_checkpoint_entry.gd; tests/integration/async_pipeline_checkpoint_probe.gd,保留：main静态引用链
+scripts/simulation/edit_validation/collision_chunk_selection.gd,.gd,main静态依赖,是,3,scripts/beach/beach_gpu_entry.gd; tests/edit_validation/beach_gpu_entry.gd; tests/edit_validation/collision_selection_probe.gd,保留：main静态引用链
+scripts/simulation/edit_validation/collision_proxy.gd,.gd,main静态依赖,是,5,scenes/main.tscn; tests/integration/collision_idle_update_probe.gd; tests/integration/collision_thread_lifecycle_probe.gd; tests/shape_brushes/legacy_playable_base.tscn; tests/shape_brushes/ui_collision_proxy.gd,保留：main静态引用链
+scripts/simulation/edit_validation/edit_protocol.gd,.gd,main静态依赖,是,21,scripts/beach/beach_gpu_entry.gd; scripts/simulation/brushes/brush_checkpoint_codec.gd; scripts/simulation/edit_validation/frame_pipeline/layout.gd; scripts/simulation/edit_validation/gpu_checkpoint_codec.gd; scripts/simulation/edit_validation/gpu_edit_scheduler.gd,保留：main静态引用链
+scripts/simulation/edit_validation/frame_pipeline/async_boundary.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,scripts/simulation/edit_validation/frame_pipeline/async_boundary.glsl.import,暂留：动态路径候选需核对
+scripts/simulation/edit_validation/frame_pipeline/async_bridge.glsl,.glsl,main静态依赖,是,2,scripts/simulation/edit_validation/frame_pipeline/async_bridge.glsl.import; scripts/simulation/edit_validation/frame_pipeline/async_controller.gd,保留：main静态引用链
+scripts/simulation/edit_validation/frame_pipeline/async_capture.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,scripts/simulation/edit_validation/frame_pipeline/async_capture.glsl.import,暂留：动态路径候选需核对
+scripts/simulation/edit_validation/frame_pipeline/async_cfl_decide.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,scripts/simulation/edit_validation/frame_pipeline/async_cfl_decide.glsl.import,暂留：动态路径候选需核对
+scripts/simulation/edit_validation/frame_pipeline/async_cfl_tiles.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,scripts/simulation/edit_validation/frame_pipeline/async_cfl_tiles.glsl.import,暂留：动态路径候选需核对
+scripts/simulation/edit_validation/frame_pipeline/async_checkpoint_capture.gd,.gd,main静态依赖,是,3,scripts/beach/async_pipeline_entry.gd; tests/integration/async_pipeline_front_roundoff_probe.gd; tests/integration/async_pipeline_smooth_checkpoint_probe.gd,保留：main静态引用链
+scripts/simulation/edit_validation/frame_pipeline/async_checkpoint_codec.gd,.gd,main静态依赖,是,7,scripts/beach/async_pipeline_entry.gd; scripts/simulation/edit_validation/frame_pipeline/async_checkpoint_capture.gd; scripts/simulation/edit_validation/frame_pipeline/async_legacy_migration.gd; scripts/simulation/edit_validation/frame_pipeline/async_restore_bundle.gd; tests/integration/async_pipeline_checkpoint_probe.gd,保留：main静态引用链
+scripts/simulation/edit_validation/frame_pipeline/async_clock_variants.gd,.gd,main静态依赖,是,1,scripts/beach/async_pipeline_entry.gd,保留：main静态引用链
+scripts/simulation/edit_validation/frame_pipeline/async_collision.gd,.gd,main静态依赖,是,3,scripts/simulation/edit_validation/frame_pipeline/async_controller.gd; tests/integration/async_pipeline_collision_probe.gd; tools/gpu_optimization/collision_selection_probe.gd,保留：main静态引用链
+scripts/simulation/edit_validation/frame_pipeline/async_controller.gd,.gd,main静态依赖,是,2,scripts/beach/async_pipeline_entry.gd; scripts/simulation/edit_validation/frame_pipeline/async_restore_bundle.gd,保留：main静态引用链
+scripts/simulation/edit_validation/frame_pipeline/async_coupled.gd,.gd,main静态依赖,是,4,scripts/simulation/edit_validation/frame_pipeline/async_controller.gd; tests/integration/async_pipeline_collision_probe.gd; tests/integration/async_pipeline_water_probe.gd; tools/gpu_optimization/profile.gd,保留：main静态引用链
+scripts/simulation/edit_validation/frame_pipeline/async_editor.gd,.gd,main静态依赖,是,3,scripts/beach/async_pipeline_entry.gd; tests/integration/async_pipeline_edit_probe.gd; tests/integration/async_pipeline_water_probe.gd,保留：main静态引用链
+scripts/simulation/edit_validation/frame_pipeline/async_gravel_normalize.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,scripts/simulation/edit_validation/frame_pipeline/async_gravel_normalize.glsl.import,暂留：动态路径候选需核对
+scripts/simulation/edit_validation/frame_pipeline/async_height_codec.gd,.gd,main静态依赖,是,2,scripts/simulation/edit_validation/frame_pipeline/async_collision.gd; tests/integration/async_pipeline_collision_probe.gd,保留：main静态引用链
+scripts/simulation/edit_validation/frame_pipeline/async_height_pack.glsl,.glsl,main静态依赖,是,2,scripts/simulation/edit_validation/frame_pipeline/async_collision.gd; scripts/simulation/edit_validation/frame_pipeline/async_height_pack.glsl.import,保留：main静态引用链
+scripts/simulation/edit_validation/frame_pipeline/async_legacy_migration.gd,.gd,main静态依赖,是,2,scripts/beach/async_pipeline_entry.gd; tests/integration/async_pipeline_migration_probe.gd,保留：main静态引用链
+scripts/simulation/edit_validation/frame_pipeline/async_normalize.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,scripts/simulation/edit_validation/frame_pipeline/async_normalize.glsl.import,暂留：动态路径候选需核对
+scripts/simulation/edit_validation/frame_pipeline/async_protocol.gd,.gd,main静态依赖,是,7,scripts/simulation/edit_validation/frame_pipeline/async_checkpoint_codec.gd; scripts/simulation/edit_validation/frame_pipeline/async_editor.gd; scripts/simulation/edit_validation/frame_pipeline/async_slots.gd; scripts/simulation/edit_validation/frame_pipeline/async_transport.gd; tests/integration/async_pipeline_contract_probe.gd,保留：main静态引用链
+scripts/simulation/edit_validation/frame_pipeline/async_restore_bundle.gd,.gd,main静态依赖,是,1,scripts/beach/async_pipeline_entry.gd,保留：main静态引用链
+scripts/simulation/edit_validation/frame_pipeline/async_scheduler.gd,.gd,main静态依赖,是,1,scripts/beach/async_pipeline_entry.gd,保留：main静态引用链
+scripts/simulation/edit_validation/frame_pipeline/async_seal.glsl,.glsl,main静态依赖,是,2,scripts/simulation/edit_validation/frame_pipeline/async_seal.glsl.import; scripts/simulation/edit_validation/frame_pipeline/async_transport.gd,保留：main静态引用链
+scripts/simulation/edit_validation/frame_pipeline/async_select.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,scripts/simulation/edit_validation/frame_pipeline/async_select.glsl.import,暂留：动态路径候选需核对
+scripts/simulation/edit_validation/frame_pipeline/async_shadow_read.gd,.gd,main静态依赖,是,1,scripts/beach/async_pipeline_entry.gd,保留：main静态引用链
+scripts/simulation/edit_validation/frame_pipeline/async_sim_finish.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,scripts/simulation/edit_validation/frame_pipeline/async_sim_finish.glsl.import,暂留：动态路径候选需核对
+scripts/simulation/edit_validation/frame_pipeline/async_slots.gd,.gd,main静态依赖,是,6,scripts/simulation/edit_validation/frame_pipeline/async_controller.gd; tests/integration/async_pipeline_contract_probe.gd; tests/integration/async_pipeline_edit_probe.gd; tests/integration/async_pipeline_identity_limit_probe.gd; tests/integration/async_pipeline_probe.gd,保留：main静态引用链
+scripts/simulation/edit_validation/frame_pipeline/async_smooth.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,scripts/simulation/edit_validation/frame_pipeline/async_smooth.glsl.import,暂留：动态路径候选需核对
+scripts/simulation/edit_validation/frame_pipeline/async_terminal_guard.gd,.gd,main静态依赖,是,2,scripts/beach/async_pipeline_entry.gd; scripts/simulation/edit_validation/collision_proxy.gd,保留：main静态引用链
+scripts/simulation/edit_validation/frame_pipeline/async_tool_capture.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,scripts/simulation/edit_validation/frame_pipeline/async_tool_capture.glsl.import,暂留：动态路径候选需核对
+scripts/simulation/edit_validation/frame_pipeline/async_tool_select.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,scripts/simulation/edit_validation/frame_pipeline/async_tool_select.glsl.import,暂留：动态路径候选需核对
+scripts/simulation/edit_validation/frame_pipeline/async_tools.gd,.gd,main静态依赖,是,1,scripts/simulation/edit_validation/frame_pipeline/async_controller.gd,保留：main静态引用链
+scripts/simulation/edit_validation/frame_pipeline/async_transport.gd,.gd,main静态依赖,是,2,scripts/simulation/edit_validation/frame_pipeline/async_editor.gd; tests/integration/async_pipeline_probe.gd,保留：main静态引用链
+scripts/simulation/edit_validation/frame_pipeline/async_visual_normalize.glsl,.glsl,main静态依赖,是,2,scripts/simulation/edit_validation/frame_pipeline/async_visual_normalize.glsl.import; scripts/simulation/edit_validation/frame_pipeline/async_visuals.gd,保留：main静态引用链
+scripts/simulation/edit_validation/frame_pipeline/async_visuals.gd,.gd,main静态依赖,是,2,scripts/simulation/edit_validation/frame_pipeline/async_controller.gd; tests/integration/async_pipeline_water_probe.gd,保留：main静态引用链
+scripts/simulation/edit_validation/frame_pipeline/async_water.gd,.gd,main静态依赖,是,4,scripts/simulation/edit_validation/frame_pipeline/async_controller.gd; tests/integration/async_pipeline_collision_probe.gd; tests/integration/async_pipeline_water_probe.gd; tools/gpu_optimization/profile.gd,保留：main静态引用链
+scripts/simulation/edit_validation/frame_pipeline/capture.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,scripts/simulation/edit_validation/frame_pipeline/capture.glsl.import,暂留：动态路径候选需核对
+scripts/simulation/edit_validation/frame_pipeline/controller.gd,.gd,main静态依赖,是,1,scripts/beach/beach_gpu_entry.gd,保留：main静态引用链
+scripts/simulation/edit_validation/frame_pipeline/editor.gd,.gd,main静态依赖,是,2,scripts/beach/shape_brush_entry.gd; scripts/simulation/edit_validation/frame_pipeline/async_editor.gd,保留：main静态引用链
+scripts/simulation/edit_validation/frame_pipeline/layout.gd,.gd,main静态依赖,是,3,scripts/simulation/edit_validation/frame_pipeline/controller.gd; scripts/simulation/edit_validation/frame_pipeline/editor.gd; scripts/simulation/edit_validation/frame_pipeline/validation.gd,保留：main静态引用链
+scripts/simulation/edit_validation/frame_pipeline/select.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,scripts/simulation/edit_validation/frame_pipeline/select.glsl.import,暂留：动态路径候选需核对
+scripts/simulation/edit_validation/frame_pipeline/validation.gd,.gd,main静态依赖,是,2,scripts/simulation/edit_validation/frame_pipeline/controller.gd; scripts/simulation/edit_validation/frame_pipeline/editor.gd,保留：main静态引用链
+scripts/simulation/edit_validation/gpu_checkpoint_codec.gd,.gd,main静态依赖,是,13,scripts/beach/beach_checkpoint_entry.gd; scripts/beach/beach_recovery_entry.gd; scripts/simulation/brushes/brush_checkpoint_codec.gd; scripts/simulation/edit_validation/beach_native_codec.gd; scripts/simulation/edit_validation/gpu_redo_codec.gd,保留：main静态引用链
+scripts/simulation/edit_validation/gpu_edit_history.gd,.gd,其他代码/配置引用,是,3,tests/edit_validation/checkpoint_lab_entry.gd; tests/edit_validation/gpu_history_probe.gd; tests/edit_validation/recovery_lab_entry.gd,暂留：参与存档源码签名
+scripts/simulation/edit_validation/gpu_edit_scheduler.gd,.gd,main静态依赖,是,8,scripts/beach/beach_interaction_entry.gd; scripts/simulation/brushes/brush_scheduler.gd; tests/edit_validation/beach_interaction_entry.gd; tests/edit_validation/checkpoint_codec_probe.gd; tests/edit_validation/checkpoint_lab_entry.gd,保留：main静态引用链
+scripts/simulation/edit_validation/gpu_redo_codec.gd,.gd,其他代码/配置引用,是,1,tests/edit_validation/checkpoint_lab_entry.gd,暂留：参与存档源码签名
+scripts/simulation/edit_validation/gpu_sand_editor.gd,.gd,main静态依赖,是,3,scripts/simulation/edit_validation/gpu_water_editor.gd; tests/edit_validation/checkpoint_lab_entry.gd; tests/edit_validation/gpu_brush_lab_entry.gd,保留：main静态引用链
+scripts/simulation/edit_validation/gpu_water_diagnostic_editor.gd,.gd,其他代码/配置引用,是,1,tests/edit_validation/gpu_water_diagnostic_lab_entry.gd,暂留：参与存档源码签名
+scripts/simulation/edit_validation/gpu_water_editor.gd,.gd,main静态依赖,是,11,scripts/beach/beach_gpu_entry.gd; scripts/experiments/approx_gpu_edit/exact_dispatch_adapter.gd; scripts/simulation/brushes/brush_material_solver.gd; scripts/simulation/edit_validation/gpu_water_diagnostic_editor.gd; tests/edit_validation/beach_gpu_entry.gd,保留：main静态引用链
+scripts/simulation/edit_validation/lab_solver.gd,.gd,main静态依赖,是,6,scripts/beach/beach_lab_entry.gd; scripts/experiments/approx_gpu_edit/trial_solver.gd; scripts/simulation/edit_validation/gpu_sand_editor.gd; tests/edit_validation/beach_lab_entry.gd; tests/edit_validation/checkpoint_lab_entry.gd,保留：main静态引用链
+scripts/simulation/edit_validation/material_copy_fence.gd,.gd,其他代码/配置引用,是,1,tests/edit_validation/beach_gpu_entry.gd,暂留：参与存档源码签名
+scripts/simulation/edit_validation/material_stage_trace.gd,.gd,其他代码/配置引用,是,1,tests/edit_validation/beach_gpu_entry.gd,暂留：参与存档源码签名
+scripts/simulation/edit_validation/ordered_material_coupler.gd,.gd,其他代码/配置引用,是,1,tests/edit_validation/beach_gpu_entry.gd,暂留：参与存档源码签名
+scripts/simulation/edit_validation/precise_material_coupler.gd,.gd,其他代码/配置引用,是,1,tests/edit_validation/beach_gpu_entry.gd,暂留：参与存档源码签名
+scripts/simulation/edit_validation/slope_record_coupler.gd,.gd,其他代码/配置引用,是,1,tests/edit_validation/beach_gpu_entry.gd,暂留：参与存档源码签名
+scripts/simulation/edit_validation/split_material_coupler.gd,.gd,其他代码/配置引用,是,3,scripts/simulation/edit_validation/material_copy_fence.gd; scripts/simulation/edit_validation/material_stage_trace.gd; tests/edit_validation/beach_gpu_entry.gd,暂留：参与存档源码签名
+scripts/simulation/edit_validation/staged_slope_coupler.gd,.gd,main静态依赖,是,6,scripts/beach/beach_gpu_entry.gd; scripts/experiments/approx_gpu_edit/trial_entry.gd; scripts/simulation/brushes/brush_material_coupler.gd; tests/edit_validation/beach_cost_cpu_entry.gd; tests/edit_validation/beach_gpu_entry.gd,保留：main静态引用链
+scripts/simulation/edit_validation/traced_material_coupler.gd,.gd,其他代码/配置引用,是,1,tests/edit_validation/beach_gpu_entry.gd,暂留：参与存档源码签名
+scripts/simulation/edit_validation/water_displacement_reference.gd,.gd,其他代码/配置引用,是,3,tests/edit_validation/water_gpu_probe.gd; tests/edit_validation/water_reference_probe.gd; tests/edit_validation/water_transaction_probe.gd,暂留：参与存档源码签名
+scripts/simulation/erosion/gpu_sediment_coupler.gd,.gd,main静态依赖,是,14,scripts/beach/beach_checkpoint_entry.gd; scripts/demo/gpu_water_preview.gd; scripts/simulation/edit_validation/beach_restore_bundle.gd; tests/erosion/gpu_competitor_exchange_probe.gd; tests/erosion/gpu_erosion_parameters_probe.gd,保留：main静态引用链
+scripts/simulation/gpu_sand_audit.gd,.gd,main静态依赖,是,5,scripts/demo/gpu_water_preview.gd; scripts/simulation/edit_validation/beach_restore_bundle.gd; tests/erosion/gpu_num09_probe.gd; tests/erosion/gpu_sediment_step_probe.gd; tests/visual_water_alignment/prototypes/reference_preview.gd,保留：main静态引用链
+scripts/simulation/gpu_scalar_pingpong.gd,.gd,其他代码/配置引用,是,1,tests/gpu_pingpong_probe.gd,暂留：参与存档源码签名
+scripts/simulation/gpu_shallow_solver.gd,.gd,main静态依赖,是,51,scripts/beach/beach_gpu_entry.gd; scripts/beach/beach_lab_entry.gd; scripts/collision/gpu_collision_proxy.gd; scripts/demo/gpu_water_preview.gd; scripts/experiments/approx_gpu_edit/trial_entry.gd,保留：main静态引用链
+scripts/simulation/material/gpu_material_coupler.gd,.gd,main静态依赖,是,22,scripts/beach/beach_gpu_entry.gd; scripts/beach/shape_brush_entry.gd; scripts/demo/gpu_water_preview.gd; scripts/experiments/approx_gpu_edit/trial_entry.gd; scripts/simulation/edit_validation/ordered_material_coupler.gd,保留：main静态引用链
+scripts/simulation/sand_water_domain.gd,.gd,main静态依赖,是,89,scripts/audit/audit_recorder.gd; scripts/beach/async_pipeline_entry.gd; scripts/beach/beach_checkpoint_entry.gd; scripts/beach/beach_interaction_entry.gd; scripts/beach/beach_playable_entry.gd,保留：main静态引用链
+scripts/structures/gpu_obstacle_remap.gd,.gd,main静态依赖,否,3,scripts/demo/gpu_water_preview.gd; tests/structures/obstacle_remap_probe.gd; tests/visual_water_alignment/prototypes/reference_preview.gd,保留：main静态引用链
+scripts/structures/structure_field.gd,.gd,main静态依赖,否,6,scripts/demo/gpu_water_preview.gd; tests/integration/structure_save_probe.gd; tests/structures/run_num11_cycles.gd; tests/structures/run_structure_tests.gd; tests/structures/structure_flow_probe.gd,保留：main静态引用链
+scripts/structures/structure_state.gd,.gd,main静态依赖,否,11,scripts/demo/gpu_water_preview.gd; scripts/structures/structure_field.gd; tests/integration/record_full_demo.gd; tests/integration/structure_save_probe.gd; tests/structures/impermeable_structure_probe.gd,保留：main静态引用链
+scripts/visual/bed_display_sampler.gd,.gd,其他代码/配置引用,是,1,tests/visual_phase2/probe_bed_sampler.gd,暂留：参与存档源码签名
+scripts/visual/brush_indicator.gd,.gd,main静态依赖,是,3,scenes/brush_indicator.tscn; scripts/demo/gpu_water_preview.gd; tests/visual_water_alignment/prototypes/reference_preview.gd,保留：main静态引用链
+scripts/visual/gpu_foam_field.gd,.gd,main静态依赖,是,12,scripts/beach/beach_checkpoint_entry.gd; scripts/demo/gpu_water_preview.gd; scripts/simulation/edit_validation/checkpoint_foam_field.gd; scripts/visual/test1_main_presentation.gd; tests/edit_validation/beach_checkpoint_entry.gd,保留：main静态引用链
+scripts/visual/gpu_gravel_field.gd,.gd,main静态依赖,是,5,scripts/beach/gravel_playable_entry.gd; scripts/visual/gravel_checkpoint_codec.gd; tests/gravel/gravel_transport_probe.gd; tests/gravel/gravel_visual_probe.gd; tests/integration/async_pipeline_water_probe.gd,保留：main静态引用链
+scripts/visual/gravel_checkpoint_codec.gd,.gd,main静态依赖,是,6,scripts/beach/gravel_playable_entry.gd; scripts/simulation/checkpoint_store.gd; scripts/simulation/edit_validation/frame_pipeline/async_checkpoint_capture.gd; scripts/simulation/edit_validation/frame_pipeline/async_checkpoint_codec.gd; tests/gravel/gravel_header_probe.gd,保留：main静态引用链
+scripts/visual/sand_display_sampler.gd,.gd,其他代码/配置引用,是,1,tests/visual_phase2/capture_sand_fixture.gd,暂留：参与存档源码签名
+scripts/visual/scene_preview_controller.gd,.gd,main静态依赖,是,1,scenes/editor_scene_preview.tscn,保留：main静态引用链
+scripts/visual/suspended_sand_cloud.gd,.gd,main静态依赖,是,1,scenes/components/suspended_sand_cloud.tscn,保留：main静态引用链
+scripts/visual/test1_beach_edit_worker_entry.gd,.gd,main静态依赖,是,3,scenes/legacy/sandcastle_test1_beach_coupled_pre_natural.tscn; tests/edit_validation/baseline_trace_entry.gd; tests/edit_validation/beach_lab_entry.gd,保留：main静态引用链
+scripts/visual/test1_beach_fixed_entry.gd,.gd,main静态依赖,是,3,assets/water_material_natural_candidate/normal_entry.gd; scripts/visual/test1_beach_edit_worker_entry.gd; scripts/visual/test1_beach_hybrid_trial_entry.gd,保留：main静态引用链
+scripts/visual/test1_beach_hybrid_trial_entry.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+scripts/visual/test1_main_presentation.gd,.gd,其他代码/配置引用,是,2,scripts/visual/test1_water_motion_trial.gd; tests/investigation/test1_water_motion/capture_trial.gd,暂留：参与存档源码签名
+scripts/visual/test1_water_motion_trial.gd,.gd,其他代码/配置引用,是,1,tests/investigation/test1_water_motion/capture_trial.gd,暂留：参与存档源码签名
+scripts/visual/water_render_profile.gd,.gd,main静态依赖,是,4,scripts/visual/water_render_staging_entry.gd; tests/visual_water_alignment/prototypes/capture_reference.gd; tests/visual_water_alignment/prototypes/probe_staging_entry.gd; tests/visual_water_alignment/prototypes/probe_staging_profile.gd,保留：main静态引用链
+scripts/visual/water_render_staging_entry.gd,.gd,main静态依赖,是,2,scenes/water_render_coupled.tscn; tests/visual_water_alignment/prototypes/rock_reflection_candidate_entry.gd,保留：main静态引用链
+scripts/visual/water_render_uniform_snapshot.gd,.gd,其他代码/配置引用,是,3,tests/visual_water_alignment/prototypes/capture_reference.gd; tests/visual_water_alignment/prototypes/probe_staging_entry.gd; tests/water_material_natural/capture.gd,暂留：参与存档源码签名
+scripts/visual/water_render_wave_workload.gd,.gd,main静态依赖,是,3,scripts/visual/water_render_staging_entry.gd; tests/visual_water_alignment/prototypes/capture_reference.gd; tests/visual_water_alignment/prototypes/reference_local_front_movie_entry.gd,保留：main静态引用链
+scripts/water/reference/shallow_water_solver.gd,.gd,其他代码/配置引用,是,11,scripts/demo/sandcastle_demo.gd; tests/closed_water_5_minutes.gd; tests/compare_solvers.gd; tests/edit_validation/scene_probe.gd; tests/gpu_cfl_probe.gd,暂留：参与存档源码签名
+shaders/benchmarks/checker_compute.glsl,.glsl,其他代码/配置引用,否,4,shaders/benchmarks/checker_compute.glsl.import; tests/gpu_dirty_chunk_probe.gd; tests/gpu_lifecycle_probe.gd; tests/gpu_texture_probe.gd,单独评估：仍有其他调用方
+shaders/benchmarks/checker_display.gdshader,.gdshader,其他代码/配置引用,否,3,tests/gpu_lifecycle_probe.gd; tests/gpu_same_frame_probe.gd; tests/gpu_texture_probe.gd,单独评估：仍有其他调用方
+shaders/benchmarks/frame_value_compute.glsl,.glsl,其他代码/配置引用,否,2,shaders/benchmarks/frame_value_compute.glsl.import; tests/same_frame_effect.gd,单独评估：仍有其他调用方
+shaders/benchmarks/pack_dirty_chunks.glsl,.glsl,其他代码/配置引用,否,2,shaders/benchmarks/pack_dirty_chunks.glsl.import; tests/gpu_dirty_chunk_probe.gd,单独评估：仍有其他调用方
+shaders/brushes/castle_preview.gdshader,.gdshader,main静态依赖,是,1,scenes/components/brushes/brush_preview.tscn,保留：main静态引用链
+shaders/brushes/footprint_preview.gdshader,.gdshader,main静态依赖,是,1,scenes/components/brushes/brush_preview.tscn,保留：main静态引用链
+shaders/experiments/approx_gpu_edit/brush.glsl,.glsl,其他代码/配置引用,否,2,scripts/experiments/approx_gpu_edit/trial_entry.gd; shaders/experiments/approx_gpu_edit/brush.glsl.import,单独评估：仍有其他调用方
+shaders/simulation/brushes/begin.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,shaders/simulation/brushes/begin.glsl.import,暂留：动态路径候选需核对
+shaders/simulation/brushes/commit.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,shaders/simulation/brushes/commit.glsl.import,暂留：动态路径候选需核对
+shaders/simulation/brushes/legacy_material_transaction.glsl,.glsl,main静态依赖,是,2,scripts/simulation/brushes/brush_material_transaction.gd; shaders/simulation/brushes/legacy_material_transaction.glsl.import,保留：main静态引用链
+shaders/simulation/brushes/material_transaction.glsl,.glsl,main静态依赖,是,2,scripts/simulation/brushes/brush_material_transaction.gd; shaders/simulation/brushes/material_transaction.glsl.import,保留：main静态引用链
+shaders/simulation/brushes/mold_support_step.glsl,.glsl,main静态依赖,是,2,scripts/simulation/brushes/brush_material_coupler.gd; shaders/simulation/brushes/mold_support_step.glsl.import,保留：main静态引用链
+shaders/simulation/brushes/molded_slope.glsl,.glsl,main静态依赖,是,3,scripts/simulation/brushes/brush_material_coupler.gd; scripts/simulation/edit_validation/frame_pipeline/async_coupled.gd; shaders/simulation/brushes/molded_slope.glsl.import,保留：main静态引用链
+shaders/simulation/brushes/prepare.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,shaders/simulation/brushes/prepare.glsl.import,暂留：动态路径候选需核对
+shaders/simulation/brushes/preview_base.glsl,.glsl,main静态依赖,是,2,scripts/simulation/brushes/brush_preview_query.gd; shaders/simulation/brushes/preview_base.glsl.import,保留：main静态引用链
+shaders/simulation/brushes/reduce.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,shaders/simulation/brushes/reduce.glsl.import,暂留：动态路径候选需核对
+shaders/simulation/brushes/rollback.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,shaders/simulation/brushes/rollback.glsl.import,暂留：动态路径候选需核对
+shaders/simulation/brushes/shovel_allocate.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,shaders/simulation/brushes/shovel_allocate.glsl.import,暂留：动态路径候选需核对
+shaders/simulation/brushes/validate.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,shaders/simulation/brushes/validate.glsl.import,暂留：动态路径候选需核对
+shaders/simulation/brushes/water_commit.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,shaders/simulation/brushes/water_commit.glsl.import,暂留：动态路径候选需核对
+shaders/simulation/brushes/water_merge.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,shaders/simulation/brushes/water_merge.glsl.import,暂留：动态路径候选需核对
+shaders/simulation/brushes/water_prepare.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,shaders/simulation/brushes/water_prepare.glsl.import,暂留：动态路径候选需核对
+shaders/simulation/brushes/water_velocity.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,shaders/simulation/brushes/water_velocity.glsl.import,暂留：动态路径候选需核对
+shaders/simulation/edit_validation/precise_slope_relax.glsl,.glsl,main动态路径候选（需看运行条件）,是,2,scripts/simulation/edit_validation/precise_material_coupler.gd; shaders/simulation/edit_validation/precise_slope_relax.glsl.import,暂留：动态路径候选需核对
+shaders/simulation/edit_validation/sand_apply.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,shaders/simulation/edit_validation/sand_apply.glsl.import,暂留：动态路径候选需核对
+shaders/simulation/edit_validation/sand_commit.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,shaders/simulation/edit_validation/sand_commit.glsl.import,暂留：动态路径候选需核对
+shaders/simulation/edit_validation/sand_prepare.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,shaders/simulation/edit_validation/sand_prepare.glsl.import,暂留：动态路径候选需核对
+shaders/simulation/edit_validation/sand_publish.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,shaders/simulation/edit_validation/sand_publish.glsl.import,暂留：动态路径候选需核对
+shaders/simulation/edit_validation/sand_reduce.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,shaders/simulation/edit_validation/sand_reduce.glsl.import,暂留：动态路径候选需核对
+shaders/simulation/edit_validation/sand_reduce_audit.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,shaders/simulation/edit_validation/sand_reduce_audit.glsl.import,暂留：动态路径候选需核对
+shaders/simulation/edit_validation/shallow_update_diagnostic.glsl,.glsl,main动态路径候选（需看运行条件）,是,2,shaders/simulation/edit_validation/shallow_update_diagnostic.glsl.import; tests/edit_validation/gpu_water_diagnostic_lab_entry.gd,暂留：动态路径候选需核对
+shaders/simulation/edit_validation/slope_counter.glsl,.glsl,main动态路径候选（需看运行条件）,是,2,scripts/simulation/edit_validation/slope_record_coupler.gd; shaders/simulation/edit_validation/slope_counter.glsl.import,暂留：动态路径候选需核对
+shaders/simulation/edit_validation/slope_output_record.glsl,.glsl,main动态路径候选（需看运行条件）,是,2,scripts/simulation/edit_validation/slope_record_coupler.gd; shaders/simulation/edit_validation/slope_output_record.glsl.import,暂留：动态路径候选需核对
+shaders/simulation/edit_validation/slope_record.glsl,.glsl,main动态路径候选（需看运行条件）,是,2,scripts/simulation/edit_validation/slope_record_coupler.gd; shaders/simulation/edit_validation/slope_record.glsl.import,暂留：动态路径候选需核对
+shaders/simulation/edit_validation/staged_slope.glsl,.glsl,main静态依赖,是,2,scripts/simulation/edit_validation/frame_pipeline/async_coupled.gd; shaders/simulation/edit_validation/staged_slope.glsl.import,保留：main静态引用链
+shaders/simulation/edit_validation/staged_slope_consume.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,shaders/simulation/edit_validation/staged_slope_consume.glsl.import,暂留：动态路径候选需核对
+shaders/simulation/edit_validation/water_commit.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,shaders/simulation/edit_validation/water_commit.glsl.import,暂留：动态路径候选需核对
+shaders/simulation/edit_validation/water_connected_runs.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,shaders/simulation/edit_validation/water_connected_runs.glsl.import,暂留：动态路径候选需核对
+shaders/simulation/edit_validation/water_displace.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,shaders/simulation/edit_validation/water_displace.glsl.import,暂留：动态路径候选需核对
+shaders/simulation/edit_validation/water_displace_compensated.glsl,.glsl,main动态路径候选（需看运行条件）,是,2,shaders/simulation/edit_validation/water_displace_compensated.glsl.import; tools/gpu_optimization/displacement_probe.gd,暂留：动态路径候选需核对
+shaders/simulation/edit_validation/water_displace_compensated_audit.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,shaders/simulation/edit_validation/water_displace_compensated_audit.glsl.import,暂留：动态路径候选需核对
+shaders/simulation/edit_validation/water_full_wet.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,shaders/simulation/edit_validation/water_full_wet.glsl.import,暂留：动态路径候选需核对
+shaders/simulation/edit_validation/water_merge_receipt.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,shaders/simulation/edit_validation/water_merge_receipt.glsl.import,暂留：动态路径候选需核对
+shaders/simulation/edit_validation/water_packed_cached.glsl,.glsl,main动态路径候选（需看运行条件）,是,2,shaders/simulation/edit_validation/water_packed_cached.glsl.import; tools/gpu_optimization/displacement_probe.gd,暂留：动态路径候选需核对
+shaders/simulation/edit_validation/water_packed_cached_idle.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,shaders/simulation/edit_validation/water_packed_cached_idle.glsl.import,暂留：动态路径候选需核对
+shaders/simulation/edit_validation/water_packed_compensated.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,shaders/simulation/edit_validation/water_packed_compensated.glsl.import,暂留：动态路径候选需核对
+shaders/simulation/edit_validation/water_packed_runs.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,shaders/simulation/edit_validation/water_packed_runs.glsl.import,暂留：动态路径候选需核对
+shaders/simulation/edit_validation/water_prepare.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,shaders/simulation/edit_validation/water_prepare.glsl.import,暂留：动态路径候选需核对
+shaders/simulation/edit_validation/water_publish.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,shaders/simulation/edit_validation/water_publish.glsl.import,暂留：动态路径候选需核对
+shaders/simulation/edit_validation/water_velocity_apply.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,shaders/simulation/edit_validation/water_velocity_apply.glsl.import,暂留：动态路径候选需核对
+shaders/simulation/edit_validation/water_velocity_prefetch.glsl,.glsl,main动态路径候选（需看运行条件）,是,2,shaders/simulation/edit_validation/water_velocity_prefetch.glsl.import; tools/gpu_optimization/velocity_probe.gd,暂留：动态路径候选需核对
+shaders/simulation/edit_validation/water_velocity_reduce.glsl,.glsl,main动态路径候选（需看运行条件）,是,1,shaders/simulation/edit_validation/water_velocity_reduce.glsl.import,暂留：动态路径候选需核对
+shaders/simulation/erosion/copy_after_boundary.glsl,.glsl,main静态依赖,是,9,scripts/demo/gpu_water_preview.gd; shaders/simulation/erosion/copy_after_boundary.glsl.import; tests/erosion/gpu_erosion_parameters_probe.gd; tests/erosion/gpu_num09_probe.gd; tests/erosion/gpu_sediment_step_probe.gd,保留：main静态引用链
+shaders/simulation/erosion/sediment_step.glsl,.glsl,main静态依赖,是,14,scripts/demo/gpu_water_preview.gd; scripts/simulation/edit_validation/frame_pipeline/async_coupled.gd; shaders/simulation/erosion/sediment_step.glsl.import; tests/erosion/gpu_competitor_exchange_probe.gd; tests/erosion/gpu_erosion_parameters_probe.gd,保留：main静态引用链
+shaders/simulation/material/material_commit.glsl,.glsl,main静态依赖,是,6,scripts/demo/gpu_water_preview.gd; shaders/simulation/material/material_commit.glsl.import; tests/material/gpu_material_step_probe.gd; tests/structures/structure_flow_probe.gd; tests/visual_phase2/probe_sand_shape_gpu.gd,保留：main静态引用链
+shaders/simulation/material/material_step.glsl,.glsl,main静态依赖,是,9,scripts/demo/gpu_water_preview.gd; scripts/simulation/edit_validation/frame_pipeline/async_coupled.gd; shaders/simulation/material/material_step.glsl.import; tests/material/gpu_material_step_probe.gd; tests/shape_brushes/fixed_stage_probe.gd,保留：main静态引用链
+shaders/simulation/material/slope_relax.glsl,.glsl,main静态依赖,是,6,scripts/demo/gpu_water_preview.gd; shaders/simulation/material/slope_relax.glsl.import; tests/material/gpu_material_step_probe.gd; tests/structures/structure_flow_probe.gd; tests/visual_phase2/probe_sand_shape_gpu.gd,保留：main静态引用链
+shaders/simulation/scalar_pingpong.glsl,.glsl,其他代码/配置引用,是,2,shaders/simulation/scalar_pingpong.glsl.import; tests/gpu_pingpong_probe.gd,暂留：参与存档源码签名
+shaders/simulation/shallow_audit_tiles.glsl,.glsl,main静态依赖,是,15,scripts/demo/gpu_water_preview.gd; shaders/simulation/shallow_audit_tiles.glsl.import; tests/erosion/gpu_erosion_parameters_probe.gd; tests/erosion/gpu_num09_probe.gd; tests/erosion/gpu_sediment_step_probe.gd,保留：main静态引用链
+shaders/simulation/shallow_cfl_tiles.glsl,.glsl,main静态依赖,是,15,scripts/demo/gpu_water_preview.gd; shaders/simulation/shallow_cfl_tiles.glsl.import; tests/erosion/gpu_erosion_parameters_probe.gd; tests/erosion/gpu_num09_probe.gd; tests/erosion/gpu_sediment_step_probe.gd,保留：main静态引用链
+shaders/simulation/shallow_collision_pack.glsl,.glsl,main静态依赖,是,5,scripts/demo/gpu_water_preview.gd; shaders/simulation/shallow_collision_pack.glsl.import; tests/edit_validation/checkpoint_lab_entry.gd; tests/edit_validation/edit_lab.gd; tests/visual_water_alignment/prototypes/reference_preview.gd,保留：main静态引用链
+shaders/simulation/shallow_drain_scale.glsl,.glsl,main静态依赖,是,16,scripts/demo/gpu_water_preview.gd; shaders/simulation/shallow_drain_scale.glsl.import; tests/erosion/gpu_erosion_parameters_probe.gd; tests/erosion/gpu_num09_probe.gd; tests/erosion/gpu_sediment_step_probe.gd,保留：main静态引用链
+shaders/simulation/shallow_edge_flux.glsl,.glsl,main静态依赖,是,16,scripts/demo/gpu_water_preview.gd; shaders/simulation/shallow_edge_flux.glsl.import; tests/erosion/gpu_erosion_parameters_probe.gd; tests/erosion/gpu_num09_probe.gd; tests/erosion/gpu_sediment_step_probe.gd,保留：main静态引用链
+shaders/simulation/shallow_gauge_depth.glsl,.glsl,main静态依赖,是,15,scripts/demo/gpu_water_preview.gd; shaders/simulation/shallow_gauge_depth.glsl.import; tests/erosion/gpu_erosion_parameters_probe.gd; tests/erosion/gpu_num09_probe.gd; tests/erosion/gpu_sediment_step_probe.gd,保留：main静态引用链
+shaders/simulation/shallow_sand_audit_tiles.glsl,.glsl,main静态依赖,是,5,scripts/demo/gpu_water_preview.gd; shaders/simulation/shallow_sand_audit_tiles.glsl.import; tests/erosion/gpu_num09_probe.gd; tests/erosion/gpu_sediment_step_probe.gd; tests/visual_water_alignment/prototypes/reference_preview.gd,保留：main静态引用链
+shaders/simulation/shallow_tide_boundary.glsl,.glsl,main静态依赖,是,15,scripts/demo/gpu_water_preview.gd; shaders/simulation/shallow_tide_boundary.glsl.import; tests/erosion/gpu_erosion_parameters_probe.gd; tests/erosion/gpu_num09_probe.gd; tests/erosion/gpu_sediment_step_probe.gd,保留：main静态引用链
+shaders/simulation/shallow_tool_patch.glsl,.glsl,main静态依赖,是,15,scripts/demo/gpu_water_preview.gd; shaders/simulation/shallow_tool_patch.glsl.import; tests/erosion/gpu_erosion_parameters_probe.gd; tests/erosion/gpu_num09_probe.gd; tests/erosion/gpu_sediment_step_probe.gd,保留：main静态引用链
+shaders/simulation/shallow_update_state.glsl,.glsl,main静态依赖,是,15,scripts/demo/gpu_water_preview.gd; shaders/simulation/shallow_update_state.glsl.import; tests/erosion/gpu_erosion_parameters_probe.gd; tests/erosion/gpu_num09_probe.gd; tests/erosion/gpu_sediment_step_probe.gd,保留：main静态引用链
+shaders/simulation/structures/obstacle_commit.glsl,.glsl,main静态依赖,是,4,scripts/demo/gpu_water_preview.gd; shaders/simulation/structures/obstacle_commit.glsl.import; tests/structures/obstacle_remap_probe.gd; tests/visual_water_alignment/prototypes/reference_preview.gd,保留：main静态引用链
+shaders/simulation/structures/obstacle_remap.glsl,.glsl,main静态依赖,是,4,scripts/demo/gpu_water_preview.gd; shaders/simulation/structures/obstacle_remap.glsl.import; tests/structures/obstacle_remap_probe.gd; tests/visual_water_alignment/prototypes/reference_preview.gd,保留：main静态引用链
+shaders/simulation/test1_main_display.glsl,.glsl,其他代码/配置引用,是,3,scripts/visual/test1_main_presentation.gd; shaders/simulation/test1_main_display.glsl.import; tests/investigation/test1_water_motion/capture_trial.gd,暂留：参与存档源码签名
+shaders/simulation/test1_water_motion.glsl,.glsl,其他代码/配置引用,是,3,scripts/visual/test1_water_motion_trial.gd; shaders/simulation/test1_water_motion.glsl.import; tests/investigation/test1_water_motion/capture_trial.gd,暂留：参与存档源码签名
+shaders/simulation/visual_foam_step.glsl,.glsl,main静态依赖,是,7,scripts/demo/gpu_water_preview.gd; scripts/simulation/edit_validation/frame_pipeline/async_visuals.gd; scripts/visual/test1_main_presentation.gd; shaders/simulation/visual_foam_step.glsl.import; tests/investigation/test1_water_motion/capture_trial.gd,保留：main静态引用链
+shaders/simulation/visual_gravel_step.glsl,.glsl,main静态依赖,是,6,scripts/beach/gravel_playable_entry.gd; scripts/simulation/edit_validation/frame_pipeline/async_tools.gd; scripts/simulation/edit_validation/frame_pipeline/async_visuals.gd; shaders/simulation/visual_gravel_step.glsl.import; tests/gravel/gravel_transport_probe.gd,保留：main静态引用链
+shaders/visual/editor_water_preview.gdshader,.gdshader,main静态依赖,否,1,scenes/water_preview_mesh.tscn,保留：main静态引用链
+shaders/visual/gpu_gravel.gdshader,.gdshader,main静态依赖,否,3,assets/gravel/stone_material.tres; scripts/beach/gravel_playable_entry.gd; tests/gravel/gravel_visual_probe.gd,保留：main静态引用链
+shaders/visual/gpu_sand_coupled_fast.gdshader,.gdshader,main静态依赖,否,1,scripts/demo/gpu_water_preview.gd,保留：main静态引用链
+shaders/visual/gpu_sand_phase2.gdshader,.gdshader,main静态依赖,否,2,scripts/demo/gpu_water_preview.gd; tests/visual_water_alignment/prototypes/reference_preview.gd,保留：main静态引用链
+shaders/visual/gpu_terrain.gdshader,.gdshader,main静态依赖,否,3,scenes/gpu_water_preview.tscn; scenes/main.tscn; scripts/demo/gpu_water_preview.gd,保留：main静态引用链
+shaders/visual/gpu_water.gdshader,.gdshader,main静态依赖,否,2,scenes/gpu_water_preview.tscn; scenes/main.tscn,保留：main静态引用链
+shaders/visual/suspended_sand_cloud.gdshader,.gdshader,main静态依赖,否,3,scenes/components/suspended_sand_cloud.tscn; scenes/main.tscn; scripts/beach/shape_brush_playable_entry.gd,保留：main静态引用链
+tests/capture_debug_views.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/capture_demo.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/capture_scenarios.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/closed_water_5_minutes.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/compare_sand_coupled_water.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/compare_sand_visual_water.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/compare_solvers.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/advanced_redo_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/baseline_trace_entry.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/baseline_trace_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/baseline_trace_solver.gd,.gd,其他代码/配置引用,否,1,tests/edit_validation/baseline_trace_entry.gd,单独评估：仍有其他调用方
+tests/edit_validation/baseline_visibility_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/beach_capture_entry_probe.gd,.gd,其他代码/配置引用,否,1,tools/gpu_edit_validation/renderdoc_capture_host.py,单独评估：仍有其他调用方
+tests/edit_validation/beach_capture_fault_entry.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/beach_capture_fault_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/beach_checkpoint_diff_export.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/beach_checkpoint_entry.gd,.gd,其他代码/配置引用,否,1,tests/edit_validation/beach_gpu_entry.gd,单独评估：仍有其他调用方
+tests/edit_validation/beach_collision_bounds_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/beach_continuous_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/beach_cost_cpu_entry.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/beach_cost_probe.gd,.gd,其他代码/配置引用,否,1,tools/gpu_edit_validation/run_beach_cost_probe.ps1,单独评估：仍有其他调用方
+tests/edit_validation/beach_edit_process_probe.gd,.gd,其他代码/配置引用,否,2,tests/edit_validation/beach_capture_entry_probe.gd; tests/edit_validation/beach_save_boundary_probe.gd,单独评估：仍有其他调用方
+tests/edit_validation/beach_feedback_probe.gd,.gd,其他代码/配置引用,否,1,tests/edit_validation/beach_pixel_feedback_probe.gd,单独评估：仍有其他调用方
+tests/edit_validation/beach_gpu_entry.gd,.gd,其他代码/配置引用,否,1,tests/edit_validation/beach_interaction_entry.gd,单独评估：仍有其他调用方
+tests/edit_validation/beach_gpu_probe.gd,.gd,其他代码/配置引用,否,5,tests/edit_validation/beach_collision_bounds_probe.gd; tests/edit_validation/beach_continuous_probe.gd; tests/edit_validation/beach_feedback_probe.gd; tests/edit_validation/beach_interaction_probe.gd; tests/edit_validation/beach_mixed_restore_probe.gd,单独评估：仍有其他调用方
+tests/edit_validation/beach_history_process_probe.gd,.gd,其他代码/配置引用,否,1,tests/edit_validation/beach_edit_process_probe.gd,单独评估：仍有其他调用方
+tests/edit_validation/beach_history_storage_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/beach_interaction_entry.gd,.gd,其他代码/配置引用,否,1,tests/edit_validation/beach_recovery_entry.gd,单独评估：仍有其他调用方
+tests/edit_validation/beach_interaction_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/beach_lab_entry.gd,.gd,其他代码/配置引用,否,2,tests/edit_validation/beach_checkpoint_entry.gd; tests/edit_validation/beach_cost_cpu_entry.gd,单独评估：仍有其他调用方
+tests/edit_validation/beach_live_restore_probe.gd,.gd,其他代码/配置引用,否,4,tests/edit_validation/beach_replay_original_probe.gd; tests/edit_validation/beach_restore_close_probe.gd; tests/edit_validation/beach_same_tick_undo_probe.gd; tests/edit_validation/beach_undo_boundary_probe.gd,单独评估：仍有其他调用方
+tests/edit_validation/beach_mixed_close_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/beach_mixed_failure_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/beach_mixed_restore_probe.gd,.gd,其他代码/配置引用,否,2,tests/edit_validation/beach_mixed_close_probe.gd; tests/edit_validation/beach_mixed_failure_probe.gd,单独评估：仍有其他调用方
+tests/edit_validation/beach_pixel_feedback_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/beach_recovery_entry.gd,.gd,其他代码/配置引用,否,5,tests/edit_validation/beach_capture_fault_entry.gd; tests/edit_validation/beach_edit_process_probe.gd; tests/edit_validation/beach_mixed_restore_probe.gd; tests/edit_validation/beach_replay_worker.gd; tests/edit_validation/beach_undo_entry.gd,单独评估：仍有其他调用方
+tests/edit_validation/beach_replay_entry.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/beach_replay_original_probe.gd,.gd,其他代码/配置引用,否,2,tools/gpu_edit_validation/renderdoc_replay_capture_host.py; tools/gpu_edit_validation/run_renderdoc_replay_capture.ps1,单独评估：仍有其他调用方
+tests/edit_validation/beach_replay_worker.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/beach_restore_close_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/beach_same_tick_undo_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/beach_save_boundary_probe.gd,.gd,其他代码/配置引用,否,4,tests/edit_validation/beach_capture_fault_probe.gd; tests/edit_validation/beach_history_storage_probe.gd; tests/edit_validation/beach_live_restore_probe.gd; tests/edit_validation/beach_undo_failure_probe.gd,单独评估：仍有其他调用方
+tests/edit_validation/beach_scene_probe.gd,.gd,其他代码/配置引用,否,2,tests/edit_validation/beach_cost_probe.gd; tests/edit_validation/beach_gpu_probe.gd,单独评估：仍有其他调用方
+tests/edit_validation/beach_undo_boundary_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/beach_undo_entry.gd,.gd,其他代码/配置引用,否,2,tests/edit_validation/beach_replay_entry.gd; tests/edit_validation/beach_undo_fault_entry.gd,单独评估：仍有其他调用方
+tests/edit_validation/beach_undo_failure_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/beach_undo_fault_entry.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/checkpoint_boundary_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/checkpoint_codec_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/checkpoint_lab_entry.gd,.gd,其他代码/配置引用,否,1,tests/edit_validation/checkpoint_lab_entry.gd,单独评估：仍有其他调用方
+tests/edit_validation/checkpoint_process_probe.gd,.gd,其他代码/配置引用,否,3,tests/edit_validation/fast_redo_process_probe.gd; tests/edit_validation/mixed_process_probe.gd; tests/edit_validation/redo_process_probe.gd,单独评估：仍有其他调用方
+tests/edit_validation/checkpoint_restore_exit_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/checkpoint_restore_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/collision_batch_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/collision_exit_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/collision_selection_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/combined_curve_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/combined_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/connected_runs_probe.gd,.gd,其他代码/配置引用,否,2,tests/edit_validation/packed_bounds_probe.gd; tests/edit_validation/sand_audit_probe.gd,单独评估：仍有其他调用方
+tests/edit_validation/contract_probe.gd,.gd,其他代码/配置引用,否,2,tests/edit_validation/run_contract_probe.ps1; tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/edit_validation/cross_tick_undo_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/edit_lab.gd,.gd,其他代码/配置引用,否,2,tests/edit_validation/checkpoint_lab_entry.gd; tests/edit_validation/gpu_brush_lab_entry.gd,单独评估：仍有其他调用方
+tests/edit_validation/fast_redo_process_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/feedback_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/gpu_brush_lab_entry.gd,.gd,其他代码/配置引用,否,3,tests/edit_validation/checkpoint_lab_entry.gd; tests/edit_validation/gpu_water_lab_entry.gd; tests/edit_validation/receipt_failure_lab_entry.gd,单独评估：仍有其他调用方
+tests/edit_validation/gpu_brush_matrix.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/gpu_brush_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/gpu_history_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/gpu_water_diagnostic_lab_entry.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/gpu_water_lab_entry.gd,.gd,其他代码/配置引用,否,3,tests/edit_validation/gpu_water_diagnostic_lab_entry.gd; tests/edit_validation/interaction_lab_entry.gd; tests/edit_validation/scheduler_exit_lab.gd,单独评估：仍有其他调用方
+tests/edit_validation/inspect_compact_encoding.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/interaction_edges_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/interaction_lab_entry.gd,.gd,其他代码/配置引用,否,2,tests/edit_validation/checkpoint_lab_entry.gd; tests/edit_validation/recovery_lab_entry.gd,单独评估：仍有其他调用方
+tests/edit_validation/interaction_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/interaction_queue_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/interaction_reset_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/lab_profile.gd,.gd,其他代码/配置引用,否,2,tests/edit_validation/brush_profile.tres; tests/edit_validation/numeric_profile.tres,单独评估：仍有其他调用方
+tests/edit_validation/lab_surface.gdshader,.gdshader,其他代码/配置引用,否,1,tests/edit_validation/checkpoint_lab_entry.gd,单独评估：仍有其他调用方
+tests/edit_validation/legacy_guard_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/mixed_process_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/packed_bounds_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/receipt_failure_lab_entry.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/receipt_failure_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/recovery_lab_entry.gd,.gd,其他代码/配置引用,否,1,tests/edit_validation/checkpoint_lab_entry.gd,单独评估：仍有其他调用方
+tests/edit_validation/redo_process_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/replay_exit_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/sand_audit_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/scene_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/scheduler_admission_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/scheduler_exit_lab.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/scheduler_exit_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/scheduler_failure_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/scheduler_probe.gd,.gd,其他代码/配置引用,否,3,tests/edit_validation/scheduler_admission_probe.gd; tests/edit_validation/scheduler_exit_probe.gd; tests/edit_validation/scheduler_failure_probe.gd,单独评估：仍有其他调用方
+tests/edit_validation/step_loss_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/transaction_lock_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/undo_probe.gd,.gd,其他代码/配置引用,否,7,tests/edit_validation/advanced_redo_probe.gd; tests/edit_validation/checkpoint_process_probe.gd; tests/edit_validation/checkpoint_restore_exit_probe.gd; tests/edit_validation/checkpoint_restore_probe.gd; tests/edit_validation/cross_tick_undo_probe.gd,单独评估：仍有其他调用方
+tests/edit_validation/velocity_curve_probe.gd,.gd,其他代码/配置引用,否,1,tests/edit_validation/combined_curve_probe.gd,单独评估：仍有其他调用方
+tests/edit_validation/velocity_negative_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/velocity_prefetch_fault_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/velocity_probe.gd,.gd,其他代码/配置引用,否,3,tests/edit_validation/combined_probe.gd; tests/edit_validation/velocity_negative_probe.gd; tests/edit_validation/velocity_prefetch_fault_probe.gd,单独评估：仍有其他调用方
+tests/edit_validation/water_bridge_probe.gd,.gd,其他代码/配置引用,否,1,tests/edit_validation/connected_runs_probe.gd,单独评估：仍有其他调用方
+tests/edit_validation/water_curve_probe.gd,.gd,其他代码/配置引用,否,2,tests/edit_validation/feedback_probe.gd; tests/edit_validation/velocity_curve_probe.gd,单独评估：仍有其他调用方
+tests/edit_validation/water_gpu_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/water_reference_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/edit_validation/water_transaction_probe.gd,.gd,其他代码/配置引用,否,16,tests/edit_validation/checkpoint_boundary_probe.gd; tests/edit_validation/checkpoint_codec_probe.gd; tests/edit_validation/collision_batch_probe.gd; tests/edit_validation/collision_exit_probe.gd; tests/edit_validation/gpu_history_probe.gd,单独评估：仍有其他调用方
+tests/erosion/gpu_competitor_exchange_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/erosion/gpu_coupled_preview_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/erosion/gpu_erosion_parameters_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/erosion/gpu_exchange_scene_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/erosion/gpu_num08_underwater_edit_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/erosion/gpu_num09_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/erosion/gpu_process_checkpoint_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/erosion/gpu_sediment_step_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/erosion/record_player_view.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/erosion/scout_player_view.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/experiments/approx_gpu_edit/cost_probe.gd,.gd,其他代码/配置引用,否,1,tools/approx_gpu_edit_trial/run_cost.py,单独评估：仍有其他调用方
+tests/experiments/approx_gpu_edit/functional_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/experiments/approx_gpu_edit/geometry_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/experiments/approx_gpu_edit/lifecycle_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/frame_baseline.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/gpu_cfl_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/gpu_checkpoint_capture_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/gpu_checkpoint_retention_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/gpu_collision_full_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/gpu_continuous_edit_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/gpu_cross_tick_replay_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/gpu_debug_view_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/gpu_dirty_chunk_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/gpu_drain_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/gpu_format_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/gpu_lifecycle_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/gpu_main_entry_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/gpu_pass_timestamp_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/gpu_pingpong_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/gpu_preview_command_timing_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/gpu_preview_frame_baseline.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/gpu_preview_lifecycle_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/gpu_preview_soak_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/gpu_preview_tool_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/gpu_preview_undo_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/gpu_same_frame_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/gpu_shallow_edge_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/gpu_shallow_step_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/gpu_solver_display_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/gpu_standard_scenario_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/gpu_texture_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/gpu_tide_tick_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/gpu_tool_patch_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/gpu_tool_visibility_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/gravel/export_legacy_signature.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/gravel/gravel_authority_isolation_probe.gd,.gd,其他代码/配置引用,否,1,tests/gravel/delivery_manifest.py,单独评估：仍有其他调用方
+tests/gravel/gravel_cost_probe.gd,.gd,其他代码/配置引用,否,1,tests/gravel/delivery_manifest.py,单独评估：仍有其他调用方
+tests/gravel/gravel_drop_transport_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/gravel/gravel_header_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/gravel/gravel_integration_probe.gd,.gd,其他代码/配置引用,否,1,tests/gravel/delivery_manifest.py,单独评估：仍有其他调用方
+tests/gravel/gravel_lifecycle_probe.gd,.gd,其他代码/配置引用,否,4,tests/gravel/delivery_manifest.py; tests/gravel/gravel_authority_isolation_probe.gd; tests/gravel/gravel_scene_switch_probe.gd; tests/gravel/gravel_shutdown_probe.gd,单独评估：仍有其他调用方
+tests/gravel/gravel_pick_regression.gd,.gd,其他代码/配置引用,否,1,tests/gravel/delivery_manifest.py,单独评估：仍有其他调用方
+tests/gravel/gravel_scene_switch_probe.gd,.gd,其他代码/配置引用,否,2,tests/gravel/delivery_manifest.py; tests/gravel/gravel_integration_probe.gd,单独评估：仍有其他调用方
+tests/gravel/gravel_shutdown_probe.gd,.gd,其他代码/配置引用,否,1,tests/gravel/delivery_manifest.py,单独评估：仍有其他调用方
+tests/gravel/gravel_texture_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/gravel/gravel_texture_probe.gdshader,.gdshader,其他代码/配置引用,否,1,tests/gravel/gravel_texture_probe.tscn,单独评估：仍有其他调用方
+tests/gravel/gravel_transport_probe.gd,.gd,其他代码/配置引用,否,3,tests/gravel/delivery_manifest.py; tests/gravel/gravel_drop_transport_probe.gd; tests/gravel/gravel_transport_probe.gd,单独评估：仍有其他调用方
+tests/gravel/gravel_visual_probe.gd,.gd,其他代码/配置引用,否,1,tests/gravel/delivery_manifest.py,单独评估：仍有其他调用方
+tests/history_stress.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/async_pipeline_all_tools_probe.gd,.gd,其他代码/配置引用,否,1,tests/integration/async_pipeline_tools_boundary_probe.gd,单独评估：仍有其他调用方
+tests/integration/async_pipeline_baseline_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/async_pipeline_bootstrap_fault_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/async_pipeline_candidate_fault_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/async_pipeline_capture_fault_probe.gd,.gd,其他代码/配置引用,否,1,tests/integration/async_pipeline_candidate_fault_probe.gd,单独评估：仍有其他调用方
+tests/integration/async_pipeline_checkpoint_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/async_pipeline_collision_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/async_pipeline_contract_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/async_pipeline_cross_owner_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/async_pipeline_delivery_probe.gd,.gd,其他代码/配置引用,否,2,tests/integration/async_pipeline_front_roundoff_probe.gd; tests/integration/async_pipeline_smooth_checkpoint_probe.gd,单独评估：仍有其他调用方
+tests/integration/async_pipeline_edit_probe.gd,.gd,其他代码/配置引用,否,1,tests/integration/async_pipeline_collision_probe.gd,单独评估：仍有其他调用方
+tests/integration/async_pipeline_fault_probe.gd,.gd,其他代码/配置引用,否,8,tests/integration/async_pipeline_bootstrap_fault_probe.gd; tests/integration/async_pipeline_capture_fault_probe.gd; tests/integration/async_pipeline_cross_owner_probe.gd; tests/integration/async_pipeline_height_fault_probe.gd; tests/integration/async_pipeline_legacy_fault_probe.gd,单独评估：仍有其他调用方
+tests/integration/async_pipeline_front_roundoff_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/async_pipeline_height_fault_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/async_pipeline_identity_limit_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/async_pipeline_legacy_fault_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/async_pipeline_lifecycle_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/async_pipeline_main_probe.gd,.gd,其他代码/配置引用,否,8,tests/integration/async_pipeline_all_tools_probe.gd; tests/integration/async_pipeline_checkpoint_probe.gd; tests/integration/async_pipeline_fault_probe.gd; tests/integration/async_pipeline_identity_limit_probe.gd; tests/integration/async_pipeline_restore_probe.gd,单独评估：仍有其他调用方
+tests/integration/async_pipeline_migration_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/async_pipeline_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/async_pipeline_public_api_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/async_pipeline_restore_probe.gd,.gd,其他代码/配置引用,否,4,tests/integration/async_pipeline_delivery_probe.gd; tests/integration/async_pipeline_lifecycle_probe.gd; tests/integration/async_pipeline_migration_probe.gd; tests/integration/async_pipeline_stale_probe.gd,单独评估：仍有其他调用方
+tests/integration/async_pipeline_smooth_checkpoint_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/async_pipeline_stale_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/async_pipeline_switch_fault_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/async_pipeline_tools_boundary_probe.gd,.gd,其他代码/配置引用,否,1,tests/integration/async_pipeline_tools_play_probe.gd,单独评估：仍有其他调用方
+tests/integration/async_pipeline_tools_fault_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/async_pipeline_tools_play_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/async_pipeline_transport_probe.glsl,.glsl,其他代码/配置引用,否,2,tests/integration/async_pipeline_probe.gd; tests/integration/async_pipeline_transport_probe.glsl.import,单独评估：仍有其他调用方
+tests/integration/async_pipeline_water_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/check_checkpoint_source_identity.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/collision_churn_memory_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/collision_continuous_tools_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/collision_edit_lifecycle_window_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/collision_idle_update_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/collision_lifecycle_window_probe.gd,.gd,其他代码/配置引用,否,1,tests/integration/collision_edit_lifecycle_window_probe.gd,单独评估：仍有其他调用方
+tests/integration/collision_prepare_cost_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/collision_prepare_threshold_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/collision_thread_lifecycle_probe.gd,.gd,其他代码/配置引用,否,1,tests/integration/collision_prepare_threshold_probe.gd,单独评估：仍有其他调用方
+tests/integration/collision_underwater_evidence_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/collision_worker_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/diagnostic_growth_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/fixed_step_overload_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/frame_pipeline_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/frame_redundancy_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/free_tools_camera_probe.gd,.gd,其他代码/配置引用,否,1,tests/gravel/gravel_pick_regression.gd,单独评估：仍有其他调用方
+tests/integration/generation_safety_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/gravel_drop_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/long_stability_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/main_beach_smoke.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/main_manual_wave_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/main_profile_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/main_threading_preview_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/main_ui_camera_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/playable_backwash_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/record_full_demo.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/save_version_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/scene_lifetime_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/scene_menu_gui_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/scene_switch_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/structure_save_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/integration/suspended_sand_probe.gd,.gd,其他代码/配置引用,否,1,tests/integration/gravel_drop_probe.gd,单独评估：仍有其他调用方
+tests/integration/ui_sand_edit_probe.gd,.gd,其他代码/配置引用,否,1,tests/integration/suspended_sand_probe.gd,单独评估：仍有其他调用方
+tests/integration/water_material_consistency_probe.gd,.gd,其他代码/配置引用,否,1,tests/integration/seal_water_material_consistency.py,单独评估：仍有其他调用方
+tests/investigation/test1_water_motion/bake_display_mesh.gd,.gd,其他代码/配置引用,否,1,tests/investigation/test1_water_motion/capture_trial.gd,单独评估：仍有其他调用方
+tests/investigation/test1_water_motion/bake_main_presentation.gd,.gd,其他代码/配置引用,否,1,tests/investigation/test1_water_motion/capture_trial.gd,单独评估：仍有其他调用方
+tests/investigation/test1_water_motion/bake_mesh.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/investigation/test1_water_motion/capture_trial.gd,.gd,其他代码/配置引用,否,2,tests/investigation/test1_water_motion/analyze_main_presentation.py; tests/investigation/test1_water_motion/capture_trial.gd,单独评估：仍有其他调用方
+tests/investigation/underwater_deposit_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/material/capture_material_views.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/material/gpu_material_step_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/preview_controller_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/record_water_debug.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/run_scene_tests.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/run_tests.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/same_frame_effect.gd,.gd,其他代码/配置引用,否,1,tests/gpu_same_frame_probe.gd,单独评估：仍有其他调用方
+tests/sand_visual_editor_preview_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/sand_visual_water_profile_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/sand_visual_wave_button_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/scene_hash_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/shape_brushes/bake_castle_preview.gd,.gd,其他代码/配置引用,否,1,assets/brushes/castle/four_towers_preview.json,单独评估：仍有其他调用方
+tests/shape_brushes/barrier_material_coupler.gd,.gd,其他代码/配置引用,否,4,tests/shape_brushes/barrier_retention_lab.gd; tests/shape_brushes/barrier_retention_probe.gd; tests/shape_brushes/immutable_material_coupler.gd; tests/shape_brushes/ordered_snapshot_retention_lab.gd,单独评估：仍有其他调用方
+tests/shape_brushes/barrier_retention_lab.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/barrier_retention_lab.tscn,单独评估：仍有其他调用方
+tests/shape_brushes/barrier_retention_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/brush_lab.gd,.gd,其他代码/配置引用,否,8,tests/shape_brushes/brush_lab.tscn; tests/shape_brushes/castle_lab.gd; tests/shape_brushes/invalid_material_lab.gd; tests/shape_brushes/inventory_lab.gd; tests/shape_brushes/material_operator_lab.gd,单独评估：仍有其他调用方
+tests/shape_brushes/castle_click_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/castle_lab.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/castle_lab.tscn,单独评估：仍有其他调用方
+tests/shape_brushes/castle_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/castle_resource_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/checkpoint_memory_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/checkpoint_v4_probe.gd,.gd,其他代码/配置引用,否,6,tests/shape_brushes/collision_matrix_probe.gd; tests/shape_brushes/continuation_probe.gd; tests/shape_brushes/engine_checkpoint_probe.gd; tests/shape_brushes/run_shape_brushes.ps1; tests/shape_brushes/runtime_profile_probe.gd,单独评估：仍有其他调用方
+tests/shape_brushes/close_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/collision_matrix_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/continuation_inputs_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/continuation_probe.gd,.gd,其他代码/配置引用,否,2,tests/shape_brushes/continuation_inputs_probe.gd; tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/engine_checkpoint_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/engine_identity_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/entry_smoke.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/shape_brushes/evolution_lab.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/evolution_lab.tscn,单独评估：仍有其他调用方
+tests/shape_brushes/export_fixtures.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/shape_brushes/final_probe.gd,.gd,其他代码/配置引用,否,2,tests/shape_brushes/legacy_drag_probe.gd; tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/fixed_stage_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/fixtures.gd,.gd,其他代码/配置引用,否,6,tests/shape_brushes/brush_lab.gd; tests/shape_brushes/check_contract.py; tests/shape_brushes/export_fixtures.gd; tests/shape_brushes/legacy_lab.gd; tests/shape_brushes/retention_fixture.gd,单独评估：仍有其他调用方
+tests/shape_brushes/formal_layout_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/formal_scene_probe.gd,.gd,其他代码/配置引用,否,2,tests/shape_brushes/lifecycle_probe.gd; tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/gpu_fault_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/gpu_framework_probe.gd,.gd,其他代码/配置引用,否,5,tests/shape_brushes/close_probe.gd; tests/shape_brushes/gpu_fault_probe.gd; tests/shape_brushes/legacy_pair_probe.gd; tests/shape_brushes/run_shape_brushes.ps1; tests/shape_brushes/wall_probe.gd,单独评估：仍有其他调用方
+tests/shape_brushes/immutable_material_coupler.gd,.gd,其他代码/配置引用,否,2,tests/shape_brushes/immutable_retention_lab.gd; tests/shape_brushes/immutable_retention_probe.gd,单独评估：仍有其他调用方
+tests/shape_brushes/immutable_retention_lab.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/immutable_retention_lab.tscn,单独评估：仍有其他调用方
+tests/shape_brushes/immutable_retention_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/input_contract_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/invalid_material_lab.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/invalid_material_lab.tscn,单独评估：仍有其他调用方
+tests/shape_brushes/inventory_gpu_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/inventory_lab.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/inventory_lab.tscn,单独评估：仍有其他调用方
+tests/shape_brushes/lab_entry_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/legacy_baseline.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_baseline.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/legacy_drag_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/legacy_inventory_contract.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/legacy_lab.gd,.gd,其他代码/配置引用,否,2,tests/shape_brushes/legacy_lab.tscn; tests/shape_brushes/original_retention_lab.gd,单独评估：仍有其他调用方
+tests/shape_brushes/legacy_pair_probe.gd,.gd,其他代码/配置引用,否,4,tests/shape_brushes/inventory_gpu_probe.gd; tests/shape_brushes/material_edit_probe.gd; tests/shape_brushes/retention_probe.gd; tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/lifecycle_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/local_material_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/local_retention_lab.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/local_retention_lab.tscn,单独评估：仍有其他调用方
+tests/shape_brushes/material_damage_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/material_edit_probe.gd,.gd,其他代码/配置引用,否,17,tests/shape_brushes/castle_probe.gd; tests/shape_brushes/castle_resource_probe.gd; tests/shape_brushes/checkpoint_v4_probe.gd; tests/shape_brushes/formal_scene_probe.gd; tests/shape_brushes/material_damage_probe.gd,单独评估：仍有其他调用方
+tests/shape_brushes/material_hot_zero_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/material_init_failure_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/material_operator_lab.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/material_operator_lab.tscn,单独评估：仍有其他调用方
+tests/shape_brushes/material_operator_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/material_precision_retention_lab.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/material_precision_retention_lab.tscn,单独评估：仍有其他调用方
+tests/shape_brushes/material_precision_retention_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/material_state_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/material_tick_trace_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/native_material_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/ordered_snapshot_retention_lab.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/ordered_snapshot_retention_lab.tscn,单独评估：仍有其他调用方
+tests/shape_brushes/ordered_snapshot_retention_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/original_retention_lab.gd,.gd,其他代码/配置引用,否,6,tests/shape_brushes/barrier_retention_lab.gd; tests/shape_brushes/immutable_retention_lab.gd; tests/shape_brushes/material_precision_retention_lab.gd; tests/shape_brushes/original_retention_lab.tscn; tests/shape_brushes/precise_retention_lab.gd,单独评估：仍有其他调用方
+tests/shape_brushes/original_retention_probe.gd,.gd,其他代码/配置引用,否,6,tests/shape_brushes/barrier_retention_probe.gd; tests/shape_brushes/immutable_retention_probe.gd; tests/shape_brushes/precise_retention_probe.gd; tests/shape_brushes/run_shape_brushes.ps1; tests/shape_brushes/snapshot_retention_probe.gd,单独评估：仍有其他调用方
+tests/shape_brushes/poison_simulation_scratch.glsl,.glsl,其他代码/配置引用,否,2,tests/shape_brushes/poison_simulation_scratch.glsl.import; tests/shape_brushes/scratch_restore_probe.gd,单独评估：仍有其他调用方
+tests/shape_brushes/precise_material_step_diagnostic.glsl,.glsl,其他代码/配置引用,否,2,tests/shape_brushes/material_precision_retention_lab.gd; tests/shape_brushes/precise_material_step_diagnostic.glsl.import,单独评估：仍有其他调用方
+tests/shape_brushes/precise_retention_lab.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/precise_retention_lab.tscn,单独评估：仍有其他调用方
+tests/shape_brushes/precise_retention_probe.gd,.gd,其他代码/配置引用,否,2,tests/shape_brushes/material_precision_retention_probe.gd; tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/precise_sediment_diagnostic.glsl,.glsl,其他代码/配置引用,否,2,tests/shape_brushes/precise_retention_lab.gd; tests/shape_brushes/precise_sediment_diagnostic.glsl.import,单独评估：仍有其他调用方
+tests/shape_brushes/rd_indirect_api_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/shape_brushes/retention_fixture.gd,.gd,其他代码/配置引用,否,3,tests/shape_brushes/original_retention_lab.gd; tests/shape_brushes/retention_lab.gd; tests/shape_brushes/retention_probe.gd,单独评估：仍有其他调用方
+tests/shape_brushes/retention_lab.gd,.gd,其他代码/配置引用,否,2,tests/shape_brushes/local_retention_lab.gd; tests/shape_brushes/retention_lab.tscn,单独评估：仍有其他调用方
+tests/shape_brushes/retention_probe.gd,.gd,其他代码/配置引用,否,4,tests/shape_brushes/local_material_probe.gd; tests/shape_brushes/material_tick_trace_probe.gd; tests/shape_brushes/original_retention_probe.gd; tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/retention_trace_coupler.gd,.gd,其他代码/配置引用,否,3,tests/shape_brushes/barrier_material_coupler.gd; tests/shape_brushes/original_retention_lab.gd; tests/shape_brushes/retention_lab.gd,单独评估：仍有其他调用方
+tests/shape_brushes/runtime_profile_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/scratch_restore_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/shape_evolution_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/shovel_edge_lab.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/shovel_edge_lab.tscn,单独评估：仍有其他调用方
+tests/shape_brushes/shovel_edge_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/shovel_lab.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/shovel_lab.tscn,单独评估：仍有其他调用方
+tests/shape_brushes/shovel_path_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/shovel_probe.gd,.gd,其他代码/配置引用,否,2,tests/shape_brushes/run_shape_brushes.ps1; tests/shape_brushes/shovel_edge_probe.gd,单独评估：仍有其他调用方
+tests/shape_brushes/shovel_side_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/snapshot_retention_lab.gd,.gd,其他代码/配置引用,否,3,tests/shape_brushes/ordered_snapshot_retention_lab.gd; tests/shape_brushes/snapshot_retention_lab.tscn; tests/shape_brushes/stage_log_retention_lab.gd,单独评估：仍有其他调用方
+tests/shape_brushes/snapshot_retention_probe.gd,.gd,其他代码/配置引用,否,2,tests/shape_brushes/ordered_snapshot_retention_probe.gd; tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/soak_cost_probe.gd,.gd,其他代码/配置引用,否,3,tests/shape_brushes/final_probe.gd; tests/shape_brushes/run_shape_brushes.ps1; tests/shape_brushes/stage_cost_probe.gd,单独评估：仍有其他调用方
+tests/shape_brushes/stage_cost_probe.gd,.gd,其他代码/配置引用,否,2,tests/shape_brushes/checkpoint_memory_probe.gd; tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/stage_log_diagnostic.glsl,.glsl,其他代码/配置引用,否,2,tests/shape_brushes/stage_log_diagnostic.glsl.import; tests/shape_brushes/stage_log_retention_lab.gd,单独评估：仍有其他调用方
+tests/shape_brushes/stage_log_retention_lab.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/stage_log_retention_lab.tscn,单独评估：仍有其他调用方
+tests/shape_brushes/stage_log_retention_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/ui_collision_proxy.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/ui_matrix_lab.tscn,单独评估：仍有其他调用方
+tests/shape_brushes/ui_lab.gd,.gd,其他代码/配置引用,否,2,tests/shape_brushes/ui_lab.tscn; tests/shape_brushes/ui_matrix_lab.gd,单独评估：仍有其他调用方
+tests/shape_brushes/ui_matrix_lab.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/ui_matrix_lab.tscn,单独评估：仍有其他调用方
+tests/shape_brushes/ui_matrix_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/ui_probe.gd,.gd,其他代码/配置引用,否,5,tests/shape_brushes/castle_click_probe.gd; tests/shape_brushes/formal_layout_probe.gd; tests/shape_brushes/run_shape_brushes.ps1; tests/shape_brushes/soak_cost_probe.gd; tests/shape_brushes/ui_matrix_probe.gd,单独评估：仍有其他调用方
+tests/shape_brushes/wall_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/water_fault_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/water_guard_lab.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/water_guard_lab.tscn,单独评估：仍有其他调用方
+tests/shape_brushes/water_guard_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/shape_brushes/water_lab.gd,.gd,其他代码/配置引用,否,4,tests/shape_brushes/evolution_lab.gd; tests/shape_brushes/shovel_edge_lab.gd; tests/shape_brushes/water_guard_lab.gd; tests/shape_brushes/water_lab.tscn,单独评估：仍有其他调用方
+tests/shape_brushes/water_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/structures/impermeable_structure_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/structures/obstacle_remap_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/structures/preview_structure_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/structures/run_num11_cycles.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/structures/run_structure_tests.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/structures/structure_flow_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/target_profile_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/tide_10_cycles.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/topology_probe.gd,.gd,其他代码/配置引用,否,1,tests/shape_brushes/run_shape_brushes.ps1,单独评估：仍有其他调用方
+tests/visual/capture_readability.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/visual/record_tool_feedback.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/visual/transparency_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/visual_phase2/capture_sand_fixture.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/visual_phase2/capture_water_fixture.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/visual_phase2/probe_bed_sampler.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/visual_phase2/probe_sand_coupled_checkpoint.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/visual_phase2/probe_sand_coupled_toe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/visual_phase2/probe_sand_final_acceptance.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/visual_phase2/probe_sand_fixture_tools.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/visual_phase2/probe_sand_pass_timestamps.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/visual_phase2/probe_sand_shape_gpu.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/visual_phase2/probe_sand_support_preview.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/visual_phase2/probe_water_acceptance.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/visual_phase2/probe_water_foam.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/visual_phase2/probe_water_foam_baseline.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/visual_phase2/probe_wave_arrival.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/visual_phase2/probe_wave_checkpoint.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/visual_phase2/probe_wave_packet.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/visual_phase2/record_sand_coupled.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/visual_phase2/record_water_foam.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/visual_water_alignment/capture_legacy_baseline.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/visual_water_alignment/prototypes/analyze_staging_checkpoint.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/build_reflection_rock_meshes.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/capture_reference.gd,.gd,其他代码/配置引用,是,2,tests/visual_water_alignment/prototypes/run_reference_capture_checked.py; tests/visual_water_alignment/prototypes/run_staging_capture.py,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/checkpoint_readback_guard.gd,.gd,其他代码/配置引用,是,3,tests/visual_water_alignment/prototypes/probe_checkpoint_readback_guard.gd; tests/visual_water_alignment/prototypes/probe_staging_checkpoint.gd; tests/visual_water_alignment/prototypes/probe_v8_checkpoint.gd,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/generate_front_foam_dense_mesh.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/generate_front_lip_meshes.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/generate_front_lip_patch_mesh.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/probe_checkpoint_readback_guard.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/probe_eta_normal_direction.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/probe_foam_bed_drop.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/probe_foam_timeline.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/probe_local_front_bed_drop.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/probe_prior_foam_checkpoint.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/probe_reference_cost.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/probe_reference_pass_timestamps.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/probe_rise_front_bed_drop.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/probe_rock_reflection_candidate.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/probe_staging_checkpoint.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/probe_staging_consumption.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/probe_staging_entry.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/probe_staging_export.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/probe_staging_profile.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/probe_v5_preview_scenes.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/probe_v5_sky_gradient.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/probe_v6_caustic_softness.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/probe_v6_preview_scenes.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/probe_v7_contact_spread.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/probe_v7_preview_scenes.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/probe_v7_rock_reflection.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/probe_v7_visible_foam_timeline.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/probe_v8_caustic_cloud.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/probe_v8_checkpoint.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/probe_v8_contact_scene_gap.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/probe_v8_export.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/probe_v8_foam_peak.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/probe_v8_preview_scenes.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/probe_v8_reflection_cost.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/probe_v8_reflection_softness.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/probe_v8_shore_overlay.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/probe_v8_visible_foam_timeline.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/probe_worker_state.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/record_local_front_height.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/record_staging_profile.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/reference_batched_ledger_solver.gd,.gd,main静态依赖,是,2,tests/visual_water_alignment/prototypes/reference_fixed_substep_solver.gd; tests/visual_water_alignment/prototypes/reference_preview.gd,保留：main静态引用链
+tests/visual_water_alignment/prototypes/reference_bed.gd,.gd,main静态依赖,是,1,tests/visual_water_alignment/prototypes/reference_preview.gd,保留：main静态引用链
+tests/visual_water_alignment/prototypes/reference_contact_history_field.gd,.gd,main静态依赖,是,1,tests/visual_water_alignment/prototypes/reference_preview.gd,保留：main静态引用链
+tests/visual_water_alignment/prototypes/reference_contact_history_step.glsl,.glsl,main静态依赖,是,2,tests/visual_water_alignment/prototypes/reference_contact_history_step.glsl.import; tests/visual_water_alignment/prototypes/reference_preview.gd,保留：main静态引用链
+tests/visual_water_alignment/prototypes/reference_coupled_bed.gdshader,.gdshader,main静态依赖,是,10,assets/test1_beach/g05_hybrid_trial.json; tests/visual_water_alignment/prototypes/reference_preview.gd; tests/visual_water_alignment/prototypes/water_render_staging_v1.json; tests/visual_water_alignment/prototypes/water_render_staging_v2.json; tests/visual_water_alignment/prototypes/water_render_staging_v3.json,保留：main静态引用链
+tests/visual_water_alignment/prototypes/reference_crest_continuous_lip.gdshader,.gdshader,main静态依赖,是,1,scenes/components/water_visual/reference_front_lips.tscn,保留：main静态引用链
+tests/visual_water_alignment/prototypes/reference_crest_curtain.gdshader,.gdshader,main静态依赖,是,1,tests/visual_water_alignment/prototypes/reference_preview.gd,保留：main静态引用链
+tests/visual_water_alignment/prototypes/reference_crest_forward_toe.gdshader,.gdshader,main静态依赖,是,1,tests/visual_water_alignment/prototypes/reference_preview.gd,保留：main静态引用链
+tests/visual_water_alignment/prototypes/reference_crest_local_segments.gdshader,.gdshader,main静态依赖,是,1,tests/visual_water_alignment/prototypes/reference_preview.gd,保留：main静态引用链
+tests/visual_water_alignment/prototypes/reference_crest_local_volume.gdshader,.gdshader,main静态依赖,是,1,tests/visual_water_alignment/prototypes/reference_preview.gd,保留：main静态引用链
+tests/visual_water_alignment/prototypes/reference_crest_ribbon.gdshader,.gdshader,main静态依赖,是,1,tests/visual_water_alignment/prototypes/reference_preview.gd,保留：main静态引用链
+tests/visual_water_alignment/prototypes/reference_crest_rise_ribbon.gdshader,.gdshader,main静态依赖,是,1,tests/visual_water_alignment/prototypes/reference_preview.gd,保留：main静态引用链
+tests/visual_water_alignment/prototypes/reference_crest_rise_ribbon_depthwrite.gdshader,.gdshader,main静态依赖,是,1,tests/visual_water_alignment/prototypes/reference_preview.gd,保留：main静态引用链
+tests/visual_water_alignment/prototypes/reference_crest_shared_front_lip.gdshader,.gdshader,main静态依赖,是,1,tests/visual_water_alignment/prototypes/reference_preview.gd,保留：main静态引用链
+tests/visual_water_alignment/prototypes/reference_crest_smoothed_lip.gdshader,.gdshader,main静态依赖,是,1,tests/visual_water_alignment/prototypes/reference_preview.gd,保留：main静态引用链
+tests/visual_water_alignment/prototypes/reference_crest_volume.gdshader,.gdshader,main静态依赖,是,1,tests/visual_water_alignment/prototypes/reference_preview.gd,保留：main静态引用链
+tests/visual_water_alignment/prototypes/reference_fixed_substep_solver.gd,.gd,main静态依赖,是,1,tests/visual_water_alignment/prototypes/reference_preview.gd,保留：main静态引用链
+tests/visual_water_alignment/prototypes/reference_foam_splats.gdshader,.gdshader,main静态依赖,是,2,scenes/components/water_visual/reference_front_foam_dense.tscn; tests/visual_water_alignment/prototypes/reference_preview.gd,保留：main静态引用链
+tests/visual_water_alignment/prototypes/reference_local_front_field.gd,.gd,main静态依赖,是,6,scripts/simulation/edit_validation/beach_restore_bundle.gd; scripts/visual/test1_main_presentation.gd; tests/integration/async_pipeline_checkpoint_probe.gd; tests/integration/async_pipeline_front_roundoff_probe.gd; tests/investigation/test1_water_motion/capture_trial.gd,保留：main静态引用链
+tests/visual_water_alignment/prototypes/reference_local_front_movie_entry.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/reference_local_front_x.glsl,.glsl,main静态依赖,是,5,scripts/visual/test1_main_presentation.gd; tests/investigation/test1_water_motion/capture_trial.gd; tests/visual_water_alignment/prototypes/probe_local_front_bed_drop.gd; tests/visual_water_alignment/prototypes/reference_local_front_x.glsl.import; tests/visual_water_alignment/prototypes/reference_preview.gd,保留：main静态引用链
+tests/visual_water_alignment/prototypes/reference_local_front_x_wide.glsl,.glsl,main静态依赖,是,2,tests/visual_water_alignment/prototypes/reference_local_front_x_wide.glsl.import; tests/visual_water_alignment/prototypes/reference_preview.gd,保留：main静态引用链
+tests/visual_water_alignment/prototypes/reference_local_front_z.glsl,.glsl,main静态依赖,是,5,scripts/visual/test1_main_presentation.gd; tests/investigation/test1_water_motion/capture_trial.gd; tests/visual_water_alignment/prototypes/probe_local_front_bed_drop.gd; tests/visual_water_alignment/prototypes/reference_local_front_z.glsl.import; tests/visual_water_alignment/prototypes/reference_preview.gd,保留：main静态引用链
+tests/visual_water_alignment/prototypes/reference_preview.gd,.gd,main静态依赖,是,4,scenes/components/water_visual/reference_coupled.tscn; scripts/visual/water_render_staging_entry.gd; tests/visual_water_alignment/prototypes/reference_local_front_movie_entry.gd; tools/approx_gpu_edit_trial/bake_grid.gd,保留：main静态引用链
+tests/visual_water_alignment/prototypes/reference_rise_front_anchor.glsl,.glsl,main静态依赖,是,2,tests/visual_water_alignment/prototypes/reference_preview.gd; tests/visual_water_alignment/prototypes/reference_rise_front_anchor.glsl.import,保留：main静态引用链
+tests/visual_water_alignment/prototypes/reference_rise_front_field.gd,.gd,main静态依赖,是,1,tests/visual_water_alignment/prototypes/reference_preview.gd,保留：main静态引用链
+tests/visual_water_alignment/prototypes/reference_rise_front_field.glsl,.glsl,main静态依赖,是,3,tests/visual_water_alignment/prototypes/probe_rise_front_bed_drop.gd; tests/visual_water_alignment/prototypes/reference_preview.gd; tests/visual_water_alignment/prototypes/reference_rise_front_field.glsl.import,保留：main静态引用链
+tests/visual_water_alignment/prototypes/reference_shore_contact_overlay.gdshader,.gdshader,main静态依赖,是,2,scenes/legacy/sandcastle_test1_beach_coupled_pre_natural.tscn; scenes/main.tscn,保留：main静态引用链
+tests/visual_water_alignment/prototypes/reference_sync_readback_solver.gd,.gd,main静态依赖,是,1,tests/visual_water_alignment/prototypes/reference_preview.gd,保留：main静态引用链
+tests/visual_water_alignment/prototypes/reference_terrain.gdshader,.gdshader,main静态依赖,是,7,tests/visual_water_alignment/prototypes/probe_staging_profile.gd; tests/visual_water_alignment/prototypes/reference_preview.gd; tests/visual_water_alignment/prototypes/water_render_staging_v1.json; tests/visual_water_alignment/prototypes/water_render_staging_v2.json; tests/visual_water_alignment/prototypes/water_render_staging_v3.json,保留：main静态引用链
+tests/visual_water_alignment/prototypes/reference_tide_ledger_batches.gd,.gd,main静态依赖,是,1,tests/visual_water_alignment/prototypes/reference_preview.gd,保留：main静态引用链
+tests/visual_water_alignment/prototypes/reference_tide_ledger_ring.gd,.gd,main静态依赖,是,1,tests/visual_water_alignment/prototypes/reference_preview.gd,保留：main静态引用链
+tests/visual_water_alignment/prototypes/reference_tide_ledger_ring.glsl,.glsl,main静态依赖,是,2,tests/visual_water_alignment/prototypes/reference_preview.gd; tests/visual_water_alignment/prototypes/reference_tide_ledger_ring.glsl.import,保留：main静态引用链
+tests/visual_water_alignment/prototypes/reference_visual_foam_front_band.glsl,.glsl,main静态依赖,是,2,tests/visual_water_alignment/prototypes/reference_preview.gd; tests/visual_water_alignment/prototypes/reference_visual_foam_front_band.glsl.import,保留：main静态引用链
+tests/visual_water_alignment/prototypes/reference_visual_foam_offshore.glsl,.glsl,main静态依赖,是,2,tests/visual_water_alignment/prototypes/reference_preview.gd; tests/visual_water_alignment/prototypes/reference_visual_foam_offshore.glsl.import,保留：main静态引用链
+tests/visual_water_alignment/prototypes/reference_water.gdshader,.gdshader,main静态依赖,是,1,tests/visual_water_alignment/prototypes/reference_preview.gd,保留：main静态引用链
+tests/visual_water_alignment/prototypes/reference_water_depthprepass.gdshader,.gdshader,其他代码/配置引用,是,1,tests/visual_water_alignment/prototypes/capture_reference.gd,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/reference_water_depthwrite.gdshader,.gdshader,其他代码/配置引用,是,3,tests/visual_water_alignment/prototypes/capture_reference.gd; tests/visual_water_alignment/prototypes/probe_reference_cost.gd; tests/visual_water_alignment/prototypes/probe_v8_reflection_cost.gd,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/reference_water_foam_overlay.gdshader,.gdshader,其他代码/配置引用,是,1,tests/visual_water_alignment/prototypes/capture_reference.gd,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/reference_water_foam_porous.gdshader,.gdshader,其他代码/配置引用,是,1,tests/visual_water_alignment/prototypes/capture_reference.gd,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/reference_water_front_cut.gdshader,.gdshader,其他代码/配置引用,是,1,tests/visual_water_alignment/prototypes/capture_reference.gd,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/reference_water_front_foam.gdshader,.gdshader,其他代码/配置引用,是,1,tests/visual_water_alignment/prototypes/capture_reference.gd,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/reference_water_front_profile.gdshader,.gdshader,其他代码/配置引用,是,1,tests/visual_water_alignment/prototypes/capture_reference.gd,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/reference_water_integrated_fold.gdshader,.gdshader,其他代码/配置引用,是,1,tests/visual_water_alignment/prototypes/capture_reference.gd,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/reference_water_local_front.gdshader,.gdshader,main静态依赖,是,13,tests/visual_water_alignment/prototypes/capture_reference.gd; tests/visual_water_alignment/prototypes/probe_eta_normal_direction.gd; tests/visual_water_alignment/prototypes/probe_reference_cost.gd; tests/visual_water_alignment/prototypes/probe_v8_reflection_cost.gd; tests/visual_water_alignment/prototypes/reference_local_front_movie_entry.gd,保留：main静态引用链
+tests/visual_water_alignment/prototypes/reference_water_rise_crest.gdshader,.gdshader,其他代码/配置引用,是,3,tests/visual_water_alignment/prototypes/capture_reference.gd; tests/visual_water_alignment/prototypes/probe_reference_cost.gd; tests/visual_water_alignment/prototypes/probe_v8_reflection_cost.gd,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/reference_water_shore_project.gdshader,.gdshader,其他代码/配置引用,是,1,tests/visual_water_alignment/prototypes/capture_reference.gd,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/reference_water_unified_curl.gdshader,.gdshader,其他代码/配置引用,是,1,tests/visual_water_alignment/prototypes/capture_reference.gd,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/rock_reflection_candidate_entry.gd,.gd,main静态依赖,是,4,assets/test1_beach/test1_beach_g03_entry.gd; scenes/water_render_coupled_rock_reflection_candidate.tscn; scripts/visual/test1_beach_fixed_entry.gd; tests/visual_water_alignment/prototypes/shore_contact_overlay_entry.gd,保留：main静态引用链
+tests/visual_water_alignment/prototypes/shore_contact_overlay_entry.gd,.gd,未发现路径/UID/class_name引用,是,0,,暂留：参与存档源码签名
+tests/visual_water_alignment/prototypes/visual_foam_step_before_bed_history.glsl,.glsl,其他代码/配置引用,是,1,tests/visual_water_alignment/prototypes/visual_foam_step_before_bed_history.glsl.import,暂留：参与存档源码签名
+tests/wall_reflection_curve.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/bed_geometry_specialized_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/bed_material_specialized_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/capture.gd,.gd,其他代码/配置引用,否,20,tests/water_material_natural/caustic_factor_probe.gd; tests/water_material_natural/compiled_startup_guard_probe.gd; tests/water_material_natural/detail_strength_probe.gd; tests/water_material_natural/foam_factor_probe.gd; tests/water_material_natural/foam_sequence_probe.gd,单独评估：仍有其他调用方
+tests/water_material_natural/caustic_factor_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/common_checkpoint_cost.gd,.gd,其他代码/配置引用,否,13,tests/water_material_natural/bed_geometry_specialized_probe.gd; tests/water_material_natural/bed_material_specialized_probe.gd; tests/water_material_natural/compiled_guard_probe.gd; tests/water_material_natural/contact_geometry_specialized_probe.gd; tests/water_material_natural/contact_lazy_probe.gd,单独评估：仍有其他调用方
+tests/water_material_natural/common_checkpoint_save.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/compiled_edit_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/compiled_guard_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/compiled_save_restore_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/compiled_startup_guard_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/contact_geometry_specialized_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/contact_height_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/contact_lazy_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/contact_shared_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/contact_surface_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/debug_specialized_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/detail_strength_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/filter_cost.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/foam_factor_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/foam_input_negatives.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/foam_layers_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/foam_occluder_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/foam_sequence_probe.gd,.gd,其他代码/配置引用,否,15,tests/water_material_natural/compiled_edit_probe.gd; tests/water_material_natural/compiled_save_restore_probe.gd; tests/water_material_natural/foam_occluder_probe.gd; tests/water_material_natural/macro_normal_probe.gd; tests/water_material_natural/metadata_cache_probe.gd,单独评估：仍有其他调用方
+tests/water_material_natural/foam_shape_factor_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/focused_shadow.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/full_cost_probe.gd,.gd,其他代码/配置引用,否,2,tests/water_material_natural/common_checkpoint_cost.gd; tests/water_material_natural/common_checkpoint_save.gd,单独评估：仍有其他调用方
+tests/water_material_natural/generate_shadow_mesh.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/geometry_specialized_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/geometry_specialized_sequence.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/glint_factor_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/import_rdc_caustic.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/layer_cost_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/lighting_cost.gd,.gd,其他代码/配置引用,否,3,tests/water_material_natural/filter_cost.gd; tests/water_material_natural/optics_path_probe.gd; tests/water_material_natural/packed_light_probe.gd,单独评估：仍有其他调用方
+tests/water_material_natural/macro_normal_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/metadata_cache_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/normal_sequence.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/optics_factor_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/optics_final_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/optics_guard_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/optics_layer_dry_probe.gd,.gd,其他代码/配置引用,否,1,tests/water_material_natural/contact_shared_probe.gd,单独评估：仍有其他调用方
+tests/water_material_natural/optics_path_probe.gd,.gd,其他代码/配置引用,否,9,tests/water_material_natural/contact_height_probe.gd; tests/water_material_natural/contact_surface_probe.gd; tests/water_material_natural/foam_input_negatives.gd; tests/water_material_natural/foam_layers_probe.gd; tests/water_material_natural/optics_final_probe.gd,单独评估：仍有其他调用方
+tests/water_material_natural/packed_light_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/path_boundary_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/probe_renderer_api.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/proxy_shadow_capture.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/rdc_factor_probe.gd,.gd,其他代码/配置引用,否,1,tests/water_material_natural/rdc_surface_probe.gd,单独评估：仍有其他调用方
+tests/water_material_natural/rdc_foreground_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/rdc_frame_probe.gd,.gd,其他代码/配置引用,否,1,tests/water_material_natural/rdc_owned_host.py,单独评估：仍有其他调用方
+tests/water_material_natural/rdc_main_smoke.gd,.gd,其他代码/配置引用,否,15,tests/erosion/gpu_exchange_scene_probe.gd; tests/gravel/gravel_cost_probe.gd; tests/gravel/gravel_lifecycle_probe.gd; tests/gravel/gravel_visual_probe.gd; tests/integration/collision_continuous_tools_probe.gd,单独评估：仍有其他调用方
+tests/water_material_natural/rdc_schema_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/rdc_sequence_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/rdc_surface_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/rdc_zero_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/reference_combination_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/reference_detail_probe.gd,.gd,其他代码/配置引用,否,2,tests/water_material_natural/reference_combination_probe.gd; tests/water_material_natural/reference_sparkle_probe.gd,单独评估：仍有其他调用方
+tests/water_material_natural/reference_foreground_coverage_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/reference_schema_guard_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/reference_sparkle_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/reflection_color_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/reflection_foreground_probe.gd,.gd,其他代码/配置引用,否,1,tests/water_material_natural/reference_foreground_coverage_probe.gd,单独评估：仍有其他调用方
+tests/water_material_natural/reflection_orientation_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/reflection_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/reflection_specialized_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/reflection_texture_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/reject_foam_profiles.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/reject_height_profiles.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/reject_lighting_profiles.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/reject_optics_profiles.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/reject_optics_profiles_v2.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/reject_profiles.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/reject_style_profiles.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/route_specialized_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/route_specialized_sequence.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/shadow_capture.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/style_layers_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/style_seam_components_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/style_seam_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/style_sequence_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tests/water_material_natural/sun_direction_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tools/approx_gpu_edit_trial/bake_grid.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tools/edit_stutter_diagnosis/drag_profile.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tools/edit_stutter_diagnosis/main_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tools/gpu_edit_validation/probe_render_profile_api.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tools/gpu_optimization/collision_selection_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tools/gpu_optimization/displacement_probe.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tools/gpu_optimization/profile.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据
+tools/gpu_optimization/velocity_probe.gd,.gd,其他代码/配置引用,否,1,tools/gpu_optimization/displacement_probe.gd,单独评估：仍有其他调用方
+tools/physics_threading/baseline_probe.gd,.gd,其他代码/配置引用,否,1,tools/physics_threading/run_baseline.py,单独评估：仍有其他调用方
+tools/physics_threading/cost_probe.gd,.gd,其他代码/配置引用,否,2,tools/physics_threading/cost_probe_no_diagnostics.gd; tools/physics_threading/run_cost.py,单独评估：仍有其他调用方
+tools/physics_threading/cost_probe_no_diagnostics.gd,.gd,未发现路径/UID/class_name引用,否,0,,候选：无静态调用线索，先核验工具入口/证据

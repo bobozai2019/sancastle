@@ -174,15 +174,30 @@ func dispatch(data: PackedByteArray, callback: Callable, execution_tick: int) ->
 	if error!=OK: _rollback(); solver.receipt_pending=false; return false
 	return true
 
+var finalize_pending:=0
+var hold_finalize:=false # Probe-only CPU consumer delay; never changes GPU work.
+var held_finalizations:=[]
+
 func _receipt_ready(bytes: PackedByteArray, callback: Callable, data: PackedByteArray, revision: int) -> void:
+	if rd==null:return
+	finalize_pending+=1
 	# Readback callbacks are delivered while the device processes completed work.
 	# Queue further GPU mutations through the render owner, outside that callback.
 	call_deferred("_schedule_finalize",bytes,callback,data,revision)
 
 func _schedule_finalize(bytes: PackedByteArray, callback: Callable, data: PackedByteArray, revision: int) -> void:
+	if rd==null:finalize_pending=maxi(0,finalize_pending-1);return
+	if hold_finalize:
+		held_finalizations.append([bytes,callback,data,revision]);return
 	RenderingServer.call_on_render_thread(_finalize_receipt.bind(bytes,callback,data,revision))
 
+func release_held_finalizations() -> void:
+	hold_finalize=false
+	for row in held_finalizations:RenderingServer.call_on_render_thread(_finalize_receipt.bind(row[0],row[1],row[2],row[3]))
+	held_finalizations.clear()
+
 func _finalize_receipt(bytes: PackedByteArray, callback: Callable, data: PackedByteArray, revision: int) -> void:
+	finalize_pending=maxi(0,finalize_pending-1)
 	if rd==null: return
 	if inject_wrong_receipt_once: bytes.encode_s64(16,bytes.decode_s64(16)+1); inject_wrong_receipt_once=false
 	var receipt := Protocol.decode_receipt(bytes)

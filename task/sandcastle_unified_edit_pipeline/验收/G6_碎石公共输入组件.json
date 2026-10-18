@@ -1,0 +1,460 @@
+{
+  "component": "tagged_display_input_in_common_pipeline",
+  "pass": true,
+  "goal_complete": false,
+  "formal_cutover": false,
+  "G6_pass": false,
+  "progress": "24/36",
+  "T06": "0/4",
+  "gpu_cases": 16,
+  "gpu_checks": 759,
+  "audit_checks": 3235,
+  "groups": [
+    {
+      "folder": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_matrix01",
+      "gpu_checks": 715,
+      "audit_checks": 2976,
+      "source_count": 184,
+      "source_zip": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_matrix01\\sources.zip",
+      "source_zip_sha256": "ef80f47ebf1a58ab3f00d6fc70759b9e42d58bf8832ef75ed7dad56cdc0f0eb2",
+      "evidence": {
+        "report.json": {
+          "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_matrix01\\report.json",
+          "sha256": "b724b59cf456cdd7da0d2f57e487cfaa2631b8672c195cd010e44b025ea137f0"
+        },
+        "audit.json": {
+          "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_matrix01\\audit.json",
+          "sha256": "d47b3c4e0e6501f7544651dc726e0371f4a905e2ba10523a1a5a2c6be622fa09"
+        },
+        "auditor_source.py": {
+          "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_matrix01\\auditor_source.py",
+          "sha256": "3da7b4f62666026daf4d887812f58bc0b0f9a09fc72308a00a522a17a427766d"
+        },
+        "variant_decoder_source.py": {
+          "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_matrix01\\variant_decoder_source.py",
+          "sha256": "ab0dc5eba5383bb13d0fcdd1368dce2db06b3fb3851913850edb6d1e550b02f0"
+        }
+      },
+      "runs": [
+        {
+          "case": "display_core",
+          "pass": true,
+          "exit_code": 0,
+          "clean_logs": true,
+          "command": [
+            "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "--path",
+            "D:\\godot\\project\\sandcastle",
+            "--script",
+            "res://tests/integration/unified_edit_display_probe.gd",
+            "--quit-after",
+            "14400",
+            "--log-file",
+            "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_matrix01\\display_core\\probe.log",
+            "--",
+            "--output=D:/godot/project/sandcastle/test_output/unified_edit_pipeline/g6_display_matrix01/display_core/probe.json",
+            "--case=display_core"
+          ],
+          "evidence": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_matrix01\\display_core\\probe.json",
+          "evidence_sha256": "50caa555c7437c7f327b9a66c942074a85399ad2f68db85d918e5866e7006bb1"
+        },
+        {
+          "case": "display_capacity",
+          "pass": true,
+          "exit_code": 0,
+          "clean_logs": true,
+          "command": [
+            "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "--path",
+            "D:\\godot\\project\\sandcastle",
+            "--script",
+            "res://tests/integration/unified_edit_display_probe.gd",
+            "--quit-after",
+            "14400",
+            "--log-file",
+            "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_matrix01\\display_capacity\\probe.log",
+            "--",
+            "--output=D:/godot/project/sandcastle/test_output/unified_edit_pipeline/g6_display_matrix01/display_capacity/probe.json",
+            "--case=display_capacity"
+          ],
+          "evidence": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_matrix01\\display_capacity\\probe.json",
+          "evidence_sha256": "f09fe3d7d923b006ac66fbd53e6b4b2a4dd1aa0e3f08de6e107f7d7c9f4645ed"
+        },
+        {
+          "case": "display_cancel",
+          "pass": true,
+          "exit_code": 0,
+          "clean_logs": true,
+          "command": [
+            "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "--path",
+            "D:\\godot\\project\\sandcastle",
+            "--script",
+            "res://tests/integration/unified_edit_display_probe.gd",
+            "--quit-after",
+            "14400",
+            "--log-file",
+            "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_matrix01\\display_cancel\\probe.log",
+            "--",
+            "--output=D:/godot/project/sandcastle/test_output/unified_edit_pipeline/g6_display_matrix01/display_cancel/probe.json",
+            "--case=display_cancel"
+          ],
+          "evidence": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_matrix01\\display_cancel\\probe.json",
+          "evidence_sha256": "05cc57e2085a7c268a71bceb44197a3fd01b1be8f7e0f9b4da37766592edaf55"
+        },
+        {
+          "case": "display_disabled",
+          "pass": true,
+          "exit_code": 0,
+          "clean_logs": true,
+          "command": [
+            "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "--path",
+            "D:\\godot\\project\\sandcastle",
+            "--script",
+            "res://tests/integration/unified_edit_display_probe.gd",
+            "--quit-after",
+            "14400",
+            "--log-file",
+            "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_matrix01\\display_disabled\\probe.log",
+            "--",
+            "--output=D:/godot/project/sandcastle/test_output/unified_edit_pipeline/g6_display_matrix01/display_disabled/probe.json",
+            "--case=display_disabled"
+          ],
+          "evidence": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_matrix01\\display_disabled\\probe.json",
+          "evidence_sha256": "19851f95eb2906bb43bf223a5d462dae95c557dedc1c01cfab516f78aaf88377"
+        },
+        {
+          "case": "display_upload",
+          "pass": true,
+          "exit_code": 0,
+          "clean_logs": true,
+          "command": [
+            "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "--path",
+            "D:\\godot\\project\\sandcastle",
+            "--script",
+            "res://tests/integration/unified_edit_display_probe.gd",
+            "--quit-after",
+            "14400",
+            "--log-file",
+            "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_matrix01\\display_upload\\probe.log",
+            "--",
+            "--output=D:/godot/project/sandcastle/test_output/unified_edit_pipeline/g6_display_matrix01/display_upload/probe.json",
+            "--case=display_upload"
+          ],
+          "evidence": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_matrix01\\display_upload\\probe.json",
+          "evidence_sha256": "6fc86c6511ac2ad5207ff1c6cff1f714fb57bfbed461aca1086fd969d5985829"
+        },
+        {
+          "case": "display_unknown",
+          "pass": true,
+          "exit_code": 0,
+          "clean_logs": true,
+          "command": [
+            "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "--path",
+            "D:\\godot\\project\\sandcastle",
+            "--script",
+            "res://tests/integration/unified_edit_display_probe.gd",
+            "--quit-after",
+            "14400",
+            "--log-file",
+            "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_matrix01\\display_unknown\\probe.log",
+            "--",
+            "--output=D:/godot/project/sandcastle/test_output/unified_edit_pipeline/g6_display_matrix01/display_unknown/probe.json",
+            "--case=display_unknown"
+          ],
+          "evidence": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_matrix01\\display_unknown\\probe.json",
+          "evidence_sha256": "8c24ace4af9ac1b43f096d196b92d66166a2fe6c5b7b279e793b7dcd831dc380"
+        },
+        {
+          "case": "display_fatal",
+          "pass": true,
+          "exit_code": 0,
+          "clean_logs": true,
+          "command": [
+            "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "--path",
+            "D:\\godot\\project\\sandcastle",
+            "--script",
+            "res://tests/integration/unified_edit_display_probe.gd",
+            "--quit-after",
+            "14400",
+            "--log-file",
+            "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_matrix01\\display_fatal\\probe.log",
+            "--",
+            "--output=D:/godot/project/sandcastle/test_output/unified_edit_pipeline/g6_display_matrix01/display_fatal/probe.json",
+            "--case=display_fatal"
+          ],
+          "evidence": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_matrix01\\display_fatal\\probe.json",
+          "evidence_sha256": "8f0266098ee124a70da0a4ff009f06887187cd0d9ff335855eb973407971678b"
+        },
+        {
+          "case": "display_capture_mismatch",
+          "pass": true,
+          "exit_code": 0,
+          "clean_logs": true,
+          "command": [
+            "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "--path",
+            "D:\\godot\\project\\sandcastle",
+            "--script",
+            "res://tests/integration/unified_edit_display_probe.gd",
+            "--quit-after",
+            "14400",
+            "--log-file",
+            "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_matrix01\\display_capture_mismatch\\probe.log",
+            "--",
+            "--output=D:/godot/project/sandcastle/test_output/unified_edit_pipeline/g6_display_matrix01/display_capture_mismatch/probe.json",
+            "--case=display_capture_mismatch"
+          ],
+          "evidence": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_matrix01\\display_capture_mismatch\\probe.json",
+          "evidence_sha256": "4d076a27cbbb5f1a608e7b4831e0b732ea1310d07b66ebbd36266c8995f023c8"
+        },
+        {
+          "case": "entry_main",
+          "pass": true,
+          "exit_code": 0,
+          "clean_logs": true,
+          "command": [
+            "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "--path",
+            "D:\\godot\\project\\sandcastle",
+            "--script",
+            "res://tests/integration/unified_edit_gravel_entry_probe.gd",
+            "--quit-after",
+            "14400",
+            "--log-file",
+            "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_matrix01\\entry_main\\probe.log",
+            "--",
+            "--output=D:/godot/project/sandcastle/test_output/unified_edit_pipeline/g6_display_matrix01/entry_main",
+            "--scene=main"
+          ],
+          "evidence": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_matrix01\\entry_main\\probe.json",
+          "evidence_sha256": "864504a90bdf9827f31adbb84cf5484f6b8e2c845fa2cdb9b30d541370c9e137"
+        },
+        {
+          "case": "entry_geometry",
+          "pass": true,
+          "exit_code": 0,
+          "clean_logs": true,
+          "command": [
+            "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "--path",
+            "D:\\godot\\project\\sandcastle",
+            "--script",
+            "res://tests/integration/unified_edit_gravel_entry_probe.gd",
+            "--quit-after",
+            "14400",
+            "--log-file",
+            "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_matrix01\\entry_geometry\\probe.log",
+            "--",
+            "--output=D:/godot/project/sandcastle/test_output/unified_edit_pipeline/g6_display_matrix01/entry_geometry",
+            "--scene=test1_geometry"
+          ],
+          "evidence": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_matrix01\\entry_geometry\\probe.json",
+          "evidence_sha256": "f786b2a34d8d2937fc6fba6011e1a3bf0bb8358a14c26f2f3daebf849802e10c"
+        },
+        {
+          "case": "visual_gravel",
+          "pass": true,
+          "exit_code": 0,
+          "clean_logs": true,
+          "command": [
+            "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "--path",
+            "D:\\godot\\project\\sandcastle",
+            "--script",
+            "res://tests/integration/unified_edit_visuals_probe.gd",
+            "--quit-after",
+            "14400",
+            "--log-file",
+            "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_matrix01\\visual_gravel\\probe.log",
+            "--",
+            "--output=D:/godot/project/sandcastle/test_output/unified_edit_pipeline/g6_display_matrix01/visual_gravel/probe.json",
+            "--case=visual_gravel"
+          ],
+          "evidence": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_matrix01\\visual_gravel\\probe.json",
+          "evidence_sha256": "9b086bf6d34fb3e24610170226904f1208e249a653fa5db116f5d745aca76d4e"
+        },
+        {
+          "case": "visual_all",
+          "pass": true,
+          "exit_code": 0,
+          "clean_logs": true,
+          "command": [
+            "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "--path",
+            "D:\\godot\\project\\sandcastle",
+            "--script",
+            "res://tests/integration/unified_edit_visuals_probe.gd",
+            "--quit-after",
+            "14400",
+            "--log-file",
+            "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_matrix01\\visual_all\\probe.log",
+            "--",
+            "--output=D:/godot/project/sandcastle/test_output/unified_edit_pipeline/g6_display_matrix01/visual_all/probe.json",
+            "--case=visual_all"
+          ],
+          "evidence": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_matrix01\\visual_all\\probe.json",
+          "evidence_sha256": "073acd5ced152b6cc2206d3128b37fdd439331cc8865e6d9d0356fbe69c15d49"
+        },
+        {
+          "case": "boundary_main",
+          "pass": true,
+          "exit_code": 0,
+          "clean_logs": true,
+          "command": [
+            "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "--path",
+            "D:\\godot\\project\\sandcastle",
+            "--script",
+            "res://tests/integration/unified_edit_boundary_probe.gd",
+            "--quit-after",
+            "14400",
+            "--log-file",
+            "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_matrix01\\boundary_main\\probe.log",
+            "--",
+            "--output=D:/godot/project/sandcastle/test_output/unified_edit_pipeline/g6_display_matrix01/boundary_main/probe.json",
+            "--case=boundary_main"
+          ],
+          "evidence": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_matrix01\\boundary_main\\probe.json",
+          "evidence_sha256": "43279f2444bc9ed503949b30bb6514c29d53a5563967fb9546e6b6a910c816f5"
+        },
+        {
+          "case": "handoff_boundary",
+          "pass": true,
+          "exit_code": 0,
+          "clean_logs": true,
+          "command": [
+            "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "--path",
+            "D:\\godot\\project\\sandcastle",
+            "--script",
+            "res://tests/integration/unified_edit_handoff_probe.gd",
+            "--quit-after",
+            "14400",
+            "--log-file",
+            "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_matrix01\\handoff_boundary\\probe.log",
+            "--",
+            "--output=D:/godot/project/sandcastle/test_output/unified_edit_pipeline/g6_display_matrix01/handoff_boundary/probe.json",
+            "--case=handoff_boundary"
+          ],
+          "evidence": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_matrix01\\handoff_boundary\\probe.json",
+          "evidence_sha256": "0f3067b22ecf6e995852e1031e725ea371d693b8f97d0bf0b46826fc142069c4"
+        },
+        {
+          "case": "normal",
+          "pass": true,
+          "exit_code": 0,
+          "clean_logs": true,
+          "command": [
+            "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "--path",
+            "D:\\godot\\project\\sandcastle",
+            "--script",
+            "res://tests/integration/unified_edit_gpu_probe.gd",
+            "--quit-after",
+            "14400",
+            "--log-file",
+            "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_matrix01\\normal\\probe.log",
+            "--",
+            "--output=D:/godot/project/sandcastle/test_output/unified_edit_pipeline/g6_display_matrix01/normal/probe.json",
+            "--case=normal"
+          ],
+          "evidence": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_matrix01\\normal\\probe.json",
+          "evidence_sha256": "094517f8aaf897f724b9e52cc1255bdfebb06c8c790fffa01fca186e5f731080"
+        }
+      ]
+    },
+    {
+      "folder": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_mixed02",
+      "gpu_checks": 44,
+      "audit_checks": 259,
+      "source_count": 117,
+      "source_zip": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_mixed02\\sources.zip",
+      "source_zip_sha256": "0d79b056466d4281911ab82bf22f08ed6e49f4bb2dd8781d71606b788c37c19c",
+      "evidence": {
+        "report.json": {
+          "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_mixed02\\report.json",
+          "sha256": "6075e92af9f6369c6f825bb7fd061d9a393d280a1263b3fab2e5064275cdcf5e"
+        },
+        "audit.json": {
+          "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_mixed02\\audit.json",
+          "sha256": "8f24afaa1d1311f4b5ff2491dfb64c147f90bf5526e5b5690ae9d859876a3ea4"
+        },
+        "auditor_source.py": {
+          "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_mixed02\\auditor_source.py",
+          "sha256": "5df41774c1963b5e9107b8510fa8e8c632e2052de082c78002522e86220b11c4"
+        },
+        "variant_decoder_source.py": {
+          "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_mixed02\\variant_decoder_source.py",
+          "sha256": "ab0dc5eba5383bb13d0fcdd1368dce2db06b3fb3851913850edb6d1e550b02f0"
+        }
+      },
+      "runs": [
+        {
+          "case": "display_mixed",
+          "pass": true,
+          "exit_code": 0,
+          "clean_logs": true,
+          "command": [
+            "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "--path",
+            "D:\\godot\\project\\sandcastle",
+            "--script",
+            "res://tests/integration/unified_edit_display_probe.gd",
+            "--quit-after",
+            "14400",
+            "--log-file",
+            "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_mixed02\\display_mixed\\probe.log",
+            "--",
+            "--output=D:/godot/project/sandcastle/test_output/unified_edit_pipeline/g6_display_mixed02/display_mixed/probe.json",
+            "--case=display_mixed"
+          ],
+          "evidence": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_mixed02\\display_mixed\\probe.json",
+          "evidence_sha256": "2ccd574eeb24d75c1a04c3ddd1497a8885c1399bb8e6c58a39ed96b502b50f97"
+        }
+      ]
+    }
+  ],
+  "shared_source_count": 117,
+  "identical_shared_sources": 115,
+  "helper_differences": [
+    "res://tests/integration/unified_edit_display_probe.gd",
+    "res://tools/unified_edit_pipeline/run_display.py"
+  ],
+  "data": {
+    "folder": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g6_display_data01",
+    "report_sha256": "2a07d0f334ca3b2364880f0f2459eddf38be38720d59fe1beb6c43ebecc5a09a",
+    "protocol_checks": 212,
+    "configuration_checks": 87
+  },
+  "current_sources": {
+    "scripts/simulation/unified_edit/display_intent.gd": "5ddd0f9019350efbe388c1862ecda7b4c44ba8b47682e93c60b36d0843d90f21",
+    "scripts/simulation/unified_edit/pipeline.gd": "856e4e86495c7b51b708206041660c6ed64abb28e5c6f71721ca7bc14d96a6c6",
+    "scripts/simulation/unified_edit/visuals.gd": "f3df8c141caaac2096763ccf28ba972b865c60da40d701e80829df734201928a",
+    "scripts/simulation/unified_edit/protocol.gd": "6cda6ca845e98a0104e98fb3ba2e62e0e6cf3551069aca787450999b35b0eeb7",
+    "scripts/simulation/unified_edit/slots.gd": "b4c73feb63692894ee9420d4c05cf31892355d4d5380399f3c0bf58c0b101cab",
+    "scripts/simulation/unified_edit/checkpoint_capture.gd": "84c81124e7f00f1b4be4129e26267c7a577cc181a85e3f56faa471d14563e630",
+    "scripts/simulation/unified_edit/restore_verifier.gd": "48206e6631bc40169c661e1f254e96b66ba5e88eb7606eba91ae556f353a05d1",
+    "scripts/simulation/unified_edit/domain_runtime.gd": "3ef80780355e25e49bbe77b01b60f7a59e97fdef090ff755c7a54cb016fb3b6b",
+    "scripts/simulation/unified_edit/player_input.gd": "bef41f3aa8b6daefcafb64e88c8d28cddc0ecbd3ad391c1ea1f24ab74f7f4a07",
+    "scripts/simulation/unified_edit/work_begin.glsl": "940538b9e13f01da456c959a7d409c188420675b46d49fbb9e508fe662d72f1a",
+    "scripts/simulation/unified_edit/display_emit.glsl": "840c6b01b244d21cd0914312df3ace652536d80727a0e34726b767216e775115",
+    "scripts/beach/unified_playable_entry.gd": "08881f53d62f17c50fefe99536c56d92076363840d0a6dbceec0f54ac584b445",
+    "tests/integration/unified_edit_display_probe.gd": "635b0630b418fbe43618d16fd3e56a86dc01f5fd1313bd24795af7a5372ddba9",
+    "tests/integration/unified_edit_gravel_entry_probe.gd": "9ec622edd05efc8a57fde861bb52d27a50e2abd5d1c5352109b8cf7156e9a40b",
+    "tests/integration/unified_edit_boundary_probe.gd": "f05deab427775c6692178b422b25797a89105fde2d42938f064167b48d6ca6f9",
+    "tools/unified_edit_pipeline/run_display.py": "e7811bc5e5b31b63f2e5d622473fb3de12b76fbf998faa8bce50a5a72d46407d",
+    "tools/unified_edit_pipeline/audit_display.py": "5df41774c1963b5e9107b8510fa8e8c632e2052de082c78002522e86220b11c4"
+  },
+  "remaining": [
+    "Continuous preview",
+    "Other tool/frontend lifecycle combinations and legacy checkpoint routing",
+    "Formal scene cutover and complete G6 lifecycle",
+    "G7 extension/writer audit",
+    "G8 visible cost and stability"
+  ]
+}

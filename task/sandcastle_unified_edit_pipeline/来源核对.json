@@ -1,0 +1,254 @@
+{
+  "date": "2026-10-17",
+  "role": "planning_source_snapshot",
+  "scope": "Source inspection for a future unified sand-water execution pipeline; no runtime code edits or GPU tests in this planning turn.",
+  "git_head": "308c45bcc14890c8e5fdb0f407ddfbdb16e9f70d",
+  "workspace_is_dirty": true,
+  "items": [
+    {
+      "path": "AGENTS.md",
+      "role": "project_instructions",
+      "bytes": 8069,
+      "sha256": "5ebd41cf8d685aad4df97052bd5af10e68a21961a83cf7d7a9f9759384a8d38e"
+    },
+    {
+      "path": ".codex/skills/myplan/SKILL.md",
+      "role": "planning_skill",
+      "bytes": 3010,
+      "sha256": "37e5bee35e55cd1a69ea15ff253975ad8ebf715013df2401d1118fbb96e0280d"
+    },
+    {
+      "path": ".codex/skills/myplan/references/execution-plan-template.md",
+      "role": "planning_skill",
+      "bytes": 13072,
+      "sha256": "9690d06caad828c6d5d787fac54db8ab90b6ab081fe24c4f79c1f9bb66877d2e"
+    },
+    {
+      "path": "scripts/beach/async_pipeline_entry.gd",
+      "role": "implementation_source",
+      "bytes": 50296,
+      "sha256": "4e5a675369c7c5379ae9737c183c8d94bb0c044c3e9103f45cfe3713ab488e38"
+    },
+    {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_controller.gd",
+      "role": "implementation_source",
+      "bytes": 19487,
+      "sha256": "47e501eb87402a9e23bed34bd0df232f6c5e818df4bf4f6d4bfa512ee2227470"
+    },
+    {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_editor.gd",
+      "role": "implementation_source",
+      "bytes": 6392,
+      "sha256": "1a7bd53a0d2bff0154993f9cd172edb07d1121b05e41c32c46514f931aee2b7e"
+    },
+    {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_tools.gd",
+      "role": "implementation_source",
+      "bytes": 10652,
+      "sha256": "7ac26ea4c5d5f0020c5a6f5afeb04652cbe7fe66c0895d3d017159bfdc817451"
+    },
+    {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_transport.gd",
+      "role": "implementation_source",
+      "bytes": 8331,
+      "sha256": "bd1fad594d7cdff8b6225850b644672d3c95f3f26c8f36b9b791fd57a05221be"
+    },
+    {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_protocol.gd",
+      "role": "implementation_source",
+      "bytes": 2582,
+      "sha256": "312ed81688880954a12c1e6d4df3c34ca7d9f22ca0c9e184b8e2e9f4925e6750"
+    },
+    {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_collision.gd",
+      "role": "implementation_source",
+      "bytes": 11097,
+      "sha256": "d5a83fbee79228128fd3307535b46817ddb3b18dfbb7f819dd465f7e8ca5c6c1"
+    },
+    {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_restore_bundle.gd",
+      "role": "implementation_source",
+      "bytes": 9112,
+      "sha256": "bd57e8138ed0627847071d1cff8007519a0d544eb17a1c662b13f0e70c7add09"
+    },
+    {
+      "path": "scripts/simulation/brushes/brush_gpu.gd",
+      "role": "implementation_source",
+      "bytes": 15660,
+      "sha256": "a9ff955f47af20516ab358edd40d021e0dabb4754a8dd1e412d323b8238397d1"
+    },
+    {
+      "path": "scripts/simulation/brushes/brush_water_transaction.gd",
+      "role": "implementation_source",
+      "bytes": 4477,
+      "sha256": "744e89495bb88958c2a056945f47fd94b44a7758a467e59d9c3b2c66a7ebb56e"
+    },
+    {
+      "path": "scripts/simulation/brushes/brush_material_transaction.gd",
+      "role": "implementation_source",
+      "bytes": 5383,
+      "sha256": "b28f0106f5d18c380725ae422086f161659b28449dafc764e39b05a8ba2a44a5"
+    },
+    {
+      "path": "scripts/simulation/brushes/brush_material_solver.gd",
+      "role": "implementation_source",
+      "bytes": 5464,
+      "sha256": "4229d6c9fc7321ce46ef93c742427c80e19f46a4c78b4a53138afc4461ccca6d"
+    },
+    {
+      "path": "scripts/simulation/edit_validation/gpu_water_editor.gd",
+      "role": "implementation_source",
+      "bytes": 6661,
+      "sha256": "3907e942d3910a0d0e39b97aa5f357eb748f1702da6b7d9076f91dd4703e02a9"
+    },
+    {
+      "path": "scripts/sand/brushes/stroke_controller.gd",
+      "role": "implementation_source",
+      "bytes": 5892,
+      "sha256": "29fdca82d9f4836760fa46bc3f120b70b3d55204cce14f97a8ea3804bcc4b45f"
+    },
+    {
+      "path": "shaders/simulation/brushes/prepare.glsl",
+      "role": "implementation_source",
+      "bytes": 5494,
+      "sha256": "2794b89aee803e86d3f2a3baeee15e58d82b2ac7906bafd477b172053dbde953"
+    },
+    {
+      "path": "shaders/simulation/brushes/shovel_allocate.glsl",
+      "role": "implementation_source",
+      "bytes": 4961,
+      "sha256": "c22323a34812e73deab3636c55b263d17b745715da1a3c97cf043e56dc0cfc8f"
+    },
+    {
+      "path": "shaders/simulation/brushes/water_merge.glsl",
+      "role": "implementation_source",
+      "bytes": 2274,
+      "sha256": "95b79fb07335f17fe2c1f734afacbc3ef479617dc94057a394df3ca303a8e43f"
+    },
+    {
+      "path": "shaders/simulation/brushes/water_prepare.glsl",
+      "role": "implementation_source",
+      "bytes": 1532,
+      "sha256": "b83883b3e464978444683a109b99c0acd5fe056098243c0ab3478c692519b65e"
+    },
+    {
+      "path": "shaders/simulation/edit_validation/water_prepare.glsl",
+      "role": "implementation_source",
+      "bytes": 1538,
+      "sha256": "c22dd62287e8a4fa3fa202cf5af89ecd37882cb5d762f914a231064848bef64a"
+    },
+    {
+      "path": "shaders/simulation/edit_validation/sand_reduce.glsl",
+      "role": "implementation_source",
+      "bytes": 5322,
+      "sha256": "a80849d71fee0d2a51d4be7f78fe99d3c274997aa324a7dadd57b83bc98d7211"
+    },
+    {
+      "path": "shaders/simulation/edit_validation/water_packed_cached.glsl",
+      "role": "implementation_source",
+      "bytes": 14727,
+      "sha256": "cd8dd0f5419d1b423158caf004ed3d5a297ee51e801159748005ad49103cd543"
+    },
+    {
+      "path": "shaders/simulation/edit_validation/water_velocity_prefetch.glsl",
+      "role": "implementation_source",
+      "bytes": 3200,
+      "sha256": "9cf7459b99ae2932a63068416cac6875844e8582dc5e58a33771f0c595f3c77d"
+    },
+    {
+      "path": "scenes/main.tscn",
+      "role": "implementation_source",
+      "bytes": 67847,
+      "sha256": "acf0c16d887dd46a7cd3e3c1bb0a00bd2ac06a76cd6b416a3a81b543c5667c7c"
+    },
+    {
+      "path": "scenes/playable/test1_capture.tscn",
+      "role": "implementation_source",
+      "bytes": 506,
+      "sha256": "400df22caf0bc0657cd9ac53a075bf30f90d2a2f2ef57fc0ce21abfed9f53921"
+    },
+    {
+      "path": "scenes/playable/test1_backwash.tscn",
+      "role": "implementation_source",
+      "bytes": 231,
+      "sha256": "c0f5308c933fb6b04447cabc778176d0038c71587b18caaeec8b07106ac59f80"
+    },
+    {
+      "path": "docs/knowledge/water_sand/ADR_形状刷子_v2.md",
+      "role": "contract_source_with_historical_amendments",
+      "bytes": 3124,
+      "sha256": "464c342b5ffc26e99bffc72799cbaa503873fe122ea3d6645bac50c73a381152"
+    },
+    {
+      "path": "docs/history/sandcastle_gpu_edit_validation/契约/编辑事务与水响应契约.md",
+      "role": "contract_source_with_historical_amendments",
+      "bytes": 18022,
+      "sha256": "0c44391c93ec1d46fc6a8f7ca995c496c7b59623f9f5c7f53779505c13af1082"
+    },
+    {
+      "path": "task/sandcastle_system_pipeline/总纲.md",
+      "role": "source_plan",
+      "bytes": 5390,
+      "sha256": "14dacfd9d786022b393f0aec4f47abeeaa9a096e556b3e494195cb0d6aeb782e"
+    },
+    {
+      "path": "task/sandcastle_system_pipeline/执行状态.md",
+      "role": "source_plan",
+      "bytes": 1875,
+      "sha256": "400aa09ea469373f9e8a9407b535eb2f91b3c3e9be9a5a15faef69bc636e11dd"
+    },
+    {
+      "path": "task/sandcastle_system_pipeline/接口与调度契约.md",
+      "role": "source_plan",
+      "bytes": 3091,
+      "sha256": "29d53b68d046f7c51c747d8a42693151b0601ddb564f017cfdb3fc4eadf25072"
+    },
+    {
+      "path": "task/sandcastle_system_pipeline/验证计划.md",
+      "role": "source_plan",
+      "bytes": 1675,
+      "sha256": "6be21338870bc883a88294b9ff6c84ec7a2b3d63174b9be631df7e37e91a7c60"
+    },
+    {
+      "path": "task/sandcastle_all_tools_pipeline/验收.md",
+      "role": "execution_record",
+      "bytes": 5758,
+      "sha256": "bc7a2be01713aabb27c4626f57e99d084ccd8e22b24181bc7fcaa7f87e82ca36"
+    },
+    {
+      "path": "task/sandcastle_gpu_optimization/验收/P08_结果.md",
+      "role": "execution_record",
+      "bytes": 3810,
+      "sha256": "110bb721f3c291708c6f235444feb4756ed3d44dda6d23a208cb4ec407ecbf4a"
+    }
+  ],
+  "observations": [
+    {
+      "fact": "Current ordinary and shape edits share queue/transport but still use separate recording chains.",
+      "sources": [
+        "scripts/simulation/edit_validation/frame_pipeline/async_editor.gd",
+        "scripts/simulation/edit_validation/frame_pipeline/async_tools.gd"
+      ]
+    },
+    {
+      "fact": "Both water_prepare inputs already use bed_water plus flow vectors, allowing a common downstream interface.",
+      "sources": [
+        "shaders/simulation/edit_validation/water_prepare.glsl",
+        "shaders/simulation/brushes/water_prepare.glsl"
+      ]
+    },
+    {
+      "fact": "Official main enables async mode, while the entry still contains a backend selection flag and super fallbacks.",
+      "sources": [
+        "scenes/main.tscn",
+        "scripts/beach/async_pipeline_entry.gd"
+      ]
+    },
+    {
+      "fact": "Wall candidates can reassert cumulative stroke coverage, so naive current-segment-only clipping changes semantics.",
+      "sources": [
+        "shaders/simulation/brushes/prepare.glsl"
+      ]
+    }
+  ]
+}

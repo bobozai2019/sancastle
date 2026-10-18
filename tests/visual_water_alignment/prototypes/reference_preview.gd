@@ -1243,6 +1243,8 @@ func _process(delta: float) -> void:
 			_request_replay_collision()
 			replay_ready = true
 		return
+	if not _automatic_tick_enabled():
+		return
 	if playing:
 		accumulator = minf(accumulator + delta, SIM_DELTA * 4.0)
 	if not playing or tick_pending:
@@ -1252,6 +1254,9 @@ func _process(delta: float) -> void:
 	accumulator -= SIM_DELTA
 	_start_tick()
 
+
+func _automatic_tick_enabled() -> bool:
+	return true
 
 func _start_tick() -> void:
 	if enable_erosion and not command_queue.pending.is_empty() and \
@@ -2667,11 +2672,17 @@ func _render_paused_patch(data: PackedByteArray, count: int,
 	if not solver.dispatch_tool_patch(data, count):
 		call_deferred("_fail", "paused tool patch dispatch failed")
 		return
+	if not _after_paused_tool_patch():
+		call_deferred("_fail", "paused tool material reconciliation failed")
+		return
 	call_deferred("_record_tool_revisions", command_ids,
 		chunks, solver.state_revision, token)
 	_request_sand_audit_render(token)
 	_publish_textures()
 	call_deferred("_paused_patch_finished", token)
+
+func _after_paused_tool_patch() -> bool:
+	return true
 
 
 func _paused_patch_finished(token: int) -> void:

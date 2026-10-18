@@ -191,7 +191,11 @@ func _dispatch_edit(index: int, mode: int=0) -> void:
 	receipt_batch_metrics.passes.append({"command":batch_pass_index,"pass":"sand_%d_%d"%[index,mode]})
 	var list:=rd.compute_list_begin()
 	rd.compute_list_bind_compute_pipeline(list,edit_pipelines[index])
-	rd.compute_list_bind_uniform_set(list,edit_sets[index][current_index if index in [0,4] else 0],0)
+	var slot:=current_index if index in [0,4] else 0
+	if suspended_edit:
+		if index==0:slot+=2
+		if index==3:slot=1
+	rd.compute_list_bind_uniform_set(list,edit_sets[index][slot],0)
 	rd.compute_list_set_push_constant(list,PackedInt32Array([mode,edit_window.position.x,edit_window.position.y,edit_window.size.x,edit_window.size.y,0,0,0]).to_byte_array(),32)
 	rd.compute_list_dispatch_indirect(list,batch_indirect,0 if index==1 else 12)
 	rd.compute_list_end()

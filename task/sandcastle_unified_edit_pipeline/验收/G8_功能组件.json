@@ -1,0 +1,154 @@
+{
+  "schema": 1,
+  "status": "component_pass",
+  "date": "2026-10-18",
+  "G8_pass": false,
+  "overall_completed": 33,
+  "overall_total": 36,
+  "T08_completed": 1,
+  "completed_subgoals": [
+    "T08.1"
+  ],
+  "gpu_runs": 43,
+  "gpu_checks": 1355,
+  "independent_checks": 3379,
+  "frozen_sources": 220,
+  "evidence": [
+    {
+      "path": "test_output/unified_edit_pipeline/g8_formal_frozen01/matrix.json",
+      "bytes": 28966,
+      "sha256": "5a1f6adf0e79887b3c9fa3cf195d185c618ebae81b0cd68cf0a756a447aed945"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g8_formal_frozen01/frozen.json",
+      "bytes": 27500,
+      "sha256": "e9c7a492ce0252b488f9477e60e397d80416fff0fc64d6b8fda823a03195ddb0"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g8_formal_frozen01/frozen_sources.zip",
+      "bytes": 25797579,
+      "sha256": "816de2934a3d4036f28e068fcc25c85e5575bbf83e3f3eb18861ec1ba4d7edf5"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g8_formal_frozen01/formal/report.json",
+      "bytes": 32239,
+      "sha256": "f6d4131cbfb695140ec5eef7934b22ed8ddc157c9a0ec2e8c5edd2bb303c7697"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g8_formal_frozen01/formal/audit.json",
+      "bytes": 206347,
+      "sha256": "aecb6af9000a6588681156cbe336c2cad099bd0c5707b4876b183c6f91e17348"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g8_formal_frozen01/formal/sources.zip",
+      "bytes": 25770680,
+      "sha256": "c4261bb25b96e78962ce493e25c7a0b2c3e5c8b8d4b96d2b970c23323d66820f"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g8_formal_frozen01/formal/verification_sources.zip",
+      "bytes": 25777302,
+      "sha256": "56cd328658b1ba8918bd7518f3447c0522e3ac24236ee3c28dde2377fd821b35"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g8_formal_frozen01/formal/artifact-index.json",
+      "bytes": 6305,
+      "sha256": "8242f121b4cf45414ccfcda03fe864367c1eeaf47114ebc9a325749da8c30397"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g8_formal_frozen01/boundaries/report.json",
+      "bytes": 43587,
+      "sha256": "4c528b98d51908b5116a6e320957524b540b683bcf03cd5f5abdccf4dd18cae4"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g8_formal_frozen01/boundaries/audit.json",
+      "bytes": 83591,
+      "sha256": "14e2fafffe18d24812efce12f7805098be52a826191cd47e598d799515acffd5"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g8_formal_frozen01/boundaries/sources.zip",
+      "bytes": 25773005,
+      "sha256": "e6e2744f9894626a9309cdc2a2aa212e4f0cc0de37b53b9aabe3077a533719f1"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g8_formal_frozen01/boundaries/verification_sources.zip",
+      "bytes": 25781200,
+      "sha256": "81f74677ab6795a9aad808ba4be97254aaead891481689014d5760a05ebe65d6"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g8_formal_frozen01/boundaries/artifact-index.json",
+      "bytes": 10159,
+      "sha256": "cf1eacf80e6e9d79477c839c6d8fda4e361264899af33afb4017d972d9adf79a"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g8_formal_frozen01/remaining/report.json",
+      "bytes": 40863,
+      "sha256": "ae4a5919ebac8a05716271653731934b50b87c7abd549ce31d628a471e79f0bf"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g8_formal_frozen01/remaining/audit.json",
+      "bytes": 42807,
+      "sha256": "bf50daac8ae04c4103811a804aa30330e5bf70de29dcc390523554d38fecadfc"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g8_formal_frozen01/remaining/sources.zip",
+      "bytes": 17687850,
+      "sha256": "06622cf186726f14cbd2790c5061618b30f63cdad20b0055fc8eafde473e268f"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g8_formal_frozen01/remaining/verification_sources.zip",
+      "bytes": 17694663,
+      "sha256": "569b6040094c231623445d10029316a179c0a0db1035a0976a11549e69ff2cb4"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g8_formal_frozen01/remaining/artifact-index.json",
+      "bytes": 11898,
+      "sha256": "690db9ab0f14423065d13e69cc9ee1b827f1eaeb0180e37ab2bd51accb17fe7b"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g8_formal_frozen01/completions/report.json",
+      "bytes": 25609,
+      "sha256": "dc27e887c1d47e540533ce760a684a706368764a1fe55fea7aad88dda8d37ca7"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g8_formal_frozen01/completions/audit.json",
+      "bytes": 22883,
+      "sha256": "9b205bd7bc96eca67392470732acb31eaa1c4dcb9b0363a01f70048b50390fd1"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g8_formal_frozen01/completions/sources.zip",
+      "bytes": 17681347,
+      "sha256": "0935576627be93d74f82f4d40c7a2fe54f6d0b213ec9e3f2091545b524a1c12b"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g8_formal_frozen01/completions/verification_sources.zip",
+      "bytes": 17685078,
+      "sha256": "d5dd42a1e597d58988282d43c62c2197b3ca60316c1ed02ef5b80cae1dc1ed24"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g8_formal_frozen01/completions/artifact-index.json",
+      "bytes": 2049,
+      "sha256": "f134a286f0e503ad5dee72052ab0bee015a26fea6ad5b08ae82cc83a04b34fab"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g8_formal_frozen01/remaining/independent_audit.json",
+      "bytes": 12676,
+      "sha256": "882fee769576dcab442874b22b1348db19f2d32b7bba192e22519ab64a08da45"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g8_static01/audit.json",
+      "bytes": 9121,
+      "sha256": "c671a07540093c511f4f4c57acd09f12edfb681b51f566d7ca0ba5038b786431"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g8_retirement01/report.json",
+      "bytes": 6550,
+      "sha256": "ee29cea5253664d48c618e8357f0f5ef2de7bf23a69985236ce6da0f4b87b1df"
+    }
+  ],
+  "scope": "Fresh complete formal four-entry/default/service/function/fault/ownership matrix and current raw/static source verification. No historical run counted toward this component. Endurance and phase/frame cost are separate unfinished goals.",
+  "remaining": [
+    "T08.2 ten lifecycle rounds and at least three minutes actual mixed inputs",
+    "T08.3 final paired visible stage/frame cost comparison",
+    "T08.4 final source/docs/HTML/36-goal proof"
+  ]
+}

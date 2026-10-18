@@ -1,0 +1,135 @@
+{
+  "schema": 1,
+  "status": "pass",
+  "date": "2026-10-18",
+  "G7_pass": true,
+  "overall_completed": 32,
+  "overall_total": 36,
+  "T07_completed": 4,
+  "completed_subgoals": [
+    "T07.1",
+    "T07.2",
+    "T07.3",
+    "T07.4"
+  ],
+  "gpu_runs": 23,
+  "gpu_checks": 537,
+  "independent_checks": 4164,
+  "core_unchanged_count": 51,
+  "evidence": [
+    {
+      "path": "test_output/unified_edit_pipeline/g7_extensions_final01/report.json",
+      "bytes": 22260,
+      "sha256": "a07ffc22f7a953e1be0d3bb2810c9d52180405f8134fca7b888d8e3975e6a072"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g7_extensions_final01/audit.json",
+      "bytes": 72661,
+      "sha256": "68746073922d94aac216b71732fa19eb8958c90b39a12cebdd9eee3f7a99d76a"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g7_extensions_final01/sources.zip",
+      "bytes": 1870036,
+      "sha256": "cb106eeb108b4048e30aea9e35699cf8593fe3b381392a477a8353309baa539e"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g7_extensions_final01/verification_sources.zip",
+      "bytes": 1872773,
+      "sha256": "d2c9a19ef928c59f949f14c0522924dc1218b37b8d76d432da530f174da6802f"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g7_extensions_final01/artifact-index.json",
+      "bytes": 62436,
+      "sha256": "9acd21bf72466b7ba6f463dce40002c5717113ce6fef9aac429573a39a208711"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g7_features_snapshot02/report.json",
+      "bytes": 32220,
+      "sha256": "969bf34bc9b718ef8ec55d29718ee5430857fcd63f61396b1ea3c889fca17732"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g7_features_snapshot02/audit.json",
+      "bytes": 154979,
+      "sha256": "a66035b2d18982845c1b4e6251e9aafa7d400bd0df693878ed6570b7da70b978"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g7_features_snapshot02/sources.zip",
+      "bytes": 1869443,
+      "sha256": "6b27f6feb27e7018e7ad736523d62cdffdb5dab5dd65d6c5137d1b33ab4ff623"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g7_features_snapshot02/verification_sources.zip",
+      "bytes": 1876629,
+      "sha256": "180f1066e436dfd54b9cdd30af0c34c9711a972a74a19c1fdb4891c946fc5557"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g7_features_snapshot02/artifact-index.json",
+      "bytes": 109208,
+      "sha256": "9a53b0d18b835481312e25e6ea9fbdee253d5b5e8156b740b5f1a8b1c35c4394"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g7_extension_runtime02/report.json",
+      "bytes": 17772,
+      "sha256": "38249fba6f615612b24de0c671c30a19fc5df255b37a2bbe8cce11310ad4601e"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g7_extension_runtime02/audit.json",
+      "bytes": 22195,
+      "sha256": "46eb18606d343af6c9ab7c33c5b33457c84d966ec4aabf3517a7d9811bf709c3"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g7_extension_runtime02/sources.zip",
+      "bytes": 1871562,
+      "sha256": "55c99ecbe24790b101aa415a2fe98aee93122784ad82a7315cbe650b0266f3f8"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g7_extension_runtime02/verification_sources.zip",
+      "bytes": 1878515,
+      "sha256": "babd56ce28689bf1a445856139876eb236c83670150cc44d9197608f2e03e630"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g7_extension_runtime02/artifact-index.json",
+      "bytes": 1279,
+      "sha256": "037f8848b6c58878cdd5904102c115913ba5cbf495edc6a5cff2ef1ffe9ff5dd"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g7_architecture_final03/report.json",
+      "bytes": 893869,
+      "sha256": "c47c2add36d7fc081ee9d8e729bea589d97b9857eaea6d38cabdab77d3940089"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g7_architecture_final03/sources.zip",
+      "bytes": 31064053,
+      "sha256": "2cb2b0215defcb85daefc637af498281f476161f30d0717781bb6674be20723b"
+    }
+  ],
+  "architecture": {
+    "resource_reference_files": 606,
+    "reference_edges": 3503,
+    "sensitive_methods": 147,
+    "sealed_code_resource_boundaries": 561,
+    "adversarial_samples": 9,
+    "limitations": "Conservative reference closure and sealed reviewed boundaries, not arbitrary-program call-graph proof. Four missing dormant test/evidence references explicitly classified; debugger autoload development boundary is explicit."
+  },
+  "guide": {
+    "path": "docs/unified-edit-extension-guide.md",
+    "bytes": 4318,
+    "sha256": "e1d57d4486c8fc27f5835304ceb1dfdf3c810eb8adef5238469409a24c44b5c6"
+  },
+  "policy": {
+    "path": "tools/unified_edit_pipeline/architecture_policy.json",
+    "bytes": 306562,
+    "sha256": "6f14440dc3e07d4db9adf1e306b931d2c8c9a77ae0c16467a3025838426dcfe6"
+  },
+  "preserved_failures": [
+    "g7_features01: one configuration digest differs, other observed source/selected-profile identities equal; no full snapshot captured, cause unknown. Final snapshot02 has all sixteen full JSON/canonical Variant snapshots equal.",
+    "g7_extension_runtime01: live unchanged chunks need not carry newest version and restore preserves command highwater; probe assumptions fixed, original bytes/logs/126-source archive retained.",
+    "g7_architecture_final02: duplicate identical project.godot ZIP member; final03 ZIP unique member check added, old archive retained."
+  ],
+  "remaining": [
+    "T08.1 final frozen entry/function/fault regression",
+    "T08.2 ten lifecycle rounds and three minutes actual mixed interaction",
+    "T08.3 visible paired phase/frame cost comparison and independent judgment",
+    "T08.4 final docs/HTML/unique-path proof and 36-goal delivery"
+  ]
+}

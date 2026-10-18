@@ -1,0 +1,36 @@
+{
+  "raw_audit": "G2_原始证据复核_交付.json",
+  "pass": true,
+  "mismatches": [],
+  "role": "G2 isolated pipeline gate; final production switching remains G6",
+  "runs": [
+    "g2_gpu_delivery10",
+    "g2_adapter_delivery04",
+    "g2_slots_delivery05"
+  ],
+  "gpu_cases": [
+    "normal",
+    "water_1",
+    "water_2",
+    "water_3",
+    "water_64",
+    "water_100",
+    "upload",
+    "readback",
+    "truncate",
+    "identity",
+    "unknown_state",
+    "fatal",
+    "counter",
+    "tick_counter",
+    "revision_counter",
+    "bad_cfl"
+  ],
+  "common_source_count": 37,
+  "scope": "One main RenderingDevice stream, ordinary volume edits, retained water CFL, canonical data adaptation and fault ownership. All tool primitives, full effects/coupling, consumers, production lifecycle and cost remain G3-G8.",
+  "checks": [
+    295,
+    55,
+    60
+  ]
+}

@@ -1,0 +1,3682 @@
+{
+  "role": "G0 workload observations, not final performance PASS",
+  "manifest": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_remainder01\\run-manifest.json",
+  "manifest_sha256": "a4263798cc05b89fdf131d70d891944c725a6ef7ffa6b87e171101b263678664",
+  "analyzer_sha256": "44602d014c6f56f619a010b6475b2d46eed5e2b8fab1b64ebaff397d9ae5f0cd",
+  "classification": "contended_or_unknown_gpu_activity",
+  "run_manifest_complete": true,
+  "runs": [
+    {
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_remainder01\\shovel_corner_dry_paused_1.json",
+      "sha256": "ba0c8190c33b4dba80d67870aaa1cabab0aa17f7644bdc89faa0c9f1fea3c21b",
+      "pass": true,
+      "case": "shovel",
+      "pattern": "corner",
+      "wet": false,
+      "realtime": false,
+      "sampling": true,
+      "checks": 70,
+      "target": {
+        "cell": "(224, 184)",
+        "checked_cell_rect": "[P: (208, 164), S: (33, 41)]",
+        "obstacle": false,
+        "sand_min_m": 0.78647792339325,
+        "water_max_m": 0.0,
+        "water_min_m": 0.0
+      },
+      "cold_load_to_ready_ms": 14959.769,
+      "warmup_frames": 30,
+      "frame_ms": {
+        "n": 48,
+        "p50": 54.412,
+        "p95": 103.564,
+        "p99": null,
+        "max": 108.189,
+        "p99_reason": "insufficient_samples"
+      },
+      "input_only_frame_ms": {
+        "n": 23,
+        "p50": 96.113,
+        "p95": 104.857,
+        "p99": null,
+        "max": 108.189,
+        "p99_reason": "insufficient_samples"
+      },
+      "focus_states": [],
+      "max_fps_values": [],
+      "low_processor_usage_values": [],
+      "low_processor_sleep_us_values": [],
+      "input_open_ms": 2094.346,
+      "input_open_tick_advance": 0,
+      "input_open_sim_seconds": 0.0,
+      "queue_peak_at_observation": 0,
+      "oldest_age_ms_at_observation": 284.23,
+      "drain_ms": 116.195,
+      "command_timings": [
+        {
+          "command_id": 2,
+          "admitted_at_us": 20137275,
+          "terminal_observed_at_us": 20329280,
+          "terminal_notice_ms": 192.005,
+          "state_seq": 2,
+          "gpu_notice_observed_at_us": 20255259,
+          "gpu_notice_ms": 117.984,
+          "collision_observed_at_us": 20606514,
+          "collision_notice_ms": 469.239
+        },
+        {
+          "command_id": 3,
+          "admitted_at_us": 20164456,
+          "terminal_observed_at_us": 20426205,
+          "terminal_notice_ms": 261.749,
+          "state_seq": 3,
+          "gpu_notice_observed_at_us": 20329280,
+          "gpu_notice_ms": 164.824,
+          "collision_observed_at_us": 20880781,
+          "collision_notice_ms": 716.325
+        },
+        {
+          "command_id": 4,
+          "admitted_at_us": 20257259,
+          "terminal_observed_at_us": 20502950,
+          "terminal_notice_ms": 245.691,
+          "state_seq": 4,
+          "gpu_notice_observed_at_us": 20426205,
+          "gpu_notice_ms": 168.946,
+          "collision_observed_at_us": 20880781,
+          "collision_notice_ms": 623.522
+        },
+        {
+          "command_id": 5,
+          "admitted_at_us": 20331446,
+          "terminal_observed_at_us": 20606514,
+          "terminal_notice_ms": 275.068,
+          "state_seq": 5,
+          "gpu_notice_observed_at_us": 20502950,
+          "gpu_notice_ms": 171.504,
+          "collision_observed_at_us": 20880781,
+          "collision_notice_ms": 549.335
+        },
+        {
+          "command_id": 6,
+          "admitted_at_us": 20429728,
+          "terminal_observed_at_us": 20707935,
+          "terminal_notice_ms": 278.207,
+          "state_seq": 6,
+          "gpu_notice_observed_at_us": 20606514,
+          "gpu_notice_ms": 176.786,
+          "collision_observed_at_us": 21138409,
+          "collision_notice_ms": 708.681
+        },
+        {
+          "command_id": 7,
+          "admitted_at_us": 20504793,
+          "terminal_observed_at_us": 20781609,
+          "terminal_notice_ms": 276.816,
+          "state_seq": 7,
+          "gpu_notice_observed_at_us": 20707935,
+          "gpu_notice_ms": 203.142,
+          "collision_observed_at_us": 21138409,
+          "collision_notice_ms": 633.616
+        },
+        {
+          "command_id": 8,
+          "admitted_at_us": 20608138,
+          "terminal_observed_at_us": 20880781,
+          "terminal_notice_ms": 272.643,
+          "state_seq": 8,
+          "gpu_notice_observed_at_us": 20781609,
+          "gpu_notice_ms": 173.471,
+          "collision_observed_at_us": 21138409,
+          "collision_notice_ms": 530.271
+        },
+        {
+          "command_id": 9,
+          "admitted_at_us": 20710387,
+          "terminal_observed_at_us": 20958190,
+          "terminal_notice_ms": 247.803,
+          "state_seq": 9,
+          "gpu_notice_observed_at_us": 20880781,
+          "gpu_notice_ms": 170.394,
+          "collision_observed_at_us": 21414153,
+          "collision_notice_ms": 703.766
+        },
+        {
+          "command_id": 10,
+          "admitted_at_us": 20783254,
+          "terminal_observed_at_us": 21057214,
+          "terminal_notice_ms": 273.96,
+          "state_seq": 10,
+          "gpu_notice_observed_at_us": 20958190,
+          "gpu_notice_ms": 174.936,
+          "collision_observed_at_us": 21414153,
+          "collision_notice_ms": 630.899
+        },
+        {
+          "command_id": 11,
+          "admitted_at_us": 20882536,
+          "terminal_observed_at_us": 21138409,
+          "terminal_notice_ms": 255.873,
+          "state_seq": 11,
+          "gpu_notice_observed_at_us": 21057214,
+          "gpu_notice_ms": 174.678,
+          "collision_observed_at_us": 21414153,
+          "collision_notice_ms": 531.617
+        },
+        {
+          "command_id": 12,
+          "admitted_at_us": 20960732,
+          "terminal_observed_at_us": 21235024,
+          "terminal_notice_ms": 274.292,
+          "state_seq": 12,
+          "gpu_notice_observed_at_us": 21138409,
+          "gpu_notice_ms": 177.677,
+          "collision_observed_at_us": 21691351,
+          "collision_notice_ms": 730.619
+        },
+        {
+          "command_id": 13,
+          "admitted_at_us": 21059439,
+          "terminal_observed_at_us": 21339881,
+          "terminal_notice_ms": 280.442,
+          "state_seq": 13,
+          "gpu_notice_observed_at_us": 21235024,
+          "gpu_notice_ms": 175.585,
+          "collision_observed_at_us": 21691351,
+          "collision_notice_ms": 631.912
+        },
+        {
+          "command_id": 14,
+          "admitted_at_us": 21139609,
+          "terminal_observed_at_us": 21414153,
+          "terminal_notice_ms": 274.544,
+          "state_seq": 14,
+          "gpu_notice_observed_at_us": 21339881,
+          "gpu_notice_ms": 200.272,
+          "collision_observed_at_us": 21691351,
+          "collision_notice_ms": 551.742
+        },
+        {
+          "command_id": 15,
+          "admitted_at_us": 21238338,
+          "terminal_observed_at_us": 21510266,
+          "terminal_notice_ms": 271.928,
+          "state_seq": 15,
+          "gpu_notice_observed_at_us": 21414153,
+          "gpu_notice_ms": 175.815,
+          "collision_observed_at_us": 21976831,
+          "collision_notice_ms": 738.493
+        },
+        {
+          "command_id": 16,
+          "admitted_at_us": 21341833,
+          "terminal_observed_at_us": 21591419,
+          "terminal_notice_ms": 249.586,
+          "state_seq": 16,
+          "gpu_notice_observed_at_us": 21510266,
+          "gpu_notice_ms": 168.433,
+          "collision_observed_at_us": 21976831,
+          "collision_notice_ms": 634.998
+        },
+        {
+          "command_id": 17,
+          "admitted_at_us": 21415672,
+          "terminal_observed_at_us": 21691351,
+          "terminal_notice_ms": 275.679,
+          "state_seq": 17,
+          "gpu_notice_observed_at_us": 21591419,
+          "gpu_notice_ms": 175.747,
+          "collision_observed_at_us": 21976831,
+          "collision_notice_ms": 561.159
+        },
+        {
+          "command_id": 18,
+          "admitted_at_us": 21512956,
+          "terminal_observed_at_us": 21767616,
+          "terminal_notice_ms": 254.66,
+          "state_seq": 18,
+          "gpu_notice_observed_at_us": 21691351,
+          "gpu_notice_ms": 178.395,
+          "collision_observed_at_us": 22227777,
+          "collision_notice_ms": 714.821
+        },
+        {
+          "command_id": 19,
+          "admitted_at_us": 21593257,
+          "terminal_observed_at_us": 21868642,
+          "terminal_notice_ms": 275.385,
+          "state_seq": 19,
+          "gpu_notice_observed_at_us": 21767616,
+          "gpu_notice_ms": 174.359,
+          "collision_observed_at_us": 22227777,
+          "collision_notice_ms": 634.52
+        },
+        {
+          "command_id": 20,
+          "admitted_at_us": 21692601,
+          "terminal_observed_at_us": 21976831,
+          "terminal_notice_ms": 284.23,
+          "state_seq": 20,
+          "gpu_notice_observed_at_us": 21868642,
+          "gpu_notice_ms": 176.041,
+          "collision_observed_at_us": 22227777,
+          "collision_notice_ms": 535.176
+        },
+        {
+          "command_id": 21,
+          "admitted_at_us": 21770292,
+          "terminal_observed_at_us": 22044711,
+          "terminal_notice_ms": 274.419,
+          "state_seq": 21,
+          "gpu_notice_observed_at_us": 21976831,
+          "gpu_notice_ms": 206.539,
+          "collision_observed_at_us": 22354892,
+          "collision_notice_ms": 584.6
+        },
+        {
+          "command_id": 22,
+          "admitted_at_us": 21871002,
+          "terminal_observed_at_us": 22143326,
+          "terminal_notice_ms": 272.324,
+          "state_seq": 22,
+          "gpu_notice_observed_at_us": 22044711,
+          "gpu_notice_ms": 173.709,
+          "collision_observed_at_us": 22354892,
+          "collision_notice_ms": 483.89
+        },
+        {
+          "command_id": 23,
+          "admitted_at_us": 21978470,
+          "terminal_observed_at_us": 22227777,
+          "terminal_notice_ms": 249.307,
+          "state_seq": 23,
+          "gpu_notice_observed_at_us": 22143326,
+          "gpu_notice_ms": 164.856,
+          "collision_observed_at_us": 22354892,
+          "collision_notice_ms": 376.422
+        },
+        {
+          "command_id": 24,
+          "admitted_at_us": 22047444,
+          "terminal_observed_at_us": 22264866,
+          "terminal_notice_ms": 217.422,
+          "state_seq": 24,
+          "gpu_notice_observed_at_us": 22227777,
+          "gpu_notice_ms": 180.333,
+          "collision_observed_at_us": 22471530,
+          "collision_notice_ms": 424.086
+        },
+        {
+          "command_id": 25,
+          "admitted_at_us": 22145169,
+          "terminal_observed_at_us": 22320790,
+          "terminal_notice_ms": 175.621,
+          "state_seq": 25,
+          "gpu_notice_observed_at_us": 22264866,
+          "gpu_notice_ms": 119.697,
+          "collision_observed_at_us": 22471530,
+          "collision_notice_ms": 326.361
+        }
+      ],
+      "gpu_stage_dispatch_ms": {
+        "edit_shape_stage_1": {
+          "n": 24,
+          "p50": 0.15820800000000002,
+          "p95": 0.159744,
+          "p99": null,
+          "max": 0.161792,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_stage_6": {
+          "n": 24,
+          "p50": 2.3567359999999997,
+          "p95": 2.454528,
+          "p99": null,
+          "max": 2.49344,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_material_0": {
+          "n": 24,
+          "p50": 0.068608,
+          "p95": 0.07168,
+          "p99": null,
+          "max": 0.113664,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_stage_2": {
+          "n": 24,
+          "p50": 0.214528,
+          "p95": 0.216064,
+          "p99": null,
+          "max": 0.216064,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_stage_3": {
+          "n": 24,
+          "p50": 0.05632,
+          "p95": 0.058368,
+          "p99": null,
+          "max": 0.065536,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_water_0_0": {
+          "n": 24,
+          "p50": 0.082944,
+          "p95": 0.086016,
+          "p99": null,
+          "max": 0.088064,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit": {
+          "n": 122,
+          "p50": 0.016384,
+          "p95": 2.14528,
+          "p99": null,
+          "max": 2.173952,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_water_1_0": {
+          "n": 24,
+          "p50": 0.077824,
+          "p95": 0.079872,
+          "p99": null,
+          "max": 0.080896,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_water_2_0": {
+          "n": 24,
+          "p50": 36.334592,
+          "p95": 36.365312,
+          "p99": null,
+          "max": 36.380672,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_stage_4": {
+          "n": 24,
+          "p50": 0.045056,
+          "p95": 0.047104,
+          "p99": null,
+          "max": 0.047104,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_material_1": {
+          "n": 24,
+          "p50": 0.034816,
+          "p95": 0.036864,
+          "p99": null,
+          "max": 0.038912,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_water_3_0": {
+          "n": 24,
+          "p50": 0.045056,
+          "p95": 0.047104,
+          "p99": null,
+          "max": 0.048128,
+          "p99_reason": "insufficient_samples"
+        },
+        "collision": {
+          "n": 20,
+          "p50": 0.016767999999999998,
+          "p95": 0.020992,
+          "p99": null,
+          "max": 0.023552,
+          "p99_reason": "insufficient_samples"
+        }
+      },
+      "cpu_marker_stage_ms": {},
+      "initial_sha256": {
+        "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "compaction": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de",
+        "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "obstacle": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+        "rock": "e5bebff58c79121549c5d1fbd484f90280de59fb99e1940fd8d54502cce0ad6c",
+        "sand": "e4229dd131b89dc44a8f08df893d938028cda47737983b548d8e947cb2d0df74",
+        "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+        "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+      },
+      "final_sha256": {
+        "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "compaction": "c64aaf85b365b14f200bbf39ebf7e6f93493ce25415f4c1f46079d31fc934787",
+        "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "sand": "6c570cfa25087d2b2a55129bba896a2eafdd8ef1baf6cb243ba243aa4612f51c",
+        "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+        "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+      },
+      "limitations": [
+        "Notification times are CPU observation upper bounds, not GPU duration.",
+        "Physics shape replacement is observed; monitor scanout is not measured.",
+        "This workload contains 24 offered commands and is not a 1000-frame tail test."
+      ],
+      "name": "shovel_corner_dry_paused_1",
+      "source_drift": []
+    },
+    {
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_remainder01\\shovel_corner_wet_paused_1.json",
+      "sha256": "d909f95b77f090c94fe81f81f5dd6f691781622af138e04f02a791247e7a67ee",
+      "pass": true,
+      "case": "shovel",
+      "pattern": "corner",
+      "wet": true,
+      "realtime": false,
+      "sampling": true,
+      "checks": 70,
+      "target": {
+        "cell": "(32, 40)",
+        "checked_cell_rect": "[P: (16, 20), S: (33, 41)]",
+        "obstacle": false,
+        "sand_min_m": 0.106849856674671,
+        "water_max_m": 0.533150136470795,
+        "water_min_m": 0.381762385368347
+      },
+      "cold_load_to_ready_ms": 13842.805,
+      "warmup_frames": 30,
+      "frame_ms": {
+        "n": 48,
+        "p50": 56.9905,
+        "p95": 138.392,
+        "p99": null,
+        "max": 142.158,
+        "p99_reason": "insufficient_samples"
+      },
+      "input_only_frame_ms": {
+        "n": 23,
+        "p50": 125.947,
+        "p95": 141.688,
+        "p99": null,
+        "max": 142.158,
+        "p99_reason": "insufficient_samples"
+      },
+      "focus_states": [],
+      "max_fps_values": [],
+      "low_processor_usage_values": [],
+      "low_processor_sleep_us_values": [],
+      "input_open_ms": 2818.644,
+      "input_open_tick_advance": 0,
+      "input_open_sim_seconds": 0.0,
+      "queue_peak_at_observation": 0,
+      "oldest_age_ms_at_observation": 392.166,
+      "drain_ms": 132.589,
+      "command_timings": [
+        {
+          "command_id": 2,
+          "admitted_at_us": 19337593,
+          "terminal_observed_at_us": 19590841,
+          "terminal_notice_ms": 253.248,
+          "state_seq": 2,
+          "gpu_notice_observed_at_us": 19469395,
+          "gpu_notice_ms": 131.802,
+          "collision_observed_at_us": 19934702,
+          "collision_notice_ms": 597.109
+        },
+        {
+          "command_id": 3,
+          "admitted_at_us": 19366519,
+          "terminal_observed_at_us": 19695201,
+          "terminal_notice_ms": 328.682,
+          "state_seq": 3,
+          "gpu_notice_observed_at_us": 19590841,
+          "gpu_notice_ms": 224.322,
+          "collision_observed_at_us": 20302893,
+          "collision_notice_ms": 936.374
+        },
+        {
+          "command_id": 4,
+          "admitted_at_us": 19471042,
+          "terminal_observed_at_us": 19821148,
+          "terminal_notice_ms": 350.106,
+          "state_seq": 4,
+          "gpu_notice_observed_at_us": 19695201,
+          "gpu_notice_ms": 224.159,
+          "collision_observed_at_us": 20302893,
+          "collision_notice_ms": 831.851
+        },
+        {
+          "command_id": 5,
+          "admitted_at_us": 19592077,
+          "terminal_observed_at_us": 19934702,
+          "terminal_notice_ms": 342.625,
+          "state_seq": 5,
+          "gpu_notice_observed_at_us": 19821148,
+          "gpu_notice_ms": 229.071,
+          "collision_observed_at_us": 20302893,
+          "collision_notice_ms": 710.816
+        },
+        {
+          "command_id": 6,
+          "admitted_at_us": 19697887,
+          "terminal_observed_at_us": 20061620,
+          "terminal_notice_ms": 363.733,
+          "state_seq": 6,
+          "gpu_notice_observed_at_us": 19934702,
+          "gpu_notice_ms": 236.815,
+          "collision_observed_at_us": 20670602,
+          "collision_notice_ms": 972.715
+        },
+        {
+          "command_id": 7,
+          "admitted_at_us": 19822967,
+          "terminal_observed_at_us": 20171733,
+          "terminal_notice_ms": 348.766,
+          "state_seq": 7,
+          "gpu_notice_observed_at_us": 20061620,
+          "gpu_notice_ms": 238.653,
+          "collision_observed_at_us": 20670602,
+          "collision_notice_ms": 847.635
+        },
+        {
+          "command_id": 8,
+          "admitted_at_us": 19936265,
+          "terminal_observed_at_us": 20302893,
+          "terminal_notice_ms": 366.628,
+          "state_seq": 8,
+          "gpu_notice_observed_at_us": 20171733,
+          "gpu_notice_ms": 235.468,
+          "collision_observed_at_us": 20670602,
+          "collision_notice_ms": 734.337
+        },
+        {
+          "command_id": 9,
+          "admitted_at_us": 20065323,
+          "terminal_observed_at_us": 20440525,
+          "terminal_notice_ms": 375.202,
+          "state_seq": 9,
+          "gpu_notice_observed_at_us": 20302893,
+          "gpu_notice_ms": 237.57,
+          "collision_observed_at_us": 21040084,
+          "collision_notice_ms": 974.761
+        },
+        {
+          "command_id": 10,
+          "admitted_at_us": 20173468,
+          "terminal_observed_at_us": 20541161,
+          "terminal_notice_ms": 367.693,
+          "state_seq": 10,
+          "gpu_notice_observed_at_us": 20440525,
+          "gpu_notice_ms": 267.057,
+          "collision_observed_at_us": 21040084,
+          "collision_notice_ms": 866.616
+        },
+        {
+          "command_id": 11,
+          "admitted_at_us": 20304725,
+          "terminal_observed_at_us": 20670602,
+          "terminal_notice_ms": 365.877,
+          "state_seq": 11,
+          "gpu_notice_observed_at_us": 20541161,
+          "gpu_notice_ms": 236.436,
+          "collision_observed_at_us": 21040084,
+          "collision_notice_ms": 735.359
+        },
+        {
+          "command_id": 12,
+          "admitted_at_us": 20442782,
+          "terminal_observed_at_us": 20808994,
+          "terminal_notice_ms": 366.212,
+          "state_seq": 12,
+          "gpu_notice_observed_at_us": 20670602,
+          "gpu_notice_ms": 227.82,
+          "collision_observed_at_us": 21415997,
+          "collision_notice_ms": 973.215
+        },
+        {
+          "command_id": 13,
+          "admitted_at_us": 20542997,
+          "terminal_observed_at_us": 20909199,
+          "terminal_notice_ms": 366.202,
+          "state_seq": 13,
+          "gpu_notice_observed_at_us": 20808994,
+          "gpu_notice_ms": 265.997,
+          "collision_observed_at_us": 21415997,
+          "collision_notice_ms": 873.0
+        },
+        {
+          "command_id": 14,
+          "admitted_at_us": 20672044,
+          "terminal_observed_at_us": 21040084,
+          "terminal_notice_ms": 368.04,
+          "state_seq": 14,
+          "gpu_notice_observed_at_us": 20909199,
+          "gpu_notice_ms": 237.155,
+          "collision_observed_at_us": 21415997,
+          "collision_notice_ms": 743.953
+        },
+        {
+          "command_id": 15,
+          "admitted_at_us": 20811257,
+          "terminal_observed_at_us": 21145229,
+          "terminal_notice_ms": 333.972,
+          "state_seq": 15,
+          "gpu_notice_observed_at_us": 21040084,
+          "gpu_notice_ms": 228.827,
+          "collision_observed_at_us": 21758836,
+          "collision_notice_ms": 947.579
+        },
+        {
+          "command_id": 16,
+          "admitted_at_us": 20911082,
+          "terminal_observed_at_us": 21273839,
+          "terminal_notice_ms": 362.757,
+          "state_seq": 16,
+          "gpu_notice_observed_at_us": 21145229,
+          "gpu_notice_ms": 234.147,
+          "collision_observed_at_us": 21758836,
+          "collision_notice_ms": 847.754
+        },
+        {
+          "command_id": 17,
+          "admitted_at_us": 21041416,
+          "terminal_observed_at_us": 21415997,
+          "terminal_notice_ms": 374.581,
+          "state_seq": 17,
+          "gpu_notice_observed_at_us": 21273839,
+          "gpu_notice_ms": 232.423,
+          "collision_observed_at_us": 21758836,
+          "collision_notice_ms": 717.42
+        },
+        {
+          "command_id": 18,
+          "admitted_at_us": 21147988,
+          "terminal_observed_at_us": 21514251,
+          "terminal_notice_ms": 366.263,
+          "state_seq": 18,
+          "gpu_notice_observed_at_us": 21415997,
+          "gpu_notice_ms": 268.009,
+          "collision_observed_at_us": 22152600,
+          "collision_notice_ms": 1004.612
+        },
+        {
+          "command_id": 19,
+          "admitted_at_us": 21275836,
+          "terminal_observed_at_us": 21647761,
+          "terminal_notice_ms": 371.925,
+          "state_seq": 19,
+          "gpu_notice_observed_at_us": 21514251,
+          "gpu_notice_ms": 238.415,
+          "collision_observed_at_us": 22152600,
+          "collision_notice_ms": 876.764
+        },
+        {
+          "command_id": 20,
+          "admitted_at_us": 21417903,
+          "terminal_observed_at_us": 21758836,
+          "terminal_notice_ms": 340.933,
+          "state_seq": 20,
+          "gpu_notice_observed_at_us": 21647761,
+          "gpu_notice_ms": 229.858,
+          "collision_observed_at_us": 22152600,
+          "collision_notice_ms": 734.697
+        },
+        {
+          "command_id": 21,
+          "admitted_at_us": 21516696,
+          "terminal_observed_at_us": 21884640,
+          "terminal_notice_ms": 367.944,
+          "state_seq": 21,
+          "gpu_notice_observed_at_us": 21758836,
+          "gpu_notice_ms": 242.14,
+          "collision_observed_at_us": 22304384,
+          "collision_notice_ms": 787.688
+        },
+        {
+          "command_id": 22,
+          "admitted_at_us": 21649866,
+          "terminal_observed_at_us": 22026328,
+          "terminal_notice_ms": 376.462,
+          "state_seq": 22,
+          "gpu_notice_observed_at_us": 21884640,
+          "gpu_notice_ms": 234.774,
+          "collision_observed_at_us": 22304384,
+          "collision_notice_ms": 654.518
+        },
+        {
+          "command_id": 23,
+          "admitted_at_us": 21760434,
+          "terminal_observed_at_us": 22152600,
+          "terminal_notice_ms": 392.166,
+          "state_seq": 23,
+          "gpu_notice_observed_at_us": 22026328,
+          "gpu_notice_ms": 265.894,
+          "collision_observed_at_us": 22304384,
+          "collision_notice_ms": 543.95
+        },
+        {
+          "command_id": 24,
+          "admitted_at_us": 21887508,
+          "terminal_observed_at_us": 22190571,
+          "terminal_notice_ms": 303.063,
+          "state_seq": 24,
+          "gpu_notice_observed_at_us": 22152600,
+          "gpu_notice_ms": 265.092,
+          "collision_observed_at_us": 22436197,
+          "collision_notice_ms": 548.689
+        },
+        {
+          "command_id": 25,
+          "admitted_at_us": 22028286,
+          "terminal_observed_at_us": 22251497,
+          "terminal_notice_ms": 223.211,
+          "state_seq": 25,
+          "gpu_notice_observed_at_us": 22190571,
+          "gpu_notice_ms": 162.285,
+          "collision_observed_at_us": 22436197,
+          "collision_notice_ms": 407.911
+        }
+      ],
+      "gpu_stage_dispatch_ms": {
+        "edit_shape_stage_1": {
+          "n": 24,
+          "p50": 0.157696,
+          "p95": 0.159744,
+          "p99": null,
+          "max": 0.166912,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_stage_6": {
+          "n": 24,
+          "p50": 2.364928,
+          "p95": 2.466816,
+          "p99": null,
+          "max": 2.491392,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_material_0": {
+          "n": 24,
+          "p50": 0.068608,
+          "p95": 0.07168,
+          "p99": null,
+          "max": 0.11264,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_stage_2": {
+          "n": 24,
+          "p50": 0.202752,
+          "p95": 0.207872,
+          "p99": null,
+          "max": 0.207872,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_stage_3": {
+          "n": 24,
+          "p50": 0.052224,
+          "p95": 0.054272,
+          "p99": null,
+          "max": 0.05632,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_water_0_0": {
+          "n": 24,
+          "p50": 0.111616,
+          "p95": 0.114688,
+          "p99": null,
+          "max": 0.114688,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit": {
+          "n": 122,
+          "p50": 0.016384,
+          "p95": 28.42112,
+          "p99": null,
+          "max": 28.75904,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_water_1_0": {
+          "n": 24,
+          "p50": 0.095232,
+          "p95": 0.099328,
+          "p99": null,
+          "max": 0.100352,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_water_2_0": {
+          "n": 24,
+          "p50": 36.310016000000005,
+          "p95": 36.419584,
+          "p99": null,
+          "max": 36.419584,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_stage_4": {
+          "n": 24,
+          "p50": 0.06656,
+          "p95": 0.069632,
+          "p99": null,
+          "max": 0.073728,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_material_1": {
+          "n": 24,
+          "p50": 0.034816,
+          "p95": 0.036864,
+          "p99": null,
+          "max": 0.036864,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_water_3_0": {
+          "n": 24,
+          "p50": 0.048128,
+          "p95": 0.0512,
+          "p99": null,
+          "max": 0.05632,
+          "p99_reason": "insufficient_samples"
+        },
+        "collision": {
+          "n": 20,
+          "p50": 0.016767999999999998,
+          "p95": 0.02176,
+          "p99": null,
+          "max": 0.03072,
+          "p99_reason": "insufficient_samples"
+        }
+      },
+      "cpu_marker_stage_ms": {},
+      "initial_sha256": {
+        "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "compaction": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de",
+        "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "obstacle": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+        "rock": "e5bebff58c79121549c5d1fbd484f90280de59fb99e1940fd8d54502cce0ad6c",
+        "sand": "e4229dd131b89dc44a8f08df893d938028cda47737983b548d8e947cb2d0df74",
+        "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+        "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+      },
+      "final_sha256": {
+        "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "compaction": "636ea2ab0a9465d2321cf55fbef1112852a0030cb77a1ef0f6e7696159b9d154",
+        "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "sand": "857bbfe4b87be57f4b47305b3e27bc0a04fdc35a54973455d0e3d57dee1e3c32",
+        "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "water": "ed20b25abfd845a9a2cd5a8af1bbd15f0bb1853a293a92da05f0cec4c80d6898",
+        "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+      },
+      "limitations": [
+        "Notification times are CPU observation upper bounds, not GPU duration.",
+        "Physics shape replacement is observed; monitor scanout is not measured.",
+        "This workload contains 24 offered commands and is not a 1000-frame tail test."
+      ],
+      "name": "shovel_corner_wet_paused_1",
+      "source_drift": []
+    },
+    {
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_remainder01\\shovel_corner_dry_realtime_1.json",
+      "sha256": "678f79753948b297bb73b2adac69a48fb4f85d960ca6d141cc2796622378345d",
+      "pass": true,
+      "case": "shovel",
+      "pattern": "corner",
+      "wet": false,
+      "realtime": true,
+      "sampling": true,
+      "checks": 71,
+      "target": {
+        "cell": "(224, 184)",
+        "checked_cell_rect": "[P: (208, 164), S: (33, 41)]",
+        "obstacle": false,
+        "sand_min_m": 0.78647792339325,
+        "water_max_m": 0.0,
+        "water_min_m": 0.0
+      },
+      "cold_load_to_ready_ms": 13528.999,
+      "warmup_frames": 30,
+      "frame_ms": {
+        "n": 48,
+        "p50": 55.221000000000004,
+        "p95": 111.113,
+        "p99": null,
+        "max": 118.321,
+        "p99_reason": "insufficient_samples"
+      },
+      "input_only_frame_ms": {
+        "n": 23,
+        "p50": 104.249,
+        "p95": 115.297,
+        "p99": null,
+        "max": 118.321,
+        "p99_reason": "insufficient_samples"
+      },
+      "focus_states": [],
+      "max_fps_values": [],
+      "low_processor_usage_values": [],
+      "low_processor_sleep_us_values": [],
+      "input_open_ms": 2320.08,
+      "input_open_tick_advance": 11,
+      "input_open_sim_seconds": 0.366666674613953,
+      "queue_peak_at_observation": 0,
+      "oldest_age_ms_at_observation": 312.419,
+      "drain_ms": 133.673,
+      "command_timings": [
+        {
+          "command_id": 2,
+          "admitted_at_us": 18473345,
+          "terminal_observed_at_us": 18683363,
+          "terminal_notice_ms": 210.018,
+          "state_seq": 2,
+          "gpu_notice_observed_at_us": 18602509,
+          "gpu_notice_ms": 129.164,
+          "collision_observed_at_us": 18983723,
+          "collision_notice_ms": 510.378
+        },
+        {
+          "command_id": 3,
+          "admitted_at_us": 18501878,
+          "terminal_observed_at_us": 18787762,
+          "terminal_notice_ms": 285.884,
+          "state_seq": 4,
+          "gpu_notice_observed_at_us": 18683363,
+          "gpu_notice_ms": 181.485,
+          "collision_observed_at_us": 19283938,
+          "collision_notice_ms": 782.06
+        },
+        {
+          "command_id": 4,
+          "admitted_at_us": 18603685,
+          "terminal_observed_at_us": 18903059,
+          "terminal_notice_ms": 299.374,
+          "state_seq": 6,
+          "gpu_notice_observed_at_us": 18787762,
+          "gpu_notice_ms": 184.077,
+          "collision_observed_at_us": 19283938,
+          "collision_notice_ms": 680.253
+        },
+        {
+          "command_id": 5,
+          "admitted_at_us": 18685624,
+          "terminal_observed_at_us": 18983723,
+          "terminal_notice_ms": 298.099,
+          "state_seq": 7,
+          "gpu_notice_observed_at_us": 18903059,
+          "gpu_notice_ms": 217.435,
+          "collision_observed_at_us": 19283938,
+          "collision_notice_ms": 598.314
+        },
+        {
+          "command_id": 6,
+          "admitted_at_us": 18790051,
+          "terminal_observed_at_us": 19087972,
+          "terminal_notice_ms": 297.921,
+          "state_seq": 9,
+          "gpu_notice_observed_at_us": 18983723,
+          "gpu_notice_ms": 193.672,
+          "collision_observed_at_us": 19570132,
+          "collision_notice_ms": 780.081
+        },
+        {
+          "command_id": 7,
+          "admitted_at_us": 18904807,
+          "terminal_observed_at_us": 19175988,
+          "terminal_notice_ms": 271.181,
+          "state_seq": 10,
+          "gpu_notice_observed_at_us": 19087972,
+          "gpu_notice_ms": 183.165,
+          "collision_observed_at_us": 19570132,
+          "collision_notice_ms": 665.325
+        },
+        {
+          "command_id": 8,
+          "admitted_at_us": 18985641,
+          "terminal_observed_at_us": 19283938,
+          "terminal_notice_ms": 298.297,
+          "state_seq": 12,
+          "gpu_notice_observed_at_us": 19175988,
+          "gpu_notice_ms": 190.347,
+          "collision_observed_at_us": 19570132,
+          "collision_notice_ms": 584.491
+        },
+        {
+          "command_id": 9,
+          "admitted_at_us": 19090289,
+          "terminal_observed_at_us": 19370681,
+          "terminal_notice_ms": 280.392,
+          "state_seq": 13,
+          "gpu_notice_observed_at_us": 19283938,
+          "gpu_notice_ms": 193.649,
+          "collision_observed_at_us": 19874408,
+          "collision_notice_ms": 784.119
+        },
+        {
+          "command_id": 10,
+          "admitted_at_us": 19177816,
+          "terminal_observed_at_us": 19477230,
+          "terminal_notice_ms": 299.414,
+          "state_seq": 15,
+          "gpu_notice_observed_at_us": 19370681,
+          "gpu_notice_ms": 192.865,
+          "collision_observed_at_us": 19874408,
+          "collision_notice_ms": 696.592
+        },
+        {
+          "command_id": 11,
+          "admitted_at_us": 19285966,
+          "terminal_observed_at_us": 19570132,
+          "terminal_notice_ms": 284.166,
+          "state_seq": 16,
+          "gpu_notice_observed_at_us": 19477230,
+          "gpu_notice_ms": 191.264,
+          "collision_observed_at_us": 19874408,
+          "collision_notice_ms": 588.442
+        },
+        {
+          "command_id": 12,
+          "admitted_at_us": 19372897,
+          "terminal_observed_at_us": 19671681,
+          "terminal_notice_ms": 298.784,
+          "state_seq": 18,
+          "gpu_notice_observed_at_us": 19570132,
+          "gpu_notice_ms": 197.235,
+          "collision_observed_at_us": 20174540,
+          "collision_notice_ms": 801.643
+        },
+        {
+          "command_id": 13,
+          "admitted_at_us": 19479427,
+          "terminal_observed_at_us": 19764121,
+          "terminal_notice_ms": 284.694,
+          "state_seq": 19,
+          "gpu_notice_observed_at_us": 19671681,
+          "gpu_notice_ms": 192.254,
+          "collision_observed_at_us": 20174540,
+          "collision_notice_ms": 695.113
+        },
+        {
+          "command_id": 14,
+          "admitted_at_us": 19571448,
+          "terminal_observed_at_us": 19874408,
+          "terminal_notice_ms": 302.96,
+          "state_seq": 21,
+          "gpu_notice_observed_at_us": 19764121,
+          "gpu_notice_ms": 192.673,
+          "collision_observed_at_us": 20174540,
+          "collision_notice_ms": 603.092
+        },
+        {
+          "command_id": 15,
+          "admitted_at_us": 19674430,
+          "terminal_observed_at_us": 19984618,
+          "terminal_notice_ms": 310.188,
+          "state_seq": 22,
+          "gpu_notice_observed_at_us": 19874408,
+          "gpu_notice_ms": 199.978,
+          "collision_observed_at_us": 20475080,
+          "collision_notice_ms": 800.65
+        },
+        {
+          "command_id": 16,
+          "admitted_at_us": 19766676,
+          "terminal_observed_at_us": 20065423,
+          "terminal_notice_ms": 298.747,
+          "state_seq": 24,
+          "gpu_notice_observed_at_us": 19984618,
+          "gpu_notice_ms": 217.942,
+          "collision_observed_at_us": 20475080,
+          "collision_notice_ms": 708.404
+        },
+        {
+          "command_id": 17,
+          "admitted_at_us": 19875797,
+          "terminal_observed_at_us": 20174540,
+          "terminal_notice_ms": 298.743,
+          "state_seq": 25,
+          "gpu_notice_observed_at_us": 20065423,
+          "gpu_notice_ms": 189.626,
+          "collision_observed_at_us": 20475080,
+          "collision_notice_ms": 599.283
+        },
+        {
+          "command_id": 18,
+          "admitted_at_us": 19987368,
+          "terminal_observed_at_us": 20285653,
+          "terminal_notice_ms": 298.285,
+          "state_seq": 27,
+          "gpu_notice_observed_at_us": 20174540,
+          "gpu_notice_ms": 187.172,
+          "collision_observed_at_us": 20788892,
+          "collision_notice_ms": 801.524
+        },
+        {
+          "command_id": 19,
+          "admitted_at_us": 20067699,
+          "terminal_observed_at_us": 20369565,
+          "terminal_notice_ms": 301.866,
+          "state_seq": 28,
+          "gpu_notice_observed_at_us": 20285653,
+          "gpu_notice_ms": 217.954,
+          "collision_observed_at_us": 20788892,
+          "collision_notice_ms": 721.193
+        },
+        {
+          "command_id": 20,
+          "admitted_at_us": 20175863,
+          "terminal_observed_at_us": 20475080,
+          "terminal_notice_ms": 299.217,
+          "state_seq": 30,
+          "gpu_notice_observed_at_us": 20369565,
+          "gpu_notice_ms": 193.702,
+          "collision_observed_at_us": 20788892,
+          "collision_notice_ms": 613.029
+        },
+        {
+          "command_id": 21,
+          "admitted_at_us": 20288457,
+          "terminal_observed_at_us": 20563324,
+          "terminal_notice_ms": 274.867,
+          "state_seq": 31,
+          "gpu_notice_observed_at_us": 20475080,
+          "gpu_notice_ms": 186.623,
+          "collision_observed_at_us": 20911098,
+          "collision_notice_ms": 622.641
+        },
+        {
+          "command_id": 22,
+          "admitted_at_us": 20371361,
+          "terminal_observed_at_us": 20670571,
+          "terminal_notice_ms": 299.21,
+          "state_seq": 33,
+          "gpu_notice_observed_at_us": 20563324,
+          "gpu_notice_ms": 191.963,
+          "collision_observed_at_us": 20911098,
+          "collision_notice_ms": 539.737
+        },
+        {
+          "command_id": 23,
+          "admitted_at_us": 20476473,
+          "terminal_observed_at_us": 20788892,
+          "terminal_notice_ms": 312.419,
+          "state_seq": 34,
+          "gpu_notice_observed_at_us": 20670571,
+          "gpu_notice_ms": 194.098,
+          "collision_observed_at_us": 20911098,
+          "collision_notice_ms": 434.625
+        },
+        {
+          "command_id": 24,
+          "admitted_at_us": 20566278,
+          "terminal_observed_at_us": 20821462,
+          "terminal_notice_ms": 255.184,
+          "state_seq": 36,
+          "gpu_notice_observed_at_us": 20788892,
+          "gpu_notice_ms": 222.614,
+          "collision_observed_at_us": 21044730,
+          "collision_notice_ms": 478.452
+        },
+        {
+          "command_id": 25,
+          "admitted_at_us": 20673037,
+          "terminal_observed_at_us": 20878828,
+          "terminal_notice_ms": 205.791,
+          "state_seq": 37,
+          "gpu_notice_observed_at_us": 20821462,
+          "gpu_notice_ms": 148.425,
+          "collision_observed_at_us": 21044730,
+          "collision_notice_ms": 371.693
+        }
+      ],
+      "gpu_stage_dispatch_ms": {
+        "edit_shape_stage_1": {
+          "n": 24,
+          "p50": 0.156672,
+          "p95": 0.159744,
+          "p99": null,
+          "max": 0.160768,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_stage_6": {
+          "n": 24,
+          "p50": 2.3434239999999997,
+          "p95": 2.443264,
+          "p99": null,
+          "max": 2.475008,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_material_0": {
+          "n": 24,
+          "p50": 0.06912,
+          "p95": 0.07168,
+          "p99": null,
+          "max": 0.11776,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_stage_2": {
+          "n": 24,
+          "p50": 0.202752,
+          "p95": 0.207872,
+          "p99": null,
+          "max": 0.207872,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_stage_3": {
+          "n": 24,
+          "p50": 0.05632,
+          "p95": 0.059392,
+          "p99": null,
+          "max": 0.065536,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_water_0_0": {
+          "n": 24,
+          "p50": 0.109056,
+          "p95": 0.11264,
+          "p99": null,
+          "max": 0.11264,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit": {
+          "n": 146,
+          "p50": 0.016384,
+          "p95": 2.284544,
+          "p99": null,
+          "max": 2.299904,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_water_1_0": {
+          "n": 24,
+          "p50": 0.09676799999999999,
+          "p95": 0.1024,
+          "p99": null,
+          "max": 0.106496,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_water_2_0": {
+          "n": 24,
+          "p50": 42.627584,
+          "p95": 42.66496,
+          "p99": null,
+          "max": 42.672128,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_stage_4": {
+          "n": 24,
+          "p50": 0.06656,
+          "p95": 0.067584,
+          "p99": null,
+          "max": 0.067584,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_material_1": {
+          "n": 24,
+          "p50": 0.034816,
+          "p95": 0.036864,
+          "p99": null,
+          "max": 0.037888,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_water_3_0": {
+          "n": 24,
+          "p50": 0.044544,
+          "p95": 0.04608,
+          "p99": null,
+          "max": 0.047104,
+          "p99_reason": "insufficient_samples"
+        },
+        "water_tick": {
+          "n": 12,
+          "p50": 1.50016,
+          "p95": 1.537024,
+          "p99": null,
+          "max": 1.537024,
+          "p99_reason": "insufficient_samples"
+        },
+        "publish": {
+          "n": 12,
+          "p50": 0.047104,
+          "p95": 0.055296,
+          "p99": null,
+          "max": 0.055296,
+          "p99_reason": "insufficient_samples"
+        },
+        "collision": {
+          "n": 20,
+          "p50": 0.016,
+          "p95": 0.021248,
+          "p99": null,
+          "max": 0.022528,
+          "p99_reason": "insufficient_samples"
+        }
+      },
+      "cpu_marker_stage_ms": {},
+      "initial_sha256": {
+        "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "compaction": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de",
+        "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "obstacle": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+        "rock": "e5bebff58c79121549c5d1fbd484f90280de59fb99e1940fd8d54502cce0ad6c",
+        "sand": "e4229dd131b89dc44a8f08df893d938028cda47737983b548d8e947cb2d0df74",
+        "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+        "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+      },
+      "final_sha256": {
+        "clock": "e0fb2d87992a9fc79e7729163ad2aea5efbf14806711292c8c46e873bac1a253",
+        "compaction": "c64aaf85b365b14f200bbf39ebf7e6f93493ce25415f4c1f46079d31fc934787",
+        "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "momentum_x": "118ed7c35b6ef4b121fc12ffd97179105a427c750045549cffbafe3d43957591",
+        "momentum_z": "2070cbabbb14e3cbca59573c44e34e2cd134f1f00a91cb0f779c8cb490575a6d",
+        "sand": "2231a1e72eba9c98ff82a24cfa5b06f9a5238692d2f891e9601c29fe84df302b",
+        "sediment": "4dd0f76ab43f970097c3d4b319290e8a83f8300a5d3378cf69c6c4e9c1c5612d",
+        "water": "5d705f178c7d91b811b692203eddf3980b2aa13c9acc671eebd034168c4cfa31",
+        "wetness": "d701e3b1b38bdd5a7fa14a2bf04a9362bd6806e6dadb77bbeb617d25fd789f0d"
+      },
+      "limitations": [
+        "Notification times are CPU observation upper bounds, not GPU duration.",
+        "Physics shape replacement is observed; monitor scanout is not measured.",
+        "This workload contains 24 offered commands and is not a 1000-frame tail test."
+      ],
+      "name": "shovel_corner_dry_realtime_1",
+      "source_drift": []
+    },
+    {
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_remainder01\\shovel_corner_wet_realtime_1.json",
+      "sha256": "74660beaf67b5dac255b3c2feb9b7d03e6b782342a082acdfddabd9284a04f54",
+      "pass": true,
+      "case": "shovel",
+      "pattern": "corner",
+      "wet": true,
+      "realtime": true,
+      "sampling": true,
+      "checks": 71,
+      "target": {
+        "cell": "(32, 40)",
+        "checked_cell_rect": "[P: (16, 20), S: (33, 41)]",
+        "obstacle": false,
+        "sand_min_m": 0.106849856674671,
+        "water_max_m": 0.533150136470795,
+        "water_min_m": 0.381762385368347
+      },
+      "cold_load_to_ready_ms": 13446.515,
+      "warmup_frames": 30,
+      "frame_ms": {
+        "n": 48,
+        "p50": 67.004,
+        "p95": 148.733,
+        "p99": null,
+        "max": 157.264,
+        "p99_reason": "insufficient_samples"
+      },
+      "input_only_frame_ms": {
+        "n": 23,
+        "p50": 137.093,
+        "p95": 152.909,
+        "p99": null,
+        "max": 157.264,
+        "p99_reason": "insufficient_samples"
+      },
+      "focus_states": [],
+      "max_fps_values": [],
+      "low_processor_usage_values": [],
+      "low_processor_sleep_us_values": [],
+      "input_open_ms": 3094.774,
+      "input_open_tick_advance": 11,
+      "input_open_sim_seconds": 0.366666674613953,
+      "queue_peak_at_observation": 0,
+      "oldest_age_ms_at_observation": 434.061,
+      "drain_ms": 132.077,
+      "command_timings": [
+        {
+          "command_id": 2,
+          "admitted_at_us": 18270881,
+          "terminal_observed_at_us": 18560732,
+          "terminal_notice_ms": 289.851,
+          "state_seq": 2,
+          "gpu_notice_observed_at_us": 18449776,
+          "gpu_notice_ms": 178.895,
+          "collision_observed_at_us": 18959647,
+          "collision_notice_ms": 688.766
+        },
+        {
+          "command_id": 3,
+          "admitted_at_us": 18317721,
+          "terminal_observed_at_us": 18694151,
+          "terminal_notice_ms": 376.43,
+          "state_seq": 4,
+          "gpu_notice_observed_at_us": 18560732,
+          "gpu_notice_ms": 243.011,
+          "collision_observed_at_us": 19362180,
+          "collision_notice_ms": 1044.459
+        },
+        {
+          "command_id": 4,
+          "admitted_at_us": 18451691,
+          "terminal_observed_at_us": 18816352,
+          "terminal_notice_ms": 364.661,
+          "state_seq": 6,
+          "gpu_notice_observed_at_us": 18694151,
+          "gpu_notice_ms": 242.46,
+          "collision_observed_at_us": 19362180,
+          "collision_notice_ms": 910.489
+        },
+        {
+          "command_id": 5,
+          "admitted_at_us": 18561790,
+          "terminal_observed_at_us": 18959647,
+          "terminal_notice_ms": 397.857,
+          "state_seq": 7,
+          "gpu_notice_observed_at_us": 18816352,
+          "gpu_notice_ms": 254.562,
+          "collision_observed_at_us": 19362180,
+          "collision_notice_ms": 800.39
+        },
+        {
+          "command_id": 6,
+          "admitted_at_us": 18696142,
+          "terminal_observed_at_us": 19108380,
+          "terminal_notice_ms": 412.238,
+          "state_seq": 9,
+          "gpu_notice_observed_at_us": 18959647,
+          "gpu_notice_ms": 263.505,
+          "collision_observed_at_us": 19766480,
+          "collision_notice_ms": 1070.338
+        },
+        {
+          "command_id": 7,
+          "admitted_at_us": 18819157,
+          "terminal_observed_at_us": 19253218,
+          "terminal_notice_ms": 434.061,
+          "state_seq": 10,
+          "gpu_notice_observed_at_us": 19108380,
+          "gpu_notice_ms": 289.223,
+          "collision_observed_at_us": 19766480,
+          "collision_notice_ms": 947.323
+        },
+        {
+          "command_id": 8,
+          "admitted_at_us": 18960911,
+          "terminal_observed_at_us": 19362180,
+          "terminal_notice_ms": 401.269,
+          "state_seq": 12,
+          "gpu_notice_observed_at_us": 19253218,
+          "gpu_notice_ms": 292.307,
+          "collision_observed_at_us": 19766480,
+          "collision_notice_ms": 805.569
+        },
+        {
+          "command_id": 9,
+          "admitted_at_us": 19110888,
+          "terminal_observed_at_us": 19502864,
+          "terminal_notice_ms": 391.976,
+          "state_seq": 13,
+          "gpu_notice_observed_at_us": 19362180,
+          "gpu_notice_ms": 251.292,
+          "collision_observed_at_us": 20153434,
+          "collision_notice_ms": 1042.546
+        },
+        {
+          "command_id": 10,
+          "admitted_at_us": 19255032,
+          "terminal_observed_at_us": 19621134,
+          "terminal_notice_ms": 366.102,
+          "state_seq": 15,
+          "gpu_notice_observed_at_us": 19502864,
+          "gpu_notice_ms": 247.832,
+          "collision_observed_at_us": 20153434,
+          "collision_notice_ms": 898.402
+        },
+        {
+          "command_id": 11,
+          "admitted_at_us": 19363215,
+          "terminal_observed_at_us": 19766480,
+          "terminal_notice_ms": 403.265,
+          "state_seq": 16,
+          "gpu_notice_observed_at_us": 19621134,
+          "gpu_notice_ms": 257.919,
+          "collision_observed_at_us": 20153434,
+          "collision_notice_ms": 790.219
+        },
+        {
+          "command_id": 12,
+          "admitted_at_us": 19505056,
+          "terminal_observed_at_us": 19885947,
+          "terminal_notice_ms": 380.891,
+          "state_seq": 18,
+          "gpu_notice_observed_at_us": 19766480,
+          "gpu_notice_ms": 261.424,
+          "collision_observed_at_us": 20553669,
+          "collision_notice_ms": 1048.613
+        },
+        {
+          "command_id": 13,
+          "admitted_at_us": 19622946,
+          "terminal_observed_at_us": 20025623,
+          "terminal_notice_ms": 402.677,
+          "state_seq": 19,
+          "gpu_notice_observed_at_us": 19885947,
+          "gpu_notice_ms": 263.001,
+          "collision_observed_at_us": 20553669,
+          "collision_notice_ms": 930.723
+        },
+        {
+          "command_id": 14,
+          "admitted_at_us": 19767764,
+          "terminal_observed_at_us": 20153434,
+          "terminal_notice_ms": 385.67,
+          "state_seq": 21,
+          "gpu_notice_observed_at_us": 20025623,
+          "gpu_notice_ms": 257.859,
+          "collision_observed_at_us": 20553669,
+          "collision_notice_ms": 785.905
+        },
+        {
+          "command_id": 15,
+          "admitted_at_us": 19888470,
+          "terminal_observed_at_us": 20290890,
+          "terminal_notice_ms": 402.42,
+          "state_seq": 22,
+          "gpu_notice_observed_at_us": 20153434,
+          "gpu_notice_ms": 264.964,
+          "collision_observed_at_us": 20955988,
+          "collision_notice_ms": 1067.518
+        },
+        {
+          "command_id": 16,
+          "admitted_at_us": 20027438,
+          "terminal_observed_at_us": 20443799,
+          "terminal_notice_ms": 416.361,
+          "state_seq": 24,
+          "gpu_notice_observed_at_us": 20290890,
+          "gpu_notice_ms": 263.452,
+          "collision_observed_at_us": 20955988,
+          "collision_notice_ms": 928.55
+        },
+        {
+          "command_id": 17,
+          "admitted_at_us": 20155999,
+          "terminal_observed_at_us": 20553669,
+          "terminal_notice_ms": 397.67,
+          "state_seq": 25,
+          "gpu_notice_observed_at_us": 20443799,
+          "gpu_notice_ms": 287.8,
+          "collision_observed_at_us": 20955988,
+          "collision_notice_ms": 799.989
+        },
+        {
+          "command_id": 18,
+          "admitted_at_us": 20293059,
+          "terminal_observed_at_us": 20690762,
+          "terminal_notice_ms": 397.703,
+          "state_seq": 27,
+          "gpu_notice_observed_at_us": 20553669,
+          "gpu_notice_ms": 260.61,
+          "collision_observed_at_us": 21361172,
+          "collision_notice_ms": 1068.113
+        },
+        {
+          "command_id": 19,
+          "admitted_at_us": 20445738,
+          "terminal_observed_at_us": 20848026,
+          "terminal_notice_ms": 402.288,
+          "state_seq": 28,
+          "gpu_notice_observed_at_us": 20690762,
+          "gpu_notice_ms": 245.024,
+          "collision_observed_at_us": 21361172,
+          "collision_notice_ms": 915.434
+        },
+        {
+          "command_id": 20,
+          "admitted_at_us": 20555038,
+          "terminal_observed_at_us": 20955988,
+          "terminal_notice_ms": 400.95,
+          "state_seq": 30,
+          "gpu_notice_observed_at_us": 20848026,
+          "gpu_notice_ms": 292.988,
+          "collision_observed_at_us": 21361172,
+          "collision_notice_ms": 806.134
+        },
+        {
+          "command_id": 21,
+          "admitted_at_us": 20693472,
+          "terminal_observed_at_us": 21094296,
+          "terminal_notice_ms": 400.824,
+          "state_seq": 31,
+          "gpu_notice_observed_at_us": 20955988,
+          "gpu_notice_ms": 262.516,
+          "collision_observed_at_us": 21526369,
+          "collision_notice_ms": 832.897
+        },
+        {
+          "command_id": 22,
+          "admitted_at_us": 20849916,
+          "terminal_observed_at_us": 21217588,
+          "terminal_notice_ms": 367.672,
+          "state_seq": 33,
+          "gpu_notice_observed_at_us": 21094296,
+          "gpu_notice_ms": 244.38,
+          "collision_observed_at_us": 21526369,
+          "collision_notice_ms": 676.453
+        },
+        {
+          "command_id": 23,
+          "admitted_at_us": 20957402,
+          "terminal_observed_at_us": 21361172,
+          "terminal_notice_ms": 403.77,
+          "state_seq": 34,
+          "gpu_notice_observed_at_us": 21217588,
+          "gpu_notice_ms": 260.186,
+          "collision_observed_at_us": 21526369,
+          "collision_notice_ms": 568.967
+        },
+        {
+          "command_id": 24,
+          "admitted_at_us": 21096771,
+          "terminal_observed_at_us": 21437795,
+          "terminal_notice_ms": 341.024,
+          "state_seq": 36,
+          "gpu_notice_observed_at_us": 21361172,
+          "gpu_notice_ms": 264.401,
+          "collision_observed_at_us": 21658323,
+          "collision_notice_ms": 561.552
+        },
+        {
+          "command_id": 25,
+          "admitted_at_us": 21219933,
+          "terminal_observed_at_us": 21468984,
+          "terminal_notice_ms": 249.051,
+          "state_seq": 37,
+          "gpu_notice_observed_at_us": 21437795,
+          "gpu_notice_ms": 217.862,
+          "collision_observed_at_us": 21658323,
+          "collision_notice_ms": 438.39
+        }
+      ],
+      "gpu_stage_dispatch_ms": {
+        "edit_shape_stage_1": {
+          "n": 24,
+          "p50": 0.157184,
+          "p95": 0.175104,
+          "p99": null,
+          "max": 0.175104,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_stage_6": {
+          "n": 24,
+          "p50": 2.3398399999999997,
+          "p95": 2.46272,
+          "p99": null,
+          "max": 2.487296,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_material_0": {
+          "n": 24,
+          "p50": 0.06912,
+          "p95": 0.07168,
+          "p99": null,
+          "max": 0.113664,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_stage_2": {
+          "n": 24,
+          "p50": 0.203264,
+          "p95": 0.207872,
+          "p99": null,
+          "max": 0.207872,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_stage_3": {
+          "n": 24,
+          "p50": 0.052224,
+          "p95": 0.053248,
+          "p99": null,
+          "max": 0.054272,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_water_0_0": {
+          "n": 24,
+          "p50": 0.109568,
+          "p95": 0.11264,
+          "p99": null,
+          "max": 0.113664,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit": {
+          "n": 146,
+          "p50": 0.016384,
+          "p95": 28.71296,
+          "p99": null,
+          "max": 28.872704,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_water_1_0": {
+          "n": 24,
+          "p50": 0.095744,
+          "p95": 0.098304,
+          "p99": null,
+          "max": 0.098304,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_water_2_0": {
+          "n": 24,
+          "p50": 45.256704,
+          "p95": 45.277184,
+          "p99": null,
+          "max": 45.28128,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_stage_4": {
+          "n": 24,
+          "p50": 0.06656,
+          "p95": 0.068608,
+          "p99": null,
+          "max": 0.070656,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_material_1": {
+          "n": 24,
+          "p50": 0.034816,
+          "p95": 0.03584,
+          "p99": null,
+          "max": 0.036864,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_water_3_0": {
+          "n": 24,
+          "p50": 0.059392,
+          "p95": 0.06144,
+          "p99": null,
+          "max": 0.067584,
+          "p99_reason": "insufficient_samples"
+        },
+        "water_tick": {
+          "n": 12,
+          "p50": 1.510912,
+          "p95": 1.543168,
+          "p99": null,
+          "max": 1.543168,
+          "p99_reason": "insufficient_samples"
+        },
+        "publish": {
+          "n": 12,
+          "p50": 0.046592,
+          "p95": 0.0512,
+          "p99": null,
+          "max": 0.0512,
+          "p99_reason": "insufficient_samples"
+        },
+        "collision": {
+          "n": 20,
+          "p50": 0.015872,
+          "p95": 0.021248,
+          "p99": null,
+          "max": 0.024064,
+          "p99_reason": "insufficient_samples"
+        }
+      },
+      "cpu_marker_stage_ms": {},
+      "initial_sha256": {
+        "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "compaction": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de",
+        "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "obstacle": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+        "rock": "e5bebff58c79121549c5d1fbd484f90280de59fb99e1940fd8d54502cce0ad6c",
+        "sand": "e4229dd131b89dc44a8f08df893d938028cda47737983b548d8e947cb2d0df74",
+        "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+        "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+      },
+      "final_sha256": {
+        "clock": "e0fb2d87992a9fc79e7729163ad2aea5efbf14806711292c8c46e873bac1a253",
+        "compaction": "49a3a8478164538454bf5c8bd2abc3f319f3e503d0689781f1bce862186e0426",
+        "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "momentum_x": "7315bba3942a67496833159a8019bba508802e62092975b227a69e583e51bb4a",
+        "momentum_z": "527c5cafba571df9e9429b29b436d3420a0271ed62bf8264889491b4f6ca6085",
+        "sand": "df784ad2e54f492880a7500220631e457152cdf5c70d6e3b2421de11975043de",
+        "sediment": "ea7c62ab703f02c4acc4dd5c73fa7972ca82e156455da7b6e14fb895452acc89",
+        "water": "81e8cc25b9f82be9967e75d4579b4ac8812e27b0913d817b1165878a41d6fce4",
+        "wetness": "0243fe44ea635113eafe0891dcc7448e2c09f940d54d7ffc2207ea5edbf019c3"
+      },
+      "limitations": [
+        "Notification times are CPU observation upper bounds, not GPU duration.",
+        "Physics shape replacement is observed; monitor scanout is not measured.",
+        "This workload contains 24 offered commands and is not a 1000-frame tail test."
+      ],
+      "name": "shovel_corner_wet_realtime_1",
+      "source_drift": []
+    },
+    {
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_remainder01\\shovel_overlap_dry_paused_1.json",
+      "sha256": "354f7654e4033116babeacee178ca55a530fedf92e1d3ab8411360a053c164fa",
+      "pass": true,
+      "case": "shovel",
+      "pattern": "overlap",
+      "wet": false,
+      "realtime": false,
+      "sampling": true,
+      "checks": 70,
+      "target": {
+        "cell": "(224, 184)",
+        "checked_cell_rect": "[P: (208, 164), S: (33, 41)]",
+        "obstacle": false,
+        "sand_min_m": 0.78647792339325,
+        "water_max_m": 0.0,
+        "water_min_m": 0.0
+      },
+      "cold_load_to_ready_ms": 13744.552,
+      "warmup_frames": 30,
+      "frame_ms": {
+        "n": 48,
+        "p50": 49.7785,
+        "p95": 100.298,
+        "p99": null,
+        "max": 108.12,
+        "p99_reason": "insufficient_samples"
+      },
+      "input_only_frame_ms": {
+        "n": 23,
+        "p50": 69.86,
+        "p95": 100.337,
+        "p99": null,
+        "max": 108.12,
+        "p99_reason": "insufficient_samples"
+      },
+      "focus_states": [],
+      "max_fps_values": [],
+      "low_processor_usage_values": [],
+      "low_processor_sleep_us_values": [],
+      "input_open_ms": 1685.915,
+      "input_open_tick_advance": 0,
+      "input_open_sim_seconds": 0.0,
+      "queue_peak_at_observation": 0,
+      "oldest_age_ms_at_observation": 283.683,
+      "drain_ms": 128.142,
+      "command_timings": [
+        {
+          "command_id": 2,
+          "admitted_at_us": 18579818,
+          "terminal_observed_at_us": 18791803,
+          "terminal_notice_ms": 211.985,
+          "state_seq": 2,
+          "gpu_notice_observed_at_us": 18699168,
+          "gpu_notice_ms": 119.35,
+          "collision_observed_at_us": 19076467,
+          "collision_notice_ms": 496.649
+        },
+        {
+          "command_id": 3,
+          "admitted_at_us": 18626582,
+          "terminal_observed_at_us": 18868382,
+          "terminal_notice_ms": 241.8,
+          "state_seq": 3,
+          "gpu_notice_observed_at_us": 18791803,
+          "gpu_notice_ms": 165.221,
+          "collision_observed_at_us": 19251455,
+          "collision_notice_ms": 624.873
+        },
+        {
+          "command_id": 4,
+          "admitted_at_us": 18700564,
+          "terminal_observed_at_us": 18968347,
+          "terminal_notice_ms": 267.783,
+          "state_seq": 4,
+          "gpu_notice_observed_at_us": 18868382,
+          "gpu_notice_ms": 167.818,
+          "collision_observed_at_us": 19251455,
+          "collision_notice_ms": 550.891
+        },
+        {
+          "command_id": 5,
+          "admitted_at_us": 18792784,
+          "terminal_observed_at_us": 19076467,
+          "terminal_notice_ms": 283.683,
+          "state_seq": 5,
+          "gpu_notice_observed_at_us": 18968347,
+          "gpu_notice_ms": 175.563,
+          "collision_observed_at_us": 19251455,
+          "collision_notice_ms": 458.671
+        },
+        {
+          "command_id": 6,
+          "admitted_at_us": 18871172,
+          "terminal_observed_at_us": 19146327,
+          "terminal_notice_ms": 275.155,
+          "state_seq": 6,
+          "gpu_notice_observed_at_us": 19076467,
+          "gpu_notice_ms": 205.295,
+          "collision_observed_at_us": 19403625,
+          "collision_notice_ms": 532.453
+        },
+        {
+          "command_id": 7,
+          "admitted_at_us": 18970648,
+          "terminal_observed_at_us": 19208584,
+          "terminal_notice_ms": 237.936,
+          "state_seq": 7,
+          "gpu_notice_observed_at_us": 19146327,
+          "gpu_notice_ms": 175.679,
+          "collision_observed_at_us": 19403625,
+          "collision_notice_ms": 432.977
+        },
+        {
+          "command_id": 8,
+          "admitted_at_us": 19078599,
+          "terminal_observed_at_us": 19251455,
+          "terminal_notice_ms": 172.856,
+          "state_seq": 8,
+          "gpu_notice_observed_at_us": 19208584,
+          "gpu_notice_ms": 129.985,
+          "collision_observed_at_us": 19403625,
+          "collision_notice_ms": 325.026
+        },
+        {
+          "command_id": 9,
+          "admitted_at_us": 19148497,
+          "terminal_observed_at_us": 19305796,
+          "terminal_notice_ms": 157.299,
+          "state_seq": 9,
+          "gpu_notice_observed_at_us": 19251455,
+          "gpu_notice_ms": 102.958,
+          "collision_observed_at_us": 19670230,
+          "collision_notice_ms": 521.733
+        },
+        {
+          "command_id": 10,
+          "admitted_at_us": 19211536,
+          "terminal_observed_at_us": 19366235,
+          "terminal_notice_ms": 154.699,
+          "state_seq": 10,
+          "gpu_notice_observed_at_us": 19305796,
+          "gpu_notice_ms": 94.26,
+          "collision_observed_at_us": 19670230,
+          "collision_notice_ms": 458.694
+        },
+        {
+          "command_id": 11,
+          "admitted_at_us": 19253029,
+          "terminal_observed_at_us": 19403625,
+          "terminal_notice_ms": 150.596,
+          "state_seq": 11,
+          "gpu_notice_observed_at_us": 19366235,
+          "gpu_notice_ms": 113.206,
+          "collision_observed_at_us": 19670230,
+          "collision_notice_ms": 417.201
+        },
+        {
+          "command_id": 12,
+          "admitted_at_us": 19308460,
+          "terminal_observed_at_us": 19496686,
+          "terminal_notice_ms": 188.226,
+          "state_seq": 12,
+          "gpu_notice_observed_at_us": 19403625,
+          "gpu_notice_ms": 95.165,
+          "collision_observed_at_us": 19947845,
+          "collision_notice_ms": 639.385
+        },
+        {
+          "command_id": 13,
+          "admitted_at_us": 19368806,
+          "terminal_observed_at_us": 19596984,
+          "terminal_notice_ms": 228.178,
+          "state_seq": 13,
+          "gpu_notice_observed_at_us": 19496686,
+          "gpu_notice_ms": 127.88,
+          "collision_observed_at_us": 19947845,
+          "collision_notice_ms": 579.039
+        },
+        {
+          "command_id": 14,
+          "admitted_at_us": 19404829,
+          "terminal_observed_at_us": 19670230,
+          "terminal_notice_ms": 265.401,
+          "state_seq": 14,
+          "gpu_notice_observed_at_us": 19596984,
+          "gpu_notice_ms": 192.155,
+          "collision_observed_at_us": 19947845,
+          "collision_notice_ms": 543.016
+        },
+        {
+          "command_id": 15,
+          "admitted_at_us": 19499795,
+          "terminal_observed_at_us": 19766664,
+          "terminal_notice_ms": 266.869,
+          "state_seq": 15,
+          "gpu_notice_observed_at_us": 19670230,
+          "gpu_notice_ms": 170.435,
+          "collision_observed_at_us": 20109982,
+          "collision_notice_ms": 610.187
+        },
+        {
+          "command_id": 16,
+          "admitted_at_us": 19598796,
+          "terminal_observed_at_us": 19847508,
+          "terminal_notice_ms": 248.712,
+          "state_seq": 16,
+          "gpu_notice_observed_at_us": 19766664,
+          "gpu_notice_ms": 167.868,
+          "collision_observed_at_us": 20109982,
+          "collision_notice_ms": 511.186
+        },
+        {
+          "command_id": 17,
+          "admitted_at_us": 19671594,
+          "terminal_observed_at_us": 19947845,
+          "terminal_notice_ms": 276.251,
+          "state_seq": 17,
+          "gpu_notice_observed_at_us": 19847508,
+          "gpu_notice_ms": 175.914,
+          "collision_observed_at_us": 20109982,
+          "collision_notice_ms": 438.388
+        },
+        {
+          "command_id": 18,
+          "admitted_at_us": 19769869,
+          "terminal_observed_at_us": 20014495,
+          "terminal_notice_ms": 244.626,
+          "state_seq": 18,
+          "gpu_notice_observed_at_us": 19947845,
+          "gpu_notice_ms": 177.976,
+          "collision_observed_at_us": 20261865,
+          "collision_notice_ms": 491.996
+        },
+        {
+          "command_id": 19,
+          "admitted_at_us": 19849671,
+          "terminal_observed_at_us": 20050967,
+          "terminal_notice_ms": 201.296,
+          "state_seq": 19,
+          "gpu_notice_observed_at_us": 20014495,
+          "gpu_notice_ms": 164.824,
+          "collision_observed_at_us": 20261865,
+          "collision_notice_ms": 412.194
+        },
+        {
+          "command_id": 20,
+          "admitted_at_us": 19949234,
+          "terminal_observed_at_us": 20109982,
+          "terminal_notice_ms": 160.748,
+          "state_seq": 20,
+          "gpu_notice_observed_at_us": 20050967,
+          "gpu_notice_ms": 101.733,
+          "collision_observed_at_us": 20261865,
+          "collision_notice_ms": 312.631
+        },
+        {
+          "command_id": 21,
+          "admitted_at_us": 20016512,
+          "terminal_observed_at_us": 20144625,
+          "terminal_notice_ms": 128.113,
+          "state_seq": 21,
+          "gpu_notice_observed_at_us": 20109982,
+          "gpu_notice_ms": 93.47,
+          "collision_observed_at_us": 20379901,
+          "collision_notice_ms": 363.389
+        },
+        {
+          "command_id": 22,
+          "admitted_at_us": 20053308,
+          "terminal_observed_at_us": 20201146,
+          "terminal_notice_ms": 147.838,
+          "state_seq": 22,
+          "gpu_notice_observed_at_us": 20144625,
+          "gpu_notice_ms": 91.317,
+          "collision_observed_at_us": 20379901,
+          "collision_notice_ms": 326.593
+        },
+        {
+          "command_id": 23,
+          "admitted_at_us": 20112896,
+          "terminal_observed_at_us": 20261865,
+          "terminal_notice_ms": 148.969,
+          "state_seq": 23,
+          "gpu_notice_observed_at_us": 20201146,
+          "gpu_notice_ms": 88.25,
+          "collision_observed_at_us": 20379901,
+          "collision_notice_ms": 267.005
+        },
+        {
+          "command_id": 24,
+          "admitted_at_us": 20147226,
+          "terminal_observed_at_us": 20294601,
+          "terminal_notice_ms": 147.375,
+          "state_seq": 24,
+          "gpu_notice_observed_at_us": 20261865,
+          "gpu_notice_ms": 114.639,
+          "collision_observed_at_us": 20507480,
+          "collision_notice_ms": 360.254
+        },
+        {
+          "command_id": 25,
+          "admitted_at_us": 20203205,
+          "terminal_observed_at_us": 20325973,
+          "terminal_notice_ms": 122.768,
+          "state_seq": 25,
+          "gpu_notice_observed_at_us": 20294601,
+          "gpu_notice_ms": 91.396,
+          "collision_observed_at_us": 20507480,
+          "collision_notice_ms": 304.275
+        }
+      ],
+      "gpu_stage_dispatch_ms": {
+        "edit_shape_stage_1": {
+          "n": 24,
+          "p50": 0.15872,
+          "p95": 0.167936,
+          "p99": null,
+          "max": 0.175104,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_stage_6": {
+          "n": 24,
+          "p50": 2.24,
+          "p95": 2.343936,
+          "p99": null,
+          "max": 2.408448,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_material_0": {
+          "n": 24,
+          "p50": 0.068608,
+          "p95": 0.069632,
+          "p99": null,
+          "max": 0.114688,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_stage_2": {
+          "n": 24,
+          "p50": 0.202752,
+          "p95": 0.207872,
+          "p99": null,
+          "max": 0.20992,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_stage_3": {
+          "n": 24,
+          "p50": 0.052736,
+          "p95": 0.054272,
+          "p99": null,
+          "max": 0.055296,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_water_0_0": {
+          "n": 24,
+          "p50": 0.108544,
+          "p95": 0.11264,
+          "p99": null,
+          "max": 0.113664,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit": {
+          "n": 122,
+          "p50": 0.017408,
+          "p95": 2.149376,
+          "p99": null,
+          "max": 2.16576,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_water_1_0": {
+          "n": 24,
+          "p50": 0.09728,
+          "p95": 0.1024,
+          "p99": null,
+          "max": 0.109568,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_water_2_0": {
+          "n": 24,
+          "p50": 18.144256000000002,
+          "p95": 36.42368,
+          "p99": null,
+          "max": 36.431872,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_stage_4": {
+          "n": 24,
+          "p50": 0.044032,
+          "p95": 0.067584,
+          "p99": null,
+          "max": 0.068608,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_material_1": {
+          "n": 24,
+          "p50": 0.025088,
+          "p95": 0.03584,
+          "p99": null,
+          "max": 0.03584,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_water_3_0": {
+          "n": 24,
+          "p50": 0.03328,
+          "p95": 0.047104,
+          "p99": null,
+          "max": 0.048128,
+          "p99_reason": "insufficient_samples"
+        },
+        "collision": {
+          "n": 20,
+          "p50": 0.016512,
+          "p95": 0.02304,
+          "p99": null,
+          "max": 0.059392,
+          "p99_reason": "insufficient_samples"
+        }
+      },
+      "cpu_marker_stage_ms": {},
+      "initial_sha256": {
+        "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "compaction": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de",
+        "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "obstacle": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+        "rock": "e5bebff58c79121549c5d1fbd484f90280de59fb99e1940fd8d54502cce0ad6c",
+        "sand": "e4229dd131b89dc44a8f08df893d938028cda47737983b548d8e947cb2d0df74",
+        "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+        "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+      },
+      "final_sha256": {
+        "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "compaction": "a466e7ec76157b5f7376654abce203583992d190fb57b49d419c1e21454a63c5",
+        "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "sand": "6fd3aae5071cfffacddc995e84532719f38a53fa1f9dfbe25c18274c24f82947",
+        "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+        "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+      },
+      "limitations": [
+        "Notification times are CPU observation upper bounds, not GPU duration.",
+        "Physics shape replacement is observed; monitor scanout is not measured.",
+        "This workload contains 24 offered commands and is not a 1000-frame tail test."
+      ],
+      "name": "shovel_overlap_dry_paused_1",
+      "source_drift": []
+    },
+    {
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_remainder01\\shovel_overlap_wet_paused_1.json",
+      "sha256": "f20d3a136d86f480f68a66fc97dfa3d683da9e3c477cd765109023e57ea6e4c3",
+      "pass": true,
+      "case": "shovel",
+      "pattern": "overlap",
+      "wet": true,
+      "realtime": false,
+      "sampling": true,
+      "checks": 70,
+      "target": {
+        "cell": "(32, 40)",
+        "checked_cell_rect": "[P: (16, 20), S: (33, 41)]",
+        "obstacle": false,
+        "sand_min_m": 0.106849856674671,
+        "water_max_m": 0.533150136470795,
+        "water_min_m": 0.381762385368347
+      },
+      "cold_load_to_ready_ms": 13987.2,
+      "warmup_frames": 30,
+      "frame_ms": {
+        "n": 48,
+        "p50": 49.8765,
+        "p95": 131.284,
+        "p99": null,
+        "max": 137.204,
+        "p99_reason": "insufficient_samples"
+      },
+      "input_only_frame_ms": {
+        "n": 23,
+        "p50": 96.765,
+        "p95": 133.102,
+        "p99": null,
+        "max": 137.204,
+        "p99_reason": "insufficient_samples"
+      },
+      "focus_states": [],
+      "max_fps_values": [],
+      "low_processor_usage_values": [],
+      "low_processor_sleep_us_values": [],
+      "input_open_ms": 2058.783,
+      "input_open_tick_advance": 0,
+      "input_open_sim_seconds": 0.0,
+      "queue_peak_at_observation": 0,
+      "oldest_age_ms_at_observation": 365.366,
+      "drain_ms": 131.838,
+      "command_timings": [
+        {
+          "command_id": 2,
+          "admitted_at_us": 18920496,
+          "terminal_observed_at_us": 19189561,
+          "terminal_notice_ms": 269.065,
+          "state_seq": 2,
+          "gpu_notice_observed_at_us": 19070723,
+          "gpu_notice_ms": 150.227,
+          "collision_observed_at_us": 19535933,
+          "collision_notice_ms": 615.437
+        },
+        {
+          "command_id": 3,
+          "admitted_at_us": 18967574,
+          "terminal_observed_at_us": 19297347,
+          "terminal_notice_ms": 329.773,
+          "state_seq": 3,
+          "gpu_notice_observed_at_us": 19189561,
+          "gpu_notice_ms": 221.987,
+          "collision_observed_at_us": 19781317,
+          "collision_notice_ms": 813.743
+        },
+        {
+          "command_id": 4,
+          "admitted_at_us": 19072356,
+          "terminal_observed_at_us": 19422574,
+          "terminal_notice_ms": 350.218,
+          "state_seq": 4,
+          "gpu_notice_observed_at_us": 19297347,
+          "gpu_notice_ms": 224.991,
+          "collision_observed_at_us": 19781317,
+          "collision_notice_ms": 708.961
+        },
+        {
+          "command_id": 5,
+          "admitted_at_us": 19190791,
+          "terminal_observed_at_us": 19535933,
+          "terminal_notice_ms": 345.142,
+          "state_seq": 5,
+          "gpu_notice_observed_at_us": 19422574,
+          "gpu_notice_ms": 231.783,
+          "collision_observed_at_us": 19781317,
+          "collision_notice_ms": 590.526
+        },
+        {
+          "command_id": 6,
+          "admitted_at_us": 19299678,
+          "terminal_observed_at_us": 19664068,
+          "terminal_notice_ms": 364.39,
+          "state_seq": 6,
+          "gpu_notice_observed_at_us": 19535933,
+          "gpu_notice_ms": 236.255,
+          "collision_observed_at_us": 19931561,
+          "collision_notice_ms": 631.883
+        },
+        {
+          "command_id": 7,
+          "admitted_at_us": 19425075,
+          "terminal_observed_at_us": 19743420,
+          "terminal_notice_ms": 318.345,
+          "state_seq": 7,
+          "gpu_notice_observed_at_us": 19664068,
+          "gpu_notice_ms": 238.993,
+          "collision_observed_at_us": 19931561,
+          "collision_notice_ms": 506.486
+        },
+        {
+          "command_id": 8,
+          "admitted_at_us": 19537376,
+          "terminal_observed_at_us": 19781317,
+          "terminal_notice_ms": 243.941,
+          "state_seq": 8,
+          "gpu_notice_observed_at_us": 19743420,
+          "gpu_notice_ms": 206.044,
+          "collision_observed_at_us": 19931561,
+          "collision_notice_ms": 394.185
+        },
+        {
+          "command_id": 9,
+          "admitted_at_us": 19666300,
+          "terminal_observed_at_us": 19836648,
+          "terminal_notice_ms": 170.348,
+          "state_seq": 9,
+          "gpu_notice_observed_at_us": 19781317,
+          "gpu_notice_ms": 115.017,
+          "collision_observed_at_us": 20282931,
+          "collision_notice_ms": 616.631
+        },
+        {
+          "command_id": 10,
+          "admitted_at_us": 19745491,
+          "terminal_observed_at_us": 19874404,
+          "terminal_notice_ms": 128.913,
+          "state_seq": 10,
+          "gpu_notice_observed_at_us": 19836648,
+          "gpu_notice_ms": 91.157,
+          "collision_observed_at_us": 20282931,
+          "collision_notice_ms": 537.44
+        },
+        {
+          "command_id": 11,
+          "admitted_at_us": 19782547,
+          "terminal_observed_at_us": 19931561,
+          "terminal_notice_ms": 149.014,
+          "state_seq": 11,
+          "gpu_notice_observed_at_us": 19874404,
+          "gpu_notice_ms": 91.857,
+          "collision_observed_at_us": 20282931,
+          "collision_notice_ms": 500.384
+        },
+        {
+          "command_id": 12,
+          "admitted_at_us": 19839009,
+          "terminal_observed_at_us": 20054097,
+          "terminal_notice_ms": 215.088,
+          "state_seq": 12,
+          "gpu_notice_observed_at_us": 19931561,
+          "gpu_notice_ms": 92.552,
+          "collision_observed_at_us": 20650002,
+          "collision_notice_ms": 810.993
+        },
+        {
+          "command_id": 13,
+          "admitted_at_us": 19876921,
+          "terminal_observed_at_us": 20151647,
+          "terminal_notice_ms": 274.726,
+          "state_seq": 13,
+          "gpu_notice_observed_at_us": 20054097,
+          "gpu_notice_ms": 177.176,
+          "collision_observed_at_us": 20650002,
+          "collision_notice_ms": 773.081
+        },
+        {
+          "command_id": 14,
+          "admitted_at_us": 19933670,
+          "terminal_observed_at_us": 20282931,
+          "terminal_notice_ms": 349.261,
+          "state_seq": 14,
+          "gpu_notice_observed_at_us": 20151647,
+          "gpu_notice_ms": 217.977,
+          "collision_observed_at_us": 20650002,
+          "collision_notice_ms": 716.332
+        },
+        {
+          "command_id": 15,
+          "admitted_at_us": 20056742,
+          "terminal_observed_at_us": 20420135,
+          "terminal_notice_ms": 363.393,
+          "state_seq": 15,
+          "gpu_notice_observed_at_us": 20282931,
+          "gpu_notice_ms": 226.189,
+          "collision_observed_at_us": 20824940,
+          "collision_notice_ms": 768.198
+        },
+        {
+          "command_id": 16,
+          "admitted_at_us": 20153683,
+          "terminal_observed_at_us": 20516900,
+          "terminal_notice_ms": 363.217,
+          "state_seq": 16,
+          "gpu_notice_observed_at_us": 20420135,
+          "gpu_notice_ms": 266.452,
+          "collision_observed_at_us": 20824940,
+          "collision_notice_ms": 671.257
+        },
+        {
+          "command_id": 17,
+          "admitted_at_us": 20284636,
+          "terminal_observed_at_us": 20650002,
+          "terminal_notice_ms": 365.366,
+          "state_seq": 17,
+          "gpu_notice_observed_at_us": 20516900,
+          "gpu_notice_ms": 232.264,
+          "collision_observed_at_us": 20824940,
+          "collision_notice_ms": 540.304
+        },
+        {
+          "command_id": 18,
+          "admitted_at_us": 20422781,
+          "terminal_observed_at_us": 20722837,
+          "terminal_notice_ms": 300.056,
+          "state_seq": 18,
+          "gpu_notice_observed_at_us": 20650002,
+          "gpu_notice_ms": 227.221,
+          "collision_observed_at_us": 20974959,
+          "collision_notice_ms": 552.178
+        },
+        {
+          "command_id": 19,
+          "admitted_at_us": 20518989,
+          "terminal_observed_at_us": 20761637,
+          "terminal_notice_ms": 242.648,
+          "state_seq": 19,
+          "gpu_notice_observed_at_us": 20722837,
+          "gpu_notice_ms": 203.848,
+          "collision_observed_at_us": 20974959,
+          "collision_notice_ms": 455.97
+        },
+        {
+          "command_id": 20,
+          "admitted_at_us": 20651461,
+          "terminal_observed_at_us": 20824940,
+          "terminal_notice_ms": 173.479,
+          "state_seq": 20,
+          "gpu_notice_observed_at_us": 20761637,
+          "gpu_notice_ms": 110.176,
+          "collision_observed_at_us": 20974959,
+          "collision_notice_ms": 323.498
+        },
+        {
+          "command_id": 21,
+          "admitted_at_us": 20726675,
+          "terminal_observed_at_us": 20860522,
+          "terminal_notice_ms": 133.847,
+          "state_seq": 21,
+          "gpu_notice_observed_at_us": 20824940,
+          "gpu_notice_ms": 98.265,
+          "collision_observed_at_us": 21090272,
+          "collision_notice_ms": 363.597
+        },
+        {
+          "command_id": 22,
+          "admitted_at_us": 20763051,
+          "terminal_observed_at_us": 20917946,
+          "terminal_notice_ms": 154.895,
+          "state_seq": 22,
+          "gpu_notice_observed_at_us": 20860522,
+          "gpu_notice_ms": 97.471,
+          "collision_observed_at_us": 21090272,
+          "collision_notice_ms": 327.221
+        },
+        {
+          "command_id": 23,
+          "admitted_at_us": 20827152,
+          "terminal_observed_at_us": 20974959,
+          "terminal_notice_ms": 147.807,
+          "state_seq": 23,
+          "gpu_notice_observed_at_us": 20917946,
+          "gpu_notice_ms": 90.794,
+          "collision_observed_at_us": 21090272,
+          "collision_notice_ms": 263.12
+        },
+        {
+          "command_id": 24,
+          "admitted_at_us": 20862408,
+          "terminal_observed_at_us": 21010129,
+          "terminal_notice_ms": 147.721,
+          "state_seq": 24,
+          "gpu_notice_observed_at_us": 20974959,
+          "gpu_notice_ms": 112.551,
+          "collision_observed_at_us": 21222650,
+          "collision_notice_ms": 360.242
+        },
+        {
+          "command_id": 25,
+          "admitted_at_us": 20919871,
+          "terminal_observed_at_us": 21060434,
+          "terminal_notice_ms": 140.563,
+          "state_seq": 25,
+          "gpu_notice_observed_at_us": 21010129,
+          "gpu_notice_ms": 90.258,
+          "collision_observed_at_us": 21222650,
+          "collision_notice_ms": 302.779
+        }
+      ],
+      "gpu_stage_dispatch_ms": {
+        "edit_shape_stage_1": {
+          "n": 24,
+          "p50": 0.157184,
+          "p95": 0.161792,
+          "p99": null,
+          "max": 0.165888,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_stage_6": {
+          "n": 24,
+          "p50": 2.224128,
+          "p95": 2.412544,
+          "p99": null,
+          "max": 2.430976,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_material_0": {
+          "n": 24,
+          "p50": 0.068608,
+          "p95": 0.070656,
+          "p99": null,
+          "max": 0.11264,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_stage_2": {
+          "n": 24,
+          "p50": 0.202752,
+          "p95": 0.2048,
+          "p99": null,
+          "max": 0.207872,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_stage_3": {
+          "n": 24,
+          "p50": 0.052224,
+          "p95": 0.055296,
+          "p99": null,
+          "max": 0.055296,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_water_0_0": {
+          "n": 24,
+          "p50": 0.108544,
+          "p95": 0.11264,
+          "p99": null,
+          "max": 0.119808,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit": {
+          "n": 122,
+          "p50": 0.017408,
+          "p95": 28.439552,
+          "p99": null,
+          "max": 28.831744,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_water_1_0": {
+          "n": 24,
+          "p50": 0.098176,
+          "p95": 0.105472,
+          "p99": null,
+          "max": 0.11264,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_water_2_0": {
+          "n": 24,
+          "p50": 18.149888,
+          "p95": 36.414464,
+          "p99": null,
+          "max": 36.42368,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_stage_4": {
+          "n": 24,
+          "p50": 0.044544,
+          "p95": 0.06656,
+          "p99": null,
+          "max": 0.067584,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_material_1": {
+          "n": 24,
+          "p50": 0.024576,
+          "p95": 0.03584,
+          "p99": null,
+          "max": 0.036864,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_water_3_0": {
+          "n": 24,
+          "p50": 0.035328,
+          "p95": 0.0512,
+          "p99": null,
+          "max": 0.053248,
+          "p99_reason": "insufficient_samples"
+        },
+        "collision": {
+          "n": 20,
+          "p50": 0.016896,
+          "p95": 0.02944,
+          "p99": null,
+          "max": 0.030464,
+          "p99_reason": "insufficient_samples"
+        }
+      },
+      "cpu_marker_stage_ms": {},
+      "initial_sha256": {
+        "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "compaction": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de",
+        "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "obstacle": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+        "rock": "e5bebff58c79121549c5d1fbd484f90280de59fb99e1940fd8d54502cce0ad6c",
+        "sand": "e4229dd131b89dc44a8f08df893d938028cda47737983b548d8e947cb2d0df74",
+        "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+        "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+      },
+      "final_sha256": {
+        "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "compaction": "7e66cb794c164336ae021b26b87ae0ea6bea66d1e5a6c2af6f9a4cb57da5b0ad",
+        "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "sand": "7adc4502c7c6734a5e23c344f0b1fd0fc6446668ead1763029497801ce460119",
+        "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "water": "a8481e8f056b405ecaad64768d2b6736fce299d48ab21ca958c29db0d18a3129",
+        "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+      },
+      "limitations": [
+        "Notification times are CPU observation upper bounds, not GPU duration.",
+        "Physics shape replacement is observed; monitor scanout is not measured.",
+        "This workload contains 24 offered commands and is not a 1000-frame tail test."
+      ],
+      "name": "shovel_overlap_wet_paused_1",
+      "source_drift": []
+    },
+    {
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_remainder01\\shovel_overlap_dry_realtime_1.json",
+      "sha256": "c0663f0d7b18948d4c92b49b509a54cc383af2a6c9a983a50855ebcf53ccc312",
+      "pass": true,
+      "case": "shovel",
+      "pattern": "overlap",
+      "wet": false,
+      "realtime": true,
+      "sampling": true,
+      "checks": 71,
+      "target": {
+        "cell": "(224, 184)",
+        "checked_cell_rect": "[P: (208, 164), S: (33, 41)]",
+        "obstacle": false,
+        "sand_min_m": 0.78647792339325,
+        "water_max_m": 0.0,
+        "water_min_m": 0.0
+      },
+      "cold_load_to_ready_ms": 13550.191,
+      "warmup_frames": 30,
+      "frame_ms": {
+        "n": 48,
+        "p50": 49.885000000000005,
+        "p95": 100.923,
+        "p99": null,
+        "max": 104.48,
+        "p99_reason": "insufficient_samples"
+      },
+      "input_only_frame_ms": {
+        "n": 23,
+        "p50": 71.011,
+        "p95": 103.467,
+        "p99": null,
+        "max": 104.48,
+        "p99_reason": "insufficient_samples"
+      },
+      "focus_states": [],
+      "max_fps_values": [],
+      "low_processor_usage_values": [],
+      "low_processor_sleep_us_values": [],
+      "input_open_ms": 1709.621,
+      "input_open_tick_advance": 11,
+      "input_open_sim_seconds": 0.366666674613953,
+      "queue_peak_at_observation": 0,
+      "oldest_age_ms_at_observation": 277.576,
+      "drain_ms": 132.443,
+      "command_timings": [
+        {
+          "command_id": 2,
+          "admitted_at_us": 18167110,
+          "terminal_observed_at_us": 18407577,
+          "terminal_notice_ms": 240.467,
+          "state_seq": 2,
+          "gpu_notice_observed_at_us": 18308286,
+          "gpu_notice_ms": 141.176,
+          "collision_observed_at_us": 18663491,
+          "collision_notice_ms": 496.381
+        },
+        {
+          "command_id": 3,
+          "admitted_at_us": 18214583,
+          "terminal_observed_at_us": 18479306,
+          "terminal_notice_ms": 264.723,
+          "state_seq": 4,
+          "gpu_notice_observed_at_us": 18407577,
+          "gpu_notice_ms": 192.994,
+          "collision_observed_at_us": 18866869,
+          "collision_notice_ms": 652.286
+        },
+        {
+          "command_id": 4,
+          "admitted_at_us": 18309528,
+          "terminal_observed_at_us": 18580229,
+          "terminal_notice_ms": 270.701,
+          "state_seq": 6,
+          "gpu_notice_observed_at_us": 18479306,
+          "gpu_notice_ms": 169.778,
+          "collision_observed_at_us": 18866869,
+          "collision_notice_ms": 557.341
+        },
+        {
+          "command_id": 5,
+          "admitted_at_us": 18408657,
+          "terminal_observed_at_us": 18663491,
+          "terminal_notice_ms": 254.834,
+          "state_seq": 7,
+          "gpu_notice_observed_at_us": 18580229,
+          "gpu_notice_ms": 171.572,
+          "collision_observed_at_us": 18866869,
+          "collision_notice_ms": 458.212
+        },
+        {
+          "command_id": 6,
+          "admitted_at_us": 18481899,
+          "terminal_observed_at_us": 18757367,
+          "terminal_notice_ms": 275.468,
+          "state_seq": 9,
+          "gpu_notice_observed_at_us": 18663491,
+          "gpu_notice_ms": 181.592,
+          "collision_observed_at_us": 19026224,
+          "collision_notice_ms": 544.325
+        },
+        {
+          "command_id": 7,
+          "admitted_at_us": 18581784,
+          "terminal_observed_at_us": 18828097,
+          "terminal_notice_ms": 246.313,
+          "state_seq": 10,
+          "gpu_notice_observed_at_us": 18757367,
+          "gpu_notice_ms": 175.583,
+          "collision_observed_at_us": 19026224,
+          "collision_notice_ms": 444.44
+        },
+        {
+          "command_id": 8,
+          "admitted_at_us": 18664671,
+          "terminal_observed_at_us": 18866869,
+          "terminal_notice_ms": 202.198,
+          "state_seq": 12,
+          "gpu_notice_observed_at_us": 18828097,
+          "gpu_notice_ms": 163.426,
+          "collision_observed_at_us": 19026224,
+          "collision_notice_ms": 361.553
+        },
+        {
+          "command_id": 9,
+          "admitted_at_us": 18759746,
+          "terminal_observed_at_us": 18924074,
+          "terminal_notice_ms": 164.328,
+          "state_seq": 13,
+          "gpu_notice_observed_at_us": 18866869,
+          "gpu_notice_ms": 107.123,
+          "collision_observed_at_us": 19291524,
+          "collision_notice_ms": 531.778
+        },
+        {
+          "command_id": 10,
+          "admitted_at_us": 18830173,
+          "terminal_observed_at_us": 18961628,
+          "terminal_notice_ms": 131.455,
+          "state_seq": 15,
+          "gpu_notice_observed_at_us": 18924074,
+          "gpu_notice_ms": 93.901,
+          "collision_observed_at_us": 19291524,
+          "collision_notice_ms": 461.351
+        },
+        {
+          "command_id": 11,
+          "admitted_at_us": 18868925,
+          "terminal_observed_at_us": 19026224,
+          "terminal_notice_ms": 157.299,
+          "state_seq": 16,
+          "gpu_notice_observed_at_us": 18961628,
+          "gpu_notice_ms": 92.703,
+          "collision_observed_at_us": 19291524,
+          "collision_notice_ms": 422.599
+        },
+        {
+          "command_id": 12,
+          "admitted_at_us": 18926397,
+          "terminal_observed_at_us": 19116598,
+          "terminal_notice_ms": 190.201,
+          "state_seq": 18,
+          "gpu_notice_observed_at_us": 19026224,
+          "gpu_notice_ms": 99.827,
+          "collision_observed_at_us": 19570482,
+          "collision_notice_ms": 644.085
+        },
+        {
+          "command_id": 13,
+          "admitted_at_us": 18963792,
+          "terminal_observed_at_us": 19192081,
+          "terminal_notice_ms": 228.289,
+          "state_seq": 19,
+          "gpu_notice_observed_at_us": 19116598,
+          "gpu_notice_ms": 152.806,
+          "collision_observed_at_us": 19570482,
+          "collision_notice_ms": 606.69
+        },
+        {
+          "command_id": 14,
+          "admitted_at_us": 19027563,
+          "terminal_observed_at_us": 19291524,
+          "terminal_notice_ms": 263.961,
+          "state_seq": 21,
+          "gpu_notice_observed_at_us": 19192081,
+          "gpu_notice_ms": 164.518,
+          "collision_observed_at_us": 19570482,
+          "collision_notice_ms": 542.919
+        },
+        {
+          "command_id": 15,
+          "admitted_at_us": 19120500,
+          "terminal_observed_at_us": 19396004,
+          "terminal_notice_ms": 275.504,
+          "state_seq": 22,
+          "gpu_notice_observed_at_us": 19291524,
+          "gpu_notice_ms": 171.024,
+          "collision_observed_at_us": 19734773,
+          "collision_notice_ms": 614.273
+        },
+        {
+          "command_id": 16,
+          "admitted_at_us": 19194001,
+          "terminal_observed_at_us": 19467015,
+          "terminal_notice_ms": 273.014,
+          "state_seq": 24,
+          "gpu_notice_observed_at_us": 19396004,
+          "gpu_notice_ms": 202.003,
+          "collision_observed_at_us": 19734773,
+          "collision_notice_ms": 540.772
+        },
+        {
+          "command_id": 17,
+          "admitted_at_us": 19292906,
+          "terminal_observed_at_us": 19570482,
+          "terminal_notice_ms": 277.576,
+          "state_seq": 25,
+          "gpu_notice_observed_at_us": 19467015,
+          "gpu_notice_ms": 174.109,
+          "collision_observed_at_us": 19734773,
+          "collision_notice_ms": 441.867
+        },
+        {
+          "command_id": 18,
+          "admitted_at_us": 19398341,
+          "terminal_observed_at_us": 19637664,
+          "terminal_notice_ms": 239.323,
+          "state_seq": 27,
+          "gpu_notice_observed_at_us": 19570482,
+          "gpu_notice_ms": 172.141,
+          "collision_observed_at_us": 19872901,
+          "collision_notice_ms": 474.56
+        },
+        {
+          "command_id": 19,
+          "admitted_at_us": 19470112,
+          "terminal_observed_at_us": 19676949,
+          "terminal_notice_ms": 206.837,
+          "state_seq": 28,
+          "gpu_notice_observed_at_us": 19637664,
+          "gpu_notice_ms": 167.552,
+          "collision_observed_at_us": 19872901,
+          "collision_notice_ms": 402.789
+        },
+        {
+          "command_id": 20,
+          "admitted_at_us": 19572984,
+          "terminal_observed_at_us": 19734773,
+          "terminal_notice_ms": 161.789,
+          "state_seq": 30,
+          "gpu_notice_observed_at_us": 19676949,
+          "gpu_notice_ms": 103.965,
+          "collision_observed_at_us": 19872901,
+          "collision_notice_ms": 299.917
+        },
+        {
+          "command_id": 21,
+          "admitted_at_us": 19640540,
+          "terminal_observed_at_us": 19772303,
+          "terminal_notice_ms": 131.763,
+          "state_seq": 31,
+          "gpu_notice_observed_at_us": 19734773,
+          "gpu_notice_ms": 94.233,
+          "collision_observed_at_us": 20012796,
+          "collision_notice_ms": 372.256
+        },
+        {
+          "command_id": 22,
+          "admitted_at_us": 19678892,
+          "terminal_observed_at_us": 19828529,
+          "terminal_notice_ms": 149.637,
+          "state_seq": 33,
+          "gpu_notice_observed_at_us": 19772303,
+          "gpu_notice_ms": 93.411,
+          "collision_observed_at_us": 20012796,
+          "collision_notice_ms": 333.904
+        },
+        {
+          "command_id": 23,
+          "admitted_at_us": 19737246,
+          "terminal_observed_at_us": 19872901,
+          "terminal_notice_ms": 135.655,
+          "state_seq": 34,
+          "gpu_notice_observed_at_us": 19828529,
+          "gpu_notice_ms": 91.283,
+          "collision_observed_at_us": 20012796,
+          "collision_notice_ms": 275.55
+        },
+        {
+          "command_id": 24,
+          "admitted_at_us": 19774867,
+          "terminal_observed_at_us": 19923964,
+          "terminal_notice_ms": 149.097,
+          "state_seq": 36,
+          "gpu_notice_observed_at_us": 19872901,
+          "gpu_notice_ms": 98.034,
+          "collision_observed_at_us": 20144947,
+          "collision_notice_ms": 370.08
+        },
+        {
+          "command_id": 25,
+          "admitted_at_us": 19830895,
+          "terminal_observed_at_us": 19958214,
+          "terminal_notice_ms": 127.319,
+          "state_seq": 37,
+          "gpu_notice_observed_at_us": 19923964,
+          "gpu_notice_ms": 93.069,
+          "collision_observed_at_us": 20144947,
+          "collision_notice_ms": 314.052
+        }
+      ],
+      "gpu_stage_dispatch_ms": {
+        "edit_shape_stage_1": {
+          "n": 24,
+          "p50": 0.155648,
+          "p95": 0.159744,
+          "p99": null,
+          "max": 0.159744,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_stage_6": {
+          "n": 24,
+          "p50": 2.21184,
+          "p95": 2.352128,
+          "p99": null,
+          "max": 2.405376,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_material_0": {
+          "n": 24,
+          "p50": 0.069632,
+          "p95": 0.070656,
+          "p99": null,
+          "max": 0.114688,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_stage_2": {
+          "n": 24,
+          "p50": 0.202752,
+          "p95": 0.206848,
+          "p99": null,
+          "max": 0.206848,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_stage_3": {
+          "n": 24,
+          "p50": 0.052224,
+          "p95": 0.055296,
+          "p99": null,
+          "max": 0.060416,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_water_0_0": {
+          "n": 24,
+          "p50": 0.109568,
+          "p95": 0.113664,
+          "p99": null,
+          "max": 0.114688,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit": {
+          "n": 146,
+          "p50": 0.016384,
+          "p95": 2.157568,
+          "p99": null,
+          "max": 2.171904,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_water_1_0": {
+          "n": 24,
+          "p50": 0.09676799999999999,
+          "p95": 0.101376,
+          "p99": null,
+          "max": 0.104448,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_water_2_0": {
+          "n": 24,
+          "p50": 18.126336000000002,
+          "p95": 36.424704,
+          "p99": null,
+          "max": 36.427776,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_stage_4": {
+          "n": 24,
+          "p50": 0.044032,
+          "p95": 0.067584,
+          "p99": null,
+          "max": 0.068608,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_material_1": {
+          "n": 24,
+          "p50": 0.025088,
+          "p95": 0.03584,
+          "p99": null,
+          "max": 0.03584,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_water_3_0": {
+          "n": 24,
+          "p50": 0.029183999999999998,
+          "p95": 0.04608,
+          "p99": null,
+          "max": 0.047104,
+          "p99_reason": "insufficient_samples"
+        },
+        "water_tick": {
+          "n": 12,
+          "p50": 1.4909439999999998,
+          "p95": 1.555456,
+          "p99": null,
+          "max": 1.555456,
+          "p99_reason": "insufficient_samples"
+        },
+        "publish": {
+          "n": 12,
+          "p50": 0.047104,
+          "p95": 0.049152,
+          "p99": null,
+          "max": 0.049152,
+          "p99_reason": "insufficient_samples"
+        },
+        "collision": {
+          "n": 20,
+          "p50": 0.016512,
+          "p95": 0.0256,
+          "p99": null,
+          "max": 0.028928,
+          "p99_reason": "insufficient_samples"
+        }
+      },
+      "cpu_marker_stage_ms": {},
+      "initial_sha256": {
+        "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "compaction": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de",
+        "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "obstacle": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+        "rock": "e5bebff58c79121549c5d1fbd484f90280de59fb99e1940fd8d54502cce0ad6c",
+        "sand": "e4229dd131b89dc44a8f08df893d938028cda47737983b548d8e947cb2d0df74",
+        "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+        "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+      },
+      "final_sha256": {
+        "clock": "e0fb2d87992a9fc79e7729163ad2aea5efbf14806711292c8c46e873bac1a253",
+        "compaction": "a466e7ec76157b5f7376654abce203583992d190fb57b49d419c1e21454a63c5",
+        "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "momentum_x": "118ed7c35b6ef4b121fc12ffd97179105a427c750045549cffbafe3d43957591",
+        "momentum_z": "2070cbabbb14e3cbca59573c44e34e2cd134f1f00a91cb0f779c8cb490575a6d",
+        "sand": "2bb2bb8fa7712321538085ccc5ff42dd04131c889a220108c71f6406bf2ddcab",
+        "sediment": "4dd0f76ab43f970097c3d4b319290e8a83f8300a5d3378cf69c6c4e9c1c5612d",
+        "water": "5d705f178c7d91b811b692203eddf3980b2aa13c9acc671eebd034168c4cfa31",
+        "wetness": "d701e3b1b38bdd5a7fa14a2bf04a9362bd6806e6dadb77bbeb617d25fd789f0d"
+      },
+      "limitations": [
+        "Notification times are CPU observation upper bounds, not GPU duration.",
+        "Physics shape replacement is observed; monitor scanout is not measured.",
+        "This workload contains 24 offered commands and is not a 1000-frame tail test."
+      ],
+      "name": "shovel_overlap_dry_realtime_1",
+      "source_drift": []
+    },
+    {
+      "result": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g0_workload_remainder01\\shovel_overlap_wet_realtime_1.json",
+      "sha256": "49650b78031645f99e3f6a06c3b3f3d1871a84d03e666bea01a6d4bc90deb1f0",
+      "pass": true,
+      "case": "shovel",
+      "pattern": "overlap",
+      "wet": true,
+      "realtime": true,
+      "sampling": true,
+      "checks": 71,
+      "target": {
+        "cell": "(32, 40)",
+        "checked_cell_rect": "[P: (16, 20), S: (33, 41)]",
+        "obstacle": false,
+        "sand_min_m": 0.106849856674671,
+        "water_max_m": 0.533150136470795,
+        "water_min_m": 0.381762385368347
+      },
+      "cold_load_to_ready_ms": 13354.456,
+      "warmup_frames": 30,
+      "frame_ms": {
+        "n": 48,
+        "p50": 50.2315,
+        "p95": 133.85,
+        "p99": null,
+        "max": 144.246,
+        "p99_reason": "insufficient_samples"
+      },
+      "input_only_frame_ms": {
+        "n": 23,
+        "p50": 101.93,
+        "p95": 139.795,
+        "p99": null,
+        "max": 144.246,
+        "p99_reason": "insufficient_samples"
+      },
+      "focus_states": [],
+      "max_fps_values": [],
+      "low_processor_usage_values": [],
+      "low_processor_sleep_us_values": [],
+      "input_open_ms": 2116.141,
+      "input_open_tick_advance": 11,
+      "input_open_sim_seconds": 0.366666674613953,
+      "queue_peak_at_observation": 0,
+      "oldest_age_ms_at_observation": 379.409,
+      "drain_ms": 132.794,
+      "command_timings": [
+        {
+          "command_id": 2,
+          "admitted_at_us": 18077525,
+          "terminal_observed_at_us": 18352125,
+          "terminal_notice_ms": 274.6,
+          "state_seq": 2,
+          "gpu_notice_observed_at_us": 18250195,
+          "gpu_notice_ms": 172.67,
+          "collision_observed_at_us": 18732775,
+          "collision_notice_ms": 655.25
+        },
+        {
+          "command_id": 3,
+          "admitted_at_us": 18125987,
+          "terminal_observed_at_us": 18484186,
+          "terminal_notice_ms": 358.199,
+          "state_seq": 4,
+          "gpu_notice_observed_at_us": 18352125,
+          "gpu_notice_ms": 226.138,
+          "collision_observed_at_us": 18960258,
+          "collision_notice_ms": 834.271
+        },
+        {
+          "command_id": 4,
+          "admitted_at_us": 18251833,
+          "terminal_observed_at_us": 18592980,
+          "terminal_notice_ms": 341.147,
+          "state_seq": 6,
+          "gpu_notice_observed_at_us": 18484186,
+          "gpu_notice_ms": 232.353,
+          "collision_observed_at_us": 18960258,
+          "collision_notice_ms": 708.425
+        },
+        {
+          "command_id": 5,
+          "admitted_at_us": 18353781,
+          "terminal_observed_at_us": 18732775,
+          "terminal_notice_ms": 378.994,
+          "state_seq": 7,
+          "gpu_notice_observed_at_us": 18592980,
+          "gpu_notice_ms": 239.199,
+          "collision_observed_at_us": 18960258,
+          "collision_notice_ms": 606.477
+        },
+        {
+          "command_id": 6,
+          "admitted_at_us": 18486808,
+          "terminal_observed_at_us": 18839929,
+          "terminal_notice_ms": 353.121,
+          "state_seq": 9,
+          "gpu_notice_observed_at_us": 18732775,
+          "gpu_notice_ms": 245.967,
+          "collision_observed_at_us": 19117911,
+          "collision_notice_ms": 631.103
+        },
+        {
+          "command_id": 7,
+          "admitted_at_us": 18595121,
+          "terminal_observed_at_us": 18907859,
+          "terminal_notice_ms": 312.738,
+          "state_seq": 10,
+          "gpu_notice_observed_at_us": 18839929,
+          "gpu_notice_ms": 244.808,
+          "collision_observed_at_us": 19117911,
+          "collision_notice_ms": 522.79
+        },
+        {
+          "command_id": 8,
+          "admitted_at_us": 18734646,
+          "terminal_observed_at_us": 18960258,
+          "terminal_notice_ms": 225.612,
+          "state_seq": 12,
+          "gpu_notice_observed_at_us": 18907859,
+          "gpu_notice_ms": 173.213,
+          "collision_observed_at_us": 19117911,
+          "collision_notice_ms": 383.265
+        },
+        {
+          "command_id": 9,
+          "admitted_at_us": 18842256,
+          "terminal_observed_at_us": 19016926,
+          "terminal_notice_ms": 174.67,
+          "state_seq": 13,
+          "gpu_notice_observed_at_us": 18960258,
+          "gpu_notice_ms": 118.002,
+          "collision_observed_at_us": 19476748,
+          "collision_notice_ms": 634.492
+        },
+        {
+          "command_id": 10,
+          "admitted_at_us": 18909745,
+          "terminal_observed_at_us": 19057423,
+          "terminal_notice_ms": 147.678,
+          "state_seq": 15,
+          "gpu_notice_observed_at_us": 19016926,
+          "gpu_notice_ms": 107.181,
+          "collision_observed_at_us": 19476748,
+          "collision_notice_ms": 567.003
+        },
+        {
+          "command_id": 11,
+          "admitted_at_us": 18961283,
+          "terminal_observed_at_us": 19117911,
+          "terminal_notice_ms": 156.628,
+          "state_seq": 16,
+          "gpu_notice_observed_at_us": 19057423,
+          "gpu_notice_ms": 96.14,
+          "collision_observed_at_us": 19476748,
+          "collision_notice_ms": 515.465
+        },
+        {
+          "command_id": 12,
+          "admitted_at_us": 19019241,
+          "terminal_observed_at_us": 19238016,
+          "terminal_notice_ms": 218.775,
+          "state_seq": 18,
+          "gpu_notice_observed_at_us": 19117911,
+          "gpu_notice_ms": 98.67,
+          "collision_observed_at_us": 19857438,
+          "collision_notice_ms": 838.197
+        },
+        {
+          "command_id": 13,
+          "admitted_at_us": 19059384,
+          "terminal_observed_at_us": 19371866,
+          "terminal_notice_ms": 312.482,
+          "state_seq": 19,
+          "gpu_notice_observed_at_us": 19238016,
+          "gpu_notice_ms": 178.632,
+          "collision_observed_at_us": 19857438,
+          "collision_notice_ms": 798.054
+        },
+        {
+          "command_id": 14,
+          "admitted_at_us": 19120124,
+          "terminal_observed_at_us": 19476748,
+          "terminal_notice_ms": 356.624,
+          "state_seq": 21,
+          "gpu_notice_observed_at_us": 19371866,
+          "gpu_notice_ms": 251.742,
+          "collision_observed_at_us": 19857438,
+          "collision_notice_ms": 737.314
+        },
+        {
+          "command_id": 15,
+          "admitted_at_us": 19240835,
+          "terminal_observed_at_us": 19607439,
+          "terminal_notice_ms": 366.604,
+          "state_seq": 22,
+          "gpu_notice_observed_at_us": 19476748,
+          "gpu_notice_ms": 235.913,
+          "collision_observed_at_us": 20030281,
+          "collision_notice_ms": 789.446
+        },
+        {
+          "command_id": 16,
+          "admitted_at_us": 19373923,
+          "terminal_observed_at_us": 19751685,
+          "terminal_notice_ms": 377.762,
+          "state_seq": 24,
+          "gpu_notice_observed_at_us": 19607439,
+          "gpu_notice_ms": 233.516,
+          "collision_observed_at_us": 20030281,
+          "collision_notice_ms": 656.358
+        },
+        {
+          "command_id": 17,
+          "admitted_at_us": 19478029,
+          "terminal_observed_at_us": 19857438,
+          "terminal_notice_ms": 379.409,
+          "state_seq": 25,
+          "gpu_notice_observed_at_us": 19751685,
+          "gpu_notice_ms": 273.656,
+          "collision_observed_at_us": 20030281,
+          "collision_notice_ms": 552.252
+        },
+        {
+          "command_id": 18,
+          "admitted_at_us": 19610030,
+          "terminal_observed_at_us": 19922812,
+          "terminal_notice_ms": 312.782,
+          "state_seq": 27,
+          "gpu_notice_observed_at_us": 19857438,
+          "gpu_notice_ms": 247.408,
+          "collision_observed_at_us": 20189340,
+          "collision_notice_ms": 579.31
+        },
+        {
+          "command_id": 19,
+          "admitted_at_us": 19753937,
+          "terminal_observed_at_us": 19971230,
+          "terminal_notice_ms": 217.293,
+          "state_seq": 28,
+          "gpu_notice_observed_at_us": 19922812,
+          "gpu_notice_ms": 168.875,
+          "collision_observed_at_us": 20189340,
+          "collision_notice_ms": 435.403
+        },
+        {
+          "command_id": 20,
+          "admitted_at_us": 19858584,
+          "terminal_observed_at_us": 20030281,
+          "terminal_notice_ms": 171.697,
+          "state_seq": 30,
+          "gpu_notice_observed_at_us": 19971230,
+          "gpu_notice_ms": 112.646,
+          "collision_observed_at_us": 20189340,
+          "collision_notice_ms": 330.756
+        },
+        {
+          "command_id": 21,
+          "admitted_at_us": 19925418,
+          "terminal_observed_at_us": 20067316,
+          "terminal_notice_ms": 141.898,
+          "state_seq": 31,
+          "gpu_notice_observed_at_us": 20030281,
+          "gpu_notice_ms": 104.863,
+          "collision_observed_at_us": 20305861,
+          "collision_notice_ms": 380.443
+        },
+        {
+          "command_id": 22,
+          "admitted_at_us": 19973297,
+          "terminal_observed_at_us": 20125383,
+          "terminal_notice_ms": 152.086,
+          "state_seq": 33,
+          "gpu_notice_observed_at_us": 20067316,
+          "gpu_notice_ms": 94.019,
+          "collision_observed_at_us": 20305861,
+          "collision_notice_ms": 332.564
+        },
+        {
+          "command_id": 23,
+          "admitted_at_us": 20031958,
+          "terminal_observed_at_us": 20189340,
+          "terminal_notice_ms": 157.382,
+          "state_seq": 34,
+          "gpu_notice_observed_at_us": 20125383,
+          "gpu_notice_ms": 93.425,
+          "collision_observed_at_us": 20305861,
+          "collision_notice_ms": 273.903
+        },
+        {
+          "command_id": 24,
+          "admitted_at_us": 20070032,
+          "terminal_observed_at_us": 20218738,
+          "terminal_notice_ms": 148.706,
+          "state_seq": 36,
+          "gpu_notice_observed_at_us": 20189340,
+          "gpu_notice_ms": 119.308,
+          "collision_observed_at_us": 20438707,
+          "collision_notice_ms": 368.675
+        },
+        {
+          "command_id": 25,
+          "admitted_at_us": 20127113,
+          "terminal_observed_at_us": 20271922,
+          "terminal_notice_ms": 144.809,
+          "state_seq": 37,
+          "gpu_notice_observed_at_us": 20218738,
+          "gpu_notice_ms": 91.625,
+          "collision_observed_at_us": 20438707,
+          "collision_notice_ms": 311.594
+        }
+      ],
+      "gpu_stage_dispatch_ms": {
+        "edit_shape_stage_1": {
+          "n": 24,
+          "p50": 0.1536,
+          "p95": 0.159744,
+          "p99": null,
+          "max": 0.160768,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_stage_6": {
+          "n": 24,
+          "p50": 2.2108160000000003,
+          "p95": 2.353152,
+          "p99": null,
+          "max": 2.40128,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_material_0": {
+          "n": 24,
+          "p50": 0.068608,
+          "p95": 0.07168,
+          "p99": null,
+          "max": 0.11264,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_stage_2": {
+          "n": 24,
+          "p50": 0.202752,
+          "p95": 0.206848,
+          "p99": null,
+          "max": 0.207872,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_stage_3": {
+          "n": 24,
+          "p50": 0.052224,
+          "p95": 0.054272,
+          "p99": null,
+          "max": 0.054272,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_water_0_0": {
+          "n": 24,
+          "p50": 0.109568,
+          "p95": 0.11264,
+          "p99": null,
+          "max": 0.11264,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit": {
+          "n": 146,
+          "p50": 0.016384,
+          "p95": 28.156928,
+          "p99": null,
+          "max": 28.726272,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_water_1_0": {
+          "n": 24,
+          "p50": 0.095232,
+          "p95": 0.100352,
+          "p99": null,
+          "max": 0.1024,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_water_2_0": {
+          "n": 24,
+          "p50": 19.64544,
+          "p95": 39.41888,
+          "p99": null,
+          "max": 39.431168,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_stage_4": {
+          "n": 24,
+          "p50": 0.044544,
+          "p95": 0.067584,
+          "p99": null,
+          "max": 0.067584,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_material_1": {
+          "n": 24,
+          "p50": 0.025088,
+          "p95": 0.034816,
+          "p99": null,
+          "max": 0.03584,
+          "p99_reason": "insufficient_samples"
+        },
+        "edit_shape_water_3_0": {
+          "n": 24,
+          "p50": 0.033280000000000004,
+          "p95": 0.060416,
+          "p99": null,
+          "max": 0.060416,
+          "p99_reason": "insufficient_samples"
+        },
+        "water_tick": {
+          "n": 12,
+          "p50": 1.501696,
+          "p95": 1.543168,
+          "p99": null,
+          "max": 1.543168,
+          "p99_reason": "insufficient_samples"
+        },
+        "publish": {
+          "n": 12,
+          "p50": 0.04608,
+          "p95": 0.048128,
+          "p99": null,
+          "max": 0.048128,
+          "p99_reason": "insufficient_samples"
+        },
+        "collision": {
+          "n": 20,
+          "p50": 0.017024,
+          "p95": 0.022528,
+          "p99": null,
+          "max": 0.032,
+          "p99_reason": "insufficient_samples"
+        }
+      },
+      "cpu_marker_stage_ms": {},
+      "initial_sha256": {
+        "clock": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "compaction": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de",
+        "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "momentum_x": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "momentum_z": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "obstacle": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+        "rock": "e5bebff58c79121549c5d1fbd484f90280de59fb99e1940fd8d54502cce0ad6c",
+        "sand": "e4229dd131b89dc44a8f08df893d938028cda47737983b548d8e947cb2d0df74",
+        "sediment": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "water": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82",
+        "wetness": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+      },
+      "final_sha256": {
+        "clock": "e0fb2d87992a9fc79e7729163ad2aea5efbf14806711292c8c46e873bac1a253",
+        "compaction": "4fab9b38fb4047f0a04c10a6a2d9156c0bf0b76a9882e5f43ebbe1bc410afc25",
+        "mold_support": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "momentum_x": "d8bf0aa560deaa91ab8b2991993bd14acb76b202929641533216f53266ed1857",
+        "momentum_z": "d969d8428053c89394e5ad7f8c1fb5cf86a1a272d43eb085b27d3973de7d5532",
+        "sand": "78a8b757120e81d40250edd1cda9b25c94bd9d05f32f2f5885b5bb11bf4d2df7",
+        "sediment": "92f9d9925179e599692ccc8cd137d8e110d37da02f970406e006a850d6c0a98f",
+        "water": "4ca3b39b27d20fdf92b9ad8413a9239d8243448ae651455ffbc2d7193cf42c63",
+        "wetness": "1157cacac6eb6466405718264fbdb92cac9d130316ce0be8bbd524c61bfc5b8b"
+      },
+      "limitations": [
+        "Notification times are CPU observation upper bounds, not GPU duration.",
+        "Physics shape replacement is observed; monitor scanout is not measured.",
+        "This workload contains 24 offered commands and is not a 1000-frame tail test."
+      ],
+      "name": "shovel_overlap_wet_realtime_1",
+      "source_drift": []
+    }
+  ]
+}

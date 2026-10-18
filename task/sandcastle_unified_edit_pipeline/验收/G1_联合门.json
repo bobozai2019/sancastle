@@ -1,0 +1,17 @@
+{
+  "role": "G1 joint CPU data gate",
+  "mismatches": [],
+  "scope": "No GPU execution, restore readiness, runtime retirement or cost acceptance",
+  "common_source_count": 32,
+  "pass": true,
+  "runs": [
+    "g1_wire_delivery10",
+    "g1_profile_delivery11",
+    "g1_configuration_delivery03"
+  ],
+  "checks": [
+    203,
+    100,
+    87
+  ]
+}

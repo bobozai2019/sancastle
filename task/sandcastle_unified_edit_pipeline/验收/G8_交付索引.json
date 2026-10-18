@@ -1,0 +1,107 @@
+{
+  "schema": 1,
+  "status": "complete",
+  "overall_completed": 36,
+  "overall_total": 36,
+  "G8_pass": true,
+  "source_archive": {
+    "path": "test_output/unified_edit_pipeline/g8_delivery01/sources.zip",
+    "bytes": 33747614,
+    "sha256": "3c1119d334ce95473016893fdaa9a64042ab98576526985b3d52cabb11a82af5"
+  },
+  "source_files": 776,
+  "evidence": [
+    {
+      "path": "task/sandcastle_unified_edit_pipeline/验收/G0_基线噪声与比较门.json",
+      "bytes": 41960,
+      "sha256": "069f11c44490435124f02bb39bb895f8bc863b0e69a741b9c3c6d2b46d7f939b"
+    },
+    {
+      "path": "task/sandcastle_unified_edit_pipeline/验收/G1_联合门.json",
+      "bytes": 360,
+      "sha256": "d5815cd5980baabad1bc7ca957edd1addc3aac8d0a17e5fa2a1b06f0dbfbe605"
+    },
+    {
+      "path": "task/sandcastle_unified_edit_pipeline/验收/G2_联合门.json",
+      "bytes": 893,
+      "sha256": "66c41549ae3753e3dec89a67a37d6088d9400d9bd455bd0bf96d89439356b0c2"
+    },
+    {
+      "path": "task/sandcastle_unified_edit_pipeline/验收/G3_联合门.json",
+      "bytes": 4344,
+      "sha256": "910684d32edcbddcc4aa5b0c6ae2d79da580ca68943cf890d409c81459dd04e0"
+    },
+    {
+      "path": "task/sandcastle_unified_edit_pipeline/验收/G4_联合门.json",
+      "bytes": 108196,
+      "sha256": "70e21a0f57d489e61e2295e03a35a44019c7d60f3c0a4df6a526280b9226b9b8"
+    },
+    {
+      "path": "task/sandcastle_unified_edit_pipeline/验收/G5_联合门.json",
+      "bytes": 23566,
+      "sha256": "5045f4eb9a7858fe526885743dba2f429fd1848c71fe81aee3ebd30b22d78a6b"
+    },
+    {
+      "path": "task/sandcastle_unified_edit_pipeline/验收/G6_联合门.json",
+      "bytes": 5227,
+      "sha256": "c796265a125b54d94e41650a074f672609448aaed859aba0023579fc72670da0"
+    },
+    {
+      "path": "task/sandcastle_unified_edit_pipeline/验收/G7_联合门.json",
+      "bytes": 5733,
+      "sha256": "1ca800a7c6b63bbee4a5765684fddbf659b667dac5e867ca8ef4aadabf7eee7b"
+    },
+    {
+      "path": "task/sandcastle_unified_edit_pipeline/验收/G8_联合门.json",
+      "bytes": 20748,
+      "sha256": "4fe21829a1e6f88d149244e4adffba7010fcda09bec6c39e6743de4e08085859"
+    },
+    {
+      "path": "task/sandcastle_unified_edit_pipeline/验收/G8_功能组件.json",
+      "bytes": 6459,
+      "sha256": "5e0383a8e8e96ad71f0496c08d68a6eb47ad0e6e79c0e8879dd3379d348048e4"
+    },
+    {
+      "path": "task/sandcastle_unified_edit_pipeline/验收/G8_长稳组件.json",
+      "bytes": 1978,
+      "sha256": "0fa15d6f63e579bb33488486b8acbb42662453f6490c3e05bb9cfd9eb731a5a9"
+    },
+    {
+      "path": "task/sandcastle_unified_edit_pipeline/验收/G8_成本组件.json",
+      "bytes": 6596,
+      "sha256": "04bee7a14cf2a8db9d9ee2690ae766b3ca63df103b97a4f0456b4e334f047708"
+    },
+    {
+      "path": "task/sandcastle_unified_edit_pipeline/验收/G8_HTML终验.json",
+      "bytes": 1143,
+      "sha256": "0f498b1d56d838c9dfdb1dee2ff2668bafedbd273124ce0e843428341ad96fb6"
+    },
+    {
+      "path": "task/sandcastle_unified_edit_pipeline/验收/G8_文档候选核对.json",
+      "bytes": 33531,
+      "sha256": "e7bafc014bb8e8f9b73805cb52464c3ba5766e1cb8d42f2ab48deeeac5674a25"
+    },
+    {
+      "path": "task/sandcastle_unified_edit_pipeline/验收/G8_文档终核对.json",
+      "bytes": 33774,
+      "sha256": "1745ea8cc167572672d884ccacbc1862dc74ab216aef3234d9281071ccab7c6d"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g8_cost_joint02/seal.json",
+      "bytes": 407,
+      "sha256": "830e51e1fe97c55568db07a2e0f0cc48870ac1ea88cd371a98865fbe4a5d6a8e"
+    }
+  ],
+  "html": {
+    "path": "docs/project-execution-guide.html",
+    "bytes": 22781,
+    "sha256": "01a952c4365f951cbea634996f74cc2e931b62ddcdd59b9234c1777280c1f0f4"
+  },
+  "source_index": {
+    "path": "docs/project-execution-guide.sources.json",
+    "bytes": 20330,
+    "sha256": "bb337b13f0a51cd1ca1a813bc1ad5b7e4a0202b07673128eb1527eb1f8dfffcf"
+  },
+  "primary_report": "task/sandcastle_unified_edit_pipeline/验收/G8_联合门.md",
+  "scope": "Final current source/plan/document bytes and immutable gate links. Raw run artifacts remain in separately indexed original evidence groups; historical failures and user changes are preserved."
+}

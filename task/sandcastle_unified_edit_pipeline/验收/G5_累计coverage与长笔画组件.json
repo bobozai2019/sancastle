@@ -1,0 +1,87 @@
+{
+  "role": "T05 cumulative coverage and long open-stroke component gate, not complete G5",
+  "pass": true,
+  "G5_complete": false,
+  "complete_objectives_this_component": [
+    "T05.2",
+    "T05.4"
+  ],
+  "complete_T05": [
+    "T05.1",
+    "T05.2",
+    "T05.4"
+  ],
+  "total_completed": 23,
+  "total_objectives": 36,
+  "gpu_checks": 961,
+  "independent_checks": 2056,
+  "common_unchanged_runtime_sources": 131,
+  "coverage": {
+    "changed_cells": 217,
+    "outside_cells": 37,
+    "latest_rect": [
+      154,
+      122,
+      28,
+      12
+    ]
+  },
+  "long_stroke": {
+    "samples": 300,
+    "water_policy": 3,
+    "open_tick_windows": 12,
+    "request_dt_each_s": 0.004,
+    "metrics": {
+      "queue_until_render_record": {
+        "count": 300,
+        "min_us": 13683,
+        "median_us": 29350.0,
+        "max_us": 35616
+      },
+      "enqueue_until_cpu_gpu_completion": {
+        "count": 300,
+        "min_us": 1172620,
+        "median_us": 1187868.0,
+        "max_us": 1721677
+      },
+      "height_request_until_observed_physics": {
+        "count": 24,
+        "min_us": 28670,
+        "median_us": 1184312.0,
+        "max_us": 2451959
+      },
+      "height_latency_scope": "Events carry actual frame IDs; observed_us is first process observation after physics, quantized by process/physics cadence, not a GPU duration or scanout time.",
+      "stroke_elapsed_observed_us": 18363257,
+      "actual_advanced_time_s": 0.0480000041425228,
+      "p99": "not estimated; not final T08 performance"
+    },
+    "scope": "Functional fairness/ownership evidence with explicitly requested ticks interleaved per 25 samples. Not a realtime pacing/FPS/P99 or final T08 performance pass."
+  },
+  "source_archive": {
+    "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g5_stroke_delivery03\\sources.zip",
+    "sha256": "fcade31ab58e9a3080a0e6a1f46c1dbb3fd36c22619db1f39b23e1ddc0a336b2",
+    "files": 144
+  },
+  "reports": {
+    "g5_stroke_delivery03/run-manifest.json": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g5_stroke_delivery03\\run-manifest.json",
+      "sha256": "43e9f7d932e90f51fa4cd784c53de4f309d71bc013e0e3ea1d2beb1984eb045b"
+    },
+    "g5_stroke_independent03/result.json": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g5_stroke_independent03\\result.json",
+      "sha256": "f98edf7a7ba50ddb2429de308fd6fd5a7a1ec958e46be125ae0d151ddd95d01e"
+    }
+  },
+  "previous_component": {
+    "path": "D:\\godot\\project\\sandcastle\\task\\sandcastle_unified_edit_pipeline\\验收\\G5_批次与脏块组件.json",
+    "sha256": "67240c33edd8fce0697044374287c23078759b1a8db20dddad3fc5a1d990d394"
+  },
+  "preserved_preliminary": "g5_stroke_attempt02 used legal water_policy0 to check the timing observer; retained with its exact source archive, not used as default-water long-stroke gate. g5_coverage_attempt01 independently passed 649 checks; not double-counted in final two-case proof.",
+  "pending": [
+    "T05.3 preview/presentation bindings and complete version tests",
+    "G5 joint gate after all current requirements verified",
+    "G6 formal entries/restore/lifecycle/old path retirement",
+    "G7 config-only extension/reachability",
+    "G8 real visible cost/lifecycle/3-minute mixed interaction"
+  ]
+}

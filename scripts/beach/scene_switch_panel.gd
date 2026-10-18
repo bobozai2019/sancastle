@@ -1,6 +1,6 @@
 extends VBoxContainer
 
-const KEYS := ["main", "test1_capture", "test1_backwash"]
+const KEYS=preload("res://scripts/beach/unified_scene_routes.gd").KEYS
 var beach
 @onready var service = get_node("/root/BeachScenes")
 @onready var targets: OptionButton = $Actions/Targets

@@ -1,7 +1,7 @@
 extends "res://scripts/beach/beach_recovery_entry.gd"
 
 ## All playable layouts share main's GPU tools, collision, ledger and recovery.
-@export_enum("main", "test1_capture", "test1_backwash") var scene_key := "main"
+@export_enum("main", "test1_capture", "test1_backwash", "test1_geometry") var scene_key := "main"
 const CaptureLayout := preload("res://scripts/scenarios/test1_playable_layout.gd")
 
 func _initialize_domain(target: SandWaterDomain) -> bool:
@@ -22,6 +22,7 @@ func _format_status_text(text: String) -> String:
 	text = super._format_status_text(text)
 	if scene_key != "main":
 		var title := "test1 捕帧沙床" if scene_key == "test1_capture" else "test1 上滩回流"
+		if scene_key == "test1_geometry": title = "test1 原比例沙滩 · 30×15"
 		text = text.replace(Scenarios.NAMES[preset_index], title)
 	return text
 

@@ -2,11 +2,9 @@ extends Node
 
 signal status_changed
 signal switched(key: String)
-const SCENES := {
-	"main": "res://scenes/main.tscn",
-	"test1_capture": "res://scenes/playable/test1_capture.tscn",
-	"test1_backwash": "res://scenes/playable/test1_backwash.tscn",
-}
+const Routes=preload("res://scripts/beach/unified_scene_routes.gd")
+const SCENES=Routes.FORMAL
+const ENTRY="res://scripts/beach/unified_playable_entry.gd"
 var active_scene: Node3D
 var busy := false
 var message := "切换保留各场景进度"
@@ -19,6 +17,11 @@ var session_directory := ""
 var inject_target_failure_once := false
 var release_records := []
 
+func _unified_factory(scene) -> bool:
+	return scene is Node3D and scene.get_script()!=null and scene.get_script().resource_path==ENTRY and not scene.playable_scene_family().is_empty()
+
+func _cache_key(scene, key: String) -> String:return scene.playable_scene_family()+":"+key
+
 func _dispose_scene(scene) -> bool:
 	if scene == null:
 		return true
@@ -29,8 +32,11 @@ func _dispose_scene(scene) -> bool:
 		if profiler != null:
 			await profiler.stop_sampling()
 		await scene.shutdown()
-		released = scene.gpu_release_done and (scene.solver == null or scene.solver.rd == null) and scene.collision_proxy.rd == null
-		if "gravel_field" in scene: released=released and scene.gravel_field==null and scene.gravel_capture_callbacks==0
+		released=scene.unified_release_complete()
+		if not released:
+			release_records.append({"instance_id":identity,"gpu_released":false,"node_freed":false,"at_us":Time.get_ticks_usec()})
+			if release_records.size()>12:release_records.pop_front()
+			return false
 		scene.set_process(false)
 		scene.queue_free()
 		# Flush node destruction and renderer commands before constructing the
@@ -46,14 +52,16 @@ func _dispose_scene(scene) -> bool:
 	return released and record.node_freed
 
 func attach(scene: Node3D) -> void:
-	if busy:
+	if busy or not _unified_factory(scene):
 		return
 	active_scene = scene
 	generation_highwater = maxi(generation_highwater, scene.generation)
 
 func request_switch(key: String) -> bool:
-	if busy or not SCENES.has(key) or not is_instance_valid(active_scene) or not active_scene.ready_for_ticks:
+	if busy or not SCENES.has(key) or not is_instance_valid(active_scene) or not _unified_factory(active_scene) or not active_scene.ready_for_ticks:
 		return false
+	if active_scene.shutdown_requested or active_scene.closing:return false
+	if not active_scene.runtime.ready_for_input():return false
 	if active_scene.scene_key == key:
 		return true
 	busy = true
@@ -92,11 +100,13 @@ func _apply_settings(scene, settings: Dictionary) -> void:
 	scene.get_node("Interface/PerformancePanel/Margin/Rows/Header/Sampling").button_pressed = shared_controls.get("sampling", true)
 	if settings.has("camera"):
 		scene.player_camera.transform = settings.camera
-	scene.set_player_camera(settings.get("use_player_camera", true))
+	scene.set_player_camera(settings.get("use_player_camera", scene.use_player_camera))
 	scene.playing = settings.get("playing", true)
 	scene._update_status()
 
 func _prepare(scene, key: String, settings: Dictionary) -> String:
+	if not _unified_factory(scene):return "不支持的场景工厂"
+	var cache_key:=_cache_key(scene,key)
 	generation_highwater += 2
 	scene.generation = generation_highwater
 	scene.playing = false
@@ -106,19 +116,21 @@ func _prepare(scene, key: String, settings: Dictionary) -> String:
 		await get_tree().process_frame
 	if not scene.ready_for_ticks or not scene.last_error.is_empty():
 		return "场景初始化失败：" + scene.last_error
-	if saved.has(key):
-		var error: StringName = await scene.restore_gpu_checkpoint(saved[key].path)
+	if saved.has(cache_key):
+		var error: StringName = await scene.restore_gpu_checkpoint(saved[cache_key].path)
 		if not error.is_empty():
 			return "恢复失败：" + String(error)
 	_apply_settings(scene, settings)
 	return ""
 
 func _switch(key: String) -> void:
-	var packed: PackedScene = load(SCENES[key])
+	var old = active_scene
+	var target_path: String=old.playable_scene_path(key)
+	var rollback_path: String=old.playable_scene_path(old.scene_key)
+	var packed: PackedScene = load(target_path)
 	if packed == null:
 		_finish("场景资源加载失败")
 		return
-	var old = active_scene
 	var old_key: String = old.scene_key
 	var old_settings := _settings(old)
 	shared_controls = old_settings.duplicate()
@@ -132,7 +144,7 @@ func _switch(key: String) -> void:
 		session_directory = "user://scene_sessions/" + str(Time.get_unix_time_from_system()) + "_" + str(Time.get_ticks_usec())
 		DirAccess.make_dir_recursive_absolute(session_directory)
 	serial += 1
-	var path := session_directory.path_join("%s_%04d.sandcp" % [old_key, serial])
+	var path := session_directory.path_join("%s_%s_%04d.sandue" % [old.playable_scene_family(),old_key,serial])
 	var save_error: StringName = await old.save_gpu_checkpoint(path)
 	if not save_error.is_empty():
 		old.playing = old_settings.playing
@@ -141,17 +153,21 @@ func _switch(key: String) -> void:
 		old.player_camera.set_process_unhandled_input(true)
 		_finish("保存失败，保留当前场景：" + String(save_error))
 		return
-	saved[old_key] = {"path": path, "settings": old_settings}
+	var old_cache_key:=_cache_key(old,old_key)
+	var target_cache_key:=_cache_key(old,key)
+	saved[old_cache_key] = {"path": path, "settings": old_settings}
 	_set_message("正在切换场景…")
 	generation_highwater = maxi(generation_highwater, old.generation)
 	active_scene = null
 	get_tree().current_scene = null
 	if not await _dispose_scene(old):
+		active_scene=old
+		get_tree().current_scene=old
 		_finish("旧场景释放未完成，已停止加载；进度保存在检查点中")
 		return
 	old = null
 	var candidate = packed.instantiate()
-	var target_settings: Dictionary = saved[key].settings if saved.has(key) else {"playing": old_settings.playing}
+	var target_settings: Dictionary = saved[target_cache_key].settings if saved.has(target_cache_key) else {"playing": old_settings.playing}
 	var error := ""
 	if inject_target_failure_once:
 		inject_target_failure_once = false
@@ -162,7 +178,7 @@ func _switch(key: String) -> void:
 		await _dispose_scene(candidate)
 		candidate = null
 		_set_message("目标加载失败，正在恢复原场景…")
-		var rollback = load(SCENES[old_key]).instantiate()
+		var rollback = load(rollback_path).instantiate()
 		var rollback_error := await _prepare(rollback, old_key, old_settings)
 		active_scene = rollback
 		get_tree().current_scene = rollback

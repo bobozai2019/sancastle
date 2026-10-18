@@ -1,0 +1,66 @@
+{
+  "schema": 1,
+  "status": "component_pass",
+  "date": "2026-10-18",
+  "overall_completed": 24,
+  "overall_total": 36,
+  "T06_completed": 0,
+  "T06_total": 4,
+  "formal_cutover": false,
+  "G6_pass": false,
+  "scope": "Four candidate factories: seven fixed UI tools plus smooth/compact API declarations; eleven physical profiles, tagged gravel, retained stroke END at pending64 and native save, three recorded edit/water/display work slots held through shutdown, actual pointer regression",
+  "gpu_runs": 9,
+  "gpu_checks": 690,
+  "case_checks": {
+    "suite_main": 92,
+    "suite_test1_capture": 92,
+    "suite_test1_backwash": 92,
+    "suite_test1_geometry": 92,
+    "save_main": 140,
+    "save_test1_geometry": 140,
+    "close_main": 13,
+    "close_test1_geometry": 13,
+    "pointer": 16
+  },
+  "independent_checks": 1552,
+  "source_members": 185,
+  "production_change": "player_input declares distinct endpoints only for registered swept_capsule shape; disks stamp at current drag point",
+  "evidence": [
+    {
+      "path": "test_output/unified_edit_pipeline/g6_front_lifecycle_final01/report.json",
+      "sha256": "5a7427a1557aed4ff3d0dad9f2aae299ab9481f071456a8c77f3cfd6dacd93c3"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g6_front_lifecycle_final01/audit.json",
+      "sha256": "b1c1c8a0b94a4e339eb3422a6e44f9754ad6a4b5a483f57f406f1522cc96068e"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g6_front_lifecycle_final01/auditor_source.py",
+      "sha256": "ce238d6ca1873b2919995f123d0cc794e581c7a2703ae40c622c537c5bdc9c66"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g6_front_lifecycle_final01/decoder_source.py",
+      "sha256": "ab0dc5eba5383bb13d0fcdd1368dce2db06b3fb3851913850edb6d1e550b02f0"
+    },
+    {
+      "path": "test_output/unified_edit_pipeline/g6_front_lifecycle_final01/sources.zip",
+      "sha256": "687ddbea99d01c96423d850f3743796375938268024ecea708c525e26b11bba5"
+    }
+  ],
+  "development_evidence": [
+    "test_output/unified_edit_pipeline/g6_front_tools01",
+    "test_output/unified_edit_pipeline/g6_front_tools02",
+    "test_output/unified_edit_pipeline/g6_front_tools03",
+    "test_output/unified_edit_pipeline/g6_front_close01"
+  ],
+  "audit_failure_retained": {
+    "path": "test_output/unified_edit_pipeline/g6_front_lifecycle_final01/audit_mask_failure.json",
+    "sha256": "6d3fb4cc1f1776d4a3c627c1b71ecc145f7adefa296ef3b7c6a3d5008c1e4f2c"
+  },
+  "remaining": [
+    "formal family routing/cutover and old execution retirement",
+    "full formal lifecycle validation including other in-flight boundaries",
+    "G7 config-only extension and writer reachability audit",
+    "G8 final cost and sustained visible validation"
+  ]
+}

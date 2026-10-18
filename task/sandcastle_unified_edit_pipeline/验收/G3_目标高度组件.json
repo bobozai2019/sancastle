@@ -1,0 +1,20 @@
+{
+  "regression_run": "g3_target_regression06",
+  "gpu_checks": 457,
+  "pass": true,
+  "independent_checks": 2105,
+  "role": "T03.2 component evidence only; G3 overall incomplete",
+  "protocol_checks": 212,
+  "scope": "Dry target-height primitives, GPU stroke control/baseline/coverage, queue capacity and sample303. Other primitives, complete materials/water, restore and production entry are pending.",
+  "source_drift": [],
+  "gpu_cases": [
+    "controls",
+    "castle",
+    "wall",
+    "stroke_bounds"
+  ],
+  "regression_scope": "normal/readback/fatal/state_seq/revision. Subsequent final source change only removes extra BEGIN monotonic-ID restriction to preserve the old explicit-reopen behavior, covered by delivery07.",
+  "gpu_run": "g3_target_delivery07",
+  "independent_report": "g3_target_reference07/result.json",
+  "protocol_run": "g3_control_protocol02"
+}

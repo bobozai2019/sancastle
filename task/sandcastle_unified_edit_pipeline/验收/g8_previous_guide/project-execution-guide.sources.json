@@ -1,0 +1,605 @@
+{
+  "document": "project-execution-guide.html",
+  "date": "2026-10-17",
+  "scope": "Godot main + editable test1 all-tools async pipeline; static source graph, runtime evidence recorded separately",
+  "source_sha256": {
+    "assets/test1_beach/test1_beach_release.json": "4d9b2304154dc3d23344ce670c9d7fa1e1265f6738314a98fdde5e1043ff6dad",
+    "assets/water_material_natural_candidate/async_clock_variants_v1.json": "6c745230fff9416979db586d9f09c7631944445666e0dcae87bde54b462936ba",
+    "project.godot": "b68d35517766c5f383a7195389dac848805f1480805284252905d881501352bb",
+    "scenes/main.tscn": "acf0c16d887dd46a7cd3e3c1bb0a00bd2ac06a76cd6b416a3a81b543c5667c7c",
+    "scenes/playable/test1_backwash.tscn": "c0f5308c933fb6b04447cabc778176d0038c71587b18caaeec8b07106ac59f80",
+    "scenes/playable/test1_capture.tscn": "400df22caf0bc0657cd9ac53a075bf30f90d2a2f2ef57fc0ce21abfed9f53921",
+    "scripts/beach/async_pipeline_entry.gd": "4e5a675369c7c5379ae9737c183c8d94bb0c044c3e9103f45cfe3713ab488e38",
+    "scripts/beach/beach_interaction_entry.gd": "60b70f73f4f65554545872dba43980b1c702d81f19e8881dad25e600ef6426f6",
+    "scripts/beach/beach_scene_service.gd": "3d3702326237b6513bd649d9657d6285c32a9c0cdefc7be30a0785d1efcf0f1c",
+    "scripts/simulation/brushes/brush_material_coupler.gd": "2a5b99a4fd8774eed32b46d59ab6ec81fe070b329c6b1cbf8ea88063f6c1e6a8",
+    "scripts/simulation/edit_validation/frame_pipeline/async_capture.glsl": "9cf9a6f9caed1835e7adce9ee76f1b3331ce613e295fe483a77dc45e6a4db780",
+    "scripts/simulation/edit_validation/frame_pipeline/async_cfl_decide.glsl": "e7dfb3973a447415ddca4a0d6f19ad496dc5499d025016d804d9d4ee96a6c6b6",
+    "scripts/simulation/edit_validation/frame_pipeline/async_checkpoint_capture.gd": "558544b896d6069f973b3f2e8568bb6ca9fa9cd8d3370b33065deacda9c865b9",
+    "scripts/simulation/edit_validation/frame_pipeline/async_checkpoint_codec.gd": "a1b8c82c71e41476fb4a2b4df835a6fdb9cdd62897c47ebae5168f160a3506ff",
+    "scripts/simulation/edit_validation/frame_pipeline/async_collision.gd": "53779ff2e4cbc2bc52fc4c3b84cb75a0f68df6b2c45e1e28a0f8c274dc96b36d",
+    "scripts/simulation/edit_validation/frame_pipeline/async_controller.gd": "47e501eb87402a9e23bed34bd0df232f6c5e818df4bf4f6d4bfa512ee2227470",
+    "scripts/simulation/edit_validation/frame_pipeline/async_coupled.gd": "779f48e98f58d4818a0b1d6b5aeec28bbc5b32dfe6019a63c5f722dac62c3aa3",
+    "scripts/simulation/edit_validation/frame_pipeline/async_editor.gd": "1a7bd53a0d2bff0154993f9cd172edb07d1121b05e41c32c46514f931aee2b7e",
+    "scripts/simulation/edit_validation/frame_pipeline/async_gravel_normalize.glsl": "19ad04695cb760264e6080bb46c9b00d4b07ff5cb6ebaa124458566c5e4d17a0",
+    "scripts/simulation/edit_validation/frame_pipeline/async_legacy_migration.gd": "4609f53f315a2688e7ff368ba0b198881069739abaab31c2d3ee879ddb3f9fc1",
+    "scripts/simulation/edit_validation/frame_pipeline/async_protocol.gd": "312ed81688880954a12c1e6d4df3c34ca7d9f22ca0c9e184b8e2e9f4925e6750",
+    "scripts/simulation/edit_validation/frame_pipeline/async_restore_bundle.gd": "bd57e8138ed0627847071d1cff8007519a0d544eb17a1c662b13f0e70c7add09",
+    "scripts/simulation/edit_validation/frame_pipeline/async_scheduler.gd": "bb143cbb8142648cebf7d0c156d35cd399df4be99c378f9fd4432fd9fca98fba",
+    "scripts/simulation/edit_validation/frame_pipeline/async_seal.glsl": "11ab3b18d815e81a2b1906ff27b894ce8225c512962881bd6ec995365037d098",
+    "scripts/simulation/edit_validation/frame_pipeline/async_select.glsl": "95436c3861967f9a67c17eca18563fb26a48de613878784d9bde286ff8c35043",
+    "scripts/simulation/edit_validation/frame_pipeline/async_slots.gd": "7dbad972285e515eeea88d5586e149536b27444eb869ca8061ab8b98314ac2ba",
+    "scripts/simulation/edit_validation/frame_pipeline/async_smooth.glsl": "787d664ce2a6762bc9b4d526357d6d2f63241a8e8ff33e6e723abf2a4c95320a",
+    "scripts/simulation/edit_validation/frame_pipeline/async_terminal_guard.gd": "08c47247c2a6f7a4d8a0c7937d580cb575ca28e23c02c8e0f388d7b1cfef518c",
+    "scripts/simulation/edit_validation/frame_pipeline/async_tool_capture.glsl": "07b77d4c0cfea25e0dbc80bc8e5fee98876885d8d7aef92182bb975756b71630",
+    "scripts/simulation/edit_validation/frame_pipeline/async_tool_select.glsl": "ae6be9e16289e1a2766a0448c41640192833a6bec23a0b90420ae06766168059",
+    "scripts/simulation/edit_validation/frame_pipeline/async_tools.gd": "7ac26ea4c5d5f0020c5a6f5afeb04652cbe7fe66c0895d3d017159bfdc817451",
+    "scripts/simulation/edit_validation/frame_pipeline/async_transport.gd": "bd1fad594d7cdff8b6225850b644672d3c95f3f26c8f36b9b791fd57a05221be",
+    "scripts/simulation/edit_validation/frame_pipeline/async_visuals.gd": "246712a7dde239f6312c4fe52267bdcfc3b55cdb833fbc07547873d5668a1856",
+    "scripts/simulation/edit_validation/frame_pipeline/async_water.gd": "82f3d2a13987fb704b9f13ea8898df056c427f78b02416cd7818adbd5fde17a4",
+    "tests/visual_water_alignment/prototypes/reference_preview.gd": "eb093da001ca8acab4342d6f1e5986d5f27452f5e8e2d15df3d4339807fefe6a"
+  },
+  "anchors": {
+    "scene": {
+      "path": "scenes/main.tscn",
+      "symbol": "main.tscn",
+      "line": 1,
+      "sha256": "acf0c16d887dd46a7cd3e3c1bb0a00bd2ac06a76cd6b416a3a81b543c5667c7c",
+      "excerpt": "   1  [gd_scene format=3 uid=\"uid://bovjuhcrpaoaf\"]\n   2  \n   3  [ext_resource type=\"PackedScene\" path=\"res://scenes/water_material_natural_candidate/rdc_v1_coupled.tscn\" id=\"1_beach\"]\n   4  [ext_resource type=\"Script\" path=\"res://scripts/beach/async_pipeline_entry.gd\" id=\"2_runtime\"]\n   5  [ext_resource type=\"Shader\" path=\"res://assets/water_material_natural_candidate/async_rdc_water.gdshader\" id=\"2_async_water\"]\n   6  [ext_resource type=\"Shader\" path=\"res://assets/water_material_natural_candidate/async_rdc_bed.gdshader\" id=\"2_async_bed\"]\n   7  [ext_resource type=\"Script\" uid=\"uid://dn0o1vlcwwso7\" path=\"res://scripts/simulation/edit_validation/collision_proxy.gd\" id=\"3_collision\"]\n   8  [ext_resource type=\"Script\" uid=\"uid://ff7vk04ukk7a\" path=\"res://scripts/beach/free_camera.gd\" id=\"4_camera\"]\n   9  [ext_resource type=\"Shader\" uid=\"uid://y1x0rnk6bs3o\" path=\"res://shaders/visual/gpu_terrain.gdshader\" id=\"4_jbj1t\"]\n  10  [ext_resource type=\"Shader\" uid=\"uid://snkxj43gevsa\" path=\"res://shaders/visual/gpu_water.gdshader\" id=\"5_muem4\"]\n  11  [ext_resource type=\"Script\" uid=\"uid://c01naimhtkprl\" path=\"res://scripts/beach/performance_panel.gd\" id=\"5_profile\"]\n  12  [ext_resource type=\"PackedScene\" path=\"res://scenes/components/scene_switch_panel.tscn\" id=\"6_switch\"]"
+    },
+    "project": {
+      "path": "project.godot",
+      "symbol": "project.godot",
+      "line": 1,
+      "sha256": "b68d35517766c5f383a7195389dac848805f1480805284252905d881501352bb",
+      "excerpt": "   1  ; Engine configuration file.\n   2  ; It's best edited using the editor UI and not directly,\n   3  ; since the parameters that go here are not all obvious.\n   4  ;\n   5  ; Format:\n   6  ;   [section] ; section goes between []\n   7  ;   param=value ; assign values to parameters\n   8  \n   9  config_version=5\n  10  \n  11  [application]\n  12  "
+    },
+    "ready": {
+      "path": "scripts/beach/async_pipeline_entry.gd",
+      "symbol": "_ready",
+      "line": 88,
+      "sha256": "4e5a675369c7c5379ae9737c183c8d94bb0c044c3e9103f45cfe3713ab488e38",
+      "excerpt": "  87  \n  88  func _ready() -> void:\n  89  \tif async_pipeline_enabled:\n  90  \t\tasync_controller=AsyncController.new(self)\n  91  \t\tasync_controller.inject_initialize_failure_phase=inject_async_bootstrap_failure_phase\n  92  \t\tcollision_proxy.async_failure_callback=_fail\n  93  \t\tledger_precision=\"approximate\"\n  94  \tsuper._ready()\n  95  \n  96  func _make_gpu_editor():\n  97  \tif not async_pipeline_enabled:return super._make_gpu_editor()\n  98  \tvar editor:=AsyncEditor.new()\n  99  \teditor.brush_water_enabled=enable_brush_water"
+    },
+    "setup": {
+      "path": "scripts/beach/async_pipeline_entry.gd",
+      "symbol": "_render_setup",
+      "line": 116,
+      "sha256": "4e5a675369c7c5379ae9737c183c8d94bb0c044c3e9103f45cfe3713ab488e38",
+      "excerpt": " 115  \n 116  func _render_setup(target: SandWaterDomain, token: int) -> void:\n 117  \tsuper._render_setup(target,token)\n 118  \tif not async_pipeline_enabled or solver==null or solver.rd==null:return\n 119  \tif inject_async_bootstrap_failure_phase==\"before_controller\":\n 120  \t\tcall_deferred(\"_fail\",\"GPU pipeline fatal: bootstrap before controller\")\n 121  \t\treturn\n 122  \tif not async_controller.initialize_render():\n 123  \t\tcall_deferred(\"_fail\",\"GPU pipeline initialization: \"+async_controller.water.last_error)\n 124  \t\treturn\n 125  \tasync_clock_wrapper.texture_rd_rid=solver.async_transport.clock_texture\n 126  \tfor material in [terrain_material,water_material]:\n 127  \t\tmaterial.set_shader_parameter(\"async_clock\",async_clock_wrapper)"
+    },
+    "mark_ready": {
+      "path": "scripts/beach/async_pipeline_entry.gd",
+      "symbol": "_async_mark_ready",
+      "line": 136,
+      "sha256": "4e5a675369c7c5379ae9737c183c8d94bb0c044c3e9103f45cfe3713ab488e38",
+      "excerpt": " 135  \n 136  func _async_mark_ready(token: int) -> void:\n 137  \t# Finish bootstrap's original full-collision request before the new owner\n 138  \t# takes over shape versions; no old callbacks can later overwrite new ones.\n 139  \twhile not closing and last_error.is_empty() and (collision_proxy.staging_texture.is_valid() or not collision_proxy.pending_revisions.is_empty() or collision_proxy.has_prepare_in_flight()):await get_tree().process_frame\n 140  \tif closing or token!=generation or not last_error.is_empty():return\n 141  \tasync_backend_ready=true\n 142  \tasync_controller.ready=true\n 143  \t_mark_ready(token)\n 144  \n 145  func _process(delta: float) -> void:\n 146  \tif async_pipeline_enabled and async_backend_ready:\n 147  \t\tasync_controller.poll()"
+    },
+    "process": {
+      "path": "scripts/beach/async_pipeline_entry.gd",
+      "symbol": "_process",
+      "line": 145,
+      "sha256": "4e5a675369c7c5379ae9737c183c8d94bb0c044c3e9103f45cfe3713ab488e38",
+      "excerpt": " 144  \n 145  func _process(delta: float) -> void:\n 146  \tif async_pipeline_enabled and async_backend_ready:\n 147  \t\tasync_controller.poll()\n 148  \t\tasync_controller.pump(delta)\n 149  \tsuper._process(delta)\n 150  \n 151  func _physics_process(_delta: float) -> void:\n 152  \tif async_pipeline_enabled and async_backend_ready:async_controller.physics_consume()\n 153  \n 154  func _start_tick() -> void:\n 155  \tif not async_pipeline_enabled:super._start_tick();return\n 156  \tif async_backend_ready and not async_checkpoint_running and not beach_restore_running and not async_controller.transitioning and not shutdown_requested:async_controller.explicit_ticks=mini(async_controller.explicit_ticks+1,64)"
+    },
+    "physics": {
+      "path": "scripts/beach/async_pipeline_entry.gd",
+      "symbol": "_physics_process",
+      "line": 151,
+      "sha256": "4e5a675369c7c5379ae9737c183c8d94bb0c044c3e9103f45cfe3713ab488e38",
+      "excerpt": " 150  \n 151  func _physics_process(_delta: float) -> void:\n 152  \tif async_pipeline_enabled and async_backend_ready:async_controller.physics_consume()\n 153  \n 154  func _start_tick() -> void:\n 155  \tif not async_pipeline_enabled:super._start_tick();return\n 156  \tif async_backend_ready and not async_checkpoint_running and not beach_restore_running and not async_controller.transitioning and not shutdown_requested:async_controller.explicit_ticks=mini(async_controller.explicit_ticks+1,64)\n 157  \n 158  func _automatic_tick_enabled() -> bool:\n 159  \treturn not async_pipeline_enabled\n 160  \n 161  func _fail(message: String) -> void:\n 162  \tif async_pipeline_enabled and not last_error.is_empty():return"
+    },
+    "configure": {
+      "path": "scripts/beach/async_pipeline_entry.gd",
+      "symbol": "_configure_scene",
+      "line": 45,
+      "sha256": "4e5a675369c7c5379ae9737c183c8d94bb0c044c3e9103f45cfe3713ab488e38",
+      "excerpt": "  44  \n  45  func _configure_scene() -> void:\n  46  \tsuper._configure_scene()\n  47  \tif not async_pipeline_enabled:return\n  48  \tif async_water_shader==null or async_terrain_shader==null:_fail(\"GPU clock static shader missing\");return\n  49  \t_bind_clock_shader(water_material,async_water_shader,compiled_constants[0])\n  50  \t_bind_clock_shader(terrain_material,async_terrain_shader,compiled_constants[1])\n  51  \tasync_shaders_bound=true\n  52  \t_validate_compiled_inputs()\n  53  \n  54  func _bind_clock_shader(shader_material: ShaderMaterial, shader: Shader, constants: Dictionary) -> void:\n  55  \tvar parameters:={}\n  56  \tfor uniform in shader_material.shader.get_shader_uniform_list():"
+    },
+    "legacy_in": {
+      "path": "scripts/beach/async_pipeline_entry.gd",
+      "symbol": "_async_enter_legacy",
+      "line": 308,
+      "sha256": "4e5a675369c7c5379ae9737c183c8d94bb0c044c3e9103f45cfe3713ab488e38",
+      "excerpt": " 307  \n 308  func _async_enter_legacy() -> StringName:\n 309  \tif async_controller.legacy:return &\"\"\n 310  \tif async_controller.transitioning:return &\"transition_busy\"\n 311  \tasync_previous_playing=playing\n 312  \tasync_previous_accepting=input_scheduler.accepting\n 313  \tasync_controller.transitioning=true\n 314  \tplaying=false\n 315  \tinput_scheduler.accepting=false\n 316  \twhile last_error.is_empty() and (not async_controller.idle(true) or (not command_queue.pending.is_empty() and async_controller.ordinary(command_queue.pending[0]))):await get_tree().process_frame\n 317  \tif not last_error.is_empty():return &\"backend_failed\"\n 318  \tasync_controller.legacy=true\n 319  \tfor chunk in collision_proxy.applied_revisions:collision_proxy.applied_revisions[chunk]=solver.state_revision"
+    },
+    "legacy_out": {
+      "path": "scripts/beach/async_pipeline_entry.gd",
+      "symbol": "_async_leave_legacy",
+      "line": 326,
+      "sha256": "4e5a675369c7c5379ae9737c183c8d94bb0c044c3e9103f45cfe3713ab488e38",
+      "excerpt": " 325  \n 326  func _async_leave_legacy() -> void:\n 327  \tif not last_error.is_empty():\n 328  \t\tcollision_proxy.closing=true\n 329  \t\tcollision_proxy.pending_revisions.clear()\n 330  \twhile collision_proxy.staging_texture.is_valid() or not collision_proxy.pending_revisions.is_empty() or collision_proxy.has_prepare_in_flight():\n 331  \t\tif _async_ownership_unconfirmed():break\n 332  \t\tawait get_tree().process_frame\n 333  \tif last_error.is_empty():await async_controller.bridge()\n 334  \tasync_controller.legacy=false\n 335  \tasync_controller.transitioning=false\n 336  \tasync_controller.collision.applied_state_seq.clear()\n 337  \tasync_controller.collision.mark_all()"
+    },
+    "capture": {
+      "path": "scripts/beach/async_pipeline_entry.gd",
+      "symbol": "capture_async_checkpoint_data",
+      "line": 517,
+      "sha256": "4e5a675369c7c5379ae9737c183c8d94bb0c044c3e9103f45cfe3713ab488e38",
+      "excerpt": " 516  \n 517  func capture_async_checkpoint_data() -> Dictionary:\n 518  \tif not async_pipeline_enabled:return {\"error\":&\"pipeline_disabled\"}\n 519  \tif async_checkpoint_running or gpu_save_running or beach_restore_running:return {\"error\":&\"transition_busy\"}\n 520  \tif shutdown_requested or closing:return {\"error\":&\"closing\"}\n 521  \tif not async_backend_ready or not last_error.is_empty():return {\"error\":&\"backend_failed\"}\n 522  \tif enable_structures or prototype_rise_front_field or prototype_contact_history_field:return {\"error\":&\"unsupported_pipeline_history\"}\n 523  \tvar profile_error:=_checkpoint_runtime_profile_error()\n 524  \tif not profile_error.is_empty():return {\"error\":profile_error}\n 525  \tasync_checkpoint_running=true\n 526  \tvar was_playing:=_async_requested_playing()\n 527  \tvar was_accepting: bool=_async_requested_accepting()\n 528  \tvar was_preview_suspended:=preview_suspended"
+    },
+    "save": {
+      "path": "scripts/beach/async_pipeline_entry.gd",
+      "symbol": "save_gpu_checkpoint",
+      "line": 558,
+      "sha256": "4e5a675369c7c5379ae9737c183c8d94bb0c044c3e9103f45cfe3713ab488e38",
+      "excerpt": " 557  \n 558  func save_gpu_checkpoint(path: String) -> StringName:\n 559  \tif not async_pipeline_enabled:return await super.save_gpu_checkpoint(path)\n 560  \tvar captured:=await capture_async_checkpoint_data()\n 561  \tif not captured.error.is_empty():return captured.error\n 562  \treturn AsyncCheckpoint.save(path,captured.checkpoint)\n 563  \n 564  func restore_gpu_checkpoint(path: String) -> StringName:\n 565  \tif not async_pipeline_enabled:return await super.restore_gpu_checkpoint(path)\n 566  \tvar source:=FileAccess.open(path,FileAccess.READ)\n 567  \tif source==null:return &\"open_failed\"\n 568  \tvar magic:=source.get_buffer(8).get_string_from_ascii();source.close()\n 569  \tif magic==Store.MAGIC:"
+    },
+    "restore": {
+      "path": "scripts/beach/async_pipeline_entry.gd",
+      "symbol": "restore_gpu_checkpoint_data",
+      "line": 578,
+      "sha256": "4e5a675369c7c5379ae9737c183c8d94bb0c044c3e9103f45cfe3713ab488e38",
+      "excerpt": " 577  \n 578  func restore_gpu_checkpoint_data(checkpoint: Dictionary) -> StringName:\n 579  \tif not async_pipeline_enabled:return await super.restore_gpu_checkpoint_data(checkpoint)\n 580  \tif async_checkpoint_running or beach_restore_running or gpu_save_running or async_legacy_running:return &\"transition_busy\"\n 581  \tif shutdown_requested or closing:return &\"closing\"\n 582  \tif not async_backend_ready or not last_error.is_empty():return &\"backend_failed\"\n 583  \tif checkpoint.has(\"gpu_beach_edit\"):\n 584  \t\tvar migration:=AsyncMigration.convert(self,checkpoint)\n 585  \t\tif not migration.error.is_empty():return migration.error\n 586  \t\tvar restored: StringName=await restore_gpu_checkpoint_data(migration.checkpoint)\n 587  \t\tif restored.is_empty():\n 588  \t\t\tasync_last_migration=migration.provenance\n 589  \t\treturn restored"
+    },
+    "commit": {
+      "path": "scripts/beach/async_pipeline_entry.gd",
+      "symbol": "_render_async_restore_commit",
+      "line": 732,
+      "sha256": "4e5a675369c7c5379ae9737c183c8d94bb0c044c3e9103f45cfe3713ab488e38",
+      "excerpt": " 731  \n 732  func _render_async_restore_commit() -> void:\n 733  \tvar old=AsyncRestore.new()\n 734  \tfor key in [\"solver\",\"foam_field\",\"local_front_field\",\"sand_audit\",\"sediment_coupler\",\"material_coupler\",\"stable_q\",\"gravel_field\",\"shape_gpu\",\"preview_query\"]:old.set(key,get(key))\n 735  \told.controller=async_controller\n 736  \told.collision={\"shader\":collision_proxy.shader,\"pipeline\":collision_proxy.pipeline,\"chunk_buffer\":collision_proxy.chunk_buffer,\"uniform_set\":collision_proxy.uniform_set}\n 737  \tpreview_baseline.texture_rd_rid=RID()\n 738  \tvar candidate=beach_restore_candidate\n 739  \tfor key in [\"solver\",\"foam_field\",\"local_front_field\",\"sand_audit\",\"sediment_coupler\",\"material_coupler\",\"stable_q\",\"gravel_field\",\"shape_gpu\",\"preview_query\"]:set(key,candidate.get(key))\n 740  \tasync_controller=candidate.controller\n 741  \tcollision_proxy.solver=solver;collision_proxy.rd=solver.rd;collision_proxy.generation=generation\n 742  \tcollision_proxy.shader=candidate.collision.shader;collision_proxy.pipeline=candidate.collision.pipeline;collision_proxy.chunk_buffer=candidate.collision.chunk_buffer;collision_proxy.uniform_set=RID()\n 743  \tcollision_proxy.applied_revisions.clear();collision_proxy.applied_usec.clear();collision_proxy.applied_stage_usec.clear()"
+    },
+    "shutdown": {
+      "path": "scripts/beach/async_pipeline_entry.gd",
+      "symbol": "shutdown",
+      "line": 774,
+      "sha256": "4e5a675369c7c5379ae9737c183c8d94bb0c044c3e9103f45cfe3713ab488e38",
+      "excerpt": " 773  \n 774  func shutdown() -> void:\n 775  \tif async_pipeline_enabled and async_controller!=null:\n 776  \t\tif gpu_release_done:return\n 777  \t\tif async_shutdown_running:\n 778  \t\t\twhile async_shutdown_running:await get_tree().process_frame\n 779  \t\t\treturn\n 780  \t\tasync_shutdown_running=true\n 781  \t\tshutdown_requested=true\n 782  \t\tasync_shutdown_error=&\"\"\n 783  \t\twhile async_fault_probe_running or async_terminal.pending:await get_tree().process_frame\n 784  \t\tif _async_ownership_unconfirmed():\n 785  \t\t\tasync_shutdown_error=&\"ownership_unconfirmed\";async_shutdown_running=false;return"
+    },
+    "release": {
+      "path": "scripts/beach/async_pipeline_entry.gd",
+      "symbol": "_render_release",
+      "line": 844,
+      "sha256": "4e5a675369c7c5379ae9737c183c8d94bb0c044c3e9103f45cfe3713ab488e38",
+      "excerpt": " 843  \n 844  func _render_release() -> void:\n 845  \tif async_pipeline_enabled and async_controller!=null:\n 846  \t\tif _async_has_external_owners():return\n 847  \t\tif not async_controller.release_render():call_deferred(\"_retry_gpu_release\");return\n 848  \t\tif not async_terminal.release_render():return\n 849  \t\tasync_backend_ready=false\n 850  \t\tasync_clock_wrapper.texture_rd_rid=RID()\n 851  \t\tfor material in [terrain_material,water_material]:material.set_shader_parameter(\"use_async_clock\",false)\n 852  \tsuper._render_release()"
+    },
+    "api": {
+      "path": "scripts/beach/async_pipeline_entry.gd",
+      "symbol": "apply_gpu_command",
+      "line": 468,
+      "sha256": "4e5a675369c7c5379ae9737c183c8d94bb0c044c3e9103f45cfe3713ab488e38",
+      "excerpt": " 467  \n 468  func apply_gpu_command(command: Dictionary) -> Dictionary:\n 469  \tif not async_pipeline_enabled:return await super.apply_gpu_command(command)\n 470  \tvar error: StringName=input_scheduler.submit(command)\n 471  \tif not error.is_empty():return {\"error\":error}\n 472  \tvar scheduler=input_scheduler\n 473  \tvar epoch:=generation\n 474  \tvar result: Dictionary={}\n 475  \twhile result.is_empty():\n 476  \t\tif not last_error.is_empty():return {\"error\":&\"backend_failed\"}\n 477  \t\tif shutdown_requested or closing:return {\"error\":&\"closing\"}\n 478  \t\tif generation!=epoch:return {\"error\":&\"generation_changed\"}\n 479  \t\tfor row in scheduler.terminal:"
+    },
+    "root_fail": {
+      "path": "scripts/beach/async_pipeline_entry.gd",
+      "symbol": "_fail",
+      "line": 161,
+      "sha256": "4e5a675369c7c5379ae9737c183c8d94bb0c044c3e9103f45cfe3713ab488e38",
+      "excerpt": " 160  \n 161  func _fail(message: String) -> void:\n 162  \tif async_pipeline_enabled and not last_error.is_empty():return\n 163  \tsuper._fail(message)\n 164  \tif async_pipeline_enabled:\n 165  \t\tcollision_proxy.closing=true\n 166  \t\tcollision_proxy.pending_revisions.clear()\n 167  \tif async_pipeline_enabled and async_controller!=null and input_scheduler!=null:async_controller._fail_pipeline(\"owner_failed:\"+message,false)\n 168  \tif async_pipeline_enabled and solver!=null and solver.rd!=null and async_controller!=null:\n 169  \t\tasync_terminal.required=true\n 170  \t\tif not async_fault_probe_running and not async_terminal.pending:\n 171  \t\t\tasync_fault_probe_running=true\n 172  \t\t\tcall_deferred(\"_async_fault_terminal_probe\")"
+    },
+    "controller_init": {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_controller.gd",
+      "symbol": "initialize_render",
+      "line": 51,
+      "sha256": "47e501eb87402a9e23bed34bd0df232f6c5e818df4bf4f6d4bfa512ee2227470",
+      "excerpt": "  50  \n  51  func initialize_render(resources: Dictionary={}) -> bool:\n  52  \tvar solver=resources.get(\"solver\",owner.solver)\n  53  \tif not solver.enable_async():return false\n  54  \tif inject_initialize_failure_phase==\"transport\":water.last_error=\"injected_transport_boundary\";return false\n  55  \tif not water.initialize(solver):return false\n  56  \tif inject_initialize_failure_phase==\"water\":water.last_error=\"injected_water_boundary\";return false\n  57  \tif owner.enable_erosion and not coupled.initialize(water,resources.get(\"sediment_coupler\",owner.sediment_coupler),resources.get(\"material_coupler\",owner.material_coupler)):return false\n  58  \tif not visuals.initialize(water,resources.get(\"foam_field\",owner.foam_field),resources.get(\"gravel_field\",owner.gravel_field),resources.get(\"local_front_field\",owner.local_front_field),owner.prototype_local_front_wide_field):return false\n  59  \tvar brush=resources.get(\"shape_gpu\",owner.get(\"shape_gpu\"))\n  60  \tif brush!=null:\n  61  \t\ttools=Tools.new()\n  62  \t\tif not tools.initialize(solver,brush,resources.get(\"gravel_field\",owner.gravel_field),visuals):water.last_error=tools.last_error;return false"
+    },
+    "poll": {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_controller.gd",
+      "symbol": "poll",
+      "line": 85,
+      "sha256": "47e501eb87402a9e23bed34bd0df232f6c5e818df4bf4f6d4bfa512ee2227470",
+      "excerpt": "  84  \n  85  func poll() -> void:\n  86  \tif not fault_reason.is_empty():return\n  87  \tif hold_completions:return\n  88  \tvar ids:=records.keys()\n  89  \tids.sort()\n  90  \tvar changed:=false\n  91  \tfor batch in ids:\n  92  \t\tvar record: Dictionary=records[batch]\n  93  \t\tvar slot: Dictionary=slots.slots[record.identity.slot_id]\n  94  \t\tif slot.state!=Slots.State.GPU_COMPLETE:break\n  95  \t\tvar result: Dictionary=slots.consume(record.identity)\n  96  \t\tchanged=true"
+    },
+    "pump": {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_controller.gd",
+      "symbol": "pump",
+      "line": 126,
+      "sha256": "47e501eb87402a9e23bed34bd0df232f6c5e818df4bf4f6d4bfa512ee2227470",
+      "excerpt": " 125  \n 126  func pump(delta: float) -> void:\n 127  \tif not ready or legacy or frozen or owner.closing or not owner.last_error.is_empty():return\n 128  \tvar automatic: bool=owner.playing and not transitioning and not owner.async_checkpoint_running and not owner.beach_restore_running and not owner.shutdown_requested\n 129  \tif automatic:\n 130  \t\taccumulator=minf(accumulator+delta,owner.SIM_DELTA*4.0)\n 131  \telse:\n 132  \t\taccumulator=0.0\n 133  \t\twater_owed=false\n 134  \t_update_waves()\n 135  \tvar water_submitted:=false\n 136  \tif explicit_ticks>0:\n 137  \t\twater_submitted=_submit_water()"
+    },
+    "edit_submit": {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_controller.gd",
+      "symbol": "_submit_edit",
+      "line": 165,
+      "sha256": "47e501eb87402a9e23bed34bd0df232f6c5e818df4bf4f6d4bfa512ee2227470",
+      "excerpt": " 164  \n 165  func _submit_edit() -> bool:\n 166  \t# Admission closes before shutdown. Already accepted units, including an\n 167  \t# owned stroke's END marker, must still drain through this same stream.\n 168  \tif owner.command_queue.pending.is_empty():return false\n 169  \tif not ordinary(owner.command_queue.pending[0]):return _submit_tool()\n 170  \tvar commands:=[]\n 171  \tvar envelopes:=[]\n 172  \tvar first_policy:=-1\n 173  \tfor command in owner.command_queue.pending:\n 174  \t\tif commands.size()>=owner.edit_frame_batch_limit or command.sim_tick>owner.completed_ticks or not ordinary(command):break\n 175  \t\tvar selection: Dictionary=owner.input_scheduler.policies[command.command_id]\n 176  \t\tif first_policy<0:first_policy=selection.policy"
+    },
+    "tool_submit": {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_controller.gd",
+      "symbol": "_submit_tool",
+      "line": 191,
+      "sha256": "47e501eb87402a9e23bed34bd0df232f6c5e818df4bf4f6d4bfa512ee2227470",
+      "excerpt": " 190  \n 191  func _submit_tool() -> bool:\n 192  \tvar command: Dictionary=owner.command_queue.pending[0]\n 193  \tif command.sim_tick>owner.completed_ticks:return false\n 194  \tif tools==null:_fail_pipeline(\"tool_backend_unavailable\");return false\n 195  \tvar id:=_acquire(\"tool\",[command.duplicate(true)])\n 196  \tif id.is_empty():return false\n 197  \towner.command_queue.pending.pop_front()\n 198  \towner.ticket_id+=1\n 199  \trecords[id.batch_seq].ticket=owner.ticket_id\n 200  \tlast_edit_frame=Engine.get_process_frames()\n 201  \tsubmitted_edits+=1\n 202  \tRenderingServer.call_on_render_thread(_submit_tool_render.bind(id,command.duplicate(true),owner.ticket_id))"
+    },
+    "tool_record": {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_tools.gd",
+      "symbol": "_record",
+      "line": 101,
+      "sha256": "7ac26ea4c5d5f0020c5a6f5afeb04652cbe7fe66c0895d3d017159bfdc817451",
+      "excerpt": " 100  \n 101  func _record(_input: RID, _control: RID, _count: int, id: Dictionary, command: Dictionary, bytes: PackedByteArray) -> void:\n 102  \tvar kind:=mode(command)\n 103  \tvar inject:=1 if shape.inject_candidate_failure_once and kind==Mode.SHAPE else 0\n 104  \tshape.inject_candidate_failure_once=false\n 105  \t_dispatch(\"tool_select\",bindings[id.slot_id].select,PackedInt32Array([kind,inject,0,0]).to_byte_array())\n 106  \tsolver.active_ticket=bytes.decode_s64(16)\n 107  \tif kind==Mode.BEGIN:\n 108  \t\tshape._dispatch(0)\n 109  \t\tshape.active=true;shape.stroke_id=command.stroke_id;shape.baseline_token=command.baseline_token;shape.baseline_copy_count+=1\n 110  \telif kind==Mode.END:\n 111  \t\tshape.active=false;shape.stroke_id=0;shape.baseline_token=0;shape.last_sample=-1\n 112  \telif kind==Mode.SHAPE:"
+    },
+    "tool_queue": {
+      "path": "scripts/beach/async_pipeline_entry.gd",
+      "symbol": "_async_queue_control",
+      "line": 351,
+      "sha256": "4e5a675369c7c5379ae9737c183c8d94bb0c044c3e9103f45cfe3713ab488e38",
+      "excerpt": " 350  \n 351  func _async_queue_control(operation: int, values: Dictionary) -> Dictionary:\n 352  \tif operation not in [async_controller.Tools.Mode.BEGIN,async_controller.Tools.Mode.END,async_controller.Tools.Mode.GRAVEL]:return {\"error\":&\"invalid_command\"}\n 353  \tif not async_backend_ready or not last_error.is_empty():return {\"error\":&\"backend_unavailable\"}\n 354  \tif async_controller.transitioning or async_controller.frozen:return {\"error\":&\"transition_busy\"}\n 355  \tif command_queue.pending.size()>=64:return {\"error\":&\"queue_full\"}\n 356  \tvar value:=values.duplicate(true)\n 357  \tvalue.async_operation=operation;value.kind=&\"async_control\"\n 358  \tvalue.generation=generation;value.domain_id=domain.domain_id\n 359  \tvalue.command_id=command_queue.last_command_id+1\n 360  \tvalue.sim_tick=maxi(completed_ticks,int(command_queue.pending[-1].sim_tick) if not command_queue.pending.is_empty() else completed_ticks)\n 361  \tcommand_queue.last_command_id=value.command_id\n 362  \tcommand_queue.pending.append(value)"
+    },
+    "shape_begin": {
+      "path": "scripts/beach/async_pipeline_entry.gd",
+      "symbol": "begin_shape_stroke",
+      "line": 376,
+      "sha256": "4e5a675369c7c5379ae9737c183c8d94bb0c044c3e9103f45cfe3713ab488e38",
+      "excerpt": " 375  \n 376  func begin_shape_stroke(stroke: int) -> StringName:\n 377  \tif not async_pipeline_enabled:return await super.begin_shape_stroke(stroke)\n 378  \tvar owned_ui: bool=ui_pump_running and stroke==ui_stroke_identity and stroke_controller.generation==generation\n 379  \tif shutdown_requested and not owned_ui:return &\"closing\"\n 380  \tif (async_checkpoint_running or beach_restore_running) and not owned_ui:return &\"transition_busy\"\n 381  \tif not input_scheduler.accepting and not owned_ui:return &\"backend_unavailable\"\n 382  \tif not shape_backend_ready or shape_stroke_id!=0 or stroke<=0:return &\"backend_unavailable\"\n 383  \t_shape_serial+=1;shape_baseline_token=_shape_serial;shape_stroke_id=stroke\n 384  \tvar queued:=_async_queue_control(async_controller.Tools.Mode.BEGIN,{\"stroke_id\":stroke,\"baseline_token\":shape_baseline_token})\n 385  \tif not queued.error.is_empty():shape_stroke_id=0;shape_baseline_token=0;return queued.error\n 386  \tvar result:=await _async_wait_command(queued.command)\n 387  \tif result.get(\"status\")!=1:shape_stroke_id=0;shape_baseline_token=0;return &\"invalid_baseline\""
+    },
+    "shape_end": {
+      "path": "scripts/beach/async_pipeline_entry.gd",
+      "symbol": "end_shape_stroke",
+      "line": 391,
+      "sha256": "4e5a675369c7c5379ae9737c183c8d94bb0c044c3e9103f45cfe3713ab488e38",
+      "excerpt": " 390  \n 391  func end_shape_stroke() -> StringName:\n 392  \tif not async_pipeline_enabled:return await super.end_shape_stroke()\n 393  \tif shape_stroke_id==0:return &\"\"\n 394  \tshape_accepting=false\n 395  \tvar queued:=_async_queue_control(async_controller.Tools.Mode.END,{\"stroke_id\":shape_stroke_id,\"baseline_token\":shape_baseline_token})\n 396  \twhile queued.error==&\"queue_full\" and last_error.is_empty():\n 397  \t\tawait get_tree().process_frame\n 398  \t\tqueued=_async_queue_control(async_controller.Tools.Mode.END,{\"stroke_id\":shape_stroke_id,\"baseline_token\":shape_baseline_token})\n 399  \tif not queued.error.is_empty():return queued.error\n 400  \tvar result:=await _async_wait_command(queued.command,true)\n 401  \tshape_stroke_id=0;shape_baseline_token=0\n 402  \treturn &\"\" if result.get(\"status\")==1 else &\"invalid_baseline\""
+    },
+    "smooth_gpu": {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_smooth.glsl",
+      "symbol": "async_smooth.glsl",
+      "line": 1,
+      "sha256": "787d664ce2a6762bc9b4d526357d6d2f63241a8e8ff33e6e723abf2a4c95320a",
+      "excerpt": "   1  #[compute]\n   2  #version 450\n   3  layout(local_size_x=1) in;\n   4  layout(set=0,binding=0,std430) readonly buffer Command {uint c[];};\n   5  layout(set=0,binding=1,std430) buffer Receipt {uint r[];};\n   6  layout(set=0,binding=2,std430) buffer Cells {uint v[];};\n   7  layout(set=0,binding=3,std430) readonly buffer Control {uint control[];};\n   8  layout(set=1,binding=0,r32f) uniform image2D sand0;\n   9  layout(set=1,binding=1,r32f) uniform image2D sand1;\n  10  layout(set=1,binding=2,r16f) uniform image2D compact0;\n  11  layout(set=1,binding=3,r16f) uniform image2D compact1;\n  12  layout(set=1,binding=4,rg32f) uniform image2D support0;"
+    },
+    "water_submit": {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_controller.gd",
+      "symbol": "_submit_water",
+      "line": 212,
+      "sha256": "47e501eb87402a9e23bed34bd0df232f6c5e818df4bf4f6d4bfa512ee2227470",
+      "excerpt": " 211  \n 212  func _submit_water() -> bool:\n 213  \tvar id:=_acquire(\"water\",[])\n 214  \tif id.is_empty():return false\n 215  \taccumulator=maxf(0.0,accumulator-owner.SIM_DELTA)\n 216  \twater_owed=false\n 217  \tsubmitted_water+=1\n 218  \tRenderingServer.call_on_render_thread(_submit_render.bind(id,\"water\",[]))\n 219  \tif owner.enable_erosion:collision.mark_all()\n 220  \treturn true\n 221  \n 222  func _submit_render(id: Dictionary, kind: String, envelopes: Array) -> void:\n 223  \tif not fault_reason.is_empty():call_deferred(\"_submission_done\",id,\"cancelled_before_recording\");return"
+    },
+    "book": {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_controller.gd",
+      "symbol": "_book_submission",
+      "line": 242,
+      "sha256": "47e501eb87402a9e23bed34bd0df232f6c5e818df4bf4f6d4bfa512ee2227470",
+      "excerpt": " 241  \n 242  func _book_submission(record: Dictionary) -> void:\n 243  \tif record.booked:return\n 244  \trecord.booked=true\n 245  \tfor command in record.commands:\n 246  \t\tif not ordinary(command):\n 247  \t\t\tif command.get(\"schema_version\")==2:nominal_upper_supply+=2.0*float(command.add_budget_m3)+1.0\n 248  \t\t\tcontinue\n 249  \t\tvar amount: float=command.amount_m3*command.strength\n 250  \t\tif command.kind==&\"place_sand\":\n 251  \t\t\towner.domain.sand_source_m3+=amount\n 252  \t\t\tnominal_upper_supply+=2.0*amount+1.0\n 253  \t\telse:owner.domain.sand_sink_m3+=amount"
+    },
+    "fault": {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_controller.gd",
+      "symbol": "_fail_pipeline",
+      "line": 276,
+      "sha256": "47e501eb87402a9e23bed34bd0df232f6c5e818df4bf4f6d4bfa512ee2227470",
+      "excerpt": " 275  \n 276  func _fail_pipeline(reason: String, report: bool=true) -> void:\n 277  \tif fault_reason.is_empty():\n 278  \t\tfault_reason=reason\n 279  \t\texplicit_ticks=0;slots.stop_admission()\n 280  \t\towner.ready_for_ticks=false\n 281  \t\tcollision.closing=true;collision.pending.clear()\n 282  \t\towner.input_scheduler.accepting=false\n 283  \t\towner.input_scheduler.cancel_pending(\"pipeline_failed\")\n 284  \t\tif report:owner._fail(\"GPU pipeline fatal: \"+reason)\n 285  \tfor record in records.values():_request_cleanup(record.identity)\n 286  \n 287  func _request_cleanup(id: Dictionary) -> void:"
+    },
+    "bridge": {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_controller.gd",
+      "symbol": "bridge",
+      "line": 370,
+      "sha256": "47e501eb87402a9e23bed34bd0df232f6c5e818df4bf4f6d4bfa512ee2227470",
+      "excerpt": " 369  \n 370  func bridge() -> void:\n 371  \tvar id:=_acquire(\"bridge\",[])\n 372  \tif id.is_empty():owner._fail(\"GPU legacy bridge has no free slot\");return\n 373  \tRenderingServer.call_on_render_thread(_bridge_render.bind(id,owner.solver.state_revision))\n 374  \twhile records.has(id.batch_seq) and owner.last_error.is_empty():await owner.get_tree().process_frame\n 375  \n 376  func _bridge_render(id: Dictionary, revision: int) -> void:\n 377  \tvar solver=owner.solver\n 378  \tif solver.current_index!=0:\n 379  \t\tfor field in solver.textures:\n 380  \t\t\tif solver.textures[field] is Array:solver._copy_texture(solver.textures[field][solver.current_index],solver.textures[field][0])\n 381  \t\tsolver.current_index=0"
+    },
+    "scheduler": {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_scheduler.gd",
+      "symbol": "submit",
+      "line": 3,
+      "sha256": "bb143cbb8142648cebf7d0c156d35cd399df4be99c378f9fd4432fd9fca98fba",
+      "excerpt": "   2  \n   3  func submit(command: Dictionary, policy: int=-1, speed: float=NAN) -> StringName:\n   4  \tif lab.async_pipeline_enabled and lab.async_controller!=null:\n   5  \t\tif command.has(\"async_operation\"):return &\"invalid_input\"\n   6  \t\tif lab.shutdown_requested or lab.closing:return &\"closing\"\n   7  \t\tvar owned_shape: bool=lab.async_controller.legacy and command.get(\"schema_version\")==2 and lab.shape_stroke_id!=0\n   8  \t\tif (lab.async_checkpoint_running or lab.beach_restore_running) and not owned_shape:return &\"transition_busy\"\n   9  \t\tif (lab.async_controller.transitioning and not owned_shape) or lab.async_controller.frozen:return &\"transition_busy\"\n  10  \t\tif lab.command_queue.pending.size()>=MAX_PENDING:return &\"queue_full\"\n  11  \t\tif command.get(\"kind\") in [&\"smooth\",&\"compact\"]:\n  12  \t\t\tif not accepting or not lab.ready_for_ticks or generation!=lab.generation:return &\"backend_unavailable\"\n  13  \t\t\tvar value:=command.duplicate(true)\n  14  \t\t\tif not value.has(\"amount_m3\"):value.amount_m3=0.0"
+    },
+    "slots": {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_slots.gd",
+      "symbol": "acquire",
+      "line": 23,
+      "sha256": "7dbad972285e515eeea88d5586e149536b27444eb869ca8061ab8b98314ac2ba",
+      "excerpt": "  22  \n  23  func acquire() -> Dictionary:\n  24  \tif not accepting: return {\"error\":\"closing\"}\n  25  \tif batch_seq==9223372036854775807 or lease_seq==9223372036854775807:return {\"error\":\"identity_exhausted\"}\n  26  \tfor index in slots.size():\n  27  \t\tif slots[index].state != State.FREE: continue\n  28  \t\tbatch_seq += 1\n  29  \t\tlease_seq += 1\n  30  \t\tvar id := {\"generation\":generation,\"batch_seq\":batch_seq,\"slot_id\":index,\"lease_id\":lease_seq}\n  31  \t\tslots[index] = {\"state\":State.CPU_FILLING,\"identity\":id.duplicate(),\"completion\":{}}\n  32  \t\t_event(\"acquire\", id)\n  33  \t\treturn {\"error\":\"\",\"identity\":id}\n  34  \treturn {\"error\":\"no_slot\"}"
+    },
+    "slot_done": {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_slots.gd",
+      "symbol": "completed",
+      "line": 59,
+      "sha256": "7dbad972285e515eeea88d5586e149536b27444eb869ca8061ab8b98314ac2ba",
+      "excerpt": "  58  \n  59  func completed(bytes: PackedByteArray, expected: Dictionary) -> String:\n  60  \t# A corrupt payload must never release a slot. The out-of-band expected\n  61  \t# identity belongs to the callback closure, not to untrusted GPU bytes.\n  62  \tif not _matches(expected): return \"stale_lease\"\n  63  \tif slots[expected.slot_id].state != State.GPU_QUEUED: return \"duplicate_or_wrong_state\"\n  64  \tvar result := Wire.decode_completion(bytes)\n  65  \tif not result.error.is_empty(): return result.error\n  66  \tif not Wire.same_lease(result, expected): return \"completion_identity\"\n  67  \tslots[expected.slot_id].state = State.GPU_COMPLETE\n  68  \tslots[expected.slot_id].completion = result\n  69  \t_event(\"gpu_complete\", expected)\n  70  \treturn \"\""
+    },
+    "transport": {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_transport.gd",
+      "symbol": "submit",
+      "line": 65,
+      "sha256": "bd1fad594d7cdff8b6225850b644672d3c95f3f26c8f36b9b791fd57a05221be",
+      "excerpt": "  64  \n  65  func submit(id: Dictionary, commands: PackedByteArray, record: Callable, callback: Callable, receipt_bytes: int=0, command_stride: int=Wire.COMMAND_BYTES) -> String:\n  66  \tif rd == null or not Wire.identity_valid(id) or id.generation != generation or not callback.is_valid(): return \"submit_identity\"\n  67  \tif receipt_bytes not in [0,256]:return \"receipt_size\"\n  68  \tif command_stride not in [128,256] or commands.is_empty() or commands.size()%command_stride!=0: return \"command_size\"\n  69  \tvar header := Wire.pack_header(id, commands.size()/command_stride)\n  70  \tif header.is_empty(): return \"command_count\"\n  71  \tif command_stride==256:\n  72  \t\t# Explicit v1 tool-envelope extension; ordinary v1 headers stay identical.\n  73  \t\theader.encode_u32(40,1);header.encode_u32(44,256)\n  74  \tvar slot: Dictionary = resources[id.slot_id]\n  75  \tif not slot.identity.is_empty(): return \"slot_in_use\"\n  76  \theader.append_array(commands)"
+    },
+    "retire": {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_transport.gd",
+      "symbol": "retire",
+      "line": 144,
+      "sha256": "bd1fad594d7cdff8b6225850b644672d3c95f3f26c8f36b9b791fd57a05221be",
+      "excerpt": " 143  \n 144  func retire(id: Dictionary) -> bool:\n 145  \tif rd == null or not Wire.identity_valid(id): return false\n 146  \tvar slot: Dictionary = resources[id.slot_id]\n 147  \tif not Wire.same_lease(slot.identity, id) or not slot.readback_done: return false\n 148  \tslot.identity = {}\n 149  \treturn true\n 150  \n 151  func release() -> bool:\n 152  \tif rd == null: return true\n 153  \tfor slot in resources:\n 154  \t\tif not slot.identity.is_empty(): return false\n 155  \tfor slot in resources:"
+    },
+    "edit": {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_editor.gd",
+      "symbol": "_record_async",
+      "line": 71,
+      "sha256": "1a7bd53a0d2bff0154993f9cd172edb07d1121b05e41c32c46514f931aee2b7e",
+      "excerpt": "  70  \n  71  func _record_async(input: RID, _control: RID, _count: int, envelopes: Array) -> void:\n  72  \tvar slot_index := -1\n  73  \tfor slot in async_transport.resources:\n  74  \t\tslot_index += 1\n  75  \t\tif slot.input==input: break\n  76  \tvar resources: Dictionary = async_resources[slot_index]\n  77  \t# These are only CPU recording variables. No callback mutates them and the\n  78  \t# RD queue consumes all shared scratch passes before the next work unit.\n  79  \trecording_batch = true\n  80  \treceipt_batch_metrics = {\"passes\":[],\"backup_texture_count\":0}\n  81  \tif profile_passes:receipt_batch_metrics.cpu_spans=[]\n  82  \tbatch_indirect = resources.indirect"
+    },
+    "water": {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_water.gd",
+      "symbol": "_record",
+      "line": 116,
+      "sha256": "82f3d2a13987fb704b9f13ea8898df056c427f78b02416cd7818adbd5fde17a4",
+      "excerpt": " 115  \n 116  func _record(_input: RID, _control: RID, _count: int, requested_dt: float) -> void:\n 117  \tvar record_start:=Time.get_ticks_usec() if solver.profile_passes else 0\n 118  \tif solver.profile_passes:rd.capture_timestamp(\"sandcastle_async_water_tick_start\")\n 119  \t_dispatch(\"cfl_tiles\",kernels.cfl_tiles.binding,PackedByteArray())\n 120  \tvar push:=PackedFloat32Array([requested_dt,solver.cell_size_m,solver.COURANT,0.0]).to_byte_array()\n 121  \tpush.encode_u32(12,solver.grid_size)\n 122  \t_dispatch(\"cfl_decide\",kernels.cfl_decide.binding,push)\n 123  \tif boundary_enabled:\n 124  \t\tvar boundary_push:=PackedFloat32Array([solver.cell_size_m*solver.cell_size_m,tide.x,tide.y,tide.z]).to_byte_array()\n 125  \t\tboundary_push.append_array(PackedInt32Array([wave_count,tide_mode,0,0]).to_byte_array())\n 126  \t\tboundary_push.encode_float(24,tide_phase)\n 127  \t\tboundary_push.encode_float(28,tide_period)"
+    },
+    "coupled": {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_coupled.gd",
+      "symbol": "record",
+      "line": 45,
+      "sha256": "779f48e98f58d4818a0b1d6b5aeec28bbc5b32dfe6019a63c5f722dac62c3aa3",
+      "excerpt": "  44  \n  45  func record(_decision: RID, _indirect: RID, step: int, live: int) -> void:\n  46  \tif step==0:\n  47  \t\tif not sediment.observe_pushes:erosion_push=sediment._erosion_push(1.0)\n  48  \t\tmaterial_push=PackedFloat32Array([0.0,material.WET_RATE_PER_S,material.DRY_RATE_PER_S,material.DIFFUSION_PER_S,material.RESIDUAL_WETNESS,material.SOAK_DEPTH_M,material.DRY_DEPTH_M,material.COMPACT_RATE_PER_S]).to_byte_array()\n  49  \t\tslope_push=material._slope_push(0.0)\n  50  \t\tordinary_push=slope_push.slice(0,32)\n  51  \t\tsupport_pushes.clear()\n  52  \t\tfor index in 2:\n  53  \t\t\tvar phases:=[]\n  54  \t\t\tfor phase in 3:phases.append(PackedInt32Array([water.solver.grid_size,index,phase,0]).to_byte_array())\n  55  \t\t\tsupport_pushes.append(phases)\n  56  \twater._dispatch(\"sediment\",sediment.sets[live],sediment._erosion_push(1.0) if sediment.observe_pushes else erosion_push,step)"
+    },
+    "visuals": {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_visuals.gd",
+      "symbol": "record",
+      "line": 47,
+      "sha256": "246712a7dde239f6312c4fe52267bdcfc3b55cdb833fbc07547873d5668a1856",
+      "excerpt": "  46  \n  47  func record(_decision: RID) -> void:\n  48  \tif local_front!=null:\n  49  \t\twater._dispatch(\"local_front_x\",water.kernels.local_front_x.binding,PackedByteArray())\n  50  \t\twater._dispatch(\"local_front_z\",water.kernels.local_front_z.binding,PackedByteArray())\n  51  \twater._dispatch(\"foam\",foam.uniform_sets[0][foam.current_index],PackedFloat32Array([0.0,water.solver.cell_size_m,1.8,25.0]).to_byte_array())\n  52  \tvar p: Dictionary=gravel.profile\n  53  \tvar push:=PackedInt32Array([gravel.active_count,p.capacity,p.seed,0]).to_byte_array()\n  54  \tpush.append_array(PackedFloat32Array([water.solver.grid_size,water.solver.cell_size_m,0.0,1.0,p.h_on_m,p.h_off_m,p.speed_on_m_s,p.speed_off_m_s,p.response_min,p.response_max,p.h_epsilon_m,p.speed_cap_m_s]).to_byte_array())\n  55  \tpush.append_array(PackedFloat32Array(p.spawn_bounds_xz).to_byte_array())\n  56  \tpush.append_array(PackedFloat32Array([1.0 if p.bed_reconstruction else 0.0,0.0,0.0,0.0]).to_byte_array())\n  57  \tvar device: RenderingDevice=water.rd\n  58  \tvar list:=device.compute_list_begin()"
+    },
+    "height_pump": {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_collision.gd",
+      "symbol": "pump",
+      "line": 98,
+      "sha256": "53779ff2e4cbc2bc52fc4c3b84cb75a0f68df6b2c45e1e28a0f8c274dc96b36d",
+      "excerpt": "  97  \n  98  func pump() -> int:\n  99  \tif closing or rd==null or pending.is_empty():return 0\n 100  \tvar submitted:=0\n 101  \tfor slot_id in slots.size():\n 102  \t\tif pending.is_empty():break\n 103  \t\tif not slots[slot_id].identity.is_empty():continue\n 104  \t\tvar keys:=pending.keys()\n 105  \t\tkeys.sort()\n 106  \t\tvar chunks:=PackedInt32Array(keys.slice(0,16))\n 107  \t\tfor chunk in chunks:pending.erase(chunk)\n 108  \t\tserial+=1\n 109  \t\tvar id:={\"generation\":generation,\"snapshot_seq\":serial,\"slot_id\":slot_id,\"chunks\":chunks}"
+    },
+    "height_pack": {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_collision.gd",
+      "symbol": "_capture_render",
+      "line": 116,
+      "sha256": "53779ff2e4cbc2bc52fc4c3b84cb75a0f68df6b2c45e1e28a0f8c274dc96b36d",
+      "excerpt": " 115  \n 116  func _capture_render(id: Dictionary) -> void:\n 117  \tvar resources: Dictionary=gpu_slots[id.slot_id]\n 118  \tvar chunks: PackedInt32Array=id.chunks\n 119  \tif rd.buffer_update(resources.ids,0,chunks.size()*4,chunks.to_byte_array())!=OK:\n 120  \t\tcall_deferred(\"_receive\",PackedByteArray(),id)\n 121  \t\treturn\n 122  \tresources.identity=id.duplicate(true)\n 123  \tresources.fence_pending=false\n 124  \tvar push:=PackedByteArray()\n 125  \tpush.resize(32)\n 126  \tpush.encode_u64(0,id.generation)\n 127  \tpush.encode_u64(8,id.snapshot_seq)"
+    },
+    "height_receive": {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_collision.gd",
+      "symbol": "_receive",
+      "line": 186,
+      "sha256": "53779ff2e4cbc2bc52fc4c3b84cb75a0f68df6b2c45e1e28a0f8c274dc96b36d",
+      "excerpt": " 185  \n 186  func _receive(bytes: PackedByteArray, id: Dictionary) -> void:\n 187  \tif not _matches(id):return\n 188  \tblocked_fences.erase(id.snapshot_seq);unconfirmed_ownership=not blocked_fences.is_empty()\n 189  \tvar slot: Dictionary=slots[id.slot_id]\n 190  \tif slot.task>=0 or not slot.result.is_empty():return\n 191  \tvar result:=Codec.decode(bytes,id)\n 192  \tif not result.error.is_empty():\n 193  \t\tinvalid_results+=1\n 194  \t\tif not closing:mark_chunks(id.chunks)\n 195  \t\t_event(\"snapshot_invalid\",id)\n 196  \t\tslots[id.slot_id]={\"identity\":{},\"result\":{},\"job\":null,\"task\":-1}\n 197  \t\treturn"
+    },
+    "height_apply": {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_collision.gd",
+      "symbol": "physics_consume",
+      "line": 212,
+      "sha256": "53779ff2e4cbc2bc52fc4c3b84cb75a0f68df6b2c45e1e28a0f8c274dc96b36d",
+      "excerpt": " 211  # Invoke only from the owning node's _physics_process on the main thread.\n 212  func physics_consume(slot_order: PackedInt32Array=PackedInt32Array([0,1])) -> int:\n 213  \tvar applied:=0\n 214  \tfor slot_id in slot_order:\n 215  \t\tif slot_id<0 or slot_id>=slots.size():continue\n 216  \t\tvar slot: Dictionary=slots[slot_id]\n 217  \t\tif slot.task<0 or not WorkerThreadPool.is_task_completed(slot.task):continue\n 218  \t\tWorkerThreadPool.wait_for_task_completion(slot.task)\n 219  \t\tvar prepared: Dictionary=slot.job.result()\n 220  \t\tvar id: Dictionary=slot.identity\n 221  \t\tif not closing and prepared.status==&\"prepared\" and id.generation==generation:\n 222  \t\t\tfor chunk in prepared.chunks:\n 223  \t\t\t\tvar chunk_id: int=chunk.chunk_id"
+    },
+    "capture_fields": {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_checkpoint_capture.gd",
+      "symbol": "_render_capture",
+      "line": 62,
+      "sha256": "558544b896d6069f973b3f2e8568bb6ca9fa9cd8d3370b33065deacda9c865b9",
+      "excerpt": "  61  \n  62  func _render_capture() -> void:\n  63  \tvar solver=owner.solver\n  64  \tif solver.current_index!=0:\n  65  \t\tcall_deferred(\"_registration_done\",{},&\"unsettled_pipeline_slots\")\n  66  \t\tcall_deferred(\"_terminal_confirmed\")\n  67  \t\treturn\n  68  \tvar requests:={}\n  69  \tfor field in Codec.FIELD_BYTES:requests[\"field/\"+field]=solver.current_texture(field)\n  70  \tfor field in Codec.SPARE:requests[\"spare/\"+field]=solver.textures[field][1]\n  71  \trequests.material_current=solver.textures.mold_support[0]\n  72  \trequests.material_spare=solver.textures.mold_support[1]\n  73  \tmaterial_metadata=MaterialCodec.make_record(PackedByteArray(),PackedByteArray(),solver.mold_field_ever_used,owner.material_coupler.profile_sha256)"
+    },
+    "candidate": {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_restore_bundle.gd",
+      "symbol": "build_async",
+      "line": 53,
+      "sha256": "bd57e8138ed0627847071d1cff8007519a0d544eb17a1c662b13f0e70c7add09",
+      "excerpt": "  52  \n  53  func build_async(owner, checkpoint: Dictionary, domain) -> bool:\n  54  \tepoch=domain.generation\n  55  \tvar native: Dictionary=checkpoint.native\n  56  \tbuild_phase=\"solver_initialize\"\n  57  \tsolver=owner._create_solver()\n  58  \tif not solver.initialize(RenderingServer.get_rendering_device(),domain,owner.spirvs[0],owner.spirvs[1],owner.spirvs[2],owner.spirvs[3],owner.spirvs[4],owner.spirvs[5],owner.spirvs[6],owner.spirvs[7],native.fields.momentum_x.to_float32_array(),native.fields.momentum_z.to_float32_array()):return false\n  59  \tbuild_phase=\"authority_restore\"\n  60  \tif not solver.restore_native_fields(native.fields,checkpoint.revision,native.spare,0):return false\n  61  \tif not solver.restore_native_material(native.material,native.fields.sand,native.spare.sand,0):return false\n  62  \tif inject_build_failure_phase==build_phase:return false\n  63  \tsolver.water_source_m3=checkpoint.ledger.water_source_m3\n  64  \tsolver.water_sink_m3=checkpoint.ledger.water_sink_m3"
+    },
+    "codec": {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_checkpoint_codec.gd",
+      "symbol": "validate_native",
+      "line": 72,
+      "sha256": "a1b8c82c71e41476fb4a2b4df835a6fdb9cdd62897c47ebae5168f160a3506ff",
+      "excerpt": "  71  \n  72  static func validate_native(value: Dictionary) -> StringName:\n  73  \tvar native: Variant=value.native\n  74  \tif not exact_keys(native,[\"version\",\"current_index\",\"fields\",\"spare\",\"material\",\"foam\",\"histories\",\"control\"]) or native.version!=3 or native.current_index!=0:return &\"invalid_pipeline_native_header\"\n  75  \tif typeof(native.version)!=TYPE_INT or typeof(native.current_index)!=TYPE_INT:return &\"invalid_pipeline_native_header\"\n  76  \tif not exact_keys(native.fields,FIELD_BYTES.keys()) or not exact_keys(native.spare,SPARE):return &\"invalid_pipeline_native_fields\"\n  77  \tfor group in [native.fields,native.spare]:\n  78  \t\tfor field in group:\n  79  \t\t\tvar bytes: Variant=group[field]\n  80  \t\t\tif not bytes is PackedByteArray or bytes.size()!=65536*int(FIELD_BYTES[field]):return &\"invalid_pipeline_field_size\"\n  81  \t\t\tif field==\"obstacle\":\n  82  \t\t\t\tfor v in bytes:\n  83  \t\t\t\t\tif v not in [0,255]:return &\"invalid_pipeline_obstacle\""
+    },
+    "save_file": {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_checkpoint_codec.gd",
+      "symbol": "save",
+      "line": 124,
+      "sha256": "a1b8c82c71e41476fb4a2b4df835a6fdb9cdd62897c47ebae5168f160a3506ff",
+      "excerpt": " 123  \n 124  static func save(path: String, checkpoint: Dictionary) -> StringName:\n 125  \tvar error:=validate(checkpoint)\n 126  \tif not error.is_empty():return error\n 127  \tif FileAccess.file_exists(path):return &\"already_exists\"\n 128  \tvar payload:=var_to_bytes(checkpoint)\n 129  \tif payload.is_empty() or payload.size()>MAX_BYTES:return &\"invalid_payload_size\"\n 130  \tvar hash:=digest(payload)\n 131  \tif hash.size()!=32:return &\"hash_init_failed\"\n 132  \tvar temporary:=path+\".tmp.\"+str(Time.get_ticks_usec())\n 133  \tvar file:=FileAccess.open(temporary,FileAccess.WRITE)\n 134  \tif file==null:return &\"open_failed\"\n 135  \tfile.store_buffer(MAGIC.to_ascii_buffer());file.store_32(CONTAINER_VERSION);file.store_32(payload.size());file.store_buffer(hash);file.store_buffer(payload);file.flush()"
+    },
+    "migration": {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_legacy_migration.gd",
+      "symbol": "convert",
+      "line": 14,
+      "sha256": "4609f53f315a2688e7ff368ba0b198881069739abaab31c2d3ee879ddb3f9fc1",
+      "excerpt": "  13  \n  14  static func convert(owner, original: Dictionary) -> Dictionary:\n  15  \t# This is a decoder/explicit projection of a real old snapshot, never a\n  16  \t# producer of synthetic v4 receipts for the approximate pipeline.\n  17  \tvar old:=original.duplicate(true)\n  18  \tif not old.get(\"gpu_beach_edit\") is Dictionary or old.gpu_beach_edit.get(\"version\")!=4 or not old.get(\"gpu_beach_native\") is Dictionary or old.gpu_beach_native.get(\"version\")!=2:return {\"error\":&\"unsupported_legacy_pipeline_version\"}\n  19  \tvar error:=Store._validate({\"format_version\":Store.FORMAT_VERSION,\"enable_erosion\":owner.enable_erosion,\"checkpoint\":old,\"prefix_commands\":[]})\n  20  \tif not error.is_empty():return {\"error\":error}\n  21  \terror=Recovery.validate_gpu_checkpoint(old,legacy_configuration(owner.source_signature))\n  22  \tif not error.is_empty():return {\"error\":error}\n  23  \tif String(old.shadow.domain_id)!=String(owner._domain_id()):return {\"error\":&\"pipeline_domain_mismatch\"}\n  24  \tif old.get(\"enable_structures\",false) or not old.get(\"structures\",{}).is_empty() or not old.get(\"support_loss_events\",[]).is_empty():return {\"error\":&\"unsupported_legacy_pipeline_history\"}\n  25  \tif not old.get(\"visual_extensions\") is Dictionary or not old.visual_extensions.has(\"gravel_v1\"):return {\"error\":&\"missing_legacy_gravel_state\"}"
+    },
+    "terminal": {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_terminal_guard.gd",
+      "symbol": "begin",
+      "line": 16,
+      "sha256": "08c47247c2a6f7a4d8a0c7937d580cb575ca28e23c02c8e0f388d7b1cfef518c",
+      "excerpt": "  15  \n  16  func begin(stage: String) -> void:\n  17  \trequired=true;pending=true;confirmed=false;sequence+=1\n  18  \tRenderingServer.call_on_render_thread(_request.bind(sequence,stage))\n  19  \n  20  func _request(serial: int, stage: String) -> void:\n  21  \tif rd==null:rd=RenderingServer.get_rendering_device()\n  22  \tif rd!=null and not anchor.is_valid():anchor=rd.storage_buffer_create(16)\n  23  \tif rd==null or not anchor.is_valid() or inject_unavailable or rd.buffer_get_data_async(anchor,_arrived.bind(serial,stage),0,16)!=OK:\n  24  \t\tcall_deferred(\"_record\",serial,stage,false)\n  25  \n  26  func _arrived(_bytes: PackedByteArray, serial: int, stage: String) -> void:\n  27  \tcall_deferred(\"_record\",serial,stage,true)"
+    },
+    "scene_switch": {
+      "path": "scripts/beach/beach_scene_service.gd",
+      "symbol": "_switch",
+      "line": 125,
+      "sha256": "3d3702326237b6513bd649d9657d6285c32a9c0cdefc7be30a0785d1efcf0f1c",
+      "excerpt": " 124  \n 125  func _switch(key: String) -> void:\n 126  \tvar packed: PackedScene = load(SCENES[key])\n 127  \tif packed == null:\n 128  \t\t_finish(\"场景资源加载失败\")\n 129  \t\treturn\n 130  \tvar old = active_scene\n 131  \tvar old_key: String = old.scene_key\n 132  \tvar old_settings := _settings(old)\n 133  \tshared_controls = old_settings.duplicate()\n 134  \told.gpu_brush = &\"\"\n 135  \told.player_camera._release_mouse()\n 136  \told.player_camera.set_process(false)"
+    },
+    "dispose": {
+      "path": "scripts/beach/beach_scene_service.gd",
+      "symbol": "_dispose_scene",
+      "line": 22,
+      "sha256": "3d3702326237b6513bd649d9657d6285c32a9c0cdefc7be30a0785d1efcf0f1c",
+      "excerpt": "  21  \n  22  func _dispose_scene(scene) -> bool:\n  23  \tif scene == null:\n  24  \t\treturn true\n  25  \tvar identity: int = scene.get_instance_id()\n  26  \tvar released := true\n  27  \tif scene.is_inside_tree():\n  28  \t\tvar profiler: Node = scene.get_node_or_null(\"Interface/PerformancePanel\")\n  29  \t\tif profiler != null and not (scene.has_method(\"_async_ownership_unconfirmed\") and scene._async_ownership_unconfirmed()):\n  30  \t\t\tawait profiler.stop_sampling()\n  31  \t\tawait scene.shutdown()\n  32  \t\treleased = scene.gpu_release_done and (scene.solver == null or scene.solver.rd == null) and scene.collision_proxy.rd == null\n  33  \t\tif \"gravel_field\" in scene: released=released and scene.gravel_field==null and scene.gravel_capture_callbacks==0"
+    },
+    "input": {
+      "path": "scripts/beach/beach_interaction_entry.gd",
+      "symbol": "_unhandled_input",
+      "line": 153,
+      "sha256": "60b70f73f4f65554545872dba43980b1c702d81f19e8881dad25e600ef6426f6",
+      "excerpt": " 152  \n 153  func _unhandled_input(event: InputEvent) -> void:\n 154  \tif player_camera!=null and \"look_active\" in player_camera and player_camera.look_active:\n 155  \t\tgpu_brush=&\"\"\n 156  \t\treturn\n 157  \tif event is InputEventMouseButton:\n 158  \t\tif event.button_index!=MOUSE_BUTTON_LEFT: return\n 159  \t\tif not event.pressed: gpu_brush=&\"\";return\n 160  \t\tif shutdown_requested or closing or not ready_for_ticks: return\n 161  \t\tget_viewport().gui_release_focus()\n 162  \t\tgpu_brush=selected_sand_tool\n 163  \t\tvar hit:=pick(event.position)\n 164  \t\tif hit.is_empty() or not _pick_current(hit,edit_frame_pipeline_enabled and gpu_brush in [&\"remove_sand\",&\"place_sand\"]): gpu_brush=&\"\";return"
+    },
+    "ray": {
+      "path": "scripts/beach/beach_interaction_entry.gd",
+      "symbol": "pick",
+      "line": 180,
+      "sha256": "60b70f73f4f65554545872dba43980b1c702d81f19e8881dad25e600ef6426f6",
+      "excerpt": " 179  \n 180  func pick(screen: Vector2) -> Dictionary:\n 181  \tvar camera:=get_viewport().get_camera_3d()\n 182  \tif camera==null: return {}\n 183  \tvar origin:=camera.project_ray_origin(screen)\n 184  \treturn get_world_3d().direct_space_state.intersect_ray(PhysicsRayQueryParameters3D.create(origin,origin+camera.project_ray_normal(screen)*100.0))\n 185  \n 186  func _pick_current(hit: Dictionary, allow_completed_collision: bool=false) -> bool:\n 187  \tvar p: Vector3=hit.position\n 188  \tif hit.get(\"collider\")!=collision_proxy.body or p.x< -16 or p.x>=16 or p.z< -16 or p.z>=16: return false\n 189  \tvar x:=clampi(int((p.x+16)/0.125),0,255);var z:=clampi(int((p.z+16)/0.125),0,255)\n 190  \tvar chunk: int=(z/32)*8+x/32\n 191  \tvar current: bool=int(collision_proxy.applied_revisions.get(chunk,-1))>=int(collision_needed.get(chunk,0))"
+    },
+    "cpu_patch": {
+      "path": "scripts/simulation/brushes/brush_material_coupler.gd",
+      "symbol": "reconcile_external_sand_patch",
+      "line": 97,
+      "sha256": "2a5b99a4fd8774eed32b46d59ab6ec81fe070b329c6b1cbf8ea88063f6c1e6a8",
+      "excerpt": "  96  \n  97  func reconcile_external_sand_patch() -> bool:\n  98  \tif rd==null or solver==null or not support_set.is_valid():return false\n  99  \t# Same upper-tag loss/reference rule used before every material step.\n 100  \t# A paused CPU patch already changed sand, so reconcile before publication\n 101  \t# without advancing moisture, slope, sand, the clock, or any source ledger.\n 102  \t_support_dispatch(2)\n 103  \t_support_dispatch(0)\n 104  \t_support_dispatch(3)\n 105  \tvar live: int=solver.current_index\n 106  \treturn rd.texture_copy(solver.textures.mold_support[1-live],solver.textures.mold_support[live],Vector3.ZERO,Vector3.ZERO,Vector3(solver.grid_size,solver.grid_size,1),0,0,0,0)==OK\n 107  \n 108  func dispatch_after_erosion(delta_s: float) -> bool:"
+    },
+    "base_ready": {
+      "path": "tests/visual_water_alignment/prototypes/reference_preview.gd",
+      "symbol": "_ready",
+      "line": 351,
+      "sha256": "eb093da001ca8acab4342d6f1e5986d5f27452f5e8e2d15df3d4339807fefe6a",
+      "excerpt": " 350  \n 351  func _ready() -> void:\n 352  \t$EditorPreviewController.visible = false\n 353  \tvar visual_editor_preview := get_node_or_null(\"VisualEditorPreview\") as Node3D\n 354  \tif visual_editor_preview != null:\n 355  \t\tvisual_editor_preview.visible = false\n 356  \tshadow_domain = Domain.new(GRID_SIZE, CELL_SIZE_M)\n 357  \tvar fixture_ok := _initialize_domain(shadow_domain)\n 358  \tif not fixture_ok:\n 359  \t\t_fail(\"invalid GPU preset index: %d\" % preset_index)\n 360  \t\treturn\n 361  \tif fixture_id == WaterFixture.FIXTURE_ID and (enable_erosion or enable_structures or WaterFixture.camera_index(fixture_camera_id) < 0):\n 362  \t\t_fail(\"water fixture requires frozen sand, no structures, and a valid camera\")"
+    },
+    "cfl": {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_cfl_decide.glsl",
+      "symbol": "async_cfl_decide.glsl",
+      "line": 1,
+      "sha256": "e7dfb3973a447415ddca4a0d6f19ad496dc5499d025016d804d9d4ee96a6c6b6",
+      "excerpt": "   1  #[compute]\n   2  #version 450\n   3  layout(local_size_x=64) in;\n   4  layout(set=0,binding=0,r32f) uniform readonly image2D tile_max_in;\n   5  layout(set=0,binding=1,std430) buffer Decision {uint d[];};\n   6  layout(set=0,binding=2,std430) buffer Indirect {uint groups[];};\n   7  layout(set=0,binding=3,std430) buffer Control {uint control[];};\n   8  layout(push_constant,std430) uniform Params {float requested_dt,cell_size,courant;uint grid_size;}p;\n   9  shared float values[64];\n  10  bool finite_value(float x){return !isnan(x)&&!isinf(x);}\n  11  void main(){\n  12   uint lane=gl_LocalInvocationID.x;ivec2 size=imageSize(tile_max_in);float speed=0.01;"
+    },
+    "seal": {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_seal.glsl",
+      "symbol": "async_seal.glsl",
+      "line": 1,
+      "sha256": "11ab3b18d815e81a2b1906ff27b894ce8225c512962881bd6ec995365037d098",
+      "excerpt": "   1  #[compute]\n   2  #version 450\n   3  layout(local_size_x=1) in;\n   4  layout(set=0,binding=0,std430) readonly buffer Input { uint input_words[]; };\n   5  layout(set=0,binding=1,std430) buffer Control { uint control[]; };\n   6  layout(set=0,binding=2,std430) writeonly buffer Completion { uint result[]; };\n   7  layout(set=0,binding=3,r32f) uniform writeonly image2D completed_clock;\n   8  void main() {\n   9      // Called after all passes of a complete work unit, on the same RD stream.\n  10      uint low=control[4]+1u;\n  11      control[5]+=uint(low==0u);\n  12      control[4]=low;"
+    },
+    "wire": {
+      "path": "scripts/simulation/edit_validation/frame_pipeline/async_protocol.gd",
+      "symbol": "async_protocol.gd",
+      "line": 1,
+      "sha256": "312ed81688880954a12c1e6d4df3c34ca7d9f22ca0c9e184b8e2e9f4925e6750",
+      "excerpt": "   1  extends RefCounted\n   2  \n   3  # pipeline_v1. Little endian; uint64 = low uint32 followed by high uint32.\n   4  # No shaderInt64 or identity encoded in floats. Integers use Godot's positive\n   5  # signed 64-bit range, including values above the float32/uint32 boundaries.\n   6  const VERSION := 1\n   7  const COMMAND_BYTES := 128\n   8  const HEADER_BYTES := 64\n   9  const COMPLETION_BYTES := 80\n  10  const CONTROL_BYTES := 128\n  11  const SNAPSHOT_HEADER_BYTES := 64\n  12  const MAX_COMMANDS := 64"
+    }
+  },
+  "generator_sha256": {
+    "tools/docs/build_execution_guide.py": "6f314eea6d622f9d607923ff2cc6e0e8b53e4fd2cf6c800d7dc0ff1a3997bbf0",
+    "tools/docs/execution_guide_template.html": "04924b0ccaad147f5bfbf80dae897e0c49f6ccdfe9c5244c8936a709212d4e0c"
+  },
+  "diagrams": [
+    {
+      "id": "boot-flow",
+      "title": "初始化流程图",
+      "width": 1170,
+      "height": 940
+    },
+    {
+      "id": "boot-sequence",
+      "title": "初始化时序图",
+      "width": 1200,
+      "height": 922
+    },
+    {
+      "id": "frame-flow",
+      "title": "CPU frame pump 与物理阶段",
+      "width": 1170,
+      "height": 940
+    },
+    {
+      "id": "batch-sequence",
+      "title": "连续两批：GPU完成与CPU消费分离",
+      "width": 1200,
+      "height": 1098
+    },
+    {
+      "id": "input-flow",
+      "title": "输入与分流流程图",
+      "width": 1170,
+      "height": 1122
+    },
+    {
+      "id": "edit-flow",
+      "title": "每批内部的GPU编辑流程",
+      "width": 1170,
+      "height": 1122
+    },
+    {
+      "id": "water-flow",
+      "title": "一个水tick的完整GPU阶段",
+      "width": 1170,
+      "height": 1122
+    },
+    {
+      "id": "height-sequence",
+      "title": "高度快照到Jolt的时序图",
+      "width": 1200,
+      "height": 1010
+    },
+    {
+      "id": "tool-sequence",
+      "title": "新工具时序图",
+      "width": 1200,
+      "height": 1098
+    },
+    {
+      "id": "save-sequence",
+      "title": "保存时序图",
+      "width": 1200,
+      "height": 1098
+    },
+    {
+      "id": "restore-flow",
+      "title": "候选恢复与失败分支",
+      "width": 1170,
+      "height": 1304
+    },
+    {
+      "id": "switch-sequence",
+      "title": "场景切换与回退时序图",
+      "width": 1200,
+      "height": 1010
+    },
+    {
+      "id": "shutdown-flow",
+      "title": "正常关闭与所有权未确认",
+      "width": 1170,
+      "height": 1122
+    },
+    {
+      "id": "slot-flow",
+      "title": "工作槽生命周期",
+      "width": 1170,
+      "height": 940
+    }
+  ],
+  "sections": [
+    {
+      "id": "map",
+      "title": "先确定正在运行哪条路径"
+    },
+    {
+      "id": "boot",
+      "title": "启动到 ready：资源先就绪，输入再开放"
+    },
+    {
+      "id": "frame",
+      "title": "每帧调度：就绪消费、有限提交、独立物理应用"
+    },
+    {
+      "id": "input",
+      "title": "从鼠标到GPU批次：身份、模式和拒收边界"
+    },
+    {
+      "id": "gpu-edit",
+      "title": "候选先验证，成功才写权威场"
+    },
+    {
+      "id": "water",
+      "title": "GPU决定子步，全部关联阶段消费同一实际时间"
+    },
+    {
+      "id": "collision",
+      "title": "实际床面快照：GPU继续写，CPU之后装形状"
+    },
+    {
+      "id": "tools",
+      "title": "形状、平滑、压实和碎石共用有序GPU工作流"
+    },
+    {
+      "id": "checkpoint",
+      "title": "完整状态快照和独立候选：不用逐笔重放"
+    },
+    {
+      "id": "lifecycle",
+      "title": "场景销毁的条件是最后消费者完成"
+    },
+    {
+      "id": "contracts",
+      "title": "资源、状态和常见修改入口"
+    },
+    {
+      "id": "evidence",
+      "title": "如何复验、如何更新这份指南"
+    }
+  ],
+  "html_sha256": "b91ebe706f3d68722fca71e44c5b21af6549a695acafb410dc6c012cff8c910f"
+}

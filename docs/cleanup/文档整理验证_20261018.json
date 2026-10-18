@@ -1,0 +1,1240 @@
+{
+  "date": "2026-10-18",
+  "scope": "Current documentation local links, generated source hashes/anchors, relocated historical hashes and selected ABI constants. No runtime or GPU regression rerun.",
+  "pass": true,
+  "counts": {
+    "current_source_hash": 55,
+    "historical_snapshot": 15,
+    "local_link": 120,
+    "source_anchor": 17,
+    "spec_constant": 9
+  },
+  "checks": [
+    {
+      "kind": "local_link",
+      "source": "docs/README.md",
+      "target": "../task/sandcastle_unified_edit_pipeline/验收/G8_联合门.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/README.md",
+      "target": "当前项目技术方案.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/README.md",
+      "target": "当前技术规格.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/README.md",
+      "target": "主场景操作.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/README.md",
+      "target": "场景切换与功能复用.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/README.md",
+      "target": "unified-edit-extension-guide.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/README.md",
+      "target": "性能面板.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/README.md",
+      "target": "project-execution-guide.html",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/README.md",
+      "target": "project-execution-guide.sources.json",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/README.md",
+      "target": "当前技术规格.md#验证范围与性能边界",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/README.md",
+      "target": "history/sandcastle_test1_reverse_rebuild/收尾记录.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/README.md",
+      "target": "knowledge/README.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/README.md",
+      "target": "competitor/README.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/README.md",
+      "target": "history/README.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/README.md",
+      "target": "history/project_snapshots/README.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/README.md",
+      "target": "cleanup/项目清理审计_20261017.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/README.md",
+      "target": "../task/sandcastle_unified_edit_pipeline/执行状态.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/README.md",
+      "target": "../task/sandcastle_unified_edit_pipeline/验收/README.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/当前项目技术方案.md",
+      "target": "当前技术规格.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/当前项目技术方案.md",
+      "target": "主场景操作.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/当前项目技术方案.md",
+      "target": "../scenes/main.tscn",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/当前项目技术方案.md",
+      "target": "../scripts/beach/unified_playable_entry.gd",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/当前项目技术方案.md",
+      "target": "../scenes/unified_edit_runtime.tscn",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/当前项目技术方案.md",
+      "target": "../scripts/simulation/unified_edit/player_input.gd",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/当前项目技术方案.md",
+      "target": "../scripts/simulation/unified_edit/profile_registry.gd",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/当前项目技术方案.md",
+      "target": "../scripts/simulation/unified_edit/configuration.gd",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/当前项目技术方案.md",
+      "target": "../scripts/simulation/unified_edit/domain_runtime.gd",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/当前项目技术方案.md",
+      "target": "../scripts/simulation/unified_edit/pipeline.gd",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/当前项目技术方案.md",
+      "target": "../scripts/simulation/unified_edit/executor.gd",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/当前项目技术方案.md",
+      "target": "../scripts/simulation/unified_edit/water.gd",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/当前项目技术方案.md",
+      "target": "../scripts/simulation/unified_edit/coupled.gd",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/当前项目技术方案.md",
+      "target": "../scripts/simulation/unified_edit/state.gd",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/当前项目技术方案.md",
+      "target": "../scripts/simulation/unified_edit/views.gd",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/当前项目技术方案.md",
+      "target": "../scripts/simulation/unified_edit/height.gd",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/当前项目技术方案.md",
+      "target": "../scripts/simulation/unified_edit/visuals.gd",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/当前项目技术方案.md",
+      "target": "../scripts/simulation/unified_edit/checkpoint_codec.gd",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/当前项目技术方案.md",
+      "target": "../scripts/simulation/unified_edit/checkpoint_router.gd",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/当前项目技术方案.md",
+      "target": "../scripts/beach/beach_scene_service.gd",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/当前项目技术方案.md",
+      "target": "unified-edit-extension-guide.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/当前项目技术方案.md",
+      "target": "../scenes/components/water_boundary_sides.tscn",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/当前项目技术方案.md",
+      "target": "../scripts/simulation/unified_edit/presentation.gd",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/当前项目技术方案.md",
+      "target": "competitor/README.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/当前项目技术方案.md",
+      "target": "当前技术规格.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/当前技术规格.md",
+      "target": "当前项目技术方案.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/当前技术规格.md",
+      "target": "../scripts/simulation/unified_edit/layout.gd",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/当前技术规格.md",
+      "target": "../task/sandcastle_unified_edit_pipeline/契约/",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/当前技术规格.md",
+      "target": "../scripts/simulation/unified_edit/state.gd",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/当前技术规格.md",
+      "target": "../task/sandcastle_unified_edit_pipeline/契约/ABI_v1.json",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/当前技术规格.md",
+      "target": "../task/sandcastle_unified_edit_pipeline/契约/ABI_v1.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/当前技术规格.md",
+      "target": "../task/sandcastle_unified_edit_pipeline/契约/显示输入_v1.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/当前技术规格.md",
+      "target": "../assets/unified_edit/default_catalog.tres",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/当前技术规格.md",
+      "target": "../scripts/simulation/unified_edit/checkpoint_codec.gd",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/当前技术规格.md",
+      "target": "../scripts/simulation/unified_edit/legacy_sources.gd",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/当前技术规格.md",
+      "target": "../task/sandcastle_unified_edit_pipeline/验收/G8_联合门.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/当前技术规格.md",
+      "target": "../task/sandcastle_unified_edit_pipeline/验收/G8_混合交互与十轮生命周期.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/当前技术规格.md",
+      "target": "../task/sandcastle_unified_edit_pipeline/验收/G8_可见成本.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/统一沙水主流程.md",
+      "target": "当前项目技术方案.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/统一沙水主流程.md",
+      "target": "当前技术规格.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/统一沙水主流程.md",
+      "target": "主场景操作.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/统一沙水主流程.md",
+      "target": "unified-edit-extension-guide.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/主场景操作.md",
+      "target": "../scenes/main.tscn",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/主场景操作.md",
+      "target": "场景切换与功能复用.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/主场景操作.md",
+      "target": "性能面板.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/主场景操作.md",
+      "target": "当前技术规格.md#检查点与兼容性",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/主场景操作.md",
+      "target": "../task/sandcastle_unified_edit_pipeline/验收/G8_联合门.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/场景切换与功能复用.md",
+      "target": "当前项目技术方案.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/场景切换与功能复用.md",
+      "target": "../scripts/beach/unified_scene_routes.gd",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/场景切换与功能复用.md",
+      "target": "../scenes/main.tscn",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/场景切换与功能复用.md",
+      "target": "../scenes/playable/test1_capture.tscn",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/场景切换与功能复用.md",
+      "target": "../scenes/playable/test1_backwash.tscn",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/场景切换与功能复用.md",
+      "target": "../scenes/playable/test1_geometry.tscn",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/场景切换与功能复用.md",
+      "target": "../assets/test1_geometry/water_cycle.json",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/场景切换与功能复用.md",
+      "target": "../task/sandcastle_unified_edit_pipeline/验收/G8_联合门.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/场景切换与功能复用.md",
+      "target": "history/README.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/性能面板.md",
+      "target": "../scripts/beach/unified_performance_panel.gd",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/性能面板.md",
+      "target": "当前技术规格.md#验证范围与性能边界",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/性能面板.md",
+      "target": "../task/sandcastle_unified_edit_pipeline/验收/G8_可见成本.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/unified-edit-extension-guide.md",
+      "target": "../task/sandcastle_unified_edit_pipeline/验收/G7_联合门.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/unified-edit-extension-guide.md",
+      "target": "../task/sandcastle_unified_edit_pipeline/验收/G8_联合门.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/unified-edit-extension-guide.md",
+      "target": "当前技术规格.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/knowledge/README.md",
+      "target": "../当前项目技术方案.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/knowledge/README.md",
+      "target": "../当前技术规格.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/knowledge/README.md",
+      "target": "../../task/sandcastle_unified_edit_pipeline/契约/主流程与扩展契约.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/knowledge/README.md",
+      "target": "../../task/sandcastle_unified_edit_pipeline/契约/ABI_v1.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/knowledge/README.md",
+      "target": "../../task/sandcastle_unified_edit_pipeline/契约/配置与存档_v1.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/knowledge/README.md",
+      "target": "../../task/sandcastle_unified_edit_pipeline/契约/显示输入_v1.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/knowledge/README.md",
+      "target": "../../task/sandcastle_unified_edit_pipeline/验收/G8_联合门.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/knowledge/README.md",
+      "target": "water_sand/状态与数据契约.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/knowledge/README.md",
+      "target": "water_sand/模块与命令接口契约.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/knowledge/README.md",
+      "target": "water_sand/场景与自动验收契约.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/knowledge/README.md",
+      "target": "water_sand/ADR_竞品容量侵蚀_v2.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/knowledge/README.md",
+      "target": "water_sand/ADR_投放悬沙_v1.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/knowledge/README.md",
+      "target": "water_sand/ADR_投碎石_v1.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/knowledge/README.md",
+      "target": "water_sand/ADR_自由挖填沙_external_v1.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/knowledge/README.md",
+      "target": "water_sand/ADR_形状刷子_v2.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/knowledge/README.md",
+      "target": "../history/sandcastle_gpu_edit_validation/契约/编辑事务与水响应契约.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/knowledge/README.md",
+      "target": "../history/README.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/knowledge/README.md",
+      "target": "../competitor/README.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/history/README.md",
+      "target": "project_snapshots/README.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/history/README.md",
+      "target": "../README.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/history/README.md",
+      "target": "sandcastle_gpu_edit_validation/README.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/history/README.md",
+      "target": "../competitor/README.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/history/README.md",
+      "target": "../README.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/history/README.md",
+      "target": "../search/README.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/history/README.md",
+      "target": "../search/migration_manifest.json",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/history/README.md",
+      "target": "../knowledge/README.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/history/README.md",
+      "target": "sandcastle_test1_reverse_rebuild/收尾记录.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/history/README.md",
+      "target": "sandcastle_test1_reverse_rebuild/契约/原始数据与索引契约.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/history/project_snapshots/README.md",
+      "target": "../../当前项目技术方案.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/history/project_snapshots/README.md",
+      "target": "../../当前技术规格.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/history/project_snapshots/README.md",
+      "target": "../../主场景操作.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "docs/history/project_snapshots/README.md",
+      "target": "migration_20261018.json",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "AGENTS.md",
+      "target": "docs/README.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "AGENTS.md",
+      "target": "docs/history/sandcastle_test1_reverse_rebuild/收尾记录.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "AGENTS.md",
+      "target": "docs/history/sandcastle_test1_reverse_rebuild/执行状态.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "AGENTS.md",
+      "target": "docs/knowledge/README.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "AGENTS.md",
+      "target": "docs/history/README.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "AGENTS.md",
+      "target": "docs/history/sandcastle_test1_reverse_rebuild/契约/原始数据与索引契约.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "AGENTS.md",
+      "target": "docs/competitor/README.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "source": "AGENTS.md",
+      "target": "docs/competitor/记录规范.md",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "assets/brushes/molded_material_candidate.json",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "assets/test1_geometry/water_cycle.json",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "assets/unified_edit/default_catalog.tres",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "assets/unified_edit/presentation/main.json",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "assets/unified_edit/presentation/test1_backwash.json",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "assets/unified_edit/presentation/test1_capture.json",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "assets/unified_edit/presentation/test1_geometry.json",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "docs/README.md",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "docs/knowledge/README.md",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "docs/unified-edit-extension-guide.md",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "docs/主场景操作.md",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "docs/场景切换与功能复用.md",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "docs/当前技术规格.md",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "docs/当前项目技术方案.md",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "docs/性能面板.md",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "project.godot",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "scenes/components/water_boundary_sides.tscn",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "scenes/main.tscn",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "scenes/playable/test1_backwash.tscn",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "scenes/playable/test1_capture.tscn",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "scenes/playable/test1_geometry.tscn",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "scenes/unified_edit_height_surface.tscn",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "scenes/unified_edit_runtime.tscn",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "scripts/beach/beach_scene_service.gd",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "scripts/beach/unified_performance_panel.gd",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "scripts/beach/unified_playable_entry.gd",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "scripts/beach/unified_scene_routes.gd",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "scripts/simulation/unified_edit/boundary.gd",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "scripts/simulation/unified_edit/cfl_decide.glsl",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "scripts/simulation/unified_edit/checkpoint_codec.gd",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "scripts/simulation/unified_edit/checkpoint_router.gd",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "scripts/simulation/unified_edit/configuration.gd",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "scripts/simulation/unified_edit/coupled.gd",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "scripts/simulation/unified_edit/display_intent.gd",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "scripts/simulation/unified_edit/domain_runtime.gd",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "scripts/simulation/unified_edit/executor.gd",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "scripts/simulation/unified_edit/height.gd",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "scripts/simulation/unified_edit/height_stamp.gd",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "scripts/simulation/unified_edit/layout.gd",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "scripts/simulation/unified_edit/legacy_sources.gd",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "scripts/simulation/unified_edit/pipeline.gd",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "scripts/simulation/unified_edit/player_input.gd",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "scripts/simulation/unified_edit/profile_catalog.gd",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "scripts/simulation/unified_edit/profile_registry.gd",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "scripts/simulation/unified_edit/state.gd",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "scripts/simulation/unified_edit/tool_profile.gd",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "scripts/simulation/unified_edit/unit_half.gd",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "scripts/simulation/unified_edit/visuals.gd",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "scripts/simulation/unified_edit/water.gd",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "scripts/simulation/unified_edit/water_response.gd",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "scripts/visual/water_boundary_sides.gd",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "task/sandcastle_unified_edit_pipeline/验收/G8_联合门.json",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "tools/docs/build_execution_guide.py",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "tools/docs/build_unified_execution_guide.py",
+      "pass": true
+    },
+    {
+      "kind": "current_source_hash",
+      "path": "tools/unified_edit_pipeline/architecture_policy.json",
+      "pass": true
+    },
+    {
+      "kind": "historical_snapshot",
+      "path": "docs/history/project_snapshots/Sandcastle_Godot水沙耦合_分阶段执行计划_v1.1.md",
+      "pass": true
+    },
+    {
+      "kind": "historical_snapshot",
+      "path": "docs/history/project_snapshots/sandcastle性能取舍分析.md",
+      "pass": true
+    },
+    {
+      "kind": "historical_snapshot",
+      "path": "docs/history/project_snapshots/technical_scheme_sources.json",
+      "pass": true
+    },
+    {
+      "kind": "historical_snapshot",
+      "path": "docs/history/project_snapshots/edit_pipeline_sources_20261016.json",
+      "pass": true
+    },
+    {
+      "kind": "historical_snapshot",
+      "path": "docs/history/project_snapshots/sand_implementation_sources_20261015.json",
+      "pass": true
+    },
+    {
+      "kind": "historical_snapshot",
+      "path": "docs/history/project_snapshots/编辑器缺失报错整理_20261015.md",
+      "pass": true
+    },
+    {
+      "kind": "historical_snapshot",
+      "path": "docs/history/project_snapshots/场景清理全量清单_20261014.md",
+      "pass": true
+    },
+    {
+      "kind": "historical_snapshot",
+      "path": "docs/history/project_snapshots/脚本与Shader引用清单_20261014.md",
+      "pass": true
+    },
+    {
+      "kind": "historical_snapshot",
+      "path": "docs/history/project_snapshots/水材质_RDC适配.md",
+      "pass": true
+    },
+    {
+      "kind": "historical_snapshot",
+      "path": "docs/history/project_snapshots/水体运动_独立测试.md",
+      "pass": true
+    },
+    {
+      "kind": "historical_snapshot",
+      "path": "docs/history/project_snapshots/test1原比例场景.md",
+      "pass": true
+    },
+    {
+      "kind": "historical_snapshot",
+      "path": "docs/history/project_snapshots/test1场景回落与相机修复_20261018.md",
+      "pass": true
+    },
+    {
+      "kind": "historical_snapshot",
+      "path": "docs/history/project_snapshots/test1_geometry_delivery_20261018.json",
+      "pass": true
+    },
+    {
+      "kind": "historical_snapshot",
+      "path": "docs/history/project_snapshots/test1_runup_fix_delivery_20261018.json",
+      "pass": true
+    },
+    {
+      "kind": "historical_snapshot",
+      "path": "docs/history/project_snapshots/water_sides_delivery_20261018.json",
+      "pass": true
+    },
+    {
+      "kind": "spec_constant",
+      "key": "COMMAND_BYTES",
+      "value": 512,
+      "pass": true
+    },
+    {
+      "kind": "spec_constant",
+      "key": "RESULT_BYTES",
+      "value": 384,
+      "pass": true
+    },
+    {
+      "kind": "spec_constant",
+      "key": "HEADER_BYTES",
+      "value": 96,
+      "pass": true
+    },
+    {
+      "kind": "spec_constant",
+      "key": "COMPLETION_BYTES",
+      "value": 96,
+      "pass": true
+    },
+    {
+      "kind": "spec_constant",
+      "key": "MAX_COMMANDS",
+      "value": 64,
+      "pass": true
+    },
+    {
+      "kind": "spec_constant",
+      "key": "WORK_SLOTS",
+      "value": 3,
+      "pass": true
+    },
+    {
+      "kind": "spec_constant",
+      "key": "HEIGHT_SLOTS",
+      "value": 2,
+      "pass": true
+    },
+    {
+      "kind": "spec_constant",
+      "key": "MAX_PROFILES",
+      "value": 64,
+      "pass": true
+    },
+    {
+      "kind": "spec_constant",
+      "key": "MAX_TEMPLATES",
+      "value": 16,
+      "pass": true
+    },
+    {
+      "kind": "source_anchor",
+      "source": "scripts/beach/unified_playable_entry.gd",
+      "line": 68,
+      "pass": true
+    },
+    {
+      "kind": "source_anchor",
+      "source": "scripts/simulation/unified_edit/player_input.gd",
+      "line": 25,
+      "pass": true
+    },
+    {
+      "kind": "source_anchor",
+      "source": "scripts/simulation/unified_edit/profile_registry.gd",
+      "line": 49,
+      "pass": true
+    },
+    {
+      "kind": "source_anchor",
+      "source": "scripts/simulation/unified_edit/configuration.gd",
+      "line": 71,
+      "pass": true
+    },
+    {
+      "kind": "source_anchor",
+      "source": "scripts/simulation/unified_edit/pipeline.gd",
+      "line": 302,
+      "pass": true
+    },
+    {
+      "kind": "source_anchor",
+      "source": "scripts/simulation/unified_edit/pipeline.gd",
+      "line": 338,
+      "pass": true
+    },
+    {
+      "kind": "source_anchor",
+      "source": "scripts/simulation/unified_edit/executor.gd",
+      "line": 46,
+      "pass": true
+    },
+    {
+      "kind": "source_anchor",
+      "source": "scripts/simulation/unified_edit/water_response.gd",
+      "line": 33,
+      "pass": true
+    },
+    {
+      "kind": "source_anchor",
+      "source": "scripts/simulation/unified_edit/water_response.gd",
+      "line": 45,
+      "pass": true
+    },
+    {
+      "kind": "source_anchor",
+      "source": "scripts/simulation/unified_edit/water.gd",
+      "line": 113,
+      "pass": true
+    },
+    {
+      "kind": "source_anchor",
+      "source": "scripts/simulation/unified_edit/state.gd",
+      "line": 32,
+      "pass": true
+    },
+    {
+      "kind": "source_anchor",
+      "source": "scripts/simulation/unified_edit/height.gd",
+      "line": 145,
+      "pass": true
+    },
+    {
+      "kind": "source_anchor",
+      "source": "scripts/simulation/unified_edit/domain_runtime.gd",
+      "line": 175,
+      "pass": true
+    },
+    {
+      "kind": "source_anchor",
+      "source": "scripts/simulation/unified_edit/domain_runtime.gd",
+      "line": 50,
+      "pass": true
+    },
+    {
+      "kind": "source_anchor",
+      "source": "scripts/simulation/unified_edit/checkpoint_codec.gd",
+      "line": 19,
+      "pass": true
+    },
+    {
+      "kind": "source_anchor",
+      "source": "scripts/simulation/unified_edit/checkpoint_router.gd",
+      "line": 11,
+      "pass": true
+    },
+    {
+      "kind": "source_anchor",
+      "source": "scripts/beach/beach_scene_service.gd",
+      "line": 126,
+      "pass": true
+    }
+  ]
+}

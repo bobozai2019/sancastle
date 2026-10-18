@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/simulation/unified_edit/tool_profile.gd" id="1"]
+[resource]
+script = ExtResource("1")
+profile_id = &"smooth_v1"
+operation = 3
+shape = 0
+destination = 0
+material_policy = 2
+water_policy = 0
+defaults = {"radius_m": 0.75, "strength": 1.0}
+ranges = {"radius_m": [0.0, 4.0], "strength": [0.0, 1.0]}
+allowed_water_policies = PackedInt32Array(0)
+allowed_material_policies = PackedInt32Array(2)

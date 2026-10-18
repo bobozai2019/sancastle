@@ -1,0 +1,86 @@
+{
+  "role": "G3 common-candidate gate, not complete product/water/cost/lifecycle delivery",
+  "pass": true,
+  "T03_complete": true,
+  "objectives": [
+    "T03.1",
+    "T03.2",
+    "T03.3",
+    "T03.4"
+  ],
+  "total_completed": 16,
+  "total_objectives": 36,
+  "joint_run": "g3_profiles_delivery08",
+  "joint_cases": [
+    "all_profiles",
+    "all_profiles_batch"
+  ],
+  "joint_gpu_checks": 360,
+  "joint_independent_checks": 260,
+  "profile_count": 11,
+  "ordered_commands": 17,
+  "defaults_verified": "All actual catalog defaults including default water/material policies; no forced water_policy0. Stable common select/candidate/material12/validate5+6/conditional7/result8 spine.",
+  "equivalence": "Same initial fields/public inputs; all final physical/baseline/coverage/published sand/water bytes and every decoded result field except batch_seq/state_seq/slot_id/lease_id identical across sequential and batched runs. Batched work recorded before CPU result consumption.",
+  "regression_gpu_checks": {
+    "target_transfer_local": 1290,
+    "suspended_coupled": 425,
+    "normal_water_faults": 182
+  },
+  "regression_independent_checks": {
+    "targets": 2601,
+    "transfer": 755,
+    "local": 589,
+    "suspended": 320
+  },
+  "common_pinned_sources": 131,
+  "source_drift": [],
+  "reports": {
+    "g3_profiles_delivery08/run-manifest.json": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g3_profiles_delivery08\\run-manifest.json",
+      "sha256": "e3639a179f7fbb9a011417182b0fd4ef8b9c053207027243ad4a9d32d367cf63"
+    },
+    "g3_profiles_regression08/run-manifest.json": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g3_profiles_regression08\\run-manifest.json",
+      "sha256": "1e129b66b0325d356b892bff58860c3caa015301363a51b04ce47d52f2927108"
+    },
+    "g3_profiles_suspended08/run-manifest.json": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g3_profiles_suspended08\\run-manifest.json",
+      "sha256": "39a0e02f4c57f9023cd2c33b483a1d074f9db03a06399533cbb79fb5f82d28d4"
+    },
+    "g3_profiles_basic08/run-manifest.json": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g3_profiles_basic08\\run-manifest.json",
+      "sha256": "ce4f3b823949263d3e9dab3c09ce8ec2958e3210e07ae35d6fc6ded4c197d1b8"
+    },
+    "g3_profiles_independent09/result.json": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g3_profiles_independent09\\result.json",
+      "sha256": "6a169a651bd813e850c58b8e1e9a5ec66a3aa140294279f5bca955716ea53e6e"
+    },
+    "g4_response_independent09/result.json": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g4_response_independent09\\result.json",
+      "sha256": "20d126d504b72bee9d89995f4de1fdd6feca0ae4b2db6714d63f488b79785ec1"
+    },
+    "g3_profiles_target_reference08/result.json": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g3_profiles_target_reference08\\result.json",
+      "sha256": "64f7d285205737374a8aa836d65cbff3c519e96be802acf597cdb8f2c08ae4da"
+    },
+    "g3_profiles_transfer_reference08/result.json": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g3_profiles_transfer_reference08\\result.json",
+      "sha256": "23f69b8a2a0e60f464b6bd1302b5c098071e6fea258a02d7f8c9b9940f48195d"
+    },
+    "g3_profiles_local_reference08/result.json": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g3_profiles_local_reference08\\result.json",
+      "sha256": "bac6dac6b2293af767aa1ce5767d9e7866dcf38247037d8baad35bb96ca0bac0"
+    },
+    "g3_profiles_suspended_reference08/result.json": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g3_profiles_suspended_reference08\\result.json",
+      "sha256": "64c599909d35cdd8995cbfc54f3da3b6e0d0ae60b0e359963eb24361162b405d"
+    }
+  },
+  "pending": [
+    "G4 complete shared water/material/validation functional and phase cost gate",
+    "G5 batching/consumers",
+    "G6 restore/lifecycle/formal sole entry",
+    "G7 config fixtures/reachability",
+    "G8 full visible cost/long stability/final delivery"
+  ]
+}

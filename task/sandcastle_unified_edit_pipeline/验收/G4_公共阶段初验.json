@@ -1,0 +1,52 @@
+{
+  "role": "T04 implementation and initial verification only; G4 not passed",
+  "implementation_progress": true,
+  "G4_pass": false,
+  "completed_T04_objectives": 0,
+  "source_gate": "G3_联合门.json",
+  "gpu_run": "g3_profiles_delivery08",
+  "response_cases": [
+    "water_fill_1",
+    "water_fill_2",
+    "water_fill_3",
+    "water_dig_1",
+    "water_wall_3",
+    "water_shovel_3",
+    "water_castle_3",
+    "water_split_1",
+    "water_partial_1",
+    "water_fail_3",
+    "water_cfl_1"
+  ],
+  "response_gpu_checks": 385,
+  "independent_checks": 1013,
+  "materials": "Common mode12 after primitive allocation, native private R16F quantization and shared validation. No primitive-private material commit/rollback.",
+  "water": "Shared full-domain old/new-bed/h/s/q/obstacle input; retained P08 packed-cached/compensated displacement and velocity prefetch; GPU indirect launch from real decision/control; shared velocity semantics; 256-block plus compensated merge audit; union dirty/count/fields; conditional physical commit before common result/version.",
+  "frozen_numeric_contract": "Original H/SED reference exact; Q compared with existing edit_protocol.gd/protocol_v2.json min2e-7 +16ULP/16u delta cell bound. Water/SED global conservation uses unchanged 8u +2*(touched+256)*u^2 plus touched R32F ULP budget. No widened tolerance.",
+  "negative_proof": [
+    "Injected water loss rejects atomically",
+    "CFL steps>64 rejects atomically",
+    "Control fatal flags remain zero for those business rejections",
+    "Valid material successor uses unchanged input revision after rejection"
+  ],
+  "retained_failures": [
+    "g4_response_attempt02: nonzero speed with policy2 rejected by frozen profile rule; fixture fixed to allow nonzero speed only for policy3",
+    "g4_response_reference04: private readonly decision guard version produced exact candidate but missing packed/CFL diagnostic words; root cause not established; replaced by stock kernels and established GPU-indirect decision gating",
+    "g4_response_reference05: exact-all-Q/reference-receipt assumption failed (14 Qx/22 Qz components, <=3.725290298461914e-9); existing cell budget retained, actual momentum impulse checked independently"
+  ],
+  "reports": {
+    "g3_profiles_delivery08/run-manifest.json": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g3_profiles_delivery08\\run-manifest.json",
+      "sha256": "e3639a179f7fbb9a011417182b0fd4ef8b9c053207027243ad4a9d32d367cf63"
+    },
+    "g4_response_independent09/result.json": {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\unified_edit_pipeline\\g4_response_independent09\\result.json",
+      "sha256": "20d126d504b72bee9d89995f4de1fdd6feca0ae4b2db6714d63f488b79785ec1"
+    }
+  },
+  "pending": [
+    "Broader topology/capacity/material-disabled/velocity-limit and field-applicability negatives",
+    "Representative actual stage timing and G0-comparable cost evidence",
+    "Complete G4 joint gate; no formal entry/lifecycle/restore or long-stability claim"
+  ]
+}
