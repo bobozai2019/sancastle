@@ -1,0 +1,456 @@
+{
+  "schema": 1,
+  "status": "frozen",
+  "frozen_date": "2026-10-19",
+  "gate": "G6",
+  "passed": true,
+  "functional_passed": true,
+  "cost_passed": true,
+  "architecture_passed": true,
+  "matrix": "test_output/floating_props/final_regressions_20261019_08/progress.json",
+  "functional_checks": 1478,
+  "independent_checks": 833,
+  "requirements": {
+    "R01": {
+      "passed": true,
+      "verification": [
+        "V04",
+        "V05",
+        "V09"
+      ]
+    },
+    "R02": {
+      "passed": true,
+      "verification": [
+        "V01",
+        "V02",
+        "V03",
+        "V04",
+        "V05"
+      ]
+    },
+    "R03": {
+      "passed": true,
+      "verification": [
+        "V06",
+        "V07"
+      ]
+    },
+    "R04": {
+      "passed": true,
+      "verification": [
+        "V03",
+        "V08"
+      ]
+    },
+    "R05": {
+      "passed": true,
+      "verification": [
+        "V10",
+        "V11"
+      ]
+    },
+    "R06": {
+      "passed": true,
+      "verification": [
+        "V02",
+        "V12",
+        "V15"
+      ]
+    },
+    "R07": {
+      "passed": true,
+      "verification": [
+        "V09",
+        "V12"
+      ]
+    },
+    "R08": {
+      "passed": true,
+      "verification": [
+        "V11",
+        "V13",
+        "V14",
+        "V15"
+      ]
+    }
+  },
+  "verification": {
+    "V01": {
+      "passed": true,
+      "evidence": [
+        {
+          "case": "sample_linear",
+          "checks": 69,
+          "path": "test_output/floating_props/final_regressions_20261018_06/sample_linear/run-manifest.json",
+          "sha256": "b6383fef62a4859eeda3a0834af429c52f014001ff5bda8296ad544edc42b9cb"
+        },
+        {
+          "case": "sample_constant",
+          "checks": 69,
+          "path": "test_output/floating_props/final_regressions_20261018_06/sample_constant/run-manifest.json",
+          "sha256": "6494e1ffa0d4751e637957cff9eea3cfce5af5bf420eff51df03d53257617d74"
+        },
+        {
+          "case": "sample_thin",
+          "checks": 69,
+          "path": "test_output/floating_props/final_regressions_20261018_06/sample_thin/run-manifest.json",
+          "sha256": "a28acb4edf924db1c335571d8c6450b96257a48038687c7e8abfc6afee864cd1"
+        }
+      ],
+      "supplementary": [
+        "height_codec"
+      ]
+    },
+    "V02": {
+      "passed": true,
+      "evidence": [
+        {
+          "case": "runtime",
+          "checks": 12,
+          "path": "test_output/floating_props/final_regressions_20261018_03/runtime/run-manifest.json",
+          "sha256": "a10b0dccfc4aeddb34ee9e035d7e159befa12677039999590eab91fe36b9c5ea"
+        },
+        {
+          "case": "height_faults",
+          "checks": 154,
+          "path": "test_output/floating_props/final_regressions_20261018_06/height_faults/run-manifest.json",
+          "sha256": "11c3e08b0937bb19b8b13466fa5ade217de2791d70a1c7aba1992e33f7e7db55"
+        },
+        {
+          "case": "service_api",
+          "checks": 55,
+          "path": "test_output/floating_props/final_regressions_20261018_03/service_api/run-manifest.json",
+          "sha256": "79fd8c233c373a56d824df4f65b4970792e5d9577752bd88baa37d8cda244350"
+        }
+      ]
+    },
+    "V03": {
+      "passed": true,
+      "evidence": [
+        {
+          "case": "service_api",
+          "checks": 55,
+          "path": "test_output/floating_props/final_regressions_20261018_03/service_api/run-manifest.json",
+          "sha256": "79fd8c233c373a56d824df4f65b4970792e5d9577752bd88baa37d8cda244350"
+        },
+        {
+          "case": "rolling",
+          "checks": 30,
+          "path": "test_output/floating_props/final_regressions_20261018_06/rolling/run-manifest.json",
+          "sha256": "6ba8b6e28551c01347c9d82b682537eab06649fdcab0a72225d629577bc89cf0"
+        }
+      ],
+      "historical_detail": "task/sandcastle_floating_props/验收/G2_水瓶与时钟.md"
+    },
+    "V04": {
+      "passed": true,
+      "evidence": [
+        {
+          "case": "three_flow_positive",
+          "checks": 32,
+          "path": "test_output/floating_props/final_regressions_20261018_06/three_flow_positive/run-manifest.json",
+          "sha256": "2428d3568104b0365915e143afa8b3d9853a6d3cc10d7b3987e66bc18bd40519"
+        },
+        {
+          "case": "three_flow_negative",
+          "checks": 32,
+          "path": "test_output/floating_props/final_regressions_20261018_06/three_flow_negative/run-manifest.json",
+          "sha256": "169b9a7c8fa96faf670e811e71982917d6580ace31b03cf6bb0ccb7b57a0d2c9"
+        }
+      ],
+      "historical_detail": "task/sandcastle_floating_props/验收/G2_水瓶与时钟.md"
+    },
+    "V05": {
+      "passed": true,
+      "evidence": [
+        {
+          "case": "three_flow_positive",
+          "checks": 32,
+          "path": "test_output/floating_props/final_regressions_20261018_06/three_flow_positive/run-manifest.json",
+          "sha256": "2428d3568104b0365915e143afa8b3d9853a6d3cc10d7b3987e66bc18bd40519"
+        },
+        {
+          "case": "three_flow_negative",
+          "checks": 32,
+          "path": "test_output/floating_props/final_regressions_20261018_06/three_flow_negative/run-manifest.json",
+          "sha256": "169b9a7c8fa96faf670e811e71982917d6580ace31b03cf6bb0ccb7b57a0d2c9"
+        },
+        {
+          "case": "three_tilt_width",
+          "checks": 29,
+          "path": "test_output/floating_props/final_regressions_20261018_06/three_tilt_width/run-manifest.json",
+          "sha256": "6442946f7f13feb8f795d20f97f512acd61b39ee13b2cc9ba7b1e88a6da41ba2"
+        },
+        {
+          "case": "three_tilt_length",
+          "checks": 31,
+          "path": "test_output/floating_props/final_regressions_20261018_06/three_tilt_length/run-manifest.json",
+          "sha256": "03909760acf5b27857a8a4fc48c12d99678bfe41eeadf94e8f4ed994f1ad2b0f"
+        }
+      ]
+    },
+    "V06": {
+      "passed": true,
+      "evidence": [
+        {
+          "case": "wave",
+          "checks": 47,
+          "path": "test_output/floating_props/final_regressions_20261018_05/wave/run-manifest.json",
+          "sha256": "acc1631ac07b7312eb695087f27bda9512cfa539e929b17a6a478f8ecc095efe"
+        }
+      ]
+    },
+    "V07": {
+      "passed": true,
+      "evidence": [
+        {
+          "case": "contact_bed_fill",
+          "checks": 60,
+          "path": "test_output/floating_props/final_regressions_20261018_06/contact_bed_fill/run-manifest.json",
+          "sha256": "3b2c3f8cdebfc0f565330e900ab4205866c48908665bc8c7171267e3b0f1b5ac"
+        },
+        {
+          "case": "contact_bed_dig",
+          "checks": 63,
+          "path": "test_output/floating_props/final_regressions_20261018_06/contact_bed_dig/run-manifest.json",
+          "sha256": "cd5a546f188b2a04ab1f8ae67fc9a5a415b1c27aa47221d63f0a9c53ed4e4c5c"
+        },
+        {
+          "case": "contact_cross_chunk",
+          "checks": 41,
+          "path": "test_output/floating_props/final_regressions_20261018_06/contact_cross_chunk/run-manifest.json",
+          "sha256": "4240700c549ae6a46e056a191cfd2273c48944cca6e5733cb9381ff4739704a0"
+        },
+        {
+          "case": "contact_collision_pair",
+          "checks": 30,
+          "path": "test_output/floating_props/final_regressions_20261018_06/contact_collision_pair/run-manifest.json",
+          "sha256": "3aa8a9e931deb5b8dc0c0e4b20a426fba8dd34149c2f39b8d63244c1a5641531"
+        },
+        {
+          "case": "contact_erosion_continuous",
+          "checks": 30,
+          "path": "test_output/floating_props/final_regressions_20261018_06/contact_erosion_continuous/run-manifest.json",
+          "sha256": "f1e6bf04df1b771ebe6821b8abf02cd28a5ae5710dd8778a5dfe7c30e724cc56"
+        },
+        {
+          "case": "stack_hover_edit",
+          "checks": 53,
+          "path": "test_output/floating_props/final_regressions_20261018_06/stack_hover_edit/run-manifest.json",
+          "sha256": "9942ee8dffb249de271ba4ee4f07fa407eb88c517b39b45e28602feaf8ade69c"
+        },
+        {
+          "case": "stack_stack_fill",
+          "checks": 56,
+          "path": "test_output/floating_props/final_regressions_20261018_06/stack_stack_fill/run-manifest.json",
+          "sha256": "fbe0c97b8032786ed027e0d7726f8ac12fcdfedd08780361ed04d7a9ec951036"
+        },
+        {
+          "case": "height_priority",
+          "checks": 107,
+          "path": "test_output/floating_props/final_regressions_20261018_06/height_priority/run-manifest.json",
+          "sha256": "e27721be5993901c87ec8d8803aff0665896ff3b0c559756026f35188059531e"
+        }
+      ]
+    },
+    "V08": {
+      "passed": true,
+      "evidence": [
+        {
+          "case": "service_api",
+          "checks": 55,
+          "path": "test_output/floating_props/final_regressions_20261018_03/service_api/run-manifest.json",
+          "sha256": "79fd8c233c373a56d824df4f65b4970792e5d9577752bd88baa37d8cda244350"
+        },
+        {
+          "case": "active_lifecycle",
+          "checks": 18,
+          "path": "test_output/floating_props/final_regressions_20261019_08/active_lifecycle/run-manifest.json",
+          "sha256": "56a7897174af459f08bee0baec6fbf9519cd0c72529c21f13608926ae2780931"
+        }
+      ]
+    },
+    "V09": {
+      "passed": true,
+      "evidence": [
+        {
+          "case": "entry_main",
+          "checks": 35,
+          "path": "test_output/floating_props/final_regressions_20261018_03/entry_main/run-manifest.json",
+          "sha256": "8bd0ba17ff364cc1896dbd8e56cb72d0f41e3290723715ed3ec600504a8e866d"
+        },
+        {
+          "case": "entry_test1_capture",
+          "checks": 35,
+          "path": "test_output/floating_props/final_regressions_20261018_03/entry_test1_capture/run-manifest.json",
+          "sha256": "5e0e065c073b51840cd09d64a753a45cf4835564b41233f98ffbcc9f7cbaa6b0"
+        },
+        {
+          "case": "entry_test1_backwash",
+          "checks": 35,
+          "path": "test_output/floating_props/final_regressions_20261018_03/entry_test1_backwash/run-manifest.json",
+          "sha256": "ec05386076c0d3d002be4a22bb9f82869c07cb39a3820dc7029dc12977676a28"
+        },
+        {
+          "case": "entry_test1_geometry",
+          "checks": 35,
+          "path": "test_output/floating_props/final_regressions_20261018_03/entry_test1_geometry/run-manifest.json",
+          "sha256": "e659b40e3527110f0dcd44b7e7c72053c6f1c870116b413ffea9577cb80a7201"
+        }
+      ]
+    },
+    "V10": {
+      "passed": true,
+      "evidence": [
+        {
+          "case": "active_lifecycle",
+          "checks": 18,
+          "path": "test_output/floating_props/final_regressions_20261019_08/active_lifecycle/run-manifest.json",
+          "sha256": "56a7897174af459f08bee0baec6fbf9519cd0c72529c21f13608926ae2780931"
+        },
+        {
+          "case": "scene_reentry",
+          "checks": 24,
+          "path": "test_output/floating_props/final_regressions_20261019_08/scene_reentry/run-manifest.json",
+          "sha256": "f4c4c150a185eb5743fe0e18a559722c14c56b160229999d2c0666f62eca1f42"
+        },
+        {
+          "case": "lifecycle_cycles",
+          "checks": 123,
+          "path": "test_output/floating_props/final_regressions_20261018_03/lifecycle_cycles/run-manifest.json",
+          "sha256": "1af79256b21e33a1dd84c7dd347218e790a05defa9481f6eca8d7731aad56207"
+        }
+      ]
+    },
+    "V11": {
+      "passed": true,
+      "evidence": [
+        {
+          "case": "native_migration",
+          "checks": 20,
+          "path": "test_output/floating_props/final_regressions_20261018_03/native_migration/run-manifest.json",
+          "sha256": "aafa2f0726c00b9b5d3dbf630e2e677e3be14c0cbc8aa1f3ab35344b31cd6812"
+        },
+        {
+          "case": "fault_recovery",
+          "checks": 15,
+          "path": "test_output/floating_props/final_regressions_20261018_03/fault_recovery/run-manifest.json",
+          "sha256": "97c460c948ed56d3d6525d7775328cc1ea2837d77b549ef0d59020c47fb65a1a"
+        }
+      ]
+    },
+    "V12": {
+      "passed": true,
+      "evidence": [
+        {
+          "case": "isolation",
+          "checks": 69,
+          "path": "test_output/floating_props/final_regressions_20261018_03/isolation/run-manifest.json",
+          "sha256": "0e3f13fe3396beeb0fafab280fa622bbb3bce5d26e32da41e2800c631fc9ef93"
+        },
+        {
+          "case": "entry_main",
+          "checks": 35,
+          "path": "test_output/floating_props/final_regressions_20261018_03/entry_main/run-manifest.json",
+          "sha256": "8bd0ba17ff364cc1896dbd8e56cb72d0f41e3290723715ed3ec600504a8e866d"
+        },
+        {
+          "case": "entry_test1_capture",
+          "checks": 35,
+          "path": "test_output/floating_props/final_regressions_20261018_03/entry_test1_capture/run-manifest.json",
+          "sha256": "5e0e065c073b51840cd09d64a753a45cf4835564b41233f98ffbcc9f7cbaa6b0"
+        },
+        {
+          "case": "entry_test1_backwash",
+          "checks": 35,
+          "path": "test_output/floating_props/final_regressions_20261018_03/entry_test1_backwash/run-manifest.json",
+          "sha256": "ec05386076c0d3d002be4a22bb9f82869c07cb39a3820dc7029dc12977676a28"
+        },
+        {
+          "case": "entry_test1_geometry",
+          "checks": 35,
+          "path": "test_output/floating_props/final_regressions_20261018_03/entry_test1_geometry/run-manifest.json",
+          "sha256": "e659b40e3527110f0dcd44b7e7c72053c6f1c870116b413ffea9577cb80a7201"
+        },
+        {
+          "case": "runtime",
+          "checks": 12,
+          "path": "test_output/floating_props/final_regressions_20261018_03/runtime/run-manifest.json",
+          "sha256": "a10b0dccfc4aeddb34ee9e035d7e159befa12677039999590eab91fe36b9c5ea"
+        }
+      ]
+    },
+    "V13": {
+      "passed": true,
+      "evidence": [
+        {
+          "case": "lifecycle_cycles",
+          "checks": 123,
+          "path": "test_output/floating_props/final_regressions_20261018_03/lifecycle_cycles/run-manifest.json",
+          "sha256": "1af79256b21e33a1dd84c7dd347218e790a05defa9481f6eca8d7731aad56207"
+        }
+      ],
+      "supplementary": [
+        "long_run",
+        "long_independent"
+      ]
+    },
+    "V14": {
+      "passed": true,
+      "evidence": [],
+      "supplementary": [
+        "cost"
+      ]
+    },
+    "V15": {
+      "passed": true,
+      "evidence": [],
+      "supplementary": [
+        "architecture",
+        "formal_nodes",
+        "configuration_hash"
+      ]
+    }
+  },
+  "supplementary_evidence": {
+    "long_run": {
+      "path": "test_output/floating_props/main_temporal_extended_20261018_02/run-manifest.json",
+      "sha256": "1d8f41d9bf6c8d0defc29ad018ee8d19518bc2dc5c493479f2cb9c93a176bbab"
+    },
+    "long_independent": {
+      "path": "test_output/floating_props/main_temporal_extended_20261018_02/independent_physics.json",
+      "sha256": "2f8162cbd631ea51f672e7bc45db037c8064866d1a5f8fe9943dbfb9786c0cb5"
+    },
+    "cost": {
+      "path": "test_output/floating_props/cost_matrix_20261019_02/comparison.json",
+      "sha256": "dd002da1770ac226c4d1d4377cd3e4c1db237243ed4ad5be438297873aecfb24"
+    },
+    "architecture": {
+      "path": "test_output/floating_props/architecture_g6_20261018_02/report.json",
+      "sha256": "7144f5cb43ce79d369932f31ad7c0b933a6a67be1c0afe7d4f782d0e7a47b20a"
+    },
+    "formal_nodes": {
+      "path": "test_output/floating_props/formal_nodes_g6_20261018_02/probe.json",
+      "sha256": "77ec1bd3102468062a6d40906b63a3845052f8c80295d3607af176e2bb3c06f0"
+    },
+    "height_codec": {
+      "path": "test_output/floating_props/height_codec_v3_20261019_01/probe.json",
+      "sha256": "e5050df1f6f6b5be6ef7e2d71d0ddf1cccb096f1fd0f93caaebcca452f4ff0ec"
+    },
+    "configuration_hash": {
+      "path": "test_output/floating_props/configuration_hash_20261018_01/stdout.txt",
+      "sha256": "2f3fa65fb5012941a6a76f73263a635343a8a44f1d355489c2631dc4959b0479"
+    }
+  },
+  "delivery_index": "test_output/floating_props/final_delivery_20261019_01/index.json",
+  "scope": "fixed bottle/plank/stick, generic consumer, one-way authority isolation; successful restore/reentry resets props; no arbitrary placement or pose persistence",
+  "limits": [
+    "300s physical sources precede only configuration hashing/strict known-source validation fixes; affected final regressions cover those changes",
+    "Original single-bottle CFL/slow-frame/multi-initial-condition evidence retained in G2 report; current final service/physical regressions cover unchanged motion implementation",
+    "Native sleep proved under explicit dry-rest precondition; arbitrary jitter/frequent holds not guaranteed",
+    "Cost limited to GTX1050 D3D12 1280x720 VSync1 measured workload; whole-world CPU cost increases",
+    "Prior native startup signal11 cause unknown; failed run excluded and preserved",
+    "Architecture proof covers explicit conservative dependency graph"
+  ]
+}
