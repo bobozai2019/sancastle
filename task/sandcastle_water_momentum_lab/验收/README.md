@@ -1,6 +1,6 @@
 # 水动量实验验收计划
 
-角色：verification_plan。尚无实现通过结论；未来实际报告按G0–G5分别保存，不向契约文件写PASS。
+角色：verification_plan。G0–G5实际报告已完成；以下保留验收计划，最终结果与限制以G5及执行状态为准，不向契约文件写PASS。
 
 ## 用例与证据
 
@@ -40,7 +40,7 @@ G1记录最终数值判据、理由及适用输入，G4冻结profile后才集中
 
 ## 运行入口与证据目录
 
-以下启动命令在T01创建场景后才可用，本轮未执行：
+以下入口已创建并实际运行；最终原始证据见各_v2运行目录和packet_final_v3：
 
 ```powershell
 & 'D:/game/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe' --path 'D:/godot/project/sandcastle' 'res://scenes/experiments/water_momentum_lab.tscn'

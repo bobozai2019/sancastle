@@ -1,5 +1,15 @@
 # 竞品GPU编辑计算与当前项目对照
 
+## EDIT-WATER-556-20261019：恢复实际mode6模板
+
+本次直接复验C3只限test41 E878/E1210的核、绑定、参数和模板；不含工具身份、连续速度或性能因果。源RDC为256177273字节，SHA256 `f1794a7235a79f7a73bd6f4085bef7ecbb3a7dc39ce8a8a7aac955ee5beb3c0d`，导出前后相同。RenderDoc1.46；命令 `D:/other_software/RenderDoc/qrenderdoc.exe --python D:/godot/project/sandcastle/tools/water_momentum_lab/export_water_paint.py`。完整原始字节、selector及hash见 `test_output/water_momentum_lab/g0_replay_20261019_v2/manifest.json`，解码见同目录`analysis.json`。本机可用。
+
+E1210仍绑定ResourceId556，实际为128² RGBA32F，262144字节，SHA256 `17faa485f5409354c6aed458c8cc8dfad1922c98532b3e0349c26f9349388261`。**本次恢复的全部R和alpha均为1**，因此不能以E878绑定的578有正负纹理变化推断本次mode6也有空间正负模板。E1210 cb138=(6,0,0,0)，36字节brush参数float[2:4]=(5,5)，中心cb147=(4.58869791,0.72305894,5.84406805)。两次独立新开捕帧的这些参数、核和模板完全相同。CS SHA256仍为`f0dea026bdaa1f44ce30dc973c7e1603fd0625c270805744e69039facf55e714`。指令138–141包含中心y的归一化；189–193为mode6速度分支。因此历史有符号模板公式的通用分支与该次有效全正R必须分开。
+
+反证与局限：两次独立E1210完整水场hash不同，故此次未用其水场全图差分证明编辑量、冲量或工具效果。首次bootstrap在manifest创建前失败，目录保留；v2修正脚本路径后完成。没有新增“全部挖填工具都调用mode6”或“原作速度5是5m/s”结论。复验先核对全部导出hash，再用float32解码556纹理及cb/brush字节；原始和派生数据分别保留。
+
+Godot水动量实验采用自建胶囊权重、填向外/挖向内和格心`q=h*v`，属于显式适配；没有把全白556或原作单位直接移植。该对照用于检验效果来源，不能称为完整原作水模拟复刻。
+
 2026-10-16补充：[连续挖填卡顿的结构对照](#edit-perf-structure-20261016连续挖填的并行结构与未知成本)已按现有test41 Ground.Paint导出和当前Godot合批源码复核。下方2026-10-12的项目表格属于当时版本，不能继续将“两物理帧、逐笔等待”作为当前main默认调度；最新实现见[项目技术方案](../当前项目技术方案.md)。本次不启动竞品或GPU重放，不新增原作性能数字。
 
 更新：2026-10-12。范围：沙、水编辑核及必要采样；不涉及业务代码。此次复取实际Compute Shader、常量字节与资源绑定，未运行原游戏或测量其真实性能。

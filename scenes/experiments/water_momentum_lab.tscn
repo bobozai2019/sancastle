@@ -1,0 +1,145 @@
+[gd_scene load_steps=8 format=3]
+[ext_resource type="Script" path="res://tests/water_momentum_lab/lab_entry.gd" id="1"]
+[ext_resource type="Shader" path="res://tests/water_momentum_lab/shaders/view.gdshader" id="2"]
+[sub_resource type="PlaneMesh" id="Plane"]
+size = Vector2(32,32)
+subdivide_width = 255
+subdivide_depth = 255
+[sub_resource type="ShaderMaterial" id="SandMat"]
+resource_local_to_scene = true
+shader = ExtResource("2")
+[sub_resource type="ShaderMaterial" id="WaterMat"]
+resource_local_to_scene = true
+shader = ExtResource("2")
+shader_parameter/water_layer = true
+[sub_resource type="Environment" id="Env"]
+background_mode = 1
+background_color = Color(0.025,0.045,0.065,1)
+[sub_resource type="BoxMesh" id="Base"]
+size = Vector3(32,0.2,32)
+[node name="WaterMomentumLab" type="Node3D"]
+script = ExtResource("1")
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Env")
+[node name="Camera" type="Camera3D" parent="."]
+position = Vector3(-9.5,36,24)
+rotation_degrees = Vector3(-56.3099,0,0)
+projection = 1
+size = 34.0
+current = true
+[node name="Light" type="DirectionalLight3D" parent="."]
+rotation_degrees = Vector3(-60,-30,0)
+[node name="Base" type="MeshInstance3D" parent="."]
+position = Vector3(0,-0.15,0)
+mesh = SubResource("Base")
+[node name="Sand" type="MeshInstance3D" parent="."]
+mesh = SubResource("Plane")
+material_override = SubResource("SandMat")
+custom_aabb = AABB(-16,-1,-16,32,8,32)
+[node name="Water" type="MeshInstance3D" parent="."]
+mesh = SubResource("Plane")
+material_override = SubResource("WaterMat")
+sorting_offset = 0.01
+custom_aabb = AABB(-16,-1,-16,32,8,32)
+[node name="Interface" type="CanvasLayer" parent="."]
+[node name="Panel" type="PanelContainer" parent="Interface"]
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 342.0
+offset_bottom = 620.0
+[node name="Rows" type="VBoxContainer" parent="Interface/Panel"]
+theme_override_constants/separation = 6
+[node name="Title" type="Label" parent="Interface/Panel/Rows"]
+text = "Water momentum lab / independent GPU"
+[node name="Status" type="Label" parent="Interface/Panel/Rows"]
+text = "Initializing..."
+custom_minimum_size = Vector2(330,84)
+autowrap_mode = 3
+[node name="Mode" type="OptionButton" parent="Interface/Panel/Rows"]
+item_count = 3
+selected = 2
+popup/item_0/text = "A0 / natural response"
+popup/item_0/id = 0
+popup/item_1/text = "A1 / raised-bed formula"
+popup/item_1/id = 1
+popup/item_2/text = "B / signed local impulse"
+popup/item_2/id = 2
+[node name="Fixture" type="OptionButton" parent="Interface/Panel/Rows"]
+item_count = 7
+selected = 0
+popup/item_0/text = "Flat lake"
+popup/item_0/id = 0
+popup/item_1/text = "Thin / wet-dry"
+popup/item_1/id = 1
+popup/item_2/text = "Islands"
+popup/item_2/id = 2
+popup/item_3/text = "Wall"
+popup/item_3/id = 3
+popup/item_4/text = "20cm platform"
+popup/item_4/id = 4
+popup/item_5/text = "80cm platform"
+popup/item_5/id = 5
+popup/item_6/text = "Controlled initial wave"
+popup/item_6/id = 6
+[node name="Operation" type="OptionButton" parent="Interface/Panel/Rows"]
+item_count = 3
+selected = 0
+popup/item_0/text = "Dig / left drag"
+popup/item_0/id = 0
+popup/item_1/text = "Fill / right drag"
+popup/item_1/id = 1
+popup/item_2/text = "Shovel / balanced shoulders"
+popup/item_2/id = 2
+[node name="View" type="OptionButton" parent="Interface/Panel/Rows"]
+item_count = 4
+selected = 0
+popup/item_0/text = "Water and sand"
+popup/item_0/id = 0
+popup/item_1/text = "Depth"
+popup/item_1/id = 1
+popup/item_2/text = "Speed"
+popup/item_2/id = 2
+popup/item_3/text = "Bed"
+popup/item_3/id = 3
+[node name="Arrows" type="CheckButton" parent="Interface/Panel/Rows"]
+text = "Flow arrows"
+button_pressed = true
+[node name="GainLabel" type="Label" parent="Interface/Panel/Rows"]
+text = "Impulse gain (m/s)"
+[node name="Gain" type="SpinBox" parent="Interface/Panel/Rows"]
+max_value = 4.0
+step = 0.01
+custom_arrow_step = 0.25
+value = 1.0
+[node name="RadiusLabel" type="Label" parent="Interface/Panel/Rows"]
+text = "Brush radius (m)"
+[node name="Radius" type="SpinBox" parent="Interface/Panel/Rows"]
+min_value = 0.25
+max_value = 2.0
+step = 0.001
+custom_arrow_step = 0.125
+value = 0.75
+[node name="Pause" type="Button" parent="Interface/Panel/Rows"]
+text = "Pause / resume [Space]"
+[node name="Step" type="Button" parent="Interface/Panel/Rows"]
+text = "One CFL step [N]"
+[node name="Reset" type="Button" parent="Interface/Panel/Rows"]
+text = "Reset [R]"
+[node name="Replay" type="Button" parent="Interface/Panel/Rows"]
+text = "Replay fixed 4m stroke"
+[node name="Export" type="Button" parent="Interface/Panel/Rows"]
+text = "Export fields / metrics / screenshot"
+[node name="Hint" type="Label" parent="Interface/Panel/Rows"]
+text = "Left: selected tool. Right: fill.\nPicking plane y=0.5m."
+autowrap_mode = 3
+[connection signal="item_selected" from="Interface/Panel/Rows/Mode" to="." method="_on_mode"]
+[connection signal="item_selected" from="Interface/Panel/Rows/Fixture" to="." method="_on_fixture"]
+[connection signal="item_selected" from="Interface/Panel/Rows/View" to="." method="_on_view"]
+[connection signal="toggled" from="Interface/Panel/Rows/Arrows" to="." method="_on_arrows"]
+[connection signal="value_changed" from="Interface/Panel/Rows/Gain" to="." method="_on_gain"]
+[connection signal="value_changed" from="Interface/Panel/Rows/Radius" to="." method="_on_radius"]
+[connection signal="pressed" from="Interface/Panel/Rows/Pause" to="." method="_on_pause"]
+[connection signal="pressed" from="Interface/Panel/Rows/Step" to="." method="_on_step"]
+[connection signal="pressed" from="Interface/Panel/Rows/Reset" to="." method="_on_reset"]
+[connection signal="pressed" from="Interface/Panel/Rows/Replay" to="." method="_on_replay"]
+[connection signal="pressed" from="Interface/Panel/Rows/Export" to="." method="_on_export"]

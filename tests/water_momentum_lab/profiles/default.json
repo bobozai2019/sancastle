@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "id": "water_momentum_lab_v1",
+  "grid": 256,
+  "cell_size_m": 0.125,
+  "initial_bed_m": 0.5,
+  "initial_depth_m": 0.3,
+  "radius_m": 0.75,
+  "edit_depth_m": 0.2,
+  "impulse_gain_m_s": 1.0,
+  "max_edit_speed_m_s": 4.0,
+  "dry_depth_m": 0.001,
+  "courant": 0.35,
+  "max_step_s": 0.008333333333333333,
+  "queue_capacity": 64,
+  "inflight_jobs": 1,
+  "substeps_per_live_job": 4,
+  "cpu_gpu_abs_tolerance": 2e-06,
+  "cpu_gpu_rel_tolerance": 2e-05,
+  "mass_relative_budget": 0.005,
+  "transfer_absolute_budget_m3": 2e-05,
+  "template_id": "analytic_capsule_signed_origin_v1"
+}
