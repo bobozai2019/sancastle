@@ -24,12 +24,12 @@
       "reason": "G6: route factory requires exact unified root script, family-scoped save/restore and rollback; no old fallback."
     },
     "scripts/beach/unified_playable_entry.gd::declarations": {
-      "sha256": "97e6d732d555070eea11b9c3a381a809683c81557445b1bd48445e9d986ad5a2",
+      "sha256": "014cdeea62f019ce4d2d8a1194d649dc972d46a54365433d003c46aefeda624d",
       "tokens": [
         "new(",
         "preload("
       ],
-      "reason": "Floating props G5/G6: scene-authored optional service; exact dependency closure, terrain-only brush mask, independent holds, save/restore identity preflight and fault-safe held boundary. Shared drainage checkbox remains UI-only policy2/3 selection."
+      "reason": "C07: optional scene-authored panel, input-mode exclusivity and successful-transition cancellation; original common backend and lifecycle factories retained."
     },
     "scripts/beach/unified_playable_entry.gd::_ready": {
       "sha256": "7f6b60b5acb2f969f80afcc0eb0930a5a53ffc558febba6382fc261da81f74c2",
@@ -378,14 +378,14 @@
       "tokens": [
         "call_deferred("
       ],
-      "reason": "G5/G6: completion-reader and dirty acknowledgement; worker join only after is_task_completed in physics_consume; no work retirement wait. 2026-10-18 reviewed opt-in bounded diagnostic marks only; no changed authority writes, slot transitions, worker completion guard, scheduling, or release ordering. Numeric dispatches unchanged. See docs/\u8fde\u7eed\u94f2\u5b50\u5361\u987f\u5b9a\u4f4d.md."
+      "reason": "G5/G6: completion-reader and dirty acknowledgement; worker join only after is_task_completed in physics_consume; no work retirement wait. 2026-10-18 reviewed opt-in bounded diagnostic marks only; no changed authority writes, slot transitions, worker completion guard, scheduling, or release ordering. Numeric dispatches unchanged. See docs/连续铲子卡顿定位.md."
     },
     "scripts/simulation/unified_edit/height.gd::_received": {
       "sha256": "a04291f65dbc8f022571890dc1567388706e33a103e5dcf8140b3a346e3d9897",
       "tokens": [
         "new("
       ],
-      "reason": "G5/G6: completion-reader and dirty acknowledgement; worker join only after is_task_completed in physics_consume; no work retirement wait. 2026-10-18 reviewed opt-in bounded diagnostic marks only; no changed authority writes, slot transitions, worker completion guard, scheduling, or release ordering. Numeric dispatches unchanged. See docs/\u8fde\u7eed\u94f2\u5b50\u5361\u987f\u5b9a\u4f4d.md."
+      "reason": "G5/G6: completion-reader and dirty acknowledgement; worker join only after is_task_completed in physics_consume; no work retirement wait. 2026-10-18 reviewed opt-in bounded diagnostic marks only; no changed authority writes, slot transitions, worker completion guard, scheduling, or release ordering. Numeric dispatches unchanged. See docs/连续铲子卡顿定位.md."
     },
     "scripts/simulation/unified_edit/height.gd::physics_consume": {
       "sha256": "d23eea5a1dc70a337e71abcb1baf8e13821c72cf7a68a94fea2384158cd30d0c",
@@ -480,7 +480,7 @@
         "new(",
         "preload("
       ],
-      "reason": "Sealed dependency/inheritance declarations and fixed component constructors. G2/G5/G6: sole queue/work recording/result/ownership pump; explicit EDIT/WATER_TICK/display branches, no profile-ID specialization. 2026-10-18 reviewed opt-in bounded diagnostic marks only; no changed authority writes, slot transitions, worker completion guard, scheduling, or release ordering. Numeric dispatches unchanged. See docs/\u8fde\u7eed\u94f2\u5b50\u5361\u987f\u5b9a\u4f4d.md."
+      "reason": "Sealed dependency/inheritance declarations and fixed component constructors. G2/G5/G6: sole queue/work recording/result/ownership pump; explicit EDIT/WATER_TICK/display branches, no profile-ID specialization. 2026-10-18 reviewed opt-in bounded diagnostic marks only; no changed authority writes, slot transitions, worker completion guard, scheduling, or release ordering. Numeric dispatches unchanged. See docs/连续铲子卡顿定位.md."
     },
     "scripts/simulation/unified_edit/pipeline.gd::initialize_render": {
       "sha256": "206f22ab35ff2059e820c9dc9830c5119ee26fabd1a1e62a360b49a82d2ee4f0",
@@ -529,35 +529,35 @@
       "tokens": [
         "call_on_render_thread("
       ],
-      "reason": "G2/G5/G6: sole queue/work recording/result/ownership pump; explicit EDIT/WATER_TICK/display branches, no profile-ID specialization. 2026-10-18 reviewed opt-in bounded diagnostic marks only; no changed authority writes, slot transitions, worker completion guard, scheduling, or release ordering. Numeric dispatches unchanged. See docs/\u8fde\u7eed\u94f2\u5b50\u5361\u987f\u5b9a\u4f4d.md."
+      "reason": "G2/G5/G6: sole queue/work recording/result/ownership pump; explicit EDIT/WATER_TICK/display branches, no profile-ID specialization. 2026-10-18 reviewed opt-in bounded diagnostic marks only; no changed authority writes, slot transitions, worker completion guard, scheduling, or release ordering. Numeric dispatches unchanged. See docs/连续铲子卡顿定位.md."
     },
     "scripts/simulation/unified_edit/pipeline.gd::_submit_render": {
       "sha256": "312c319ac5a28aac0737359c7a192a0fbf0ecdf908051101e4148f8174ddb67a",
       "tokens": [
         "call_deferred("
       ],
-      "reason": "G2/G5/G6: sole queue/work recording/result/ownership pump; explicit EDIT/WATER_TICK/display branches, no profile-ID specialization. 2026-10-18 reviewed opt-in bounded diagnostic marks only; no changed authority writes, slot transitions, worker completion guard, scheduling, or release ordering. Numeric dispatches unchanged. See docs/\u8fde\u7eed\u94f2\u5b50\u5361\u987f\u5b9a\u4f4d.md."
+      "reason": "G2/G5/G6: sole queue/work recording/result/ownership pump; explicit EDIT/WATER_TICK/display branches, no profile-ID specialization. 2026-10-18 reviewed opt-in bounded diagnostic marks only; no changed authority writes, slot transitions, worker completion guard, scheduling, or release ordering. Numeric dispatches unchanged. See docs/连续铲子卡顿定位.md."
     },
     "scripts/simulation/unified_edit/pipeline.gd::_arrived_render": {
       "sha256": "ed8cf43065d3cd84a4116ed82a9b4dbcc86b2621f9b0ccce495735a787d708a3",
       "tokens": [
         "call_deferred("
       ],
-      "reason": "G2/G5/G6: sole queue/work recording/result/ownership pump; explicit EDIT/WATER_TICK/display branches, no profile-ID specialization. 2026-10-18 reviewed opt-in bounded diagnostic marks only; no changed authority writes, slot transitions, worker completion guard, scheduling, or release ordering. Numeric dispatches unchanged. See docs/\u8fde\u7eed\u94f2\u5b50\u5361\u987f\u5b9a\u4f4d.md."
+      "reason": "G2/G5/G6: sole queue/work recording/result/ownership pump; explicit EDIT/WATER_TICK/display branches, no profile-ID specialization. 2026-10-18 reviewed opt-in bounded diagnostic marks only; no changed authority writes, slot transitions, worker completion guard, scheduling, or release ordering. Numeric dispatches unchanged. See docs/连续铲子卡顿定位.md."
     },
     "scripts/simulation/unified_edit/pipeline.gd::_poll": {
       "sha256": "8be970185eb96550cfd3d2e49199c6b6ff5dc46da4dee4ef5d5308e0644b6249",
       "tokens": [
         "call_on_render_thread("
       ],
-      "reason": "G2/G5/G6: sole queue/work recording/result/ownership pump; explicit EDIT/WATER_TICK/display branches, no profile-ID specialization. 2026-10-18 reviewed opt-in bounded diagnostic marks only; no changed authority writes, slot transitions, worker completion guard, scheduling, or release ordering. Numeric dispatches unchanged. See docs/\u8fde\u7eed\u94f2\u5b50\u5361\u987f\u5b9a\u4f4d.md."
+      "reason": "G2/G5/G6: sole queue/work recording/result/ownership pump; explicit EDIT/WATER_TICK/display branches, no profile-ID specialization. 2026-10-18 reviewed opt-in bounded diagnostic marks only; no changed authority writes, slot transitions, worker completion guard, scheduling, or release ordering. Numeric dispatches unchanged. See docs/连续铲子卡顿定位.md."
     },
     "scripts/simulation/unified_edit/pipeline.gd::_retire_render": {
       "sha256": "6b2e49ed9de141f50959f5f121620bd3bc2168f163289a94788ececa5ee09ebe",
       "tokens": [
         "call_deferred("
       ],
-      "reason": "G2/G5/G6: sole queue/work recording/result/ownership pump; explicit EDIT/WATER_TICK/display branches, no profile-ID specialization. 2026-10-18 reviewed opt-in bounded diagnostic marks only; no changed authority writes, slot transitions, worker completion guard, scheduling, or release ordering. Numeric dispatches unchanged. See docs/\u8fde\u7eed\u94f2\u5b50\u5361\u987f\u5b9a\u4f4d.md."
+      "reason": "G2/G5/G6: sole queue/work recording/result/ownership pump; explicit EDIT/WATER_TICK/display branches, no profile-ID specialization. 2026-10-18 reviewed opt-in bounded diagnostic marks only; no changed authority writes, slot transitions, worker completion guard, scheduling, or release ordering. Numeric dispatches unchanged. See docs/连续铲子卡顿定位.md."
     },
     "scripts/simulation/unified_edit/pipeline.gd::request_checkpoint": {
       "sha256": "4cac8c90ab604172b5dd8abcbe8d64bfde87c637294a1c697fe4a0cef4792644",
@@ -1176,7 +1176,7 @@
       "tokens": [
         "new("
       ],
-      "reason": " 2026-10-18 reviewed opt-in bounded diagnostic marks only; no changed authority writes, slot transitions, worker completion guard, scheduling, or release ordering. Numeric dispatches unchanged. See docs/\u8fde\u7eed\u94f2\u5b50\u5361\u987f\u5b9a\u4f4d.md."
+      "reason": " 2026-10-18 reviewed opt-in bounded diagnostic marks only; no changed authority writes, slot transitions, worker completion guard, scheduling, or release ordering. Numeric dispatches unchanged. See docs/连续铲子卡顿定位.md."
     },
     "scripts/simulation/unified_edit/water_packed_parallel.glsl::shader": {
       "sha256": "8e48a46ade6d9a608b9fe9aa5b10f1127f4b036b22a788f392c069d9585d481d",
@@ -1244,11 +1244,11 @@
       "reason": "Floating props G4/G6: analytic authored collider bounds; terrain-only downward recovery query excludes other props, bounded2m root displacement; upward obstruction propagates only actual terrain displacement through registered stack. Never normal-frame snapping or neighboring-prop leapfrog."
     },
     "scripts/props/floating_props_service.gd::declarations": {
-      "sha256": "11c290ac5e84b183f5e799f613b7886bc963926a17a446fed07e2f32870a8902",
+      "sha256": "8063032f5045762f963fca19ff30d12f039b9dc46fbd0363c777fdc91b9bfeb8",
       "tokens": [
         "preload("
       ],
-      "reason": "Floating props G2-G6: generic data-only typed registry, collider envelope, public bounded readonly sample consumer; native gravity plus per-point buoyancy/relative drag; real granted quanta and explicit sleep proof. No RD, authority writer, private queue or type branching. Half-budget query forecast and full delivery guards; terrain-only bounded edit correction and independent lifecycle leases."
+      "reason": "C07: <=3 authored instances; await real physics grant and common probe terminal, renew pose owner, filter held inventory bodies, initialize only placed body; no writer, queue or water admission gate."
     },
     "scripts/props/floating_props_service.gd::_apply_forces": {
       "sha256": "2103afdde1735841283d3aae47984a1ee27910a9212d46cb798786d3cbb0c5d7",
@@ -1258,11 +1258,11 @@
       "reason": "Floating props G2-G6: generic data-only typed registry, collider envelope, public bounded readonly sample consumer; native gravity plus per-point buoyancy/relative drag; real granted quanta and explicit sleep proof. No RD, authority writer, private queue or type branching. Half-budget query forecast and full delivery guards; terrain-only bounded edit correction and independent lifecycle leases."
     },
     "scripts/simulation/unified_edit/consumer_checkpoint_sources.gd::declarations": {
-      "sha256": "5ad4ef26eeb81dc15dc3a1f7093825d39c6664844f985d4d7348a0d8397013b9",
+      "sha256": "19323c2fa942c08f63a7d7b2a0ba9754a9c880bb052069aa74a72fa2bf08226e",
       "tokens": [
         "preload("
       ],
-      "reason": "Floating props G5/G6: one offline catalog pins known source full configuration and exact reviewed target source map; compare all declarative profile data before derived source-hash rebinding. Native fields/ledger/clock preserved; no learned allowlist. G6 deterministic-hash compatibility: original FULL configuration must equal offline pinned source dictionary; validation copy rehashes only the derived configuration digest. Original source/provenance/native fields stay intact. Unknown sources and unreviewed targets reject."
+      "reason": "C07: schema3 exact offline allowlist of two complete known source configurations, exact target pinning and unchanged declarative parameters; all native bytes still fully validated."
     }
   },
   "sealed_boundaries": {
@@ -1291,12 +1291,12 @@
       "reason": "Floating props G5/G6: cached restore waits completed boot; switch rejects during boot. Same unified factory and disposal proof; no consumer gate on producer."
     },
     "scripts/beach/unified_playable_entry.gd": {
-      "sha256": "d9160d47d952ceb2aae10f57803e278cfcb4ef583e03c3317b348dce0afe482a",
-      "reason": "Floating props G5/G6: scene-authored optional service; exact dependency closure, terrain-only brush mask, independent holds, save/restore identity preflight and fault-safe held boundary. Shared drainage checkbox remains UI-only policy2/3 selection."
+      "sha256": "5e1bd7d6d4ff12fa1833e8e1568fd7564757598c273eca04bbfa4cd5db3574ce",
+      "reason": "C07: optional scene-authored panel, input-mode exclusivity and successful-transition cancellation; original common backend and lifecycle factories retained."
     },
     "scenes/main.tscn": {
-      "sha256": "0f34fa95474df858644151043a7fbfcadf41bf9324db1ed26b217fd392bf6f7c",
-      "reason": "Floating props: static authored main-only three bodies/service, fixed typed profile/shape/material bindings, Jolt layer2 mask3, exact one native world; no runtime recreation. Other formal entries contain no props."
+      "sha256": "ae1be4b2616e32d0868fbf98a25af77daf65288f4a1ad8a518118e0dd6e32647",
+      "reason": "C07: same formal entry and runtime, authored three-slot panel with fixed signals."
     },
     "assets/unified_edit/presentation/main.json": {
       "sha256": "2704777896d1f933ec359e2dfdb7272558b5a2bb85362d8c3835acf1d5d0810f",
@@ -3539,12 +3539,12 @@
       "reason": "2026-10-18 velocity-only preparation: policy2 uses two GPU dispatches with group-uniform decision/control guard, private candidate/scratch and a 2048-byte first-error reduction. No authority stores, new CPU completion dependency, budget or connected-displacement semantic change. 21 fixed input pairs plus rejection/fatal guards passed 168 checks; common fill/shovel/toggle integration passed 92. Phase RIDs and private buffers use Response ownership and release."
     },
     "scenes/components/floating_props.tscn": {
-      "sha256": "afa5cf8683e52e0111ae0db256969274cf3759049c2a9b1d0574d0f31a241b1d",
-      "reason": "Floating props: static authored main-only three bodies/service, fixed typed profile/shape/material bindings, Jolt layer2 mask3, exact one native world; no runtime recreation. Other formal entries contain no props."
+      "sha256": "ef7a0f919704405376e2c1241c0fb1fb22d4a83c4d90fb3c1973fb7bf992fcd8",
+      "reason": "C07: existing three bodies unchanged; adds scene-authored non-colliding placement preview ring."
     },
     "scripts/props/floating_props_service.gd": {
-      "sha256": "3f727ad8d9d07c2aa81ec657c24488633c3074586593d2b27fe522bd42c68e49",
-      "reason": "Floating props G2-G6: generic data-only typed registry, collider envelope, public bounded readonly sample consumer; native gravity plus per-point buoyancy/relative drag; real granted quanta and explicit sleep proof. No RD, authority writer, private queue or type branching. Half-budget query forecast and full delivery guards; terrain-only bounded edit correction and independent lifecycle leases. G6 recovery: eligible root pending versions are strictly installed; terrain query uses actual assigned HeightMap snapshot, not unrelated edge chunks of force-compatible water packet. Successful reset clears old consumer fault hold."
+      "sha256": "1552a5e386bba23c4723f0f38928431e172857e892aea6d6c5521ef53c0ab08e",
+      "reason": "C07: <=3 authored instances; await real physics grant and common probe terminal, renew pose owner, filter held inventory bodies, initialize only placed body; no writer, queue or water admission gate."
     },
     "scripts/props/floating_prop_contact.gd": {
       "sha256": "a377b0ea1b1114b7d8d30cfa68b81e91223f8ac5dfbce5c4958fe6eb241035e1",
@@ -3555,8 +3555,8 @@
       "reason": "Floating props Profile v2: exact Resource script; finite typed data validation and immutable snapshot with sampling rank/axis; no dynamic behavior/callback/owner access."
     },
     "scripts/props/floating_prop.gd": {
-      "sha256": "6a794f8a4a15b4791593be4f2623147ffd26771610742f975e7686401cdf1acf",
-      "reason": "Floating props: native RigidBody3D integration observer forwards actual state.step/COM/contact data; no custom integrator, gravity duplicate, authority write or body factory."
+      "sha256": "cf046be6914fc9d1a240b64a7630c0b387fc9b0f82670e5c028c25584a8183df",
+      "reason": "C07: local visibility/freeze/collision-mask inventory toggle; existing Jolt callback still reports real step to common service."
     },
     "scenes/props/wood_stick.tscn": {
       "sha256": "2a8b6f4089b9a354da84ca7f461a4549dfaa07396f44ca295b4d2f594d46b6da",
@@ -3583,8 +3583,16 @@
       "reason": "Floating props Profile v2: reviewed fixed mass/COM/point volume/drag and observable direction budgets; full axial rolling bound derived from4m/s divided by collider radius. No executable callback."
     },
     "scripts/simulation/unified_edit/consumer_checkpoint_sources.gd": {
-      "sha256": "463f0486aad144ed8e982ff4dc84d3ec8c0171cdff9116cf4769285f6365e072",
-      "reason": "Floating props G5/G6: one offline catalog pins known source full configuration and exact reviewed target source map; compare all declarative profile data before derived source-hash rebinding. Native fields/ledger/clock preserved; no learned allowlist. G6 deterministic-hash compatibility: original FULL configuration must equal offline pinned source dictionary; validation copy rehashes only the derived configuration digest. Original source/provenance/native fields stay intact. Unknown sources and unreviewed targets reject."
+      "sha256": "8360687b6ade3e4b29903b36b3462c32f83805d69bd7e069ca97a437d102fc91",
+      "reason": "C07: schema3 exact offline allowlist of two complete known source configurations, exact target pinning and unchanged declarative parameters; all native bytes still fully validated."
+    },
+    "scenes/components/floating_props_panel.tscn": {
+      "sha256": "61be2d8fd49b965ee21b0da2d7c167c58a84b746461dcc30eeb21b977632cb53",
+      "reason": "C07: fixed panel hierarchy, type-slot buttons, pickup/cancel and fixed signal bindings."
+    },
+    "scripts/beach/floating_props_panel.gd": {
+      "sha256": "a095db4e55fad1dc78d5f7746830fd632a72d103e76cc23dcf16386e3df2feb4",
+      "reason": "C07: static UI controls and Terrain/Prop aiming only; all mutations call the registered generic service, no authority or GPU access."
     }
   },
   "tool_ids": [
@@ -3612,7 +3620,7 @@
   "baseline_evidence": [
     "test_output/unified_edit_pipeline/g6_final_static01/audit.json",
     "test_output/unified_edit_pipeline/g6_retirement_final01/report.json",
-    "task/sandcastle_unified_edit_pipeline/\u9a8c\u6536/G6_\u8054\u5408\u95e8.json"
+    "task/sandcastle_unified_edit_pipeline/验收/G6_联合门.json"
   ],
   "authority_roles": {
     "executor.gd": "G3/G4: single local-candidate recorder; modes12 material,5/6 validation,7 conditional commit,8 receipt. No tool identity branch.",
@@ -3653,7 +3661,7 @@
     }
   },
   "actual_nodes_evidence": {
-    "path": "test_output/floating_props/formal_nodes_g6_20261018_02/probe.json",
-    "sha256": "77ec1bd3102468062a6d40906b63a3845052f8c80295d3607af176e2bb3c06f0"
+    "path": "task/sandcastle_floating_props/验收/ui_formal_nodes_20261019.json",
+    "sha256": "c3d6684ff410a6c26f43913da3d04e55b459b65b6a629e91e4f4f1fe05395894"
   }
 }

@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bovjuhcrpaoaf"]
+[gd_scene load_steps=6 format=3 uid="uid://bovjuhcrpaoaf"]
 
 [ext_resource type="PackedScene" path="res://scenes/unified_edit/presentation/main.tscn" id="1"]
 
@@ -7,6 +7,8 @@
 [ext_resource type="Script" path="res://scripts/beach/unified_performance_panel.gd" id="3"]
 
 [ext_resource type="PackedScene" path="res://scenes/components/floating_props.tscn" id="4"]
+
+[ext_resource type="PackedScene" path="res://scenes/components/floating_props_panel.tscn" id="5"]
 
 [node name="UnifiedBeach" instance=ExtResource("1")]
 
@@ -21,6 +23,8 @@ presentation_manifest = "res://assets/unified_edit/presentation/main.json"
 script = ExtResource("3")
 
 [node name="FloatingProps" parent="." instance=ExtResource("4")]
+
+[node name="FloatingPropsPanel" parent="Interface" instance=ExtResource("5")]
 
 [node name="ConnectedDrainage" type="CheckButton" parent="Interface/ShapeBrushPanel/Margin/Controls" index="1"]
 
@@ -39,6 +43,8 @@ text = "关闭后保留推水，排水交给水流模拟"
 [connection signal="toggled" from="Interface/ShapeBrushPanel/Margin/Controls/ConnectedDrainage" to="." method="_on_connected_drainage_toggled"]
 
 [connection signal="look_started" from="GpuPlayerCamera" to="." method="_on_camera_look_started"]
+
+[connection signal="mode_changed" from="Interface/FloatingPropsPanel" to="." method="_on_prop_mode_changed"]
 
 [connection signal="tool_changed" from="Interface/ShapeBrushPanel" to="." method="_on_tool_changed"]
 

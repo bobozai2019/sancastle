@@ -1,0 +1,271 @@
+{
+  "schema": 1,
+  "date": "2026-10-19",
+  "scope": "main three authored prop slots, pointer placement/move/pickup, local reader and physics epochs, native source migration, lifecycle, original tool regression and architecture",
+  "pass": true,
+  "functional_runs": 9,
+  "functional_checks": 211,
+  "runs": [
+    {
+      "case": "interaction_final_02",
+      "checks": 51,
+      "elapsed_s": 71.99031782150269,
+      "manifest": {
+        "path": "C:\\Users\\18205\\.codex\\visualizations\\2026\\10\\18\\01a14e1b-fc32-7803-a274-45d1b75ee085\\prop_placement_20261019\\interaction_final_02\\run-manifest.json",
+        "bytes": 84646,
+        "sha256": "234da0a20095cf1ed6f5e4ad10475a2ffa8995b65ef5ef4dc7af521381c85318"
+      },
+      "report": {
+        "path": "C:\\Users\\18205\\.codex\\visualizations\\2026\\10\\18\\01a14e1b-fc32-7803-a274-45d1b75ee085\\prop_placement_20261019\\interaction_final_02\\probe.json",
+        "bytes": 2786028,
+        "sha256": "dc1e3361ba3e19ee7c0a730337f4b9735a7022a57008bac80cb27c875183e7d6"
+      },
+      "source_archive": {
+        "path": "C:\\Users\\18205\\.codex\\visualizations\\2026\\10\\18\\01a14e1b-fc32-7803-a274-45d1b75ee085\\prop_placement_20261019\\interaction_final_02\\sources.zip",
+        "bytes": 31092565,
+        "sha256": "f37983be76d5da78baddcd31e3c47a9d4db1984f8654179de3b99b358be78ddd"
+      },
+      "engine_sha256": "12310c74bdda7dcd43f28e971f33047dcecadd436b68169d61ce41009006df38"
+    },
+    {
+      "case": "close_final_01",
+      "checks": 7,
+      "elapsed_s": 13.1564040184021,
+      "manifest": {
+        "path": "C:\\Users\\18205\\.codex\\visualizations\\2026\\10\\18\\01a14e1b-fc32-7803-a274-45d1b75ee085\\prop_placement_20261019\\close_final_01\\run-manifest.json",
+        "bytes": 84644,
+        "sha256": "38b442fbe85ee1bc78d23a917e1446adf4a0449a23001e56fe636741efac38a9"
+      },
+      "report": {
+        "path": "C:\\Users\\18205\\.codex\\visualizations\\2026\\10\\18\\01a14e1b-fc32-7803-a274-45d1b75ee085\\prop_placement_20261019\\close_final_01\\probe.json",
+        "bytes": 687,
+        "sha256": "762b38eed4b6851363ced4d0ce41fd3484cf490f516f48f6438e99516642d399"
+      },
+      "source_archive": {
+        "path": "C:\\Users\\18205\\.codex\\visualizations\\2026\\10\\18\\01a14e1b-fc32-7803-a274-45d1b75ee085\\prop_placement_20261019\\close_final_01\\sources.zip",
+        "bytes": 31090217,
+        "sha256": "68f9af414c6f1b3d005b64d6e1fd7a356b1399ccd56f709f2e5885fbaec0d193"
+      },
+      "engine_sha256": "12310c74bdda7dcd43f28e971f33047dcecadd436b68169d61ce41009006df38"
+    },
+    {
+      "case": "release_migration_final_01",
+      "checks": 10,
+      "elapsed_s": 33.60524344444275,
+      "manifest": {
+        "path": "C:\\Users\\18205\\.codex\\visualizations\\2026\\10\\18\\01a14e1b-fc32-7803-a274-45d1b75ee085\\prop_placement_20261019\\release_migration_final_01\\run-manifest.json",
+        "bytes": 84694,
+        "sha256": "6fd629d204ff047fd88745b1310c7ee0858fef20ab9c4bad6d873f22d1dd3410"
+      },
+      "report": {
+        "path": "C:\\Users\\18205\\.codex\\visualizations\\2026\\10\\18\\01a14e1b-fc32-7803-a274-45d1b75ee085\\prop_placement_20261019\\release_migration_final_01\\probe.json",
+        "bytes": 896,
+        "sha256": "eb573ea92985d8116939f1ee9739f46ef7373ed08d3b8dcc76d6304125c979e0"
+      },
+      "source_archive": {
+        "path": "C:\\Users\\18205\\.codex\\visualizations\\2026\\10\\18\\01a14e1b-fc32-7803-a274-45d1b75ee085\\prop_placement_20261019\\release_migration_final_01\\sources.zip",
+        "bytes": 31090610,
+        "sha256": "71bf9e0ae82810648fced8a0bc695ef00ef4719cf83bb652fed58c1b963b182c"
+      },
+      "engine_sha256": "12310c74bdda7dcd43f28e971f33047dcecadd436b68169d61ce41009006df38"
+    },
+    {
+      "case": "legacy_migration_final_01",
+      "checks": 20,
+      "elapsed_s": 54.304911613464355,
+      "manifest": {
+        "path": "C:\\Users\\18205\\.codex\\visualizations\\2026\\10\\18\\01a14e1b-fc32-7803-a274-45d1b75ee085\\prop_placement_20261019\\legacy_migration_final_01\\run-manifest.json",
+        "bytes": 84695,
+        "sha256": "f69d3132963633c50ba533f19cbf22236e59adbc3e795b594cba47c5d1e6dc19"
+      },
+      "report": {
+        "path": "C:\\Users\\18205\\.codex\\visualizations\\2026\\10\\18\\01a14e1b-fc32-7803-a274-45d1b75ee085\\prop_placement_20261019\\legacy_migration_final_01\\probe.json",
+        "bytes": 64742,
+        "sha256": "6e5ecedfec737b1cca911e465c8e79933e4b38137b04f54c4d4983542af775ed"
+      },
+      "source_archive": {
+        "path": "C:\\Users\\18205\\.codex\\visualizations\\2026\\10\\18\\01a14e1b-fc32-7803-a274-45d1b75ee085\\prop_placement_20261019\\legacy_migration_final_01\\sources.zip",
+        "bytes": 32398098,
+        "sha256": "1ed0abd58f8af030e781615e4d9a5670d8ab92ced96fa6d59a3f8f0c4de7b2d3"
+      },
+      "engine_sha256": "12310c74bdda7dcd43f28e971f33047dcecadd436b68169d61ce41009006df38"
+    },
+    {
+      "case": "scene_reentry_final_01",
+      "checks": 24,
+      "elapsed_s": 71.34729504585266,
+      "manifest": {
+        "path": "C:\\Users\\18205\\.codex\\visualizations\\2026\\10\\18\\01a14e1b-fc32-7803-a274-45d1b75ee085\\prop_placement_20261019\\scene_reentry_final_01\\run-manifest.json",
+        "bytes": 84658,
+        "sha256": "e759b26f943f1549ae07d8ae16e4f6bc85a90cf3739da2f0dd3e78b2880d26dc"
+      },
+      "report": {
+        "path": "C:\\Users\\18205\\.codex\\visualizations\\2026\\10\\18\\01a14e1b-fc32-7803-a274-45d1b75ee085\\prop_placement_20261019\\scene_reentry_final_01\\probe.json",
+        "bytes": 25974,
+        "sha256": "7a8cd5bac5d52fcf3833f98ca747f91d95c8657e0a4b3ec4f3a5dd7dea0a53db"
+      },
+      "source_archive": {
+        "path": "C:\\Users\\18205\\.codex\\visualizations\\2026\\10\\18\\01a14e1b-fc32-7803-a274-45d1b75ee085\\prop_placement_20261019\\scene_reentry_final_01\\sources.zip",
+        "bytes": 31090936,
+        "sha256": "473776aa3a5ab488722635feb610781f901786d51023095ad597a99afc0f7854"
+      },
+      "engine_sha256": "12310c74bdda7dcd43f28e971f33047dcecadd436b68169d61ce41009006df38"
+    },
+    {
+      "case": "main_regression_final_01",
+      "checks": 35,
+      "elapsed_s": 34.31361436843872,
+      "manifest": {
+        "path": "C:\\Users\\18205\\.codex\\visualizations\\2026\\10\\18\\01a14e1b-fc32-7803-a274-45d1b75ee085\\prop_placement_20261019\\main_regression_final_01\\run-manifest.json",
+        "bytes": 84665,
+        "sha256": "404ec233343fda15c45384b00b370139bde2c4e12f58e60f37cf8c2ee26873d1"
+      },
+      "report": {
+        "path": "C:\\Users\\18205\\.codex\\visualizations\\2026\\10\\18\\01a14e1b-fc32-7803-a274-45d1b75ee085\\prop_placement_20261019\\main_regression_final_01\\probe.json",
+        "bytes": 45538,
+        "sha256": "30f7ffe0f74c47e187054b072c0c8f1d1b9b5466da383fa3ba14d5f2bef970d0"
+      },
+      "source_archive": {
+        "path": "C:\\Users\\18205\\.codex\\visualizations\\2026\\10\\18\\01a14e1b-fc32-7803-a274-45d1b75ee085\\prop_placement_20261019\\main_regression_final_01\\sources.zip",
+        "bytes": 31088375,
+        "sha256": "df2c6c5eb1ade433ffbfa1173fe6d2fecffa818db6bca8e57f477ec8f1af17e2"
+      },
+      "engine_sha256": "12310c74bdda7dcd43f28e971f33047dcecadd436b68169d61ce41009006df38"
+    },
+    {
+      "case": "geometry_regression_final_01",
+      "checks": 35,
+      "elapsed_s": 31.569027185440063,
+      "manifest": {
+        "path": "C:\\Users\\18205\\.codex\\visualizations\\2026\\10\\18\\01a14e1b-fc32-7803-a274-45d1b75ee085\\prop_placement_20261019\\geometry_regression_final_01\\run-manifest.json",
+        "bytes": 84684,
+        "sha256": "72682c142002c951da82948e92f36b715b37403802af5e35114711f0a2e9beee"
+      },
+      "report": {
+        "path": "C:\\Users\\18205\\.codex\\visualizations\\2026\\10\\18\\01a14e1b-fc32-7803-a274-45d1b75ee085\\prop_placement_20261019\\geometry_regression_final_01\\probe.json",
+        "bytes": 43959,
+        "sha256": "3c63543ff0435bd8ff208c72fef725332ce82b2c6440c87080964a25266cc2cd"
+      },
+      "source_archive": {
+        "path": "C:\\Users\\18205\\.codex\\visualizations\\2026\\10\\18\\01a14e1b-fc32-7803-a274-45d1b75ee085\\prop_placement_20261019\\geometry_regression_final_01\\sources.zip",
+        "bytes": 31088375,
+        "sha256": "d7aedc304abf77a86e9044e41dca04b60f0cba616904b1fda90795612343523c"
+      },
+      "engine_sha256": "12310c74bdda7dcd43f28e971f33047dcecadd436b68169d61ce41009006df38"
+    },
+    {
+      "case": "fault_regression_final_01",
+      "checks": 15,
+      "elapsed_s": 37.61130976676941,
+      "manifest": {
+        "path": "C:\\Users\\18205\\.codex\\visualizations\\2026\\10\\18\\01a14e1b-fc32-7803-a274-45d1b75ee085\\prop_placement_20261019\\fault_regression_final_01\\run-manifest.json",
+        "bytes": 84666,
+        "sha256": "24fe5bae41976557cec356aadb6be1385de9a9c568f1d0d674bf5d469dc07bf3"
+      },
+      "report": {
+        "path": "C:\\Users\\18205\\.codex\\visualizations\\2026\\10\\18\\01a14e1b-fc32-7803-a274-45d1b75ee085\\prop_placement_20261019\\fault_regression_final_01\\probe.json",
+        "bytes": 23964,
+        "sha256": "d9fe21839b21b150fb260aa91674ff9dc74db2d575b89136edaf70f778019493"
+      },
+      "source_archive": {
+        "path": "C:\\Users\\18205\\.codex\\visualizations\\2026\\10\\18\\01a14e1b-fc32-7803-a274-45d1b75ee085\\prop_placement_20261019\\fault_regression_final_01\\sources.zip",
+        "bytes": 31091023,
+        "sha256": "17d3df0135069f27215966953f691146372b0ab4f5c80826a5a8364f8d9de6b7"
+      },
+      "engine_sha256": "12310c74bdda7dcd43f28e971f33047dcecadd436b68169d61ce41009006df38"
+    },
+    {
+      "case": "preservation_final_01",
+      "checks": 14,
+      "elapsed_s": 16.382514715194702,
+      "manifest": {
+        "path": "C:\\Users\\18205\\.codex\\visualizations\\2026\\10\\18\\01a14e1b-fc32-7803-a274-45d1b75ee085\\prop_placement_20261019\\preservation_final_01\\run-manifest.json",
+        "bytes": 84675,
+        "sha256": "e8a633212b8140e408c9d0f1c2c63a587b976ef965efdfb51efc4099966e8b50"
+      },
+      "report": {
+        "path": "C:\\Users\\18205\\.codex\\visualizations\\2026\\10\\18\\01a14e1b-fc32-7803-a274-45d1b75ee085\\prop_placement_20261019\\preservation_final_01\\probe.json",
+        "bytes": 1107,
+        "sha256": "047a4951dcee4d39cc3782c94c6fc319a85b5d0bc75f2b8115c74a94ad7e59ee"
+      },
+      "source_archive": {
+        "path": "C:\\Users\\18205\\.codex\\visualizations\\2026\\10\\18\\01a14e1b-fc32-7803-a274-45d1b75ee085\\prop_placement_20261019\\preservation_final_01\\sources.zip",
+        "bytes": 31090306,
+        "sha256": "9ed298b758a9e607a9ddd87acf8f7f61354d32c9aed34b8be069aa04fb063129"
+      },
+      "engine_sha256": "12310c74bdda7dcd43f28e971f33047dcecadd436b68169d61ce41009006df38"
+    }
+  ],
+  "architecture": {
+    "path": "C:\\Users\\18205\\.codex\\visualizations\\2026\\10\\18\\01a14e1b-fc32-7803-a274-45d1b75ee085\\prop_placement_20261019\\architecture_final_02\\report.json",
+    "bytes": 919986,
+    "sha256": "8cceb2006b4d36272790993b736d34f47e21de4f04467dae0af36d067a95bd7c"
+  },
+  "architecture_checks": 1633,
+  "formal_nodes": {
+    "path": "D:\\godot\\project\\sandcastle\\task\\sandcastle_floating_props\\验收\\ui_formal_nodes_20261019.json",
+    "bytes": 9866,
+    "sha256": "c3d6684ff410a6c26f43913da3d04e55b459b65b6a629e91e4f4f1fe05395894"
+  },
+  "formal_node_checks": 39,
+  "semantic_boundary_review": {
+    "path": "C:\\Users\\18205\\.codex\\visualizations\\2026\\10\\18\\01a14e1b-fc32-7803-a274-45d1b75ee085\\prop_placement_20261019\\boundary_review.json",
+    "bytes": 2579,
+    "sha256": "b4bda7b731709d974b593957e6d87432661ab2350f913920eac2db4aa8eed0c4"
+  },
+  "policy": {
+    "path": "D:\\godot\\project\\sandcastle\\tools\\unified_edit_pipeline\\architecture_policy.json",
+    "bytes": 330953,
+    "sha256": "b3cba6a83a93dc1dd86b8a5add389e4ff0970b76e326c88c612e882fbb491dd2"
+  },
+  "source_catalog": {
+    "path": "D:\\godot\\project\\sandcastle\\assets\\unified_edit\\floating_props_source_catalog.variant",
+    "bytes": 125556,
+    "sha256": "0456f9a90bb90bd98fbb131058bbf18f1e7b7c0a28e06ba3d50f729ae42eb299"
+  },
+  "baseline": {
+    "path": "C:\\Users\\18205\\.codex\\visualizations\\2026\\10\\18\\01a14e1b-fc32-7803-a274-45d1b75ee085\\prop_placement_20261019\\baseline_03\\baseline.sandue",
+    "bytes": 8795724,
+    "sha256": "3ec5a12635623f396ee0d4a26ccbf46309695f18c9aeec9d99d87109b41b80ed"
+  },
+  "preserved_failed_runs": [
+    {
+      "case": "interaction_01",
+      "pass": false,
+      "manifest": {
+        "path": "C:\\Users\\18205\\.codex\\visualizations\\2026\\10\\18\\01a14e1b-fc32-7803-a274-45d1b75ee085\\prop_placement_20261019\\interaction_01\\run-manifest.json",
+        "bytes": 84692,
+        "sha256": "58da0994744e5ea7b369a2f7bbecad3f3380e3f8884c4c3db6d946e2dc806647"
+      }
+    },
+    {
+      "case": "interaction_02",
+      "pass": false,
+      "manifest": {
+        "path": "C:\\Users\\18205\\.codex\\visualizations\\2026\\10\\18\\01a14e1b-fc32-7803-a274-45d1b75ee085\\prop_placement_20261019\\interaction_02\\run-manifest.json",
+        "bytes": 84634,
+        "sha256": "70f39fefde27ef40f2267fddae71c80349feb70a588f7f92a26b7edc1ad4b6d7"
+      }
+    },
+    {
+      "case": "interaction_final_01",
+      "pass": false,
+      "manifest": {
+        "path": "C:\\Users\\18205\\.codex\\visualizations\\2026\\10\\18\\01a14e1b-fc32-7803-a274-45d1b75ee085\\prop_placement_20261019\\interaction_final_01\\run-manifest.json",
+        "bytes": 84647,
+        "sha256": "748d57b597d7c5c3163e65f426cbf9bdc71f925303d407943d8a36026efb67aa"
+      }
+    }
+  ],
+  "screenshot": {
+    "path": "C:\\Users\\18205\\.codex\\visualizations\\2026\\10\\18\\01a14e1b-fc32-7803-a274-45d1b75ee085\\prop_placement_20261019\\interaction_final_02\\placement_ui.png",
+    "bytes": 694050,
+    "sha256": "7bfa823fe4da1be7fa56bb95088f2b2a9eca0511d9fd348f9d7215e3eff3c967"
+  },
+  "limits": [
+    "Each of three types has one authored instance; active world count 0..3",
+    "Props/UI inventory and placement are reset on successful restore/reentry, not serialized",
+    "Functional visible D3D12/Jolt verification, no new representative cost or long endurance claim",
+    "Large evidence placed on C drive because D drive filled; initial failed outputs and relocated archives remain identified"
+  ]
+}

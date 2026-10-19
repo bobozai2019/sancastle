@@ -56,6 +56,90 @@ var read_latency_s:=0.0
 var query_frame:=0
 var physics_delta_s:=0.0
 var held_since_frame:=-1
+var body_time_origins: Dictionary={}
+var _manipulating:=false
+var _placement_ids: Dictionary={}
+
+func world_registry() -> Array:
+	return registry.filter(func(row):return not row.body.in_inventory)
+
+func body_for_id(id: int):
+	for row in registry:
+		if row.body_id==id:return row.body
+	return null
+
+func placement_error(id: int, point: Vector2) -> StringName:
+	var body=body_for_id(id)
+	if body==null:return &"invalid_body"
+	if not point.is_finite():return &"invalid_position"
+	var margin: float=body.footprint_radius_m+0.2
+	if absf(point.x)>16.0-margin or absf(point.y)>16.0-margin:return &"out_of_domain"
+	for row in world_registry():
+		if row.body_id==id:continue
+		var other: Vector2=Vector2(row.body.global_position.x,row.body.global_position.z)
+		if point.distance_to(other)<body.footprint_radius_m+row.body.footprint_radius_m+0.05:return &"occupied"
+	return &""
+
+func manipulate_body(id: int, point: Vector2, yaw_rad: float=0.0, pickup: bool=false) -> Dictionary:
+	if closing:return _result(0,&"closing")
+	if not active or runtime.current==null:return _result(0,&"backend_failed")
+	if runtime.generation()!=generation:return _result(0,&"stale_generation")
+	if busy or holds.has(&"save") or holds.has(&"restore"):return _result(0,&"busy")
+	var body=body_for_id(id)
+	if body==null:return _result(0,&"invalid_body")
+	if not last_error.is_empty():return _result(0,last_error)
+	if pickup and body.in_inventory:return _result(0,&"already_picked_up")
+	var error: StringName=&"" if pickup else placement_error(id,point)
+	if not is_finite(yaw_rad):error=&"invalid_position"
+	if not error.is_empty():return _result(0,error)
+	if owner_token==9223372036854775807:return _result(0,&"identity_exhausted")
+	var op:=_next_operation()
+	if op==0:return _result(0,&"identity_exhausted")
+	busy=true;holds[&"interaction"]=true;_manipulating=true
+	# Keep this generation's accepted read alive until its real terminal callback.
+	# A body or pose is never removed while a previous physics grant is in flight.
+	await get_tree().physics_frame
+	_finalize_resting_steps();_hold_all()
+	var retry_at:=Time.get_ticks_msec()
+	while pending and not closing:
+		if Time.get_ticks_msec()-retry_at>=500:runtime.retry_retirement();retry_at=Time.get_ticks_msec()
+		await get_tree().physics_frame
+	if closing:
+		_manipulating=false;busy=false;holds.erase(&"interaction");return _result(op,&"closing")
+	if runtime.current==null or runtime.generation()!=generation:
+		_manipulating=false;busy=false;holds.erase(&"interaction");return _result(op,&"stale_generation")
+	if not expected_steps.is_empty() or not last_error.is_empty():
+		_manipulating=false;busy=false;holds.erase(&"interaction")
+		return _result(op,last_error if not last_error.is_empty() else &"busy")
+	# Another body may have moved before the common boundary was held.
+	if not pickup:error=placement_error(id,point)
+	if not error.is_empty():
+		_manipulating=false;busy=false;holds.erase(&"interaction");return _result(op,error)
+	owner_token+=1;sample={};latest_sample={};sample_history.clear();sample_poses={}
+	query_poses={};support_versions.clear();pending_support.clear()
+	if pickup:
+		body.set_in_inventory(true)
+		saved[id]={"linear":Vector3.ZERO,"angular":Vector3.ZERO,"sleeping":false}
+	else:
+		body.set_in_inventory(false);body.freeze=true
+		var pose: Transform3D=layout[id]
+		pose.basis=Basis(Vector3.UP,yaw_rad)*pose.basis;pose.origin=Vector3(point.x,0.0,point.y)
+		body.global_transform=pose;body.linear_velocity=Vector3.ZERO;body.angular_velocity=Vector3.ZERO
+		saved[id]={"linear":Vector3.ZERO,"angular":Vector3.ZERO,"sleeping":false}
+		body_time_origins[id]=admitted_time_s;actual_time[id]=0.0
+		_placement_ids={id:true};_initialize_height=true;_initialized_pose=false
+	_manipulating=false
+	if not pickup:error=await _wait_initial_sample()
+	if closing:
+		busy=false;holds.erase(&"interaction");return _result(op,&"closing")
+	# Hand manipulation starts a new consumer observation epoch. It neither
+	# advances authority nor creates physics catch-up debt for time spent held.
+	origin_time_s=runtime.current.advanced_time_s-admitted_time_s
+	last_sample_time_s=runtime.current.advanced_time_s
+	if not error.is_empty():last_error=error;holds[&"fault"]=true
+	_event(&"pickup" if pickup else &"place",{"body_id":id,"position":body.global_position,"owner_token":owner_token,"origin_time_s":origin_time_s,"body_time_origin_s":body_time_origins.get(id,0.0),"error":error})
+	holds.erase(&"interaction");busy=false
+	return _result(op,error)
 
 func authored_registry() -> Array:
 	var result: Array=[]
@@ -143,15 +227,17 @@ func attach(owner, rows: Array, positions: Dictionary) -> Dictionary:
 
 func _start_layout(positions: Dictionary) -> void:
 	_hold_all();sample={};sample_poses={};_initialized_pose=false;_initialize_height=true
+	_placement_ids.clear()
 	sample_history.clear();latest_sample={}
 	expected_steps.clear();expected_frames.clear();expected_resting.clear();support_versions.clear();pending_support.clear();last_observed_step_s=0.0
 	read_latency_s=0.0;query_frame=0
 	origin_time_s=runtime.current.advanced_time_s;last_sample_time_s=origin_time_s;admitted_time_s=0
 	for row in registry:
-		var body: RigidBody3D=row.body;body.global_transform=positions[row.body_id]
+		var body=row.body;body.set_in_inventory(false);body.global_transform=positions[row.body_id]
 		body.linear_velocity=Vector3.ZERO;body.angular_velocity=Vector3.ZERO
 		saved[row.body_id]={"linear":Vector3.ZERO,"angular":Vector3.ZERO,"sleeping":false}
 		actual_time[row.body_id]=0.0
+		body_time_origins[row.body_id]=0.0
 	_event(&"layout_reset",{"origin_time_s":origin_time_s})
 
 func _wait_initial_sample() -> StringName:
@@ -189,12 +275,13 @@ func _query_pose(body: RigidBody3D, data: Dictionary) -> Dictionary:
 	return {"pose":current,"lead_s":0.0}
 
 func _request_sample() -> void:
-	if pending or closing:return
+	if pending or closing or _manipulating or world_registry().is_empty():return
 	if holds.has(&"restore") and _initialized_pose:return
 	if request_id==9223372036854775807 or pose_seq==9223372036854775807:last_error=&"identity_exhausted";return
 	var points: Array=[];var footprints: Array=[];var leads:={};query_poses={}
 	query_chunks_by_body={}
-	for row in registry:
+	var world:=world_registry()
+	for row in world:
 		var body: RigidBody3D=row.body;var data: Dictionary=profiles[row.body_id]
 		var forecast:=_query_pose(body,data);var pose: Transform3D=forecast.pose
 		query_poses[row.body_id]=pose;leads[row.body_id]=forecast.lead_s
@@ -206,10 +293,10 @@ func _request_sample() -> void:
 	# packet can still be selected. This avoids mistaking a moving footprint's
 	# disappearing edge chunk for an unbounded terrain change.
 	var expanded: Array=[]
-	for index in registry.size():
-		var rect: Rect2=footprints[index];var id: int=registry[index].body_id
+	for index in world.size():
+		var rect: Rect2=footprints[index];var id: int=world[index].body_id
 		for packet in sample_history:
-			for chunk in packet.chunks[id]:rect=rect.expand(Vector2(-14.0+float(chunk%8)*4.0,-14.0+float(chunk/8)*4.0))
+			for chunk in packet.chunks.get(id,[]):rect=rect.expand(Vector2(-14.0+float(chunk%8)*4.0,-14.0+float(chunk/8)*4.0))
 		expanded.append(rect)
 	if ProbeCodec.chunks({"footprints":expanded}).size()<=12:footprints=expanded
 	var priority: Array[int]=[]
@@ -238,7 +325,8 @@ func _received(value: Dictionary) -> void:
 	if trace_enabled:_event(&"sample",{"state_seq":value.captured_state_seq,"tick":value.captured_tick,"revision":value.captured_revision,"pose_seq":value.pose_seq,"points":value.points.duplicate(true)})
 	if _initialize_height:
 		if not runtime.current.heights.footprint_ready(value.footprint_versions,generation).ready:return
-		for row in registry:
+		for row in world_registry():
+			if not _placement_ids.is_empty() and not _placement_ids.has(row.body_id):continue
 			var body: RigidBody3D=row.body;var highest:=-1e10;var highest_water:=-1e10
 			for point in value.points:
 				if point.body_id==row.body_id:highest_water=maxf(highest_water,point.eta+0.05)
@@ -249,7 +337,7 @@ func _received(value: Dictionary) -> void:
 			var bottom: float=body.global_position.y-bounds.aabb.position.y
 			highest=maxf(highest_water,bed.maximum_m+bottom+0.01)
 			var position:=body.global_position;position.y=highest;body.global_position=position
-		_initialize_height=false;sample={};sample_poses={}
+		_initialize_height=false;_placement_ids.clear();sample={};sample_poses={}
 	else:
 		_initialized_pose=true
 		sample_history.append({"value":value,"poses":sample_poses.duplicate(true),"chunks":sample_chunks_by_body.duplicate(true)})
@@ -269,7 +357,7 @@ func _wake(row: Dictionary, reason: StringName) -> void:
 	if was_sleeping:_event(&"wake",{"body_id":row.body_id,"reason":reason,"held":body.freeze})
 
 func _observe_environment() -> void:
-	for row in registry:
+	for row in world_registry():
 		var versions:={};var previous: Dictionary=support_versions.get(row.body_id,{})
 		for chunk in sample_chunks_by_body[row.body_id]:versions[chunk]=sample.footprint_versions[chunk]
 		var changed:=false
@@ -289,7 +377,7 @@ func _hold_all() -> void:
 	if changed or held_since_frame<0:held_since_frame=Engine.get_physics_frames()
 
 func _release_all() -> void:
-	for row in registry:
+	for row in world_registry():
 		var body: RigidBody3D=row.body
 		if body.freeze:
 			body.freeze=false;body.linear_velocity=saved[row.body_id].linear;body.angular_velocity=saved[row.body_id].angular;body.sleeping=saved[row.body_id].sleeping
@@ -303,7 +391,8 @@ func _reject_sample(reason: StringName, value: Dictionary, detail: Dictionary={}
 
 func _candidate_usable(value: Dictionary, poses: Dictionary) -> bool:
 	if value.is_empty() or not _initialized_pose:return false
-	for row in registry:
+	for row in world_registry():
+		if not poses.has(row.body_id):return false
 		var data: Dictionary=profiles[row.body_id];var body: RigidBody3D=row.body
 		if maxf(runtime.current.advanced_time_s,last_sample_time_s)-value.captured_time_s>data.max_sample_age_s:return _reject_sample(&"age",value,{"body_id":row.body_id})
 		var pose: Transform3D=poses[row.body_id]
@@ -363,11 +452,14 @@ func _physics_process(delta: float) -> void:
 		if not _has_current_grant():_hold_all()
 		return
 	if runtime.current==null or runtime.generation()!=generation:last_error=&"stale_generation";_hold_all();return
+	if _manipulating:_hold_all();return
+	if world_registry().is_empty():
+		origin_time_s=runtime.current.advanced_time_s-admitted_time_s;_hold_all();return
 	_request_sample()
 	var usable:=last_error.is_empty() and _select_sample()
 	if usable and not pending_support.is_empty():
 		var eligible:={}
-		for row in registry:
+		for row in world_registry():
 			if not pending_support.has(row.body_id):continue
 			if not runtime.current.heights.footprint_ready(pending_support[row.body_id],generation).ready:continue
 			eligible[row.body_id]=true
@@ -378,7 +470,7 @@ func _physics_process(delta: float) -> void:
 			# actual assigned collision snapshot, not a newer force-compatible water
 			# packet whose unrelated edge chunks may still be in flight.
 			var assigned: Dictionary=runtime.current.heights.applied_state_seq.duplicate()
-			var result: Dictionary=Contact.recovery_plan(registry,eligible,runtime.current.heights,assigned,generation)
+			var result: Dictionary=Contact.recovery_plan(world_registry(),eligible,runtime.current.heights,assigned,generation)
 			if result.error==&"support_not_ready":return
 			if not result.error.is_empty():last_error=result.error;_event(&"edit_recovery_failed",{"result":result});return
 			for row in registry:
@@ -398,12 +490,12 @@ func _physics_process(delta: float) -> void:
 			_event(&"hold",{"reason":reason,"budget_s":budget,"support":readiness,"sample_time_s":sample.get("captured_time_s",-1.0),"candidate_rejections":candidate_rejections.duplicate(true) if trace_enabled else []})
 		_hold_all();return
 	_hold_reason=&""
-	for row in registry:
+	for row in world_registry():
 		var body: RigidBody3D=row.body;var data: Dictionary=profiles[row.body_id]
 		if not _motion_within_budget(body,data):
 			last_error=&"speed_limit";_event(&"protection",{"body_id":row.body_id,"error":last_error,"linear_velocity":body.linear_velocity,"angular_velocity":body.angular_velocity});_hold_all();return
 	_release_all()
-	for row in registry:
+	for row in world_registry():
 		var body: RigidBody3D=row.body;var data: Dictionary=profiles[row.body_id]
 		if body.sleeping and _has_wet_sample(row.body_id):_wake(row,&"water_covered")
 		var resting:=body.sleeping

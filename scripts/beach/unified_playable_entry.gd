@@ -62,6 +62,7 @@ var _reported_props_error: StringName
 @onready var player_camera: Camera3D=$GpuPlayerCamera
 @onready var panel=$Interface/ShapeBrushPanel
 @onready var floating_props=get_node_or_null("FloatingProps/Service")
+@onready var props_panel=get_node_or_null("Interface/FloatingPropsPanel")
 
 func _domain_id() -> StringName:return &"main_beach" if scene_key=="main" else StringName(scene_key)
 func playable_scene_family() -> String:return SceneRoutes.family(scene_file_path,scene_key)
@@ -111,6 +112,7 @@ func _ready() -> void:
 
 func _transition(value: Dictionary) -> void:
 	if value.error.is_empty():
+		if props_panel!=null:props_panel.cancel_mode()
 		last_error=&""
 		generation=runtime.generation();input.restored();action_message="沙场已就绪";_accumulator=0.0;_last_reported_id=0
 		_sync_gravel_count()
@@ -203,6 +205,7 @@ func _apply_brush_selection(value: Dictionary) -> void:
 	selected_sand_tool=StringName(value.tool);dig_amount_m3=value.dig_amount_m3;fill_amount_m3=value.fill_amount_m3;panel.apply_selection(value)
 	_invalidate_preview()
 func _on_tool_changed(tool: StringName) -> void:
+	if props_panel!=null and props_panel.has_world_mode():props_panel.cancel_mode()
 	_finish_ui_stroke(false);selected_sand_tool=tool
 	if panel.selected_tool!=tool:
 		var profile: Dictionary=registry.profile(PlayerInput._profile_id(tool,false))
@@ -224,6 +227,10 @@ func _on_fill_amount_changed(value: float) -> void:fill_amount_m3=value
 func _on_wave_amount_changed(value: float) -> void:manual_wave_amplitude_m=value
 func _on_camera_look_started() -> void:_finish_ui_stroke(false)
 
+func _on_prop_mode_changed() -> void:
+	_finish_ui_stroke(false)
+	if props_panel!=null and props_panel.has_world_mode():$BrushIndicator.hide_indicator()
+
 func _on_trigger_wave_pressed() -> void:
 	if not ready_for_ticks:return
 	var boundary=runtime.current.boundary
@@ -238,6 +245,7 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and not event.pressed and event.button_index==MOUSE_BUTTON_LEFT:_finish_ui_stroke(false)
 
 func _unhandled_input(event: InputEvent) -> void:
+	if props_panel!=null and props_panel.handle_world_input(event):return
 	if event is InputEventKey and event.pressed and not event.echo:
 		match event.keycode:
 			KEY_SPACE:playing=not playing;_update_status();get_viewport().set_input_as_handled()

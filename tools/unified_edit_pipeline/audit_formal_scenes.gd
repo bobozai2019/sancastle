@@ -29,7 +29,7 @@ func _run() -> void:
 		var paths:={};_scripts(entry,paths)
 		var runtimes:=0;var authorized:=true
 		for script in paths.values():
-			authorized=authorized and (script in ALLOWED or (key=="main" and script in ["res://scripts/props/floating_prop.gd","res://scripts/props/floating_props_service.gd"]))
+			authorized=authorized and (script in ALLOWED or (key=="main" and script in ["res://scripts/props/floating_prop.gd","res://scripts/props/floating_props_service.gd","res://scripts/beach/floating_props_panel.gd"]))
 			if script==RUNTIME:runtimes+=1
 		check(key+"_exact_root",entry.get_script().resource_path==ENTRY and entry.get_script().get_base_script()==null and entry.scene_file_path==path)
 		check(key+"_one_scene_authored_runtime",runtimes==1 and entry.has_node("UnifiedEditRuntime"))

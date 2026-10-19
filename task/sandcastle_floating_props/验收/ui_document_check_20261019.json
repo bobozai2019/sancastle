@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-19",
+  "scope": "updated document links, generated guide check and final runtime source identity",
+  "pass": true,
+  "documents": [
+    "docs/README.md",
+    "docs/漂浮道具.md",
+    "docs/主场景操作.md",
+    "docs/当前项目技术方案.md",
+    "docs/当前技术规格.md",
+    "docs/unified-edit-extension-guide.md",
+    "task/sandcastle_floating_props/执行状态.md",
+    "task/sandcastle_floating_props/契约/C07_UI交互.md",
+    "task/sandcastle_floating_props/验收/UI_摆放与拾取_20261019.md"
+  ],
+  "missing_links": [],
+  "source_drift": [],
+  "functional_checks": 211,
+  "architecture_checks": 1633,
+  "generated_guide": {
+    "initial_check": "stale after final documentation edits; failed check retained in this record",
+    "regenerated": true,
+    "final_check": "PASS",
+    "commands": [
+      [
+        "C:\\Python313\\python.exe",
+        "-X",
+        "utf8",
+        "tools/docs/build_execution_guide.py"
+      ],
+      [
+        "C:\\Python313\\python.exe",
+        "-X",
+        "utf8",
+        "tools/docs/build_execution_guide.py",
+        "--check"
+      ]
+    ]
+  }
+}

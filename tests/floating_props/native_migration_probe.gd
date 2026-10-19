@@ -24,7 +24,7 @@ func _run() -> void:
 	check("known_source_projects_without_header_change",projected.error.is_empty() and projected.checkpoint.version==6 and projected.checkpoint.native.version==3)
 	if not projected.error.is_empty():observations.migration_error=projected.error;await _close();return
 	check("native_fields_ledgers_and_clock_preserved",projected.checkpoint.native==raw.checkpoint.native and projected.checkpoint.ledger==raw.checkpoint.ledger and projected.checkpoint.advanced_time_s==raw.checkpoint.advanced_time_s and projected.checkpoint.state_seq==raw.checkpoint.state_seq)
-	check("known_source_provenance_and_target_pinned",projected.checkpoint.configuration==scene.configuration and projected.checkpoint.source_provenance.configuration==raw.checkpoint.configuration and projected.checkpoint.source_provenance.sha256==file_hash and projected.checkpoint.source_provenance.policies.migration=="floating_props_consumer_v2")
+	check("known_source_provenance_and_target_pinned",projected.checkpoint.configuration==scene.configuration and projected.checkpoint.source_provenance.configuration==raw.checkpoint.configuration and projected.checkpoint.source_provenance.sha256==file_hash and projected.checkpoint.source_provenance.policies.migration=="floating_props_consumer_v3")
 	var unknown: Dictionary=raw.checkpoint.duplicate(true);unknown.configuration=scene.configuration.duplicate(true);unknown.configuration.environment.unreviewed_test_source=true;unknown.configuration.configuration_hash=scene.Config.stable_hash(unknown.configuration)
 	var unknown_path:=output.get_base_dir()+"/unknown.sandue"
 	check("unknown_source_fixture_is_structurally_valid",Codec.save(unknown_path,unknown,unknown.configuration).is_empty())
@@ -52,7 +52,7 @@ func _run() -> void:
 	await process_frame
 	check("migrated_current_checkpoint_can_be_saved",(await scene.save_gpu_checkpoint(save_path)).is_empty())
 	var saved:=Codec.load(save_path,scene.configuration)
-	check("migration_provenance_survives_next_save",saved.error.is_empty() and saved.checkpoint.source_provenance.policies.migration=="floating_props_consumer_v2")
+	check("migration_provenance_survives_next_save",saved.error.is_empty() and saved.checkpoint.source_provenance.policies.migration=="floating_props_consumer_v3")
 	check("archival_input_unchanged",FileAccess.get_sha256(Baseline)==file_hash and file_hash=="9c8a637e4ea9536b605201908b17484367b5c91c3522d041d5175f8160c9f38f")
 	observations.sources=scene.configuration.sources.duplicate(true);observations.provenance=projected.checkpoint.source_provenance
 	await _close()

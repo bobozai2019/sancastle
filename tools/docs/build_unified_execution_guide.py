@@ -22,7 +22,10 @@ ANCHORS=[('入口','scripts/beach/unified_playable_entry.gd','_ready'),
          ('公共道具采样',BASE+'probe_codec.gd','decode'),('碰撞差异证明',BASE+'height.gd','footprint_compatible'),
          ('道具接入','scripts/props/floating_props_service.gd','attach'),('样本准入','scripts/props/floating_props_service.gd','_candidate_usable'),
          ('通用浮力与流阻','scripts/props/floating_props_service.gd','_apply_forces'),('恢复重置','scripts/props/floating_props_service.gd','reset'),
-         ('道具安全关闭','scripts/props/floating_props_service.gd','shutdown'),('精确旧来源投影',BASE+'consumer_checkpoint_sources.gd','project')]
+         ('道具安全关闭','scripts/props/floating_props_service.gd','shutdown'),
+         ('UI投放与拾取','scripts/beach/floating_props_panel.gd','perform_action'),
+         ('操作物理边界','scripts/props/floating_props_service.gd','manipulate_body'),
+         ('精确旧来源投影',BASE+'consumer_checkpoint_sources.gd','project')]
 def sha(raw):return hashlib.sha256(raw).hexdigest()
 def build(preview_final=False):
     sources={};anchors=[]
@@ -40,7 +43,7 @@ def build(preview_final=False):
         sources[path]=sha((ROOT/path).read_bytes())
     for key in ['main','test1_capture','test1_backwash','test1_geometry']:
         path='assets/unified_edit/presentation/'+key+'.json';sources[path]=sha((ROOT/path).read_bytes())
-    for path in ['scenes/components/floating_props.tscn','scripts/props/floating_prop.gd','scripts/props/floating_prop_profile.gd','scripts/props/floating_prop_contact.gd','docs/漂浮道具.md','task/sandcastle_floating_props/契约/probe_ABI_v3.json','task/sandcastle_floating_props/契约/height_snapshot_ABI_v3.json']:
+    for path in ['scenes/components/floating_props.tscn','scenes/components/floating_props_panel.tscn','scripts/props/floating_prop.gd','scripts/props/floating_prop_profile.gd','scripts/props/floating_prop_contact.gd','docs/漂浮道具.md','task/sandcastle_floating_props/契约/probe_ABI_v3.json','task/sandcastle_floating_props/契约/height_snapshot_ABI_v3.json','task/sandcastle_floating_props/契约/C07_UI交互.md']:
         sources[path]=sha((ROOT/path).read_bytes())
     for name in ['bottle','wood_plank','wood_stick']:
         for path in ['scenes/props/'+name+'.tscn','assets/props/'+name+'_profile.tres']:sources[path]=sha((ROOT/path).read_bytes())
@@ -61,7 +64,7 @@ def build(preview_final=False):
 <h2>权威状态与读者边界</h2><table><tr><th>边界</th><th>实际职责</th></tr><tr><td>编辑执行器</td><td>只在公共决定允许时提交沙/材料等字段；拒绝保留原场。</td></tr><tr><td>水响应 / 水tick</td><td>前者共享编辑事务决定，后者拥有明确的水/侵蚀/材料子步；实际时钟由GPU完成态推进。</td></tr><tr><td>预览 / 表现 / 碰撞</td><td>读取同generation完整完成态。编辑无需等待CPU通知或碰撞收敛；消费者各自保留资源租约。</td></tr><tr><td>native保存 / 恢复</td><td>SANDUE06容器保留有效配置和原始资源字节。候选还是同一种Pipeline；完整64块新代物理槽准备后才切换。</td></tr><tr><td>关闭 / unknown</td><td>先关闭接纳，等待真实终结与最后读者证明。unknown不重放，不伪造GPU结果，不强制free未知所有权。</td></tr></table>
 <h2>配置新增玩法</h2><p>新增ToolProfile资源，使用既有operation、shape、材料/水策略、数值范围和受限模板。注册表校验精确script类型并复制冻结数据；profile不得携带执行Callable、自选shader或调度器。</p><p>G7的宽填沙、阶梯模板和宽槽搬运通过23例GPU验证与全部已声明能力组合。核心51文件hash不变，三种配置在同一Runtime完成碰撞、原生恢复和继续编辑。完整步骤见<a href="unified-edit-extension-guide.md">扩展指南</a>。</p>
 <h2>当前方案与规格</h2><p><a href="当前项目技术方案.md">技术方案</a>说明模块协作、模拟、表现和生命周期；<a href="当前技术规格.md">技术规格</a>列出域、字段、ABI、容量、账本、兼容与验证边界。<a href="主场景操作.md">操作说明</a>和<a href="场景切换与功能复用.md">场景说明</a>对应当前四入口。</p>
-<h2>main漂浮道具</h2><p>场景预存水瓶、木板、木棍各一件。公共只读Probe → 完成态水/床/流速 → 类型化Profile逐点浮力和相对流阻 → 原生Jolt。实际state.step消耗完成水时间余额；局部保持不阻塞生产。Height ABI3用完整共享顶点上界证明5mm总床面差，未知或超限时保持道具。暂停/保存保持，成功恢复或重进重置，检查点不保存道具姿态。三个test1不投放。</p><p><a href="漂浮道具.md">机制与扩展</a> · <a href="../task/sandcastle_floating_props/验收/README.md">道具功能与成本验收</a>；原统一流程G8成本不自动覆盖新增负载。</p><h2>复验与证据</h2><p>当前验收入口：<a href="../task/sandcastle_unified_edit_pipeline/验收/README.md">任务验收索引</a>。功能、架构、阶段成本、整帧成本与长稳分别判定；导出日志成功不代替这些结论。失败与未知记录保留在原始输出目录。</p><p class="muted">旧HTML、来源索引和生成器的原字节保存在任务验收g8_previous_guide目录；旧任务和竞品报告不因本页更新而改写。</p>
+<h2>main漂浮道具</h2><p>场景预存水瓶、木板、木棍各一件，右下角三槽UI选择后左键摆放/移动；拾取模式将实例收入槽位，[ / ]旋转，右键/Esc取消。固定容量3件，全部拾取后不提交空探针。交互在公共读者真实终结后换owner，重新采样目标位置并建立新观察起点，未操作物体保留运动状态。公共只读Probe → 完成态水/床/流速 → 类型化Profile逐点浮力和相对流阻 → 原生Jolt。实际state.step消耗完成水时间余额；局部保持不阻塞生产。Height ABI3用完整共享顶点上界证明5mm总床面差，未知或超限时保持道具。暂停/保存保持，成功恢复或重进重置，检查点不保存道具姿态。三个test1不投放。</p><p><a href="漂浮道具.md">机制与扩展</a> · <a href="../task/sandcastle_floating_props/验收/README.md">道具功能与成本验收</a>；原统一流程G8成本不自动覆盖新增负载。</p><h2>复验与证据</h2><p>当前验收入口：<a href="../task/sandcastle_unified_edit_pipeline/验收/README.md">任务验收索引</a>。功能、架构、阶段成本、整帧成本与长稳分别判定；导出日志成功不代替这些结论。失败与未知记录保留在原始输出目录。</p><p class="muted">旧HTML、来源索引和生成器的原字节保存在任务验收g8_previous_guide目录；旧任务和竞品报告不因本页更新而改写。</p>
 <h2>当前源码锚点</h2><p class="muted">以下摘录、行号与SHA256直接来自生成时文件，可用build_execution_guide.py --check核对。</p>CARDS
 <script>const op=document.getElementById('operation'),water=document.getElementById('water');function draw(){const base=[0,1,2,3];let v=op.value==='transfer'?base.concat([9,4,2,3,10,4,11,4]):base.concat([4]);v=v.concat([12,5,6,7,8]);document.getElementById('phases').replaceChildren(...v.map(n=>{let e=document.createElement('span');e.className='phase'+(n===7?' commit':'');e.textContent=String(n)+(n===7?' · 条件提交':'');return e}));document.getElementById('stroke').textContent=op.value==='volume'?'无固定笔画基准；按体积候选处理。':'公共BEGIN → sample序列 → END；固定基准与累计coverage由域持有。';document.getElementById('response').textContent=water.value==='0'?'水响应关闭，水/悬沙/动量不因该编辑被改写。':'公共水阶段：prepare → '+(water.value==='2'?'velocity_only':'packed')+' → displace → velocity → velocity_reduce → audit_blocks → audit_merge；与同一决定提交。'}op.addEventListener('change',draw);water.addEventListener('change',draw);draw();</script></html>'''
     content=content.replace('STATUS',html.escape(status)).replace('CARDS','\n'.join(cards))

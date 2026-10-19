@@ -7,17 +7,17 @@
 <h2>权威状态与读者边界</h2><table><tr><th>边界</th><th>实际职责</th></tr><tr><td>编辑执行器</td><td>只在公共决定允许时提交沙/材料等字段；拒绝保留原场。</td></tr><tr><td>水响应 / 水tick</td><td>前者共享编辑事务决定，后者拥有明确的水/侵蚀/材料子步；实际时钟由GPU完成态推进。</td></tr><tr><td>预览 / 表现 / 碰撞</td><td>读取同generation完整完成态。编辑无需等待CPU通知或碰撞收敛；消费者各自保留资源租约。</td></tr><tr><td>native保存 / 恢复</td><td>SANDUE06容器保留有效配置和原始资源字节。候选还是同一种Pipeline；完整64块新代物理槽准备后才切换。</td></tr><tr><td>关闭 / unknown</td><td>先关闭接纳，等待真实终结与最后读者证明。unknown不重放，不伪造GPU结果，不强制free未知所有权。</td></tr></table>
 <h2>配置新增玩法</h2><p>新增ToolProfile资源，使用既有operation、shape、材料/水策略、数值范围和受限模板。注册表校验精确script类型并复制冻结数据；profile不得携带执行Callable、自选shader或调度器。</p><p>G7的宽填沙、阶梯模板和宽槽搬运通过23例GPU验证与全部已声明能力组合。核心51文件hash不变，三种配置在同一Runtime完成碰撞、原生恢复和继续编辑。完整步骤见<a href="unified-edit-extension-guide.md">扩展指南</a>。</p>
 <h2>当前方案与规格</h2><p><a href="当前项目技术方案.md">技术方案</a>说明模块协作、模拟、表现和生命周期；<a href="当前技术规格.md">技术规格</a>列出域、字段、ABI、容量、账本、兼容与验证边界。<a href="主场景操作.md">操作说明</a>和<a href="场景切换与功能复用.md">场景说明</a>对应当前四入口。</p>
-<h2>main漂浮道具</h2><p>场景预存水瓶、木板、木棍各一件。公共只读Probe → 完成态水/床/流速 → 类型化Profile逐点浮力和相对流阻 → 原生Jolt。实际state.step消耗完成水时间余额；局部保持不阻塞生产。Height ABI3用完整共享顶点上界证明5mm总床面差，未知或超限时保持道具。暂停/保存保持，成功恢复或重进重置，检查点不保存道具姿态。三个test1不投放。</p><p><a href="漂浮道具.md">机制与扩展</a> · <a href="../task/sandcastle_floating_props/验收/README.md">道具功能与成本验收</a>；原统一流程G8成本不自动覆盖新增负载。</p><h2>复验与证据</h2><p>当前验收入口：<a href="../task/sandcastle_unified_edit_pipeline/验收/README.md">任务验收索引</a>。功能、架构、阶段成本、整帧成本与长稳分别判定；导出日志成功不代替这些结论。失败与未知记录保留在原始输出目录。</p><p class="muted">旧HTML、来源索引和生成器的原字节保存在任务验收g8_previous_guide目录；旧任务和竞品报告不因本页更新而改写。</p>
-<h2>当前源码锚点</h2><p class="muted">以下摘录、行号与SHA256直接来自生成时文件，可用build_execution_guide.py --check核对。</p><details><summary>入口 · scripts/beach/unified_playable_entry.gd:70</summary><p class="hash">SHA256 d9160d47d952ceb2aae10f57803e278cfcb4ef583e03c3317b348dce0afe482a</p><pre>  70 func _ready() -&gt; void:
-  71 	get_tree().auto_accept_quit=false
-  72 	$GravelLayer.visible=false
-  73 	var read:=Presentation.read(presentation_manifest)
-  74 	if not read.error.is_empty():_fail(read.error);return
-  75 	var data: Dictionary=read.metadata
-  76 	if data.settings.scene_key!=scene_key:_fail(&amp;&quot;presentation_scene_mismatch&quot;);return
-  77 	var plan:=Presentation.material_plan(self,data,get_script())
-  78 	if not plan.error.is_empty():_fail(plan.error);return
-  79 	material_bindings=plan.bindings</pre></details>
+<h2>main漂浮道具</h2><p>场景预存水瓶、木板、木棍各一件，右下角三槽UI选择后左键摆放/移动；拾取模式将实例收入槽位，[ / ]旋转，右键/Esc取消。固定容量3件，全部拾取后不提交空探针。交互在公共读者真实终结后换owner，重新采样目标位置并建立新观察起点，未操作物体保留运动状态。公共只读Probe → 完成态水/床/流速 → 类型化Profile逐点浮力和相对流阻 → 原生Jolt。实际state.step消耗完成水时间余额；局部保持不阻塞生产。Height ABI3用完整共享顶点上界证明5mm总床面差，未知或超限时保持道具。暂停/保存保持，成功恢复或重进重置，检查点不保存道具姿态。三个test1不投放。</p><p><a href="漂浮道具.md">机制与扩展</a> · <a href="../task/sandcastle_floating_props/验收/README.md">道具功能与成本验收</a>；原统一流程G8成本不自动覆盖新增负载。</p><h2>复验与证据</h2><p>当前验收入口：<a href="../task/sandcastle_unified_edit_pipeline/验收/README.md">任务验收索引</a>。功能、架构、阶段成本、整帧成本与长稳分别判定；导出日志成功不代替这些结论。失败与未知记录保留在原始输出目录。</p><p class="muted">旧HTML、来源索引和生成器的原字节保存在任务验收g8_previous_guide目录；旧任务和竞品报告不因本页更新而改写。</p>
+<h2>当前源码锚点</h2><p class="muted">以下摘录、行号与SHA256直接来自生成时文件，可用build_execution_guide.py --check核对。</p><details><summary>入口 · scripts/beach/unified_playable_entry.gd:71</summary><p class="hash">SHA256 5e1bd7d6d4ff12fa1833e8e1568fd7564757598c273eca04bbfa4cd5db3574ce</p><pre>  71 func _ready() -&gt; void:
+  72 	get_tree().auto_accept_quit=false
+  73 	$GravelLayer.visible=false
+  74 	var read:=Presentation.read(presentation_manifest)
+  75 	if not read.error.is_empty():_fail(read.error);return
+  76 	var data: Dictionary=read.metadata
+  77 	if data.settings.scene_key!=scene_key:_fail(&amp;&quot;presentation_scene_mismatch&quot;);return
+  78 	var plan:=Presentation.material_plan(self,data,get_script())
+  79 	if not plan.error.is_empty():_fail(plan.error);return
+  80 	material_bindings=plan.bindings</pre></details>
 <details><summary>声明 · scripts/simulation/unified_edit/player_input.gd:25</summary><p class="hash">SHA256 e368b682c09d8ecbb7b1424c876b5606662eefb331ee1c7c90bf729a42da5f35</p><pre>  25 func begin(tool: StringName, point: Vector2, parameters: Dictionary, amount: float, policy: int, speed: float) -&gt; Dictionary:
   26 	if not gesture.is_empty():return {&quot;accepted&quot;:false,&quot;error&quot;:&amp;&quot;stroke_busy&quot;}
   27 	if tool==&amp;&quot;gravel_drop&quot;:
@@ -213,64 +213,84 @@
  239 		if applied&gt;=required[chunk]:continue
  240 		var upper: float=applied_change_bounds.get(chunk,-1.0);var lower:=Codec.lower_change_bound(upper);var newer: float=bounds.get(chunk,-1.0)
  241 		if lower&lt;0.0 or newer&lt;0.0 or newer&lt;lower or newer-lower&gt;tolerance_m:return {&quot;ready&quot;:false,&quot;error&quot;:&amp;&quot;support_change_bound&quot;}</pre></details>
-<details><summary>道具接入 · scripts/props/floating_props_service.gd:118</summary><p class="hash">SHA256 3f727ad8d9d07c2aa81ec657c24488633c3074586593d2b27fe522bd42c68e49</p><pre> 118 func attach(owner, rows: Array, positions: Dictionary) -&gt; Dictionary:
- 119 	if closing:return _result(0,&amp;&quot;closing&quot;)
- 120 	if busy or active:return _result(0,&amp;&quot;busy&quot;)
- 121 	var error:=_validate(rows,positions)
- 122 	if not error.is_empty():return _result(0,error)
- 123 	if owner==null or not owner.ready_for_input():return _result(0,&amp;&quot;backend_failed&quot;)
- 124 	var id:=_next_operation()
- 125 	if id==0:return _result(0,&amp;&quot;identity_exhausted&quot;)
- 126 	busy=true
- 127 	runtime=owner;registry=rows.duplicate();layout=positions.duplicate(true)</pre></details>
-<details><summary>样本准入 · scripts/props/floating_props_service.gd:304</summary><p class="hash">SHA256 3f727ad8d9d07c2aa81ec657c24488633c3074586593d2b27fe522bd42c68e49</p><pre> 304 func _candidate_usable(value: Dictionary, poses: Dictionary) -&gt; bool:
- 305 	if value.is_empty() or not _initialized_pose:return false
- 306 	for row in registry:
- 307 		var data: Dictionary=profiles[row.body_id];var body: RigidBody3D=row.body
- 308 		if maxf(runtime.current.advanced_time_s,last_sample_time_s)-value.captured_time_s&gt;data.max_sample_age_s:return _reject_sample(&amp;&quot;age&quot;,value,{&quot;body_id&quot;:row.body_id})
- 309 		var pose: Transform3D=poses[row.body_id]
- 310 		if body.global_position.distance_to(pose.origin)&gt;data.max_pose_distance_m:return _reject_sample(&amp;&quot;root_distance&quot;,value,{&quot;body_id&quot;:row.body_id})
- 311 		if _orientation_error(data,body.global_basis,pose.basis)&gt;data.max_pose_angle_rad:return _reject_sample(&amp;&quot;cloud_angle&quot;,value,{&quot;body_id&quot;:row.body_id})
- 312 		# Query data observes the sampling cloud, not invisible axial twist of a
- 313 		# collinear cloud. Point displacement also bounds translation+rotation</pre></details>
-<details><summary>通用浮力与流阻 · scripts/props/floating_props_service.gd:416</summary><p class="hash">SHA256 3f727ad8d9d07c2aa81ec657c24488633c3074586593d2b27fe522bd42c68e49</p><pre> 416 func _apply_forces(body: RigidBody3D, data: Dictionary) -&gt; void:
- 417 	var gravity: float=ProjectSettings.get_setting(&quot;physics/3d/default_gravity&quot;,9.8)
- 418 	var center: Vector3=body.to_global(data.center_of_mass_m)
- 419 	for point in sample.points:
- 420 		if point.body_id!=body.body_id:continue
- 421 		var config: Dictionary=data.points[point.point_id-1];var position:=body.to_global(config.local_position_m)
- 422 		var half: float=config.half_height_m
- 423 		var wet: bool=point.h&gt;ProbeCodec.DRY_DEPTH_M
- 424 		var fraction:=clampf((minf(position.y+half,point.eta)-maxf(position.y-half,point.bed))/(2.0*half),0,1) if wet else 0.0
- 425 		var velocity:=body.linear_velocity+body.angular_velocity.cross(position-center)</pre></details>
-<details><summary>恢复重置 · scripts/props/floating_props_service.gd:494</summary><p class="hash">SHA256 3f727ad8d9d07c2aa81ec657c24488633c3074586593d2b27fe522bd42c68e49</p><pre> 494 func reset(positions: Dictionary, domain: StringName, epoch: int) -&gt; Dictionary:
- 495 	if closing:return _result(0,&amp;&quot;closing&quot;)
- 496 	if busy or pending:return _result(0,&amp;&quot;busy&quot;)
- 497 	if runtime.current==null or runtime.generation()!=epoch or String(runtime.configuration.domain_id)!=String(domain):return _result(0,&amp;&quot;stale_generation&quot;)
- 498 	_finalize_resting_steps()
- 499 	if not expected_steps.is_empty():return _result(0,&amp;&quot;busy&quot;)
- 500 	var error:=_validate(registry,positions)
- 501 	if not error.is_empty():return _result(0,error)
- 502 	if owner_token==9223372036854775807:return _result(0,&amp;&quot;identity_exhausted&quot;)
- 503 	var id:=_next_operation()</pre></details>
-<details><summary>道具安全关闭 · scripts/props/floating_props_service.gd:514</summary><p class="hash">SHA256 3f727ad8d9d07c2aa81ec657c24488633c3074586593d2b27fe522bd42c68e49</p><pre> 514 func shutdown() -&gt; Dictionary:
- 515 	if closed:return _result(operation_id,&amp;&quot;&quot;)
- 516 	if closing:
- 517 		while not closed:await get_tree().physics_frame
- 518 		return _result(operation_id,&amp;&quot;&quot;)
- 519 	# Shutdown must still retire leases when the diagnostic operation counter is
- 520 	# exhausted. Reuse its final identity instead of overflowing signed int64.
- 521 	closing=true;var id:=_next_operation(true)
- 522 	if id==0:id=operation_id
- 523 	if not _has_current_grant():_hold_all()</pre></details>
-<details><summary>精确旧来源投影 · scripts/simulation/unified_edit/consumer_checkpoint_sources.gd:22</summary><p class="hash">SHA256 463f0486aad144ed8e982ff4dc84d3ec8c0171cdff9116cf4769285f6365e072</p><pre>  22 static func project(value: Dictionary, target: Dictionary, path: String) -&gt; Dictionary:
+<details><summary>道具接入 · scripts/props/floating_props_service.gd:202</summary><p class="hash">SHA256 1552a5e386bba23c4723f0f38928431e172857e892aea6d6c5521ef53c0ab08e</p><pre> 202 func attach(owner, rows: Array, positions: Dictionary) -&gt; Dictionary:
+ 203 	if closing:return _result(0,&amp;&quot;closing&quot;)
+ 204 	if busy or active:return _result(0,&amp;&quot;busy&quot;)
+ 205 	var error:=_validate(rows,positions)
+ 206 	if not error.is_empty():return _result(0,error)
+ 207 	if owner==null or not owner.ready_for_input():return _result(0,&amp;&quot;backend_failed&quot;)
+ 208 	var id:=_next_operation()
+ 209 	if id==0:return _result(0,&amp;&quot;identity_exhausted&quot;)
+ 210 	busy=true
+ 211 	runtime=owner;registry=rows.duplicate();layout=positions.duplicate(true)</pre></details>
+<details><summary>样本准入 · scripts/props/floating_props_service.gd:392</summary><p class="hash">SHA256 1552a5e386bba23c4723f0f38928431e172857e892aea6d6c5521ef53c0ab08e</p><pre> 392 func _candidate_usable(value: Dictionary, poses: Dictionary) -&gt; bool:
+ 393 	if value.is_empty() or not _initialized_pose:return false
+ 394 	for row in world_registry():
+ 395 		if not poses.has(row.body_id):return false
+ 396 		var data: Dictionary=profiles[row.body_id];var body: RigidBody3D=row.body
+ 397 		if maxf(runtime.current.advanced_time_s,last_sample_time_s)-value.captured_time_s&gt;data.max_sample_age_s:return _reject_sample(&amp;&quot;age&quot;,value,{&quot;body_id&quot;:row.body_id})
+ 398 		var pose: Transform3D=poses[row.body_id]
+ 399 		if body.global_position.distance_to(pose.origin)&gt;data.max_pose_distance_m:return _reject_sample(&amp;&quot;root_distance&quot;,value,{&quot;body_id&quot;:row.body_id})
+ 400 		if _orientation_error(data,body.global_basis,pose.basis)&gt;data.max_pose_angle_rad:return _reject_sample(&amp;&quot;cloud_angle&quot;,value,{&quot;body_id&quot;:row.body_id})
+ 401 		# Query data observes the sampling cloud, not invisible axial twist of a</pre></details>
+<details><summary>通用浮力与流阻 · scripts/props/floating_props_service.gd:508</summary><p class="hash">SHA256 1552a5e386bba23c4723f0f38928431e172857e892aea6d6c5521ef53c0ab08e</p><pre> 508 func _apply_forces(body: RigidBody3D, data: Dictionary) -&gt; void:
+ 509 	var gravity: float=ProjectSettings.get_setting(&quot;physics/3d/default_gravity&quot;,9.8)
+ 510 	var center: Vector3=body.to_global(data.center_of_mass_m)
+ 511 	for point in sample.points:
+ 512 		if point.body_id!=body.body_id:continue
+ 513 		var config: Dictionary=data.points[point.point_id-1];var position:=body.to_global(config.local_position_m)
+ 514 		var half: float=config.half_height_m
+ 515 		var wet: bool=point.h&gt;ProbeCodec.DRY_DEPTH_M
+ 516 		var fraction:=clampf((minf(position.y+half,point.eta)-maxf(position.y-half,point.bed))/(2.0*half),0,1) if wet else 0.0
+ 517 		var velocity:=body.linear_velocity+body.angular_velocity.cross(position-center)</pre></details>
+<details><summary>恢复重置 · scripts/props/floating_props_service.gd:586</summary><p class="hash">SHA256 1552a5e386bba23c4723f0f38928431e172857e892aea6d6c5521ef53c0ab08e</p><pre> 586 func reset(positions: Dictionary, domain: StringName, epoch: int) -&gt; Dictionary:
+ 587 	if closing:return _result(0,&amp;&quot;closing&quot;)
+ 588 	if busy or pending:return _result(0,&amp;&quot;busy&quot;)
+ 589 	if runtime.current==null or runtime.generation()!=epoch or String(runtime.configuration.domain_id)!=String(domain):return _result(0,&amp;&quot;stale_generation&quot;)
+ 590 	_finalize_resting_steps()
+ 591 	if not expected_steps.is_empty():return _result(0,&amp;&quot;busy&quot;)
+ 592 	var error:=_validate(registry,positions)
+ 593 	if not error.is_empty():return _result(0,error)
+ 594 	if owner_token==9223372036854775807:return _result(0,&amp;&quot;identity_exhausted&quot;)
+ 595 	var id:=_next_operation()</pre></details>
+<details><summary>道具安全关闭 · scripts/props/floating_props_service.gd:606</summary><p class="hash">SHA256 1552a5e386bba23c4723f0f38928431e172857e892aea6d6c5521ef53c0ab08e</p><pre> 606 func shutdown() -&gt; Dictionary:
+ 607 	if closed:return _result(operation_id,&amp;&quot;&quot;)
+ 608 	if closing:
+ 609 		while not closed:await get_tree().physics_frame
+ 610 		return _result(operation_id,&amp;&quot;&quot;)
+ 611 	# Shutdown must still retire leases when the diagnostic operation counter is
+ 612 	# exhausted. Reuse its final identity instead of overflowing signed int64.
+ 613 	closing=true;var id:=_next_operation(true)
+ 614 	if id==0:id=operation_id
+ 615 	if not _has_current_grant():_hold_all()</pre></details>
+<details><summary>UI投放与拾取 · scripts/beach/floating_props_panel.gd:136</summary><p class="hash">SHA256 a095db4e55fad1dc78d5f7746830fd632a72d103e76cc23dcf16386e3df2feb4</p><pre> 136 func perform_action(id: int, point: Vector2, pickup: bool) -&gt; Dictionary:
+ 137 	if working:return {&quot;error&quot;:&amp;&quot;busy&quot;}
+ 138 	if not beach.ready_for_ticks or beach.closing or beach._saving or beach._restoring or beach._booting:return {&quot;error&quot;:&amp;&quot;transition_busy&quot;}
+ 139 	working=true;marker.hide()
+ 140 	last_result=await beach.floating_props.manipulate_body(id,point,yaw_rad,pickup)
+ 141 	working=false
+ 142 	if last_result.error.is_empty():
+ 143 		message=&quot;%s已拾取，可从槽位重新投放&quot;%NAMES[id] if pickup else &quot;%s已摆放，可继续选择位置移动&quot;%NAMES[id]
+ 144 	else:_show_error(last_result.error)
+ 145 	return last_result</pre></details>
+<details><summary>操作物理边界 · scripts/props/floating_props_service.gd:83</summary><p class="hash">SHA256 1552a5e386bba23c4723f0f38928431e172857e892aea6d6c5521ef53c0ab08e</p><pre>  83 func manipulate_body(id: int, point: Vector2, yaw_rad: float=0.0, pickup: bool=false) -&gt; Dictionary:
+  84 	if closing:return _result(0,&amp;&quot;closing&quot;)
+  85 	if not active or runtime.current==null:return _result(0,&amp;&quot;backend_failed&quot;)
+  86 	if runtime.generation()!=generation:return _result(0,&amp;&quot;stale_generation&quot;)
+  87 	if busy or holds.has(&amp;&quot;save&quot;) or holds.has(&amp;&quot;restore&quot;):return _result(0,&amp;&quot;busy&quot;)
+  88 	var body=body_for_id(id)
+  89 	if body==null:return _result(0,&amp;&quot;invalid_body&quot;)
+  90 	if not last_error.is_empty():return _result(0,last_error)
+  91 	if pickup and body.in_inventory:return _result(0,&amp;&quot;already_picked_up&quot;)
+  92 	var error: StringName=&amp;&quot;&quot; if pickup else placement_error(id,point)</pre></details>
+<details><summary>精确旧来源投影 · scripts/simulation/unified_edit/consumer_checkpoint_sources.gd:22</summary><p class="hash">SHA256 8360687b6ade3e4b29903b36b3462c32f83805d69bd7e069ca97a437d102fc91</p><pre>  22 static func project(value: Dictionary, target: Dictionary, path: String) -&gt; Dictionary:
   23 	if not FileAccess.file_exists(CATALOG) or FileAccess.get_sha256(CATALOG)!=CATALOG_SHA256:return {&quot;error&quot;:&amp;&quot;consumer_source_catalog_identity_mismatch&quot;}
   24 	var bytes:=FileAccess.get_file_as_bytes(CATALOG)
   25 	if bytes.is_empty() or bytes.size()&gt;1048576:return {&quot;error&quot;:&amp;&quot;invalid_consumer_source_catalog&quot;}
   26 	var catalog: Variant=bytes_to_var(bytes)
-  27 	if not Config.exact(catalog,[&quot;schema&quot;,&quot;id&quot;,&quot;source_configuration&quot;,&quot;fixture&quot;,&quot;target_sources&quot;,&quot;target_parameters&quot;,&quot;review&quot;]) or catalog.schema!=2 or catalog.id!=&quot;floating_props_consumer_v2&quot; or not catalog.source_configuration is Dictionary or not catalog.target_sources is Dictionary:return {&quot;error&quot;:&amp;&quot;invalid_consumer_source_catalog&quot;}
-  28 	if value.get(&quot;configuration&quot;,{}).get(&quot;configuration_hash&quot;)!=catalog.source_configuration.get(&quot;configuration_hash&quot;):return {&quot;error&quot;:&amp;&quot;unknown_native_source_configuration&quot;}
-  29 	if value.configuration!=catalog.source_configuration:return {&quot;error&quot;:&amp;&quot;unknown_native_source_configuration&quot;}
-  30 	# The source disk is archival, so validate its known configuration and ALL
-  31 	# native fields/counters/ledger/provenance without comparing to today&#x27;s disk.</pre></details>
+  27 	if not Config.exact(catalog,[&quot;schema&quot;,&quot;id&quot;,&quot;source_configuration&quot;,&quot;fixture&quot;,&quot;additional_sources&quot;,&quot;target_sources&quot;,&quot;target_parameters&quot;,&quot;review&quot;]) or catalog.schema!=3 or catalog.id!=&quot;floating_props_consumer_v3&quot; or not catalog.source_configuration is Dictionary or not catalog.target_sources is Dictionary or not catalog.additional_sources is Array or catalog.additional_sources.size()&gt;4:return {&quot;error&quot;:&amp;&quot;invalid_consumer_source_catalog&quot;}
+  28 	var trusted_fixture: Dictionary={}
+  29 	var known: Array=[{&quot;configuration&quot;:catalog.source_configuration,&quot;fixture&quot;:catalog.fixture}]+catalog.additional_sources
+  30 	for source in known:
+  31 		if not source is Dictionary or not Config.exact(source,[&quot;configuration&quot;,&quot;fixture&quot;]) or not source.configuration is Dictionary or not source.fixture is Dictionary:return {&quot;error&quot;:&amp;&quot;invalid_consumer_source_catalog&quot;}</pre></details>
 <script>const op=document.getElementById('operation'),water=document.getElementById('water');function draw(){const base=[0,1,2,3];let v=op.value==='transfer'?base.concat([9,4,2,3,10,4,11,4]):base.concat([4]);v=v.concat([12,5,6,7,8]);document.getElementById('phases').replaceChildren(...v.map(n=>{let e=document.createElement('span');e.className='phase'+(n===7?' commit':'');e.textContent=String(n)+(n===7?' · 条件提交':'');return e}));document.getElementById('stroke').textContent=op.value==='volume'?'无固定笔画基准；按体积候选处理。':'公共BEGIN → sample序列 → END；固定基准与累计coverage由域持有。';document.getElementById('response').textContent=water.value==='0'?'水响应关闭，水/悬沙/动量不因该编辑被改写。':'公共水阶段：prepare → '+(water.value==='2'?'velocity_only':'packed')+' → displace → velocity → velocity_reduce → audit_blocks → audit_merge；与同一决定提交。'}op.addEventListener('change',draw);water.addEventListener('change',draw);draw();</script></html>

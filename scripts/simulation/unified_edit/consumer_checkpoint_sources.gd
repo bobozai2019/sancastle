@@ -7,7 +7,7 @@ const Codec=preload("res://scripts/simulation/unified_edit/checkpoint_codec.gd")
 const Config=preload("res://scripts/simulation/unified_edit/configuration.gd")
 const SELF="res://scripts/simulation/unified_edit/consumer_checkpoint_sources.gd"
 const CATALOG="res://assets/unified_edit/floating_props_source_catalog.variant"
-const CATALOG_SHA256="ee2c2b862101110c323e0280bb2b97a2a2e345dddbfb3b08a4d7ee61b84c9991"
+const CATALOG_SHA256="0456f9a90bb90bd98fbb131058bbf18f1e7b7c0a28e06ba3d50f729ae42eb299"
 const SOURCES=[SELF,CATALOG]
 
 static func parameters(configuration: Dictionary) -> Dictionary:
@@ -24,9 +24,13 @@ static func project(value: Dictionary, target: Dictionary, path: String) -> Dict
 	var bytes:=FileAccess.get_file_as_bytes(CATALOG)
 	if bytes.is_empty() or bytes.size()>1048576:return {"error":&"invalid_consumer_source_catalog"}
 	var catalog: Variant=bytes_to_var(bytes)
-	if not Config.exact(catalog,["schema","id","source_configuration","fixture","target_sources","target_parameters","review"]) or catalog.schema!=2 or catalog.id!="floating_props_consumer_v2" or not catalog.source_configuration is Dictionary or not catalog.target_sources is Dictionary:return {"error":&"invalid_consumer_source_catalog"}
-	if value.get("configuration",{}).get("configuration_hash")!=catalog.source_configuration.get("configuration_hash"):return {"error":&"unknown_native_source_configuration"}
-	if value.configuration!=catalog.source_configuration:return {"error":&"unknown_native_source_configuration"}
+	if not Config.exact(catalog,["schema","id","source_configuration","fixture","additional_sources","target_sources","target_parameters","review"]) or catalog.schema!=3 or catalog.id!="floating_props_consumer_v3" or not catalog.source_configuration is Dictionary or not catalog.target_sources is Dictionary or not catalog.additional_sources is Array or catalog.additional_sources.size()>4:return {"error":&"invalid_consumer_source_catalog"}
+	var trusted_fixture: Dictionary={}
+	var known: Array=[{"configuration":catalog.source_configuration,"fixture":catalog.fixture}]+catalog.additional_sources
+	for source in known:
+		if not source is Dictionary or not Config.exact(source,["configuration","fixture"]) or not source.configuration is Dictionary or not source.fixture is Dictionary:return {"error":&"invalid_consumer_source_catalog"}
+		if value.get("configuration",{}).get("configuration_hash")==source.configuration.get("configuration_hash") and value.configuration==source.configuration:trusted_fixture=source.fixture
+	if trusted_fixture.is_empty():return {"error":&"unknown_native_source_configuration"}
 	# The source disk is archival, so validate its known configuration and ALL
 	# native fields/counters/ledger/provenance without comparing to today's disk.
 	# Historical schema1 hashed mixed String/StringName keys using Variant sort,
@@ -45,6 +49,6 @@ static func project(value: Dictionary, target: Dictionary, path: String) -> Dict
 	if target_sources!=catalog.target_sources or parameters(target)!=catalog.target_parameters or parameters(value.configuration)!=catalog.target_parameters:return {"error":&"unreviewed_consumer_target_configuration"}
 	var result:=value.duplicate(true)
 	result.configuration=target.duplicate(true)
-	result.source_provenance={"format":"native_v6","path":path,"sha256":FileAccess.get_sha256(path),"configuration":value.configuration.duplicate(true),"trusted_fixture":catalog.fixture.duplicate(true),"original_prefix":[],"policies":{"migration":catalog.id,"native":"preserve_v3_raw_bytes","clock":"preserve_actual_complete_f32","profiles":"rebind_only_identical_declarative_data_after_exact_source_review","props":"reset_authored_layout_not_serialized","parent_provenance":value.source_provenance.duplicate(true)}}
+	result.source_provenance={"format":"native_v6","path":path,"sha256":FileAccess.get_sha256(path),"configuration":value.configuration.duplicate(true),"trusted_fixture":trusted_fixture.duplicate(true),"original_prefix":[],"policies":{"migration":catalog.id,"native":"preserve_v3_raw_bytes","clock":"preserve_actual_complete_f32","profiles":"rebind_only_identical_declarative_data_after_exact_source_review","props":"reset_authored_layout_not_serialized","parent_provenance":value.source_provenance.duplicate(true)}}
 	error=Codec.validate(result,target)
 	return {"error":&"","checkpoint":result,"requires_candidate_build":true} if error.is_empty() else {"error":error}

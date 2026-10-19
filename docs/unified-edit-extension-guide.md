@@ -34,3 +34,5 @@ python tools/unified_edit_pipeline/audit_architecture.py --policy tools/unified_
 ## 新增漂浮道具配置
 
 使用精确floating_prop_profile.gd脚本的Resource和静态RigidBody3D预制体，绑定固定碰撞体、摩擦及采样云；统一服务不按类型名分流。碰撞体和点必须完全位于声明足迹半径内。当前main三件/32点/12优先块是容量边界，扩容前补ABI、所有权和性能证据。该消费者没有修改水沙的权限，不得通过Profile增加Callable、writer或私有调度。机制与复验见[漂浮道具](漂浮道具.md)。
+
+2026-10-19道具槽选择、投放/移动和拾取统一调用FloatingPropsService.manipulate_body。只操作预存三实例，不按类型重建服务。新增交互入口必须终结旧读者并更新owner/姿态观察起点，纳入暂停、恢复失败、关闭和未知回读回归；不要在UI直接改刚体坐标或清除公共pending。道具模式独占世界左键，沙刷与道具射线分别用Terrain/Prop层。新交互代码的审计与源码身份单独审阅，历史封存保持原样。
