@@ -96,7 +96,7 @@ func record(policy: int) -> Array:
 	_legacy_dispatch("velocity_reduce",PackedByteArray())
 	dispatch("response",sets.response,Vector3i(256,1,1),PackedInt32Array([2,0,0,0]).to_byte_array())
 	dispatch("response",sets.response,Vector3i(1,1,1),PackedInt32Array([3,0,0,0]).to_byte_array())
-	return ["prepare","velocity_only" if policy==2 else ("generic_injected_loss" if inject else "packed"),"velocity_prepare_parallel" if policy==2 else "displace","velocity","velocity_reduce","audit_blocks","audit_merge"]
+	return ["prepare","velocity_only" if policy==2 else ("generic_injected_loss" if inject else "packed"),"velocity_prepare_parallel" if policy==2 else "displace","momentum_B" if policy==2 else "velocity","velocity_reduce","audit_blocks","audit_merge"]
 
 func commit() -> void:
 	dispatch("response",sets.response,Vector3i(256,1,1),PackedInt32Array([4,0,0,0]).to_byte_array())

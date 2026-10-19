@@ -10,7 +10,7 @@ func _run() -> void:
 	if not scene.ready_for_ticks:await _close();return
 	var toggle=scene.get_node("Interface/ShapeBrushPanel/Margin/Controls/ConnectedDrainage")
 	scene._update_status()
-	check("authored_toggle_default_on",toggle.button_pressed and not toggle.disabled and scene.water_policy==3)
+	check("authored_toggle_default_B",not toggle.button_pressed and not toggle.disabled and scene.water_policy==2)
 	var speed: float=scene.signed_speed_m_s
 	toggle.button_pressed=false
 	check("toggle_selects_velocity_only",scene.water_policy==2 and scene.signed_speed_m_s==speed)

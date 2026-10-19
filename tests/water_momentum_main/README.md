@@ -24,4 +24,4 @@ B 每次仅依据本次实际被接受的床面变化施加动量：
 并检查原文件哈希。验证输出位于 `test_output/water_momentum_main/`。
 同步字段回读仅用于验证，不作性能验收。
 
-2026-10-19：用户确认后已移植正式main，现行实现与验证见`docs/主场景动量B移植.md`。本目录保留独立对照；`original_hashes.json`是移植前的隔离审计基线，正式移植后不再满足“原文件未改”断言。正式回归使用`tests/integration/unified_edit_main_momentum_probe.gd`和`check_main_momentum.py`。
+正式main的水响应规格见`docs/当前技术规格.md`。本目录是独立实验后端；`original_hashes.json`用于检查实验隔离基线，并不表示当前正式文件应与基线一致。正式回归使用`tests/integration/unified_edit_main_momentum_probe.gd`和`check_main_momentum.py`。

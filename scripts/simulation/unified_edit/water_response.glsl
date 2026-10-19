@@ -61,7 +61,18 @@ void main(){
   vec4 old=candidate[i];scratch[i]=floatBitsToInt(old.z);scratch[65536u+i]=floatBitsToInt(old.w);scratch[131072u+i]=scratch[i];scratch[196608u+i]=scratch[65536u+i];
   if(w[0]!=1u||c[UE_C_WATER_POLICY_WORD]<2u||cf(UE_C_SPEED_M_S_WORD)==0.0||old.x<=0.001||!valid_cell(q)||vf(k,UE_CELL_WEIGHT)<=0.0)return;
   vec2 dq=vec2(0);
-  if(c[UE_C_OPERATION_WORD]==UE_OP_VOLUME_DELTA){
+  // B: use the actual accepted bed delta once; water/sediment stay unchanged.
+  if(c[UE_C_WATER_POLICY_WORD]==2u){
+   float db=inputs[i].bed_water.y-inputs[i].bed_water.x;
+   if(db==0.0||inputs[i].flow.z>=0.5)return;
+   vec2 point=(vec2(q)+0.5-128.0)*0.125;
+   vec2 a=vec2(cf(UE_C_START_X_WORD),cf(UE_C_START_Z_WORD));
+   vec2 segment=vec2(cf(UE_C_END_X_WORD),cf(UE_C_END_Z_WORD))-a;
+   float len2=dot(segment,segment);
+   vec2 radial=point-a-segment*(len2>1e-6?clamp(dot(point-a,segment)/len2,0.0,1.0):0.0);
+   float distance=length(radial);
+   dq=distance>0.0?old.x*(radial/distance)*cf(UE_C_SPEED_M_S_WORD)*(db/0.2):vec2(0);
+  }else if(c[UE_C_OPERATION_WORD]==UE_OP_VOLUME_DELTA){
    if(cf(UE_C_STRENGTH_WORD)==0.0)return;
    vec2 point=(vec2(q)+0.5-128.0)*0.125,a=vec2(cf(UE_C_START_X_WORD),cf(UE_C_START_Z_WORD)),b=vec2(cf(UE_C_END_X_WORD),cf(UE_C_END_Z_WORD)),segment=b-a,radial=point-a;
    float length_squared=dot(segment,segment);

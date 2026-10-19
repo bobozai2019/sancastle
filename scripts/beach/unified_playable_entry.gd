@@ -187,6 +187,12 @@ func _sync_gravel_count() -> void:
 	$GravelLayer.visible=visuals.gravel_enabled and visuals.active_count>0
 
 func _update_status() -> void:
+	var gain=get_node_or_null("Interface/ShapeBrushPanel/Margin/Controls/MomentumGain")
+	if gain!=null:
+		gain.set_value_no_signal(signed_speed_m_s)
+		gain.editable=ready_for_ticks
+	var hint=get_node_or_null("Interface/ShapeBrushPanel/Margin/Controls/DrainageHint")
+	if hint!=null:hint.text="原连通排水 · 编辑时重分配水量" if (water_policy&1)!=0 else "动量 B · 填沙外推 / 挖沙内拉"
 	var drainage=get_node_or_null("Interface/ShapeBrushPanel/Margin/Controls/ConnectedDrainage")
 	if drainage!=null:
 		drainage.set_pressed_no_signal((water_policy&1)!=0)
@@ -218,7 +224,7 @@ func _on_connected_drainage_toggled(enabled: bool) -> void:
 	# the gesture so a toggle cannot change an already submitted stroke.
 	_finish_ui_stroke(false)
 	water_policy=(water_policy|1) if enabled else (water_policy&~1)
-	action_message="连通排水已开启" if enabled else "连通排水已关闭 · 保留推水与水流模拟"
+	action_message="原连通排水已开启" if enabled else "动量 B · 填沙外推 / 挖沙内拉"
 	_update_status()
 func _on_dig_tool_pressed() -> void:_on_tool_changed(&"remove_sand")
 func _on_fill_tool_pressed() -> void:_on_tool_changed(&"place_sand")
@@ -431,3 +437,10 @@ func unified_release_complete() -> bool:return gpu_release_done and runtime.clos
 func _notification(what: int) -> void:
 	if what==NOTIFICATION_WM_CLOSE_REQUEST:
 		await shutdown();get_tree().quit()
+
+func _on_momentum_gain_changed(value: float) -> void:
+	_finish_ui_stroke(false)
+	signed_speed_m_s=value
+	_invalidate_preview()
+	action_message="推水力度 %.2f"%value
+	_update_status()

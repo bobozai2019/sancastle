@@ -1,33 +1,33 @@
 {
-  "schema": 2,
+  "schema": 3,
   "family": "unified_edit",
-  "status": "36/36 · G8已通过；本轮交付见最终联合门。",
-  "preview_final": false,
+  "status": "main默认动量B；三个test1场景默认连通排水。编辑、水tick与显示工作共用统一Pipeline。",
   "sources": {
+    "AGENTS.md": "d46e5ec2b89134675d2f67432484c95865eac10839c4a9aa20db50bf3447890a",
     "assets/brushes/molded_material_candidate.json": "1936e7dfc654a7a5dc5e9307d880c85e7cc7f48b128372ec622f5b68b7af2890",
     "assets/props/bottle_profile.tres": "6e0b1ec936e7d204ea8bf996386ac022f3e626ce6b38470bd3824f17f9f97158",
     "assets/props/wood_plank_profile.tres": "a103b604504b8ba8b2558c1d1cb8abfbb18bcb7f10761fb07dfbf1781759cd7d",
     "assets/props/wood_stick_profile.tres": "1a5e2a3e32bfe7f9611500bfdacc6d5edac144d830e57a334815f5cdf90cbf71",
     "assets/test1_geometry/water_cycle.json": "b95e55ec01bfe639ad58c757092b76c6f2f67bf63d6dd52cd8b4ea0fc9a561c9",
     "assets/unified_edit/default_catalog.tres": "c4d517c1d778f92a560533b1f140f208d1eb035580fa5149f4a6e7597a2ccfd4",
-    "assets/unified_edit/presentation/main.json": "2704777896d1f933ec359e2dfdb7272558b5a2bb85362d8c3835acf1d5d0810f",
+    "assets/unified_edit/presentation/main.json": "34e516cecad95699af2b708f100e9e32ba45e7b5b662c95625955392c4b6f900",
     "assets/unified_edit/presentation/test1_backwash.json": "931a6cfdb1750df1cbca7208b1f3d7e06f68f0ae89211db57913f1fe5c773732",
     "assets/unified_edit/presentation/test1_capture.json": "91ee7fc0b73c5273c78ba069e148af9ba8f3db16cd753f896fa233c932310737",
     "assets/unified_edit/presentation/test1_geometry.json": "3300d495b670f6f0e84a8a264cffa36633ed3b15306c2a3c42d08f14d9544af3",
-    "docs/README.md": "0e0d2ec3d49aed0d03db17dd77940ebc8d0cf991ca3f1e8001338bf46318321c",
+    "docs/README.md": "6ffb8ea47c05752a164a317bde1aa565701e7d63a2846cc394e6b44810a8138b",
     "docs/knowledge/README.md": "b582dcf3801544f56ef74ac6068851762fa4851a8e5263280f89bfb7c22ad8e7",
     "docs/unified-edit-extension-guide.md": "14a700240fec6d297ac079bcde758f5982d23b4b1df746e1cc92c80f63905ed5",
-    "docs/主场景操作.md": "d85bf399d59bbd8337bab430732fc9112c24ff16c629291bbda7d59c193f7a3c",
+    "docs/主场景操作.md": "d58e7c764d26323fabdd196f0e369716e8744a37ea8a3a31829662e260bd4f98",
     "docs/场景切换与功能复用.md": "4a541d2a3a96e67735a73e87ed1f5733a484ecc944331b40fad4bd2d15378e7d",
-    "docs/当前技术规格.md": "e916743a0aee39b86f2e1d1d53ee60bac91739672f549c0fc885647ff0611444",
-    "docs/当前项目技术方案.md": "2dbff4e4cad0de7dc564d663659478d63decce86fc76c3ff842018e221ca7c1c",
+    "docs/当前技术规格.md": "72c89cfe98c52ba38866eb7930bbed902426864322c8dd375ed543087e2a263f",
+    "docs/当前项目技术方案.md": "2e87993085e28de4177c27cfb953e36223d00704097ab5791026394754b4d7ce",
     "docs/性能面板.md": "597dbb1e22fabed0c116db5c45514405175d0d22f385cef91044347c51179b03",
     "docs/漂浮道具.md": "a61b81ed06bc33105967b374bdcc2442c0b9e32403e949f656b8ce7bde136038",
     "project.godot": "6ffd830959ed6630565cf9bdc3957b0ece379ce49be0cf0bc9db2b3c4ce941a3",
     "scenes/components/floating_props.tscn": "ef7a0f919704405376e2c1241c0fb1fb22d4a83c4d90fb3c1973fb7bf992fcd8",
     "scenes/components/floating_props_panel.tscn": "61be2d8fd49b965ee21b0da2d7c167c58a84b746461dcc30eeb21b977632cb53",
     "scenes/components/water_boundary_sides.tscn": "613f98726654fb43bbd47ecea32e085806a1eddfc5747dc558856f2495011524",
-    "scenes/main.tscn": "ae1be4b2616e32d0868fbf98a25af77daf65288f4a1ad8a518118e0dd6e32647",
+    "scenes/main.tscn": "f063d6a422dc4f7c6290fc68422d999d59e359d8ae0d52e6b5a45f588804d8f6",
     "scenes/playable/test1_backwash.tscn": "d7b8eb4a07e0a68dda94f7831afe5e36d6410404958cc2aa3fbe3618baab3a3c",
     "scenes/playable/test1_capture.tscn": "5e30d144d51cfb7515eea1091af8bf7623313011179dad69e7bafae9e010a199",
     "scenes/playable/test1_geometry.tscn": "c4e2574ef9fa2f4dd02b70d2aaecc265e369d9e17b2cfde5d63c6f5b3a641cc6",
@@ -39,7 +39,7 @@
     "scripts/beach/beach_scene_service.gd": "27d984202c3db965c5502260534578b2920bc3855e2c294a4463d64c54aee6ca",
     "scripts/beach/floating_props_panel.gd": "a095db4e55fad1dc78d5f7746830fd632a72d103e76cc23dcf16386e3df2feb4",
     "scripts/beach/unified_performance_panel.gd": "f5c9c835358f0434174147e9eb65a444fa39d7611bafb35cb0fd35d7879b2935",
-    "scripts/beach/unified_playable_entry.gd": "5e1bd7d6d4ff12fa1833e8e1568fd7564757598c273eca04bbfa4cd5db3574ce",
+    "scripts/beach/unified_playable_entry.gd": "d1fcb379972922abfdca7b3e449e8f95eac2f32a597013b942656af9cd89946f",
     "scripts/beach/unified_scene_routes.gd": "8b554be029c1948a4c741bbdc491aa0c51a8d768e7e8274dce7c59de44d8f32f",
     "scripts/props/floating_prop.gd": "cf046be6914fc9d1a240b64a7630c0b387fc9b0f82670e5c028c25584a8183df",
     "scripts/props/floating_prop_contact.gd": "a377b0ea1b1114b7d8d30cfa68b81e91223f8ac5dfbce5c4958fe6eb241035e1",
@@ -71,14 +71,14 @@
     "scripts/simulation/unified_edit/water.gd": "0a0cbedc11d9fcb4d55f53e75b99da537c4ed4a166945bffcad90cac69600903",
     "scripts/simulation/unified_edit/water_packed_parallel.glsl": "8e48a46ade6d9a608b9fe9aa5b10f1127f4b036b22a788f392c069d9585d481d",
     "scripts/simulation/unified_edit/water_packed_topology.glsl": "876056fb1b25c7eaea97e513dddcc882b7ea2cd723abb5409828ea0d389710cf",
-    "scripts/simulation/unified_edit/water_response.gd": "dcaac3bda25c8d742e105d0fcbae287a4d2378612e7724a4adca6d17429691e1",
+    "scripts/simulation/unified_edit/water_response.gd": "9ccb1a9d714ef5427e6a5534feac26e6e16d0886f3df5edac816d7a15a6ab5bc",
+    "scripts/simulation/unified_edit/water_response.glsl": "19fca940f8886393fc683a6e2bc962dcda3298520ebff2aa04c208def16751f0",
     "scripts/visual/water_boundary_sides.gd": "cc6cb7cdd2bc92560c94551e3d220705feccc2249f51fbd46eb6cc4ad277ab64",
     "task/sandcastle_floating_props/契约/C07_UI交互.md": "f30012d11b34d529f6fde0d60fbd1f63b44c39e530561f89944e85136028fc93",
     "task/sandcastle_floating_props/契约/height_snapshot_ABI_v3.json": "1ff5a1ea03e247eb863ac221e1fcde0c2037489a053e569d97a332bfd50f5077",
     "task/sandcastle_floating_props/契约/probe_ABI_v3.json": "68e1f489a6f00c261677c84bdc667bfb5c07e5f34366fb02954bd0bff28a3b95",
-    "task/sandcastle_unified_edit_pipeline/验收/G8_联合门.json": "4fe21829a1e6f88d149244e4adffba7010fcda09bec6c39e6743de4e08085859",
     "tools/docs/build_execution_guide.py": "a8a698c14749ebd63c8595ef6ab7683a51ed8d05bc90cb78d0a7faa1bfd84df6",
-    "tools/docs/build_unified_execution_guide.py": "2aea595de0a4ce4333787537a9e155102f8aed850b628994f389890a8158d986",
+    "tools/docs/build_unified_execution_guide.py": "c532e5c7403bc9afcd9673cb6e1c6167b9d860ddb30c9dd605a8d61654770901",
     "tools/unified_edit_pipeline/architecture_policy.json": "b3cba6a83a93dc1dd86b8a5add389e4ff0970b76e326c88c612e882fbb491dd2"
   },
   "anchors": [
@@ -87,7 +87,7 @@
       "path": "scripts/beach/unified_playable_entry.gd",
       "symbol": "_ready",
       "line": 71,
-      "sha256": "5e1bd7d6d4ff12fa1833e8e1568fd7564757598c273eca04bbfa4cd5db3574ce",
+      "sha256": "d1fcb379972922abfdca7b3e449e8f95eac2f32a597013b942656af9cd89946f",
       "excerpt": "  71 func _ready() -> void:\n  72 \tget_tree().auto_accept_quit=false\n  73 \t$GravelLayer.visible=false\n  74 \tvar read:=Presentation.read(presentation_manifest)\n  75 \tif not read.error.is_empty():_fail(read.error);return\n  76 \tvar data: Dictionary=read.metadata\n  77 \tif data.settings.scene_key!=scene_key:_fail(&\"presentation_scene_mismatch\");return\n  78 \tvar plan:=Presentation.material_plan(self,data,get_script())\n  79 \tif not plan.error.is_empty():_fail(plan.error);return\n  80 \tmaterial_bindings=plan.bindings"
     },
     {
@@ -143,7 +143,7 @@
       "path": "scripts/simulation/unified_edit/water_response.gd",
       "symbol": "record",
       "line": 87,
-      "sha256": "dcaac3bda25c8d742e105d0fcbae287a4d2378612e7724a4adca6d17429691e1",
+      "sha256": "9ccb1a9d714ef5427e6a5534feac26e6e16d0886f3df5edac816d7a15a6ab5bc",
       "excerpt": "  87 func record(policy: int) -> Array:\n  88 \tvar inject:=inject_water_loss_once;inject_water_loss_once=false\n  89 \tdispatch(\"response\",sets.response,Vector3i(256,1,1),PackedInt32Array([0,0,0,0]).to_byte_array())\n  90 \tvar push:=PackedFloat32Array([0,0.125,0,0]).to_byte_array();push.encode_u32(0,256)\n  91 \tif policy==2:_velocity_only()\n  92 \telse:\n  93 \t\tif not inject:_legacy_dispatch(\"packed\",push)\n  94 \t\tpush.encode_u32(8,1 if inject else 0);push.encode_u32(12,0 if inject else 2);_legacy_dispatch(\"displace\",push)\n  95 \tdispatch(\"response\",sets.response,Vector3i(256,1,1),PackedInt32Array([1,0,0,0]).to_byte_array())\n  96 \t_legacy_dispatch(\"velocity_reduce\",PackedByteArray())"
     },
     {
@@ -151,7 +151,7 @@
       "path": "scripts/simulation/unified_edit/water_response.gd",
       "symbol": "commit",
       "line": 101,
-      "sha256": "dcaac3bda25c8d742e105d0fcbae287a4d2378612e7724a4adca6d17429691e1",
+      "sha256": "9ccb1a9d714ef5427e6a5534feac26e6e16d0886f3df5edac816d7a15a6ab5bc",
       "excerpt": " 101 func commit() -> void:\n 102 \tdispatch(\"response\",sets.response,Vector3i(256,1,1),PackedInt32Array([4,0,0,0]).to_byte_array())\n 103\n 104 func release() -> void:\n 105 \tsets.clear();buffers.clear();state=null;owner=null;super.release()"
     },
     {
@@ -159,7 +159,7 @@
       "path": "scripts/simulation/unified_edit/water_response.gd",
       "symbol": "_packed_math",
       "line": 52,
-      "sha256": "dcaac3bda25c8d742e105d0fcbae287a4d2378612e7724a4adca6d17429691e1",
+      "sha256": "9ccb1a9d714ef5427e6a5534feac26e6e16d0886f3df5edac816d7a15a6ab5bc",
       "excerpt": "  52 func _packed_math(push: PackedByteArray) -> void:\n  53 \t# GPU-only phase boundaries. Per-cell math spans all SMs; component reductions\n  54 \t# retain the reference's row-major compensated order and bounded repair.\n  55 \tvar phase_push:=push.duplicate()\n  56 \tfor mode in 11:\n  57 \t\tphase_push.encode_u32(8,mode)\n  58 \t\t_packed_phase(mode,phase_push)\n  59\n  60 func _packed_phase(mode: int, push: PackedByteArray) -> void:\n  61 \tvar groups:=1024 if mode in [1,3,5,8] else (1 if mode==10 else 32)"
     },
     {
@@ -167,7 +167,7 @@
       "path": "scripts/simulation/unified_edit/water_response.gd",
       "symbol": "_packed_phase",
       "line": 60,
-      "sha256": "dcaac3bda25c8d742e105d0fcbae287a4d2378612e7724a4adca6d17429691e1",
+      "sha256": "9ccb1a9d714ef5427e6a5534feac26e6e16d0886f3df5edac816d7a15a6ab5bc",
       "excerpt": "  60 func _packed_phase(mode: int, push: PackedByteArray) -> void:\n  61 \tvar groups:=1024 if mode in [1,3,5,8] else (1 if mode==10 else 32)\n  62 \tvar list:=rd.compute_list_begin()\n  63 \trd.compute_list_bind_compute_pipeline(list,kernels.packed_math.phases[mode])\n  64 \trd.compute_list_bind_uniform_set(list,sets.packed_math,0)\n  65 \trd.compute_list_set_push_constant(list,push,push.size())\n  66 \trd.compute_list_dispatch(list,groups,1,1);rd.compute_list_end()\n  67\n  68 func _initialize_velocity_prepare_phases() -> bool:\n  69 \tkernels.velocity_prepare.phases=[]"
     },
     {
@@ -315,5 +315,5 @@
       "excerpt": "  22 static func project(value: Dictionary, target: Dictionary, path: String) -> Dictionary:\n  23 \tif not FileAccess.file_exists(CATALOG) or FileAccess.get_sha256(CATALOG)!=CATALOG_SHA256:return {\"error\":&\"consumer_source_catalog_identity_mismatch\"}\n  24 \tvar bytes:=FileAccess.get_file_as_bytes(CATALOG)\n  25 \tif bytes.is_empty() or bytes.size()>1048576:return {\"error\":&\"invalid_consumer_source_catalog\"}\n  26 \tvar catalog: Variant=bytes_to_var(bytes)\n  27 \tif not Config.exact(catalog,[\"schema\",\"id\",\"source_configuration\",\"fixture\",\"additional_sources\",\"target_sources\",\"target_parameters\",\"review\"]) or catalog.schema!=3 or catalog.id!=\"floating_props_consumer_v3\" or not catalog.source_configuration is Dictionary or not catalog.target_sources is Dictionary or not catalog.additional_sources is Array or catalog.additional_sources.size()>4:return {\"error\":&\"invalid_consumer_source_catalog\"}\n  28 \tvar trusted_fixture: Dictionary={}\n  29 \tvar known: Array=[{\"configuration\":catalog.source_configuration,\"fixture\":catalog.fixture}]+catalog.additional_sources\n  30 \tfor source in known:\n  31 \t\tif not source is Dictionary or not Config.exact(source,[\"configuration\",\"fixture\"]) or not source.configuration is Dictionary or not source.fixture is Dictionary:return {\"error\":&\"invalid_consumer_source_catalog\"}"
     }
   ],
-  "limitations": "Documentation/source evidence only; execution, functional and cost verdicts belong to the linked gates. Preview-final prepares identical completion HTML for visual QA before the gate is issued."
+  "limitations": "Current source and technical documentation index; contains no execution verdict or task status."
 }
