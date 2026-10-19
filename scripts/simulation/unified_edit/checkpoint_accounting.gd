@@ -63,7 +63,7 @@ func settle(command: Dictionary, result: Dictionary) -> void:
 			if command.control_kind==L.ControlKind.BEGIN:stroke={"stroke_id":command.stroke_id,"baseline_token":command.baseline_token}
 			else:stroke={}
 		return
-	if result.ledger==L.Ledger.EXACT_EXTERNAL and result.outcome==L.Outcome.APPLIED:ledger.sand_source_m3+=result.source_m3;ledger.sand_sink_m3+=result.sink_m3
+	if result.ledger in [L.Ledger.EXACT_EXTERNAL,L.Ledger.TRANSFER_WITH_SINK] and result.outcome==L.Outcome.APPLIED:ledger.sand_source_m3+=result.source_m3;ledger.sand_sink_m3+=result.sink_m3
 	if result.outcome==L.Outcome.APPLIED and command.configuration.material_policy==P.MaterialPolicy.MOLDED and (result.changed_fields&P.MATERIAL)!=0:material_ever_used=true
 
 func water_ledger(control: PackedByteArray) -> Dictionary:

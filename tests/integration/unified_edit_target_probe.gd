@@ -334,7 +334,9 @@ func transfer() -> void:
 	elif probe_case=="transfer_empty":
 		expect("empty_donor",await perform("empty_donor",shape_request(&"shovel_v1",Vector2.ZERO,Vector2(1,0),1,{},1,11,2)),L.Outcome.NO_CHANGE)
 	elif probe_case=="transfer_capacity":
-		expect("one_side_blocked",await perform("one_side_blocked",shape_request(&"shovel_v1",Vector2.ZERO,Vector2(1,0),1,{},1,11,2)),L.Outcome.NO_CHANGE)
+		var blocked:=await perform("one_side_blocked",shape_request(&"shovel_v1",Vector2.ZERO,Vector2(1,0),1,{},1,11,2))
+		expect("one_side_blocked",blocked,L.Outcome.APPLIED)
+		check("blocked_side_does_not_limit_cut",not blocked.is_empty() and blocked.removed_m3>0.015625 and blocked.sink_m3>0.0)
 		expect("donor_obstacle",await perform("donor_obstacle",shape_request(&"shovel_v1",Vector2(4,0),Vector2(5,0),2,{},1,11,2)),L.Outcome.REJECTED,L.ErrorCode.INVALID_PLACEMENT)
 		expect("boundary_valid",await perform("boundary_valid",shape_request(&"shovel_v1",Vector2(15.25,2),Vector2(15.25,3),3,{},1,11,2)),L.Outcome.APPLIED)
 		var outside:=shape_request(&"shovel_v1",Vector2(15.8,2),Vector2(15.8,3),4,{},1,11,2)
@@ -343,7 +345,7 @@ func transfer() -> void:
 	elif probe_case=="transfer_limited":
 		var value:=await perform("limited",shape_request(&"shovel_v1",Vector2.ZERO,Vector2(1,0),1,{},1,11,2))
 		expect("limited",value,L.Outcome.APPLIED)
-		check("limited_by_one_receiver",not value.is_empty() and absf(value.removed_m3-0.015625)<value.eps_transfer_m3)
+		check("receiver_limit_only_discards_excess",not value.is_empty() and value.removed_m3>0.015625 and absf(minf(value.left_received_m3,value.right_received_m3)-0.0078125)<value.eps_transfer_m3 and value.sink_m3>0.0)
 	elif probe_case=="transfer_stress":
 		expect("diagonal",await perform("diagonal",shape_request(&"shovel_v1",Vector2(-0.7,-0.7),Vector2(0.7,0.7),1,{"depth_m":0.3,"trench_width_m":1.0,"shoulder_width_m":1.0},1,11,2)),L.Outcome.APPLIED)
 		expect("crossing",await perform("crossing",shape_request(&"shovel_v1",Vector2(-0.7,0.7),Vector2(0.7,-0.7),2,{"depth_m":0.3,"trench_width_m":1.0,"shoulder_width_m":1.0},1,11,2)),L.Outcome.APPLIED)

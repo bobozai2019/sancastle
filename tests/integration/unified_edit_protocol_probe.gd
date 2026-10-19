@@ -231,7 +231,15 @@ func _run() -> void:
 	var transfer:=result_record(shovel);transfer.source_m3=0.1
 	check("transfer_cannot_use_external_source",not Wire.decode_result(Wire.encode_result(transfer),shovel,identity()).error.is_empty())
 	transfer=result_record(shovel);transfer.right_received_m3=0.0
-	check("transfer_unbalanced_rejected",not Wire.decode_result(Wire.encode_result(transfer),shovel,identity()).error.is_empty())
+	check("transfer_missing_receipt_rejected",not Wire.decode_result(Wire.encode_result(transfer),shovel,identity()).error.is_empty())
+	transfer=result_record(shovel);transfer.right_received_m3=0.0;transfer.added_m3=0.005;transfer.transferred_m3=0.005;transfer.sink_m3=0.005
+	check("capped_transfer_unbalanced_with_exact_sink",Wire.decode_result(Wire.encode_result(transfer),shovel,identity()).error.is_empty())
+	transfer.sink_m3=0.0
+	check("capped_transfer_missing_sink_rejected",not Wire.decode_result(Wire.encode_result(transfer),shovel,identity()).error.is_empty())
+	transfer=result_record(shovel);transfer.left_received_m3=0.0;transfer.right_received_m3=0.0;transfer.added_m3=0.0;transfer.transferred_m3=0.0;transfer.sink_m3=0.01
+	check("capped_transfer_full_sink",Wire.decode_result(Wire.encode_result(transfer),shovel,identity()).error.is_empty())
+	transfer.sink_m3=0.02
+	check("capped_transfer_excess_sink_rejected",not Wire.decode_result(Wire.encode_result(transfer),shovel,identity()).error.is_empty())
 	transfer=result_record(shovel);transfer.added_m3=0.1
 	check("transfer_cannot_create_sand",not Wire.decode_result(Wire.encode_result(transfer),shovel,identity()).error.is_empty())
 	var overflow:=result_record(fill);overflow.added_m3=0.5

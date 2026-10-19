@@ -3,11 +3,12 @@
 [resource]
 script = ExtResource("1")
 profile_id = &"shovel_v1"
+version = 2
 operation = 2
 shape = 1
 destination = 0
 height_reference = 2
-transfer_policy = 1
+transfer_policy = 2
 material_policy = 2
 stroke_policy = 1
 defaults = {"depth_m": 0.15, "shoulder_width_m": 0.5, "speed_m_s": 0.0, "trench_width_m": 0.5}

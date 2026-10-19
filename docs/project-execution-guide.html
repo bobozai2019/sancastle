@@ -38,7 +38,7 @@
   56 		frozen[String(key)]=features[key]
   57 	frozen.selected_features={&quot;water_policy&quot;:frozen.water_policy,&quot;material_policy&quot;:frozen.material_policy}
   58 	frozen.derived_fields=Profile.fields_for(frozen.operation,frozen.destination,frozen.water_policy,frozen.stroke_policy)</pre></details>
-<details><summary>冻结配置 · scripts/simulation/unified_edit/configuration.gd:71</summary><p class="hash">SHA256 500287dc7cc6a5c30fd4144aa458a064d09416b53e5190c9a1607c803e04e00a</p><pre>  71 static func freeze(registry, domain: Variant, simulation: Dictionary, effects: Dictionary={}, diagnostics: Dictionary={}, environment: Dictionary={}, extra_sources: PackedStringArray=PackedStringArray()) -&gt; Dictionary:
+<details><summary>冻结配置 · scripts/simulation/unified_edit/configuration.gd:71</summary><p class="hash">SHA256 3f5669a7c3706746c13ffb5abc1b610cd00f16f4f415199741f1eb0d5c5883ec</p><pre>  71 static func freeze(registry, domain: Variant, simulation: Dictionary, effects: Dictionary={}, diagnostics: Dictionary={}, environment: Dictionary={}, extra_sources: PackedStringArray=PackedStringArray()) -&gt; Dictionary:
   72 	if typeof(domain) not in [TYPE_STRING,TYPE_STRING_NAME] or String(domain).is_empty() or String(domain).length()&gt;128:return {&quot;error&quot;:&amp;&quot;invalid_configuration_domain&quot;}
   73 	if not exact(simulation,SIMULATION_KEYS):return {&quot;error&quot;:&amp;&quot;invalid_simulation_flags&quot;}
   74 	for value in simulation.values():

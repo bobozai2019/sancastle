@@ -26,7 +26,7 @@ static func ledger_for(frozen: Dictionary) -> int:
 	match frozen.configuration.operation:
 		P.Operation.VOLUME_DELTA:return L.Ledger.APPROXIMATE_EXTERNAL
 		P.Operation.TARGET_HEIGHT:return L.Ledger.EXACT_EXTERNAL
-		P.Operation.TRANSFER:return L.Ledger.CONSERVATIVE_TRANSFER
+		P.Operation.TRANSFER:return L.Ledger.TRANSFER_WITH_SINK if frozen.configuration.transfer_policy==P.TransferPolicy.CAPPED_SHOULDERS else L.Ledger.CONSERVATIVE_TRANSFER
 	return L.Ledger.UNCHANGED
 
 static func _budgets(frozen: Dictionary) -> Dictionary:
@@ -170,7 +170,7 @@ static func decode_command(bytes: PackedByteArray, canonical: PackedByteArray=Pa
 		if value.rect_w==0 or value.rect_h==0 or value.rect_x+value.rect_w>256 or value.rect_z+value.rect_h>256:return {"error":&"command_bounds"}
 		for key in ["add_budget_m3","transfer_budget_m3","available_m3"]:
 			if value[key]<0.0:return {"error":&"command_budget"}
-		var fake:={"control_kind":0,"configuration":{"operation":value.operation}}
+		var fake:={"control_kind":0,"configuration":{"operation":value.operation,"transfer_policy":value.transfer_policy}}
 		if value.ledger!=ledger_for(fake):return {"error":&"command_ledger"}
 	if not canonical.is_empty() and bytes!=canonical:return {"error":&"command_snapshot_mismatch"}
 	return {"error":&"","value":value,"structural_only":canonical.is_empty()}
@@ -189,7 +189,7 @@ static func decode_result(bytes: PackedByteArray, frozen: Dictionary, id: Dictio
 		if not frozen.has(key):return {"error":&"result_expected_command"}
 	if typeof(frozen.control_kind)!=TYPE_INT or frozen.control_kind not in L.ControlKind.values() or not frozen.configuration is Dictionary or not frozen.parameters is Dictionary:return {"error":&"result_expected_command"}
 	if frozen.control_kind==0:
-		for key in ["operation","volume_sign","derived_fields","version","effective_hash"]:
+		for key in ["operation","volume_sign","derived_fields","version","effective_hash","transfer_policy"]:
 			if not frozen.configuration.has(key):return {"error":&"result_expected_command"}
 		if frozen.configuration.operation not in P.Operation.values():return {"error":&"result_expected_command"}
 		if frozen.configuration.operation==P.Operation.VOLUME_DELTA:
@@ -247,10 +247,13 @@ static func decode_result(bytes: PackedByteArray, frozen: Dictionary, id: Dictio
 		elif op==P.Operation.TARGET_HEIGHT:
 			if value.removed_m3!=0.0 or value.added_m3>_budgets(frozen).add_budget_m3+value.eps_sand_m3:return {"error":&"result_target_authorization"}
 		elif op==P.Operation.TRANSFER:
-			if absf(value.added_m3-value.removed_m3)>value.eps_transfer_m3 or value.removed_m3>_budgets(frozen).transfer_budget_m3+value.eps_transfer_m3:return {"error":&"result_transfer_authorization"}
+			if absf(value.added_m3+value.sink_m3-value.removed_m3)>value.eps_transfer_m3 or value.removed_m3>_budgets(frozen).transfer_budget_m3+value.eps_transfer_m3:return {"error":&"result_transfer_authorization"}
 		if op!=P.Operation.TRANSFER and (value.transferred_m3!=0.0 or value.left_received_m3!=0.0 or value.right_received_m3!=0.0):return {"error":&"result_unexpected_transfer"}
 	if value.ledger==L.Ledger.CONSERVATIVE_TRANSFER:
 		if value.source_m3!=0.0 or value.sink_m3!=0.0 or absf(value.removed_m3-value.left_received_m3-value.right_received_m3)>value.eps_transfer_m3 or absf(value.left_received_m3-value.right_received_m3)>value.eps_transfer_m3 or absf(value.transferred_m3-value.removed_m3)>value.eps_transfer_m3:return {"error":&"result_transfer_ledger"}
+	elif value.ledger==L.Ledger.TRANSFER_WITH_SINK:
+		var received: float=value.left_received_m3+value.right_received_m3
+		if value.source_m3!=0.0 or absf(value.added_m3-received)>value.eps_transfer_m3 or absf(value.transferred_m3-received)>value.eps_transfer_m3 or absf(value.removed_m3-received-value.sink_m3)>value.eps_transfer_m3 or maxf(value.left_received_m3,value.right_received_m3)>value.removed_m3*0.5+value.eps_transfer_m3:return {"error":&"result_transfer_ledger"}
 	elif value.ledger==L.Ledger.UNCHANGED:
 		if value.source_m3!=0.0 or value.sink_m3!=0.0:return {"error":&"result_unchanged_ledger"}
 	elif value.ledger==L.Ledger.EXACT_EXTERNAL:

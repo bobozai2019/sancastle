@@ -53,8 +53,13 @@ bool is_volume(){return !is_control()&&c[UE_C_OPERATION_WORD]==UE_OP_VOLUME_DELT
 bool is_smooth(){return !is_control()&&c[UE_C_OPERATION_WORD]==UE_OP_REDISTRIBUTE;}
 bool is_adjust(){return !is_control()&&c[UE_C_OPERATION_WORD]==UE_OP_FIELD_ADJUST;}
 bool is_transfer(){return !is_control()&&c[UE_C_OPERATION_WORD]==UE_OP_TRANSFER;}
+bool capped_shoulders(){return is_transfer()&&c[UE_C_TRANSFER_POLICY_WORD]==UE_TRANSFER_CAPPED_SHOULDERS;}
+float side_target(uint side){return capped_shoulders()?min(tx[4]*0.5,tx[1u+side]):tx[4]*0.5;}
 bool is_stroke(){return is_target()||is_transfer();}
 bool is_suspended(){return !is_control()&&c[UE_C_DESTINATION_WORD]==UE_DEST_SUSPENDED_SAND;}
+// Allocation and deduction must use the same donor set. Sub-epsilon residue
+// is excluded from both, including residue left by an earlier shovel cut.
+bool removable_sand(float weight,float depth,float area,float epsilon){return weight>0.0&&depth*area>epsilon;}
 float capacity(uint k){return max(0.0,vf(k,UE_CELL_TARGET_HEIGHT)-vf(k,UE_CELL_ROCK)-vf(k,UE_CELL_OLD_VALUE));}
 void compensated_add(float a,inout float sum,inout float correction){precise float y=a-correction;precise float next=sum+y;correction=(next-sum)-y;sum=next;}
 // Sorted per-block prefix sums turn each capped-weight query into 8 binary
@@ -173,7 +178,9 @@ void main(){
    float net=uintBitsToFloat(s[base+UE_SUMMARY_NET_VOLUME]);float removed=uintBitsToFloat(s[base+UE_SUMMARY_REMOVED]);
    result[rb()+UE_R_ADDED_M3_WORD]=floatBitsToUint(max(0.0,net+removed));result[rb()+UE_R_REMOVED_M3_WORD]=floatBitsToUint(removed);
    if(is_transfer()){
-    result[rb()+UE_R_TRANSFERRED_M3_WORD]=floatBitsToUint(removed);
+    float received=uintBitsToFloat(s[base+UE_SUMMARY_LEFT_RECEIVED])+uintBitsToFloat(s[base+UE_SUMMARY_RIGHT_RECEIVED]);
+    result[rb()+UE_R_TRANSFERRED_M3_WORD]=floatBitsToUint(capped_shoulders()?received:removed);
+    if(capped_shoulders())result[rb()+UE_R_SINK_M3_WORD]=floatBitsToUint(max(0.0,removed-received));
     result[rb()+UE_R_LEFT_RECEIVED_M3_WORD]=s[base+UE_SUMMARY_LEFT_RECEIVED];result[rb()+UE_R_RIGHT_RECEIVED_M3_WORD]=s[base+UE_SUMMARY_RIGHT_RECEIVED];
     result[rb()+UE_R_EPS_TRANSFER_M3_WORD]=d[11];
    }
@@ -225,7 +232,7 @@ void main(){
      float profile=max(0.0,1.0-dist*dist/(inner*inner));target=max(r,base-cf(UE_C_DEPTH_M_WORD)*profile);
      if(previous.y>0.0)target=max(r,profile<=previous.y?previous.x:min(target,previous.x));
      next=min(old,max(0.0,target-r));flags=UE_FLAG_TOUCHED|UE_FLAG_DONOR;weight=1.0;cv=vec2(target,max(profile,previous.y));
-    }else if(dist<inner+shoulder&&previous.y==0.0&&imageLoad(obstacle,q).r==0.0){
+    }else if(dist<inner+shoulder&&(capped_shoulders()||previous.y==0.0)&&imageLoad(obstacle,q).r==0.0){
      target=base+cf(UE_C_RIDGE_HEIGHT_M_WORD);weight=sin(3.141592653589793*(dist-inner)/shoulder);
      if(weight>0.0)flags=UE_FLAG_TOUCHED|(side>=0.0?UE_FLAG_LEFT:UE_FLAG_RIGHT);
     }
@@ -290,6 +297,8 @@ void main(){
   // upper bound would otherwise leave a tiny positive lambda at target zero.
   if(tx[4]<=0.0){tx[7]=0.0;tx[8]=0.0;return;}
   for(uint side=0u;side<2u;side++){
+   float target=side_target(side);
+   if(target<=0.0){tx[7u+side]=0.0;continue;}
    float lo=0.0,hi=0.0;
    for(uint group=0u;group<p.groups;group++){
     uint base=(group*2u+side)*256u,lower=0u,upper=256u;
@@ -298,7 +307,7 @@ void main(){
    }
    for(uint iteration=0u;iteration<48u;iteration++){
     float previous_lo=lo,previous_hi=hi,middle=lo+(hi-lo)*0.5;
-    if(allocated(middle,side)<tx[4]*0.5)lo=middle;else hi=middle;
+    if(allocated(middle,side)<target)lo=middle;else hi=middle;
     if(previous_lo==lo&&previous_hi==hi)break;
    }
    tx[7u+side]=lo+(hi-lo)*0.5;
@@ -315,7 +324,7 @@ void main(){
     if((flags&UE_FLAG_LEFT)!=0u)compensated_add(vf(at,UE_CELL_NEW_VALUE)-vf(at,UE_CELL_OLD_VALUE),sum.x,corr.x);
     if((flags&UE_FLAG_RIGHT)!=0u)compensated_add(vf(at,UE_CELL_NEW_VALUE)-vf(at,UE_CELL_OLD_VALUE),sum.y,corr.y);
    }
-   vec2 residue=vec2(tx[4]*0.5)-sum;
+   vec2 residue=vec2(side_target(0u),side_target(1u))-sum;
    for(uint j=0u;j<count;j++){
     uint at=cell_index(j)*UE_CELL_WORD_COUNT,flags=v[at+UE_CELL_FLAGS];if((flags&(UE_FLAG_LEFT|UE_FLAG_RIGHT))==0u)continue;
     uint side=(flags&UE_FLAG_LEFT)!=0u?0u:1u;float old=vf(at,UE_CELL_OLD_VALUE),next=vf(at,UE_CELL_NEW_VALUE),step=ulp(next);
@@ -343,7 +352,7 @@ void main(){
    uint flags=v[k+UE_CELL_FLAGS];
    if(p.reserved==0u){if((flags&UE_FLAG_DONOR)!=0u)v[k+UE_CELL_NEW_VALUE]=floatBitsToUint(max(0.0,old-max(0.0,old-next)*tx[3]));return;}
    if(p.reserved==1u){if((flags&(UE_FLAG_LEFT|UE_FLAG_RIGHT))!=0u)v[k+UE_CELL_NEW_VALUE]=floatBitsToUint(min(old+capacity(k),old+min(capacity(k),tx[(flags&UE_FLAG_LEFT)!=0u?7:8]*weight)));return;}
-   if((flags&UE_FLAG_DONOR)!=0u){vec2 cv=imageLoad(candidate_coverage,q).xy;cv.x=max(cv.x,next+vf(k,UE_CELL_ROCK));imageStore(candidate_coverage,q,vec4(cv,0,0));}
+   if((flags&UE_FLAG_DONOR)!=0u){vec2 cv=imageLoad(candidate_coverage,q).xy;cv.x=max(cv.x,next+vf(k,UE_CELL_ROCK));if(capped_shoulders()&&next>=old)cv=imageLoad(coverage,q).xy;imageStore(candidate_coverage,q,vec4(cv,0,0));}
    return;
   }
   if(is_adjust()){
@@ -358,7 +367,7 @@ void main(){
    next=p.reserved==0u?mix(old,uintBitsToFloat(d[3]),cf(UE_C_STRENGTH_WORD)*weight):max(0.0,next+uintBitsToFloat(d[6]));
   }else if(c[UE_C_VOLUME_SIGN_WORD]==UE_SIGN_ADD){
    float amount=uintBitsToFloat(d[0])*weight/uintBitsToFloat(d[2]);next=old+amount/area;step_amount[i]=amount;
-  }else if(uintBitsToFloat(d[1])>eps&&uintBitsToFloat(d[3])>eps){
+  }else if(removable_sand(weight,next,area,eps)&&uintBitsToFloat(d[1])>eps&&uintBitsToFloat(d[3])>eps){
    float take=min(next*area,uintBitsToFloat(d[1])*weight/uintBitsToFloat(d[3]));next-=take/area;step_amount[i]=take;
   }
   v[k+UE_CELL_NEW_VALUE]=floatBitsToUint(next);
@@ -391,7 +400,7 @@ void main(){
      if(p.reserved==0u)values[l]=vec4(moved,(bits&UE_FLAG_LEFT)!=0u?capacity(k):0.0,(bits&UE_FLAG_RIGHT)!=0u?capacity(k):0.0,0);
      else values[l]=vec4(moved,min(max(vf(k,UE_CELL_OLD_TAG),0.0),moved),moved*vf(k,UE_CELL_OLD_COMPACTION),0);
     }else if(is_smooth())values[l]=w<=0.0?vec4(0):(p.reserved==0u?vec4(old*w,w,old,1.0):vec4(next,0,0,0));
-    else values[l]=vec4(w,w>0.0&&next*area>eps?w:0.0,w>0.0?step_amount[i]:0.0,0);
+    else values[l]=vec4(w,removable_sand(w,next,area,eps)?w:0.0,w>0.0?step_amount[i]:0.0,0);
     meta[l].w=flags;
    }
    else if(w>0.0){
@@ -446,7 +455,7 @@ void main(){
   if(is_control())return;
   if(p.mode==3u){
    if(is_transfer()){
-    if(p.reserved==0u){tx[0]=sum.x;tx[1]=sum.y;tx[2]=sum.z;float limit=min(min(sum.x,max(0.0,cf(UE_C_TRANSFER_BUDGET_M3_WORD))/area),2.0*min(sum.y,sum.z));tx[3]=sum.x>0.0?limit/sum.x:0.0;}
+    if(p.reserved==0u){tx[0]=sum.x;tx[1]=sum.y;tx[2]=sum.z;float limit=min(sum.x,max(0.0,cf(UE_C_TRANSFER_BUDGET_M3_WORD))/area);if(!capped_shoulders())limit=min(limit,2.0*min(sum.y,sum.z));tx[3]=sum.x>0.0?limit/sum.x:0.0;}
     else{tx[4]=sum.x;tx[5]=sum.y;tx[6]=sum.x>0.0?sum.z/sum.x:0.0;}
     return;
    }
@@ -466,7 +475,12 @@ void main(){
    float u=5.9604644775390625e-8,budget=max(1e-7,sum.z+max(1e-8,((is_volume()?4.0:8.0)*u+2.0*(float(s[base+UE_SUMMARY_TOUCHED_CELLS])+(is_volume()?0.0:256.0))*u*u)*sum.w));
    if(is_transfer()){
     nominal=0.0;
-    if(actual>2.0*budget||abs(sum.y-side_sum.x-side_sum.y)>2.0*budget||abs(side_sum.x-side_sum.y)>2.0*budget){error(UE_ERROR_CANDIDATE_INVALID);return;}
+    if(capped_shoulders()){
+     // Receiver capacity never limits the cut. Account for discarded sand,
+     // and still audit the actual per-side allocation before atomic commit.
+     float received=side_sum.x+side_sum.y,sink=max(0.0,sum.y-received);
+     if(received>sum.y+2.0*budget||abs(sum.x+sink)>2.0*budget||any(greaterThan(abs(side_sum-area*vec2(side_target(0u),side_target(1u))),vec2(2.0*budget)))){error(UE_ERROR_CANDIDATE_INVALID);return;}
+    }else if(actual>2.0*budget||abs(sum.y-side_sum.x-side_sum.y)>2.0*budget||abs(side_sum.x-side_sum.y)>2.0*budget){error(UE_ERROR_CANDIDATE_INVALID);return;}
     if(sum.y>cf(UE_C_TRANSFER_BUDGET_M3_WORD)+budget){error(UE_ERROR_BUDGET_EXCEEDED);return;}
     // Existing transfer validation permits 2*eps for net/side balance. Report
     // that actual bound, so the common result codec checks the same bound.
@@ -480,9 +494,16 @@ void main(){
    }else if(is_adjust()){
     nominal=0.0;budget=0.0;
     if(actual!=0.0||sum.w!=0.0){error(UE_ERROR_CANDIDATE_INVALID);return;}
-   }else if(!finite_value(actual)||abs(actual-nominal)>budget||actual>cf(UE_C_AVAILABLE_M3_WORD)+eps){error(UE_ERROR_CANDIDATE_INVALID);return;}
+   }else{
+    if(!finite_value(actual)||abs(actual-nominal)>budget||actual>cf(UE_C_AVAILABLE_M3_WORD)+eps){error(UE_ERROR_CANDIDATE_INVALID);return;}
+    // The accumulated allocation is not permission to exceed the request.
+    // Enforce the receipt's authorization before any physical commit, using
+    // the existing ULP budget rather than the coarser allocation epsilon.
+    if(actual-uintBitsToFloat(d[0])>budget||actual-cf(UE_C_AVAILABLE_M3_WORD)>budget){error(UE_ERROR_CANDIDATE_INVALID);return;}
+   }
    if(s[base+UE_SUMMARY_CHANGED_CELLS]>0u&&control[10]==0xffffffffu&&control[11]==0x7fffffffu){control[1]|=32u;return;}
    d[9]=s[base+UE_SUMMARY_CHANGED_CELLS];d[10]=floatBitsToUint(is_smooth()||is_transfer()?sum.x:actual-nominal);d[11]=floatBitsToUint(budget);d[12]=s[base+UE_SUMMARY_TOUCHED_CELLS];
+   if(capped_shoulders())d[10]=floatBitsToUint(sum.x+max(0.0,sum.y-side_sum.x-side_sum.y));
    d[14]=s[base+UE_SUMMARY_COVERAGE_CHANGED];
    s[base+UE_SUMMARY_NET_VOLUME]=floatBitsToUint(sum.x);s[base+UE_SUMMARY_REMOVED]=floatBitsToUint(sum.y);s[base+UE_SUMMARY_SAND_ABSOLUTE_DELTA]=floatBitsToUint(sum.w);s[base+UE_SUMMARY_MAX_DELTA]=floatBitsToUint(max_delta);
    s[base+UE_SUMMARY_LEFT_RECEIVED]=floatBitsToUint(side_sum.x);s[base+UE_SUMMARY_RIGHT_RECEIVED]=floatBitsToUint(side_sum.y);

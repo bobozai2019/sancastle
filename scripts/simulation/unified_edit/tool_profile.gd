@@ -7,7 +7,7 @@ enum Destination { BED_SAND, SUSPENDED_SAND, MATERIAL }
 enum VolumeSign { NONE, ADD, REMOVE }
 enum HeightReference { NONE, FIXED_WORLD, STROKE_BASELINE }
 enum TargetRule { NONE, FILL_TO }
-enum TransferPolicy { NONE, BALANCED_SHOULDERS }
+enum TransferPolicy { NONE, BALANCED_SHOULDERS, CAPPED_SHOULDERS }
 enum MaterialPolicy { PLAIN, MOLDED, PRESERVE }
 enum StrokePolicy { NONE, FIXED_BASELINE_COVERAGE }
 const BED:=1
@@ -65,7 +65,7 @@ func combination_error() -> StringName:
 			if shape not in [Shape.SWEPT_CAPSULE,Shape.HEIGHT_STAMP] or destination!=Destination.BED_SAND or volume_sign!=VolumeSign.NONE or target_rule!=TargetRule.FILL_TO or transfer_policy!=TransferPolicy.NONE or material_policy not in [MaterialPolicy.PLAIN,MaterialPolicy.MOLDED] or stroke_policy!=StrokePolicy.FIXED_BASELINE_COVERAGE:return &"unsupported_combination"
 			if height_reference!=(HeightReference.FIXED_WORLD if shape==Shape.HEIGHT_STAMP else HeightReference.STROKE_BASELINE):return &"unsupported_combination"
 		Operation.TRANSFER:
-			if shape!=Shape.SWEPT_CAPSULE or destination!=Destination.BED_SAND or volume_sign!=VolumeSign.NONE or target_rule!=TargetRule.NONE or transfer_policy!=TransferPolicy.BALANCED_SHOULDERS or material_policy!=MaterialPolicy.PRESERVE or stroke_policy!=StrokePolicy.FIXED_BASELINE_COVERAGE or height_reference!=HeightReference.STROKE_BASELINE:return &"unsupported_combination"
+			if shape!=Shape.SWEPT_CAPSULE or destination!=Destination.BED_SAND or volume_sign!=VolumeSign.NONE or target_rule!=TargetRule.NONE or transfer_policy not in [TransferPolicy.BALANCED_SHOULDERS,TransferPolicy.CAPPED_SHOULDERS] or material_policy!=MaterialPolicy.PRESERVE or stroke_policy!=StrokePolicy.FIXED_BASELINE_COVERAGE or height_reference!=HeightReference.STROKE_BASELINE:return &"unsupported_combination"
 		Operation.REDISTRIBUTE,Operation.FIELD_ADJUST:
 			if shape!=Shape.DISK or destination!=(Destination.BED_SAND if operation==Operation.REDISTRIBUTE else Destination.MATERIAL) or volume_sign!=VolumeSign.NONE or height_reference!=HeightReference.NONE or target_rule!=TargetRule.NONE or transfer_policy!=TransferPolicy.NONE or material_policy!=MaterialPolicy.PRESERVE or stroke_policy!=StrokePolicy.NONE or water_policy!=0:return &"unsupported_combination"
 	if shape==Shape.HEIGHT_STAMP:
