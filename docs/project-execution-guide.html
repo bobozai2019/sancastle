@@ -38,36 +38,36 @@
   56 		frozen[String(key)]=features[key]
   57 	frozen.selected_features={&quot;water_policy&quot;:frozen.water_policy,&quot;material_policy&quot;:frozen.material_policy}
   58 	frozen.derived_fields=Profile.fields_for(frozen.operation,frozen.destination,frozen.water_policy,frozen.stroke_policy)</pre></details>
-<details><summary>冻结配置 · scripts/simulation/unified_edit/configuration.gd:71</summary><p class="hash">SHA256 3f5669a7c3706746c13ffb5abc1b610cd00f16f4f415199741f1eb0d5c5883ec</p><pre>  71 static func freeze(registry, domain: Variant, simulation: Dictionary, effects: Dictionary={}, diagnostics: Dictionary={}, environment: Dictionary={}, extra_sources: PackedStringArray=PackedStringArray()) -&gt; Dictionary:
-  72 	if typeof(domain) not in [TYPE_STRING,TYPE_STRING_NAME] or String(domain).is_empty() or String(domain).length()&gt;128:return {&quot;error&quot;:&amp;&quot;invalid_configuration_domain&quot;}
-  73 	if not exact(simulation,SIMULATION_KEYS):return {&quot;error&quot;:&amp;&quot;invalid_simulation_flags&quot;}
-  74 	for value in simulation.values():
-  75 		if typeof(value)!=TYPE_BOOL:return {&quot;error&quot;:&amp;&quot;invalid_simulation_flags&quot;}
-  76 	if not simulation.unrestricted_sand_tools:return {&quot;error&quot;:&amp;&quot;unsupported_inventory_accounting&quot;}
-  77 	for key in [&quot;enable_structures&quot;,&quot;rise_front_history&quot;,&quot;contact_history&quot;]:
-  78 		if simulation[key]:return {&quot;error&quot;:&amp;&quot;unsupported_history_capability&quot;}
-  79 	var effect:=_flags(effects,EFFECT_DEFAULTS);var diagnostic:=_flags(diagnostics,DIAGNOSTIC_DEFAULTS)
-  80 	if not effect.error.is_empty():return effect</pre></details>
-<details><summary>主调度 · scripts/simulation/unified_edit/pipeline.gd:305</summary><p class="hash">SHA256 a60c7893dfc41ed9d310316ff7e1d28c3e971c007f8ea6b18b198e3a950e8ef8</p><pre> 305 func pump() -&gt; void:
- 306 	if not _ready or not _fault.is_empty():
- 307 		_checkpoint_progress();return
- 308 	if diagnostics!=null:diagnostics.mark(&amp;&quot;pump_begin&quot;,0,{&quot;pending&quot;:_pending.size(),&quot;active&quot;:active_count()})
- 309 	_poll()
- 310 	if not _fault.is_empty():
- 311 		_checkpoint_progress();return
- 312 	heights.pump()
- 313 	_checkpoint_progress()
- 314 	# All ready work may record ahead; no per-command CPU completion gate.</pre></details>
-<details><summary>唯一录制 · scripts/simulation/unified_edit/pipeline.gd:346</summary><p class="hash">SHA256 a60c7893dfc41ed9d310316ff7e1d28c3e971c007f8ea6b18b198e3a950e8ef8</p><pre> 346 func _submit_render(id: Dictionary, packet: PackedByteArray, kind: int, dt: float, wave_packets: Array=[]) -&gt; void:
- 347 	if diagnostics!=null:diagnostics.mark(&amp;&quot;submit_begin&quot;,id.batch_seq)
- 348 	if kind==L.WorkKind.WATER_TICK and boundary.enabled and not water.configure_boundary(water.tide,wave_packets):
- 349 		call_deferred(&quot;_submission_failed&quot;,id,{&quot;recorded&quot;:false,&quot;error&quot;:&amp;&quot;boundary_wave_upload&quot;});return
- 350 	var decoded:=W.decode_batch(packet,id)
- 351 	var recorder: Callable=_record_work.bind(kind,dt,decoded.commands)
- 352 	if diagnostics!=null and state.profile_passes:state.rd.capture_timestamp(&quot;ue_batch_&quot;+str(id.batch_seq)+&quot;_start&quot;)
- 353 	var submitted:=transport.submit(id,packet,recorder,_arrived_render,_finish_work)
- 354 	if diagnostics!=null and state.profile_passes:state.rd.capture_timestamp(&quot;ue_batch_&quot;+str(id.batch_seq)+&quot;_end&quot;)
- 355 	if diagnostics!=null:diagnostics.mark(&amp;&quot;submit_end&quot;,id.batch_seq,{&quot;recorded&quot;:submitted.recorded,&quot;error&quot;:submitted.error})</pre></details>
+<details><summary>冻结配置 · scripts/simulation/unified_edit/configuration.gd:72</summary><p class="hash">SHA256 22e822729c270ee835ac655d7b303b55ee9116e1518f95358286fc2bf3577f86</p><pre>  72 static func freeze(registry, domain: Variant, simulation: Dictionary, effects: Dictionary={}, diagnostics: Dictionary={}, environment: Dictionary={}, extra_sources: PackedStringArray=PackedStringArray()) -&gt; Dictionary:
+  73 	if typeof(domain) not in [TYPE_STRING,TYPE_STRING_NAME] or String(domain).is_empty() or String(domain).length()&gt;128:return {&quot;error&quot;:&amp;&quot;invalid_configuration_domain&quot;}
+  74 	if not exact(simulation,SIMULATION_KEYS):return {&quot;error&quot;:&amp;&quot;invalid_simulation_flags&quot;}
+  75 	for value in simulation.values():
+  76 		if typeof(value)!=TYPE_BOOL:return {&quot;error&quot;:&amp;&quot;invalid_simulation_flags&quot;}
+  77 	if not simulation.unrestricted_sand_tools:return {&quot;error&quot;:&amp;&quot;unsupported_inventory_accounting&quot;}
+  78 	for key in [&quot;enable_structures&quot;,&quot;rise_front_history&quot;,&quot;contact_history&quot;]:
+  79 		if simulation[key]:return {&quot;error&quot;:&amp;&quot;unsupported_history_capability&quot;}
+  80 	var effect:=_flags(effects,EFFECT_DEFAULTS);var diagnostic:=_flags(diagnostics,DIAGNOSTIC_DEFAULTS)
+  81 	if not effect.error.is_empty():return effect</pre></details>
+<details><summary>主调度 · scripts/simulation/unified_edit/pipeline.gd:311</summary><p class="hash">SHA256 56686dc8430e9740f34770d6261e765d2306b4eb161670829e908f9c40c53734</p><pre> 311 func pump() -&gt; void:
+ 312 	if not _ready or not _fault.is_empty():
+ 313 		_checkpoint_progress();return
+ 314 	if diagnostics!=null:diagnostics.mark(&amp;&quot;pump_begin&quot;,0,{&quot;pending&quot;:_pending.size(),&quot;active&quot;:active_count()})
+ 315 	_poll()
+ 316 	if not _fault.is_empty():
+ 317 		_checkpoint_progress();return
+ 318 	heights.pump()
+ 319 	_checkpoint_progress()
+ 320 	# All ready work may record ahead; no per-command CPU completion gate.</pre></details>
+<details><summary>唯一录制 · scripts/simulation/unified_edit/pipeline.gd:352</summary><p class="hash">SHA256 56686dc8430e9740f34770d6261e765d2306b4eb161670829e908f9c40c53734</p><pre> 352 func _submit_render(id: Dictionary, packet: PackedByteArray, kind: int, dt: float, wave_packets: Array=[]) -&gt; void:
+ 353 	if diagnostics!=null:diagnostics.mark(&amp;&quot;submit_begin&quot;,id.batch_seq)
+ 354 	if kind==L.WorkKind.WATER_TICK and boundary.enabled and not water.configure_boundary(water.tide,wave_packets):
+ 355 		call_deferred(&quot;_submission_failed&quot;,id,{&quot;recorded&quot;:false,&quot;error&quot;:&amp;&quot;boundary_wave_upload&quot;});return
+ 356 	var decoded:=W.decode_batch(packet,id)
+ 357 	var recorder: Callable=_record_work.bind(kind,dt,decoded.commands)
+ 358 	if diagnostics!=null and state.profile_passes:state.rd.capture_timestamp(&quot;ue_batch_&quot;+str(id.batch_seq)+&quot;_start&quot;)
+ 359 	var submitted:=transport.submit(id,packet,recorder,_arrived_render,_finish_work)
+ 360 	if diagnostics!=null and state.profile_passes:state.rd.capture_timestamp(&quot;ue_batch_&quot;+str(id.batch_seq)+&quot;_end&quot;)
+ 361 	if diagnostics!=null:diagnostics.mark(&amp;&quot;submit_end&quot;,id.batch_seq,{&quot;recorded&quot;:submitted.recorded,&quot;error&quot;:submitted.error})</pre></details>
 <details><summary>编辑骨架 · scripts/simulation/unified_edit/executor.gd:46</summary><p class="hash">SHA256 f57c4bf157df609b9e922e038c7546914a9ae0d0cc76c7d23b9b92d270001751</p><pre>  46 func record(input: RID, _control: RID, _output: RID, count: int, commands: Array) -&gt; void:
   47 	var slot_index:=-1
   48 	for index in transport.resources.size():
@@ -113,36 +113,36 @@
   67
   68 func _initialize_velocity_prepare_phases() -&gt; bool:
   69 	kernels.velocity_prepare.phases=[]</pre></details>
-<details><summary>水tick · scripts/simulation/unified_edit/water.gd:113</summary><p class="hash">SHA256 0a0cbedc11d9fcb4d55f53e75b99da537c4ed4a166945bffcad90cac69600903</p><pre> 113 func record_tick(_input: RID, _control: RID, _output: RID, _count: int, requested_dt: float) -&gt; void:
- 114 	var record_start:=Time.get_ticks_usec() if solver.profile_passes else 0
- 115 	if solver.profile_passes:rd.capture_timestamp(&quot;sandcastle_async_water_tick_start&quot;)
- 116 	_dispatch(&quot;cfl_tiles&quot;,kernels.cfl_tiles.binding,PackedByteArray())
- 117 	var push:=PackedFloat32Array([requested_dt,solver.cell_size_m,solver.COURANT,0.0]).to_byte_array()
- 118 	push.encode_u32(12,solver.grid_size)
- 119 	_dispatch(&quot;cfl_decide&quot;,kernels.cfl_decide.binding,push)
- 120 	if boundary_enabled:
- 121 		var boundary_push:=PackedFloat32Array([solver.cell_size_m*solver.cell_size_m,tide.x,tide.y,tide.z]).to_byte_array()
- 122 		boundary_push.append_array(PackedInt32Array([wave_count,tide_mode,0,0]).to_byte_array())</pre></details>
-<details><summary>初始化与native资源 · scripts/simulation/unified_edit/state.gd:32</summary><p class="hash">SHA256 125b6317ebf10cf84df89fefb79c0ba0aa9a83a44ae5f890f5c4793a603421df</p><pre>  32 func initialize(device: RenderingDevice, domain, transport, native: Dictionary={}) -&gt; bool:
-  33 	if rd!=null or device==null or domain==null or domain.grid_size!=256 or domain.cell_size_m!=0.125:return false
-  34 	if not is_finite(cohesion_yield_height_m) or cohesion_yield_height_m&lt;0.0 or cohesion_yield_height_m&gt;2.0:last_error=&quot;initial_cohesion_value&quot;;return false
-  35 	rd=device;async_transport=transport
-  36 	for field in [&quot;rock&quot;,&quot;sand&quot;,&quot;water&quot;,&quot;sediment&quot;,&quot;wetness&quot;,&quot;compaction&quot;,&quot;obstacle&quot;]:
-  37 		var values: PackedFloat32Array=domain.get(field)
-  38 		if values.size()!=65536:last_error=&quot;initial_field_size&quot;;return false
-  39 		for value in values:
-  40 			if not is_finite(value) or (field!=&quot;rock&quot; and value&lt;0.0) or (field in [&quot;wetness&quot;,&quot;compaction&quot;,&quot;obstacle&quot;] and value&gt;1.0):last_error=&quot;initial_field_value&quot;;return false
-  41 		var format_id: int=RenderingDevice.DATA_FORMAT_R32_SFLOAT</pre></details>
-<details><summary>碰撞消费 · scripts/simulation/unified_edit/height.gd:164</summary><p class="hash">SHA256 6d6b3e070667d9263687ceca33d169ae2ccc69381e29cb953d50c75fe0a77ff9</p><pre> 164 func physics_consume(order: PackedInt32Array=PackedInt32Array([0,1])) -&gt; int:
- 165 	if hold_physics:return 0
- 166 	var count:=0
- 167 	for index in order:
- 168 		if index&lt;0 or index&gt;=slots.size():continue
- 169 		var slot: Dictionary=slots[index]
- 170 		if slot.phase!=&amp;&quot;worker&quot; or not WorkerThreadPool.is_task_completed(slot.task):continue
- 171 		WorkerThreadPool.wait_for_task_completion(slot.task)
- 172 		var prepared: Dictionary=slot.job.result();var id: Dictionary=slot.identity
- 173 		if diagnostics!=null:diagnostics.mark(&amp;&quot;height_apply_begin&quot;,id.snapshot_seq,{&quot;timings&quot;:prepared.timings,&quot;chunks&quot;:slot.result.chunks.size(),&quot;state_seq&quot;:slot.result.state_seq})</pre></details>
+<details><summary>水tick · scripts/simulation/unified_edit/water.gd:143</summary><p class="hash">SHA256 26d2fbbe6faa9862af5ab29649290d37f903f0732cac05195de424b109d5249c</p><pre> 143 func record_tick(_input: RID, _control: RID, _output: RID, _count: int, requested_dt: float) -&gt; void:
+ 144 	if muscl!=null:
+ 145 		muscl.record_tick(requested_dt);return
+ 146 	var record_start:=Time.get_ticks_usec() if solver.profile_passes else 0
+ 147 	if solver.profile_passes:rd.capture_timestamp(&quot;sandcastle_async_water_tick_start&quot;)
+ 148 	_dispatch(&quot;cfl_tiles&quot;,kernels.cfl_tiles.binding,PackedByteArray())
+ 149 	var push:=PackedFloat32Array([requested_dt,solver.cell_size_m,solver.COURANT,0.0]).to_byte_array()
+ 150 	push.encode_u32(12,solver.grid_size)
+ 151 	_dispatch(&quot;cfl_decide&quot;,kernels.cfl_decide.binding,push)
+ 152 	if boundary_enabled:</pre></details>
+<details><summary>初始化与native资源 · scripts/simulation/unified_edit/state.gd:33</summary><p class="hash">SHA256 018b6a782b8d0e7f338c49a93bfee7131c1d67b494f1e10fd3048793b9f3b272</p><pre>  33 func initialize(device: RenderingDevice, domain, transport, native: Dictionary={}) -&gt; bool:
+  34 	if rd!=null or device==null or domain==null or domain.grid_size!=256 or domain.cell_size_m!=0.125:return false
+  35 	if not is_finite(cohesion_yield_height_m) or cohesion_yield_height_m&lt;0.0 or cohesion_yield_height_m&gt;2.0:last_error=&quot;initial_cohesion_value&quot;;return false
+  36 	rd=device;async_transport=transport
+  37 	for field in [&quot;rock&quot;,&quot;sand&quot;,&quot;water&quot;,&quot;sediment&quot;,&quot;wetness&quot;,&quot;compaction&quot;,&quot;obstacle&quot;]:
+  38 		var values: PackedFloat32Array=domain.get(field)
+  39 		if values.size()!=65536:last_error=&quot;initial_field_size&quot;;return false
+  40 		for value in values:
+  41 			if not is_finite(value) or (field!=&quot;rock&quot; and value&lt;0.0) or (field in [&quot;wetness&quot;,&quot;compaction&quot;,&quot;obstacle&quot;] and value&gt;1.0):last_error=&quot;initial_field_value&quot;;return false
+  42 		var format_id: int=RenderingDevice.DATA_FORMAT_R32_SFLOAT</pre></details>
+<details><summary>碰撞消费 · scripts/simulation/unified_edit/height.gd:173</summary><p class="hash">SHA256 2675c1caf640099c600e4f9245132013c8a9a3057788418b4dabdce15b96f969</p><pre> 173 func physics_consume(order: PackedInt32Array=PackedInt32Array()) -&gt; int:
+ 174 	if hold_physics:return 0
+ 175 	var frame:=Engine.get_process_frames()
+ 176 	if _apply_frame!=frame:
+ 177 		_apply_frame=frame;_apply_usec=0;_apply_count=0
+ 178 	if order.is_empty():order=PackedInt32Array([_next_apply_slot,1-_next_apply_slot])
+ 179 	var count:=0
+ 180 	for index in order:
+ 181 		if index&lt;0 or index&gt;=slots.size():continue
+ 182 		var slot: Dictionary=slots[index]</pre></details>
 <details><summary>换代提交 · scripts/simulation/unified_edit/domain_runtime.gd:186</summary><p class="hash">SHA256 825d377324b9235dcfb9ab3fc965f5dfeaaa355e555d69b6e8905a0dfc5acd7a</p><pre> 186 func _physics_process(_delta: float) -&gt; void:
  187 	if closing:
  188 		for surface in surfaces:surface.set_collision_enabled(false)
@@ -203,16 +203,16 @@
   80 	result.domain_id=request.domain_id
   81 	if bytes.slice(96,128)!=String(request.domain_id).sha256_text().hex_decode():return result
   82 	if bytes.decode_u32(68)!=request.points.size() or bytes.decode_u32(80)!=0 or bytes.decode_u32(84)!=0:return result</pre></details>
-<details><summary>碰撞差异证明 · scripts/simulation/unified_edit/height.gd:232</summary><p class="hash">SHA256 6d6b3e070667d9263687ceca33d169ae2ccc69381e29cb953d50c75fe0a77ff9</p><pre> 232 func footprint_compatible(required: Dictionary, bounds: Dictionary, epoch: int, tolerance_m: float) -&gt; Dictionary:
- 233 	var strict:=footprint_ready(required,epoch)
- 234 	if not strict.error.is_empty() or tolerance_m&lt;0.0 or not is_finite(tolerance_m):return {&quot;ready&quot;:false,&quot;error&quot;:strict.error}
- 235 	var maximum:=0.0;var differences:={}
- 236 	for chunk in required:
- 237 		var applied: int=applied_state_seq.get(chunk,-1)
- 238 		if applied&lt;0 or int(applied_physics_frame.get(chunk,-1))&lt;0:return {&quot;ready&quot;:false,&quot;error&quot;:&amp;&quot;support_not_ready&quot;}
- 239 		if applied&gt;=required[chunk]:continue
- 240 		var upper: float=applied_change_bounds.get(chunk,-1.0);var lower:=Codec.lower_change_bound(upper);var newer: float=bounds.get(chunk,-1.0)
- 241 		if lower&lt;0.0 or newer&lt;0.0 or newer&lt;lower or newer-lower&gt;tolerance_m:return {&quot;ready&quot;:false,&quot;error&quot;:&amp;&quot;support_change_bound&quot;}</pre></details>
+<details><summary>碰撞差异证明 · scripts/simulation/unified_edit/height.gd:261</summary><p class="hash">SHA256 2675c1caf640099c600e4f9245132013c8a9a3057788418b4dabdce15b96f969</p><pre> 261 func footprint_compatible(required: Dictionary, bounds: Dictionary, epoch: int, tolerance_m: float) -&gt; Dictionary:
+ 262 	var strict:=footprint_ready(required,epoch)
+ 263 	if not strict.error.is_empty() or tolerance_m&lt;0.0 or not is_finite(tolerance_m):return {&quot;ready&quot;:false,&quot;error&quot;:strict.error}
+ 264 	var maximum:=0.0;var differences:={}
+ 265 	for chunk in required:
+ 266 		var applied: int=applied_state_seq.get(chunk,-1)
+ 267 		if applied&lt;0 or int(applied_physics_frame.get(chunk,-1))&lt;0:return {&quot;ready&quot;:false,&quot;error&quot;:&amp;&quot;support_not_ready&quot;}
+ 268 		if applied&gt;=required[chunk]:continue
+ 269 		var upper: float=applied_change_bounds.get(chunk,-1.0);var lower:=Codec.lower_change_bound(upper);var newer: float=bounds.get(chunk,-1.0)
+ 270 		if lower&lt;0.0 or newer&lt;0.0 or newer&lt;lower or newer-lower&gt;tolerance_m:return {&quot;ready&quot;:false,&quot;error&quot;:&amp;&quot;support_change_bound&quot;}</pre></details>
 <details><summary>道具接入 · scripts/props/floating_props_service.gd:202</summary><p class="hash">SHA256 1552a5e386bba23c4723f0f38928431e172857e892aea6d6c5521ef53c0ab08e</p><pre> 202 func attach(owner, rows: Array, positions: Dictionary) -&gt; Dictionary:
  203 	if closing:return _result(0,&amp;&quot;closing&quot;)
  204 	if busy or active:return _result(0,&amp;&quot;busy&quot;)

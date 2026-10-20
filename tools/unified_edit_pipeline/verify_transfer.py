@@ -94,7 +94,8 @@ def main():
                 continue
             if not wire:
                 continue
-            check(label+"_transfer_operation", wire["operation"] == 2 and result["ledger"] == 2)
+            capped = wire["transfer_policy"] == 2
+            check(label+"_transfer_operation", wire["operation"] == 2 and result["ledger"] == (4 if capped else 2))
             old, new = raw(before, "sand0"), raw(after, "sand0")
             base, rock = raw(before, "baseline"), raw(before, "rock")
             previous, current = raw(before, "coverage", 2), raw(after, "coverage", 2)
@@ -108,12 +109,12 @@ def main():
                 t = np.clip(((x-ax)*dx+(z-az)*dz)/(dx*dx+dz*dz), 0, 1)
                 distance = np.hypot(x-(ax+t*dx), z-(az+t*dz))
             donor = distance < inner
-            receiver = (distance >= inner) & (distance < inner+shoulder) & (previous[:, :, 1] == 0) & (raw(before, "obstacle", dtype="u1") == 0)
+            receiver = (distance >= inner) & (distance < inner+shoulder) & (capped | (previous[:, :, 1] == 0)) & (raw(before, "obstacle", dtype="u1") == 0)
             signed = (z-az)*dx-(x-ax)*dz
             left, right = receiver & (signed >= 0), receiver & (signed < 0)
             touched = donor | receiver
             check(label+"_independent_participation", int(touched.sum()) == result["touched_cells"])
-            check(label+"_zero_source_sink", result["source_m3"] == result["sink_m3"] == 0)
+            check(label+"_external_ledger_policy", result["source_m3"] == 0 and (result["sink_m3"] >= 0 if capped else result["sink_m3"] == 0))
             profile = np.where(donor, np.maximum(0, 1-distance*distance/(inner*inner)), 0)
             target = np.maximum(rock, base-wire["depth_m"]*profile)
             target = np.where(previous[:, :, 1] > 0, np.maximum(rock, np.where(profile <= previous[:, :, 1], previous[:, :, 0], np.minimum(target, previous[:, :, 0]))), target)
@@ -133,8 +134,11 @@ def main():
             weight_error = math.pi*distance_error/shoulder+gamma(8)*math.pi+4*U
             weight_lo, weight_hi = np.where(receiver, np.maximum(0, weight-weight_error), 0), np.where(receiver, weight+weight_error, 0)
             cut_total_lo, cut_total_hi = math.fsum(cut_lo.ravel()), math.fsum(cut_hi.ravel())
-            limit_lo = min(cut_total_lo, wire["transfer_budget_m3"]/AREA, 2*min(math.fsum(cap_lo[left]), math.fsum(cap_lo[right])))
-            limit_hi = min(cut_total_hi, wire["transfer_budget_m3"]/AREA, 2*min(math.fsum(cap_hi[left]), math.fsum(cap_hi[right])))
+            limit_lo = min(cut_total_lo, wire["transfer_budget_m3"]/AREA)
+            limit_hi = min(cut_total_hi, wire["transfer_budget_m3"]/AREA)
+            if not capped:
+                limit_lo = min(limit_lo, 2*min(math.fsum(cap_lo[left]), math.fsum(cap_lo[right])))
+                limit_hi = min(limit_hi, 2*min(math.fsum(cap_hi[left]), math.fsum(cap_hi[right])))
             scale_lo = limit_lo/cut_total_hi if cut_total_hi else 0
             scale_hi = min(1, limit_hi/cut_total_lo) if cut_total_lo else (1 if limit_hi else 0)
             rounding = gamma(4)*(np.abs(old)+cut_hi)
@@ -149,8 +153,10 @@ def main():
             moved_lo = max(0, moved_lo*(1-gamma(10)))
             moved_hi *= 1+gamma(10)
             for mask in [left, right]:
-                lambda_lo = solve(cap_hi[mask], weight_hi[mask], moved_lo*.5)
-                lambda_hi = solve(cap_lo[mask], weight_lo[mask], moved_hi*.5)
+                target_lo = min(moved_lo*.5, math.fsum(cap_lo[mask])) if capped else moved_lo*.5
+                target_hi = min(moved_hi*.5, math.fsum(cap_hi[mask])) if capped else moved_hi*.5
+                lambda_lo = solve(cap_hi[mask], weight_hi[mask], target_lo)
+                lambda_hi = solve(cap_lo[mask], weight_lo[mask], target_hi)
                 low_amount = np.minimum(cap_lo[mask], lambda_lo*weight_lo[mask])
                 high_amount = cap_hi[mask] if math.isinf(lambda_hi) else np.minimum(cap_hi[mask], lambda_hi*weight_hi[mask])
                 # Two frozen residual rounds alter each R32F receiver by at
@@ -170,12 +176,16 @@ def main():
             received_left, received_right = math.fsum(np.maximum(delta[left], 0))*AREA, math.fsum(np.maximum(delta[right], 0))*AREA
             net, absolute = math.fsum(delta.ravel())*AREA, math.fsum(np.abs(delta).ravel())*AREA
             eps = max(1e-7, math.fsum(2*ulps(np.maximum(np.abs(old), np.abs(new))[touched]))*AREA+max(1e-8, (8*U+2*(int(touched.sum())+256)*U*U)*absolute))
-            check(label+"_frozen_conservation", abs(net) <= 2*eps and abs(removed-received_left-received_right) <= 2*eps and abs(received_left-received_right) <= 2*eps, {"net_m3": net, "eps_base_m3": eps})
+            if capped:
+                check(label+"_sink_conservation", abs(net+result["sink_m3"]) <= 2*eps and abs(removed-received_left-received_right-result["sink_m3"]) <= 2*eps and max(received_left, received_right) <= removed*.5+2*eps, {"net_m3": net, "sink_m3": result["sink_m3"], "eps_base_m3": eps})
+            else:
+                check(label+"_frozen_conservation", abs(net) <= 2*eps and abs(removed-received_left-received_right) <= 2*eps and abs(received_left-received_right) <= 2*eps, {"net_m3": net, "eps_base_m3": eps})
             check(label+"_authorization", removed <= wire["transfer_budget_m3"]+eps)
             check(label+"_capacity_and_direction", np.all(delta[donor] <= 0) and np.all(delta[receiver] >= 0) and np.all(delta[receiver] <= cap_hi[receiver]+2*ulps(new[receiver])))
             if result["outcome"] == 1:
                 check(label+"_reported_budget", abs(result["eps_sand_m3"]-2*eps) <= max(32*U*eps, 1e-12) and result["eps_transfer_m3"] == result["eps_sand_m3"])
-                check(label+"_actual_receipt", all(abs(result[name]-value) <= max(1e-10, gamma(12)*(absolute if name == "sand_error_m3" else abs(value))) for name, value in [("added_m3", added), ("removed_m3", removed), ("transferred_m3", removed), ("left_received_m3", received_left), ("right_received_m3", received_right), ("sand_error_m3", net)]))
+                transferred = received_left+received_right if capped else removed
+                check(label+"_actual_receipt", all(abs(result[name]-value) <= max(1e-10, gamma(12)*(absolute if name == "sand_error_m3" else abs(value))) for name, value in [("added_m3", added), ("removed_m3", removed), ("transferred_m3", transferred), ("left_received_m3", received_left), ("right_received_m3", received_right), ("sand_error_m3", net+result["sink_m3"])]))
             support = raw(before, "support0", 2)
             tag_removed = math.fsum(np.minimum(support[:, :, 0], np.maximum(-delta, 0))[donor])
             moved = removed/AREA
@@ -198,6 +208,9 @@ def main():
             cv_error = wire["depth_m"]*profile_error+gamma(8)*(np.abs(base)+np.abs(rock)+np.abs(new)+1)
             expected_cv_x = np.maximum(target, new+rock)
             expected_cv_y = np.maximum(profile, previous[:, :, 1])
+            if capped:
+                expected_cv_x = np.where(new < old, expected_cv_x, previous[:, :, 0])
+                expected_cv_y = np.where(new < old, expected_cv_y, previous[:, :, 1])
             check(label+"_coverage_committed_actual_bed", np.all(np.abs(current[:, :, 0][donor]-expected_cv_x[donor]) <= cv_error[donor]) and np.all(np.abs(current[:, :, 1][donor]-expected_cv_y[donor]) <= profile_error[donor]))
             changed = (old != new) | (comp != actual_comp) | np.any(support != actual_support, axis=2)
             check(label+"_actual_changed_count", result["changed_cells"] == int(changed.sum()))
@@ -260,7 +273,7 @@ def main():
         # This recorded horizontal fixture has no zero-side shoulder cells.
         # It is a fixture observation, not a general endpoint-invariance rule.
         check("horizontal_fixture_direction_invariance", all(firsts["transfer"]["after"][name]["sha256"] == firsts["transfer_reverse"]["after"][name]["sha256"] for name in FIELDS))
-    report = {"pass": all(c["pass"] for c in checks), "selected_cases": [run["case"] for run in selected], "excluded_cases": [run["case"] for run in manifest["runs"] if run not in selected], "checks": checks, "tool_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(), "scope": "Dry balanced transfer only. Independent float64 per-receiver monotone allocation intervals, separate frozen R32F mass/side budgets, actual native materials and precommit authority bytes. R16F positive truncation is the previously measured D3D12 device convention, not a cross-backend claim."}
+    report = {"pass": all(c["pass"] for c in checks), "selected_cases": [run["case"] for run in selected], "excluded_cases": [run["case"] for run in manifest["runs"] if run not in selected], "checks": checks, "tool_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(), "scope": "Dry balanced/capped transfer. Independent float64 per-receiver monotone allocation intervals, separate frozen R32F mass/side/sink budgets, actual native materials and precommit authority bytes. R16F positive truncation is the previously measured D3D12 device convention, not a cross-backend claim."}
     (args.output/"result.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
     print(json.dumps({"pass": report["pass"], "checks": len(checks), "failures": [c["name"] for c in checks if not c["pass"]]}))
     return 0 if report["pass"] else 1

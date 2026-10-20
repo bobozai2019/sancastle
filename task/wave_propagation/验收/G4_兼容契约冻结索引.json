@@ -1,0 +1,35 @@
+{
+  "schema": 1,
+  "contract": "C02 v1.1",
+  "status": "frozen_design_not_gate_acceptance",
+  "previous": "G1_\u51bb\u7ed3\u7d22\u5f15.json and original G1 source zip",
+  "artifacts": [
+    {
+      "path": "test_output/wave_propagation/g4_compat_contract_freeze_01/bake_numerics_catalog.gd",
+      "sha256": "cd23a8fa0ff3d629033e5b49fbef95f0e1e23152dda260e7d71843c4d2b5661a",
+      "bytes": 6270
+    },
+    {
+      "path": "test_output/wave_propagation/g4_compat_contract_freeze_01/C02_\u65f6\u5e8f\u4e0e\u517c\u5bb9.md",
+      "sha256": "6164ef181ead92d0bccf5e8b1d2dbf6e4debbd3c8bc61cf38bfbab3ebfcc4f37",
+      "bytes": 12286
+    },
+    {
+      "path": "test_output/wave_propagation/g4_compat_contract_freeze_01/numerics_checkpoint_sources.gd",
+      "sha256": "91e5ec6112b35cd293680351ee8df272913320d8ddee951873684f7f62820764",
+      "bytes": 5870
+    },
+    {
+      "path": "test_output/wave_propagation/g4_compat_contract_freeze_01/\u51b3\u7b56\u8bb0\u5f55.md",
+      "sha256": "68fb1d679e44518e6424e7ffa508bebf650218ceeb462fa299bb7d4c12da1260",
+      "bytes": 5984
+    },
+    {
+      "path": "test_output/wave_propagation/g4_compat_contract_freeze_02/C02_\u65f6\u5e8f\u4e0e\u517c\u5bb9.md",
+      "bytes": 12317,
+      "sha256": "6ffd293b2329147407b67f3eaa4a7e21a51dfe67d2ffb29953846ac6581d58c5"
+    }
+  ],
+  "active_contract_copy": "test_output/wave_propagation/g4_compat_contract_freeze_02/C02_\u65f6\u5e8f\u4e0e\u517c\u5bb9.md",
+  "clarification": "Header status clarification only; v1.1 normative parameter mapping unchanged. Original G1 and first v1.1 copy preserved."
+}

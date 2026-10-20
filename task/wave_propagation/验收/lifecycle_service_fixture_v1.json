@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "suite": "lifecycle",
+  "solver_id": "muscl_mc_ssprk2_v1",
+  "cases": [
+    {
+      "id": "candidate_failure_main",
+      "kind": "formal_candidate",
+      "case_id": "main"
+    },
+    {
+      "id": "four_scene_service",
+      "kind": "formal_service",
+      "case_id": "main"
+    }
+  ]
+}

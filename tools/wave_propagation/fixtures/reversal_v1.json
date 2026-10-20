@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "seed": 2081,
+  "numpy_version": "2.4.4",
+  "path": "res://tools/wave_propagation/fixtures/reversal_v1.rgba32f",
+  "shape": [
+    256,
+    256,
+    4
+  ],
+  "dtype": "float32",
+  "channels": [
+    "h_m",
+    "qx_m2_s",
+    "qz_m2_s",
+    "sediment_m"
+  ],
+  "sha256": "67b600c8f0b6b85c63df75ed5df991f2672958f9a505a07810d2f34fc2c7493d",
+  "bytes": 1048576,
+  "construction": "Repeat the frozen 32-square RNG2081 realization 8 by 8; physical bed fixed0.4m; only a testing initial field."
+}

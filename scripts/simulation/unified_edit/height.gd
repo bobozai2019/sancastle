@@ -32,6 +32,15 @@ var hold_readbacks:=false
 var held: Array[Dictionary]=[]
 var hold_physics:=false
 var diagnostics: Diagnostics
+# A budget belongs to one height owner and one rendered frame, including all
+# physics catch-up notifications in that frame. One native shape call is atomic.
+const APPLY_BUDGET_USEC:=1500
+const APPLY_MAX_CHUNKS:=8
+var _apply_frame: int=-1
+var _apply_usec:=0
+var _apply_count:=0
+var _next_apply_slot:=0
+var _apply_slice:=0
 
 func _init() -> void:
 	priority_mask.resize(8)
@@ -161,29 +170,49 @@ func _invalid(id: Dictionary, error: StringName) -> void:
 
 # Called only by the owner's _physics_process, even when collecting workers
 # during shutdown. No work-slot retirement waits for collision convergence.
-func physics_consume(order: PackedInt32Array=PackedInt32Array([0,1])) -> int:
+func physics_consume(order: PackedInt32Array=PackedInt32Array()) -> int:
 	if hold_physics:return 0
+	var frame:=Engine.get_process_frames()
+	if _apply_frame!=frame:
+		_apply_frame=frame;_apply_usec=0;_apply_count=0
+	if order.is_empty():order=PackedInt32Array([_next_apply_slot,1-_next_apply_slot])
 	var count:=0
 	for index in order:
 		if index<0 or index>=slots.size():continue
 		var slot: Dictionary=slots[index]
-		if slot.phase!=&"worker" or not WorkerThreadPool.is_task_completed(slot.task):continue
-		WorkerThreadPool.wait_for_task_completion(slot.task)
-		var prepared: Dictionary=slot.job.result();var id: Dictionary=slot.identity
-		if diagnostics!=null:diagnostics.mark(&"height_apply_begin",id.snapshot_seq,{"timings":prepared.timings,"chunks":slot.result.chunks.size(),"state_seq":slot.result.state_seq})
-		if prepared.status!=&"prepared":_invalid(id,&"height_nonfinite");continue
+		if slot.phase==&"worker":
+			if not WorkerThreadPool.is_task_completed(slot.task):continue
+			WorkerThreadPool.wait_for_task_completion(slot.task)
+			slot.prepared=slot.job.result();slot.job=null;slot.task=-1
+			slot.next_chunk=0;slot.phase=&"applying"
+			if slot.prepared.status!=&"prepared":_invalid(slot.identity,&"height_nonfinite");continue
+		if slot.phase!=&"applying":continue
+		var prepared: Dictionary=slot.prepared;var id: Dictionary=slot.identity
 		if not closing and proxy!=null:
+			if _apply_usec>=APPLY_BUDGET_USEC or _apply_count>=APPLY_MAX_CHUNKS:break
+			_apply_slice+=1
+			if diagnostics!=null:diagnostics.mark(&"height_apply_begin",id.snapshot_seq,{"slice_id":_apply_slice,"timings":prepared.timings if slot.next_chunk==0 else [],"chunks":prepared.chunks.size()-slot.next_chunk,"state_seq":slot.result.state_seq})
 			var accepted:=true
-			for chunk in prepared.chunks:
+			while slot.next_chunk<prepared.chunks.size():
+				if _apply_usec>=APPLY_BUDGET_USEC or _apply_count>=APPLY_MAX_CHUNKS:break
+				var chunk: Dictionary=prepared.chunks[slot.next_chunk]
+				slot.next_chunk+=1
 				var version: int=slot.result.state_seq;var chunk_id: int=chunk.chunk_id
 				if version<int(applied_state_seq.get(chunk_id,-1)):continue
-				if not proxy._replace_chunk_shape(chunk_id,version,chunk.heights,generation):accepted=false;break
+				var started:=Time.get_ticks_usec()
+				var replaced: bool=proxy._replace_chunk_shape(chunk_id,version,chunk.heights,generation)
+				_apply_usec+=Time.get_ticks_usec()-started;_apply_count+=1
+				if not replaced:accepted=false;break
 				applied_state_seq[chunk_id]=version;applied_tick[chunk_id]=slot.result.sim_tick;applied_revision[chunk_id]=slot.result.revision;applied_physics_frame[chunk_id]=Engine.get_physics_frames();count+=1
 				applied_change_bounds[chunk_id]=slot.result.change_bounds[chunk_id]
+			if diagnostics!=null:diagnostics.mark(&"height_apply_end",id.snapshot_seq,{"slice_id":_apply_slice,"next_chunk":slot.next_chunk,"frame_apply_usec":_apply_usec,"frame_apply_count":_apply_count})
+			_next_apply_slot=1-index
 			if not accepted:_invalid(id,&"height_proxy_rejected");continue
+			# Keep the real reader lease and borrowed dirty bits until every
+			# chunk is consumed. Closing may discard the remaining CPU shapes.
+			if slot.next_chunk<prepared.chunks.size():break
 			_event(&"physics",id,{"state_seq":slot.result.state_seq,"chunks":slot.result.chunks})
 		_ack(id,false)
-		if diagnostics!=null:diagnostics.mark(&"height_apply_end",id.snapshot_seq)
 	return count
 
 func _ack(id: Dictionary, retry: bool) -> void:

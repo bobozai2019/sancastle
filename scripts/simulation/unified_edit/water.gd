@@ -1,7 +1,22 @@
 extends RefCounted
 
+const Muscl=preload("res://scripts/simulation/unified_edit/water_muscl.gd")
+const NUMERICS_SOURCES=Muscl.SOURCES
+var muscl
+
 # Retained GPU CFL/water numerical recorder; submission belongs to unified transport.
 # Main frame-pump and lifecycle integration is independently verified in G5/G6.
+class RecordingPass:
+	var pipeline: RID
+	var uniform: RID
+	var decision_set: RID
+	var has_decision: bool
+	var push: PackedByteArray
+	var push_size: int
+	func _init(program: RID, binding: RID, decision_binding: RID=RID(), constants: PackedByteArray=PackedByteArray()) -> void:
+		pipeline=program;uniform=binding;decision_set=decision_binding
+		has_decision=decision_binding.is_valid();push=constants;push_size=constants.size()
+
 var solver
 var rd: RenderingDevice
 var decision := RID()
@@ -21,6 +36,8 @@ var tide_period:=16.0
 var last_recording_us:=0
 var recorded_ticks:=0
 var inject_boundary_upload_failure_once:=false
+var _water_passes: Array=[]
+var _update_pushes: Array[PackedByteArray]=[]
 const MAX_WAVES:=128 # Main's existing staged workload has 80 scheduled packets.
 
 func _own(rid: RID) -> RID:
@@ -79,6 +96,19 @@ func initialize(owner) -> bool:
 	kernels.normalize.binding=_make_binding(kernels.normalize.shader,0,images,[])
 	waves=_own(rd.storage_buffer_create(MAX_WAVES*16))
 	kernels.boundary.binding=_make_binding(kernels.boundary.shader,0,[owner.textures.rock,owner.textures.sand[0],owner.textures.water[0],owner.textures.momentum_x[0],owner.textures.momentum_z[0]],[owner.async_transport.control,decision,waves])
+	# Cache only the fixed numerical stages and borrowed bindings for this owner.
+	# List boundaries and the GPU-selected 64 indirect dispatches stay unchanged.
+	var drain_push:=PackedFloat32Array([0.0,0.0,0.0,0.0]).to_byte_array()
+	for boundary in 2:_update_pushes.append(PackedFloat32Array([0.0,owner.cell_size_m,float(boundary),0.0]).to_byte_array())
+	for index in 2:
+		var passes: Array[RecordingPass]=[
+			RecordingPass.new(owner.pipelines[0],owner.uniform_sets[index][0]),
+			RecordingPass.new(kernels.drain_scale.pipeline,owner.uniform_sets[index][1],kernels.drain_scale.decision_set,drain_push),
+			RecordingPass.new(kernels.update_state.pipeline,owner.uniform_sets[index][2],kernels.update_state.decision_set,_update_pushes[0])]
+		_water_passes.append(passes)
+	if owner.water_solver_id=="muscl_mc_ssprk2_v1":
+		muscl=Muscl.new()
+		if not muscl.initialize(self):last_error=muscl.last_error;return false
 	return last_error.is_empty()
 
 # Render-thread, low-frequency configuration. Each packet is
@@ -111,6 +141,8 @@ func _dispatch(name: String, binding: RID, push: PackedByteArray, step: int=-1) 
 	rd.compute_list_end()
 
 func record_tick(_input: RID, _control: RID, _output: RID, _count: int, requested_dt: float) -> void:
+	if muscl!=null:
+		muscl.record_tick(requested_dt);return
 	var record_start:=Time.get_ticks_usec() if solver.profile_passes else 0
 	if solver.profile_passes:rd.capture_timestamp("sandcastle_async_water_tick_start")
 	_dispatch("cfl_tiles",kernels.cfl_tiles.binding,PackedByteArray())
@@ -127,17 +159,17 @@ func record_tick(_input: RID, _control: RID, _output: RID, _count: int, requeste
 		# the boundary change. Neither decision leaves the GPU sequence.
 		_dispatch("cfl_tiles",kernels.cfl_tiles.binding,PackedByteArray())
 		_dispatch("cfl_decide",kernels.cfl_decide.binding,push)
-	var drain_push:=PackedFloat32Array([0.0,0.0,0.0,0.0]).to_byte_array()
-	var update_push:=PackedFloat32Array([0.0,solver.cell_size_m,1.0 if solver.prescribed_tide_boundary else 0.0,0.0]).to_byte_array()
+	for passes in _water_passes:passes[2].push=_update_pushes[1 if solver.prescribed_tide_boundary else 0]
 	for step in 64:
 		var index:=step%2
-		var list:=rd.compute_list_begin()
-		rd.compute_list_bind_compute_pipeline(list,solver.pipelines[0])
-		rd.compute_list_bind_uniform_set(list,solver.uniform_sets[index][0],0)
-		rd.compute_list_dispatch_indirect(list,indirect,step*12)
-		rd.compute_list_end()
-		_dispatch("drain_scale",solver.uniform_sets[index][1],drain_push,step)
-		_dispatch("update_state",solver.uniform_sets[index][2],update_push,step)
+		for stage: RecordingPass in _water_passes[index]:
+			var list:=rd.compute_list_begin()
+			rd.compute_list_bind_compute_pipeline(list,stage.pipeline)
+			rd.compute_list_bind_uniform_set(list,stage.uniform,0)
+			if stage.has_decision:rd.compute_list_bind_uniform_set(list,stage.decision_set,1)
+			if stage.push_size>0:rd.compute_list_set_push_constant(list,stage.push,stage.push_size)
+			rd.compute_list_dispatch_indirect(list,indirect,step*12)
+			rd.compute_list_end()
 		if coupled_recorder.is_valid():coupled_recorder.call(decision,indirect,step,1-index)
 	_dispatch("normalize",kernels.normalize.binding,PackedByteArray())
 	_dispatch("sim_finish",kernels.sim_finish.binding,PackedByteArray())
@@ -148,9 +180,11 @@ func record_tick(_input: RID, _control: RID, _output: RID, _count: int, requeste
 		recorded_ticks+=1
 
 func release() -> void:
+	if muscl!=null:muscl.release();muscl=null
 	if rd!=null:
 		for index in range(owned.size()-1,-1,-1):rd.free_rid(owned[index])
 	owned.clear()
 	kernels.clear()
+	_water_passes.clear();_update_pushes.clear()
 	rd=null
 	solver=null

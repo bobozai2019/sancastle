@@ -5,9 +5,10 @@ extends RefCounted
 const Codec=preload("res://scripts/simulation/unified_edit/checkpoint_codec.gd")
 const Legacy=preload("res://scripts/simulation/unified_edit/legacy_sources.gd")
 const ConsumerSources=preload("res://scripts/simulation/unified_edit/consumer_checkpoint_sources.gd")
+const NumericsSources=preload("res://scripts/simulation/unified_edit/numerics_checkpoint_sources.gd")
 const CATALOG="res://assets/unified_edit/legacy_source_catalog.variant"
 const CATALOG_SHA256="cbac0b2c091c09f3506d0a15723d0ff7cd962104918b8eb3827a44a7b57942ff"
-const SOURCES=["res://scripts/simulation/unified_edit/checkpoint_router.gd",CATALOG]+ConsumerSources.SOURCES
+const SOURCES=["res://scripts/simulation/unified_edit/checkpoint_router.gd",CATALOG]+ConsumerSources.SOURCES+NumericsSources.SOURCES
 
 static func load_file(path: String, configuration: Dictionary) -> Dictionary:
 	var file:=FileAccess.open(path,FileAccess.READ)
@@ -20,7 +21,7 @@ static func load_file(path: String, configuration: Dictionary) -> Dictionary:
 		var error:=Codec.validate(loaded.checkpoint,configuration)
 		if error.is_empty():return loaded
 		if error!=&"checkpoint_configuration_mismatch":return {"error":error}
-		return ConsumerSources.project(loaded.checkpoint,configuration,path)
+		return NumericsSources.project(loaded.checkpoint,configuration,path)
 	if magic!=Legacy.Old.MAGIC and magic!=Legacy.Store.MAGIC:return {"error":&"unsupported_checkpoint_family"}
 	var source:=Legacy.new()
 	var error:=source.initialize_catalog(CATALOG,CATALOG_SHA256)

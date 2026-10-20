@@ -1,0 +1,15 @@
+const float G=9.81;
+const float DRY=0.001;
+const float VELOCITY_DEPTH=0.005;
+const float EPS=1.1920928955078125e-7;
+bool finite1(float x){return !isnan(x)&&!isinf(x);}
+bool finite4(vec4 x){return !any(isnan(x))&&!any(isinf(x));}
+float mc(float l,float r){return l*r>0.0?sign(l)*min(min(2.0*abs(l),2.0*abs(r)),0.5*abs(l+r)):0.0;}
+vec4 mc4(vec4 l,vec4 r){return vec4(mc(l.x,r.x),mc(l.y,r.y),mc(l.z,r.z),mc(l.w,r.w));}
+vec4 cap_state(vec4 a,out bool limited){
+ limited=false;
+ if(a.x<=DRY){a.yz=vec2(0.0);return a;}
+ float length_q=length(a.yz),cap=a.x*max(1.5,3.0*sqrt(G*a.x));
+ if(length_q>cap){a.yz*=cap/length_q;limited=true;}
+ return a;
+}

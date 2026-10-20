@@ -1,0 +1,198 @@
+{
+  "schema": 1,
+  "suite": "water",
+  "solver_id": "muscl_mc_ssprk2_v1",
+  "grid_size": 256,
+  "cell_size_m": 0.125,
+  "cases": [
+    {
+      "id": "wave1_h010_a010",
+      "case_id": "wave_1m",
+      "duration_s": 2,
+      "depth_m": 0.1,
+      "amplitude_m": 0.0001,
+      "tick_dt_s": 0.03333333333333333,
+      "cpu_replay": false
+    },
+    {
+      "id": "wave4_h010_a010",
+      "case_id": "wave_4m",
+      "duration_s": 2,
+      "depth_m": 0.1,
+      "amplitude_m": 0.0001,
+      "tick_dt_s": 0.03333333333333333,
+      "cpu_replay": false
+    },
+    {
+      "id": "wave05_h010_a010",
+      "case_id": "wave_0.5m",
+      "duration_s": 2,
+      "depth_m": 0.1,
+      "amplitude_m": 0.0001,
+      "tick_dt_s": 0.03333333333333333,
+      "cpu_replay": false
+    },
+    {
+      "id": "wave2_h005_a010",
+      "case_id": "wave_2m",
+      "duration_s": 2,
+      "depth_m": 0.05,
+      "amplitude_m": 0.0001,
+      "tick_dt_s": 0.03333333333333333,
+      "cpu_replay": false
+    },
+    {
+      "id": "wave2_h005_a020",
+      "case_id": "wave_2m",
+      "duration_s": 2,
+      "depth_m": 0.05,
+      "amplitude_m": 0.0002,
+      "tick_dt_s": 0.03333333333333333,
+      "cpu_replay": false
+    },
+    {
+      "id": "wave2_h010_a010",
+      "case_id": "wave_2m",
+      "duration_s": 2,
+      "depth_m": 0.1,
+      "amplitude_m": 0.0001,
+      "tick_dt_s": 0.03333333333333333,
+      "cpu_replay": false
+    },
+    {
+      "id": "wave2_h010_a020",
+      "case_id": "wave_2m",
+      "duration_s": 2,
+      "depth_m": 0.1,
+      "amplitude_m": 0.0002,
+      "tick_dt_s": 0.03333333333333333,
+      "cpu_replay": false
+    },
+    {
+      "id": "wave2_h020_a010",
+      "case_id": "wave_2m",
+      "duration_s": 2,
+      "depth_m": 0.2,
+      "amplitude_m": 0.0001,
+      "tick_dt_s": 0.03333333333333333,
+      "cpu_replay": false
+    },
+    {
+      "id": "wave2_h020_a020",
+      "case_id": "wave_2m",
+      "duration_s": 2,
+      "depth_m": 0.2,
+      "amplitude_m": 0.0002,
+      "tick_dt_s": 0.03333333333333333,
+      "cpu_replay": false
+    },
+    {
+      "id": "wave_z_short",
+      "case_id": "wave_z_2m",
+      "duration_s": 0.1,
+      "depth_m": 0.1,
+      "amplitude_m": 0.0001,
+      "tick_dt_s": 0.03333333333333333,
+      "cpu_replay": true
+    },
+    {
+      "id": "wave_diagonal_short",
+      "case_id": "wave_diagonal_2m",
+      "duration_s": 0.1,
+      "depth_m": 0.1,
+      "amplitude_m": 0.0001,
+      "tick_dt_s": 0.03333333333333333,
+      "cpu_replay": true
+    },
+    {
+      "id": "lake_flat",
+      "case_id": "lake_flat",
+      "duration_s": 0.1,
+      "depth_m": 0.1,
+      "amplitude_m": 0.0001,
+      "tick_dt_s": 0.03333333333333333,
+      "cpu_replay": false
+    },
+    {
+      "id": "lake_slope",
+      "case_id": "lake_slope",
+      "duration_s": 0.1,
+      "depth_m": 0.1,
+      "amplitude_m": 0.0001,
+      "tick_dt_s": 0.03333333333333333,
+      "cpu_replay": true
+    },
+    {
+      "id": "lake_step",
+      "case_id": "lake_step",
+      "duration_s": 0.1,
+      "depth_m": 0.1,
+      "amplitude_m": 0.0001,
+      "tick_dt_s": 0.03333333333333333,
+      "cpu_replay": false
+    },
+    {
+      "id": "lake_shore",
+      "case_id": "lake_shore",
+      "duration_s": 0.1,
+      "depth_m": 0.1,
+      "amplitude_m": 0.0001,
+      "tick_dt_s": 0.03333333333333333,
+      "cpu_replay": true
+    },
+    {
+      "id": "lake_obstacle",
+      "case_id": "lake_obstacle",
+      "duration_s": 0.1,
+      "depth_m": 0.1,
+      "amplitude_m": 0.0001,
+      "tick_dt_s": 0.03333333333333333,
+      "cpu_replay": false
+    },
+    {
+      "id": "dam_break",
+      "case_id": "dam_break",
+      "duration_s": 0.1,
+      "depth_m": 0.1,
+      "amplitude_m": 0.0001,
+      "tick_dt_s": 0.03333333333333333,
+      "cpu_replay": true
+    },
+    {
+      "id": "near_dry",
+      "case_id": "near_dry",
+      "duration_s": 0.1,
+      "depth_m": 0.1,
+      "amplitude_m": 0.0001,
+      "tick_dt_s": 0.03333333333333333,
+      "cpu_replay": true
+    },
+    {
+      "id": "concentration_001",
+      "case_id": "concentration_001",
+      "duration_s": 0.1,
+      "depth_m": 0.1,
+      "amplitude_m": 0.0001,
+      "tick_dt_s": 0.03333333333333333,
+      "cpu_replay": true
+    },
+    {
+      "id": "concentration_005",
+      "case_id": "concentration_005",
+      "duration_s": 0.1,
+      "depth_m": 0.1,
+      "amplitude_m": 0.0001,
+      "tick_dt_s": 0.03333333333333333,
+      "cpu_replay": true
+    },
+    {
+      "id": "capacity",
+      "case_id": "cfl_capacity",
+      "duration_s": 0.03333333333333333,
+      "depth_m": 0.1,
+      "amplitude_m": 0.0001,
+      "tick_dt_s": 0.03333333333333333,
+      "cpu_replay": false
+    }
+  ]
+}

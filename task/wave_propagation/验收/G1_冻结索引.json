@@ -1,0 +1,77 @@
+{
+  "schema": 1,
+  "gate": "G1",
+  "outcome": "pass",
+  "scope": "Frozen design and full 2D CPU reference only; GPU implementation follows",
+  "files": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\task\\wave_propagation\\\u5951\u7ea6\\C01_\u6570\u503c\u4e0e\u5b88\u6052.md",
+      "bytes": 14155,
+      "sha256": "eb26bc0a9b32b7211eba4901beeb2f6ca2a6299d5e39ae6398aa1e9fdf28e431"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\task\\wave_propagation\\\u5951\u7ea6\\C02_\u65f6\u5e8f\u4e0e\u517c\u5bb9.md",
+      "bytes": 9514,
+      "sha256": "58b782a6f68b655963d2672382fac82176ecaac3299fd38270d2d9c417781e96"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\task\\wave_propagation\\\u5951\u7ea6\\C03_\u9a8c\u8bc1\u4e0e\u6210\u672c.md",
+      "bytes": 12127,
+      "sha256": "9d60eaad9756462d49f36dcab2f8808e90e9d618042eb46810883c7501092d2f"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\task\\wave_propagation\\\u9a8c\u6536\\reference_fixture_v1.json",
+      "bytes": 160,
+      "sha256": "dcbbcff304fa6f3c2caae832a52db02758ce8ba59ca4c7a6cfdbf0c4ce8a9be4"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\tools\\wave_propagation\\reference.py",
+      "bytes": 8730,
+      "sha256": "f5c6602b0ee9ee79119739c89b7a6306603995fdf8580da4117fa8c76dc1e74c"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g1_reference_final_01\\verify.py",
+      "bytes": 9029,
+      "sha256": "24ba4723019682b8cad6684705bf4634152b9eedba5095e604b0cbf7fcb5196d",
+      "original_path": "D:\\godot\\project\\sandcastle\\tools\\wave_propagation\\verify.py"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\tools\\wave_propagation\\verify_policy.py",
+      "bytes": 5118,
+      "sha256": "b9d604d402639a982c05d082809be719967c5b2e839aed79f7e99f20ee601b73"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\tools\\wave_propagation\\inspect_recovery_sources.gd",
+      "bytes": 3204,
+      "sha256": "775f88f23e1fa0b66828107a0174ca8cdecc4bdb74329e1a809caee4c8989177"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g1_reference_final_01\\result.json",
+      "bytes": 24391,
+      "sha256": "8e11b65bf19476c71a77217687f234c348e6887f624598cf918444ba7d21d2a7"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g1_policy_02\\result.json",
+      "bytes": 3218,
+      "sha256": "aea8a9f21f4549bb6092e60f7af98e19549830ec41ca86c953aa2c9ed3e75943"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g1_recovery_inspect_01\\result.json",
+      "bytes": 6749,
+      "sha256": "6607499b9a425b89c2d385f9928e9f33ef7c6948c06ff61d57ae9ece0cc448e3"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g1_recovery_inspect_01\\source_configurations.variant",
+      "bytes": 782252,
+      "sha256": "72e3a733ba7abdd743803c1c03d4dacc178605d37e425427b1125a21b4e13751"
+    }
+  ],
+  "design_revision": "1.2",
+  "revision_reason": "Explicitly distinguish nonfinite/negative/material-domain flags and stage failed-trial flags; no arithmetic or acceptance gate changes.",
+  "archive": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g1_contract_freeze_v1_2.zip",
+  "archive_sha256": "99a230acda32e67bb836727f323799d7f3a536650da843d519578172af2b3d80",
+  "previous_archive": {
+    "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g1_contract_freeze_v1_1.zip",
+    "sha256": "b7982525a3317b48a661005f75ebe8e04656c4a3266233946313853e3b034532"
+  }
+}

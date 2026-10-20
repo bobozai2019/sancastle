@@ -77,6 +77,7 @@ func _set_message(value: String) -> void:
 
 func _settings(scene) -> Dictionary:
 	var settings := {"playing": scene.playing, "hide_hud": scene.hide_hud,
+		"water_solver_id": scene.water_solver_id,
 		"selected_sand_tool": scene.selected_sand_tool,
 		"dig_amount_m3": scene.dig_amount_m3, "fill_amount_m3": scene.fill_amount_m3,
 		"manual_wave_amplitude_m": scene.manual_wave_amplitude_m,
@@ -111,6 +112,9 @@ func _prepare(scene, key: String, settings: Dictionary) -> String:
 	generation_highwater += 2
 	scene.generation = generation_highwater
 	scene.playing = false
+	# Carry an explicit release algorithm selection into the new frozen domain.
+	# Empty continues to use the release default; active domains never mutate.
+	scene.water_solver_id = shared_controls.get("water_solver_id", "")
 	get_tree().root.add_child(scene)
 	var deadline := Time.get_ticks_msec() + 90000
 	while (not scene.ready_for_ticks or scene._booting) and scene.last_error.is_empty() and Time.get_ticks_msec() < deadline:

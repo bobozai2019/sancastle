@@ -202,13 +202,13 @@
         "res://assets/water_material_natural_candidate/contact_height_geometry.json": "82a3fa2e20eb8805273914df04893f7e4e0c1004f21948e5bedac62cbc534fae",
         "res://assets/water_material_natural_candidate/contact_lazy.gdshader": "d5fc6f57690585e6679ab70e0fc3bbf9a1514f7abb073c657f300ebd00bcd8df",
         "res://assets/water_material_natural_candidate/contact_reflection_geometry.json": "0c4c2c27848fccaa44462e2cd70125fb9bfd0966f66d1f9da318e5b9175416c0",
-        "res://assets/water_material_natural_candidate/contact_shape.gdshader": "f3c31f9efe150635c0475478a851277d9a8057a7edf4fb89c8d67c2571245e88",
+        "res://assets/water_material_natural_candidate/contact_shape.gdshader": "df877260fd31aae4785dc937cc23c7d24e742ed7d16895f612ebb6e600e9fba8",
         "res://assets/water_material_natural_candidate/contact_shape_geometry.json": "096409ca006deaf9b382f527bb750fd2a2919c6777f3896056687bc33b8998f9",
         "res://assets/water_material_natural_candidate/contact_shared.gdshader": "88f53f8cc33f0bf12b629b9352c541a063150189f6553359e6649bddce246c18",
         "res://assets/water_material_natural_candidate/foam_baseline.json": "58eaca5bc538b17ef9861c33f2f415670e9d0ec1ace085895d5e65d2aad9980f",
         "res://assets/water_material_natural_candidate/foam_combination.json": "474dd58b1541ef01bd86ac76c31225b9618209a2893851ccbe5bdf85f1a1a65d",
         "res://assets/water_material_natural_candidate/foam_compiled_v1_derived.json": "758b1e4d78eb0167ee72e3df6d881c9074f97e22843f8b7414fef672714beec1",
-        "res://assets/water_material_natural_candidate/foam_distribution.gdshader": "a3929fc0fe5c2b118ac25f24b7c4fc4a814ca24bbc9a805b9bd6578605564123",
+        "res://assets/water_material_natural_candidate/foam_distribution.gdshader": "55077448b1b78594922c05db6bcfac25822d9742d2aeef2e3aea7dbf2191ef65",
         "res://assets/water_material_natural_candidate/foam_engine_light.gdshader": "16e73f843c92b45ba1be07763e0c93c2f3e3184f093e7cf068ee84c699fe1b8b",
         "res://assets/water_material_natural_candidate/foam_entry.gd": "8d00e87db797deb730baf01cdf4d295022fe6139ca6e1ac76db19d81c22da535",
         "res://assets/water_material_natural_candidate/foam_height_derived.json": "d077f12e3c4a46e999056d61ca199e7b04dcf2329223d4420b2c670c3eee2bf6",
@@ -573,7 +573,7 @@
         "res://shaders/simulation/visual_foam_step.glsl": "19d7bec7f157791f75e0b4a63bd04c7ae8dc06eb82e016f1ea96ae8174e6edb0",
         "res://shaders/simulation/visual_gravel_step.glsl": "187e52c7ae677aba712bf441c29fe4268578327dab6fb19186a2439c5e0e6799",
         "res://shaders/visual/gpu_gravel.gdshader": "07d8292cf9ef912f85ccf505edcd45ef7b59b8dd2f4847570b0102803e4e22ab",
-        "res://shaders/visual/suspended_sand_cloud.gdshader": "db80eaef10a24fab4ea034a5438abe3afbb0e17054ac7133fa0cb7ee56e90cd6",
+        "res://shaders/visual/suspended_sand_cloud.gdshader": "8f36f7c4289c16236a44b304cb02f6b3f49c4e03bad8f2925403ee50fa7dcdd0",
         "res://tests/visual_water_alignment/prototypes/analyze_staging_checkpoint.gd": "d366cffa8c5c9f3d2faa8d629eb65192d1bd1f9940bb3839f4e2208e9d889593",
         "res://tests/visual_water_alignment/prototypes/build_reflection_rock_meshes.gd": "a9b04a2501b207283d4f3eb7abda97747e352a4bca1b9bb26b01acb10804dfe2",
         "res://tests/visual_water_alignment/prototypes/capture_reference.gd": "42ac50fab42a3492423dbbb87e6d0f1b01a99c3dd8c32d928d4bfd71c4383efb",
@@ -1040,7 +1040,7 @@
           "viewport_height_px": 1080.0
         },
         "shader": "res://assets/water_material_natural_candidate/foam_distribution.gdshader",
-        "shader_sha256": "a3929fc0fe5c2b118ac25f24b7c4fc4a814ca24bbc9a805b9bd6578605564123"
+        "shader_sha256": "55077448b1b78594922c05db6bcfac25822d9742d2aeef2e3aea7dbf2191ef65"
       },
       {
         "fields": {
@@ -1088,7 +1088,7 @@
           "wet_epsilon_m": 0.001
         },
         "shader": "res://assets/water_material_natural_candidate/contact_shape.gdshader",
-        "shader_sha256": "f3c31f9efe150635c0475478a851277d9a8057a7edf4fb89c8d67c2571245e88"
+        "shader_sha256": "df877260fd31aae4785dc937cc23c7d24e742ed7d16895f612ebb6e600e9fba8"
       },
       {
         "fields": {},
@@ -1313,7 +1313,7 @@
           "wet_epsilon_m": 0.001
         },
         "shader": "res://shaders/visual/suspended_sand_cloud.gdshader",
-        "shader_sha256": "db80eaef10a24fab4ea034a5438abe3afbb0e17054ac7133fa0cb7ee56e90cd6"
+        "shader_sha256": "8f36f7c4289c16236a44b304cb02f6b3f49c4e03bad8f2925403ee50fa7dcdd0"
       },
       {
         "fields": {

@@ -35,9 +35,9 @@ def read_worktree(relative: str) -> bytes:
     return path.read_bytes()
 
 
-def verify(staged: bool) -> list[str]:
+def verify(staged: bool, manifest: str = MANIFEST) -> list[str]:
     read = read_staged if staged else read_worktree
-    document = json.loads(read(MANIFEST))
+    document = json.loads(read(manifest))
     metadata = document["metadata"]
     artifacts = [("scene", metadata["scene"]), ("seed", metadata["seed"])]
     artifacts.extend(
@@ -66,9 +66,14 @@ def verify(staged: bool) -> list[str]:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--staged", action="store_true", help="validate Git index bytes")
+    parser.add_argument("--all", action="store_true", help="validate all four formal presentation manifests")
     args = parser.parse_args()
     try:
-        errors = verify(args.staged)
+        manifests = [MANIFEST] if not args.all else [
+            f"assets/unified_edit/presentation/{key}.json"
+            for key in ("main", "test1_capture", "test1_backwash", "test1_geometry")
+        ]
+        errors = [f"{manifest}: {error}" for manifest in manifests for error in verify(args.staged, manifest)]
     except (KeyError, TypeError, ValueError, json.JSONDecodeError) as error:
         print(f"main presentation hash check failed: {error}", file=sys.stderr)
         return 1
@@ -78,7 +83,7 @@ def main() -> int:
             print(f"- {error}", file=sys.stderr)
         return 1
     scope = "staged" if args.staged else "worktree"
-    print(f"main presentation hashes match ({scope})")
+    print(f"{'all' if args.all else 'main'} presentation hashes match ({scope})")
     return 0
 
 

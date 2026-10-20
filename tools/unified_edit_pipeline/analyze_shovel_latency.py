@@ -74,7 +74,11 @@ def analyze(path):
     for event in events:
         name, key = event["event"], str(event["key"])
         if name.startswith("height_"):
-            heights[key][name] = event
+            # A bounded height consumer may apply one snapshot over several
+            # frames. Each slice is a CPU interval; waiting between is not CPU.
+            height_key = (key + "/slice_" + str(event["detail"]["slice_id"])
+                          if name in {"height_apply_begin", "height_apply_end"} and "slice_id" in event["detail"] else key)
+            heights[height_key][name] = event
         elif name in {"enqueue", "result_taken"}:
             commands[key][name] = event
         elif name in {x for pair in BATCH_SPANS.values() for x in pair}:

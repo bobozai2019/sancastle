@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "suite": "coupling",
+  "solver_id": "rusanov_first_order_v1",
+  "grid_size": 256,
+  "cell_size_m": 0.125,
+  "cases": [
+    {
+      "id": "erosion",
+      "case_id": "erosion",
+      "duration_s": 0.1,
+      "tick_dt_s": 0.03333333333333333
+    },
+    {
+      "id": "deposition",
+      "case_id": "deposition",
+      "duration_s": 0.1,
+      "tick_dt_s": 0.03333333333333333
+    },
+    {
+      "id": "boundary",
+      "case_id": "boundary",
+      "duration_s": 0.1,
+      "tick_dt_s": 0.03333333333333333
+    },
+    {
+      "id": "support",
+      "case_id": "support",
+      "duration_s": 0.1,
+      "tick_dt_s": 0.03333333333333333
+    }
+  ]
+}

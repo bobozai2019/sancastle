@@ -1,6 +1,6 @@
 extends SceneTree
 
-# Feasibility probe only. Product pipeline and its resource/lifetime rules stay intact.
+# Real GPU regression for submit-ahead and confirmed owner-thread slot reuse.
 const Pipeline=preload("res://scripts/simulation/unified_edit/pipeline.gd")
 const Config=preload("res://scripts/simulation/unified_edit/configuration.gd")
 const Domain=preload("res://scripts/simulation/sand_water_domain.gd")
@@ -55,7 +55,7 @@ func _sample(id: int, index: int) -> Dictionary:
 	return {"domain_id":"main_beach","generation":1,"command_id":id,"sim_tick":0,"stroke_id":1,"baseline_token":1,"sample_index":index,"profile_id":"shovel_v1","profile_version":profile.version,"profile_hash":profile.profile_hash,"start_xz_m":Vector2(0,index),"end_xz_m":Vector2(0,index+1),"parameters":{"depth_m":0.15,"trench_width_m":0.5,"shoulder_width_m":0.5,"speed_m_s":0.25},"features":{"water_policy":3},"seed":101}
 
 func _run() -> void:
-	DisplayServer.window_set_size(Vector2i(1280,720));DisplayServer.window_set_title("Submit-ahead feasibility; no product scheduling changes")
+	DisplayServer.window_set_size(Vector2i(1280,720));DisplayServer.window_set_title("Submit-ahead and confirmed slot reuse")
 	var created: Dictionary=load("res://assets/unified_edit/default_catalog.tres").instantiate_registry();registry=created.registry
 	check("registry",created.error.is_empty())
 	var simulation:={"enable_erosion":false,"enable_brush_water":true,"unrestricted_sand_tools":true,"enable_structures":false,"local_front_history":false,"rise_front_history":false,"contact_history":false}
@@ -92,7 +92,7 @@ func _run() -> void:
 	deadline=Time.get_ticks_msec()+30000
 	while (pipeline.active_count()!=0 or pipeline.pending_count()!=0) and Time.get_ticks_msec()<deadline:await process_frame
 	check("frame_start_consumption_finishes_all",pipeline.active_count()==0 and pipeline.pending_count()==0 and pipeline.completed_state_seq==4 and pipeline.completed_tick==2 and pipeline.fault_reason().is_empty())
-	check("frame_start_alone_keeps_retirement_gap",observations.first_frame_head.completed==3 and observations.first_frame_head.pending==1)
+	check("frame_start_reuses_confirmed_owner_thread_slots",observations.first_frame_head.completed==3 and observations.first_frame_head.pending==0 and observations.first_frame_head.active==1)
 	var results: Array=[]
 	for id in range(1,5):results.append(pipeline.take_result(id))
 	check("real_shovel_results",results[1].get("outcome")==1 and results[2].get("outcome")==1)
@@ -116,5 +116,5 @@ func _finish() -> void:
 	process_frame.disconnect(_frame_start)
 	if not output.is_empty():
 		FileAccess.open(output.get_basename()+".control.bin",FileAccess.WRITE).store_buffer(gpu_control)
-		FileAccess.open(output,FileAccess.WRITE).store_string(JSON.stringify({"pass":not failed,"checks":checks,"configuration":configuration,"probe_sha256":FileAccess.get_sha256("res://tools/unified_edit_pipeline/check_submit_ahead.gd"),"observations":observations,"frame_heads":frame_heads,"timeline":trace.snapshot(),"scope":"Isolated real main RenderingDevice. Existing three slots and shaders. Receive decorator queues detached receipts until process_frame; no product implementation changed. Proves bounded GPU progress without CPU consumption, not full-scene performance or more-than-three-slot capacity."},"\t"))
+		FileAccess.open(output,FileAccess.WRITE).store_string(JSON.stringify({"pass":not failed,"checks":checks,"configuration":configuration,"probe_sha256":FileAccess.get_sha256("res://tools/unified_edit_pipeline/check_submit_ahead.gd"),"observations":observations,"frame_heads":frame_heads,"timeline":trace.snapshot(),"scope":"Isolated real main RenderingDevice using current product Pipeline, three slots and shaders. Receive decorator queues detached receipts until process_frame. Proves bounded GPU progress without CPU consumption and same-pump reuse after confirmed owner-thread retirement; not full-scene performance or more-than-three-slot capacity."},"\t"))
 	quit(1 if failed else 0)

@@ -1,0 +1,57 @@
+{
+  "schema": 1,
+  "suite": "lifecycle",
+  "solver_id": "muscl_mc_ssprk2_v1",
+  "cases": [
+    {
+      "id": "boot_main",
+      "kind": "formal_final",
+      "case_id": "boot_main"
+    },
+    {
+      "id": "restoreclose_main",
+      "kind": "formal_final",
+      "case_id": "restoreclose_main"
+    },
+    {
+      "id": "faultrestore_main",
+      "kind": "formal_final",
+      "case_id": "faultrestore_main"
+    },
+    {
+      "id": "faultclose_main",
+      "kind": "formal_final",
+      "case_id": "faultclose_main"
+    },
+    {
+      "id": "detach_main",
+      "kind": "formal_final",
+      "case_id": "detach_main"
+    },
+    {
+      "id": "capture_main",
+      "kind": "formal_boundary",
+      "case_id": "capture_main"
+    },
+    {
+      "id": "height_main",
+      "kind": "formal_boundary",
+      "case_id": "height_main"
+    },
+    {
+      "id": "physics_main",
+      "kind": "formal_boundary",
+      "case_id": "physics_main"
+    },
+    {
+      "id": "recorded_main",
+      "kind": "formal_boundary",
+      "case_id": "recorded_main"
+    },
+    {
+      "id": "reader_generation",
+      "kind": "reader",
+      "case_id": "normal"
+    }
+  ]
+}

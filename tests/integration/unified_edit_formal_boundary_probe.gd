@@ -14,13 +14,15 @@ func _run() -> void:
 	DisplayServer.window_set_size(Vector2i(1280,720))
 	scene=load(Routes.FORMAL[scene_key]).instantiate();scene.playing=false;scene.generation=1001;root.add_child(scene)
 	var start:=Time.get_ticks_msec()
-	while not scene.ready_for_ticks and scene.last_error.is_empty() and Time.get_ticks_msec()-start<180000:await process_frame
-	observations.startup={"phase":String(scene.runtime.phase),"root_error":String(scene.last_error),"elapsed_ms":Time.get_ticks_msec()-start,"current":scene.runtime.current!=null}
+	# The scene may accept sand edits before its props boot transition ends;
+	# checkpoint admission requires that transition to finish as well.
+	while (not scene.ready_for_ticks or scene._booting) and scene.last_error.is_empty() and Time.get_ticks_msec()-start<180000:await process_frame
+	observations.startup={"phase":String(scene.runtime.phase),"root_error":String(scene.last_error),"elapsed_ms":Time.get_ticks_msec()-start,"current":scene.runtime.current!=null,"booting":scene._booting}
 	if scene.runtime.candidate!=null:
 		var staged=scene.runtime.candidate
 		observations.startup.candidate={"initialized":staged.initialized,"started":staged.initialization_started,"error":String(staged.initialization_error),"height_readers":staged.heights.active_count(),"height_hint":staged.heights.hinted,"applied_chunks":staged.heights.applied_state_seq.size()}
-	check("formal_boundary_ready",scene.ready_for_ticks and scene.last_error.is_empty())
-	if not scene.ready_for_ticks:await _close();return
+	check("formal_boundary_ready",scene.ready_for_ticks and not scene._booting and scene.last_error.is_empty())
+	if not scene.ready_for_ticks or scene._booting:await _close();return
 	observations.sources=scene.configuration.sources.duplicate(true)
 	check("actual_formal_root",scene.scene_file_path==Routes.FORMAL[scene_key] and scene.playable_scene_family()=="formal")
 	if mode=="capture":await _capture_unknown()
@@ -117,7 +119,9 @@ func _physics_pending() -> void:
 	while owner.heights.active_count()==0 and Time.get_ticks_msec()-start<10000:await process_frame
 	check("authority_complete_physics_not_applied",owner.completed_state_seq>0 and owner.heights.active_count()>0 and _applied(owner)<owner.completed_state_seq)
 	var path:=output+"/physics_pending.sandue"
-	check("save_does_not_wait_for_collision_application",(await scene.save_gpu_checkpoint(path)).is_empty())
+	var pending_save_error: StringName=await scene.save_gpu_checkpoint(path)
+	observations.pending_save_error=String(pending_save_error)
+	check("save_does_not_wait_for_collision_application",pending_save_error.is_empty())
 	var saved:=Codec.load(path,scene.configuration)
 	check("save_uses_completed_authority_not_old_collision",saved.error.is_empty() and saved.checkpoint.state_seq==owner.completed_state_seq and _applied(owner)<owner.completed_state_seq)
 	observations.snapshot={"path":path,"sha256":FileAccess.get_sha256(path),"state_seq":owner.completed_state_seq,"applied_before":_applied(owner)}

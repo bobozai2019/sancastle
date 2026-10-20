@@ -3,7 +3,7 @@
   "family": "unified_edit",
   "status": "main默认动量B；三个test1场景默认连通排水。编辑、水tick与显示工作共用统一Pipeline。",
   "sources": {
-    "AGENTS.md": "d46e5ec2b89134675d2f67432484c95865eac10839c4a9aa20db50bf3447890a",
+    "AGENTS.md": "aec0f9497f621de1ed45f8f5cae391289629d8175c3163e91edb75f2f186a809",
     "assets/brushes/molded_material_candidate.json": "1936e7dfc654a7a5dc5e9307d880c85e7cc7f48b128372ec622f5b68b7af2890",
     "assets/props/bottle_profile.tres": "6e0b1ec936e7d204ea8bf996386ac022f3e626ce6b38470bd3824f17f9f97158",
     "assets/props/wood_plank_profile.tres": "a103b604504b8ba8b2558c1d1cb8abfbb18bcb7f10761fb07dfbf1781759cd7d",
@@ -11,19 +11,19 @@
     "assets/test1_geometry/water_cycle.json": "b95e55ec01bfe639ad58c757092b76c6f2f67bf63d6dd52cd8b4ea0fc9a561c9",
     "assets/unified_edit/default_catalog.tres": "c4d517c1d778f92a560533b1f140f208d1eb035580fa5149f4a6e7597a2ccfd4",
     "assets/unified_edit/presentation/main.json": "2c03b0305bdfe7b1ddfa1d15d47f5a5ce39cb7286fa01f521b029112108cc1cb",
-    "assets/unified_edit/presentation/test1_backwash.json": "931a6cfdb1750df1cbca7208b1f3d7e06f68f0ae89211db57913f1fe5c773732",
-    "assets/unified_edit/presentation/test1_capture.json": "91ee7fc0b73c5273c78ba069e148af9ba8f3db16cd753f896fa233c932310737",
-    "assets/unified_edit/presentation/test1_geometry.json": "3300d495b670f6f0e84a8a264cffa36633ed3b15306c2a3c42d08f14d9544af3",
+    "assets/unified_edit/presentation/test1_backwash.json": "196df6fc4abd6cc3d404d8a20259996b6ba5dea92bfeea57306c1eb7a4a381c0",
+    "assets/unified_edit/presentation/test1_capture.json": "2630ffc45c179b4e3354c9b3dd3c741117c7814dfa473902d832fcd79530f03b",
+    "assets/unified_edit/presentation/test1_geometry.json": "dbf7d6849b57d7aa6eb4e42723a0ef9ff3c41a462017024cf3d19fecb0d08eed",
     "docs/README.md": "6ffb8ea47c05752a164a317bde1aa565701e7d63a2846cc394e6b44810a8138b",
     "docs/knowledge/README.md": "b582dcf3801544f56ef74ac6068851762fa4851a8e5263280f89bfb7c22ad8e7",
     "docs/unified-edit-extension-guide.md": "14a700240fec6d297ac079bcde758f5982d23b4b1df746e1cc92c80f63905ed5",
-    "docs/主场景操作.md": "badbdde4d4d1d362655c0581cdde43559a104313b7fee497de5376c1b286e77e",
+    "docs/主场景操作.md": "2a18937f665a5b8feae1932f08a0540490d41ed4ca596905ba4a71f42d56965e",
     "docs/场景切换与功能复用.md": "4a541d2a3a96e67735a73e87ed1f5733a484ecc944331b40fad4bd2d15378e7d",
-    "docs/当前技术规格.md": "ffb56a5cfcc4e0e9e2262baea303a3e5c2133085b751c9cd3265fcedfcf0aabb",
-    "docs/当前项目技术方案.md": "af0524b566e942e10292726e11de5733aa6b1ae71ef28ef4e0d0d1b7f8aaf84d",
+    "docs/当前技术规格.md": "d2dfa0846c9280b15327fb3ebc9d0581eafb443a2c936f75391777deda12a901",
+    "docs/当前项目技术方案.md": "384fc0f3743fd02b923a7e5e6c59680ec42ae66edd14fb70c90be7cca236c2b4",
     "docs/性能面板.md": "597dbb1e22fabed0c116db5c45514405175d0d22f385cef91044347c51179b03",
     "docs/漂浮道具.md": "a61b81ed06bc33105967b374bdcc2442c0b9e32403e949f656b8ce7bde136038",
-    "project.godot": "5e92361cfb3f6bc8a02583e4ff21857f7ffe0ea21f447912e939f2a959a219aa",
+    "project.godot": "dd4079a2f07f98ba050dba42ee1f3e3d0c001a831c7c68ab2cb42574a1caece9",
     "scenes/components/floating_props.tscn": "ef7a0f919704405376e2c1241c0fb1fb22d4a83c4d90fb3c1973fb7bf992fcd8",
     "scenes/components/floating_props_panel.tscn": "61be2d8fd49b965ee21b0da2d7c167c58a84b746461dcc30eeb21b977632cb53",
     "scenes/components/water_boundary_sides.tscn": "613f98726654fb43bbd47ecea32e085806a1eddfc5747dc558856f2495011524",
@@ -49,26 +49,26 @@
     "scripts/simulation/unified_edit/cfl_decide.glsl": "8d246db53a1d2b72ae252e68d906b71166b64bc7782244c4f3c6c47757e19e5e",
     "scripts/simulation/unified_edit/checkpoint_codec.gd": "d02c6ed5f676067b3b7cebdcfdcfade4f19ed1dac56d24a1bf5992cf864213d2",
     "scripts/simulation/unified_edit/checkpoint_router.gd": "521c44828444976086fcc0d6b59c17bda40dc2474f03e5d4e10da8e88f67e849",
-    "scripts/simulation/unified_edit/configuration.gd": "3f5669a7c3706746c13ffb5abc1b610cd00f16f4f415199741f1eb0d5c5883ec",
+    "scripts/simulation/unified_edit/configuration.gd": "22e822729c270ee835ac655d7b303b55ee9116e1518f95358286fc2bf3577f86",
     "scripts/simulation/unified_edit/consumer_checkpoint_sources.gd": "8360687b6ade3e4b29903b36b3462c32f83805d69bd7e069ca97a437d102fc91",
-    "scripts/simulation/unified_edit/coupled.gd": "8da731de5d0b1d82e7579c4360a25e27534c574d9aa5f882dad27be2e6b94378",
+    "scripts/simulation/unified_edit/coupled.gd": "3508eea0e21cfbb8fa7ba8f8ff9c1fc533251f9cf8f03c41bb7e493492915990",
     "scripts/simulation/unified_edit/display_intent.gd": "5ddd0f9019350efbe388c1862ecda7b4c44ba8b47682e93c60b36d0843d90f21",
     "scripts/simulation/unified_edit/domain_runtime.gd": "825d377324b9235dcfb9ab3fc965f5dfeaaa355e555d69b6e8905a0dfc5acd7a",
     "scripts/simulation/unified_edit/executor.gd": "f57c4bf157df609b9e922e038c7546914a9ae0d0cc76c7d23b9b92d270001751",
-    "scripts/simulation/unified_edit/height.gd": "6d6b3e070667d9263687ceca33d169ae2ccc69381e29cb953d50c75fe0a77ff9",
+    "scripts/simulation/unified_edit/height.gd": "2675c1caf640099c600e4f9245132013c8a9a3057788418b4dabdce15b96f969",
     "scripts/simulation/unified_edit/height_stamp.gd": "a2b8d8d940f8ef7b2af13232c0f7bd0b1888e5ed8f1e074885f656b2203f48d0",
     "scripts/simulation/unified_edit/layout.gd": "0249e55b8005bef604ead7ba62f4adf8a5875d2786e0ea48035d259937686da0",
     "scripts/simulation/unified_edit/legacy_sources.gd": "a53ddb381060b5c9e0f928db6fd22f83269992e6d5e356e271c85df961fcc567",
-    "scripts/simulation/unified_edit/pipeline.gd": "a60c7893dfc41ed9d310316ff7e1d28c3e971c007f8ea6b18b198e3a950e8ef8",
+    "scripts/simulation/unified_edit/pipeline.gd": "56686dc8430e9740f34770d6261e765d2306b4eb161670829e908f9c40c53734",
     "scripts/simulation/unified_edit/player_input.gd": "e368b682c09d8ecbb7b1424c876b5606662eefb331ee1c7c90bf729a42da5f35",
     "scripts/simulation/unified_edit/probe_codec.gd": "577de99be1b546a29908df5392c10a0d7138e2e0aeda13e71deb58c3012c7441",
     "scripts/simulation/unified_edit/profile_catalog.gd": "6d4651c5d6cc5209cfe0696e3f6ef7375b9444ed2426fe94b1592c0b2473e0a4",
     "scripts/simulation/unified_edit/profile_registry.gd": "f1911785ae05e56816c63641fbd98ece60a9de323bd365962df9331246ba558b",
-    "scripts/simulation/unified_edit/state.gd": "125b6317ebf10cf84df89fefb79c0ba0aa9a83a44ae5f890f5c4793a603421df",
+    "scripts/simulation/unified_edit/state.gd": "018b6a782b8d0e7f338c49a93bfee7131c1d67b494f1e10fd3048793b9f3b272",
     "scripts/simulation/unified_edit/tool_profile.gd": "5ec7ad018abaf9099e64f0c85acf7f106acc9c2ea013767166d4a394f17c38d8",
     "scripts/simulation/unified_edit/unit_half.gd": "3d0d323b653df1f9237525e3b42a2c395ffe3a585ecb68ab8a5bd0d9a03e573a",
     "scripts/simulation/unified_edit/visuals.gd": "f3df8c141caaac2096763ccf28ba972b865c60da40d701e80829df734201928a",
-    "scripts/simulation/unified_edit/water.gd": "0a0cbedc11d9fcb4d55f53e75b99da537c4ed4a166945bffcad90cac69600903",
+    "scripts/simulation/unified_edit/water.gd": "26d2fbbe6faa9862af5ab29649290d37f903f0732cac05195de424b109d5249c",
     "scripts/simulation/unified_edit/water_packed_parallel.glsl": "8e48a46ade6d9a608b9fe9aa5b10f1127f4b036b22a788f392c069d9585d481d",
     "scripts/simulation/unified_edit/water_packed_topology.glsl": "876056fb1b25c7eaea97e513dddcc882b7ea2cd723abb5409828ea0d389710cf",
     "scripts/simulation/unified_edit/water_response.gd": "9ccb1a9d714ef5427e6a5534feac26e6e16d0886f3df5edac816d7a15a6ab5bc",
@@ -79,7 +79,7 @@
     "task/sandcastle_floating_props/契约/probe_ABI_v3.json": "68e1f489a6f00c261677c84bdc667bfb5c07e5f34366fb02954bd0bff28a3b95",
     "tools/docs/build_execution_guide.py": "a8a698c14749ebd63c8595ef6ab7683a51ed8d05bc90cb78d0a7faa1bfd84df6",
     "tools/docs/build_unified_execution_guide.py": "c532e5c7403bc9afcd9673cb6e1c6167b9d860ddb30c9dd605a8d61654770901",
-    "tools/unified_edit_pipeline/architecture_policy.json": "b3cba6a83a93dc1dd86b8a5add389e4ff0970b76e326c88c612e882fbb491dd2"
+    "tools/unified_edit_pipeline/architecture_policy.json": "3ae95c52908b80c4148bdc6cf252d0fd36e2f41cee320ce91880eabb9375c70b"
   },
   "anchors": [
     {
@@ -110,25 +110,25 @@
       "title": "冻结配置",
       "path": "scripts/simulation/unified_edit/configuration.gd",
       "symbol": "freeze",
-      "line": 71,
-      "sha256": "3f5669a7c3706746c13ffb5abc1b610cd00f16f4f415199741f1eb0d5c5883ec",
-      "excerpt": "  71 static func freeze(registry, domain: Variant, simulation: Dictionary, effects: Dictionary={}, diagnostics: Dictionary={}, environment: Dictionary={}, extra_sources: PackedStringArray=PackedStringArray()) -> Dictionary:\n  72 \tif typeof(domain) not in [TYPE_STRING,TYPE_STRING_NAME] or String(domain).is_empty() or String(domain).length()>128:return {\"error\":&\"invalid_configuration_domain\"}\n  73 \tif not exact(simulation,SIMULATION_KEYS):return {\"error\":&\"invalid_simulation_flags\"}\n  74 \tfor value in simulation.values():\n  75 \t\tif typeof(value)!=TYPE_BOOL:return {\"error\":&\"invalid_simulation_flags\"}\n  76 \tif not simulation.unrestricted_sand_tools:return {\"error\":&\"unsupported_inventory_accounting\"}\n  77 \tfor key in [\"enable_structures\",\"rise_front_history\",\"contact_history\"]:\n  78 \t\tif simulation[key]:return {\"error\":&\"unsupported_history_capability\"}\n  79 \tvar effect:=_flags(effects,EFFECT_DEFAULTS);var diagnostic:=_flags(diagnostics,DIAGNOSTIC_DEFAULTS)\n  80 \tif not effect.error.is_empty():return effect"
+      "line": 72,
+      "sha256": "22e822729c270ee835ac655d7b303b55ee9116e1518f95358286fc2bf3577f86",
+      "excerpt": "  72 static func freeze(registry, domain: Variant, simulation: Dictionary, effects: Dictionary={}, diagnostics: Dictionary={}, environment: Dictionary={}, extra_sources: PackedStringArray=PackedStringArray()) -> Dictionary:\n  73 \tif typeof(domain) not in [TYPE_STRING,TYPE_STRING_NAME] or String(domain).is_empty() or String(domain).length()>128:return {\"error\":&\"invalid_configuration_domain\"}\n  74 \tif not exact(simulation,SIMULATION_KEYS):return {\"error\":&\"invalid_simulation_flags\"}\n  75 \tfor value in simulation.values():\n  76 \t\tif typeof(value)!=TYPE_BOOL:return {\"error\":&\"invalid_simulation_flags\"}\n  77 \tif not simulation.unrestricted_sand_tools:return {\"error\":&\"unsupported_inventory_accounting\"}\n  78 \tfor key in [\"enable_structures\",\"rise_front_history\",\"contact_history\"]:\n  79 \t\tif simulation[key]:return {\"error\":&\"unsupported_history_capability\"}\n  80 \tvar effect:=_flags(effects,EFFECT_DEFAULTS);var diagnostic:=_flags(diagnostics,DIAGNOSTIC_DEFAULTS)\n  81 \tif not effect.error.is_empty():return effect"
     },
     {
       "title": "主调度",
       "path": "scripts/simulation/unified_edit/pipeline.gd",
       "symbol": "pump",
-      "line": 305,
-      "sha256": "a60c7893dfc41ed9d310316ff7e1d28c3e971c007f8ea6b18b198e3a950e8ef8",
-      "excerpt": " 305 func pump() -> void:\n 306 \tif not _ready or not _fault.is_empty():\n 307 \t\t_checkpoint_progress();return\n 308 \tif diagnostics!=null:diagnostics.mark(&\"pump_begin\",0,{\"pending\":_pending.size(),\"active\":active_count()})\n 309 \t_poll()\n 310 \tif not _fault.is_empty():\n 311 \t\t_checkpoint_progress();return\n 312 \theights.pump()\n 313 \t_checkpoint_progress()\n 314 \t# All ready work may record ahead; no per-command CPU completion gate."
+      "line": 311,
+      "sha256": "56686dc8430e9740f34770d6261e765d2306b4eb161670829e908f9c40c53734",
+      "excerpt": " 311 func pump() -> void:\n 312 \tif not _ready or not _fault.is_empty():\n 313 \t\t_checkpoint_progress();return\n 314 \tif diagnostics!=null:diagnostics.mark(&\"pump_begin\",0,{\"pending\":_pending.size(),\"active\":active_count()})\n 315 \t_poll()\n 316 \tif not _fault.is_empty():\n 317 \t\t_checkpoint_progress();return\n 318 \theights.pump()\n 319 \t_checkpoint_progress()\n 320 \t# All ready work may record ahead; no per-command CPU completion gate."
     },
     {
       "title": "唯一录制",
       "path": "scripts/simulation/unified_edit/pipeline.gd",
       "symbol": "_submit_render",
-      "line": 346,
-      "sha256": "a60c7893dfc41ed9d310316ff7e1d28c3e971c007f8ea6b18b198e3a950e8ef8",
-      "excerpt": " 346 func _submit_render(id: Dictionary, packet: PackedByteArray, kind: int, dt: float, wave_packets: Array=[]) -> void:\n 347 \tif diagnostics!=null:diagnostics.mark(&\"submit_begin\",id.batch_seq)\n 348 \tif kind==L.WorkKind.WATER_TICK and boundary.enabled and not water.configure_boundary(water.tide,wave_packets):\n 349 \t\tcall_deferred(\"_submission_failed\",id,{\"recorded\":false,\"error\":&\"boundary_wave_upload\"});return\n 350 \tvar decoded:=W.decode_batch(packet,id)\n 351 \tvar recorder: Callable=_record_work.bind(kind,dt,decoded.commands)\n 352 \tif diagnostics!=null and state.profile_passes:state.rd.capture_timestamp(\"ue_batch_\"+str(id.batch_seq)+\"_start\")\n 353 \tvar submitted:=transport.submit(id,packet,recorder,_arrived_render,_finish_work)\n 354 \tif diagnostics!=null and state.profile_passes:state.rd.capture_timestamp(\"ue_batch_\"+str(id.batch_seq)+\"_end\")\n 355 \tif diagnostics!=null:diagnostics.mark(&\"submit_end\",id.batch_seq,{\"recorded\":submitted.recorded,\"error\":submitted.error})"
+      "line": 352,
+      "sha256": "56686dc8430e9740f34770d6261e765d2306b4eb161670829e908f9c40c53734",
+      "excerpt": " 352 func _submit_render(id: Dictionary, packet: PackedByteArray, kind: int, dt: float, wave_packets: Array=[]) -> void:\n 353 \tif diagnostics!=null:diagnostics.mark(&\"submit_begin\",id.batch_seq)\n 354 \tif kind==L.WorkKind.WATER_TICK and boundary.enabled and not water.configure_boundary(water.tide,wave_packets):\n 355 \t\tcall_deferred(\"_submission_failed\",id,{\"recorded\":false,\"error\":&\"boundary_wave_upload\"});return\n 356 \tvar decoded:=W.decode_batch(packet,id)\n 357 \tvar recorder: Callable=_record_work.bind(kind,dt,decoded.commands)\n 358 \tif diagnostics!=null and state.profile_passes:state.rd.capture_timestamp(\"ue_batch_\"+str(id.batch_seq)+\"_start\")\n 359 \tvar submitted:=transport.submit(id,packet,recorder,_arrived_render,_finish_work)\n 360 \tif diagnostics!=null and state.profile_passes:state.rd.capture_timestamp(\"ue_batch_\"+str(id.batch_seq)+\"_end\")\n 361 \tif diagnostics!=null:diagnostics.mark(&\"submit_end\",id.batch_seq,{\"recorded\":submitted.recorded,\"error\":submitted.error})"
     },
     {
       "title": "编辑骨架",
@@ -174,25 +174,25 @@
       "title": "水tick",
       "path": "scripts/simulation/unified_edit/water.gd",
       "symbol": "record_tick",
-      "line": 113,
-      "sha256": "0a0cbedc11d9fcb4d55f53e75b99da537c4ed4a166945bffcad90cac69600903",
-      "excerpt": " 113 func record_tick(_input: RID, _control: RID, _output: RID, _count: int, requested_dt: float) -> void:\n 114 \tvar record_start:=Time.get_ticks_usec() if solver.profile_passes else 0\n 115 \tif solver.profile_passes:rd.capture_timestamp(\"sandcastle_async_water_tick_start\")\n 116 \t_dispatch(\"cfl_tiles\",kernels.cfl_tiles.binding,PackedByteArray())\n 117 \tvar push:=PackedFloat32Array([requested_dt,solver.cell_size_m,solver.COURANT,0.0]).to_byte_array()\n 118 \tpush.encode_u32(12,solver.grid_size)\n 119 \t_dispatch(\"cfl_decide\",kernels.cfl_decide.binding,push)\n 120 \tif boundary_enabled:\n 121 \t\tvar boundary_push:=PackedFloat32Array([solver.cell_size_m*solver.cell_size_m,tide.x,tide.y,tide.z]).to_byte_array()\n 122 \t\tboundary_push.append_array(PackedInt32Array([wave_count,tide_mode,0,0]).to_byte_array())"
+      "line": 143,
+      "sha256": "26d2fbbe6faa9862af5ab29649290d37f903f0732cac05195de424b109d5249c",
+      "excerpt": " 143 func record_tick(_input: RID, _control: RID, _output: RID, _count: int, requested_dt: float) -> void:\n 144 \tif muscl!=null:\n 145 \t\tmuscl.record_tick(requested_dt);return\n 146 \tvar record_start:=Time.get_ticks_usec() if solver.profile_passes else 0\n 147 \tif solver.profile_passes:rd.capture_timestamp(\"sandcastle_async_water_tick_start\")\n 148 \t_dispatch(\"cfl_tiles\",kernels.cfl_tiles.binding,PackedByteArray())\n 149 \tvar push:=PackedFloat32Array([requested_dt,solver.cell_size_m,solver.COURANT,0.0]).to_byte_array()\n 150 \tpush.encode_u32(12,solver.grid_size)\n 151 \t_dispatch(\"cfl_decide\",kernels.cfl_decide.binding,push)\n 152 \tif boundary_enabled:"
     },
     {
       "title": "初始化与native资源",
       "path": "scripts/simulation/unified_edit/state.gd",
       "symbol": "initialize",
-      "line": 32,
-      "sha256": "125b6317ebf10cf84df89fefb79c0ba0aa9a83a44ae5f890f5c4793a603421df",
-      "excerpt": "  32 func initialize(device: RenderingDevice, domain, transport, native: Dictionary={}) -> bool:\n  33 \tif rd!=null or device==null or domain==null or domain.grid_size!=256 or domain.cell_size_m!=0.125:return false\n  34 \tif not is_finite(cohesion_yield_height_m) or cohesion_yield_height_m<0.0 or cohesion_yield_height_m>2.0:last_error=\"initial_cohesion_value\";return false\n  35 \trd=device;async_transport=transport\n  36 \tfor field in [\"rock\",\"sand\",\"water\",\"sediment\",\"wetness\",\"compaction\",\"obstacle\"]:\n  37 \t\tvar values: PackedFloat32Array=domain.get(field)\n  38 \t\tif values.size()!=65536:last_error=\"initial_field_size\";return false\n  39 \t\tfor value in values:\n  40 \t\t\tif not is_finite(value) or (field!=\"rock\" and value<0.0) or (field in [\"wetness\",\"compaction\",\"obstacle\"] and value>1.0):last_error=\"initial_field_value\";return false\n  41 \t\tvar format_id: int=RenderingDevice.DATA_FORMAT_R32_SFLOAT"
+      "line": 33,
+      "sha256": "018b6a782b8d0e7f338c49a93bfee7131c1d67b494f1e10fd3048793b9f3b272",
+      "excerpt": "  33 func initialize(device: RenderingDevice, domain, transport, native: Dictionary={}) -> bool:\n  34 \tif rd!=null or device==null or domain==null or domain.grid_size!=256 or domain.cell_size_m!=0.125:return false\n  35 \tif not is_finite(cohesion_yield_height_m) or cohesion_yield_height_m<0.0 or cohesion_yield_height_m>2.0:last_error=\"initial_cohesion_value\";return false\n  36 \trd=device;async_transport=transport\n  37 \tfor field in [\"rock\",\"sand\",\"water\",\"sediment\",\"wetness\",\"compaction\",\"obstacle\"]:\n  38 \t\tvar values: PackedFloat32Array=domain.get(field)\n  39 \t\tif values.size()!=65536:last_error=\"initial_field_size\";return false\n  40 \t\tfor value in values:\n  41 \t\t\tif not is_finite(value) or (field!=\"rock\" and value<0.0) or (field in [\"wetness\",\"compaction\",\"obstacle\"] and value>1.0):last_error=\"initial_field_value\";return false\n  42 \t\tvar format_id: int=RenderingDevice.DATA_FORMAT_R32_SFLOAT"
     },
     {
       "title": "碰撞消费",
       "path": "scripts/simulation/unified_edit/height.gd",
       "symbol": "physics_consume",
-      "line": 164,
-      "sha256": "6d6b3e070667d9263687ceca33d169ae2ccc69381e29cb953d50c75fe0a77ff9",
-      "excerpt": " 164 func physics_consume(order: PackedInt32Array=PackedInt32Array([0,1])) -> int:\n 165 \tif hold_physics:return 0\n 166 \tvar count:=0\n 167 \tfor index in order:\n 168 \t\tif index<0 or index>=slots.size():continue\n 169 \t\tvar slot: Dictionary=slots[index]\n 170 \t\tif slot.phase!=&\"worker\" or not WorkerThreadPool.is_task_completed(slot.task):continue\n 171 \t\tWorkerThreadPool.wait_for_task_completion(slot.task)\n 172 \t\tvar prepared: Dictionary=slot.job.result();var id: Dictionary=slot.identity\n 173 \t\tif diagnostics!=null:diagnostics.mark(&\"height_apply_begin\",id.snapshot_seq,{\"timings\":prepared.timings,\"chunks\":slot.result.chunks.size(),\"state_seq\":slot.result.state_seq})"
+      "line": 173,
+      "sha256": "2675c1caf640099c600e4f9245132013c8a9a3057788418b4dabdce15b96f969",
+      "excerpt": " 173 func physics_consume(order: PackedInt32Array=PackedInt32Array()) -> int:\n 174 \tif hold_physics:return 0\n 175 \tvar frame:=Engine.get_process_frames()\n 176 \tif _apply_frame!=frame:\n 177 \t\t_apply_frame=frame;_apply_usec=0;_apply_count=0\n 178 \tif order.is_empty():order=PackedInt32Array([_next_apply_slot,1-_next_apply_slot])\n 179 \tvar count:=0\n 180 \tfor index in order:\n 181 \t\tif index<0 or index>=slots.size():continue\n 182 \t\tvar slot: Dictionary=slots[index]"
     },
     {
       "title": "换代提交",
@@ -246,9 +246,9 @@
       "title": "碰撞差异证明",
       "path": "scripts/simulation/unified_edit/height.gd",
       "symbol": "footprint_compatible",
-      "line": 232,
-      "sha256": "6d6b3e070667d9263687ceca33d169ae2ccc69381e29cb953d50c75fe0a77ff9",
-      "excerpt": " 232 func footprint_compatible(required: Dictionary, bounds: Dictionary, epoch: int, tolerance_m: float) -> Dictionary:\n 233 \tvar strict:=footprint_ready(required,epoch)\n 234 \tif not strict.error.is_empty() or tolerance_m<0.0 or not is_finite(tolerance_m):return {\"ready\":false,\"error\":strict.error}\n 235 \tvar maximum:=0.0;var differences:={}\n 236 \tfor chunk in required:\n 237 \t\tvar applied: int=applied_state_seq.get(chunk,-1)\n 238 \t\tif applied<0 or int(applied_physics_frame.get(chunk,-1))<0:return {\"ready\":false,\"error\":&\"support_not_ready\"}\n 239 \t\tif applied>=required[chunk]:continue\n 240 \t\tvar upper: float=applied_change_bounds.get(chunk,-1.0);var lower:=Codec.lower_change_bound(upper);var newer: float=bounds.get(chunk,-1.0)\n 241 \t\tif lower<0.0 or newer<0.0 or newer<lower or newer-lower>tolerance_m:return {\"ready\":false,\"error\":&\"support_change_bound\"}"
+      "line": 261,
+      "sha256": "2675c1caf640099c600e4f9245132013c8a9a3057788418b4dabdce15b96f969",
+      "excerpt": " 261 func footprint_compatible(required: Dictionary, bounds: Dictionary, epoch: int, tolerance_m: float) -> Dictionary:\n 262 \tvar strict:=footprint_ready(required,epoch)\n 263 \tif not strict.error.is_empty() or tolerance_m<0.0 or not is_finite(tolerance_m):return {\"ready\":false,\"error\":strict.error}\n 264 \tvar maximum:=0.0;var differences:={}\n 265 \tfor chunk in required:\n 266 \t\tvar applied: int=applied_state_seq.get(chunk,-1)\n 267 \t\tif applied<0 or int(applied_physics_frame.get(chunk,-1))<0:return {\"ready\":false,\"error\":&\"support_not_ready\"}\n 268 \t\tif applied>=required[chunk]:continue\n 269 \t\tvar upper: float=applied_change_bounds.get(chunk,-1.0);var lower:=Codec.lower_change_bound(upper);var newer: float=bounds.get(chunk,-1.0)\n 270 \t\tif lower<0.0 or newer<0.0 or newer<lower or newer-lower>tolerance_m:return {\"ready\":false,\"error\":&\"support_change_bound\"}"
     },
     {
       "title": "道具接入",

@@ -1,0 +1,678 @@
+{
+  "schema": 1,
+  "gate": "G2",
+  "outcome": "pass",
+  "scope": "Fixed-bed actual GPU numerics only; production coupling/consumers/default scene remain unaccepted",
+  "runtime_root": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_workspace_01",
+  "files": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_gate_summary_01\\final_result.json",
+      "bytes": 3998,
+      "sha256": "38eebbe2754d881a351444eb5cec63be7fffe09edd0eb5194cea18b1d20bf875"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\task\\wave_propagation\\\u9a8c\u6536\\water_fixture_v1.json",
+      "bytes": 4837,
+      "sha256": "785f6b55ccc42c0ad1a8577e3b94bd5a7efd9f0b916c9b2d556e57c439849ed2"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_workspace_01\\snapshot_identity.json",
+      "bytes": 1310472,
+      "sha256": "8e625555ea77c23ee980b37d58a034e5fc9c043821cdbd166181f20177a9647c"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_workspace_01\\runtime_overlays.jsonl",
+      "bytes": 2002,
+      "sha256": "3b20b82670051013df40e10583c61eb7ce7f05b88cda8db2e9324770edbde697"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\result.json",
+      "bytes": 20434,
+      "sha256": "e9aeaa4364dc7a157eef52e9b8e61dbbdfe00af8ad5496ba60926ae171f0dc20"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\capacity\\analysis.json",
+      "bytes": 19300,
+      "sha256": "49e67e4c39854755f89dc3200be7d18b8545fb817b6cf3045a9b8151e319cfe1"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\capacity\\consumed_sources.zip",
+      "bytes": 1844912,
+      "sha256": "ceea2bc66aca4b614502dd7ab9c261135182089c57ecb87328edc7b202d2a549"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\capacity\\manifest.json",
+      "bytes": 1142,
+      "sha256": "281be1f912aa8e2e9603a9ded45daffd9b78d6930679694e26bcce8f793ce5a0"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\capacity\\result.json",
+      "bytes": 54941,
+      "sha256": "feaad3a5d753d432e4bab11a948d8ee4fca0d214fcdd0efbc0d456ba5425ec02"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\concentration_001\\analysis_cpu.json",
+      "bytes": 19211,
+      "sha256": "ea8b9e39caff85ba9c72a6fba1c60238673f98cc665ce8dc8bca1861185b5b35"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\concentration_001\\consumed_sources.zip",
+      "bytes": 1844912,
+      "sha256": "77a7c07afd27676c4555c03e36464b2e54d0a0b935e5c26ee944b060378ae3c5"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\concentration_001\\manifest.json",
+      "bytes": 1148,
+      "sha256": "4055eaa5598a81353466bf7673729effc6b52199e6d0d389db7222e59a01efb8"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\concentration_001\\result.json",
+      "bytes": 48594,
+      "sha256": "58468fbfb4fc4729a31e8e286955802595fa5e31c5d3c7abf9cac889f43d84f9"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\concentration_005\\analysis_cpu.json",
+      "bytes": 19211,
+      "sha256": "a1cc5d9742335a5605812eb36de531053cfeab896de47f40961a2e8474cda250"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\concentration_005\\consumed_sources.zip",
+      "bytes": 1844912,
+      "sha256": "caaa3a845466fa15696bf2fe6998df29898a05767de41581d4668cbe307e7998"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\concentration_005\\manifest.json",
+      "bytes": 1148,
+      "sha256": "7d1196e8c46313da53da64873f22930d8dc8e2c8e28be1086e029e2027c75194"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\concentration_005\\result.json",
+      "bytes": 48594,
+      "sha256": "f288bc92e8cd99f4992bab518ea01729019a8247a69edfe7d73c2368683e589d"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\dam_break\\analysis_cpu.json",
+      "bytes": 18764,
+      "sha256": "2e81579bb59a8e5f4cc965057f6800890448adbb0833d3520aa0db8bc462aea4"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\dam_break\\consumed_sources.zip",
+      "bytes": 1844912,
+      "sha256": "e8cfda85bed80b33fa9c27c6c1868693bea881a20cf9b37b299a1d504ef9999c"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\dam_break\\manifest.json",
+      "bytes": 1124,
+      "sha256": "282aeb4fc778abcf4f6788790f91c1d9c564eb45a74987843cfb2336017c098f"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\dam_break\\result.json",
+      "bytes": 48138,
+      "sha256": "6794dee7184c7240cfaf43a2024488ba3d08ef1efe8585c9c5f46cf362f00217"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\lake_flat\\analysis.json",
+      "bytes": 18147,
+      "sha256": "976e6ec331bfa421ce3141a620e3d8f41ccff8aa46635325428fa2a6fb81f496"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\lake_flat\\consumed_sources.zip",
+      "bytes": 1844912,
+      "sha256": "92199141090d0288fc0205d23dbfcbfc5db7ae14b41a01667697ed859922c041"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\lake_flat\\manifest.json",
+      "bytes": 1123,
+      "sha256": "d79e4b44cee20df772b1b66378c5718fe6b27e969c4443c12dc60be2c7757696"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\lake_flat\\result.json",
+      "bytes": 48136,
+      "sha256": "f9bff7bbfd79a4a54161853fe430edd101c05156e3563bf70724d88805255978"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\lake_obstacle\\analysis.json",
+      "bytes": 18151,
+      "sha256": "b4c1a16a8bdea34249d47fd5bad58e5e8dc7947eef21d7827766e23f258a9c0a"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\lake_obstacle\\consumed_sources.zip",
+      "bytes": 1844912,
+      "sha256": "83245cd1b7fd9fa1b1873d1a9ea9266388567feb5c1c8137567bcbbc3c6f3f27"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\lake_obstacle\\manifest.json",
+      "bytes": 1135,
+      "sha256": "188efd6c55d57a8601148a9b48a33940e07dd1ff87510f02a32f5f27a0eedd3a"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\lake_obstacle\\result.json",
+      "bytes": 48364,
+      "sha256": "920be1398ecef8c7d0fd5c63cc152f14e846580ab0f17cdfdc3b844c8417683b"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\lake_shore\\analysis_cpu.json",
+      "bytes": 18616,
+      "sha256": "97b048008c05f262241eb3dbb0df33cf86c2f33e188e166e8e9fbe934d25016d"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\lake_shore\\consumed_sources.zip",
+      "bytes": 1844912,
+      "sha256": "1050b6d171d3a8e24ef80e60a22c7ddc0b5d77d8750f899a9241d318cf2dc5bd"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\lake_shore\\manifest.json",
+      "bytes": 1127,
+      "sha256": "621c4704922a83b5edad03b3ec5395739258aa75486cf834df24bb965c0f5dc6"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\lake_shore\\result.json",
+      "bytes": 48195,
+      "sha256": "eb15d88f33d9b6bf1816566e4de6c0465ce67b06a3adbb20e5dc5cd083443ad8"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\lake_slope\\analysis_cpu.json",
+      "bytes": 18631,
+      "sha256": "84be580c2f494066bf8b85b531eb91d24c76bc7b3945bacf3ef69e9f49be0097"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\lake_slope\\consumed_sources.zip",
+      "bytes": 1844912,
+      "sha256": "5634554dc6b23e2a2ff35a0fc12a62a8fd21ff5c816616bb587657b932feb8ce"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\lake_slope\\manifest.json",
+      "bytes": 1125,
+      "sha256": "c98e77b4fdfcbd1352cc6b8805f158f6251f495c6f40dc4def25b1398e333cce"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\lake_slope\\result.json",
+      "bytes": 48194,
+      "sha256": "de48db5ab8caef17cd954197c71666466d5a315f9c83aeb90229c19e18ebb854"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\lake_step\\analysis.json",
+      "bytes": 18153,
+      "sha256": "b634ff336049160f90cb1488e7817407ee15a15dd76f2b1d59d2bc2c5e081dfd"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\lake_step\\consumed_sources.zip",
+      "bytes": 1844912,
+      "sha256": "b18b5d84013f59a2a67a1a5d1a9abe68283b7bf3e77424a15d9b597361c86e5f"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\lake_step\\manifest.json",
+      "bytes": 1124,
+      "sha256": "9755c514906491a0ba382e97b5bdc37056b9963f15340f5da8c7697b6c9e9ebc"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\lake_step\\result.json",
+      "bytes": 48136,
+      "sha256": "83d7fa4c48b7c6e414bd8b69a4360f67f65b1d6820ff84f5b3046a38ed814b64"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\near_dry\\analysis_cpu.json",
+      "bytes": 18846,
+      "sha256": "f383109b950f6a90f4a5e3cd717faed987a4a8ee600b233537393365e6860ae1"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\near_dry\\consumed_sources.zip",
+      "bytes": 1844912,
+      "sha256": "1bec6eef9803d441134ae423037d25a40b9b98532b266bbea6fcbc565ff55908"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\near_dry\\manifest.json",
+      "bytes": 1121,
+      "sha256": "7cd7f7fd94ed8c3591a12073d18d114cef3aa537d27b1b258f188a68c76596cb"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\near_dry\\result.json",
+      "bytes": 48081,
+      "sha256": "a6bb2e15a29e66354e73593cf34457c1c936933db02e4117e9736ce98d750537"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave05_h010_a010\\analysis.json",
+      "bytes": 65133,
+      "sha256": "82d4727474650b28fb07abead8f513b514d0a51518254fb8cd0c4965583179c3"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave05_h010_a010\\consumed_sources.zip",
+      "bytes": 1844912,
+      "sha256": "5436939db5b2e559093054955280d6d7128421629242a1e6a86200d6fc5cc202"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave05_h010_a010\\manifest.json",
+      "bytes": 1138,
+      "sha256": "aed2ac43c360dc35ca371d10fd4006b198b6a8c19add57caf9a06488debc10f1"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave05_h010_a010\\result.json",
+      "bytes": 252236,
+      "sha256": "aa8e62a8b42a0483adb814797b3fa50548f1486467324e358c285937bcf91b30"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave1_h010_a010\\analysis.json",
+      "bytes": 65033,
+      "sha256": "45d61ddef9a4464aa0d484286bd4b89d0e7bab3eb2daac206c1d5c1711f23072"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave1_h010_a010\\consumed_sources.zip",
+      "bytes": 1844912,
+      "sha256": "601f55b24598a4029c38c8aa08980de31c57a67d45dccb0c88e795bd7b2d2059"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave1_h010_a010\\manifest.json",
+      "bytes": 1134,
+      "sha256": "b814a9541c87b98a7b8733d4ad882e948fbe0e3867dde41f2e7f4e181d0aedd9"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave1_h010_a010\\result.json",
+      "bytes": 251492,
+      "sha256": "e49b36c2fdbd3261d9a40999add0127706c012f82667cc3cd97a5cdeb10a8c7f"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave2_h005_a010\\analysis.json",
+      "bytes": 64966,
+      "sha256": "c6d5c7cc9500fcc5006490f34907adfbfeb43416ccde0f82856c9e65108cab3a"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave2_h005_a010\\consumed_sources.zip",
+      "bytes": 1844912,
+      "sha256": "fd43e69fd4ec60b1b378f1e5c4de8c5506b0cf7efc00e8390b280ac138e1d446"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave2_h005_a010\\manifest.json",
+      "bytes": 1134,
+      "sha256": "67a47a91009c1f5cfa5f3b4a442f4e968b35302b668fbdd899d4ebda3e523602"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave2_h005_a010\\result.json",
+      "bytes": 251477,
+      "sha256": "6b3b02837690df71c4e7a2e743a1db8f9fa92d41521361c8d14a9dce5ed0c7a8"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave2_h005_a020\\analysis.json",
+      "bytes": 65160,
+      "sha256": "8bce8615a9fbe7f5743317cf1b93ebb8b4ed43275903eca861ca484f3edb194d"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave2_h005_a020\\consumed_sources.zip",
+      "bytes": 1844912,
+      "sha256": "62619905a5292e531f2fbb590fdd843289444925c7b3fa28e5ae993584fd3ee9"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave2_h005_a020\\manifest.json",
+      "bytes": 1136,
+      "sha256": "55803ae3dc2161a7967952a1c9805cca3f8c009e227748108422abf94414a5f6"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave2_h005_a020\\result.json",
+      "bytes": 251479,
+      "sha256": "ac8773d17152f4dfd173cd2c6738c3755fe45c07200a94164eee77a420e085ea"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave2_h010_a010\\analysis.json",
+      "bytes": 64962,
+      "sha256": "f635978b06fd82766500f1ded5f881b1c4317ed9be923732fd21e7ac03fa7781"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave2_h010_a010\\consumed_sources.zip",
+      "bytes": 1844912,
+      "sha256": "ff11f32f7bc4df1ede31643efc31ab628d6fec94f45bc1e9badc457fc6812a38"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave2_h010_a010\\manifest.json",
+      "bytes": 1134,
+      "sha256": "53e65257945f86a4a6c68a8fc05556873c8236815c05edae606c03dca04b8011"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave2_h010_a010\\result.json",
+      "bytes": 251489,
+      "sha256": "9151b5aebb45b649bf35877eb6fcb53aa2c99cee813bfc1bb2feeb30989f71a0"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave2_h010_a020\\analysis.json",
+      "bytes": 65057,
+      "sha256": "08299c9215334b7510c86ae8708fd668034be01ad2623d96afd2897e8ac0ff98"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave2_h010_a020\\consumed_sources.zip",
+      "bytes": 1844912,
+      "sha256": "27973503e59573d746f079b72a49af5faf63cc2b5100c54e038db15d5144c9c7"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave2_h010_a020\\manifest.json",
+      "bytes": 1134,
+      "sha256": "7f2a4a97093e5fd4e6ef69c13b4fd2cfe79f220b94b32e11a74f1c5e4caef295"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave2_h010_a020\\result.json",
+      "bytes": 251492,
+      "sha256": "e701efab9a06ca857fc122ef3b1b2872b892423c362e29d203400c81b99bf121"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave2_h020_a010\\analysis.json",
+      "bytes": 65127,
+      "sha256": "3cdc9798e2b24f4ab2d32edab38637fde471e4c34f6912d5a1e97824e03c526d"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave2_h020_a010\\consumed_sources.zip",
+      "bytes": 1844912,
+      "sha256": "c62789a72aa6452b71dff348c91bcc4052a47156d997e069ee799d81727ac9a2"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave2_h020_a010\\manifest.json",
+      "bytes": 1135,
+      "sha256": "71cf755294caba76c9bceecfddb71bbd4cfdac4f03ab3ad6d80caf3db5982594"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave2_h020_a010\\result.json",
+      "bytes": 251497,
+      "sha256": "a307f3af93846445f8810d3b1964e8b98cea7cb91d43772c43e87f7b38d4cbf0"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave2_h020_a020\\analysis.json",
+      "bytes": 65116,
+      "sha256": "92e0b20caae40675ba53bee523ac1af676423e91adf5def16b270d055be71a43"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave2_h020_a020\\consumed_sources.zip",
+      "bytes": 1844912,
+      "sha256": "1041db960d57abd114509256f70cfea07e937f32f0c8295bce4670a4152f0e1b"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave2_h020_a020\\manifest.json",
+      "bytes": 1134,
+      "sha256": "afdd63bf7329b392166e73c7dca3a7720615e7ac3aefb62fd4be153daadd59de"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave2_h020_a020\\result.json",
+      "bytes": 251497,
+      "sha256": "e3c7ac90f0ab1d9028bd67d08d42d8a7fe3b4660b52e8bc33ee81945336e6134"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave4_h010_a010\\analysis.json",
+      "bytes": 65050,
+      "sha256": "2d062a007160f47e565fab53b2a35b409bd33bf878a915e04150d96478cfae7d"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave4_h010_a010\\consumed_sources.zip",
+      "bytes": 1844912,
+      "sha256": "6023fc6eb3de8c3597de14230a7694d721ffe4a0789e5a07683b246f6f242b01"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave4_h010_a010\\manifest.json",
+      "bytes": 1135,
+      "sha256": "6b015c511de08b9d9191bad93b8b3da26679bec5c497705a324e1106017024c3"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave4_h010_a010\\result.json",
+      "bytes": 251482,
+      "sha256": "c5138ebfb080914fab793e5a4cc982ed6457194b07e42f45d8923181f95aa3d8"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave_diagonal_short\\analysis_cpu.json",
+      "bytes": 18874,
+      "sha256": "627cec52d5b86a5e6d7feb5e557025b2ec869deb96606d220a5e570cdde4c29f"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave_diagonal_short\\consumed_sources.zip",
+      "bytes": 1844912,
+      "sha256": "5d643f8eaa28cbb9cb6abe3802cf286cb8c38065f0781b6b85e8eb72c21f0fd1"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave_diagonal_short\\manifest.json",
+      "bytes": 1151,
+      "sha256": "c6aa333cf6130d907cd8e2f591f87347e13be0f0207d72f071102435436814ac"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave_diagonal_short\\result.json",
+      "bytes": 48705,
+      "sha256": "a39728bf4c4a60c1c73faccb95328fd91fa9d7d2be2e5da54bcb891849d5fce9"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave_z_short\\analysis_cpu.json",
+      "bytes": 19584,
+      "sha256": "8012a57f592c8fef0a866a8d9757f7f11e1c2d0669c7252cdc1fa62a0447ede1"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave_z_short\\consumed_sources.zip",
+      "bytes": 1844912,
+      "sha256": "28b85d68845a28963030058c2ab0eb85a1f6eaf411f91e6bff0f8730ec4bc621"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave_z_short\\manifest.json",
+      "bytes": 1130,
+      "sha256": "c4196c943842d274f1e0b4a12c3b15c0f84a1de1c5c2279e5925af2df2a0ee25"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_water_suite_01\\wave_z_short\\result.json",
+      "bytes": 48304,
+      "sha256": "7e54e4752a834fae6f9f08bc362aa0c07e317bc0c45275b5b7acba39fc0a0038"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_final_diagnostics_01\\lake_flat\\analysis_cpu.json",
+      "bytes": 18627,
+      "sha256": "7597ef3df79a77b77da74863e56d310c7f32e6ad8c27c28c33b216ae87b5e56f"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_final_diagnostics_01\\lake_flat\\consumed_sources.zip",
+      "bytes": 1844970,
+      "sha256": "c3ee3c666ebdd1a44fc14686a95568d05c3b3118738e934b348a79af24033d5a"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_final_diagnostics_01\\lake_flat\\manifest.json",
+      "bytes": 1136,
+      "sha256": "89264ef5e848220a26324ff9961748624ccf2cb5a8e3d106f18cf97e645c97f2"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_final_diagnostics_01\\lake_flat\\result.json",
+      "bytes": 48472,
+      "sha256": "922860b13164ee6b96941644762c00b8edfba3302f0533b9711702b0ae360087"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_final_diagnostics_01\\negative\\consumed_sources.zip",
+      "bytes": 1847936,
+      "sha256": "6282f9d942a54f0df4dc5f8e3fa2e3980cbb532f03cf589ceebf4c10a1cb2600"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_final_diagnostics_01\\negative\\manifest.json",
+      "bytes": 1142,
+      "sha256": "5d00e0200dab9b34743fde87ef41e434bfa0888a4aee4a1c89a1101e68bcddf1"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_final_diagnostics_01\\negative\\result.json",
+      "bytes": 44387,
+      "sha256": "a9930bbc0c669497102bfeb0379c4be49054e1b6a899a2041996604ef463ef68"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_final_diagnostics_01\\nonfinite\\consumed_sources.zip",
+      "bytes": 1847936,
+      "sha256": "6282f9d942a54f0df4dc5f8e3fa2e3980cbb532f03cf589ceebf4c10a1cb2600"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_final_diagnostics_01\\nonfinite\\manifest.json",
+      "bytes": 1144,
+      "sha256": "5b4ac2933d6f4262cf21e7df5f3c57152b959c0469e9deb2c1d9057bbfbf0f5f"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_final_diagnostics_01\\nonfinite\\result.json",
+      "bytes": 44430,
+      "sha256": "7859ae2079249ca8df54c35e3683373b2469f93047b53354b91a584912f5dfe2"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_strong_edit_01\\strong_shovel\\analysis.json",
+      "bytes": 1668,
+      "sha256": "d230a9b537bfddb016fa76da0d52a6a34a09ba5d504ef9b49d555fed7f90e9a5"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_strong_edit_01\\strong_shovel\\consumed_sources.zip",
+      "bytes": 1848373,
+      "sha256": "32b887e981f36480f4fdb89464fed6ea61f2fb602e4120b604b3ea3906c39435"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_strong_edit_01\\strong_shovel\\manifest.json",
+      "bytes": 1142,
+      "sha256": "f90462ceaecfb5a5d347c16782870cd91e01354a44c7504daf48f43a39693b7c"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_strong_edit_01\\strong_shovel\\result.json",
+      "bytes": 53599,
+      "sha256": "e5f92c719ee205c28a8d3a017faff64ed5a8d646173000a775450d75982f57da"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_strong_edit_01\\velocity_cap\\analysis.json",
+      "bytes": 963,
+      "sha256": "789981a97fdafdd98a4e8211250c929d093b345d8501e3071bf043782ad07e29"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_strong_edit_01\\velocity_cap\\consumed_sources.zip",
+      "bytes": 1848373,
+      "sha256": "4d227cc0f0f45bb4341f310fd20f03e0f05fa285fd314f4d36f5acb39976eefe"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_strong_edit_01\\velocity_cap\\manifest.json",
+      "bytes": 1142,
+      "sha256": "36217f374a81f70ada2c47f53f4edc46b3ae028af9900dca26917d587a2bb6bd"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_strong_edit_01\\velocity_cap\\result.json",
+      "bytes": 39969,
+      "sha256": "1333c8c0d4b3d7c5653f8d20a5745b2da3c7b1bbe9d1081ea51a934f2c496c37"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_special_03\\obstacle_pulse\\analysis.json",
+      "bytes": 9091,
+      "sha256": "73cc4975663552200c848676ffece29408bd85510371c6dd5ec960d576e77137"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_special_03\\obstacle_pulse\\consumed_sources.zip",
+      "bytes": 1847854,
+      "sha256": "e97b3fed003b7512fc888d4a012fad8efabe95f10ea0a93ab33ff119ff0717d4"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_special_03\\obstacle_pulse\\manifest.json",
+      "bytes": 1140,
+      "sha256": "62d8ccc3fdd337e8140452a496c81acce5204ae0baecada60efeb36259331dc3"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_special_03\\obstacle_pulse\\result.json",
+      "bytes": 129903,
+      "sha256": "b736bd68bfc507a0a093a3a2217f793b630ee0ab657d10800c3f7e5668d05606"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_first_order_identity_01\\manifest.json",
+      "bytes": 1124,
+      "sha256": "e82a2b1cb88f0200bbf008456161a3f4c7b0068314ec7db54ebb72ee7442e4d6"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_first_order_identity_01\\result.json",
+      "bytes": 43025,
+      "sha256": "75db3463b9ec5fdd62ede761c65c86e4b914aadbc04e81ea387e7150fc396a37"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_net_flux_01\\result.json",
+      "bytes": 8222,
+      "sha256": "7709fa0897b1698396e0343ef09de0974ad0af3aa4f158b2b7545f6eb9c8b28a"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_roundoff_gpu_01\\manifest.json",
+      "bytes": 394,
+      "sha256": "1ebdd51737cca26b6fc232591b0a7b9616856f66523d9ec63125de505c8fc42c"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_roundoff_gpu_01\\result.json",
+      "bytes": 1739,
+      "sha256": "14dda9dfef8c7e3ddbf5c586d6bfe6a32de36a77eb45b3bef13b25b21777444a"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_configuration_01\\manifest.json",
+      "bytes": 517,
+      "sha256": "c98a3c5aaac45b1337b22cb1e35c58cf1f202d8fed80218fc54f809d1e3a00ed"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_configuration_01\\result.json",
+      "bytes": 16527,
+      "sha256": "2a5ecd6e3a4b0a486ced7ec7cfefd84b031f9d67ba51600b1d0b273a07d284bd"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_source_freeze_01\\shaders\\simulation\\muscl\\muscl_math.glslinc",
+      "bytes": 641,
+      "sha256": "f3e29214fcbec311664fc82754bb5bf8a5399a4c28062846ec7c5be8b2ff65b3",
+      "original_path": "D:\\godot\\project\\sandcastle\\shaders\\simulation\\muscl\\muscl_math.glslinc"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_source_freeze_01\\shaders\\simulation\\muscl\\muscl_spatial.glslinc",
+      "bytes": 3346,
+      "sha256": "8df8ea5ba8661defc58ca0509705a25b13a594c05ef789ba3e21755b68fff6b1",
+      "original_path": "D:\\godot\\project\\sandcastle\\shaders\\simulation\\muscl\\muscl_spatial.glslinc"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_source_freeze_01\\shaders\\simulation\\muscl\\muscl_stats.glslinc",
+      "bytes": 801,
+      "sha256": "70e147a8a112354fb8a6dbd2da0dcceb4e2045a8d98f05b903122ad20b6744b1",
+      "original_path": "D:\\godot\\project\\sandcastle\\shaders\\simulation\\muscl\\muscl_stats.glslinc"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_source_freeze_01\\shaders\\simulation\\muscl\\rk_decide.glsl",
+      "bytes": 4676,
+      "sha256": "f6f651534ee8e78d531c713bb4979b890c0137d368a7859027c3bf24b0979849",
+      "original_path": "D:\\godot\\project\\sandcastle\\shaders\\simulation\\muscl\\rk_decide.glsl"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_source_freeze_01\\shaders\\simulation\\muscl\\rk_drain.glsl",
+      "bytes": 536,
+      "sha256": "8a649a8379954fed16f4a18424da70a83a05511043f943f164a9b2ea7b8c0d11",
+      "original_path": "D:\\godot\\project\\sandcastle\\shaders\\simulation\\muscl\\rk_drain.glsl"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_source_freeze_01\\shaders\\simulation\\muscl\\rk_edge.glsl",
+      "bytes": 1039,
+      "sha256": "c8cd8c28cc8b9290e4db83a994c6f71f4eec78287894818f88211ef008df2a69",
+      "original_path": "D:\\godot\\project\\sandcastle\\shaders\\simulation\\muscl\\rk_edge.glsl"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_source_freeze_01\\shaders\\simulation\\muscl\\rk_euler.glsl",
+      "bytes": 1754,
+      "sha256": "daf72a12c24352106a2b9e6aa8fbc1a935b5d13b380e2090042c344b553b2d06",
+      "original_path": "D:\\godot\\project\\sandcastle\\shaders\\simulation\\muscl\\rk_euler.glsl"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_source_freeze_01\\shaders\\simulation\\muscl\\rk_finalize.glsl",
+      "bytes": 3083,
+      "sha256": "0dbffbbb3cf88ad43761ca6f2b6f155fc360c57aebdc5379298ac69823613ae6",
+      "original_path": "D:\\godot\\project\\sandcastle\\shaders\\simulation\\muscl\\rk_finalize.glsl"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_source_freeze_01\\shaders\\simulation\\muscl\\rk_normalize.glsl",
+      "bytes": 1488,
+      "sha256": "517ea7d43c1b42b6aa18bff7259d5b7ab0ee11d13e61769242ed4a4fd9d1840e",
+      "original_path": "D:\\godot\\project\\sandcastle\\shaders\\simulation\\muscl\\rk_normalize.glsl"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_source_freeze_01\\shaders\\simulation\\muscl\\rk_validate.glsl",
+      "bytes": 1075,
+      "sha256": "c53f4fc33334174cd0b458e441a9aa3bf106f0452330638163707829adbd2120",
+      "original_path": "D:\\godot\\project\\sandcastle\\shaders\\simulation\\muscl\\rk_validate.glsl"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_source_freeze_01\\scripts\\simulation\\unified_edit\\water_muscl.gd",
+      "bytes": 8322,
+      "sha256": "e8a063794887eb7426cf6c458abd589e6a1af9d4decab8b6e8a7b84ad8f978a4",
+      "original_path": "D:\\godot\\project\\sandcastle\\scripts\\simulation\\unified_edit\\water_muscl.gd"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g2_source_freeze_01\\scripts\\simulation\\unified_edit\\water_numerics.gd",
+      "bytes": 1247,
+      "sha256": "bece1a797c61b61813f8a65be6b2925a8eb237d48524cb44a7004fe30fa3cf87",
+      "original_path": "D:\\godot\\project\\sandcastle\\scripts\\simulation\\unified_edit\\water_numerics.gd"
+    }
+  ],
+  "retained_failures": {
+    "g2_smoke_01": "GLSL reserved active identifier; compiler log and source hashes retained, original draft shader bytes not separately archived",
+    "g2_special_01": "test harness missing explicit PackedByteArray type",
+    "g2_special_02": "texture_update returned success but injection was not roundtrip verified; no solver rejection conclusion",
+    "g2_rejection_final_01": "rejection behavior passed but negative flag classification was broad; final diagnostics case now verifies exact flags"
+  },
+  "implementation_delta_after_matrix": "Only diagnostic classification/audit in rk_decide/rk_validate/rk_finalize changed; valid-state arithmetic unchanged. Negative/NaN and static CPU comparison rerun in g2_final_diagnostics_01; old matrix source bytes preserved per consumed_sources.zip."
+}

@@ -1,0 +1,111 @@
+{
+  "schema": 1,
+  "gate": "G0",
+  "outcome": "pass",
+  "scope": "baseline identity, replay and measurements only; not candidate implementation acceptance",
+  "runtime_root": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g0_workspace_20261020",
+  "baseline_solver": "rusanov_first_order_v1",
+  "performance_specialist_seconds": 0,
+  "files": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g0_workspace_20261020\\snapshot_identity.json",
+      "bytes": 1310700,
+      "sha256": "bd70ab53cc251871b50df62da66ba44cf2f9ae19967dbc0fd941809d9282b02a"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g0_baseline_20261020\\source_identity.json",
+      "bytes": 248337,
+      "sha256": "552b9b58114f08d5d2b95b8559902bec77faf24dd797d2ee05f931fddd783200"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g0_baseline_20261020\\source_snapshot.zip",
+      "bytes": 16862846,
+      "sha256": "01d765a9b5fa0de42ef61028af0fa94a9785d7cda9508fa64dba85a5056911c5"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g0_baseline_20261020\\fixture.json",
+      "bytes": 4866,
+      "sha256": "d7a16cc6a917f8c107ad955f2a65f99c912f9b763c6f75a89ea6712480e103f6"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g0_baseline_20261020\\measurement_fixture.json",
+      "bytes": 1257,
+      "sha256": "6901531358323a3edcf30c6d3d271a40426f3c6d73fdc4e5acd9a72fa18d6364"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g0_baseline_20261020\\acceptance_inputs.json",
+      "bytes": 1673,
+      "sha256": "9e7ff2ca2bbc652f262e143675f4d12f05334a5f93ff715d589151ff5f158b89"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g0_baseline_20261020\\recovery_sources.json",
+      "bytes": 4244,
+      "sha256": "7ee6065fa14035516c3ee00cddc39ccf9c672bd077a7f0657bee385f80fcff87"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g0_flat_isolated_02\\manifest.json",
+      "bytes": 1420,
+      "sha256": "48d131c6c0ce6bc9aea20cffd35925e6c01ca3dac91b40514621aadc583405e9"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g0_flat_isolated_02\\diagnosis.json",
+      "bytes": 2962746,
+      "sha256": "1ab380c19f2509476fb84d0c83bc064feac18395cf77659593cc8bd47247aa2c"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g0_flat_isolated_02\\analysis_frozen_points.json",
+      "bytes": 685437,
+      "sha256": "a4bfaf58a9a3af825d7820a61d81d5f3d5e24533055a0bb39b6a271b4fee050f"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g0_flat_isolated_02\\consumed_sources.zip",
+      "bytes": 1832591,
+      "sha256": "3017c0380d2d908140ee261ccfdcce4a527415372c8a4f276d5983b93068ff01"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g0_main_isolated_02\\manifest.json",
+      "bytes": 1420,
+      "sha256": "9240102d3a0a04560d686a5d5013976e7c1d153be336d79f977f773e9c07e6e4"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g0_main_isolated_02\\diagnosis.json",
+      "bytes": 269717,
+      "sha256": "dd96e7d8ca5276ad7f9bee83430b54acb3c5da61ed6a23cdb90608c559318a75"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g0_main_isolated_02\\analysis.json",
+      "bytes": 81317,
+      "sha256": "a7290421b042724e1bd9e22fa2662bf06cb02fe61c8d4c9fd68f0dbe10ab8510"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g0_main_isolated_02\\consumed_sources.zip",
+      "bytes": 17069155,
+      "sha256": "9306c8bd35877a032a32d365a7b478788e54b805e8b4d58b0d070288a8b470cf"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g0_main_isolated_02\\main_initial.sandue",
+      "bytes": 8795988,
+      "sha256": "1d32d93f43b96cbd959cae9523167ffc787a6acf2c036eac0eb166fce6976330"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g0_main_isolated_02\\main_control_4s.png",
+      "bytes": 683495,
+      "sha256": "bd46dde77439dfce2c499a49948871e162219cd52224e81582c7bbb513c01e43"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\wave_propagation\\g0_main_isolated_02\\main_shovel_4s.png",
+      "bytes": 680349,
+      "sha256": "be54fc7d700f79ac39c18075d057bf9f752286fb0c077e8851a49211f6b7024c"
+    }
+  ],
+  "successful_runs": [
+    "g0_flat_isolated_02",
+    "g0_main_isolated_02"
+  ],
+  "retained_failures": {
+    "g0_flat_20261020_01": "source changed during run",
+    "g0_flat_isolated_01": "missing retained research dependencies",
+    "g0_main_isolated_01": "missing prototype PNG import metadata; process exit0 with no diagnosis is incomplete"
+  },
+  "next_gate": "G1"
+}

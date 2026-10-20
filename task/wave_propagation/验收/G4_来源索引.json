@@ -1,0 +1,2003 @@
+{
+  "schema": 1,
+  "gate": "G4",
+  "outcome": "pass",
+  "scope": "Complete T04; no G5 or G6 assertion. Per-case source zips contain exact consumed res:// members. Raw bin identities are nested in probes and revalidated by the intermediate/final audits. Original and reconstructed fixture identities remain distinct.",
+  "artifacts": [
+    {
+      "path": "task/wave_propagation/\u9a8c\u6536/G4_\u517c\u5bb9\u5951\u7ea6\u51bb\u7ed3\u7d22\u5f15.json",
+      "bytes": 1614,
+      "sha256": "3713174b91a995aabb182d7b0d90a8a49369ee303c0f21105118d9161ca9ab1c"
+    },
+    {
+      "path": "task/wave_propagation/\u9a8c\u6536/G4_\u5b8c\u6210\u6001\u4e0e\u6062\u590d.md",
+      "bytes": 10377,
+      "sha256": "c05dc93f6b1735942587287227a5d8ca3a7487095877fb60fef78476a7280539"
+    },
+    {
+      "path": "task/wave_propagation/\u9a8c\u6536/lifecycle_fault_fixture_v1.json",
+      "bytes": 1306,
+      "sha256": "bdcf13b9dbeaa6a6c752e7478f4e51d93143ec09114e90537a3b3cae5b4fad60"
+    },
+    {
+      "path": "task/wave_propagation/\u9a8c\u6536/lifecycle_formal_fixture_v1.json",
+      "bytes": 1204,
+      "sha256": "b975562fb9371d0bc1f4276c8d00581e43a9eafdcc38b5d91ef3089a1e5a77df"
+    },
+    {
+      "path": "task/wave_propagation/\u9a8c\u6536/lifecycle_service_fixture_v1.json",
+      "bytes": 323,
+      "sha256": "a0c381185852998c62034b10ccb72686468d324836f85bc657186bbf89e6924d"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_algorithm_switch_01/manifest.json",
+      "bytes": 635,
+      "sha256": "db1b56d799008aa5af62e898328112038b30a2b8904c4c189756c99bc02d8ca4"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_algorithm_switch_01/probe.gd",
+      "bytes": 4992,
+      "sha256": "04baa00d4f39e9b6ff6cb8c5f2cae32f2de0c1e428965be2e060c7b206bdedcf"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_algorithm_switch_01/stdout.txt",
+      "bytes": 521,
+      "sha256": "553e5915fd28cbc20df01df784927347c1e175f0260786107e709204fcb04e4e"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_algorithm_switch_02/audit_algorithm_switch.gd",
+      "bytes": 3845,
+      "sha256": "f43279ec761a1085ecff103adafe2052afd0f8605cd02a440a0061135fc6b849"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_algorithm_switch_02/audit_stdout.txt",
+      "bytes": 127,
+      "sha256": "1a170b21ee4409ec4fd62ee77e5a52e1a053446aab9da5a1d2232355ccfb071d"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_algorithm_switch_02/compile_stdout.txt",
+      "bytes": 72,
+      "sha256": "0fb41bb7cc71b68a335c01d8f84a806304e1cc6bb173f34ca02cb913d0f62013"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_algorithm_switch_02/consumed_sources.zip",
+      "bytes": 17207148,
+      "sha256": "057c175679465c71458374865f9c6bf0613d6560ce07a05f6def71e969e93ba8"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_algorithm_switch_02/fo_continued.sandue",
+      "bytes": 8889308,
+      "sha256": "110046b675dd1a386eb447aa54cdcb897b0ee84d02996dfd3039d807cbd4aaa1"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_algorithm_switch_02/fo_source.sandue",
+      "bytes": 8798200,
+      "sha256": "95b2a836a5f2a54f7a5daf432a7bfd557f549572a2864548fceb9a5605fece35"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_algorithm_switch_02/fo_to_mc.sandue",
+      "bytes": 8843752,
+      "sha256": "c9eeb7bd3d76cfe47e999511260ed40cb0168012529a57e153ef7703e180ab7e"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_algorithm_switch_02/independent_audit.json",
+      "bytes": 3753,
+      "sha256": "f75b0f8b847841db014a62d1d5daa31771db991f4236b5578d4ca4cbe55c5814"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_algorithm_switch_02/manifest.json",
+      "bytes": 652,
+      "sha256": "2e691a66ca08ff4b6047c39c5c998667e337387f3945eba9617ee98d8dadd429"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_algorithm_switch_02/mc_source.sandue",
+      "bytes": 8843752,
+      "sha256": "da22458c4bfc76c0df71ba3e2bc32cb3b5339b95919fe8a4a32d9a32f16e1f6c"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_algorithm_switch_02/mc_to_fo.sandue",
+      "bytes": 8889308,
+      "sha256": "6db81d34945f967896f753f018e6a6312f08866c05419d14b98bbe1a1a4bc5dc"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_algorithm_switch_02/probe.gd",
+      "bytes": 5003,
+      "sha256": "088b4c343e0c8750e1fff37d8938e0b2dcea090202a227a8a97ab0b26130af93"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_algorithm_switch_02/probe.json",
+      "bytes": 30320,
+      "sha256": "5731249d43d957be7901cf844feca79cb440a22b791c1692c20a3893e6798eac"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_algorithm_switch_02/stdout.txt",
+      "bytes": 3268,
+      "sha256": "28c214fe98b432aecb50c10c5b2958a8ce1765dc924ee47d6ed1bc2159371f1e"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_bottle_delay_01/consumed_sources.zip",
+      "bytes": 1871839,
+      "sha256": "771347e932d5e82a9189027318287b30a841324e36f3ac5920195d16d05c884e"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_bottle_delay_01/manifest.json",
+      "bytes": 771,
+      "sha256": "e76e7e045c685ef48b682e3a49fa89225cb809a3bac307ce35f85b0d7e034abb"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_bottle_delay_01/probe.gd",
+      "bytes": 1606,
+      "sha256": "33252a72aabe0d6cdc170a0e151c9ad6af34a166db8df0f87b676d3ba42f872c"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_bottle_delay_01/result.json",
+      "bytes": 979722,
+      "sha256": "4eee2d94416793905283a158d83ce0ab9edf21f6575412de15eadc5fb1217aec"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_bottle_delay_01/run_bottle_clock.py",
+      "bytes": 2680,
+      "sha256": "22418c0ae6b7d0b40bb71d437afe6122226c3fb5f87c905a18a16f6b65cefcb0"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_bottle_delay_01/stdout.txt",
+      "bytes": 2399,
+      "sha256": "d8536f007b5e9a6539a0fc823f95568807a81cfefbe8eee58bb377b1f8b2b279"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_bottle_flow_01/consumed_sources.zip",
+      "bytes": 1871839,
+      "sha256": "161cafb58cafd0212572407712e3d5441f5660dd49f0ee03c48bbb347ed63dad"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_bottle_flow_01/manifest.json",
+      "bytes": 779,
+      "sha256": "aa53af33927ca98b39cc48754a72d1eb8c97a7d4aa308b956c682b7629a314d7"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_bottle_flow_01/probe.gd",
+      "bytes": 1606,
+      "sha256": "33252a72aabe0d6cdc170a0e151c9ad6af34a166db8df0f87b676d3ba42f872c"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_bottle_flow_01/result.json",
+      "bytes": 897697,
+      "sha256": "56709c79353d4afc1dce296e0e275938e4b6c573a1f5ea55f8751d9f9f53e056"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_bottle_flow_01/run_bottle_clock.py",
+      "bytes": 2680,
+      "sha256": "22418c0ae6b7d0b40bb71d437afe6122226c3fb5f87c905a18a16f6b65cefcb0"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_bottle_flow_01/stdout.txt",
+      "bytes": 1395,
+      "sha256": "e074d11bbc33b68b4b9d89a4fdb77023df9600b7c33825ea2bfb8dff243c9703"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_catalog_bake_01/catalog.variant",
+      "bytes": 450788,
+      "sha256": "eeb5d8b4fb22fc72b689105c1c3e784dd35c8b9adae0693c72eb4129a7aa6572"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_catalog_bake_01/manifest.json",
+      "bytes": 674,
+      "sha256": "bdb398455527be14d41ab14c51ef9abe4052a5398b31c27299b52abe0939f075"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_catalog_bake_01/numerics_checkpoint_sources.gd",
+      "bytes": 5652,
+      "sha256": "11005f77e5dc27f248abc001b854539be4a6c8c6fac5cb0d9fbce5159086a173"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_catalog_bake_01/stdout.txt",
+      "bytes": 175,
+      "sha256": "632a692093d63256d7186fcea2ced23f7882ae5f1fc753d5eb983bcf2341bfde"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_catalog_bake_02/bake_stdout.txt",
+      "bytes": 175,
+      "sha256": "00e2cb8ed0f73dc1d8f322518f01216ddbe560c9fcec8a2ca47a388e5248ddf9"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_catalog_bake_02/catalog.variant",
+      "bytes": 450776,
+      "sha256": "16a7c39bd20dcdc482b3c7e61dafe54534c417ebfc0ae15199af7031c618d734"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_catalog_bake_02/numerics_checkpoint_sources.gd",
+      "bytes": 5652,
+      "sha256": "da8f7dfc8a62ea8e01008f54c0735bd1badd402a71f861a8ab0e3fc61465f42a"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_catalog_bake_02/refresh_stdout.txt",
+      "bytes": 72,
+      "sha256": "0fb41bb7cc71b68a335c01d8f84a806304e1cc6bb173f34ca02cb913d0f62013"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_catalog_bake_02/targets.variant",
+      "bytes": 175180,
+      "sha256": "d5babf9b8e50295cadcdc4caf053e33c4265dcc103844f4c61a6349c842bf2c5"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_catalog_bake_02/targets.variant.json",
+      "bytes": 3427,
+      "sha256": "729b478c9dd012d3584da8d073ffbbe672ad86bab459406f8f9bcbeb81652d8f"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_catalog_bake_03/bake_stdout.txt",
+      "bytes": 175,
+      "sha256": "c1b3e6c39d5dba6df3510d0f227c94e949a8362e0882931ccc919b606f273ca7"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_catalog_bake_03/catalog.variant",
+      "bytes": 659896,
+      "sha256": "6bd4040b8e396621e8d482b4654d967ce49a3ad5b1bfad0c4ef32c7aeec6d969"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_catalog_bake_03/numerics_checkpoint_sources.gd",
+      "bytes": 5870,
+      "sha256": "91e5ec6112b35cd293680351ee8df272913320d8ddee951873684f7f62820764"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_catalog_bake_03/refresh_stdout.txt",
+      "bytes": 72,
+      "sha256": "0fb41bb7cc71b68a335c01d8f84a806304e1cc6bb173f34ca02cb913d0f62013"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_catalog_bake_03/targets.variant",
+      "bytes": 175180,
+      "sha256": "ac85c0a13a544228e19822b93034b21cf69d453b77e0a98043da60986c4d6f0a"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_catalog_bake_03/targets.variant.json",
+      "bytes": 4528,
+      "sha256": "7f7c3cf97c15d76aed9222c5607055c491541fb4c5d28298d23417ea74128eec"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_catalog_negative_01/bake_stdout.txt",
+      "bytes": 405,
+      "sha256": "26dffc329b5fdc4ac7aa0829a2c6c537665b5d9eab9b109cae1fa3a29aef6708"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_catalog_negative_01/changed_targets.variant",
+      "bytes": 175196,
+      "sha256": "559618588a07cf5065dfc04a1a17029a542b109e446b2f66f4e517f394faff9b"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_catalog_negative_01/fixture_stdout.txt",
+      "bytes": 72,
+      "sha256": "0fb41bb7cc71b68a335c01d8f84a806304e1cc6bb173f34ca02cb913d0f62013"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_catalog_negative_01/result.json",
+      "bytes": 921,
+      "sha256": "ec15503c2da0ed1fe5e078e6a0d23ad801b8aac76c7912b3a4d0ed3b1e82a42e"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_compat_contract_freeze_01/bake_numerics_catalog.gd",
+      "bytes": 6270,
+      "sha256": "cd23a8fa0ff3d629033e5b49fbef95f0e1e23152dda260e7d71843c4d2b5661a"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_compat_contract_freeze_01/numerics_checkpoint_sources.gd",
+      "bytes": 5870,
+      "sha256": "91e5ec6112b35cd293680351ee8df272913320d8ddee951873684f7f62820764"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_configuration_01/consumed_sources.zip",
+      "bytes": 1843819,
+      "sha256": "b62998476f077189e24e221f86ac0e9d41bbd11d6f8c9e2282005ca481c6855e"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_configuration_01/manifest.json",
+      "bytes": 578,
+      "sha256": "a06d72222837d2106c0a083f4167fac53337577b364dc7ef2cbf27a4c2ed62a3"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_configuration_01/probe.gd",
+      "bytes": 4301,
+      "sha256": "74b3788902127825770b5956140504806c5107af3f64d1341849a7fe0ac6e39e"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_configuration_01/result.json",
+      "bytes": 16859,
+      "sha256": "8a5f525c19499d23f291c56621bdfa8d44976a4637a6cc96b5f27ec1d8474e9d"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_configuration_01/stdout.txt",
+      "bytes": 16191,
+      "sha256": "59d1dbbd08ec1e121290f1602b2bd09b6729f6c434fdf979d1ec687c15441120"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_configuration_gather_01/data/result.json",
+      "bytes": 707,
+      "sha256": "96f9f215a025c3f6bf8755043214ebd6122ff880f25954645a218eb092741c78"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_configuration_gather_01/data/targets.variant",
+      "bytes": 175180,
+      "sha256": "78bc9d79ea28f98de568dc0c54e2a8c86b4ade04eeb06a96fb31552ce53d4b65"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_configuration_gather_01/manifest.json",
+      "bytes": 560,
+      "sha256": "915a9410eec90b3b9f166f2f23997b490b034e28ab9f4ead6b94f5ed1f78961c"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_configuration_gather_01/stdout.txt",
+      "bytes": 250,
+      "sha256": "fccb5f74f57426ea23fe9ebe84fafff2d0cc72e7ad4c735826273f372178f9d7"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/fixture.json",
+      "bytes": 1306,
+      "sha256": "bdcf13b9dbeaa6a6c752e7478f4e51d93143ec09114e90537a3b3cae5b4fad60"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/init_compile/consumed_sources.zip",
+      "bytes": 1846449,
+      "sha256": "7ae200efdaa63c90123df51c72aa660656f90eaa2768a8943d8ea9694621b164"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/init_compile/manifest.json",
+      "bytes": 843,
+      "sha256": "abd36fe451ab553c878d449bf8ba7756cfa04156f8bdbaa95de7d5aaaeeffaf6"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/init_compile/preparation.json",
+      "bytes": 4623,
+      "sha256": "55345a3081951284bfc306fda9c9284402c128dd33e79a9bbdf5f2245b344628"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/init_compile/probe.gd",
+      "bytes": 6451,
+      "sha256": "325380945ada0a1ded3c8a44f289d20ef0be49f8b416b73a12f809cca5e87234"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/init_compile/result.json",
+      "bytes": 18711,
+      "sha256": "3d02377214cb06e4e6134495d0b61b519f7fb8b8a9078bca0e648a33bb34b62a"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/init_compile/stdout.txt",
+      "bytes": 656,
+      "sha256": "6a12805b5c828841038c83fca72243373277d668f13ebf8364f8074571dacf43"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/init_compile_launcher.txt",
+      "bytes": 1503,
+      "sha256": "2f02b8140d2e5f78e69bcea6fce0646b6691f74c0663b3eb90920774ea0be0a6"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/init_coupled/consumed_sources.zip",
+      "bytes": 1846449,
+      "sha256": "67440a1a9062593d10b593986e0a05ba8e03a6540b037bdc8bd5d7d4b4cbf7cd"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/init_coupled/manifest.json",
+      "bytes": 843,
+      "sha256": "7b92a27a3393b553d344d42a971aa5e8cb8b715aa7d895ab97945b1411d1d660"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/init_coupled/preparation.json",
+      "bytes": 4623,
+      "sha256": "55345a3081951284bfc306fda9c9284402c128dd33e79a9bbdf5f2245b344628"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/init_coupled/probe.gd",
+      "bytes": 6451,
+      "sha256": "325380945ada0a1ded3c8a44f289d20ef0be49f8b416b73a12f809cca5e87234"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/init_coupled/result.json",
+      "bytes": 18012,
+      "sha256": "7486227809d1454a6bc2eba2674aceab8591ee25e5b1610fd4a704438a9a314f"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/init_coupled/stdout.txt",
+      "bytes": 608,
+      "sha256": "e16082545edd46596689f1fcd671f8f473da45c80c8758efb9881a2e4ecb6a65"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/init_coupled_launcher.txt",
+      "bytes": 1455,
+      "sha256": "0d1805dc7236210f160314be145c8895766ad6c9c901b69a9fb764d1c6e510f5"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/init_unknown/consumed_sources.zip",
+      "bytes": 1846449,
+      "sha256": "fd142e486bf9acf615bb4ea01afd5223799a5b0108a5cc8cdf6d51cecd24d09f"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/init_unknown/manifest.json",
+      "bytes": 843,
+      "sha256": "ccebe1c25fe2e57926e438a0b7a7c2e555f6b8760571e32713ac471dde9d3bab"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/init_unknown/preparation.json",
+      "bytes": 4623,
+      "sha256": "55345a3081951284bfc306fda9c9284402c128dd33e79a9bbdf5f2245b344628"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/init_unknown/probe.gd",
+      "bytes": 6451,
+      "sha256": "325380945ada0a1ded3c8a44f289d20ef0be49f8b416b73a12f809cca5e87234"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/init_unknown/result.json",
+      "bytes": 18987,
+      "sha256": "b0941efeb93a4f9662b32552d1738f76f130ad2ec03d9451aababc9d21ed6c59"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/init_unknown/stdout.txt",
+      "bytes": 845,
+      "sha256": "dfb35453c31a010b36578138fa335ed75a85ad0af6aa0f65d20d879e3c7135bc"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/init_unknown_launcher.txt",
+      "bytes": 1692,
+      "sha256": "90875e302743b17656b2a1277392c90550f040f2d3129eda86ce4d30b8ebbfe0"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/init_water/consumed_sources.zip",
+      "bytes": 1846449,
+      "sha256": "a27085d6da7b3d8f59a07926d15c439d99369ac5662e3dbb8801729840f96cb2"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/init_water/manifest.json",
+      "bytes": 839,
+      "sha256": "9f360c33155c77c503e4fcc18e884f84480cf5cc44e5f08923e8bbb26c8b7a43"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/init_water/preparation.json",
+      "bytes": 4623,
+      "sha256": "55345a3081951284bfc306fda9c9284402c128dd33e79a9bbdf5f2245b344628"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/init_water/probe.gd",
+      "bytes": 6451,
+      "sha256": "325380945ada0a1ded3c8a44f289d20ef0be49f8b416b73a12f809cca5e87234"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/init_water/result.json",
+      "bytes": 18005,
+      "sha256": "c5706104d09f445b83ece3bed403e7e8339f10d07b3471b840c1696c446d576f"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/init_water/stdout.txt",
+      "bytes": 608,
+      "sha256": "e16082545edd46596689f1fcd671f8f473da45c80c8758efb9881a2e4ecb6a65"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/init_water_launcher.txt",
+      "bytes": 1451,
+      "sha256": "7ad32370290a473d393ead1ffe33ed4d90d781673759d2f06d2ab55c472268b6"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/lifecycle_suite.py",
+      "bytes": 4054,
+      "sha256": "81ecffe0f7d5507d56d23a592c13efbe8c20452045ae6f16e66f51251ff3e960"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/preparation.json",
+      "bytes": 4623,
+      "sha256": "55345a3081951284bfc306fda9c9284402c128dd33e79a9bbdf5f2245b344628"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_cancel/captured.sandue",
+      "bytes": 8229468,
+      "sha256": "05b9569400d2fec24415466faf9689230a1888741d2aebb7f72e364720921a27"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_cancel/consumed_sources.zip",
+      "bytes": 1849737,
+      "sha256": "ac3a82f9cf1a0a01c94b8baf332fb13b274bdaf9fb52a203cfb9aee88742146e"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_cancel/manifest.json",
+      "bytes": 841,
+      "sha256": "6b1c157093f1eadaada95190c397c93000a94e62480ea2a0d998fc340ba4e844"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_cancel/preparation.json",
+      "bytes": 4623,
+      "sha256": "55345a3081951284bfc306fda9c9284402c128dd33e79a9bbdf5f2245b344628"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_cancel/probe.gd",
+      "bytes": 21290,
+      "sha256": "47f08053b6e1eb0d450d47bd05e1c4c0adcb1d94bd129232c931a2d8e7ccd59e"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_cancel/result.json",
+      "bytes": 60237,
+      "sha256": "166c7f2bc8c9bc77a5a84482714098295b8229ab2011df93792cec95043e9312"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_cancel/stdout.txt",
+      "bytes": 2953,
+      "sha256": "5b7be9dac5993d5af19029f98bca452559dec5bf0936c573605e7d4c001351fc"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_cancel_launcher.txt",
+      "bytes": 3395,
+      "sha256": "fbbb6a321eff239b1e55afdf6b40613b30c706bb92251cafff7728ca16b817b1"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_cohesion/captured.sandue",
+      "bytes": 8229476,
+      "sha256": "56b4e9e21a473752db4f6b618d582d73d83ebc6e76cb6e975b3166cc70ad4c97"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_cohesion/consumed_sources.zip",
+      "bytes": 1849737,
+      "sha256": "7fc44df57ac14ced64fb8127b1e92c1fe3b0bd09f76084a8b1e26f41c1fb9418"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_cohesion/manifest.json",
+      "bytes": 844,
+      "sha256": "3b8299bbe636022645b2683b8556e6efda46deae8686cdda4f4afb7833f52b0b"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_cohesion/preparation.json",
+      "bytes": 4623,
+      "sha256": "55345a3081951284bfc306fda9c9284402c128dd33e79a9bbdf5f2245b344628"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_cohesion/probe.gd",
+      "bytes": 21290,
+      "sha256": "47f08053b6e1eb0d450d47bd05e1c4c0adcb1d94bd129232c931a2d8e7ccd59e"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_cohesion/result.json",
+      "bytes": 78973,
+      "sha256": "df1632ab680a15dcbec8dd672aa00ee041b435290885ac517d7b7ed78c28260e"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_cohesion/stdout.txt",
+      "bytes": 4414,
+      "sha256": "08aefbdfc0738df42ce361d0ace37fb1552e028383c8e2785a341f9a6ce1fd30"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_cohesion_launcher.txt",
+      "bytes": 3398,
+      "sha256": "686c20dc4ad03c9c154dfb2ba689da4731d3966c6c296ac48ea8a0afe25e6ef0"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_corrupt/captured.sandue",
+      "bytes": 8229468,
+      "sha256": "4ccbd70e71b84bf3a25d0682f5245b93729bc877c09ef9f49a16ed3b7bba6ae8"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_corrupt/consumed_sources.zip",
+      "bytes": 1849737,
+      "sha256": "eab998e4792385da055403e593cfd0b0dc9b6c65eafa0d88efd7b17be6fae1d1"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_corrupt/manifest.json",
+      "bytes": 843,
+      "sha256": "1f1739388c4882fe401196b46385f48bb2170344bf9ea5253646e3f3426bfc83"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_corrupt/preparation.json",
+      "bytes": 4623,
+      "sha256": "55345a3081951284bfc306fda9c9284402c128dd33e79a9bbdf5f2245b344628"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_corrupt/probe.gd",
+      "bytes": 21290,
+      "sha256": "47f08053b6e1eb0d450d47bd05e1c4c0adcb1d94bd129232c931a2d8e7ccd59e"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_corrupt/result.json",
+      "bytes": 59688,
+      "sha256": "1e4781376c04bbb26fe5636bd8c02d2204ad5f98eba757ca8690ba75a619c89d"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_corrupt/stdout.txt",
+      "bytes": 2786,
+      "sha256": "82565ca6e86c494d04f41ee680a74301ee469ab11c08f394a251073e32d14767"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_corrupt_launcher.txt",
+      "bytes": 3399,
+      "sha256": "009f288d833f08ca58d855e0505a645b5569ac5010fd4a887673fecf8cf728eb"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_distinct/captured.sandue",
+      "bytes": 8229468,
+      "sha256": "c60e881ed9da999797501663f5a00b26b59c76665eec10e533db3d6e46c8e758"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_distinct/consumed_sources.zip",
+      "bytes": 1849737,
+      "sha256": "1946e296f2ab5dda710e202f36dc938d389878bbd9a6ed11f26a638f2f7de95f"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_distinct/manifest.json",
+      "bytes": 845,
+      "sha256": "8f55d835fb76f35b18c6eef9df317c3390f6560498c4e5f39dc5c5e1f0c85dbe"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_distinct/preparation.json",
+      "bytes": 4623,
+      "sha256": "55345a3081951284bfc306fda9c9284402c128dd33e79a9bbdf5f2245b344628"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_distinct/probe.gd",
+      "bytes": 21290,
+      "sha256": "47f08053b6e1eb0d450d47bd05e1c4c0adcb1d94bd129232c931a2d8e7ccd59e"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_distinct/result.json",
+      "bytes": 77226,
+      "sha256": "60d3baf873b0828abcce5b1e2c1f086f910cfee749d2e0cec1dd2bf8a678d56e"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_distinct/stdout.txt",
+      "bytes": 3158,
+      "sha256": "a4dec0ae7478ed3c40ab3038d651b7118dcf4daad8abaf260f36ab01de034f8c"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_distinct_launcher.txt",
+      "bytes": 3400,
+      "sha256": "5c0b1d4e07d04bb0c3ba9ebca0ed10d36d1813d50afd72ece572cae92ff4b50a"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_hold/captured.sandue",
+      "bytes": 8229464,
+      "sha256": "64836f16f1dfccddd78da7ae723cfcd1bd217b96cf5e42d47b251ead4c08f338"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_hold/consumed_sources.zip",
+      "bytes": 1849737,
+      "sha256": "41f3637a500a7140f55c57d08aa1dbd97d81899c48dc15ad46fb589b3f0840d6"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_hold/manifest.json",
+      "bytes": 837,
+      "sha256": "da96b1f6d6c03c49afb9de136cf6a3644d1bf62d10f6e4e3f9335d00bfdf6966"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_hold/preparation.json",
+      "bytes": 4623,
+      "sha256": "55345a3081951284bfc306fda9c9284402c128dd33e79a9bbdf5f2245b344628"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_hold/probe.gd",
+      "bytes": 21290,
+      "sha256": "47f08053b6e1eb0d450d47bd05e1c4c0adcb1d94bd129232c931a2d8e7ccd59e"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_hold/result.json",
+      "bytes": 78944,
+      "sha256": "d98b0d17ff7f8e450933ab0f559f3266f3cc9dfc2a27282181fad5576f4b0c48"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_hold/stdout.txt",
+      "bytes": 4532,
+      "sha256": "77fa78f73a3d0ad3063450d87a62c70d21f37509e36e531e822f597142c690b0"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_hold_launcher.txt",
+      "bytes": 3391,
+      "sha256": "88abde8ff38161d6b8d8f4f29c9954fd61f58ff449e86b390d130022c19cfdec"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_registration/captured.sandue",
+      "bytes": 8229472,
+      "sha256": "33770966683ed0bbf75c7f06dd44c67cb92c799e08162bed732909ea8352e313"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_registration/consumed_sources.zip",
+      "bytes": 1849737,
+      "sha256": "a5f077ad4cd5f6d25f7fea37f124c5abe257ea27592552a1d2fe3a577b9fb002"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_registration/manifest.json",
+      "bytes": 853,
+      "sha256": "8960cccd8dd44de06ca5e8b6e8cd2dea42e1a2aa666584cfd720f9e94c377d79"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_registration/preparation.json",
+      "bytes": 4623,
+      "sha256": "55345a3081951284bfc306fda9c9284402c128dd33e79a9bbdf5f2245b344628"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_registration/probe.gd",
+      "bytes": 21290,
+      "sha256": "47f08053b6e1eb0d450d47bd05e1c4c0adcb1d94bd129232c931a2d8e7ccd59e"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_registration/result.json",
+      "bytes": 59706,
+      "sha256": "bb2a6aec496fa0eaf5fd2cf748e1eb0a2577cdf4489dbce4c0574a2474a5897d"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_registration/stdout.txt",
+      "bytes": 2786,
+      "sha256": "82565ca6e86c494d04f41ee680a74301ee469ab11c08f394a251073e32d14767"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_registration_launcher.txt",
+      "bytes": 3409,
+      "sha256": "63eb505795eba9d75b314a9950dd575d1513d73ec7823a1fae22c1f3acb98624"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_unknown/captured.sandue",
+      "bytes": 8229468,
+      "sha256": "09540e20ac2e85c40127ac6cc942791a5b4934449ed2ec60d6f0c3f6df438a16"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_unknown/consumed_sources.zip",
+      "bytes": 1849737,
+      "sha256": "0cdb8664710faaa29d344199b48540f66a54e2bea767c760450f5fb9d5bbcf48"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_unknown/manifest.json",
+      "bytes": 842,
+      "sha256": "04e812a2dc02ca7e9961c8e646689f33daa7572af4b3260072ac4fe5e8c926f7"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_unknown/preparation.json",
+      "bytes": 4623,
+      "sha256": "55345a3081951284bfc306fda9c9284402c128dd33e79a9bbdf5f2245b344628"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_unknown/probe.gd",
+      "bytes": 21290,
+      "sha256": "47f08053b6e1eb0d450d47bd05e1c4c0adcb1d94bd129232c931a2d8e7ccd59e"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_unknown/result.json",
+      "bytes": 59690,
+      "sha256": "431a941a955ffb074ad660790b1c29104f0c9f0ff925bb94ceea8f46fd553beb"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_unknown/stdout.txt",
+      "bytes": 2834,
+      "sha256": "572956648fa7eb1b8abda740c0b19bfc2cc4cc1df27ecde2fdec7b1b97841e79"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/restore_unknown_launcher.txt",
+      "bytes": 3397,
+      "sha256": "7bc9e77ce19827181b88eb1545d9906c1cf6ca8f5134b119fc26db4c05890626"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/result.json",
+      "bytes": 3152,
+      "sha256": "299c58ec83201aab2b41afb6fc7c29ba937ac30d12562cb43faa9d236de4fc5c"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/run_lifecycle_case.py",
+      "bytes": 3433,
+      "sha256": "25e28d3e8f3d0f4f3a0e7e970897d9b903c889b01ba36ebd09dd049a0acac1a2"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/status.json",
+      "bytes": 2671,
+      "sha256": "d0439c1a94d575d042650cdc8d1a1bdee4d0f3827a8154ada2eb72cc7c5ef1ff"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_failure_matrix_01/terminal_status.json",
+      "bytes": 2861,
+      "sha256": "6eefd882647346d1b2e58ee09e94d90a69e2014bacfa0a84306b88a9f7e406a9"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/boot_main/consumed_sources.zip",
+      "bytes": 17188027,
+      "sha256": "71252a95b5c3320d079c0b65bdbba4b637ef951c478510418fcf0335b5cbe496"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/boot_main/manifest.json",
+      "bytes": 822,
+      "sha256": "c3c31d72a888c49ad88e4f2c51452a350a1e084ac4890923a8da1d3c727de273"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/boot_main/preparation.json",
+      "bytes": 4623,
+      "sha256": "55345a3081951284bfc306fda9c9284402c128dd33e79a9bbdf5f2245b344628"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/boot_main/probe.gd",
+      "bytes": 8236,
+      "sha256": "3dfd8fb036c98fd6cbd63f863ae16c67f33007a58b435466c73a4d8190ebc4b2"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/boot_main/probe.json",
+      "bytes": 25860,
+      "sha256": "ec9eeb0429639dc154735d019c9284d01e25e79dc302fbeb3ab605f04b9a14fb"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/boot_main/stdout.txt",
+      "bytes": 332,
+      "sha256": "294db69accc416f1c0c4c03d1976cb0ec1b88b5fa5f7fa7fda7f80e9df38edc6"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/boot_main_launcher.txt",
+      "bytes": 1158,
+      "sha256": "d45b7126d3b1f39e0a370e4427392d916812ca4a94a207ad5e73d3b4c0324ccb"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/capture_main/consumed_sources.zip",
+      "bytes": 17188027,
+      "sha256": "5d3f167b4cc183cbe4b06572a6696148c2daf04f73d772ad1ccbf7873e4af9a8"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/capture_main/manifest.json",
+      "bytes": 832,
+      "sha256": "bb219b56112a873de424158b8d5c0b5eea006f38445b42932a737436a8769260"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/capture_main/preparation.json",
+      "bytes": 4623,
+      "sha256": "55345a3081951284bfc306fda9c9284402c128dd33e79a9bbdf5f2245b344628"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/capture_main/probe.gd",
+      "bytes": 10584,
+      "sha256": "50d9054ebb2837e3d087479a5fc99a250e2919b7dd62d0d739a7a3915728165b"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/capture_main/probe.json",
+      "bytes": 27134,
+      "sha256": "ace30cb7aebfb8ab06e10a026b3d4fc6e0c8bc1336db68f764931e216bbb0714"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/capture_main/stdout.txt",
+      "bytes": 902,
+      "sha256": "d31cfb7c1a17d01d4702b4f9e5a58f322be543fa7bb201ced3cdd27e641f8a6f"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/capture_main_launcher.txt",
+      "bytes": 1738,
+      "sha256": "c94d05c076191990af8a9c3515dd9111b5e9fa0c615dc76b25416b3083f57a29"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/detach_main/baseline.sandue",
+      "bytes": 8798196,
+      "sha256": "9eed39741a005c9347bd67f6d782eef322899e2c690d6a954ee74f0205d6a5cc"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/detach_main/consumed_sources.zip",
+      "bytes": 17188027,
+      "sha256": "e4e4db9c23fb53637e09f44d392ff34d8c8f24e5e005665be6adb46657110218"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/detach_main/manifest.json",
+      "bytes": 826,
+      "sha256": "5815d8295cbe32265c9d33fc49e25fbeb35e99ff0f55bb187bb608e384491fff"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/detach_main/preparation.json",
+      "bytes": 4623,
+      "sha256": "55345a3081951284bfc306fda9c9284402c128dd33e79a9bbdf5f2245b344628"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/detach_main/probe.gd",
+      "bytes": 8236,
+      "sha256": "3dfd8fb036c98fd6cbd63f863ae16c67f33007a58b435466c73a4d8190ebc4b2"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/detach_main/probe.json",
+      "bytes": 26733,
+      "sha256": "bba888c9e63ecc53ca12ae8ed7aac7e86b80436e8756c4c50803e9f3dc3ec283"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/detach_main/stdout.txt",
+      "bytes": 427,
+      "sha256": "132d8a1e52b48945a4a3133b0979fbb588e03fdcaad99c5e846dd7a998fc1f10"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/detach_main_launcher.txt",
+      "bytes": 1257,
+      "sha256": "cb879368ea6bdb195a546b0fb17f136e703fdf97e6587088b1296f2db9fd6772"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/faultclose_main/baseline.sandue",
+      "bytes": 8798196,
+      "sha256": "9eed39741a005c9347bd67f6d782eef322899e2c690d6a954ee74f0205d6a5cc"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/faultclose_main/consumed_sources.zip",
+      "bytes": 17188027,
+      "sha256": "d201e30155975e0791c58458f0da1f2aa16faa30428a3495df4fc5a578cfaf2f"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/faultclose_main/manifest.json",
+      "bytes": 835,
+      "sha256": "0609d66ea16eb7ca20e0869def6db2c8dfb3982525d3aa8925ce94b3f713b0da"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/faultclose_main/preparation.json",
+      "bytes": 4623,
+      "sha256": "55345a3081951284bfc306fda9c9284402c128dd33e79a9bbdf5f2245b344628"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/faultclose_main/probe.gd",
+      "bytes": 8236,
+      "sha256": "3dfd8fb036c98fd6cbd63f863ae16c67f33007a58b435466c73a4d8190ebc4b2"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/faultclose_main/probe.json",
+      "bytes": 26604,
+      "sha256": "55269eeecc7a55ce31d4f863adc0b1cea1333e2aab671d360e3009db71068881"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/faultclose_main/stdout.txt",
+      "bytes": 657,
+      "sha256": "54d0d70383ab12def52f372fdff8dcff13e9057fab9b7191481547608fda32c8"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/faultclose_main_launcher.txt",
+      "bytes": 1496,
+      "sha256": "66e3a523a94c60870ae5933b364978829d1aa3c3b1e13e678569aa1669ffe9d6"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/faultrestore_main/baseline.sandue",
+      "bytes": 8798196,
+      "sha256": "9eed39741a005c9347bd67f6d782eef322899e2c690d6a954ee74f0205d6a5cc"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/faultrestore_main/consumed_sources.zip",
+      "bytes": 17188027,
+      "sha256": "dd44a511ab98379e6e1229e5c1aa73a520c4a4497ee727782ebe132352d9cced"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/faultrestore_main/manifest.json",
+      "bytes": 838,
+      "sha256": "121358e7eada4e195084c19d5499eea23b55647f76df8ddf861dfe52cd9ca1a9"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/faultrestore_main/preparation.json",
+      "bytes": 4623,
+      "sha256": "55345a3081951284bfc306fda9c9284402c128dd33e79a9bbdf5f2245b344628"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/faultrestore_main/probe.gd",
+      "bytes": 8236,
+      "sha256": "3dfd8fb036c98fd6cbd63f863ae16c67f33007a58b435466c73a4d8190ebc4b2"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/faultrestore_main/probe.json",
+      "bytes": 28973,
+      "sha256": "37dc944dafd60462d07d6f113959978d2040006c7375905211ae5f8f62013486"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/faultrestore_main/stdout.txt",
+      "bytes": 881,
+      "sha256": "f1998a82c261c2c39ede929f27fbe6f626fcd1e8c14575848f18a2c4299fb78a"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/faultrestore_main_launcher.txt",
+      "bytes": 1723,
+      "sha256": "b51f693bf91f3b994fb931feb58c751d26b4cc534cd5f275e4df80639e11e781"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/fixture.json",
+      "bytes": 1204,
+      "sha256": "b975562fb9371d0bc1f4276c8d00581e43a9eafdcc38b5d91ef3089a1e5a77df"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/height_main/consumed_sources.zip",
+      "bytes": 17188027,
+      "sha256": "0fa863de306f04d838ad54c7a5df0f48bab7a50bb6c72e35167e83d7acc6d3ff"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/height_main/manifest.json",
+      "bytes": 829,
+      "sha256": "f5b6805dd7a271ca025c02813c8e44cef89fe951130eee312eed71882336690c"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/height_main/preparation.json",
+      "bytes": 4623,
+      "sha256": "55345a3081951284bfc306fda9c9284402c128dd33e79a9bbdf5f2245b344628"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/height_main/probe.gd",
+      "bytes": 10584,
+      "sha256": "50d9054ebb2837e3d087479a5fc99a250e2919b7dd62d0d739a7a3915728165b"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/height_main/probe.json",
+      "bytes": 33918,
+      "sha256": "403914fb69459eaac35a7d0cc708b8d423a6040aa3872e10bf0a1972b6be4e1a"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/height_main/stdout.txt",
+      "bytes": 507,
+      "sha256": "2f0a19deaa470013c2ce01cffc0ea3f18d4526b8062a60a6121d9758cf35ee03"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/height_main_launcher.txt",
+      "bytes": 1340,
+      "sha256": "8d3f0ddb2c0eb61d7f9d188dc6d9ae2d3fa4320f0b353072c835142efba1292c"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/lifecycle_suite.py",
+      "bytes": 4054,
+      "sha256": "81ecffe0f7d5507d56d23a592c13efbe8c20452045ae6f16e66f51251ff3e960"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/physics_main/consumed_sources.zip",
+      "bytes": 17188027,
+      "sha256": "4800531d5f2f1c882a5bf6e63615c5c8b153401cac63ac55a5efddfbfbf33e9e"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/physics_main/manifest.json",
+      "bytes": 832,
+      "sha256": "a0edbb8526678a92958bec6c4ecadf0ca47de06dec505e7c68e8f81954629470"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/physics_main/physics_pending.sandue",
+      "bytes": 8798204,
+      "sha256": "ed1fa74ab4fb11dd630b556c11e43cc38065cf05507518803c9b7d5fbbe214ca"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/physics_main/preparation.json",
+      "bytes": 4623,
+      "sha256": "55345a3081951284bfc306fda9c9284402c128dd33e79a9bbdf5f2245b344628"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/physics_main/probe.gd",
+      "bytes": 10584,
+      "sha256": "50d9054ebb2837e3d087479a5fc99a250e2919b7dd62d0d739a7a3915728165b"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/physics_main/probe.json",
+      "bytes": 33512,
+      "sha256": "92a5d6885c8a3e01e120a84193e3e89fe7cb635babbc8b6e236d05a19c2f4288"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/physics_main/stdout.txt",
+      "bytes": 686,
+      "sha256": "698f94976ef7064e0ef9e6a1c8667add7845c0ae9b59662c7a89eed1a4ec01be"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/physics_main_launcher.txt",
+      "bytes": 1522,
+      "sha256": "d6b25ca6c5d0ec587721a6c07de7421a207351a0c0f94b9450a7dc3b67c09ed6"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/preparation.json",
+      "bytes": 4623,
+      "sha256": "55345a3081951284bfc306fda9c9284402c128dd33e79a9bbdf5f2245b344628"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/reader_generation/consumed_sources.zip",
+      "bytes": 17044974,
+      "sha256": "deb5e95a7bfcc7badf85df2f8f83d05950cc5c81d66588a568e5b6c333979131"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/reader_generation/current.sandue",
+      "bytes": 8796688,
+      "sha256": "d4ab4777fbcd2d24b647a6de0e50439cce7d682fe48bbad1091aee8d1f4d18da"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/reader_generation/manifest.json",
+      "bytes": 832,
+      "sha256": "9251887fd24c6d70949542dcd0991ba6b8f34a89ea791678d3865593757b6880"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/reader_generation/preparation.json",
+      "bytes": 6328,
+      "sha256": "06b5b4f93061fa9e8d2edc1454a0f359609277a2a84a606403b8b419007558f1"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/reader_generation/probe.gd",
+      "bytes": 3919,
+      "sha256": "a0a98a7832f6005f15740d1327f04ee0e4c951064dd69ed6d37d829a8a78373e"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/reader_generation/result.json",
+      "bytes": 24555,
+      "sha256": "1c20d04f5dd8ed768b9ba76e3b1430e98e7fa01e28def87da1c32ba755255cb0"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/reader_generation/stdout.txt",
+      "bytes": 777,
+      "sha256": "6b0c3ddbbdeae903b72e8cf162171d776d27f4055799913b57dbf4f8e7fbe0a5"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/reader_generation_launcher.txt",
+      "bytes": 1613,
+      "sha256": "77300c93262f318de8c8f83e353152f7d3fee317393e642f4afe2ea7875ab72b"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/recorded_main/consumed_sources.zip",
+      "bytes": 17188027,
+      "sha256": "74572b3d6c18ec0f6842a189a932b391774c2b9a631550f9ccc0f6f17c883503"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/recorded_main/manifest.json",
+      "bytes": 833,
+      "sha256": "009c59811859f3c0b3da503a1f292049e7e4c85647ec227b5114a2957d90856f"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/recorded_main/preparation.json",
+      "bytes": 4623,
+      "sha256": "55345a3081951284bfc306fda9c9284402c128dd33e79a9bbdf5f2245b344628"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/recorded_main/probe.gd",
+      "bytes": 10584,
+      "sha256": "50d9054ebb2837e3d087479a5fc99a250e2919b7dd62d0d739a7a3915728165b"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/recorded_main/probe.json",
+      "bytes": 30150,
+      "sha256": "cb0a78d203ea50e9fad64b9b645a1977bf772f03843b58ce23d1bf8590d30d81"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/recorded_main/recorded.sandue",
+      "bytes": 8798284,
+      "sha256": "b43ae5badac7c5046c5a7793372b76de5d03445cd24318ac8e9a710196ce57d9"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/recorded_main/stdout.txt",
+      "bytes": 561,
+      "sha256": "4ed82fbe648cbf7b385a576c86b0f1450f89088f54e9a41ca20bfb4c9a0c244f"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/recorded_main_launcher.txt",
+      "bytes": 1398,
+      "sha256": "77b1286de8ae0cd9c25b19c2c099e32417b7e7d0dc073a11618a3ea70ee010c8"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/restoreclose_main/baseline.sandue",
+      "bytes": 8798196,
+      "sha256": "9eed39741a005c9347bd67f6d782eef322899e2c690d6a954ee74f0205d6a5cc"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/restoreclose_main/consumed_sources.zip",
+      "bytes": 17188027,
+      "sha256": "c29b578bc0bfa2e52c50636e1d2f814294c0308bdb3126e8b995fdac566627f8"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/restoreclose_main/manifest.json",
+      "bytes": 838,
+      "sha256": "e030f939b8295c4e02f9600da339e5a1a6e1c22047785e815ddb61b1fd22386a"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/restoreclose_main/preparation.json",
+      "bytes": 4623,
+      "sha256": "55345a3081951284bfc306fda9c9284402c128dd33e79a9bbdf5f2245b344628"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/restoreclose_main/probe.gd",
+      "bytes": 8236,
+      "sha256": "3dfd8fb036c98fd6cbd63f863ae16c67f33007a58b435466c73a4d8190ebc4b2"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/restoreclose_main/probe.json",
+      "bytes": 26867,
+      "sha256": "13ebdc906685d14e5904900f26e1ec390e0e6af2402887bccbe01e387bfdd422"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/restoreclose_main/stdout.txt",
+      "bytes": 533,
+      "sha256": "473aafcd992509c334ee910f28ebb673b9b50a2c4e5f084b768bffdfc1472c27"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/restoreclose_main_launcher.txt",
+      "bytes": 1375,
+      "sha256": "fadd7fe3728d7c327f31accd785d74495b50cfe4053a4534fdbe036dc0a800e2"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/result.json",
+      "bytes": 2868,
+      "sha256": "0e59c643baa537769687aba5f5b9c3022c1a268873e345c9daa984387c0477d3"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/run_lifecycle_case.py",
+      "bytes": 3433,
+      "sha256": "25e28d3e8f3d0f4f3a0e7e970897d9b903c889b01ba36ebd09dd049a0acac1a2"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_formal_matrix_01/status.json",
+      "bytes": 2387,
+      "sha256": "66badcbbb14cc38b509a6586c61c7002e67bec97b81456c93eff146fd39ce4e0"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_gate_summary_01/audit_g4_gate.py",
+      "bytes": 4922,
+      "sha256": "431b6643cb48d7f47d5ef0b374f2ba8b491fe5fde913f0cb387e051c6ff9f82d"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_gate_summary_01/result.json",
+      "bytes": 4977,
+      "sha256": "b55ec3f804a4179dd5a4a77ef47539c87af6432f878a910d3dd219e3e8713a8d"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_gate_summary_01/verification_tools.zip",
+      "bytes": 116383,
+      "sha256": "c8a0a342ef8a0bf14e9e31c648e92ccf9a65bdac65c6d10dfefd0de611ea2f9d"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_intermediate_audit_01/audit_g4_intermediate.py",
+      "bytes": 4680,
+      "sha256": "35d14800d5e6eed5f42d4e3e2327cc0335061057c4e6b8df6a8a556590b82de0"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_intermediate_audit_01/result.json",
+      "bytes": 11391,
+      "sha256": "9e9a0c646c5bf0dcd4ba0c7693a8c4e918f63706a4e0662410b0544301b88998"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_intermediate_audit_01/verification_tools.zip",
+      "bytes": 99366,
+      "sha256": "95aac44b490859e6d7bbd9c20673537482e6e9bcd21647cd7ea0f180cc8130fc"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_intermediate_audit_02/audit_g4_intermediate.py",
+      "bytes": 4680,
+      "sha256": "35d14800d5e6eed5f42d4e3e2327cc0335061057c4e6b8df6a8a556590b82de0"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_intermediate_audit_02/result.json",
+      "bytes": 11391,
+      "sha256": "9e9a0c646c5bf0dcd4ba0c7693a8c4e918f63706a4e0662410b0544301b88998"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_migration_01/manifest.json",
+      "bytes": 580,
+      "sha256": "5251e826d3503e92da9be72f25043d0c9461fae10dee35e4e585ce409c2efb7d"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_migration_01/stdout.txt",
+      "bytes": 455,
+      "sha256": "2e628acc4385fa6b4f51f1db3e259dd39e3fc0987767438716d235a88827a259"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_migration_02/manifest.json",
+      "bytes": 580,
+      "sha256": "a0c3773d381aac6275ad89412dd324f76dc8eebfc754ff392187f9a168c17d31"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_migration_02/parameter_inspection.json",
+      "bytes": 227155,
+      "sha256": "0db51e0fd3ce20b0704ba41e0ca15049a79560606f218c6bb31887253fd577f8"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_migration_02/probe.gd",
+      "bytes": 6317,
+      "sha256": "7a4bc43edc6bbc59e0ffc9af537b614e4bf44196d428cff55441ea7a2af1104e"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_migration_02/result.json",
+      "bytes": 4024,
+      "sha256": "4e397b9914a8b6d0bbe9962f9209f2eb872ef9426ee24ffb9b8d4f83b97cc8b4"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_migration_02/stdout.txt",
+      "bytes": 1381,
+      "sha256": "db2800a7491851af18921facfa1d1dfd34f42b7caa13cf8b891b222675d0b867"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_migration_03/manifest.json",
+      "bytes": 566,
+      "sha256": "145b352dad0ed90ddf182f0addcc50f61f7eb0e9b4ae2420ee754cfb65a5fca0"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_migration_03/probe.gd",
+      "bytes": 6691,
+      "sha256": "22c7a09c676747d7d203286ab5de6c47d5ab2ba1d85a15fdac2843bec5a417d9"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_migration_03/result.json",
+      "bytes": 5282,
+      "sha256": "27066650d4587a16f5d099043233bd70765ccd4bee69cb46080ee532a061f585"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_migration_03/stdout.txt",
+      "bytes": 1853,
+      "sha256": "29120293a4e920843c3bcc2b64380a19cbc20a95c0a267e9bab8ff42593cc1d8"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_migration_04/manifest.json",
+      "bytes": 566,
+      "sha256": "9bb7594d21f7a3783fce8e3ee274385cdec4c40edfd91b4178e5282e24d3c1a4"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_migration_04/probe.gd",
+      "bytes": 7057,
+      "sha256": "a94d90eb1004739530d2455683fe1b51765c1958cdeeb1e896491f9076d40e9b"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_migration_04/result.json",
+      "bytes": 5612,
+      "sha256": "409c780331177fa5b92ab9812e6bf5c1259f888dd421ae8794b53a943004c321"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_migration_04/stdout.txt",
+      "bytes": 2476,
+      "sha256": "adb40a95da2587725582ced9b464b47b4369fea9742ac8e6712a7d5f4e8dbfbb"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_native_restart_01/compare_native_restart.gd",
+      "bytes": 2816,
+      "sha256": "96ada899f9d6f9e42b9cc6f801c78718e9bad7913db5d793721c8cb6c98d8df0"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_native_restart_01/comparison.json",
+      "bytes": 4294,
+      "sha256": "7456eabfac84b54c31584373a352ae42550cf81b0a6f882caa7999e86d917737"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_native_restart_01/comparison_stdout.txt",
+      "bytes": 2223,
+      "sha256": "03f3c352e0f9d5ea0eff0bd31f6b12197dec118e5ed2512892b72eb9dc6d46d1"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_native_restart_01/native_restart_probe.gd",
+      "bytes": 7210,
+      "sha256": "8381f83eed798eb9c2ecfdef7737ce0473b724993bd5299a3ce625c46943e172"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_native_restart_01/result.json",
+      "bytes": 1667,
+      "sha256": "bdd93662a6d7a4734afd5e5ffa886c181c5bfc97d951c41fba9e348f36146080"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_native_restart_01/resume/consumed_sources.zip",
+      "bytes": 1849610,
+      "sha256": "760ba96f966e8540f778ca19e19d8a6f8a4e1bb69bb2cdb733b5441ae29bf5e5"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_native_restart_01/resume/data/continuation.sandue",
+      "bytes": 8264240,
+      "sha256": "b677cf2a125a498a3bf927dd406370fdcbb07c69ef5f3aa2a4ba7e055c5bc4e2"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_native_restart_01/resume/data/restored.sandue",
+      "bytes": 8264240,
+      "sha256": "006a1a136bc91d39ac75fed9e3c34c5e9946ab6fad7fb2f113aaf203ddc392b2"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_native_restart_01/resume/data/result.json",
+      "bytes": 65417,
+      "sha256": "9323d466720f8fe9f5bf7cda62c98c54bff58916a1850e91532cab01d8e60e22"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_native_restart_01/resume/stdout.txt",
+      "bytes": 267,
+      "sha256": "eef0c07266a948815b33627913e74ad2ca11a58ca46a23421d53681f4b1de4f4"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_native_restart_01/seed/consumed_sources.zip",
+      "bytes": 1849610,
+      "sha256": "0a32bc9b57637f63934819e8f97de3a73b01d4e72bec08b5958195f890346307"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_native_restart_01/seed/data/continuation.sandue",
+      "bytes": 8264240,
+      "sha256": "bf3cb89b98b228053393d19f56f1a8a64ec0e5aacaa04603c8856b657045d4d4"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_native_restart_01/seed/data/result.json",
+      "bytes": 65647,
+      "sha256": "f58e3b3ecf29fac19788d48c97989ae7f421ac80765aff21f3a4188b5946e6ba"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_native_restart_01/seed/data/seed.sandue",
+      "bytes": 8264240,
+      "sha256": "dba9e56439590487e117f250335e5a11bad40d8a0e4c3b6f735991186895ccd1"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_native_restart_01/seed/stdout.txt",
+      "bytes": 267,
+      "sha256": "eef0c07266a948815b33627913e74ad2ca11a58ca46a23421d53681f4b1de4f4"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_native_restart_01/status.json",
+      "bytes": 1337,
+      "sha256": "6a392c52de95454ce4ef5d29422d7548bae94bb4903ce869df894ed5d565fb39"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_rebuilt_legacy_01/data/rebuilt_consumer_native6.sandue",
+      "bytes": 8793148,
+      "sha256": "70be0e8d6ec7d74d6e9dde589daecb032c75af4384675a757f942c62acdfcf8b"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_rebuilt_legacy_01/data/rebuilt_edit4_native2.sandcp",
+      "bytes": 13019916,
+      "sha256": "1ff145497b638689f57f97e7080593da6313f55d6f74e847c81a5024e5a5dd30"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_rebuilt_legacy_01/data/rebuilt_edit5_native3.sandgp",
+      "bytes": 8822756,
+      "sha256": "22823f6cb58d005bd4e81bf83b813ca2dbf872fed12861837a2b3f320ffa0dfb"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_rebuilt_legacy_01/data/result.json",
+      "bytes": 3185,
+      "sha256": "725bc4cf9d741ebbc3dcd7b373259256fa2258f8972238709570c7ce55c8acb2"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_rebuilt_legacy_01/manifest.json",
+      "bytes": 446,
+      "sha256": "da4edf5477a97c7214ebc061707fec69a8d24e8d918ef243c6348339264c9c68"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_rebuilt_legacy_01/stdout.txt",
+      "bytes": 526,
+      "sha256": "10766753048c13292a01989ab7e6122008569618d35119a7500363414177781c"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_restore_01/captured.sandue",
+      "bytes": 8229460,
+      "sha256": "9edb025f3c70517aae82513c7d694287a17fc9d804d4e6ce32ea5c13b81b33a3"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_restore_01/consumed_sources.zip",
+      "bytes": 1849737,
+      "sha256": "0db74f664c9563baf2026f995605fcbf9635b6c995e451efc8d09aea342e192f"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_restore_01/manifest.json",
+      "bytes": 809,
+      "sha256": "c2cc31ea12013e220e386442932cd532c53e831ea03a10fd3471022e843dec67"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_restore_01/preparation.json",
+      "bytes": 4623,
+      "sha256": "55345a3081951284bfc306fda9c9284402c128dd33e79a9bbdf5f2245b344628"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_restore_01/probe.gd",
+      "bytes": 21290,
+      "sha256": "47f08053b6e1eb0d450d47bd05e1c4c0adcb1d94bd129232c931a2d8e7ccd59e"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_restore_01/result.json",
+      "bytes": 75005,
+      "sha256": "51df85720c161c56fe3de7d8bf61c71e03e1f2cb5fa5ba6d3d950f88931b60d3"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_restore_01/stdout.txt",
+      "bytes": 4414,
+      "sha256": "08aefbdfc0738df42ce361d0ace37fb1552e028383c8e2785a341f9a6ce1fd30"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_01/candidate_failure_main/forced_stop.json",
+      "bytes": 583,
+      "sha256": "682b45c697918f34c7718ef0f686f4ad3cfcc985ac02a2f7e048b5ff8a301433"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_01/candidate_failure_main/manifest.json",
+      "bytes": 844,
+      "sha256": "c7526a9e90db2c9d004d5caa3463431b0b6ededdf5465b9621ee01492acc4ef6"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_01/candidate_failure_main/preparation.json",
+      "bytes": 6328,
+      "sha256": "06b5b4f93061fa9e8d2edc1454a0f359609277a2a84a606403b8b419007558f1"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_01/candidate_failure_main/probe.gd",
+      "bytes": 5275,
+      "sha256": "a41780483957628c7699b729b2de197fb43095aab562080ec7f8a558896385ca"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_01/candidate_failure_main/stdout.txt",
+      "bytes": 1038,
+      "sha256": "9a722f923950c457d6115657d658da40b904bdb1977f7028be57872d671b9520"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_01/candidate_failure_main_launcher.txt",
+      "bytes": 1885,
+      "sha256": "495f4cd627ecc39073548ef67c2c3d92235aecff1b82fe15868845bd9df62265"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_01/fixture.json",
+      "bytes": 323,
+      "sha256": "a0c381185852998c62034b10ccb72686468d324836f85bc657186bbf89e6924d"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_01/lifecycle_suite.py",
+      "bytes": 4054,
+      "sha256": "81ecffe0f7d5507d56d23a592c13efbe8c20452045ae6f16e66f51251ff3e960"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_01/preparation.json",
+      "bytes": 6328,
+      "sha256": "06b5b4f93061fa9e8d2edc1454a0f359609277a2a84a606403b8b419007558f1"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_01/result.json",
+      "bytes": 461,
+      "sha256": "015c38a6d599f5dd54b34d16f5573c8049a2bd345de60ecd18497a1f2dca5f44"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_01/run_lifecycle_case.py",
+      "bytes": 3487,
+      "sha256": "2e37ff88a1c22b01b8ded4bf0ca35627c9272fc3d0d4fb6971ae99adca9b02b7"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_01/status.json",
+      "bytes": 147,
+      "sha256": "fc55d5c38b9d1dee95b0ccc199b4389386f79fc4111c200be3db0ae2ef82ebc4"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_02/candidate_failure_main/baseline.sandue",
+      "bytes": 8798196,
+      "sha256": "9eed39741a005c9347bd67f6d782eef322899e2c690d6a954ee74f0205d6a5cc"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_02/candidate_failure_main/forced_stop.json",
+      "bytes": 594,
+      "sha256": "3aaf14a4547654d4c6e1b17a81585b0eb1bd78e912e0bc954c10b8fbc5932773"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_02/candidate_failure_main/manifest.json",
+      "bytes": 844,
+      "sha256": "7e51e4b8f74427dc457c9b9ebf98fece26f73e45fab629420f3846242a060a82"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_02/candidate_failure_main/preparation.json",
+      "bytes": 6636,
+      "sha256": "4d4cf9d734dc2b670d0c2f69d4eac3930db011a329e476253a548d8550d322f5"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_02/candidate_failure_main/probe.gd",
+      "bytes": 5313,
+      "sha256": "3c6c412139d8eada0d4e9f6178004f44899c6fb0b127d77abd705d78c9450b2f"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_02/candidate_failure_main/stdout.txt",
+      "bytes": 1037,
+      "sha256": "997fe9a35008b8c7e169c7e80bdc1f4c9db4d7410edee6d1992f90f766e427ae"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_02/candidate_failure_main_launcher.txt",
+      "bytes": 1884,
+      "sha256": "4a81a2e9b496cec7b50520dc4d4b2cc6dd758755f0bcb6d3d6796dd32043fe2f"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_02/fixture.json",
+      "bytes": 323,
+      "sha256": "a0c381185852998c62034b10ccb72686468d324836f85bc657186bbf89e6924d"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_02/lifecycle_suite.py",
+      "bytes": 4054,
+      "sha256": "81ecffe0f7d5507d56d23a592c13efbe8c20452045ae6f16e66f51251ff3e960"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_02/preparation.json",
+      "bytes": 6636,
+      "sha256": "4d4cf9d734dc2b670d0c2f69d4eac3930db011a329e476253a548d8550d322f5"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_02/result.json",
+      "bytes": 461,
+      "sha256": "c37efd0119f4e1a20d5c228af8fb206221e4c0905b537999a4b046f791a761e5"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_02/run_lifecycle_case.py",
+      "bytes": 3487,
+      "sha256": "2e37ff88a1c22b01b8ded4bf0ca35627c9272fc3d0d4fb6971ae99adca9b02b7"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_02/status.json",
+      "bytes": 147,
+      "sha256": "fc55d5c38b9d1dee95b0ccc199b4389386f79fc4111c200be3db0ae2ef82ebc4"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_03/candidate_failure_main/baseline.sandue",
+      "bytes": 8798196,
+      "sha256": "9eed39741a005c9347bd67f6d782eef322899e2c690d6a954ee74f0205d6a5cc"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_03/candidate_failure_main/consumed_sources.zip",
+      "bytes": 17188027,
+      "sha256": "32950a135a552d23e988e8af96ee29ae8699a3f8083bbd9594c20cdda0ef04ba"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_03/candidate_failure_main/manifest.json",
+      "bytes": 834,
+      "sha256": "74558897a891c487ddb5e5e259732fb2efed6d8da413958bb746cb0cdab826f5"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_03/candidate_failure_main/preparation.json",
+      "bytes": 7157,
+      "sha256": "af2ab76ad2ee25d67242331db56abdf7c70e79369fe73c0ca2d1e3ca768931f6"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_03/candidate_failure_main/probe.gd",
+      "bytes": 5640,
+      "sha256": "5643837ccf79ff109473863c79e1b399f1cadf875b744c649b3d5ee82ccc8c35"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_03/candidate_failure_main/probe.json",
+      "bytes": 30566,
+      "sha256": "1d3a67d26883fd2d1d37f62456c99dfc6b5007eedb659c6bcbc5eded7373415c"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_03/candidate_failure_main/stdout.txt",
+      "bytes": 2037,
+      "sha256": "7a29132abc04b5728de2ace8bf34ad4c5741332e4d248bc026b1cb67d4c6d1c4"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_03/candidate_failure_main_launcher.txt",
+      "bytes": 2874,
+      "sha256": "ad8d06fbc1a38b558d877d45d170a12f711bc6ad2a9c89e9eb93dc8a46d5d81e"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_03/fixture.json",
+      "bytes": 323,
+      "sha256": "a0c381185852998c62034b10ccb72686468d324836f85bc657186bbf89e6924d"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_03/four_scene_service/consumed_sources.zip",
+      "bytes": 25904069,
+      "sha256": "c1af58d8a2fb6cc1eb393ba59c144ed7ff4cd2319583850669240895b19bb656"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_03/four_scene_service/manifest.json",
+      "bytes": 829,
+      "sha256": "f6f547d8ec8b69f0767394e6a6528b6bde25c659aaec44dbf2b98c30078f1375"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_03/four_scene_service/preparation.json",
+      "bytes": 7157,
+      "sha256": "af2ab76ad2ee25d67242331db56abdf7c70e79369fe73c0ca2d1e3ca768931f6"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_03/four_scene_service/probe.gd",
+      "bytes": 4775,
+      "sha256": "51b8002e042f0232056cf0b193d7121b4164ca932dfd80f537b32b9ae1890db5"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_03/four_scene_service/probe.json",
+      "bytes": 34839,
+      "sha256": "f19ed50c10773316d651b9c0e7d587ec5c30bc8e040f347410acac014539d642"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_03/four_scene_service/sessions/formal_main_0001.sandue",
+      "bytes": 8798288,
+      "sha256": "9ab037cae4c222a9c578be856b80807675684b999b78470620945511c74ac7b3"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_03/four_scene_service/sessions/formal_main_0002.sandue",
+      "bytes": 8798288,
+      "sha256": "19ade5735e0d6352f86d1363dd908a4d7739d03cf3b240a53f75174745bb8263"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_03/four_scene_service/sessions/formal_test1_backwash_0004.sandue",
+      "bytes": 8796764,
+      "sha256": "943fa93493656835079b0ad859878d38b8d0ea5c0657a3ddc03d41bdefc4d4f6"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_03/four_scene_service/sessions/formal_test1_capture_0003.sandue",
+      "bytes": 8796756,
+      "sha256": "d6c2492893f3d2f924ecd00c927b7016545ed5d93121de0197648384412e1014"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_03/four_scene_service/sessions/formal_test1_geometry_0005.sandue",
+      "bytes": 8797144,
+      "sha256": "d4c2a49d624886047bcce55460fafebf18251a8cb9611ba27a68658b5ead7e30"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_03/four_scene_service/stdout.txt",
+      "bytes": 2946,
+      "sha256": "a2223ccdef11a70a15d01025acc32ca1845122fdee52c1f78dcc0195a2e06573"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_03/four_scene_service_launcher.txt",
+      "bytes": 3384,
+      "sha256": "471d526fb3f984652e29df82281b86ccedad69d45d7a46f5d4a5ad581ad23de6"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_03/lifecycle_suite.py",
+      "bytes": 4054,
+      "sha256": "81ecffe0f7d5507d56d23a592c13efbe8c20452045ae6f16e66f51251ff3e960"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_03/preparation.json",
+      "bytes": 7157,
+      "sha256": "af2ab76ad2ee25d67242331db56abdf7c70e79369fe73c0ca2d1e3ca768931f6"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_03/result.json",
+      "bytes": 888,
+      "sha256": "e91f0d48fd3d138c2625db2447b292dfe0e647df991bc1e1c103e876899dc533"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_03/run_lifecycle_case.py",
+      "bytes": 3487,
+      "sha256": "2e37ff88a1c22b01b8ded4bf0ca35627c9272fc3d0d4fb6971ae99adca9b02b7"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_service_matrix_03/status.json",
+      "bytes": 408,
+      "sha256": "6d56fafe7cc89a4a7ee14fba7d6b01a6a34be3f8bef2480194f116e6be174218"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_foreign_01/consumed_sources.zip",
+      "bytes": 17064069,
+      "sha256": "1fdc06adfefb8f7795efab6c4df1736d5ed0fd790d19acc47ecf082decb7eeb0"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_foreign_01/current.sandue",
+      "bytes": 8796672,
+      "sha256": "e961d969be2f9bb1f22d8b613cf7d146f35df97f815e524c40b31d6510c073fe"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_foreign_01/fixtures.json",
+      "bytes": 2911,
+      "sha256": "cd759bdd8a57cb63665691f5ec59e87d631b6c5010f4e7f18ad5b2dfb20360aa"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_foreign_01/manifest.json",
+      "bytes": 1000,
+      "sha256": "95412c89f918f40d9c4e3805ad9411a25391ae9d551747fc54f8795559e38ad4"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_foreign_01/probe.gd",
+      "bytes": 7890,
+      "sha256": "12b7ff5f4323f4329c07ed4fe3fc17da4f38ca22330552869ce717451361e1ca"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_foreign_01/probe.json",
+      "bytes": 29253,
+      "sha256": "3c397afb0ad7c1b58d9f1d7524a7cb3c14a2164be704812f860aa76d78ae69ec"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_foreign_01/rejected_identity.sandue",
+      "bytes": 8796672,
+      "sha256": "dd4e7fe1ecb269f914eb0e83603ce318166ff31e097699cba82d48783c9e38fe"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_foreign_01/rejected_nan.sandue",
+      "bytes": 8796672,
+      "sha256": "3675d817f8c5fe2820a6860930fe00e2fb4b96d2cd5a89526d209c82e05af514"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_foreign_01/rejected_unknown_algorithm.sandue",
+      "bytes": 8796660,
+      "sha256": "c4c2b0f64f2dce38e1e3441e1e86a1de87cebc7f9e38245eb7bcd3aec39215ba"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_foreign_01/rejected_unknown_source.sandue",
+      "bytes": 8796524,
+      "sha256": "20e37482662b7918c32f0bb343c17d1976a2ac46c30e8189758237416784932e"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_foreign_01/run_source_restore.py",
+      "bytes": 3379,
+      "sha256": "c1312171ac92249a8d5461f6fb5fde11c1572159ce3966d426b9387e1ef6f2f3"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_foreign_01/stdout.txt",
+      "bytes": 1578,
+      "sha256": "43d71d6194b8e77283e008ca7151bfb1822d45941db72b436b9bd6b66b6af283"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_restore_01/consumed_sources.zip",
+      "bytes": 17207148,
+      "sha256": "e1a852b33ffbb52ea6c1f20ac98a77441d8a21f7393c1a00cc124d9af96f0d9c"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_restore_01/current.sandue",
+      "bytes": 8844772,
+      "sha256": "c60bfa6f043c7577b6311fc78c9d8ade8969c56567e408bb3d46d4ad4ce6a53b"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_restore_01/fixtures.json",
+      "bytes": 2911,
+      "sha256": "cd759bdd8a57cb63665691f5ec59e87d631b6c5010f4e7f18ad5b2dfb20360aa"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_restore_01/manifest.json",
+      "bytes": 750,
+      "sha256": "ac82be5242255bdca1a5bdae6017ffa6b371c3bb7f017a062613c26eff8362f5"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_restore_01/migrated_00.sandue",
+      "bytes": 8841744,
+      "sha256": "1d77f929bfdfdff51008698ab4fdcfbf93cc4adee5bba223d81c899e73653f70"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_restore_01/migrated_01.sandue",
+      "bytes": 8848404,
+      "sha256": "ba22dc02de79a5bf0e2090162ebc011260c6337e8fab3084a1443ca49e6458d9"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_restore_01/migrated_03.sandue",
+      "bytes": 8847432,
+      "sha256": "5ff36137e7dc75fd095e9e4eb0d48d6d5782adb8126b547bc69ea416c899a6bd"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_restore_01/migrated_05.sandue",
+      "bytes": 8871060,
+      "sha256": "70e998ccef9707e7695c77a30389561e389b5f7b2167f3002a16f665efda8a1d"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_restore_01/migrated_06.sandue",
+      "bytes": 8844772,
+      "sha256": "690919c201824cb9c578c6ed29f526ba00853a7525869ec28ddcec70c1ed8158"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_restore_01/probe.gd",
+      "bytes": 6376,
+      "sha256": "631528fa4fff0c6d6c59bdfe5f9aa18922eb74253b91382510c9895aa0ce1f58"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_restore_01/probe.json",
+      "bytes": 308632,
+      "sha256": "6f70468f84340c5bb022fd0fd6c230ef49a5c58eef3e8151d9b7b3ee894ffcda"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_restore_01/rejected_identity.sandue",
+      "bytes": 8844772,
+      "sha256": "7b7a27b97b203ecc7924cada9e8837f90135efec6c59e6757134e4253be0d835"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_restore_01/rejected_nan.sandue",
+      "bytes": 8844772,
+      "sha256": "6c61556ead4761cc1be81f70e009d3131318323f566eacfb1ec2011c91a488a3"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_restore_01/rejected_unknown_algorithm.sandue",
+      "bytes": 8844760,
+      "sha256": "a6f123755fa2b1682e1d2691fe25830c8e9fcff973661529f8ad998a3c293f27"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_restore_01/rejected_unknown_source.sandue",
+      "bytes": 8844624,
+      "sha256": "b2ff4574056038299bb8e70cd453cd73506b95cd7042a9388210d28d205a1c81"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_restore_01/stdout.txt",
+      "bytes": 6686,
+      "sha256": "10c2e22898a2611db04d91a6196f379dd3f52ac766579b126e71f5fa78e18208"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_restore_02/audit_source_restore.gd",
+      "bytes": 5433,
+      "sha256": "7d5bb60a3cb866398214ce83e22ba70e88b63597d8f0fc250de5ab18426c4bbc"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_restore_02/audit_stdout.txt",
+      "bytes": 114,
+      "sha256": "263a865b776f426593c73bb3c80d997364628f0bf3680c233d5d1dd51cc5bc7e"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_restore_02/consumed_sources.zip",
+      "bytes": 17207148,
+      "sha256": "402143950ad5a1e703d141a838286b0511abcae2f69dfc4103243de8660f5ed8"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_restore_02/current.sandue",
+      "bytes": 8844772,
+      "sha256": "c60bfa6f043c7577b6311fc78c9d8ade8969c56567e408bb3d46d4ad4ce6a53b"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_restore_02/fixtures.json",
+      "bytes": 2911,
+      "sha256": "cd759bdd8a57cb63665691f5ec59e87d631b6c5010f4e7f18ad5b2dfb20360aa"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_restore_02/independent_audit.json",
+      "bytes": 28213,
+      "sha256": "18f214079c208c41a7cf3030d772de7736dbfdbcfbca29eab08e038016129f4f"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_restore_02/manifest.json",
+      "bytes": 970,
+      "sha256": "09f47c5cda27dd9363d287cc6c2a3a9bc6250d5f478c8eac4cb65dc72d983530"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_restore_02/migrated_00.sandue",
+      "bytes": 8841744,
+      "sha256": "1d77f929bfdfdff51008698ab4fdcfbf93cc4adee5bba223d81c899e73653f70"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_restore_02/migrated_01.sandue",
+      "bytes": 8848404,
+      "sha256": "ba22dc02de79a5bf0e2090162ebc011260c6337e8fab3084a1443ca49e6458d9"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_restore_02/migrated_02.sandue",
+      "bytes": 8847208,
+      "sha256": "186d1a78d97fe28ddc474b82d69a5e15b02b0887d0f91bbc56e6d6c0bffea048"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_restore_02/migrated_03.sandue",
+      "bytes": 8847432,
+      "sha256": "5ff36137e7dc75fd095e9e4eb0d48d6d5782adb8126b547bc69ea416c899a6bd"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_restore_02/migrated_04.sandue",
+      "bytes": 8868600,
+      "sha256": "4894cb0a468fd0c2ee57af55c8e7e672b4d7e1a740b900a1acbb196f2c051240"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_restore_02/migrated_05.sandue",
+      "bytes": 8871060,
+      "sha256": "70e998ccef9707e7695c77a30389561e389b5f7b2167f3002a16f665efda8a1d"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_restore_02/migrated_06.sandue",
+      "bytes": 8844772,
+      "sha256": "690919c201824cb9c578c6ed29f526ba00853a7525869ec28ddcec70c1ed8158"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_restore_02/probe.gd",
+      "bytes": 7094,
+      "sha256": "f427c2a6aa8d026b28c9abd01a5375e25f64a47f3952c669980bf9ec869fd1a0"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_restore_02/probe.json",
+      "bytes": 472509,
+      "sha256": "8ad05ee52b7c3a96a25eaa279334f1d11962092d5d65e30ccf7a4ee79faeb9e3"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_restore_02/rejected_identity.sandue",
+      "bytes": 8844772,
+      "sha256": "7b7a27b97b203ecc7924cada9e8837f90135efec6c59e6757134e4253be0d835"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_restore_02/rejected_nan.sandue",
+      "bytes": 8844772,
+      "sha256": "6c61556ead4761cc1be81f70e009d3131318323f566eacfb1ec2011c91a488a3"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_restore_02/rejected_unknown_algorithm.sandue",
+      "bytes": 8844760,
+      "sha256": "a6f123755fa2b1682e1d2691fe25830c8e9fcff973661529f8ad998a3c293f27"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_restore_02/rejected_unknown_source.sandue",
+      "bytes": 8844624,
+      "sha256": "b2ff4574056038299bb8e70cd453cd73506b95cd7042a9388210d28d205a1c81"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_restore_02/run_source_restore.py",
+      "bytes": 3252,
+      "sha256": "bbdb46d98e394e8fcf7a7861fc7118584095537ece7d0d3ca87ea7e704a4064f"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_restore_02/stdout.txt",
+      "bytes": 8605,
+      "sha256": "eaf5d6b0e5280187c5853ce32b87d66e176f48797b3eab4143a7a0f0a350ab8a"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_source_restore_02/targeted_source_changes.json",
+      "bytes": 3653,
+      "sha256": "4926f75903be5e61897562a1af1d12029732d3611e93ddcd451080985f8934f7"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_start_identity_01/source_identity.json",
+      "bytes": 22664,
+      "sha256": "3a378942e661617bcc9b1f15fb2eee4e627a67fe460790ade99c44d3fd9e534a"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_workspace_01/bottle_dependency_identity.json",
+      "bytes": 596,
+      "sha256": "51c2cbfc1662ffbfc42742f3f238ca623b6d5bf9ca9ae63d14b6ee9ee14e69fe"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_workspace_01/catalog_amendment_01.json",
+      "bytes": 525,
+      "sha256": "76c71ad566a60a41a080711b0591d11a230c11d74d12e012945523957fe3d73e"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_workspace_01/catalog_amendment_02.json",
+      "bytes": 765,
+      "sha256": "899e998d82fde71ff918927a7ccaab58f46899fd81d6b8ab8164d0860328686e"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_workspace_01/catalog_amendment_03.json",
+      "bytes": 849,
+      "sha256": "f9df91cefc9f29e1c5ad1dc308e906f44b61407ed28db637faaef3ef2adb80d2"
+    },
+    {
+      "path": "test_output/wave_propagation/g4_workspace_01/snapshot_identity.json",
+      "bytes": 1314745,
+      "sha256": "bbf54241e4dfdcbd2226df0eb53483afb1f3a84c0c05d573516765cc1d2f2e48"
+    }
+  ]
+}

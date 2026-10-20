@@ -1,0 +1,894 @@
+{
+  "schema": 1,
+  "gate": "G3",
+  "outcome": "pass",
+  "scope": "16 short GPU cases, raw stage audit and source receipts; source archives contain exact res:// members. Raw field paths/bytes/hash are nested in each result.json snapshots.fields and all verified by the aggregate. Failed v1 retained.",
+  "artifacts": [
+    {
+      "path": "task/wave_propagation/\u9a8c\u6536/coupling_first_order_fixture_v1.json",
+      "bytes": 694,
+      "sha256": "9d1babecf51c72118f9c5cbdc2de174b0457c9e0c0ec70ceae8901fd57bc6097"
+    },
+    {
+      "path": "task/wave_propagation/\u9a8c\u6536/coupling_fixture_v1.json",
+      "bytes": 1856,
+      "sha256": "6fcd73d06f838a904d1d1fdff26849800001088846c05ca6e2f6f6f5dabd998e"
+    },
+    {
+      "path": "task/wave_propagation/\u9a8c\u6536/coupling_fixture_v2.json",
+      "bytes": 1856,
+      "sha256": "6c82fc4974bf6a0980a6014426ad13333907ddce2ef35d72509053561ed90a78"
+    },
+    {
+      "path": "task/wave_propagation/\u9a8c\u6536/G3_\u6c34\u6c99\u8026\u5408.md",
+      "bytes": 9365,
+      "sha256": "feb4ba6ad098b0b606bd031fadc91f3897a8c2ceae8a39b569ddca6ae29d70f0"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_erosion_01/analysis.json",
+      "bytes": 20343,
+      "sha256": "26607e6beaec3f50a32509f347404ca7b991bd7b06326c0ca2e9a1a971100713"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_erosion_01/consumed_sources.zip",
+      "bytes": 1849953,
+      "sha256": "3e6dcd954fe08de27a7923bb153b7a0bdb478be5cae355dafdec8bb1c0b8e4b9"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_erosion_01/manifest.json",
+      "bytes": 1101,
+      "sha256": "8d5fb7c27806f92fb52ae0090f3b7174070c092111cc054aa67f9dddd11c81f5"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_erosion_01/probe.gd",
+      "bytes": 9010,
+      "sha256": "40efe105b5f1e8bc5aa95a4475d08d221d29fa22d5ad0704cf634b2fd70f75fd"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_erosion_01/result.json",
+      "bytes": 60745,
+      "sha256": "a1211bd087a2eedefb77020ae949e2e4b12bd1463269d393221c0ace536885dd"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_first_order_01/analyze_coupling.py",
+      "bytes": 11609,
+      "sha256": "2d7ac55feaf945a5dd91de6d366016d1b1a3fb0459fa9435e277c8bc38f0ee10"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_first_order_01/boundary/analysis.json",
+      "bytes": 18178,
+      "sha256": "ad5b38d15685b4c0ee852c9b38607bbc2ff3496d9bfcdd7a1d7730f16fa20b69"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_first_order_01/boundary/consumed_sources.zip",
+      "bytes": 1849964,
+      "sha256": "e6884dc499008f66737dc40643d2b50f0e5ce63869c775a26d5a8f7b83376354"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_first_order_01/boundary/manifest.json",
+      "bytes": 1134,
+      "sha256": "b027ec55b60972b2e301de0fcc1e36f9b4027d284866249f96fc84ac81ad9636"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_first_order_01/boundary/probe.gd",
+      "bytes": 9131,
+      "sha256": "ca6717baee4b6ed4ab8cfd32ac297f01a891d2f02118dbfd1ebade6f81b7c741"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_first_order_01/boundary/result.json",
+      "bytes": 57052,
+      "sha256": "ecbc6d5cfdebc532790b36635b26fe086788b9ecab84d7ca8f8f2d88429ede4e"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_first_order_01/coupled_reference.py",
+      "bytes": 4600,
+      "sha256": "f9b4aa2eb859807720e5ee868add0854d3754fab39452d222302acabad87ff95"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_first_order_01/coupling_gpu_probe.gd",
+      "bytes": 9131,
+      "sha256": "ca6717baee4b6ed4ab8cfd32ac297f01a891d2f02118dbfd1ebade6f81b7c741"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_first_order_01/coupling_suite.py",
+      "bytes": 4619,
+      "sha256": "8cca9999bd8e9af72f68f70a7bf9cc22ddf4c805b315d44685d531b36dda0dfd"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_first_order_01/deposition/analysis.json",
+      "bytes": 18320,
+      "sha256": "17466ec9c4bcc35d7626cfd4cb993eae91bffae35f00392dce6decd54380088b"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_first_order_01/deposition/consumed_sources.zip",
+      "bytes": 1849964,
+      "sha256": "7d7a21655c60e9debe184cb2fbe22883c571826349d63a4ce6e5baf86e17990b"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_first_order_01/deposition/manifest.json",
+      "bytes": 1139,
+      "sha256": "6cd4d9722f60c513e8982bce2438ca4bb33758edecb3b44ea62767f90ac7b919"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_first_order_01/deposition/probe.gd",
+      "bytes": 9131,
+      "sha256": "ca6717baee4b6ed4ab8cfd32ac297f01a891d2f02118dbfd1ebade6f81b7c741"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_first_order_01/deposition/result.json",
+      "bytes": 57090,
+      "sha256": "5f072fd43d5ba0f281ba4b1380a39b37e240358351e2584aae83b51a5fb6b9be"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_first_order_01/erosion/analysis.json",
+      "bytes": 18341,
+      "sha256": "08f0240066ae0ce1db4bcb55c105076a2e988f5e1d0acd2ed9e377b2a51599bb"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_first_order_01/erosion/consumed_sources.zip",
+      "bytes": 1849964,
+      "sha256": "76fef8368a2f386f2d006708c7fd0bde94b1643591c7d4efae1f3c15f7e0af5c"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_first_order_01/erosion/manifest.json",
+      "bytes": 1131,
+      "sha256": "58f1578b073809a2c72dae82bb314b20851d0a55afa6152e9ddb3f3008dd218c"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_first_order_01/erosion/probe.gd",
+      "bytes": 9131,
+      "sha256": "ca6717baee4b6ed4ab8cfd32ac297f01a891d2f02118dbfd1ebade6f81b7c741"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_first_order_01/erosion/result.json",
+      "bytes": 56835,
+      "sha256": "397fb4730a182e54e2dda5b051b2e9c80a3c0796dce75ba4a2161ea4057b772e"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_first_order_01/fixture.json",
+      "bytes": 694,
+      "sha256": "9d1babecf51c72118f9c5cbdc2de174b0457c9e0c0ec70ceae8901fd57bc6097"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_first_order_01/gpu_probe.gd",
+      "bytes": 8841,
+      "sha256": "2d323172a05660afc1b514c2a4298a516c30bf678145c78ceb2f571c4cd963f5"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_first_order_01/reference.py",
+      "bytes": 8730,
+      "sha256": "f5c6602b0ee9ee79119739c89b7a6306603995fdf8580da4117fa8c76dc1e74c"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_first_order_01/result.json",
+      "bytes": 4613,
+      "sha256": "9455345499562d081d5bc60381dfca276ad655e6ba2b291506b8b6dd161ea277"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_first_order_01/run_gpu.py",
+      "bytes": 4488,
+      "sha256": "ac62a6af3dfd4f1a8086f48fe191c66def3716b4979c4f532119751da76e2c57"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_first_order_01/status.json",
+      "bytes": 2797,
+      "sha256": "5fe68442a504f448682aa3b080d9c24519fb5212b400fa9dd8e24867ef718f48"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_first_order_01/support/analysis.json",
+      "bytes": 18155,
+      "sha256": "0088c035a6d2376eb9f825b071c59b775407c4ed265c388627d85c4783a4450e"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_first_order_01/support/consumed_sources.zip",
+      "bytes": 1849964,
+      "sha256": "f6694658d45eb7a10999beb036f0176bee9a1dcd6e2b58c112ae4fffa82f664d"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_first_order_01/support/manifest.json",
+      "bytes": 1131,
+      "sha256": "275c9e1a2dd069fbb564cb05c61a2a234f5d3dde698a016d1aa0bf0af74e80fc"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_first_order_01/support/probe.gd",
+      "bytes": 9131,
+      "sha256": "ca6717baee4b6ed4ab8cfd32ac297f01a891d2f02118dbfd1ebade6f81b7c741"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_first_order_01/support/result.json",
+      "bytes": 57094,
+      "sha256": "447c9d945f94e9c6633b91558107df90284508006ea834f8822d49f122225a23"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_gate_summary_01/analyze_stage_transport.py",
+      "bytes": 4681,
+      "sha256": "4c1aec46150cb31aaa615cbddfa910566265eea1917b79b733fea2cdd23be8e2"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_gate_summary_01/flux_reader_sources.json",
+      "bytes": 2336,
+      "sha256": "2259206e116599dfc58885e9eaef2889255b1cc6fd000c6e4f2d0b1a5cbc8816"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_gate_summary_01/flux_reader_sources.zip",
+      "bytes": 80402,
+      "sha256": "71d3133a9dc3493b23548920771580c8d3a6315cee4d3ae14f94d91bfebbf581"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_gate_summary_01/result.json",
+      "bytes": 17671,
+      "sha256": "0ac4b5b80b5bf67dba40a1146420fb906e8db413796814930d58f924bdbec41f"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_gate_summary_01/summarize_coupling.py",
+      "bytes": 4627,
+      "sha256": "3f65464229f0ce3d7f63c45078c43b30de7118334b207b0462d4cd599b5c1719"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/analyze_coupling.py",
+      "bytes": 11609,
+      "sha256": "2d7ac55feaf945a5dd91de6d366016d1b1a3fb0459fa9435e277c8bc38f0ee10"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/constant_001_off/analysis.json",
+      "bytes": 20055,
+      "sha256": "656615619b6a4d64b1ff5b71bf2b2599d891604f49b5a86901881766635f87c7"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/constant_001_off/consumed_sources.zip",
+      "bytes": 1849953,
+      "sha256": "e03a110179f6cef3b1e08bc160b8416dd08801583accb901f48e826a1cae26cb"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/constant_001_off/manifest.json",
+      "bytes": 1142,
+      "sha256": "152b1aaa6b6969bbbbe6f1480f54e4dc3f5e692f73379b265ac468910da58d00"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/constant_001_off/probe.gd",
+      "bytes": 9010,
+      "sha256": "40efe105b5f1e8bc5aa95a4475d08d221d29fa22d5ad0704cf634b2fd70f75fd"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/constant_001_off/result.json",
+      "bytes": 58935,
+      "sha256": "ad9a598e5082353f94d16d99bcc4a6223c11f05c8506735ca7ecd37337cc295b"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/constant_005_off/analysis.json",
+      "bytes": 20053,
+      "sha256": "ccf8da284c9d93d31ce284c3637e8f349c410d809bc12e2d1397f43db2147a15"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/constant_005_off/consumed_sources.zip",
+      "bytes": 1849953,
+      "sha256": "6b67dcbd5f12fa4031ff271cda3e903028ab02b1c4264a12ac46abe0da75e8f4"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/constant_005_off/manifest.json",
+      "bytes": 1142,
+      "sha256": "ebe8a5057c28fc421de30869aaee1b26d16badf384823eab2f3704a3aba443f6"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/constant_005_off/probe.gd",
+      "bytes": 9010,
+      "sha256": "40efe105b5f1e8bc5aa95a4475d08d221d29fa22d5ad0704cf634b2fd70f75fd"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/constant_005_off/result.json",
+      "bytes": 58937,
+      "sha256": "9446cd4f1f37592c70d8d1f6833497a6d115c80823d9e4980e705fd619ba9580"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/coupled_reference.py",
+      "bytes": 4600,
+      "sha256": "f9b4aa2eb859807720e5ee868add0854d3754fab39452d222302acabad87ff95"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/coupling_gpu_probe.gd",
+      "bytes": 9010,
+      "sha256": "40efe105b5f1e8bc5aa95a4475d08d221d29fa22d5ad0704cf634b2fd70f75fd"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/coupling_suite.py",
+      "bytes": 4619,
+      "sha256": "8cca9999bd8e9af72f68f70a7bf9cc22ddf4c805b315d44685d531b36dda0dfd"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/deposition/analysis.json",
+      "bytes": 20008,
+      "sha256": "dcefad3043cf937216b67b925e4e5fb9547ea29a343d5044563af924fe3e1ffd"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/deposition/consumed_sources.zip",
+      "bytes": 1849953,
+      "sha256": "5f488294adbffa3df96f7d799034d672c73a1b0bc068b2bfc5b1b424cf0f3e69"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/deposition/manifest.json",
+      "bytes": 1123,
+      "sha256": "868a71c7a06384fd4b1e4fe873c3c59fce6574c8f60379c438b3f9f379392d63"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/deposition/probe.gd",
+      "bytes": 9010,
+      "sha256": "40efe105b5f1e8bc5aa95a4475d08d221d29fa22d5ad0704cf634b2fd70f75fd"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/deposition/result.json",
+      "bytes": 61796,
+      "sha256": "bcc0b27bf2711518d1518c02949c577e793c32a55ad137f4d65625339c70f19c"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/erosion/analysis.json",
+      "bytes": 20343,
+      "sha256": "26607e6beaec3f50a32509f347404ca7b991bd7b06326c0ca2e9a1a971100713"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/erosion/consumed_sources.zip",
+      "bytes": 1849953,
+      "sha256": "395496608c175d080ffbe2827e358a54b7523fed42304cfd2668eef8063aed8f"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/erosion/manifest.json",
+      "bytes": 1114,
+      "sha256": "f4d488e35fae66b9af703195ef6918c184938747bcf49a22a76c20811cb5d940"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/erosion/probe.gd",
+      "bytes": 9010,
+      "sha256": "40efe105b5f1e8bc5aa95a4475d08d221d29fa22d5ad0704cf634b2fd70f75fd"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/erosion/result.json",
+      "bytes": 61480,
+      "sha256": "faf6035c713b1a0759dd4239d3a3c7ca7d6da779121b74bba5ae3f8fe06056b8"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/fixture.json",
+      "bytes": 1856,
+      "sha256": "6fcd73d06f838a904d1d1fdff26849800001088846c05ca6e2f6f6f5dabd998e"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/gpu_probe.gd",
+      "bytes": 8841,
+      "sha256": "2d323172a05660afc1b514c2a4298a516c30bf678145c78ceb2f571c4cd963f5"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/reference.py",
+      "bytes": 8730,
+      "sha256": "f5c6602b0ee9ee79119739c89b7a6306603995fdf8580da4117fa8c76dc1e74c"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/result.json",
+      "bytes": 7277,
+      "sha256": "82711b0e3f96059f364cbdbb3d03a42693f1b2dcd3abc9e453ef699da843db4c"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/reversal/analysis.json",
+      "bytes": 18141,
+      "sha256": "465a9f0c8176ad54da5ab2cf9acfbcbc87ee064b6d0e7235a341dc2de8f6ce43"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/reversal/consumed_sources.zip",
+      "bytes": 1977058,
+      "sha256": "741d4110bc431df595646e5926c22513b0d860e790f990f80052cfdf73b1fb07"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/reversal/manifest.json",
+      "bytes": 1120,
+      "sha256": "8f2222ad7a6bbe339a311eb6cc15ee033968ce318e3a23bf0c5623690c1d67d6"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/reversal/probe.gd",
+      "bytes": 9010,
+      "sha256": "40efe105b5f1e8bc5aa95a4475d08d221d29fa22d5ad0704cf634b2fd70f75fd"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/reversal/result.json",
+      "bytes": 46961,
+      "sha256": "39bfd27cbc59a7385ad96aaebd8ade51777362e22a5acbc7be3dcb68382cb57a"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/reversal/stage_transport_analysis.json",
+      "bytes": 803,
+      "sha256": "1f4f801920b823ec336f06a60854b6198b6bbf92d7acdb9f0a2495a652468c3e"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/run_gpu.py",
+      "bytes": 4488,
+      "sha256": "ac62a6af3dfd4f1a8086f48fe191c66def3716b4979c4f532119751da76e2c57"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/status.json",
+      "bytes": 5483,
+      "sha256": "e975f2913e3db4452e807179add15195c890e30b053027c594ab0425bdf06721"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/transport_backward/analysis.json",
+      "bytes": 20183,
+      "sha256": "fd81c175fd83bae76f0d0d276482f43f6d0a1d704c90b76ac6581b89876ee546"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/transport_backward/consumed_sources.zip",
+      "bytes": 1849953,
+      "sha256": "3503c0efb758c374da6f579623c81401a264ca5b8329b43b6c6cb0c5055113bb"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/transport_backward/manifest.json",
+      "bytes": 1147,
+      "sha256": "39975702349f41837cf046a32bd36d7da0eb448645845ce64cbd7ccdb453d97c"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/transport_backward/probe.gd",
+      "bytes": 9010,
+      "sha256": "40efe105b5f1e8bc5aa95a4475d08d221d29fa22d5ad0704cf634b2fd70f75fd"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/transport_backward/result.json",
+      "bytes": 62646,
+      "sha256": "775aecfdb8086d47d703817d2cbc29fedceb3ec63441bbc0f1a2d6a1cc43ba53"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/transport_forward/analysis.json",
+      "bytes": 20171,
+      "sha256": "34e32cceff6fc69de0ed1db0b424960fb0503998f9bdd81e6332f0bf90fbb648"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/transport_forward/consumed_sources.zip",
+      "bytes": 1849953,
+      "sha256": "c6da4c9393ffab67db9f8aff9e447783011b68d864b2cee7687dc9b0a847e0aa"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/transport_forward/manifest.json",
+      "bytes": 1145,
+      "sha256": "006ee62b4c688f8a31ba17ed4d29a24085e559231d7c66fa1bf26b5517e56227"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/transport_forward/probe.gd",
+      "bytes": 9010,
+      "sha256": "40efe105b5f1e8bc5aa95a4475d08d221d29fa22d5ad0704cf634b2fd70f75fd"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_01/transport_forward/result.json",
+      "bytes": 62540,
+      "sha256": "d98bad63f5152ca59914b77953402e5489ed8d3f6cf00176bcbaa66e11277cea"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/analyze_coupling.py",
+      "bytes": 11609,
+      "sha256": "2d7ac55feaf945a5dd91de6d366016d1b1a3fb0459fa9435e277c8bc38f0ee10"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/boundary/analysis.json",
+      "bytes": 20057,
+      "sha256": "541e43734ab9d0502c5fc742ddc72642ae2a7138c3c77e3aa33c874d7419b3c3"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/boundary/consumed_sources.zip",
+      "bytes": 1849964,
+      "sha256": "387b7ecec69facf10737e78e6c6cfea666a31230195a4705715c985de3c7e4de"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/boundary/manifest.json",
+      "bytes": 1118,
+      "sha256": "8075694e8740a77b461edc91631ccac2d54223e4f9a88b04ef7f739c04491eff"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/boundary/probe.gd",
+      "bytes": 9131,
+      "sha256": "ca6717baee4b6ed4ab8cfd32ac297f01a891d2f02118dbfd1ebade6f81b7c741"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/boundary/result.json",
+      "bytes": 61717,
+      "sha256": "9b862eab2052761cc701ab806bcd3918f2ac90c825550a45ee7645cd402d2ad5"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/constant_001_off/analysis.json",
+      "bytes": 20055,
+      "sha256": "23eca680f6771d6a8c4484ca58f4dc95a6ee3f5996e750a4240381ce7acaa1e8"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/constant_001_off/consumed_sources.zip",
+      "bytes": 1849964,
+      "sha256": "4c86b2679f6eed3372cd04fb23daefe4f8f21af7fd09c55aa8973d7587e0dfa8"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/constant_001_off/manifest.json",
+      "bytes": 1142,
+      "sha256": "b5e8a51703ef6bb68253c5c886733dfe6c6c177ae4eeab1c82949c2800cf77a7"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/constant_001_off/probe.gd",
+      "bytes": 9131,
+      "sha256": "ca6717baee4b6ed4ab8cfd32ac297f01a891d2f02118dbfd1ebade6f81b7c741"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/constant_001_off/result.json",
+      "bytes": 58935,
+      "sha256": "a547c85025ec0e3137e63884487be8ecde00f45906e26dfee229e934a0e20901"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/constant_005_off/analysis.json",
+      "bytes": 20053,
+      "sha256": "0e1262233b9e3200f26c76a9b68a6392ea9a71ce06d00db1375cf2f0408c71f2"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/constant_005_off/consumed_sources.zip",
+      "bytes": 1849964,
+      "sha256": "f5cc5ca542a4f8e73ab5f02c4c3f19c78fc6511b84a5e52890a8e52868ca5707"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/constant_005_off/manifest.json",
+      "bytes": 1143,
+      "sha256": "f86b6aeca67b98ece2004f3442dbebbd51cd633dda6dd98eb2bf8458ba74ec7e"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/constant_005_off/probe.gd",
+      "bytes": 9131,
+      "sha256": "ca6717baee4b6ed4ab8cfd32ac297f01a891d2f02118dbfd1ebade6f81b7c741"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/constant_005_off/result.json",
+      "bytes": 58937,
+      "sha256": "b91476a327b1f6ad8268d3e73737b62286f40ad9f3de46ac107f005584a9ca5e"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/coupled_reference.py",
+      "bytes": 4600,
+      "sha256": "f9b4aa2eb859807720e5ee868add0854d3754fab39452d222302acabad87ff95"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/coupling_gpu_probe.gd",
+      "bytes": 9131,
+      "sha256": "ca6717baee4b6ed4ab8cfd32ac297f01a891d2f02118dbfd1ebade6f81b7c741"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/coupling_suite.py",
+      "bytes": 4619,
+      "sha256": "8cca9999bd8e9af72f68f70a7bf9cc22ddf4c805b315d44685d531b36dda0dfd"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/deposition/analysis.json",
+      "bytes": 20008,
+      "sha256": "2eed9e8745e49d5ad6b2796c35012844fbebf023a15f04f5da3c958024996c30"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/deposition/consumed_sources.zip",
+      "bytes": 1849964,
+      "sha256": "a415c0466b51c7dcadce0e018a2eef7ec9b9a3b7dac4ecfb5ed29fb0a21281d8"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/deposition/manifest.json",
+      "bytes": 1122,
+      "sha256": "ea22789e7034bec6f8407802fe2bf786ef3f7c7b8972aa180eeb142f2fd55b9a"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/deposition/probe.gd",
+      "bytes": 9131,
+      "sha256": "ca6717baee4b6ed4ab8cfd32ac297f01a891d2f02118dbfd1ebade6f81b7c741"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/deposition/result.json",
+      "bytes": 61796,
+      "sha256": "6acefdbc6c3590dc91c863f1cc62e3b1de07fcea348d1fa8ac5f9b6171442a1b"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/erosion/analysis.json",
+      "bytes": 20343,
+      "sha256": "ab872e2dfaf50e4dbd2c88979a19b1a556641d7102d778194616b903d1cbee14"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/erosion/consumed_sources.zip",
+      "bytes": 1849964,
+      "sha256": "53b1df49599a81f15fe884f518617be741b4c733b7c8fe33da0a36b9edc9e761"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/erosion/manifest.json",
+      "bytes": 1114,
+      "sha256": "c93cd4afb6693e1683c717ba3c6e770f9df1578c30730fb397a95a0025ca7ae7"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/erosion/probe.gd",
+      "bytes": 9131,
+      "sha256": "ca6717baee4b6ed4ab8cfd32ac297f01a891d2f02118dbfd1ebade6f81b7c741"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/erosion/result.json",
+      "bytes": 61480,
+      "sha256": "75e2130e1299db5ab0d8027a911e85b9bccadf5a0b26fc59fb0310c64ecab7ce"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/fixture.json",
+      "bytes": 1856,
+      "sha256": "6c82fc4974bf6a0980a6014426ad13333907ddce2ef35d72509053561ed90a78"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/gpu_probe.gd",
+      "bytes": 8841,
+      "sha256": "2d323172a05660afc1b514c2a4298a516c30bf678145c78ceb2f571c4cd963f5"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/molded_edit/analysis.json",
+      "bytes": 18853,
+      "sha256": "3e3368f5675581b5261f4f2c086695a25bb45a335e3e0a5efc7a2d5fd3d20452"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/molded_edit/consumed_sources.zip",
+      "bytes": 1849964,
+      "sha256": "7dda8fc24c0ace39f2495b4c68f9080cafa3d81be3b863cd8cc6deccbfaf5fdd"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/molded_edit/manifest.json",
+      "bytes": 1127,
+      "sha256": "d66b307d23b78c51d774a1fc96c6800e2bd442ccbf24191cf6b242eebdecb030"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/molded_edit/probe.gd",
+      "bytes": 9131,
+      "sha256": "ca6717baee4b6ed4ab8cfd32ac297f01a891d2f02118dbfd1ebade6f81b7c741"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/molded_edit/result.json",
+      "bytes": 70322,
+      "sha256": "2cc3b16c74a0fdf8368d8d6daf796bafbe26e99d42c8a5735e8746a755f077aa"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/near_dry/analysis.json",
+      "bytes": 19356,
+      "sha256": "b80db71cf8ace2a29c67e55c80e2a17f9198d342adf197d36768ce1720a3668f"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/near_dry/consumed_sources.zip",
+      "bytes": 1849964,
+      "sha256": "1f266f68128c5679cef620e08e99ace6c4a193b846a0859623185ea29ebf007b"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/near_dry/manifest.json",
+      "bytes": 1118,
+      "sha256": "55848512f0abc828a164752fb7d419035b0232ff47ed6726b6c450134dc5ddcc"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/near_dry/probe.gd",
+      "bytes": 9131,
+      "sha256": "ca6717baee4b6ed4ab8cfd32ac297f01a891d2f02118dbfd1ebade6f81b7c741"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/near_dry/result.json",
+      "bytes": 61584,
+      "sha256": "db821bec149a0c171ead527a95b014dd1bd99a7b4c2aff41a70bfd8fc27de84b"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/obstacle/analysis.json",
+      "bytes": 20175,
+      "sha256": "ef11f11b66310800681f98ededa34d9d8d05aba7ba95da2f8a3f61ddf35e6525"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/obstacle/consumed_sources.zip",
+      "bytes": 1849964,
+      "sha256": "a871fbde403a19be40d96076ea6f7610845381dac551bd9c37fce95c0a18f468"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/obstacle/manifest.json",
+      "bytes": 1118,
+      "sha256": "5955bd79452b440ae53cf5ef817af782dad455777e905a34321bfaef93e3fd1d"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/obstacle/probe.gd",
+      "bytes": 9131,
+      "sha256": "ca6717baee4b6ed4ab8cfd32ac297f01a891d2f02118dbfd1ebade6f81b7c741"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/obstacle/result.json",
+      "bytes": 61586,
+      "sha256": "48dc8b9ccbc9508278b368d81bb9bf78ce2bf6d915868a3334f5dcd5c73ccb4a"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/reference.py",
+      "bytes": 8730,
+      "sha256": "f5c6602b0ee9ee79119739c89b7a6306603995fdf8580da4117fa8c76dc1e74c"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/result.json",
+      "bytes": 11636,
+      "sha256": "73e7b5234ba7863cbb7fe23d600844388a43982ebf1d5711d7b23bf989a5ef8a"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/reversal/analysis.json",
+      "bytes": 18087,
+      "sha256": "506ea137a7663a3ea82efb44c74fe239cdd864fe7489543482232f8ab0aad452"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/reversal/consumed_sources.zip",
+      "bytes": 1979698,
+      "sha256": "617a64b100bbe37ce83b7cccefb716a49ee87aa95ffd59c865617b1d7c316a2e"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/reversal/manifest.json",
+      "bytes": 1118,
+      "sha256": "2f8720e9907e2161ffdd8438b79825d42977c0322567303f90d6bc47114d496e"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/reversal/probe.gd",
+      "bytes": 9131,
+      "sha256": "ca6717baee4b6ed4ab8cfd32ac297f01a891d2f02118dbfd1ebade6f81b7c741"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/reversal/result.json",
+      "bytes": 46963,
+      "sha256": "d69428aed4fffb41b91ee54947d497f3f64533dd83c6e2f2a7b7a1802c0b1ba7"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/reversal/stage_transport_analysis.json",
+      "bytes": 890,
+      "sha256": "0d0573867ca229c75b756b2e52f34226d9d3677fc457290c2ebe459c084a6120"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/run_gpu.py",
+      "bytes": 4488,
+      "sha256": "ac62a6af3dfd4f1a8086f48fe191c66def3716b4979c4f532119751da76e2c57"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/status.json",
+      "bytes": 9837,
+      "sha256": "5e43c6b350ca18450d5de53cd0c688572649d62beb55455263879f39b2e41d29"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/support/analysis.json",
+      "bytes": 20156,
+      "sha256": "f9392561d78dd08acf8b14f09051dfc7c5c396bcb88ab2ebf49f6e75c4fa4d2d"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/support/consumed_sources.zip",
+      "bytes": 1849964,
+      "sha256": "fa9d3345fc6c5510a0fa63283baa5900a7bbf046927550eb0f862281b41f2704"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/support/manifest.json",
+      "bytes": 1115,
+      "sha256": "0b426acafd7e4d79903e960a15c9b8fa76f0309b6752206e45f61364e03ee258"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/support/probe.gd",
+      "bytes": 9131,
+      "sha256": "ca6717baee4b6ed4ab8cfd32ac297f01a891d2f02118dbfd1ebade6f81b7c741"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/support/result.json",
+      "bytes": 61739,
+      "sha256": "8b2038e6e49f67dd02d9b358e326306662c89f4fbeca204afb166458a5087169"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/transport_backward/analysis.json",
+      "bytes": 20183,
+      "sha256": "ca5fd33cc742f088cce02fc75e97a73d834afe3f0e49ee13064c59975fdea7ed"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/transport_backward/consumed_sources.zip",
+      "bytes": 1849964,
+      "sha256": "6e0304190a851d0a2dfac44ba256051130a5b42d69b2fffbc9814b6a321ee3f6"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/transport_backward/manifest.json",
+      "bytes": 1147,
+      "sha256": "1bb4dac486c0c35cdaba0df24f23c7f82b22c633a4172c7180661e074103217d"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/transport_backward/probe.gd",
+      "bytes": 9131,
+      "sha256": "ca6717baee4b6ed4ab8cfd32ac297f01a891d2f02118dbfd1ebade6f81b7c741"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/transport_backward/result.json",
+      "bytes": 62646,
+      "sha256": "278ea6e5b3908ccc1676a3b61da8738ac7e866cc3cbb6a1fbe7e6e9fa792aa8a"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/transport_forward/analysis.json",
+      "bytes": 20171,
+      "sha256": "b2df575826ffe33eee0825921a08f69d8a63cc14da8930f5f914be8e16ed31f0"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/transport_forward/consumed_sources.zip",
+      "bytes": 1849964,
+      "sha256": "0372089a6a3761726ae5dc5d13c93ac69df82bc0f8ecf2abc5d601d13bd78adc"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/transport_forward/manifest.json",
+      "bytes": 1145,
+      "sha256": "c3c659283246f96c98670d95d7fbf4b49a743c9b032319d8b67b3b42c7b32812"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/transport_forward/probe.gd",
+      "bytes": 9131,
+      "sha256": "ca6717baee4b6ed4ab8cfd32ac297f01a891d2f02118dbfd1ebade6f81b7c741"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_suite_02/transport_forward/result.json",
+      "bytes": 62540,
+      "sha256": "7f212f45b81610e4aaf9b4746bc410d52fe8cc2c4f97fb3c2cbfdcc6cd392f78"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_workspace_01/fixture_amendment_v2.json",
+      "bytes": 519,
+      "sha256": "668dd7e5ce851ebf879b22f5e376a4a32e45f59695da01005f3b401338677923"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_workspace_01/snapshot_identity.json",
+      "bytes": 1312886,
+      "sha256": "ef1bd67bc5f44b9afbf35468416e7d119657694600860a89d5ff12c07a4d5566"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_workspace_01/snapshot_identity_repaired.json",
+      "bytes": 1313201,
+      "sha256": "1b531030363fdf54f952c5c9c42bcb77d0adb4e12aaa6fdfcc14f90a52dfaa79"
+    },
+    {
+      "path": "tools/wave_propagation/fixtures/reversal_v1.json",
+      "bytes": 526,
+      "sha256": "3a646536f5349549a867e763220374bd6fb491820c8c56bcad982c433a9b7d6d"
+    },
+    {
+      "path": "tools/wave_propagation/fixtures/reversal_v1.rgba32f",
+      "bytes": 1048576,
+      "sha256": "67b600c8f0b6b85c63df75ed5df991f2672958f9a505a07810d2f34fc2c7493d"
+    },
+    {
+      "path": "tools/wave_propagation/fixtures/reversal_v2.json",
+      "bytes": 654,
+      "sha256": "d9b547b4033c68f22b1a781b9eacb7f9797ab6f727b096733096114c9f7baf76"
+    },
+    {
+      "path": "tools/wave_propagation/fixtures/reversal_v2.rgba32f",
+      "bytes": 1048576,
+      "sha256": "43739478912a6fa8bd3d86d38c0540fee5ab5f5500cd663fc3030459e76d2685"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_configuration_01/consumed_sources.zip",
+      "bytes": 1843347,
+      "sha256": "9d66a5b524b5e39f9abf2ab48ef363f61e7e17691e118f4bfc8c96a20f3b44e9"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_configuration_01/manifest.json",
+      "bytes": 496,
+      "sha256": "ca088c9238ed0d78fdb46fb972afc77e25969836a072c109478e33db8b4783e0"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_configuration_01/numerics_configuration_probe.gd",
+      "bytes": 3965,
+      "sha256": "e24451bb11e34ef1280807d28fb11e6c265c9337db793fc45f39a463ab488d88"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_configuration_01/result.json",
+      "bytes": 16565,
+      "sha256": "92a1a2de3f74cd39c07f4757b308345c01ed1cf5d20ff5c624691359e6d84b21"
+    },
+    {
+      "path": "test_output/wave_propagation/g3_configuration_01/stdout.txt",
+      "bytes": 15961,
+      "sha256": "5f71c271892e9a6c4842294e560cb8d4f093f58e9971e7c7c75331c5c0497c40"
+    }
+  ],
+  "reader_archive_members": {
+    "scripts/simulation/unified_edit/coupled.gd": "6a2bb1247234197c1c023ca9f84cb9a9d9552e9abb15570e8602b86c6e1cd5c8",
+    "scripts/simulation/unified_edit/water_muscl.gd": "eb05b597ed8150e1d90ec4043086b449cf1d3a8f4153944b76fe4fdc1565ef8d",
+    "scripts/simulation/unified_edit/state.gd": "018b6a782b8d0e7f338c49a93bfee7131c1d67b494f1e10fd3048793b9f3b272",
+    "scripts/simulation/unified_edit/views.gd": "08bb89331235170bbcbd1038ab5870c36fd88dde5ed86d6cb0cdb6bf2a3547eb",
+    "scripts/simulation/unified_edit/view_publish.glsl": "56160ffa358b59456f754126204042edf3e3cea77fc3d505e43fb5891fdc9816",
+    "scripts/simulation/erosion/gpu_sediment_coupler.gd": "9d5dc9449f3d722cb981204f90bf9b033136914ce61959c3f62e821c6d79381e",
+    "scripts/simulation/gpu_shallow_solver.gd": "ada3029ee6bf71d185988a1587c8e71e8b54226e97503a9fe076e36e53058aab",
+    "scripts/demo/gpu_water_preview.gd": "c9edbd1f31ea076b0c74b5299f8a764c119367dd35c720b48e097e25ba563bb0",
+    "scripts/beach/async_pipeline_entry.gd": "d77d1a28f02c65e57a8cdc56021c2d88ce9e22e6e0563f1b0cf784d31c8d656b",
+    "scripts/beach/beach_checkpoint_entry.gd": "9939e0442c08c9b6f0988ee85ef8735e16bef615522a339bf0896405ca2b49d6",
+    "scripts/simulation/edit_validation/gpu_checkpoint_codec.gd": "b67acc0842599328d240a261ecf19ea9a36658e66425c935590159522a110e6d",
+    "scripts/simulation/edit_validation/beach_native_codec.gd": "ee0b3a5935a9d5dd1c2d1519b10754a9a31519e7b142bb827630b9578b23b243",
+    "scripts/simulation/edit_validation/frame_pipeline/async_checkpoint_codec.gd": "ef0e368736579cc6a1a6a11eb10d2c7bf6c92d2db4d2836c67578da3c444765a",
+    "scripts/simulation/edit_validation/frame_pipeline/async_restore_bundle.gd": "bd57e8138ed0627847071d1cff8007519a0d544eb17a1c662b13f0e70c7add09",
+    "scripts/simulation/edit_validation/frame_pipeline/async_water.gd": "82f3d2a13987fb704b9f13ea8898df056c427f78b02416cd7818adbd5fde17a4",
+    "scripts/simulation/sand_water_domain.gd": "449b69482a2de6347a3562b6610507b2669bb8bcdc34cb6e15e363946866cadc",
+    "scripts/water/reference/shallow_water_solver.gd": "7ca778eb5dd98c8fb6a8c4c6ca804a436bcb607eea49a2852e54d9b2bd4fbdc2",
+    "shaders/simulation/erosion/sediment_step.glsl": "02ff254c037da330de571d2ecc2edc13711295a44d226917fcfdb98412c743c9",
+    "shaders/visual/gpu_terrain.gdshader": "20b5b3d8752e712997a14400befc9b2d5035f158307c5dbf0d2dcd778ff001ee"
+  }
+}

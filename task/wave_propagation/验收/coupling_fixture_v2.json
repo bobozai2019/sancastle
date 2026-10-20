@@ -1,0 +1,81 @@
+{
+  "schema": 1,
+  "suite": "coupling",
+  "solver_id": "muscl_mc_ssprk2_v1",
+  "grid_size": 256,
+  "cell_size_m": 0.125,
+  "cases": [
+    {
+      "id": "erosion",
+      "case_id": "erosion",
+      "duration_s": 0.1,
+      "tick_dt_s": 0.03333333333333333
+    },
+    {
+      "id": "deposition",
+      "case_id": "deposition",
+      "duration_s": 0.1,
+      "tick_dt_s": 0.03333333333333333
+    },
+    {
+      "id": "transport_forward",
+      "case_id": "transport_forward",
+      "duration_s": 0.1,
+      "tick_dt_s": 0.03333333333333333
+    },
+    {
+      "id": "transport_backward",
+      "case_id": "transport_backward",
+      "duration_s": 0.1,
+      "tick_dt_s": 0.03333333333333333
+    },
+    {
+      "id": "constant_001_off",
+      "case_id": "constant_001_off",
+      "duration_s": 0.1,
+      "tick_dt_s": 0.03333333333333333
+    },
+    {
+      "id": "constant_005_off",
+      "case_id": "constant_005_off",
+      "duration_s": 0.1,
+      "tick_dt_s": 0.03333333333333333
+    },
+    {
+      "id": "reversal",
+      "case_id": "reversal",
+      "duration_s": 0.007,
+      "tick_dt_s": 0.03333333333333333
+    },
+    {
+      "id": "near_dry",
+      "case_id": "near_dry",
+      "duration_s": 0.1,
+      "tick_dt_s": 0.03333333333333333
+    },
+    {
+      "id": "obstacle",
+      "case_id": "obstacle",
+      "duration_s": 0.1,
+      "tick_dt_s": 0.03333333333333333
+    },
+    {
+      "id": "boundary",
+      "case_id": "boundary",
+      "duration_s": 0.1,
+      "tick_dt_s": 0.03333333333333333
+    },
+    {
+      "id": "support",
+      "case_id": "support",
+      "duration_s": 0.1,
+      "tick_dt_s": 0.03333333333333333
+    },
+    {
+      "id": "molded_edit",
+      "case_id": "molded_edit",
+      "duration_s": 0.1,
+      "tick_dt_s": 0.03333333333333333
+    }
+  ]
+}

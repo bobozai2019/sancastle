@@ -1,0 +1,62 @@
+{
+  "schema": 1,
+  "suite": "lifecycle",
+  "solver_id": "muscl_mc_ssprk2_v1",
+  "cases": [
+    {
+      "id": "restore_distinct",
+      "kind": "restore",
+      "case_id": "restore_distinct"
+    },
+    {
+      "id": "restore_hold",
+      "kind": "restore",
+      "case_id": "restore_hold"
+    },
+    {
+      "id": "restore_cancel",
+      "kind": "restore",
+      "case_id": "restore_cancel"
+    },
+    {
+      "id": "restore_registration",
+      "kind": "restore",
+      "case_id": "restore_registration"
+    },
+    {
+      "id": "restore_corrupt",
+      "kind": "restore",
+      "case_id": "restore_corrupt"
+    },
+    {
+      "id": "restore_unknown",
+      "kind": "restore",
+      "case_id": "restore_unknown"
+    },
+    {
+      "id": "restore_cohesion",
+      "kind": "restore",
+      "case_id": "restore_cohesion"
+    },
+    {
+      "id": "init_water",
+      "kind": "initialization",
+      "case_id": "init_water"
+    },
+    {
+      "id": "init_coupled",
+      "kind": "initialization",
+      "case_id": "init_coupled"
+    },
+    {
+      "id": "init_unknown",
+      "kind": "initialization",
+      "case_id": "init_unknown"
+    },
+    {
+      "id": "init_compile",
+      "kind": "initialization",
+      "case_id": "init_compile"
+    }
+  ]
+}

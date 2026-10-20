@@ -17,7 +17,18 @@ const KEYS=["version","protocol_family","pipeline_protocol_version","grid_size",
 const PRECISION="mixed_operation_v1"
 
 static func validate(value: Dictionary, configuration: Dictionary, verify_configuration_disk: bool=true) -> StringName:
-	var error:=Config.validate(configuration,verify_configuration_disk)
+	return _validate(value,configuration,verify_configuration_disk,Config.LEDGER_POLICY)
+
+static func validate_pinned_source(value: Dictionary, pinned: Dictionary) -> StringName:
+	if value.get("configuration")!=pinned:return &"unknown_numerics_source_configuration"
+	var validation:=value.duplicate(true)
+	# Normalize only the historical mixed-key derived hash, after full identity
+	# equality. Fields and past ledger values are never projected for validation.
+	validation.configuration.configuration_hash=Config.stable_hash(validation.configuration)
+	return _validate(validation,validation.configuration,false,pinned.ledger_policy)
+
+static func _validate(value: Dictionary, configuration: Dictionary, verify_configuration_disk: bool, source_ledger_policy: Dictionary) -> StringName:
+	var error:=Config._validate_snapshot(configuration,verify_configuration_disk,source_ledger_policy)
 	if not error.is_empty():return error
 	if not Config.exact(value,KEYS) or typeof(value.version)!=TYPE_INT or value.version!=VERSION or value.protocol_family!=Config.FAMILY or typeof(value.pipeline_protocol_version)!=TYPE_INT or value.pipeline_protocol_version!=L.VERSION or typeof(value.grid_size)!=TYPE_INT or value.grid_size!=256 or value.cell_size_m!=0.125:return &"invalid_unified_checkpoint_header"
 	if value.domain_id!=configuration.domain_id or typeof(value.domain_id)!=TYPE_STRING:return &"checkpoint_domain_mismatch"
@@ -25,7 +36,7 @@ static func validate(value: Dictionary, configuration: Dictionary, verify_config
 		if not I.counter(value[key],1 if key=="generation" else 0):return &"invalid_checkpoint_counter"
 	if not value.configuration is Dictionary:return &"invalid_configuration"
 	if value.configuration.get("configuration_hash")!=configuration.configuration_hash:return &"checkpoint_configuration_mismatch"
-	error=Config.validate(value.configuration)
+	error=Config._validate_snapshot(value.configuration,false,source_ledger_policy)
 	if not error.is_empty():return error
 	if not Config.exact(value.simulation,Old.SIMULATION_KEYS):return &"invalid_checkpoint_simulation"
 	for key in Old.SIMULATION_KEYS:
@@ -107,6 +118,7 @@ static func project_validated_legacy(inspected: Dictionary, configuration: Dicti
 		provenance.original_prefix=old.gpu_beach_edit.prefix.duplicate(true)
 		provenance.policies={"clock":"legacy_tick_over_30_f32","state_seq":"new_zero_not_invented_gpu_completions","ledger":"preserve_exact_legacy_history","native":"preserve_raw_fields_normalize_binding_index_only"}
 	else:return {"error":&"unsupported_legacy_projection"}
+	provenance.policies.water_numerics={"from_solver":Config.Numerics.FIRST_ORDER,"to_solver":Config.Numerics.solver_id(configuration.environment),"policy":"new_generation_preserve_native_v3_fields"}
 	value.version=VERSION;value.protocol_family=Config.FAMILY;value.pipeline_protocol_version=L.VERSION
 	value.ledger_precision=PRECISION;value.source_provenance=provenance
 	error=validate(value,configuration)

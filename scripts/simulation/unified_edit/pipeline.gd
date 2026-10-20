@@ -24,7 +24,7 @@ const Capture=preload("res://scripts/simulation/unified_edit/checkpoint_capture.
 const Display=preload("res://scripts/simulation/unified_edit/display_intent.gd")
 const MAX_PENDING:=64
 const MAX_RESULTS:=512
-const SOURCE_PATHS=["res://scripts/simulation/unified_edit/diagnostics.gd","res://scripts/simulation/unified_edit/checkpoint_accounting.gd","res://scripts/simulation/unified_edit/checkpoint_capture.gd","res://scripts/simulation/unified_edit/restore_verifier.gd","res://scripts/simulation/unified_edit/idle_fence.glsl","res://scripts/simulation/unified_edit/gpu.gd","res://scripts/simulation/unified_edit/slots.gd","res://scripts/simulation/unified_edit/transport.gd","res://scripts/simulation/unified_edit/state.gd","res://scripts/simulation/unified_edit/unit_half.gd","res://scripts/simulation/unified_edit/publish.glsl","res://scripts/simulation/unified_edit/water.gd","res://scripts/simulation/unified_edit/executor.gd","res://scripts/simulation/unified_edit/pipeline.gd","res://scripts/simulation/unified_edit/work_begin.glsl","res://scripts/simulation/unified_edit/work_seal.glsl","res://scripts/simulation/unified_edit/edit.glsl","res://scripts/simulation/unified_edit/cfl_decide.glsl","res://scripts/simulation/edit_validation/frame_pipeline/async_cfl_tiles.glsl","res://scripts/simulation/edit_validation/frame_pipeline/async_sim_finish.glsl","res://scripts/simulation/edit_validation/frame_pipeline/async_normalize.glsl","res://scripts/simulation/edit_validation/frame_pipeline/async_boundary.glsl","res://shaders/simulation/shallow_edge_flux.glsl","res://shaders/simulation/shallow_drain_scale.glsl","res://shaders/simulation/shallow_update_state.glsl"]+Coupled.SOURCES+Executor.Response.SOURCES+Height.SOURCES+Views.SOURCES+Visuals.SOURCES+Boundary.SOURCES+Display.SOURCES
+const SOURCE_PATHS=["res://scripts/simulation/unified_edit/diagnostics.gd","res://scripts/simulation/unified_edit/checkpoint_accounting.gd","res://scripts/simulation/unified_edit/checkpoint_capture.gd","res://scripts/simulation/unified_edit/restore_verifier.gd","res://scripts/simulation/unified_edit/idle_fence.glsl","res://scripts/simulation/unified_edit/gpu.gd","res://scripts/simulation/unified_edit/slots.gd","res://scripts/simulation/unified_edit/transport.gd","res://scripts/simulation/unified_edit/state.gd","res://scripts/simulation/unified_edit/unit_half.gd","res://scripts/simulation/unified_edit/publish.glsl","res://scripts/simulation/unified_edit/water.gd","res://scripts/simulation/unified_edit/executor.gd","res://scripts/simulation/unified_edit/pipeline.gd","res://scripts/simulation/unified_edit/work_begin.glsl","res://scripts/simulation/unified_edit/work_seal.glsl","res://scripts/simulation/unified_edit/edit.glsl","res://scripts/simulation/unified_edit/cfl_decide.glsl","res://scripts/simulation/edit_validation/frame_pipeline/async_cfl_tiles.glsl","res://scripts/simulation/edit_validation/frame_pipeline/async_sim_finish.glsl","res://scripts/simulation/edit_validation/frame_pipeline/async_normalize.glsl","res://scripts/simulation/edit_validation/frame_pipeline/async_boundary.glsl","res://shaders/simulation/shallow_edge_flux.glsl","res://shaders/simulation/shallow_drain_scale.glsl","res://shaders/simulation/shallow_update_state.glsl"]+Coupled.SOURCES+Executor.Response.SOURCES+Height.SOURCES+Views.SOURCES+Visuals.SOURCES+Boundary.SOURCES+Display.SOURCES+Water.NUMERICS_SOURCES
 var visuals:=Visuals.new()
 var boundary:=Boundary.new()
 var accounting:=Accounting.new()
@@ -73,12 +73,16 @@ var inject_initialization_failure_after: StringName=&""
 var hold_completions:=false
 var arrival_order: Array[int]=[]
 var diagnostics: Diagnostics
+# Slot state belongs to the thread that constructs this Pipeline. The render
+# owner may be that same thread, depending on the engine's threading mode.
+var _owner_thread_id:=OS.get_thread_caller_id()
 
 func configure(registry, configuration: Dictionary, generation: Variant) -> StringName:
 	if _registry!=null or released or initialization_started or _closing:return &"pipeline_already_configured"
 	var error:=C.validate(configuration,true)
 	if not error.is_empty():return error
 	if not I.counter(generation,1):return &"invalid_generation"
+	if C.Numerics.solver_id(configuration.environment)==C.Numerics.MUSCL and configuration.simulation.enable_erosion and not Water.Muscl.COUPLING_SUPPORTED:return &"unimplemented_runtime_capability"
 	if not Checkpoint.Old.number(configuration.environment.get("ordinary_cohesion_yield_height_m",0.0),0.0,2.0):return &"invalid_runtime_ordinary_cohesion"
 	error=Visuals.configuration_error(configuration)
 	if not error.is_empty():return error
@@ -123,7 +127,9 @@ func initialize_render(domain) -> void:
 	if initialization_started or released:return
 	initialization_started=true
 	if _closing:_initialization_failed_render(&"initialization_cancelled");return
-	if _registry!=null:state.cohesion_yield_height_m=float(_configuration.environment.get("ordinary_cohesion_yield_height_m",0.0))
+	if _registry!=null:
+		state.cohesion_yield_height_m=float(_configuration.environment.get("ordinary_cohesion_yield_height_m",0.0))
+		state.water_solver_id=C.Numerics.solver_id(_configuration.environment)
 	var error: StringName=&""
 	# Capabilities are added with their real implementation, never silently off.
 	if _registry==null:error=&"unimplemented_runtime_capability"
@@ -433,7 +439,12 @@ func _poll() -> void:
 
 func _retire_render(id: Dictionary) -> void:
 	if diagnostics!=null:diagnostics.mark(&"retire_render",id.batch_seq)
-	call_deferred("_retired",id,transport.retire(id))
+	var confirmed:=transport.retire(id)
+	# Only acknowledge an actual transport retirement. On the owner thread this
+	# lets the existing pump reuse the lease after _poll(), without another pump
+	# or an unnecessary deferred round trip. Other threads still marshal the ACK.
+	if OS.get_thread_caller_id()==_owner_thread_id:_retired(id,confirmed)
+	else:call_deferred("_retired",id,confirmed)
 
 func _retired(id: Dictionary, success: bool) -> void:
 	if not success or not slots.retired(id):_fail(&"retirement_failed")

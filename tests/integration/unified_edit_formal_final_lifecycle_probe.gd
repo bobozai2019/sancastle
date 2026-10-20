@@ -20,11 +20,15 @@ func _run() -> void:
 		observations.released={"generation":staged._generation,"owned":_owned(staged),"released":staged.released}
 	else:
 		var start:=Time.get_ticks_msec()
-		while not scene.ready_for_ticks and scene.last_error.is_empty() and Time.get_ticks_msec()-start<180000:await process_frame
-		check("formal_special_ready",scene.ready_for_ticks and scene.last_error.is_empty())
-		if not scene.ready_for_ticks:await _close();return
+		# Sand/water can be ready before the scene finishes attaching its props.
+		# Saving is admitted only after that boot transition has completed.
+		while (not scene.ready_for_ticks or scene._booting) and scene.last_error.is_empty() and Time.get_ticks_msec()-start<180000:await process_frame
+		check("formal_special_ready",scene.ready_for_ticks and not scene._booting and scene.last_error.is_empty())
+		if not scene.ready_for_ticks or scene._booting:await _close();return
 		var path:=output+"/baseline.sandue"
-		check("special_baseline_saved",(await scene.save_gpu_checkpoint(path)).is_empty());await process_frame
+		var save_error: StringName=await scene.save_gpu_checkpoint(path)
+		observations.baseline_save_error=save_error
+		check("special_baseline_saved",save_error.is_empty());await process_frame
 		if mode=="restoreclose":await _restore_close(path)
 		elif mode in ["faultrestore","faultclose"]:await _fault(path)
 		elif mode=="detach":await _detach(path)
@@ -47,8 +51,15 @@ func _owned(owner) -> int:
 func _restore_close(path: String) -> void:
 	var old=scene.runtime.current
 	_start_restore(path)
+	# The scene first waits for the props consumer to hold at its boundary.
+	# Observe the candidate once it actually exists, before verifier delivery.
+	var candidate_started:=Time.get_ticks_msec()
+	while scene.runtime.candidate==null and not restore_done and Time.get_ticks_msec()-candidate_started<15000:await process_frame
 	var staged=scene.runtime.candidate
 	check("restore_candidate_created",staged!=null and not restore_done)
+	if staged==null or restore_done:
+		observations.early_restore_error=restore_error
+		return
 	staged.restore_verifier.hold_delivery=true
 	var start:=Time.get_ticks_msec()
 	while staged.restore_verifier.held.is_empty() and Time.get_ticks_msec()-start<15000:await process_frame
