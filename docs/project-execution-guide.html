@@ -6,18 +6,18 @@
 <h2>声明如何选择公共阶段</h2><p>下面只演示既有执行轨迹。选择操作和水策略会改变可见阶段标签，不执行Godot模拟。</p><div class="panel"><label>操作 <select id="operation"><option value="volume">体积增沙</option><option value="target">目标高度</option><option value="transfer">守恒搬运</option></select></label><label>水响应 <select id="water"><option value="0">0 · 关闭</option><option value="1">1 · 容量/位移</option><option value="2" selected>2 · 动量 B（main默认）</option><option value="3">3 · 原连通排水</option></select></label><p id="stroke"></p><div id="phases" class="flow"></div><p id="response"></p><p class="muted">阶段12为公共材料候选，5/6为校验，7为条件提交，8为结果；原语内部迭代不构成第二个事务。</p></div>
 <h2>权威状态与读者边界</h2><table><tr><th>边界</th><th>实际职责</th></tr><tr><td>编辑执行器</td><td>只在公共决定允许时提交沙/材料等字段；拒绝保留原场。</td></tr><tr><td>水响应 / 水tick</td><td>前者共享编辑事务决定，后者拥有明确的水/侵蚀/材料子步；实际时钟由GPU完成态推进。</td></tr><tr><td>预览 / 表现 / 碰撞</td><td>读取同generation完整完成态。编辑无需等待CPU通知或碰撞收敛；消费者各自保留资源租约。</td></tr><tr><td>native保存 / 恢复</td><td>SANDUE06容器保留有效配置和原始资源字节。候选还是同一种Pipeline；完整64块新代物理槽准备后才切换。</td></tr><tr><td>关闭 / unknown</td><td>先关闭接纳，等待真实终结与最后读者证明。unknown不重放，不伪造GPU结果，不强制free未知所有权。</td></tr></table>
 <h2>配置新增玩法</h2><p>新增ToolProfile资源，使用既有operation、shape、材料/水策略、数值范围和受限模板。注册表校验精确script类型并复制冻结数据；profile不得携带执行Callable、自选shader或调度器。</p><p>配置扩展方法见<a href="unified-edit-extension-guide.md">扩展指南</a>。</p>
-<h2>当前方案与规格</h2><p><a href="当前项目技术方案.md">技术方案</a>说明模块协作、模拟、表现和生命周期；<a href="当前技术规格.md">技术规格</a>列出域、字段、ABI、容量、账本、兼容与验证边界。<a href="主场景操作.md">操作说明</a>和<a href="场景切换与功能复用.md">场景说明</a>对应当前四入口。</p>
+<h2>当前方案与规格</h2><p><a href="Sandcastle项目技术全景.docx">项目技术全景 Word</a>完整说明架构、数值、数据协议、消费者和生命周期，并提供从当前源码提取的附录。</p><p><a href="当前项目技术方案.md">技术方案</a>说明模块协作、模拟、表现和生命周期；<a href="当前技术规格.md">技术规格</a>列出域、字段、ABI、容量、账本、兼容与验证边界。<a href="主场景操作.md">操作说明</a>和<a href="场景切换与功能复用.md">场景说明</a>对应当前四入口。</p>
 <h2>main漂浮道具</h2><p>场景预存水瓶、木板、木棍各一件，右下角三槽UI选择后左键摆放/移动；拾取模式将实例收入槽位，[ / ]旋转，右键/Esc取消。固定容量3件，全部拾取后不提交空探针。交互在公共读者真实终结后换owner，重新采样目标位置并建立新观察起点，未操作物体保留运动状态。公共只读Probe → 完成态水/床/流速 → 类型化Profile逐点浮力和相对流阻 → 原生Jolt。实际state.step消耗完成水时间余额；局部保持不阻塞生产。Height ABI3用完整共享顶点上界证明5mm总床面差，未知或超限时保持道具。暂停/保存保持，成功恢复或重进重置，检查点不保存道具姿态。三个test1不投放。</p><p><a href="漂浮道具.md">道具机制与扩展</a>。</p>
-<h2>当前源码锚点</h2><p class="muted">以下摘录、行号与SHA256直接来自生成时文件，可用build_execution_guide.py --check核对。</p><details><summary>入口 · scripts/beach/unified_playable_entry.gd:71</summary><p class="hash">SHA256 d1fcb379972922abfdca7b3e449e8f95eac2f32a597013b942656af9cd89946f</p><pre>  71 func _ready() -&gt; void:
-  72 	get_tree().auto_accept_quit=false
-  73 	$GravelLayer.visible=false
-  74 	var read:=Presentation.read(presentation_manifest)
-  75 	if not read.error.is_empty():_fail(read.error);return
-  76 	var data: Dictionary=read.metadata
-  77 	if data.settings.scene_key!=scene_key:_fail(&amp;&quot;presentation_scene_mismatch&quot;);return
-  78 	var plan:=Presentation.material_plan(self,data,get_script())
-  79 	if not plan.error.is_empty():_fail(plan.error);return
-  80 	material_bindings=plan.bindings</pre></details>
+<h2>当前源码锚点</h2><p class="muted">以下摘录、行号与SHA256直接来自生成时文件，可用build_execution_guide.py --check核对。</p><details><summary>入口 · scripts/beach/unified_playable_entry.gd:74</summary><p class="hash">SHA256 eb5290155692fa7e560fbfb9b7a4a2a8c839e214fd90e6b637697796483bc309</p><pre>  74 func _ready() -&gt; void:
+  75 	get_tree().auto_accept_quit=false
+  76 	$GravelLayer.visible=false
+  77 	var read:=Presentation.read(presentation_manifest)
+  78 	if not read.error.is_empty():_fail(read.error);return
+  79 	var data: Dictionary=read.metadata
+  80 	if data.settings.scene_key!=scene_key:_fail(&amp;&quot;presentation_scene_mismatch&quot;);return
+  81 	var plan:=Presentation.material_plan(self,data,get_script())
+  82 	if not plan.error.is_empty():_fail(plan.error);return
+  83 	material_bindings=plan.bindings</pre></details>
 <details><summary>声明 · scripts/simulation/unified_edit/player_input.gd:25</summary><p class="hash">SHA256 e368b682c09d8ecbb7b1424c876b5606662eefb331ee1c7c90bf729a42da5f35</p><pre>  25 func begin(tool: StringName, point: Vector2, parameters: Dictionary, amount: float, policy: int, speed: float) -&gt; Dictionary:
   26 	if not gesture.is_empty():return {&quot;accepted&quot;:false,&quot;error&quot;:&amp;&quot;stroke_busy&quot;}
   27 	if tool==&amp;&quot;gravel_drop&quot;:
@@ -38,7 +38,7 @@
   56 		frozen[String(key)]=features[key]
   57 	frozen.selected_features={&quot;water_policy&quot;:frozen.water_policy,&quot;material_policy&quot;:frozen.material_policy}
   58 	frozen.derived_fields=Profile.fields_for(frozen.operation,frozen.destination,frozen.water_policy,frozen.stroke_policy)</pre></details>
-<details><summary>冻结配置 · scripts/simulation/unified_edit/configuration.gd:72</summary><p class="hash">SHA256 22e822729c270ee835ac655d7b303b55ee9116e1518f95358286fc2bf3577f86</p><pre>  72 static func freeze(registry, domain: Variant, simulation: Dictionary, effects: Dictionary={}, diagnostics: Dictionary={}, environment: Dictionary={}, extra_sources: PackedStringArray=PackedStringArray()) -&gt; Dictionary:
+<details><summary>冻结配置 · scripts/simulation/unified_edit/configuration.gd:72</summary><p class="hash">SHA256 103b7261d5cb2674b873e32a6a941a4342dad2e1592359c0aaf17e7f54995a06</p><pre>  72 static func freeze(registry, domain: Variant, simulation: Dictionary, effects: Dictionary={}, diagnostics: Dictionary={}, environment: Dictionary={}, extra_sources: PackedStringArray=PackedStringArray()) -&gt; Dictionary:
   73 	if typeof(domain) not in [TYPE_STRING,TYPE_STRING_NAME] or String(domain).is_empty() or String(domain).length()&gt;128:return {&quot;error&quot;:&amp;&quot;invalid_configuration_domain&quot;}
   74 	if not exact(simulation,SIMULATION_KEYS):return {&quot;error&quot;:&amp;&quot;invalid_simulation_flags&quot;}
   75 	for value in simulation.values():
@@ -163,36 +163,36 @@
   57 	if not epoch.error.is_empty():return epoch.error
   58 	var next:=Pipeline.new();error=next.configure_restore(registry,configuration,epoch.value,checkpoint)
   59 	if not error.is_empty():return error</pre></details>
-<details><summary>原生校验 · scripts/simulation/unified_edit/checkpoint_codec.gd:19</summary><p class="hash">SHA256 d02c6ed5f676067b3b7cebdcfdcfade4f19ed1dac56d24a1bf5992cf864213d2</p><pre>  19 static func validate(value: Dictionary, configuration: Dictionary, verify_configuration_disk: bool=true) -&gt; StringName:
-  20 	var error:=Config.validate(configuration,verify_configuration_disk)
-  21 	if not error.is_empty():return error
-  22 	if not Config.exact(value,KEYS) or typeof(value.version)!=TYPE_INT or value.version!=VERSION or value.protocol_family!=Config.FAMILY or typeof(value.pipeline_protocol_version)!=TYPE_INT or value.pipeline_protocol_version!=L.VERSION or typeof(value.grid_size)!=TYPE_INT or value.grid_size!=256 or value.cell_size_m!=0.125:return &amp;&quot;invalid_unified_checkpoint_header&quot;
-  23 	if value.domain_id!=configuration.domain_id or typeof(value.domain_id)!=TYPE_STRING:return &amp;&quot;checkpoint_domain_mismatch&quot;
-  24 	for key in [&quot;generation&quot;,&quot;state_seq&quot;,&quot;sim_tick&quot;,&quot;revision&quot;,&quot;highwater_id&quot;,&quot;ticket_id&quot;,&quot;wave_highwater_id&quot;]:
-  25 		if not I.counter(value[key],1 if key==&quot;generation&quot; else 0):return &amp;&quot;invalid_checkpoint_counter&quot;
-  26 	if not value.configuration is Dictionary:return &amp;&quot;invalid_configuration&quot;
-  27 	if value.configuration.get(&quot;configuration_hash&quot;)!=configuration.configuration_hash:return &amp;&quot;checkpoint_configuration_mismatch&quot;
-  28 	error=Config.validate(value.configuration)</pre></details>
-<details><summary>存档路由 · scripts/simulation/unified_edit/checkpoint_router.gd:12</summary><p class="hash">SHA256 521c44828444976086fcc0d6b59c17bda40dc2474f03e5d4e10da8e88f67e849</p><pre>  12 static func load_file(path: String, configuration: Dictionary) -&gt; Dictionary:
-  13 	var file:=FileAccess.open(path,FileAccess.READ)
-  14 	if file==null:return {&quot;error&quot;:&amp;&quot;open_failed&quot;}
-  15 	if file.get_length()&lt;48:return {&quot;error&quot;:&amp;&quot;invalid_file_size&quot;}
-  16 	var magic:=file.get_buffer(8).get_string_from_ascii();file.close()
-  17 	if magic==Codec.MAGIC:
-  18 		var loaded:=Codec.read_container(path)
-  19 		if not loaded.error.is_empty():return loaded
-  20 		var error:=Codec.validate(loaded.checkpoint,configuration)
-  21 		if error.is_empty():return loaded</pre></details>
-<details><summary>正式切换 · scripts/beach/beach_scene_service.gd:127</summary><p class="hash">SHA256 27d984202c3db965c5502260534578b2920bc3855e2c294a4463d64c54aee6ca</p><pre> 127 func _switch(key: String) -&gt; void:
- 128 	var old = active_scene
- 129 	var target_path: String=old.playable_scene_path(key)
- 130 	var rollback_path: String=old.playable_scene_path(old.scene_key)
- 131 	var packed: PackedScene = load(target_path)
- 132 	if packed == null:
- 133 		_finish(&quot;场景资源加载失败&quot;)
- 134 		return
- 135 	var old_key: String = old.scene_key
- 136 	var old_settings := _settings(old)</pre></details>
+<details><summary>原生校验 · scripts/simulation/unified_edit/checkpoint_codec.gd:19</summary><p class="hash">SHA256 43285824ac7853e92b8b7b839215541504b08d9f019c1ff3e1b792c5dafed756</p><pre>  19 static func validate(value: Dictionary, configuration: Dictionary, verify_configuration_disk: bool=true) -&gt; StringName:
+  20 	return _validate(value,configuration,verify_configuration_disk,Config.LEDGER_POLICY)
+  21
+  22 static func validate_pinned_source(value: Dictionary, pinned: Dictionary) -&gt; StringName:
+  23 	if value.get(&quot;configuration&quot;)!=pinned:return &amp;&quot;unknown_numerics_source_configuration&quot;
+  24 	var validation:=value.duplicate(true)
+  25 	# Normalize only the historical mixed-key derived hash, after full identity
+  26 	# equality. Fields and past ledger values are never projected for validation.
+  27 	validation.configuration.configuration_hash=Config.stable_hash(validation.configuration)
+  28 	return _validate(validation,validation.configuration,false,pinned.ledger_policy)</pre></details>
+<details><summary>存档路由 · scripts/simulation/unified_edit/checkpoint_router.gd:13</summary><p class="hash">SHA256 13970781a8676d15aabd0f9f18e19eede28b5dea79da23212a24a3467a110178</p><pre>  13 static func load_file(path: String, configuration: Dictionary) -&gt; Dictionary:
+  14 	var file:=FileAccess.open(path,FileAccess.READ)
+  15 	if file==null:return {&quot;error&quot;:&amp;&quot;open_failed&quot;}
+  16 	if file.get_length()&lt;48:return {&quot;error&quot;:&amp;&quot;invalid_file_size&quot;}
+  17 	var magic:=file.get_buffer(8).get_string_from_ascii();file.close()
+  18 	if magic==Codec.MAGIC:
+  19 		var loaded:=Codec.read_container(path)
+  20 		if not loaded.error.is_empty():return loaded
+  21 		var error:=Codec.validate(loaded.checkpoint,configuration)
+  22 		if error.is_empty():return loaded</pre></details>
+<details><summary>正式切换 · scripts/beach/beach_scene_service.gd:131</summary><p class="hash">SHA256 928e63e2c28efec51868c0dbd158d6ed79d853c22052cd8c16771d645adeaa98</p><pre> 131 func _switch(key: String) -&gt; void:
+ 132 	var old = active_scene
+ 133 	var target_path: String=old.playable_scene_path(key)
+ 134 	var rollback_path: String=old.playable_scene_path(old.scene_key)
+ 135 	var packed: PackedScene = load(target_path)
+ 136 	if packed == null:
+ 137 		_finish(&quot;场景资源加载失败&quot;)
+ 138 		return
+ 139 	var old_key: String = old.scene_key
+ 140 	var old_settings := _settings(old)</pre></details>
 <details><summary>公共道具采样 · scripts/simulation/unified_edit/probe_codec.gd:73</summary><p class="hash">SHA256 577de99be1b546a29908df5392c10a0d7138e2e0aeda13e71deb58c3012c7441</p><pre>  73 static func decode(bytes: PackedByteArray, request: Dictionary, serial: int) -&gt; Dictionary:
   74 	var result:={&quot;error&quot;:&amp;&quot;readback_failed&quot;,&quot;raw&quot;:bytes.duplicate()}
   75 	if bytes.size()!=OUTPUT_BYTES or bytes.decode_u32(0)!=VERSION or bytes.decode_s64(88)!=serial:return result

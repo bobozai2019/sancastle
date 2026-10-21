@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "gate": "G5",
+  "outcome": "pass_with_accepted_limitation",
+  "scope": "D09 explicit user-authorized effective acceptance. Original flat duration failure preserved by original G5 source index. No G6 completion/default switch assertion.",
+  "artifacts": [
+    {
+      "path": "task/wave_propagation/\u5951\u7ea6/C03_\u9a8c\u8bc1\u4e0e\u6210\u672c.md",
+      "bytes": 12751,
+      "sha256": "b865769094d71e5e556ae4afc96300cc0a3c627ae7a0d9323669bd58b83a4103"
+    },
+    {
+      "path": "task/wave_propagation/\u9a8c\u6536/G5_\u6309main\u9a8c\u6536.md",
+      "bytes": 1713,
+      "sha256": "e3ad89ca61aac628815161ee1845928da0823e3b5ecc4731db7cf3f65c0ff9dc"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_scope_freeze_01/C03_v1_1_effective.md",
+      "bytes": 12751,
+      "sha256": "b865769094d71e5e556ae4afc96300cc0a3c627ae7a0d9323669bd58b83a4103"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_scope_freeze_01/C03_v1_original.md",
+      "bytes": 12127,
+      "sha256": "9d60eaad9756462d49f36dcab2f8808e90e9d618042eb46810883c7501092d2f"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_scope_freeze_01/D09_decision.md",
+      "bytes": 1287,
+      "sha256": "87949a5cca8123c60abb0adbc9b02d23493f2dc960bbe22e54ce17931183b13e"
+    },
+    {
+      "path": "task/wave_propagation/\u9a8c\u6536/G5_\u6765\u6e90\u7d22\u5f15.json",
+      "bytes": 1509,
+      "sha256": "96abc92aaacc10bd3f2b36d55beee12a5b1bd8b2484a1574105ec7bfd7e1a306"
+    }
+  ]
+}

@@ -1,0 +1,1375 @@
+{
+  "schema": 1,
+  "gate": "G6",
+  "component": "T06-G01",
+  "outcome": "pass",
+  "overall_gate_outcome": "incomplete",
+  "scope": "Exact G5 main source identity and affected short monitor/coupled/material regression. Five-minute, performance, default and current-doc completion not asserted.",
+  "artifacts": [
+    {
+      "path": "task/wave_propagation/\u9a8c\u6536/G6_\u5019\u9009\u4e0e\u77ed\u56de\u5f52.md",
+      "bytes": 3126,
+      "sha256": "c5bb0f3573551e52875f0b9a9762ade54b73598a993882905cf7765a195bc112"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_candidate_audit_01/candidate_main_sources.zip",
+      "bytes": 17207148,
+      "sha256": "2fd1203d1cc1ac821a6fa2c4c461fe8e41e71bf42fdf33272435118b9be0916b"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_candidate_audit_01/result.json",
+      "bytes": 1590,
+      "sha256": "43a44f257ec9d43befd24d3f8780688a41166d2df53c3a52c8ee99c34f6f1c56"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_01/consumed_sources.zip",
+      "bytes": 1853121,
+      "sha256": "0cf0bb3994aa75130f4020a4a53aba7a53dab28d11143afc410d8112a37e9b57"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_01/initial_audit.bin",
+      "bytes": 2048,
+      "sha256": "e5a00aa9991ac8a5ee3109844d84a55583bd20572ad3ffcd42792f3c36b183ad"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_01/initial_compaction.bin",
+      "bytes": 131072,
+      "sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_01/initial_compaction_spare.bin",
+      "bytes": 131072,
+      "sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_01/initial_control.bin",
+      "bytes": 128,
+      "sha256": "c977a3cd342c166ce2e9393047c9c5de0dfd50d5640fd7f9b6c1048427e312e1"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_01/initial_decision.bin",
+      "bytes": 64,
+      "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_01/initial_flux.bin",
+      "bytes": 1048576,
+      "sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_01/initial_mold_support.bin",
+      "bytes": 524288,
+      "sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_01/initial_mold_support_spare.bin",
+      "bytes": 524288,
+      "sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_01/initial_momentum_x.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_01/initial_momentum_z.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_01/initial_obstacle.bin",
+      "bytes": 65536,
+      "sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_01/initial_rock.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_01/initial_safety.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_01/initial_sand.bin",
+      "bytes": 262144,
+      "sha256": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_01/initial_sand_spare.bin",
+      "bytes": 262144,
+      "sha256": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_01/initial_sediment.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_01/initial_sediment_spare.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_01/initial_soak_monitor.bin",
+      "bytes": 16,
+      "sha256": "374708fff7719dd5979ec875d56cd2286f6d3cf7ec317a3b25632aab28ec37bb"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_01/initial_trial.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_01/initial_water.bin",
+      "bytes": 262144,
+      "sha256": "b4b0b2f147c4b7459ed33b2fdd3e7dbb4fab2ba3d005fd70d66926e968646aab"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_01/initial_wetness.bin",
+      "bytes": 131072,
+      "sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_01/initial_wetness_spare.bin",
+      "bytes": 131072,
+      "sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_01/manifest.json",
+      "bytes": 979,
+      "sha256": "c8a081e79c8862beb72b2c329a77de61b2298b1cb14f10047fda5c9f9c95fd3f"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_01/probe.gd",
+      "bytes": 11541,
+      "sha256": "1b9e07bdfe9650cd8b03f3aadbc72687a79a004abd4b56c21136a7219b678e6c"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_01/result.json",
+      "bytes": 40152,
+      "sha256": "9a113ad3e3ffa0416f49bdde734036515871c50f074029dd5e3e1e7d2339215f"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_01/runner.py",
+      "bytes": 3303,
+      "sha256": "77fd47e2a389cc294820ac453c5780e80aa4e26261b00201f2d09d62c3e4d3fe"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_01/stdout.txt",
+      "bytes": 1234,
+      "sha256": "4fe4bc7133976a8f892086d6c02514df202102d045f00dae64c6121cc8fa9bfe"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/consumed_sources.zip",
+      "bytes": 1853135,
+      "sha256": "81b483690312a01458ad58a5caf84b5b1ea4d614f32d0b18d5cde7f8419a7f05"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/initial_audit.bin",
+      "bytes": 2048,
+      "sha256": "e5a00aa9991ac8a5ee3109844d84a55583bd20572ad3ffcd42792f3c36b183ad"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/initial_compaction.bin",
+      "bytes": 131072,
+      "sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/initial_compaction_spare.bin",
+      "bytes": 131072,
+      "sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/initial_control.bin",
+      "bytes": 128,
+      "sha256": "c977a3cd342c166ce2e9393047c9c5de0dfd50d5640fd7f9b6c1048427e312e1"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/initial_decision.bin",
+      "bytes": 64,
+      "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/initial_flux.bin",
+      "bytes": 1048576,
+      "sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/initial_mold_support.bin",
+      "bytes": 524288,
+      "sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/initial_mold_support_spare.bin",
+      "bytes": 524288,
+      "sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/initial_momentum_x.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/initial_momentum_z.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/initial_obstacle.bin",
+      "bytes": 65536,
+      "sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/initial_rock.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/initial_safety.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/initial_sand.bin",
+      "bytes": 262144,
+      "sha256": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/initial_sand_spare.bin",
+      "bytes": 262144,
+      "sha256": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/initial_sediment.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/initial_sediment_spare.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/initial_soak_monitor.bin",
+      "bytes": 16,
+      "sha256": "374708fff7719dd5979ec875d56cd2286f6d3cf7ec317a3b25632aab28ec37bb"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/initial_trial.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/initial_water.bin",
+      "bytes": 262144,
+      "sha256": "b4b0b2f147c4b7459ed33b2fdd3e7dbb4fab2ba3d005fd70d66926e968646aab"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/initial_wetness.bin",
+      "bytes": 131072,
+      "sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/initial_wetness_spare.bin",
+      "bytes": 131072,
+      "sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/manifest.json",
+      "bytes": 956,
+      "sha256": "9e61d4ab0b8c45f356d2905536176bf4f59b44c01d6f66324c1272098ad24279"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/probe.gd",
+      "bytes": 11541,
+      "sha256": "1b9e07bdfe9650cd8b03f3aadbc72687a79a004abd4b56c21136a7219b678e6c"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/result.json",
+      "bytes": 46517,
+      "sha256": "287ad4db2fac91222b69aecf5d6ecc76063c9f7689d867c3ed05377bae0668ac"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/runner.py",
+      "bytes": 3303,
+      "sha256": "77fd47e2a389cc294820ac453c5780e80aa4e26261b00201f2d09d62c3e4d3fe"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/sample_000_audit.bin",
+      "bytes": 2048,
+      "sha256": "a3ee00f906560309c538b6296a14d9b2ffe18e1e0b66f1f6a5a33f1734903ab9"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/sample_000_compaction.bin",
+      "bytes": 131072,
+      "sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/sample_000_compaction_spare.bin",
+      "bytes": 131072,
+      "sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/sample_000_control.bin",
+      "bytes": 128,
+      "sha256": "24b7a4f748ab7c4f9c74c0de09dadce9cbb221d7956f9125fd8782bcc4794769"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/sample_000_decision.bin",
+      "bytes": 64,
+      "sha256": "9424262e560697a93e47f45300efbcdf99059c6e2fbf6dcb84e7110dcf1bdea8"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/sample_000_flux.bin",
+      "bytes": 1048576,
+      "sha256": "61de604ed3ea924eb3c2ddbede3131eae64d678d0ba83a76bfdb2c06d8a5984a"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/sample_000_mold_support.bin",
+      "bytes": 524288,
+      "sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/sample_000_mold_support_spare.bin",
+      "bytes": 524288,
+      "sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/sample_000_momentum_x.bin",
+      "bytes": 262144,
+      "sha256": "f8d56a2826cc1b7eef653cc9803f03be2def689575b7d422082d7f156dbfc3d8"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/sample_000_momentum_z.bin",
+      "bytes": 262144,
+      "sha256": "a3fe791104da63e85cf0f96e30bb33ca8d651f73ab1dd6adc449bcfe4bf9e759"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/sample_000_obstacle.bin",
+      "bytes": 65536,
+      "sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/sample_000_rock.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/sample_000_safety.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/sample_000_sand.bin",
+      "bytes": 262144,
+      "sha256": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/sample_000_sand_spare.bin",
+      "bytes": 262144,
+      "sha256": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/sample_000_sediment.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/sample_000_sediment_spare.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/sample_000_soak_monitor.bin",
+      "bytes": 16,
+      "sha256": "faa3ec84407e9f250d4890f2be3b60e15558602035a935caca5de8081e77ada7"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/sample_000_trial.bin",
+      "bytes": 128,
+      "sha256": "cf8a89902f83bd3a18dbab7354e58427e2a7938f609604837d1eafe9da5cc3ea"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/sample_000_water.bin",
+      "bytes": 262144,
+      "sha256": "b4b0b2f147c4b7459ed33b2fdd3e7dbb4fab2ba3d005fd70d66926e968646aab"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/sample_000_wetness.bin",
+      "bytes": 131072,
+      "sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/sample_000_wetness_spare.bin",
+      "bytes": 131072,
+      "sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_detector_negative_02/stdout.txt",
+      "bytes": 563,
+      "sha256": "0fdea6c2f8bc12dfd9ff51e79b55dcc81096489f3c0bff3d1a35e71b3c6c2475"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/analysis.json",
+      "bytes": 1486,
+      "sha256": "713e833fda4fdbad23eecbad933e2bec29c0ae61b98abcc3181430f6ea60073b"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/consumed_sources.zip",
+      "bytes": 1853135,
+      "sha256": "12d3a57928bed651b4c1062d93fa6c588c7361b1c9d602c2b1f3b92c68c8d2dd"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/initial_audit.bin",
+      "bytes": 2048,
+      "sha256": "e5a00aa9991ac8a5ee3109844d84a55583bd20572ad3ffcd42792f3c36b183ad"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/initial_compaction.bin",
+      "bytes": 131072,
+      "sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/initial_compaction_spare.bin",
+      "bytes": 131072,
+      "sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/initial_control.bin",
+      "bytes": 128,
+      "sha256": "c977a3cd342c166ce2e9393047c9c5de0dfd50d5640fd7f9b6c1048427e312e1"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/initial_coupled_dirty.bin",
+      "bytes": 256,
+      "sha256": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/initial_coupled_flags.bin",
+      "bytes": 4,
+      "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/initial_coupled_support.bin",
+      "bytes": 524288,
+      "sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/initial_decision.bin",
+      "bytes": 64,
+      "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/initial_flux.bin",
+      "bytes": 1048576,
+      "sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/initial_mold_support.bin",
+      "bytes": 524288,
+      "sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/initial_mold_support_spare.bin",
+      "bytes": 524288,
+      "sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/initial_momentum_x.bin",
+      "bytes": 262144,
+      "sha256": "6b0b5b2a109e5366b05de9eb57c9b9241276a7e885f2697db76ea4002c96685d"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/initial_momentum_z.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/initial_obstacle.bin",
+      "bytes": 65536,
+      "sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/initial_rock.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/initial_safety.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/initial_sand.bin",
+      "bytes": 262144,
+      "sha256": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/initial_sand_spare.bin",
+      "bytes": 262144,
+      "sha256": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/initial_sediment.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/initial_sediment_spare.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/initial_soak_monitor.bin",
+      "bytes": 16,
+      "sha256": "374708fff7719dd5979ec875d56cd2286f6d3cf7ec317a3b25632aab28ec37bb"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/initial_trial.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/initial_water.bin",
+      "bytes": 262144,
+      "sha256": "b4b0b2f147c4b7459ed33b2fdd3e7dbb4fab2ba3d005fd70d66926e968646aab"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/initial_wetness.bin",
+      "bytes": 131072,
+      "sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/initial_wetness_spare.bin",
+      "bytes": 131072,
+      "sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/manifest.json",
+      "bytes": 882,
+      "sha256": "707d5f9f285faed83609e34c43f5ef10c2550560dbb33747e885fda290cc85e5"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/probe.gd",
+      "bytes": 11541,
+      "sha256": "1b9e07bdfe9650cd8b03f3aadbc72687a79a004abd4b56c21136a7219b678e6c"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/result.json",
+      "bytes": 48087,
+      "sha256": "a20c67a2e11c74dbcb945feb4ec079446e81263ae104f47a8dd232057af1d610"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/runner.py",
+      "bytes": 3303,
+      "sha256": "77fd47e2a389cc294820ac453c5780e80aa4e26261b00201f2d09d62c3e4d3fe"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/sample_000_audit.bin",
+      "bytes": 2048,
+      "sha256": "220dd0d40173987f5665ea330f8aaa6052e50e179268d3f78db38a78cfdb6562"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/sample_000_compaction.bin",
+      "bytes": 131072,
+      "sha256": "04ff50b963276ccc8a284ac61808473e0aab8c679118957b5396d4e60c8e7d06"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/sample_000_compaction_spare.bin",
+      "bytes": 131072,
+      "sha256": "04ff50b963276ccc8a284ac61808473e0aab8c679118957b5396d4e60c8e7d06"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/sample_000_control.bin",
+      "bytes": 128,
+      "sha256": "101a3f47c4e647ce95d48fcd6bb6576ea0afa60fb42abdbaa8d5a01e37b8eb2b"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/sample_000_coupled_dirty.bin",
+      "bytes": 256,
+      "sha256": "58ce5c958c387d3bcad653fb2317b72fa16b44525b127a653c02195e01d9a168"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/sample_000_coupled_flags.bin",
+      "bytes": 4,
+      "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/sample_000_coupled_support.bin",
+      "bytes": 524288,
+      "sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/sample_000_decision.bin",
+      "bytes": 64,
+      "sha256": "dc5d3769812e7e1cfa79732502483045c7d16a91f0dc043a2943eb6ea2261b2a"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/sample_000_flux.bin",
+      "bytes": 1048576,
+      "sha256": "31a8cc0ce3a773d056e59f2103eaffe34f36e6ff1c1e0e9be64627a60c82f278"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/sample_000_mold_support.bin",
+      "bytes": 524288,
+      "sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/sample_000_mold_support_spare.bin",
+      "bytes": 524288,
+      "sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/sample_000_momentum_x.bin",
+      "bytes": 262144,
+      "sha256": "7c2fc7956ae29d130b12cd22fb40a33994d2f9fdfe35e9e134d2711ab0922ed0"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/sample_000_momentum_z.bin",
+      "bytes": 262144,
+      "sha256": "a00292a25d602ae72fabca870f4e1157fbe0369093d744e33622a49566672808"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/sample_000_obstacle.bin",
+      "bytes": 65536,
+      "sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/sample_000_rock.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/sample_000_safety.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/sample_000_sand.bin",
+      "bytes": 262144,
+      "sha256": "bc0a13fda4d0427c92db81a75fef113e7cacea600f137a5f7197b9b050dfd90f"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/sample_000_sand_spare.bin",
+      "bytes": 262144,
+      "sha256": "bc0a13fda4d0427c92db81a75fef113e7cacea600f137a5f7197b9b050dfd90f"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/sample_000_sediment.bin",
+      "bytes": 262144,
+      "sha256": "2b4d9874d671ec412e2d47554ed84ed683e93483ac135b76c88731418e676c22"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/sample_000_sediment_spare.bin",
+      "bytes": 262144,
+      "sha256": "2b4d9874d671ec412e2d47554ed84ed683e93483ac135b76c88731418e676c22"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/sample_000_soak_monitor.bin",
+      "bytes": 16,
+      "sha256": "afb9f05fc70c6b240a3dfdf657d1cf5f900ef97aa7320ee322bf00abd24ec368"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/sample_000_trial.bin",
+      "bytes": 128,
+      "sha256": "5d106852cf0c7f8d1c488146ce7df023b58f856ceac42dfe961abb2b423023ab"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/sample_000_water.bin",
+      "bytes": 262144,
+      "sha256": "6685b7eb74c7e2843133165cb92f2a19e3efe487efd2d1b056d5b4e681e352ae"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/sample_000_wetness.bin",
+      "bytes": 131072,
+      "sha256": "32e77d0ea47416e31cc5a448786d8769d0fe83f4c4bb51a72002053988c4c9ce"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/sample_000_wetness_spare.bin",
+      "bytes": 131072,
+      "sha256": "32e77d0ea47416e31cc5a448786d8769d0fe83f4c4bb51a72002053988c4c9ce"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_coupled_01/stdout.txt",
+      "bytes": 233,
+      "sha256": "f7c68e99dbadaf93c6f292ee0cd4352b0eb4fa02895a08e59020e4ef19245677"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/analysis.json",
+      "bytes": 2106,
+      "sha256": "ef6cb75eb1596bb1afff638c485d04b6fa8d5ea2e582c92e7217b4d3d58f0375"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/consumed_sources.zip",
+      "bytes": 1853135,
+      "sha256": "aaef3351a0a7578859d299319afc9477e3fb482727b2f507eef4ae17b0f4afe6"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/edited_audit.bin",
+      "bytes": 2048,
+      "sha256": "e5a00aa9991ac8a5ee3109844d84a55583bd20572ad3ffcd42792f3c36b183ad"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/edited_compaction.bin",
+      "bytes": 131072,
+      "sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/edited_compaction_spare.bin",
+      "bytes": 131072,
+      "sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/edited_control.bin",
+      "bytes": 128,
+      "sha256": "00e9213fea25a6a638deb6bee0c6a2d02d7c1d7b3dc8c6c3d6a33013fb2b0054"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/edited_coupled_dirty.bin",
+      "bytes": 256,
+      "sha256": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/edited_coupled_flags.bin",
+      "bytes": 4,
+      "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/edited_coupled_support.bin",
+      "bytes": 524288,
+      "sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/edited_decision.bin",
+      "bytes": 64,
+      "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/edited_flux.bin",
+      "bytes": 1048576,
+      "sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/edited_mold_support.bin",
+      "bytes": 524288,
+      "sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/edited_mold_support_spare.bin",
+      "bytes": 524288,
+      "sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/edited_momentum_x.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/edited_momentum_z.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/edited_obstacle.bin",
+      "bytes": 65536,
+      "sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/edited_rock.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/edited_safety.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/edited_sand.bin",
+      "bytes": 262144,
+      "sha256": "24497cad800b7d1f27790111ee1bdd7e01ebe45478e3eb7774ade265ec0f92cf"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/edited_sand_spare.bin",
+      "bytes": 262144,
+      "sha256": "24497cad800b7d1f27790111ee1bdd7e01ebe45478e3eb7774ade265ec0f92cf"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/edited_sediment.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/edited_sediment_spare.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/edited_soak_monitor.bin",
+      "bytes": 16,
+      "sha256": "374708fff7719dd5979ec875d56cd2286f6d3cf7ec317a3b25632aab28ec37bb"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/edited_trial.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/edited_water.bin",
+      "bytes": 262144,
+      "sha256": "4d78f3fc7d3019ee1664dfd56b7bba6b66a787518261a02d6364d86fba65530f"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/edited_wetness.bin",
+      "bytes": 131072,
+      "sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/edited_wetness_spare.bin",
+      "bytes": 131072,
+      "sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/initial_audit.bin",
+      "bytes": 2048,
+      "sha256": "e5a00aa9991ac8a5ee3109844d84a55583bd20572ad3ffcd42792f3c36b183ad"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/initial_compaction.bin",
+      "bytes": 131072,
+      "sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/initial_compaction_spare.bin",
+      "bytes": 131072,
+      "sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/initial_control.bin",
+      "bytes": 128,
+      "sha256": "c977a3cd342c166ce2e9393047c9c5de0dfd50d5640fd7f9b6c1048427e312e1"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/initial_coupled_dirty.bin",
+      "bytes": 256,
+      "sha256": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/initial_coupled_flags.bin",
+      "bytes": 4,
+      "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/initial_coupled_support.bin",
+      "bytes": 524288,
+      "sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/initial_decision.bin",
+      "bytes": 64,
+      "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/initial_flux.bin",
+      "bytes": 1048576,
+      "sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/initial_mold_support.bin",
+      "bytes": 524288,
+      "sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/initial_mold_support_spare.bin",
+      "bytes": 524288,
+      "sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/initial_momentum_x.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/initial_momentum_z.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/initial_obstacle.bin",
+      "bytes": 65536,
+      "sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/initial_rock.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/initial_safety.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/initial_sand.bin",
+      "bytes": 262144,
+      "sha256": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/initial_sand_spare.bin",
+      "bytes": 262144,
+      "sha256": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/initial_sediment.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/initial_sediment_spare.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/initial_soak_monitor.bin",
+      "bytes": 16,
+      "sha256": "374708fff7719dd5979ec875d56cd2286f6d3cf7ec317a3b25632aab28ec37bb"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/initial_trial.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/initial_water.bin",
+      "bytes": 262144,
+      "sha256": "b4b0b2f147c4b7459ed33b2fdd3e7dbb4fab2ba3d005fd70d66926e968646aab"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/initial_wetness.bin",
+      "bytes": 131072,
+      "sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/initial_wetness_spare.bin",
+      "bytes": 131072,
+      "sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/manifest.json",
+      "bytes": 885,
+      "sha256": "aba9900cade412a140c76f987e82715f84071106eaf49670d778d4a24badc889"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/probe.gd",
+      "bytes": 11541,
+      "sha256": "1b9e07bdfe9650cd8b03f3aadbc72687a79a004abd4b56c21136a7219b678e6c"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/result.json",
+      "bytes": 56563,
+      "sha256": "af96f4c6b9060ddf1ed40ae703fbce88bdc50307573270b2b1b61f7155d5dbb1"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/runner.py",
+      "bytes": 3303,
+      "sha256": "77fd47e2a389cc294820ac453c5780e80aa4e26261b00201f2d09d62c3e4d3fe"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/sample_000_audit.bin",
+      "bytes": 2048,
+      "sha256": "39c9f8e1af50406ec90511a0a7a6a5e08746c697f3b63519c3ae471d771d1b20"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/sample_000_compaction.bin",
+      "bytes": 131072,
+      "sha256": "bfef77d52035fd96c52f377982555e11ae9ba902bd83b2835b53fd5915ba9d18"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/sample_000_compaction_spare.bin",
+      "bytes": 131072,
+      "sha256": "bfef77d52035fd96c52f377982555e11ae9ba902bd83b2835b53fd5915ba9d18"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/sample_000_control.bin",
+      "bytes": 128,
+      "sha256": "27a5ebc3d725372ea890c716224543ba7213ae959d4c1485f15d267b997b548d"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/sample_000_coupled_dirty.bin",
+      "bytes": 256,
+      "sha256": "f10ac34781001e6e122cbc45e9ac0d5074fd984e631459ea4bde673bcd3dadde"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/sample_000_coupled_flags.bin",
+      "bytes": 4,
+      "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/sample_000_coupled_support.bin",
+      "bytes": 524288,
+      "sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/sample_000_decision.bin",
+      "bytes": 64,
+      "sha256": "db4f22a7de2e1cf4e5cc27e0bc2449d036fc46cdbf5497ceea9b079fd77387f1"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/sample_000_flux.bin",
+      "bytes": 1048576,
+      "sha256": "688a053662cb3a0d90ce5ef55e2deb063d950dfa9a6e6d2872db131f8619de39"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/sample_000_mold_support.bin",
+      "bytes": 524288,
+      "sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/sample_000_mold_support_spare.bin",
+      "bytes": 524288,
+      "sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/sample_000_momentum_x.bin",
+      "bytes": 262144,
+      "sha256": "1efdd639b7ae13314b0d88a7285f2a36d1853f9256d1defa507a54984a5ea1c6"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/sample_000_momentum_z.bin",
+      "bytes": 262144,
+      "sha256": "da7ddabd427504aeed467bb624423ac212dae6d4c0959d2b404fbaf067a524c1"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/sample_000_obstacle.bin",
+      "bytes": 65536,
+      "sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/sample_000_rock.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/sample_000_safety.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/sample_000_sand.bin",
+      "bytes": 262144,
+      "sha256": "7f66a8a5d26de014f5f624216fee6408fa7dc64b4683e8c2166d392578ead8b6"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/sample_000_sand_spare.bin",
+      "bytes": 262144,
+      "sha256": "7f66a8a5d26de014f5f624216fee6408fa7dc64b4683e8c2166d392578ead8b6"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/sample_000_sediment.bin",
+      "bytes": 262144,
+      "sha256": "d089541f67b04b562aa2ac30ab1c799703167f2a517e1f58e1b209ee96a6bedf"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/sample_000_sediment_spare.bin",
+      "bytes": 262144,
+      "sha256": "d089541f67b04b562aa2ac30ab1c799703167f2a517e1f58e1b209ee96a6bedf"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/sample_000_soak_monitor.bin",
+      "bytes": 16,
+      "sha256": "3c7c335c40bdddd974a8db50f7e03a6eea286998fa14e818b33112672d49ce70"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/sample_000_trial.bin",
+      "bytes": 128,
+      "sha256": "8e9ca5027b0bca7dad23cc0d9c45bb51d637460d9bedea0d062cdb1202060213"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/sample_000_water.bin",
+      "bytes": 262144,
+      "sha256": "85958e037ec4a9476232e1ff59336bd4648e4267eec9789a3563fac5f68c6e9e"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/sample_000_wetness.bin",
+      "bytes": 131072,
+      "sha256": "bd0860ff5be5b8d774c93636cc519ba69be258d45b5c27aaf6e27c86e829dc07"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/sample_000_wetness_spare.bin",
+      "bytes": 131072,
+      "sha256": "bd0860ff5be5b8d774c93636cc519ba69be258d45b5c27aaf6e27c86e829dc07"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_molded_01/stdout.txt",
+      "bytes": 267,
+      "sha256": "85e394acb86b9fb329b83ee5fa6232b525d265214a7c5f9027d091992c2b17f5"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/analysis.json",
+      "bytes": 1434,
+      "sha256": "05993b8e674e1ed9d184356fe771a190ce6b2fd114e38a7fc83f11b6198a5f88"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/consumed_sources.zip",
+      "bytes": 1853135,
+      "sha256": "f40da5e2ac7c53f95a2df08b5d7396134c22d7c07b40aede8367a80829ca22e2"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/initial_audit.bin",
+      "bytes": 2048,
+      "sha256": "e5a00aa9991ac8a5ee3109844d84a55583bd20572ad3ffcd42792f3c36b183ad"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/initial_compaction.bin",
+      "bytes": 131072,
+      "sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/initial_compaction_spare.bin",
+      "bytes": 131072,
+      "sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/initial_control.bin",
+      "bytes": 128,
+      "sha256": "c977a3cd342c166ce2e9393047c9c5de0dfd50d5640fd7f9b6c1048427e312e1"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/initial_decision.bin",
+      "bytes": 64,
+      "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/initial_flux.bin",
+      "bytes": 1048576,
+      "sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/initial_mold_support.bin",
+      "bytes": 524288,
+      "sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/initial_mold_support_spare.bin",
+      "bytes": 524288,
+      "sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/initial_momentum_x.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/initial_momentum_z.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/initial_obstacle.bin",
+      "bytes": 65536,
+      "sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/initial_rock.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/initial_safety.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/initial_sand.bin",
+      "bytes": 262144,
+      "sha256": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/initial_sand_spare.bin",
+      "bytes": 262144,
+      "sha256": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/initial_sediment.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/initial_sediment_spare.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/initial_soak_monitor.bin",
+      "bytes": 16,
+      "sha256": "374708fff7719dd5979ec875d56cd2286f6d3cf7ec317a3b25632aab28ec37bb"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/initial_trial.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/initial_water.bin",
+      "bytes": 262144,
+      "sha256": "b4b0b2f147c4b7459ed33b2fdd3e7dbb4fab2ba3d005fd70d66926e968646aab"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/initial_wetness.bin",
+      "bytes": 131072,
+      "sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/initial_wetness_spare.bin",
+      "bytes": 131072,
+      "sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/manifest.json",
+      "bytes": 883,
+      "sha256": "d7e2a5f1d9c4b8f1d68f3eeec6452ef65fd6d7805335752a4b863551823b1ad4"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/probe.gd",
+      "bytes": 11541,
+      "sha256": "1b9e07bdfe9650cd8b03f3aadbc72687a79a004abd4b56c21136a7219b678e6c"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/result.json",
+      "bytes": 46517,
+      "sha256": "4c93408de537c6721b1a6fe89efd7a963d0042872b9909b01413bf3dbd4f7312"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/runner.py",
+      "bytes": 3303,
+      "sha256": "77fd47e2a389cc294820ac453c5780e80aa4e26261b00201f2d09d62c3e4d3fe"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/sample_000_audit.bin",
+      "bytes": 2048,
+      "sha256": "a3ee00f906560309c538b6296a14d9b2ffe18e1e0b66f1f6a5a33f1734903ab9"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/sample_000_compaction.bin",
+      "bytes": 131072,
+      "sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/sample_000_compaction_spare.bin",
+      "bytes": 131072,
+      "sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/sample_000_control.bin",
+      "bytes": 128,
+      "sha256": "24b7a4f748ab7c4f9c74c0de09dadce9cbb221d7956f9125fd8782bcc4794769"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/sample_000_decision.bin",
+      "bytes": 64,
+      "sha256": "9424262e560697a93e47f45300efbcdf99059c6e2fbf6dcb84e7110dcf1bdea8"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/sample_000_flux.bin",
+      "bytes": 1048576,
+      "sha256": "61de604ed3ea924eb3c2ddbede3131eae64d678d0ba83a76bfdb2c06d8a5984a"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/sample_000_mold_support.bin",
+      "bytes": 524288,
+      "sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/sample_000_mold_support_spare.bin",
+      "bytes": 524288,
+      "sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/sample_000_momentum_x.bin",
+      "bytes": 262144,
+      "sha256": "f8d56a2826cc1b7eef653cc9803f03be2def689575b7d422082d7f156dbfc3d8"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/sample_000_momentum_z.bin",
+      "bytes": 262144,
+      "sha256": "a3fe791104da63e85cf0f96e30bb33ca8d651f73ab1dd6adc449bcfe4bf9e759"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/sample_000_obstacle.bin",
+      "bytes": 65536,
+      "sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/sample_000_rock.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/sample_000_safety.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/sample_000_sand.bin",
+      "bytes": 262144,
+      "sha256": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/sample_000_sand_spare.bin",
+      "bytes": 262144,
+      "sha256": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/sample_000_sediment.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/sample_000_sediment_spare.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/sample_000_soak_monitor.bin",
+      "bytes": 16,
+      "sha256": "96fb5e4a2704b410bbf097c41e40ff8118ef0bc819ccf4344f31f694d12d536a"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/sample_000_trial.bin",
+      "bytes": 128,
+      "sha256": "cf8a89902f83bd3a18dbab7354e58427e2a7938f609604837d1eafe9da5cc3ea"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/sample_000_water.bin",
+      "bytes": 262144,
+      "sha256": "b4b0b2f147c4b7459ed33b2fdd3e7dbb4fab2ba3d005fd70d66926e968646aab"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/sample_000_wetness.bin",
+      "bytes": 131072,
+      "sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/sample_000_wetness_spare.bin",
+      "bytes": 131072,
+      "sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_soak_smoke_static_01/stdout.txt",
+      "bytes": 232,
+      "sha256": "e513e36cb41f78c86ca78d7f188399748343c9a14fd8c8fb25b67e12b46fa77f"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_workspace_01/monitor_amendment_01.json",
+      "bytes": 293,
+      "sha256": "7bfd319e8c94819c3d6fef4d1943ff7be4d070205b35bf9da9a30337ccba6823"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_workspace_01/snapshot_identity.json",
+      "bytes": 1321566,
+      "sha256": "27ca27fd52243920ba5295a71d76f5df783d9725da2b819d275734b8bf65fa22"
+    }
+  ]
+}

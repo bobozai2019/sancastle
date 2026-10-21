@@ -6,6 +6,7 @@
 
 | 文档 | 内容 |
 |---|---|
+| [项目技术全景 Word](Sandcastle项目技术全景.docx) | 完整架构、算法、数据流、ABI、场景参数、材质输入、接口与生命周期；[来源索引](technical-panorama.sources.json) |
 | [当前项目技术方案](当前项目技术方案.md) | 技术栈、模块职责、GPU编辑与模拟、渲染、碰撞、存档 |
 | [当前技术规格](当前技术规格.md) | 单位、字段、ABI、容量、算法参数、事务与兼容性 |
 | [主场景操作](主场景操作.md) | 工具、水响应开关、力度、相机、暂停和保存恢复 |
@@ -19,6 +20,6 @@ main默认使用动量B：按实际床面差施加推拉动量，编辑阶段保
 
 ## 文档维护
 
-当前技术文档按主题描述生效实现，不记录开发经过、移植过程、任务进度或验收流水。写作规则见项目根目录[AGENTS.md](../AGENTS.md#项目技术文档规范)。修改源码后同步方案、规格和操作说明，再运行`python -X utf8 tools/docs/build_execution_guide.py`及`--check`。
+当前技术文档按主题描述生效实现，不记录开发经过、移植过程、任务进度或验收流水。写作规则见项目根目录[AGENTS.md](../AGENTS.md#项目技术文档规范)。修改源码后同步方案、规格和操作说明，再运行`python -X utf8 tools/docs/build_execution_guide.py`及`--check`。Word技术全景由 `tools/docs/technical_panorama_content.py` 维护正文，`tools/docs/build_technical_panorama.py` 合并当前ABI、有效settings和接口生成；生成后需重新渲染检查分页，`--check`核对来源与文档身份。
 
 [可复用契约](knowledge/README.md)约束数值、源汇、碰撞和恢复；[竞品技术知识](competitor/README.md)单独记录来源事实与适用范围。[历史文档](history/README.md)不作为当前实现的说明入口。

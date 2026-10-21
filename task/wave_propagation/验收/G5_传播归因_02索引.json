@@ -1,0 +1,1008 @@
+{
+  "schema": 1,
+  "gate": "G5",
+  "outcome": "fail",
+  "scope": "Completed diagnostics, frozen duration criterion still failed. Reference refinement and source counterfactuals are not production acceptance. All original results remain unchanged.",
+  "artifacts": [
+    {
+      "path": "task/wave_propagation/\u9a8c\u6536/G5_\u4f20\u64ad\u5f52\u56e0_02.md",
+      "bytes": 3542,
+      "sha256": "adfcd83fa181f078b7e06918d41278f10e99fdbb84f1e431376779cebd5606e7"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_resolution_cause_audit_01/resolution_curves.png",
+      "bytes": 163092,
+      "sha256": "f1b5cbb1b18ce3e34e73547b0976fbd18ae7c07c744f8311c2f9fa736a3b45ea"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_resolution_cause_audit_01/result.json",
+      "bytes": 16790,
+      "sha256": "977818bf67e16190c205673113815b167395d9edd849c97885b1e638c8ebe55b"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/result.json",
+      "bytes": 27001,
+      "sha256": "d5acfddb5786bb2f2b9c0cc2ffadfc6bc942d4ac048c36a591963640df7bf41c"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/runtime.json",
+      "bytes": 619,
+      "sha256": "be5438ae95cf133c1e1c473e8448943a0c3cad80388f1d11ebf1243fac120af8"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/sources.zip",
+      "bytes": 5345,
+      "sha256": "6d521aea4abb1a9ba250444e784d8d4ada91d69a11581f74b720380a182a84de"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_000.npz",
+      "bytes": 1718,
+      "sha256": "f767f05ee48206848745a5982c9330ed1f4b8b53f09ed661b57bee4cb894fb4d"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_001.npz",
+      "bytes": 9458,
+      "sha256": "d263b3957bbae8ef266f60539fa3e27eaf0380ea387986e4cb488eaa1f8898b9"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_002.npz",
+      "bytes": 12043,
+      "sha256": "fd0a2aec1bceb74c4ecb507750e2481e506848e464ebc6cc6b2b8308f43dcc6e"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_003.npz",
+      "bytes": 14538,
+      "sha256": "432b68b7fb61d85e6acbed16a3560d2adb29edb65cfbf943124841f707f3bc3f"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_004.npz",
+      "bytes": 17026,
+      "sha256": "a0cbb516316b0a834c026528065d4ccf6a4d050a5d0a541fa60a699877059512"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_005.npz",
+      "bytes": 19722,
+      "sha256": "fc937b94de1e607a8f319e9320acde58f584c7388a75e1f9630c70c2b8a6307d"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_006.npz",
+      "bytes": 22068,
+      "sha256": "c4d48876320f41be9eb53df49e2fb78e48aa2cd7539e07de9649b3537662a24c"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_007.npz",
+      "bytes": 24612,
+      "sha256": "b63928f65a30a1b26a02c779766ddbdc6905c95694f2a9cf2c1b1307366a9a1a"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_008.npz",
+      "bytes": 27645,
+      "sha256": "36fc8e08d9b1257343a9bf585f378a67d50dbe2da4517dfa715b62a77d834b6f"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_009.npz",
+      "bytes": 30416,
+      "sha256": "8701fbb8f39d4591c758ec068b990308f4811248856f33ac2e5d049953aee9ba"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_010.npz",
+      "bytes": 33246,
+      "sha256": "c5a373cd1b11a821b82177751170d293f3b3d2850e864f136618c8e22f54f152"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_011.npz",
+      "bytes": 36247,
+      "sha256": "85bda62226ae97a13e585d535b874940ca4351351c7fe961ec960496a8c448ba"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_012.npz",
+      "bytes": 39375,
+      "sha256": "1beab95b891b3c41e746ea3ccd98ea15c3aefb1eee1832f94f0ba6e845fb4efa"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_013.npz",
+      "bytes": 42822,
+      "sha256": "ef3d6a4a86e947ec1278b7254b2be548d3752c2b9da8a34ad9c82cfd0e44e6b5"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_014.npz",
+      "bytes": 46320,
+      "sha256": "c9d268dddcecb6d70e5d5720cb28ef65f76d78579dc8544fdc63d742e96211e7"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_015.npz",
+      "bytes": 49617,
+      "sha256": "a489244706e47352d1ca3736b00d75a0e4628ec4a34b3a160e1e34a2b083c931"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_016.npz",
+      "bytes": 53098,
+      "sha256": "ae4240b28c0cacbaf547004b1dce1f851740454774762cf9ba1ecd0ec5219ae9"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_017.npz",
+      "bytes": 56588,
+      "sha256": "33ed36081f4826886faf2c70debc3be8c7ce5024d3549756e9b435b30dd05460"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_018.npz",
+      "bytes": 60336,
+      "sha256": "530546f745fe1fe2ac2a72a307b2a4b9527f9230a75a93271c4185aedd71304e"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_019.npz",
+      "bytes": 63828,
+      "sha256": "7e2044ce3624641c1b494e0b89d0e80f1cc49c6c044c6c05cb4137039c1f2f00"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_020.npz",
+      "bytes": 67577,
+      "sha256": "cfcbba8945dd31dd592ec2eed4afbfa9a64d96cc4dac19c9ff41ff74d694c8b4"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_021.npz",
+      "bytes": 71776,
+      "sha256": "e5ddf6e47e82edbe34e50745a8373b1c43ca5b030ede9d45bd91337bc951f8d0"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_022.npz",
+      "bytes": 76061,
+      "sha256": "38d1149e88d0b212859a97dea6121a0db4e9ebc51369f79a48bd255052a5df18"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_023.npz",
+      "bytes": 80437,
+      "sha256": "d4e13b8258147f959f6222903f4fd05842ae7a68d8b307a5a1b1374e84038891"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_024.npz",
+      "bytes": 84502,
+      "sha256": "cf4988207a0ca09e2b91ce1470dd747a1eb39bfc15c049dc27471248fbf2a06f"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_025.npz",
+      "bytes": 88529,
+      "sha256": "fe6a4e20eb84922ea45313b431a07034285bcac3c64eac54ca249537ebbf8fc6"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_026.npz",
+      "bytes": 92726,
+      "sha256": "056638d4e0322d159c461aecaed0b7127f28d5da8bbf176ead9adef98d319b8d"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_027.npz",
+      "bytes": 96471,
+      "sha256": "4d60a38cc8c6521ced7b27a72ca2bb46c57572b161b39d555a08059b9ceed0d7"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_028.npz",
+      "bytes": 101927,
+      "sha256": "2580f017ea3f563bbff3df2c7086e50a7f6e49638c93bb88fc8aa550955172bd"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_029.npz",
+      "bytes": 106868,
+      "sha256": "823c28bf5ec6d87badc98a960f6417081df0c4531a53792ff78003388d352f87"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_030.npz",
+      "bytes": 111156,
+      "sha256": "32f07c4f7819b9d3a645e4dc9d53891a547cdeb4ec3643379a5022633a3f7cfc"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_031.npz",
+      "bytes": 116245,
+      "sha256": "b6f9dbca067c9f335d5bdfc1f5e35527d65a1278d79dfa47fbbb540a5bb032f3"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_032.npz",
+      "bytes": 121448,
+      "sha256": "b9b44bbc2501ff61008e0f4453c2fa38a2e1a1a10b13b5189df71923843e451f"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_033.npz",
+      "bytes": 126083,
+      "sha256": "851791fac6f83dab0cb3acaef8aea7128a240a0c8e6f7d7ccbfbd30b5bcc455c"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_034.npz",
+      "bytes": 131338,
+      "sha256": "e77c71ac779ed5bf0f598559c4e3e3effbb3864c292c3de09732a9cda78fe10f"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_035.npz",
+      "bytes": 136939,
+      "sha256": "e06436ce9e7ca9346d141176c6eb9502c5641e3221724fb79b93eaa233c412c2"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_036.npz",
+      "bytes": 142079,
+      "sha256": "43d9f63c9b06ca9b163de45e7ef9df14e94dcd90c3decf662c75be95385cc4cd"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_037.npz",
+      "bytes": 147764,
+      "sha256": "9d4cfea486e670cea63700294fcb0232d3dac98fb384cd6e83cc9eed425f06e6"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_038.npz",
+      "bytes": 152946,
+      "sha256": "12f54992b4b27e061c6c28035d6a9c9d972f682ea914c2de4ada8eaf6ffebb89"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_039.npz",
+      "bytes": 158574,
+      "sha256": "699a9166195c3210b2d1725adb16d9b164c2a4d5fd5c4d0d4d65c1ce1342c796"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_040.npz",
+      "bytes": 164036,
+      "sha256": "df8397668da172c7a5c828ddd7525f011314db7121ad8cc1e510d0268f7d4526"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_041.npz",
+      "bytes": 169413,
+      "sha256": "353dde9672f2a12777d461a1e53cbd3adefb83e1a19aa6f3a041bd1255b21419"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_042.npz",
+      "bytes": 174990,
+      "sha256": "77f7f2046aee37c1950a72060bee216cf1c311e356e9082775ecce50e51ecabc"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_043.npz",
+      "bytes": 180913,
+      "sha256": "e8d2d692354c84395e7b1a7404f1a2f3d9d4f29513512b9c20ffeb3ecba40fd5"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_044.npz",
+      "bytes": 186569,
+      "sha256": "bd837acd8cae9ac98cc1f891f2160f73e24b905f1c53cd5e3d5100c7ec4c3217"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_045.npz",
+      "bytes": 192861,
+      "sha256": "4e63a70dcab04244f6746d417da1c7f5ea635969e7ba04a76ab88e59df8702a5"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_046.npz",
+      "bytes": 202614,
+      "sha256": "ab8d2c7d405533259f2263ca4cec483743c4cca40d48cca4e7e453fe7c109e10"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_047.npz",
+      "bytes": 209591,
+      "sha256": "9c2348705b48439e07f9e7a02d195bdeec34e9d15eea9db49a944275de04caaa"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_048.npz",
+      "bytes": 216373,
+      "sha256": "f97e83a0b0863011af8070a82bb7dab3f7b81bfaf6b401589df55e484b39c251"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_049.npz",
+      "bytes": 223780,
+      "sha256": "cd516916d140aa85844adb5ce0a473c84717a33a5e4293594b14b701e0e60853"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_050.npz",
+      "bytes": 231060,
+      "sha256": "55b9d1dc1d892297c05b400cb758cf9f92339b1be6fcf3999b4b3427008d32eb"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_051.npz",
+      "bytes": 237706,
+      "sha256": "fb10a559b8b7ac413d7caeafe45f5071c4e1cf0b9d25c83dfbacf3857ba3b2a5"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_052.npz",
+      "bytes": 243985,
+      "sha256": "3e0b92ec80f6debcefa4f3ad55ce34b0eb47e03e6c84d2d22210fb7d51964ec1"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_053.npz",
+      "bytes": 250785,
+      "sha256": "05a46c9cf3fadc8f1d45f64b6d7d72ed4c13031d9585d403125403a9738ce998"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_054.npz",
+      "bytes": 256979,
+      "sha256": "69264d8fd2c3172990a91cb60879f2e3af35f36e3e872f5f0d397987f8ad924d"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_055.npz",
+      "bytes": 263385,
+      "sha256": "cf9540428195e764950e1892e330ec9a5728eb54195ae45550a79049cc4b8ff7"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_056.npz",
+      "bytes": 269593,
+      "sha256": "6d459595a5909ecd7ffaa7b6b37b34fc7b35196ae75176147b90e205429b3396"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_057.npz",
+      "bytes": 274378,
+      "sha256": "8c78575f82c13d65125d329d2b6d8ae777886d6316ab2b26b3e8285f6635f5c2"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_058.npz",
+      "bytes": 279312,
+      "sha256": "d844c029a6470eca26325c736d05850368b13930807a5d7d651d94e39fa233e3"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_059.npz",
+      "bytes": 283878,
+      "sha256": "07a0b85615d6d655e092f1d70f270348bacd3374903d0f993043dc9bdd589743"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01/state_060.npz",
+      "bytes": 288418,
+      "sha256": "43b24d1272be728136d5d26396ccfdc8e7990b9b055424cd29e7d6421a1f4f2f"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_bed_only_reference_01.log",
+      "bytes": 4035,
+      "sha256": "ffdb72093ba0a5d706c5e8d9188ac10412101750158febe3fadb59342c17d6a6"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/live_process.json",
+      "bytes": 325,
+      "sha256": "828909a4b8b364b1e38c837fa7577b43a55034f9cbfc331b73318eeae8b22fdd"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/result.json",
+      "bytes": 26440,
+      "sha256": "b1b0d35fdbcd6c2a978a4ca513d724b416e536a56660ef9a4eed593356cf8fb8"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/runtime.json",
+      "bytes": 604,
+      "sha256": "586c1ae9c4a5346e3bf1953ba4e0d9382571bf3fd4418eb5f628a0ae5c7c47b4"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/sources.zip",
+      "bytes": 5239,
+      "sha256": "ebaf081bae2ea6c394def22455477400776e05e2c1a4377d4514ece10bed0443"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_000.npz",
+      "bytes": 5362,
+      "sha256": "dd5a025ba6650d3353e69fcfba10398ab7f2beeb75ee3db183170603fdabf0b7"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_001.npz",
+      "bytes": 30582,
+      "sha256": "6b8ab21ef7ef0d2d4291413d47260e54ad1c61d1c3ddb3a9930133aa2ec6f52f"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_002.npz",
+      "bytes": 38432,
+      "sha256": "f5190b231b9d0ead850340918bcf32c53d2ffd0a7b73ebc49c5cbbe0f9969564"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_003.npz",
+      "bytes": 46226,
+      "sha256": "fce8b65dc62e5b2ea5bee8db759f69dae2ec57144705f62326e2533614172e07"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_004.npz",
+      "bytes": 54873,
+      "sha256": "64bfd67e56410be83d37663d66f28058f7ff49e8918cb0c483e16aa9c81503e7"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_005.npz",
+      "bytes": 62710,
+      "sha256": "24195f2a20f230990ca830cb3d3894a8663ca497008fac3b531546635b597373"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_006.npz",
+      "bytes": 71842,
+      "sha256": "eb32cdec3893eb3214da7e22a6f5f48bc94f26b6b38131746026c7ea595c8dec"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_007.npz",
+      "bytes": 79914,
+      "sha256": "c3fff9c6e504b9d5ae43541e20b7701539cb36b5e9f83f796a9aab5ca8263519"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_008.npz",
+      "bytes": 89734,
+      "sha256": "3055ac71fb0050b54023490f1ca03a1a444c36b8473d1c1fff85596f077d6ea8"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_009.npz",
+      "bytes": 98643,
+      "sha256": "7cc8b28b281447e4d3e3825edd7ee9078b4feb57b48f101baf659f28c3acb165"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_010.npz",
+      "bytes": 108406,
+      "sha256": "9957b01479372cbf1b9efd56ffd8094839a476999a3cc8afa946f3245f0fef3a"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_011.npz",
+      "bytes": 117850,
+      "sha256": "9e63ca8424bd008db6a150b7d45e7c38d30d9aa3b32a368e7cf1b6f9cb9c1958"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_012.npz",
+      "bytes": 127330,
+      "sha256": "42a373d275d6821775d57a7b34b8d3edba8d57a874cddfddc8318bcc551caf98"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_013.npz",
+      "bytes": 137232,
+      "sha256": "37753a0673d321222f35ec28a39a54580dbf6b9354576fe7ff9bc02420dfe631"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_014.npz",
+      "bytes": 147509,
+      "sha256": "2ab4712f0ef694eb628e896a8f55ba60b98d4b23956347c45aeaa64c7d6108a4"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_015.npz",
+      "bytes": 159821,
+      "sha256": "c2200fca512f6a064404eb1a69da3bf499f84af400555ebe969474fb74c082ad"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_016.npz",
+      "bytes": 172235,
+      "sha256": "ed6393be62a268b8c72f34218be2e41d204e22e01108218fb21a787ee21c24b5"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_017.npz",
+      "bytes": 183872,
+      "sha256": "7a0f93f298307df5330a649ab127bf5322b84ae81dfaab0c88e3b77bded11db5"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_018.npz",
+      "bytes": 197502,
+      "sha256": "364b850fd3da341d4c5443b99baa36d60cb915a6f69be30011e9916d676bfa3e"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_019.npz",
+      "bytes": 209919,
+      "sha256": "62247327a430781d78a7510107cf1551cce7a07c96ff59a43eec7e70afc56f07"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_020.npz",
+      "bytes": 223132,
+      "sha256": "d28dd59f6a1d6fb0ce8450cf2c4409aacb6d2dd00b95359084d298eafbe123fc"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_021.npz",
+      "bytes": 236823,
+      "sha256": "03c85ee7780b801250be31d24342ef33745fd1f3de1648301b839daf2ef51901"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_022.npz",
+      "bytes": 251090,
+      "sha256": "52494c5dfb19b7cd33214ea08329d877f545485c533d7aa23dd867ec6166afe0"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_023.npz",
+      "bytes": 265128,
+      "sha256": "f7cc5f2e91985c2f35ce851da8c81259e5aa442cb3b4b884608d8946c45fab07"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_024.npz",
+      "bytes": 283857,
+      "sha256": "a70d809b5700a4ab5596dd6f52fa7720576bf0e20b2968a93079207230ef4d8e"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_025.npz",
+      "bytes": 298746,
+      "sha256": "f940f8b09ab1ff9331ed10f719a6ee22657bbac2ffa249171c93d82dcae1498d"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_026.npz",
+      "bytes": 314527,
+      "sha256": "95a794c5da70e4ceee2aef386f0107041853ad44987d3709dbc42a96fa781e7d"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_027.npz",
+      "bytes": 330496,
+      "sha256": "ac4e63b127a4fed4a3f6bffbde21debdf35d42edaaf0900e8aa0416d229367f6"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_028.npz",
+      "bytes": 346537,
+      "sha256": "251500fdd26ba676290a6c9cefeb84987e810044073a88c5bca7cdcedfc73994"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_029.npz",
+      "bytes": 363595,
+      "sha256": "3d3ff0f054be6fecd826981a97a0442569900ae8d7e85106238883530af2eef0"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_030.npz",
+      "bytes": 380683,
+      "sha256": "6bc8d787886080982a6c43616f543fc1089aad309cb03a4d0ea6a28d38df7849"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_031.npz",
+      "bytes": 398251,
+      "sha256": "544506794c4127f8c4553a02d0395158126025481b333cef0e29fc7e5b6d2108"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_032.npz",
+      "bytes": 414986,
+      "sha256": "e08801889387857c4ce89443d60e965986fe6d8b3cf918795ea287652c2f8b3e"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_033.npz",
+      "bytes": 432590,
+      "sha256": "db045bd33ff12686d87e60954ba3630bf1dd166b688114fc579564b0706741da"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_034.npz",
+      "bytes": 451407,
+      "sha256": "8473188e48a2fef32a326bebc79ea13b3f12bc439a9d5ffbd71949a3a07f5892"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_035.npz",
+      "bytes": 469808,
+      "sha256": "204a32fcc99710a786fe459c85b42c26e7933b4dd449cf6f48851a6571eaa679"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_036.npz",
+      "bytes": 488188,
+      "sha256": "f1533c3634347662cd83ca9d34a4950a8bfc0a4d7ab3960e46f458ce9c781d5b"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_037.npz",
+      "bytes": 507393,
+      "sha256": "5a472bd22227587e9ce6e2a6b863b875410232906b7838435efcb5e1b80630f1"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_038.npz",
+      "bytes": 526507,
+      "sha256": "a6ba6b2ccc4c58e31a6f8676ee1a9e2681d357abcd79192125121df1f0ac26a0"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_039.npz",
+      "bytes": 548167,
+      "sha256": "8ce77117c6b1a192f3922789a322784e027311c3f6b8bbcf4ed410f08fc4d414"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_040.npz",
+      "bytes": 568780,
+      "sha256": "25e014c5cdf0ea01e323b247c1e604a0d1756d7e68b9e59112cda62e0e3f81cd"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_041.npz",
+      "bytes": 590776,
+      "sha256": "9bf18ad3c6f328a72cda9a98ce9a3f2360863a026f1a38bd47a46ab3d31aa86a"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_042.npz",
+      "bytes": 612386,
+      "sha256": "4a7ede5aa119633637d74385a519b5ad99252e38fd97eddb5b212737c623af55"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_043.npz",
+      "bytes": 633683,
+      "sha256": "b2331ef341ed7d0b4545b67a14775415c7d9911b636a44d077867610d5f3c5f0"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_044.npz",
+      "bytes": 654784,
+      "sha256": "56b02f0dc719ab9edab8f3d5a5749531c88c63dd7bc68de3acf9e1715390deb6"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_045.npz",
+      "bytes": 676434,
+      "sha256": "e24a8f63ff7e738c902804965e4dce9c81eec55165d78c6f198d2a0a55faeb9e"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_046.npz",
+      "bytes": 698855,
+      "sha256": "baf6f9bf20089d7d9e831f5cad8cd205e2e155a516dc08f1275673d3df8cf8c1"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_047.npz",
+      "bytes": 721765,
+      "sha256": "b55e9bc5f694723ec34bcdf0fa008f7bd36045661e2e1ee87b1deb721e8c9436"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_048.npz",
+      "bytes": 744211,
+      "sha256": "d8bb3a6a4d2fb778f4caf80eacf5c7ef508f337922a87127430ffa840e5cffb0"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_049.npz",
+      "bytes": 767731,
+      "sha256": "3ff5f2dcfb4311d1f6ebe16f4ee68a045e3d7ca598bd0ecb47b08ed5b65b6302"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_050.npz",
+      "bytes": 791848,
+      "sha256": "f652163cd397d49812249f9e7057967e674a93d5baab7327e4cffdcdc2d34504"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_051.npz",
+      "bytes": 814730,
+      "sha256": "372adb61e47efe25ff00b11b97d2451a207e1bf80d9abe70770b7316d7342888"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_052.npz",
+      "bytes": 839088,
+      "sha256": "6f8653f53c5916a42dfedf68d042e468c1c6b86fd2017967691fe675a63c8b82"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_053.npz",
+      "bytes": 864217,
+      "sha256": "eb15ce04a632b642a590060073b803f498594a9530d113bdccb1d2b632c96fda"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_054.npz",
+      "bytes": 888112,
+      "sha256": "033a75efc6906fbfb783ae71698de5e24d74ca2965415470554560d9759f5bfc"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_055.npz",
+      "bytes": 912897,
+      "sha256": "df450de21474bdca38110abe98e9b8066c456483e985130a332aa235069c58b8"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_056.npz",
+      "bytes": 939147,
+      "sha256": "9bdea98efc156cb021ae8adb576c4ae01e82c321e7312480f131e48c99fe12f1"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_057.npz",
+      "bytes": 964784,
+      "sha256": "f7c24414627b60552ce868d60493bfa27111aa8535445f2648d81ee2e09b2ce7"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_058.npz",
+      "bytes": 991417,
+      "sha256": "75dea9c9f43100b0a76f81dbd82563874f93d0352fd90c26afa8730590aab4be"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_059.npz",
+      "bytes": 1017085,
+      "sha256": "00e54b1e0a59259149bd2870157b2333985584c937bc3cfe8dd4ff361965a271"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01/state_060.npz",
+      "bytes": 1043026,
+      "sha256": "e3d88364db2eabf74bc17799daf6ceaa8cf163f1e4f53b2a58f2ebe72ebe9b0f"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_fine_reference_01.log",
+      "bytes": 3741,
+      "sha256": "5c53ba0db5c4a52ca7a28e43daa70b3b675820538a36aa9253a5f67a86144332"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/result.json",
+      "bytes": 27044,
+      "sha256": "640875001c347ec3b6e503381dbc0f93e5c9f0e43bddec561c0bea7980b9e9d5"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/runtime.json",
+      "bytes": 622,
+      "sha256": "e0f62c9445f28a7e2432298d977a1003c9f82db26f9dee60337b617745c45323"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/sources.zip",
+      "bytes": 5345,
+      "sha256": "6d521aea4abb1a9ba250444e784d8d4ada91d69a11581f74b720380a182a84de"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_000.npz",
+      "bytes": 2579,
+      "sha256": "1b379d1a4e6cb2295abeecac4240184d87730f6cfb9a1055b25c80a2f2af6def"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_001.npz",
+      "bytes": 12724,
+      "sha256": "0479b7c4c1aa85b2a427706cf3dea3073065062ae9db2035d892010d92a79e5d"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_002.npz",
+      "bytes": 15680,
+      "sha256": "7ac6ed44ff76b2bf238d15037c3a4ae92013520cabc516b2d08e9d50b154d090"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_003.npz",
+      "bytes": 18431,
+      "sha256": "1622ab08d03e0b55ede9bf80a7fbbc6afdf1045991a23531ca97107850bc001a"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_004.npz",
+      "bytes": 21036,
+      "sha256": "01596752fc27d83d00a6b4548b780d257ecc32455c3d94cd3dc1c9188cc440eb"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_005.npz",
+      "bytes": 23650,
+      "sha256": "ac93a7169b34f9bf2835f2feca96a6d49ddf3d65e7439ef1a0ed8842ad595849"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_006.npz",
+      "bytes": 26244,
+      "sha256": "1e5b79cd8d3a7463a7197768d1d9ef269d782e071b6e3402a9acbe2801b44acc"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_007.npz",
+      "bytes": 28752,
+      "sha256": "cca0a8732628baa1fd337ff16c2e745332a98cb75ce4a137b0c48a79af304976"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_008.npz",
+      "bytes": 31320,
+      "sha256": "974744f3860b30e1575a611a73fac0bdd1c0ae1407a1bb8ed5d55c74c4f9a98b"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_009.npz",
+      "bytes": 34133,
+      "sha256": "71f24eff29ca671cbaca775f01c84a718bbc50f9a3001cf659c7d7cf563cad05"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_010.npz",
+      "bytes": 37574,
+      "sha256": "bfe75c5f8d6ec3d5d8e77862b281f102808768d624aa3914f3549438157251e3"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_011.npz",
+      "bytes": 40232,
+      "sha256": "3f9c5f9659d659a6872b0537a7890904eb4286e3cf64bc2d7ad70e24e32b43b8"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_012.npz",
+      "bytes": 43359,
+      "sha256": "afefb42a281507d33747f65bcc1a1ba62bae1c8167a96a9a3008cdb4efe61cbf"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_013.npz",
+      "bytes": 46585,
+      "sha256": "3810d3b914a89f3fdf4ca6afabcdec9f111713933843b3115db2e1ae65fa24f2"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_014.npz",
+      "bytes": 49648,
+      "sha256": "0a5bc70a7ffc5f0895c82b434f3cf99f1f4484f4e77c40576206a5553dc69ab4"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_015.npz",
+      "bytes": 53072,
+      "sha256": "0466f5ebb4fb24d76eb29453aa8c48899f297b1ce9200c85daed2fe90abec7df"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_016.npz",
+      "bytes": 56690,
+      "sha256": "c4e945a8fd93d78bc7095fa245bdd1492bbcee6c85102cc3cb49fd37d64d7955"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_017.npz",
+      "bytes": 60040,
+      "sha256": "5dd856489746cc1a5fdb105651559826439fed3853b2b1c52dc1d57892a2ead8"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_018.npz",
+      "bytes": 63720,
+      "sha256": "afa075afc8af701564b290e3900f9a5a55dada54efd75616c845d02d80374272"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_019.npz",
+      "bytes": 67384,
+      "sha256": "7db528067f470ed4b945425edd6247570db12c0d2fcf17461f2c94557ccdfd42"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_020.npz",
+      "bytes": 71198,
+      "sha256": "d11597ed86604d61e42968864c91d21b096c0f6f3c8e58dc24c1cdee6881c06d"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_021.npz",
+      "bytes": 74983,
+      "sha256": "ff202bd8b443bf52b76e06009dca2bf51f1d13a00feaacef1bbbcd30e71370e6"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_022.npz",
+      "bytes": 79078,
+      "sha256": "2d99493149fbc43d0cf84843707affecc00672f2df786b1de817c7ac272e8e27"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_023.npz",
+      "bytes": 82992,
+      "sha256": "546beacff2f619786b303eec609c73ade5c8dfbc90dbde4bbf06434de058171e"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_024.npz",
+      "bytes": 87176,
+      "sha256": "cd42a44eca3aab35158858d36561e60cc77f52834cd8f737841108e6df9d50ef"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_025.npz",
+      "bytes": 91753,
+      "sha256": "1658ca465f238648d6acc868028404d2dbf2f64ab3358ff4f8213739ba1dd116"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_026.npz",
+      "bytes": 96021,
+      "sha256": "9f127c5ee5d19e0fa6416f54289aa8db3babda8e700f0e195f73db9e31f671ee"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_027.npz",
+      "bytes": 100333,
+      "sha256": "450e0ffceb798d05a0e632688b257ee788c1e9cb00a607f63091b8ada9ab4f87"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_028.npz",
+      "bytes": 105197,
+      "sha256": "5483a4933c73c71160c7166901f8857a7fca03743cf8b0f29126d5646f854d5b"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_029.npz",
+      "bytes": 110909,
+      "sha256": "e8a9905ecaf0c1c5b68d078478f8c963cc035522365cb3b799b2a3ab528e367a"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_030.npz",
+      "bytes": 115107,
+      "sha256": "d8111b0816cb0d3ccd278ac397ca2fdb08fcf4d4432f0b902cec61a80e0f9dc6"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_031.npz",
+      "bytes": 119917,
+      "sha256": "c27a8bd86d1897f5d48293ad34452b326ad53f0f58baeedee42da6e6c5e8afe4"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_032.npz",
+      "bytes": 124653,
+      "sha256": "05dbe4ed846a478ee8d40c57f5bff1fd298e138496a07ec3a6c41a54368314e8"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_033.npz",
+      "bytes": 129343,
+      "sha256": "d5ae403c0696c2fda594c16644de7defb5efe3c570addea30b454696c182a84f"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_034.npz",
+      "bytes": 134549,
+      "sha256": "feb5180085ee7e1cd5784fae944bec47c2080d68ec15e77180dcd090e6a372fe"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_035.npz",
+      "bytes": 139993,
+      "sha256": "c3102e0b80bbb73f89fad965ad7a3fdc402517ff2b447108b18e2f2dfc792fd4"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_036.npz",
+      "bytes": 145278,
+      "sha256": "cb7907e608c417ca0afbbcd2d8c384af6e4b599ac3a89e2519a230d9657e22e2"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_037.npz",
+      "bytes": 150320,
+      "sha256": "7d3fac0286f2bb0bc35eb2bb5508e79ca43725a456eac7e4dae6b0db6ebd2984"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_038.npz",
+      "bytes": 155922,
+      "sha256": "3416d9933f96c43d66d459036de0ade94aa78cea3eb9dd9958e9c0212b64f3c1"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_039.npz",
+      "bytes": 161512,
+      "sha256": "1e0bd569051f82ab8100e35040a4da0e69d8375fdf383e17267ea1a5393c8369"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_040.npz",
+      "bytes": 166588,
+      "sha256": "36a21bce0d99e883348d67df0ea638cccd92fd6072f1bf83531a6697032bf1b5"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_041.npz",
+      "bytes": 172299,
+      "sha256": "75b85779b3f62f7cbca9981bcbbb33ce99e22a989890fe5589c67ffc798d41fa"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_042.npz",
+      "bytes": 177922,
+      "sha256": "96cc757fb56212198dd05c0f88d38f6dfcb5b6766e50b6063ce526c5c90c080c"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_043.npz",
+      "bytes": 183652,
+      "sha256": "a233a66c148164efff967bc4fbd9689c06a3420cf99e657110d1e330ea85dab7"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_044.npz",
+      "bytes": 189522,
+      "sha256": "aeb7c952bd06b449db1c38eb68d537592092fa70aa64eddb7e3fb69146ad2d91"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_045.npz",
+      "bytes": 195673,
+      "sha256": "f7f43b8cc66c9d8422f8d75884cc717639110ef55bea82a426b1dde6b17fd30c"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_046.npz",
+      "bytes": 203907,
+      "sha256": "ef9790138a8c259f89551065f64ed8895405c047328d1c28599564ecd6aa7304"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_047.npz",
+      "bytes": 210543,
+      "sha256": "c3dfc17c9b46ad33d50faa3eed62ea82420b9d991178c50e5d51d3d05b9f8151"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_048.npz",
+      "bytes": 217955,
+      "sha256": "f762b35b029cd9e8b9d78a7d026e414d8d9ccd16c5f3bc076a2af1d31de0e695"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_049.npz",
+      "bytes": 224322,
+      "sha256": "cfc4571bb5a0fdb965b7385448a984b24ea76065e60c24c1ab9032207c4b9ac6"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_050.npz",
+      "bytes": 231208,
+      "sha256": "85b26a458808159c734e2ab5f5c63886fa27f68c7e993718ca1b86bce33bb119"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_051.npz",
+      "bytes": 237449,
+      "sha256": "49fb298c9862758c706930d1f2db209c1f43b4d9c6d6ecab639e2131f5abccf8"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_052.npz",
+      "bytes": 243903,
+      "sha256": "649ddbdd075e7a9f77addaf60785c86624750a2071c348d2f7b93ac974e96a6c"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_053.npz",
+      "bytes": 250978,
+      "sha256": "f7db0690566ef970df4a51473e5159b2c2bd42f8abf9f7edf54d0ebaee372c9c"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_054.npz",
+      "bytes": 257012,
+      "sha256": "9e04da1ea03ba8739552de8d32a141c5a20e7d7656a29a5f8c2813e6ebcdd746"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_055.npz",
+      "bytes": 263773,
+      "sha256": "3904f4d29cff542556a9268eba6d3b87c0c7bc0825a699a88d243fc228b70e31"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_056.npz",
+      "bytes": 270109,
+      "sha256": "fffd1cf4308cabf622f350d1fe05db04f5fa174a4353c81756b04829aa507007"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_057.npz",
+      "bytes": 275434,
+      "sha256": "0a11664579206ff3971e0562be3e7594f8556f1afaf5b3c796780864a1c3ae69"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_058.npz",
+      "bytes": 281125,
+      "sha256": "3b060032037444a74034a04ebc147d91fdddafe631d8787fdaa4a4e1aeb95d26"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_059.npz",
+      "bytes": 285954,
+      "sha256": "935d088692615bb08f1fd2ec29757ecca70bf716bad61f7595b9e7e7a946520f"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01/state_060.npz",
+      "bytes": 290473,
+      "sha256": "838f2f403a77fb1410df50272de26274640f49acff7c115a10f0a86bb39fc6b0"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_shovel_reverse_impulse_reference_01.log",
+      "bytes": 4033,
+      "sha256": "eabe6133bcfb63be645549bc24a79673c5a0ab5b20021259214181764adb24b0"
+    },
+    {
+      "path": "test_output/wave_propagation/g5_source_cause_audit_01/result.json",
+      "bytes": 32929,
+      "sha256": "08e5aaa040b6a65dc3ce9f0f65c61634a51556874b2381e52fca1fc41b99da14"
+    }
+  ]
+}
