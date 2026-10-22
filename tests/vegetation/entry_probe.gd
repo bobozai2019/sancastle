@@ -21,7 +21,7 @@ func _run() -> void:
 	if not scene.ready_for_ticks:observations.error=String(scene.last_error);await _close();return
 	observations.sources=scene.configuration.sources.duplicate(true)
 	observations.configuration=scene.configuration.environment.vegetation_profile.duplicate(true)
-	check("fixed_vegetation_layer",scene.has_node("VegetationLayer") and scene.vegetation_layer.get_child_count()==4 and scene.vegetation_layer.visible)
+	check("fixed_vegetation_layer",scene.has_node("VegetationLayer") and scene.vegetation_layer.get_child_count()==Profile.KINDS.size() and scene.vegetation_layer.visible)
 	var geometry_valid:=true
 	for layer in scene.vegetation_layer.get_children():
 		geometry_valid=geometry_valid and layer.multimesh.instance_count==Profile.CANDIDATES_PER_KIND and layer.multimesh.buffer.size()==Profile.CANDIDATES_PER_KIND*12 and absf(layer.multimesh.get_instance_transform(0).basis.determinant()-1.0)<0.00001
@@ -36,6 +36,13 @@ func _run() -> void:
 	var counts:=_counts(initial.roots)
 	observations.initial_counts=counts
 	check("each_habitat_has_plants",counts[0]>0 and counts[1]>0 and counts[2]>0 and counts[3]>0)
+	if scene_key=="main":check("all_nine_species_have_live_instances",counts.all(func(n):return n>0))
+	var atlases_valid:=true
+	for kind in Profile.KINDS.size():
+		var material: ShaderMaterial=scene.vegetation_layer.get_child(kind).material_override
+		var texture: Texture2D=material.get_shader_parameter("atlas")
+		atlases_valid=atlases_valid and texture!=null and texture.get_width()>=1024 and texture.get_height()>=1024
+	check("full_resolution_original_atlases_bound",atlases_valid)
 	check("finite_and_inside_spawn_bounds",_valid_roots(initial.roots))
 	check("roots_reference_visible_bed",_roots_match_bed(initial))
 	await _capture("initial")
@@ -43,12 +50,30 @@ func _run() -> void:
 	if mode=="cost":await _cost()
 	if mode=="lifecycle":await _lifecycle()
 	if mode=="soak":await _soak()
-	if mode=="smoke":
+	if mode in ["smoke","views"]:
 		for tick in 12:
 			check("tick_accepted_"+str(tick),scene.runtime.request_tick(1.0/30.0).is_empty());await _idle()
 		await _capture("advanced")
 		await _visual_contribution()
+		if mode=="views":await _views(initial)
 	await _close()
+
+func _views(initial: Dictionary) -> void:
+	var camera: Camera3D=scene.get_viewport().get_camera_3d()
+	var original:=camera.global_transform
+	for kind in Profile.KINDS.size():
+		var selected:=-1;var nearest:=INF
+		for index in range(kind*Profile.CANDIDATES_PER_KIND,(kind+1)*Profile.CANDIDATES_PER_KIND):
+			if initial.roots.decode_float(index*16+12)<=0.0:continue
+			var distance:=Vector2(initial.roots.decode_float(index*16),initial.roots.decode_float(index*16+8)).length_squared()
+			if distance<nearest:nearest=distance;selected=index
+		if selected<0:continue
+		var point:=Vector3(initial.roots.decode_float(selected*16),initial.roots.decode_float(selected*16+4),initial.roots.decode_float(selected*16+8))
+		for view in 2:
+			camera.global_position=point+(Vector3(1.8,1.5,2.5) if view==0 else Vector3(-1.8,1.5,-2.5))
+			camera.look_at(point+Vector3(0,0.25,0))
+			await _capture(Profile.KINDS[kind]+"_view_"+str(view))
+	camera.global_transform=original
 
 func _bindings_valid() -> bool:
 	for binding in scene.material_bindings:
@@ -85,15 +110,16 @@ func _snapshot_received(serial: int, value: Dictionary) -> void:
 	snapshots[serial]=value
 
 func _counts(bytes: PackedByteArray) -> Array:
-	var counts: Array=[0,0,0,0]
-	for index in Profile.CANDIDATES_PER_KIND*4:
+	var counts: Array=[]
+	counts.resize(Profile.KINDS.size());counts.fill(0)
+	for index in Profile.CANDIDATES_PER_KIND*Profile.KINDS.size():
 		if bytes.decode_float(index*16+12)>0.0:counts[index/Profile.CANDIDATES_PER_KIND]+=1
 	return counts
 
 func _valid_roots(bytes: PackedByteArray) -> bool:
 	if bytes.size()!=Profile.WIDTH*Profile.HEIGHT*16:return false
 	var bounds: Array=observations.configuration.bounds_xz
-	for index in Profile.CANDIDATES_PER_KIND*4:
+	for index in Profile.CANDIDATES_PER_KIND*Profile.KINDS.size():
 		for k in 4:
 			if not is_finite(bytes.decode_float(index*16+k*4)):return false
 		if bytes.decode_float(index*16)<bounds[0] or bytes.decode_float(index*16)>bounds[2] or bytes.decode_float(index*16+8)<bounds[1] or bytes.decode_float(index*16+8)>bounds[3]:return false
@@ -111,7 +137,7 @@ func _bed_at(point: Vector2, fields: Dictionary) -> float:
 
 func _roots_match_bed(fields: Dictionary) -> bool:
 	var raw: PackedByteArray=fields.roots
-	for index in Profile.CANDIDATES_PER_KIND*4:
+	for index in Profile.CANDIDATES_PER_KIND*Profile.KINDS.size():
 		if raw.decode_float(index*16+12)<=0.0:continue
 		var point:=Vector2(raw.decode_float(index*16),raw.decode_float(index*16+8))
 		if absf(raw.decode_float(index*16+4)-_bed_at(point,fields))>0.00001:return false
@@ -150,7 +176,7 @@ func _behavior(initial: Dictionary) -> void:
 		if field not in ["roots","motion"]:unchanged=unchanged and initial[field]==isolated[field]
 	check("vegetation_does_not_write_authority",unchanged)
 	var chosen:=-1;var raw: PackedByteArray=initial.roots
-	for index in range(Profile.CANDIDATES_PER_KIND*2,Profile.CANDIDATES_PER_KIND*4):
+	for index in range(Profile.CANDIDATES_PER_KIND*2,Profile.CANDIDATES_PER_KIND*Profile.KINDS.size()):
 		if raw.decode_float(index*16+12)>0.0:
 			chosen=index;break
 	check("editable_bank_plant_found",chosen>=0)

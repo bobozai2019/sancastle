@@ -1,11 +1,16 @@
 [gd_resource type="Resource" format=3]
 
-[ext_resource type="Script" path="res://scripts/visual/vegetation_profile.gd" id="1_wqonc"]
-[ext_resource type="Resource" path="res://assets/vegetation/seagrass_species.tres" id="2_pvtsg"]
-[ext_resource type="Resource" path="res://assets/vegetation/kelp_species.tres" id="3_qo5du"]
-[ext_resource type="Resource" path="res://assets/vegetation/shore_grass_species.tres" id="4_tvpef"]
-[ext_resource type="Resource" path="res://assets/vegetation/dune_grass_species.tres" id="5_2w048"]
+[ext_resource type="Script" path="res://scripts/visual/vegetation_profile.gd" id="1_orytw"]
+[ext_resource type="Resource" path="res://assets/vegetation/seagrass_species.tres" id="2_qw0or"]
+[ext_resource type="Resource" path="res://assets/vegetation/kelp_species.tres" id="3_o5etr"]
+[ext_resource type="Resource" path="res://assets/vegetation/shore_grass_species.tres" id="4_p3f1i"]
+[ext_resource type="Resource" path="res://assets/vegetation/dune_grass_species.tres" id="5_q78jr"]
+[ext_resource type="Resource" path="res://assets/vegetation/red_algae_species.tres" id="6_6bri1"]
+[ext_resource type="Resource" path="res://assets/vegetation/switch_grass_species.tres" id="7_2j7r3"]
+[ext_resource type="Resource" path="res://assets/vegetation/wheat_grass_species.tres" id="8_v5ql6"]
+[ext_resource type="Resource" path="res://assets/vegetation/yarrow_species.tres" id="9_213qn"]
+[ext_resource type="Resource" path="res://assets/vegetation/goldenrod_species.tres" id="10_vnmfg"]
 
 [resource]
-script = ExtResource("1_wqonc")
-species = Array[Resource]([ExtResource("2_pvtsg"), ExtResource("3_qo5du"), ExtResource("4_tvpef"), ExtResource("5_2w048")])
+script = ExtResource("1_orytw")
+species = Array[Resource]([ExtResource("2_qw0or"), ExtResource("3_o5etr"), ExtResource("4_p3f1i"), ExtResource("5_q78jr"), ExtResource("6_6bri1"), ExtResource("7_2j7r3"), ExtResource("8_v5ql6"), ExtResource("9_213qn"), ExtResource("10_vnmfg")])

@@ -32,20 +32,20 @@ vec3 water_at(vec2 xz){
  return mix(mix(water_cell(q),water_cell(q+ivec2(1,0)),f.x),mix(water_cell(q+ivec2(0,1)),water_cell(q+ivec2(1,1)),f.x),f.y);
 }
 void main(){
- ivec2 at=ivec2(gl_GlobalInvocationID.xy);if(any(greaterThanEqual(at,ivec2(128,24))))return;
+ ivec2 at=ivec2(gl_GlobalInvocationID.xy);if(any(greaterThanEqual(at,ivec2(128,144))))return;
  // VEG_GUARD
  float dt = 0.0; // VEG_DT
  uint id=uint(at.y*128+at.x);uint count=uint(settings[1].y);uint kind=id/count;uint local_id=id%count;
  uint seed=uint(settings[1].x)+id*0x9e3779b9u;
  vec4 habitat=settings[2u+kind*3u],distribution=settings[3u+kind*3u],response=settings[4u+kind*3u];
  if(phase.mode==1u){
-  vec2 grid=vec2(float(local_id%32u)+random01(seed),float(local_id/32u)+random01(seed+61u))/vec2(32.0,24.0);
+  vec2 grid=vec2(float(local_id%64u)+random01(seed),float(local_id/64u)+random01(seed+61u))/vec2(64.0,32.0);
   vec2 xz=mix(settings[0].xy,settings[0].zw,grid);float y=bed_at(xz);vec3 w=water_at(xz);
   ivec2 cell=clamp(ivec2((xz/32.0+0.5)*256.0),ivec2(0),ivec2(255));
   vec2 slope=vec2(bed_at(xz+vec2(0.0625,0))-bed_at(xz-vec2(0.0625,0)),bed_at(xz+vec2(0,0.0625))-bed_at(xz-vec2(0,0.0625)))/0.125;
-  float patch_value=noise(xz*0.48+vec2(float(kind)*13.1,7.7));
+  float patch_value=noise(xz*0.30+vec2(3.1,7.7));
   bool alive=w.x>=habitat.x&&w.x<=habitat.y&&y>=distribution.x&&y<=distribution.y&&length(slope)<=response.x;
-  alive=alive&&patch_value>=response.y&&patch_value<=response.z&&random01(seed+197u)<distribution.z&&imageLoad(obstacle,cell).r<0.5&&imageLoad(sand,cell).r>0.02;
+  alive=alive&&patch_value>=response.y&&patch_value<=response.z&&random01(seed+197u)<distribution.z*smoothstep(response.y,min(response.y+0.12,response.z),patch_value)&&imageLoad(obstacle,cell).r<0.5&&imageLoad(sand,cell).r>0.02;
   float size=mix(habitat.z,habitat.w,random01(seed+113u));
   imageStore(roots,at,vec4(xz.x,y,xz.y,alive?size:0.0));imageStore(motion,at,vec4(0));return;
  }

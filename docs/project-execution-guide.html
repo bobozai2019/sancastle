@@ -8,7 +8,7 @@
 <h2>配置新增玩法</h2><p>新增ToolProfile资源，使用既有operation、shape、材料/水策略、数值范围和受限模板。注册表校验精确script类型并复制冻结数据；profile不得携带执行Callable、自选shader或调度器。</p><p>配置扩展方法见<a href="unified-edit-extension-guide.md">扩展指南</a>。</p>
 <h2>当前方案与规格</h2><p><a href="Sandcastle项目技术全景.docx">项目技术全景 Word</a>完整说明架构、数值、数据协议、消费者和生命周期，并提供从当前源码提取的附录。</p><p><a href="当前项目技术方案.md">技术方案</a>说明模块协作、模拟、表现和生命周期；<a href="当前技术规格.md">技术规格</a>列出域、字段、ABI、容量、账本、兼容与验证边界。<a href="主场景操作.md">操作说明</a>和<a href="场景切换与功能复用.md">场景说明</a>对应当前四入口。</p>
 <h2>main漂浮道具</h2><p>场景预存水瓶、木板、木棍各一件，右下角三槽UI选择后左键摆放/移动；拾取模式将实例收入槽位，[ / ]旋转，右键/Esc取消。固定容量3件，全部拾取后不提交空探针。交互在公共读者真实终结后换owner，重新采样目标位置并建立新观察起点，未操作物体保留运动状态。公共只读Probe → 完成态水/床/流速 → 类型化Profile逐点浮力和相对流阻 → 原生Jolt。实际state.step消耗完成水时间余额；局部保持不阻塞生产。Height ABI3用完整共享顶点上界证明5mm总床面差，未知或超限时保持道具。暂停/保存保持，成功恢复或重进重置，检查点不保存道具姿态。三个test1不投放。</p><p><a href="漂浮道具.md">道具机制与扩展</a>。</p>
-<h2>水草与岸草</h2><p>四个正式场景预存海草、海带和两种岸草，各768候选。初态床水与分布场筛选位置；公共Visuals读取水沙驱动根部下移和临界阻尼摆动，填沙可遮埋草叶。批量不透明草叶写入场景深度，接受光照并参与水下遮挡。暂停保持姿态，恢复或重进根据完整床水重新分布。配置、纹理布局及持久化限制见<a href="植被.md">水草与岸草</a>。</p>
+<h2>水草与岸草</h2><p>四个正式场景预存海草、海带、红藻与六种岸上草本，各2048候选。初态床水与分布场筛选位置；公共Visuals读取水沙驱动根部下移和临界阻尼摆动，填沙可遮埋草叶。原包多视角图集与代理网格批量绘制，裁剪轮廓并重建场景深度，接受光照并参与水下遮挡。暂停保持姿态，恢复或重进根据完整床水重新分布。配置、纹理布局及持久化限制见<a href="植被.md">水草与岸草</a>。</p>
 <h2>当前源码锚点</h2><p class="muted">以下摘录、行号与SHA256直接来自生成时文件，可用build_execution_guide.py --check核对。</p><details><summary>参数服务 · scripts/parameters/parameter_service.gd:179</summary><p class="hash">SHA256 b7d9f61c9dd60a36c1ccf76fcc9424f3373154b19566c6dbb4661e0bee6d47a0</p><pre> 179 func set_value(id: String, value: Variant) -&gt; StringName:
  180 	if _busy():return &amp;&quot;scene_busy&quot;
  181 	if not _enabled(id):return &amp;&quot;parameter_unavailable&quot;
@@ -334,7 +334,7 @@
   29 	var known: Array=[{&quot;configuration&quot;:catalog.source_configuration,&quot;fixture&quot;:catalog.fixture}]+catalog.additional_sources
   30 	for source in known:
   31 		if not source is Dictionary or not Config.exact(source,[&quot;configuration&quot;,&quot;fixture&quot;]) or not source.configuration is Dictionary or not source.fixture is Dictionary:return {&quot;error&quot;:&amp;&quot;invalid_consumer_source_catalog&quot;}</pre></details>
-<details><summary>植被只读更新 · scripts/simulation/unified_edit/vegetation.gd:77</summary><p class="hash">SHA256 c0ac00bb2eab17a291e8fa602f44739bedc2f32ababf30915f33260cc94c1a7a</p><pre>  77 func record_tick() -&gt; void:
+<details><summary>植被只读更新 · scripts/simulation/unified_edit/vegetation.gd:77</summary><p class="hash">SHA256 cb5437ab5dcccc327f8ff7a05d7315389fdb19423183774e70c50c2374cecee2</p><pre>  77 func record_tick() -&gt; void:
   78 	if enabled:_dispatch(&quot;vegetation_tick&quot;)
   79
   80 func record_edit() -&gt; void:
@@ -344,7 +344,7 @@
   84 	if enabled:_dispatch(&quot;vegetation_publish&quot;)
   85
   86 func detach() -&gt; void:</pre></details>
-<details><summary>植被发布 · scripts/simulation/unified_edit/vegetation.gd:83</summary><p class="hash">SHA256 c0ac00bb2eab17a291e8fa602f44739bedc2f32ababf30915f33260cc94c1a7a</p><pre>  83 func publish() -&gt; void:
+<details><summary>植被发布 · scripts/simulation/unified_edit/vegetation.gd:83</summary><p class="hash">SHA256 cb5437ab5dcccc327f8ff7a05d7315389fdb19423183774e70c50c2374cecee2</p><pre>  83 func publish() -&gt; void:
   84 	if enabled:_dispatch(&quot;vegetation_publish&quot;)
   85
   86 func detach() -&gt; void:

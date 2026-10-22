@@ -36,11 +36,11 @@ func _run() -> void:
 		check(key+"_no_legacy_node_scripts",authorized)
 		check(key+"_no_old_collision_proxy",not entry.has_node("GpuCollisionProxy"))
 		var vegetation=entry.get_node_or_null("VegetationLayer")
-		check(key+"_four_authored_vegetation_kinds",vegetation!=null and vegetation.get_child_count()==4 and vegetation.profile.get_script()==preload("res://scripts/visual/vegetation_profile.gd"))
+		check(key+"_nine_authored_vegetation_kinds",vegetation!=null and vegetation.get_child_count()==9 and vegetation.profile.get_script()==preload("res://scripts/visual/vegetation_profile.gd"))
 		if vegetation!=null:
 			# Scene-local resource duplicates have no resource_path. Inspect the
 			# fixed asset named by the authored child, never a runtime factory.
-			check(key+"_vegetation_authored_meshes",vegetation.get_children().all(func(node):return node is MultiMeshInstance3D and node.multimesh.instance_count==768 and FileAccess.get_file_as_string("res://assets/vegetation/"+String(node.name)+"_instances.tres").contains("buffer = PackedFloat32Array")))
+			check(key+"_vegetation_authored_meshes",vegetation.get_children().all(func(node):return node is MultiMeshInstance3D and node.multimesh.instance_count==2048 and FileAccess.get_file_as_string("res://assets/vegetation/"+String(node.name)+"_instances.tres").contains("buffer = PackedFloat32Array")))
 		if key=="main":
 			var props=entry.get_node_or_null("FloatingProps/Service")
 			var rows: Array=props.authored_registry() if props!=null else []

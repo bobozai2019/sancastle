@@ -1,0 +1,13 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://scripts/visual/vegetation_species.gd" id="1_rcff2"]
+
+[resource]
+script = ExtResource("1_rcff2")
+label = "柳枝稷"
+depth_max_m = 0.015
+scale_min = 0.85
+scale_max = 1.3
+density = 0.56
+max_slope = 1.2
+patch_min = 0.48

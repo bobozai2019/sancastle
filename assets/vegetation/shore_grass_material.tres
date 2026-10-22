@@ -1,12 +1,13 @@
-[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+[gd_resource type="ShaderMaterial" load_steps=3 format=3]
 
 [ext_resource type="Shader" path="res://shaders/visual/vegetation.gdshader" id="1"]
+[ext_resource type="Texture2D" path="res://assets/vegetation/competitor/shore_grass_atlas.png" id="2"]
 
 [resource]
 resource_local_to_scene = true
 shader = ExtResource("1")
 shader_parameter/kind = 2
 shader_parameter/seed = 62143
-shader_parameter/base_color = Color(0.200000, 0.250000, 0.065000, 1)
-shader_parameter/tip_color = Color(0.460000, 0.490000, 0.170000, 1)
-shader_parameter/root_darkening = 0.25
+shader_parameter/atlas = ExtResource("2")
+shader_parameter/atlas_grid = 14.0
+shader_parameter/pivot_offset = Vector4(-0.055201381, 0.132688463, 0.067045741, 1.293985486)

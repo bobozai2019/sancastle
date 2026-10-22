@@ -5,12 +5,12 @@
 [resource]
 script = ExtResource("1_tqfec")
 label = "海带"
-depth_min_m = 0.18
-depth_max_m = 2.8
-height_min_m = 0.65
-height_max_m = 1.15
-density = 0.64
+depth_min_m = 0.35
+depth_max_m = 3.0
+scale_min = 1.1
+scale_max = 1.85
+density = 0.46
 flow_response = 0.85
-patch_min = 0.42
-patch_max = 0.85
+patch_min = 0.36
+patch_max = 0.9
 response_hz = 4.5

@@ -38,7 +38,7 @@ func initialize(recorder, config: Dictionary) -> bool:
 	var parameters := PackedFloat32Array(profile.bounds_xz)
 	parameters.append_array(PackedFloat32Array([float(profile.seed),Profile.CANDIDATES_PER_KIND,0.0,0.0]))
 	for item in profile.species:
-		parameters.append_array(PackedFloat32Array([item.depth_min_m,item.depth_max_m,item.height_min_m,item.height_max_m,
+		parameters.append_array(PackedFloat32Array([item.depth_min_m,item.depth_max_m,item.scale_min,item.scale_max,
 			item.bed_min_m,item.bed_max_m,item.density,item.flow_response,
 			item.max_slope,item.patch_min,item.patch_max,item.response_hz]))
 	var bytes := parameters.to_byte_array()

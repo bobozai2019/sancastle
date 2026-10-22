@@ -8,6 +8,6 @@ layout(set=0,binding=3,rgba32f) uniform writeonly image2D motion_view;
 layout(set=0,binding=4,std430) readonly buffer Control {uint control[];};
 void main(){
  if(control[1]!=0u)return;
- ivec2 at=ivec2(gl_GlobalInvocationID.xy);if(any(greaterThanEqual(at,ivec2(128,24))))return;
+ ivec2 at=ivec2(gl_GlobalInvocationID.xy);if(any(greaterThanEqual(at,ivec2(128,144))))return;
  imageStore(roots_view,at,imageLoad(roots,at));imageStore(motion_view,at,imageLoad(motion,at));
 }

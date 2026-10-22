@@ -95,6 +95,26 @@
       {
         "path": "VegetationLayer/dune_grass:material_override",
         "material_id": 13
+      },
+      {
+        "path": "VegetationLayer/red_algae:material_override",
+        "material_id": 14
+      },
+      {
+        "path": "VegetationLayer/switch_grass:material_override",
+        "material_id": 15
+      },
+      {
+        "path": "VegetationLayer/wheat_grass:material_override",
+        "material_id": 16
+      },
+      {
+        "path": "VegetationLayer/yarrow:material_override",
+        "material_id": 17
+      },
+      {
+        "path": "VegetationLayer/goldenrod:material_override",
+        "material_id": 18
       }
     ],
     "configuration": {
@@ -1499,7 +1519,7 @@
       },
       {
         "shader": "res://shaders/visual/vegetation.gdshader",
-        "shader_sha256": "10d98cbb3a36c987e1314a778715bd2e41f2cef953307bd84ff3f21c1b6e57f5",
+        "shader_sha256": "802632735aad045b6e21e68c92d0ff9a9d64b09a928710b4e469ad70d11a2310",
         "fields": {
           "vegetation_roots": "vegetation_roots",
           "vegetation_motion": "vegetation_motion",
@@ -1510,13 +1530,13 @@
         "parameters": {
           "kind": 0,
           "seed": 62143,
-          "root_darkening": 0.25,
+          "atlas_grid": 12,
           "material_resource": "res://assets/vegetation/seagrass_material.tres"
         }
       },
       {
         "shader": "res://shaders/visual/vegetation.gdshader",
-        "shader_sha256": "10d98cbb3a36c987e1314a778715bd2e41f2cef953307bd84ff3f21c1b6e57f5",
+        "shader_sha256": "802632735aad045b6e21e68c92d0ff9a9d64b09a928710b4e469ad70d11a2310",
         "fields": {
           "vegetation_roots": "vegetation_roots",
           "vegetation_motion": "vegetation_motion",
@@ -1527,13 +1547,13 @@
         "parameters": {
           "kind": 1,
           "seed": 62143,
-          "root_darkening": 0.25,
+          "atlas_grid": 16,
           "material_resource": "res://assets/vegetation/kelp_material.tres"
         }
       },
       {
         "shader": "res://shaders/visual/vegetation.gdshader",
-        "shader_sha256": "10d98cbb3a36c987e1314a778715bd2e41f2cef953307bd84ff3f21c1b6e57f5",
+        "shader_sha256": "802632735aad045b6e21e68c92d0ff9a9d64b09a928710b4e469ad70d11a2310",
         "fields": {
           "vegetation_roots": "vegetation_roots",
           "vegetation_motion": "vegetation_motion",
@@ -1544,13 +1564,13 @@
         "parameters": {
           "kind": 2,
           "seed": 62143,
-          "root_darkening": 0.25,
+          "atlas_grid": 14,
           "material_resource": "res://assets/vegetation/shore_grass_material.tres"
         }
       },
       {
         "shader": "res://shaders/visual/vegetation.gdshader",
-        "shader_sha256": "10d98cbb3a36c987e1314a778715bd2e41f2cef953307bd84ff3f21c1b6e57f5",
+        "shader_sha256": "802632735aad045b6e21e68c92d0ff9a9d64b09a928710b4e469ad70d11a2310",
         "fields": {
           "vegetation_roots": "vegetation_roots",
           "vegetation_motion": "vegetation_motion",
@@ -1561,8 +1581,93 @@
         "parameters": {
           "kind": 3,
           "seed": 62143,
-          "root_darkening": 0.25,
+          "atlas_grid": 14,
           "material_resource": "res://assets/vegetation/dune_grass_material.tres"
+        }
+      },
+      {
+        "shader": "res://shaders/visual/vegetation.gdshader",
+        "shader_sha256": "802632735aad045b6e21e68c92d0ff9a9d64b09a928710b4e469ad70d11a2310",
+        "fields": {
+          "vegetation_roots": "vegetation_roots",
+          "vegetation_motion": "vegetation_motion",
+          "async_clock": "clock",
+          "water_state": "water"
+        },
+        "id": 14,
+        "parameters": {
+          "kind": 4,
+          "seed": 62143,
+          "atlas_grid": 14,
+          "material_resource": "res://assets/vegetation/red_algae_material.tres"
+        }
+      },
+      {
+        "shader": "res://shaders/visual/vegetation.gdshader",
+        "shader_sha256": "802632735aad045b6e21e68c92d0ff9a9d64b09a928710b4e469ad70d11a2310",
+        "fields": {
+          "vegetation_roots": "vegetation_roots",
+          "vegetation_motion": "vegetation_motion",
+          "async_clock": "clock",
+          "water_state": "water"
+        },
+        "id": 15,
+        "parameters": {
+          "kind": 5,
+          "seed": 62143,
+          "atlas_grid": 12,
+          "material_resource": "res://assets/vegetation/switch_grass_material.tres"
+        }
+      },
+      {
+        "shader": "res://shaders/visual/vegetation.gdshader",
+        "shader_sha256": "802632735aad045b6e21e68c92d0ff9a9d64b09a928710b4e469ad70d11a2310",
+        "fields": {
+          "vegetation_roots": "vegetation_roots",
+          "vegetation_motion": "vegetation_motion",
+          "async_clock": "clock",
+          "water_state": "water"
+        },
+        "id": 16,
+        "parameters": {
+          "kind": 6,
+          "seed": 62143,
+          "atlas_grid": 14,
+          "material_resource": "res://assets/vegetation/wheat_grass_material.tres"
+        }
+      },
+      {
+        "shader": "res://shaders/visual/vegetation.gdshader",
+        "shader_sha256": "802632735aad045b6e21e68c92d0ff9a9d64b09a928710b4e469ad70d11a2310",
+        "fields": {
+          "vegetation_roots": "vegetation_roots",
+          "vegetation_motion": "vegetation_motion",
+          "async_clock": "clock",
+          "water_state": "water"
+        },
+        "id": 17,
+        "parameters": {
+          "kind": 7,
+          "seed": 62143,
+          "atlas_grid": 12,
+          "material_resource": "res://assets/vegetation/yarrow_material.tres"
+        }
+      },
+      {
+        "shader": "res://shaders/visual/vegetation.gdshader",
+        "shader_sha256": "802632735aad045b6e21e68c92d0ff9a9d64b09a928710b4e469ad70d11a2310",
+        "fields": {
+          "vegetation_roots": "vegetation_roots",
+          "vegetation_motion": "vegetation_motion",
+          "async_clock": "clock",
+          "water_state": "water"
+        },
+        "id": 18,
+        "parameters": {
+          "kind": 8,
+          "seed": 62143,
+          "atlas_grid": 12,
+          "material_resource": "res://assets/vegetation/goldenrod_material.tres"
         }
       }
     ],

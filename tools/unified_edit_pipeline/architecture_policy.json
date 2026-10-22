@@ -1340,11 +1340,11 @@
       "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Borrowed Water RD and owned RIDs; no submit/readback or authority writer."
     },
     "scripts/simulation/unified_edit/vegetation.gd::initialize": {
-      "sha256": "43fb43001c115649df01affbb4bfeeb8d34f6c7aba5fec20f824479f1f8dcc8a",
+      "sha256": "79d2e3707350223d9b951c2c160d66b0d6ba67a3539388251cfd6e91adeb9db5",
       "tokens": [
         "storage_buffer_create("
       ],
-      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Borrowed Water RD and owned RIDs; no submit/readback or authority writer."
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
     },
     "scripts/simulation/unified_edit/vegetation.gd::_dispatch": {
       "sha256": "0407534fcfc23763574894cfe1e722ddabfec06393b383862f12bbb485e3fe28",
@@ -1393,8 +1393,8 @@
       "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously sealed resource, exact CRLF-to-LF only; original SHA and normalized bytes checked."
     },
     "assets/unified_edit/presentation/main.json": {
-      "sha256": "d2de8f610ced199ff8c9594503f2fe3a13c6a544e437364e59909bf24209d70b",
-      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Four decorative bindings and reviewed source identities; seed unchanged."
+      "sha256": "c2de7554a3ddf6080f48bb0c57f403aca88a9f9aeb6fc7ae6a2cf67b6ad71e57",
+      "reason": "Reviewed backface-culling single-variable visual/cost comparison in task/vegetation_atlas/验收/架构审查.md; fixed resources and readonly behavior unchanged."
     },
     "scripts/beach/async_pipeline_entry.gd": {
       "sha256": "d77d1a28f02c65e57a8cdc56021c2d88ce9e22e6e0563f1b0cf784d31c8d656b",
@@ -2529,8 +2529,8 @@
       "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously sealed resource, exact CRLF-to-LF only; original SHA and normalized bytes checked."
     },
     "assets/unified_edit/presentation/test1_geometry.json": {
-      "sha256": "c8ec1b347c4ff2f61300c5d400f4b8f67ff55a58e605cf5cda44bfca094e7b1e",
-      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Four decorative bindings and reviewed source identities; seed unchanged."
+      "sha256": "d65e8230025df6b4bd032673b8b2ca1976335d34f79545d4636fb95d09cd13bb",
+      "reason": "Reviewed backface-culling single-variable visual/cost comparison in task/vegetation_atlas/验收/架构审查.md; fixed resources and readonly behavior unchanged."
     },
     "scripts/beach/test1_geometry_entry.gd": {
       "sha256": "faa8715add9cb617655d2b890bd57768098bdef1f4d152844297e988639b39be",
@@ -3265,8 +3265,8 @@
       "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously sealed resource, exact CRLF-to-LF only; original SHA and normalized bytes checked."
     },
     "assets/unified_edit/presentation/test1_capture.json": {
-      "sha256": "f0e2456b202d896ef834793f92a69ea506e06a20891252724e518167231b44db",
-      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Four decorative bindings and reviewed source identities; seed unchanged."
+      "sha256": "4ac4b72b051e1b2b204f5ee0a9a50b758e785d051855c5098fe02937538acd65",
+      "reason": "Reviewed backface-culling single-variable visual/cost comparison in task/vegetation_atlas/验收/架构审查.md; fixed resources and readonly behavior unchanged."
     },
     "scenes/unified_edit/presentation/test1_capture.tscn": {
       "sha256": "1e6b6de9cf35537d8948e415f09da1e0497034053b256b64d9ce7849f7076dca",
@@ -3277,8 +3277,8 @@
       "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously sealed resource, exact CRLF-to-LF only; original SHA and normalized bytes checked."
     },
     "assets/unified_edit/presentation/test1_backwash.json": {
-      "sha256": "834d40e3387a2dfd71263ab9341baf19246dcbf78d6ac1f680cf3c2e7b9173ea",
-      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Four decorative bindings and reviewed source identities; seed unchanged."
+      "sha256": "7573ab88a807e83d6a180d10ccabad1fded6d43ad7de3d198b677c12f271fb37",
+      "reason": "Reviewed backface-culling single-variable visual/cost comparison in task/vegetation_atlas/验收/架构审查.md; fixed resources and readonly behavior unchanged."
     },
     "scenes/unified_edit/presentation/test1_backwash.tscn": {
       "sha256": "86833adaaf47d053744e5d942402cccfeaf6bfd884210b56a1469d582a9c4611",
@@ -3721,104 +3721,220 @@
       "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously sealed resource, exact CRLF-to-LF only; original SHA and normalized bytes checked."
     },
     "scenes/components/vegetation_layer.tscn": {
-      "sha256": "6aeb308643a0b11e641c7768089d3ceed5a40a66b0ebb4b64cc6a8516d8adc77",
-      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Four fixed MultiMesh nodes; no runtime construction."
+      "sha256": "cc2cde498655f723d2ff71608aedb192865506ad6a611325092d51d193e0b8a2",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
     },
     "assets/vegetation/dune_grass_material.tres": {
-      "sha256": "31e87f69a4abae36c069b35ff0a4b3a6188ae82b1c09ddf50cf97b330707ce7e",
-      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Preauthored original mesh/identity matrices or finite typed appearance data."
+      "sha256": "8deb8385f3a99d55bef41cfd1554297e8e2af2f611b4c8ff8b2a94fc6716425d",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
     },
     "shaders/visual/vegetation.gdshader": {
-      "sha256": "10d98cbb3a36c987e1314a778715bd2e41f2cef953307bd84ff3f21c1b6e57f5",
-      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Opaque original leaf geometry and completed-state appearance."
+      "sha256": "802632735aad045b6e21e68c92d0ff9a9d64b09a928710b4e469ad70d11a2310",
+      "reason": "Reviewed backface-culling single-variable visual/cost comparison in task/vegetation_atlas/验收/架构审查.md; fixed resources and readonly behavior unchanged."
     },
     "assets/vegetation/dune_grass_instances.tres": {
-      "sha256": "0cc501f3e68970b50b2b6ed08f0245fabea6edabbbaf7e19eed2b406e39e07f9",
-      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Preauthored original mesh/identity matrices or finite typed appearance data."
+      "sha256": "9b14334fb1c1e003377c798b72ec5a64dc11fa58d53e65479d1f261ad5e5ea78",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
     },
     "assets/vegetation/dune_grass_mesh.tres": {
-      "sha256": "1c985b0deb5de877bacbf8ef321c49a3abb3edc19814cc5a03e7de9688a62ab6",
-      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Preauthored original mesh/identity matrices or finite typed appearance data."
+      "sha256": "5760097aebf9fc6372ae1cc6eb7fd9d35c5e357c8c8e0a94ec1ae45a548ce448",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
     },
     "assets/vegetation/shore_grass_material.tres": {
-      "sha256": "6a6c891dfe91e6a129376a0f9c5754c9ec86c4cd1b624582ad696d534e4f63e9",
-      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Preauthored original mesh/identity matrices or finite typed appearance data."
+      "sha256": "425360235c1b3a6fb7309760e640014ab4fe14e15bf685dd9305d72b3b9031b7",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
     },
     "assets/vegetation/shore_grass_instances.tres": {
-      "sha256": "2c587a1a5c72a17cfe821a404c647f1a0ceb60bc5b6ba2280ef129332f572146",
-      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Preauthored original mesh/identity matrices or finite typed appearance data."
+      "sha256": "feb107a2c5fa1555ae504e808893f53ee21dc0f7f52647ab63ddd52655ad8a84",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
     },
     "assets/vegetation/shore_grass_mesh.tres": {
-      "sha256": "89ae1954d951f24d2effcab7867ed35ef5b83c036af22d5dba4b968e32be88e7",
-      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Preauthored original mesh/identity matrices or finite typed appearance data."
+      "sha256": "798834f55d91f14e04a8319d317acea1c5c585798d46d532f68c9d2c236d2425",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
     },
     "assets/vegetation/kelp_material.tres": {
-      "sha256": "2b7dfef1a180be3f7d4b703a2f3fbed1dd9a609862630e31135cc683996a9cab",
-      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Preauthored original mesh/identity matrices or finite typed appearance data."
+      "sha256": "ab1de313395cd5deea6745acf271e84b589821be4cd082889f2377854ef3f602",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
     },
     "assets/vegetation/kelp_instances.tres": {
-      "sha256": "e99a499ea932b1fa2eddece527e5d6e45d6094bce34a1c7900f95eb8d8556ad7",
-      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Preauthored original mesh/identity matrices or finite typed appearance data."
+      "sha256": "14469a3c1ea3daf433ca2db8904fb47bd2482b6482f993794ecb7dab0ee50e4a",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
     },
     "assets/vegetation/kelp_mesh.tres": {
-      "sha256": "d1b13283fc0030810811eb2e480f4dfb422465af3b58bd1b0732ee0d76bd43dd",
-      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Preauthored original mesh/identity matrices or finite typed appearance data."
+      "sha256": "4fa6c939144033f90443bf3b9a2d73f9336134edf758d2c3d95f6f5dbe02638f",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
     },
     "assets/vegetation/seagrass_material.tres": {
-      "sha256": "a27d716f5cb3396b76d463fd4a8509deec62b60bbe7946f9ce0f581271680b34",
-      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Preauthored original mesh/identity matrices or finite typed appearance data."
+      "sha256": "667dd41d3471ca4952636ced0152b558d8cc1d06c502316dfe07651543f4ddb6",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
     },
     "assets/vegetation/seagrass_instances.tres": {
-      "sha256": "a188a4cb9863cb7820736715fc0e309a0a2b620d5a84e4bdcda009ccd56488d4",
-      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Preauthored original mesh/identity matrices or finite typed appearance data."
+      "sha256": "9da4ff205e3ace1d22367c96d39f34bcfda58ea18a0a6cccb42383e006d0b453",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
     },
     "assets/vegetation/seagrass_mesh.tres": {
-      "sha256": "ea1fd4769b93bd908286822da02f2337ae904b3c1a330b3baaa4c98dcd6d1335",
-      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Preauthored original mesh/identity matrices or finite typed appearance data."
+      "sha256": "3f0db56905d7cbd107fb10b3b0737270f9824e0f10a05334b7bc967b7fc442e7",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
     },
     "assets/vegetation/default_profile.tres": {
-      "sha256": "5076997095343f9f994612594040cc0665c7ff35165463b8543b3ba9954dca7f",
-      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Exact Profile/Species data bindings."
+      "sha256": "e81cdc29b02232e724a8ee8cd020af3ea7d5ceca389b916a06b0fd0e5ca5541a",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
     },
     "assets/vegetation/dune_grass_species.tres": {
-      "sha256": "ba7fc0648b0a4318edb1aa2c01d3903c9adebee604c417090917520aa411aad2",
-      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Preauthored original mesh/identity matrices or finite typed appearance data."
+      "sha256": "6387dfc388f90d99aa9f11c274de49ffbf021b7b9c61db2370f987f10fd4d064",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
     },
     "scripts/visual/vegetation_species.gd": {
-      "sha256": "7b3f5b43560f3957b835bee4a0cebfe1cfdcf3f61235d4635f230f46996fb1d7",
-      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Serialized finite scalar appearance data."
+      "sha256": "4467634e8713eaaf963062a3b8a9fa6841d33ddfb5acdee9729a996e29be3ebd",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
     },
     "assets/vegetation/shore_grass_species.tres": {
-      "sha256": "37d79c1b3a9e4a6686994ee4397b929ac1e69ca9ea5aa31f6167bf34c7e72367",
-      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Preauthored original mesh/identity matrices or finite typed appearance data."
+      "sha256": "b6fba5ea7ff66165ca71fad56b8d3c608611bb9f695d3b5cf27cf1cd355f8e0e",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
     },
     "assets/vegetation/kelp_species.tres": {
-      "sha256": "8fdf3fb295e7147addfde3cdc14a4162beec61ec0d3122cc0c67863102c9c9dd",
-      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Preauthored original mesh/identity matrices or finite typed appearance data."
+      "sha256": "2b3346c31ed3ed7e86f525501f4138716cfbc33f08f8cfc587768dd4c20a13db",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
     },
     "assets/vegetation/seagrass_species.tres": {
-      "sha256": "810ffee130b4133b0e18c7e7aa05861c53dd0a073a774001cfd7a1a558c807e5",
-      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Preauthored original mesh/identity matrices or finite typed appearance data."
+      "sha256": "d68907a76e5a1a63f9364363312557711884fea9b8e9b2c6f5d757af70349dd4",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
     },
     "scripts/visual/vegetation_profile.gd": {
-      "sha256": "74c803f79d9ecbc239a707c49200d2184b831715cd322a273030e50f04dd797a",
-      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Strict finite typed data snapshot; no callback or authority."
+      "sha256": "29e5141396351bd98d709b2f625cfce34a56553581fa975e9c7f67919112ba49",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
     },
     "scripts/visual/vegetation_layer.gd": {
       "sha256": "fab851b62913d8278ce2bfae7aa425eb16c6ecab10945759aa10542406a70dd7",
       "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Data-only fixed scene node."
     },
     "scripts/simulation/unified_edit/vegetation.gd": {
-      "sha256": "c0ac00bb2eab17a291e8fa602f44739bedc2f32ababf30915f33260cc94c1a7a",
-      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Borrowed Water RD and owned RIDs; no submit/readback or authority writer."
+      "sha256": "cb5437ab5dcccc327f8ff7a05d7315389fdb19423183774e70c50c2374cecee2",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
     },
     "shaders/simulation/vegetation_publish.glsl": {
-      "sha256": "0b2d474a2214297cc942285707da0b3594fc468210a8ab166b83338b50309275",
-      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Only decorative publications writable after original seal."
+      "sha256": "d0c6a2dc18f0768f30c4267095cd958a77272a3e78756b54d00ded06890bc58f",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
     },
     "shaders/simulation/vegetation_step.glsl": {
-      "sha256": "f9acdc1541479a1380ae401ccc6961f81a0af8f2dbb5c0fd898b3387503368c0",
-      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Only roots/motion writable; authority inputs readonly, accepted dt and fault guards."
+      "sha256": "1981271f0f8ecbb63d56339424270a85175f31e6ccf9754b85048352a5197b46",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
+    },
+    "assets/vegetation/goldenrod_material.tres": {
+      "sha256": "ac5f8812f319f62adb8d10002019e15189af5935b310f17cc992994fcfb0b01a",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
+    },
+    "assets/vegetation/competitor/goldenrod_atlas.png": {
+      "sha256": "3f1af7daafb5a3e69511ded692d6db17ca3eff4f2935826a4e59ac9960caf92f",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
+    },
+    "assets/vegetation/goldenrod_instances.tres": {
+      "sha256": "e07babe88fe54487f5be0d8985f60997d55e8c832bd1c86b1d00e26f26b824d7",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
+    },
+    "assets/vegetation/goldenrod_mesh.tres": {
+      "sha256": "159ffae6d04618a658406292440ff14fb9eb686a7d24e4f152bef60d9af0feb0",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
+    },
+    "assets/vegetation/yarrow_material.tres": {
+      "sha256": "15e7d16832612a700f1f43401973c143579d03fca25946b89f313367724e8d78",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
+    },
+    "assets/vegetation/competitor/yarrow_atlas.png": {
+      "sha256": "9133c2b04a114dda3d0a473a2677c8ada8d32dae6cef1c669f5ea8d0f31de11d",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
+    },
+    "assets/vegetation/yarrow_instances.tres": {
+      "sha256": "5ecd56712b6173abed651b92a9fd0b3c0684349811269d264e8adb08a688ec7a",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
+    },
+    "assets/vegetation/yarrow_mesh.tres": {
+      "sha256": "c145189141527d91e6f2dfb36f82935e82f52610ad414e7afe013535ccd59802",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
+    },
+    "assets/vegetation/wheat_grass_material.tres": {
+      "sha256": "5e9ca5b04178256c006c5b11f8b388b7b44092c4e786057f62a2386263dbe5d0",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
+    },
+    "assets/vegetation/competitor/wheat_grass_atlas.png": {
+      "sha256": "49a8f8bd560af3a37d4e03b1bf7046cdcf9f3dd2b528639a2ccd6c214fad21ec",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
+    },
+    "assets/vegetation/wheat_grass_instances.tres": {
+      "sha256": "c4499842323b9a75cd0e9cf44a989606b7917be313c09ed653611e30c7ff8ad7",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
+    },
+    "assets/vegetation/wheat_grass_mesh.tres": {
+      "sha256": "4663e3e8344c9bfff2b727ef9502776e9b4de1737b0dd2704995881da967905d",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
+    },
+    "assets/vegetation/switch_grass_material.tres": {
+      "sha256": "569b8d3b033aec3a4f5fba58c6f43d1649f1a30b83e7fa683c20a283de3e0c37",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
+    },
+    "assets/vegetation/competitor/switch_grass_atlas.png": {
+      "sha256": "1c0dd9842064c71af76a7916bf6d87729080542da8494e7f04ae17c56a09e955",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
+    },
+    "assets/vegetation/switch_grass_instances.tres": {
+      "sha256": "c6de775059fbea966215c7a4ce4e264e2a73391d7d310f81a70c667043908c94",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
+    },
+    "assets/vegetation/switch_grass_mesh.tres": {
+      "sha256": "efa1b18695e7b71354bd15470ce7d62ccdad691ca022263bec5c98684fd668e5",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
+    },
+    "assets/vegetation/red_algae_material.tres": {
+      "sha256": "0125c631279ffccbc28ba59fcfbf6bc93be50e0a28bb51e70066f4e9ba4935c9",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
+    },
+    "assets/vegetation/competitor/red_algae_atlas.png": {
+      "sha256": "20a4498566dff49af2aceb8f3371a61fe4eecdf45ed1c71f42606b207cdbd85b",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
+    },
+    "assets/vegetation/red_algae_instances.tres": {
+      "sha256": "929621fbb0f77528b2e002117b897a32c7d2bda0b3184713950d1d47f25adadd",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
+    },
+    "assets/vegetation/red_algae_mesh.tres": {
+      "sha256": "31fd0393abb8561d4d9ff9c171a9c89d07b5a79f59915d50235e6623dd8fbdb1",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
+    },
+    "assets/vegetation/competitor/dune_grass_atlas.png": {
+      "sha256": "7ec90f5b04f2e4bdaf2bcf01807fd4d965e25d2caba8b35ed7f7cee2f864213c",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
+    },
+    "assets/vegetation/competitor/shore_grass_atlas.png": {
+      "sha256": "7e40afd16ab29d467372c61631a6d1474b194a48d315291261e60134fce1d402",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
+    },
+    "assets/vegetation/competitor/kelp_atlas.png": {
+      "sha256": "e22ca46baa9c44bf616996e0bbb34a21fb9fa63ba8064f759be2a5e27c5ded23",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
+    },
+    "assets/vegetation/competitor/seagrass_atlas.png": {
+      "sha256": "08d916368e093c223af3e8d7f05a684c37bf578613ae33fd67b1e394fb8a5fdb",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
+    },
+    "assets/vegetation/goldenrod_species.tres": {
+      "sha256": "702fce3b20876feb36c9326c37731b20ccea285088f5b8d26055255dce7ec094",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
+    },
+    "assets/vegetation/yarrow_species.tres": {
+      "sha256": "6af6947030afec692de29cd85f8f3a961ad614133dc60f03307d0741e3f59212",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
+    },
+    "assets/vegetation/wheat_grass_species.tres": {
+      "sha256": "af99f55e4f9c9bbccf1f6fce64d3da5b323cd1e2bd47e7d3e061a336448a912b",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
+    },
+    "assets/vegetation/switch_grass_species.tres": {
+      "sha256": "fdabe13d5d6dd283439a208fd0e3dcb52d0b3cd9d5ba66a6883a3c4c49c4ad2c",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
+    },
+    "assets/vegetation/red_algae_species.tres": {
+      "sha256": "09c2ef761fc64b3c36f49446bae31753f74f8ddcb5715ff20433992870359e5d",
+      "reason": "Reviewed atlas visual adaptation: task/vegetation_atlas/验收/架构审查.md. Nine fixed data-only species, source proxy meshes and RGB-depth atlases; no authority writer or private schedule."
     }
   },
   "tool_ids": [
@@ -3896,7 +4012,7 @@
     }
   },
   "actual_nodes_evidence": {
-    "path": "task/vegetation/验收/场景结构_最终.json",
-    "sha256": "f20faede73168e28ddaffcbef46fad8b1f254ecc89cc65f618ced7ebcd0a5d31"
+    "path": "task/vegetation_atlas/验收/场景结构.json",
+    "sha256": "cc8a48054a4363071f511d7d87c2891c651544bba1a94d00d61ef9767c95a430"
   }
 }

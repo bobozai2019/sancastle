@@ -1,0 +1,109 @@
+{
+  "runs": {
+    "behavior_final_v4": {
+      "pass": true,
+      "checks": 61,
+      "elapsed_s": 43.31285333633423,
+      "probe_sha256": "2e399707a0436b89949772f65d45ab9eb132f0b050893714e960e18e0b608204",
+      "source_drift": []
+    },
+    "views_final_v4": {
+      "pass": true,
+      "checks": 39,
+      "elapsed_s": 26.934523582458496,
+      "probe_sha256": "4cddb352c715e606df6a69b486d16b5e21e778742e39ef2b570cde3eacba3652",
+      "source_drift": []
+    },
+    "soak_final_v4": {
+      "pass": true,
+      "checks": 20,
+      "elapsed_s": 79.00672936439514,
+      "probe_sha256": "3291e7bd9e44871160313b95e557bf76b8de4ff9933cdbed6d796627e0e183ad",
+      "source_drift": []
+    },
+    "cost_cull_v4": {
+      "pass": true,
+      "checks": 44,
+      "elapsed_s": 26.52865505218506,
+      "probe_sha256": "fa57021ed8f4ba66c8a1b1e7de43b5c0b657ce56fb68259bfb3cf01b78076cc2",
+      "source_drift": []
+    },
+    "smoke_test1_capture_final_v4": {
+      "pass": true,
+      "checks": 38,
+      "elapsed_s": 19.34385323524475,
+      "probe_sha256": "3ffdb7727de40e120e431d87cf08b4ff8f08d328ca53d7aec4691e1367d246f8",
+      "source_drift": []
+    },
+    "smoke_test1_backwash_final_v4": {
+      "pass": true,
+      "checks": 38,
+      "elapsed_s": 19.501354932785034,
+      "probe_sha256": "6bdbbb3da2aef3b0f42bd6781057d66fbc940da9c4125228f31ba6c1eeaad98a",
+      "source_drift": []
+    },
+    "smoke_test1_geometry_final_v4": {
+      "pass": true,
+      "checks": 38,
+      "elapsed_s": 14.099454879760742,
+      "probe_sha256": "0a06fd4ebc64f8354bb614a30424f7e4d17f77630b4286daad82a206eae88131",
+      "source_drift": []
+    }
+  },
+  "asset_manifest_sha256": "3a935a6a39642cd05d3d1c14b9fa3e5ac87a3d20363d3cd10de188a0776d6fa0",
+  "import_settings": {
+    "assets/vegetation/competitor/dune_grass_atlas.png.import": "ff4055ff88be0180a4cbe5ff533626c1ed254da5690c230b3d701b23a2e1232d",
+    "assets/vegetation/competitor/goldenrod_atlas.png.import": "4744ba5f00b8bd2fec46a2f7aba16e7b8191cee3f863cc47c743c782ca828d11",
+    "assets/vegetation/competitor/kelp_atlas.png.import": "6869c1738cc134a03deb6c2d812940dc349683459e2c27de6aad94efdd43ff0e",
+    "assets/vegetation/competitor/red_algae_atlas.png.import": "9470f13da46a218d12818245f2192f57fbbb8b8139c84df4c0953b122e5eca53",
+    "assets/vegetation/competitor/seagrass_atlas.png.import": "e44493230ea5bcd34da9b186edadc3a5409549071c089557b539050b476bcd99",
+    "assets/vegetation/competitor/shore_grass_atlas.png.import": "d048db7484170e45270a5f4b6ccb2a32a351e8a37a1153d0215a222b9b963907",
+    "assets/vegetation/competitor/switch_grass_atlas.png.import": "b5ed39c7eee381cb0b16264897f05c673d5d0f0209e0551c2ad58b856108a0ea",
+    "assets/vegetation/competitor/wheat_grass_atlas.png.import": "445b1959b1b416818b8802b09b0c964357cd8c1105e14d45e024ab107f54e74f",
+    "assets/vegetation/competitor/yarrow_atlas.png.import": "49fd33fcc93e9b93a769457bfe3e633af7fba3cc0b0831075b9442bb5b017290"
+  },
+  "cost_v3": {
+    "off_1": {
+      "viewport_gpu_ms": 11.0780000686646,
+      "frame_ms": 15.861,
+      "draw_calls": 87.0,
+      "primitives": 3837686.0
+    },
+    "on_0": {
+      "viewport_gpu_ms": 20.1444997787476,
+      "frame_ms": 25.542,
+      "draw_calls": 113.0,
+      "primitives": 5029622.0
+    },
+    "on_2": {
+      "viewport_gpu_ms": 20.22949981689455,
+      "frame_ms": 25.6465,
+      "draw_calls": 113.0,
+      "primitives": 5029622.0
+    }
+  },
+  "cost_cull_v4": {
+    "off_1": {
+      "viewport_gpu_ms": 10.89050006866455,
+      "frame_ms": 15.907,
+      "draw_calls": 87.0,
+      "primitives": 3837686.0
+    },
+    "on_0": {
+      "viewport_gpu_ms": 15.8415002822876,
+      "frame_ms": 19.808500000000002,
+      "draw_calls": 113.0,
+      "primitives": 5029622.0
+    },
+    "on_2": {
+      "viewport_gpu_ms": 15.90850019454955,
+      "frame_ms": 19.9165,
+      "draw_calls": 113.0,
+      "primitives": 5029622.0
+    }
+  },
+  "archive": {
+    "bytes": 52019988,
+    "sha256": "d03387d8d4d20a44e95ff46b943c863b712b8ab259cab712303c60a5698222f0"
+  }
+}

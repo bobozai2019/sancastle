@@ -19,7 +19,7 @@ def main():
     p=argparse.ArgumentParser()
     p.add_argument('--output',type=Path,required=True)
     p.add_argument('--scene',default='main',choices=('main','test1_capture','test1_backwash','test1_geometry'))
-    p.add_argument('--case',default='smoke',choices=('smoke','behavior','lifecycle','cost','soak'))
+    p.add_argument('--case',default='smoke',choices=('smoke','behavior','lifecycle','cost','soak','views'))
     p.add_argument('--timeout',type=int,default=240)
     args=p.parse_args();out=args.output.resolve();out.mkdir(parents=True,exist_ok=False)
     spec=importlib.util.spec_from_file_location('audit',ROOT/'tools/unified_edit_pipeline/audit_architecture.py')

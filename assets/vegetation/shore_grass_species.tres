@@ -4,10 +4,12 @@
 
 [resource]
 script = ExtResource("1_7878j")
-label = "岸边矮草"
-height_min_m = 0.2
-height_max_m = 0.4
-density = 0.9
+label = "水牛草"
+depth_max_m = 0.018
+scale_min = 0.85
+scale_max = 1.45
+density = 0.92
 flow_response = 0.45
 max_slope = 1.2
+patch_min = 0.28
 response_hz = 7.0
