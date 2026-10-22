@@ -1,0 +1,314 @@
+{
+	"auditor_sha256": "ceae90047fa88c0bfbc181690164c5cc90e558ac643b3f8649dfbfaf2f8284e0",
+	"checks": [
+		{
+			"name": "project_main_is_formal",
+			"pass": true
+		},
+		{
+			"name": "main_uid_preserved",
+			"pass": true
+		},
+		{
+			"name": "main_exact_root",
+			"pass": true
+		},
+		{
+			"name": "main_one_scene_authored_runtime",
+			"pass": true
+		},
+		{
+			"name": "main_no_legacy_node_scripts",
+			"pass": true
+		},
+		{
+			"name": "main_no_old_collision_proxy",
+			"pass": true
+		},
+		{
+			"name": "main_four_authored_vegetation_kinds",
+			"pass": true
+		},
+		{
+			"name": "main_vegetation_authored_meshes",
+			"pass": true
+		},
+		{
+			"name": "main_three_static_props",
+			"pass": true
+		},
+		{
+			"name": "main_exact_profile_bindings",
+			"pass": true
+		},
+		{
+			"name": "main_prop_layers",
+			"pass": true
+		},
+		{
+			"name": "main_no_old_execution_flags_or_solver",
+			"pass": true
+		},
+		{
+			"name": "main_same_family_routes",
+			"pass": true
+		},
+		{
+			"name": "main_promoted_presentation_identity",
+			"pass": true
+		},
+		{
+			"name": "test1_capture_exact_root",
+			"pass": true
+		},
+		{
+			"name": "test1_capture_one_scene_authored_runtime",
+			"pass": true
+		},
+		{
+			"name": "test1_capture_no_legacy_node_scripts",
+			"pass": true
+		},
+		{
+			"name": "test1_capture_no_old_collision_proxy",
+			"pass": true
+		},
+		{
+			"name": "test1_capture_four_authored_vegetation_kinds",
+			"pass": true
+		},
+		{
+			"name": "test1_capture_vegetation_authored_meshes",
+			"pass": true
+		},
+		{
+			"name": "test1_capture_no_props",
+			"pass": true
+		},
+		{
+			"name": "test1_capture_no_old_execution_flags_or_solver",
+			"pass": true
+		},
+		{
+			"name": "test1_capture_same_family_routes",
+			"pass": true
+		},
+		{
+			"name": "test1_capture_promoted_presentation_identity",
+			"pass": true
+		},
+		{
+			"name": "test1_backwash_exact_root",
+			"pass": true
+		},
+		{
+			"name": "test1_backwash_one_scene_authored_runtime",
+			"pass": true
+		},
+		{
+			"name": "test1_backwash_no_legacy_node_scripts",
+			"pass": true
+		},
+		{
+			"name": "test1_backwash_no_old_collision_proxy",
+			"pass": true
+		},
+		{
+			"name": "test1_backwash_four_authored_vegetation_kinds",
+			"pass": true
+		},
+		{
+			"name": "test1_backwash_vegetation_authored_meshes",
+			"pass": true
+		},
+		{
+			"name": "test1_backwash_no_props",
+			"pass": true
+		},
+		{
+			"name": "test1_backwash_no_old_execution_flags_or_solver",
+			"pass": true
+		},
+		{
+			"name": "test1_backwash_same_family_routes",
+			"pass": true
+		},
+		{
+			"name": "test1_backwash_promoted_presentation_identity",
+			"pass": true
+		},
+		{
+			"name": "test1_geometry_exact_root",
+			"pass": true
+		},
+		{
+			"name": "test1_geometry_one_scene_authored_runtime",
+			"pass": true
+		},
+		{
+			"name": "test1_geometry_no_legacy_node_scripts",
+			"pass": true
+		},
+		{
+			"name": "test1_geometry_no_old_collision_proxy",
+			"pass": true
+		},
+		{
+			"name": "test1_geometry_four_authored_vegetation_kinds",
+			"pass": true
+		},
+		{
+			"name": "test1_geometry_vegetation_authored_meshes",
+			"pass": true
+		},
+		{
+			"name": "test1_geometry_no_props",
+			"pass": true
+		},
+		{
+			"name": "test1_geometry_no_old_execution_flags_or_solver",
+			"pass": true
+		},
+		{
+			"name": "test1_geometry_same_family_routes",
+			"pass": true
+		},
+		{
+			"name": "test1_geometry_promoted_presentation_identity",
+			"pass": true
+		},
+		{
+			"name": "service_no_old_flags_ownership_or_solver_fallback",
+			"pass": true
+		},
+		{
+			"name": "service_no_path_fallback",
+			"pass": true
+		},
+		{
+			"name": "unknown_family_path_empty",
+			"pass": true
+		}
+	],
+	"entries": [
+		{
+			"key": "main",
+			"path": "res://scenes/main.tscn",
+			"presentation": {
+				"path": "res://scenes/unified_edit/presentation/main.tscn",
+				"sha256": "01ab0b5295dc3467babcc3599c8437efed4fe6c285b07d288ff9ced20a527ea3"
+			},
+			"scripts": {
+				"Bottle:133999628130": "res://scripts/props/floating_prop.gd",
+				"BrushIndicator:127674617285": "res://scripts/visual/brush_indicator.gd",
+				"BrushPreview:129872432748": "res://scripts/sand/brushes/brush_preview_view.gd",
+				"FloatingPropsPanel:133429202752": "res://scripts/beach/floating_props_panel.gd",
+				"GpuPlayerCamera:127557176548": "res://scripts/beach/free_camera.gd",
+				"SceneSwitcher:127892721109": "res://scripts/beach/scene_switch_panel.gd",
+				"Service:134385504121": "res://scripts/props/floating_props_service.gd",
+				"ShapeBrushPanel:128798690860": "res://scripts/sand/brushes/brush_tool_panel.gd",
+				"SurfaceA:130073759352": "res://scripts/simulation/unified_edit/height_surface.gd",
+				"SurfaceB:131181055674": "res://scripts/simulation/unified_edit/height_surface.gd",
+				"UIDrag:130006650484": "res://scripts/beach/ui_drag.gd",
+				"UIVisibility:129939541616": "res://scripts/beach/ui_visibility.gd",
+				"UnifiedBeach:127506844896": "res://scripts/beach/unified_playable_entry.gd",
+				"UnifiedEditRuntime:130056982135": "res://scripts/simulation/unified_edit/domain_runtime.gd",
+				"VegetationLayer:133194321714": "res://scripts/visual/vegetation_layer.gd",
+				"WaterSides:130040204918": "res://scripts/visual/water_boundary_sides.gd",
+				"WoodPlank:134133845866": "res://scripts/props/floating_prop.gd",
+				"WoodStick:134284840819": "res://scripts/props/floating_prop.gd"
+			},
+			"seed": {
+				"path": "res://assets/unified_edit/presentation/main.variant",
+				"sha256": "fcecd63ed78e4a7ab50b9d417b17dc7f9ae6af5b07417841ded5182291ed8d13"
+			},
+			"sha256": "18a4e3b9ff9527ec643ae74df0208acc063ac233188b672531306ffe476b0eb6"
+		},
+		{
+			"key": "test1_capture",
+			"path": "res://scenes/playable/test1_capture.tscn",
+			"presentation": {
+				"path": "res://scenes/unified_edit/presentation/test1_capture.tscn",
+				"sha256": "1e6b6de9cf35537d8948e415f09da1e0497034053b256b64d9ce7849f7076dca"
+			},
+			"scripts": {
+				"BrushIndicator:143814299409": "res://scripts/visual/brush_indicator.gd",
+				"BrushPreview:146012114515": "res://scripts/sand/brushes/brush_preview_view.gd",
+				"GpuPlayerCamera:143696858339": "res://scripts/beach/free_camera.gd",
+				"SceneSwitcher:144032403235": "res://scripts/beach/scene_switch_panel.gd",
+				"ShapeBrushPanel:144938372671": "res://scripts/sand/brushes/brush_tool_panel.gd",
+				"SurfaceA:146213441112": "res://scripts/simulation/unified_edit/height_surface.gd",
+				"SurfaceB:147320737404": "res://scripts/simulation/unified_edit/height_surface.gd",
+				"UIDrag:146146332043": "res://scripts/beach/ui_drag.gd",
+				"UIVisibility:146079223127": "res://scripts/beach/ui_visibility.gd",
+				"UnifiedBeach:143646526688": "res://scripts/beach/unified_playable_entry.gd",
+				"UnifiedEditRuntime:146196663696": "res://scripts/simulation/unified_edit/domain_runtime.gd",
+				"VegetationLayer:149334003444": "res://scripts/visual/vegetation_layer.gd",
+				"WaterSides:146179886679": "res://scripts/visual/water_boundary_sides.gd"
+			},
+			"seed": {
+				"path": "res://assets/unified_edit/presentation/test1_capture.variant",
+				"sha256": "104ac9aca3b2a31ac56f2d44790b2f6c27573884ebbdbf6832069da52bc823dd"
+			},
+			"sha256": "b8b9e6fe3b86cb1cb8caf4e94f3893edc8aab87c11b144bf2836f3a1d0cdac6e"
+		},
+		{
+			"key": "test1_backwash",
+			"path": "res://scenes/playable/test1_backwash.tscn",
+			"presentation": {
+				"path": "res://scenes/unified_edit/presentation/test1_backwash.tscn",
+				"sha256": "86833adaaf47d053744e5d942402cccfeaf6bfd884210b56a1469d582a9c4611"
+			},
+			"scripts": {
+				"BrushIndicator:158964125395": "res://scripts/visual/brush_indicator.gd",
+				"BrushPreview:161161940561": "res://scripts/sand/brushes/brush_preview_view.gd",
+				"GpuPlayerCamera:158846684386": "res://scripts/beach/free_camera.gd",
+				"SceneSwitcher:159182229221": "res://scripts/beach/scene_switch_panel.gd",
+				"ShapeBrushPanel:160088198732": "res://scripts/sand/brushes/brush_tool_panel.gd",
+				"SurfaceA:161363267060": "res://scripts/simulation/unified_edit/height_surface.gd",
+				"SurfaceB:162470563222": "res://scripts/simulation/unified_edit/height_surface.gd",
+				"UIDrag:161296158199": "res://scripts/beach/ui_drag.gd",
+				"UIVisibility:161229049426": "res://scripts/beach/ui_visibility.gd",
+				"UnifiedBeach:158796352736": "res://scripts/beach/unified_playable_entry.gd",
+				"UnifiedEditRuntime:161346490112": "res://scripts/simulation/unified_edit/domain_runtime.gd",
+				"VegetationLayer:164483829094": "res://scripts/visual/vegetation_layer.gd",
+				"WaterSides:161329712897": "res://scripts/visual/water_boundary_sides.gd"
+			},
+			"seed": {
+				"path": "res://assets/unified_edit/presentation/test1_backwash.variant",
+				"sha256": "c9f8213317f629fa333248b8e1c5aee3db1570e6826ea328ac5a8e9e485fb054"
+			},
+			"sha256": "032f19108443904152e2f436c462bfb9af71c0c780bfc9eedff55deac7f67038"
+		},
+		{
+			"key": "test1_geometry",
+			"path": "res://scenes/playable/test1_geometry.tscn",
+			"presentation": {
+				"path": "res://scenes/unified_edit/presentation/test1_geometry.tscn",
+				"sha256": "1e9a97141326a967c053c48f4990a577d2f3860648814b6cd4deed75b5f0da6a"
+			},
+			"scripts": {
+				"BrushIndicator:174449495736": "res://scripts/visual/brush_indicator.gd",
+				"BrushPreview:176647311199": "res://scripts/sand/brushes/brush_preview_view.gd",
+				"GpuPlayerCamera:174332055359": "res://scripts/beach/free_camera.gd",
+				"SceneSwitcher:174667599374": "res://scripts/beach/scene_switch_panel.gd",
+				"ShapeBrushPanel:175573569355": "res://scripts/sand/brushes/brush_tool_panel.gd",
+				"SurfaceA:176865414944": "res://scripts/simulation/unified_edit/height_surface.gd",
+				"SurfaceB:177972711008": "res://scripts/simulation/unified_edit/height_surface.gd",
+				"UIDrag:176781528770": "res://scripts/beach/ui_drag.gd",
+				"UIVisibility:176714419593": "res://scripts/beach/ui_visibility.gd",
+				"UnifiedBeach:174281723104": "res://scripts/beach/unified_playable_entry.gd",
+				"UnifiedEditRuntime:176848637636": "res://scripts/simulation/unified_edit/domain_runtime.gd",
+				"VegetationLayer:179985976867": "res://scripts/visual/vegetation_layer.gd",
+				"WaterSides:176815082847": "res://scripts/visual/water_boundary_sides.gd"
+			},
+			"seed": {
+				"path": "res://assets/unified_edit/presentation/test1_geometry.variant",
+				"sha256": "150e9087b0fe41581146784a5dfbc319b3bc0b027a8a9252d0d1b1de7ed3c7a8"
+			},
+			"sha256": "f52c1c6a3d04c771f2b9af262a4a94dcca4237b694c71e14de8cb56b0943da6c"
+		}
+	],
+	"pass": true,
+	"scope": "Formal static node scripts, one authored unified runtime, source identity and removed scene-service fallback; not the full G7 executable writer audit"
+}

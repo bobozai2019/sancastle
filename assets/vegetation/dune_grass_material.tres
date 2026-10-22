@@ -1,0 +1,12 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://shaders/visual/vegetation.gdshader" id="1"]
+
+[resource]
+resource_local_to_scene = true
+shader = ExtResource("1")
+shader_parameter/kind = 3
+shader_parameter/seed = 62143
+shader_parameter/base_color = Color(0.250000, 0.270000, 0.090000, 1)
+shader_parameter/tip_color = Color(0.560000, 0.540000, 0.250000, 1)
+shader_parameter/root_darkening = 0.25

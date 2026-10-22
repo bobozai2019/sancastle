@@ -2,6 +2,3 @@
 [ext_resource type="PackedScene" path="res://scenes/main.tscn" id="1"]
 [node name="BrushPlayableCandidate" instance=ExtResource("1")]
 playing = false
-[node name="PerformancePanel" parent="Interface"]
-visible = false
-process_mode = 4

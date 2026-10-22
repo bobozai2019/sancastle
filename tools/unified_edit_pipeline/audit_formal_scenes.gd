@@ -5,7 +5,7 @@ extends SceneTree
 const Routes=preload("res://scripts/beach/unified_scene_routes.gd")
 const ENTRY="res://scripts/beach/unified_playable_entry.gd"
 const RUNTIME="res://scripts/simulation/unified_edit/domain_runtime.gd"
-const ALLOWED=[ENTRY,RUNTIME,"res://scripts/simulation/unified_edit/height_surface.gd","res://scripts/beach/unified_performance_panel.gd","res://scripts/beach/free_camera.gd","res://scripts/beach/ui_visibility.gd","res://scripts/beach/ui_drag.gd","res://scripts/beach/scene_switch_panel.gd","res://scripts/sand/brushes/brush_tool_panel.gd","res://scripts/sand/brushes/brush_preview_view.gd","res://scripts/visual/brush_indicator.gd","res://scripts/visual/water_boundary_sides.gd"]
+const ALLOWED=[ENTRY,RUNTIME,"res://scripts/simulation/unified_edit/height_surface.gd","res://scripts/beach/unified_performance_panel.gd","res://scripts/beach/free_camera.gd","res://scripts/beach/ui_visibility.gd","res://scripts/beach/ui_drag.gd","res://scripts/beach/scene_switch_panel.gd","res://scripts/sand/brushes/brush_tool_panel.gd","res://scripts/sand/brushes/brush_preview_view.gd","res://scripts/visual/brush_indicator.gd","res://scripts/visual/water_boundary_sides.gd","res://scripts/visual/vegetation_layer.gd"]
 var output:=""
 var checks: Array=[]
 var entries: Array=[]
@@ -35,6 +35,12 @@ func _run() -> void:
 		check(key+"_one_scene_authored_runtime",runtimes==1 and entry.has_node("UnifiedEditRuntime"))
 		check(key+"_no_legacy_node_scripts",authorized)
 		check(key+"_no_old_collision_proxy",not entry.has_node("GpuCollisionProxy"))
+		var vegetation=entry.get_node_or_null("VegetationLayer")
+		check(key+"_four_authored_vegetation_kinds",vegetation!=null and vegetation.get_child_count()==4 and vegetation.profile.get_script()==preload("res://scripts/visual/vegetation_profile.gd"))
+		if vegetation!=null:
+			# Scene-local resource duplicates have no resource_path. Inspect the
+			# fixed asset named by the authored child, never a runtime factory.
+			check(key+"_vegetation_authored_meshes",vegetation.get_children().all(func(node):return node is MultiMeshInstance3D and node.multimesh.instance_count==768 and FileAccess.get_file_as_string("res://assets/vegetation/"+String(node.name)+"_instances.tres").contains("buffer = PackedFloat32Array")))
 		if key=="main":
 			var props=entry.get_node_or_null("FloatingProps/Service")
 			var rows: Array=props.authored_registry() if props!=null else []

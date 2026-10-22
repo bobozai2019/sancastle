@@ -1,0 +1,11 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://scripts/visual/vegetation_profile.gd" id="1_wqonc"]
+[ext_resource type="Resource" path="res://assets/vegetation/seagrass_species.tres" id="2_pvtsg"]
+[ext_resource type="Resource" path="res://assets/vegetation/kelp_species.tres" id="3_qo5du"]
+[ext_resource type="Resource" path="res://assets/vegetation/shore_grass_species.tres" id="4_tvpef"]
+[ext_resource type="Resource" path="res://assets/vegetation/dune_grass_species.tres" id="5_2w048"]
+
+[resource]
+script = ExtResource("1_wqonc")
+species = Array[Resource]([ExtResource("2_pvtsg"), ExtResource("3_qo5du"), ExtResource("4_tvpef"), ExtResource("5_2w048")])

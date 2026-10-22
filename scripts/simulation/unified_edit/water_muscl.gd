@@ -87,6 +87,8 @@ func record_tick(requested_dt: float) -> void:
 	if water.solver.profile_passes:rd.capture_timestamp("sandcastle_async_water_tick_start")
 	var push0:=PackedInt32Array([0,1 if water.boundary_enabled else 0,0,0]).to_byte_array()
 	var push1:=PackedInt32Array([1,1 if water.boundary_enabled else 0,0,0]).to_byte_array()
+	push0.encode_float(8,water.solver.wave_retention)
+	push1.encode_float(8,water.solver.wave_retention)
 	_decide(0,1 if water.boundary_enabled else 0,requested_dt)
 	_dispatch("rk_edge",sets.rk_edge[0],push0)
 	_decide(7,0,requested_dt)

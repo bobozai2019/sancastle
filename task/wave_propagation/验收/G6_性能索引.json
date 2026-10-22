@@ -1,0 +1,136 @@
+{
+  "schema": 1,
+  "gate": "G6",
+  "component": "T06-G03",
+  "outcome": "measured_targets_unmet",
+  "performance_targets_met": false,
+  "functional_delivery_allowed_by": "D06",
+  "overall_gate_outcome": "incomplete",
+  "artifacts": [
+    {
+      "path": "task/wave_propagation/验收/G6_性能.md",
+      "bytes": 3884,
+      "sha256": "6ebfda1e61746ba4003f48ebc528f985b0f65c5ed9ede392d1a2df76e0ceedbd"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_cost_budget_01/budget.json",
+      "bytes": 752,
+      "sha256": "2aa0eb75116f5c45d4b71e3580a7a03ef193ec3a3b97fcbcff7537fe20bdfdc4"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_cost_budget_01/check_stdout.txt",
+      "bytes": 72,
+      "sha256": "0fb41bb7cc71b68a335c01d8f84a806304e1cc6bb173f34ca02cb913d0f62013"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_cost_budget_01/cpu.json",
+      "bytes": 118,
+      "sha256": "c52b80d07361cd713664e671d6b2a713245ff3bf0cdd125796efeaf8a3f8c068"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_cost_budget_01/godot_process_inventory.json",
+      "bytes": 917,
+      "sha256": "f393c351b04dad210f93c61705ddc8a97a125071a64a34a1b9cae80ebdb6278b"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_cost_budget_01/paired_conditions.json",
+      "bytes": 590,
+      "sha256": "0a0538d57b50917f75d2b5de7a78b3751d2338db32fa420774c546413f6aa6b1"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_cost_budget_01/video_controllers.json",
+      "bytes": 247,
+      "sha256": "c2e47680b1414f84069f8fc2053fcd4a5a89067b8da2d87a565fec099230015e"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_cost_fo_01/analysis.json",
+      "bytes": 3138,
+      "sha256": "1b2be3ce665e01d75411d40b1bbb4b83297c83c7e760a2439537aa4273865531"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_cost_fo_01/analyzer.py",
+      "bytes": 3313,
+      "sha256": "bc2dfd3d830cf10294848486f25782d12a9c31012eb84267c9147ac112c16545"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_cost_fo_01/consumed_sources.zip",
+      "bytes": 17207148,
+      "sha256": "6f6476c0439d8555e959277ee2790ee2477e55f4e650e4786896178ea4f41b5d"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_cost_fo_01/frame_after_window.png",
+      "bytes": 686464,
+      "sha256": "75c15d88c8ade63786039b2b6ac9dd69117e37bbc8f10d076bb6d8bae27dabf7"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_cost_fo_01/manifest.json",
+      "bytes": 718,
+      "sha256": "21d54d3ef82f15d056b35477463963bd7754f1afbff82fa4b6141ce11568be78"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_cost_fo_01/probe.gd",
+      "bytes": 6428,
+      "sha256": "133b5a46320fad06430955fad210d508490e9685868a0739135f22b35aacd9b3"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_cost_fo_01/result.json",
+      "bytes": 940628,
+      "sha256": "1135d6672e8f7c9525409e7044a7e729bb612f47c18ab616a8acacd12f7db35f"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_cost_fo_01/runner.py",
+      "bytes": 2899,
+      "sha256": "cadfcaf6d27082b36120085ccd2a377668f7d8e26cd3a290083be8813a0ce5ea"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_cost_fo_01/stdout.txt",
+      "bytes": 250,
+      "sha256": "fccb5f74f57426ea23fe9ebe84fafff2d0cc72e7ad4c735826273f372178f9d7"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_cost_mc_01/analysis.json",
+      "bytes": 3137,
+      "sha256": "8c1df3eb4c8506406883fd9a863df0b4e3e1219edfd21e50e553384b5309bbea"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_cost_mc_01/analyzer_v1.py",
+      "bytes": 3060,
+      "sha256": "d838ba1542bffebcde15037e4f16e1d4230992226f1d975175b25043495006fa"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_cost_mc_01/consumed_sources.zip",
+      "bytes": 17207148,
+      "sha256": "0fbd9550494eed2af9c0eb1a350f5908be30fa47d19b3c10e452cbc81046a44f"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_cost_mc_01/frame_after_window.png",
+      "bytes": 675103,
+      "sha256": "e762d29dce93727db6e18437abffadeba17b696012d5f10ddad8fa6b9fe12767"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_cost_mc_01/manifest.json",
+      "bytes": 714,
+      "sha256": "5c90aa82bbf0141ef390854a099c0eb3955209577fb7fd83994a86dc8c8b84e4"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_cost_mc_01/probe.gd",
+      "bytes": 6428,
+      "sha256": "133b5a46320fad06430955fad210d508490e9685868a0739135f22b35aacd9b3"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_cost_mc_01/result.json",
+      "bytes": 538649,
+      "sha256": "b6d3a490e5b73f64293950707a38929d5c3312396f9b3396d8e6641a762bc191"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_cost_mc_01/runner.py",
+      "bytes": 2899,
+      "sha256": "cadfcaf6d27082b36120085ccd2a377668f7d8e26cd3a290083be8813a0ce5ea"
+    },
+    {
+      "path": "test_output/wave_propagation/g6_cost_mc_01/stdout.txt",
+      "bytes": 250,
+      "sha256": "fccb5f74f57426ea23fe9ebe84fafff2d0cc72e7ad4c735826273f372178f9d7"
+    }
+  ]
+}

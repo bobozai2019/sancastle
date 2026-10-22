@@ -8,13 +8,14 @@ import time
 import zipfile
 from run_lifecycle_case import ENGINE
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--runtime',type=Path,required=True);p.add_argument('--fixtures',type=Path,required=True);p.add_argument('--output',type=Path,required=True);p.add_argument('--scene',choices=['main','test1_capture','test1_backwash','test1_geometry'],default='main');a=p.parse_args();runtime=a.runtime.resolve();out=a.output.resolve();fixtures=json.loads(a.fixtures.read_text(encoding='utf-8'))
+    p=argparse.ArgumentParser();p.add_argument('--runtime',type=Path,required=True);p.add_argument('--fixtures',type=Path,required=True);p.add_argument('--output',type=Path,required=True);p.add_argument('--scene',choices=['main','test1_capture','test1_backwash','test1_geometry'],default='main');p.add_argument('--matched-domain',action='store_true');a=p.parse_args();runtime=a.runtime.resolve();out=a.output.resolve();fixtures=json.loads(a.fixtures.read_text(encoding='utf-8'))
     if not isinstance(fixtures,list) or not 1<=len(fixtures)<=16:raise ValueError('invalid fixtures')
     for item in fixtures:
         file=Path(item['path'])
         if not file.is_file() or hashlib.sha256(file.read_bytes()).hexdigest()!=item['sha256']:raise ValueError('source fixture identity')
     out.mkdir(parents=True,exist_ok=False);(out/'fixtures.json').write_bytes(a.fixtures.read_bytes());script=runtime/'tools/wave_propagation/native_source_restore_probe.gd';(out/'probe.gd').write_bytes(script.read_bytes());(out/Path(__file__).name).write_bytes(Path(__file__).read_bytes())
     command=[ENGINE,'--path',str(runtime),'--rendering-driver','d3d12','--script','res://tools/wave_propagation/native_source_restore_probe.gd','--','--output='+str(out),'--fixtures='+str(out/'fixtures.json'),'--scene='+a.scene]
+    if a.matched_domain:command.append('--matched-domain')
     manifest={'command':command,'outcome':'running','probe_sha256':hashlib.sha256(script.read_bytes()).hexdigest(),'engine_sha256':hashlib.sha256(Path(ENGINE).read_bytes()).hexdigest(),'scope':'Functional full-source migration, raw GPU resave and continuation; no performance measurement'};started=time.time()
     with (out/'stdout.txt').open('w',encoding='utf-8') as log:
         child=subprocess.Popen(command,stdout=log,stderr=subprocess.STDOUT);manifest['pid']=child.pid;(out/'manifest.json').write_text(json.dumps(manifest,indent=2),encoding='utf-8')

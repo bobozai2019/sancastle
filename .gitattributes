@@ -1,2 +1,5 @@
 # Normalize EOL for all files that Git considers text files.
 * text=auto eol=lf
+
+# Research exports are byte-addressed evidence; preserve their recorded hashes.
+/docs/competitor/evidence/** -text

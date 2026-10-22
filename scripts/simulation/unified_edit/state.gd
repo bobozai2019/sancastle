@@ -12,6 +12,8 @@ var prescribed_tide_boundary:=false
 var cohesion_yield_height_m:=0.0
 var profile_passes:=false
 var water_solver_id:="rusanov_first_order_v1"
+var wave_retention:=0.0
+var coupling_parameters: Dictionary={}
 var async_active:=true
 var async_transport
 var textures: Dictionary={}

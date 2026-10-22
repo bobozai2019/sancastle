@@ -130,6 +130,8 @@ func initialize_render(domain) -> void:
 	if _registry!=null:
 		state.cohesion_yield_height_m=float(_configuration.environment.get("ordinary_cohesion_yield_height_m",0.0))
 		state.water_solver_id=C.Numerics.solver_id(_configuration.environment)
+		state.wave_retention=C.Numerics.retention(_configuration.environment)
+		state.coupling_parameters=_configuration.environment.get("coupling_parameters",{}).duplicate(true)
 	var error: StringName=&""
 	# Capabilities are added with their real implementation, never silently off.
 	if _registry==null:error=&"unimplemented_runtime_capability"
@@ -494,7 +496,7 @@ func request_checkpoint(selection: Dictionary, callback: Callable, save_path: St
 	if checkpoint_capture!=null:return {"accepted":false,"error":&"checkpoint_busy"}
 	if not callback.is_valid():return {"accepted":false,"error":&"invalid_checkpoint_callback"}
 	if not C.exact(selection,["policy","speed","brush"]) or typeof(selection.policy)!=TYPE_INT or selection.policy not in [0,1,2,3] or not Checkpoint.Old.number(selection.speed,-1.0,1.0):return {"accepted":false,"error":&"invalid_checkpoint_selection"}
-	var error:=Checkpoint.Selection.selection_error(selection.brush)
+	var error:=C.ParameterSchema.selection_error(selection.brush)
 	if not error.is_empty():return {"accepted":false,"error":error}
 	error=C.validate(_configuration,true)
 	if not error.is_empty():return {"accepted":false,"error":error}

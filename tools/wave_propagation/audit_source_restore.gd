@@ -19,10 +19,14 @@ func leaf(value: Dictionary,path: String) -> Variant:
 		current=current[key]
 	return current
 func _initialize() -> void:
-	var folder:=OS.get_cmdline_user_args()[0];var output:=folder.path_join("independent_audit.json")
+	var args:=OS.get_cmdline_user_args()
+	if args.size() not in [1,2]:quit(2);return
+	var folder:=args[0];var expected_count:=7 if args.size()==1 else args[1].to_int()
+	if expected_count<1 or expected_count>16:quit(2);return
+	var output:=folder.path_join("independent_audit.json" if args.size()==1 else "independent_audit_release.json")
 	if FileAccess.file_exists(output):quit(2);return
 	var report: Dictionary=JSON.parse_string(FileAccess.get_file_as_string(folder.path_join("probe.json")))
-	check("runtime_probe_passed",report.get("pass",false));check("seven_sources",report.observations.migrations.size()==7)
+	check("runtime_probe_passed",report.get("pass",false));check("externally_fixed_source_count",report.observations.migrations.size()==expected_count)
 	for i in report.observations.migrations.size():
 		var row: Dictionary=report.observations.migrations[i];var format: String=row.source.get("format","native_v6")
 		var magic: String="SANDCP01" if format=="edit4_native2" else ("SANDGP05" if format=="edit5_native3" else "SANDUE06")

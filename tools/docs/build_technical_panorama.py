@@ -189,7 +189,7 @@ def main():
     doc.core_properties.keywords='Godot RenderingDevice 沙水模拟 统一编辑'
     paragraph(doc,'Sandcastle 项目技术全景','Title')
     paragraph(doc,'架构 算法 数据接口 生命周期与运行边界','Subtitle')
-    paragraph(doc,'当前实现参考版  2026年10月21日')
+    paragraph(doc,'内容依据当前源码和生效配置')
     paragraph(doc,'这份手册从场景入口到 GPU 权威状态，再到三维表现、碰撞、道具和原生检查点，解释当前项目如何运行。核心设计是让编辑、水 tick 和显示工作沿同一有序流推进，以完整完成态连接消费者，并用明确的所有权证明管理异步资源。')
     paragraph(doc,'内容依据项目当前源码、场景和实际被入口读取的配置。默认行为与可选能力分别说明；文档不包含开发流水、任务进度、性能测试流水或验收记录。阅读时可用 Word 标题导航或下页目录跳转，源文件定位见附录。')
     table(doc,['主题','读者能获得的内容'],[['架构与运行','模块职责、输入路径、CPU/GPU 边界与场景差异'],['数值与交互','浅水、悬沙、材料、编辑水响应和铲子账本'],['消费者与持久化','完整态绑定、碰撞分帧、Jolt 道具、保存恢复'],['工程接口','字节 ABI、公共入口、有效参数和来源文件']], [35,135])
@@ -229,7 +229,7 @@ def main():
     for label,rows in get_abi():
         heading(doc,label,2);table(doc,['偏移 B','长度 B','类型','字段'],rows,[20,20,25,105])
     appendix_heading(number+2,appendix[1])
-    paragraph(doc,'下表来自各正式 manifest 的 metadata.settings。只列入口实际配置相关项，不把烘焙时的 metadata.configuration 或历史 checks 当作当前后端开关。数值求解器为空导出值时由 water_numerics.gd 解析为默认一阶。')
+    paragraph(doc,'下表来自各正式 manifest 的 metadata.settings。只列入口实际配置相关项，不把烘焙时的 metadata.configuration 或历史 checks 当作当前后端开关。数值求解器为空导出值时由 water_numerics.gd 解析为默认 MUSCL 二阶；历史检查点缺失数值字段仍按一阶解释。')
     keys=['water_policy','signed_speed_m_s','dig_amount_m3','fill_amount_m3','enable_erosion','enable_brush_water','foam_enabled','gravel_enabled','gravel_count','local_front_history','prototype_local_front_wide_field','render_subdivision','sand_cohesion_yield_height_m','use_player_camera']
     cases=['main','test1_capture','test1_backwash','test1_geometry'];settings=[]
     for case in cases:
@@ -240,11 +240,18 @@ def main():
     appendix_heading(number+3,appendix[2])
     paragraph(doc,'动态字段映射来自 main manifest，并由 material_plan 对照静态场景校验。每项列出 shader 和采样器到公共完成态字段的关系；材质静态参数以实际 .tscn 资源为准，不把旧烘焙参数快照视为运行中的全部有效值。')
     metadata=json.loads((ROOT/'assets/unified_edit/presentation/main.json').read_text(encoding='utf-8'))['metadata']
+    grouped_materials={}
     for material in metadata['materials']:
+        if not material['fields']:continue
+        key=(material['shader'],tuple(sorted(material['fields'].items())))
+        if key not in grouped_materials:grouped_materials[key]={'material':material,'ids':[]}
+        grouped_materials[key]['ids'].append(material['id'])
+    for group in grouped_materials.values():
+        material=group['material']
         fields=material['fields']
-        if not fields:continue
         path=material['shader'].removeprefix('res://');sid=add_source(path)
-        heading(doc,f'材质 {material["id"]}  {Path(path).stem}',2)
+        labels=' '.join(str(value) for value in group['ids'])
+        heading(doc,f'材质 {labels}  {Path(path).stem}',2)
         paragraph(doc,f'{sid}  '+breakable(path)).paragraph_format.keep_with_next=True
         table(doc,['材质采样器','公共字段'],list(fields.items()),[105,65])
     appendix_heading(number+4,appendix[3],new_page=False)

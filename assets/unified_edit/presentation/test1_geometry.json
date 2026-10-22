@@ -83,6 +83,22 @@
       {
         "material_id": 10,
         "path": "SandSides:material_override"
+      },
+      {
+        "path": "VegetationLayer/seagrass:material_override",
+        "material_id": 11
+      },
+      {
+        "path": "VegetationLayer/kelp:material_override",
+        "material_id": 12
+      },
+      {
+        "path": "VegetationLayer/shore_grass:material_override",
+        "material_id": 13
+      },
+      {
+        "path": "VegetationLayer/dune_grass:material_override",
+        "material_id": 14
       }
     ],
     "configuration": {
@@ -806,7 +822,7 @@
           "visual_time_s": 0.0
         },
         "shader": "res://assets/water_material_natural_candidate/async_rdc_bed.gdshader",
-        "shader_sha256": "aefafca7ae8c6ea6131b6fae4dc712ca8e18916c72f97cbde338d5ce7bdf5977"
+        "shader_sha256": "db674d509d26f848e6e203d61e6e1a6a11e53f090b450d92a353c7042081f42f"
       },
       {
         "fields": {
@@ -1502,6 +1518,74 @@
         "parameters": {},
         "shader": "res://assets/test1_geometry/sand_sides.gdshader",
         "shader_sha256": "0e5a93f7918069b224e28818970bee1e3469649a6cdf0de5acb66afbddcae0f5"
+      },
+      {
+        "shader": "res://shaders/visual/vegetation.gdshader",
+        "shader_sha256": "10d98cbb3a36c987e1314a778715bd2e41f2cef953307bd84ff3f21c1b6e57f5",
+        "fields": {
+          "vegetation_roots": "vegetation_roots",
+          "vegetation_motion": "vegetation_motion",
+          "async_clock": "clock",
+          "water_state": "water"
+        },
+        "id": 11,
+        "parameters": {
+          "kind": 0,
+          "seed": 62143,
+          "root_darkening": 0.25,
+          "material_resource": "res://assets/vegetation/seagrass_material.tres"
+        }
+      },
+      {
+        "shader": "res://shaders/visual/vegetation.gdshader",
+        "shader_sha256": "10d98cbb3a36c987e1314a778715bd2e41f2cef953307bd84ff3f21c1b6e57f5",
+        "fields": {
+          "vegetation_roots": "vegetation_roots",
+          "vegetation_motion": "vegetation_motion",
+          "async_clock": "clock",
+          "water_state": "water"
+        },
+        "id": 12,
+        "parameters": {
+          "kind": 1,
+          "seed": 62143,
+          "root_darkening": 0.25,
+          "material_resource": "res://assets/vegetation/kelp_material.tres"
+        }
+      },
+      {
+        "shader": "res://shaders/visual/vegetation.gdshader",
+        "shader_sha256": "10d98cbb3a36c987e1314a778715bd2e41f2cef953307bd84ff3f21c1b6e57f5",
+        "fields": {
+          "vegetation_roots": "vegetation_roots",
+          "vegetation_motion": "vegetation_motion",
+          "async_clock": "clock",
+          "water_state": "water"
+        },
+        "id": 13,
+        "parameters": {
+          "kind": 2,
+          "seed": 62143,
+          "root_darkening": 0.25,
+          "material_resource": "res://assets/vegetation/shore_grass_material.tres"
+        }
+      },
+      {
+        "shader": "res://shaders/visual/vegetation.gdshader",
+        "shader_sha256": "10d98cbb3a36c987e1314a778715bd2e41f2cef953307bd84ff3f21c1b6e57f5",
+        "fields": {
+          "vegetation_roots": "vegetation_roots",
+          "vegetation_motion": "vegetation_motion",
+          "async_clock": "clock",
+          "water_state": "water"
+        },
+        "id": 14,
+        "parameters": {
+          "kind": 3,
+          "seed": 62143,
+          "root_darkening": 0.25,
+          "material_resource": "res://assets/vegetation/dune_grass_material.tres"
+        }
       }
     ],
     "nodes": [
@@ -1601,53 +1685,8 @@
         "script": ""
       },
       {
-        "class": "HBoxContainer",
-        "path": "Interface/EditPanel/Margin/Controls/Tools",
-        "script": ""
-      },
-      {
-        "class": "Button",
-        "path": "Interface/EditPanel/Margin/Controls/Tools/DigTool",
-        "script": ""
-      },
-      {
-        "class": "Button",
-        "path": "Interface/EditPanel/Margin/Controls/Tools/FillTool",
-        "script": ""
-      },
-      {
-        "class": "Label",
-        "path": "Interface/EditPanel/Margin/Controls/DigLabel",
-        "script": ""
-      },
-      {
-        "class": "SpinBox",
-        "path": "Interface/EditPanel/Margin/Controls/DigAmount",
-        "script": ""
-      },
-      {
-        "class": "Label",
-        "path": "Interface/EditPanel/Margin/Controls/FillLabel",
-        "script": ""
-      },
-      {
-        "class": "SpinBox",
-        "path": "Interface/EditPanel/Margin/Controls/FillAmount",
-        "script": ""
-      },
-      {
         "class": "HSeparator",
         "path": "Interface/EditPanel/Margin/Controls/WaveSeparator",
-        "script": ""
-      },
-      {
-        "class": "Label",
-        "path": "Interface/EditPanel/Margin/Controls/WaveLabel",
-        "script": ""
-      },
-      {
-        "class": "SpinBox",
-        "path": "Interface/EditPanel/Margin/Controls/WaveAmount",
         "script": ""
       },
       {
@@ -1658,96 +1697,6 @@
       {
         "class": "Label",
         "path": "Interface/EditPanel/Margin/Controls/WaveStatus",
-        "script": ""
-      },
-      {
-        "class": "Label",
-        "path": "Interface/EditPanel/Margin/Controls/Help",
-        "script": ""
-      },
-      {
-        "class": "PanelContainer",
-        "path": "Interface/PerformancePanel",
-        "script": ""
-      },
-      {
-        "class": "MarginContainer",
-        "path": "Interface/PerformancePanel/Margin",
-        "script": ""
-      },
-      {
-        "class": "VBoxContainer",
-        "path": "Interface/PerformancePanel/Margin/Rows",
-        "script": ""
-      },
-      {
-        "class": "HBoxContainer",
-        "path": "Interface/PerformancePanel/Margin/Rows/Header",
-        "script": ""
-      },
-      {
-        "class": "Label",
-        "path": "Interface/PerformancePanel/Margin/Rows/Header/Title",
-        "script": ""
-      },
-      {
-        "class": "CheckButton",
-        "path": "Interface/PerformancePanel/Margin/Rows/Header/Sampling",
-        "script": ""
-      },
-      {
-        "class": "Label",
-        "path": "Interface/PerformancePanel/Margin/Rows/Summary",
-        "script": ""
-      },
-      {
-        "class": "Label",
-        "path": "Interface/PerformancePanel/Margin/Rows/Cpu",
-        "script": ""
-      },
-      {
-        "class": "Label",
-        "path": "Interface/PerformancePanel/Margin/Rows/RenderTime",
-        "script": ""
-      },
-      {
-        "class": "Label",
-        "path": "Interface/PerformancePanel/Margin/Rows/Simulation",
-        "script": ""
-      },
-      {
-        "class": "HSeparator",
-        "path": "Interface/PerformancePanel/Margin/Rows/Separator",
-        "script": ""
-      },
-      {
-        "class": "Label",
-        "path": "Interface/PerformancePanel/Margin/Rows/StageHeading",
-        "script": ""
-      },
-      {
-        "class": "HBoxContainer",
-        "path": "Interface/PerformancePanel/Margin/Rows/Stages",
-        "script": ""
-      },
-      {
-        "class": "Label",
-        "path": "Interface/PerformancePanel/Margin/Rows/Stages/Names",
-        "script": ""
-      },
-      {
-        "class": "Label",
-        "path": "Interface/PerformancePanel/Margin/Rows/Stages/Values",
-        "script": ""
-      },
-      {
-        "class": "Label",
-        "path": "Interface/PerformancePanel/Margin/Rows/Collision",
-        "script": ""
-      },
-      {
-        "class": "Label",
-        "path": "Interface/PerformancePanel/Margin/Rows/State",
         "script": ""
       },
       {
@@ -1808,151 +1757,6 @@
       {
         "class": "Button",
         "path": "Interface/ShapeBrushPanel/Margin/Controls/Tools/GravelDrop",
-        "script": ""
-      },
-      {
-        "class": "VBoxContainer",
-        "path": "Interface/ShapeBrushPanel/Margin/Controls/GravelParams",
-        "script": ""
-      },
-      {
-        "class": "Label",
-        "path": "Interface/ShapeBrushPanel/Margin/Controls/GravelParams/AmountLabel",
-        "script": ""
-      },
-      {
-        "class": "SpinBox",
-        "path": "Interface/ShapeBrushPanel/Margin/Controls/GravelParams/GravelCount",
-        "script": ""
-      },
-      {
-        "class": "VBoxContainer",
-        "path": "Interface/ShapeBrushPanel/Margin/Controls/OrdinaryParams",
-        "script": ""
-      },
-      {
-        "class": "Label",
-        "path": "Interface/ShapeBrushPanel/Margin/Controls/OrdinaryParams/DigAmountLabel",
-        "script": ""
-      },
-      {
-        "class": "SpinBox",
-        "path": "Interface/ShapeBrushPanel/Margin/Controls/OrdinaryParams/DigAmount",
-        "script": ""
-      },
-      {
-        "class": "Label",
-        "path": "Interface/ShapeBrushPanel/Margin/Controls/OrdinaryParams/FillAmountLabel",
-        "script": ""
-      },
-      {
-        "class": "SpinBox",
-        "path": "Interface/ShapeBrushPanel/Margin/Controls/OrdinaryParams/FillAmount",
-        "script": ""
-      },
-      {
-        "class": "VBoxContainer",
-        "path": "Interface/ShapeBrushPanel/Margin/Controls/CastleParams",
-        "script": ""
-      },
-      {
-        "class": "Label",
-        "path": "Interface/ShapeBrushPanel/Margin/Controls/CastleParams/CastleScaleLabel",
-        "script": ""
-      },
-      {
-        "class": "SpinBox",
-        "path": "Interface/ShapeBrushPanel/Margin/Controls/CastleParams/CastleScale",
-        "script": ""
-      },
-      {
-        "class": "Label",
-        "path": "Interface/ShapeBrushPanel/Margin/Controls/CastleParams/CastleHeightLabel",
-        "script": ""
-      },
-      {
-        "class": "SpinBox",
-        "path": "Interface/ShapeBrushPanel/Margin/Controls/CastleParams/CastleHeight",
-        "script": ""
-      },
-      {
-        "class": "Label",
-        "path": "Interface/ShapeBrushPanel/Margin/Controls/CastleParams/CastleYawLabel",
-        "script": ""
-      },
-      {
-        "class": "SpinBox",
-        "path": "Interface/ShapeBrushPanel/Margin/Controls/CastleParams/CastleYaw",
-        "script": ""
-      },
-      {
-        "class": "VBoxContainer",
-        "path": "Interface/ShapeBrushPanel/Margin/Controls/WallParams",
-        "script": ""
-      },
-      {
-        "class": "Label",
-        "path": "Interface/ShapeBrushPanel/Margin/Controls/WallParams/WallHeightLabel",
-        "script": ""
-      },
-      {
-        "class": "SpinBox",
-        "path": "Interface/ShapeBrushPanel/Margin/Controls/WallParams/WallHeight",
-        "script": ""
-      },
-      {
-        "class": "Label",
-        "path": "Interface/ShapeBrushPanel/Margin/Controls/WallParams/WallBottomLabel",
-        "script": ""
-      },
-      {
-        "class": "SpinBox",
-        "path": "Interface/ShapeBrushPanel/Margin/Controls/WallParams/WallBottom",
-        "script": ""
-      },
-      {
-        "class": "Label",
-        "path": "Interface/ShapeBrushPanel/Margin/Controls/WallParams/WallTopLabel",
-        "script": ""
-      },
-      {
-        "class": "SpinBox",
-        "path": "Interface/ShapeBrushPanel/Margin/Controls/WallParams/WallTop",
-        "script": ""
-      },
-      {
-        "class": "VBoxContainer",
-        "path": "Interface/ShapeBrushPanel/Margin/Controls/ShovelParams",
-        "script": ""
-      },
-      {
-        "class": "Label",
-        "path": "Interface/ShapeBrushPanel/Margin/Controls/ShovelParams/ShovelWidthLabel",
-        "script": ""
-      },
-      {
-        "class": "SpinBox",
-        "path": "Interface/ShapeBrushPanel/Margin/Controls/ShovelParams/ShovelWidth",
-        "script": ""
-      },
-      {
-        "class": "Label",
-        "path": "Interface/ShapeBrushPanel/Margin/Controls/ShovelParams/ShovelDepthLabel",
-        "script": ""
-      },
-      {
-        "class": "SpinBox",
-        "path": "Interface/ShapeBrushPanel/Margin/Controls/ShovelParams/ShovelDepth",
-        "script": ""
-      },
-      {
-        "class": "Label",
-        "path": "Interface/ShapeBrushPanel/Margin/Controls/ShovelParams/ShovelShoulderLabel",
-        "script": ""
-      },
-      {
-        "class": "SpinBox",
-        "path": "Interface/ShapeBrushPanel/Margin/Controls/ShovelParams/ShovelShoulder",
         "script": ""
       },
       {
@@ -2784,6 +2588,31 @@
         "class": "CollisionShape3D",
         "path": "UnifiedEditRuntime/SurfaceB/Terrain/Chunk_63",
         "script": ""
+      },
+      {
+        "path": "Interface/EditPanel/Margin/Controls/ParameterWindows",
+        "class": "MenuButton",
+        "script": ""
+      },
+      {
+        "path": "Interface/EditPanel/Margin/Controls/Pause",
+        "class": "Button",
+        "script": ""
+      },
+      {
+        "path": "Interface/EditPanel/Margin/Controls/Camera",
+        "class": "Button",
+        "script": ""
+      },
+      {
+        "path": "Interface/ShapeBrushPanel/Margin/Controls/Tools/Smooth",
+        "class": "Button",
+        "script": ""
+      },
+      {
+        "path": "Interface/ShapeBrushPanel/Margin/Controls/Tools/Compact",
+        "class": "Button",
+        "script": ""
       }
     ],
     "original_png": {
@@ -2792,7 +2621,7 @@
     },
     "scene": {
       "path": "res://scenes/unified_edit/presentation/test1_geometry.tscn",
-      "sha256": "6bf4edac57ed6e3ca264756bf26facbc1a986696b525fc45c69d29b351104068"
+      "sha256": "1e9a97141326a967c053c48f4990a577d2f3860648814b6cd4deed75b5f0da6a"
     },
     "seed": {
       "path": "res://assets/unified_edit/presentation/test1_geometry.variant",

@@ -46,7 +46,10 @@ func render_capture() -> void:
 	for key in _owner.visuals.capture_images():
 		images[key]=_owner.visuals.capture_images()[key]
 		expected_sizes[key]=16384 if "gravel_" in key else (65536*4 if "bed_" in key else 65536*8)
-	for field in _owner.visuals.published:
+	# Only native display histories participate in SANDUE06. Decorative plants
+	# are regenerated from the restored completed bed/water for each generation.
+	for field in ["foam","local_front","gravel"]:
+		if not _owner.visuals.published.has(field):continue
 		images["visual_view/"+field]=_owner.visuals.published[field];expected_sizes["visual_view/"+field]=16384 if field=="gravel" else 65536*8
 	expected_sizes.published_sand=65536*4;expected_sizes.published_water=65536*4;expected_sizes.clock=4
 	var buffers:={"control":[_owner.transport.control,128],"stamp":[_owner.state.published_stamp,32],"stroke":[_owner.executor.buffers.stroke,64]}

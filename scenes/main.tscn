@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" path="res://scenes/components/floating_props.tscn" id="4"]
 [ext_resource type="PackedScene" path="res://scenes/components/floating_props_panel.tscn" id="5"]
 
+[ext_resource type="PackedScene" path="res://scenes/components/wave_settings.tscn" id="99_wave_settings"]
+
 [sub_resource type="Environment" id="Environment_tbgi4"]
 resource_local_to_scene = true
 background_mode = 1
@@ -35,36 +37,6 @@ environment = SubResource("Environment_tbgi4")
 [node name="BrushIndicator" parent="." index="6" unique_id=1652832490]
 material_override = SubResource("StandardMaterial3D_tefeu")
 
-[node name="DigTool" parent="Interface/EditPanel/Margin/Controls/Tools" parent_id_path=PackedInt32Array(741738515) index="0" unique_id=1226004474]
-button_group = SubResource("ButtonGroup_o6xl0")
-
-[node name="FillTool" parent="Interface/EditPanel/Margin/Controls/Tools" parent_id_path=PackedInt32Array(741738515) index="1" unique_id=1168785158]
-button_group = SubResource("ButtonGroup_o6xl0")
-
-[node name="PerformancePanel" parent="Interface" parent_id_path=PackedInt32Array(1784250205) index="2" unique_id=31905350]
-script = ExtResource("3")
-
-[node name="ConnectedDrainage" type="CheckButton" parent="Interface/ShapeBrushPanel/Margin/Controls" parent_id_path=PackedInt32Array(1883058934) index="1" unique_id=1684502208]
-layout_mode = 2
-tooltip_text = "未勾选使用动量 B，勾选恢复原连通排水。切换结束当前拖拽，从下一笔生效。"
-focus_mode = 0
-text = "原连通排水（勾选对照）"
-
-[node name="DrainageHint" type="Label" parent="Interface/ShapeBrushPanel/Margin/Controls" parent_id_path=PackedInt32Array(1883058934) index="2" unique_id=1295905517]
-layout_mode = 2
-theme_override_font_sizes/font_size = 12
-text = "动量 B · 填沙外推 / 挖沙内拉"
-
-[node name="MomentumGainLabel" type="Label" parent="Interface/ShapeBrushPanel/Margin/Controls" parent_id_path=PackedInt32Array(1883058934) index="3" unique_id=309839746]
-layout_mode = 2
-text = "推水力度（默认 0.25，可加大观察）"
-
-[node name="MomentumGain" type="SpinBox" parent="Interface/ShapeBrushPanel/Margin/Controls" parent_id_path=PackedInt32Array(1883058934) index="4" unique_id=754058907]
-layout_mode = 2
-max_value = 1.0
-step = 0.25
-value = 0.25
-
 [node name="Dig" parent="Interface/ShapeBrushPanel/Margin/Controls/Tools" parent_id_path=PackedInt32Array(2127972580) index="0" unique_id=1397531769]
 button_group = SubResource("ButtonGroup_tipki")
 
@@ -91,15 +63,6 @@ button_group = SubResource("ButtonGroup_tipki")
 [node name="FloatingProps" parent="." index="22" unique_id=1313501570 instance=ExtResource("4")]
 
 [connection signal="look_started" from="GpuPlayerCamera" to="." method="_on_camera_look_started"]
-[connection signal="pressed" from="Interface/EditPanel/Margin/Controls/Tools/DigTool" to="." method="_on_dig_tool_pressed"]
-[connection signal="pressed" from="Interface/EditPanel/Margin/Controls/Tools/FillTool" to="." method="_on_fill_tool_pressed"]
-[connection signal="value_changed" from="Interface/EditPanel/Margin/Controls/DigAmount" to="." method="_on_dig_amount_changed"]
-[connection signal="value_changed" from="Interface/EditPanel/Margin/Controls/FillAmount" to="." method="_on_fill_amount_changed"]
-[connection signal="value_changed" from="Interface/EditPanel/Margin/Controls/WaveAmount" to="." method="_on_wave_amount_changed"]
 [connection signal="pressed" from="Interface/EditPanel/Margin/Controls/TriggerWave" to="." method="_on_trigger_wave_pressed"]
-[connection signal="toggled" from="Interface/PerformancePanel/Margin/Rows/Header/Sampling" to="Interface/PerformancePanel" method="_on_sampling_toggled"]
-[connection signal="parameters_changed" from="Interface/ShapeBrushPanel" to="." method="_on_parameters_changed"]
 [connection signal="tool_changed" from="Interface/ShapeBrushPanel" to="." method="_on_tool_changed"]
-[connection signal="toggled" from="Interface/ShapeBrushPanel/Margin/Controls/ConnectedDrainage" to="." method="_on_connected_drainage_toggled"]
-[connection signal="value_changed" from="Interface/ShapeBrushPanel/Margin/Controls/MomentumGain" to="." method="_on_momentum_gain_changed"]
 [connection signal="mode_changed" from="Interface/FloatingPropsPanel" to="." method="_on_prop_mode_changed"]

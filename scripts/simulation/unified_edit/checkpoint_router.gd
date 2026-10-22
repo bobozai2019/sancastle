@@ -10,7 +10,7 @@ const CATALOG="res://assets/unified_edit/legacy_source_catalog.variant"
 const CATALOG_SHA256="cbac0b2c091c09f3506d0a15723d0ff7cd962104918b8eb3827a44a7b57942ff"
 const SOURCES=["res://scripts/simulation/unified_edit/checkpoint_router.gd",CATALOG]+ConsumerSources.SOURCES+NumericsSources.SOURCES
 
-static func load_file(path: String, configuration: Dictionary) -> Dictionary:
+static func load_file(path: String, configuration: Dictionary, preserve_water_retention: bool=false) -> Dictionary:
 	var file:=FileAccess.open(path,FileAccess.READ)
 	if file==null:return {"error":&"open_failed"}
 	if file.get_length()<48:return {"error":&"invalid_file_size"}
@@ -18,6 +18,14 @@ static func load_file(path: String, configuration: Dictionary) -> Dictionary:
 	if magic==Codec.MAGIC:
 		var loaded:=Codec.read_container(path)
 		if not loaded.error.is_empty():return loaded
+		if preserve_water_retention:
+			if not loaded.checkpoint.get("configuration") is Dictionary or not loaded.checkpoint.configuration.get("environment") is Dictionary:return {"error":&"invalid_configuration"}
+			var numerical_error:=Codec.Config.Numerics.configuration_error(loaded.checkpoint.configuration.environment)
+			if not numerical_error.is_empty():return {"error":numerical_error}
+			if Codec.Config.Numerics.solver_id(configuration.environment)==Codec.Config.Numerics.MUSCL:
+				configuration=configuration.duplicate(true)
+				configuration.environment.water_numerics=Codec.Config.Numerics.selection(Codec.Config.Numerics.MUSCL,Codec.Config.Numerics.retention(loaded.checkpoint.configuration.environment))
+				configuration.configuration_hash=Codec.Config.stable_hash(configuration)
 		var error:=Codec.validate(loaded.checkpoint,configuration)
 		if error.is_empty():return loaded
 		if error!=&"checkpoint_configuration_mismatch":return {"error":error}

@@ -7,6 +7,8 @@ const PINNED_SHA="72e3a733ba7abdd743803c1c03d4dacc178605d37e425427b1125a21b4e137
 var output:=""
 var targets_path:=""
 var targets_sha:=""
+var release_pins_path:=""
+var release_pins_sha:=""
 const OLD_SHOVEL="346826e4f0e5203b8425ef854be79be5a49e8a50c796ea6eac772f50a9756f38"
 const NEW_SHOVEL="62ff4641dbbe8b866da6954579cda64d608cb1cd0c308aa0c7a807d22bd09ff9"
 func differences(first: Variant,second: Variant,path: String="") -> Array:
@@ -39,6 +41,8 @@ func _initialize() -> void:
 		if arg.begins_with("--output="):output=arg.trim_prefix("--output=")
 		if arg.begins_with("--targets="):targets_path=arg.trim_prefix("--targets=")
 		if arg.begins_with("--targets-sha256="):targets_sha=arg.trim_prefix("--targets-sha256=")
+		if arg.begins_with("--release-pins="):release_pins_path=arg.trim_prefix("--release-pins=")
+		if arg.begins_with("--release-pins-sha256="):release_pins_sha=arg.trim_prefix("--release-pins-sha256=")
 	if output.is_empty() or FileAccess.file_exists(output) or FileAccess.get_sha256(PINNED_PATH)!=PINNED_SHA or not Sources.Codec.WireHash(targets_sha) or FileAccess.get_sha256(targets_path)!=targets_sha:push_error("bake_input_identity");quit(1);return
 	var original: Dictionary=bytes_to_var(FileAccess.get_file_as_bytes(PINNED_PATH))
 	var target_rows: Variant=bytes_to_var(FileAccess.get_file_as_bytes(targets_path))
@@ -51,6 +55,21 @@ func _initialize() -> void:
 	for row in [{"configuration":consumer.source_configuration,"fixture":consumer.fixture}]+consumer.additional_sources:
 		var digest:=Config.digest_data(row.configuration)
 		if not digests.has(digest):sources.append({"configuration":row.configuration,"fixture":row.fixture,"mappings":[]});digests[digest]=true
+	# An explicit offline, SHA-pinned list extends the release boundary. Opening
+	# an arbitrary checkpoint at runtime never registers its configuration.
+	if not release_pins_path.is_empty():
+		if not Sources.Codec.WireHash(release_pins_sha) or FileAccess.get_sha256(release_pins_path)!=release_pins_sha:push_error("release_pins_identity");quit(1);return
+		var pins: Variant=JSON.parse_string(FileAccess.get_file_as_string(release_pins_path))
+		if not pins is Array or pins.is_empty() or pins.size()>32:push_error("release_pins_shape");quit(1);return
+		for pin in pins:
+			if not Config.exact(pin,["path","sha256"]) or typeof(pin.path)!=TYPE_STRING or not Sources.Codec.WireHash(pin.sha256) or FileAccess.get_sha256(pin.path)!=pin.sha256:push_error("release_checkpoint_identity");quit(1);return
+			var loaded:=Sources.Codec.read_container(pin.path)
+			if not loaded.error.is_empty():push_error("release_checkpoint_container:"+String(loaded.error));quit(1);return
+			var configuration: Dictionary=loaded.checkpoint.configuration
+			var error:=Sources.Codec.validate(loaded.checkpoint,configuration,false)
+			if not error.is_empty():push_error("release_checkpoint_validation:"+String(error));quit(1);return
+			var digest:=Config.digest_data(configuration)
+			if not digests.has(digest):sources.append({"configuration":configuration,"fixture":pin.duplicate(true),"mappings":[]});digests[digest]=true
 	var targets: Array=[]
 	for row in target_rows:
 		var target: Dictionary=row.configuration
@@ -67,5 +86,6 @@ func _initialize() -> void:
 			if reviewed:source.mappings.append({"source_parameters":Sources.parameters(source.configuration),"target_parameters":target.parameters.duplicate(true),"changes":changes})
 		if source.mappings.is_empty():push_error("no_reviewed_target_for_pinned_source:"+str(source.fixture.path));quit(1);return
 	var value:={"schema":2,"id":"water_numerics_release_v1","native_sources":sources,"targets":targets,"review":{"scope":"Exact original configurations plus explicit per-source/per-target parameter maps. Only listed derived identities, expanded declared tool admission and the already-current shovel/transfer v2 may differ. Past fields and ledger remain untouched; future operations use the reviewed target.","pinned_archive":{"path":PINNED_PATH,"sha256":PINNED_SHA},"targets":{"path":targets_path,"sha256":targets_sha},"same_release_policy":"identical complete sources and non-numeric parameters","legacy":"existing exact legacy source catalog and validator remain required","authority":"G2/G3 kernels; G4 native-source adapters separately verified; refresh target pins after G6 final sources"}}
+	if not release_pins_path.is_empty():value.review.release_pins={"path":release_pins_path,"sha256":release_pins_sha}
 	var file:=FileAccess.open(output,FileAccess.WRITE);file.store_buffer(var_to_bytes(value));file.flush();file.close()
 	print("NUMERICS_CATALOG ",FileAccess.get_sha256(output)," sources=",sources.size()," targets=",targets.size());quit()

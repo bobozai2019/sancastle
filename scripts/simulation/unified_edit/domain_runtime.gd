@@ -5,6 +5,7 @@ extends Node3D
 const Pipeline=preload("res://scripts/simulation/unified_edit/pipeline.gd")
 const Intent=preload("res://scripts/simulation/unified_edit/intent.gd")
 const Codec=preload("res://scripts/simulation/unified_edit/checkpoint_codec.gd")
+const NumericsSources=preload("res://scripts/simulation/unified_edit/numerics_checkpoint_sources.gd")
 const SOURCES=["res://scripts/simulation/unified_edit/domain_runtime.gd","res://scripts/simulation/unified_edit/height_surface.gd","res://scenes/unified_edit_runtime.tscn","res://scenes/unified_edit_height_surface.tscn"]
 var current
 var candidate
@@ -47,15 +48,21 @@ func boot(catalog, config: Dictionary, domain, material_bindings: Array, callbac
 	candidate=next;candidate_index=0;_callback=callback;phase=&"building";_event(&"boot_build",{"generation":epoch_highwater})
 	RenderingServer.call_on_render_thread(candidate.initialize_render.bind(domain));return &""
 
-func restore_checkpoint(checkpoint: Dictionary, callback: Callable) -> StringName:
+func restore_checkpoint(checkpoint: Dictionary, callback: Callable, target_configuration: Dictionary={}) -> StringName:
 	if closing or current==null:return &"runtime_unavailable"
 	if candidate!=null or not retired.is_empty() or current.checkpoint_capture!=null:return &"transition_busy"
 	if not callback.is_valid():return &"invalid_transition_callback"
-	var error:=Codec.validate(checkpoint,configuration)
+	var target: Dictionary=configuration if target_configuration.is_empty() else target_configuration
+	# The only live reconfiguration is this scalar, on a replacement generation.
+	# Disk identity, domain, solver and every other physical parameter stay fixed.
+	var error:=Codec.Config.validate(target,true)
+	if not error.is_empty():return error
+	if target.sources!=configuration.sources or NumericsSources.parameters(target)!=NumericsSources.parameters(configuration) or Codec.Config.Numerics.solver_id(target.environment)!=Codec.Config.Numerics.solver_id(configuration.environment):return &"unsupported_runtime_reconfiguration"
+	error=Codec.validate(checkpoint,target)
 	if not error.is_empty():return error
 	var epoch:=Intent.next_identity(maxi(epoch_highwater,checkpoint.generation))
 	if not epoch.error.is_empty():return epoch.error
-	var next:=Pipeline.new();error=next.configure_restore(registry,configuration,epoch.value,checkpoint)
+	var next:=Pipeline.new();error=next.configure_restore(registry,target,epoch.value,checkpoint)
 	if not error.is_empty():return error
 	epoch_highwater=epoch.value;candidate=next;candidate_index=1-current_index;_callback=callback;_cancelled=false;_discarding=false;_stage_attached=false;last_error=&"";phase=&"building"
 	candidate.inject_initialization_failure_after=inject_candidate_initialization_after
@@ -200,6 +207,7 @@ func _physics_process(_delta: float) -> void:
 	if previous_index>=0:surfaces[previous_index].set_collision_enabled(false)
 	surfaces[candidate_index].set_collision_enabled(true)
 	current=candidate;current_index=candidate_index;candidate=null;candidate_index=-1;_stage_attached=false;phase=&"active"
+	configuration=current._configuration.duplicate(true)
 	_event(&"commit",{"generation":current._generation,"state_seq":current.completed_state_seq,"previous_generation":0 if previous==null else previous._generation})
 	if previous!=null:_retire(previous,previous_index,true)
 	var callback:=_callback;_callback=Callable()

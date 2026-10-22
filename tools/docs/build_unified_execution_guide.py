@@ -9,13 +9,14 @@ ROOT=Path(__file__).resolve().parents[2]
 OUTPUT=ROOT/'docs/project-execution-guide.html'
 INDEX=ROOT/'docs/project-execution-guide.sources.json'
 BASE='scripts/simulation/unified_edit/'
-ANCHORS=[('入口','scripts/beach/unified_playable_entry.gd','_ready'),
+ANCHORS=[('参数服务','scripts/parameters/parameter_service.gd','set_value'),('启动参数','scripts/parameters/parameter_service.gd','prepare_boot'),('入口','scripts/beach/unified_playable_entry.gd','_ready'),
          ('声明',BASE+'player_input.gd','begin'),('注册表',BASE+'profile_registry.gd','resolve'),
          ('冻结配置',BASE+'configuration.gd','freeze'),('主调度',BASE+'pipeline.gd','pump'),
          ('唯一录制',BASE+'pipeline.gd','_submit_render'),('编辑骨架',BASE+'executor.gd','record'),
          ('公共水响应',BASE+'water_response.gd','record'),('水条件提交',BASE+'water_response.gd','commit'),
          ('排水分阶段录制',BASE+'water_response.gd','_packed_math'),('排水特化阶段',BASE+'water_response.gd','_packed_phase'),
-         ('水tick',BASE+'water.gd','record_tick'),('初始化与native资源',BASE+'state.gd','initialize'),
+         ('水tick',BASE+'water.gd','record_tick'),('MUSCL阶段录制',BASE+'water_muscl.gd','record_tick'),
+         ('数值来源精确投影',BASE+'numerics_checkpoint_sources.gd','project'),('初始化与native资源',BASE+'state.gd','initialize'),
          ('碰撞消费',BASE+'height.gd','physics_consume'),('换代提交',BASE+'domain_runtime.gd','_physics_process'),
          ('恢复工厂',BASE+'domain_runtime.gd','restore_checkpoint'),('原生校验',BASE+'checkpoint_codec.gd','validate'),
          ('存档路由',BASE+'checkpoint_router.gd','load_file'),('正式切换','scripts/beach/beach_scene_service.gd','_switch'),
@@ -25,7 +26,8 @@ ANCHORS=[('入口','scripts/beach/unified_playable_entry.gd','_ready'),
          ('道具安全关闭','scripts/props/floating_props_service.gd','shutdown'),
          ('UI投放与拾取','scripts/beach/floating_props_panel.gd','perform_action'),
          ('操作物理边界','scripts/props/floating_props_service.gd','manipulate_body'),
-         ('精确旧来源投影',BASE+'consumer_checkpoint_sources.gd','project')]
+         ('精确旧来源投影',BASE+'consumer_checkpoint_sources.gd','project'),
+         ('植被只读更新',BASE+'vegetation.gd','record_tick'),('植被发布',BASE+'vegetation.gd','publish')]
 def sha(raw):return hashlib.sha256(raw).hexdigest()
 def build(preview_final=False):
     sources={};anchors=[]
@@ -34,7 +36,13 @@ def build(preview_final=False):
         assert match is not None,path+'::'+symbol
         line=text[:match.start()].count('\n')+1;lines=text.splitlines();excerpt='\n'.join(f'{i+1:>4} {lines[i]}'.rstrip() for i in range(line-1,min(len(lines),line+9)))
         sources[path]=sha(raw);anchors.append({'title':title,'path':path,'symbol':symbol,'line':line,'sha256':sources[path],'excerpt':excerpt})
-    for path in ['AGENTS.md','project.godot','scenes/main.tscn','scenes/playable/test1_capture.tscn','scenes/playable/test1_backwash.tscn','scenes/playable/test1_geometry.tscn','assets/unified_edit/default_catalog.tres','docs/unified-edit-extension-guide.md','docs/当前项目技术方案.md','docs/当前技术规格.md','docs/README.md','docs/Sandcastle项目技术全景.docx','docs/technical-panorama.sources.json','tools/docs/build_technical_panorama.py','tools/docs/technical_panorama_content.py','docs/主场景操作.md','docs/场景切换与功能复用.md','docs/性能面板.md','docs/knowledge/README.md','tools/unified_edit_pipeline/architecture_policy.json','tools/docs/build_execution_guide.py','tools/docs/build_unified_execution_guide.py']:
+    for path in ['AGENTS.md','project.godot','scenes/main.tscn','scenes/playable/test1_capture.tscn','scenes/playable/test1_backwash.tscn','scenes/playable/test1_geometry.tscn','assets/unified_edit/default_catalog.tres','docs/unified-edit-extension-guide.md','docs/当前项目技术方案.md','docs/当前技术规格.md','docs/README.md','docs/Sandcastle项目技术全景.docx','docs/technical-panorama.sources.json','tools/docs/build_technical_panorama.py','tools/docs/technical_panorama_content.py','docs/主场景操作.md','docs/场景切换与功能复用.md','docs/性能面板.md','docs/参数窗口.md','assets/parameters/catalog.json','scripts/parameters/parameter_schema.gd','scenes/parameters/parameter_windows.tscn','docs/knowledge/README.md','tools/unified_edit_pipeline/architecture_policy.json','tools/docs/build_execution_guide.py','tools/docs/build_unified_execution_guide.py']:
+        sources[path]=sha((ROOT/path).read_bytes())
+    for path in sorted((ROOT/'shaders/simulation/muscl').glob('*')):
+        if path.is_file() and path.suffix in ['.glsl','.glslinc']:
+            sources[path.relative_to(ROOT).as_posix()]=sha(path.read_bytes())
+    for path in [BASE+'water_numerics.gd','assets/unified_edit/numerics_source_catalog.variant',
+                 'shaders/simulation/erosion/sediment_exchange.glsl','shaders/simulation/erosion/sediment_copy.glsl']:
         sources[path]=sha((ROOT/path).read_bytes())
     # Spec authorities that are not method-excerpt cards still receive exact hashes.
     for path in ['layout.gd','tool_profile.gd','height_stamp.gd','profile_catalog.gd','coupled.gd','boundary.gd','cfl_decide.glsl','display_intent.gd','visuals.gd','legacy_sources.gd','unit_half.gd','water_packed_topology.glsl','water_packed_parallel.glsl','water_response.glsl']:
@@ -47,7 +55,11 @@ def build(preview_final=False):
         sources[path]=sha((ROOT/path).read_bytes())
     for name in ['bottle','wood_plank','wood_stick']:
         for path in ['scenes/props/'+name+'.tscn','assets/props/'+name+'_profile.tres']:sources[path]=sha((ROOT/path).read_bytes())
-    status='main默认动量B；三个test1场景默认连通排水。编辑、水tick与显示工作共用统一Pipeline。'
+    for path in ['docs/植被.md','scripts/visual/vegetation_profile.gd','scripts/visual/vegetation_species.gd','scripts/visual/vegetation_layer.gd','scenes/components/vegetation_layer.tscn','shaders/simulation/vegetation_step.glsl','shaders/simulation/vegetation_publish.glsl','shaders/visual/vegetation.gdshader']:
+        sources[path]=sha((ROOT/path).read_bytes())
+    for path in sorted((ROOT/'assets/vegetation').glob('*')):
+        if path.suffix in ['.tres','.json']:sources[path.relative_to(ROOT).as_posix()]=sha(path.read_bytes())
+    status='四个正式入口默认MUSCL MC与SSPRK2二阶水传播，可启动前显式选择一阶。面板保波程度0–1混合MC/Superbee重构，默认0；独立水参数窗保存后由用户重启生效，窗口不调用热重建，存档记录当前有效值。main默认动量B；三个test1默认连通排水。编辑、水tick与显示共用统一Pipeline。'
     cards=[]
     for anchor in anchors:
         cards.append('<details><summary>'+html.escape(anchor['title']+' · '+anchor['path']+':'+str(anchor['line']))+'</summary><p class="hash">SHA256 '+anchor['sha256']+'</p><pre>'+html.escape(anchor['excerpt'])+'</pre></details>')
@@ -61,6 +73,7 @@ def build(preview_final=False):
 <h2>配置新增玩法</h2><p>新增ToolProfile资源，使用既有operation、shape、材料/水策略、数值范围和受限模板。注册表校验精确script类型并复制冻结数据；profile不得携带执行Callable、自选shader或调度器。</p><p>配置扩展方法见<a href="unified-edit-extension-guide.md">扩展指南</a>。</p>
 <h2>当前方案与规格</h2><p><a href="Sandcastle项目技术全景.docx">项目技术全景 Word</a>完整说明架构、数值、数据协议、消费者和生命周期，并提供从当前源码提取的附录。</p><p><a href="当前项目技术方案.md">技术方案</a>说明模块协作、模拟、表现和生命周期；<a href="当前技术规格.md">技术规格</a>列出域、字段、ABI、容量、账本、兼容与验证边界。<a href="主场景操作.md">操作说明</a>和<a href="场景切换与功能复用.md">场景说明</a>对应当前四入口。</p>
 <h2>main漂浮道具</h2><p>场景预存水瓶、木板、木棍各一件，右下角三槽UI选择后左键摆放/移动；拾取模式将实例收入槽位，[ / ]旋转，右键/Esc取消。固定容量3件，全部拾取后不提交空探针。交互在公共读者真实终结后换owner，重新采样目标位置并建立新观察起点，未操作物体保留运动状态。公共只读Probe → 完成态水/床/流速 → 类型化Profile逐点浮力和相对流阻 → 原生Jolt。实际state.step消耗完成水时间余额；局部保持不阻塞生产。Height ABI3用完整共享顶点上界证明5mm总床面差，未知或超限时保持道具。暂停/保存保持，成功恢复或重进重置，检查点不保存道具姿态。三个test1不投放。</p><p><a href="漂浮道具.md">道具机制与扩展</a>。</p>
+<h2>水草与岸草</h2><p>四个正式场景预存海草、海带和两种岸草，各768候选。初态床水与分布场筛选位置；公共Visuals读取水沙驱动根部下移和临界阻尼摆动，填沙可遮埋草叶。批量不透明草叶写入场景深度，接受光照并参与水下遮挡。暂停保持姿态，恢复或重进根据完整床水重新分布。配置、纹理布局及持久化限制见<a href="植被.md">水草与岸草</a>。</p>
 <h2>当前源码锚点</h2><p class="muted">以下摘录、行号与SHA256直接来自生成时文件，可用build_execution_guide.py --check核对。</p>CARDS
 <script>const op=document.getElementById('operation'),water=document.getElementById('water');function draw(){const base=[0,1,2,3];let v=op.value==='transfer'?base.concat([9,4,2,3,10,4,11,4]):base.concat([4]);v=v.concat([12,5,6,7,8]);document.getElementById('phases').replaceChildren(...v.map(n=>{let e=document.createElement('span');e.className='phase'+(n===7?' commit':'');e.textContent=String(n)+(n===7?' · 条件提交':'');return e}));document.getElementById('stroke').textContent=op.value==='volume'?'无固定笔画基准；按体积候选处理。':'公共BEGIN → sample序列 → END；固定基准与累计coverage由域持有。';document.getElementById('response').textContent=water.value==='0'?'水响应关闭，水/悬沙/动量不因该编辑被改写。':'公共水阶段：prepare → '+(water.value==='2'?'velocity_only → velocity_prepare_parallel → momentum_B':'packed → displace → velocity')+' → velocity_reduce → audit_blocks → audit_merge；与同一决定提交。'}op.addEventListener('change',draw);water.addEventListener('change',draw);draw();</script></html>'''
     content=content.replace('STATUS',html.escape(status)).replace('CARDS','\n'.join(cards))

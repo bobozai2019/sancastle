@@ -1,0 +1,63 @@
+{
+  "smoke_main_v4": {
+    "checks": 37,
+    "pass": true,
+    "elapsed_s": 16.767479181289673,
+    "exit_code": 0,
+    "source_drift": [],
+    "probe_sha256": "6a8c6ee2a93dd4ec63de6bc8ee76916369a3993938e6f08a6fbaadd786848365"
+  },
+  "smoke_capture_final": {
+    "checks": 37,
+    "pass": true,
+    "elapsed_s": 17.747895002365112,
+    "exit_code": 0,
+    "source_drift": [],
+    "probe_sha256": "5e745c7b2bf8561455b86827c47b23b6ceea2df42f90551737c2d91108d22b63"
+  },
+  "smoke_backwash_final": {
+    "checks": 37,
+    "pass": true,
+    "elapsed_s": 16.468650817871094,
+    "exit_code": 0,
+    "source_drift": [],
+    "probe_sha256": "fb54ae0d0606ea6a1965faa00f5348686da4167cbfc493c5c354bf9840af4ac1"
+  },
+  "smoke_geometry_final": {
+    "checks": 37,
+    "pass": true,
+    "elapsed_s": 12.762166500091553,
+    "exit_code": 0,
+    "source_drift": [],
+    "probe_sha256": "a55695ae4ac3d7d80b892627f254beec498a6332337b38629d80b36e4c5adf9f"
+  },
+  "behavior_main_delivery": {
+    "checks": 59,
+    "pass": true,
+    "elapsed_s": 39.19960355758667,
+    "exit_code": 0,
+    "source_drift": [],
+    "probe_sha256": "70543d6363859dfc3f3fb6a97a21100f9d720c7f4302e0b5e876e62b2d95c7dc"
+  },
+  "cost_main_v1": {
+    "checks": 42,
+    "pass": true,
+    "elapsed_s": 22.656734228134155,
+    "exit_code": 0,
+    "source_drift": [],
+    "probe_sha256": "485042ba0a306e45138a8bef9b88220e33904154283bdc37e617f9dd3d83eefc"
+  },
+  "soak_main_v1": {
+    "checks": 18,
+    "pass": true,
+    "elapsed_s": 75.8143994808197,
+    "exit_code": 0,
+    "source_drift": [],
+    "probe_sha256": "0aa28d082427ecf575d563ebf18b85be75183a51ce47b667f27f4192c00efc72"
+  },
+  "evidence": {
+    "path": "运行证据.zip",
+    "sha256": "995523392ebd053b6ba5bb9e2fde23f96c77e33a1a756593d6e0cb785ce2cd62",
+    "bytes": 16282372
+  }
+}

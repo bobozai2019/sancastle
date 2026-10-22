@@ -1,0 +1,99 @@
+{
+	"generator_sha256": "23957e2696bd9f754ca66db91c4b1ee74309acd6a241b94d7c1b853797876c34",
+	"geometry": [
+		{
+			"kind": "seagrass",
+			"sha256": "ea1fd4769b93bd908286822da02f2337ae904b3c1a330b3baaa4c98dcd6d1335",
+			"vertices": 324
+		},
+		{
+			"kind": "kelp",
+			"sha256": "d1b13283fc0030810811eb2e480f4dfb422465af3b58bd1b0732ee0d76bd43dd",
+			"vertices": 270
+		},
+		{
+			"kind": "shore_grass",
+			"sha256": "89ae1954d951f24d2effcab7867ed35ef5b83c036af22d5dba4b968e32be88e7",
+			"vertices": 330
+		},
+		{
+			"kind": "dune_grass",
+			"sha256": "1c985b0deb5de877bacbf8ef321c49a3abb3edc19814cc5a03e7de9688a62ab6",
+			"vertices": 324
+		}
+	],
+	"profile": {
+		"bounds_xz": [
+			-14.8,
+			-14.8,
+			14.8,
+			14.8
+		],
+		"candidates_per_kind": 768,
+		"enabled": true,
+		"seed": 62143,
+		"species": [
+			{
+				"bed_max_m": 10.0,
+				"bed_min_m": -8.0,
+				"density": 0.88,
+				"depth_max_m": 1.5,
+				"depth_min_m": 0.025,
+				"flow_response": 0.58,
+				"height_max_m": 0.62,
+				"height_min_m": 0.32,
+				"label": "海草",
+				"max_slope": 1.7,
+				"patch_max": 1.0,
+				"patch_min": 0.3,
+				"response_hz": 6.0
+			},
+			{
+				"bed_max_m": 10.0,
+				"bed_min_m": -8.0,
+				"density": 0.64,
+				"depth_max_m": 2.8,
+				"depth_min_m": 0.18,
+				"flow_response": 0.85,
+				"height_max_m": 1.15,
+				"height_min_m": 0.65,
+				"label": "海带",
+				"max_slope": 1.5,
+				"patch_max": 0.85,
+				"patch_min": 0.42,
+				"response_hz": 4.5
+			},
+			{
+				"bed_max_m": 10.0,
+				"bed_min_m": -8.0,
+				"density": 0.9,
+				"depth_max_m": 0.025,
+				"depth_min_m": 0.0,
+				"flow_response": 0.45,
+				"height_max_m": 0.4,
+				"height_min_m": 0.2,
+				"label": "岸边矮草",
+				"max_slope": 1.2,
+				"patch_max": 1.0,
+				"patch_min": 0.35,
+				"response_hz": 7.0
+			},
+			{
+				"bed_max_m": 10.0,
+				"bed_min_m": -8.0,
+				"density": 0.72,
+				"depth_max_m": 0.012,
+				"depth_min_m": 0.0,
+				"flow_response": 0.6,
+				"height_max_m": 0.7,
+				"height_min_m": 0.4,
+				"label": "沙丘丛草",
+				"max_slope": 1.3,
+				"patch_max": 0.88,
+				"patch_min": 0.43,
+				"response_hz": 5.5
+			}
+		],
+		"version": 1
+	}
+}

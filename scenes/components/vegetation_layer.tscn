@@ -1,0 +1,40 @@
+[gd_scene load_steps=11 format=3]
+
+[ext_resource type="Script" path="res://scripts/visual/vegetation_layer.gd" id="1"]
+[ext_resource type="Resource" path="res://assets/vegetation/default_profile.tres" id="2"]
+[ext_resource type="MultiMesh" path="res://assets/vegetation/seagrass_instances.tres" id="m0"]
+[ext_resource type="Material" path="res://assets/vegetation/seagrass_material.tres" id="s0"]
+[ext_resource type="MultiMesh" path="res://assets/vegetation/kelp_instances.tres" id="m1"]
+[ext_resource type="Material" path="res://assets/vegetation/kelp_material.tres" id="s1"]
+[ext_resource type="MultiMesh" path="res://assets/vegetation/shore_grass_instances.tres" id="m2"]
+[ext_resource type="Material" path="res://assets/vegetation/shore_grass_material.tres" id="s2"]
+[ext_resource type="MultiMesh" path="res://assets/vegetation/dune_grass_instances.tres" id="m3"]
+[ext_resource type="Material" path="res://assets/vegetation/dune_grass_material.tres" id="s3"]
+
+[node name="VegetationLayer" type="Node3D"]
+script = ExtResource("1")
+profile = ExtResource("2")
+
+[node name="seagrass" type="MultiMeshInstance3D" parent="."]
+layers = 5
+cast_shadow = 0
+material_override = ExtResource("s0")
+multimesh = ExtResource("m0")
+
+[node name="kelp" type="MultiMeshInstance3D" parent="."]
+layers = 5
+cast_shadow = 1
+material_override = ExtResource("s1")
+multimesh = ExtResource("m1")
+
+[node name="shore_grass" type="MultiMeshInstance3D" parent="."]
+layers = 5
+cast_shadow = 1
+material_override = ExtResource("s2")
+multimesh = ExtResource("m2")
+
+[node name="dune_grass" type="MultiMeshInstance3D" parent="."]
+layers = 5
+cast_shadow = 1
+material_override = ExtResource("s3")
+multimesh = ExtResource("m3")

@@ -6,6 +6,7 @@ const Runtime=preload("res://scripts/simulation/unified_edit/domain_runtime.gd")
 const Config=preload("res://scripts/simulation/unified_edit/configuration.gd")
 const PlayerInput=preload("res://scripts/simulation/unified_edit/player_input.gd")
 const CheckpointRouter=preload("res://scripts/simulation/unified_edit/checkpoint_router.gd")
+const ParameterSchema=preload("res://scripts/parameters/parameter_schema.gd")
 const SceneRoutes=preload("res://scripts/beach/unified_scene_routes.gd")
 const SOURCES=["res://scripts/beach/unified_playable_entry.gd","res://scripts/beach/unified_performance_panel.gd","res://scripts/simulation/unified_edit/player_input.gd","res://scripts/beach/beach_scene_service.gd","res://scripts/beach/scene_switch_panel.gd","res://scripts/beach/free_camera.gd","res://scripts/beach/ui_visibility.gd","res://scripts/beach/ui_drag.gd","res://scripts/sand/brushes/brush_tool_panel.gd","res://scripts/sand/brushes/brush_preview_view.gd","res://scripts/visual/brush_indicator.gd","res://scripts/visual/water_boundary_sides.gd","res://assets/water_sides/geometry_manifest.json"]
 @export var presentation_manifest: String
@@ -13,6 +14,7 @@ const SOURCES=["res://scripts/beach/unified_playable_entry.gd","res://scripts/be
 # Empty selects the release default. A different algorithm is frozen before
 # boot, never switched in place on an active generation.
 @export var water_solver_id: String=""
+@export_range(0.0,1.0,0.1) var wave_retention:=0.0
 var generation:=1
 var playing:=true
 var hide_hud:=false
@@ -22,6 +24,10 @@ var gpu_brush: StringName=&""
 var dig_amount_m3:=0.1
 var fill_amount_m3:=0.1
 var manual_wave_amplitude_m:=0.1
+var manual_wave_duration_s:=3.0
+var tool_parameter_values: Dictionary={}
+var parameter_defaults: Dictionary={}
+var _parameters_bound:=false
 var water_policy:=3
 var signed_speed_m_s:=0.25
 var ready_for_ticks:=false
@@ -66,6 +72,7 @@ var _reported_props_error: StringName
 @onready var panel=$Interface/ShapeBrushPanel
 @onready var floating_props=get_node_or_null("FloatingProps/Service")
 @onready var props_panel=get_node_or_null("Interface/FloatingPropsPanel")
+@onready var vegetation_layer=get_node_or_null("VegetationLayer")
 
 func _domain_id() -> StringName:return &"main_beach" if scene_key=="main" else StringName(scene_key)
 func playable_scene_family() -> String:return SceneRoutes.family(scene_file_path,scene_key)
@@ -73,7 +80,12 @@ func playable_scene_path(key: String) -> String:return SceneRoutes.scene_path(pl
 
 func _ready() -> void:
 	get_tree().auto_accept_quit=false
+	get_window().focus_exited.connect(_world_focus_lost)
+	$Interface/EditPanel/Margin/Controls/ParameterWindows.get_popup().id_pressed.connect(open_parameters)
+	$Interface/EditPanel/Margin/Controls/Pause.pressed.connect(_toggle_pause)
+	$Interface/EditPanel/Margin/Controls/Camera.pressed.connect(_toggle_camera)
 	$GravelLayer.visible=false
+	if vegetation_layer!=null:vegetation_layer.visible=false
 	var read:=Presentation.read(presentation_manifest)
 	if not read.error.is_empty():_fail(read.error);return
 	var data: Dictionary=read.metadata
@@ -98,6 +110,7 @@ func _ready() -> void:
 	if not dependencies.error.is_empty():_fail(dependencies.error);return
 	var sources:=PackedStringArray(Pipeline.SOURCE_PATHS+Pipeline.ADAPTER_SOURCES+Runtime.SOURCES+Presentation.SOURCES+SOURCES)
 	sources.append_array(dependencies.sources)
+	sources.append_array(PackedStringArray(ParameterSchema.SOURCES))
 	if floating_props!=null:sources.append_array(PackedStringArray(floating_props.SOURCES))
 	sources.append_array(CheckpointRouter.SOURCES)
 	sources.append("res://scripts/beach/unified_scene_routes.gd")
@@ -105,7 +118,13 @@ func _ready() -> void:
 	var gravel:=Pipeline.Visuals.Gravel.default_profile(scene_key,int(settings.gravel_count));gravel.bed_reconstruction=settings.render_subdivision>1
 	var simulation:={"enable_erosion":settings.enable_erosion,"enable_brush_water":settings.enable_brush_water,"unrestricted_sand_tools":true,"enable_structures":false,"local_front_history":settings.local_front_history,"rise_front_history":false,"contact_history":false}
 	var environment:={"engine":Engine.get_version_info().string,"boundary":Pipeline.Boundary.for_scene(_domain_id()),"ordinary_cohesion_yield_height_m":settings.sand_cohesion_yield_height_m,"local_front_wide_field":settings.prototype_local_front_wide_field,"gravel_profile":gravel}
-	if not water_solver_id.is_empty():environment.water_numerics={"schema":1,"solver_id":water_solver_id}
+	if vegetation_layer!=null:
+		if vegetation_layer.profile==null or vegetation_layer.profile.get_script()!=Pipeline.Visuals.Vegetation.Profile:_fail(&"invalid_vegetation_resource");return
+		environment.vegetation_profile=vegetation_layer.profile.snapshot(scene_key)
+	parameter_defaults={"ordinary_cohesion_yield_height_m":settings.sand_cohesion_yield_height_m,"water_policy":water_policy,"boundary":environment.boundary.duplicate(true)}
+	var parameter_error: StringName=get_node("/root/Parameters").prepare_boot(self,settings,environment,simulation)
+	if not parameter_error.is_empty():_fail(parameter_error);return
+	if not water_solver_id.is_empty() or wave_retention!=0.0:environment.water_numerics=Config.Numerics.selection(Config.Numerics.DEFAULT_SOLVER if water_solver_id.is_empty() else water_solver_id,wave_retention)
 	var frozen:=Config.freeze(registry,_domain_id(),simulation,{"foam_enabled":settings.foam_enabled,"gravel_enabled":settings.gravel_enabled},{},environment,sources)
 	if not frozen.error.is_empty():_fail(frozen.error);return
 	configuration=frozen.value;input.configure(runtime,registry,_domain_id())
@@ -116,12 +135,16 @@ func _ready() -> void:
 
 func _transition(value: Dictionary) -> void:
 	if value.error.is_empty():
+		configuration=runtime.configuration.duplicate(true)
+		wave_retention=Config.Numerics.retention(configuration.environment)
 		if props_panel!=null:props_panel.cancel_mode()
 		last_error=&""
 		generation=runtime.generation();input.restored();action_message="沙场已就绪";_accumulator=0.0;_last_reported_id=0
 		_sync_gravel_count()
+		if vegetation_layer!=null:vegetation_layer.visible=configuration.environment.get("vegetation_profile",{}).get("enabled",false)
 		_invalidate_preview()
 		if floating_props!=null:
+			if not floating_props.active:get_node("/root/Parameters").prepare_props(self)
 			var prop_result: Dictionary
 			if floating_props.active:prop_result=await floating_props.reset(floating_props.authored_layout() if floating_props.layout.is_empty() else floating_props.layout,_domain_id(),generation)
 			else:prop_result=await floating_props.attach(runtime,floating_props.authored_registry(),floating_props.authored_layout())
@@ -163,6 +186,9 @@ func _process(delta: float) -> void:
 		_reported_props_error=floating_props.last_error
 		if not _reported_props_error.is_empty():action_message="漂浮物已保持，可保存或恢复沙场："+String(_reported_props_error)
 	ready_for_ticks=not _saving and not _restoring and runtime.ready_for_input() and last_error.is_empty()
+	if ready_for_ticks and not _parameters_bound:
+		_parameters_bound=true
+		get_node("/root/Parameters").bind_scene(self)
 	if registry!=null:
 		input.poll()
 		for result in input.terminal:
@@ -191,38 +217,28 @@ func _sync_gravel_count() -> void:
 	$GravelLayer.visible=visuals.gravel_enabled and visuals.active_count>0
 
 func _update_status() -> void:
-	var gain=get_node_or_null("Interface/ShapeBrushPanel/Margin/Controls/MomentumGain")
-	if gain!=null:
-		gain.set_value_no_signal(signed_speed_m_s)
-		gain.editable=ready_for_ticks
-	var hint=get_node_or_null("Interface/ShapeBrushPanel/Margin/Controls/DrainageHint")
-	if hint!=null:hint.text="原连通排水 · 编辑时重分配水量" if (water_policy&1)!=0 else "动量 B · 填沙外推 / 挖沙内拉"
-	var drainage=get_node_or_null("Interface/ShapeBrushPanel/Margin/Controls/ConnectedDrainage")
-	if drainage!=null:
-		drainage.set_pressed_no_signal((water_policy&1)!=0)
-		drainage.disabled=not ready_for_ticks
 	var label=get_node_or_null("Interface/StatusLabel")
 	if label==null:return
 	var phase:="运行" if playing else "暂停"
 	var tick:=0;var time:=0.0
 	if runtime!=null and runtime.current!=null:tick=runtime.current.completed_tick;time=runtime.current.advanced_time_s
-	label.text="沙滩 · %s · %s\nTick %d · 模拟 %.2f s\n左键使用工具 · 右键转向 · WASD移动 · 空格暂停 · F5视角 · F6隐藏UI\n%s"%[scene_key,phase,tick,time,action_message]
+	label.text="沙滩 · %s · %s · Tick %d · %.2f s\n%s"%[scene_key,phase,tick,time,action_message]
 	panel.show_status(preview_message if not preview_message.is_empty() else action_message,_preview_state if not preview_message.is_empty() else (&"invalid" if not last_error.is_empty() else (&"ready" if ready_for_ticks else &"waiting")))
 
 func _capture_brush_selection() -> Dictionary:
-	return {"tool":selected_sand_tool,"parameters":panel.parameters(),"dig_amount_m3":dig_amount_m3,"fill_amount_m3":fill_amount_m3}
+	return {"tool":selected_sand_tool,"parameters":tool_parameters(),"dig_amount_m3":dig_amount_m3,"fill_amount_m3":fill_amount_m3}
 func _apply_brush_selection(value: Dictionary) -> void:
-	selected_sand_tool=StringName(value.tool);dig_amount_m3=value.dig_amount_m3;fill_amount_m3=value.fill_amount_m3;panel.apply_selection(value)
+	selected_sand_tool=StringName(value.tool);dig_amount_m3=value.dig_amount_m3;fill_amount_m3=value.fill_amount_m3
+	apply_tool_parameters(value.get("parameters",{}));panel.apply_selection(value)
 	_invalidate_preview()
 func _on_tool_changed(tool: StringName) -> void:
 	if props_panel!=null and props_panel.has_world_mode():props_panel.cancel_mode()
 	_finish_ui_stroke(false);selected_sand_tool=tool
-	if panel.selected_tool!=tool:
-		var profile: Dictionary=registry.profile(PlayerInput._profile_id(tool,false))
-		panel.apply_selection({"tool":tool,"parameters":profile.get("defaults",{}),"dig_amount_m3":dig_amount_m3,"fill_amount_m3":fill_amount_m3})
+	panel.apply_selection({"tool":tool})
 	_update_status()
+	get_node("/root/Parameters").changed.emit()
 func _on_parameters_changed() -> void:
-	_finish_ui_stroke(false);dig_amount_m3=panel.dig_amount();fill_amount_m3=panel.fill_amount()
+	_finish_ui_stroke(false)
 func _on_connected_drainage_toggled(enabled: bool) -> void:
 	# Policy is frozen into each queued command and its effective hash. Finish
 	# the gesture so a toggle cannot change an already submitted stroke.
@@ -248,28 +264,30 @@ func _on_trigger_wave_pressed() -> void:
 	if not next.error.is_empty():action_message=String(next.error);return
 	# Pending and recorded water work all precede the declared future packet.
 	var tick: int=runtime.current._scheduled_tick+runtime.current.pending_count()+2
-	var result: Dictionary=runtime.request_wave({"domain_id":_domain_id(),"generation":generation,"request_id":next.value,"start_tick":tick,"profile_id":&"test_packet","amplitude_m":manual_wave_amplitude_m,"duration_s":3.0,"seed":int(next.value*17+31)})
+	var result: Dictionary=runtime.request_wave({"domain_id":_domain_id(),"generation":generation,"request_id":next.value,"start_tick":tick,"profile_id":&"test_packet","amplitude_m":manual_wave_amplitude_m,"duration_s":manual_wave_duration_s,"seed":int(next.value*17+31)})
 	action_message="波浪已排队" if result.accepted else String(result.error)
 
 func _input(event: InputEvent) -> void:
+	if not get_window().has_focus():return
 	if event is InputEventMouseButton and not event.pressed and event.button_index==MOUSE_BUTTON_LEFT:_finish_ui_stroke(false)
 
 func _unhandled_input(event: InputEvent) -> void:
+	if not get_window().has_focus():return
 	if props_panel!=null and props_panel.handle_world_input(event):return
 	if event is InputEventKey and event.pressed and not event.echo:
 		match event.keycode:
 			KEY_SPACE:playing=not playing;_update_status();get_viewport().set_input_as_handled()
 			KEY_F5:set_player_camera(not use_player_camera)
 			KEY_F6:hide_hud=not hide_hud
-			KEY_BRACKETLEFT:if selected_sand_tool==&"castle_v1":panel.rotate_castle(-15)
-			KEY_BRACKETRIGHT:if selected_sand_tool==&"castle_v1":panel.rotate_castle(15)
+			KEY_BRACKETLEFT:if selected_sand_tool==&"castle_v1":rotate_castle(-15)
+			KEY_BRACKETRIGHT:if selected_sand_tool==&"castle_v1":rotate_castle(15)
 	if not ready_for_ticks or player_camera.look_active:return
 	if event is InputEventMouseButton and event.button_index==MOUSE_BUTTON_LEFT and event.pressed:
 		var hit:=pick(event.position)
 		if hit.is_empty():return
 		var position: Vector3=hit.position
 		var amount:=dig_amount_m3 if selected_sand_tool==&"remove_sand" else fill_amount_m3
-		var result:=input.begin(selected_sand_tool,Vector2(position.x,position.z),panel.parameters(),amount,water_policy,signed_speed_m_s)
+		var result:=input.begin(selected_sand_tool,Vector2(position.x,position.z),tool_parameters(),amount,water_policy,signed_speed_m_s)
 		_invalidate_preview()
 		gpu_brush=selected_sand_tool if result.accepted else &""
 		if not result.accepted:input.finish()
@@ -306,7 +324,7 @@ func preview_at(point: Vector2) -> void:
 
 func _preview_descriptor() -> Dictionary:
 	var amount:=dig_amount_m3 if selected_sand_tool==&"remove_sand" else fill_amount_m3
-	return input.preview_request(selected_sand_tool,_preview_target,panel.parameters(),amount,water_policy,signed_speed_m_s)
+	return input.preview_request(selected_sand_tool,_preview_target,tool_parameters(),amount,water_policy,signed_speed_m_s)
 
 func _refresh_preview_geometry() -> Dictionary:
 	if not ready_for_ticks or registry==null:return {"error":&"not_ready"}
@@ -327,6 +345,7 @@ func _update_preview(delta: float) -> void:
 	_preview_retry_elapsed+=delta
 	if _preview_retry_elapsed>=1.0:
 		_preview_retry_elapsed=0.0;runtime.retry_preview_readback();runtime.retry_retirement()
+	if not get_window().has_focus():return
 	_preview_elapsed=minf(_preview_elapsed+delta,0.2)
 	if _preview_exhausted or not ready_for_ticks or not _preview_has_target or _preview_elapsed<0.1 or _preview_pending!=0:return
 	if _preview_screen_valid:
@@ -404,12 +423,12 @@ func save_gpu_checkpoint(path: String) -> StringName:
 func restore_gpu_checkpoint(path: String) -> StringName:
 	if _booting or _saving or _restoring or closing or runtime.current==null:return &"transition_busy"
 	if floating_props!=null and floating_props.active and not floating_props.has_operation_room(5,true):return &"identity_exhausted"
-	var loaded:=CheckpointRouter.load_file(path,configuration)
+	var loaded:=CheckpointRouter.load_file(path,configuration,true)
 	if not loaded.error.is_empty():return loaded.error
 	_restoring=true;_finish_ui_stroke(false);_transition_result={}
 	var hold_error:=await _props_hold(true,&"restore")
 	if not hold_error.is_empty():_restoring=false;return hold_error
-	var error: StringName=runtime.restore_checkpoint(loaded.checkpoint,_transition)
+	var error: StringName=runtime.restore_checkpoint(loaded.checkpoint,_transition,loaded.checkpoint.configuration)
 	if not error.is_empty():
 		await _props_hold(false,&"restore");_restoring=false;return error
 	var start:=Time.get_ticks_msec()
@@ -422,6 +441,7 @@ func restore_gpu_checkpoint(path: String) -> StringName:
 	return error
 
 func shutdown() -> void:
+	get_node("/root/Parameters").unbind_scene(self)
 	if gpu_release_done:return
 	if closing:
 		while not gpu_release_done:await get_tree().process_frame
@@ -448,3 +468,85 @@ func _on_momentum_gain_changed(value: float) -> void:
 	_invalidate_preview()
 	action_message="推水力度 %.2f"%value
 	_update_status()
+
+func _on_wave_retention_changed(value: float) -> void:
+	var error: StringName=await set_wave_retention(value)
+	if not error.is_empty():action_message="保波设置未更改："+String(error)
+	_update_status()
+
+func set_wave_retention(value: float) -> StringName:
+	if not is_finite(value) or value<0.0 or value>1.0:return &"invalid_wave_retention"
+	if _booting or _saving or _restoring or closing or not ready_for_ticks:return &"transition_busy"
+	if Config.Numerics.solver_id(configuration.environment)!=Config.Numerics.MUSCL:return &"unsupported_wave_retention_solver"
+	if value==wave_retention:return &""
+	if floating_props!=null and floating_props.active and not floating_props.has_operation_room(5,true):return &"identity_exhausted"
+	_restoring=true;ready_for_ticks=false;_finish_ui_stroke(false);_saved={};_transition_result={}
+	_invalidate_preview();action_message="正在应用保波程度…";_update_status()
+	var start:=Time.get_ticks_msec()
+	while not input.end_requested.is_empty() and Time.get_ticks_msec()-start<30000:await get_tree().process_frame
+	if not input.end_requested.is_empty():_restoring=false;return &"stroke_end_timeout"
+	var error: StringName=await _props_hold(true,&"restore")
+	if error.is_empty():
+		var admitted: Dictionary=runtime.current.request_checkpoint({"policy":water_policy,"speed":signed_speed_m_s,"brush":_capture_brush_selection()},func(result: Dictionary):_saved=result)
+		if not admitted.accepted:error=admitted.error
+		else:
+			while _saved.is_empty() and Time.get_ticks_msec()-start<60000:await get_tree().process_frame
+			error=_saved.get("error",&"checkpoint_wait_timeout")
+	if error.is_empty():
+		var target:=configuration.duplicate(true)
+		target.environment.water_numerics=Config.Numerics.selection(Config.Numerics.MUSCL,value)
+		target.configuration_hash=Config.stable_hash(target)
+		var checkpoint: Dictionary=_saved.checkpoint.duplicate(true)
+		checkpoint.configuration=target
+		# Exact current-release snapshot: raw fields, ledger and completed time
+		# are preserved. Only future reconstruction changes on the new owner.
+		error=runtime.restore_checkpoint(checkpoint,_transition,target)
+		if error.is_empty():
+			while _transition_result.is_empty() and Time.get_ticks_msec()-start<120000:await get_tree().process_frame
+			error=_transition_result.get("error",&"restore_wait_timeout")
+	await _props_hold(false,&"restore");_restoring=false
+	if error.is_empty():action_message="保波程度 %.1f 已应用"%wave_retention
+	return error
+
+func tool_parameters() -> Dictionary:
+	match selected_sand_tool:
+		&"gravel_drop":return {"count":int(tool_parameter_values.get("gravel_count",16))}
+		&"castle_v1":return {"scale_xz":tool_parameter_values.get("castle_scale",1.0),"height_m":tool_parameter_values.get("castle_height",0.7),"yaw_rad":wrapf(deg_to_rad(tool_parameter_values.get("castle_yaw",0.0)),-PI,PI)}
+		&"wall_v1":return {"height_m":tool_parameter_values.get("wall_height",0.3),"bottom_width_m":tool_parameter_values.get("wall_bottom",1.0),"top_width_m":tool_parameter_values.get("wall_top",0.5)}
+		&"shovel_v1":return {"depth_m":tool_parameter_values.get("shovel_depth",0.15),"trench_width_m":tool_parameter_values.get("shovel_width",0.5),"shoulder_width_m":tool_parameter_values.get("shovel_shoulder",0.5)}
+		&"smooth_v1",&"compact_v1":return {"radius_m":tool_parameter_values.get("adjust_radius",0.75),"strength":tool_parameter_values.get("adjust_strength",1.0)}
+	return {"radius_m":tool_parameter_values.get("radius_m",0.75),"strength":tool_parameter_values.get("strength",1.0)}
+
+func apply_tool_parameters(values: Dictionary) -> void:
+	var mapping: Dictionary={}
+	match selected_sand_tool:
+		&"gravel_drop":mapping={"count":"gravel_count"}
+		&"castle_v1":mapping={"scale_xz":"castle_scale","height_m":"castle_height","yaw_rad":"castle_yaw"}
+		&"wall_v1":mapping={"height_m":"wall_height","bottom_width_m":"wall_bottom","top_width_m":"wall_top"}
+		&"shovel_v1":mapping={"depth_m":"shovel_depth","trench_width_m":"shovel_width","shoulder_width_m":"shovel_shoulder"}
+		&"smooth_v1",&"compact_v1":mapping={"radius_m":"adjust_radius","strength":"adjust_strength"}
+		_:mapping={"radius_m":"radius_m","strength":"strength"}
+	for key in mapping:
+		if values.has(key):tool_parameter_values[mapping[key]]=rad_to_deg(values[key]) if key=="yaw_rad" else values[key]
+
+func rotate_castle(degrees: float) -> void:
+	var parameters=get_node("/root/Parameters")
+	parameters.set_value("castle_yaw",wrapf(float(tool_parameter_values.get("castle_yaw",0.0))+degrees,-180,180))
+
+func open_parameters(index: int) -> void:
+	get_node("/root/Parameters").open_window(get_node("/root/Parameters").GROUPS[index])
+
+func _world_focus_lost() -> void:
+	_finish_ui_stroke(false)
+	player_camera._release_mouse()
+	$BrushIndicator.hide_indicator()
+	$BrushPreview.hide_preview()
+
+func _exit_tree() -> void:
+	if has_node("/root/Parameters"):get_node("/root/Parameters").unbind_scene(self)
+
+func _toggle_pause() -> void:
+	playing=not playing;_update_status()
+
+func _toggle_camera() -> void:
+	set_player_camera(not use_player_camera)

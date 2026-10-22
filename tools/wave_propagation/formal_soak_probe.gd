@@ -3,6 +3,7 @@ const Codec=preload("res://scripts/simulation/unified_edit/checkpoint_codec.gd")
 var seconds:=300.0
 var container_records: Array=[]
 var ownership_records: Array=[]
+var orphan_baseline:=0
 
 func _initialize() -> void:
 	for arg in OS.get_cmdline_user_args():
@@ -44,8 +45,6 @@ func capture_container(label: String) -> Dictionary:
 
 func run_main() -> void:
 	scene=load("res://scenes/main.tscn").instantiate();scene.playing=false;scene.water_solver_id=solver_id
-	scene.get_node("FloatingProps/Bottle").position.x=-1.5625;scene.get_node("FloatingProps/Bottle").position.z=.0625
-	scene.get_node("FloatingProps/WoodPlank").position.x=-2.5625;scene.get_node("FloatingProps/WoodPlank").position.z=.0625
 	root.add_child(scene)
 	var deadline:=Time.get_ticks_msec()+120000
 	while (not scene.ready_for_ticks or scene._booting) and scene.last_error.is_empty() and Time.get_ticks_msec()<deadline:await process_frame
@@ -56,7 +55,7 @@ func run_main() -> void:
 	while scene.floating_props.busy:await physics_frame
 	check("props_active",(await scene.floating_props.set_paused(false,&"user")).error.is_empty())
 	scene.floating_props.events.clear();scene.floating_props.events_evicted=0
-	current={"id":"main_soak","snapshots":[],"configuration":scene.configuration,"camera":str(scene.player_camera.global_transform)}
+	current={"id":"main_soak","snapshots":[],"configuration":scene.configuration,"camera":str(scene.player_camera.global_transform),"body_layout":"authored_default_no_position_overrides"}
 	await snapshot("initial");await apply_standard("first_edit");await snapshot("edited")
 	var restored:=false
 	for second in range(1,int(seconds)+1):
@@ -67,7 +66,7 @@ func run_main() -> void:
 			await idle()
 		if failed:break
 		await snapshot("second_%03d"%second)
-		if second%30==0:ownership_records.append({"time_s":owner.advanced_time_s,"generation":str(scene.generation),"counts":owner.ownership_counts(),"props_error":String(scene.floating_props.last_error)})
+		if second%30==0:ownership_records.append({"time_s":owner.advanced_time_s,"generation":str(scene.generation),"counts":owner.ownership_counts(),"props_error":String(scene.floating_props.last_error),"static_memory_bytes":int(Performance.get_monitor(Performance.MEMORY_STATIC)),"object_count":int(Performance.get_monitor(Performance.OBJECT_COUNT)),"node_count":int(Performance.get_monitor(Performance.OBJECT_NODE_COUNT)),"orphan_count":int(Performance.get_monitor(Performance.OBJECT_ORPHAN_NODE_COUNT))})
 		if second==int(seconds/2) and not restored:
 			var expected: Dictionary=await capture_container("before_restore")
 			var old=owner;scene.set_process(true)
@@ -91,10 +90,13 @@ func run_main() -> void:
 	var service=root.get_node("BeachScenes")
 	if service.active_scene==scene:service.active_scene=null
 	root.remove_child(scene);scene.free();scene=null;owner=null
+	await process_frame
+	check("no_orphan_growth",int(Performance.get_monitor(Performance.OBJECT_ORPHAN_NODE_COUNT))==orphan_baseline)
 
 func run() -> void:
 	if output.is_empty() or solver_id!="muscl_mc_ssprk2_v1" or not is_finite(seconds) or seconds<2 or seconds>300:quit(2);return
 	DirAccess.make_dir_recursive_absolute(output);DisplayServer.window_set_size(Vector2i(1280,720));DisplayServer.window_set_title("Formal main correctness soak")
+	orphan_baseline=int(Performance.get_monitor(Performance.OBJECT_ORPHAN_NODE_COUNT))
 	await run_main()
 	var drift: Array=[]
 	for path in sources:

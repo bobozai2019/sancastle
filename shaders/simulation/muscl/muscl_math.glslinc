@@ -6,6 +6,15 @@ bool finite1(float x){return !isnan(x)&&!isinf(x);}
 bool finite4(vec4 x){return !any(isnan(x))&&!any(isinf(x));}
 float mc(float l,float r){return l*r>0.0?sign(l)*min(min(2.0*abs(l),2.0*abs(r)),0.5*abs(l+r)):0.0;}
 vec4 mc4(vec4 l,vec4 r){return vec4(mc(l.x,r.x),mc(l.y,r.y),mc(l.z,r.z),mc(l.w,r.w));}
+// Convex blend of MC and Superbee slopes. Never reduce the Rusanov speed
+// bound, add energy, or change the wet/dry and positivity safeguards.
+float retained_slope(float l,float r,float retention){
+ float base=mc(l,r);
+ if(retention<=0.0||l*r<=0.0)return base;
+ float sharp=sign(l)*max(min(2.0*abs(l),abs(r)),min(abs(l),2.0*abs(r)));
+ return mix(base,sharp,retention);
+}
+vec4 retained_slopes(vec4 l,vec4 r,float retention){return vec4(retained_slope(l.x,r.x,retention),retained_slope(l.y,r.y,retention),retained_slope(l.z,r.z,retention),retained_slope(l.w,r.w,retention));}
 vec4 cap_state(vec4 a,out bool limited){
  limited=false;
  if(a.x<=DRY){a.yz=vec2(0.0);return a;}

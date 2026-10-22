@@ -38,6 +38,8 @@
 [ext_resource type="Script" path="res://scripts/simulation/unified_edit/domain_runtime.gd" id="36_kilie"]
 [ext_resource type="Script" path="res://scripts/simulation/unified_edit/height_surface.gd" id="37_xy87y"]
 
+[ext_resource type="PackedScene" path="res://scenes/components/vegetation_layer.tscn" id="vegetation_layer"]
+
 [sub_resource type="Environment" id="Environment_j7kgc"]
 resource_local_to_scene = true
 background_mode = 1
@@ -822,7 +824,7 @@ theme_override_constants/separation = 8
 [node name="Title" type="Label" parent="Interface/EditPanel/Margin/Controls" unique_id=1861301498]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
-text = "沙量 · 波浪 · 视角"
+text = "场景操作"
 
 [node name="SceneSwitcher" type="VBoxContainer" parent="Interface/EditPanel/Margin/Controls" unique_id=283084814]
 layout_mode = 2
@@ -857,69 +859,8 @@ theme_override_font_sizes/font_size = 12
 text = "切换保留各场景进度"
 autowrap_mode = 2
 
-[node name="Tools" type="HBoxContainer" parent="Interface/EditPanel/Margin/Controls" unique_id=6341593]
-visible = false
-layout_mode = 2
-
-[node name="DigTool" type="Button" parent="Interface/EditPanel/Margin/Controls/Tools" unique_id=1584253020]
-layout_mode = 2
-size_flags_horizontal = 3
-focus_mode = 0
-toggle_mode = true
-button_pressed = true
-button_group = SubResource("ButtonGroup_j7g1x")
-text = "挖沙"
-
-[node name="FillTool" type="Button" parent="Interface/EditPanel/Margin/Controls/Tools" unique_id=1247857475]
-layout_mode = 2
-size_flags_horizontal = 3
-focus_mode = 0
-toggle_mode = true
-button_group = SubResource("ButtonGroup_j7g1x")
-text = "填沙"
-
-[node name="DigLabel" type="Label" parent="Interface/EditPanel/Margin/Controls" unique_id=1566792562]
-visible = false
-layout_mode = 2
-text = "挖沙量（m³ / 次）"
-
-[node name="DigAmount" type="SpinBox" parent="Interface/EditPanel/Margin/Controls" unique_id=1329343728]
-visible = false
-layout_mode = 2
-min_value = 0.01
-max_value = 1.0
-step = 0.01
-value = 0.09999999999999999
-suffix = "m³"
-
-[node name="FillLabel" type="Label" parent="Interface/EditPanel/Margin/Controls" unique_id=1980843709]
-visible = false
-layout_mode = 2
-text = "填沙量（m³ / 次）"
-
-[node name="FillAmount" type="SpinBox" parent="Interface/EditPanel/Margin/Controls" unique_id=538474186]
-visible = false
-layout_mode = 2
-min_value = 0.01
-max_value = 1.0
-step = 0.01
-value = 0.09999999999999999
-suffix = "m³"
-
 [node name="WaveSeparator" type="HSeparator" parent="Interface/EditPanel/Margin/Controls" unique_id=225883237]
 layout_mode = 2
-
-[node name="WaveLabel" type="Label" parent="Interface/EditPanel/Margin/Controls" unique_id=2121279592]
-layout_mode = 2
-text = "波浪量：波幅（m）"
-
-[node name="WaveAmount" type="SpinBox" parent="Interface/EditPanel/Margin/Controls" unique_id=501195800]
-layout_mode = 2
-min_value = 0.01
-max_value = 0.2
-step = 0.01
-value = 0.09999999999999999
-suffix = "m"
 
 [node name="TriggerWave" type="Button" parent="Interface/EditPanel/Margin/Controls" unique_id=1971601384]
 layout_mode = 2
@@ -930,135 +871,6 @@ text = "触发波浪"
 layout_mode = 2
 theme_override_font_sizes/font_size = 14
 text = "点击触发一波；暂停时等待继续"
-
-[node name="Help" type="Label" parent="Interface/EditPanel/Margin/Controls" unique_id=199487090]
-layout_mode = 2
-theme_override_font_sizes/font_size = 14
-text = "左键使用选定工具 · 拖动连续编辑
-WASD 移动 · 右键按住转向
-Q/E 升降 · Shift 加速 · Esc 释放鼠标"
-
-[node name="PerformancePanel" type="PanelContainer" parent="Interface" unique_id=646986363]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -280.0
-offset_top = -350.0
-offset_right = 112.0
-offset_bottom = -18.0
-grow_horizontal = 0
-grow_vertical = 0
-theme = ExtResource("9_lsrjp")
-theme_override_styles/panel = SubResource("Style_edit_panel")
-
-[node name="Margin" type="MarginContainer" parent="Interface/PerformancePanel" unique_id=792343045]
-layout_mode = 2
-theme_override_constants/margin_left = 14
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 14
-theme_override_constants/margin_bottom = 10
-
-[node name="Rows" type="VBoxContainer" parent="Interface/PerformancePanel/Margin" unique_id=1870249688]
-layout_mode = 2
-theme_override_constants/separation = 3
-
-[node name="Header" type="HBoxContainer" parent="Interface/PerformancePanel/Margin/Rows" unique_id=1737712510]
-layout_mode = 2
-
-[node name="Title" type="Label" parent="Interface/PerformancePanel/Margin/Rows/Header" unique_id=1435443997]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 18
-text = "性能 / Profile"
-
-[node name="Sampling" type="CheckButton" parent="Interface/PerformancePanel/Margin/Rows/Header" unique_id=1362117794]
-layout_mode = 2
-tooltip_text = "读取已完成的 GPU 时间戳；关闭或 F6 隐藏面板可停止采样。"
-focus_mode = 0
-theme_override_font_sizes/font_size = 14
-button_pressed = true
-text = "分阶段采样"
-
-[node name="Summary" type="Label" parent="Interface/PerformancePanel/Margin/Rows" unique_id=1182680769]
-layout_mode = 2
-theme_override_font_sizes/font_size = 16
-text = "0.1 FPS  |  帧 16733.05 ms  |  峰值 33466.09 ms"
-
-[node name="Cpu" type="Label" parent="Interface/PerformancePanel/Margin/Rows" unique_id=1615399926]
-layout_mode = 2
-tooltip_text = "Godot 最近约一秒内的处理/物理帧最大耗时，不是平均耗时。物理阶段包含延迟回调与碰撞数据处理；两者不直接相加。"
-theme_override_font_sizes/font_size = 14
-text = "CPU 峰值 33463.89 ms  ·  物理峰值 9454.90 ms"
-
-[node name="RenderTime" type="Label" parent="Interface/PerformancePanel/Margin/Rows" unique_id=2009984180]
-layout_mode = 2
-tooltip_text = "当前主视口渲染时间；独立计算阶段与渲染可能交错，不能和下方阶段直接相加。"
-theme_override_font_sizes/font_size = 14
-text = "渲染 CPU / GPU：—（采样关闭）"
-
-[node name="Simulation" type="Label" parent="Interface/PerformancePanel/Margin/Rows" unique_id=198578963]
-layout_mode = 2
-theme_override_font_sizes/font_size = 14
-text = "模拟 0.0 tick/s  ·  0.00×  ·  子步 0"
-
-[node name="Separator" type="HSeparator" parent="Interface/PerformancePanel/Margin/Rows" unique_id=359533093]
-layout_mode = 2
-
-[node name="StageHeading" type="Label" parent="Interface/PerformancePanel/Margin/Rows" unique_id=310617342]
-layout_mode = 2
-tooltip_text = "每帧内重复的子步累加，再取半秒采样均值；无新样本保留上次。各行与渲染耗时不直接相加。"
-theme_override_font_sizes/font_size = 14
-text = "GPU 分阶段 · ms / 含该阶段的采样帧"
-
-[node name="Stages" type="HBoxContainer" parent="Interface/PerformancePanel/Margin/Rows" unique_id=1865485667]
-layout_mode = 2
-
-[node name="Names" type="Label" parent="Interface/PerformancePanel/Margin/Rows/Stages" unique_id=145860439]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 14
-text = "边界 / CFL
-水流更新
-侵蚀 / 沉积
-湿润 / 沙坡
-白沫更新
-统计 / 审计
-挖填沙
-编辑水核
-完整水 tick
-沙面发布
-碰撞打包"
-
-[node name="Values" type="Label" parent="Interface/PerformancePanel/Margin/Rows/Stages" unique_id=185044975]
-layout_mode = 2
-theme_override_font_sizes/font_size = 14
-text = "—
-—
-—
-—
-—
-—
-—
-—
-—
-—
-—"
-horizontal_alignment = 2
-
-[node name="Collision" type="Label" parent="Interface/PerformancePanel/Margin/Rows" unique_id=1719124622]
-layout_mode = 2
-tooltip_text = "最近有效批次：回读为 GPU 请求到回调的等待；碰撞 CPU 包括解码、校验、分块和形状更新。替换阶段是其中一段，不能相加。高度未变的块跳过重建，但仍更新修订号。"
-theme_override_font_sizes/font_size = 13
-text = "回读 — ms · 碰撞 CPU — ms
-替换阶段 — ms · 替换 — / 跳过 — 块"
-
-[node name="State" type="Label" parent="Interface/PerformancePanel/Margin/Rows" unique_id=2019658023]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.62, 0.75, 0.82, 1)
-theme_override_font_sizes/font_size = 13
-text = "准备 / 恢复中"
 
 [node name="ShapeBrushPanel" type="PanelContainer" parent="Interface" unique_id=1400261106]
 custom_minimum_size = Vector2(296, 0)
@@ -1162,184 +974,6 @@ focus_mode = 0
 toggle_mode = true
 button_group = SubResource("ButtonGroup_wjx3u")
 text = "投碎石"
-
-[node name="GravelParams" type="VBoxContainer" parent="Interface/ShapeBrushPanel/Margin/Controls" unique_id=1443708327]
-unique_name_in_owner = true
-visible = false
-layout_mode = 2
-
-[node name="AmountLabel" type="Label" parent="Interface/ShapeBrushPanel/Margin/Controls/GravelParams" unique_id=527333716]
-layout_mode = 2
-text = "碎石数量 · 颗 / 次"
-
-[node name="GravelCount" type="SpinBox" parent="Interface/ShapeBrushPanel/Margin/Controls/GravelParams" unique_id=18298049]
-unique_name_in_owner = true
-layout_mode = 2
-min_value = 1.0
-max_value = 128.0
-value = 16.0
-suffix = "颗"
-
-[node name="OrdinaryParams" type="VBoxContainer" parent="Interface/ShapeBrushPanel/Margin/Controls" unique_id=464867501]
-unique_name_in_owner = true
-layout_mode = 2
-
-[node name="DigAmountLabel" type="Label" parent="Interface/ShapeBrushPanel/Margin/Controls/OrdinaryParams" unique_id=1660627475]
-layout_mode = 2
-text = "挖沙量 · m³ / 次"
-
-[node name="DigAmount" type="SpinBox" parent="Interface/ShapeBrushPanel/Margin/Controls/OrdinaryParams" unique_id=1871779342]
-unique_name_in_owner = true
-layout_mode = 2
-min_value = 0.01
-max_value = 1.0
-step = 0.01
-value = 0.09999999999999999
-suffix = "m³"
-
-[node name="FillAmountLabel" type="Label" parent="Interface/ShapeBrushPanel/Margin/Controls/OrdinaryParams" unique_id=1908578121]
-layout_mode = 2
-text = "投沙量 · m³ / 次"
-
-[node name="FillAmount" type="SpinBox" parent="Interface/ShapeBrushPanel/Margin/Controls/OrdinaryParams" unique_id=1855762565]
-unique_name_in_owner = true
-layout_mode = 2
-min_value = 0.01
-max_value = 1.0
-step = 0.01
-value = 0.09999999999999999
-suffix = "m³"
-
-[node name="CastleParams" type="VBoxContainer" parent="Interface/ShapeBrushPanel/Margin/Controls" unique_id=549146395]
-unique_name_in_owner = true
-visible = false
-layout_mode = 2
-
-[node name="CastleScaleLabel" type="Label" parent="Interface/ShapeBrushPanel/Margin/Controls/CastleParams" unique_id=1967098830]
-layout_mode = 2
-text = "城堡尺寸 · 4–6 m"
-
-[node name="CastleScale" type="SpinBox" parent="Interface/ShapeBrushPanel/Margin/Controls/CastleParams" unique_id=407995893]
-unique_name_in_owner = true
-layout_mode = 2
-min_value = 1.0
-max_value = 1.5
-step = 0.05
-value = 1.0
-suffix = "×"
-
-[node name="CastleHeightLabel" type="Label" parent="Interface/ShapeBrushPanel/Margin/Controls/CastleParams" unique_id=485685736]
-layout_mode = 2
-text = "城堡固定标高（世界Y）"
-
-[node name="CastleHeight" type="SpinBox" parent="Interface/ShapeBrushPanel/Margin/Controls/CastleParams" unique_id=1280311808]
-unique_name_in_owner = true
-layout_mode = 2
-min_value = 0.5
-max_value = 1.0
-step = 0.05
-value = 0.7
-suffix = "m"
-
-[node name="CastleYawLabel" type="Label" parent="Interface/ShapeBrushPanel/Margin/Controls/CastleParams" unique_id=2093190277]
-layout_mode = 2
-text = "水平旋转"
-
-[node name="CastleYaw" type="SpinBox" parent="Interface/ShapeBrushPanel/Margin/Controls/CastleParams" unique_id=1867651490]
-unique_name_in_owner = true
-layout_mode = 2
-min_value = -180.0
-max_value = 180.0
-step = 15.0
-suffix = "°"
-
-[node name="WallParams" type="VBoxContainer" parent="Interface/ShapeBrushPanel/Margin/Controls" unique_id=547658292]
-unique_name_in_owner = true
-visible = false
-layout_mode = 2
-
-[node name="WallHeightLabel" type="Label" parent="Interface/ShapeBrushPanel/Margin/Controls/WallParams" unique_id=1547215104]
-layout_mode = 2
-text = "墙高"
-
-[node name="WallHeight" type="SpinBox" parent="Interface/ShapeBrushPanel/Margin/Controls/WallParams" unique_id=278739244]
-unique_name_in_owner = true
-layout_mode = 2
-min_value = 0.15
-max_value = 0.6
-step = 0.05
-value = 0.3
-suffix = "m"
-
-[node name="WallBottomLabel" type="Label" parent="Interface/ShapeBrushPanel/Margin/Controls/WallParams" unique_id=368369696]
-layout_mode = 2
-text = "底宽"
-
-[node name="WallBottom" type="SpinBox" parent="Interface/ShapeBrushPanel/Margin/Controls/WallParams" unique_id=1204581018]
-unique_name_in_owner = true
-layout_mode = 2
-min_value = 1.0
-max_value = 2.0
-step = 0.125
-value = 1.0
-suffix = "m"
-
-[node name="WallTopLabel" type="Label" parent="Interface/ShapeBrushPanel/Margin/Controls/WallParams" unique_id=255951187]
-layout_mode = 2
-text = "顶宽 · 不超过底宽"
-
-[node name="WallTop" type="SpinBox" parent="Interface/ShapeBrushPanel/Margin/Controls/WallParams" unique_id=417610639]
-unique_name_in_owner = true
-layout_mode = 2
-min_value = 0.5
-max_value = 1.5
-step = 0.125
-value = 0.5
-suffix = "m"
-
-[node name="ShovelParams" type="VBoxContainer" parent="Interface/ShapeBrushPanel/Margin/Controls" unique_id=116108865]
-unique_name_in_owner = true
-visible = false
-layout_mode = 2
-
-[node name="ShovelWidthLabel" type="Label" parent="Interface/ShapeBrushPanel/Margin/Controls/ShovelParams" unique_id=722461283]
-layout_mode = 2
-text = "沟宽"
-
-[node name="ShovelWidth" type="SpinBox" parent="Interface/ShapeBrushPanel/Margin/Controls/ShovelParams" unique_id=1498368002]
-unique_name_in_owner = true
-layout_mode = 2
-min_value = 0.5
-max_value = 1.0
-step = 0.125
-value = 0.5
-suffix = "m"
-
-[node name="ShovelDepthLabel" type="Label" parent="Interface/ShapeBrushPanel/Margin/Controls/ShovelParams" unique_id=670086081]
-layout_mode = 2
-text = "沟深"
-
-[node name="ShovelDepth" type="SpinBox" parent="Interface/ShapeBrushPanel/Margin/Controls/ShovelParams" unique_id=786456978]
-unique_name_in_owner = true
-layout_mode = 2
-min_value = 0.05
-max_value = 0.3
-step = 0.05
-value = 0.15000000000000002
-suffix = "m"
-
-[node name="ShovelShoulderLabel" type="Label" parent="Interface/ShapeBrushPanel/Margin/Controls/ShovelParams" unique_id=894699591]
-layout_mode = 2
-text = "每侧肩部宽度"
-
-[node name="ShovelShoulder" type="SpinBox" parent="Interface/ShapeBrushPanel/Margin/Controls/ShovelParams" unique_id=1385763361]
-unique_name_in_owner = true
-layout_mode = 2
-min_value = 0.5
-max_value = 1.0
-step = 0.125
-value = 0.5
-suffix = "m"
 
 [node name="Help" type="Label" parent="Interface/ShapeBrushPanel/Margin/Controls" unique_id=1264630393]
 unique_name_in_owner = true
@@ -1918,16 +1552,49 @@ transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 14.0625, 0, 14.0625)
 [connection signal="pressed" from="Interface/ShapeBrushPanel/Margin/Controls/Tools/Wall" to="Interface/ShapeBrushPanel" method="_on_tool_pressed" binds= [&"wall_v1"]]
 [connection signal="pressed" from="Interface/ShapeBrushPanel/Margin/Controls/Tools/SuspendedSand" to="Interface/ShapeBrushPanel" method="_on_tool_pressed" binds= [&"suspended_sand"]]
 [connection signal="pressed" from="Interface/ShapeBrushPanel/Margin/Controls/Tools/GravelDrop" to="Interface/ShapeBrushPanel" method="_on_tool_pressed" binds= [&"gravel_drop"]]
-[connection signal="value_changed" from="Interface/ShapeBrushPanel/Margin/Controls/GravelParams/GravelCount" to="Interface/ShapeBrushPanel" method="_on_value_changed"]
-[connection signal="value_changed" from="Interface/ShapeBrushPanel/Margin/Controls/OrdinaryParams/DigAmount" to="Interface/ShapeBrushPanel" method="_on_value_changed"]
-[connection signal="value_changed" from="Interface/ShapeBrushPanel/Margin/Controls/OrdinaryParams/FillAmount" to="Interface/ShapeBrushPanel" method="_on_value_changed"]
-[connection signal="value_changed" from="Interface/ShapeBrushPanel/Margin/Controls/CastleParams/CastleScale" to="Interface/ShapeBrushPanel" method="_on_value_changed"]
-[connection signal="value_changed" from="Interface/ShapeBrushPanel/Margin/Controls/CastleParams/CastleHeight" to="Interface/ShapeBrushPanel" method="_on_value_changed"]
-[connection signal="value_changed" from="Interface/ShapeBrushPanel/Margin/Controls/CastleParams/CastleYaw" to="Interface/ShapeBrushPanel" method="_on_value_changed"]
-[connection signal="value_changed" from="Interface/ShapeBrushPanel/Margin/Controls/WallParams/WallHeight" to="Interface/ShapeBrushPanel" method="_on_value_changed"]
-[connection signal="value_changed" from="Interface/ShapeBrushPanel/Margin/Controls/WallParams/WallBottom" to="Interface/ShapeBrushPanel" method="_on_value_changed"]
-[connection signal="value_changed" from="Interface/ShapeBrushPanel/Margin/Controls/WallParams/WallTop" to="Interface/ShapeBrushPanel" method="_on_value_changed"]
-[connection signal="value_changed" from="Interface/ShapeBrushPanel/Margin/Controls/ShovelParams/ShovelWidth" to="Interface/ShapeBrushPanel" method="_on_value_changed"]
-[connection signal="value_changed" from="Interface/ShapeBrushPanel/Margin/Controls/ShovelParams/ShovelDepth" to="Interface/ShapeBrushPanel" method="_on_value_changed"]
-[connection signal="value_changed" from="Interface/ShapeBrushPanel/Margin/Controls/ShovelParams/ShovelShoulder" to="Interface/ShapeBrushPanel" method="_on_value_changed"]
 [connection signal="pressed" from="UIVisibility/ToggleUI" to="UIVisibility" method="_on_toggle_pressed"]
+
+[node name="ParameterWindows" type="MenuButton" parent="Interface/EditPanel/Margin/Controls"]
+layout_mode = 2
+text = "参数窗口"
+focus_mode = 0
+item_count = 6
+popup/item_0/text = "工具参数"
+popup/item_0/id = 0
+popup/item_1/text = "水参数"
+popup/item_1/id = 1
+popup/item_2/text = "沙参数"
+popup/item_2/id = 2
+popup/item_3/text = "道具参数"
+popup/item_3/id = 3
+popup/item_4/text = "环境与显示"
+popup/item_4/id = 4
+popup/item_5/text = "性能与诊断"
+popup/item_5/id = 5
+
+[node name="Pause" type="Button" parent="Interface/EditPanel/Margin/Controls"]
+layout_mode = 2
+focus_mode = 0
+text = "暂停／继续"
+
+[node name="Camera" type="Button" parent="Interface/EditPanel/Margin/Controls"]
+layout_mode = 2
+focus_mode = 0
+text = "切换视角"
+
+[node name="Smooth" type="Button" parent="Interface/ShapeBrushPanel/Margin/Controls/Tools"]
+layout_mode = 2
+focus_mode = 0
+toggle_mode = true
+text = "平滑"
+
+[node name="Compact" type="Button" parent="Interface/ShapeBrushPanel/Margin/Controls/Tools"]
+layout_mode = 2
+focus_mode = 0
+toggle_mode = true
+text = "压实"
+
+[connection signal="pressed" from="Interface/ShapeBrushPanel/Margin/Controls/Tools/Smooth" to="Interface/ShapeBrushPanel" method="_on_tool_pressed" binds=[&"smooth_v1"]]
+[connection signal="pressed" from="Interface/ShapeBrushPanel/Margin/Controls/Tools/Compact" to="Interface/ShapeBrushPanel" method="_on_tool_pressed" binds=[&"compact_v1"]]
+
+[node name="VegetationLayer" parent="." instance=ExtResource("vegetation_layer")]

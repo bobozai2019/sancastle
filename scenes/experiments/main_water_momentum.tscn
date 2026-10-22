@@ -4,7 +4,7 @@
 
 [ext_resource type="Script" path="res://tests/water_momentum_main/entry.gd" id="2"]
 
-[ext_resource type="Script" path="res://scripts/beach/unified_performance_panel.gd" id="3"]
+[ext_resource type="PackedScene" path="res://scenes/components/unified_performance_panel.tscn" id="3"]
 
 [ext_resource type="PackedScene" path="res://scenes/components/floating_props.tscn" id="4"]
 
@@ -21,9 +21,7 @@ scene_key = "main"
 
 presentation_manifest = "res://tests/water_momentum_main/presentation.json"
 
-[node name="PerformancePanel" parent="Interface"]
-
-script = ExtResource("3")
+[node name="PerformancePanel" parent="Interface" instance=ExtResource("3")]
 
 [node name="FloatingProps" parent="." instance=ExtResource("4")]
 
@@ -79,8 +77,6 @@ value = 0.25
 [connection signal="tool_changed" from="Interface/ShapeBrushPanel" to="." method="_on_tool_changed"]
 
 [connection signal="parameters_changed" from="Interface/ShapeBrushPanel" to="." method="_on_parameters_changed"]
-
-[connection signal="toggled" from="Interface/PerformancePanel/Margin/Rows/Header/Sampling" to="Interface/PerformancePanel" method="_on_sampling_toggled"]
 
 [connection signal="pressed" from="Interface/EditPanel/Margin/Controls/Tools/DigTool" to="." method="_on_dig_tool_pressed"]
 

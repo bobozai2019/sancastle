@@ -17,7 +17,7 @@ layout(set=0,binding=14,rg32f) uniform image2D speed_tiles;
 layout(set=0,binding=15,std430) buffer Decision {uint d[];};
 layout(set=0,binding=16,std430) buffer Trial {uint tr[];};
 layout(set=0,binding=17,std430) buffer Safety {uint stats[];};
-layout(push_constant,std430) uniform Params {uint phase,boundary_enabled,reserved0,reserved1;}p;
+layout(push_constant,std430) uniform Params {uint phase,boundary_enabled;float wave_retention;uint reserved1;}p;
 #include "muscl_math.glslinc"
 #include "muscl_stats.glslinc"
 ivec2 extent(){return imageSize(water_state);}
@@ -46,7 +46,7 @@ bool reconstructable(ivec2 q){
 vec4 face(ivec2 q,ivec2 axis,float side){
  vec4 c=primitive(q);
  if(!reconstructable(q))return c;
- vec4 slope=mc4(c-primitive(q-axis),primitive(q+axis)-c);
+ vec4 slope=retained_slopes(c-primitive(q-axis),primitive(q+axis)-c,p.wave_retention);
  slope.x*=min(1.0,2.0*c.x/max(abs(slope.x),1.17549435e-38));
  return c+0.5*side*slope;
 }

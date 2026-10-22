@@ -48,7 +48,7 @@ static func _validate(value: Dictionary, configuration: Dictionary, verify_confi
 	for key in ["advanced_time_s","initial_sand_total_m3","nominal_upper_supply"]:
 		if not Old.number(value[key]):return &"invalid_checkpoint_scalar"
 	if not Old.number(value.cohesion_yield_height_m,0.0,2.0) or not Config.exact(value.selection,["policy","speed","brush"]) or typeof(value.selection.policy)!=TYPE_INT or value.selection.policy not in [0,1,2,3] or not Old.number(value.selection.speed,-1.0,1.0):return &"invalid_checkpoint_selection"
-	error=Selection.selection_error(value.selection.brush)
+	error=Config.ParameterSchema.selection_error(value.selection.brush)
 	if not error.is_empty():return error
 	# This calls the unchanged native-v3 field/material/foam/control validator.
 	# The native version is genuinely still 3: no fake old header is constructed.

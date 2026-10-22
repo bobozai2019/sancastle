@@ -97,8 +97,8 @@ func _sample(point: Vector2, swept: bool) -> Dictionary:
 		var amount: float=gesture.amount if not swept else maxf(gesture.amount/30.0,gesture.last.distance_to(point)*gesture.amount/0.75)
 		# The public UI drag rate can be below the profile's 0.01 m3 amount
 		# minimum. Its existing strength parameter expresses the same volume.
-		params={"radius_m":0.75,"amount_m3":maxf(0.01,amount),"strength":minf(1.0,amount/0.01),"speed_m_s":0.0 if gesture.tool==&"suspended_sand" else gesture.speed}
-	elif profile.operation in [1,2]:params.speed_m_s=gesture.speed
+		params={"radius_m":gesture.parameters.get("radius_m",0.75),"amount_m3":maxf(0.01,amount),"strength":minf(1.0,amount/0.01)*gesture.parameters.get("strength",1.0),"speed_m_s":0.0 if gesture.tool==&"suspended_sand" else (gesture.speed if gesture.policy in [2,3] else 0.0)}
+	elif profile.operation in [1,2]:params.speed_m_s=gesture.speed if gesture.policy in [2,3] else 0.0
 	# Disk profiles stamp at the current point even during a drag. Only the
 	# registered capsule shape describes a segment between successive points.
 	var start: Vector2=gesture.last if swept and profile.shape==I.Profile.Shape.SWEPT_CAPSULE else point
@@ -128,8 +128,8 @@ func preview_request(tool: StringName, point: Vector2, parameters: Dictionary, a
 	var params: Dictionary=gesture.parameters.duplicate(true) if active else parameters.duplicate(true)
 	var selected_policy: int=gesture.policy if active else policy
 	var selected_speed: float=gesture.speed if active else speed
-	if profile.operation==0:params={"radius_m":0.75,"amount_m3":maxf(0.01,amount),"strength":minf(1.0,amount/0.01),"speed_m_s":0.0 if tool==&"suspended_sand" else selected_speed}
-	elif profile.operation in [1,2]:params.speed_m_s=selected_speed
+	if profile.operation==0:params={"radius_m":params.get("radius_m",0.75),"amount_m3":maxf(0.01,amount),"strength":minf(1.0,amount/0.01)*params.get("strength",1.0),"speed_m_s":0.0 if tool==&"suspended_sand" else (selected_speed if selected_policy in [2,3] else 0.0)}
+	elif profile.operation in [1,2]:params.speed_m_s=selected_speed if selected_policy in [2,3] else 0.0
 	var start: Vector2=gesture.last if swept else point
 	var stroke: int=gesture.stroke_id if active else 0
 	var request:={"domain_id":domain_id,"generation":runtime.generation(),"command_id":next.value,"sim_tick":_tick(),"profile_id":profile_id,"profile_version":profile.version,"profile_hash":profile.profile_hash,"start_xz_m":start,"end_xz_m":point,"parameters":params,"features":{"water_policy":0 if tool in [&"suspended_sand",&"smooth_v1",&"compact_v1"] else selected_policy},"source_context":"readonly_player_preview","seed":101}

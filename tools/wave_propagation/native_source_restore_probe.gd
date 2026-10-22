@@ -2,9 +2,11 @@ extends "res://tests/integration/unified_edit_playable_probe.gd"
 const Routes=preload("res://scripts/beach/unified_scene_routes.gd")
 const Router=preload("res://scripts/simulation/unified_edit/checkpoint_router.gd")
 var fixture_file:=""
+var matched_domain:=false
 func _initialize() -> void:
 	for arg in OS.get_cmdline_user_args():
 		if arg.begins_with("--fixtures="):fixture_file=arg.trim_prefix("--fixtures=")
+		if arg=="--matched-domain":matched_domain=true
 	super._initialize()
 func write_native(path: String,value: Dictionary) -> void:
 	var payload:=var_to_bytes(value);var file:=FileAccess.open(path,FileAccess.WRITE)
@@ -27,7 +29,7 @@ func _run() -> void:
 		var fixture: Dictionary=fixtures[i];var path: String=fixture.path
 		check("source_file_pin:"+str(i),FileAccess.get_sha256(path)==fixture.sha256)
 		var projected:=Router.load_file(path,scene.configuration)
-		if scene_key!="main":
+		if scene_key!="main" and not matched_domain:
 			var current_owner=scene.runtime.current;var current_epoch: int=scene.generation;var current_seq: int=current_owner.completed_state_seq
 			check("foreign_projection_rejected:"+str(i),not projected.error.is_empty())
 			var foreign_error: StringName=await scene.restore_gpu_checkpoint(path)
@@ -75,7 +77,7 @@ func _run() -> void:
 		var bad_path:=output.path_join("rejected_"+fault+".sandue");write_native(bad_path,bad)
 		var error: StringName=await scene.restore_gpu_checkpoint(bad_path)
 		check("reject_before_candidate:"+fault,not error.is_empty() and scene.runtime.current==current and scene.runtime.candidate==null and scene.generation==epoch and current.completed_state_seq==seq and scene.runtime.ready_for_input())
-	check("all_fixture_routes_executed",(observations.migrations.size() if scene_key=="main" else observations.foreign_rejections.size())==fixtures.size())
+	check("all_fixture_routes_executed",(observations.migrations.size() if scene_key=="main" or matched_domain else observations.foreign_rejections.size())==fixtures.size())
 	observations.events=scene.runtime.events.duplicate(true);await _close()
 func finish() -> void:
 	FileAccess.open(output.path_join("probe.json"),FileAccess.WRITE).store_string(JSON.stringify({"pass":not failed,"checks":checks,"observations":observations,"scope":"Actual formal main candidate restore of pinned old native and reconstructed legacy fixtures, complete raw resave, continued MC tick and rejection preserving current domain"},"\t"));quit(1 if failed else 0)

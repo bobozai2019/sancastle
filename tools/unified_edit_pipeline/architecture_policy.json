@@ -3,40 +3,40 @@
   "scope": "Reviewed current unified owner boundary with conservative reference-corpus seal; source hashes are a fail-closed change guard, not a substitute for runtime/numerical gate evidence. Old source references are not asserted to execute.",
   "sensitive_methods": {
     "scripts/beach/beach_scene_service.gd::declarations": {
-      "sha256": "81e818d75cd4c19bb8ab98ca21d854f47b6923fef6b5c9cf3b436adc0dfd2bda",
+      "sha256": "cd11bf96029712b286e7343718b5406756799c4f54bd825e3772cee12249ea7a",
       "tokens": [
         "preload("
       ],
-      "reason": "Sealed dependency/inheritance declarations and fixed component constructors. G6: route factory requires exact unified root script, family-scoped save/restore and rollback; no old fallback."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously reviewed method, exact CRLF-to-LF only, verified original SHA and normalized body."
     },
     "scripts/beach/beach_scene_service.gd::request_switch": {
-      "sha256": "3cc53612e4f0b86fe930ec1f86ca63a249f29785dfcc78592042c4a4fabc3759",
+      "sha256": "fde4d3db1b90fa65902f16668f6dd67a15951119c57dfb29a1414849e863b8e2",
       "tokens": [
         "call_deferred("
       ],
-      "reason": "Floating props G5/G6: cached restore waits completed boot; switch rejects during boot. Same unified factory and disposal proof; no consumer gate on producer."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously reviewed method, exact CRLF-to-LF only, verified original SHA and normalized body."
     },
     "scripts/beach/beach_scene_service.gd::_switch": {
-      "sha256": "66cc7e968838d6b2102a740ea887dd83aab7f5381587a58825cc509fe9f04a3e",
+      "sha256": "6f442c90e4bf60a5a6acdd6f94d09768dc1286dc191ab7116ac2c8c56dbc09ad",
       "tokens": [
         "load("
       ],
-      "reason": "G6: route factory requires exact unified root script, family-scoped save/restore and rollback; no old fallback."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously reviewed method, exact CRLF-to-LF only, verified original SHA and normalized body."
     },
     "scripts/beach/unified_playable_entry.gd::declarations": {
-      "sha256": "014cdeea62f019ce4d2d8a1194d649dc972d46a54365433d003c46aefeda624d",
+      "sha256": "d1752153a86ad11a2b24c9942bcc83bfd380ec3e2268919fa6cfd2a2b44f30dd",
       "tokens": [
         "new(",
         "preload("
       ],
-      "reason": "C07: optional scene-authored panel, input-mode exclusivity and successful-transition cancellation; original common backend and lifecycle factories retained."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Exact Profile snapshot and fixed layer wiring; sole Runtime unchanged."
     },
     "scripts/beach/unified_playable_entry.gd::_ready": {
-      "sha256": "7f6b60b5acb2f969f80afcc0eb0930a5a53ffc558febba6382fc261da81f74c2",
+      "sha256": "9f088c563760d1126e3a5b7ecfc3afe41d22d5bb5b97bb544e288c8eb9262085",
       "tokens": [
         "load("
       ],
-      "reason": "Floating props G5/G6: scene-authored optional service; exact dependency closure, terrain-only brush mask, independent holds, save/restore identity preflight and fault-safe held boundary. Shared drainage checkbox remains UI-only policy2/3 selection."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Exact Profile snapshot and fixed layer wiring; sole Runtime unchanged."
     },
     "scripts/simulation/unified_edit/api_adapter.gd::declarations": {
       "sha256": "705952f17a827923d3630aab5f99f38cb94e235c5f3932c0f766b95b00f69e33",
@@ -81,11 +81,11 @@
       "reason": "Sealed dependency/inheritance declarations and fixed component constructors. G1/G6 shared protocol/configuration/checkpoint/presentation helper or completion-publication shader; data/allocation/readonly consumers remain within sealed owners, not a tool-specific scheduler."
     },
     "scripts/simulation/unified_edit/checkpoint_capture.gd::render_capture": {
-      "sha256": "2e1987a75ae26af958051b4d6e883995e4b43ea0c3c0f5fb30899ac2251abf66",
+      "sha256": "2eb3e7aa44d7072d83ad807dcfaf0281045fa406e44c3f14fb94a2a5320f5b8a",
       "tokens": [
         "call_deferred("
       ],
-      "reason": "G1/G6 shared protocol/configuration/checkpoint/presentation helper or completion-publication shader; data/allocation/readonly consumers remain within sealed owners, not a tool-specific scheduler."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Explicit original native display-history allowlist, unchanged native layout."
     },
     "scripts/simulation/unified_edit/checkpoint_capture.gd::_maybe_finished": {
       "sha256": "e00dadd26b7e5cef5cbab82011455bc6cf10fe890b255cc8eea33a2f35029e56",
@@ -135,64 +135,64 @@
       "tokens": [
         "preload("
       ],
-      "reason": "Sealed dependency/inheritance declarations and fixed component constructors. G1/G6: data-only native/known legacy validation; wave IDs validate payload, no runtime restoration factory."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously reviewed method, exact CRLF-to-LF only, verified original SHA and normalized body."
     },
     "scripts/simulation/unified_edit/checkpoint_codec.gd::WireHash": {
       "sha256": "12d47a85854df0773fe6b78b55487d62f8aabc7f0bfe57cb1ec8c96dc3a69660",
       "tokens": [
         "preload("
       ],
-      "reason": "G1/G6: data-only native/known legacy validation; wave IDs validate payload, no runtime restoration factory."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously reviewed method, exact CRLF-to-LF only, verified original SHA and normalized body."
     },
     "scripts/simulation/unified_edit/checkpoint_codec.gd::load": {
       "sha256": "12aff36cbeb8bde12cc0098b6f24c4848fc8b37ef60637202af62794075fcbd5",
       "tokens": [
         "load("
       ],
-      "reason": "Floating props G5/G6: strict container decoder retains size/checksum/non-object decoding; archival validation optionally skips current disk identity only, default stays strict. No prop native field."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously reviewed method, exact CRLF-to-LF only, verified original SHA and normalized body."
     },
     "scripts/simulation/unified_edit/checkpoint_router.gd::declarations": {
-      "sha256": "d586893b2292e84524615fd3cd60a0b04a33f5970f4e1824fbeeb4aa6939c3ef",
+      "sha256": "e5d1a2fce4ae8e9e062dbe0d6383f36281f31823b5336fcab92be5ad6eac606b",
       "tokens": [
         "preload("
       ],
-      "reason": "Floating props G5/G6: exact native configuration mismatch alone enters reviewed source projector; arbitrary unknown configurations still reject."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously reviewed method, exact CRLF-to-LF only, verified original SHA and normalized body."
     },
     "scripts/simulation/unified_edit/checkpoint_router.gd::load_file": {
-      "sha256": "ec47511822b6253047fb64289f443623bfe85eb37c6166172769ecb8e183f017",
+      "sha256": "f566ae824314bdff7fa508699015aef92ed7df4a83230b18ecc556ba5ea9208d",
       "tokens": [
         "new("
       ],
-      "reason": "Floating props G5/G6: exact native configuration mismatch alone enters reviewed source projector; arbitrary unknown configurations still reject."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously reviewed method, exact CRLF-to-LF only, verified original SHA and normalized body."
     },
     "scripts/simulation/unified_edit/configuration.gd::declarations": {
-      "sha256": "37d1407241f1e45f1949b7b7f09be10b2f86773b4f73774ea7567fbc43c6a7e4",
+      "sha256": "3f4cfc90c789aae8c50b104f323f2e39999d154dcc3152444c3367cc0e2994fc",
       "tokens": [
         "preload("
       ],
-      "reason": "Sealed dependency/inheritance declarations and fixed component constructors. G1/G6 shared protocol/configuration/checkpoint/presentation helper or completion-publication shader; data/allocation/readonly consumers remain within sealed owners, not a tool-specific scheduler."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously reviewed method, exact CRLF-to-LF only, verified original SHA and normalized body."
     },
     "scripts/simulation/unified_edit/configuration.gd::digest_data": {
-      "sha256": "0dfa6a355970f2447ae3f2c20a990bb0dd91c50c0682897dad9042713aad06d0",
+      "sha256": "7aa078a0683e5187f0f3a7ebea7c03f92818fdaf825c81f29cd76e0375af28df",
       "tokens": [
         "new("
       ],
-      "reason": "G1/G6 shared protocol/configuration/checkpoint/presentation helper or completion-publication shader; data/allocation/readonly consumers remain within sealed owners, not a tool-specific scheduler."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously reviewed method, exact CRLF-to-LF only, verified original SHA and normalized body."
     },
     "scripts/simulation/unified_edit/coupled.gd::initialize": {
-      "sha256": "6da6356117c45abe4cab77909487f8b20a00647173524fea7f1682161cda1f68",
+      "sha256": "38feba8817ed06104b1e58a08df05c3b851d21dd35ed1c3c2d3d6cf3769be2c0",
       "tokens": [
         "new(",
         "storage_buffer_create("
       ],
-      "reason": "Reviewed fixed recorder caches and bounded height application. Water/Coupled cache only existing RID bindings and identical constant bytes; 64 indirect substeps, shader order, compute-list boundaries and CFL remain unchanged. Height joins only completed workers, retains partial reader leases until final ACK, applies at most 8 chunks/1500us per render frame per owner (one native call may overrun), rotates slots and guards versions. Real GPU byte equivalence and independent 64-map/dirty-state checks pass."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously reviewed method, exact CRLF-to-LF only, verified original SHA and normalized body."
     },
     "scripts/simulation/unified_edit/coupled.gd::release": {
-      "sha256": "b2d4229e56d258c1631fe5edf20327f269eb4d2bea68d0d1de647f8e9e65c7c8",
+      "sha256": "a9ec1deecf94835f2babd1f0c99f78da786a377b5aa6c89c1a6fa1905ae83a97",
       "tokens": [
         "Callable("
       ],
-      "reason": "Reviewed fixed recorder caches and bounded height application. Water/Coupled cache only existing RID bindings and identical constant bytes; 64 indirect substeps, shader order, compute-list boundaries and CFL remain unchanged. Height joins only completed workers, retains partial reader leases until final ACK, applies at most 8 chunks/1500us per render frame per owner (one native call may overrun), rotates slots and guards versions. Real GPU byte equivalence and independent 64-map/dirty-state checks pass."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously reviewed method, exact CRLF-to-LF only, verified original SHA and normalized body."
     },
     "scripts/simulation/unified_edit/display_emit.glsl::shader": {
       "sha256": "840c6b01b244d21cd0914312df3ace652536d80727a0e34726b767216e775115",
@@ -218,11 +218,11 @@
       "reason": "G1/G6 shared protocol/configuration/checkpoint/presentation helper or completion-publication shader; data/allocation/readonly consumers remain within sealed owners, not a tool-specific scheduler."
     },
     "scripts/simulation/unified_edit/domain_runtime.gd::declarations": {
-      "sha256": "d011436de6ce76d1807b0ceda8479f12a5e3acde8e142b36cf92499e6d440eee",
+      "sha256": "582e2311b5eda3c3a51f2318792813bedd8955d87118d469bdd2fdc2f4cf1802",
       "tokens": [
         "preload("
       ],
-      "reason": "Sealed dependency/inheritance declarations and fixed component constructors. G6: only Pipeline.new for boot and restore, fixed two consumer slots and physics-phase handoff; no direct numerical writer."
+      "reason": "Reviewed wave retention UI: static packed controls; frozen finite scalar blends MC/Superbee slopes only; same-release complete checkpoints replace generation with strict same sources/domain/solver/non-numeric parameters; old owner retained on failure. Signal-speed, CFL, positivity and lifecycle ownership retained."
     },
     "scripts/simulation/unified_edit/domain_runtime.gd::boot": {
       "sha256": "5b391aab8ef383440478e3a6bc0175358634475bc0fc6d558efde4d1661b38a7",
@@ -233,12 +233,12 @@
       "reason": "G6: only Pipeline.new for boot and restore, fixed two consumer slots and physics-phase handoff; no direct numerical writer."
     },
     "scripts/simulation/unified_edit/domain_runtime.gd::restore_checkpoint": {
-      "sha256": "dde18059b1ab2a307bbd532ffa21b722f965d4ac95a087ab1016ceb9832c49bf",
+      "sha256": "8349466238f76ace3c8c371dbdf8782046cab5c787e9bf135e35d89dd5ee6b90",
       "tokens": [
         "call_on_render_thread(",
         "new("
       ],
-      "reason": "G6: only Pipeline.new for boot and restore, fixed two consumer slots and physics-phase handoff; no direct numerical writer."
+      "reason": "Reviewed wave retention UI: static packed controls; frozen finite scalar blends MC/Superbee slopes only; same-release complete checkpoints replace generation with strict same sources/domain/solver/non-numeric parameters; old owner retained on failure. Signal-speed, CFL, positivity and lifecycle ownership retained."
     },
     "scripts/simulation/unified_edit/domain_runtime.gd::_preview_received": {
       "sha256": "8077d524afee835320b664ab4a2965f6948c41086d071193257bad272fd7c82b",
@@ -248,12 +248,12 @@
       "reason": "G6: only Pipeline.new for boot and restore, fixed two consumer slots and physics-phase handoff; no direct numerical writer."
     },
     "scripts/simulation/unified_edit/domain_runtime.gd::_physics_process": {
-      "sha256": "788c7b31fb5e35074ee24ad8c7b2b588e49ff6e66670980522289dbe63c4c3ad",
+      "sha256": "05af4b1364af04b4390c66ba2685a59988114811b430db0249d3c19a40369fe8",
       "tokens": [
         "Callable(",
         "call("
       ],
-      "reason": "G6: only Pipeline.new for boot and restore, fixed two consumer slots and physics-phase handoff; no direct numerical writer."
+      "reason": "Reviewed wave retention UI: static packed controls; frozen finite scalar blends MC/Superbee slopes only; same-release complete checkpoints replace generation with strict same sources/domain/solver/non-numeric parameters; old owner retained on failure. Signal-speed, CFL, positivity and lifecycle ownership retained."
     },
     "scripts/simulation/unified_edit/domain_runtime.gd::_discard_candidate": {
       "sha256": "8b69d37b8ddc30231c9194c35bea98223e0184ec685e86b7087b4bba43d86ff9",
@@ -271,12 +271,12 @@
       "reason": "G6: only Pipeline.new for boot and restore, fixed two consumer slots and physics-phase handoff; no direct numerical writer."
     },
     "scripts/simulation/unified_edit/edit.glsl::shader": {
-      "sha256": "e893acf357c0859f3881c8dcb58a55440fbd370ba8a27b045acffeba576bcec3",
+      "sha256": "57553c4b755f629d60d61d73ee6f457eacf83b176230e6884396a9750cf48973",
       "tokens": [
         "imageStore(",
         "indexed_shader_assignment"
       ],
-      "reason": "G3/G4: private candidates and SSBO reductions; authority writes restricted to validated mode7 and shared decision."
+      "reason": "G3/G4: private candidates and SSBO reductions; authority writes restricted to validated mode7 and shared decision. Exact G5/G6 candidate bytes, whose implementation roles and invariants were reviewed in C01/C02 and G2-G6."
     },
     "scripts/simulation/unified_edit/executor.gd::declarations": {
       "sha256": "3fef6204081ee5ce4bc9552e4bce496bd367a9ae02f3133c9a15af5572594b9b",
@@ -442,11 +442,11 @@
       "reason": "Sealed dependency/inheritance declarations and fixed component constructors. G1/G6 shared protocol/configuration/checkpoint/presentation helper or completion-publication shader; data/allocation/readonly consumers remain within sealed owners, not a tool-specific scheduler."
     },
     "scripts/simulation/unified_edit/layout.gd::declarations": {
-      "sha256": "fd3abbc42b365a114460157fb08c7407b53e686edb5f6ed3c59fd44480121abd",
+      "sha256": "abeaf21fc8b3f90a7df96b9b5cb3f5c76a1d0a8d440c19e61ab03e3ad91944e5",
       "tokens": [
         "preload("
       ],
-      "reason": "Sealed dependency/inheritance declarations and fixed component constructors. G1/G6 shared protocol/configuration/checkpoint/presentation helper or completion-publication shader; data/allocation/readonly consumers remain within sealed owners, not a tool-specific scheduler."
+      "reason": "Sealed dependency/inheritance declarations and fixed component constructors. G1/G6 shared protocol/configuration/checkpoint/presentation helper or completion-publication shader; data/allocation/readonly consumers remain within sealed owners, not a tool-specific scheduler. Exact G5/G6 candidate bytes, whose implementation roles and invariants were reviewed in C01/C02 and G2-G6."
     },
     "scripts/simulation/unified_edit/legacy_sources.gd::declarations": {
       "sha256": "d649348ac890b6ee3c0a4b25b97ccc57f64268979456d52aabf2355d0e7a7f90",
@@ -463,139 +463,139 @@
       "reason": "G1/G6 shared protocol/configuration/checkpoint/presentation helper or completion-publication shader; data/allocation/readonly consumers remain within sealed owners, not a tool-specific scheduler."
     },
     "scripts/simulation/unified_edit/pipeline.gd::declarations": {
-      "sha256": "81cf2ddcabe1a9a08914a01884c3ce4697f691ddba4df6f2ccbae2fa74e6fa06",
+      "sha256": "1cee206d9875230bcff9d98b84ae0589840638ff6e45774eedda291ac5e7554c",
       "tokens": [
         "new(",
         "preload("
       ],
-      "reason": "Reviewed owner-thread retirement ACK: transport.retire still proves matching lease and completed readback. Only the Pipeline construction thread acknowledges inline; foreign threads still defer to that owner. No extra pump, slot capacity, command order, GPU dispatch or authority changes. Covered by unified_edit_retirement_probe.gd and check_submit_ahead.gd."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously reviewed method, exact CRLF-to-LF only, verified original SHA and normalized body."
     },
     "scripts/simulation/unified_edit/pipeline.gd::initialize_render": {
-      "sha256": "206f22ab35ff2059e820c9dc9830c5119ee26fabd1a1e62a360b49a82d2ee4f0",
+      "sha256": "9f55b6a7e92da0478b012aa8ac75c718500589106a9b602e73601255a17125d8",
       "tokens": [
         "call_deferred("
       ],
-      "reason": "G2/G5/G6: sole queue/work recording/result/ownership pump; explicit EDIT/WATER_TICK/display branches, no profile-ID specialization."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously reviewed method, exact CRLF-to-LF only, verified original SHA and normalized body."
     },
     "scripts/simulation/unified_edit/pipeline.gd::_restore_verified_render": {
-      "sha256": "54bed1b9285fce403f1f16d1118bb1baf1c6207cce83d8669035e8fb42ab18aa",
+      "sha256": "8c2b81774c2eb405d1b6cfb02269684778e35d55654adddb8b834156ff40f088",
       "tokens": [
         "call_deferred("
       ],
-      "reason": "G2/G5/G6: sole queue/work recording/result/ownership pump; explicit EDIT/WATER_TICK/display branches, no profile-ID specialization."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously reviewed method, exact CRLF-to-LF only, verified original SHA and normalized body."
     },
     "scripts/simulation/unified_edit/pipeline.gd::_restore_verified": {
-      "sha256": "02419f9a18f1c6021d78038e8d9deefea72c341d3da35f3a8494c533ed4476d6",
+      "sha256": "14e8bf148c16e1e2745b9f521af2ca5eaee38e6404b40b8f99dc628237d77754",
       "tokens": [
         "call_on_render_thread("
       ],
-      "reason": "G2/G5/G6: sole queue/work recording/result/ownership pump; explicit EDIT/WATER_TICK/display branches, no profile-ID specialization."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously reviewed method, exact CRLF-to-LF only, verified original SHA and normalized body."
     },
     "scripts/simulation/unified_edit/pipeline.gd::_initialized": {
-      "sha256": "e05554b6aa24e2ecf2fc61c846dedb0dca130a2e970861eb538047ebd3491253",
+      "sha256": "3b7d14a488362fe447010e4f3d7f09d277a37b7e3442965d6dfa912e0e094b3d",
       "tokens": [
         "call_on_render_thread("
       ],
-      "reason": "G2/G5/G6: sole queue/work recording/result/ownership pump; explicit EDIT/WATER_TICK/display branches, no profile-ID specialization."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously reviewed method, exact CRLF-to-LF only, verified original SHA and normalized body."
     },
     "scripts/simulation/unified_edit/pipeline.gd::_initialization_proved_render": {
-      "sha256": "5501b2b35781bdb8191789d29aed56e698d9145b2daf550e529ca926008cb4ef",
+      "sha256": "eafc6896e191d418790a01b4b7a1b918c199369af02673036dd9cf5a7eaeceb0",
       "tokens": [
         "call_deferred("
       ],
-      "reason": "G2/G5/G6: sole queue/work recording/result/ownership pump; explicit EDIT/WATER_TICK/display branches, no profile-ID specialization."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously reviewed method, exact CRLF-to-LF only, verified original SHA and normalized body."
     },
     "scripts/simulation/unified_edit/pipeline.gd::retry_initialization_cleanup": {
-      "sha256": "2850ab55e4c26f0c625cc91530dcc157cba803e98aaed9193eccf4dbc00e20f3",
+      "sha256": "0b3be7a886fc310f32c354be8d0780c0164b55d31b36a62de7bfbad733736b74",
       "tokens": [
         "call_on_render_thread("
       ],
-      "reason": "G2/G5/G6: sole queue/work recording/result/ownership pump; explicit EDIT/WATER_TICK/display branches, no profile-ID specialization."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously reviewed method, exact CRLF-to-LF only, verified original SHA and normalized body."
     },
     "scripts/simulation/unified_edit/pipeline.gd::pump": {
-      "sha256": "92503549c562876d329d3838e0bc1e113da7fd35afff99374144691c2e5f3ace",
+      "sha256": "7421f30b311634f67f611186d528ffde4d9a6c84dbe48c95b01c77f7082b2387",
       "tokens": [
         "call_on_render_thread("
       ],
-      "reason": "G2/G5/G6: sole queue/work recording/result/ownership pump; explicit EDIT/WATER_TICK/display branches, no profile-ID specialization. 2026-10-18 reviewed opt-in bounded diagnostic marks only; no changed authority writes, slot transitions, worker completion guard, scheduling, or release ordering. Numeric dispatches unchanged. See docs/连续铲子卡顿定位.md."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously reviewed method, exact CRLF-to-LF only, verified original SHA and normalized body."
     },
     "scripts/simulation/unified_edit/pipeline.gd::_submit_render": {
-      "sha256": "312c319ac5a28aac0737359c7a192a0fbf0ecdf908051101e4148f8174ddb67a",
+      "sha256": "6a96e8735e105f32675d31ec4c8ca1a41df9f76ae7a416597dfb90104f236604",
       "tokens": [
         "call_deferred("
       ],
-      "reason": "G2/G5/G6: sole queue/work recording/result/ownership pump; explicit EDIT/WATER_TICK/display branches, no profile-ID specialization. 2026-10-18 reviewed opt-in bounded diagnostic marks only; no changed authority writes, slot transitions, worker completion guard, scheduling, or release ordering. Numeric dispatches unchanged. See docs/连续铲子卡顿定位.md."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously reviewed method, exact CRLF-to-LF only, verified original SHA and normalized body."
     },
     "scripts/simulation/unified_edit/pipeline.gd::_arrived_render": {
-      "sha256": "ed8cf43065d3cd84a4116ed82a9b4dbcc86b2621f9b0ccce495735a787d708a3",
+      "sha256": "d0fcbb933f0fc82ca182a8e7a6497ffcbed8f5554305c7942af220fa7055f665",
       "tokens": [
         "call_deferred("
       ],
-      "reason": "G2/G5/G6: sole queue/work recording/result/ownership pump; explicit EDIT/WATER_TICK/display branches, no profile-ID specialization. 2026-10-18 reviewed opt-in bounded diagnostic marks only; no changed authority writes, slot transitions, worker completion guard, scheduling, or release ordering. Numeric dispatches unchanged. See docs/连续铲子卡顿定位.md."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously reviewed method, exact CRLF-to-LF only, verified original SHA and normalized body."
     },
     "scripts/simulation/unified_edit/pipeline.gd::_poll": {
-      "sha256": "8be970185eb96550cfd3d2e49199c6b6ff5dc46da4dee4ef5d5308e0644b6249",
+      "sha256": "f6c3e850cd6ca05dc25db47f2cf9af0281a91188ae9085dd103886f8652cb061",
       "tokens": [
         "call_on_render_thread("
       ],
-      "reason": "G2/G5/G6: sole queue/work recording/result/ownership pump; explicit EDIT/WATER_TICK/display branches, no profile-ID specialization. 2026-10-18 reviewed opt-in bounded diagnostic marks only; no changed authority writes, slot transitions, worker completion guard, scheduling, or release ordering. Numeric dispatches unchanged. See docs/连续铲子卡顿定位.md."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously reviewed method, exact CRLF-to-LF only, verified original SHA and normalized body."
     },
     "scripts/simulation/unified_edit/pipeline.gd::_retire_render": {
-      "sha256": "06f3f3332626b6654e2df5e1efc7068ffa7f9233ed33325ddea096b686733dde",
+      "sha256": "3e4b9ed879af418b7fcfd08afe71586ecac3cedda89096c0e7b3d747d06cf0cb",
       "tokens": [
         "call_deferred("
       ],
-      "reason": "Reviewed owner-thread retirement ACK: transport.retire still proves matching lease and completed readback. Only the Pipeline construction thread acknowledges inline; foreign threads still defer to that owner. No extra pump, slot capacity, command order, GPU dispatch or authority changes. Covered by unified_edit_retirement_probe.gd and check_submit_ahead.gd."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously reviewed method, exact CRLF-to-LF only, verified original SHA and normalized body."
     },
     "scripts/simulation/unified_edit/pipeline.gd::request_checkpoint": {
-      "sha256": "4cac8c90ab604172b5dd8abcbe8d64bfde87c637294a1c697fe4a0cef4792644",
+      "sha256": "9bbe1f6048257c15834aed415eb0f3e35c4a87a44174b712270ed25facb2074a",
       "tokens": [
         "new("
       ],
-      "reason": "G2/G5/G6: sole queue/work recording/result/ownership pump; explicit EDIT/WATER_TICK/display branches, no profile-ID specialization."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously reviewed method, exact CRLF-to-LF only, verified original SHA and normalized body."
     },
     "scripts/simulation/unified_edit/pipeline.gd::_checkpoint_progress": {
-      "sha256": "e291ac3d8d79fd69f7239f189b783d874b086035a757cd6b1285a146139204a8",
+      "sha256": "d56589827328abfd129cf39e998d15dd9c9f9aebc0829cc9731d6de760fca77e",
       "tokens": [
         "call_on_render_thread("
       ],
-      "reason": "G2/G5/G6: sole queue/work recording/result/ownership pump; explicit EDIT/WATER_TICK/display branches, no profile-ID specialization."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously reviewed method, exact CRLF-to-LF only, verified original SHA and normalized body."
     },
     "scripts/simulation/unified_edit/pipeline.gd::_checkpoint_captured": {
-      "sha256": "b3cabcd700871106e52149e544a561ef9483477e985c71aa74acb3b19609e7c5",
+      "sha256": "966f428ff9e867c61cc450b4fa6aa53024abeba9b5523ba82092f2d27d2f6079",
       "tokens": [
         "Callable(",
         "call("
       ],
-      "reason": "G2/G5/G6: sole queue/work recording/result/ownership pump; explicit EDIT/WATER_TICK/display branches, no profile-ID specialization."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously reviewed method, exact CRLF-to-LF only, verified original SHA and normalized body."
     },
     "scripts/simulation/unified_edit/pipeline.gd::release_render": {
-      "sha256": "bb7baf04056f457c504a151ced01472896efd0bd313dfdfed3e1113ec95d387a",
+      "sha256": "adf891164a2fc407b872474f544abf713cc1f7e235f8e985918f98eaf0c46cc9",
       "tokens": [
         "call_deferred("
       ],
-      "reason": "G2/G5/G6: sole queue/work recording/result/ownership pump; explicit EDIT/WATER_TICK/display branches, no profile-ID specialization."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously reviewed method, exact CRLF-to-LF only, verified original SHA and normalized body."
     },
     "scripts/simulation/unified_edit/pipeline.gd::cleanup_fault": {
-      "sha256": "dd2360fc072e5d628b6a7a3547ff172a23790e3083bb3686a58e2f79b6b0f5f4",
+      "sha256": "b632e11ef0d9849233b60a8af4a9caa08cab482b7c0631d391bc8095c60b5cd6",
       "tokens": [
         "call_on_render_thread("
       ],
-      "reason": "G2/G5/G6: sole queue/work recording/result/ownership pump; explicit EDIT/WATER_TICK/display branches, no profile-ID specialization."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously reviewed method, exact CRLF-to-LF only, verified original SHA and normalized body."
     },
     "scripts/simulation/unified_edit/pipeline.gd::_terminal_render": {
-      "sha256": "8515b59811fe0f205a444b4e00c3cd91abbccb8f2a282fa2288ecc01ae74171a",
+      "sha256": "fc64ecb3fcf3ed712050d1d9e8ae4b65b327221b083ea8a1b8bc8ed286916a98",
       "tokens": [
         "call_deferred("
       ],
-      "reason": "G2/G5/G6: sole queue/work recording/result/ownership pump; explicit EDIT/WATER_TICK/display branches, no profile-ID specialization."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously reviewed method, exact CRLF-to-LF only, verified original SHA and normalized body."
     },
     "scripts/simulation/unified_edit/player_input.gd::declarations": {
       "sha256": "9127a8d2f1b8cb875ad1ab7015cbfee8a1690e592c15ef72b554748c53d11250",
       "tokens": [
         "preload("
       ],
-      "reason": "Sealed dependency/inheritance declarations and fixed component constructors. G6: allowed tool-ID frontend translation into common Intent; no GPU recorder or runtime constructor."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously reviewed method, exact CRLF-to-LF only, verified original SHA and normalized body."
     },
     "scripts/simulation/unified_edit/presentation.gd::declarations": {
       "sha256": "360aa72427bb97c3bc67a4c37e09ad03ac99f7c854ae689ff346c0723e179400",
@@ -700,11 +700,11 @@
       "reason": "Sealed dependency/inheritance declarations and fixed component constructors. G1/G6 shared protocol/configuration/checkpoint/presentation helper or completion-publication shader; data/allocation/readonly consumers remain within sealed owners, not a tool-specific scheduler."
     },
     "scripts/simulation/unified_edit/state.gd::declarations": {
-      "sha256": "865fb49e4e26af95c074d4cb519019e2ab7ba9344a7a380b50c96a4dfbdcc3c3",
+      "sha256": "2fa2a146e012eb558609deb8da87bd54596c47822ecb75908169a71ad92d4f92",
       "tokens": [
         "preload("
       ],
-      "reason": "Sealed dependency/inheritance declarations and fixed component constructors. G6: physical allocation/initialization/native byte restore and completed publication; no runtime tool path."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously reviewed method, exact CRLF-to-LF only, verified original SHA and normalized body."
     },
     "scripts/simulation/unified_edit/state.gd::_create_texture": {
       "sha256": "fb21a0352e62c9775b139ecdf9d090c7c7d6c0b585c552602babde2f796748d0",
@@ -712,21 +712,21 @@
         "new(",
         "texture_create("
       ],
-      "reason": "G6: physical allocation/initialization/native byte restore and completed publication; no runtime tool path."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously reviewed method, exact CRLF-to-LF only, verified original SHA and normalized body."
     },
     "scripts/simulation/unified_edit/state.gd::initialize": {
       "sha256": "9547f26cd6ab31f006e11cac7df7c3ef5d0f316455f4ce7336bb6388668ce9dd",
       "tokens": [
         "storage_buffer_create("
       ],
-      "reason": "G6: physical allocation/initialization/native byte restore and completed publication; no runtime tool path."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously reviewed method, exact CRLF-to-LF only, verified original SHA and normalized body."
     },
     "scripts/simulation/unified_edit/tool_profile.gd::declarations": {
-      "sha256": "b2828765878f6c25c7771835d5c48e14fd15ef27f00198dbf4d5047dc0b37bb9",
+      "sha256": "ccb869745443bc9db2e6ec554e296d1e7213cc2a5e47f008119e3e0fc8a0377a",
       "tokens": [
         "preload("
       ],
-      "reason": "Sealed dependency/inheritance declarations and fixed component constructors. G1/G6 shared protocol/configuration/checkpoint/presentation helper or completion-publication shader; data/allocation/readonly consumers remain within sealed owners, not a tool-specific scheduler."
+      "reason": "Sealed dependency/inheritance declarations and fixed component constructors. G1/G6 shared protocol/configuration/checkpoint/presentation helper or completion-publication shader; data/allocation/readonly consumers remain within sealed owners, not a tool-specific scheduler. Exact G5/G6 candidate bytes, whose implementation roles and invariants were reviewed in C01/C02 and G2-G6."
     },
     "scripts/simulation/unified_edit/tool_profile.gd::validated_snapshot": {
       "sha256": "e49b75085b8399019f5d1b80c74881d3d2793ee920a3730e74bf108f8c4dabec",
@@ -928,37 +928,38 @@
       "reason": "G1/G6 shared protocol/configuration/checkpoint/presentation helper or completion-publication shader; data/allocation/readonly consumers remain within sealed owners, not a tool-specific scheduler."
     },
     "scripts/simulation/unified_edit/visuals.gd::declarations": {
-      "sha256": "6c015aad20bd34997356791e412d24618c12254c6b39f3ec932dd42f71d568d0",
+      "sha256": "c3e9e2909947e3ad32aa58efb3e5e9e09a1f4cca9ca290bfc33b9d6d723838eb",
       "tokens": [
+        "new(",
         "preload("
       ],
-      "reason": "Sealed dependency/inheritance declarations and fixed component constructors. G6: optional shared display stage; foam/front/gravel only, no authority sand/water writes."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Water-owned decorative stage in original tick/edit/publish slots."
     },
     "scripts/simulation/unified_edit/visuals.gd::_texture": {
-      "sha256": "8b69b597d05077543708f83445a14a7fb93ec097d2c8162b344f80e58d419335",
+      "sha256": "80695a97a3590eb4ce87b65f8e6d3b5600487c8e28ef696dcdcaeaf9f1777a3d",
       "tokens": [
         "new(",
         "texture_create("
       ],
-      "reason": "G6: optional shared display stage; foam/front/gravel only, no authority sand/water writes."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Water-owned decorative stage in original tick/edit/publish slots."
     },
     "scripts/simulation/unified_edit/visuals.gd::_clone": {
-      "sha256": "6d263ac60b63f3e5fe93af6c6a84e48973b77671825167e1f21a42c7be739c3c",
+      "sha256": "d968b97a7dda461e31264f75af6ee647d6224b373380101dc8530332c167c287",
       "tokens": [
         "new(",
         "texture_create("
       ],
-      "reason": "G6: optional shared display stage; foam/front/gravel only, no authority sand/water writes."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Water-owned decorative stage in original tick/edit/publish slots."
     },
     "scripts/simulation/unified_edit/visuals.gd::initialize": {
-      "sha256": "df5f5050ba5a8be05a5bf05e9968be9d36edd9c120d1946990981f4afe2c2dc2",
+      "sha256": "0b341191e4b7890205798f1c0d73ac779f49f368c5435184dd58eb4b3fa362c4",
       "tokens": [
         "storage_buffer_create("
       ],
-      "reason": "G6: optional shared display stage; foam/front/gravel only, no authority sand/water writes."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Water-owned decorative stage in original tick/edit/publish slots."
     },
     "scripts/simulation/unified_edit/visuals.gd::_dispatch_gravel": {
-      "sha256": "a94feae4246dee960b83d770e81a087d51950ed95f3a55e39a7633c1a241f44c",
+      "sha256": "436acede5704f6ce24f371f2be1b907980464553a4f0986e2c980ceb398675ba",
       "tokens": [
         "compute_list_begin(",
         "compute_list_bind_compute_pipeline(",
@@ -967,10 +968,10 @@
         "compute_list_end(",
         "compute_list_set_push_constant("
       ],
-      "reason": "G6: optional shared display stage; foam/front/gravel only, no authority sand/water writes."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Water-owned decorative stage in original tick/edit/publish slots."
     },
     "scripts/simulation/unified_edit/visuals.gd::_display_phase": {
-      "sha256": "77fd7bc97fbede90df7c1778bf735832b923b81c585c75c5d4d825a0c60317a5",
+      "sha256": "ac46c70650bf2ca76b26c3c2537bdc555799005c4e5820ce7f9af0f5b513a1b3",
       "tokens": [
         "compute_list_begin(",
         "compute_list_bind_compute_pipeline(",
@@ -979,21 +980,22 @@
         "compute_list_end(",
         "compute_list_set_push_constant("
       ],
-      "reason": "G6: optional shared display stage; foam/front/gravel only, no authority sand/water writes."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Water-owned decorative stage in original tick/edit/publish slots."
     },
     "scripts/simulation/unified_edit/visuals.gd::detach": {
-      "sha256": "6617e78c060ba53297b06c447b3dd09fa2233ea4f8212468f852fe05d4d1b011",
+      "sha256": "06535908aa54a05e43f279f9b97de2fdffa52fe2270ab6e0f74b37d7a3e47c1c",
       "tokens": [
         "Callable("
       ],
-      "reason": "G6: optional shared display stage; foam/front/gravel only, no authority sand/water writes."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Water-owned decorative stage in original tick/edit/publish slots."
     },
     "scripts/simulation/unified_edit/water.gd::declarations": {
-      "sha256": "b679fca0bf364b51334d489a90973feceec78379a00015aa264d37d70b1f1516",
+      "sha256": "7ef034ea2e5f01c12766bceb3d13d0875b8359c885dda5d4b06071076a1b4fb9",
       "tokens": [
-        "Callable("
+        "Callable(",
+        "preload("
       ],
-      "reason": "Reviewed fixed recorder caches and bounded height application. Water/Coupled cache only existing RID bindings and identical constant bytes; 64 indirect substeps, shader order, compute-list boundaries and CFL remain unchanged. Height joins only completed workers, retains partial reader leases until final ACK, applies at most 8 chunks/1500us per render frame per owner (one native call may overrun), rotates slots and guards versions. Real GPU byte equivalence and independent 64-map/dirty-state checks pass."
+      "reason": "Water remains the sole numeric owner/recorder; explicit frozen solver selection delegates to MUSCL using shared ordered recording, tail and ownership. Exact G5/G6 candidate bytes, whose implementation roles and invariants were reviewed in C01/C02 and G2-G6."
     },
     "scripts/simulation/unified_edit/water.gd::_compile": {
       "sha256": "7cc0db006ce5fc4159fb7c7678e007f9f6c6c828aa6e98a349d16cc4b9db6089",
@@ -1010,12 +1012,12 @@
       "reason": "G2/G4/G6: water tick numerical recorder called only by Pipeline; fixed coupled/tail callbacks assigned during initialize_render."
     },
     "scripts/simulation/unified_edit/water.gd::initialize": {
-      "sha256": "5667f702ddd98fa876c9b60c31b4ebe1c7a9d70aaa69db1ec107ff305a50ead6",
+      "sha256": "620fb7bc40b0a1d1b9b4e643b199fe051bb2dfae7cbf4565227349757ab81498",
       "tokens": [
         "new(",
         "storage_buffer_create("
       ],
-      "reason": "Reviewed fixed recorder caches and bounded height application. Water/Coupled cache only existing RID bindings and identical constant bytes; 64 indirect substeps, shader order, compute-list boundaries and CFL remain unchanged. Height joins only completed workers, retains partial reader leases until final ACK, applies at most 8 chunks/1500us per render frame per owner (one native call may overrun), rotates slots and guards versions. Real GPU byte equivalence and independent 64-map/dirty-state checks pass."
+      "reason": "Water remains the sole numeric owner/recorder; explicit frozen solver selection delegates to MUSCL using shared ordered recording, tail and ownership. Exact G5/G6 candidate bytes, whose implementation roles and invariants were reviewed in C01/C02 and G2-G6."
     },
     "scripts/simulation/unified_edit/water.gd::configure_boundary": {
       "sha256": "ff0f2dd01196c26ede5d4aacaf7ad483ce0e7dd9529d5e8b1a4dfa91613ad84d",
@@ -1038,7 +1040,7 @@
       "reason": "G2/G4/G6: water tick numerical recorder called only by Pipeline; fixed coupled/tail callbacks assigned during initialize_render."
     },
     "scripts/simulation/unified_edit/water.gd::record_tick": {
-      "sha256": "864a5eae6b4fb5bb6c16e52fd5c9979ce5a7a73d3a75fa38c030e05b0540898a",
+      "sha256": "80c92c3ac20be1e54d062547e494bc4da38d4e426f24150bdc91786b374adbca",
       "tokens": [
         "call(",
         "compute_list_begin(",
@@ -1048,7 +1050,7 @@
         "compute_list_end(",
         "compute_list_set_push_constant("
       ],
-      "reason": "Reviewed fixed recorder caches and bounded height application. Water/Coupled cache only existing RID bindings and identical constant bytes; 64 indirect substeps, shader order, compute-list boundaries and CFL remain unchanged. Height joins only completed workers, retains partial reader leases until final ACK, applies at most 8 chunks/1500us per render frame per owner (one native call may overrun), rotates slots and guards versions. Real GPU byte equivalence and independent 64-map/dirty-state checks pass."
+      "reason": "Water remains the sole numeric owner/recorder; explicit frozen solver selection delegates to MUSCL using shared ordered recording, tail and ownership. Exact G5/G6 candidate bytes, whose implementation roles and invariants were reviewed in C01/C02 and G2-G6."
     },
     "scripts/simulation/unified_edit/water_response.gd::initialize": {
       "sha256": "25d516416a57a334575f60e5e88d2d1acaf94af84dd260f39101db2fec9b2397",
@@ -1067,13 +1069,13 @@
       "reason": "2026-10-18 packed water optimization: reviewed private topology/CSR, per-cell candidates and ordered compensated reductions; integer topology/dry-loss flags only, no new authority writer or CPU completion dependency. Frozen budgets, original generic fallback and common conditional commit retained; phase RIDs and scratch owned/released with Response."
     },
     "scripts/simulation/unified_edit/water_response.glsl::shader": {
-      "sha256": "fcde586830e793490def32a6d193004bcd7f35522c830b168f4dd09ceb358d46",
+      "sha256": "19fca940f8886393fc683a6e2bc962dcda3298520ebff2aa04c208def16751f0",
       "tokens": [
         "atomicAdd(",
         "imageStore(",
         "indexed_shader_assignment"
       ],
-      "reason": "G4: private response candidates and shared decision-guarded mode4 authority commit."
+      "reason": "G4: private response candidates and shared decision-guarded mode4 authority commit. Exact G5/G6 candidate bytes, whose implementation roles and invariants were reviewed in C01/C02 and G2-G6."
     },
     "scripts/simulation/unified_edit/work_begin.glsl::shader": {
       "sha256": "940538b9e13f01da456c959a7d409c188420675b46d49fbb9e508fe662d72f1a",
@@ -1255,11 +1257,11 @@
       "reason": "C07: schema3 exact offline allowlist of two complete known source configurations, exact target pinning and unchanged declarative parameters; all native bytes still fully validated."
     },
     "scripts/simulation/unified_edit/coupled.gd::declarations": {
-      "sha256": "e5b6bd60719bf19a789bc86b1ddb215112895adfcf0a74b548c4544d726dd509",
+      "sha256": "9766e4fc59937248cb509bb39b33449e7e126e8c90fffc68fe55a3f39abef245",
       "tokens": [
         "preload("
       ],
-      "reason": "Reviewed fixed recorder caches and bounded height application. Water/Coupled cache only existing RID bindings and identical constant bytes; 64 indirect substeps, shader order, compute-list boundaries and CFL remain unchanged. Height joins only completed workers, retains partial reader leases until final ACK, applies at most 8 chunks/1500us per render frame per owner (one native call may overrun), rotates slots and guards versions. Real GPU byte equivalence and independent 64-map/dirty-state checks pass."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously reviewed method, exact CRLF-to-LF only, verified original SHA and normalized body."
     },
     "scripts/simulation/unified_edit/coupled.gd::record": {
       "sha256": "c174b9ebdbb43d54e43089412c02bf0f4eaa775d657aa0984e100f5c0dec85ef",
@@ -1271,13 +1273,96 @@
         "compute_list_end(",
         "compute_list_set_push_constant("
       ],
-      "reason": "Reviewed fixed recorder caches and bounded height application. Water/Coupled cache only existing RID bindings and identical constant bytes; 64 indirect substeps, shader order, compute-list boundaries and CFL remain unchanged. Height joins only completed workers, retains partial reader leases until final ACK, applies at most 8 chunks/1500us per render frame per owner (one native call may overrun), rotates slots and guards versions. Real GPU byte equivalence and independent 64-map/dirty-state checks pass."
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously reviewed method, exact CRLF-to-LF only, verified original SHA and normalized body."
+    },
+    "scripts/simulation/unified_edit/numerics_checkpoint_sources.gd::declarations": {
+      "sha256": "fd80bf3472d415b9176319de964d3ef2168a24813fecc2c15246921a07b3aaeb",
+      "tokens": [
+        "preload("
+      ],
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously reviewed method, exact CRLF-to-LF only, verified original SHA and normalized body."
+    },
+    "scripts/simulation/unified_edit/water_muscl.gd::_texture": {
+      "sha256": "8ab5e17ff50e710c4dd31e8f41229da2813b9d264588ee66c4f098c42e3d75f1",
+      "tokens": [
+        "new(",
+        "texture_create("
+      ],
+      "reason": "Water-owned recorder shares RD, control, decision and release. Private U1/U2 and stage edges; GPU gates reject trials, accepted-only finalization/coupling/normalization. No queue or tool-selected writer. Exact G5/G6 candidate bytes, whose implementation roles and invariants were reviewed in C01/C02 and G2-G6."
+    },
+    "scripts/simulation/unified_edit/water_muscl.gd::_compile": {
+      "sha256": "6fcd5050ed3d0c5fc60ade1b6f373d1e7ad1278cd4be3a6016ee40c898b1016e",
+      "tokens": [
+        "new("
+      ],
+      "reason": "Water-owned recorder shares RD, control, decision and release. Private U1/U2 and stage edges; GPU gates reject trials, accepted-only finalization/coupling/normalization. No queue or tool-selected writer. Exact G5/G6 candidate bytes, whose implementation roles and invariants were reviewed in C01/C02 and G2-G6."
+    },
+    "scripts/simulation/unified_edit/water_muscl.gd::initialize": {
+      "sha256": "637ea8371aeedc5e3908b3edee3b4c9b5367619113fe765c3f179af9fa66e4e4",
+      "tokens": [
+        "storage_buffer_create("
+      ],
+      "reason": "Water-owned recorder shares RD, control, decision and release. Private U1/U2 and stage edges; GPU gates reject trials, accepted-only finalization/coupling/normalization. No queue or tool-selected writer. Exact G5/G6 candidate bytes, whose implementation roles and invariants were reviewed in C01/C02 and G2-G6."
+    },
+    "scripts/simulation/unified_edit/water_muscl.gd::_dispatch": {
+      "sha256": "425f7cca2bc3a8fc9ba38ac3266c165ba56855695a0e580e59e76602ca58f041",
+      "tokens": [
+        "compute_list_begin(",
+        "compute_list_bind_compute_pipeline(",
+        "compute_list_bind_uniform_set(",
+        "compute_list_dispatch(",
+        "compute_list_dispatch_indirect(",
+        "compute_list_end(",
+        "compute_list_set_push_constant("
+      ],
+      "reason": "Water-owned recorder shares RD, control, decision and release. Private U1/U2 and stage edges; GPU gates reject trials, accepted-only finalization/coupling/normalization. No queue or tool-selected writer. Exact G5/G6 candidate bytes, whose implementation roles and invariants were reviewed in C01/C02 and G2-G6."
+    },
+    "scripts/simulation/unified_edit/water_muscl.gd::record_tick": {
+      "sha256": "4131e4fe93c5f9e0d8c844fb202fbeaf27e0077456316a0ed63113f41b2f419d",
+      "tokens": [
+        "call("
+      ],
+      "reason": "Reviewed wave retention UI: static packed controls; frozen finite scalar blends MC/Superbee slopes only; same-release complete checkpoints replace generation with strict same sources/domain/solver/non-numeric parameters; old owner retained on failure. Signal-speed, CFL, positivity and lifecycle ownership retained."
+    },
+    "scripts/simulation/unified_edit/vegetation.gd::declarations": {
+      "sha256": "93a8451e90ee5f2a5e49c211cfc728adc777ef891d04a3c895d24d339bd2360a",
+      "tokens": [
+        "preload("
+      ],
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Borrowed Water RD and owned RIDs; no submit/readback or authority writer."
+    },
+    "scripts/simulation/unified_edit/vegetation.gd::_texture": {
+      "sha256": "f221d6891f39a5e5709b598eb64bec15b4f48aed0e2b8f8965679c62963f2ceb",
+      "tokens": [
+        "new(",
+        "texture_create("
+      ],
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Borrowed Water RD and owned RIDs; no submit/readback or authority writer."
+    },
+    "scripts/simulation/unified_edit/vegetation.gd::initialize": {
+      "sha256": "43fb43001c115649df01affbb4bfeeb8d34f6c7aba5fec20f824479f1f8dcc8a",
+      "tokens": [
+        "storage_buffer_create("
+      ],
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Borrowed Water RD and owned RIDs; no submit/readback or authority writer."
+    },
+    "scripts/simulation/unified_edit/vegetation.gd::_dispatch": {
+      "sha256": "0407534fcfc23763574894cfe1e722ddabfec06393b383862f12bbb485e3fe28",
+      "tokens": [
+        "compute_list_begin(",
+        "compute_list_bind_compute_pipeline(",
+        "compute_list_bind_uniform_set(",
+        "compute_list_dispatch(",
+        "compute_list_end(",
+        "compute_list_set_push_constant("
+      ],
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Borrowed Water RD and owned RIDs; no submit/readback or authority writer."
     }
   },
   "sealed_boundaries": {
     "scripts/simulation/unified_edit/tool_profile.gd": {
-      "sha256": "8d5f10e0150f208653087daeebb16ac561a85ba72e426317af16f0214e6099af",
-      "reason": "2026-10-18 drainage toggle: policy2 accepts a nonzero local impulse, matching existing GPU velocity-only semantics. Policies0/1 still reject speed; no writer, layout or ownership change. Profile/protocol and real GPU drainage probes passed."
+      "sha256": "5ec7ad018abaf9099e64f0c85acf7f106acc9c2ea013767166d4a394f17c38d8",
+      "reason": "2026-10-18 drainage toggle: policy2 accepts a nonzero local impulse, matching existing GPU velocity-only semantics. Policies0/1 still reject speed; no writer, layout or ownership change. Profile/protocol and real GPU drainage probes passed. Exact G5/G6 candidate bytes, whose implementation roles and invariants were reviewed in C01/C02 and G2-G6."
     },
     "scripts/simulation/unified_edit/height_stamp.gd": {
       "sha256": "a2b8d8d940f8ef7b2af13232c0f7bd0b1888e5ed8f1e074885f656b2203f48d0",
@@ -1292,24 +1377,24 @@
       "reason": "G1: immutable Profile snapshots. 2026-10-18 policy2 local speed accepted for drainage toggle; selected policy and speed remain in effective_hash, no profile callbacks or audit bypass."
     },
     "scripts/simulation/unified_edit/layout.gd": {
-      "sha256": "fc2460d63c51315c85a60680adb7ee62e2ce84868e8e44adb6992c146a27ee52",
-      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
+      "sha256": "0249e55b8005bef604ead7ba62f4adf8a5875d2786e0ea48035d259937686da0",
+      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01. Exact G5/G6 candidate bytes, whose implementation roles and invariants were reviewed in C01/C02 and G2-G6."
     },
     "scripts/beach/beach_scene_service.gd": {
-      "sha256": "27d984202c3db965c5502260534578b2920bc3855e2c294a4463d64c54aee6ca",
-      "reason": "Floating props G5/G6: cached restore waits completed boot; switch rejects during boot. Same unified factory and disposal proof; no consumer gate on producer."
+      "sha256": "47b808e6e256709cd92af337cfc5f38fef7751d4c3e13801af557397601be016",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously sealed resource, exact CRLF-to-LF only; original SHA and normalized bytes checked."
     },
     "scripts/beach/unified_playable_entry.gd": {
-      "sha256": "5e1bd7d6d4ff12fa1833e8e1568fd7564757598c273eca04bbfa4cd5db3574ce",
-      "reason": "C07: optional scene-authored panel, input-mode exclusivity and successful-transition cancellation; original common backend and lifecycle factories retained."
+      "sha256": "7eeec747ebf046a576f4489d5bfe7ecc87a33fe4d10b6f0c712fd8c12e388044",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Exact Profile snapshot and fixed layer wiring; sole Runtime unchanged."
     },
     "scenes/main.tscn": {
-      "sha256": "ae1be4b2616e32d0868fbf98a25af77daf65288f4a1ad8a518118e0dd6e32647",
-      "reason": "C07: same formal entry and runtime, authored three-slot panel with fixed signals."
+      "sha256": "18a4e3b9ff9527ec643ae74df0208acc063ac233188b672531306ffe476b0eb6",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously sealed resource, exact CRLF-to-LF only; original SHA and normalized bytes checked."
     },
     "assets/unified_edit/presentation/main.json": {
-      "sha256": "2704777896d1f933ec359e2dfdb7272558b5a2bb85362d8c3835acf1d5d0810f",
-      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
+      "sha256": "d2de8f610ced199ff8c9594503f2fe3a13c6a544e437364e59909bf24209d70b",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Four decorative bindings and reviewed source identities; seed unchanged."
     },
     "scripts/beach/async_pipeline_entry.gd": {
       "sha256": "d77d1a28f02c65e57a8cdc56021c2d88ce9e22e6e0563f1b0cf784d31c8d656b",
@@ -1596,12 +1681,12 @@
       "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
     },
     "assets/water_material_natural_candidate/contact_shape.gdshader": {
-      "sha256": "f3c31f9efe150635c0475478a851277d9a8057a7edf4fb89c8d67c2571245e88",
-      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
+      "sha256": "df877260fd31aae4785dc937cc23c7d24e742ed7d16895f612ebb6e600e9fba8",
+      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01. Exact G5/G6 candidate bytes, whose implementation roles and invariants were reviewed in C01/C02 and G2-G6."
     },
     "assets/water_material_natural_candidate/foam_distribution.gdshader": {
-      "sha256": "a3929fc0fe5c2b118ac25f24b7c4fc4a814ca24bbc9a805b9bd6578605564123",
-      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
+      "sha256": "55077448b1b78594922c05db6bcfac25822d9742d2aeef2e3aea7dbf2191ef65",
+      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01. Exact G5/G6 candidate bytes, whose implementation roles and invariants were reviewed in C01/C02 and G2-G6."
     },
     "assets/water_material_natural_candidate/optics_selected.json": {
       "sha256": "e56df9bc4e907e1ca2be1fc579ec6a7288d12ffdc48073103cf705c9198cc29b",
@@ -2068,8 +2153,8 @@
       "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
     },
     "assets/water_material_natural_candidate/async_rdc_bed.gdshader": {
-      "sha256": "aefafca7ae8c6ea6131b6fae4dc712ca8e18916c72f97cbde338d5ce7bdf5977",
-      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
+      "sha256": "db674d509d26f848e6e203d61e6e1a6a11e53f090b450d92a353c7042081f42f",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously sealed resource, exact CRLF-to-LF only; original SHA and normalized bytes checked."
     },
     "assets/water_material_natural_candidate/rdc_bed.gdshader": {
       "sha256": "e36bf7c1d44dbc38f50c46b7405cf439a48fd6f427df6f95a3d5e3e50d650abf",
@@ -2120,8 +2205,8 @@
       "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
     },
     "shaders/visual/suspended_sand_cloud.gdshader": {
-      "sha256": "db80eaef10a24fab4ea034a5438abe3afbb0e17054ac7133fa0cb7ee56e90cd6",
-      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
+      "sha256": "8f36f7c4289c16236a44b304cb02f6b3f49c4e03bad8f2925403ee50fa7dcdd0",
+      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01. Exact G5/G6 candidate bytes, whose implementation roles and invariants were reviewed in C01/C02 and G2-G6."
     },
     "scripts/beach/shape_brush_entry.gd": {
       "sha256": "a552320612c75c1aa99b48def562213075e94a1f75c52414edefa8823ca91bd6",
@@ -2160,16 +2245,16 @@
       "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
     },
     "scenes/unified_edit/presentation/main.tscn": {
-      "sha256": "2dacb3591c394a43d7fe40823c036239f6e09056da8aa1157de9d8d29ceefb6f",
-      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
+      "sha256": "01ab0b5295dc3467babcc3599c8437efed4fe6c285b07d288ff9ced20a527ea3",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. One preauthored VegetationLayer instance."
     },
     "scripts/simulation/unified_edit/height_surface.gd": {
       "sha256": "257d20fce15c3090a01d8a18207e2176aba7d4be52b0426790073048ec72d716",
       "reason": "G5/G6: physics HeightMapShape3D consumer only, no authority write."
     },
     "scripts/simulation/unified_edit/domain_runtime.gd": {
-      "sha256": "825d377324b9235dcfb9ab3fc965f5dfeaaa355e555d69b6e8905a0dfc5acd7a",
-      "reason": "Floating props G5: retirement retries current Views reader as well as retired domains; only existing boot/restore Pipeline factories. Public readonly probe wrappers preserve generation/ownership."
+      "sha256": "4a2020e166e20e71ea1ef734ee860fd17d9f3e732b414df80d33bec512bcefc5",
+      "reason": "Reviewed wave retention UI: static packed controls; frozen finite scalar blends MC/Superbee slopes only; same-release complete checkpoints replace generation with strict same sources/domain/solver/non-numeric parameters; old owner retained on failure. Signal-speed, CFL, positivity and lifecycle ownership retained."
     },
     "scenes/unified_edit_height_surface.tscn": {
       "sha256": "76ec932ebd6694b9d4bfafa10ab94e0083e88ef85a3dc0669afd35b8d5559dd7",
@@ -2180,12 +2265,12 @@
       "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
     },
     "scripts/simulation/unified_edit/checkpoint_codec.gd": {
-      "sha256": "d02c6ed5f676067b3b7cebdcfdcfade4f19ed1dac56d24a1bf5992cf864213d2",
-      "reason": "Floating props G5/G6: strict container decoder retains size/checksum/non-object decoding; archival validation optionally skips current disk identity only, default stays strict. No prop native field. G6 fix: compare expected configuration identity before validating a different archival source; exact known-source projector then validates every native/header/ledger field under a normalized derived-hash copy. Same-identity saves/loads retain full strict Config validation."
+      "sha256": "e57b9f85ee73ebedf36d59ba009dde22148fef2d9b3d752aa2d8ce331e087b7f",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously sealed resource, exact CRLF-to-LF only; original SHA and normalized bytes checked."
     },
     "scripts/simulation/unified_edit/protocol.gd": {
-      "sha256": "67d41c996ac567eeb7a9392bdf8ecb1b516a0804671c445385ee307e0734bdc7",
-      "reason": "2026-10-18 drainage toggle: wire validation accepts nonzero speed for existing policy2, with unchanged bounds, derived fields, effective hash, layouts and receipt audits. Policies0/1 retain rejection; protocol and real GPU probes passed."
+      "sha256": "d27781aa931455a8434564712f256bb87cbae370858b1aaafbaa8982e42e70ab",
+      "reason": "2026-10-18 drainage toggle: wire validation accepts nonzero speed for existing policy2, with unchanged bounds, derived fields, effective hash, layouts and receipt audits. Policies0/1 retain rejection; protocol and real GPU probes passed. Exact G5/G6 candidate bytes, whose implementation roles and invariants were reviewed in C01/C02 and G2-G6."
     },
     "scripts/simulation/unified_edit/intent.gd": {
       "sha256": "347fbc161a5295d8c597dd2a5c6b2853fd146f9b9a45eaa6aefd7a7805f6319f",
@@ -2208,16 +2293,16 @@
       "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
     },
     "scripts/simulation/unified_edit/configuration.gd": {
-      "sha256": "500287dc7cc6a5c30fd4144aa458a064d09416b53e5190c9a1607c803e04e00a",
-      "reason": "G6 deterministic source identity: recursively sort mixed String/StringName dictionary keys by String content before normalization and var_to_bytes. Preserves all configuration data/numerical values; prevents process interning order from changing the digest. Negative mutant restores unsafe Variant sort and must fail."
+      "sha256": "51eeaeb3163a58fd2256984d469c49c336962bc370aabba27b24fd5d250c5258",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously sealed resource, exact CRLF-to-LF only; original SHA and normalized bytes checked."
     },
     "scripts/simulation/unified_edit/protocol.glslinc": {
-      "sha256": "fb80880bc8f8ebe9cdcee3e2c1427a7b0997d410146eaae23c52e97b963492ad",
-      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
+      "sha256": "431faa2b39ebdfc3be501ab597d0c3eeb4f912fd1b2417840e1a56c000bb75f6",
+      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01. Exact G5/G6 candidate bytes, whose implementation roles and invariants were reviewed in C01/C02 and G2-G6."
     },
     "scripts/simulation/unified_edit/pipeline.gd": {
-      "sha256": "2e95f96720e0fb28cd8febf65373d8d0ca4eb64eff52c233dc6f3dab37720cb7",
-      "reason": "Reviewed owner-thread retirement ACK: transport.retire still proves matching lease and completed readback. Only the Pipeline construction thread acknowledges inline; foreign threads still defer to that owner. No extra pump, slot capacity, command order, GPU dispatch or authority changes. Covered by unified_edit_retirement_probe.gd and check_submit_ahead.gd."
+      "sha256": "b73a2705baf7da5937253bd336c33b47ccec313c6588325c9ff3e950d98a4591",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously sealed resource, exact CRLF-to-LF only; original SHA and normalized bytes checked."
     },
     "scripts/simulation/edit_validation/frame_pipeline/async_boundary.glsl": {
       "sha256": "a6226484e71e726a1ba7d68bc3d50a8ff89891904eeef6d71a659be484203477",
@@ -2240,8 +2325,8 @@
       "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
     },
     "scripts/simulation/unified_edit/edit.glsl": {
-      "sha256": "e893acf357c0859f3881c8dcb58a55440fbd370ba8a27b045acffeba576bcec3",
-      "reason": "G3/G4: private candidates and SSBO reductions; authority writes restricted to validated mode7 and shared decision."
+      "sha256": "57553c4b755f629d60d61d73ee6f457eacf83b176230e6884396a9750cf48973",
+      "reason": "G3/G4: private candidates and SSBO reductions; authority writes restricted to validated mode7 and shared decision. Exact G5/G6 candidate bytes, whose implementation roles and invariants were reviewed in C01/C02 and G2-G6."
     },
     "scripts/simulation/unified_edit/work_seal.glsl": {
       "sha256": "26434191421521492b5a63160cb4ae8674b1b8773205cb868b083bc1f8d6866e",
@@ -2256,8 +2341,8 @@
       "reason": "G3/G4: single local-candidate recorder; modes12 material,5/6 validation,7 conditional commit,8 receipt. No tool identity branch."
     },
     "scripts/simulation/unified_edit/water_response.gd": {
-      "sha256": "dcaac3bda25c8d742e105d0fcbae287a4d2378612e7724a4adca6d17429691e1",
-      "reason": "2026-10-18 velocity-only preparation: policy2 uses two GPU dispatches with group-uniform decision/control guard, private candidate/scratch and a 2048-byte first-error reduction. No authority stores, new CPU completion dependency, budget or connected-displacement semantic change. 21 fixed input pairs plus rejection/fatal guards passed 168 checks; common fill/shovel/toggle integration passed 92. Phase RIDs and private buffers use Response ownership and release."
+      "sha256": "9ccb1a9d714ef5427e6a5534feac26e6e16d0886f3df5edac816d7a15a6ab5bc",
+      "reason": "2026-10-18 velocity-only preparation: policy2 uses two GPU dispatches with group-uniform decision/control guard, private candidate/scratch and a 2048-byte first-error reduction. No authority stores, new CPU completion dependency, budget or connected-displacement semantic change. 21 fixed input pairs plus rejection/fatal guards passed 168 checks; common fill/shovel/toggle integration passed 92. Phase RIDs and private buffers use Response ownership and release. Exact G5/G6 candidate bytes, whose implementation roles and invariants were reviewed in C01/C02 and G2-G6."
     },
     "shaders/simulation/edit_validation/water_velocity_prefetch.glsl": {
       "sha256": "9cf7459b99ae2932a63068416cac6875844e8582dc5e58a33771f0c595f3c77d",
@@ -2272,24 +2357,24 @@
       "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
     },
     "scripts/simulation/unified_edit/water_response.glsl": {
-      "sha256": "fcde586830e793490def32a6d193004bcd7f35522c830b168f4dd09ceb358d46",
-      "reason": "G4: private response candidates and shared decision-guarded mode4 authority commit."
+      "sha256": "19fca940f8886393fc683a6e2bc962dcda3298520ebff2aa04c208def16751f0",
+      "reason": "G4: private response candidates and shared decision-guarded mode4 authority commit. Exact G5/G6 candidate bytes, whose implementation roles and invariants were reviewed in C01/C02 and G2-G6."
     },
     "scripts/simulation/unified_edit/gpu.gd": {
       "sha256": "fcb28e68b22c0b29b31d2d7c4c20822782018ddc3f7a55e107e3c2fb54926f68",
       "reason": "Common resource allocation/compiler/dispatch primitive inherited by stage owners; no independent scheduler."
     },
     "scripts/simulation/unified_edit/water.gd": {
-      "sha256": "a7f67720bf471d9b60406e2a1d159e8d28296c7a2df6f6a146efbc3924b60fac",
-      "reason": "Reviewed fixed recorder caches and bounded height application. Water/Coupled cache only existing RID bindings and identical constant bytes; 64 indirect substeps, shader order, compute-list boundaries and CFL remain unchanged. Height joins only completed workers, retains partial reader leases until final ACK, applies at most 8 chunks/1500us per render frame per owner (one native call may overrun), rotates slots and guards versions. Real GPU byte equivalence and independent 64-map/dirty-state checks pass."
+      "sha256": "26d2fbbe6faa9862af5ab29649290d37f903f0732cac05195de424b109d5249c",
+      "reason": "Water remains the sole numeric owner/recorder; explicit frozen solver selection delegates to MUSCL using shared ordered recording, tail and ownership. Exact G5/G6 candidate bytes, whose implementation roles and invariants were reviewed in C01/C02 and G2-G6."
     },
     "scripts/simulation/unified_edit/publish.glsl": {
       "sha256": "84f60cbb6d59a60e5481b2ce7b00ce438ff90f659c03d2bf7ad3971308dba0f8",
       "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
     },
     "scripts/simulation/unified_edit/state.gd": {
-      "sha256": "125b6317ebf10cf84df89fefb79c0ba0aa9a83a44ae5f890f5c4793a603421df",
-      "reason": "G6: physical allocation/initialization/native byte restore and completed publication; no runtime tool path."
+      "sha256": "75bdfe876a504a81fc469fbb1afe16b484a0652432e774533f87679e46dc614b",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously sealed resource, exact CRLF-to-LF only; original SHA and normalized bytes checked."
     },
     "scripts/simulation/unified_edit/transport.gd": {
       "sha256": "060e00341524fd7605def902e2936449c839e57722c7fe56ffd79d1e8adedc78",
@@ -2308,12 +2393,12 @@
       "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
     },
     "scripts/simulation/unified_edit/checkpoint_capture.gd": {
-      "sha256": "84c81124e7f00f1b4be4129e26267c7a577cc181a85e3f56faa471d14563e630",
-      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
+      "sha256": "2d0d85e92a8302ac1badb1b84bafccd015baf69777ec300837501c1b447550ef",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Explicit original native display-history allowlist, unchanged native layout."
     },
     "scripts/simulation/unified_edit/checkpoint_accounting.gd": {
-      "sha256": "1499528bc012a12cbdcad48dab2236d88f70b2e1e95bfc7ded9c0ee6af58ac39",
-      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
+      "sha256": "ed42766ab86b9073b0cb46c4c917689576c9a2c949866aede023525a1c4c0df8",
+      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01. Exact G5/G6 candidate bytes, whose implementation roles and invariants were reviewed in C01/C02 and G2-G6."
     },
     "scripts/simulation/unified_edit/api_adapter.gd": {
       "sha256": "a12f2df91586143a6c69fa89249d121a03c0dd3265d7feeb42bee12542f5834e",
@@ -2324,8 +2409,8 @@
       "reason": "G6: wave profile IDs select boundary data, not editing tools; requests consumed by same water tick."
     },
     "scripts/simulation/unified_edit/visuals.gd": {
-      "sha256": "f3df8c141caaac2096763ccf28ba972b865c60da40d701e80829df734201928a",
-      "reason": "G6: optional shared display stage; foam/front/gravel only, no authority sand/water writes."
+      "sha256": "ed42b02cf5a0e6b65fb1bdb4121722637ae821e0615e52e624292729d8431738",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Water-owned decorative stage in original tick/edit/publish slots."
     },
     "scripts/simulation/unified_edit/visual_edit_finish.glsl": {
       "sha256": "0a6c2a1ef102918ed5b234f85cd859048d1a8d3befcef5f189809a7361f4f987",
@@ -2364,8 +2449,8 @@
       "reason": "Height ABI3: only private before/dirty/snapshot writes; complete33x33 shared vertex maximum temporal difference, outward rounding and +Inf saturation. TagID masked in borrow/ack; unchanged16capacity and ordinary fairness; no authority writes."
     },
     "scripts/simulation/unified_edit/coupled.gd": {
-      "sha256": "3508eea0e21cfbb8fa7ba8f8ff9c1fc533251f9cf8f03c41bb7e493492915990",
-      "reason": "Reviewed fixed recorder caches and bounded height application. Water/Coupled cache only existing RID bindings and identical constant bytes; 64 indirect substeps, shader order, compute-list boundaries and CFL remain unchanged. Height joins only completed workers, retains partial reader leases until final ACK, applies at most 8 chunks/1500us per render frame per owner (one native call may overrun), rotates slots and guards versions. Real GPU byte equivalence and independent 64-map/dirty-state checks pass."
+      "sha256": "39a016a6e3bcac204192161ccaf5c0e253d167c6257615e51a50f49a71743bb7",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously sealed resource, exact CRLF-to-LF only; original SHA and normalized bytes checked."
     },
     "shaders/simulation/edit_validation/staged_slope_consume.glsl": {
       "sha256": "da10584e13400f2c9e957ba32aa6dfecdc4cd08cf1bd07c74877028773ef83ba",
@@ -2376,8 +2461,8 @@
       "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
     },
     "assets/water_sides/geometry_manifest.json": {
-      "sha256": "9722976bfbc3563e41ea6da983e9033a78478b2bbb4bbb0be87d41ff5f5d6ac4",
-      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
+      "sha256": "703624a36d748cdb8c1d35d600725fbb271bc90e065886f2ceba0317e888d7a6",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Bed whole-file SHA after exact CRLF normalization; verbatim geometry generator check passes."
     },
     "assets/water_sides/water_sides.gdshader": {
       "sha256": "d69f77b8bd03a78461fb29ff5fd8084e1fc68b43b30ac9c0319a9b6dee757462",
@@ -2428,8 +2513,8 @@
       "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
     },
     "scripts/sand/brushes/brush_tool_panel.gd": {
-      "sha256": "4e54c2a19f25d3ac564db57a44be7df2bd80baa54b10e4956e8f2a0005c37b68",
-      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
+      "sha256": "1fec3c63d945190b98910e75c3a5758cdadb907b56e810f14accf09ed9fe0ef7",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously sealed resource, exact CRLF-to-LF only; original SHA and normalized bytes checked."
     },
     "scripts/beach/scene_switch_panel.gd": {
       "sha256": "4f776a94af9628a1e06fa064fdf201ffc5b23084a6ba5d5bffbf87b7da4d28dd",
@@ -2440,28 +2525,28 @@
       "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
     },
     "scenes/unified_edit/playable/test1_geometry.tscn": {
-      "sha256": "c4e2574ef9fa2f4dd02b70d2aaecc265e369d9e17b2cfde5d63c6f5b3a641cc6",
-      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
+      "sha256": "f52c1c6a3d04c771f2b9af262a4a94dcca4237b694c71e14de8cb56b0943da6c",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously sealed resource, exact CRLF-to-LF only; original SHA and normalized bytes checked."
     },
     "assets/unified_edit/presentation/test1_geometry.json": {
-      "sha256": "3300d495b670f6f0e84a8a264cffa36633ed3b15306c2a3c42d08f14d9544af3",
-      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
+      "sha256": "c8ec1b347c4ff2f61300c5d400f4b8f67ff55a58e605cf5cda44bfca094e7b1e",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Four decorative bindings and reviewed source identities; seed unchanged."
     },
     "scripts/beach/test1_geometry_entry.gd": {
       "sha256": "faa8715add9cb617655d2b890bd57768098bdef1f4d152844297e988639b39be",
       "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
     },
     "scenes/playable/test1_geometry.tscn": {
-      "sha256": "c4e2574ef9fa2f4dd02b70d2aaecc265e369d9e17b2cfde5d63c6f5b3a641cc6",
-      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
+      "sha256": "f52c1c6a3d04c771f2b9af262a4a94dcca4237b694c71e14de8cb56b0943da6c",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously sealed resource, exact CRLF-to-LF only; original SHA and normalized bytes checked."
     },
     "scripts/beach/unified_performance_panel.gd": {
       "sha256": "f5c9c835358f0434174147e9eb65a444fa39d7611bafb35cb0fd35d7879b2935",
       "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
     },
     "scenes/unified_edit/presentation/test1_geometry.tscn": {
-      "sha256": "6bf4edac57ed6e3ca264756bf26facbc1a986696b525fc45c69d29b351104068",
-      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
+      "sha256": "1e9a97141326a967c053c48f4990a577d2f3860648814b6cd4deed75b5f0da6a",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. One preauthored VegetationLayer instance."
     },
     "assets/test1_geometry/sand_sides.gdshader": {
       "sha256": "0e5a93f7918069b224e28818970bee1e3469649a6cdf0de5acb66afbddcae0f5",
@@ -2472,12 +2557,12 @@
       "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
     },
     "scripts/visual/brush_indicator.gd": {
-      "sha256": "93c968eaa9283baf8340fc5b67d263eeb86c7d26bc8073907ab8c036bb93ef11",
-      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
+      "sha256": "641e1267cc8edbe45ba537102e089ebbb0b157cea7ea2bca4d76797f082f700a",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously sealed resource, exact CRLF-to-LF only; original SHA and normalized bytes checked."
     },
     "scripts/beach/free_camera.gd": {
-      "sha256": "7bf190f5f8b8c6bcee670a15b7bf32cc883c93cf96090426f2b1a055c5dd3784",
-      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
+      "sha256": "04be91f88635bdd5a6d5b6192e773e097f20bc13ca8159fd9a2e0d565fd5c8b0",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously sealed resource, exact CRLF-to-LF only; original SHA and normalized bytes checked."
     },
     "tests/visual_water_alignment/prototypes/water_render_staging_v8.json": {
       "sha256": "82c54211c0d3e9e852e69e218f210af8787ca169cf1a580c9c3e97ae34be71c3",
@@ -2569,10 +2654,6 @@
     },
     "tests/visual_water_alignment/prototypes/reference_front_foam_dense_mesh.tres": {
       "sha256": "42310f9ee1aa11b1b82dd7ad163f6f6cf88331eecf1dce214920966359731adb",
-      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
-    },
-    "tests/visual_water_alignment/prototypes/record_local_front_height.gd": {
-      "sha256": "12bb1057f8cb820062276bd0c0fc6eedcce91d2f1992b8d8736a7d30eb5aac12",
       "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
     },
     "tests/visual_water_alignment/prototypes/probe_worker_state.gd": {
@@ -2703,10 +2784,6 @@
       "sha256": "5c83d84077dcddf326559a0d35c318e5ebe2d54e78df47115793188d8d9c98e1",
       "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
     },
-    "tests/visual_water_alignment/prototypes/probe_foam_timeline.gd": {
-      "sha256": "162db28baea2c86a8be5e49f88bfa425179feac9e3ffd112aa78019277b37284",
-      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
-    },
     "tests/visual_water_alignment/prototypes/probe_foam_bed_drop.gd": {
       "sha256": "4c18915195684635bb5b21d56064c7eddba80f7bef3fdd76061294414d1986a7",
       "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
@@ -2733,10 +2810,6 @@
     },
     "tests/visual_water_alignment/prototypes/generate_front_foam_dense_mesh.gd": {
       "sha256": "395e42d5e20733cf0bdef7115d816c7c40bb983f6d7a68c7fd9be585ce02b908",
-      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
-    },
-    "tests/visual_water_alignment/prototypes/capture_reference.gd": {
-      "sha256": "42ac50fab42a3492423dbbb87e6d0f1b01a99c3dd8c32d928d4bfd71c4383efb",
       "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
     },
     "scripts/visual/water_render_uniform_snapshot.gd": {
@@ -3184,32 +3257,32 @@
       "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
     },
     "scenes/shape_brushes/brush_playable_candidate.tscn": {
-      "sha256": "bf2ee9665419981446a823ecf968e0303a489c60a465d74d37c608222d1a666a",
-      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
+      "sha256": "bac9af74be09de49bb0e7775ee21b856d2aaf6cefcb560b987aaa6e83175e164",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously sealed resource, exact CRLF-to-LF only; original SHA and normalized bytes checked."
     },
     "scenes/playable/test1_capture.tscn": {
-      "sha256": "5e30d144d51cfb7515eea1091af8bf7623313011179dad69e7bafae9e010a199",
-      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
+      "sha256": "b8b9e6fe3b86cb1cb8caf4e94f3893edc8aab87c11b144bf2836f3a1d0cdac6e",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously sealed resource, exact CRLF-to-LF only; original SHA and normalized bytes checked."
     },
     "assets/unified_edit/presentation/test1_capture.json": {
-      "sha256": "91ee7fc0b73c5273c78ba069e148af9ba8f3db16cd753f896fa233c932310737",
-      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
+      "sha256": "f0e2456b202d896ef834793f92a69ea506e06a20891252724e518167231b44db",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Four decorative bindings and reviewed source identities; seed unchanged."
     },
     "scenes/unified_edit/presentation/test1_capture.tscn": {
-      "sha256": "a9f3d1ff562a462100d961a6f1579a2abbfe5413983d0be6ff576d24fbba07ea",
-      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
+      "sha256": "1e6b6de9cf35537d8948e415f09da1e0497034053b256b64d9ce7849f7076dca",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. One preauthored VegetationLayer instance."
     },
     "scenes/playable/test1_backwash.tscn": {
-      "sha256": "d7b8eb4a07e0a68dda94f7831afe5e36d6410404958cc2aa3fbe3618baab3a3c",
-      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
+      "sha256": "032f19108443904152e2f436c462bfb9af71c0c780bfc9eedff55deac7f67038",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously sealed resource, exact CRLF-to-LF only; original SHA and normalized bytes checked."
     },
     "assets/unified_edit/presentation/test1_backwash.json": {
-      "sha256": "931a6cfdb1750df1cbca7208b1f3d7e06f68f0ae89211db57913f1fe5c773732",
-      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
+      "sha256": "834d40e3387a2dfd71263ab9341baf19246dcbf78d6ac1f680cf3c2e7b9173ea",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Four decorative bindings and reviewed source identities; seed unchanged."
     },
     "scenes/unified_edit/presentation/test1_backwash.tscn": {
-      "sha256": "0202aa0cdce39d37aa719ee864f55b3131baafed8fa973c4a64111429a02a20c",
-      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
+      "sha256": "86833adaaf47d053744e5d942402cccfeaf6bfd884210b56a1469d582a9c4611",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. One preauthored VegetationLayer instance."
     },
     "scenes/components/water_boundary_sides.tscn": {
       "sha256": "613f98726654fb43bbd47ecea32e085806a1eddfc5747dc558856f2495011524",
@@ -3500,24 +3573,24 @@
       "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
     },
     "scenes/unified_edit/playable/test1_backwash.tscn": {
-      "sha256": "d7b8eb4a07e0a68dda94f7831afe5e36d6410404958cc2aa3fbe3618baab3a3c",
-      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
+      "sha256": "032f19108443904152e2f436c462bfb9af71c0c780bfc9eedff55deac7f67038",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously sealed resource, exact CRLF-to-LF only; original SHA and normalized bytes checked."
     },
     "scenes/unified_edit/playable/test1_capture.tscn": {
-      "sha256": "5e30d144d51cfb7515eea1091af8bf7623313011179dad69e7bafae9e010a199",
-      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
+      "sha256": "b8b9e6fe3b86cb1cb8caf4e94f3893edc8aab87c11b144bf2836f3a1d0cdac6e",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously sealed resource, exact CRLF-to-LF only; original SHA and normalized bytes checked."
     },
     "scenes/unified_edit/playable/main.tscn": {
-      "sha256": "d2a24abb86142833fedaac846f07663a434f67582b62353f300d63411a8c7c3f",
-      "reason": "Conservative transitive reference corpus sealed against unreviewed code/resource substitutions. Reference inclusion alone does not authorize constructing a legacy owner; current actual node/factory evidence is G6_final_static01 and G6_retirement_final01."
+      "sha256": "971a68bffdca41bc0a0e38f0fb4ee449243b8d35c797e7c891654186ad65b202",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously sealed resource, exact CRLF-to-LF only; original SHA and normalized bytes checked."
     },
     "scripts/simulation/unified_edit/player_input.gd": {
-      "sha256": "e368b682c09d8ecbb7b1424c876b5606662eefb331ee1c7c90bf729a42da5f35",
-      "reason": "G6: allowed tool-ID frontend translation into common Intent; no GPU recorder or runtime constructor."
+      "sha256": "c0d9105c3a0d20afbf55808de2f5643a7f9f4f7bf8ebe23f4d0e628627e969ac",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously sealed resource, exact CRLF-to-LF only; original SHA and normalized bytes checked."
     },
     "scripts/simulation/unified_edit/checkpoint_router.gd": {
-      "sha256": "521c44828444976086fcc0d6b59c17bda40dc2474f03e5d4e10da8e88f67e849",
-      "reason": "Floating props G5/G6: exact native configuration mismatch alone enters reviewed source projector; arbitrary unknown configurations still reject."
+      "sha256": "1431da54bf5d4ae36c0f0bafaeac984d4666daac8d933fa3b1d693906f782c01",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously sealed resource, exact CRLF-to-LF only; original SHA and normalized bytes checked."
     },
     "scripts/simulation/unified_edit/probe.gd": {
       "sha256": "de1a09c4c6a0f128d9461c91248edfb8ea2a01bccd4da49fd4478f92d6676645",
@@ -3602,6 +3675,150 @@
     "scripts/beach/floating_props_panel.gd": {
       "sha256": "a095db4e55fad1dc78d5f7746830fd632a72d103e76cc23dcf16386e3df2feb4",
       "reason": "C07: static UI controls and Terrain/Prop aiming only; all mutations call the registered generic service, no authority or GPU access."
+    },
+    "scripts/simulation/unified_edit/water_numerics.gd": {
+      "sha256": "794d56cfc7259260590b0dd790e299106602e0b88e5b8feee17f79efc78f31d2",
+      "reason": "Reviewed wave retention UI: static packed controls; frozen finite scalar blends MC/Superbee slopes only; same-release complete checkpoints replace generation with strict same sources/domain/solver/non-numeric parameters; old owner retained on failure. Signal-speed, CFL, positivity and lifecycle ownership retained."
+    },
+    "scripts/simulation/unified_edit/water_muscl.gd": {
+      "sha256": "44eb177dd4d03fa58ec1bc7855ff0f92edf7f83656cf2c981a98407f5db0552b",
+      "reason": "Reviewed wave retention UI: static packed controls; frozen finite scalar blends MC/Superbee slopes only; same-release complete checkpoints replace generation with strict same sources/domain/solver/non-numeric parameters; old owner retained on failure. Signal-speed, CFL, positivity and lifecycle ownership retained."
+    },
+    "shaders/simulation/erosion/sediment_copy.glsl": {
+      "sha256": "b444f30ce8c9ede98a7c5dbeb7d281be0d716145382242a96f639ed5bff80140",
+      "reason": "Accepted-step private exchange result copied into the existing public sediment slot; no independently scheduled writer. Exact G5/G6 candidate bytes, whose implementation roles and invariants were reviewed in C01/C02 and G2-G6."
+    },
+    "shaders/simulation/erosion/sediment_exchange.glsl": {
+      "sha256": "da563ac4f8273e16ec95a58deb15eb443bfcc386d656037bb0436fd879d82a02",
+      "reason": "Single accepted-dt bed/suspension exchange only, after stage-specific RK transport; existing rates and material chain retained. Exact G5/G6 candidate bytes, whose implementation roles and invariants were reviewed in C01/C02 and G2-G6."
+    },
+    "scripts/simulation/unified_edit/numerics_checkpoint_sources.gd": {
+      "sha256": "2a899cbfa5a693b83fc3880c1cbea1391b20dcc72079a42ae226b4d581e77e91",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously sealed resource, exact CRLF-to-LF only; original SHA and normalized bytes checked."
+    },
+    "scenes/components/wave_settings.tscn": {
+      "sha256": "483f4a9229fce0129dd4b573081e5a66ff634e71ad060136b2a4bc8fece0bce1",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously sealed resource, exact CRLF-to-LF only; original SHA and normalized bytes checked."
+    },
+    "scenes/parameters/parameter_windows.tscn": {
+      "sha256": "f9b14a3e61e1bcef3ee032858a9b2f774b0adea8e033bdb92fde41d9afddc4e9",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously sealed resource, exact CRLF-to-LF only; original SHA and normalized bytes checked."
+    },
+    "scripts/parameters/parameter_row.gd": {
+      "sha256": "d8690a0d661113b88c331f28e92b601a218bda758fbdfb2f447225a2a89c6372",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously sealed resource, exact CRLF-to-LF only; original SHA and normalized bytes checked."
+    },
+    "scripts/parameters/parameter_service.gd": {
+      "sha256": "b7d9f61c9dd60a36c1ccf76fcc9424f3373154b19566c6dbb4661e0bee6d47a0",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously sealed resource, exact CRLF-to-LF only; original SHA and normalized bytes checked."
+    },
+    "scripts/parameters/parameter_schema.gd": {
+      "sha256": "db40e772107e02b23a505c0c13982f6c434938949581a770815cd09d2fbf4495",
+      "reason": "Parameter windows: explicit source-role review in task/parameter_windows/验收/架构审查.md; static native controls, typed startup configuration, public Intent only, unchanged authority/ledger/native layout. Runtime and source checks recorded separately."
+    },
+    "assets/parameters/catalog.json": {
+      "sha256": "c550e30e4ed3380e6b5caf0de97c3400177ceccc8ffea4166b57e28d54790ec9",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Previously sealed resource, exact CRLF-to-LF only; original SHA and normalized bytes checked."
+    },
+    "scenes/components/vegetation_layer.tscn": {
+      "sha256": "6aeb308643a0b11e641c7768089d3ceed5a40a66b0ebb4b64cc6a8516d8adc77",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Four fixed MultiMesh nodes; no runtime construction."
+    },
+    "assets/vegetation/dune_grass_material.tres": {
+      "sha256": "31e87f69a4abae36c069b35ff0a4b3a6188ae82b1c09ddf50cf97b330707ce7e",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Preauthored original mesh/identity matrices or finite typed appearance data."
+    },
+    "shaders/visual/vegetation.gdshader": {
+      "sha256": "10d98cbb3a36c987e1314a778715bd2e41f2cef953307bd84ff3f21c1b6e57f5",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Opaque original leaf geometry and completed-state appearance."
+    },
+    "assets/vegetation/dune_grass_instances.tres": {
+      "sha256": "0cc501f3e68970b50b2b6ed08f0245fabea6edabbbaf7e19eed2b406e39e07f9",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Preauthored original mesh/identity matrices or finite typed appearance data."
+    },
+    "assets/vegetation/dune_grass_mesh.tres": {
+      "sha256": "1c985b0deb5de877bacbf8ef321c49a3abb3edc19814cc5a03e7de9688a62ab6",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Preauthored original mesh/identity matrices or finite typed appearance data."
+    },
+    "assets/vegetation/shore_grass_material.tres": {
+      "sha256": "6a6c891dfe91e6a129376a0f9c5754c9ec86c4cd1b624582ad696d534e4f63e9",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Preauthored original mesh/identity matrices or finite typed appearance data."
+    },
+    "assets/vegetation/shore_grass_instances.tres": {
+      "sha256": "2c587a1a5c72a17cfe821a404c647f1a0ceb60bc5b6ba2280ef129332f572146",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Preauthored original mesh/identity matrices or finite typed appearance data."
+    },
+    "assets/vegetation/shore_grass_mesh.tres": {
+      "sha256": "89ae1954d951f24d2effcab7867ed35ef5b83c036af22d5dba4b968e32be88e7",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Preauthored original mesh/identity matrices or finite typed appearance data."
+    },
+    "assets/vegetation/kelp_material.tres": {
+      "sha256": "2b7dfef1a180be3f7d4b703a2f3fbed1dd9a609862630e31135cc683996a9cab",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Preauthored original mesh/identity matrices or finite typed appearance data."
+    },
+    "assets/vegetation/kelp_instances.tres": {
+      "sha256": "e99a499ea932b1fa2eddece527e5d6e45d6094bce34a1c7900f95eb8d8556ad7",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Preauthored original mesh/identity matrices or finite typed appearance data."
+    },
+    "assets/vegetation/kelp_mesh.tres": {
+      "sha256": "d1b13283fc0030810811eb2e480f4dfb422465af3b58bd1b0732ee0d76bd43dd",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Preauthored original mesh/identity matrices or finite typed appearance data."
+    },
+    "assets/vegetation/seagrass_material.tres": {
+      "sha256": "a27d716f5cb3396b76d463fd4a8509deec62b60bbe7946f9ce0f581271680b34",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Preauthored original mesh/identity matrices or finite typed appearance data."
+    },
+    "assets/vegetation/seagrass_instances.tres": {
+      "sha256": "a188a4cb9863cb7820736715fc0e309a0a2b620d5a84e4bdcda009ccd56488d4",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Preauthored original mesh/identity matrices or finite typed appearance data."
+    },
+    "assets/vegetation/seagrass_mesh.tres": {
+      "sha256": "ea1fd4769b93bd908286822da02f2337ae904b3c1a330b3baaa4c98dcd6d1335",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Preauthored original mesh/identity matrices or finite typed appearance data."
+    },
+    "assets/vegetation/default_profile.tres": {
+      "sha256": "5076997095343f9f994612594040cc0665c7ff35165463b8543b3ba9954dca7f",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Exact Profile/Species data bindings."
+    },
+    "assets/vegetation/dune_grass_species.tres": {
+      "sha256": "ba7fc0648b0a4318edb1aa2c01d3903c9adebee604c417090917520aa411aad2",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Preauthored original mesh/identity matrices or finite typed appearance data."
+    },
+    "scripts/visual/vegetation_species.gd": {
+      "sha256": "7b3f5b43560f3957b835bee4a0cebfe1cfdcf3f61235d4635f230f46996fb1d7",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Serialized finite scalar appearance data."
+    },
+    "assets/vegetation/shore_grass_species.tres": {
+      "sha256": "37d79c1b3a9e4a6686994ee4397b929ac1e69ca9ea5aa31f6167bf34c7e72367",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Preauthored original mesh/identity matrices or finite typed appearance data."
+    },
+    "assets/vegetation/kelp_species.tres": {
+      "sha256": "8fdf3fb295e7147addfde3cdc14a4162beec61ec0d3122cc0c67863102c9c9dd",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Preauthored original mesh/identity matrices or finite typed appearance data."
+    },
+    "assets/vegetation/seagrass_species.tres": {
+      "sha256": "810ffee130b4133b0e18c7e7aa05861c53dd0a073a774001cfd7a1a558c807e5",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Preauthored original mesh/identity matrices or finite typed appearance data."
+    },
+    "scripts/visual/vegetation_profile.gd": {
+      "sha256": "74c803f79d9ecbc239a707c49200d2184b831715cd322a273030e50f04dd797a",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Strict finite typed data snapshot; no callback or authority."
+    },
+    "scripts/visual/vegetation_layer.gd": {
+      "sha256": "fab851b62913d8278ce2bfae7aa425eb16c6ecab10945759aa10542406a70dd7",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Data-only fixed scene node."
+    },
+    "scripts/simulation/unified_edit/vegetation.gd": {
+      "sha256": "c0ac00bb2eab17a291e8fa602f44739bedc2f32ababf30915f33260cc94c1a7a",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Borrowed Water RD and owned RIDs; no submit/readback or authority writer."
+    },
+    "shaders/simulation/vegetation_publish.glsl": {
+      "sha256": "0b2d474a2214297cc942285707da0b3594fc468210a8ab166b83338b50309275",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Only decorative publications writable after original seal."
+    },
+    "shaders/simulation/vegetation_step.glsl": {
+      "sha256": "f9acdc1541479a1380ae401ccc6961f81a0af8f2dbb5c0fd898b3387503368c0",
+      "reason": "Vegetation source review: task/vegetation/验收/架构审查.md. Only roots/motion writable; authority inputs readonly, accepted dt and fault guards."
     }
   },
   "tool_ids": [
@@ -3621,15 +3838,20 @@
     "wide_transfer_v1"
   ],
   "nonruntime_missing_references": {
-    "missing_pattern.png": "Only referenced by dormant prototype evidence/test scripts reached through the conservative reference corpus; not a formal packed-scene binding or permitted factory target. See edges for exact source line.",
-    "missing_reflection_scene.tscn": "Only referenced by dormant prototype evidence/test scripts reached through the conservative reference corpus; not a formal packed-scene binding or permitted factory target. See edges for exact source line.",
-    "tests/visual_water_alignment/prototypes/reference_fixed.tscn": "Only referenced by dormant prototype evidence/test scripts reached through the conservative reference corpus; not a formal packed-scene binding or permitted factory target. See edges for exact source line.",
-    "tests/visual_water_alignment/prototypes/reference_local_front_movie.tscn": "Only referenced by dormant prototype evidence/test scripts reached through the conservative reference corpus; not a formal packed-scene binding or permitted factory target. See edges for exact source line."
+    "missing_pattern.png": "Explicit rejection fixture in probe_staging_profile.gd (_rejects missing resource), not a formal scene binding.",
+    "missing_reflection_scene.tscn": "Explicit rejection fixture in probe_staging_profile.gd (_rejects missing resource), not a formal scene binding.",
+    "tests/visual_water_alignment/prototypes/capture_reference.gd": "Only historical metadata.configuration.sources entries in formal presentation manifests. Presentation.read uses actual scene/seed/material/settings and entry freezes fresh sources; all four actual default boots and instantiated node audit passed. Missing script is not executed.",
+    "tests/visual_water_alignment/prototypes/probe_foam_timeline.gd": "Only historical metadata.configuration.sources entries in formal presentation manifests. Presentation.read uses actual scene/seed/material/settings and entry freezes fresh sources; all four actual default boots and instantiated node audit passed. Missing script is not executed.",
+    "tests/visual_water_alignment/prototypes/record_local_front_height.gd": "Only historical metadata.configuration.sources entries in formal presentation manifests. Presentation.read uses actual scene/seed/material/settings and entry freezes fresh sources; all four actual default boots and instantiated node audit passed. Missing script is not executed."
   },
   "baseline_evidence": [
     "test_output/unified_edit_pipeline/g6_final_static01/audit.json",
     "test_output/unified_edit_pipeline/g6_retirement_final01/report.json",
-    "task/sandcastle_unified_edit_pipeline/验收/G6_联合门.json"
+    "task/sandcastle_unified_edit_pipeline/验收/G6_联合门.json",
+    "task/wave_propagation/验收/G6_候选索引.json",
+    "task/wave_propagation/验收/G6_水沙长稳索引.json",
+    "task/wave_propagation/验收/G6_main长稳索引.json",
+    "test_output/wave_propagation/g6_architecture_review_01/actual_nodes.json"
   ],
   "authority_roles": {
     "executor.gd": "G3/G4: single local-candidate recorder; modes12 material,5/6 validation,7 conditional commit,8 receipt. No tool identity branch.",
@@ -3645,7 +3867,7 @@
     "height.gd": "G5/G6: completion-reader and dirty acknowledgement; worker join only after is_task_completed in physics_consume; no work retirement wait.",
     "height_surface.gd": "G5/G6: physics HeightMapShape3D consumer only, no authority write.",
     "views.gd": "G5/G6: readonly public texture/query copies, async preview and detach proof; command buffer upload is private query data.",
-    "visuals.gd": "G6: optional shared display stage; foam/front/gravel only, no authority sand/water writes.",
+    "visuals.gd": "Optional Water-owned foam/front/gravel/vegetation stages in the shared recorder, no authority writes.",
     "profile_registry.gd": "G1: exact Profile script; immutable data snapshots and SHA-checked payloads; no profile callbacks.",
     "profile_catalog.gd": "G1: exact catalog script; builds data registry only.",
     "player_input.gd": "G6: allowed tool-ID frontend translation into common Intent; no GPU recorder or runtime constructor.",
@@ -3653,12 +3875,16 @@
     "boundary.gd": "G6: wave profile IDs select boundary data, not editing tools; requests consumed by same water tick.",
     "checkpoint_codec.gd": "G1/G6: data-only native/known legacy validation; wave IDs validate payload, no runtime restoration factory.",
     "unified_playable_entry.gd": "G6: direct Node3D and only PlayerInput constructor; scene-authored Runtime owns actual backend.",
-    "beach_scene_service.gd": "G6: route factory requires exact unified root script, family-scoped save/restore and rollback; no old fallback."
+    "beach_scene_service.gd": "G6: route factory requires exact unified root script, family-scoped save/restore and rollback; no old fallback.",
+    "water_muscl.gd": "Water-owned recorder freezes retention in stage push constants. MC to Superbee slope blend with unchanged signal-speed, CFL and positivity guards.",
+    "water_numerics.gd": "Strict schema1 solver and schema2 retention scalar. Runtime tuning only through validated complete-state replacement generation; no algorithm switch or mutable authority patch.",
+    "numerics_checkpoint_sources.gd": "Only reviewed catalog SHA changes. Exact original configuration pins, complete target sources, explicit per-target parameter maps and raw native validation stay strict; no generic mismatch bypass.",
+    "vegetation.gd": "Decorative readonly consumer recorded only by Visuals, fixed Water-owned kernels and publications."
   },
   "startup_tooling_boundaries": {
     "project.godot": {
-      "sha256": "6ffd830959ed6630565cf9bdc3957b0ece379ce49be0cf0bc9db2b3c4ce941a3",
-      "reason": "Existing project bootstrap and debugger tooling; Floating props contact calibration sets Jolt penetration_slop0.002m (default0.02 failed5mm contact budget). No authority/queue change."
+      "sha256": "7c59f92820a80f6de25bd832f3aff4131edb71868e04621684ce87fbd5997e08",
+      "reason": "Parameter windows: explicit source-role review in task/parameter_windows/验收/架构审查.md; static native controls, typed startup configuration, public Intent only, unchanged authority/ledger/native layout. Runtime and source checks recorded separately."
     },
     "addons/godotiq/godotiq_runtime.gd": {
       "sha256": "2d67e5b72b2bdd3f6871d84d158bf273acb8a4b964c5f8804331345b8daf4cc5",
@@ -3670,7 +3896,7 @@
     }
   },
   "actual_nodes_evidence": {
-    "path": "task/sandcastle_floating_props/验收/ui_formal_nodes_20261019.json",
-    "sha256": "c3d6684ff410a6c26f43913da3d04e55b459b65b6a629e91e4f4f1fe05395894"
+    "path": "task/vegetation/验收/场景结构_最终.json",
+    "sha256": "f20faede73168e28ddaffcbef46fad8b1f254ecc89cc65f618ced7ebcd0a5d31"
   }
 }

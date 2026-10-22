@@ -30,7 +30,7 @@ func initialize(bundle, recorder, material: Dictionary) -> bool:
 		if not buffers[pair[0]].is_valid():last_error="coupled_buffer";return false
 	var dt:="uintBitsToFloat(async_d[2])"
 	var fraction:="float async_fraction(float x){return x<0.1?x*(1.0+x*(-0.5+x*(1.0/6.0+x*(-1.0/24.0+x*(1.0/120.0-x/720.0))))):1.0-exp(-x);}\nvoid main() {"
-	var sediment_replacements:={"params.erosion_fraction":"async_fraction(%.16f*%s)"%[EROSION_RATE_PER_S,dt],"params.deposition_fraction":"async_fraction(%.16f*%s)"%[DEPOSITION_RATE_PER_S,dt],"void main() {":fraction}
+	var sediment_replacements:={"params.erosion_fraction":"async_fraction(%.16f*%s)"%[float(state.coupling_parameters.get("erosion_rate_per_s",EROSION_RATE_PER_S)),dt],"params.deposition_fraction":"async_fraction(%.16f*%s)"%[float(state.coupling_parameters.get("deposition_rate_per_s",DEPOSITION_RATE_PER_S)),dt],"void main() {":fraction}
 	if not stage_transport:sediment_replacements["params.delta_s"]=dt
 	if not water._compile("sediment",EXCHANGE_SOURCE if stage_transport else SOURCES[1],sediment_replacements):last_error=water.last_error;return false
 	if stage_transport:
@@ -65,9 +65,9 @@ func initialize(bundle, recorder, material: Dictionary) -> bool:
 	for value in sets.values():
 		for uniform in (value if value is Array else [value]):
 			if not uniform.is_valid():last_error="coupled_uniform";return false
-	material_push=PackedFloat32Array([0.0,1.5,0.07,4.0,0.05,0.06,0.001,0.05]).to_byte_array()
-	slope_push=PackedFloat32Array([0.0,state.cell_size_m,15.0,0.674,1.0,0.3,0.0005,state.cohesion_yield_height_m,material.cohesion_yield_height_m,material.saturation_tagged_depth_m,0,0]).to_byte_array()
-	for boundary in 2:_erosion_pushes.append(PackedFloat32Array([1.0,state.cell_size_m*state.cell_size_m,CAPACITY_PER_SPEED_S,0,0,0.001,1.0/30.0,float(boundary)]).to_byte_array())
+	material_push=PackedFloat32Array([0.0,tuning("wet_rate_per_s",1.5),tuning("dry_rate_per_s",0.07),tuning("diffusion_per_s",4.0),tuning("residual_wetness",0.05),tuning("soak_depth_m",0.06),tuning("dry_depth_m",0.001),tuning("compact_rate_per_s",0.05)]).to_byte_array()
+	slope_push=PackedFloat32Array([0.0,state.cell_size_m,tuning("relax_rate_per_s",15.0),tuning("dry_repose_tan",0.674),tuning("wet_repose_tan",1.0),tuning("compaction_repose_gain",0.3),tuning("min_drop_m",0.0005),state.cohesion_yield_height_m,material.cohesion_yield_height_m,material.saturation_tagged_depth_m,0,0]).to_byte_array()
+	for boundary in 2:_erosion_pushes.append(PackedFloat32Array([1.0,state.cell_size_m*state.cell_size_m,tuning("capacity_per_speed_s",CAPACITY_PER_SPEED_S),0,0,0.001,1.0/30.0,float(boundary)]).to_byte_array())
 	for live in 2:
 		var passes: Array[Recorder.RecordingPass]=[Recorder.RecordingPass.new(water.kernels.sediment.pipeline,sets.sediment[live],water.kernels.sediment.decision_set,_erosion_pushes[0])]
 		if stage_transport:passes.append(Recorder.RecordingPass.new(water.kernels.sediment_copy_normalize.pipeline,sets.sediment_copy[live],water.kernels.sediment_copy_normalize.decision_set))
@@ -100,3 +100,6 @@ func release() -> void:
 	if water!=null:water.coupled_recorder=Callable()
 	_passes.clear();_erosion_pushes.clear()
 	sets.clear();buffers.clear();images.clear();water=null;state=null;super.release()
+
+func tuning(key: String, fallback: float) -> float:
+	return float(state.coupling_parameters.get(key,fallback))

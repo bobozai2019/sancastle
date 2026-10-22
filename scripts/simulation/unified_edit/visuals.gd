@@ -3,7 +3,9 @@ extends RefCounted
 # One optional display stage in the common recorder. All RIDs (including
 # history and published clones) belong to Water's existing lifetime owner.
 const Gravel=preload("res://scripts/visual/gpu_gravel_field.gd")
-const SOURCES=["res://scripts/simulation/unified_edit/visuals.gd","res://scripts/simulation/unified_edit/visual_finish.glsl","res://scripts/simulation/unified_edit/visual_publish.glsl","res://scripts/visual/gpu_gravel_field.gd","res://shaders/simulation/visual_foam_step.glsl","res://shaders/simulation/visual_gravel_step.glsl","res://tests/visual_water_alignment/prototypes/reference_local_front_x.glsl","res://tests/visual_water_alignment/prototypes/reference_local_front_x_wide.glsl","res://tests/visual_water_alignment/prototypes/reference_local_front_z.glsl","res://scripts/simulation/unified_edit/visual_edit_finish.glsl"]
+const Vegetation=preload("res://scripts/simulation/unified_edit/vegetation.gd")
+const SOURCES=["res://scripts/simulation/unified_edit/visuals.gd","res://scripts/simulation/unified_edit/visual_finish.glsl","res://scripts/simulation/unified_edit/visual_publish.glsl","res://scripts/visual/gpu_gravel_field.gd","res://shaders/simulation/visual_foam_step.glsl","res://shaders/simulation/visual_gravel_step.glsl","res://tests/visual_water_alignment/prototypes/reference_local_front_x.glsl","res://tests/visual_water_alignment/prototypes/reference_local_front_x_wide.glsl","res://tests/visual_water_alignment/prototypes/reference_local_front_z.glsl","res://scripts/simulation/unified_edit/visual_edit_finish.glsl"]+Vegetation.SOURCES
+var vegetation:=Vegetation.new()
 var water
 var configuration: Dictionary={}
 var foam_enabled:=false
@@ -26,6 +28,8 @@ static func profile_for(config: Dictionary) -> Dictionary:
 
 static func configuration_error(config: Dictionary) -> StringName:
 	if typeof(config.environment.get("local_front_wide_field",false))!=TYPE_BOOL:return &"invalid_runtime_local_front_wide"
+	var vegetation_error:=Vegetation.configuration_error(config)
+	if not vegetation_error.is_empty():return vegetation_error
 	if config.effects.gravel_enabled:
 		if not config.environment.get("gravel_profile",{}) is Dictionary:return &"invalid_gravel_profile"
 		return Gravel.validate_profile(profile_for(config),256,0.125)
@@ -45,7 +49,11 @@ func _clone(source: RID) -> RID:
 func initialize(recorder, config: Dictionary, domain, restored: Dictionary={}) -> bool:
 	water=recorder;configuration=config.duplicate(true)
 	front_enabled=config.simulation.local_front_history;foam_enabled=config.effects.foam_enabled or front_enabled;gravel_enabled=config.effects.gravel_enabled;enabled=foam_enabled or gravel_enabled
-	if not enabled:return true
+	if not vegetation.initialize(water,config):last_error=vegetation.last_error;return false
+	published.merge(vegetation.published)
+	if not enabled:
+		if vegetation.enabled:water.tail_recorder=record
+		return true
 	var native: Dictionary=restored.get("native",{})
 	var zero:=PackedByteArray()
 	if foam_enabled:
@@ -140,16 +148,20 @@ func _dispatch_gravel(kernel: String, binding: RID, mode: int, spawn: PackedFloa
 	rd.compute_list_set_push_constant(list,push,push.size());rd.compute_list_dispatch(list,16,1,1);rd.compute_list_end()
 
 func record(_decision: RID) -> void:
+	vegetation.record_tick()
+	if not enabled:return
 	if front_enabled:
 		water._dispatch("display_front_x",bindings.front_x,PackedByteArray());water._dispatch("display_front_z",bindings.front_z,PackedByteArray())
-	if foam_enabled:water._dispatch("display_foam",bindings.foam,PackedFloat32Array([0,0.125,1.8,25]).to_byte_array())
+	if foam_enabled:water._dispatch("display_foam",bindings.foam,PackedFloat32Array([0,0.125,configuration.environment.get("foam_parameters",{}).get("foam_lifetime_s",1.8),configuration.environment.get("foam_parameters",{}).get("foam_source_gain",25)]).to_byte_array())
 	if gravel_enabled:_dispatch_gravel("display_gravel",bindings.gravel,0)
 	water._dispatch("display_finish",bindings.finish,PackedByteArray())
 
 func publish() -> void:
 	if enabled:water._dispatch("display_publish",bindings.publish,PackedByteArray())
+	vegetation.publish()
 
 func record_edit() -> void:
+	vegetation.record_edit()
 	# A completed edit batch also changes the visible bed. Reprojection uses
 	# the original mode=2 kernel; it advances neither physics nor visual time.
 	if not gravel_enabled:return
@@ -181,5 +193,6 @@ func gravel_extension(epoch: int, tick: int, revision: int, bytes: Dictionary={}
 
 func detach() -> void:
 	if water!=null:water.tail_recorder=Callable()
+	vegetation.detach()
 	water=null;images.clear();published.clear();bindings.clear()
 	gravel_meta=RID();display_bindings.clear()

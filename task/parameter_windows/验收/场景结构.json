@@ -1,0 +1,278 @@
+{
+	"auditor_sha256": "6077d1b75c57e9fafdc990fc7a4447ffb9f975cd946afeb8be4c24a5feab3545",
+	"checks": [
+		{
+			"name": "project_main_is_formal",
+			"pass": true
+		},
+		{
+			"name": "main_uid_preserved",
+			"pass": true
+		},
+		{
+			"name": "main_exact_root",
+			"pass": true
+		},
+		{
+			"name": "main_one_scene_authored_runtime",
+			"pass": true
+		},
+		{
+			"name": "main_no_legacy_node_scripts",
+			"pass": true
+		},
+		{
+			"name": "main_no_old_collision_proxy",
+			"pass": true
+		},
+		{
+			"name": "main_three_static_props",
+			"pass": true
+		},
+		{
+			"name": "main_exact_profile_bindings",
+			"pass": true
+		},
+		{
+			"name": "main_prop_layers",
+			"pass": true
+		},
+		{
+			"name": "main_no_old_execution_flags_or_solver",
+			"pass": true
+		},
+		{
+			"name": "main_same_family_routes",
+			"pass": true
+		},
+		{
+			"name": "main_promoted_presentation_identity",
+			"pass": true
+		},
+		{
+			"name": "test1_capture_exact_root",
+			"pass": true
+		},
+		{
+			"name": "test1_capture_one_scene_authored_runtime",
+			"pass": true
+		},
+		{
+			"name": "test1_capture_no_legacy_node_scripts",
+			"pass": true
+		},
+		{
+			"name": "test1_capture_no_old_collision_proxy",
+			"pass": true
+		},
+		{
+			"name": "test1_capture_no_props",
+			"pass": true
+		},
+		{
+			"name": "test1_capture_no_old_execution_flags_or_solver",
+			"pass": true
+		},
+		{
+			"name": "test1_capture_same_family_routes",
+			"pass": true
+		},
+		{
+			"name": "test1_capture_promoted_presentation_identity",
+			"pass": true
+		},
+		{
+			"name": "test1_backwash_exact_root",
+			"pass": true
+		},
+		{
+			"name": "test1_backwash_one_scene_authored_runtime",
+			"pass": true
+		},
+		{
+			"name": "test1_backwash_no_legacy_node_scripts",
+			"pass": true
+		},
+		{
+			"name": "test1_backwash_no_old_collision_proxy",
+			"pass": true
+		},
+		{
+			"name": "test1_backwash_no_props",
+			"pass": true
+		},
+		{
+			"name": "test1_backwash_no_old_execution_flags_or_solver",
+			"pass": true
+		},
+		{
+			"name": "test1_backwash_same_family_routes",
+			"pass": true
+		},
+		{
+			"name": "test1_backwash_promoted_presentation_identity",
+			"pass": true
+		},
+		{
+			"name": "test1_geometry_exact_root",
+			"pass": true
+		},
+		{
+			"name": "test1_geometry_one_scene_authored_runtime",
+			"pass": true
+		},
+		{
+			"name": "test1_geometry_no_legacy_node_scripts",
+			"pass": true
+		},
+		{
+			"name": "test1_geometry_no_old_collision_proxy",
+			"pass": true
+		},
+		{
+			"name": "test1_geometry_no_props",
+			"pass": true
+		},
+		{
+			"name": "test1_geometry_no_old_execution_flags_or_solver",
+			"pass": true
+		},
+		{
+			"name": "test1_geometry_same_family_routes",
+			"pass": true
+		},
+		{
+			"name": "test1_geometry_promoted_presentation_identity",
+			"pass": true
+		},
+		{
+			"name": "service_no_old_flags_ownership_or_solver_fallback",
+			"pass": true
+		},
+		{
+			"name": "service_no_path_fallback",
+			"pass": true
+		},
+		{
+			"name": "unknown_family_path_empty",
+			"pass": true
+		}
+	],
+	"entries": [
+		{
+			"key": "main",
+			"path": "res://scenes/main.tscn",
+			"presentation": {
+				"path": "res://scenes/unified_edit/presentation/main.tscn",
+				"sha256": "355288c19a6da1528178fd9f9a78001efec5a05f96b8d01ef4359f05c664fc81"
+			},
+			"scripts": {
+				"Bottle:129687883581": "res://scripts/props/floating_prop.gd",
+				"BrushIndicator:123580976538": "res://scripts/visual/brush_indicator.gd",
+				"BrushPreview:125778792020": "res://scripts/sand/brushes/brush_preview_view.gd",
+				"FloatingPropsPanel:129117458203": "res://scripts/beach/floating_props_panel.gd",
+				"GpuPlayerCamera:123463535842": "res://scripts/beach/free_camera.gd",
+				"SceneSwitcher:123799080377": "res://scripts/beach/scene_switch_panel.gd",
+				"Service:130073759572": "res://scripts/props/floating_props_service.gd",
+				"ShapeBrushPanel:124705050132": "res://scripts/sand/brushes/brush_tool_panel.gd",
+				"SurfaceA:125980118624": "res://scripts/simulation/unified_edit/height_surface.gd",
+				"SurfaceB:127087414946": "res://scripts/simulation/unified_edit/height_surface.gd",
+				"UIDrag:125913009756": "res://scripts/beach/ui_drag.gd",
+				"UIVisibility:125845900888": "res://scripts/beach/ui_visibility.gd",
+				"UnifiedBeach:123413204190": "res://scripts/beach/unified_playable_entry.gd",
+				"UnifiedEditRuntime:125963341407": "res://scripts/simulation/unified_edit/domain_runtime.gd",
+				"WaterSides:125946564190": "res://scripts/visual/water_boundary_sides.gd",
+				"WoodPlank:129822101317": "res://scripts/props/floating_prop.gd",
+				"WoodStick:129973096270": "res://scripts/props/floating_prop.gd"
+			},
+			"seed": {
+				"path": "res://assets/unified_edit/presentation/main.variant",
+				"sha256": "fcecd63ed78e4a7ab50b9d417b17dc7f9ae6af5b07417841ded5182291ed8d13"
+			},
+			"sha256": "d4a99bdf57fea277c70ed8d2238495b61a316aadae5ad0361db3b30adc000aeb"
+		},
+		{
+			"key": "test1_capture",
+			"path": "res://scenes/playable/test1_capture.tscn",
+			"presentation": {
+				"path": "res://scenes/unified_edit/presentation/test1_capture.tscn",
+				"sha256": "5b04590c195be0ff200b2334b779eadcd96c99c8fdeb4a05769f08734fc4f45e"
+			},
+			"scripts": {
+				"BrushIndicator:137053081337": "res://scripts/visual/brush_indicator.gd",
+				"BrushPreview:139250896687": "res://scripts/sand/brushes/brush_preview_view.gd",
+				"GpuPlayerCamera:136935640289": "res://scripts/beach/free_camera.gd",
+				"SceneSwitcher:137271185163": "res://scripts/beach/scene_switch_panel.gd",
+				"ShapeBrushPanel:138177154580": "res://scripts/sand/brushes/brush_tool_panel.gd",
+				"SurfaceA:139452223291": "res://scripts/simulation/unified_edit/height_surface.gd",
+				"SurfaceB:140559519321": "res://scripts/simulation/unified_edit/height_surface.gd",
+				"UIDrag:139385114423": "res://scripts/beach/ui_drag.gd",
+				"UIVisibility:139318005555": "res://scripts/beach/ui_visibility.gd",
+				"UnifiedBeach:136885308638": "res://scripts/beach/unified_playable_entry.gd",
+				"UnifiedEditRuntime:139435446074": "res://scripts/simulation/unified_edit/domain_runtime.gd",
+				"WaterSides:139418668857": "res://scripts/visual/water_boundary_sides.gd"
+			},
+			"seed": {
+				"path": "res://assets/unified_edit/presentation/test1_capture.variant",
+				"sha256": "104ac9aca3b2a31ac56f2d44790b2f6c27573884ebbdbf6832069da52bc823dd"
+			},
+			"sha256": "622225dbdcfc71773465f3d2dc7095251d65cd11e1f3f3a70e101b74d17c1e79"
+		},
+		{
+			"key": "test1_backwash",
+			"path": "res://scenes/playable/test1_backwash.tscn",
+			"presentation": {
+				"path": "res://scenes/unified_edit/presentation/test1_backwash.tscn",
+				"sha256": "f6622b3b0bd8f43b1873dd3cddc5cf4e86fde2aab3cd4e5dac6570b6e4bbeb0f"
+			},
+			"scripts": {
+				"BrushIndicator:149535329959": "res://scripts/visual/brush_indicator.gd",
+				"BrushPreview:151733145373": "res://scripts/sand/brushes/brush_preview_view.gd",
+				"GpuPlayerCamera:149417888992": "res://scripts/beach/free_camera.gd",
+				"SceneSwitcher:149753433785": "res://scripts/beach/scene_switch_panel.gd",
+				"ShapeBrushPanel:150659403284": "res://scripts/sand/brushes/brush_tool_panel.gd",
+				"SurfaceA:151934471971": "res://scripts/simulation/unified_edit/height_surface.gd",
+				"SurfaceB:153041767999": "res://scripts/simulation/unified_edit/height_surface.gd",
+				"UIDrag:151867363079": "res://scripts/beach/ui_drag.gd",
+				"UIVisibility:151800254213": "res://scripts/beach/ui_visibility.gd",
+				"UnifiedBeach:149367557342": "res://scripts/beach/unified_playable_entry.gd",
+				"UnifiedEditRuntime:151917694754": "res://scripts/simulation/unified_edit/domain_runtime.gd",
+				"WaterSides:151900917537": "res://scripts/visual/water_boundary_sides.gd"
+			},
+			"seed": {
+				"path": "res://assets/unified_edit/presentation/test1_backwash.variant",
+				"sha256": "c9f8213317f629fa333248b8e1c5aee3db1570e6826ea328ac5a8e9e485fb054"
+			},
+			"sha256": "83af3768fef9af066803c477606ad89069143a3c49a8d0c40e8ac008da71b5b7"
+		},
+		{
+			"key": "test1_geometry",
+			"path": "res://scenes/playable/test1_geometry.tscn",
+			"presentation": {
+				"path": "res://scenes/unified_edit/presentation/test1_geometry.tscn",
+				"sha256": "ad17b3d7effc5940e3dde939558091850f942e2c90894e631aca7b103fb9cf75"
+			},
+			"scripts": {
+				"BrushIndicator:162353122936": "res://scripts/visual/brush_indicator.gd",
+				"BrushPreview:164550938357": "res://scripts/sand/brushes/brush_preview_view.gd",
+				"GpuPlayerCamera:162235682586": "res://scripts/beach/free_camera.gd",
+				"SceneSwitcher:162571226760": "res://scripts/beach/scene_switch_panel.gd",
+				"ShapeBrushPanel:163477196069": "res://scripts/sand/brushes/brush_tool_panel.gd",
+				"SurfaceA:164769042103": "res://scripts/simulation/unified_edit/height_surface.gd",
+				"SurfaceB:165876338126": "res://scripts/simulation/unified_edit/height_surface.gd",
+				"UIDrag:164685156093": "res://scripts/beach/ui_drag.gd",
+				"UIVisibility:164618047156": "res://scripts/beach/ui_visibility.gd",
+				"UnifiedBeach:162185350366": "res://scripts/beach/unified_playable_entry.gd",
+				"UnifiedEditRuntime:164752264645": "res://scripts/simulation/unified_edit/domain_runtime.gd",
+				"WaterSides:164718710223": "res://scripts/visual/water_boundary_sides.gd"
+			},
+			"seed": {
+				"path": "res://assets/unified_edit/presentation/test1_geometry.variant",
+				"sha256": "150e9087b0fe41581146784a5dfbc319b3bc0b027a8a9252d0d1b1de7ed3c7a8"
+			},
+			"sha256": "51c2fcc0a334072b4cd5712f420fabaeb195e26d4e5a8673d41682ae3e4351b7"
+		}
+	],
+	"pass": true,
+	"scope": "Formal static node scripts, one authored unified runtime, source identity and removed scene-service fallback; not the full G7 executable writer audit"
+}

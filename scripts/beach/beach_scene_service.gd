@@ -28,9 +28,7 @@ func _dispose_scene(scene) -> bool:
 	var identity: int = scene.get_instance_id()
 	var released := true
 	if scene.is_inside_tree():
-		var profiler: Node = scene.get_node_or_null("Interface/PerformancePanel")
-		if profiler != null:
-			await profiler.stop_sampling()
+		get_node("/root/Parameters").unbind_scene(scene)
 		await scene.shutdown()
 		released=scene.unified_release_complete()
 		if not released:
@@ -78,10 +76,13 @@ func _set_message(value: String) -> void:
 func _settings(scene) -> Dictionary:
 	var settings := {"playing": scene.playing, "hide_hud": scene.hide_hud,
 		"water_solver_id": scene.water_solver_id,
+		"wave_retention": scene.wave_retention,
+		"parameter_boot_values":scene.get_meta("parameter_boot_values",{}).duplicate(true),
+		"tool_parameter_values":scene.tool_parameter_values.duplicate(true),
 		"selected_sand_tool": scene.selected_sand_tool,
 		"dig_amount_m3": scene.dig_amount_m3, "fill_amount_m3": scene.fill_amount_m3,
 		"manual_wave_amplitude_m": scene.manual_wave_amplitude_m,
-		"sampling": scene.get_node("Interface/PerformancePanel/Margin/Rows/Header/Sampling").button_pressed,
+		"sampling": get_node("/root/Parameters").sampling,
 		"camera": scene.player_camera.transform, "use_player_camera": scene.use_player_camera}
 	if scene.has_method("_capture_brush_selection"):
 		settings["brush_selection"]=scene._capture_brush_selection()
@@ -91,19 +92,15 @@ func _apply_settings(scene, settings: Dictionary) -> void:
 	for key in ["dig_amount_m3", "fill_amount_m3", "manual_wave_amplitude_m", "selected_sand_tool", "hide_hud"]:
 		if shared_controls.has(key):
 			scene.set(key, shared_controls[key])
-	var controls: Node = scene.get_node("Interface/EditPanel/Margin/Controls")
-	controls.get_node("DigAmount").value = scene.dig_amount_m3
-	controls.get_node("FillAmount").value = scene.fill_amount_m3
-	controls.get_node("WaveAmount").value = scene.manual_wave_amplitude_m
-	controls.get_node("Tools/DigTool").button_pressed = scene.selected_sand_tool == &"remove_sand"
-	controls.get_node("Tools/FillTool").button_pressed = scene.selected_sand_tool == &"place_sand"
 	if shared_controls.has("brush_selection") and scene.has_method("_apply_brush_selection"):
 		scene._apply_brush_selection(shared_controls.brush_selection)
-	scene.get_node("Interface/PerformancePanel/Margin/Rows/Header/Sampling").button_pressed = shared_controls.get("sampling", true)
+	get_node("/root/Parameters").sampling = shared_controls.get("sampling", true)
 	if settings.has("camera"):
 		scene.player_camera.transform = settings.camera
 	scene.set_player_camera(settings.get("use_player_camera", scene.use_player_camera))
 	scene.playing = settings.get("playing", true)
+	if shared_controls.has("tool_parameter_values"):scene.tool_parameter_values=shared_controls.tool_parameter_values.duplicate(true)
+	get_node("/root/Parameters").bind_scene(scene)
 	scene._update_status()
 
 func _prepare(scene, key: String, settings: Dictionary) -> String:
@@ -114,7 +111,9 @@ func _prepare(scene, key: String, settings: Dictionary) -> String:
 	scene.playing = false
 	# Carry an explicit release algorithm selection into the new frozen domain.
 	# Empty continues to use the release default; active domains never mutate.
-	scene.water_solver_id = shared_controls.get("water_solver_id", "")
+	scene.water_solver_id = settings.get("water_solver_id", "")
+	scene.wave_retention = settings.get("wave_retention",0.0)
+	if settings.has("parameter_boot_values"):scene.set_meta("parameter_boot_values",settings.parameter_boot_values)
 	get_tree().root.add_child(scene)
 	var deadline := Time.get_ticks_msec() + 90000
 	while (not scene.ready_for_ticks or scene._booting) and scene.last_error.is_empty() and Time.get_ticks_msec() < deadline:

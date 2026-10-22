@@ -7,7 +7,7 @@ const Config=preload("res://scripts/simulation/unified_edit/configuration.gd")
 const Consumer=preload("res://scripts/simulation/unified_edit/consumer_checkpoint_sources.gd")
 const SELF="res://scripts/simulation/unified_edit/numerics_checkpoint_sources.gd"
 const CATALOG="res://assets/unified_edit/numerics_source_catalog.variant"
-const CATALOG_SHA256="6bd4040b8e396621e8d482b4654d967ce49a3ad5b1bfad0c4ef32c7aeec6d969"
+const CATALOG_SHA256="0d20058631d7f8fdaa0083f989a97b092b77e6d71f3585ac92945ddd9ad10350"
 const SOURCES=[SELF,CATALOG]
 
 static func parameters(configuration: Dictionary, consumer_rebind: bool=false) -> Dictionary:

@@ -1,0 +1,2275 @@
+{
+  "sources": {
+    "assets/unified_edit/extensions/extension_catalog.tres": "243e180aa4f281e2140d65b7bd0d4fedcb30220a971b5b582627319ed358e5bb",
+    "assets/unified_edit/extensions/wide_transfer_v1.tres": "9c5f2a4d6f4da84bbd8f8f33e6a8e7bddc15641bdb0d2b977a3e11876b1641c5",
+    "scripts/simulation/unified_edit/tool_profile.gd": "5ec7ad018abaf9099e64f0c85acf7f106acc9c2ea013767166d4a394f17c38d8",
+    "scripts/simulation/unified_edit/height_stamp.gd": "a2b8d8d940f8ef7b2af13232c0f7bd0b1888e5ed8f1e074885f656b2203f48d0",
+    "assets/unified_edit/extensions/stepped_mound_tool_v1.tres": "eac1d6c2632db416d5b0264572d14baa9bc61544c89acfd192939b00e4fc6257",
+    "assets/unified_edit/extensions/stepped_mound_v1.tres": "574a3c4f7fe2d99a95d7290bca4cdf4ade9c8bc32111a988412d950fb16265ca",
+    "assets/unified_edit/extensions/stepped_mound_v1.rgba32f": "90712a3db02056b3402dc301ec274c4d50582f5b2e79cf855ef12940b4f23a50",
+    "assets/unified_edit/extensions/wide_fill_v1.tres": "d23a00c553366089003b2e09ef85d38b5cb440bba058f1dfa069c6194678de53",
+    "assets/unified_edit/suspended_sweep_v1.tres": "d1551bb2e05169355778754f8fa38469ace041f035fbcaf460c32bf37c6d4c9d",
+    "assets/unified_edit/fill_sweep_v1.tres": "9be98ddd1489278f7544b7bb8555018b8668c3e203d1b291cc23b8dfbe014fff",
+    "assets/unified_edit/dig_sweep_v1.tres": "f24798e571f6cb309292ff78b0fdfb4cc93b480739fbf200acd873e6b1749cd5",
+    "assets/unified_edit/compact_v1.tres": "4054a6df232ea8eb63e69fb20284d98cd7dbba945cab6ee2cf6518379fb37802",
+    "assets/unified_edit/smooth_v1.tres": "01731a291186884bd9cebaa76babd7acf09c9cc6fa2db82c4b243f06b0160fb7",
+    "assets/unified_edit/shovel_v1.tres": "62ff4641dbbe8b866da6954579cda64d608cb1cd0c308aa0c7a807d22bd09ff9",
+    "assets/unified_edit/castle_v1.tres": "4944fa37e4d037a96ab2bc8c41191b4590c6778ddb56d4bf03b43472cce3520d",
+    "assets/unified_edit/four_towers_v1.tres": "4a0a2b40adca14741b5365a1b25736e2d4e21778f1576d1455792eda0b1b98f9",
+    "assets/brushes/castle/four_towers_v1.rgba32f": "42f4654b2a40688fdfb936a790c1c08f0d2f4efbe6d1aa3bef91f2598089e833",
+    "assets/unified_edit/wall_v1.tres": "181374910e104a061a37ac78520881f3a70741248f49fcfb94931daab66f17ad",
+    "assets/unified_edit/suspended_v1.tres": "587a3926894f434d1a95a41ab91b56559b4d70f25913982c59ba817cd45eb90a",
+    "assets/unified_edit/fill_v1.tres": "59ab1c2ac14b40b20fc082c0ab13d783c28167da89c652ee03cf178d9e81d49e",
+    "assets/unified_edit/dig_v1.tres": "c282b0206f1961e6ed43fd7d4a7bd983ab847057da54502917fcfea0bc97e136",
+    "scripts/simulation/unified_edit/profile_catalog.gd": "6d4651c5d6cc5209cfe0696e3f6ef7375b9444ed2426fe94b1592c0b2473e0a4",
+    "scripts/simulation/unified_edit/profile_registry.gd": "f1911785ae05e56816c63641fbd98ece60a9de323bd365962df9331246ba558b",
+    "scripts/simulation/unified_edit/layout.gd": "0249e55b8005bef604ead7ba62f4adf8a5875d2786e0ea48035d259937686da0",
+    "scripts/beach/beach_scene_service.gd": "8e09b7ef9fc5ad069afc2bd28f29f40c3d8eb14a4df9beb466a5bf61f9830f9c",
+    "scripts/beach/unified_playable_entry.gd": "aab70136d1a6e66fc7772e34946dab863117635317c6999b3a6ef919e3899575",
+    "project.godot": "7c59f92820a80f6de25bd832f3aff4131edb71868e04621684ce87fbd5997e08",
+    "addons/runtime_source_export/plugin.cfg": "80a6ebd8516affae4553f3f98ebc540f77c99f4dc002f23e3db45773e00e1f63",
+    "addons/godotiq/plugin.cfg": "dc79c3d11b3633b913951b71bb1b0621efcf7f28b9dd187eaa920241d2a66b1b",
+    "addons/godot_editor_logger/plugin.cfg": "22eb90f4235fb3098b18ad7bca53b7351e867ac782b142d7239d02e3a6de7741",
+    "scenes/parameters/parameter_windows.tscn": "a4a52c5419cced251b7c6c03af785f13c9ca92bff5aeaa07e19a9335705beccc",
+    "scripts/parameters/parameter_row.gd": "4bec4c85c4ffd107e1fa564bbf773727eb09bcb91769fc1468f95b0c37f39c3f",
+    "scripts/parameters/parameter_service.gd": "dcd43b0fc946c2a4a60c7991590bc754402a54b080030a1491a6d5dfb579e558",
+    "scripts/parameters/parameter_schema.gd": "db40e772107e02b23a505c0c13982f6c434938949581a770815cd09d2fbf4495",
+    "scripts/simulation/brushes/brush_checkpoint_codec.gd": "382a60b69ed7b0930099142d56c2adbbe54d58753d217aa7a8112c984798adab",
+    "scripts/simulation/edit_validation/gpu_checkpoint_codec.gd": "b67acc0842599328d240a261ecf19ea9a36658e66425c935590159522a110e6d",
+    "scripts/simulation/sand_water_domain.gd": "449b69482a2de6347a3562b6610507b2669bb8bcdc34cb6e15e363946866cadc",
+    "scripts/simulation/edit_validation/edit_protocol.gd": "7c00201b41929064945fa502bcb9f28cc9d60d346941091c1b4abb9d58e33de6",
+    "scripts/simulation/checkpoint_store.gd": "cab0e52ee89bcd9fd08bf7265dd7b952dec2ba319e6c884796ac2ac9e32a459e",
+    "scripts/visual/gravel_checkpoint_codec.gd": "8cd4f7f0b50ff08f3be9cc7d52a1270ebef3bbed41d17b457a3c0cbc42ae6ba4",
+    "scripts/visual/gpu_gravel_field.gd": "f634064e9f279faf16827229157b7435f12903579324fbefe64b07f2e42b367d",
+    "assets/gravel/stone_material.tres": "42f17ba297ab6c7930e545f59b8395ee48d201d79404b5ebd408fc3d49768f88",
+    "shaders/visual/gpu_gravel.gdshader": "07d8292cf9ef912f85ccf505edcd45ef7b59b8dd2f4847570b0102803e4e22ab",
+    "assets/gravel/stone_mesh.tres": "c5b3f015e5e540ab2d57c6051fe0d36549a037bbd2f40dd84c73fa550e41ff52",
+    "scripts/simulation/brushes/brush_protocol.gd": "94083fc3cd6869a28bb2b68b024e469781ae2b6cb54f16d1b79ecd672f8ad463",
+    "scripts/sand/brushes/brush_registry.gd": "64d3520ce0c519cb34f46636ba59a6bcb3c8aae45edbcca2ae1ffecd10f35631",
+    "scripts/sand/brushes/brush_definition.gd": "63f682e4f20161b4bbd193bd5264bd9f51cab79606ba38b9695d8b512d66c161",
+    "scripts/sand/brushes/brush_spec.gd": "2532c325b5ad6a615731830a08d86b2c33dd446e8a115aa336b9371b539d644c",
+    "assets/brushes/protocol_v2.json": "c74983277c081285385896b7d91b52e2b83b212444086a18e2dd007445aeb507",
+    "assets/brushes/shovel_v1.tres": "8681fbfe01a98a5af25ddbfe2a78bd747e43313174b4094db80176fb3c0fc343",
+    "assets/brushes/wall_v1.tres": "e65b5949fff433149f5274f289f12ff6cac4c924d39ae9b2a4dd350a28a9cf34",
+    "assets/brushes/castle_v1.tres": "47b6f19647d04996d4be6f6df5b3b99f0bc76abd3a90a3e1792d26506b6b9a0b",
+    "assets/parameters/catalog.json": "8e7b1d5d4b876c056286de9ad9d0ce4f22fcb1ea7f7d852a36664d1c7bb99fe8",
+    "icon.svg": "6c80384360a5b269d1054bfb27241258154e2cc8167c522016fdc1820e84e0f8",
+    "scenes/main.tscn": "d4a99bdf57fea277c70ed8d2238495b61a316aadae5ad0361db3b30adc000aeb",
+    "assets/unified_edit/presentation/main.json": "44742e7f402f7491cf38e6a01f231dc3ea1685015db7de3821846ba675f424ad",
+    "scripts/beach/async_pipeline_entry.gd": "d77d1a28f02c65e57a8cdc56021c2d88ce9e22e6e0563f1b0cf784d31c8d656b",
+    "assets/water_sides/test1_boundary.res": "7660646be9f1c2eb914d09c8e4efebda9cf79464a068ae5aac8b615fc6b5510c",
+    "assets/water_sides/main_boundary.res": "6ed5bc7cd495f34d04e90b0f1bf98222cb74e5edf648e914c3a964e6625bcb69",
+    "scripts/simulation/edit_validation/frame_pipeline/async_shadow_read.gd": "40c7669054d467d12d82d582884e8ba3b2064687e4d7d4945466fd05cacb0533",
+    "scripts/simulation/edit_validation/frame_pipeline/async_terminal_guard.gd": "08c47247c2a6f7a4d8a0c7937d580cb575ca28e23c02c8e0f388d7b1cfef518c",
+    "scripts/simulation/edit_validation/frame_pipeline/async_legacy_migration.gd": "4609f53f315a2688e7ff368ba0b198881069739abaab31c2d3ee879ddb3f9fc1",
+    "scripts/simulation/edit_validation/frame_pipeline/async_checkpoint_codec.gd": "ef0e368736579cc6a1a6a11eb10d2c7bf6c92d2db4d2836c67578da3c444765a",
+    "assets/brushes/molded_material_candidate.json": "1936e7dfc654a7a5dc5e9307d880c85e7cc7f48b128372ec622f5b68b7af2890",
+    "scripts/simulation/brushes/brush_material_state_codec.gd": "c0d0394abc3b89c3587dc5057ae6a54e1458e97ab087a81a40bd4bde353b6ca4",
+    "scripts/simulation/edit_validation/frame_pipeline/async_protocol.gd": "312ed81688880954a12c1e6d4df3c34ca7d9f22ca0c9e184b8e2e9f4925e6750",
+    "scripts/beach/beach_recovery_entry.gd": "238ea012bc1d2b281d2428c6c5ac4a6d8a7e81545bc522b42e572830585fd3c0",
+    "assets/test1_beach/test1_beach_release.json": "4d9b2304154dc3d23344ce670c9d7fa1e1265f6738314a98fdde5e1043ff6dad",
+    "scenes/components/water_visual/reflection_rock_environment.tscn": "6910e246c00e35d2c29e3982dd878cc0dadfeb93d651d961e538513b34dccd3f",
+    "tests/visual_water_alignment/prototypes/reflection_rock_2.tres": "617b46961fd33efa9a2075260dd703962aba96d1dfea93714c524a8150dd1939",
+    "tests/visual_water_alignment/prototypes/reflection_rock_1.tres": "6fa8c12f7ef205991f0c78edc5f1116dac357d34c1adadecf5a0867fe313c8ce",
+    "tests/visual_water_alignment/prototypes/reflection_rock_0.tres": "89eab2c4076aebded99a45c8e780c03d09bad63dbb27148bfe215456782ca8eb",
+    "tests/visual_water_alignment/prototypes/caustic_fold_v1.png": "173b50e3e4e9fa143ae9b71867768e5b246a150a2be7a65a74c88d9a6c4b00ee",
+    "assets/test1_beach/test1_bed_lit_fast.gdshader": "0e8340b6e20e3d5a8380549995610e5a442b04524ff72e50c996b5cb4f9e7366",
+    "assets/test1_beach/test1_water_front.gdshader": "deac308744b85960c239d6722d59a3b12507ebc6741ec2b81600718d63b81017",
+    "assets/test1_water_motion/capture_state.rgba32f": "06540acafd57583465e0d5e3926819f27b33e51afb3134a700d684cc52fa8523",
+    "scripts/simulation/edit_validation/beach_restore_bundle.gd": "82eb4ae56d28300cc0e6d21a8024e88a4c66424f7eff080f0b3f3cbc251e37f0",
+    "scripts/collision/gpu_collision_proxy.gd": "4018308026913806fb980905e87d0786b6ce8a2f7f177006df93323ac32b294d",
+    "scripts/collision/collision_prepare_scheduler.gd": "e2dfe7c2acf3e330743c42ca3e3a6f010f8e18a9105d8a6779c5edac602d320c",
+    "scripts/collision/collision_prepare_job.gd": "629fcfde9d4edb14e446ee1970f03b9ae9d4da364979150f35a0182aab46fb6b",
+    "scripts/simulation/erosion/gpu_sediment_coupler.gd": "9d5dc9449f3d722cb981204f90bf9b033136914ce61959c3f62e821c6d79381e",
+    "scripts/simulation/gpu_sand_audit.gd": "4e0c483ef76dba0d2862622ab4434fdbe1519d6d5fc6df76bb061031ec8d1588",
+    "tests/visual_water_alignment/prototypes/reference_local_front_field.gd": "f791d419826f9797a7d12949a3aa50f08c3024460a58da2de0221c36cce2d276",
+    "scripts/simulation/edit_validation/checkpoint_foam_field.gd": "1cfaa95ec19bde30c6769a26746275994cb634efad4f760c4925f13945de74ce",
+    "scripts/visual/gpu_foam_field.gd": "61328906de62d414a197516d38895ae1a376eb45a6a4fe201a0b5598035a1cc4",
+    "scripts/beach/beach_interaction_entry.gd": "60b70f73f4f65554545872dba43980b1c702d81f19e8881dad25e600ef6426f6",
+    "scripts/simulation/edit_validation/gpu_edit_scheduler.gd": "88e251442e047d3c63d8216ce3d84c61ecd1c3ae80cb716cbcc8585c75936d10",
+    "scripts/beach/beach_gpu_entry.gd": "ee62687afc6558dda563f16318ecbcb8f6681da0426451b89d5fe706b832059f",
+    "scripts/simulation/edit_validation/collision_chunk_selection.gd": "81ad1db63c6baf3ef876a8050ebe9550bd6130669cba810698049ddf70570892",
+    "scripts/simulation/edit_validation/frame_pipeline/controller.gd": "eba3874aac33266f449ccde99b56285aae7975345eb00fc8cc7f02655bd514f7",
+    "scripts/simulation/edit_validation/frame_pipeline/validation.gd": "aa329de59d707ce5444906f2b93d57d17ed53d447ffa9ef4989f878c459e5dd9",
+    "scripts/simulation/edit_validation/frame_pipeline/layout.gd": "4c3e25e5b803edc54ed954e711f59f21cb3cab92580fc888af0154dd2ecc52ad",
+    "scripts/simulation/edit_validation/staged_slope_coupler.gd": "3786237bafb640995bfabb66ef7a758bf9ceb892681e32a7df56399f136162d6",
+    "scripts/simulation/material/gpu_material_coupler.gd": "81bd1712b4f3d6923848387b625a0933fe6669ecb3dd1b4eac95f25816cb0e7e",
+    "scripts/simulation/edit_validation/gpu_water_editor.gd": "3907e942d3910a0d0e39b97aa5f357eb748f1702da6b7d9076f91dd4703e02a9",
+    "scripts/simulation/edit_validation/gpu_sand_editor.gd": "e67d3ca773fe9349cd504fc53d5c5da39db3cb6e1466e2d05e036e3634fb1a00",
+    "scripts/simulation/edit_validation/lab_solver.gd": "4bc319179b9699229f69bb6ba7e8b56e2255a65b39757090ffa221b6e9e8d8dc",
+    "scripts/simulation/gpu_shallow_solver.gd": "ada3029ee6bf71d185988a1587c8e71e8b54226e97503a9fe076e36e53058aab",
+    "scripts/beach/release_config.gd": "006e91856bd21ad9b002ac35ba3d4a3db43395c042e68c2ba6b4910acefd757e",
+    "scripts/beach/beach_checkpoint_entry.gd": "9939e0442c08c9b6f0988ee85ef8735e16bef615522a339bf0896405ca2b49d6",
+    "scripts/simulation/edit_validation/beach_native_codec.gd": "ee0b3a5935a9d5dd1c2d1519b10754a9a31519e7b142bb827630b9578b23b243",
+    "scripts/beach/beach_lab_entry.gd": "e092c3626e29d88ae87733c85304922c6bde7d3b43d25bddcf30c216ed577c4c",
+    "assets/water_material_natural_candidate/compiled_worker_entry.gd": "3567965df037e4a3667723c8cc831aca29622dfd2c568c62006c51ff36613bd4",
+    "assets/water_material_natural_candidate/style_worker_entry.gd": "e4c37f4c511090aa57a74fb93267748a7759379a134e117205afc3f11bd96b28",
+    "assets/water_material_natural_candidate/style_entry.gd": "866dc7e5c3032c4dc6869ecb061432059fa5883d363ab3b9a7369b86ce66461e",
+    "assets/water_material_natural_candidate/style_baseline.json": "6f32185913e11ca947e178783593934bde9f55a2bbd73c50963c7c8c1d580815",
+    "assets/water_material_natural_candidate/bed_style.gdshader": "271b03cfa840795410a7165650de3e6ecff102e137eec910fb9ab9f57b759c11",
+    "assets/water_material_natural_candidate/base_v8_style.json": "8d061ac83dd9b52b06cd4c136db2db807437270e1082fd10dbd2516efeccc685",
+    "assets/water_material_natural_candidate/water_reflection.gdshader": "92ffedb04d08672b09bc0dc4dabaada7066cb42bf87288c66bc2237a0ef2195c",
+    "assets/water_material_natural_candidate/reflection_oriented.json": "8e6cf9034808f3e7d8da00fa430cac698b7d59adc6d6183e3ae899d5d2568c88",
+    "assets/water_material_natural_candidate/base_v8_reflection.json": "4bc019688cb2e6950c1b40bc8ef31855ad22d49c373929ddfbdd1938403dd6ae",
+    "assets/water_material_natural_candidate/foam_reflection_derived.json": "5cb696fc477deb89ed63875ab33667941718dbfddaf89918c5e93ac94dc78d77",
+    "assets/water_material_natural_candidate/contact_reflection_geometry.json": "0c4c2c27848fccaa44462e2cd70125fb9bfd0966f66d1f9da318e5b9175416c0",
+    "assets/water_material_natural_candidate/contact_shape.gdshader": "df877260fd31aae4785dc937cc23c7d24e742ed7d16895f612ebb6e600e9fba8",
+    "assets/water_material_natural_candidate/foam_distribution.gdshader": "55077448b1b78594922c05db6bcfac25822d9742d2aeef2e3aea7dbf2191ef65",
+    "assets/water_material_natural_candidate/optics_selected.json": "e56df9bc4e907e1ca2be1fc579ec6a7288d12ffdc48073103cf705c9198cc29b",
+    "assets/water_material_natural_candidate/lighting_optics_unrefracted.json": "111f131b00c3b9f166d4b3b307b2078d19fe8f8f59511808e2437b0dccffa132",
+    "assets/water_material_natural_candidate/foam_engine_light.gdshader": "16e73f843c92b45ba1be07763e0c93c2f3e3184f093e7cf068ee84c699fe1b8b",
+    "assets/water_material_natural_candidate/water_optics_unrefracted.gdshader": "70b415a9f3e68a724fe8f075c5588b52eddd32c5dda15544ba3d3b298e896ba6",
+    "assets/water_material_natural_candidate/base_v8_optics_unrefracted.json": "ebc5490547fa31f975ea570fbe571fc814b7447ff14d01d687981da8f26d9b63",
+    "assets/water_material_natural_candidate/texture_layers.json": "88b6b3b2f9d9d8459d9bb3d8799e87b22341d1f3232161ecf2b1776c0eef1f14",
+    "assets/water_material_natural_candidate/water_normal_681.png": "09060fd043521aecffa7013184a7c8a9b3556df9148469a03cc88e8bbd84b548",
+    "assets/water_material_natural_candidate/foam_combination.json": "474dd58b1541ef01bd86ac76c31225b9618209a2893851ccbe5bdf85f1a1a65d",
+    "assets/water_material_natural_candidate/contact_shape_geometry.json": "096409ca006deaf9b382f527bb750fd2a2919c6777f3896056687bc33b8998f9",
+    "assets/water_material_natural_candidate/water_foam.gdshader": "b13ac3e56eecfe56adf427c06f0ec1442cd989bffddbd11fec36b0dea42d59ce",
+    "assets/water_material_natural_candidate/base_v8_foam.json": "4ef08fdd3fc3830b6de9278481145b6182c487142b8d36fee71f5091ff4acd86",
+    "assets/water_material_natural_candidate/reflection_entry.gd": "2f6badee41a4d793879493be2abb9097e9e390aae9b1eb88d2ca18def8101f63",
+    "assets/water_material_natural_candidate/reflection_baseline.json": "9e85e7df3e8460d2739fe9341dc9db42f3b837dfeb1b60fe59048d4388973eac",
+    "assets/water_material_natural_candidate/foam_entry.gd": "8d00e87db797deb730baf01cdf4d295022fe6139ca6e1ac76db19d81c22da535",
+    "assets/water_material_natural_candidate/contact_geometry_bindings.json": "0dbcfec9907cd0e18eac41b891e29c7196845cc7db3bce405a2db539f646c3ba",
+    "assets/water_material_natural_candidate/foam_baseline.json": "58eaca5bc538b17ef9861c33f2f415670e9d0ec1ace085895d5e65d2aad9980f",
+    "assets/water_material_natural_candidate/contact_foam.gdshader": "101325f41af40f36af1fef3288aeb618403ac59cb483e38065996fa985e6fa85",
+    "assets/water_material_natural_candidate/optics_entry.gd": "a5497d51cc001b3e5aeb21f28f4fb3a5be551417706f64c8f1a8f073cd994046",
+    "assets/water_material_natural_candidate/optics_legacy.json": "f5e628835a99e198a9e8e25c7ea13219ac42f25dd48222b51a49e19f4342c377",
+    "assets/water_material_natural_candidate/lighting_optics.json": "166be6acbb061203c6fba04037281398bb4e23cc94f11a3760ce69ff3ffaec52",
+    "assets/water_material_natural_candidate/water_optics.gdshader": "cc9d989dfc2be0c88e527a16bd32f6e29e1b4003da10b3554924d584ade55473",
+    "assets/water_material_natural_candidate/base_v8_optics.json": "96f1d70b42f58658bf4f2e73512fb63d67892bc4ef8e0618c7ea82ded60982e3",
+    "assets/water_material_natural_candidate/lighting_entry.gd": "59bb263f29915b22bde1979bf7da037ef3b604ea7e9ebc92a96958189c5197e9",
+    "assets/water_material_natural_candidate/lighting_manual.json": "d27ec7fae1eeeaac93fc1c16da76a8fb3852b427862293d23bea460610bb86b6",
+    "assets/water_material_natural_candidate/water_manual_glint.gdshader": "8eb8160e55cc0ec91fac6c04583b70794167ae924061f053c231de8f8261f487",
+    "assets/water_material_natural_candidate/base_v8_manual_glint.json": "c06ba3efe6493a1e4d11bd87c68f63797070060099301455c977f99e76193a50",
+    "assets/water_material_natural_candidate/normal_entry.gd": "ba6ca2a0bab787097a750a639be41a3a225bba8879f7fccf233d8d8044ac6dcd",
+    "assets/water_material_natural_candidate/water_normal.gdshader": "5a84c97bb21859a4064ed7933323fe53987029cd0056fb8da3a61a7ecafb6671",
+    "assets/water_material_natural_candidate/base_v8_normal.json": "459a4648ca58e4f20d83eb2579db9813ffadd75e7c51c837d8b2ede77b519a3c",
+    "scripts/visual/test1_beach_fixed_entry.gd": "fb33d9826d3354f91d15c9ff25156955379cb2460391c4e4e869b3120aa6e681",
+    "tests/visual_water_alignment/prototypes/rock_reflection_candidate_entry.gd": "4cf60c1290c0580b9290652cf66576222d0600e50dba71b03aa130794b58dc31",
+    "scripts/visual/water_render_staging_entry.gd": "08e4bde7cfa9a968fc06cdae538788542afcbe0698fac2585473eb564090abd3",
+    "tests/visual_water_alignment/prototypes/water_render_staging_v1.json": "b35b81cbd5831a48c361c98e8737096d7b5badd70db955429d5703cde179d8a7",
+    "tests/visual_water_alignment/prototypes/reference_coupled_bed.gdshader": "b60f600299f006898e8258f27dfe9a7059e2aae3b7066c6c9e77624dbf6a2250",
+    "tests/visual_water_alignment/prototypes/reference_terrain.gdshader": "bf77f94303c320a2dccda9a7194aa87fb8f71c582e159df3bc865ade97c3baec",
+    "tests/visual_water_alignment/prototypes/reference_water_local_front.gdshader": "d75afd108ca483b33c760a3a4257be9396eeaf390ed12b05a9f61bbb3b6cc405",
+    "scripts/visual/water_render_wave_workload.gd": "f16fbc73346c39aa57b6b13ec3824a8fcf63f12d1454cfe26fc1208b79233d21",
+    "scripts/visual/water_render_profile.gd": "033978698ceeca9b9365b01541196349f22094a448ed71766471a6f200e3e147",
+    "tests/visual_water_alignment/prototypes/reference_preview.gd": "eb093da001ca8acab4342d6f1e5986d5f27452f5e8e2d15df3d4339807fefe6a",
+    "tests/visual_water_alignment/prototypes/reference_crest_ribbon.gdshader": "084f3391e8aa4dc4745d400342f0389c22bf2733be43f044c32db18f61267d6a",
+    "tests/visual_water_alignment/prototypes/reference_crest_rise_ribbon.gdshader": "2977f4dda77cb1beb4256bac0e2cc3d483315e3b9bf2cae3fd5d71eca5f00d8b",
+    "tests/visual_water_alignment/prototypes/reference_crest_rise_ribbon_depthwrite.gdshader": "8f13f413c2f87b766263d6cba5869d7436a4510a9cc51019cfee7474576472d5",
+    "tests/visual_water_alignment/prototypes/reference_crest_shared_front_lip.gdshader": "72968404b01ea6e6274c816e535d3032d699f989d20ce636be3cb838edb56d30",
+    "tests/visual_water_alignment/prototypes/reference_crest_smoothed_lip.gdshader": "66be7b4f462e781ff02eca43e58b512fb04df59cfc4b1401bf21f95a7b491d13",
+    "tests/visual_water_alignment/prototypes/reference_crest_forward_toe.gdshader": "b0b5f08eef4eeeb8e1449ae00a439940fce4a454e2058ddd605a060319e43ae6",
+    "tests/visual_water_alignment/prototypes/reference_crest_curtain.gdshader": "8a1ec383093276dfd6f034707fa9dfe10ae127c7e7c67e6e76b8845c746972f1",
+    "tests/visual_water_alignment/prototypes/reference_foam_splats.gdshader": "ed5d860f2254b65bfe0c98c5e9b3e6803d5e07f7debbe99e3a3d182130731a17",
+    "tests/visual_water_alignment/prototypes/reference_crest_local_segments.gdshader": "92f66b265b96e23d0e602c2139dbc942482d5e064fe351940ab64e8b1f00187c",
+    "tests/visual_water_alignment/prototypes/reference_crest_volume.gdshader": "06a44a61cd3cab6e659746817fba3153a59a5a16abb21c47c315d9886103585f",
+    "tests/visual_water_alignment/prototypes/reference_crest_local_volume.gdshader": "d6eaca6bbf27c7b21b8090e5deb6a950ae851ba5207dca2eb196f169acf9f53c",
+    "tests/visual_water_alignment/prototypes/reference_water.gdshader": "d78958d8749b4313ebca55a5b10f5eb768eda044132f3444c423658b2fb5f999",
+    "tests/visual_water_alignment/prototypes/caustic_cells_v1.png": "ab1dc8e1964b9c52cf18aa285db2c7b9881443d18436d3dd9ebb954c4148ded7",
+    "shaders/visual/gpu_sand_phase2.gdshader": "b39e64d82d8b15f63e272ca3c4644232132a39b8bdd223a5161586bee2071663",
+    "tests/visual_water_alignment/prototypes/reference_contact_history_step.glsl": "bfec2a9f6c184d2a1164ff3f7a0b930f907609b40fbe4c716640850359db2c79",
+    "tests/visual_water_alignment/prototypes/reference_local_front_z.glsl": "dc986bfa7e64e6f05f814a1eed3cef2eef1bd5e72025a1c9475d90c4855ddfae",
+    "tests/visual_water_alignment/prototypes/reference_local_front_x.glsl": "1ca06648fc517bc6d01b66780af1d1e66cfe2978ddd2f00e5ac763658799d13d",
+    "tests/visual_water_alignment/prototypes/reference_local_front_x_wide.glsl": "3e8c3729eb40b07a36772aa25ae8c3f10b5d3f137e7b19721669df6ed4098004",
+    "tests/visual_water_alignment/prototypes/reference_rise_front_anchor.glsl": "26c735fbc43e23c27d54f4fe612418ce66ca87d4609ee2285e9cc0f9866c5935",
+    "tests/visual_water_alignment/prototypes/reference_rise_front_field.glsl": "cc2c18d0d1680d0ec2d039d96cda592a6f49255ae44df0d40fd4ad4df557f35c",
+    "tests/visual_water_alignment/prototypes/reference_tide_ledger_ring.glsl": "70afb76be87686985afd102eebab8a2971490be6315aaf71020470dcab08ce08",
+    "tests/visual_water_alignment/prototypes/reference_visual_foam_offshore.glsl": "2ae3ed27fffce69c5913afee851f88f5b11bc45dc0e18eed15ea5d6f3e755b6e",
+    "tests/visual_water_alignment/prototypes/reference_visual_foam_front_band.glsl": "ecfceac6836ddc67260d3eb91c9a4f8b9c2a412526b5c1ca466ea1f4c802ede6",
+    "shaders/simulation/visual_foam_step.glsl": "19d7bec7f157791f75e0b4a63bd04c7ae8dc06eb82e016f1ea96ae8174e6edb0",
+    "shaders/simulation/structures/obstacle_commit.glsl": "98afc576f237c5acac4ec0f09ee8d0c7d4ad59a1b0f480b4acb76ab842a3d655",
+    "shaders/simulation/structures/obstacle_remap.glsl": "a54a87ec0b648ed1fed2053815082e4b395904d6ed664b953d4749f9cddb922a",
+    "shaders/simulation/material/material_commit.glsl": "a5ecfc44668a97d519677fc9769eb22638cab5bd4b932e6e225abd4642977979",
+    "shaders/simulation/material/slope_relax.glsl": "3a84a74ea96425febabf5dcca59fdd5509a069c508d8702236e14de0a984ccfe",
+    "shaders/simulation/material/material_step.glsl": "290b44d3fb13ab2b4d7da27e4fa4f93e070244ba11ad450b8356067280f60aef",
+    "shaders/simulation/erosion/copy_after_boundary.glsl": "dbae28c2350fb4551bfb214a38c60ac90d2e660b2ad68575ab62cb5e04306282",
+    "shaders/simulation/erosion/sediment_step.glsl": "02ff254c037da330de571d2ecc2edc13711295a44d226917fcfdb98412c743c9",
+    "shaders/simulation/shallow_sand_audit_tiles.glsl": "40adab5f7447f987418daec6e6cfc64b866ae4894960cd7e6b8d89ba45d5e503",
+    "shaders/simulation/shallow_collision_pack.glsl": "21e58b4e4bd906e98c0b0e894c514332a9a1b2ca9251c539275a209749ca9b9d",
+    "shaders/simulation/shallow_tool_patch.glsl": "d0fbfea07be64cf31f7fabed61b7440b67d768657091d4287d976e8c313f4168",
+    "shaders/simulation/shallow_audit_tiles.glsl": "f9deb50fd988d4db627a86fc42c6b57204298f8016c530762eef6e20f2a7f71f",
+    "shaders/simulation/shallow_gauge_depth.glsl": "f9d9219e8957645c14708fe4f4ca1d88cb4bb4d0cd1c507c47fbd203db792790",
+    "shaders/simulation/shallow_cfl_tiles.glsl": "bc636e57f1feb1d9e24606bc64b5753f07035925cb97882f09a0fec3c2a3833c",
+    "shaders/simulation/shallow_tide_boundary.glsl": "e6911fc637aacfc1ded6f0eb002942aed06a79022eec4c65ce31db6270ce7835",
+    "shaders/simulation/shallow_update_state.glsl": "fe373e7d793d0cc126db241fe0c81e5b3aa2b7d70b37c7299f21418d81b76185",
+    "shaders/simulation/shallow_drain_scale.glsl": "f36e5a1a0b50f867ca89571a12033ba8dbb059a5a1a481bca07e43a1cf87fdbe",
+    "shaders/simulation/shallow_edge_flux.glsl": "621bc8ec3738d896cdf68c2fe20d306f0d1bd87817f3e917214a9f91b84dea4e",
+    "tests/visual_water_alignment/prototypes/reference_fixed_substep_solver.gd": "e85b5b16b7f247619221d5b69c3f8490f91d000392159a16a71131bc3a385a38",
+    "tests/visual_water_alignment/prototypes/reference_batched_ledger_solver.gd": "9a2e37364476d817a2b38c1831660cee6dc71d3cd942257f1e0cb3820035170c",
+    "tests/visual_water_alignment/prototypes/reference_tide_ledger_batches.gd": "d744528686b74639729f9f944b7e2958de93d3dcafca54c3d6c5df1775ff7f93",
+    "tests/visual_water_alignment/prototypes/reference_tide_ledger_ring.gd": "e5c382d288ddc06c5605917be5042e4d0d4e623143d13b487931894f3230c115",
+    "tests/visual_water_alignment/prototypes/reference_contact_history_field.gd": "a695507d79cdb6c177f2afe6bdb5c4fb082884445a229c0bf02b42655e44f7ad",
+    "tests/visual_water_alignment/prototypes/reference_rise_front_field.gd": "b539b5880a6602267be8fe6511db1f128aea85b4133678305d4a630a04d45b18",
+    "tests/visual_water_alignment/prototypes/reference_bed.gd": "c46756a6a1df97d559697d5a9742d33c3820df0eb1987d61c929fe414d3410e4",
+    "scripts/scenarios/standard_scenarios.gd": "3bf32552b7d9ea7a0e7a92aedba9bfb58e086c8cd98c14a58fd878c1d41c406e",
+    "scripts/sand/tool_command_queue.gd": "17c3dd19158edab5999374c1839a0e0fe8ed69d3f9f3b0579abc8fa59fc8777c",
+    "scripts/structures/gpu_obstacle_remap.gd": "cc6b54b4d7c147b07b56954abddd8a4756500413d6240c75c564c1a3a6a9a5a7",
+    "scripts/structures/structure_state.gd": "0dbaaa6a29933cf3f0d894e814ed503779fdbe5d5f20355f76b7803b945ebe48",
+    "scripts/structures/structure_field.gd": "94f35646a6ea9c4584d8a6ab6f8d52cdc3921c29514f9a7872665b994fd6e92e",
+    "tests/visual_water_alignment/prototypes/reference_sync_readback_solver.gd": "9445031ef7ba468d6d32f6a5bab3afe96044037e2c31a649e9a9e2df59f2d610",
+    "scripts/simulation/edit_validation/frame_pipeline/async_restore_bundle.gd": "bd57e8138ed0627847071d1cff8007519a0d544eb17a1c662b13f0e70c7add09",
+    "scripts/simulation/brushes/brush_preview_query.gd": "d2e4f842fa83633cc5ae60be653bbfbf5e09e2e31f85d7907195ee01c6d21978",
+    "shaders/simulation/brushes/preview_base.glsl": "62f49d2dec4badcc7d0fee4aebe04f03aeeb8e581624d360fc41ca26b9b423c7",
+    "scripts/simulation/brushes/brush_gpu.gd": "a9ff955f47af20516ab358edd40d021e0dabb4754a8dd1e412d323b8238397d1",
+    "scripts/simulation/brushes/brush_water_transaction.gd": "744e89495bb88958c2a056945f47fd94b44a7758a467e59d9c3b2c66a7ebb56e",
+    "scripts/simulation/brushes/brush_material_transaction.gd": "b28f0106f5d18c380725ae422086f161659b28449dafc764e39b05a8ba2a44a5",
+    "shaders/simulation/brushes/material_transaction.glsl": "b9339e0506fd782df072276a21bace49304a824b9652602dab8cbeb6383bcbb9",
+    "shaders/simulation/brushes/legacy_material_transaction.glsl": "8453cb09251f4789f9f686acf535b7a5e53c23f5f0d7b949b5480c65870191fc",
+    "scripts/simulation/edit_validation/frame_pipeline/async_controller.gd": "562cd38053e8c5f7fef96d70268b0e4f17f5f3ef9a121c9b94b93c37cdbbabc4",
+    "scripts/simulation/edit_validation/frame_pipeline/async_bridge.glsl": "5d12ebefb8ebbd3a86a77ffeabd7dea3fe6d923b412d7951dcbac74ee927f960",
+    "scripts/simulation/edit_validation/frame_pipeline/async_tools.gd": "7ac26ea4c5d5f0020c5a6f5afeb04652cbe7fe66c0895d3d017159bfdc817451",
+    "shaders/simulation/visual_gravel_step.glsl": "187e52c7ae677aba712bf441c29fe4268578327dab6fb19186a2439c5e0e6799",
+    "scripts/simulation/edit_validation/frame_pipeline/async_collision.gd": "d5a83fbee79228128fd3307535b46817ddb3b18dfbb7f819dd465f7e8ca5c6c1",
+    "scripts/simulation/edit_validation/frame_pipeline/async_height_pack.glsl": "f0e0674b4676d990916776bbac5cd71b96fdae31d0500f9ba83218516d1ae32a",
+    "scripts/simulation/edit_validation/frame_pipeline/async_height_codec.gd": "d5e5b03c8ae9a1c77fb3c458ff6886676126c77c666eb79c1d195c5485c9588e",
+    "scripts/simulation/edit_validation/frame_pipeline/async_visuals.gd": "246712a7dde239f6312c4fe52267bdcfc3b55cdb833fbc07547873d5668a1856",
+    "scripts/simulation/edit_validation/frame_pipeline/async_visual_normalize.glsl": "ba58d5b1739cb5078e5eb87438ba101e8df5f8adac0f3acfb80b8149e96a39d8",
+    "scripts/simulation/edit_validation/frame_pipeline/async_coupled.gd": "779f48e98f58d4818a0b1d6b5aeec28bbc5b32dfe6019a63c5f722dac62c3aa3",
+    "shaders/simulation/brushes/molded_slope.glsl": "808103f691329ca21bba69cc6e309c857134b5fe666d22a6a4a50c47abe0417d",
+    "shaders/simulation/edit_validation/staged_slope.glsl": "8777b5baa680a9fb4d1eb66176a92b058972b2cb1fe713b49c07ae8d2d39bf00",
+    "scripts/simulation/edit_validation/frame_pipeline/async_water.gd": "82f3d2a13987fb704b9f13ea8898df056c427f78b02416cd7818adbd5fde17a4",
+    "scripts/simulation/edit_validation/frame_pipeline/async_slots.gd": "7dbad972285e515eeea88d5586e149536b27444eb869ca8061ab8b98314ac2ba",
+    "scripts/simulation/edit_validation/frame_pipeline/async_checkpoint_capture.gd": "558544b896d6069f973b3f2e8568bb6ca9fa9cd8d3370b33065deacda9c865b9",
+    "scripts/simulation/edit_validation/frame_pipeline/async_clock_variants.gd": "3c96c317fb78116f57ad3e3f8bf39d23486de303a82e8d2a9be73ff7be1f0d73",
+    "assets/water_material_natural_candidate/async_clock_variants_v1.json": "6c745230fff9416979db586d9f09c7631944445666e0dcae87bde54b462936ba",
+    "assets/water_material_natural_candidate/async_rdc_bed.gdshader": "6c95d2631137ed87fc313cb406a1f1e60221a56a36d33dc70a18459589ba1740",
+    "assets/water_material_natural_candidate/rdc_bed.gdshader": "e36bf7c1d44dbc38f50c46b7405cf439a48fd6f427df6f95a3d5e3e50d650abf",
+    "assets/water_material_natural_candidate/async_rdc_water.gdshader": "26a503bd375f88e43f7b1a7fdac1812fd2d7da4ad4217423aa5ae6d398ed0a61",
+    "assets/water_material_natural_candidate/rdc_water.gdshader": "16a93e3d6942429073cbcbcba73b59bbe42e80c61bf776e9f15170ca69fd8b89",
+    "scripts/simulation/edit_validation/frame_pipeline/async_scheduler.gd": "bb143cbb8142648cebf7d0c156d35cd399df4be99c378f9fd4432fd9fca98fba",
+    "scripts/simulation/brushes/brush_scheduler.gd": "9e58c174cdc4cfcb961c547d69cc896440ca62a999d1b3fe8855a9f368b260a9",
+    "scripts/simulation/edit_validation/frame_pipeline/async_editor.gd": "1a7bd53a0d2bff0154993f9cd172edb07d1121b05e41c32c46514f931aee2b7e",
+    "scripts/simulation/edit_validation/frame_pipeline/async_transport.gd": "bd1fad594d7cdff8b6225850b644672d3c95f3f26c8f36b9b791fd57a05221be",
+    "scripts/simulation/edit_validation/frame_pipeline/async_seal.glsl": "11ab3b18d815e81a2b1906ff27b894ce8225c512962881bd6ec995365037d098",
+    "scripts/simulation/edit_validation/frame_pipeline/editor.gd": "ff306de8483aa9b244c1465e4167653176d4670ccadf6531fd79204954702160",
+    "scripts/simulation/brushes/brush_material_solver.gd": "4229d6c9fc7321ce46ef93c742427c80e19f46a4c78b4a53138afc4461ccca6d",
+    "scripts/beach/gravel_playable_entry.gd": "157785de185399cb0f566777df9f89aa70d916dea84d0cecdad9e07ca26cb62b",
+    "assets/gravel/legacy_configuration_20261015.bin": "1760bc21f0ea86869607959dc17acce9810f024544b2f9e5ee5ad80908f826ec",
+    "scripts/beach/shape_brush_playable_entry.gd": "1e254c0b318e7fcfb44b89f6af455a402256736b382278906742c14800231323",
+    "shaders/visual/suspended_sand_cloud.gdshader": "8f36f7c4289c16236a44b304cb02f6b3f49c4e03bad8f2925403ee50fa7dcdd0",
+    "scripts/beach/shape_brush_entry.gd": "a552320612c75c1aa99b48def562213075e94a1f75c52414edefa8823ca91bd6",
+    "scripts/simulation/brushes/brush_material_coupler.gd": "2a5b99a4fd8774eed32b46d59ab6ec81fe070b329c6b1cbf8ea88063f6c1e6a8",
+    "shaders/simulation/brushes/mold_support_step.glsl": "02b3dd96f818c304fa723336f4891c4666bf8562c9a874a737b6416a51324e03",
+    "scripts/sand/brushes/stroke_controller.gd": "29fdca82d9f4836760fa46bc3f120b70b3d55204cce14f97a8ea3804bcc4b45f",
+    "scripts/sand/brushes/brush_command_queue.gd": "f08f39aa7b80fc99a6756ff195ae1481ab8d8bdb7a5a3efe6514eb9c23c77c7b",
+    "scripts/beach/beach_playable_entry.gd": "cb74ed9266f814aa9a5db821d0503e2c163caa66521aa586155426250eb1f3f9",
+    "scripts/scenarios/test1_playable_layout.gd": "96d0f46fec8f86cfad5d47a38572c957359e78f3be65739baee805f80848375e",
+    "scripts/scenarios/test1_geometry_layout.gd": "80a3241eebec98159109df76e68f623e0ffebab2ef3f0bcd32ac9d0c836e5695",
+    "assets/test1_geometry/water_cycle.json": "b95e55ec01bfe639ad58c757092b76c6f2f67bf63d6dd52cd8b4ea0fc9a561c9",
+    "assets/test1_geometry/initial_state.f32": "0d2afa78195b675600e2d36bf4dc4539b9575bb7fd5e25019c43b5df341bd3b3",
+    "assets/unified_edit/presentation/main.variant": "fcecd63ed78e4a7ab50b9d417b17dc7f9ae6af5b07417841ded5182291ed8d13",
+    "scenes/unified_edit/presentation/main.tscn": "01ab0b5295dc3467babcc3599c8437efed4fe6c285b07d288ff9ced20a527ea3",
+    "scenes/components/vegetation_layer.tscn": "6aeb308643a0b11e641c7768089d3ceed5a40a66b0ebb4b64cc6a8516d8adc77",
+    "assets/vegetation/dune_grass_material.tres": "31e87f69a4abae36c069b35ff0a4b3a6188ae82b1c09ddf50cf97b330707ce7e",
+    "shaders/visual/vegetation.gdshader": "10d98cbb3a36c987e1314a778715bd2e41f2cef953307bd84ff3f21c1b6e57f5",
+    "assets/vegetation/dune_grass_instances.tres": "0cc501f3e68970b50b2b6ed08f0245fabea6edabbbaf7e19eed2b406e39e07f9",
+    "assets/vegetation/dune_grass_mesh.tres": "1c985b0deb5de877bacbf8ef321c49a3abb3edc19814cc5a03e7de9688a62ab6",
+    "assets/vegetation/shore_grass_material.tres": "6a6c891dfe91e6a129376a0f9c5754c9ec86c4cd1b624582ad696d534e4f63e9",
+    "assets/vegetation/shore_grass_instances.tres": "2c587a1a5c72a17cfe821a404c647f1a0ceb60bc5b6ba2280ef129332f572146",
+    "assets/vegetation/shore_grass_mesh.tres": "89ae1954d951f24d2effcab7867ed35ef5b83c036af22d5dba4b968e32be88e7",
+    "assets/vegetation/kelp_material.tres": "2b7dfef1a180be3f7d4b703a2f3fbed1dd9a609862630e31135cc683996a9cab",
+    "assets/vegetation/kelp_instances.tres": "e99a499ea932b1fa2eddece527e5d6e45d6094bce34a1c7900f95eb8d8556ad7",
+    "assets/vegetation/kelp_mesh.tres": "d1b13283fc0030810811eb2e480f4dfb422465af3b58bd1b0732ee0d76bd43dd",
+    "assets/vegetation/seagrass_material.tres": "a27d716f5cb3396b76d463fd4a8509deec62b60bbe7946f9ce0f581271680b34",
+    "assets/vegetation/seagrass_instances.tres": "a188a4cb9863cb7820736715fc0e309a0a2b620d5a84e4bdcda009ccd56488d4",
+    "assets/vegetation/seagrass_mesh.tres": "ea1fd4769b93bd908286822da02f2337ae904b3c1a330b3baaa4c98dcd6d1335",
+    "assets/vegetation/default_profile.tres": "5076997095343f9f994612594040cc0665c7ff35165463b8543b3ba9954dca7f",
+    "assets/vegetation/dune_grass_species.tres": "ba7fc0648b0a4318edb1aa2c01d3903c9adebee604c417090917520aa411aad2",
+    "scripts/visual/vegetation_species.gd": "7b3f5b43560f3957b835bee4a0cebfe1cfdcf3f61235d4635f230f46996fb1d7",
+    "assets/vegetation/shore_grass_species.tres": "37d79c1b3a9e4a6686994ee4397b929ac1e69ca9ea5aa31f6167bf34c7e72367",
+    "assets/vegetation/kelp_species.tres": "8fdf3fb295e7147addfde3cdc14a4162beec61ec0d3122cc0c67863102c9c9dd",
+    "assets/vegetation/seagrass_species.tres": "810ffee130b4133b0e18c7e7aa05861c53dd0a073a774001cfd7a1a558c807e5",
+    "scripts/visual/vegetation_profile.gd": "74c803f79d9ecbc239a707c49200d2184b831715cd322a273030e50f04dd797a",
+    "scripts/visual/vegetation_layer.gd": "fab851b62913d8278ce2bfae7aa425eb16c6ecab10945759aa10542406a70dd7",
+    "scripts/simulation/unified_edit/height_surface.gd": "257d20fce15c3090a01d8a18207e2176aba7d4be52b0426790073048ec72d716",
+    "scripts/simulation/unified_edit/domain_runtime.gd": "4a2020e166e20e71ea1ef734ee860fd17d9f3e732b414df80d33bec512bcefc5",
+    "scenes/unified_edit_height_surface.tscn": "76ec932ebd6694b9d4bfafa10ab94e0083e88ef85a3dc0669afd35b8d5559dd7",
+    "scenes/unified_edit_runtime.tscn": "bbc141dba36f68247494840a42f6d29e76222eb4904d12eab4f28e5c8f5f9e34",
+    "scripts/simulation/unified_edit/numerics_checkpoint_sources.gd": "2a9a2222125ded0924d2c13c81dcbf3d9478bed45a14802053ba70a6d369936a",
+    "assets/unified_edit/numerics_source_catalog.variant": "0d20058631d7f8fdaa0083f989a97b092b77e6d71f3585ac92945ddd9ad10350",
+    "scripts/simulation/unified_edit/consumer_checkpoint_sources.gd": "8360687b6ade3e4b29903b36b3462c32f83805d69bd7e069ca97a437d102fc91",
+    "assets/unified_edit/floating_props_source_catalog.variant": "0456f9a90bb90bd98fbb131058bbf18f1e7b7c0a28e06ba3d50f729ae42eb299",
+    "scripts/simulation/unified_edit/configuration.gd": "48504ad310d521434413f279d2a3d5027e9905aad6998e23c4d30b16762411e0",
+    "scripts/simulation/unified_edit/protocol.glslinc": "431faa2b39ebdfc3be501ab597d0c3eeb4f912fd1b2417840e1a56c000bb75f6",
+    "scripts/simulation/unified_edit/legacy_sources.gd": "a53ddb381060b5c9e0f928db6fd22f83269992e6d5e356e271c85df961fcc567",
+    "scripts/simulation/unified_edit/protocol.gd": "d27781aa931455a8434564712f256bb87cbae370858b1aaafbaa8982e42e70ab",
+    "scripts/simulation/unified_edit/intent.gd": "347fbc161a5295d8c597dd2a5c6b2853fd146f9b9a45eaa6aefd7a7805f6319f",
+    "scripts/simulation/unified_edit/display_intent.gd": "5ddd0f9019350efbe388c1862ecda7b4c44ba8b47682e93c60b36d0843d90f21",
+    "scripts/simulation/unified_edit/display_emit.glsl": "840c6b01b244d21cd0914312df3ace652536d80727a0e34726b767216e775115",
+    "scripts/simulation/unified_edit/checkpoint_codec.gd": "a5d2b58634e75ca95247aad3d87969e77142916f0a73b546abe2749e78635627",
+    "scripts/simulation/unified_edit/unit_half.gd": "3d0d323b653df1f9237525e3b42a2c395ffe3a585ecb68ab8a5bd0d9a03e573a",
+    "scripts/simulation/unified_edit/water_numerics.gd": "794d56cfc7259260590b0dd790e299106602e0b88e5b8feee17f79efc78f31d2",
+    "scripts/simulation/unified_edit/pipeline.gd": "48981fd4d6bc285c876a321acf82af74dd1dbf404161bfb1a3f08b68fafc002a",
+    "scripts/simulation/edit_validation/frame_pipeline/async_boundary.glsl": "a6226484e71e726a1ba7d68bc3d50a8ff89891904eeef6d71a659be484203477",
+    "scripts/simulation/edit_validation/frame_pipeline/async_normalize.glsl": "52cca694a0bf455d386541782ed2d765d05541ffd19c2f235390c0d6f3fc75ba",
+    "scripts/simulation/edit_validation/frame_pipeline/async_sim_finish.glsl": "71229a60bbea62762a77ae3ee481819792eae4cf6ff11ea30a7ebb833be87a8a",
+    "scripts/simulation/edit_validation/frame_pipeline/async_cfl_tiles.glsl": "06875caf6af822cb96ee8f1f009e246ec689a0a1feba4aaf73bebfb3f3824ac1",
+    "scripts/simulation/unified_edit/cfl_decide.glsl": "8d246db53a1d2b72ae252e68d906b71166b64bc7782244c4f3c6c47757e19e5e",
+    "scripts/simulation/unified_edit/edit.glsl": "57553c4b755f629d60d61d73ee6f457eacf83b176230e6884396a9750cf48973",
+    "scripts/simulation/unified_edit/work_seal.glsl": "26434191421521492b5a63160cb4ae8674b1b8773205cb868b083bc1f8d6866e",
+    "scripts/simulation/unified_edit/work_begin.glsl": "940538b9e13f01da456c959a7d409c188420675b46d49fbb9e508fe662d72f1a",
+    "scripts/simulation/unified_edit/executor.gd": "f57c4bf157df609b9e922e038c7546914a9ae0d0cc76c7d23b9b92d270001751",
+    "scripts/simulation/unified_edit/water_response.gd": "9ccb1a9d714ef5427e6a5534feac26e6e16d0886f3df5edac816d7a15a6ab5bc",
+    "scripts/simulation/unified_edit/water_velocity_prepare.glsl": "9ad4fb084b7e4713fcd0030f85e59b9af1b440e891a9ce5ee86201cfadd27a6c",
+    "scripts/simulation/unified_edit/water_packed_parallel.glsl": "8e48a46ade6d9a608b9fe9aa5b10f1127f4b036b22a788f392c069d9585d481d",
+    "scripts/simulation/unified_edit/water_packed_topology.glsl": "876056fb1b25c7eaea97e513dddcc882b7ea2cd723abb5409828ea0d389710cf",
+    "shaders/simulation/edit_validation/water_velocity_prefetch.glsl": "9cf7459b99ae2932a63068416cac6875844e8582dc5e58a33771f0c595f3c77d",
+    "shaders/simulation/edit_validation/water_packed_cached.glsl": "cd8dd0f5419d1b423158caf004ed3d5a297ee51e801159748005ad49103cd543",
+    "shaders/simulation/edit_validation/water_displace_compensated.glsl": "8b161dbf853c8916de189f745e1573380fcd2f687680cbe83887d5e8867c0641",
+    "scripts/simulation/unified_edit/water_response.glsl": "19fca940f8886393fc683a6e2bc962dcda3298520ebff2aa04c208def16751f0",
+    "scripts/simulation/unified_edit/gpu.gd": "fcb28e68b22c0b29b31d2d7c4c20822782018ddc3f7a55e107e3c2fb54926f68",
+    "scripts/simulation/unified_edit/water.gd": "26d2fbbe6faa9862af5ab29649290d37f903f0732cac05195de424b109d5249c",
+    "scripts/simulation/unified_edit/water_muscl.gd": "44eb177dd4d03fa58ec1bc7855ff0f92edf7f83656cf2c981a98407f5db0552b",
+    "scripts/simulation/unified_edit/publish.glsl": "84f60cbb6d59a60e5481b2ce7b00ce438ff90f659c03d2bf7ad3971308dba0f8",
+    "scripts/simulation/unified_edit/state.gd": "653d1d508203b61c7c82386bde71d98a26ff19803761cd0aff83eb91556126a2",
+    "scripts/simulation/unified_edit/transport.gd": "060e00341524fd7605def902e2936449c839e57722c7fe56ffd79d1e8adedc78",
+    "scripts/simulation/unified_edit/idle_fence.glsl": "1268fcb20b1d592fac6b71fb68ddeca4eae63a23bcf217b02161cebb44005e77",
+    "scripts/simulation/unified_edit/slots.gd": "b4c73feb63692894ee9420d4c05cf31892355d4d5380399f3c0bf58c0b101cab",
+    "scripts/simulation/unified_edit/restore_verifier.gd": "48206e6631bc40169c661e1f254e96b66ba5e88eb7606eba91ae556f353a05d1",
+    "scripts/simulation/unified_edit/checkpoint_capture.gd": "2d0d85e92a8302ac1badb1b84bafccd015baf69777ec300837501c1b447550ef",
+    "scripts/simulation/unified_edit/checkpoint_accounting.gd": "ed42766ab86b9073b0cb46c4c917689576c9a2c949866aede023525a1c4c0df8",
+    "scripts/simulation/unified_edit/diagnostics.gd": "c66cd305ced9e692b8739cd7aa124586cbcdfabca388a74c5425ebe05f3b5780",
+    "scripts/simulation/unified_edit/api_adapter.gd": "a12f2df91586143a6c69fa89249d121a03c0dd3265d7feeb42bee12542f5834e",
+    "scripts/simulation/unified_edit/boundary.gd": "98ac2a4d90ba7c35e1a6a411b6b1f2b7ab6de7285ef17301c7c8298b7f49ea78",
+    "scripts/simulation/unified_edit/visuals.gd": "a3b24214cca4ed3bcc7ccb6449cb16c727a93d16498da8ff744facfcd07acbe3",
+    "scripts/simulation/unified_edit/visual_edit_finish.glsl": "0a6c2a1ef102918ed5b234f85cd859048d1a8d3befcef5f189809a7361f4f987",
+    "scripts/simulation/unified_edit/visual_publish.glsl": "e517e7dd58218ee764a1d773c20e2c714e880dfc01f151188834c43cfa70967d",
+    "scripts/simulation/unified_edit/visual_finish.glsl": "10f2a79bec43f77b80d77f674e60df7123876931d1473a5cf38c47182b38e5c7",
+    "scripts/simulation/unified_edit/vegetation.gd": "c0ac00bb2eab17a291e8fa602f44739bedc2f32ababf30915f33260cc94c1a7a",
+    "shaders/simulation/vegetation_publish.glsl": "0b2d474a2214297cc942285707da0b3594fc468210a8ab166b83338b50309275",
+    "shaders/simulation/vegetation_step.glsl": "f9acdc1541479a1380ae401ccc6961f81a0af8f2dbb5c0fd898b3387503368c0",
+    "scripts/simulation/unified_edit/views.gd": "08bb89331235170bbcbd1038ab5870c36fd88dde5ed86d6cb0cdb6bf2a3547eb",
+    "scripts/simulation/unified_edit/view_query.glsl": "9a1c36a38c6c02107aa60d499018635b85ae76849aa11788ff47af8e09ad24fa",
+    "scripts/simulation/unified_edit/view_publish.glsl": "56160ffa358b59456f754126204042edf3e3cea77fc3d505e43fb5891fdc9816",
+    "scripts/simulation/unified_edit/probe.gd": "de1a09c4c6a0f128d9461c91248edfb8ea2a01bccd4da49fd4478f92d6676645",
+    "scripts/simulation/unified_edit/probe.glsl": "ab45f4e46692b78f40d1c3329a23ecdd100b384de966dcc0aa80e19e50546d10",
+    "scripts/simulation/unified_edit/probe_codec.gd": "577de99be1b546a29908df5392c10a0d7138e2e0aeda13e71deb58c3012c7441",
+    "scripts/simulation/unified_edit/height.gd": "2675c1caf640099c600e4f9245132013c8a9a3057788418b4dabdce15b96f969",
+    "scripts/simulation/unified_edit/height_codec.gd": "f8472a265358da3fb21c3a00f5f7598426bb32457b0a2cea8c314833c59f8fcd",
+    "scripts/simulation/unified_edit/height.glsl": "9f08382aafd9706f017298cb9721b897b0fd3a4023a21c3e91510ab51650153d",
+    "scripts/simulation/unified_edit/coupled.gd": "33dcaabd38a8f24354a7236d782fb10d122249fb35da22285a346856cf58beeb",
+    "shaders/simulation/edit_validation/staged_slope_consume.glsl": "da10584e13400f2c9e957ba32aa6dfecdc4cd08cf1bd07c74877028773ef83ba",
+    "shaders/simulation/erosion/sediment_copy.glsl": "b444f30ce8c9ede98a7c5dbeb7d281be0d716145382242a96f639ed5bff80140",
+    "shaders/simulation/erosion/sediment_exchange.glsl": "da563ac4f8273e16ec95a58deb15eb443bfcc386d656037bb0436fd879d82a02",
+    "scripts/visual/water_boundary_sides.gd": "cc6cb7cdd2bc92560c94551e3d220705feccc2249f51fbd46eb6cc4ad277ab64",
+    "assets/water_sides/geometry_manifest.json": "c1ba8fc8194e7f6b5580fca1c25e3c790908089f4b52503dad12dbd05950fd38",
+    "assets/water_sides/water_sides.gdshader": "d69f77b8bd03a78461fb29ff5fd8084e1fc68b43b30ac9c0319a9b6dee757462",
+    "scripts/beach/ui_drag.gd": "0e81b46fe7c887e18d4a00e7c4747eae2df804b903f063c3105f9afcfe67460b",
+    "scripts/beach/ui_visibility.gd": "d89b99bab669376a089ff39647160669b10ecec0b04eaeaa22dd75f8d1efe5f5",
+    "shaders/brushes/footprint_preview.gdshader": "dfac831f9ab2cc6b890f9fd24c7cc1ac7dbb3f981b504b972bca946da93da6bf",
+    "assets/brushes/castle/four_towers_preview.tres": "51e5d6365711adaf4a43a88625417ac904b1f789775dd155bfc1d30f0fa149bc",
+    "shaders/brushes/castle_preview.gdshader": "9d1c343fbf98e398ec98fd9194b99b03e97a98db97f1dcabb4ffe2e790978679",
+    "scripts/sand/brushes/brush_preview_view.gd": "7ad3096626b81c6b831ef56188c1343b3f56c2f1e81e8667343b3829be7aad24",
+    "assets/test1_beach/test1_front_foam_sparse_mesh.tres": "f343b5354ad4b18da405bd538d79e021112f58b39d129f307d248a13261f7b1b",
+    "tests/visual_water_alignment/prototypes/reference_front_lip_patch_mesh.tres": "c1934c87582ebb73c83c1f8bc81c05c5cdedca5dbfd8675948ff4358831c9179",
+    "tests/visual_water_alignment/prototypes/reference_front_lip_branch_mesh.tres": "c23c6099ab61b7dc4a56330c2ad8c83e856fcd1abcb60b83f3f36fa9cb2ef7ed",
+    "tests/visual_water_alignment/prototypes/reference_front_lip_row_mesh.tres": "54609c8270325c9efce2cf2f823a29d33448f2ce80a6f1e2800ee3a7689d8ae1",
+    "tests/visual_water_alignment/prototypes/reference_crest_continuous_lip.gdshader": "98b4def2f197b66791c5e12ace5f37a342dc3d1c5bea6f48f02b78d7946d3b11",
+    "scripts/sand/brushes/brush_tool_panel.gd": "c3e7d0920ab3a005ab981feb1e3f1f7a630bb9ee1253c35f9e3dfd9f5358b9e1",
+    "scripts/beach/scene_switch_panel.gd": "4f776a94af9628a1e06fa064fdf201ffc5b23084a6ba5d5bffbf87b7da4d28dd",
+    "scripts/beach/unified_scene_routes.gd": "8b554be029c1948a4c741bbdc491aa0c51a8d768e7e8274dce7c59de44d8f32f",
+    "scenes/unified_edit/playable/test1_geometry.tscn": "51c2fcc0a334072b4cd5712f420fabaeb195e26d4e5a8673d41682ae3e4351b7",
+    "assets/unified_edit/presentation/test1_geometry.json": "bea41e3403ead5855af600aad9afceb70a5afe8e83add66eda1fb681e16c2bf4",
+    "scripts/beach/test1_geometry_entry.gd": "faa8715add9cb617655d2b890bd57768098bdef1f4d152844297e988639b39be",
+    "assets/test1_geometry/sand_sides.res": "a38859835f41bca1c2f7a7b37c12cdc4c666ea6338a852f295ab673839361639",
+    "assets/test1_geometry/visible_grid.res": "ee77523656cbf756df6e88f03a4c8839c8a256a03459b8f5236f174415a42ed0",
+    "scenes/playable/test1_geometry.tscn": "51c2fcc0a334072b4cd5712f420fabaeb195e26d4e5a8673d41682ae3e4351b7",
+    "scenes/components/wave_settings.tscn": "a1d19d1e3730b673b1aa46d3414bb57ae6a29929ab17d487431cf8cff9a916fd",
+    "scripts/beach/unified_performance_panel.gd": "f5c9c835358f0434174147e9eb65a444fa39d7611bafb35cb0fd35d7879b2935",
+    "scenes/unified_edit/presentation/test1_geometry.tscn": "1e9a97141326a967c053c48f4990a577d2f3860648814b6cd4deed75b5f0da6a",
+    "assets/test1_geometry/sand_sides.gdshader": "0e5a93f7918069b224e28818970bee1e3469649a6cdf0de5acb66afbddcae0f5",
+    "assets/ui/main_explicit_font.tres": "43ae81002bbfa8d4eaf0b07d1ef453a7797d784e016965b9416b5da090be3b3b",
+    "scripts/visual/brush_indicator.gd": "a177998adf7200816013d274686d6c290100a9c9a88d9dcede3b9917b9b72be4",
+    "assets/water_material_natural_candidate/rdc_caustic_1105_mipped.res": "2a80438ddc3a43ab3c335ed4f6412c3f0a6a0340f825030bf00eb537e20c7f25",
+    "scripts/beach/free_camera.gd": "dfb54c3027f020b292c9e52327e6d8de6734b6fe9bed85fb19938fe70b731329",
+    "assets/unified_edit/presentation/test1_geometry.variant": "150e9087b0fe41581146784a5dfbc319b3bc0b027a8a9252d0d1b1de7ed3c7a8",
+    "tests/visual_water_alignment/prototypes/water_render_staging_v8.json": "82c54211c0d3e9e852e69e218f210af8787ca169cf1a580c9c3e97ae34be71c3",
+    "tests/visual_water_alignment/prototypes/water_render_staging_v7.json": "a7f6460d6b0b8951a38191bf9f757fe7fadb18054b0d73e4cbb8479db8ff30aa",
+    "tests/visual_water_alignment/prototypes/water_render_staging_v6.json": "688444b36050672e5bba368586c68171a83e955917e96d0ea78511e2e25d3b87",
+    "tests/visual_water_alignment/prototypes/water_render_staging_v5.json": "7c6597708ec44b7be8ee0cc40aeda7c1c3eeb1ac1e828e13f42abc7f59164b88",
+    "tests/visual_water_alignment/prototypes/water_render_staging_v4.json": "835c79882fad39f8a9ba965f8fb5dbbaa54fd46b13e3df97ec65306aa40a4ef7",
+    "tests/visual_water_alignment/prototypes/water_render_staging_v3.json": "54432e93af6d648d3a016b62b77958f9ef32f3fec440ef60b4e619752c3ae486",
+    "tests/visual_water_alignment/prototypes/water_render_staging_v2.json": "64dd02a3eeeec370b3982dedd30f91e35430ae70bd4dfaf6384ae463fe7d5095",
+    "tests/visual_water_alignment/prototypes/visual_foam_step_before_bed_history.glsl": "58b0367edf351d0f8c88a324ae9fdfed770fa2d948be77c34211dabe8f3457f3",
+    "tests/visual_water_alignment/prototypes/shore_contact_overlay_entry.gd": "ff16e7470da146664cab08e87b2e207c7320d0107e874d70834d3d907453f748",
+    "tests/visual_water_alignment/prototypes/reference_water_unified_curl.gdshader": "9674f04a83dd288a475b986c055d7ee6d6635512192e509cc99ae2771fe29c5e",
+    "tests/visual_water_alignment/prototypes/reference_water_shore_project.gdshader": "0220aa9f8b11a39b55bc87c5b59ffd1df35bd42fdc25241add9bfe4d9cb59d50",
+    "tests/visual_water_alignment/prototypes/reference_water_rise_crest.gdshader": "80b2c012cc15a83af44b2a6838bcf414d8aa503a9bdad1df0366c6977eec516b",
+    "tests/visual_water_alignment/prototypes/reference_water_integrated_fold.gdshader": "b20f24953d8fe341d381aa4a74611bd638e271394847a134cb6c2f4c5619ab29",
+    "tests/visual_water_alignment/prototypes/reference_water_front_profile.gdshader": "2e30cd22318b9d28b7c4c40502626d455fde05dceb4b908f74cb02df58bb5adb",
+    "tests/visual_water_alignment/prototypes/reference_water_front_foam.gdshader": "1f1687bf5449fc76dbd0ba5e003e232f003b88a6060e49f0c3aeeb9020e2227c",
+    "tests/visual_water_alignment/prototypes/reference_water_front_cut.gdshader": "b11d41f20686d24aea7f732bfb799d8dabdcd0c33c9a8ef4ea4de46524d940a4",
+    "tests/visual_water_alignment/prototypes/reference_water_foam_porous.gdshader": "8c662d508823ce37841e23e65868ad2e974998ec348b0c158886d8aa0eed2b70",
+    "tests/visual_water_alignment/prototypes/reference_water_foam_overlay.gdshader": "592f1c60636324fd05e1512582fc6b18238f7fed8ef5b75cddd28194d017d9e3",
+    "tests/visual_water_alignment/prototypes/reference_water_depthwrite.gdshader": "2142009976ff652bcab9ffd76d9bb2af38497148a55adcf1e1d0484d53fc960a",
+    "tests/visual_water_alignment/prototypes/reference_water_depthprepass.gdshader": "3e1ebc401e45833800c8d218b25213e8a8471093be5b41c8eca2739b68c60a62",
+    "tests/visual_water_alignment/prototypes/reference_shore_contact_overlay.gdshader": "f9c2a6f778a3d75328fa960dad0d7787e02aae5e4c66fd486e81d23ad57143ec",
+    "tests/visual_water_alignment/prototypes/reference_local_front_movie_entry.gd": "b4e672c1f9ba05786acd4e8ae15790a393f4905f6c0c05c9672caab26b111d2e",
+    "tests/visual_water_alignment/prototypes/reference_front_foam_dense_mesh.tres": "42310f9ee1aa11b1b82dd7ad163f6f6cf88331eecf1dce214920966359731adb",
+    "tests/visual_water_alignment/prototypes/probe_worker_state.gd": "d9d7a37bf846ccaaeb56854203a9e5af1d8557097f97ed089efe41511ef93e62",
+    "scenes/components/water_visual/reference_coupled.tscn": "0fc8b4d2a7fc8b213960b79d82008ef6f4c7a663e909549d665bffd33009396e",
+    "scenes/components/water_visual/reference_foreground_occluders.tscn": "e0fd715fc43d6a759ef4eca3d77a35046b65c947654c474050e7d2e73af0bcca",
+    "scenes/components/water_visual/reference_front_foam_dense.tscn": "bd8c12d5c02aacebebafc7e397a477f87382126784b40e015fff48724a6be2e7",
+    "scenes/components/water_visual/reference_front_lips.tscn": "71dd667685df0833c58536b0ef81b74558698a74de52ea80d94c4cf6378906c6",
+    "scenes/gpu_water_preview.tscn": "d9e34df4fd869fba098eb883a8623c52d2960520a59204ec232c4af7f006c251",
+    "scenes/editor_scene_preview.tscn": "8bc4c9e55a34171c21566079f3bbb765a2127b2083e8b4315711a44fd94f3be0",
+    "scenes/water_preview_mesh.tscn": "21a0c4be933f29fd9e7aac65e5a4795d1a466e96b99d2c022eb21c0ec281be8e",
+    "shaders/visual/editor_water_preview.gdshader": "7cbf3f7a678a75e6573ac4cc7c3e27e537965acfa55add8f959b8343d1de8022",
+    "scenes/terrain_preview_mesh.tscn": "29cfba0b5179dd6d4f285fa240478ece983e459d76da8dc362f4e5536c01db33",
+    "scripts/visual/scene_preview_controller.gd": "51ca5b8aecfbc315e5808dcc51262428c775c772099b115c0c677b5408511a93",
+    "scenes/brush_indicator.tscn": "e9856acb89eae8eb2b511b93758cde65f8cff3688fe9c13a38c058f26f8d49a8",
+    "scenes/gpu_collision_proxy.tscn": "4dc48e7f01848866ddf990fdf0262b326835b7333fb01a136bfdaf107acdf8ce",
+    "shaders/visual/gpu_water.gdshader": "c8dd858f563d340dd1f5ebb9925f48e71eeba1fa1f649ec38628b7b5ac53c93a",
+    "shaders/visual/gpu_terrain.gdshader": "20b5b3d8752e712997a14400befc9b2d5035f158307c5dbf0d2dcd778ff001ee",
+    "scripts/demo/gpu_water_preview.gd": "c9edbd1f31ea076b0c74b5299f8a764c119367dd35c720b48e097e25ba563bb0",
+    "shaders/visual/gpu_sand_coupled_fast.gdshader": "86fafa25170e3fe45665562fa06d092a125fa616aa958e62dcc09949a378ceca",
+    "scripts/scenarios/sand_visual_fixture.gd": "96cb265467869f245e89e41906399e8f72160a883f273d566796fe4e2dbc8bf3",
+    "scripts/scenarios/water_visual_fixture.gd": "4d7d718a8644e62f20d0e1f979bbb81b6d52a5985e78dc05c1ba38e1281eaf8e",
+    "tests/visual_water_alignment/prototypes/probe_v8_visible_foam_timeline.gd": "95a65b5c801dc79d6f1df142b9bd2aa29e1a4347a7335768042a3763efa45006",
+    "scenes/water_render_coupled_v8_preview.tscn": "561e5bfc35784cac2ce048296ede748535968e881d78d65300aff49c94e56fec",
+    "scenes/water_render_coupled_rock_reflection_candidate.tscn": "56622a93b0732139c7e3d366976dcbb11ff813f34261cab4e395434e2406445d",
+    "scenes/water_render_coupled_v7_preview.tscn": "c306db4b4b3da24cbb954dafa3967d658a5c287bdf2781e6a8d3188564b626fa",
+    "scenes/water_render_coupled_continuous.tscn": "8ba013fa1a40b4ea08432b911668f2f895241c9cf5b2d72c649d151f21a8fe5f",
+    "scenes/water_render_coupled.tscn": "4169a5fe18d6fbebde61349e8fbb812f8e119673749d1d80f1dc4be3c0763b51",
+    "tests/visual_water_alignment/prototypes/probe_v8_foam_peak.gd": "309f6639d09b0ead5d0dc8ad051f6c75df3cfa0485c2da183365111bc0f09020",
+    "tests/visual_water_alignment/prototypes/probe_v7_visible_foam_timeline.gd": "2aaa385e1a364744da95e54f14b02d6a70c279aea98a96ce00cc73e5e8eb4935",
+    "tests/visual_water_alignment/prototypes/probe_v7_rock_reflection.gd": "ad8dfb1404050bad2d47900c83107991760fb903f05de1c5fb6cca58008e6619",
+    "tests/visual_water_alignment/prototypes/probe_staging_profile.gd": "2203e941d630260cef63def9d81c380f1619c6acb530054aa35c24c15432f949",
+    "tests/visual_water_alignment/prototypes/probe_rise_front_bed_drop.gd": "7e3acc3d946a0f8dfe72db53b70dff5f3104e6659de74ed55bd701dc6810831c",
+    "tests/visual_water_alignment/prototypes/probe_reference_pass_timestamps.gd": "73530a0bb58cf6e5527636555d0200b7c9206de1dd4477f7f4015c8de82c5333",
+    "tests/visual_water_alignment/prototypes/probe_local_front_bed_drop.gd": "5c83d84077dcddf326559a0d35c318e5ebe2d54e78df47115793188d8d9c98e1",
+    "tests/visual_water_alignment/prototypes/probe_foam_bed_drop.gd": "4c18915195684635bb5b21d56064c7eddba80f7bef3fdd76061294414d1986a7",
+    "tests/visual_water_alignment/prototypes/probe_eta_normal_direction.gd": "5ffa42d8dac02084ffc4dfe8930b2b1437124298d4b5bb387fa867c5eeef2d85",
+    "tests/visual_water_alignment/prototypes/probe_checkpoint_readback_guard.gd": "16344f6b6cc5993462bdcd59c7fd234d7274586386e8d470ff27e04640731fcf",
+    "tests/visual_water_alignment/prototypes/checkpoint_readback_guard.gd": "8fb48f87f65fcb4e1446be209f89840f68013cac8973c87986d3d406f927875f",
+    "tests/visual_water_alignment/prototypes/generate_front_lip_patch_mesh.gd": "2d71e3ebc9554de991f11c2916f9f6462a7a8b0bdefce47523c073737e270030",
+    "tests/visual_water_alignment/prototypes/generate_front_lip_meshes.gd": "d7f6c9f445536f590d1f2652abc8e93a56901b65585ed9661434d4a81a027419",
+    "tests/visual_water_alignment/prototypes/generate_front_foam_dense_mesh.gd": "395e42d5e20733cf0bdef7115d816c7c40bb983f6d7a68c7fd9be585ce02b908",
+    "tests/visual_water_alignment/prototypes/build_reflection_rock_meshes.gd": "a9b04a2501b207283d4f3eb7abda97747e352a4bca1b9bb26b01acb10804dfe2",
+    "tests/visual_water_alignment/prototypes/analyze_staging_checkpoint.gd": "d366cffa8c5c9f3d2faa8d629eb65192d1bd1f9940bb3839f4e2208e9d889593",
+    "shaders/simulation/test1_water_motion.glsl": "9f167d80fab66457d81b7dd27aaad14a8bbaf0901284e6b8b5a4f876496b45a0",
+    "shaders/simulation/test1_main_display.glsl": "bb6cd5427b3f15a70daa1ace4eca7d58d21ce0f98695de3c86e769c13254d210",
+    "shaders/simulation/scalar_pingpong.glsl": "3ae534a8a661cdf984df699150a978c269683ff2c21effcb4a2e14195f1c6512",
+    "shaders/simulation/edit_validation/water_velocity_reduce.glsl": "d73f86bfc1d13604c50171fa119eea6ed21c6165d79a85f1f477bca163f5d759",
+    "shaders/simulation/edit_validation/water_velocity_apply.glsl": "596f7218795638eb4f780671eed62f2cffecf3ad9ebaf2177fe460927a55f0b7",
+    "shaders/simulation/edit_validation/water_publish.glsl": "92ea11794ce0c1b4dab367dd50a8f4f7887afd3d3485671b7157d18c2606f7f7",
+    "shaders/simulation/edit_validation/water_prepare.glsl": "c22dd62287e8a4fa3fa202cf5af89ecd37882cb5d762f914a231064848bef64a",
+    "shaders/simulation/edit_validation/water_packed_runs.glsl": "a56fc8c05babcf9c82abb1707b324639dc28b4b794a3751d97f62c1bbefcfd98",
+    "shaders/simulation/edit_validation/water_packed_compensated.glsl": "398f720005d05580a73489bb93a79af2aeb3bbac2965dad9244db015d34e3422",
+    "shaders/simulation/edit_validation/water_packed_cached_idle.glsl": "40888083334a7b4bd1b09a6e4f48f9283f3b278d2b0fc56fea2f8e0c5bd9944f",
+    "shaders/simulation/edit_validation/water_merge_receipt.glsl": "28d6d32fb7c87404f7c8d4057104def45ed2998b5dff4561563907cce48d0c65",
+    "shaders/simulation/edit_validation/water_full_wet.glsl": "a7f1786415760e7b9399c11baa2f3d46e4c7d821e7bfb71a983ea1f306fae336",
+    "shaders/simulation/edit_validation/water_displace_compensated_audit.glsl": "5225c8c2b23dddec7c14a6580e544b49c689556a3022e060eaff4847af7e557a",
+    "shaders/simulation/edit_validation/water_displace.glsl": "2cc36d4082d4dfb8234edb8599853278446c59701a5874acafdc87dc41506f5d",
+    "shaders/simulation/edit_validation/water_connected_runs.glsl": "374496b6b992e31c0844fa3bbf0c1c2cf89c4dc72f7b7b253c1fc422ba27fe0e",
+    "shaders/simulation/edit_validation/water_commit.glsl": "3c66875f4c2b2e193a95ab53bfe0072887fffaac9638249381b70cad3484e669",
+    "shaders/simulation/edit_validation/slope_record.glsl": "989b016872974340db663d54b99d1a35559a63c8fe5f141de7d3173e0cda8602",
+    "shaders/simulation/edit_validation/slope_output_record.glsl": "52375b43f0dd48863ccb1ed5af2b025e8d571091dc0fe4af1760767076eb2f12",
+    "shaders/simulation/edit_validation/slope_counter.glsl": "1d9ca25f0b42f8869d4fff2fab60f562a9592470bd9c4eb3b78eca2f639ccefd",
+    "shaders/simulation/edit_validation/shallow_update_diagnostic.glsl": "afa5061db9efe652cb0908e8d1ac23c01b3304f23e3970c4c47136e7ba2c0464",
+    "shaders/simulation/edit_validation/sand_reduce_audit.glsl": "0d1b03b8c8117d49329a64ab5c737923439706aa4e1e2ce4c6ee4e2bf06743d5",
+    "shaders/simulation/edit_validation/sand_reduce.glsl": "a80849d71fee0d2a51d4be7f78fe99d3c274997aa324a7dadd57b83bc98d7211",
+    "shaders/simulation/edit_validation/sand_publish.glsl": "d94074c81e66ad2a0060034c5b95951e472f3ac9903eeef5167a1ec31b17d0fd",
+    "shaders/simulation/edit_validation/sand_prepare.glsl": "5db63768d1c7cf7c5e9c71c3a4f88c04dd714dd7c68fcfdc39dd6d24d7eb822b",
+    "shaders/simulation/edit_validation/sand_commit.glsl": "02f1b912b03d69d28ddf7cf238c28d25ec884f1a20c8c06ba305c73353795a1e",
+    "shaders/simulation/edit_validation/sand_apply.glsl": "ed863879d0a83f150b7932a1575ebea2f3677486c572660fab6ed2bc2d259d3d",
+    "shaders/simulation/edit_validation/precise_slope_relax.glsl": "bba97470ac846db8185ecbd476987a880c9a06ff438c47b6174b04e142a66b6c",
+    "shaders/simulation/brushes/water_velocity.glsl": "8eb603352628990694c6726be12f2243d4ff46993dfb8fadcd851c1ffbf1f784",
+    "shaders/simulation/brushes/water_prepare.glsl": "b83883b3e464978444683a109b99c0acd5fe056098243c0ab3478c692519b65e",
+    "shaders/simulation/brushes/water_merge.glsl": "95b79fb07335f17fe2c1f734afacbc3ef479617dc94057a394df3ca303a8e43f",
+    "shaders/simulation/brushes/water_commit.glsl": "e4ca3b23ee15a49c84861593c5f2fc240025199a3b2bcede0c6728eed82c9ade",
+    "shaders/simulation/brushes/validate.glsl": "7ee33b4d16acaa29baa464844f903d4baf12927999261f1b4a14625363f5b206",
+    "shaders/simulation/brushes/shovel_allocate.glsl": "c22323a34812e73deab3636c55b263d17b745715da1a3c97cf043e56dc0cfc8f",
+    "shaders/simulation/brushes/rollback.glsl": "7a1b409a3cd13ddc817c446b2a56cf9d0c64f674afad5bce9dc6cc1673ca98ff",
+    "shaders/simulation/brushes/reduce.glsl": "7fc831d8009102fe8b0fc9734eef03e7db5b9c17cccfeff261c14984eec2d4fe",
+    "shaders/simulation/brushes/prepare.glsl": "2794b89aee803e86d3f2a3baeee15e58d82b2ac7906bafd477b172053dbde953",
+    "shaders/simulation/brushes/commit.glsl": "9bccb43c473dd835cc28161a0fb65a9231d6be03fb6a211dabfebf89ad16eab2",
+    "shaders/simulation/brushes/begin.glsl": "12126b800654cfbcb6512b1d61a785722808b6b52805e12ae25d0b1f5395e0e5",
+    "scripts/water/reference/shallow_water_solver.gd": "7ca778eb5dd98c8fb6a8c4c6ca804a436bcb607eea49a2852e54d9b2bd4fbdc2",
+    "scripts/visual/water_render_uniform_snapshot.gd": "fd5327458ee51ac092979c36cc2d94125a83af8bbcd3be3abafdbaf44cf772c0",
+    "scripts/visual/test1_water_motion_trial.gd": "f1028ff065a6f1f7a0265cd420826292f65f47d21418373b14617a8249acdeac",
+    "scripts/visual/test1_main_presentation.gd": "b4dde405588be136d8a230bb33e650cbbb70a8740252fd8707d4475d3974b421",
+    "assets/test1_water_motion/capture_aux.rgba32f": "3a19b6641139f883763961892bc94628d05259513857213d05dcf9954a44b7db",
+    "scripts/visual/test1_beach_hybrid_trial_entry.gd": "53eb4e34fe47aac1cc009a6b280ad0dda07ed4777f2a800bd4c1af6c943b3ba2",
+    "scripts/visual/test1_beach_edit_worker_entry.gd": "c9b4a4d15b9fe1df97f653df9330a08ccf54312fa275f9d505873f850f9c0582",
+    "scripts/visual/suspended_sand_cloud.gd": "d9a782de8b8dcf6f2783c84787fbfbed68d4d1e0e56a6f91c2a9b1f740891325",
+    "scripts/visual/sand_display_sampler.gd": "8f33423f0145c7e18957ae5983684a6133073ef3bd0f4ac3d3fb932c27e50ff1",
+    "scripts/visual/bed_display_sampler.gd": "8aa3add12d5b74342464fc5d46d14bddc62354723bdcbc7ae86ab8a8b1fb3f32",
+    "scripts/simulation/unified_edit/presentation.gd": "56705e5023ed004bb6400f76918999c231a87e66f681c12cf75f3077a97ed260",
+    "scripts/simulation/gpu_scalar_pingpong.gd": "e50431ba680e073d35dd5ea5fb7a6dc4595952d76d61580653f99c4aa05f6110",
+    "scripts/simulation/edit_validation/water_displacement_reference.gd": "9a159190c93113482c7880cd45cb06fb0448269fbf9c316b6203d30a1655b361",
+    "scripts/simulation/edit_validation/traced_material_coupler.gd": "c1e2c4fe9f2572444d4f63c0e14e7429ca82d26229deb9a69ca1a290b80eac7e",
+    "scripts/simulation/edit_validation/split_material_coupler.gd": "cd87f350c76226f4c6e9128f374e994ebbc16bf62699834f21a2c9c45a52f7f5",
+    "scripts/simulation/edit_validation/slope_record_coupler.gd": "ce43fb94b5aedcbabee84dd008c6e25def8716ee28ad785713316c59f2bda8da",
+    "scripts/simulation/edit_validation/precise_material_coupler.gd": "cd8d7cdb8266401b75393c17153fed064ed3d3a3caea91bedebd90de391fcc5e",
+    "scripts/simulation/edit_validation/ordered_material_coupler.gd": "457da25beca5220c2fe3ed0e6efc5b6e5d564e99b1b718b8fb3545e445b9a712",
+    "scripts/simulation/edit_validation/material_stage_trace.gd": "938f16fcdebb217869ec16acd04861a2b257ff8ff198034e6ca472596ceda124",
+    "scripts/simulation/edit_validation/beach_sand_copy_trace.gd": "80b5627ca6f9d2576524da89619d0a9e14362ac3a824cceae82a716c89312a48",
+    "scripts/simulation/edit_validation/material_copy_fence.gd": "75af8340b0fbf6543356359d75e31bac1e58225b6805943561597c7c1e7bd827",
+    "scripts/simulation/edit_validation/gpu_water_diagnostic_editor.gd": "db60c7d733f31ed04b197d31002d81b3b9da07b457eb8148debee0416682f808",
+    "scripts/simulation/edit_validation/gpu_redo_codec.gd": "d3b7c2481fa2df5be712f143dbaa6a99c44bae3c9c0cb2b63410241d240663b9",
+    "scripts/simulation/edit_validation/gpu_edit_history.gd": "37cd8136f38498a7931119ebc99d42396765620a802c55671423d4fd8e2e3163",
+    "scripts/simulation/edit_validation/frame_pipeline/select.glsl": "b9fd2ff6aeb24836cf809c28382ccd6356b7061d033cc91f5d8ea75e3f009acb",
+    "scripts/simulation/edit_validation/frame_pipeline/capture.glsl": "861e5463638fbead36e918884656f454b742608c464df2940bbbf40250a32fce",
+    "scripts/simulation/edit_validation/frame_pipeline/async_tool_select.glsl": "ae6be9e16289e1a2766a0448c41640192833a6bec23a0b90420ae06766168059",
+    "scripts/simulation/edit_validation/frame_pipeline/async_tool_capture.glsl": "07b77d4c0cfea25e0dbc80bc8e5fee98876885d8d7aef92182bb975756b71630",
+    "scripts/simulation/edit_validation/frame_pipeline/async_smooth.glsl": "787d664ce2a6762bc9b4d526357d6d2f63241a8e8ff33e6e723abf2a4c95320a",
+    "scripts/simulation/edit_validation/frame_pipeline/async_select.glsl": "95436c3861967f9a67c17eca18563fb26a48de613878784d9bde286ff8c35043",
+    "scripts/simulation/edit_validation/frame_pipeline/async_gravel_normalize.glsl": "19ad04695cb760264e6080bb46c9b00d4b07ff5cb6ebaa124458566c5e4d17a0",
+    "scripts/simulation/edit_validation/frame_pipeline/async_cfl_decide.glsl": "e7dfb3973a447415ddca4a0d6f19ad496dc5499d025016d804d9d4ee96a6c6b6",
+    "scripts/simulation/edit_validation/frame_pipeline/async_capture.glsl": "9cf9a6f9caed1835e7adce9ee76f1b3331ce613e295fe483a77dc45e6a4db780",
+    "scripts/simulation/edit_validation/collision_proxy.gd": "9b8cf79e4b1722c97cf5e2ef5fdff303ae51906d872a5babba7c03f3a322b6a8",
+    "scripts/simulation/edit_validation/beach_gpu_edit_history.gd": "8878f88edb82d7e34be94577e5014691fb71aaefa00be9525e0eed1b223e5779",
+    "scripts/beach/performance_panel.gd": "a909de8156725999f0c0db29cddb3fb0223ad02c2faf5d0b273f677826630d8d",
+    "scenes/water_material_natural_candidate/style_height_coupled.tscn": "ed9dad0c2adb3b4bdcb258c58e772929ab1faccefefa5aaf44a1e0bcc6ed7640",
+    "assets/water_material_natural_candidate/style_height.json": "369ac5a9657c0f9a0d818b0f3ac4932c74dc5f3698e9595686d0d6b5fc464eb6",
+    "assets/water_material_natural_candidate/base_v8_height_style.json": "48a13d23349cf2171ef6c619616f32e182eade24c5451ec8340d6dc40c25428e",
+    "assets/water_material_natural_candidate/water_height.gdshader": "f7f9108fde01ee288349a2fdde9d57a003e457b25fc7cbea666f484d58ba151d",
+    "assets/water_material_natural_candidate/reflection_height.json": "8cd74aa24c91cce940f0111ffd91fc108557d5c33535a286f9b2349bad137954",
+    "assets/water_material_natural_candidate/base_v8_height.json": "56e1e56ab134d28412772b64d4e731f8a2a79cdbc8cdf9ef42682643b3784b4a",
+    "assets/water_material_natural_candidate/foam_height_derived.json": "d077f12e3c4a46e999056d61ca199e7b04dcf2329223d4420b2c670c3eee2bf6",
+    "assets/water_material_natural_candidate/contact_height_geometry.json": "82a3fa2e20eb8805273914df04893f7e4e0c1004f21948e5bedac62cbc534fae",
+    "scenes/legacy/sandcastle_test1_beach_coupled_pre_natural.tscn": "0e322de1f462221f10e89ade7d0e887bd57f755065bb32e62034a3c534533570",
+    "assets/test1_beach/test1_front_foam_splats.gdshader": "45a43cf1ea48a0913e2a06012f1eef90bac837ecc610319cab5718505075f03b",
+    "scenes/water_material_natural_candidate/style_compiled_v1_coupled.tscn": "14ceb68148144fc0d74b551e5d49b1fcf1fd2fa630fd63717d870f52a547c795",
+    "assets/water_material_natural_candidate/compiled_v1_bundle.json": "19b665f359c7a94e32989693b4bc625990f14eb9a87b5789e826e8fb673dbafe",
+    "assets/water_material_natural_candidate/bed_geometry_specialized_index.json": "3e86183671d6e17f9bce8d72beabe7e713219bff32c44e69acde3013682cdf44",
+    "assets/water_material_natural_candidate/bed_geometry_specialized.gdshader": "77bd0939f5523e1cacb1461f13cc4db647f6941c0f8832ae5940779ce32fdc5f",
+    "assets/water_material_natural_candidate/water_route_full_index.json": "eddf1c27d11579817b320cab44b589c503dd4b835ac2d4a723e0fb610dc44186",
+    "assets/water_material_natural_candidate/water_route_specialized.gdshader": "7a225ea82c286b8d8be53f116a96e701b2773a7da25b6a8579ba6a7359789b2d",
+    "assets/water_material_natural_candidate/style_compiled_v1.json": "a072e614ef2b5c349f4580819150af1eab2191d5842dbf2364d07d75bc74480e",
+    "assets/water_material_natural_candidate/base_v8_compiled_v1_style.json": "68397de6694ecf9f009bd7f6d335b1d8a02303613b1081f3a8f197de5b5a769c",
+    "assets/water_material_natural_candidate/reflection_compiled_v1.json": "7a59fd182045d7d3971c18e64160594b7980a7f31c652ecf0a1ff68d35619906",
+    "assets/water_material_natural_candidate/base_v8_compiled_v1.json": "a3dafdfdde5f0977c3842d7a54f8ecfcec29b5a83b95b323c9b79403f5376cec",
+    "assets/water_material_natural_candidate/foam_compiled_v1_derived.json": "758b1e4d78eb0167ee72e3df6d881c9074f97e22843f8b7414fef672714beec1",
+    "assets/water_material_natural_candidate/contact_compiled_v1_geometry.json": "972b918dfb30c973ca7fbf91087d184b93f89e90686dbae7546d5c4db977e01f",
+    "scenes/water_material_natural_candidate/reference_v1_coupled.tscn": "1f28006b481d309b7ed5aa566e413615631dcf0d16a1bca11c5adec028ad2a60",
+    "assets/water_material_natural_candidate/reference_v1_bundle.json": "4d87818a5f0258e6de578a63d6605dc5fe78596c67f43a07f471cdc29337c006",
+    "assets/water_material_natural_candidate/style_reference_v1.json": "19980a7955633e155f5cf31d2c8d5a2d9c1cafc486d32c5e6e65ca630886315b",
+    "scenes/water_material_natural_candidate/rdc_v1_coupled.tscn": "4aafc7e046b9cbe80aead54a4588a75d3219a6a07166c565ad06432b570952b7",
+    "assets/water_material_natural_candidate/rdc_bundle_v1.json": "13257a0fed0149b461e82e2ecaa18fa2814b8a50ccddd2dec42e87394d2bf267",
+    "assets/water_material_natural_candidate/rdc_bed_index.json": "71ae11192caa6e0dbae951506fb31d20e5079561e4373f8a2807a13e14035fc6",
+    "assets/water_material_natural_candidate/rdc_water_index.json": "d0ba20a7f2d1277b233852465757e07d481f2ee53b40779cdbf9f44ff78fc304",
+    "assets/water_material_natural_candidate/rdc_style_v1.json": "dae5eebb564ac2d853a7daae58bd1c93261d83239a3df1eeeeb13fdab2e79fd1",
+    "assets/water_material_natural_candidate/rdc_material_v1.json": "e8afe1767c48d0daf8b27470b98f857390fd458a3ea88733430ee78c595b48c2",
+    "assets/water_material_natural_candidate/rdc_style_base.json": "35dee9bed6536e6dd5e672bac6205bb436acd2fcb429a66a4da82c7155a4580a",
+    "assets/water_material_natural_candidate/rdc_reflection.json": "f399f59b423167abb3e8f9d23daa481f99fded27c7af3fec05a5feea5345c6ca",
+    "assets/water_material_natural_candidate/rdc_base.json": "1f59f38443267c9a6d8ab304ee73d065fe05a67f4cb714037a026165d3ab85ec",
+    "assets/water_material_natural_candidate/rdc_foam.json": "54af20fba3b92a02024c499f155a1bd07b9b267a609e2d85b9406ddbf0de2951",
+    "assets/water_material_natural_candidate/rdc_contact_geometry.json": "e1e47b7127eb05d2af6a7639e00a8e815a6cdd71ca9c36eac3d06a86ed12d31f",
+    "scenes/shape_brushes/brush_playable_candidate.tscn": "6f0b2fa4b73cee0d48212939fb87f06dce0f308fa3816ba326f708924f309f24",
+    "scenes/playable/test1_capture.tscn": "622225dbdcfc71773465f3d2dc7095251d65cd11e1f3f3a70e101b74d17c1e79",
+    "assets/unified_edit/presentation/test1_capture.json": "a982a980d16200c36dc6abdb42cf29f92bc64fc77ab987f3c0f606e1878de655",
+    "assets/unified_edit/presentation/test1_capture.variant": "104ac9aca3b2a31ac56f2d44790b2f6c27573884ebbdbf6832069da52bc823dd",
+    "scenes/unified_edit/presentation/test1_capture.tscn": "1e6b6de9cf35537d8948e415f09da1e0497034053b256b64d9ce7849f7076dca",
+    "scenes/playable/test1_backwash.tscn": "83af3768fef9af066803c477606ad89069143a3c49a8d0c40e8ac008da71b5b7",
+    "assets/unified_edit/presentation/test1_backwash.json": "ba21cf39a961b6ac75ec940adb2d79fa5908a9837c81d1153237f0d385b3bdd2",
+    "assets/unified_edit/presentation/test1_backwash.variant": "c9f8213317f629fa333248b8e1c5aee3db1570e6826ea328ac5a8e9e485fb054",
+    "scenes/unified_edit/presentation/test1_backwash.tscn": "86833adaaf47d053744e5d942402cccfeaf6bfd884210b56a1469d582a9c4611",
+    "scenes/components/water_boundary_sides.tscn": "613f98726654fb43bbd47ecea32e085806a1eddfc5747dc558856f2495011524",
+    "scenes/components/ui_visibility.tscn": "94bd334f6d45eb946de5a5600bc62c284b75ba22cfe12d1490c15fe66983f6f7",
+    "scenes/components/suspended_sand_cloud.tscn": "8db905e01323a0201403f080588162259498b9b960c266fcf634326cd74db3af",
+    "scenes/components/scene_switch_panel.tscn": "17b2b2d0d76571b100d3fce92f3c118bd0089ed63d267940681054c85f278200",
+    "scenes/components/gravel_layer.tscn": "f88adad1987092235135af44f8dc13bec66d5aa1078a21095d494cf1d957d1b6",
+    "assets/gravel/stone_instances.tres": "2aa19583f13014083bfc9440cac14aaaf6a36632cfad5051929829c7b8411043",
+    "scenes/components/brushes/brush_tool_panel.tscn": "622bfca880ccebba611a8653a08cd5c874d8cde0d7d419cfa281d2e1d8313793",
+    "scenes/components/brushes/brush_preview.tscn": "71416823361c77badf81fca882aa1423607fa314ee473147cf4dcfd1c3531c18",
+    "scenes/approx_gpu_edit.tscn": "fd3abe86c3c9a760b15549ce28e80fec18d13d43a1c551008591ecda3e60e926",
+    "assets/approx_gpu_edit/grid_mesh.res": "53c51966168a5105215eeec743dbf0eabb9e47a31d8276d7465dc4dfae24b23a",
+    "assets/approx_gpu_edit/trial_profile.tres": "7d7bbc2ce5ce8a2e4f0a5dfcfe07a799631677a9dc6610d63a8402e530881981",
+    "scripts/experiments/approx_gpu_edit/trial_profile.gd": "73c7c7fba408ee73967ae4c746ec6b64597af7d1e17380b6008b4a815b280890",
+    "scripts/experiments/approx_gpu_edit/trial_entry.gd": "20c54cb09a140cdd626db154d8c141caec30bb41e7ae76e492e4f89542f50ce2",
+    "scripts/experiments/approx_gpu_edit/exact_trial_solver.gd": "c8f7073f16a86b13070759c26f625a271c5c5d644eefbbfb6440a68bca42c646",
+    "scripts/experiments/approx_gpu_edit/exact_dispatch_adapter.gd": "f3495410d6d2adc54ff1e4e8e066f36935c57c53f30169bbd614d8ddf3a53dc4",
+    "shaders/experiments/approx_gpu_edit/brush.glsl": "e5368847c767879571c4f1166029a8b9059766d7c8a788facb1d014ab0b0d81b",
+    "scripts/experiments/approx_gpu_edit/trial_solver.gd": "cfd46dc0fa8866befd4fba3692d27e9a9d6486c79566fa71f0d5c47fadc530d6",
+    "scripts/experiments/approx_gpu_edit/trial_lifecycle.gd": "5206be916229c98d9ef012bd5ac24d7ae408a723d9c5b8d311d732a3483d5937",
+    "assets/water_material_natural_candidate/water_route_specialized_index.json": "878f4e0ef6b0919d2867b2a41bfad484fd4c06e37f31c29c4dbfb97d9a0a604a",
+    "assets/water_material_natural_candidate/water_reflection_srgb_probe.gdshader": "af3f018b6b1edff78e271d09c2cf1064a5cfdbc9286b254187650ff18fb7f97f",
+    "assets/water_material_natural_candidate/water_reflection_specialized_index.json": "9ef0935efeed47ba8def800eadf2b62e0cfb8f6f61a40ce9370f4ee5ffcb7446",
+    "assets/water_material_natural_candidate/water_reflection_specialized.gdshader": "69ffc455f6f8c384c6c5d6c61ee1222b979eb0500260d14c530808e072658f29",
+    "assets/water_material_natural_candidate/water_reflection_flip_y_probe.gdshader": "e8eb22f171fc3049788dc6e42e1056f752fea8cc514e01b7cd2a203c4f18b497",
+    "assets/water_material_natural_candidate/water_path_diagnostic.gdshader": "f6e345959a4d466627bad923d732d9404ff4e37be35efb832ecb12ac3b87db57",
+    "assets/water_material_natural_candidate/water_macro_generation.json": "28694442bf4b34b827a75b032abb80c6c1406902e73621b20e898f85fc5515ae",
+    "assets/water_material_natural_candidate/water_macro.gdshader": "530ccf9ef93d1b85cfa61b4b406c7a5d4a0fd94b1efe321aad1f44ce59526e78",
+    "assets/water_material_natural_candidate/water_geometry_specialized_index.json": "69d23d0fad4b860d1ed7f19d7f6ff25f09bddb757ee722b185de1b3139bec015",
+    "assets/water_material_natural_candidate/water_geometry_specialized.gdshader": "eb75e87315bf72fcf42d5911b85540dc63e556e23f02bd441f7ea2ad3dabd59f",
+    "assets/water_material_natural_candidate/water_engine_light_specialized.gdshader": "f17a029bc8486d97f48efe65ede283a226b07d2934b3ab3c9d65574f94f523b8",
+    "assets/water_material_natural_candidate/water_engine_light_packed.gdshader": "832821660f3914169133bcb9c988cdfa7bd40ca9f57520bdd4602355a0dff8dd",
+    "assets/water_material_natural_candidate/water_engine_light_no_standard_specular.gdshader": "5494ae1ad94bcffab292345c744725b5d7730078bcc306b3f979f1480788ffc4",
+    "assets/water_material_natural_candidate/water_engine_light.gdshader": "6a4db171e15a19a5b90f30b5e29497c7b1625fd4a6241b59a380a6a849397def",
+    "assets/water_material_natural_candidate/water_debug_specialized_index.json": "f0106d1e926f8993bc90bae59c6ddc777d8b68fa82ecaba1dd9e3ab566777583",
+    "assets/water_material_natural_candidate/water_debug_specialized.gdshader": "bd239c50be0177bbb5a16c39683d39bd87f70a7112e21240d305ac48071773c7",
+    "assets/water_material_natural_candidate/style_worker_generation.json": "fb31083d7ec017db9dba3fa4317d913d64e141e2bd5a16afdadd2a763ec4583a",
+    "assets/water_material_natural_candidate/style_height_baseline.json": "c292a4938efd9c96082e809c407b343648eaa2a8954bd6935c60bcd834fdaf97",
+    "assets/water_material_natural_candidate/style_combination.json": "d4040501738db2bd9e38cbde384056e663522162bb0cfda6be2563c222f05a02",
+    "assets/water_material_natural_candidate/reflection_corrected.json": "4945b9bfb2d4c32d61c3e9379cb0373115547202088fc3b80bd7128cb233d4d3",
+    "assets/water_material_natural_candidate/rdc_generation.json": "6a32000319d9e38651f2477199ae3cf2e34ede4c62a3aefc911330616afdc430",
+    "assets/water_material_natural_candidate/rdc_caustic_manifest.json": "eb1dd9cf1e2e795675478ed93abf57d621a3964f69aed8ee63a988f175f4a942",
+    "assets/water_material_natural_candidate/optics_unrefracted.json": "5a3f4a95a956afebbb4d23b80c06defd22349c18366ff9dfc1e95b506bb8d2df",
+    "assets/water_material_natural_candidate/optics_reconstructed.json": "90b88f3a76393ffba92f6e68fa464f7aa2e7d2eb1614453c598ce3b1e67dc079",
+    "assets/water_material_natural_candidate/off.json": "1fb7bed1dc04733a53018dc211b2aa844b410ca4a0b99e86b3a48b19187f1e05",
+    "assets/water_material_natural_candidate/lighting_proxy.json": "5907acd9407db28996ce1dbb59ab063ef0cecfe7c7711929a719e9c61671d053",
+    "assets/water_material_natural_candidate/shadow_grid257.res": "94fc7f90a69a2320f2444b9252a4c7c9b51ecc9e8db0dc69a7b7fc14ca3d9047",
+    "assets/water_material_natural_candidate/base_v8_engine_light.json": "d265a1a9804f1d842a23753d5f24ea75fdd03a1987f1120bd15d91d359b6eb0b",
+    "assets/water_material_natural_candidate/lighting_packed.json": "8c6600fe8f9cffa8770a5ca4e5d1ae779f491f00913643f3f3620fb4ed70da59",
+    "assets/water_material_natural_candidate/base_v8_engine_packed.json": "b8c4df259d8ea26dec6fe8026619980130de9cc2c2008c5530466da891617884",
+    "assets/water_material_natural_candidate/lighting_engine.json": "51025aa2d19a0b91637c7097c2072553c0bcce9fb0e51ae7757e2b93df227886",
+    "assets/water_material_natural_candidate/legacy_sine.json": "089ba7922f5e544b6c8b97e605fe5ebe0b3a9d88df9f70ff9594530a6f19d3ad",
+    "assets/water_material_natural_candidate/height_normal_generation.json": "0e48e807dedd9bbfc0262ba89e242a2f645828bd3ee32c840858c85859603e63",
+    "assets/water_material_natural_candidate/foam_shared_surface.json": "43f8aa947efd28fc9bd5ef6d703dcdbd828ebb6a91a3e4b77922e281f71a9e9d",
+    "assets/water_material_natural_candidate/contact_shared.gdshader": "88f53f8cc33f0bf12b629b9352c541a063150189f6553359e6649bddce246c18",
+    "assets/water_material_natural_candidate/foam_shape_baseline.json": "bcf2af3795055c7db5e457046ff88bac9746827bae4d2097603c2c8ff75f03e9",
+    "assets/water_material_natural_candidate/contact_lazy.gdshader": "d5fc6f57690585e6679ab70e0fc3bbf9a1514f7abb073c657f300ebd00bcd8df",
+    "assets/water_material_natural_candidate/contact_geometry_specialized_index.json": "6de00091de0c1a20d2d2d2f9a1eb31f5323ef3932e610331f764f48835b86036",
+    "assets/water_material_natural_candidate/contact_geometry_specialized.gdshader": "b51c5b11d063e2832290619262cda9054c4d4c44cda52c135f425bc680b0cdc6",
+    "assets/water_material_natural_candidate/bed_style_generation.json": "a273e658201010a93a34e7cb6c72a877bda587265961cf53a5319a5c63a3e7bd",
+    "assets/water_material_natural_candidate/bed_material_specialized_index.json": "93eee04dc5c67a0c0f918fca4a408875a04058c1220ec58005597220900a8651",
+    "assets/water_material_natural_candidate/bed_material_specialized.gdshader": "c9176f1ed527d7e3851115514acb299aa57d5fb7bda48a835f3b87e210e59261",
+    "assets/test1_beach/test1_front_foam_sparse32_mesh.tres": "2a58ea791c66a7de014178eb6e4c8a4a3e5c567eed37829a9edc22c34fc3e124",
+    "assets/test1_beach/test1_bed_vertex_light_trial.gdshader": "0e8340b6e20e3d5a8380549995610e5a442b04524ff72e50c996b5cb4f9e7366",
+    "assets/test1_beach/test1_bed_lit.gdshader": "5eb82335a471c821cc2c10e9fd2590d979fa06ae62d317fe13574b40a2e7e6a2",
+    "assets/test1_beach/test1_bed_dry_vertex_trial.gdshader": "869e178b39d54edcbfed60c5fdfa34ec749138f2d4d1e6f3d6c657b1227eacc4",
+    "assets/test1_beach/test1_bed_dry_vertex_depth14_trial.gdshader": "185f75135e98faf65025498ae768a36bde484dc8fff6d55ca324c58ed693a534",
+    "assets/test1_beach/test1_bed_dry_overlay_trial.gdshader": "4f17c7b16b5b23928d9bd0298ce33b361eb6ffb27f0e68e8a2b91246efcd5530",
+    "assets/test1_beach/test1_beach_v8_base.json": "d5467a0a792150e52dcd73f9695e44254e686c48aee885bdba1b930590df3e3e",
+    "assets/test1_beach/test1_beach_g03_entry.gd": "44cdd17732e3efe6e4d0189693f1c2c8023886796dbcac39bb2ccf3b4ad2befa",
+    "assets/test1_beach/g05_vertex_light_trial.json": "22d0c4c5177304ff236d2930343fcfb9e913d427602613ec0af0519f81d25c7a",
+    "assets/test1_beach/g05_hybrid_trial.json": "338e577b9d8b1f922847ac84a46ad418f48ba9e6eae91e8e0bc7a829659736ef",
+    "assets/brushes/castle/four_towers_v1.json": "443165267184afe6cde31b705636e78da02ca0ff05ce9d7b84b9f12fe7359008",
+    "assets/brushes/castle/four_towers_preview.json": "1fed13ef4887333574174b468eef21de229c54dc34870891ab7eddec0387c4ff",
+    "tests/shape_brushes/bake_castle_preview.gd": "051a3d12f2632b2a65ec3861746a16877fbbdd772518837d089b55e879251dae",
+    "assets/test1_geometry/source_sand_1024x512.f32": "954e9ce7fa17992cc7c6eb632349d8fae94e7c72eb05f622a2466f848efaeb51",
+    "assets/test1_geometry/initial_state.json": "c48e9885ecb0df42c13c59a32872214ca626a984ae1936f253e92b6717619732",
+    "scenes/unified_edit/playable/test1_backwash.tscn": "83af3768fef9af066803c477606ad89069143a3c49a8d0c40e8ac008da71b5b7",
+    "scenes/unified_edit/playable/test1_capture.tscn": "622225dbdcfc71773465f3d2dc7095251d65cd11e1f3f3a70e101b74d17c1e79",
+    "scenes/unified_edit/playable/main.tscn": "fdc9eeb9c46ae6825e85d7672f759df492c454b343cebb5d493c14917c84dd9c",
+    "scenes/components/floating_props_panel.tscn": "61be2d8fd49b965ee21b0da2d7c167c58a84b746461dcc30eeb21b977632cb53",
+    "scripts/beach/floating_props_panel.gd": "a095db4e55fad1dc78d5f7746830fd632a72d103e76cc23dcf16386e3df2feb4",
+    "scenes/components/floating_props.tscn": "ef7a0f919704405376e2c1241c0fb1fb22d4a83c4d90fb3c1973fb7bf992fcd8",
+    "scripts/props/floating_props_service.gd": "1552a5e386bba23c4723f0f38928431e172857e892aea6d6c5521ef53c0ab08e",
+    "scripts/props/floating_prop_contact.gd": "a377b0ea1b1114b7d8d30cfa68b81e91223f8ac5dfbce5c4958fe6eb241035e1",
+    "scripts/props/floating_prop_profile.gd": "0ac16e7ec8188e6cce91e1cf9adda75c4b6949fab2d1d0bcff3e52afd60f16b6",
+    "scripts/props/floating_prop.gd": "cf046be6914fc9d1a240b64a7630c0b387fc9b0f82670e5c028c25584a8183df",
+    "scenes/props/wood_stick.tscn": "2a8b6f4089b9a354da84ca7f461a4549dfaa07396f44ca295b4d2f594d46b6da",
+    "assets/props/wood_stick_profile.tres": "1a5e2a3e32bfe7f9611500bfdacc6d5edac144d830e57a334815f5cdf90cbf71",
+    "scenes/props/wood_plank.tscn": "6f08f5161d6815c74997ca74ecfe805facce698b7aec26d85e0e4cc975ffbc8f",
+    "assets/props/wood_plank_profile.tres": "a103b604504b8ba8b2558c1d1cb8abfbb18bcb7f10761fb07dfbf1781759cd7d",
+    "scenes/props/bottle.tscn": "4ae799a270b29de188ae4db21ec2a1d849416fe55d564ef934927434a80cb32f",
+    "assets/props/bottle_profile.tres": "6e0b1ec936e7d204ea8bf996386ac022f3e626ce6b38470bd3824f17f9f97158",
+    "assets/unified_edit/default_catalog.tres": "c4d517c1d778f92a560533b1f140f208d1eb035580fa5149f4a6e7597a2ccfd4",
+    "scripts/simulation/unified_edit/player_input.gd": "28f21f04591c576d4712b6200167e2cdc44ac764d04bae2e42365969893bb825",
+    "scripts/simulation/unified_edit/checkpoint_router.gd": "5c907fab6324362d028704d2ee2d0a4e8332d93b7de1b32d401650557f447524",
+    "assets/unified_edit/legacy_source_catalog.variant": "cbac0b2c091c09f3506d0a15723d0ff7cd962104918b8eb3827a44a7b57942ff"
+  },
+  "methods": {
+    "scripts/beach/beach_scene_service.gd::declarations": {
+      "sha256": "81e818d75cd4c19bb8ab98ca21d854f47b6923fef6b5c9cf3b436adc0dfd2bda",
+      "tokens": [
+        "preload("
+      ]
+    },
+    "scripts/beach/beach_scene_service.gd::request_switch": {
+      "sha256": "3cc53612e4f0b86fe930ec1f86ca63a249f29785dfcc78592042c4a4fabc3759",
+      "tokens": [
+        "call_deferred("
+      ]
+    },
+    "scripts/beach/beach_scene_service.gd::_switch": {
+      "sha256": "66cc7e968838d6b2102a740ea887dd83aab7f5381587a58825cc509fe9f04a3e",
+      "tokens": [
+        "load("
+      ]
+    },
+    "scripts/beach/unified_playable_entry.gd::declarations": {
+      "sha256": "d13960dafd389335e3b2c6a62241b89c4f6bc9f18e11bf70a3084decfb0299a8",
+      "tokens": [
+        "new(",
+        "preload("
+      ]
+    },
+    "scripts/beach/unified_playable_entry.gd::_ready": {
+      "sha256": "9997e07c1888f7a7c63d29109a7300e610a3f752d8069588a93554875d29514a",
+      "tokens": [
+        "load("
+      ]
+    },
+    "scripts/props/floating_prop_contact.gd::project_above_support": {
+      "sha256": "eacf26ff7144402eadc4faf2d0b84360b733ca110b591be65a024eb338d5069b",
+      "tokens": [
+        "body_test_motion(",
+        "new("
+      ]
+    },
+    "scripts/props/floating_prop_contact.gd::recovery_plan": {
+      "sha256": "1acf440cb6aedef49b05031063be7a07919576c89a61d18b5ab39f9d549ddb22",
+      "tokens": [
+        "body_test_motion(",
+        "new("
+      ]
+    },
+    "scripts/props/floating_props_service.gd::declarations": {
+      "sha256": "8063032f5045762f963fca19ff30d12f039b9dc46fbd0363c777fdc91b9bfeb8",
+      "tokens": [
+        "preload("
+      ]
+    },
+    "scripts/props/floating_props_service.gd::_apply_forces": {
+      "sha256": "2103afdde1735841283d3aae47984a1ee27910a9212d46cb798786d3cbb0c5d7",
+      "tokens": [
+        "apply_force("
+      ]
+    },
+    "scripts/simulation/unified_edit/api_adapter.gd::declarations": {
+      "sha256": "705952f17a827923d3630aab5f99f38cb94e235c5f3932c0f766b95b00f69e33",
+      "tokens": [
+        "preload("
+      ]
+    },
+    "scripts/simulation/unified_edit/boundary.gd::declarations": {
+      "sha256": "cd038a8fa45b13e381f6b047f895188f686daabac49828125d4af625b64e9016",
+      "tokens": [
+        "preload("
+      ]
+    },
+    "scripts/simulation/unified_edit/cfl_decide.glsl::shader": {
+      "sha256": "8d246db53a1d2b72ae252e68d906b71166b64bc7782244c4f3c6c47757e19e5e",
+      "tokens": [
+        "indexed_shader_assignment"
+      ]
+    },
+    "scripts/simulation/unified_edit/checkpoint_accounting.gd::declarations": {
+      "sha256": "84c232daa2cd3f6075efe94db08b1702194d55c0a162d1733b366f0f8e6bec23",
+      "tokens": [
+        "preload("
+      ]
+    },
+    "scripts/simulation/unified_edit/checkpoint_accounting.gd::_sha": {
+      "sha256": "a3634029d461c29fd2fabece6f654f8ca0ab059617d06bd3900e4af55f116ea7",
+      "tokens": [
+        "new("
+      ]
+    },
+    "scripts/simulation/unified_edit/checkpoint_capture.gd::declarations": {
+      "sha256": "d9981e1aa86c784ccfbfc8cfeb7889a8a37ecf2531c006905e84e8d0e0c7a977",
+      "tokens": [
+        "preload("
+      ]
+    },
+    "scripts/simulation/unified_edit/checkpoint_capture.gd::render_capture": {
+      "sha256": "2eb3e7aa44d7072d83ad807dcfaf0281045fa406e44c3f14fb94a2a5320f5b8a",
+      "tokens": [
+        "call_deferred("
+      ]
+    },
+    "scripts/simulation/unified_edit/checkpoint_capture.gd::_maybe_finished": {
+      "sha256": "e00dadd26b7e5cef5cbab82011455bc6cf10fe890b255cc8eea33a2f35029e56",
+      "tokens": [
+        "call_deferred("
+      ]
+    },
+    "scripts/simulation/unified_edit/checkpoint_capture.gd::_readers_finished": {
+      "sha256": "0867b548a9d1e89ff5357396030a451b9f81a1199fb5dc6d67321f8d28042bf3",
+      "tokens": [
+        "call_on_render_thread("
+      ]
+    },
+    "scripts/simulation/unified_edit/checkpoint_capture.gd::_proof_arrived": {
+      "sha256": "260afefff05f95961a59e93b040fad6c6ecca6f5b0f2591eb25883249b2b8ebc",
+      "tokens": [
+        "call_deferred("
+      ]
+    },
+    "scripts/simulation/unified_edit/checkpoint_capture.gd::retry_lifetime": {
+      "sha256": "1ac4c266c765f59c8f8cf200ef34ad10302b0b6aa5f49df19990bd254c0c1b45",
+      "tokens": [
+        "call_on_render_thread("
+      ]
+    },
+    "scripts/simulation/unified_edit/checkpoint_capture.gd::_finish": {
+      "sha256": "10da44fd6c05ddaab5d1a13d8297b30c8c210ee7ceab531378a80338ba974d9b",
+      "tokens": [
+        "Callable(",
+        "call("
+      ]
+    },
+    "scripts/simulation/unified_edit/checkpoint_capture.gd::_sha": {
+      "sha256": "57d20a621315df67d6c7774372372b8f6010af0eb170dc1c7ecb5fbed07efbf6",
+      "tokens": [
+        "new("
+      ]
+    },
+    "scripts/simulation/unified_edit/checkpoint_codec.gd::declarations": {
+      "sha256": "dcbbc565ac17bdc37ec31823e1877565887bec3b65c9de948070b0e73b872f3d",
+      "tokens": [
+        "preload("
+      ]
+    },
+    "scripts/simulation/unified_edit/checkpoint_codec.gd::WireHash": {
+      "sha256": "03ca374a7783575ba60f2641ee58c23bc102b0b60dd39c87824c1eede20a2a2b",
+      "tokens": [
+        "preload("
+      ]
+    },
+    "scripts/simulation/unified_edit/checkpoint_codec.gd::load": {
+      "sha256": "b29df85b92a03f454215c1b68265caa18301edc6c0ca40b3daad91e62d655c9b",
+      "tokens": [
+        "load("
+      ]
+    },
+    "scripts/simulation/unified_edit/checkpoint_router.gd::declarations": {
+      "sha256": "8c3447f6180cc7fab4bdacaa47d50bcb2957a6e3f31391765567bb6df1f71f9e",
+      "tokens": [
+        "preload("
+      ]
+    },
+    "scripts/simulation/unified_edit/checkpoint_router.gd::load_file": {
+      "sha256": "2a9d528dd4dfb10b12aba9f06bc97021b3ae9e9a50aaa38554406f10f23e8953",
+      "tokens": [
+        "new("
+      ]
+    },
+    "scripts/simulation/unified_edit/configuration.gd::declarations": {
+      "sha256": "a43fca67527bfd984f283007a67c31d40ba923f0b5d978e51c41441cddec8fdd",
+      "tokens": [
+        "preload("
+      ]
+    },
+    "scripts/simulation/unified_edit/configuration.gd::digest_data": {
+      "sha256": "0dfa6a355970f2447ae3f2c20a990bb0dd91c50c0682897dad9042713aad06d0",
+      "tokens": [
+        "new("
+      ]
+    },
+    "scripts/simulation/unified_edit/consumer_checkpoint_sources.gd::declarations": {
+      "sha256": "19323c2fa942c08f63a7d7b2a0ba9754a9c880bb052069aa74a72fa2bf08226e",
+      "tokens": [
+        "preload("
+      ]
+    },
+    "scripts/simulation/unified_edit/coupled.gd::declarations": {
+      "sha256": "e5674fd0f6bb50726e7e83eb2f8813fe8e17c15b4c665c08760004b1c537226c",
+      "tokens": [
+        "preload("
+      ]
+    },
+    "scripts/simulation/unified_edit/coupled.gd::initialize": {
+      "sha256": "8dbc2f44ae08642d23a0538bf8c41762ec970ce03e60f604799fce1202095989",
+      "tokens": [
+        "new(",
+        "storage_buffer_create("
+      ]
+    },
+    "scripts/simulation/unified_edit/coupled.gd::record": {
+      "sha256": "a434c4254a6c6a6a458f03d902e530796c695c069356fa912946e9e2becdd48e",
+      "tokens": [
+        "compute_list_begin(",
+        "compute_list_bind_compute_pipeline(",
+        "compute_list_bind_uniform_set(",
+        "compute_list_dispatch_indirect(",
+        "compute_list_end(",
+        "compute_list_set_push_constant("
+      ]
+    },
+    "scripts/simulation/unified_edit/coupled.gd::release": {
+      "sha256": "f0cad666c711038b0737bf5f1da5e42b8896be08c0d4dba64ed8fcc0cb10248e",
+      "tokens": [
+        "Callable("
+      ]
+    },
+    "scripts/simulation/unified_edit/diagnostics.gd::declarations": {
+      "sha256": "a930809a9ae9e3db6ca1de3ea137a67c77a1a4b8b95b00ab1a2dbca7f0d3c282",
+      "tokens": [
+        "new("
+      ]
+    },
+    "scripts/simulation/unified_edit/display_emit.glsl::shader": {
+      "sha256": "840c6b01b244d21cd0914312df3ace652536d80727a0e34726b767216e775115",
+      "tokens": [
+        "atomicOr(",
+        "imageStore(",
+        "indexed_shader_assignment"
+      ]
+    },
+    "scripts/simulation/unified_edit/display_intent.gd::declarations": {
+      "sha256": "71a3bd97becee562207fe60b1675209a0b4f51a6fdbd37f0b869bce0a1c98eae",
+      "tokens": [
+        "preload("
+      ]
+    },
+    "scripts/simulation/unified_edit/display_intent.gd::_hash": {
+      "sha256": "06afbb6cc87874d2ccd639991c23c18aff6350d07bca0426da279621f938eaf7",
+      "tokens": [
+        "new("
+      ]
+    },
+    "scripts/simulation/unified_edit/domain_runtime.gd::declarations": {
+      "sha256": "582e2311b5eda3c3a51f2318792813bedd8955d87118d469bdd2fdc2f4cf1802",
+      "tokens": [
+        "preload("
+      ]
+    },
+    "scripts/simulation/unified_edit/domain_runtime.gd::boot": {
+      "sha256": "5b391aab8ef383440478e3a6bc0175358634475bc0fc6d558efde4d1661b38a7",
+      "tokens": [
+        "call_on_render_thread(",
+        "new("
+      ]
+    },
+    "scripts/simulation/unified_edit/domain_runtime.gd::restore_checkpoint": {
+      "sha256": "8349466238f76ace3c8c371dbdf8782046cab5c787e9bf135e35d89dd5ee6b90",
+      "tokens": [
+        "call_on_render_thread(",
+        "new("
+      ]
+    },
+    "scripts/simulation/unified_edit/domain_runtime.gd::_probe_received": {
+      "sha256": "d3f4d1bc258759adcf4fb1c520d5f609e10de70347151b7389626cbc0ec5bfe6",
+      "tokens": [
+        "call("
+      ]
+    },
+    "scripts/simulation/unified_edit/domain_runtime.gd::_preview_received": {
+      "sha256": "8077d524afee835320b664ab4a2965f6948c41086d071193257bad272fd7c82b",
+      "tokens": [
+        "call("
+      ]
+    },
+    "scripts/simulation/unified_edit/domain_runtime.gd::_physics_process": {
+      "sha256": "05af4b1364af04b4390c66ba2685a59988114811b430db0249d3c19a40369fe8",
+      "tokens": [
+        "Callable(",
+        "call("
+      ]
+    },
+    "scripts/simulation/unified_edit/domain_runtime.gd::_discard_candidate": {
+      "sha256": "8b69d37b8ddc30231c9194c35bea98223e0184ec685e86b7087b4bba43d86ff9",
+      "tokens": [
+        "Callable(",
+        "call("
+      ]
+    },
+    "scripts/simulation/unified_edit/domain_runtime.gd::_request_release": {
+      "sha256": "4e0e7523dcef49b34eaf0f9760659d68c36e098c49083e9a8721181b492aabe9",
+      "tokens": [
+        "call_on_render_thread("
+      ]
+    },
+    "scripts/simulation/unified_edit/edit.glsl::shader": {
+      "sha256": "57553c4b755f629d60d61d73ee6f457eacf83b176230e6884396a9750cf48973",
+      "tokens": [
+        "imageStore(",
+        "indexed_shader_assignment"
+      ]
+    },
+    "scripts/simulation/unified_edit/executor.gd::declarations": {
+      "sha256": "3fef6204081ee5ce4bc9552e4bce496bd367a9ae02f3133c9a15af5572594b9b",
+      "tokens": [
+        "new(",
+        "preload("
+      ]
+    },
+    "scripts/simulation/unified_edit/executor.gd::initialize": {
+      "sha256": "d0029f3227a93a0a51eb8e53908cad7590431b0199f2ffc4fdedc51e8b3e13a8",
+      "tokens": [
+        "storage_buffer_create("
+      ]
+    },
+    "scripts/simulation/unified_edit/gpu.gd::declarations": {
+      "sha256": "4ebfec8a39b537cc9b7a023fb66aeb63678dc33ebcf4647d08d3b7573480990a",
+      "tokens": [
+        "preload("
+      ]
+    },
+    "scripts/simulation/unified_edit/gpu.gd::compile": {
+      "sha256": "b7ffe6e4f3ccf8c15f13eae65af260ce985212062097be79386379249474deb5",
+      "tokens": [
+        "new("
+      ]
+    },
+    "scripts/simulation/unified_edit/gpu.gd::binding": {
+      "sha256": "bcc875fd1ef0fb0c4141fe3dbfbb66b790d881ec39a1a9b8f80336f4e08de2b1",
+      "tokens": [
+        "new("
+      ]
+    },
+    "scripts/simulation/unified_edit/gpu.gd::dispatch": {
+      "sha256": "a5c0c3354c9c672ea5b0b1fbb1e29e746eb6f252da7b299f373d2e12597f9592",
+      "tokens": [
+        "compute_list_begin(",
+        "compute_list_bind_compute_pipeline(",
+        "compute_list_bind_uniform_set(",
+        "compute_list_dispatch(",
+        "compute_list_end(",
+        "compute_list_set_push_constant("
+      ]
+    },
+    "scripts/simulation/unified_edit/height.gd::declarations": {
+      "sha256": "b7bbc0d465e4880487088767c99ac48e3e5041164daa7f8cb92dd4611444b00f",
+      "tokens": [
+        "preload("
+      ]
+    },
+    "scripts/simulation/unified_edit/height.gd::initialize": {
+      "sha256": "6642ba452ed0a8ff772eccc1eb41d1274a4a296d1be22dccad40341ed4c91a13",
+      "tokens": [
+        "storage_buffer_create("
+      ]
+    },
+    "scripts/simulation/unified_edit/height.gd::pump": {
+      "sha256": "cac82247fdf95e8055750543f62ba3d41750c8f60b71b1db5e085f13f9cda4ec",
+      "tokens": [
+        "call_on_render_thread("
+      ]
+    },
+    "scripts/simulation/unified_edit/height.gd::_read_render": {
+      "sha256": "50a8861082cbe6127e896d1d48588a66c793f5759496f2b42512436cb78b90dc",
+      "tokens": [
+        "call_deferred("
+      ]
+    },
+    "scripts/simulation/unified_edit/height.gd::retry_readbacks": {
+      "sha256": "5ddda8980b3d422ff8ddc70cb77dc07b6875506dcde6703e5195b4c7abe7e584",
+      "tokens": [
+        "call_on_render_thread("
+      ]
+    },
+    "scripts/simulation/unified_edit/height.gd::_read_arrived": {
+      "sha256": "a883e55a5bf841bf07d861acbf146421a3a0aa5e848e3b1dd76738a534a818f4",
+      "tokens": [
+        "call_deferred("
+      ]
+    },
+    "scripts/simulation/unified_edit/height.gd::_received": {
+      "sha256": "a04291f65dbc8f022571890dc1567388706e33a103e5dcf8140b3a346e3d9897",
+      "tokens": [
+        "new("
+      ]
+    },
+    "scripts/simulation/unified_edit/height.gd::physics_consume": {
+      "sha256": "d43987a4a13274dc3576129f25f6fde45ef45a57f77c39f6e9e3cc6d934e4ed6",
+      "tokens": [
+        "wait_for_task_completion("
+      ]
+    },
+    "scripts/simulation/unified_edit/height.gd::_ack": {
+      "sha256": "1ffecdc9867c837b1615e0b8b2087117a886944e8a453ab957458a9176a339e0",
+      "tokens": [
+        "call_on_render_thread("
+      ]
+    },
+    "scripts/simulation/unified_edit/height.gd::_ack_arrived": {
+      "sha256": "0918d1ba25b3dc40227673ef5b26c97748d30cada5232ed57f20b31fbd0787d6",
+      "tokens": [
+        "call_deferred("
+      ]
+    },
+    "scripts/simulation/unified_edit/height.glsl::shader": {
+      "sha256": "9f08382aafd9706f017298cb9721b897b0fd3a4023a21c3e91510ab51650153d",
+      "tokens": [
+        "atomicCompSwap(",
+        "atomicExchange(",
+        "imageStore(",
+        "indexed_shader_assignment"
+      ]
+    },
+    "scripts/simulation/unified_edit/height_stamp.gd::validated_snapshot": {
+      "sha256": "80f558722a6d0232fbb9905ef0bb2de9f024c89ab0a3347a97bffc2418994032",
+      "tokens": [
+        "load("
+      ]
+    },
+    "scripts/simulation/unified_edit/height_stamp.gd::bytes_sha256": {
+      "sha256": "c06358b9a3fc39947bf5b6dc55817f723a710d33b7f342fa63f487684b75ac5e",
+      "tokens": [
+        "new("
+      ]
+    },
+    "scripts/simulation/unified_edit/height_surface.gd::_replace_chunk_shape": {
+      "sha256": "adadb71f6e2d43ac37751bcb841d22ce4dfddbb05f861d66a3e9db3d2d67c57e",
+      "tokens": [
+        "new("
+      ]
+    },
+    "scripts/simulation/unified_edit/idle_fence.glsl::shader": {
+      "sha256": "1268fcb20b1d592fac6b71fb68ddeca4eae63a23bcf217b02161cebb44005e77",
+      "tokens": [
+        "indexed_shader_assignment"
+      ]
+    },
+    "scripts/simulation/unified_edit/intent.gd::declarations": {
+      "sha256": "d206e554959e0c488880cc164e79953567d24fbf85af123240bc500d8b0b51b1",
+      "tokens": [
+        "preload("
+      ]
+    },
+    "scripts/simulation/unified_edit/layout.gd::declarations": {
+      "sha256": "abeaf21fc8b3f90a7df96b9b5cb3f5c76a1d0a8d440c19e61ab03e3ad91944e5",
+      "tokens": [
+        "preload("
+      ]
+    },
+    "scripts/simulation/unified_edit/legacy_sources.gd::declarations": {
+      "sha256": "d649348ac890b6ee3c0a4b25b97ccc57f64268979456d52aabf2355d0e7a7f90",
+      "tokens": [
+        "preload("
+      ]
+    },
+    "scripts/simulation/unified_edit/legacy_sources.gd::_read_file": {
+      "sha256": "387f5a0f53d30ef01ff7f34bc8516925332967d43c188239bbe8328b7f7a78cf",
+      "tokens": [
+        "load("
+      ]
+    },
+    "scripts/simulation/unified_edit/numerics_checkpoint_sources.gd::declarations": {
+      "sha256": "b46b6258ddbad2f4cf513451cee5141fae192a6fd6a6de33170fbae533201901",
+      "tokens": [
+        "preload("
+      ]
+    },
+    "scripts/simulation/unified_edit/pipeline.gd::declarations": {
+      "sha256": "deb0d4ba9aaf7283b76860e71bf35d228f0ca17bce995287873aab92631fb817",
+      "tokens": [
+        "new(",
+        "preload("
+      ]
+    },
+    "scripts/simulation/unified_edit/pipeline.gd::initialize_render": {
+      "sha256": "bba7b79797cad8a75d588807d214a9b11b49d5957b0cf1fe008169c3e1ebf975",
+      "tokens": [
+        "call_deferred("
+      ]
+    },
+    "scripts/simulation/unified_edit/pipeline.gd::_restore_verified_render": {
+      "sha256": "54bed1b9285fce403f1f16d1118bb1baf1c6207cce83d8669035e8fb42ab18aa",
+      "tokens": [
+        "call_deferred("
+      ]
+    },
+    "scripts/simulation/unified_edit/pipeline.gd::_restore_verified": {
+      "sha256": "02419f9a18f1c6021d78038e8d9deefea72c341d3da35f3a8494c533ed4476d6",
+      "tokens": [
+        "call_on_render_thread("
+      ]
+    },
+    "scripts/simulation/unified_edit/pipeline.gd::_initialized": {
+      "sha256": "e05554b6aa24e2ecf2fc61c846dedb0dca130a2e970861eb538047ebd3491253",
+      "tokens": [
+        "call_on_render_thread("
+      ]
+    },
+    "scripts/simulation/unified_edit/pipeline.gd::_initialization_proved_render": {
+      "sha256": "5501b2b35781bdb8191789d29aed56e698d9145b2daf550e529ca926008cb4ef",
+      "tokens": [
+        "call_deferred("
+      ]
+    },
+    "scripts/simulation/unified_edit/pipeline.gd::retry_initialization_cleanup": {
+      "sha256": "2850ab55e4c26f0c625cc91530dcc157cba803e98aaed9193eccf4dbc00e20f3",
+      "tokens": [
+        "call_on_render_thread("
+      ]
+    },
+    "scripts/simulation/unified_edit/pipeline.gd::pump": {
+      "sha256": "92503549c562876d329d3838e0bc1e113da7fd35afff99374144691c2e5f3ace",
+      "tokens": [
+        "call_on_render_thread("
+      ]
+    },
+    "scripts/simulation/unified_edit/pipeline.gd::_submit_render": {
+      "sha256": "312c319ac5a28aac0737359c7a192a0fbf0ecdf908051101e4148f8174ddb67a",
+      "tokens": [
+        "call_deferred("
+      ]
+    },
+    "scripts/simulation/unified_edit/pipeline.gd::_arrived_render": {
+      "sha256": "ed8cf43065d3cd84a4116ed82a9b4dbcc86b2621f9b0ccce495735a787d708a3",
+      "tokens": [
+        "call_deferred("
+      ]
+    },
+    "scripts/simulation/unified_edit/pipeline.gd::_poll": {
+      "sha256": "8be970185eb96550cfd3d2e49199c6b6ff5dc46da4dee4ef5d5308e0644b6249",
+      "tokens": [
+        "call_on_render_thread("
+      ]
+    },
+    "scripts/simulation/unified_edit/pipeline.gd::_retire_render": {
+      "sha256": "06f3f3332626b6654e2df5e1efc7068ffa7f9233ed33325ddea096b686733dde",
+      "tokens": [
+        "call_deferred("
+      ]
+    },
+    "scripts/simulation/unified_edit/pipeline.gd::request_checkpoint": {
+      "sha256": "5f605270f36201895fbfe7872f2eab8750eec1c5b335aaca4c4ef9ce76d3508d",
+      "tokens": [
+        "new("
+      ]
+    },
+    "scripts/simulation/unified_edit/pipeline.gd::_checkpoint_progress": {
+      "sha256": "e291ac3d8d79fd69f7239f189b783d874b086035a757cd6b1285a146139204a8",
+      "tokens": [
+        "call_on_render_thread("
+      ]
+    },
+    "scripts/simulation/unified_edit/pipeline.gd::_checkpoint_captured": {
+      "sha256": "b3cabcd700871106e52149e544a561ef9483477e985c71aa74acb3b19609e7c5",
+      "tokens": [
+        "Callable(",
+        "call("
+      ]
+    },
+    "scripts/simulation/unified_edit/pipeline.gd::release_render": {
+      "sha256": "bb7baf04056f457c504a151ced01472896efd0bd313dfdfed3e1113ec95d387a",
+      "tokens": [
+        "call_deferred("
+      ]
+    },
+    "scripts/simulation/unified_edit/pipeline.gd::cleanup_fault": {
+      "sha256": "dd2360fc072e5d628b6a7a3547ff172a23790e3083bb3686a58e2f79b6b0f5f4",
+      "tokens": [
+        "call_on_render_thread("
+      ]
+    },
+    "scripts/simulation/unified_edit/pipeline.gd::_terminal_render": {
+      "sha256": "8515b59811fe0f205a444b4e00c3cd91abbccb8f2a282fa2288ecc01ae74171a",
+      "tokens": [
+        "call_deferred("
+      ]
+    },
+    "scripts/simulation/unified_edit/player_input.gd::declarations": {
+      "sha256": "436ee333021f3854f482f5cc7deeb3af01351f0f558f9d7fe02b3853bef6395f",
+      "tokens": [
+        "preload("
+      ]
+    },
+    "scripts/simulation/unified_edit/presentation.gd::declarations": {
+      "sha256": "360aa72427bb97c3bc67a4c37e09ad03ac99f7c854ae689ff346c0723e179400",
+      "tokens": [
+        "preload("
+      ]
+    },
+    "scripts/simulation/unified_edit/presentation.gd::initial_domain": {
+      "sha256": "e038964ce6bb6d5aa73afbeb434ff1737f28e2dfa014d96032073aa55e4f5dcd",
+      "tokens": [
+        "new("
+      ]
+    },
+    "scripts/simulation/unified_edit/presentation.gd::dependencies": {
+      "sha256": "45d26fbd95383367deb19ae48de2070ada696e5348d78cf4c0509962c7e1ed30",
+      "tokens": [
+        "load(",
+        "new("
+      ]
+    },
+    "scripts/simulation/unified_edit/probe.gd::declarations": {
+      "sha256": "905279e257c4f599a8a14cabae3eb136b790527e72a03c5e817462df9be7656f",
+      "tokens": [
+        "preload("
+      ]
+    },
+    "scripts/simulation/unified_edit/probe.gd::initialize": {
+      "sha256": "8d6e81ee8481684b8b16a8757448a7bc194c0964fbc2e2a33bfb21e386f91453",
+      "tokens": [
+        "storage_buffer_create("
+      ]
+    },
+    "scripts/simulation/unified_edit/probe.gd::request": {
+      "sha256": "40144602b6f5810612cd6c4124f7aa0ea93c06e2e7a8742d945d593e552d4045",
+      "tokens": [
+        "call_on_render_thread("
+      ]
+    },
+    "scripts/simulation/unified_edit/probe.gd::_record_render": {
+      "sha256": "c99e96d4905cd9853b6e910a075ffc4e5166c8c39bda85dfe4dbecab7e438e26",
+      "tokens": [
+        "buffer_update(",
+        "call_deferred("
+      ]
+    },
+    "scripts/simulation/unified_edit/probe.gd::_read_render": {
+      "sha256": "1e2c3de3f0cf9f766b6366a3bc3150b9546a1968dea4799227c28ab470caf745",
+      "tokens": [
+        "call_deferred("
+      ]
+    },
+    "scripts/simulation/unified_edit/probe.gd::retry_readback": {
+      "sha256": "926ab3dc9c2bca2f15ab1e75ed670a6d453153ad1a3e98471ad7a902660dd1e5",
+      "tokens": [
+        "call_on_render_thread("
+      ]
+    },
+    "scripts/simulation/unified_edit/probe.gd::_arrived": {
+      "sha256": "e1e52eb78d491d263ab3a22dc6ae16f0907967beeca7a9baaf10ee9307ea3180",
+      "tokens": [
+        "call_deferred("
+      ]
+    },
+    "scripts/simulation/unified_edit/probe.gd::_complete": {
+      "sha256": "72aa96d755c14d94457aef8e4eea0ecd45b9e3124d8bd4b8ff316d6fb72ed101",
+      "tokens": [
+        "call("
+      ]
+    },
+    "scripts/simulation/unified_edit/probe.glsl::shader": {
+      "sha256": "ab45f4e46692b78f40d1c3329a23ecdd100b384de966dcc0aa80e19e50546d10",
+      "tokens": [
+        "indexed_shader_assignment"
+      ]
+    },
+    "scripts/simulation/unified_edit/profile_catalog.gd::declarations": {
+      "sha256": "2ca6fd8648ad4f11f2c4e5dbe41dabf88c21565a32dfe722fc9da36d00379af2",
+      "tokens": [
+        "preload("
+      ]
+    },
+    "scripts/simulation/unified_edit/profile_catalog.gd::instantiate_registry": {
+      "sha256": "38dfb33a703f20f124553d66fdcc3393901fc247bde2a4c3202bbb1ab54f6ead",
+      "tokens": [
+        "load(",
+        "new("
+      ]
+    },
+    "scripts/simulation/unified_edit/profile_registry.gd::declarations": {
+      "sha256": "1fd30b559dfd1821c7218bbc555802c09f9385d2dd354cc880e0ebab8c2f2c5d",
+      "tokens": [
+        "preload("
+      ]
+    },
+    "scripts/simulation/unified_edit/protocol.gd::declarations": {
+      "sha256": "b5d0f0b3828772f4187c3a416365218b25c47fc788d2dce0be4947be5bf31101",
+      "tokens": [
+        "preload("
+      ]
+    },
+    "scripts/simulation/unified_edit/protocol.gd::_wire_profile": {
+      "sha256": "f6652f7cd60e518e67d681df9bc6f2219c2e8fc3c5ce433188eeeada49a1d329",
+      "tokens": [
+        "new("
+      ]
+    },
+    "scripts/simulation/unified_edit/publish.glsl::shader": {
+      "sha256": "84f60cbb6d59a60e5481b2ce7b00ce438ff90f659c03d2bf7ad3971308dba0f8",
+      "tokens": [
+        "imageStore(",
+        "indexed_shader_assignment"
+      ]
+    },
+    "scripts/simulation/unified_edit/restore_verifier.gd::declarations": {
+      "sha256": "a923641acf4283dbfafba84ccb24ebea6cf9896aea7efa3e73479ec20e7f82dc",
+      "tokens": [
+        "preload("
+      ]
+    },
+    "scripts/simulation/unified_edit/restore_verifier.gd::domain_from": {
+      "sha256": "07c27dca2c5f2d8dfa1ce8f504c77c49f3d471dcf6d3a4d5789445497a091df0",
+      "tokens": [
+        "new("
+      ]
+    },
+    "scripts/simulation/unified_edit/restore_verifier.gd::_finish_if_complete": {
+      "sha256": "bee227f7d8b92ac059add0d849cfd1fc6321eded6468500cf3507c4b54cb412d",
+      "tokens": [
+        "Callable(",
+        "call("
+      ]
+    },
+    "scripts/simulation/unified_edit/restore_verifier.gd::_sha": {
+      "sha256": "a3634029d461c29fd2fabece6f654f8ca0ab059617d06bd3900e4af55f116ea7",
+      "tokens": [
+        "new("
+      ]
+    },
+    "scripts/simulation/unified_edit/slots.gd::declarations": {
+      "sha256": "993dc09e95bf6d8df28c24a28f75e000a1e07c4c450dc5748bbfe87fdc724b9b",
+      "tokens": [
+        "preload("
+      ]
+    },
+    "scripts/simulation/unified_edit/state.gd::declarations": {
+      "sha256": "4bcf471413a9adc623d33bce7fadf84ac426293412cb52d4df4c34b92b1cc547",
+      "tokens": [
+        "preload("
+      ]
+    },
+    "scripts/simulation/unified_edit/state.gd::_create_texture": {
+      "sha256": "1dfb49064251deb5b03c2d0ea52f6d226b881789d34cc213b2bfb1d41e29ebd5",
+      "tokens": [
+        "new(",
+        "texture_create("
+      ]
+    },
+    "scripts/simulation/unified_edit/state.gd::initialize": {
+      "sha256": "29f262617a95460bc446ded21002f663dd3ea93d25653dc82b714e8e0b873e52",
+      "tokens": [
+        "storage_buffer_create("
+      ]
+    },
+    "scripts/simulation/unified_edit/tool_profile.gd::declarations": {
+      "sha256": "ccb869745443bc9db2e6ec554e296d1e7213cc2a5e47f008119e3e0fc8a0377a",
+      "tokens": [
+        "preload("
+      ]
+    },
+    "scripts/simulation/unified_edit/tool_profile.gd::validated_snapshot": {
+      "sha256": "e49b75085b8399019f5d1b80c74881d3d2793ee920a3730e74bf108f8c4dabec",
+      "tokens": [
+        "load("
+      ]
+    },
+    "scripts/simulation/unified_edit/transport.gd::declarations": {
+      "sha256": "30ae1edea1bea5839b1e7c406ae991dc43ce963cba1f18bb23b41efa92a9c865",
+      "tokens": [
+        "preload("
+      ]
+    },
+    "scripts/simulation/unified_edit/transport.gd::initialize": {
+      "sha256": "76749a9179854bcff70c1a6ec7acfed10c0e66f408fbd7da2b125705c7f5aad8",
+      "tokens": [
+        "new(",
+        "storage_buffer_create(",
+        "texture_create("
+      ]
+    },
+    "scripts/simulation/unified_edit/transport.gd::submit": {
+      "sha256": "ba514cbf9e81b64996d75d92907734a0014cf30eaad6e3239571b981c0628026",
+      "tokens": [
+        "Callable(",
+        "buffer_update(",
+        "call("
+      ]
+    },
+    "scripts/simulation/unified_edit/transport.gd::_completed": {
+      "sha256": "ea893d8247417c7aeec4056c4ec88baaf88e464212e20540e4d610a83146a1d1",
+      "tokens": [
+        "call("
+      ]
+    },
+    "scripts/simulation/unified_edit/transport.gd::request_terminal": {
+      "sha256": "656ae9e95f90590bb3456399d287c085af0bbacc7786393a349c5fa4ec171664",
+      "tokens": [
+        "call("
+      ]
+    },
+    "scripts/simulation/unified_edit/transport.gd::_terminal": {
+      "sha256": "fd1d299d88509cbc4bd3e2fb9c4421fa7eaf132acf174b3b5f5386e0a3098740",
+      "tokens": [
+        "call("
+      ]
+    },
+    "scripts/simulation/unified_edit/transport.gd::request_idle_proof": {
+      "sha256": "db649a9b3c2e7a0e11bf8717b47fa20f59a4fdca88f32bb2b6875219069fe875",
+      "tokens": [
+        "call("
+      ]
+    },
+    "scripts/simulation/unified_edit/transport.gd::_idle_arrived": {
+      "sha256": "12ad6105d5e47eeb5ecacbd34d1bb656f9fc0f8b5df77f193b4af78c939f68f9",
+      "tokens": [
+        "call("
+      ]
+    },
+    "scripts/simulation/unified_edit/vegetation.gd::declarations": {
+      "sha256": "93a8451e90ee5f2a5e49c211cfc728adc777ef891d04a3c895d24d339bd2360a",
+      "tokens": [
+        "preload("
+      ]
+    },
+    "scripts/simulation/unified_edit/vegetation.gd::_texture": {
+      "sha256": "f221d6891f39a5e5709b598eb64bec15b4f48aed0e2b8f8965679c62963f2ceb",
+      "tokens": [
+        "new(",
+        "texture_create("
+      ]
+    },
+    "scripts/simulation/unified_edit/vegetation.gd::initialize": {
+      "sha256": "43fb43001c115649df01affbb4bfeeb8d34f6c7aba5fec20f824479f1f8dcc8a",
+      "tokens": [
+        "storage_buffer_create("
+      ]
+    },
+    "scripts/simulation/unified_edit/vegetation.gd::_dispatch": {
+      "sha256": "0407534fcfc23763574894cfe1e722ddabfec06393b383862f12bbb485e3fe28",
+      "tokens": [
+        "compute_list_begin(",
+        "compute_list_bind_compute_pipeline(",
+        "compute_list_bind_uniform_set(",
+        "compute_list_dispatch(",
+        "compute_list_end(",
+        "compute_list_set_push_constant("
+      ]
+    },
+    "scripts/simulation/unified_edit/view_publish.glsl::shader": {
+      "sha256": "56160ffa358b59456f754126204042edf3e3cea77fc3d505e43fb5891fdc9816",
+      "tokens": [
+        "imageStore(",
+        "indexed_shader_assignment"
+      ]
+    },
+    "scripts/simulation/unified_edit/view_query.glsl::shader": {
+      "sha256": "9a1c36a38c6c02107aa60d499018635b85ae76849aa11788ff47af8e09ad24fa",
+      "tokens": [
+        "indexed_shader_assignment"
+      ]
+    },
+    "scripts/simulation/unified_edit/views.gd::declarations": {
+      "sha256": "e594287e2cfbecd7daaf9b9f7baab9714f361c204cc859b436ec9dea9574e87e",
+      "tokens": [
+        "new(",
+        "preload("
+      ]
+    },
+    "scripts/simulation/unified_edit/views.gd::initialize": {
+      "sha256": "a149242f2cc92d34b56197362083422887ead0dc18fb50fd5c9a55c371aa950b",
+      "tokens": [
+        "new(",
+        "storage_buffer_create(",
+        "texture_create("
+      ]
+    },
+    "scripts/simulation/unified_edit/views.gd::bind_material": {
+      "sha256": "79687e0b18787cc8b9014e523ae13f44ba3caac96f80cc7375034b1c3a015a6f",
+      "tokens": [
+        "new("
+      ]
+    },
+    "scripts/simulation/unified_edit/views.gd::request_preview": {
+      "sha256": "482c4f5c2d6fe681c07838a51a9978e1a757b13ca048da67222ec9bd1e374453",
+      "tokens": [
+        "call_on_render_thread("
+      ]
+    },
+    "scripts/simulation/unified_edit/views.gd::_query_render": {
+      "sha256": "1828b1cc55c845d1570f09c567d1f588baee56ecffa61445c773c9b1b1548208",
+      "tokens": [
+        "buffer_update(",
+        "call_deferred("
+      ]
+    },
+    "scripts/simulation/unified_edit/views.gd::_read_render": {
+      "sha256": "5ebdf9135727d9e9bc2e89958ca7d87f1d7be9fe9920807bd43febe14cb26ef2",
+      "tokens": [
+        "call_deferred("
+      ]
+    },
+    "scripts/simulation/unified_edit/views.gd::retry_preview_readback": {
+      "sha256": "0ccdb98ef834ab7dc102f0b57504d3ffa321aa2cba4849247660001cb8d97475",
+      "tokens": [
+        "call_on_render_thread("
+      ]
+    },
+    "scripts/simulation/unified_edit/views.gd::_arrived": {
+      "sha256": "7eca8a8a8624484ae9243559f6b3ea0feb483fc72f71f767f84a0e869218aad7",
+      "tokens": [
+        "call_deferred("
+      ]
+    },
+    "scripts/simulation/unified_edit/views.gd::_complete": {
+      "sha256": "f9a9cf96bdf2891200461702a93d103a31f90ff70e6a81abfd7d17694143be3b",
+      "tokens": [
+        "call("
+      ]
+    },
+    "scripts/simulation/unified_edit/views.gd::start_detach_bindings": {
+      "sha256": "b9816fe50b74c43ce61ae2d0aec3fe487e3eafbdd0d7c156072f29f38d521fd9",
+      "tokens": [
+        "call_deferred("
+      ]
+    },
+    "scripts/simulation/unified_edit/views.gd::_detach_after_frame": {
+      "sha256": "e834180753e003972210c0e1d3d3520251de397f6d8044b3c49f59243920147d",
+      "tokens": [
+        "call_on_render_thread("
+      ]
+    },
+    "scripts/simulation/unified_edit/views.gd::_detach_render": {
+      "sha256": "3838f3d7b28113a8efa21f83c61b5efcb314988406f7986a7c04f9a1858e4451",
+      "tokens": [
+        "call_deferred("
+      ]
+    },
+    "scripts/simulation/unified_edit/views.gd::_detach_arrived": {
+      "sha256": "fb2c12e59b65a111d555a21f973750b6afbe18400b3c4c53d56ce0bf7ad48498",
+      "tokens": [
+        "call_deferred("
+      ]
+    },
+    "scripts/simulation/unified_edit/visual_edit_finish.glsl::shader": {
+      "sha256": "0a6c2a1ef102918ed5b234f85cd859048d1a8d3befcef5f189809a7361f4f987",
+      "tokens": [
+        "imageStore("
+      ]
+    },
+    "scripts/simulation/unified_edit/visual_finish.glsl::shader": {
+      "sha256": "10f2a79bec43f77b80d77f674e60df7123876931d1473a5cf38c47182b38e5c7",
+      "tokens": [
+        "imageStore(",
+        "indexed_shader_assignment"
+      ]
+    },
+    "scripts/simulation/unified_edit/visual_publish.glsl::shader": {
+      "sha256": "e517e7dd58218ee764a1d773c20e2c714e880dfc01f151188834c43cfa70967d",
+      "tokens": [
+        "imageStore("
+      ]
+    },
+    "scripts/simulation/unified_edit/visuals.gd::declarations": {
+      "sha256": "f63338531ef4e5c7eeb985908083d44d9c2df2006f701a343622ef59c0b9c6d5",
+      "tokens": [
+        "new(",
+        "preload("
+      ]
+    },
+    "scripts/simulation/unified_edit/visuals.gd::_texture": {
+      "sha256": "8b69b597d05077543708f83445a14a7fb93ec097d2c8162b344f80e58d419335",
+      "tokens": [
+        "new(",
+        "texture_create("
+      ]
+    },
+    "scripts/simulation/unified_edit/visuals.gd::_clone": {
+      "sha256": "6d263ac60b63f3e5fe93af6c6a84e48973b77671825167e1f21a42c7be739c3c",
+      "tokens": [
+        "new(",
+        "texture_create("
+      ]
+    },
+    "scripts/simulation/unified_edit/visuals.gd::initialize": {
+      "sha256": "41398847fcd18dd47520f62e8ed019eb6fd530538bbaa19c1a6e4574408e86e9",
+      "tokens": [
+        "storage_buffer_create("
+      ]
+    },
+    "scripts/simulation/unified_edit/visuals.gd::_dispatch_gravel": {
+      "sha256": "a94feae4246dee960b83d770e81a087d51950ed95f3a55e39a7633c1a241f44c",
+      "tokens": [
+        "compute_list_begin(",
+        "compute_list_bind_compute_pipeline(",
+        "compute_list_bind_uniform_set(",
+        "compute_list_dispatch(",
+        "compute_list_end(",
+        "compute_list_set_push_constant("
+      ]
+    },
+    "scripts/simulation/unified_edit/visuals.gd::_display_phase": {
+      "sha256": "77fd7bc97fbede90df7c1778bf735832b923b81c585c75c5d4d825a0c60317a5",
+      "tokens": [
+        "compute_list_begin(",
+        "compute_list_bind_compute_pipeline(",
+        "compute_list_bind_uniform_set(",
+        "compute_list_dispatch(",
+        "compute_list_end(",
+        "compute_list_set_push_constant("
+      ]
+    },
+    "scripts/simulation/unified_edit/visuals.gd::detach": {
+      "sha256": "87da307379fed850a33850737614195ac508545d51c4f906ee6c7793a188d1ba",
+      "tokens": [
+        "Callable("
+      ]
+    },
+    "scripts/simulation/unified_edit/water.gd::declarations": {
+      "sha256": "7ef034ea2e5f01c12766bceb3d13d0875b8359c885dda5d4b06071076a1b4fb9",
+      "tokens": [
+        "Callable(",
+        "preload("
+      ]
+    },
+    "scripts/simulation/unified_edit/water.gd::_compile": {
+      "sha256": "7cc0db006ce5fc4159fb7c7678e007f9f6c6c828aa6e98a349d16cc4b9db6089",
+      "tokens": [
+        "new("
+      ]
+    },
+    "scripts/simulation/unified_edit/water.gd::_make_binding": {
+      "sha256": "bb1b18320e840242317d7fd27f37f2107499a74729884a9ad2fa8fcca83dddcd",
+      "tokens": [
+        "new("
+      ]
+    },
+    "scripts/simulation/unified_edit/water.gd::initialize": {
+      "sha256": "620fb7bc40b0a1d1b9b4e643b199fe051bb2dfae7cbf4565227349757ab81498",
+      "tokens": [
+        "new(",
+        "storage_buffer_create("
+      ]
+    },
+    "scripts/simulation/unified_edit/water.gd::configure_boundary": {
+      "sha256": "ff0f2dd01196c26ede5d4aacaf7ad483ce0e7dd9529d5e8b1a4dfa91613ad84d",
+      "tokens": [
+        "buffer_update("
+      ]
+    },
+    "scripts/simulation/unified_edit/water.gd::_dispatch": {
+      "sha256": "e1d828196d855baedb58f0d4f6278f569c7708a01ccba44d56bf8c0d0070848e",
+      "tokens": [
+        "compute_list_begin(",
+        "compute_list_bind_compute_pipeline(",
+        "compute_list_bind_uniform_set(",
+        "compute_list_dispatch(",
+        "compute_list_dispatch_indirect(",
+        "compute_list_end(",
+        "compute_list_set_push_constant("
+      ]
+    },
+    "scripts/simulation/unified_edit/water.gd::record_tick": {
+      "sha256": "80c92c3ac20be1e54d062547e494bc4da38d4e426f24150bdc91786b374adbca",
+      "tokens": [
+        "call(",
+        "compute_list_begin(",
+        "compute_list_bind_compute_pipeline(",
+        "compute_list_bind_uniform_set(",
+        "compute_list_dispatch_indirect(",
+        "compute_list_end(",
+        "compute_list_set_push_constant("
+      ]
+    },
+    "scripts/simulation/unified_edit/water_muscl.gd::_texture": {
+      "sha256": "8ab5e17ff50e710c4dd31e8f41229da2813b9d264588ee66c4f098c42e3d75f1",
+      "tokens": [
+        "new(",
+        "texture_create("
+      ]
+    },
+    "scripts/simulation/unified_edit/water_muscl.gd::_compile": {
+      "sha256": "6fcd5050ed3d0c5fc60ade1b6f373d1e7ad1278cd4be3a6016ee40c898b1016e",
+      "tokens": [
+        "new("
+      ]
+    },
+    "scripts/simulation/unified_edit/water_muscl.gd::initialize": {
+      "sha256": "637ea8371aeedc5e3908b3edee3b4c9b5367619113fe765c3f179af9fa66e4e4",
+      "tokens": [
+        "storage_buffer_create("
+      ]
+    },
+    "scripts/simulation/unified_edit/water_muscl.gd::_dispatch": {
+      "sha256": "425f7cca2bc3a8fc9ba38ac3266c165ba56855695a0e580e59e76602ca58f041",
+      "tokens": [
+        "compute_list_begin(",
+        "compute_list_bind_compute_pipeline(",
+        "compute_list_bind_uniform_set(",
+        "compute_list_dispatch(",
+        "compute_list_dispatch_indirect(",
+        "compute_list_end(",
+        "compute_list_set_push_constant("
+      ]
+    },
+    "scripts/simulation/unified_edit/water_muscl.gd::record_tick": {
+      "sha256": "4131e4fe93c5f9e0d8c844fb202fbeaf27e0077456316a0ed63113f41b2f419d",
+      "tokens": [
+        "call("
+      ]
+    },
+    "scripts/simulation/unified_edit/water_packed_parallel.glsl::shader": {
+      "sha256": "8e48a46ade6d9a608b9fe9aa5b10f1127f4b036b22a788f392c069d9585d481d",
+      "tokens": [
+        "atomicOr(",
+        "indexed_shader_assignment"
+      ]
+    },
+    "scripts/simulation/unified_edit/water_packed_topology.glsl::shader": {
+      "sha256": "876056fb1b25c7eaea97e513dddcc882b7ea2cd723abb5409828ea0d389710cf",
+      "tokens": [
+        "atomicAdd(",
+        "atomicCompSwap(",
+        "atomicOr(",
+        "indexed_shader_assignment"
+      ]
+    },
+    "scripts/simulation/unified_edit/water_response.gd::initialize": {
+      "sha256": "25d516416a57a334575f60e5e88d2d1acaf94af84dd260f39101db2fec9b2397",
+      "tokens": [
+        "storage_buffer_create("
+      ]
+    },
+    "scripts/simulation/unified_edit/water_response.gd::_initialize_packed_phases": {
+      "sha256": "c0e41b644deebd2e19409781de6377e3c4be27e3ff115c66119dde14fc35844f",
+      "tokens": [
+        "new("
+      ]
+    },
+    "scripts/simulation/unified_edit/water_response.gd::_legacy_dispatch": {
+      "sha256": "8f2ae083100bdbea4c1ebee16c14fa03bc6075f4ba6d0d90e28b0879e32fc4b0",
+      "tokens": [
+        "compute_list_begin(",
+        "compute_list_bind_compute_pipeline(",
+        "compute_list_bind_uniform_set(",
+        "compute_list_dispatch_indirect(",
+        "compute_list_end(",
+        "compute_list_set_push_constant("
+      ]
+    },
+    "scripts/simulation/unified_edit/water_response.gd::_packed_phase": {
+      "sha256": "44f34a5caca37008fd2b9b27896a8663d5bc1bb756d6766b990f7f2a37e66cbe",
+      "tokens": [
+        "compute_list_begin(",
+        "compute_list_bind_compute_pipeline(",
+        "compute_list_bind_uniform_set(",
+        "compute_list_dispatch(",
+        "compute_list_end(",
+        "compute_list_set_push_constant("
+      ]
+    },
+    "scripts/simulation/unified_edit/water_response.gd::_initialize_velocity_prepare_phases": {
+      "sha256": "66a4f6e0d161e50359e064182c96e01a50c756e89f89b205b983edac5f199356",
+      "tokens": [
+        "new("
+      ]
+    },
+    "scripts/simulation/unified_edit/water_response.gd::_velocity_only": {
+      "sha256": "af4cd20bc5f2754a7d74391f7e4050f9da59e30609ee1da0392c3ed9b3252957",
+      "tokens": [
+        "compute_list_begin(",
+        "compute_list_bind_compute_pipeline(",
+        "compute_list_bind_uniform_set(",
+        "compute_list_dispatch(",
+        "compute_list_end("
+      ]
+    },
+    "scripts/simulation/unified_edit/water_response.glsl::shader": {
+      "sha256": "19fca940f8886393fc683a6e2bc962dcda3298520ebff2aa04c208def16751f0",
+      "tokens": [
+        "atomicAdd(",
+        "imageStore(",
+        "indexed_shader_assignment"
+      ]
+    },
+    "scripts/simulation/unified_edit/water_velocity_prepare.glsl::shader": {
+      "sha256": "9ad4fb084b7e4713fcd0030f85e59b9af1b440e891a9ce5ee86201cfadd27a6c",
+      "tokens": [
+        "indexed_shader_assignment"
+      ]
+    },
+    "scripts/simulation/unified_edit/work_begin.glsl::shader": {
+      "sha256": "940538b9e13f01da456c959a7d409c188420675b46d49fbb9e508fe662d72f1a",
+      "tokens": [
+        "indexed_shader_assignment"
+      ]
+    },
+    "scripts/simulation/unified_edit/work_seal.glsl::shader": {
+      "sha256": "26434191421521492b5a63160cb4ae8674b1b8773205cb868b083bc1f8d6866e",
+      "tokens": [
+        "imageStore(",
+        "indexed_shader_assignment"
+      ]
+    }
+  },
+  "normalized": [
+    {
+      "path": "assets/parameters/catalog.json",
+      "before": "8e7b1d5d4b876c056286de9ad9d0ce4f22fcb1ea7f7d852a36664d1c7bb99fe8",
+      "after": "c550e30e4ed3380e6b5caf0de97c3400177ceccc8ffea4166b57e28d54790ec9",
+      "change": "CRLF to LF only; Git attributes already require LF"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/async_rdc_bed.gdshader",
+      "before": "6c95d2631137ed87fc313cb406a1f1e60221a56a36d33dc70a18459589ba1740",
+      "after": "db674d509d26f848e6e203d61e6e1a6a11e53f090b450d92a353c7042081f42f",
+      "change": "CRLF to LF only; Git attributes already require LF"
+    },
+    {
+      "path": "scenes/components/wave_settings.tscn",
+      "before": "a1d19d1e3730b673b1aa46d3414bb57ae6a29929ab17d487431cf8cff9a916fd",
+      "after": "483f4a9229fce0129dd4b573081e5a66ff634e71ad060136b2a4bc8fece0bce1",
+      "change": "CRLF to LF only; Git attributes already require LF"
+    },
+    {
+      "path": "scenes/main.tscn",
+      "before": "d4a99bdf57fea277c70ed8d2238495b61a316aadae5ad0361db3b30adc000aeb",
+      "after": "18a4e3b9ff9527ec643ae74df0208acc063ac233188b672531306ffe476b0eb6",
+      "change": "CRLF to LF only; Git attributes already require LF"
+    },
+    {
+      "path": "scenes/parameters/parameter_windows.tscn",
+      "before": "a4a52c5419cced251b7c6c03af785f13c9ca92bff5aeaa07e19a9335705beccc",
+      "after": "f9b14a3e61e1bcef3ee032858a9b2f774b0adea8e033bdb92fde41d9afddc4e9",
+      "change": "CRLF to LF only; Git attributes already require LF"
+    },
+    {
+      "path": "scenes/playable/test1_backwash.tscn",
+      "before": "83af3768fef9af066803c477606ad89069143a3c49a8d0c40e8ac008da71b5b7",
+      "after": "032f19108443904152e2f436c462bfb9af71c0c780bfc9eedff55deac7f67038",
+      "change": "CRLF to LF only; Git attributes already require LF"
+    },
+    {
+      "path": "scenes/playable/test1_capture.tscn",
+      "before": "622225dbdcfc71773465f3d2dc7095251d65cd11e1f3f3a70e101b74d17c1e79",
+      "after": "b8b9e6fe3b86cb1cb8caf4e94f3893edc8aab87c11b144bf2836f3a1d0cdac6e",
+      "change": "CRLF to LF only; Git attributes already require LF"
+    },
+    {
+      "path": "scenes/playable/test1_geometry.tscn",
+      "before": "51c2fcc0a334072b4cd5712f420fabaeb195e26d4e5a8673d41682ae3e4351b7",
+      "after": "f52c1c6a3d04c771f2b9af262a4a94dcca4237b694c71e14de8cb56b0943da6c",
+      "change": "CRLF to LF only; Git attributes already require LF"
+    },
+    {
+      "path": "scenes/shape_brushes/brush_playable_candidate.tscn",
+      "before": "6f0b2fa4b73cee0d48212939fb87f06dce0f308fa3816ba326f708924f309f24",
+      "after": "bac9af74be09de49bb0e7775ee21b856d2aaf6cefcb560b987aaa6e83175e164",
+      "change": "CRLF to LF only; Git attributes already require LF"
+    },
+    {
+      "path": "scenes/unified_edit/playable/main.tscn",
+      "before": "fdc9eeb9c46ae6825e85d7672f759df492c454b343cebb5d493c14917c84dd9c",
+      "after": "971a68bffdca41bc0a0e38f0fb4ee449243b8d35c797e7c891654186ad65b202",
+      "change": "CRLF to LF only; Git attributes already require LF"
+    },
+    {
+      "path": "scenes/unified_edit/playable/test1_backwash.tscn",
+      "before": "83af3768fef9af066803c477606ad89069143a3c49a8d0c40e8ac008da71b5b7",
+      "after": "032f19108443904152e2f436c462bfb9af71c0c780bfc9eedff55deac7f67038",
+      "change": "CRLF to LF only; Git attributes already require LF"
+    },
+    {
+      "path": "scenes/unified_edit/playable/test1_capture.tscn",
+      "before": "622225dbdcfc71773465f3d2dc7095251d65cd11e1f3f3a70e101b74d17c1e79",
+      "after": "b8b9e6fe3b86cb1cb8caf4e94f3893edc8aab87c11b144bf2836f3a1d0cdac6e",
+      "change": "CRLF to LF only; Git attributes already require LF"
+    },
+    {
+      "path": "scenes/unified_edit/playable/test1_geometry.tscn",
+      "before": "51c2fcc0a334072b4cd5712f420fabaeb195e26d4e5a8673d41682ae3e4351b7",
+      "after": "f52c1c6a3d04c771f2b9af262a4a94dcca4237b694c71e14de8cb56b0943da6c",
+      "change": "CRLF to LF only; Git attributes already require LF"
+    },
+    {
+      "path": "scripts/beach/beach_scene_service.gd",
+      "before": "8e09b7ef9fc5ad069afc2bd28f29f40c3d8eb14a4df9beb466a5bf61f9830f9c",
+      "after": "47b808e6e256709cd92af337cfc5f38fef7751d4c3e13801af557397601be016",
+      "change": "CRLF to LF only; Git attributes already require LF"
+    },
+    {
+      "path": "scripts/beach/free_camera.gd",
+      "before": "dfb54c3027f020b292c9e52327e6d8de6734b6fe9bed85fb19938fe70b731329",
+      "after": "04be91f88635bdd5a6d5b6192e773e097f20bc13ca8159fd9a2e0d565fd5c8b0",
+      "change": "CRLF to LF only; Git attributes already require LF"
+    },
+    {
+      "path": "scripts/beach/unified_playable_entry.gd",
+      "before": "aab70136d1a6e66fc7772e34946dab863117635317c6999b3a6ef919e3899575",
+      "after": "7eeec747ebf046a576f4489d5bfe7ecc87a33fe4d10b6f0c712fd8c12e388044",
+      "change": "CRLF to LF only; Git attributes already require LF"
+    },
+    {
+      "path": "scripts/parameters/parameter_row.gd",
+      "before": "4bec4c85c4ffd107e1fa564bbf773727eb09bcb91769fc1468f95b0c37f39c3f",
+      "after": "d8690a0d661113b88c331f28e92b601a218bda758fbdfb2f447225a2a89c6372",
+      "change": "CRLF to LF only; Git attributes already require LF"
+    },
+    {
+      "path": "scripts/parameters/parameter_service.gd",
+      "before": "dcd43b0fc946c2a4a60c7991590bc754402a54b080030a1491a6d5dfb579e558",
+      "after": "b7d9f61c9dd60a36c1ccf76fcc9424f3373154b19566c6dbb4661e0bee6d47a0",
+      "change": "CRLF to LF only; Git attributes already require LF"
+    },
+    {
+      "path": "scripts/sand/brushes/brush_tool_panel.gd",
+      "before": "c3e7d0920ab3a005ab981feb1e3f1f7a630bb9ee1253c35f9e3dfd9f5358b9e1",
+      "after": "1fec3c63d945190b98910e75c3a5758cdadb907b56e810f14accf09ed9fe0ef7",
+      "change": "CRLF to LF only; Git attributes already require LF"
+    },
+    {
+      "path": "scripts/simulation/unified_edit/checkpoint_codec.gd",
+      "before": "a5d2b58634e75ca95247aad3d87969e77142916f0a73b546abe2749e78635627",
+      "after": "e57b9f85ee73ebedf36d59ba009dde22148fef2d9b3d752aa2d8ce331e087b7f",
+      "change": "CRLF to LF only; Git attributes already require LF"
+    },
+    {
+      "path": "scripts/simulation/unified_edit/checkpoint_router.gd",
+      "before": "5c907fab6324362d028704d2ee2d0a4e8332d93b7de1b32d401650557f447524",
+      "after": "1431da54bf5d4ae36c0f0bafaeac984d4666daac8d933fa3b1d693906f782c01",
+      "change": "CRLF to LF only; Git attributes already require LF"
+    },
+    {
+      "path": "scripts/simulation/unified_edit/configuration.gd",
+      "before": "48504ad310d521434413f279d2a3d5027e9905aad6998e23c4d30b16762411e0",
+      "after": "51eeaeb3163a58fd2256984d469c49c336962bc370aabba27b24fd5d250c5258",
+      "change": "CRLF to LF only; Git attributes already require LF"
+    },
+    {
+      "path": "scripts/simulation/unified_edit/coupled.gd",
+      "before": "33dcaabd38a8f24354a7236d782fb10d122249fb35da22285a346856cf58beeb",
+      "after": "39a016a6e3bcac204192161ccaf5c0e253d167c6257615e51a50f49a71743bb7",
+      "change": "CRLF to LF only; Git attributes already require LF"
+    },
+    {
+      "path": "scripts/simulation/unified_edit/numerics_checkpoint_sources.gd",
+      "before": "2a9a2222125ded0924d2c13c81dcbf3d9478bed45a14802053ba70a6d369936a",
+      "after": "2a899cbfa5a693b83fc3880c1cbea1391b20dcc72079a42ae226b4d581e77e91",
+      "change": "CRLF to LF only; Git attributes already require LF"
+    },
+    {
+      "path": "scripts/simulation/unified_edit/pipeline.gd",
+      "before": "48981fd4d6bc285c876a321acf82af74dd1dbf404161bfb1a3f08b68fafc002a",
+      "after": "b73a2705baf7da5937253bd336c33b47ccec313c6588325c9ff3e950d98a4591",
+      "change": "CRLF to LF only; Git attributes already require LF"
+    },
+    {
+      "path": "scripts/simulation/unified_edit/player_input.gd",
+      "before": "28f21f04591c576d4712b6200167e2cdc44ac764d04bae2e42365969893bb825",
+      "after": "c0d9105c3a0d20afbf55808de2f5643a7f9f4f7bf8ebe23f4d0e628627e969ac",
+      "change": "CRLF to LF only; Git attributes already require LF"
+    },
+    {
+      "path": "scripts/simulation/unified_edit/state.gd",
+      "before": "653d1d508203b61c7c82386bde71d98a26ff19803761cd0aff83eb91556126a2",
+      "after": "75bdfe876a504a81fc469fbb1afe16b484a0652432e774533f87679e46dc614b",
+      "change": "CRLF to LF only; Git attributes already require LF"
+    },
+    {
+      "path": "scripts/simulation/unified_edit/visuals.gd",
+      "before": "a3b24214cca4ed3bcc7ccb6449cb16c727a93d16498da8ff744facfcd07acbe3",
+      "after": "ed42b02cf5a0e6b65fb1bdb4121722637ae821e0615e52e624292729d8431738",
+      "change": "CRLF to LF only; Git attributes already require LF"
+    },
+    {
+      "path": "scripts/visual/brush_indicator.gd",
+      "before": "a177998adf7200816013d274686d6c290100a9c9a88d9dcede3b9917b9b72be4",
+      "after": "641e1267cc8edbe45ba537102e089ebbb0b157cea7ea2bca4d76797f082f700a",
+      "change": "CRLF to LF only; Git attributes already require LF"
+    },
+    {
+      "path": ".gitignore",
+      "before": "41c895b5eb7fbd6e2a69b17275b58f889fa6665dd98321b54cecc8f20c521003",
+      "after": "1406cac1558670e791806ad936bbd1a4e0080c215f47abb2fad9e55f646b528c",
+      "change": "CRLF to LF only; pending text outside runtime graph"
+    },
+    {
+      "path": "AGENTS.md",
+      "before": "0ac407cae62f707a9052c9794ca1f71b57632d3b3a3ed5d6afc4924f7ad7bad9",
+      "after": "8492dd1b27fe812c544f881726c11f5ba52fa167d36c8b2085f0c7f9722467b8",
+      "change": "CRLF to LF only; pending text outside runtime graph"
+    },
+    {
+      "path": "docs/README.md",
+      "before": "e02f25f2cc81a5e41cd70bb09bbe9e5718801bdefec992ce682d7ddcc09ffe5f",
+      "after": "88100c3a22d7c26eb3c8a416412650634f2301c247f38151d905aa2b4f1a91a9",
+      "change": "CRLF to LF only; pending text outside runtime graph"
+    },
+    {
+      "path": "docs/competitor/README.md",
+      "before": "b363fd28ee3166e95ddcddf7b8a22631b9f3c220a8dee274addd4eabd0f1a633",
+      "after": "ec38a3a5298231ce283d67a92118115bbf63d0af60dbcf3d676cdc3ffa576976",
+      "change": "CRLF to LF only; pending text outside runtime graph"
+    },
+    {
+      "path": "docs/competitor/vegetation_sources_20261021.json",
+      "before": "e0a42ab540148751f25eda5e661f3ff2f78ffe3a1dc024b73eefabb8252a940f",
+      "after": "0f3e57679249d4c3a9580562f9b7e0b8a0e826b0f77afdf63ece9a4ae9d920a9",
+      "change": "CRLF to LF only; pending text outside runtime graph"
+    },
+    {
+      "path": "docs/project-execution-guide.html",
+      "before": "21b6b2dae7720995e4081c325380d1f0d4e951dfda96991865bf783690184c22",
+      "after": "9b2d6b18e7b1e7ae3d4acafb15172c0b02e158793f7614489341b795c95c379f",
+      "change": "CRLF to LF only; pending text outside runtime graph"
+    },
+    {
+      "path": "docs/project-execution-guide.sources.json",
+      "before": "2855c063c742ab92bc3b7aa0cb05e42ce0e17d0636a220343dd823c7adc76645",
+      "after": "5b6c3c4961b9121f09e47d2e9b6eb9282181fd9f9ae903186e2128ac242d590e",
+      "change": "CRLF to LF only; pending text outside runtime graph"
+    },
+    {
+      "path": "docs/technical-panorama.sources.json",
+      "before": "8b47b17be48789574126d6a6c7e5f79c5b257c7d167b8f7abc651a5a635f1f39",
+      "after": "f897de1c0a609dc50a9b0e1af3bd26c9ddcb8501aa8c82fc4218e03f251c66cc",
+      "change": "CRLF to LF only; pending text outside runtime graph"
+    },
+    {
+      "path": "docs/主场景操作.md",
+      "before": "f6a3def9f931810bd6d5b304566c187f0df1e8343c8d7ee1d486412464a4b3df",
+      "after": "0246ceb7c1c2d0c235e0e138cf73acd4b0334cc3bf491fe434d1afe6ba7b8d6e",
+      "change": "CRLF to LF only; pending text outside runtime graph"
+    },
+    {
+      "path": "docs/场景切换与功能复用.md",
+      "before": "c8f381fb6647e2c1862b59c5d197948ad5304e8b84d89a9530d9f65e3c586b97",
+      "after": "48b807a743ec0318359e915caf855abed393fca94b85a7c7d757b96c38cf2f04",
+      "change": "CRLF to LF only; pending text outside runtime graph"
+    },
+    {
+      "path": "docs/当前技术规格.md",
+      "before": "2ac376db81fd99ac6e1d33ece1bc84ccfde6a9f2b3621127f66f72bbd01bbdd3",
+      "after": "bf7717b63b66f645c8f1f58e812e071daa53ef1f46588cb0238f26f677c5003a",
+      "change": "CRLF to LF only; pending text outside runtime graph"
+    },
+    {
+      "path": "docs/当前项目技术方案.md",
+      "before": "45bc98d812ab49c91f6c05a4e8876f23f5b5f6dc59d225d8c8c0d3802602bc95",
+      "after": "6e364ae025eb7d512ed81377177574cf93514cdc40b3d4e86a715cd25d07fbc5",
+      "change": "CRLF to LF only; pending text outside runtime graph"
+    },
+    {
+      "path": "docs/性能面板.md",
+      "before": "e023082f9faf4f47d2abb16fa8875c5f07d26bcaae5ceec134a7f8f33b4ff827",
+      "after": "9f37bbac0661d0b8d6fad2d919011453109992469d86f8e249a9fa1140127532",
+      "change": "CRLF to LF only; pending text outside runtime graph"
+    },
+    {
+      "path": "scenes/components/unified_performance_panel.tscn",
+      "before": "378388bd14335aaeeb9ecbe3cbf6e565552ecc422381c5bc83f48d216438cf3a",
+      "after": "8a9804ecb2de81fa796b90e263d0adfbe908c89a05b4433c96bedf6becb05c3a",
+      "change": "CRLF to LF only; pending text outside runtime graph"
+    },
+    {
+      "path": "scenes/experiments/main_water_momentum.tscn",
+      "before": "d9612d00a3d88a3268472b6902fadf2dd7f6a09e2cdab7b82e77ca5ca1164452",
+      "after": "299f843d0fbb77965536f6b16118628a1db4184f2fb771764ca8bd39ee52276e",
+      "change": "CRLF to LF only; pending text outside runtime graph"
+    },
+    {
+      "path": "task/wave_propagation/总纲.md",
+      "before": "545cafb66ce402c57ca7c91403f5ee5185a8f7d6ca5af51472e782c6f2007c40",
+      "after": "a745573d896f97664e94ff35b091b528c530a94fae57183a69cb01bdb7161767",
+      "change": "CRLF to LF only; pending text outside runtime graph"
+    },
+    {
+      "path": "task/wave_propagation/执行状态.md",
+      "before": "0a0ad412ccdce5d5bd0e98db861ef3005f7f4b0f047c7fe44a0d1812d7475c88",
+      "after": "d0d8d37886fd6b1944f90623cc4e50492e865744c836822294c1d526143bd1ec",
+      "change": "CRLF to LF only; pending text outside runtime graph"
+    },
+    {
+      "path": "task/wave_propagation/细则/README.md",
+      "before": "5496ed2ff4f223da379d764d9f513e48107420c51e58c1f6ba3b25913e0f8e39",
+      "after": "9a44ed550ccf1a6a6548b0c489eedf008d0dad5b60f4609611bb9611124a254a",
+      "change": "CRLF to LF only; pending text outside runtime graph"
+    },
+    {
+      "path": "task/wave_propagation/细则/T06_成本与交付.md",
+      "before": "1518450aa89201f3c6fde0ccf6c5f62607e441fa5ec89a5350ec5f727fca7f43",
+      "after": "6668ed0cea0468e1933c2bff16601cac2140618ecfeb29cfc5eabdeb9cc5ab2b",
+      "change": "CRLF to LF only; pending text outside runtime graph"
+    },
+    {
+      "path": "task/wave_propagation/需求映射.md",
+      "before": "0e4393c4f7717b68b2bd25252f67fe5092d4f0473a71459f9a9811f1700e3a4a",
+      "after": "f166fef850120f62b2efc386c444b633d0fc123ab227ceb8c9071279197ec735",
+      "change": "CRLF to LF only; pending text outside runtime graph"
+    },
+    {
+      "path": "task/wave_propagation/验收/G6_main长稳索引.json",
+      "before": "641efa2f70ab2c00b1575bac0bc67d4d8e38df4c9a1135d0665635a0cfc02124",
+      "after": "1fb2b0cd0d3a741c36f663b3a362aa26030a2cbe9fd1b87bbd5eebbcc9a54a7d",
+      "change": "CRLF to LF only; pending text outside runtime graph"
+    },
+    {
+      "path": "task/wave_propagation/验收/G6_性能索引.json",
+      "before": "b2299e971c788dfd1fd75802bd273f653170f5b4c08bcaac24ee048608660be6",
+      "after": "ee6393d5c81bb3090b706138c7bd33fcd3d65a5e83f8ef01b482713154b4fd93",
+      "change": "CRLF to LF only; pending text outside runtime graph"
+    },
+    {
+      "path": "task/wave_propagation/验收/G6_最终索引.json",
+      "before": "5c84c1a68d0fa19b242fc2ed1de504a8e300f2ada5320d40f8bf188c37f585e3",
+      "after": "2be205284c5d46089db23edd53cfe4d0c2b83757e5424e60cafbfa6988d383e6",
+      "change": "CRLF to LF only; pending text outside runtime graph"
+    },
+    {
+      "path": "task/wave_propagation/验收/G6_水沙长稳索引.json",
+      "before": "93f82c5bb038e9e65555856288b87e21aa59c0648b318e19522c67e9f1cf61d7",
+      "after": "6b513de794d9e8069b6a5137c8bbfe34068f08a1fdc3158fd88dfa458d33fc45",
+      "change": "CRLF to LF only; pending text outside runtime graph"
+    },
+    {
+      "path": "task/wave_propagation/验收/README.md",
+      "before": "fb96fd7ce990ce18398310dde2db3a34bca515672fabf30b2b3bb9ccbb2d109d",
+      "after": "d96b747f0a3afb4a8abbab13f8e530f7a0f0471aa37b24e55675b9867aa0bfc7",
+      "change": "CRLF to LF only; pending text outside runtime graph"
+    },
+    {
+      "path": "task/wave_retention_ui/索引.json",
+      "before": "c4d112aaeacd6a565617e64611a18a05e5549ba8fbe45d0be4c05f313f9bb9fa",
+      "after": "a24a142f149fd72d3d4a874574450f87fa6399ecd298c895c8df67fd99419921",
+      "change": "CRLF to LF only; pending text outside runtime graph"
+    },
+    {
+      "path": "tests/parameter_windows/runtime_probe.gd",
+      "before": "42b34d2256237c08a905ca3fe28e1907166e18ad913426d134312c0476865629",
+      "after": "350f64cdc57e486994390b24b4e48d8bea055bbefecf8eef677c043f87ae70be",
+      "change": "CRLF to LF only; pending text outside runtime graph"
+    },
+    {
+      "path": "tools/docs/build_technical_panorama.py",
+      "before": "d90553d4f6ed8b465e77d557b9e8838ddad8ddc103817ee31e5c352d507b62ff",
+      "after": "b27410b28ea4c6bbb7591569a592d4cd4827c4ef1e125c48788d6b1694fbdbaa",
+      "change": "CRLF to LF only; pending text outside runtime graph"
+    },
+    {
+      "path": "tools/docs/build_unified_execution_guide.py",
+      "before": "5aaaa7ea22199c5bfbf3e222cc8035aca7622acc5a6e559ebb1cfec5d03d01cd",
+      "after": "adb18b6508709b2880cc44224fb1ab2f6bb7e3ee82c960b876ab6bb2f2bc1277",
+      "change": "CRLF to LF only; pending text outside runtime graph"
+    },
+    {
+      "path": "tools/docs/technical_panorama_content.py",
+      "before": "833935bfa79eb37a57ca6cd00264db0fb131fc513dc52454451bb87f2ffd330c",
+      "after": "e3a57b7ce283bc683e152daebfb0a6f9eb3407e52241e9cdbb8b92935b1d28e9",
+      "change": "CRLF to LF only; pending text outside runtime graph"
+    },
+    {
+      "path": "tools/parameter_windows/build_windows.py",
+      "before": "a0d341eb28ad0a63d2538c124ef61d429865e48bfd88b84decfd9d5410abda13",
+      "after": "9b2d8d3dfbad986bafbfc2330b5622bec8650778ee17ef8cb50ba7d5ed7e3312",
+      "change": "CRLF to LF only; pending text outside runtime graph"
+    },
+    {
+      "path": "tools/parameter_windows/migrate_operation_panels.py",
+      "before": "c63961458d8a0fa214f23c13bdcf5c26169b6b5eb640ef6cef0a48bbe3d2f2aa",
+      "after": "8013975b42aadafdaed42dfc56f5cac170f3bd8e0e49aa3ea9298d04c28f6e2c",
+      "change": "CRLF to LF only; pending text outside runtime graph"
+    },
+    {
+      "path": "tools/unified_edit_pipeline/architecture_policy.json",
+      "before": "42ff59227ef877f7f4eee5ea3e1fc2d9ee8d0ec1696b4117d48160315fe2f6d1",
+      "after": "c312de48f763f58bdf70acd8a7cebba8f0a093dfeea913edd08f2cd3ecfedb11",
+      "change": "CRLF to LF only; pending text outside runtime graph"
+    },
+    {
+      "path": "tools/wave_propagation/after_soak_matrix.py",
+      "before": "ac5548a015b86e558131a6deebe07bced4ace32fcd9a150a7c463f09492d4f0d",
+      "after": "4ae8b9016001c6c428df80c9efa677e8ee38fc237812e4f57701d3efd5b6c6c9",
+      "change": "CRLF to LF only; pending text outside runtime graph"
+    },
+    {
+      "path": "tools/wave_propagation/analyze_formal_soak.py",
+      "before": "5f2d89aa226a2836f3eb1b29ced39eb12b342ae586c18303c1b8893108bef193",
+      "after": "9cff4c8ef16489adddffe5b80846524df811f9f8425a890d78cdd986637c0a8d",
+      "change": "CRLF to LF only; pending text outside runtime graph"
+    },
+    {
+      "path": "tools/wave_propagation/audit_formal_soak_native.gd",
+      "before": "ff5745d3d7bf5ced12a430eb720004c6b2fb9c21eb694aa2a164dfc8acfab954",
+      "after": "8d51d8cfe9e1be06a2f86ed250552724daef7c1091275f02077f7753ee898759",
+      "change": "CRLF to LF only; pending text outside runtime graph"
+    },
+    {
+      "path": "tools/wave_propagation/formal_soak_probe.gd",
+      "before": "9a0b0adb1b535faed0ac04b58e78f241359ad560afcee1fe770cb3abb9af5eba",
+      "after": "85e4af694d48befcab70635f2495bb77c46561312b5c3ccf5379290f1f72e2e3",
+      "change": "CRLF to LF only; pending text outside runtime graph"
+    },
+    {
+      "path": "tools/wave_propagation/numerics_configuration_probe.gd",
+      "before": "9e9ddfa0af03d092b26c05fce538f3a99ff6c4af1cea24f1ee06d1dd3d55f861",
+      "after": "4af070af20c70b9b50a650df8eb012fd84971caccaa434973e91beec5e585a52",
+      "change": "CRLF to LF only; pending text outside runtime graph"
+    },
+    {
+      "path": "tools/wave_propagation/retention_gpu_probe.gd",
+      "before": "934ffc1e5a1833cd4ce9127957a0cba7affc597b5a4b004b46537b1f4ef00b2a",
+      "after": "c7429e5789cc3722eee584dbb46981dbc8c1b6d2398ade8d1846d10b1b4f2f2d",
+      "change": "CRLF to LF only; pending text outside runtime graph"
+    },
+    {
+      "path": "tools/wave_propagation/wave_retention_ui_probe.gd",
+      "before": "c95be14874fa039ebf02799b944633b888d6d556ef6f2766b1dbb72e6d00f4a8",
+      "after": "efcb2ee017204a2a76ad892041ec726d666b01910ca9015743a932f79037cc10",
+      "change": "CRLF to LF only; pending text outside runtime graph"
+    }
+  ]
+}

@@ -1,0 +1,4787 @@
+{
+  "scope": "Plant visual configuration and GPU bytecode; no gameplay methods, live bindings or temporal observation",
+  "python": "3.13.12",
+  "unitypy": "1.25.4",
+  "command": [
+    "docs/competitor/tools/analyze_vegetation.py",
+    "--out",
+    "D:/godot/project/sandcastle/docs/competitor/evidence/vegetation_20261021/package_v1"
+  ],
+  "tool": {
+    "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\tools\\analyze_vegetation.py",
+    "bytes": 13654,
+    "sha256": "a3428fb25e1df46b36d92398320b25c93976a05f0820de3d7e51bb3827822d9c"
+  },
+  "sources": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "bytes": 96756,
+      "sha256": "7e4fa0a38904d42243cec1f600f353c8adce0182fa5d9304f1023f2867243b6d"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+      "bytes": 76135784,
+      "sha256": "6dd7bb6bc7d926fd43c08d22c9c767b7edf531cf11a4a555fcd41830f2f9c721"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets.resS",
+      "bytes": 167798272,
+      "sha256": "5db9857c6c27ad5eef905e10428898c87cfbfaaac7c36f8d014fe77cf595c65c"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\globalgamemanagers.assets",
+      "bytes": 282924,
+      "sha256": "8c8f9cbc1b1bc03ff278154f93698295e5de5f4b078b46c3a9ccae70e70815a2"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+      "bytes": 47654400,
+      "sha256": "147030ecf9527a25250238120364eb761390b99688b1812c4ea555b3b04e56a0"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+      "bytes": 8928184,
+      "sha256": "aa4457307746c4552541b6cedd4809fdaccf33eef03964a9e2300de5a09e1606"
+    }
+  ],
+  "objects": [
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\globalgamemanagers.assets",
+      "path_id": 1500,
+      "type": "MonoScript",
+      "name": "Plant",
+      "offset": 218976,
+      "bytes": 68,
+      "unity_version": "6000.4.10f1",
+      "parse": "complete_typetree",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\globalgamemanagers.assets_1500.raw",
+        "bytes": 68,
+        "sha256": "2b0e83732e18b2186e3e8c1f551c82d39619e0dadb800446c849aed7d9d486f9",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\globalgamemanagers.assets",
+          "offset": 218976,
+          "bytes": 68,
+          "path_id": 1500
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\globalgamemanagers.assets_1500.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 480,
+      "type": "MonoBehaviour",
+      "name": "",
+      "offset": 75808,
+      "bytes": 100,
+      "unity_version": "6000.4.10f1",
+      "parse": "header_only",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_480.raw",
+        "bytes": 100,
+        "sha256": "47565c10b6a32d0b5e2bb1a4dcad35561ea105949c161689516ea533dbcb56d4",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 75808,
+          "bytes": 100,
+          "path_id": 480
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_480.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 14,
+      "type": "GameObject",
+      "name": "Kelp",
+      "offset": 19216,
+      "bytes": 43,
+      "unity_version": "6000.4.10f1",
+      "parse": "complete_typetree",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_14.raw",
+        "bytes": 43,
+        "sha256": "6724bba43f3ed045c548a0e4993a493e253c417ee2d391d19d01b5854d0a4997",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 19216,
+          "bytes": 43,
+          "path_id": 14
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_14.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 153,
+      "type": "Transform",
+      "name": "",
+      "offset": 29056,
+      "bytes": 68,
+      "unity_version": "6000.4.10f1",
+      "parse": "complete_typetree",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_153.raw",
+        "bytes": 68,
+        "sha256": "fca369eb4056e45739b5df83afa578a0ff43bdce084937e70a5a2427cb4d92d5",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 29056,
+          "bytes": 68,
+          "path_id": 153
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_153.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 172,
+      "type": "Transform",
+      "name": "",
+      "offset": 30672,
+      "bytes": 104,
+      "unity_version": "6000.4.10f1",
+      "parse": "complete_typetree",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_172.raw",
+        "bytes": 104,
+        "sha256": "005f859a1e107d9d486dd9dae9d8e72d1eeec521b2df45a2d5f2688658e92073",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 30672,
+          "bytes": 104,
+          "path_id": 172
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_172.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 45,
+      "type": "GameObject",
+      "name": "Coastal",
+      "offset": 21152,
+      "bytes": 35,
+      "unity_version": "6000.4.10f1",
+      "parse": "complete_typetree",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_45.raw",
+        "bytes": 35,
+        "sha256": "ad90ddd3ff09fc06fdce906775e8a0ecaafbb24f251a0c67ffcca402b0d54b47",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 21152,
+          "bytes": 35,
+          "path_id": 45
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_45.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 180,
+      "type": "Transform",
+      "name": "",
+      "offset": 31344,
+      "bytes": 224,
+      "unity_version": "6000.4.10f1",
+      "parse": "complete_typetree",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_180.raw",
+        "bytes": 224,
+        "sha256": "a18689662751a93205b440b21dfaf295ba394fb4b8b1c856fa6668f88979bc49",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 31344,
+          "bytes": 224,
+          "path_id": 180
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_180.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 58,
+      "type": "GameObject",
+      "name": "Beach",
+      "offset": 22048,
+      "bytes": 47,
+      "unity_version": "6000.4.10f1",
+      "parse": "complete_typetree",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_58.raw",
+        "bytes": 47,
+        "sha256": "8696437435fef5a97d953a923e2fa52ad1bbd766774226a7b04ff6ea9d05bc29",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 22048,
+          "bytes": 47,
+          "path_id": 58
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_58.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 491,
+      "type": "MonoBehaviour",
+      "name": "",
+      "offset": 77248,
+      "bytes": 100,
+      "unity_version": "6000.4.10f1",
+      "parse": "header_only",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_491.raw",
+        "bytes": 100,
+        "sha256": "9b40ac2c4d6a45fb744224c7edb2cf7c23f8ad39e07d7822cc3192341027aa48",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 77248,
+          "bytes": 100,
+          "path_id": 491
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_491.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 25,
+      "type": "GameObject",
+      "name": "LettuceCoral",
+      "offset": 19872,
+      "bytes": 51,
+      "unity_version": "6000.4.10f1",
+      "parse": "complete_typetree",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_25.raw",
+        "bytes": 51,
+        "sha256": "d737e29970b5f13ed61b6c81b52839e68211745872e9f04e9acdaf8ad6f065bc",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 19872,
+          "bytes": 51,
+          "path_id": 25
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_25.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 158,
+      "type": "Transform",
+      "name": "",
+      "offset": 29536,
+      "bytes": 68,
+      "unity_version": "6000.4.10f1",
+      "parse": "complete_typetree",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_158.raw",
+        "bytes": 68,
+        "sha256": "9b429ca51c8086d08928f503e024f0f21d52ae824d098531a3620b5d6a946545",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 29536,
+          "bytes": 68,
+          "path_id": 158
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_158.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 196,
+      "type": "Transform",
+      "name": "",
+      "offset": 32800,
+      "bytes": 116,
+      "unity_version": "6000.4.10f1",
+      "parse": "complete_typetree",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_196.raw",
+        "bytes": 116,
+        "sha256": "378ed4cc8d8240d3d12ea85d46171c8783e7e6b7f22292cad8bc6d62a4318024",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 32800,
+          "bytes": 116,
+          "path_id": 196
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_196.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 84,
+      "type": "GameObject",
+      "name": "CoralReef",
+      "offset": 23648,
+      "bytes": 39,
+      "unity_version": "6000.4.10f1",
+      "parse": "complete_typetree",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_84.raw",
+        "bytes": 39,
+        "sha256": "4186775828762d43d972fcf81822bdc88ce52bfb66f9d99d2e39ecde949d7415",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 23648,
+          "bytes": 39,
+          "path_id": 84
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_84.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 492,
+      "type": "MonoBehaviour",
+      "name": "",
+      "offset": 77360,
+      "bytes": 100,
+      "unity_version": "6000.4.10f1",
+      "parse": "header_only",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_492.raw",
+        "bytes": 100,
+        "sha256": "91ab1d7d34d93eea157097fda7822e5c859ef3df7e95132176f6a5b16f1fc2bb",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 77360,
+          "bytes": 100,
+          "path_id": 492
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_492.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 27,
+      "type": "GameObject",
+      "name": "GreyTussock",
+      "offset": 19984,
+      "bytes": 51,
+      "unity_version": "6000.4.10f1",
+      "parse": "complete_typetree",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_27.raw",
+        "bytes": 51,
+        "sha256": "5b8d1ca839f14687c9a6622d10ae14c1213f81f6d9a3c9cb17e9646223921267",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 19984,
+          "bytes": 51,
+          "path_id": 27
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_27.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 160,
+      "type": "Transform",
+      "name": "",
+      "offset": 29696,
+      "bytes": 68,
+      "unity_version": "6000.4.10f1",
+      "parse": "complete_typetree",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_160.raw",
+        "bytes": 68,
+        "sha256": "0597a96c6a3d3273caf62713431964a477c4873119c69e8c4f039cf8eb5d914c",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 29696,
+          "bytes": 68,
+          "path_id": 160
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_160.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 154,
+      "type": "Transform",
+      "name": "",
+      "offset": 29136,
+      "bytes": 140,
+      "unity_version": "6000.4.10f1",
+      "parse": "complete_typetree",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_154.raw",
+        "bytes": 140,
+        "sha256": "a0117e1b8a4c30cef09fd3b77682566d805d608f82a832f92622a744bc879592",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 29136,
+          "bytes": 140,
+          "path_id": 154
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_154.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 18,
+      "type": "GameObject",
+      "name": "Grassland",
+      "offset": 19440,
+      "bytes": 39,
+      "unity_version": "6000.4.10f1",
+      "parse": "complete_typetree",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_18.raw",
+        "bytes": 39,
+        "sha256": "8007643faf013233a204fc71b5304053e7402cd88772e6eaaa487fc133bc2b57",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 19440,
+          "bytes": 39,
+          "path_id": 18
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_18.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 493,
+      "type": "MonoBehaviour",
+      "name": "",
+      "offset": 77472,
+      "bytes": 100,
+      "unity_version": "6000.4.10f1",
+      "parse": "header_only",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_493.raw",
+        "bytes": 100,
+        "sha256": "a218a054dda1f09f671fbf0e36e74d62e029dc02a0edb64b84f4b097a5c0aa7a",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 77472,
+          "bytes": 100,
+          "path_id": 493
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_493.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 31,
+      "type": "GameObject",
+      "name": "Yarrow",
+      "offset": 20224,
+      "bytes": 47,
+      "unity_version": "6000.4.10f1",
+      "parse": "complete_typetree",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_31.raw",
+        "bytes": 47,
+        "sha256": "4bc825513d2e74ade5128a2ea8fc3e7cee67f16bebd62c461f9bddc91d2b1eab",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 20224,
+          "bytes": 47,
+          "path_id": 31
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_31.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 163,
+      "type": "Transform",
+      "name": "",
+      "offset": 29936,
+      "bytes": 68,
+      "unity_version": "6000.4.10f1",
+      "parse": "complete_typetree",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_163.raw",
+        "bytes": 68,
+        "sha256": "d895e926cea390a4d7660c7e27caa76e3fec8342d4d59f3271ba81fde6bd446c",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 29936,
+          "bytes": 68,
+          "path_id": 163
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_163.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 496,
+      "type": "MonoBehaviour",
+      "name": "",
+      "offset": 77760,
+      "bytes": 100,
+      "unity_version": "6000.4.10f1",
+      "parse": "header_only",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_496.raw",
+        "bytes": 100,
+        "sha256": "8b0d3cb94eafeabb6ce1a89a17a7199c46d12097151104ab226b70b359dee32a",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 77760,
+          "bytes": 100,
+          "path_id": 496
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_496.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 34,
+      "type": "GameObject",
+      "name": "SeaGrass",
+      "offset": 20416,
+      "bytes": 47,
+      "unity_version": "6000.4.10f1",
+      "parse": "complete_typetree",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_34.raw",
+        "bytes": 47,
+        "sha256": "8d8fbce8c5d2dae26ef29e559410c5f0de23cb8ec7fa6bcb33a1c8386b2c2e5b",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 20416,
+          "bytes": 47,
+          "path_id": 34
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_34.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 164,
+      "type": "Transform",
+      "name": "",
+      "offset": 30016,
+      "bytes": 68,
+      "unity_version": "6000.4.10f1",
+      "parse": "complete_typetree",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_164.raw",
+        "bytes": 68,
+        "sha256": "dd00914a3d577f4ed7db472b74a366ca10cb2dae60839551b5aeabc9f10c7195",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 30016,
+          "bytes": 68,
+          "path_id": 164
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_164.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 510,
+      "type": "MonoBehaviour",
+      "name": "",
+      "offset": 79680,
+      "bytes": 100,
+      "unity_version": "6000.4.10f1",
+      "parse": "header_only",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_510.raw",
+        "bytes": 100,
+        "sha256": "d850b478894a61f2ecc9604e3d2f22e3e9385edbc4a7b087e587420fd37edace",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 79680,
+          "bytes": 100,
+          "path_id": 510
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_510.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 43,
+      "type": "GameObject",
+      "name": "SwitchGrass",
+      "offset": 21040,
+      "bytes": 51,
+      "unity_version": "6000.4.10f1",
+      "parse": "complete_typetree",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_43.raw",
+        "bytes": 51,
+        "sha256": "f9ec86348b04aa2b15c30e0daedf3616711d6dfdbbb79ab68f2df277c22018d3",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 21040,
+          "bytes": 51,
+          "path_id": 43
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_43.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 170,
+      "type": "Transform",
+      "name": "",
+      "offset": 30496,
+      "bytes": 68,
+      "unity_version": "6000.4.10f1",
+      "parse": "complete_typetree",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_170.raw",
+        "bytes": 68,
+        "sha256": "6988d435e63bc95ae905d597056c22e7805fe865b7cccf7369df97e082dcbb70",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 30496,
+          "bytes": 68,
+          "path_id": 170
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_170.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 515,
+      "type": "MonoBehaviour",
+      "name": "",
+      "offset": 80256,
+      "bytes": 100,
+      "unity_version": "6000.4.10f1",
+      "parse": "header_only",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_515.raw",
+        "bytes": 100,
+        "sha256": "fcac26f38592c4f10bfda6869f23aab35cb29945c7b5a0e458ec132bb150a9c9",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 80256,
+          "bytes": 100,
+          "path_id": 515
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_515.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 47,
+      "type": "GameObject",
+      "name": "Goldenrod",
+      "offset": 21296,
+      "bytes": 51,
+      "unity_version": "6000.4.10f1",
+      "parse": "complete_typetree",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_47.raw",
+        "bytes": 51,
+        "sha256": "c41870ca2e7ea9336048169815c9f572fadc87f98d2a3402f820f16c4c2af869",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 21296,
+          "bytes": 51,
+          "path_id": 47
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_47.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 173,
+      "type": "Transform",
+      "name": "",
+      "offset": 30784,
+      "bytes": 68,
+      "unity_version": "6000.4.10f1",
+      "parse": "complete_typetree",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_173.raw",
+        "bytes": 68,
+        "sha256": "b955948347468b308204f9abc0d14886d76e495361305964bb8bd2339ca160b5",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 30784,
+          "bytes": 68,
+          "path_id": 173
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_173.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 525,
+      "type": "MonoBehaviour",
+      "name": "",
+      "offset": 81376,
+      "bytes": 100,
+      "unity_version": "6000.4.10f1",
+      "parse": "header_only",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_525.raw",
+        "bytes": 100,
+        "sha256": "cd7b97ba006673116a9af79b86771295fbfe4459888ff67b5e19f6d638869a84",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 81376,
+          "bytes": 100,
+          "path_id": 525
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_525.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 51,
+      "type": "GameObject",
+      "name": "RedAlgae",
+      "offset": 21616,
+      "bytes": 47,
+      "unity_version": "6000.4.10f1",
+      "parse": "complete_typetree",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_51.raw",
+        "bytes": 47,
+        "sha256": "793af077099956fd4c9a795303afa0fd3d3a7ff38085a970ec6c26fc4ccf5695",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 21616,
+          "bytes": 47,
+          "path_id": 51
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_51.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 175,
+      "type": "Transform",
+      "name": "",
+      "offset": 30944,
+      "bytes": 68,
+      "unity_version": "6000.4.10f1",
+      "parse": "complete_typetree",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_175.raw",
+        "bytes": 68,
+        "sha256": "7d61f20618aacfdbd799bf82c94fdf3568c99301bac54fd1cf733a0df1715568",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 30944,
+          "bytes": 68,
+          "path_id": 175
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_175.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 527,
+      "type": "MonoBehaviour",
+      "name": "",
+      "offset": 81632,
+      "bytes": 100,
+      "unity_version": "6000.4.10f1",
+      "parse": "header_only",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_527.raw",
+        "bytes": 100,
+        "sha256": "5206f6f70dc2d72789887e0c2891e8c32e32eeb201ea327d6e62e36d865df85b",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 81632,
+          "bytes": 100,
+          "path_id": 527
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_527.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 55,
+      "type": "GameObject",
+      "name": "GrooveBrainCoral",
+      "offset": 21856,
+      "bytes": 55,
+      "unity_version": "6000.4.10f1",
+      "parse": "complete_typetree",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_55.raw",
+        "bytes": 55,
+        "sha256": "3af4bc5750c3774f29341a73f555434a28174aa304e1930c226c975209c2f810",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 21856,
+          "bytes": 55,
+          "path_id": 55
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_55.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 177,
+      "type": "Transform",
+      "name": "",
+      "offset": 31104,
+      "bytes": 68,
+      "unity_version": "6000.4.10f1",
+      "parse": "complete_typetree",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_177.raw",
+        "bytes": 68,
+        "sha256": "1913df01286e980fb74c251f5a3a09599c4b00cc7d7e730c7c12c728af8d89d8",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 31104,
+          "bytes": 68,
+          "path_id": 177
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_177.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 528,
+      "type": "MonoBehaviour",
+      "name": "",
+      "offset": 81744,
+      "bytes": 100,
+      "unity_version": "6000.4.10f1",
+      "parse": "header_only",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_528.raw",
+        "bytes": 100,
+        "sha256": "076c150c12d217e5725c58266eb7129b3da377e224af523809313beb24a21153",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 81744,
+          "bytes": 100,
+          "path_id": 528
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_528.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 56,
+      "type": "GameObject",
+      "name": "CarnationCoral",
+      "offset": 21920,
+      "bytes": 55,
+      "unity_version": "6000.4.10f1",
+      "parse": "complete_typetree",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_56.raw",
+        "bytes": 55,
+        "sha256": "3ef3815b36d09a5a4b2ab4977f5421cc60067fca1e3c03d296eeb72cb621d5cb",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 21920,
+          "bytes": 55,
+          "path_id": 56
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_56.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 178,
+      "type": "Transform",
+      "name": "",
+      "offset": 31184,
+      "bytes": 68,
+      "unity_version": "6000.4.10f1",
+      "parse": "complete_typetree",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_178.raw",
+        "bytes": 68,
+        "sha256": "e905b4eb84632592ef3b5b226aff67fc85f5df84fab7ab1773f5aa6e1de2e60d",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 31184,
+          "bytes": 68,
+          "path_id": 178
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_178.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 539,
+      "type": "MonoBehaviour",
+      "name": "",
+      "offset": 82992,
+      "bytes": 100,
+      "unity_version": "6000.4.10f1",
+      "parse": "header_only",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_539.raw",
+        "bytes": 100,
+        "sha256": "d3bc827e1d5f6aea09e614d18f8c51007ca970e32a9b15d2db0706500693555b",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 82992,
+          "bytes": 100,
+          "path_id": 539
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_539.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 70,
+      "type": "GameObject",
+      "name": "BuffaloGrass",
+      "offset": 22832,
+      "bytes": 51,
+      "unity_version": "6000.4.10f1",
+      "parse": "complete_typetree",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_70.raw",
+        "bytes": 51,
+        "sha256": "57803bb46c91bdf6fde5bf29f77a8c3c0e37fece39fead19e0e9cabdf41c3c6e",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 22832,
+          "bytes": 51,
+          "path_id": 70
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_70.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 186,
+      "type": "Transform",
+      "name": "",
+      "offset": 31968,
+      "bytes": 68,
+      "unity_version": "6000.4.10f1",
+      "parse": "complete_typetree",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_186.raw",
+        "bytes": 68,
+        "sha256": "21eedc990f5a1f4856f5e8a448f96db871a22167765b31e3e1df3ee308364297",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 31968,
+          "bytes": 68,
+          "path_id": 186
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_186.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 542,
+      "type": "MonoBehaviour",
+      "name": "",
+      "offset": 83328,
+      "bytes": 100,
+      "unity_version": "6000.4.10f1",
+      "parse": "header_only",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_542.raw",
+        "bytes": 100,
+        "sha256": "a7d5607e83d63a26ca9587d36cfdc16a68331c51a25caa7256ce9bee199b57ab",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 83328,
+          "bytes": 100,
+          "path_id": 542
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_542.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 73,
+      "type": "GameObject",
+      "name": "WheatGrass",
+      "offset": 22992,
+      "bytes": 51,
+      "unity_version": "6000.4.10f1",
+      "parse": "complete_typetree",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_73.raw",
+        "bytes": 51,
+        "sha256": "563ff59731c90bbbc4761d4b2605d0dc62444e8acff9a1ba9218194cfd771e45",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 22992,
+          "bytes": 51,
+          "path_id": 73
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_73.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 189,
+      "type": "Transform",
+      "name": "",
+      "offset": 32208,
+      "bytes": 68,
+      "unity_version": "6000.4.10f1",
+      "parse": "complete_typetree",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_189.raw",
+        "bytes": 68,
+        "sha256": "d1056ac2b5bad5e2bc08593187aa6081cb1c113e0ca32d8fb27d7714c163d3ec",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 32208,
+          "bytes": 68,
+          "path_id": 189
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_189.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 553,
+      "type": "MonoBehaviour",
+      "name": "",
+      "offset": 84272,
+      "bytes": 100,
+      "unity_version": "6000.4.10f1",
+      "parse": "header_only",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_553.raw",
+        "bytes": 100,
+        "sha256": "9f9d789f429811bb42962d3766f34e274ff6cf5a1951d0bd34b9d3f2bb9c2500",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 84272,
+          "bytes": 100,
+          "path_id": 553
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_553.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 91,
+      "type": "GameObject",
+      "name": "ElkhornCoral",
+      "offset": 24080,
+      "bytes": 51,
+      "unity_version": "6000.4.10f1",
+      "parse": "complete_typetree",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_91.raw",
+        "bytes": 51,
+        "sha256": "beb74c60111641f843ca31198f984045c4c2ac3f68f76b000b0905596efaa99c",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 24080,
+          "bytes": 51,
+          "path_id": 91
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_91.json"
+    },
+    {
+      "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+      "path_id": 201,
+      "type": "Transform",
+      "name": "",
+      "offset": 33296,
+      "bytes": 68,
+      "unity_version": "6000.4.10f1",
+      "parse": "complete_typetree",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_201.raw",
+        "bytes": 68,
+        "sha256": "b7f3120f86c1f84d1762d725dd34c572a8c86a472e4715e7be4f80a95f57d95a",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+          "offset": 33296,
+          "bytes": 68,
+          "path_id": 201
+        }
+      },
+      "tree": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_201.json"
+    }
+  ],
+  "fields": [
+    {
+      "index": 7431,
+      "name": "Particle",
+      "namespace": "",
+      "offset": 7589280,
+      "byval": 24737,
+      "parent": 20032,
+      "flags": 1048577,
+      "first_field": 31685,
+      "field_count": 18,
+      "token": 33554566,
+      "fields": [
+        {
+          "index": 31685,
+          "metadata_offset": 6296310,
+          "name": "THREADS_GROUP_SIZE",
+          "type": {
+            "descriptor_va": "0x182a12e10",
+            "descriptor_offset": 44112400,
+            "type_tag": 8,
+            "attrs": 32851,
+            "data": "0xd5",
+            "name": "int"
+          },
+          "native_offset": 0
+        },
+        {
+          "index": 31686,
+          "metadata_offset": 6296320,
+          "name": "capacity",
+          "type": {
+            "descriptor_va": "0x182a11f70",
+            "descriptor_offset": 44108656,
+            "type_tag": 8,
+            "attrs": 6,
+            "data": "0xd5",
+            "name": "int"
+          },
+          "native_offset": 56
+        },
+        {
+          "index": 31687,
+          "metadata_offset": 6296330,
+          "name": "mesh",
+          "type": {
+            "descriptor_va": "0x182a1a3d0",
+            "descriptor_offset": 44142544,
+            "type_tag": 18,
+            "attrs": 6,
+            "data": "0x134f",
+            "name": "UnityEngine.Mesh",
+            "type_definition_index": 4943
+          },
+          "native_offset": 64
+        },
+        {
+          "index": 31688,
+          "metadata_offset": 6296340,
+          "name": "material",
+          "type": {
+            "descriptor_va": "0x182a19210",
+            "descriptor_offset": 44138000,
+            "type_tag": 18,
+            "attrs": 6,
+            "data": "0x1320",
+            "name": "UnityEngine.Material",
+            "type_definition_index": 4896
+          },
+          "native_offset": 72
+        },
+        {
+          "index": 31689,
+          "metadata_offset": 6296350,
+          "name": "args",
+          "type": {
+            "descriptor_va": "0x182a206a0",
+            "descriptor_offset": 44167840,
+            "type_tag": 18,
+            "attrs": 3,
+            "data": "0x13fc",
+            "name": "UnityEngine.ComputeBuffer",
+            "type_definition_index": 5116
+          },
+          "native_offset": 80
+        },
+        {
+          "index": 31690,
+          "metadata_offset": 6296360,
+          "name": "aliveList",
+          "type": {
+            "descriptor_va": "0x182a206a0",
+            "descriptor_offset": 44167840,
+            "type_tag": 18,
+            "attrs": 3,
+            "data": "0x13fc",
+            "name": "UnityEngine.ComputeBuffer",
+            "type_definition_index": 5116
+          },
+          "native_offset": 88
+        },
+        {
+          "index": 31691,
+          "metadata_offset": 6296370,
+          "name": "deadList",
+          "type": {
+            "descriptor_va": "0x182a206a0",
+            "descriptor_offset": 44167840,
+            "type_tag": 18,
+            "attrs": 3,
+            "data": "0x13fc",
+            "name": "UnityEngine.ComputeBuffer",
+            "type_definition_index": 5116
+          },
+          "native_offset": 96
+        },
+        {
+          "index": 31692,
+          "metadata_offset": 6296380,
+          "name": "deadCounter",
+          "type": {
+            "descriptor_va": "0x182a206a0",
+            "descriptor_offset": 44167840,
+            "type_tag": 18,
+            "attrs": 3,
+            "data": "0x13fc",
+            "name": "UnityEngine.ComputeBuffer",
+            "type_definition_index": 5116
+          },
+          "native_offset": 104
+        },
+        {
+          "index": 31693,
+          "metadata_offset": 6296390,
+          "name": "compactedList",
+          "type": {
+            "descriptor_va": "0x182a20620",
+            "descriptor_offset": 44167712,
+            "type_tag": 18,
+            "attrs": 1,
+            "data": "0x13fc",
+            "name": "UnityEngine.ComputeBuffer",
+            "type_definition_index": 5116
+          },
+          "native_offset": 112
+        },
+        {
+          "index": 31694,
+          "metadata_offset": 6296400,
+          "name": "renderingBounds",
+          "type": {
+            "descriptor_va": "0x1829f6530",
+            "descriptor_offset": 43995440,
+            "type_tag": 17,
+            "attrs": 3,
+            "data": "0x12f5",
+            "name": "UnityEngine.Bounds",
+            "type_definition_index": 4853
+          },
+          "native_offset": 120
+        },
+        {
+          "index": 31695,
+          "metadata_offset": 6296410,
+          "name": "kernelInitialization",
+          "type": {
+            "descriptor_va": "0x182a11d80",
+            "descriptor_offset": 44108160,
+            "type_tag": 8,
+            "attrs": 3,
+            "data": "0xd5",
+            "name": "int"
+          },
+          "native_offset": 144
+        },
+        {
+          "index": 31696,
+          "metadata_offset": 6296420,
+          "name": "kernelSpawn",
+          "type": {
+            "descriptor_va": "0x182a11d80",
+            "descriptor_offset": 44108160,
+            "type_tag": 8,
+            "attrs": 3,
+            "data": "0xd5",
+            "name": "int"
+          },
+          "native_offset": 148
+        },
+        {
+          "index": 31697,
+          "metadata_offset": 6296430,
+          "name": "kernelPaint",
+          "type": {
+            "descriptor_va": "0x182a11d80",
+            "descriptor_offset": 44108160,
+            "type_tag": 8,
+            "attrs": 3,
+            "data": "0xd5",
+            "name": "int"
+          },
+          "native_offset": 152
+        },
+        {
+          "index": 31698,
+          "metadata_offset": 6296440,
+          "name": "kernelKill",
+          "type": {
+            "descriptor_va": "0x182a11d80",
+            "descriptor_offset": 44108160,
+            "type_tag": 8,
+            "attrs": 3,
+            "data": "0xd5",
+            "name": "int"
+          },
+          "native_offset": 156
+        },
+        {
+          "index": 31699,
+          "metadata_offset": 6296450,
+          "name": "kernelCompact",
+          "type": {
+            "descriptor_va": "0x182a11d80",
+            "descriptor_offset": 44108160,
+            "type_tag": 8,
+            "attrs": 3,
+            "data": "0xd5",
+            "name": "int"
+          },
+          "native_offset": 160
+        },
+        {
+          "index": 31700,
+          "metadata_offset": 6296460,
+          "name": "kernelSwap",
+          "type": {
+            "descriptor_va": "0x182a11d80",
+            "descriptor_offset": 44108160,
+            "type_tag": 8,
+            "attrs": 3,
+            "data": "0xd5",
+            "name": "int"
+          },
+          "native_offset": 164
+        },
+        {
+          "index": 31701,
+          "metadata_offset": 6296470,
+          "name": "brushDataBuffer",
+          "type": {
+            "descriptor_va": "0x182a206a0",
+            "descriptor_offset": 44167840,
+            "type_tag": 18,
+            "attrs": 3,
+            "data": "0x13fc",
+            "name": "UnityEngine.ComputeBuffer",
+            "type_definition_index": 5116
+          },
+          "native_offset": 168
+        },
+        {
+          "index": 31702,
+          "metadata_offset": 6296480,
+          "name": "spawnCounter",
+          "type": {
+            "descriptor_va": "0x182a12060",
+            "descriptor_offset": 44108896,
+            "type_tag": 8,
+            "attrs": 17,
+            "data": "0xd5",
+            "name": "int"
+          },
+          "native_offset": 0
+        }
+      ],
+      "parent_type": {
+        "descriptor_va": "0x182a204a0",
+        "descriptor_offset": 44167328,
+        "type_tag": 18,
+        "attrs": 0,
+        "data": "0x1d6b",
+        "name": "Compute",
+        "type_definition_index": 7531
+      }
+    },
+    {
+      "index": 7440,
+      "name": "PlantParticle",
+      "namespace": "",
+      "offset": 7589964,
+      "byval": 31554,
+      "parent": 28322,
+      "flags": 1048842,
+      "first_field": 31738,
+      "field_count": 5,
+      "token": 33554576,
+      "fields": [
+        {
+          "index": 31738,
+          "metadata_offset": 6296840,
+          "name": "rotation",
+          "type": {
+            "descriptor_va": "0x18298e810",
+            "descriptor_offset": 43570192,
+            "type_tag": 17,
+            "attrs": 6,
+            "data": "0x137a",
+            "name": "UnityEngine.Vector4",
+            "type_definition_index": 4986
+          },
+          "native_offset": 16
+        },
+        {
+          "index": 31739,
+          "metadata_offset": 6296850,
+          "name": "position",
+          "type": {
+            "descriptor_va": "0x18298d8f0",
+            "descriptor_offset": 43566320,
+            "type_tag": 17,
+            "attrs": 6,
+            "data": "0x1374",
+            "name": "UnityEngine.Vector3",
+            "type_definition_index": 4980
+          },
+          "native_offset": 32
+        },
+        {
+          "index": 31740,
+          "metadata_offset": 6296860,
+          "name": "size",
+          "type": {
+            "descriptor_va": "0x182a2ee10",
+            "descriptor_offset": 44227088,
+            "type_tag": 12,
+            "attrs": 6,
+            "data": "0xff",
+            "name": "float"
+          },
+          "native_offset": 44
+        },
+        {
+          "index": 31741,
+          "metadata_offset": 6296870,
+          "name": "velocity",
+          "type": {
+            "descriptor_va": "0x18298d8f0",
+            "descriptor_offset": 43566320,
+            "type_tag": 17,
+            "attrs": 6,
+            "data": "0x1374",
+            "name": "UnityEngine.Vector3",
+            "type_definition_index": 4980
+          },
+          "native_offset": 48
+        },
+        {
+          "index": 31742,
+          "metadata_offset": 6296880,
+          "name": "age",
+          "type": {
+            "descriptor_va": "0x182a2ee10",
+            "descriptor_offset": 44227088,
+            "type_tag": 12,
+            "attrs": 6,
+            "data": "0xff",
+            "name": "float"
+          },
+          "native_offset": 60
+        }
+      ],
+      "parent_type": {
+        "descriptor_va": "0x1829ed170",
+        "descriptor_offset": 43957616,
+        "type_tag": 18,
+        "attrs": 0,
+        "data": "0x1a4",
+        "name": "System.ValueType",
+        "type_definition_index": 420
+      }
+    },
+    {
+      "index": 7441,
+      "name": "Plant",
+      "namespace": "",
+      "offset": 7590040,
+      "byval": 24944,
+      "parent": 24737,
+      "flags": 1048577,
+      "first_field": 31731,
+      "field_count": 7,
+      "token": 33554575,
+      "fields": [
+        {
+          "index": 31731,
+          "metadata_offset": 6296770,
+          "name": "castShadows",
+          "type": {
+            "descriptor_va": "0x1829f51f0",
+            "descriptor_offset": 43990512,
+            "type_tag": 2,
+            "attrs": 6,
+            "data": "0x99",
+            "name": "bool"
+          },
+          "native_offset": 176
+        },
+        {
+          "index": 31732,
+          "metadata_offset": 6296780,
+          "name": "sizeRange",
+          "type": {
+            "descriptor_va": "0x18298c550",
+            "descriptor_offset": 43561296,
+            "type_tag": 17,
+            "attrs": 6,
+            "data": "0x1377",
+            "name": "UnityEngine.Vector2",
+            "type_definition_index": 4983
+          },
+          "native_offset": 180
+        },
+        {
+          "index": 31733,
+          "metadata_offset": 6296790,
+          "name": "groundHeightRange",
+          "type": {
+            "descriptor_va": "0x18298c550",
+            "descriptor_offset": 43561296,
+            "type_tag": 17,
+            "attrs": 6,
+            "data": "0x1377",
+            "name": "UnityEngine.Vector2",
+            "type_definition_index": 4983
+          },
+          "native_offset": 188
+        },
+        {
+          "index": 31734,
+          "metadata_offset": 6296800,
+          "name": "fertilityRange",
+          "type": {
+            "descriptor_va": "0x18298c550",
+            "descriptor_offset": 43561296,
+            "type_tag": 17,
+            "attrs": 6,
+            "data": "0x1377",
+            "name": "UnityEngine.Vector2",
+            "type_definition_index": 4983
+          },
+          "native_offset": 196
+        },
+        {
+          "index": 31735,
+          "metadata_offset": 6296810,
+          "name": "buffer",
+          "type": {
+            "descriptor_va": "0x182a206a0",
+            "descriptor_offset": 44167840,
+            "type_tag": 18,
+            "attrs": 3,
+            "data": "0x13fc",
+            "name": "UnityEngine.ComputeBuffer",
+            "type_definition_index": 5116
+          },
+          "native_offset": 208
+        },
+        {
+          "index": 31736,
+          "metadata_offset": 6296820,
+          "name": "kernelDistribution",
+          "type": {
+            "descriptor_va": "0x182a11c00",
+            "descriptor_offset": 44107776,
+            "type_tag": 8,
+            "attrs": 1,
+            "data": "0xd5",
+            "name": "int"
+          },
+          "native_offset": 216
+        },
+        {
+          "index": 31737,
+          "metadata_offset": 6296830,
+          "name": "kernelUpdate",
+          "type": {
+            "descriptor_va": "0x182a11c00",
+            "descriptor_offset": 44107776,
+            "type_tag": 8,
+            "attrs": 1,
+            "data": "0xd5",
+            "name": "int"
+          },
+          "native_offset": 220
+        }
+      ],
+      "parent_type": {
+        "descriptor_va": "0x182a20b30",
+        "descriptor_offset": 44169008,
+        "type_tag": 18,
+        "attrs": 0,
+        "data": "0x1d07",
+        "name": "Particle",
+        "type_definition_index": 7431
+      }
+    },
+    {
+      "index": 7531,
+      "name": "Compute",
+      "namespace": "",
+      "offset": 7596880,
+      "byval": 20032,
+      "parent": 24171,
+      "flags": 1048577,
+      "first_field": 32167,
+      "field_count": 3,
+      "token": 33554665,
+      "fields": [
+        {
+          "index": 32167,
+          "metadata_offset": 6301130,
+          "name": "computeShader",
+          "type": {
+            "descriptor_va": "0x182a21500",
+            "descriptor_offset": 44171520,
+            "type_tag": 18,
+            "attrs": 6,
+            "data": "0x13fd",
+            "name": "UnityEngine.ComputeShader",
+            "type_definition_index": 5117
+          },
+          "native_offset": 32
+        },
+        {
+          "index": 32168,
+          "metadata_offset": 6301140,
+          "name": "initialized",
+          "type": {
+            "descriptor_va": "0x1829f4e40",
+            "descriptor_offset": 43989568,
+            "type_tag": 2,
+            "attrs": 1,
+            "data": "0x99",
+            "name": "bool"
+          },
+          "native_offset": 40
+        },
+        {
+          "index": 32169,
+          "metadata_offset": 6301150,
+          "name": "accumulators",
+          "type": {
+            "descriptor_va": "0x18264b418",
+            "descriptor_offset": 40151064,
+            "type_tag": 21,
+            "attrs": 33,
+            "data": "0x182a02600",
+            "name": "System.Collections.Generic.Dictionary`2<string,Accumulator>",
+            "generic_base": {
+              "descriptor_va": "0x18297e280",
+              "descriptor_offset": 43503232,
+              "type_tag": 18,
+              "attrs": 0,
+              "data": "0x50e",
+              "name": "System.Collections.Generic.Dictionary`2",
+              "type_definition_index": 1294
+            },
+            "generic_arguments": [
+              {
+                "descriptor_va": "0x1829a3350",
+                "descriptor_offset": 43654992,
+                "type_tag": 14,
+                "attrs": 0,
+                "data": "0x6f",
+                "name": "string"
+              },
+              {
+                "descriptor_va": "0x182996200",
+                "descriptor_offset": 43601408,
+                "type_tag": 17,
+                "attrs": 0,
+                "data": "0x1d6a",
+                "name": "Accumulator",
+                "type_definition_index": 7530
+              }
+            ]
+          },
+          "native_offset": 48
+        }
+      ],
+      "parent_type": {
+        "descriptor_va": "0x182a09c50",
+        "descriptor_offset": 44075088,
+        "type_tag": 18,
+        "attrs": 0,
+        "data": "0x13d5",
+        "name": "UnityEngine.MonoBehaviour",
+        "type_definition_index": 5077
+      }
+    },
+    {
+      "index": 9582,
+      "name": "Particle",
+      "namespace": "",
+      "offset": 7752756,
+      "byval": 31405,
+      "parent": 28322,
+      "flags": 1048842,
+      "first_field": 41048,
+      "field_count": 17,
+      "token": 33554438,
+      "fields": [
+        {
+          "index": 41048,
+          "metadata_offset": 6389940,
+          "name": "m_Position",
+          "type": {
+            "descriptor_va": "0x18298d6c0",
+            "descriptor_offset": 43565760,
+            "type_tag": 17,
+            "attrs": 1,
+            "data": "0x1374",
+            "name": "UnityEngine.Vector3",
+            "type_definition_index": 4980
+          },
+          "native_offset": 16
+        },
+        {
+          "index": 41049,
+          "metadata_offset": 6389950,
+          "name": "m_Velocity",
+          "type": {
+            "descriptor_va": "0x18298d6c0",
+            "descriptor_offset": 43565760,
+            "type_tag": 17,
+            "attrs": 1,
+            "data": "0x1374",
+            "name": "UnityEngine.Vector3",
+            "type_definition_index": 4980
+          },
+          "native_offset": 28
+        },
+        {
+          "index": 41050,
+          "metadata_offset": 6389960,
+          "name": "m_AnimatedVelocity",
+          "type": {
+            "descriptor_va": "0x18298d6c0",
+            "descriptor_offset": 43565760,
+            "type_tag": 17,
+            "attrs": 1,
+            "data": "0x1374",
+            "name": "UnityEngine.Vector3",
+            "type_definition_index": 4980
+          },
+          "native_offset": 40
+        },
+        {
+          "index": 41051,
+          "metadata_offset": 6389970,
+          "name": "m_InitialVelocity",
+          "type": {
+            "descriptor_va": "0x18298d6c0",
+            "descriptor_offset": 43565760,
+            "type_tag": 17,
+            "attrs": 1,
+            "data": "0x1374",
+            "name": "UnityEngine.Vector3",
+            "type_definition_index": 4980
+          },
+          "native_offset": 52
+        },
+        {
+          "index": 41052,
+          "metadata_offset": 6389980,
+          "name": "m_AxisOfRotation",
+          "type": {
+            "descriptor_va": "0x18298d6c0",
+            "descriptor_offset": 43565760,
+            "type_tag": 17,
+            "attrs": 1,
+            "data": "0x1374",
+            "name": "UnityEngine.Vector3",
+            "type_definition_index": 4980
+          },
+          "native_offset": 64
+        },
+        {
+          "index": 41053,
+          "metadata_offset": 6389990,
+          "name": "m_Rotation",
+          "type": {
+            "descriptor_va": "0x18298d6c0",
+            "descriptor_offset": 43565760,
+            "type_tag": 17,
+            "attrs": 1,
+            "data": "0x1374",
+            "name": "UnityEngine.Vector3",
+            "type_definition_index": 4980
+          },
+          "native_offset": 76
+        },
+        {
+          "index": 41054,
+          "metadata_offset": 6390000,
+          "name": "m_AngularVelocity",
+          "type": {
+            "descriptor_va": "0x18298d6c0",
+            "descriptor_offset": 43565760,
+            "type_tag": 17,
+            "attrs": 1,
+            "data": "0x1374",
+            "name": "UnityEngine.Vector3",
+            "type_definition_index": 4980
+          },
+          "native_offset": 88
+        },
+        {
+          "index": 41055,
+          "metadata_offset": 6390010,
+          "name": "m_StartSize",
+          "type": {
+            "descriptor_va": "0x18298d6c0",
+            "descriptor_offset": 43565760,
+            "type_tag": 17,
+            "attrs": 1,
+            "data": "0x1374",
+            "name": "UnityEngine.Vector3",
+            "type_definition_index": 4980
+          },
+          "native_offset": 100
+        },
+        {
+          "index": 41056,
+          "metadata_offset": 6390020,
+          "name": "m_StartColor",
+          "type": {
+            "descriptor_va": "0x1829fb120",
+            "descriptor_offset": 44014880,
+            "type_tag": 17,
+            "attrs": 1,
+            "data": "0x136b",
+            "name": "UnityEngine.Color32",
+            "type_definition_index": 4971
+          },
+          "native_offset": 112
+        },
+        {
+          "index": 41057,
+          "metadata_offset": 6390030,
+          "name": "m_RandomSeed",
+          "type": {
+            "descriptor_va": "0x1829883b0",
+            "descriptor_offset": 43544496,
+            "type_tag": 9,
+            "attrs": 1,
+            "data": "0x119",
+            "name": "uint"
+          },
+          "native_offset": 116
+        },
+        {
+          "index": 41058,
+          "metadata_offset": 6390040,
+          "name": "m_ParentRandomSeed",
+          "type": {
+            "descriptor_va": "0x1829883b0",
+            "descriptor_offset": 43544496,
+            "type_tag": 9,
+            "attrs": 1,
+            "data": "0x119",
+            "name": "uint"
+          },
+          "native_offset": 120
+        },
+        {
+          "index": 41059,
+          "metadata_offset": 6390050,
+          "name": "m_Lifetime",
+          "type": {
+            "descriptor_va": "0x182a2ead0",
+            "descriptor_offset": 44226256,
+            "type_tag": 12,
+            "attrs": 1,
+            "data": "0xff",
+            "name": "float"
+          },
+          "native_offset": 124
+        },
+        {
+          "index": 41060,
+          "metadata_offset": 6390060,
+          "name": "m_StartLifetime",
+          "type": {
+            "descriptor_va": "0x182a2ead0",
+            "descriptor_offset": 44226256,
+            "type_tag": 12,
+            "attrs": 1,
+            "data": "0xff",
+            "name": "float"
+          },
+          "native_offset": 128
+        },
+        {
+          "index": 41061,
+          "metadata_offset": 6390070,
+          "name": "m_MeshIndex",
+          "type": {
+            "descriptor_va": "0x182a11c00",
+            "descriptor_offset": 44107776,
+            "type_tag": 8,
+            "attrs": 1,
+            "data": "0xd5",
+            "name": "int"
+          },
+          "native_offset": 132
+        },
+        {
+          "index": 41062,
+          "metadata_offset": 6390080,
+          "name": "m_EmitAccumulator0",
+          "type": {
+            "descriptor_va": "0x182a2ead0",
+            "descriptor_offset": 44226256,
+            "type_tag": 12,
+            "attrs": 1,
+            "data": "0xff",
+            "name": "float"
+          },
+          "native_offset": 136
+        },
+        {
+          "index": 41063,
+          "metadata_offset": 6390090,
+          "name": "m_EmitAccumulator1",
+          "type": {
+            "descriptor_va": "0x182a2ead0",
+            "descriptor_offset": 44226256,
+            "type_tag": 12,
+            "attrs": 1,
+            "data": "0xff",
+            "name": "float"
+          },
+          "native_offset": 140
+        },
+        {
+          "index": 41064,
+          "metadata_offset": 6390100,
+          "name": "m_Flags",
+          "type": {
+            "descriptor_va": "0x1829883b0",
+            "descriptor_offset": 43544496,
+            "type_tag": 9,
+            "attrs": 1,
+            "data": "0x119",
+            "name": "uint"
+          },
+          "native_offset": 144
+        }
+      ],
+      "parent_type": {
+        "descriptor_va": "0x1829ed170",
+        "descriptor_offset": 43957616,
+        "type_tag": 18,
+        "attrs": 0,
+        "data": "0x1a4",
+        "name": "System.ValueType",
+        "type_definition_index": 420
+      }
+    }
+  ],
+  "plants": [
+    {
+      "name": "Kelp",
+      "path_id": 480,
+      "game_object": {
+        "m_FileID": 0,
+        "m_PathID": 14
+      },
+      "active_self": true,
+      "capacity": 2048,
+      "cast_shadows": true,
+      "size_range": [
+        0.5,
+        1.0
+      ],
+      "ground_height_range": [
+        0.0,
+        0.4000000059604645
+      ],
+      "fertility_range": [
+        0.20000000298023224,
+        1.0
+      ],
+      "references": {
+        "compute": [
+          2,
+          650
+        ],
+        "mesh": [
+          2,
+          422
+        ],
+        "material": [
+          2,
+          31
+        ]
+      },
+      "selectors": {
+        "compute": [
+          32,
+          44
+        ],
+        "capacity": [
+          44,
+          48
+        ],
+        "mesh": [
+          48,
+          60
+        ],
+        "material": [
+          60,
+          72
+        ],
+        "cast_shadows": [
+          72,
+          76
+        ],
+        "size_range": [
+          76,
+          84
+        ],
+        "ground_height_range": [
+          84,
+          92
+        ],
+        "fertility_range": [
+          92,
+          100
+        ]
+      },
+      "ancestors_including_self": [
+        {
+          "name": "Kelp",
+          "active_self": true,
+          "transform": 153
+        },
+        {
+          "name": "Coastal",
+          "active_self": true,
+          "transform": 172
+        },
+        {
+          "name": "Beach",
+          "active_self": true,
+          "transform": 180
+        }
+      ],
+      "active_in_packaged_hierarchy": true
+    },
+    {
+      "name": "LettuceCoral",
+      "path_id": 491,
+      "game_object": {
+        "m_FileID": 0,
+        "m_PathID": 25
+      },
+      "active_self": true,
+      "capacity": 8192,
+      "cast_shadows": true,
+      "size_range": [
+        0.5,
+        1.0
+      ],
+      "ground_height_range": [
+        0.6000000238418579,
+        0.8999999761581421
+      ],
+      "fertility_range": [
+        0.20000000298023224,
+        1.0
+      ],
+      "references": {
+        "compute": [
+          2,
+          650
+        ],
+        "mesh": [
+          2,
+          415
+        ],
+        "material": [
+          2,
+          32
+        ]
+      },
+      "selectors": {
+        "compute": [
+          32,
+          44
+        ],
+        "capacity": [
+          44,
+          48
+        ],
+        "mesh": [
+          48,
+          60
+        ],
+        "material": [
+          60,
+          72
+        ],
+        "cast_shadows": [
+          72,
+          76
+        ],
+        "size_range": [
+          76,
+          84
+        ],
+        "ground_height_range": [
+          84,
+          92
+        ],
+        "fertility_range": [
+          92,
+          100
+        ]
+      },
+      "ancestors_including_self": [
+        {
+          "name": "LettuceCoral",
+          "active_self": true,
+          "transform": 158
+        },
+        {
+          "name": "CoralReef",
+          "active_self": true,
+          "transform": 196
+        },
+        {
+          "name": "Beach",
+          "active_self": true,
+          "transform": 180
+        }
+      ],
+      "active_in_packaged_hierarchy": true
+    },
+    {
+      "name": "GreyTussock",
+      "path_id": 492,
+      "game_object": {
+        "m_FileID": 0,
+        "m_PathID": 27
+      },
+      "active_self": true,
+      "capacity": 8192,
+      "cast_shadows": true,
+      "size_range": [
+        0.75,
+        1.5
+      ],
+      "ground_height_range": [
+        1.100000023841858,
+        4.0
+      ],
+      "fertility_range": [
+        0.30000001192092896,
+        0.6000000238418579
+      ],
+      "references": {
+        "compute": [
+          2,
+          650
+        ],
+        "mesh": [
+          2,
+          419
+        ],
+        "material": [
+          2,
+          29
+        ]
+      },
+      "selectors": {
+        "compute": [
+          32,
+          44
+        ],
+        "capacity": [
+          44,
+          48
+        ],
+        "mesh": [
+          48,
+          60
+        ],
+        "material": [
+          60,
+          72
+        ],
+        "cast_shadows": [
+          72,
+          76
+        ],
+        "size_range": [
+          76,
+          84
+        ],
+        "ground_height_range": [
+          84,
+          92
+        ],
+        "fertility_range": [
+          92,
+          100
+        ]
+      },
+      "ancestors_including_self": [
+        {
+          "name": "GreyTussock",
+          "active_self": true,
+          "transform": 160
+        },
+        {
+          "name": "Grassland",
+          "active_self": true,
+          "transform": 154
+        },
+        {
+          "name": "Beach",
+          "active_self": true,
+          "transform": 180
+        }
+      ],
+      "active_in_packaged_hierarchy": true
+    },
+    {
+      "name": "Yarrow",
+      "path_id": 493,
+      "game_object": {
+        "m_FileID": 0,
+        "m_PathID": 31
+      },
+      "active_self": true,
+      "capacity": 64,
+      "cast_shadows": true,
+      "size_range": [
+        1.0,
+        2.0
+      ],
+      "ground_height_range": [
+        1.0499999523162842,
+        4.0
+      ],
+      "fertility_range": [
+        0.800000011920929,
+        2.0
+      ],
+      "references": {
+        "compute": [
+          2,
+          650
+        ],
+        "mesh": [
+          2,
+          498
+        ],
+        "material": [
+          2,
+          37
+        ]
+      },
+      "selectors": {
+        "compute": [
+          32,
+          44
+        ],
+        "capacity": [
+          44,
+          48
+        ],
+        "mesh": [
+          48,
+          60
+        ],
+        "material": [
+          60,
+          72
+        ],
+        "cast_shadows": [
+          72,
+          76
+        ],
+        "size_range": [
+          76,
+          84
+        ],
+        "ground_height_range": [
+          84,
+          92
+        ],
+        "fertility_range": [
+          92,
+          100
+        ]
+      },
+      "ancestors_including_self": [
+        {
+          "name": "Yarrow",
+          "active_self": true,
+          "transform": 163
+        },
+        {
+          "name": "Grassland",
+          "active_self": true,
+          "transform": 154
+        },
+        {
+          "name": "Beach",
+          "active_self": true,
+          "transform": 180
+        }
+      ],
+      "active_in_packaged_hierarchy": true
+    },
+    {
+      "name": "SeaGrass",
+      "path_id": 496,
+      "game_object": {
+        "m_FileID": 0,
+        "m_PathID": 34
+      },
+      "active_self": true,
+      "capacity": 4096,
+      "cast_shadows": false,
+      "size_range": [
+        0.5,
+        1.0
+      ],
+      "ground_height_range": [
+        0.20000000298023224,
+        0.6000000238418579
+      ],
+      "fertility_range": [
+        0.10000000149011612,
+        1.5
+      ],
+      "references": {
+        "compute": [
+          2,
+          650
+        ],
+        "mesh": [
+          2,
+          461
+        ],
+        "material": [
+          2,
+          34
+        ]
+      },
+      "selectors": {
+        "compute": [
+          32,
+          44
+        ],
+        "capacity": [
+          44,
+          48
+        ],
+        "mesh": [
+          48,
+          60
+        ],
+        "material": [
+          60,
+          72
+        ],
+        "cast_shadows": [
+          72,
+          76
+        ],
+        "size_range": [
+          76,
+          84
+        ],
+        "ground_height_range": [
+          84,
+          92
+        ],
+        "fertility_range": [
+          92,
+          100
+        ]
+      },
+      "ancestors_including_self": [
+        {
+          "name": "SeaGrass",
+          "active_self": true,
+          "transform": 164
+        },
+        {
+          "name": "Coastal",
+          "active_self": true,
+          "transform": 172
+        },
+        {
+          "name": "Beach",
+          "active_self": true,
+          "transform": 180
+        }
+      ],
+      "active_in_packaged_hierarchy": true
+    },
+    {
+      "name": "SwitchGrass",
+      "path_id": 510,
+      "game_object": {
+        "m_FileID": 0,
+        "m_PathID": 43
+      },
+      "active_self": true,
+      "capacity": 32768,
+      "cast_shadows": true,
+      "size_range": [
+        0.75,
+        1.25
+      ],
+      "ground_height_range": [
+        1.0499999523162842,
+        4.0
+      ],
+      "fertility_range": [
+        0.699999988079071,
+        2.0
+      ],
+      "references": {
+        "compute": [
+          2,
+          650
+        ],
+        "mesh": [
+          2,
+          358
+        ],
+        "material": [
+          2,
+          35
+        ]
+      },
+      "selectors": {
+        "compute": [
+          32,
+          44
+        ],
+        "capacity": [
+          44,
+          48
+        ],
+        "mesh": [
+          48,
+          60
+        ],
+        "material": [
+          60,
+          72
+        ],
+        "cast_shadows": [
+          72,
+          76
+        ],
+        "size_range": [
+          76,
+          84
+        ],
+        "ground_height_range": [
+          84,
+          92
+        ],
+        "fertility_range": [
+          92,
+          100
+        ]
+      },
+      "ancestors_including_self": [
+        {
+          "name": "SwitchGrass",
+          "active_self": true,
+          "transform": 170
+        },
+        {
+          "name": "Grassland",
+          "active_self": true,
+          "transform": 154
+        },
+        {
+          "name": "Beach",
+          "active_self": true,
+          "transform": 180
+        }
+      ],
+      "active_in_packaged_hierarchy": true
+    },
+    {
+      "name": "Goldenrod",
+      "path_id": 515,
+      "game_object": {
+        "m_FileID": 0,
+        "m_PathID": 47
+      },
+      "active_self": true,
+      "capacity": 256,
+      "cast_shadows": true,
+      "size_range": [
+        0.75,
+        1.25
+      ],
+      "ground_height_range": [
+        1.0499999523162842,
+        4.0
+      ],
+      "fertility_range": [
+        0.800000011920929,
+        1.0
+      ],
+      "references": {
+        "compute": [
+          2,
+          650
+        ],
+        "mesh": [
+          2,
+          471
+        ],
+        "material": [
+          2,
+          28
+        ]
+      },
+      "selectors": {
+        "compute": [
+          32,
+          44
+        ],
+        "capacity": [
+          44,
+          48
+        ],
+        "mesh": [
+          48,
+          60
+        ],
+        "material": [
+          60,
+          72
+        ],
+        "cast_shadows": [
+          72,
+          76
+        ],
+        "size_range": [
+          76,
+          84
+        ],
+        "ground_height_range": [
+          84,
+          92
+        ],
+        "fertility_range": [
+          92,
+          100
+        ]
+      },
+      "ancestors_including_self": [
+        {
+          "name": "Goldenrod",
+          "active_self": true,
+          "transform": 173
+        },
+        {
+          "name": "Grassland",
+          "active_self": true,
+          "transform": 154
+        },
+        {
+          "name": "Beach",
+          "active_self": true,
+          "transform": 180
+        }
+      ],
+      "active_in_packaged_hierarchy": true
+    },
+    {
+      "name": "RedAlgae",
+      "path_id": 525,
+      "game_object": {
+        "m_FileID": 0,
+        "m_PathID": 51
+      },
+      "active_self": false,
+      "capacity": 1024,
+      "cast_shadows": true,
+      "size_range": [
+        0.5,
+        1.0
+      ],
+      "ground_height_range": [
+        0.0,
+        0.5
+      ],
+      "fertility_range": [
+        0.800000011920929,
+        1.0
+      ],
+      "references": {
+        "compute": [
+          2,
+          650
+        ],
+        "mesh": [
+          2,
+          428
+        ],
+        "material": [
+          2,
+          33
+        ]
+      },
+      "selectors": {
+        "compute": [
+          32,
+          44
+        ],
+        "capacity": [
+          44,
+          48
+        ],
+        "mesh": [
+          48,
+          60
+        ],
+        "material": [
+          60,
+          72
+        ],
+        "cast_shadows": [
+          72,
+          76
+        ],
+        "size_range": [
+          76,
+          84
+        ],
+        "ground_height_range": [
+          84,
+          92
+        ],
+        "fertility_range": [
+          92,
+          100
+        ]
+      },
+      "ancestors_including_self": [
+        {
+          "name": "RedAlgae",
+          "active_self": false,
+          "transform": 175
+        },
+        {
+          "name": "Coastal",
+          "active_self": true,
+          "transform": 172
+        },
+        {
+          "name": "Beach",
+          "active_self": true,
+          "transform": 180
+        }
+      ],
+      "active_in_packaged_hierarchy": false
+    },
+    {
+      "name": "GrooveBrainCoral",
+      "path_id": 527,
+      "game_object": {
+        "m_FileID": 0,
+        "m_PathID": 55
+      },
+      "active_self": true,
+      "capacity": 4096,
+      "cast_shadows": true,
+      "size_range": [
+        0.5,
+        1.0
+      ],
+      "ground_height_range": [
+        0.5,
+        0.8500000238418579
+      ],
+      "fertility_range": [
+        0.30000001192092896,
+        1.0
+      ],
+      "references": {
+        "compute": [
+          2,
+          650
+        ],
+        "mesh": [
+          2,
+          488
+        ],
+        "material": [
+          2,
+          30
+        ]
+      },
+      "selectors": {
+        "compute": [
+          32,
+          44
+        ],
+        "capacity": [
+          44,
+          48
+        ],
+        "mesh": [
+          48,
+          60
+        ],
+        "material": [
+          60,
+          72
+        ],
+        "cast_shadows": [
+          72,
+          76
+        ],
+        "size_range": [
+          76,
+          84
+        ],
+        "ground_height_range": [
+          84,
+          92
+        ],
+        "fertility_range": [
+          92,
+          100
+        ]
+      },
+      "ancestors_including_self": [
+        {
+          "name": "GrooveBrainCoral",
+          "active_self": true,
+          "transform": 177
+        },
+        {
+          "name": "CoralReef",
+          "active_self": true,
+          "transform": 196
+        },
+        {
+          "name": "Beach",
+          "active_self": true,
+          "transform": 180
+        }
+      ],
+      "active_in_packaged_hierarchy": true
+    },
+    {
+      "name": "CarnationCoral",
+      "path_id": 528,
+      "game_object": {
+        "m_FileID": 0,
+        "m_PathID": 56
+      },
+      "active_self": true,
+      "capacity": 4096,
+      "cast_shadows": true,
+      "size_range": [
+        0.5,
+        1.0
+      ],
+      "ground_height_range": [
+        0.5,
+        0.8999999761581421
+      ],
+      "fertility_range": [
+        0.3499999940395355,
+        1.0
+      ],
+      "references": {
+        "compute": [
+          2,
+          650
+        ],
+        "mesh": [
+          2,
+          439
+        ],
+        "material": [
+          2,
+          26
+        ]
+      },
+      "selectors": {
+        "compute": [
+          32,
+          44
+        ],
+        "capacity": [
+          44,
+          48
+        ],
+        "mesh": [
+          48,
+          60
+        ],
+        "material": [
+          60,
+          72
+        ],
+        "cast_shadows": [
+          72,
+          76
+        ],
+        "size_range": [
+          76,
+          84
+        ],
+        "ground_height_range": [
+          84,
+          92
+        ],
+        "fertility_range": [
+          92,
+          100
+        ]
+      },
+      "ancestors_including_self": [
+        {
+          "name": "CarnationCoral",
+          "active_self": true,
+          "transform": 178
+        },
+        {
+          "name": "CoralReef",
+          "active_self": true,
+          "transform": 196
+        },
+        {
+          "name": "Beach",
+          "active_self": true,
+          "transform": 180
+        }
+      ],
+      "active_in_packaged_hierarchy": true
+    },
+    {
+      "name": "BuffaloGrass",
+      "path_id": 539,
+      "game_object": {
+        "m_FileID": 0,
+        "m_PathID": 70
+      },
+      "active_self": true,
+      "capacity": 32768,
+      "cast_shadows": true,
+      "size_range": [
+        0.6000000238418579,
+        1.5
+      ],
+      "ground_height_range": [
+        1.2000000476837158,
+        4.0
+      ],
+      "fertility_range": [
+        0.6000000238418579,
+        2.0
+      ],
+      "references": {
+        "compute": [
+          2,
+          650
+        ],
+        "mesh": [
+          2,
+          379
+        ],
+        "material": [
+          2,
+          25
+        ]
+      },
+      "selectors": {
+        "compute": [
+          32,
+          44
+        ],
+        "capacity": [
+          44,
+          48
+        ],
+        "mesh": [
+          48,
+          60
+        ],
+        "material": [
+          60,
+          72
+        ],
+        "cast_shadows": [
+          72,
+          76
+        ],
+        "size_range": [
+          76,
+          84
+        ],
+        "ground_height_range": [
+          84,
+          92
+        ],
+        "fertility_range": [
+          92,
+          100
+        ]
+      },
+      "ancestors_including_self": [
+        {
+          "name": "BuffaloGrass",
+          "active_self": true,
+          "transform": 186
+        },
+        {
+          "name": "Grassland",
+          "active_self": true,
+          "transform": 154
+        },
+        {
+          "name": "Beach",
+          "active_self": true,
+          "transform": 180
+        }
+      ],
+      "active_in_packaged_hierarchy": true
+    },
+    {
+      "name": "WheatGrass",
+      "path_id": 542,
+      "game_object": {
+        "m_FileID": 0,
+        "m_PathID": 73
+      },
+      "active_self": true,
+      "capacity": 512,
+      "cast_shadows": true,
+      "size_range": [
+        0.75,
+        1.0
+      ],
+      "ground_height_range": [
+        1.0499999523162842,
+        4.0
+      ],
+      "fertility_range": [
+        0.699999988079071,
+        0.8999999761581421
+      ],
+      "references": {
+        "compute": [
+          2,
+          650
+        ],
+        "mesh": [
+          2,
+          479
+        ],
+        "material": [
+          2,
+          36
+        ]
+      },
+      "selectors": {
+        "compute": [
+          32,
+          44
+        ],
+        "capacity": [
+          44,
+          48
+        ],
+        "mesh": [
+          48,
+          60
+        ],
+        "material": [
+          60,
+          72
+        ],
+        "cast_shadows": [
+          72,
+          76
+        ],
+        "size_range": [
+          76,
+          84
+        ],
+        "ground_height_range": [
+          84,
+          92
+        ],
+        "fertility_range": [
+          92,
+          100
+        ]
+      },
+      "ancestors_including_self": [
+        {
+          "name": "WheatGrass",
+          "active_self": true,
+          "transform": 189
+        },
+        {
+          "name": "Grassland",
+          "active_self": true,
+          "transform": 154
+        },
+        {
+          "name": "Beach",
+          "active_self": true,
+          "transform": 180
+        }
+      ],
+      "active_in_packaged_hierarchy": true
+    },
+    {
+      "name": "ElkhornCoral",
+      "path_id": 553,
+      "game_object": {
+        "m_FileID": 0,
+        "m_PathID": 91
+      },
+      "active_self": true,
+      "capacity": 4096,
+      "cast_shadows": true,
+      "size_range": [
+        0.5,
+        1.0
+      ],
+      "ground_height_range": [
+        0.5,
+        0.800000011920929
+      ],
+      "fertility_range": [
+        0.30000001192092896,
+        1.0
+      ],
+      "references": {
+        "compute": [
+          2,
+          650
+        ],
+        "mesh": [
+          2,
+          396
+        ],
+        "material": [
+          2,
+          27
+        ]
+      },
+      "selectors": {
+        "compute": [
+          32,
+          44
+        ],
+        "capacity": [
+          44,
+          48
+        ],
+        "mesh": [
+          48,
+          60
+        ],
+        "material": [
+          60,
+          72
+        ],
+        "cast_shadows": [
+          72,
+          76
+        ],
+        "size_range": [
+          76,
+          84
+        ],
+        "ground_height_range": [
+          84,
+          92
+        ],
+        "fertility_range": [
+          92,
+          100
+        ]
+      },
+      "ancestors_including_self": [
+        {
+          "name": "ElkhornCoral",
+          "active_self": true,
+          "transform": 201
+        },
+        {
+          "name": "CoralReef",
+          "active_self": true,
+          "transform": 196
+        },
+        {
+          "name": "Beach",
+          "active_self": true,
+          "transform": 180
+        }
+      ],
+      "active_in_packaged_hierarchy": true
+    }
+  ],
+  "kernels": [],
+  "artifacts": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\type_7431.raw",
+      "bytes": 76,
+      "sha256": "d216dab5bd7880f50066a8a242d44556be3fd7e1ab994d8fa0f8670f45799ef4",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 7589280,
+        "bytes": 76
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\offsets_7431.raw",
+      "bytes": 72,
+      "sha256": "761da903f47040a3b5bac9937427b889000cc0c9e8df563ff1c73f67bd9a9876",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 33973680,
+        "bytes": 72
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_31685.raw",
+      "bytes": 10,
+      "sha256": "82cf7691591cae5c281146666b00e6ccfa09ff3f7f388fff5ff91e1d2ab88cda",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6296310,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_31685.raw",
+      "bytes": 16,
+      "sha256": "122cd75e8289ba9d3a0243dae00c59d7b26539645947d1a602b28caa563ded2c",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 44112400,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_31686.raw",
+      "bytes": 10,
+      "sha256": "1b97f430a31f9c32a9dde956072f03df4bf40ac93fce7584e189f33a42667667",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6296320,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_31686.raw",
+      "bytes": 16,
+      "sha256": "7290a01e18bea2d304a3b032ffa4d4968a3478cff8e642f0b2e14affc575b7ac",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 44108656,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_31687.raw",
+      "bytes": 10,
+      "sha256": "cd9b70462d3f709861e85ad1138ef504d03ae538af6a4c2fd4a952161c715ce5",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6296330,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_31687.raw",
+      "bytes": 16,
+      "sha256": "e3ec70facd34e2bbdce4149808fc54ba201067c26577f51d1f83f9cad90bfcc7",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 44142544,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_31688.raw",
+      "bytes": 10,
+      "sha256": "64c6bab9974427918449ce65bd7df7d7c6c09aae064dd7ebf171796f1a9d8604",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6296340,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_31688.raw",
+      "bytes": 16,
+      "sha256": "fb36ec44ed74d2bc079e55dd3dcb261707dcdfc11ab9768a4c15df20f2ae9d1c",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 44138000,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_31689.raw",
+      "bytes": 10,
+      "sha256": "0d90796bcdcc6625dce9361cae68c5bae4702036cc4091158214da08d90186dd",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6296350,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_31689.raw",
+      "bytes": 16,
+      "sha256": "ea11b033d9a9a66f6a03211e8643f364866d22f990d71c9e978591e505187efa",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 44167840,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_31690.raw",
+      "bytes": 10,
+      "sha256": "aa7b659665504ecdbfb531f13b1281e2e6935d3d9e1c7884404a76d3662bd850",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6296360,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_31690.raw",
+      "bytes": 16,
+      "sha256": "ea11b033d9a9a66f6a03211e8643f364866d22f990d71c9e978591e505187efa",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 44167840,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_31691.raw",
+      "bytes": 10,
+      "sha256": "0f112f6d65e2309685003f6985492a75fa168693e88a7eddcd24568a855178eb",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6296370,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_31691.raw",
+      "bytes": 16,
+      "sha256": "ea11b033d9a9a66f6a03211e8643f364866d22f990d71c9e978591e505187efa",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 44167840,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_31692.raw",
+      "bytes": 10,
+      "sha256": "af1c621ffe984f60150accd099b762fcc89cb20fbfbb35c082ded2546cd95861",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6296380,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_31692.raw",
+      "bytes": 16,
+      "sha256": "ea11b033d9a9a66f6a03211e8643f364866d22f990d71c9e978591e505187efa",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 44167840,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_31693.raw",
+      "bytes": 10,
+      "sha256": "6c44d70b85e56574359d9d74fa6d34fa01294b6e3626b4a3f8bdb9727a01d6a6",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6296390,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_31693.raw",
+      "bytes": 16,
+      "sha256": "9c3f0ab09ab81c1e134af782b6b464a4a71997ea478a8ffd9c0ebe27943d1dcc",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 44167712,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_31694.raw",
+      "bytes": 10,
+      "sha256": "1aa18b1c2c394232222d09a1946bbe42dcc6a89f7a564d75dea2dac1078f0bb6",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6296400,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_31694.raw",
+      "bytes": 16,
+      "sha256": "668cfeb8298f4f9927c6fed047d7d1deac6e572c7fe46cc9c01bc62d14f322a7",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 43995440,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_31695.raw",
+      "bytes": 10,
+      "sha256": "a71708c03aa1abd8835afb2ff9aaad3cfc3f5581236aa1ada8c573f9f7de58b3",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6296410,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_31695.raw",
+      "bytes": 16,
+      "sha256": "a77c560d25581e4f9d2b76eb3325b639fa374191ef010d91f38d237a45ad5e5a",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 44108160,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_31696.raw",
+      "bytes": 10,
+      "sha256": "33f17fb8864c7899e599d29bee679c62769bf739b4ebaec4778aeeeeaca9aed9",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6296420,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_31696.raw",
+      "bytes": 16,
+      "sha256": "a77c560d25581e4f9d2b76eb3325b639fa374191ef010d91f38d237a45ad5e5a",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 44108160,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_31697.raw",
+      "bytes": 10,
+      "sha256": "80acd543f1687131aaa108554f9eb9e47bac249dd38c4d23438327894ec38551",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6296430,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_31697.raw",
+      "bytes": 16,
+      "sha256": "a77c560d25581e4f9d2b76eb3325b639fa374191ef010d91f38d237a45ad5e5a",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 44108160,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_31698.raw",
+      "bytes": 10,
+      "sha256": "333ae71f15fe72a4066c951d3462436e56d9978c3f0e776486e4bd14a08da12d",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6296440,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_31698.raw",
+      "bytes": 16,
+      "sha256": "a77c560d25581e4f9d2b76eb3325b639fa374191ef010d91f38d237a45ad5e5a",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 44108160,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_31699.raw",
+      "bytes": 10,
+      "sha256": "553ac26eb27394a8948a6f81f8dcc0160145056b9e28d915a2db66b3462cbc33",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6296450,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_31699.raw",
+      "bytes": 16,
+      "sha256": "a77c560d25581e4f9d2b76eb3325b639fa374191ef010d91f38d237a45ad5e5a",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 44108160,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_31700.raw",
+      "bytes": 10,
+      "sha256": "edf7c190ee111bdac32ea29398800cfab6d1c0ea5bb2e0c24a1b89fe563a24db",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6296460,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_31700.raw",
+      "bytes": 16,
+      "sha256": "a77c560d25581e4f9d2b76eb3325b639fa374191ef010d91f38d237a45ad5e5a",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 44108160,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_31701.raw",
+      "bytes": 10,
+      "sha256": "fe2180a008dbffe8b1a557733fd17e2e9af987d44ed9f26db500c515149779da",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6296470,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_31701.raw",
+      "bytes": 16,
+      "sha256": "ea11b033d9a9a66f6a03211e8643f364866d22f990d71c9e978591e505187efa",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 44167840,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_31702.raw",
+      "bytes": 10,
+      "sha256": "22f0eab408aae096989aa48aac96f7e6237c90100e88bc175d1f236e35511bed",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6296480,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_31702.raw",
+      "bytes": 16,
+      "sha256": "a2aed9aa7d3ed7635b21c8ed0618d0412e53a16a8dc08e4fc5e3e5fe2085836d",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 44108896,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\type_7440.raw",
+      "bytes": 76,
+      "sha256": "f1c2ea7cb2a6e732e5122198e06cce7baae7ed85378c399ec621f1b264621123",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 7589964,
+        "bytes": 76
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\offsets_7440.raw",
+      "bytes": 20,
+      "sha256": "d41870a84f82734627c7743831031c5cc472fcd8f0a0badee377727cd53c6a0b",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 33974232,
+        "bytes": 20
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_31738.raw",
+      "bytes": 10,
+      "sha256": "1a48d2ffad78d2798d5103a9b9b777a179435ad88251d513b93d489d1567baf5",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6296840,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_31738.raw",
+      "bytes": 16,
+      "sha256": "545fe16cbddfe4c99fd232090f56d6129bdd56bdfb54ebb0386f982cb103644e",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 43570192,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_31739.raw",
+      "bytes": 10,
+      "sha256": "21eda4bb7514a3788e51fb3fef019d3d7d69610990cd855f0080844f5bfc63dc",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6296850,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_31739.raw",
+      "bytes": 16,
+      "sha256": "c913b4fd1c2432afffd19eff76f56d165ac7263e108bc38c87de609d1e4b8a79",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 43566320,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_31740.raw",
+      "bytes": 10,
+      "sha256": "9171e70d16a90be3586d202d97be5610c1336224c6d686cd08bace8273800162",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6296860,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_31740.raw",
+      "bytes": 16,
+      "sha256": "f0a3279a9d5a5c6a4c6e0c4a223d4c5b1fa305bbc76c6bbcb25ae1697044fdaf",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 44227088,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_31741.raw",
+      "bytes": 10,
+      "sha256": "7245054fa7d8651cb5af5e5b78b71851bcc6f26b7359c55ac11422359fb12145",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6296870,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_31741.raw",
+      "bytes": 16,
+      "sha256": "c913b4fd1c2432afffd19eff76f56d165ac7263e108bc38c87de609d1e4b8a79",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 43566320,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_31742.raw",
+      "bytes": 10,
+      "sha256": "81f86cb70f2f93e553493d0ab148518d8ff53bc3ef4a036346e45c69ed5469d6",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6296880,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_31742.raw",
+      "bytes": 16,
+      "sha256": "f0a3279a9d5a5c6a4c6e0c4a223d4c5b1fa305bbc76c6bbcb25ae1697044fdaf",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 44227088,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\type_7441.raw",
+      "bytes": 76,
+      "sha256": "6ef582c5f57beb650b4d2c93e592f49bffb25b98a939968f67841a5eed977436",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 7590040,
+        "bytes": 76
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\offsets_7441.raw",
+      "bytes": 28,
+      "sha256": "5a233379d0eba083cf2eda8587852ca79756f9226fc0e6ae1ca088564203e029",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 33974288,
+        "bytes": 28
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_31731.raw",
+      "bytes": 10,
+      "sha256": "c9ee9c28f7eca6bc2545e484cb386a6b4bc40d832536f3fedcd9da1e25a58b2e",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6296770,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_31731.raw",
+      "bytes": 16,
+      "sha256": "452c7dfb00109c22f7698b36406cb2bd01cfee6eab0415201391dac8f446625e",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 43990512,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_31732.raw",
+      "bytes": 10,
+      "sha256": "f008d07373dfb36af8af8d88dd694433f023571a2fc9e41c3113b7c30ad4294b",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6296780,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_31732.raw",
+      "bytes": 16,
+      "sha256": "268fea982b85b31d8e342907d5c56279e27a629d429fe307831b1a08a1495aae",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 43561296,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_31733.raw",
+      "bytes": 10,
+      "sha256": "317970671c52d4097d92b5f865be7d0cbf3c79465b86810ab9644f6b7437de16",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6296790,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_31733.raw",
+      "bytes": 16,
+      "sha256": "268fea982b85b31d8e342907d5c56279e27a629d429fe307831b1a08a1495aae",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 43561296,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_31734.raw",
+      "bytes": 10,
+      "sha256": "cee80cdd8f375262de94f385a4dc80cbc80e94fb129704798623013d39162d6e",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6296800,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_31734.raw",
+      "bytes": 16,
+      "sha256": "268fea982b85b31d8e342907d5c56279e27a629d429fe307831b1a08a1495aae",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 43561296,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_31735.raw",
+      "bytes": 10,
+      "sha256": "1a7608511aa0ea7652d0f4d421115ce38624337df4fa0639c584269fcf30ee9b",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6296810,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_31735.raw",
+      "bytes": 16,
+      "sha256": "ea11b033d9a9a66f6a03211e8643f364866d22f990d71c9e978591e505187efa",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 44167840,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_31736.raw",
+      "bytes": 10,
+      "sha256": "4c2bbc16c7eec9842aa16b6f52340b060f0523c29e4cd48781f61a313a875dbc",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6296820,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_31736.raw",
+      "bytes": 16,
+      "sha256": "4696c801645a2eb04b7f79b0e350838e204261d0587130bd434d320f4c527548",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 44107776,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_31737.raw",
+      "bytes": 10,
+      "sha256": "e1f673ea9d7a4ebb3a3d1f7d2269aed1cbf3ab2785f37c27912bcf8d2c41f618",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6296830,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_31737.raw",
+      "bytes": 16,
+      "sha256": "4696c801645a2eb04b7f79b0e350838e204261d0587130bd434d320f4c527548",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 44107776,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\type_7531.raw",
+      "bytes": 76,
+      "sha256": "a4595838f45a433940359d27402625162f5d230da5f54d7ffddba0558f774835",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 7596880,
+        "bytes": 76
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\offsets_7531.raw",
+      "bytes": 12,
+      "sha256": "c84c1fbbf39c0a89150136565215405e3ec7d8da36c0e974943eb63fac6fc05b",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 33981744,
+        "bytes": 12
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_32167.raw",
+      "bytes": 10,
+      "sha256": "a5426730402020434f04c8f5cf7c48530a1b87afef50e1c02785ee5690de06d1",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6301130,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_32167.raw",
+      "bytes": 16,
+      "sha256": "bd31fc303588317d7923abe4679e977224c114b9d9bc7d1a197257572228b2cd",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 44171520,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_32168.raw",
+      "bytes": 10,
+      "sha256": "ac21041bcedbad4352cbf52c9f179dbcc3bcbf049e40f178419a54f878ca5364",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6301140,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_32168.raw",
+      "bytes": 16,
+      "sha256": "34c86498b1cf5846abefe0d4671156f8bec7dc00449f110f8c853703304162af",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 43989568,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_32169.raw",
+      "bytes": 10,
+      "sha256": "15578cfcbf566e6458e76c6c33d20807304193dba3340922bc3f65f91361b47f",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6301150,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_32169.raw",
+      "bytes": 16,
+      "sha256": "d1c2e951ac237f873f273283c493176b42eb4b20e304a7891b667459192b79e1",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 40151064,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\type_9582.raw",
+      "bytes": 76,
+      "sha256": "dce4051b37ac39af622f54808ada88c1f7f93a2008683ca671f321bd31e4196d",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 7752756,
+        "bytes": 76
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\offsets_9582.raw",
+      "bytes": 68,
+      "sha256": "e3f85d24dccd2b88f3bea81d2c52ae9282fd22fe7caeaa01a757c7634086019f",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 33988400,
+        "bytes": 68
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_41048.raw",
+      "bytes": 10,
+      "sha256": "c3a7c2b3371034a69040c10d39d2635c3a941a117218f25231c779df076aa88b",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6389940,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_41048.raw",
+      "bytes": 16,
+      "sha256": "c632fae7b799cf81e0dd943a9ae27afba3b4283264ab8e13935b94dcaf9092d2",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 43565760,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_41049.raw",
+      "bytes": 10,
+      "sha256": "1e16ff8b5a6a6aaf9eb7b5145282ab6a2874ca30568d37522a354afdd02dd277",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6389950,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_41049.raw",
+      "bytes": 16,
+      "sha256": "c632fae7b799cf81e0dd943a9ae27afba3b4283264ab8e13935b94dcaf9092d2",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 43565760,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_41050.raw",
+      "bytes": 10,
+      "sha256": "c2a8954878b72dffe3ed5c32df8233dcfb477a9333e679e2338d5cd1e9622743",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6389960,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_41050.raw",
+      "bytes": 16,
+      "sha256": "c632fae7b799cf81e0dd943a9ae27afba3b4283264ab8e13935b94dcaf9092d2",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 43565760,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_41051.raw",
+      "bytes": 10,
+      "sha256": "09ca68adb68c86e10dc61a9ac8add264cdd018750b7ae09eabea413fe8c45799",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6389970,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_41051.raw",
+      "bytes": 16,
+      "sha256": "c632fae7b799cf81e0dd943a9ae27afba3b4283264ab8e13935b94dcaf9092d2",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 43565760,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_41052.raw",
+      "bytes": 10,
+      "sha256": "43b55bfc56d0410ffc1afc159af9a65e32a1000712066dd84b17df1fe73646af",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6389980,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_41052.raw",
+      "bytes": 16,
+      "sha256": "c632fae7b799cf81e0dd943a9ae27afba3b4283264ab8e13935b94dcaf9092d2",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 43565760,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_41053.raw",
+      "bytes": 10,
+      "sha256": "4a4d0df2def4c3708b3eda6d9e2d285d0419d6996035598e487c481f99398c51",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6389990,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_41053.raw",
+      "bytes": 16,
+      "sha256": "c632fae7b799cf81e0dd943a9ae27afba3b4283264ab8e13935b94dcaf9092d2",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 43565760,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_41054.raw",
+      "bytes": 10,
+      "sha256": "e2cdcef155a4de63db180b2b2770dd723cdccdc08f5a1b45fc679eddc844c4b0",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6390000,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_41054.raw",
+      "bytes": 16,
+      "sha256": "c632fae7b799cf81e0dd943a9ae27afba3b4283264ab8e13935b94dcaf9092d2",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 43565760,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_41055.raw",
+      "bytes": 10,
+      "sha256": "3e7b44a1b5a071a134ca282c9c1b11fb670846a0e8f3b54427610b1dfb522530",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6390010,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_41055.raw",
+      "bytes": 16,
+      "sha256": "c632fae7b799cf81e0dd943a9ae27afba3b4283264ab8e13935b94dcaf9092d2",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 43565760,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_41056.raw",
+      "bytes": 10,
+      "sha256": "d07f18e4cb2e367dd01bef8470d7085cb1f65058d40bf822972206f2a0cbff2c",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6390020,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_41056.raw",
+      "bytes": 16,
+      "sha256": "c80690df8cbaf2613d7327c65a06d986abebcc7a94adb6bbfd0cd08ecef74eb4",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 44014880,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_41057.raw",
+      "bytes": 10,
+      "sha256": "93f34761861922612f11f4a017e1996ec6d029edf7d1c8439c0359c22d7de87f",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6390030,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_41057.raw",
+      "bytes": 16,
+      "sha256": "125d8989cdfe70da35b41a94493673ce763fc44ba6ab6e538fecfa319f4dc16d",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 43544496,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_41058.raw",
+      "bytes": 10,
+      "sha256": "6647cf743e8013a1d9e49582d84c508c691a4a14dfb3d4eef3146e0e4b0fa29d",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6390040,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_41058.raw",
+      "bytes": 16,
+      "sha256": "125d8989cdfe70da35b41a94493673ce763fc44ba6ab6e538fecfa319f4dc16d",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 43544496,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_41059.raw",
+      "bytes": 10,
+      "sha256": "6dfa0c9ff4866f63989273b2c7f7dfa2140b852d1b64c3c696d5f57d29baf9b3",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6390050,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_41059.raw",
+      "bytes": 16,
+      "sha256": "6f817354f547de17c98f8c9ebb40181f12277ef757ba7406a63268e8fbbfbd64",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 44226256,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_41060.raw",
+      "bytes": 10,
+      "sha256": "f67bc06826f119ad147bf606db9d9cc9ba65992743a731792c5133db7e298d38",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6390060,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_41060.raw",
+      "bytes": 16,
+      "sha256": "6f817354f547de17c98f8c9ebb40181f12277ef757ba7406a63268e8fbbfbd64",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 44226256,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_41061.raw",
+      "bytes": 10,
+      "sha256": "d90b2ec6da488c6f3f70b9410acd05ca2be2c3dad4d13307e445874dd68b62d2",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6390070,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_41061.raw",
+      "bytes": 16,
+      "sha256": "4696c801645a2eb04b7f79b0e350838e204261d0587130bd434d320f4c527548",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 44107776,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_41062.raw",
+      "bytes": 10,
+      "sha256": "97b23083ed0ab79661d96b3631bf96c7980f61cd3aca00e27ad1b0d895f0f814",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6390080,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_41062.raw",
+      "bytes": 16,
+      "sha256": "6f817354f547de17c98f8c9ebb40181f12277ef757ba7406a63268e8fbbfbd64",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 44226256,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_41063.raw",
+      "bytes": 10,
+      "sha256": "959595ef8e7653945d427580c12a6f1a8587a4368f02bac2d7cb466aa9e85ffa",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6390090,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_41063.raw",
+      "bytes": 16,
+      "sha256": "6f817354f547de17c98f8c9ebb40181f12277ef757ba7406a63268e8fbbfbd64",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 44226256,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\field_41064.raw",
+      "bytes": 10,
+      "sha256": "e05d1c463d2fc3834c7e3e66c7d0de16cd2fdf79a07743934710664ef7b7427d",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\il2cpp_data\\Metadata\\global-metadata.dat",
+        "offset": 6390100,
+        "bytes": 10
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\metadata\\descriptor_41064.raw",
+      "bytes": 16,
+      "sha256": "125d8989cdfe70da35b41a94493673ce763fc44ba6ab6e538fecfa319f4dc16d",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\GameAssembly.dll",
+        "offset": 43544496,
+        "bytes": 16
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\globalgamemanagers.assets_1500.raw",
+      "bytes": 68,
+      "sha256": "2b0e83732e18b2186e3e8c1f551c82d39619e0dadb800446c849aed7d9d486f9",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\globalgamemanagers.assets",
+        "offset": 218976,
+        "bytes": 68,
+        "path_id": 1500
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_480.raw",
+      "bytes": 100,
+      "sha256": "47565c10b6a32d0b5e2bb1a4dcad35561ea105949c161689516ea533dbcb56d4",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 75808,
+        "bytes": 100,
+        "path_id": 480
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_14.raw",
+      "bytes": 43,
+      "sha256": "6724bba43f3ed045c548a0e4993a493e253c417ee2d391d19d01b5854d0a4997",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 19216,
+        "bytes": 43,
+        "path_id": 14
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_153.raw",
+      "bytes": 68,
+      "sha256": "fca369eb4056e45739b5df83afa578a0ff43bdce084937e70a5a2427cb4d92d5",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 29056,
+        "bytes": 68,
+        "path_id": 153
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_172.raw",
+      "bytes": 104,
+      "sha256": "005f859a1e107d9d486dd9dae9d8e72d1eeec521b2df45a2d5f2688658e92073",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 30672,
+        "bytes": 104,
+        "path_id": 172
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_45.raw",
+      "bytes": 35,
+      "sha256": "ad90ddd3ff09fc06fdce906775e8a0ecaafbb24f251a0c67ffcca402b0d54b47",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 21152,
+        "bytes": 35,
+        "path_id": 45
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_180.raw",
+      "bytes": 224,
+      "sha256": "a18689662751a93205b440b21dfaf295ba394fb4b8b1c856fa6668f88979bc49",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 31344,
+        "bytes": 224,
+        "path_id": 180
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_58.raw",
+      "bytes": 47,
+      "sha256": "8696437435fef5a97d953a923e2fa52ad1bbd766774226a7b04ff6ea9d05bc29",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 22048,
+        "bytes": 47,
+        "path_id": 58
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_491.raw",
+      "bytes": 100,
+      "sha256": "9b40ac2c4d6a45fb744224c7edb2cf7c23f8ad39e07d7822cc3192341027aa48",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 77248,
+        "bytes": 100,
+        "path_id": 491
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_25.raw",
+      "bytes": 51,
+      "sha256": "d737e29970b5f13ed61b6c81b52839e68211745872e9f04e9acdaf8ad6f065bc",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 19872,
+        "bytes": 51,
+        "path_id": 25
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_158.raw",
+      "bytes": 68,
+      "sha256": "9b429ca51c8086d08928f503e024f0f21d52ae824d098531a3620b5d6a946545",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 29536,
+        "bytes": 68,
+        "path_id": 158
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_196.raw",
+      "bytes": 116,
+      "sha256": "378ed4cc8d8240d3d12ea85d46171c8783e7e6b7f22292cad8bc6d62a4318024",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 32800,
+        "bytes": 116,
+        "path_id": 196
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_84.raw",
+      "bytes": 39,
+      "sha256": "4186775828762d43d972fcf81822bdc88ce52bfb66f9d99d2e39ecde949d7415",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 23648,
+        "bytes": 39,
+        "path_id": 84
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_492.raw",
+      "bytes": 100,
+      "sha256": "91ab1d7d34d93eea157097fda7822e5c859ef3df7e95132176f6a5b16f1fc2bb",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 77360,
+        "bytes": 100,
+        "path_id": 492
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_27.raw",
+      "bytes": 51,
+      "sha256": "5b8d1ca839f14687c9a6622d10ae14c1213f81f6d9a3c9cb17e9646223921267",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 19984,
+        "bytes": 51,
+        "path_id": 27
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_160.raw",
+      "bytes": 68,
+      "sha256": "0597a96c6a3d3273caf62713431964a477c4873119c69e8c4f039cf8eb5d914c",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 29696,
+        "bytes": 68,
+        "path_id": 160
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_154.raw",
+      "bytes": 140,
+      "sha256": "a0117e1b8a4c30cef09fd3b77682566d805d608f82a832f92622a744bc879592",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 29136,
+        "bytes": 140,
+        "path_id": 154
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_18.raw",
+      "bytes": 39,
+      "sha256": "8007643faf013233a204fc71b5304053e7402cd88772e6eaaa487fc133bc2b57",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 19440,
+        "bytes": 39,
+        "path_id": 18
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_493.raw",
+      "bytes": 100,
+      "sha256": "a218a054dda1f09f671fbf0e36e74d62e029dc02a0edb64b84f4b097a5c0aa7a",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 77472,
+        "bytes": 100,
+        "path_id": 493
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_31.raw",
+      "bytes": 47,
+      "sha256": "4bc825513d2e74ade5128a2ea8fc3e7cee67f16bebd62c461f9bddc91d2b1eab",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 20224,
+        "bytes": 47,
+        "path_id": 31
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_163.raw",
+      "bytes": 68,
+      "sha256": "d895e926cea390a4d7660c7e27caa76e3fec8342d4d59f3271ba81fde6bd446c",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 29936,
+        "bytes": 68,
+        "path_id": 163
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_496.raw",
+      "bytes": 100,
+      "sha256": "8b0d3cb94eafeabb6ce1a89a17a7199c46d12097151104ab226b70b359dee32a",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 77760,
+        "bytes": 100,
+        "path_id": 496
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_34.raw",
+      "bytes": 47,
+      "sha256": "8d8fbce8c5d2dae26ef29e559410c5f0de23cb8ec7fa6bcb33a1c8386b2c2e5b",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 20416,
+        "bytes": 47,
+        "path_id": 34
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_164.raw",
+      "bytes": 68,
+      "sha256": "dd00914a3d577f4ed7db472b74a366ca10cb2dae60839551b5aeabc9f10c7195",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 30016,
+        "bytes": 68,
+        "path_id": 164
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_510.raw",
+      "bytes": 100,
+      "sha256": "d850b478894a61f2ecc9604e3d2f22e3e9385edbc4a7b087e587420fd37edace",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 79680,
+        "bytes": 100,
+        "path_id": 510
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_43.raw",
+      "bytes": 51,
+      "sha256": "f9ec86348b04aa2b15c30e0daedf3616711d6dfdbbb79ab68f2df277c22018d3",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 21040,
+        "bytes": 51,
+        "path_id": 43
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_170.raw",
+      "bytes": 68,
+      "sha256": "6988d435e63bc95ae905d597056c22e7805fe865b7cccf7369df97e082dcbb70",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 30496,
+        "bytes": 68,
+        "path_id": 170
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_515.raw",
+      "bytes": 100,
+      "sha256": "fcac26f38592c4f10bfda6869f23aab35cb29945c7b5a0e458ec132bb150a9c9",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 80256,
+        "bytes": 100,
+        "path_id": 515
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_47.raw",
+      "bytes": 51,
+      "sha256": "c41870ca2e7ea9336048169815c9f572fadc87f98d2a3402f820f16c4c2af869",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 21296,
+        "bytes": 51,
+        "path_id": 47
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_173.raw",
+      "bytes": 68,
+      "sha256": "b955948347468b308204f9abc0d14886d76e495361305964bb8bd2339ca160b5",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 30784,
+        "bytes": 68,
+        "path_id": 173
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_525.raw",
+      "bytes": 100,
+      "sha256": "cd7b97ba006673116a9af79b86771295fbfe4459888ff67b5e19f6d638869a84",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 81376,
+        "bytes": 100,
+        "path_id": 525
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_51.raw",
+      "bytes": 47,
+      "sha256": "793af077099956fd4c9a795303afa0fd3d3a7ff38085a970ec6c26fc4ccf5695",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 21616,
+        "bytes": 47,
+        "path_id": 51
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_175.raw",
+      "bytes": 68,
+      "sha256": "7d61f20618aacfdbd799bf82c94fdf3568c99301bac54fd1cf733a0df1715568",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 30944,
+        "bytes": 68,
+        "path_id": 175
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_527.raw",
+      "bytes": 100,
+      "sha256": "5206f6f70dc2d72789887e0c2891e8c32e32eeb201ea327d6e62e36d865df85b",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 81632,
+        "bytes": 100,
+        "path_id": 527
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_55.raw",
+      "bytes": 55,
+      "sha256": "3af4bc5750c3774f29341a73f555434a28174aa304e1930c226c975209c2f810",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 21856,
+        "bytes": 55,
+        "path_id": 55
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_177.raw",
+      "bytes": 68,
+      "sha256": "1913df01286e980fb74c251f5a3a09599c4b00cc7d7e730c7c12c728af8d89d8",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 31104,
+        "bytes": 68,
+        "path_id": 177
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_528.raw",
+      "bytes": 100,
+      "sha256": "076c150c12d217e5725c58266eb7129b3da377e224af523809313beb24a21153",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 81744,
+        "bytes": 100,
+        "path_id": 528
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_56.raw",
+      "bytes": 55,
+      "sha256": "3ef3815b36d09a5a4b2ab4977f5421cc60067fca1e3c03d296eeb72cb621d5cb",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 21920,
+        "bytes": 55,
+        "path_id": 56
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_178.raw",
+      "bytes": 68,
+      "sha256": "e905b4eb84632592ef3b5b226aff67fc85f5df84fab7ab1773f5aa6e1de2e60d",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 31184,
+        "bytes": 68,
+        "path_id": 178
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_539.raw",
+      "bytes": 100,
+      "sha256": "d3bc827e1d5f6aea09e614d18f8c51007ca970e32a9b15d2db0706500693555b",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 82992,
+        "bytes": 100,
+        "path_id": 539
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_70.raw",
+      "bytes": 51,
+      "sha256": "57803bb46c91bdf6fde5bf29f77a8c3c0e37fece39fead19e0e9cabdf41c3c6e",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 22832,
+        "bytes": 51,
+        "path_id": 70
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_186.raw",
+      "bytes": 68,
+      "sha256": "21eedc990f5a1f4856f5e8a448f96db871a22167765b31e3e1df3ee308364297",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 31968,
+        "bytes": 68,
+        "path_id": 186
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_542.raw",
+      "bytes": 100,
+      "sha256": "a7d5607e83d63a26ca9587d36cfdc16a68331c51a25caa7256ce9bee199b57ab",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 83328,
+        "bytes": 100,
+        "path_id": 542
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_73.raw",
+      "bytes": 51,
+      "sha256": "563ff59731c90bbbc4761d4b2605d0dc62444e8acff9a1ba9218194cfd771e45",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 22992,
+        "bytes": 51,
+        "path_id": 73
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_189.raw",
+      "bytes": 68,
+      "sha256": "d1056ac2b5bad5e2bc08593187aa6081cb1c113e0ca32d8fb27d7714c163d3ec",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 32208,
+        "bytes": 68,
+        "path_id": 189
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_553.raw",
+      "bytes": 100,
+      "sha256": "9f9d789f429811bb42962d3766f34e274ff6cf5a1951d0bd34b9d3f2bb9c2500",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 84272,
+        "bytes": 100,
+        "path_id": 553
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_91.raw",
+      "bytes": 51,
+      "sha256": "beb74c60111641f843ca31198f984045c4c2ac3f68f76b000b0905596efaa99c",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 24080,
+        "bytes": 51,
+        "path_id": 91
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\level0_201.raw",
+      "bytes": 68,
+      "sha256": "b7f3120f86c1f84d1762d725dd34c572a8c86a472e4715e7be4f80a95f57d95a",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\level0",
+        "offset": 33296,
+        "bytes": 68,
+        "path_id": 201
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v1\\objects\\sharedassets0.assets_422.raw",
+      "bytes": 592,
+      "sha256": "d18138acfdccf77f4518c9f87f4c10e0c2fedcdd068441d776fc2b39424fceba",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+        "offset": 46175376,
+        "bytes": 592,
+        "path_id": 422
+      }
+    }
+  ],
+  "errors": [
+    "TypeError: Object of type bytes is not JSON serializable"
+  ],
+  "metadata_decoder": {
+    "path": "D:\\godot\\project\\sandcastle\\tests\\investigation\\brush_hit_competitor\\metadata_fields.py",
+    "bytes": 7148,
+    "sha256": "e6d93cd27fbaa470fee5f6035195ff174b0dcdcc424f90bf9bea0a658dc6a799",
+    "execution_scope": "helper prefix before selected=[]; no methods decoded"
+  },
+  "result": "PARTIAL_EXPORT"
+}

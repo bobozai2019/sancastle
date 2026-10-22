@@ -1,0 +1,15 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://scripts/visual/vegetation_species.gd" id="1_0mk2j"]
+
+[resource]
+script = ExtResource("1_0mk2j")
+label = "海草"
+depth_min_m = 0.025
+depth_max_m = 1.5
+height_min_m = 0.32
+height_max_m = 0.62
+density = 0.88
+flow_response = 0.58
+max_slope = 1.7
+patch_min = 0.3

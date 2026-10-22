@@ -3,6 +3,7 @@ extends RefCounted
 const L=preload("res://scripts/simulation/unified_edit/layout.gd")
 const P=preload("res://scripts/simulation/unified_edit/tool_profile.gd")
 const Wire=preload("res://scripts/simulation/unified_edit/protocol.gd")
+const ParameterSchema=preload("res://scripts/parameters/parameter_schema.gd")
 const Numerics=preload("res://scripts/simulation/unified_edit/water_numerics.gd")
 const FAMILY="unified_edit"
 const SCHEMA:=1
@@ -83,12 +84,18 @@ static func freeze(registry, domain: Variant, simulation: Dictionary, effects: D
 	if not safe_data(environment) or var_to_bytes(environment).size()>256*1024:return {"error":&"invalid_environment_configuration"}
 	var numerics:=Numerics.effective(environment)
 	if not numerics.error.is_empty():return numerics
+	var coupling_error:=ParameterSchema.coupling_error(environment.get("coupling_parameters",{}))
+	if not coupling_error.is_empty():return {"error":coupling_error}
+	for pair in [["foam_parameters","foam"],["prop_parameters","prop"]]:
+		var tuning_error:=ParameterSchema.typed_parameters_error(environment.get(pair[0],{}),pair[1])
+		if not tuning_error.is_empty():return {"error":tuning_error}
 	environment=numerics.value
 	var profiles: Dictionary=registry.catalog_snapshot()
 	if profiles.is_empty():return {"error":&"empty_configuration_catalog"}
 	var paths: Array=DATA_FILES.duplicate()
 	paths.append_array(CHECKPOINT_FILES)
 	paths.append(Numerics.SELF)
+	paths.append_array(ParameterSchema.SOURCES)
 	paths.append_array(Array(extra_sources))
 	for profile in profiles.values():
 		if not profile.resource_identity.path.is_empty():paths.append(profile.resource_identity.path)
@@ -131,6 +138,11 @@ static func _validate_snapshot(snapshot: Variant, verify_disk: bool, expected_le
 	if not snapshot.profiles is Dictionary or snapshot.profiles.is_empty() or snapshot.profiles.size()>L.MAX_PROFILES or not snapshot.sources is Dictionary or snapshot.sources.is_empty() or not snapshot.environment is Dictionary or snapshot.ledger_policy!=expected_ledger_policy:return &"invalid_configuration_catalog"
 	var numerical_error:=Numerics.configuration_error(snapshot.environment)
 	if not numerical_error.is_empty():return numerical_error
+	var coupling_error:=ParameterSchema.coupling_error(snapshot.environment.get("coupling_parameters",{}))
+	if not coupling_error.is_empty():return coupling_error
+	for pair in [["foam_parameters","foam"],["prop_parameters","prop"]]:
+		var tuning_error:=ParameterSchema.typed_parameters_error(snapshot.environment.get(pair[0],{}),pair[1])
+		if not tuning_error.is_empty():return tuning_error
 	if not Wire.hash_valid(snapshot.configuration_hash,true) or stable_hash(snapshot)!=snapshot.configuration_hash:return &"configuration_hash_mismatch"
 	for path in snapshot.sources:
 		if not path.begins_with("res://") or ".." in path or not Wire.hash_valid(snapshot.sources[path],true):return &"invalid_configuration_source"

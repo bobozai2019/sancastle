@@ -3,6 +3,15 @@ render_mode cull_disabled, vertex_lighting, specular_disabled;
 
 // S03 sand-only presentation. Authority remains the R32F rock+sand fields;
 // interpolation and lighting never feed a simulation pass.
+uniform vec3 sand_dry_color = vec3(0.76, 0.59, 0.35);
+uniform vec3 sand_wet_color = vec3(0.52, 0.41, 0.28);
+uniform float sand_grain_scale = 30.0;
+uniform float sand_grain_gain = 0.16;
+uniform float sand_grain_normal = 0.22;
+uniform float sand_dry_roughness = 0.94;
+uniform float sand_wet_roughness = 0.68;
+uniform float sand_dry_specular = 0.16;
+uniform float sand_wet_specular = 0.42;
 uniform bool natural_caustic_override = false;
 uniform bool natural_caustic_enabled = true;
 uniform float natural_caustic_strength = 0.8;
@@ -110,22 +119,22 @@ void fragment() {
         SPECULAR = 0.16;
         METALLIC = 0.0;
     } else {
-        vec3 dry = vec3(0.76, 0.59, 0.35);
-        vec3 damp = vec3(0.52, 0.41, 0.28);
+        vec3 dry = sand_dry_color;
+        vec3 damp = sand_wet_color;
         vec3 color = mix(dry, damp, (use_wet_finish ? wet : 0.0) * 0.65);
         if (use_compaction_tint) {
             color = mix(color, color * vec3(0.89, 0.91, 0.96), compact * 0.25);
         }
         // 3.3 cm grains in world metres. Screen derivatives fade the pattern
         // before a grain becomes smaller than a pixel, avoiding distant crawl.
-        vec3 grain_uv = sand_world_position * 30.0;
+        vec3 grain_uv = sand_world_position * sand_grain_scale;
         vec3 shaded_normal = normalize(sand_world_normal);
         vec3 grain_cell = floor(grain_uv);
         float grain = grain_hash(grain_cell);
         float grain_footprint = max(length(fwidth(grain_uv)), 0.0);
         float grain_visibility = (use_grain ? 1.0 : 0.0) *
             (1.0 - smoothstep(1.0, 2.3, grain_footprint));
-        color *= 1.0 + (grain - 0.5) * 0.16 * grain_visibility;
+        color *= 1.0 + (grain - 0.5) * sand_grain_gain * grain_visibility;
         if (use_grain_normal && use_grain) {
             vec3 key_light = normalize(vec3(-0.42, 0.84, 0.34));
             float shade_before = dot(shaded_normal, key_light);
@@ -137,7 +146,7 @@ void fragment() {
                 grain_hash(grain_cell + vec3(0.0, 0.0, 1.0)) -
                     grain_hash(grain_cell + vec3(0.0, 0.0, -1.0)));
             shaded_normal = normalize(shaded_normal + grain_slope *
-                (0.22 * grain_visibility));
+                (sand_grain_normal * grain_visibility));
             float shade_after = dot(shaded_normal, key_light);
             color *= clamp(1.0 + (shade_after - shade_before) * 0.65,
                 0.82, 1.18);
@@ -152,11 +161,11 @@ void fragment() {
             texture(water_state, UV).r)) * smoothstep(0.26, 0.45, wet);
         ALBEDO *= mix(vec3(1.0), vec3(0.82, 0.84, 0.87),
             exposed_trace * prototype_wet_trace_gain);
-        ROUGHNESS = mix(0.94, 0.68, use_wet_finish ? wet : 0.0) -
+        ROUGHNESS = mix(sand_dry_roughness, sand_wet_roughness, use_wet_finish ? wet : 0.0) -
             (use_compaction_tint ? compact * 0.035 : 0.0) +
             (grain - 0.5) * 0.08 * grain_visibility;
         ROUGHNESS = clamp(ROUGHNESS, 0.48, 1.0);
-        SPECULAR = use_wet_finish ? mix(0.16, 0.42, wet) : 0.16;
+        SPECULAR = use_wet_finish ? mix(sand_dry_specular, sand_wet_specular, wet) : sand_dry_specular;
         METALLIC = 0.0;
     }
     // Isolated W07 parity trial: use the fixed-bed optical bright-line function

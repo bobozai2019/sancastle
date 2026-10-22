@@ -6,6 +6,8 @@
 
 [ext_resource type="Script" path="res://scripts/beach/unified_performance_panel.gd" id="3"]
 
+[ext_resource type="PackedScene" path="res://scenes/components/wave_settings.tscn" id="99_wave_settings"]
+
 [node name="UnifiedBeach" instance=ExtResource("1")]
 
 script = ExtResource("2")
@@ -14,26 +16,8 @@ scene_key = "main"
 
 presentation_manifest = "res://assets/unified_edit/presentation/main.json"
 
-[node name="PerformancePanel" parent="Interface"]
-
-script = ExtResource("3")
-
 [connection signal="look_started" from="GpuPlayerCamera" to="." method="_on_camera_look_started"]
 
 [connection signal="tool_changed" from="Interface/ShapeBrushPanel" to="." method="_on_tool_changed"]
-
-[connection signal="parameters_changed" from="Interface/ShapeBrushPanel" to="." method="_on_parameters_changed"]
-
-[connection signal="toggled" from="Interface/PerformancePanel/Margin/Rows/Header/Sampling" to="Interface/PerformancePanel" method="_on_sampling_toggled"]
-
-[connection signal="pressed" from="Interface/EditPanel/Margin/Controls/Tools/DigTool" to="." method="_on_dig_tool_pressed"]
-
-[connection signal="pressed" from="Interface/EditPanel/Margin/Controls/Tools/FillTool" to="." method="_on_fill_tool_pressed"]
-
-[connection signal="value_changed" from="Interface/EditPanel/Margin/Controls/DigAmount" to="." method="_on_dig_amount_changed"]
-
-[connection signal="value_changed" from="Interface/EditPanel/Margin/Controls/FillAmount" to="." method="_on_fill_amount_changed"]
-
-[connection signal="value_changed" from="Interface/EditPanel/Margin/Controls/WaveAmount" to="." method="_on_wave_amount_changed"]
 
 [connection signal="pressed" from="Interface/EditPanel/Margin/Controls/TriggerWave" to="." method="_on_trigger_wave_pressed"]

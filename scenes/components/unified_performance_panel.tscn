@@ -1,0 +1,134 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/beach/unified_performance_panel.gd" id="1"]
+
+[sub_resource type="StyleBoxFlat" id="Style_edit_panel"]
+bg_color = Color(0.06, 0.09, 0.12, 0.92)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="PerformancePanel" type="PanelContainer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -280.0
+offset_top = -350.0
+offset_right = 112.0
+offset_bottom = -18.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("Style_edit_panel")
+script = ExtResource("1")
+
+[node name="Margin" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 10
+
+[node name="Rows" type="VBoxContainer" parent="Margin"]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="Header" type="HBoxContainer" parent="Margin/Rows"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Margin/Rows/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 18
+text = "性能 / Profile"
+
+[node name="Sampling" type="CheckButton" parent="Margin/Rows/Header"]
+layout_mode = 2
+tooltip_text = "读取已完成的 GPU 时间戳；关闭或 F6 隐藏面板可停止采样。"
+focus_mode = 0
+theme_override_font_sizes/font_size = 14
+button_pressed = true
+text = "分阶段采样"
+
+[node name="Summary" type="Label" parent="Margin/Rows"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "16.7 FPS  |  帧 59.78 ms  |  峰值 193.80 ms"
+
+[node name="Cpu" type="Label" parent="Margin/Rows"]
+layout_mode = 2
+tooltip_text = "Godot 最近约一秒内的处理/物理帧最大耗时，不是平均耗时。物理阶段包含延迟回调与碰撞数据处理；两者不直接相加。"
+theme_override_font_sizes/font_size = 14
+text = "CPU 峰值 165.08 ms  ·  物理峰值 0.17 ms"
+
+[node name="RenderTime" type="Label" parent="Margin/Rows"]
+layout_mode = 2
+tooltip_text = "当前主视口渲染时间；独立计算阶段与渲染可能交错，不能和下方阶段直接相加。"
+theme_override_font_sizes/font_size = 14
+text = "渲染 CPU 0.00 ms  ·  GPU 0.00 ms"
+
+[node name="Simulation" type="Label" parent="Margin/Rows"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "模拟 0.0 tick/s  ·  0.00×  ·  子步 0"
+
+[node name="Separator" type="HSeparator" parent="Margin/Rows"]
+layout_mode = 2
+
+[node name="StageHeading" type="Label" parent="Margin/Rows"]
+layout_mode = 2
+tooltip_text = "每帧内重复的子步累加，再取半秒采样均值；无新样本保留上次。各行与渲染耗时不直接相加。"
+theme_override_font_sizes/font_size = 14
+text = "GPU 分阶段 · ms / 含该阶段的采样帧"
+
+[node name="Stages" type="HBoxContainer" parent="Margin/Rows"]
+layout_mode = 2
+
+[node name="Names" type="Label" parent="Margin/Rows/Stages"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 14
+text = "边界 / CFL
+水流更新
+侵蚀 / 沉积
+湿润 / 沙坡
+白沫更新
+统计 / 审计
+挖填沙
+编辑水核
+完整水 tick
+沙面发布
+碰撞打包"
+
+[node name="Values" type="Label" parent="Margin/Rows/Stages"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "—
+—
+—
+—
+—
+—
+—
+—
+—
+—
+—"
+horizontal_alignment = 2
+
+[node name="Collision" type="Label" parent="Margin/Rows"]
+layout_mode = 2
+tooltip_text = "最近有效批次：回读为 GPU 请求到回调的等待；碰撞 CPU 包括解码、校验、分块和形状更新。替换阶段是其中一段，不能相加。高度未变的块跳过重建，但仍更新修订号。"
+theme_override_font_sizes/font_size = 13
+text = "回读 22.91 ms · 碰撞 CPU 4.07 ms（上次）
+替换阶段 3.47 ms · 替换 16 / 跳过 0 块"
+
+[node name="State" type="Label" parent="Margin/Rows"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.62, 0.75, 0.82, 1)
+theme_override_font_sizes/font_size = 13
+text = "暂停 · 保留最后采样"
+
+[connection signal="toggled" from="Margin/Rows/Header/Sampling" to="." method="_on_sampling_toggled"]

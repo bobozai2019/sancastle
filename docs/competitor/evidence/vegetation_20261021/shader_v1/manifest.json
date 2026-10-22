@@ -1,0 +1,4838 @@
+{
+  "source": {
+    "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+    "bytes": 76135784,
+    "sha256": "6dd7bb6bc7d926fd43c08d22c9c767b7edf531cf11a4a555fcd41830f2f9c721"
+  },
+  "tool": {
+    "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\tools\\extract_vegetation_shader.py",
+    "bytes": 5253,
+    "sha256": "07ad5eaae1b2fa9a800a21fd8ff56f7c0964cb5977b93d04e558971c96c589ad"
+  },
+  "command": [
+    "docs/competitor/tools/extract_vegetation_shader.py",
+    "--out",
+    "D:/godot/project/sandcastle/docs/competitor/evidence/vegetation_20261021/shader_v1"
+  ],
+  "unitypy": "1.25.4",
+  "artifacts": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\object.raw",
+      "bytes": 16508,
+      "sha256": "3ea3ae95275475f96854881a90107b1616f45fcc4f75dfb781418eecfa5ed867",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+        "path_id": 580,
+        "offset": 49422192,
+        "bytes": 16508
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\compressed.lz4",
+      "bytes": 6601,
+      "sha256": "efbb4c9b0e16d3a1c1d2136a5bc6e340a24be038bf0b93df7ff4dfbb0bce65a8",
+      "selector": {
+        "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+        "path_id": 580,
+        "offset_in_object": 9860
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\decompressed.bin",
+      "bytes": 73584,
+      "sha256": "a4304081695682b138725a007c1301b7c87df8899294fb192d4bef6865507d1d",
+      "selector": {
+        "derived_from": "compressed.lz4",
+        "codec": "lz4",
+        "bytes": 73584
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progVertex_0.dxbc",
+      "bytes": 2380,
+      "sha256": "3dbf80280f7bbf436051c22398196171f36399f683de4eb1571104ac38e77cab",
+      "selector": {
+        "path_id": 580,
+        "subshader": 0,
+        "pass_index": 0,
+        "stage": "progVertex",
+        "group": 3,
+        "variant": 0,
+        "blob_index": 1,
+        "offset_in_decompressed": 550,
+        "bytes": 2380
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progVertex_0.asm",
+      "bytes": 3540,
+      "sha256": "691f6328d6b5a12159708def5252a219272870fae3c40d6cb93548a86bee341b",
+      "selector": {
+        "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progVertex_0.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progVertex_1.dxbc",
+      "bytes": 2380,
+      "sha256": "3dbf80280f7bbf436051c22398196171f36399f683de4eb1571104ac38e77cab",
+      "selector": {
+        "path_id": 580,
+        "subshader": 0,
+        "pass_index": 0,
+        "stage": "progVertex",
+        "group": 3,
+        "variant": 1,
+        "blob_index": 2,
+        "offset_in_decompressed": 3070,
+        "bytes": 2380
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progVertex_1.asm",
+      "bytes": 3540,
+      "sha256": "691f6328d6b5a12159708def5252a219272870fae3c40d6cb93548a86bee341b",
+      "selector": {
+        "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progVertex_1.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progVertex_2.dxbc",
+      "bytes": 2380,
+      "sha256": "3dbf80280f7bbf436051c22398196171f36399f683de4eb1571104ac38e77cab",
+      "selector": {
+        "path_id": 580,
+        "subshader": 0,
+        "pass_index": 0,
+        "stage": "progVertex",
+        "group": 3,
+        "variant": 2,
+        "blob_index": 3,
+        "offset_in_decompressed": 5590,
+        "bytes": 2380
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progVertex_2.asm",
+      "bytes": 3540,
+      "sha256": "691f6328d6b5a12159708def5252a219272870fae3c40d6cb93548a86bee341b",
+      "selector": {
+        "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progVertex_2.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progVertex_3.dxbc",
+      "bytes": 2380,
+      "sha256": "3dbf80280f7bbf436051c22398196171f36399f683de4eb1571104ac38e77cab",
+      "selector": {
+        "path_id": 580,
+        "subshader": 0,
+        "pass_index": 0,
+        "stage": "progVertex",
+        "group": 3,
+        "variant": 3,
+        "blob_index": 4,
+        "offset_in_decompressed": 8134,
+        "bytes": 2380
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progVertex_3.asm",
+      "bytes": 3540,
+      "sha256": "691f6328d6b5a12159708def5252a219272870fae3c40d6cb93548a86bee341b",
+      "selector": {
+        "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progVertex_3.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progFragment_0.dxbc",
+      "bytes": 7700,
+      "sha256": "ac8df16b29bb78a28fae7eb68dd07fc6f77f5b91903453bbfb4f0dc344b47a76",
+      "selector": {
+        "path_id": 580,
+        "subshader": 0,
+        "pass_index": 0,
+        "stage": "progFragment",
+        "group": 3,
+        "variant": 0,
+        "blob_index": 8,
+        "offset_in_decompressed": 11074,
+        "bytes": 7700
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progFragment_0.asm",
+      "bytes": 9348,
+      "sha256": "dc751bc094ad03d080479084b9ded7b864e03cb651462d7e17757155aa288daf",
+      "selector": {
+        "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progFragment_0.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progFragment_1.dxbc",
+      "bytes": 8092,
+      "sha256": "9068289030d3af3608879a2edd483afc48e17a4c9c0f977dff5a9612a6f1a610",
+      "selector": {
+        "path_id": 580,
+        "subshader": 0,
+        "pass_index": 0,
+        "stage": "progFragment",
+        "group": 3,
+        "variant": 1,
+        "blob_index": 9,
+        "offset_in_decompressed": 18898,
+        "bytes": 8092
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progFragment_1.asm",
+      "bytes": 9850,
+      "sha256": "bac52a943332862849213ecbab7c308a7c641e527549923587aff24e5621baa7",
+      "selector": {
+        "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progFragment_1.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progFragment_2.dxbc",
+      "bytes": 9356,
+      "sha256": "48f9d464a1ed0b3d6351e75bf7952a85c1e02c5d24f9e6a2637855c64a9e9cc3",
+      "selector": {
+        "path_id": 580,
+        "subshader": 0,
+        "pass_index": 0,
+        "stage": "progFragment",
+        "group": 3,
+        "variant": 2,
+        "blob_index": 10,
+        "offset_in_decompressed": 27114,
+        "bytes": 9356
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progFragment_2.asm",
+      "bytes": 11186,
+      "sha256": "15ae1b38a0395673181146e7663d257fddfcdb37827ae6cbdd182be12c5577b2",
+      "selector": {
+        "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progFragment_2.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progFragment_3.dxbc",
+      "bytes": 9656,
+      "sha256": "00aab4abd48763c30a7a0018e1cbc96110bc82e905505e11c569f4267072a055",
+      "selector": {
+        "path_id": 580,
+        "subshader": 0,
+        "pass_index": 0,
+        "stage": "progFragment",
+        "group": 3,
+        "variant": 3,
+        "blob_index": 11,
+        "offset_in_decompressed": 36618,
+        "bytes": 9656
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progFragment_3.asm",
+      "bytes": 11576,
+      "sha256": "accbf5c7894cd6e1996db2df662185d0484c606e74dfda6c080bf2348dd42285",
+      "selector": {
+        "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progFragment_3.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progVertex_0.dxbc",
+      "bytes": 2160,
+      "sha256": "c269cfdac9e9dae23ce08dbe20e14a19453c630e5f7f987d41e8be91c1e3172d",
+      "selector": {
+        "path_id": 580,
+        "subshader": 0,
+        "pass_index": 1,
+        "stage": "progVertex",
+        "group": 3,
+        "variant": 0,
+        "blob_index": 13,
+        "offset_in_decompressed": 46438,
+        "bytes": 2160
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progVertex_0.asm",
+      "bytes": 3276,
+      "sha256": "09431eb8833208ffd069183577752b4e010ffd190dcacb9efcef83e94a29105f",
+      "selector": {
+        "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progVertex_0.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progVertex_1.dxbc",
+      "bytes": 2160,
+      "sha256": "c269cfdac9e9dae23ce08dbe20e14a19453c630e5f7f987d41e8be91c1e3172d",
+      "selector": {
+        "path_id": 580,
+        "subshader": 0,
+        "pass_index": 1,
+        "stage": "progVertex",
+        "group": 3,
+        "variant": 1,
+        "blob_index": 14,
+        "offset_in_decompressed": 48710,
+        "bytes": 2160
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progVertex_1.asm",
+      "bytes": 3276,
+      "sha256": "09431eb8833208ffd069183577752b4e010ffd190dcacb9efcef83e94a29105f",
+      "selector": {
+        "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progVertex_1.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progVertex_2.dxbc",
+      "bytes": 2160,
+      "sha256": "c269cfdac9e9dae23ce08dbe20e14a19453c630e5f7f987d41e8be91c1e3172d",
+      "selector": {
+        "path_id": 580,
+        "subshader": 0,
+        "pass_index": 1,
+        "stage": "progVertex",
+        "group": 3,
+        "variant": 2,
+        "blob_index": 15,
+        "offset_in_decompressed": 50982,
+        "bytes": 2160
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progVertex_2.asm",
+      "bytes": 3276,
+      "sha256": "09431eb8833208ffd069183577752b4e010ffd190dcacb9efcef83e94a29105f",
+      "selector": {
+        "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progVertex_2.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progVertex_3.dxbc",
+      "bytes": 2160,
+      "sha256": "c269cfdac9e9dae23ce08dbe20e14a19453c630e5f7f987d41e8be91c1e3172d",
+      "selector": {
+        "path_id": 580,
+        "subshader": 0,
+        "pass_index": 1,
+        "stage": "progVertex",
+        "group": 3,
+        "variant": 3,
+        "blob_index": 16,
+        "offset_in_decompressed": 53278,
+        "bytes": 2160
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progVertex_3.asm",
+      "bytes": 3276,
+      "sha256": "09431eb8833208ffd069183577752b4e010ffd190dcacb9efcef83e94a29105f",
+      "selector": {
+        "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progVertex_3.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progFragment_0.dxbc",
+      "bytes": 2888,
+      "sha256": "30370bcbfb2e844af65d0c8fd87839b530756a13b844e1c8905fa63ac536bde3",
+      "selector": {
+        "path_id": 580,
+        "subshader": 0,
+        "pass_index": 1,
+        "stage": "progFragment",
+        "group": 3,
+        "variant": 0,
+        "blob_index": 17,
+        "offset_in_decompressed": 55526,
+        "bytes": 2888
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progFragment_0.asm",
+      "bytes": 3893,
+      "sha256": "ded37ded9614a86cf32abffdc5c02127917fbc443aa7bbebeb5edd5df8d6a483",
+      "selector": {
+        "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progFragment_0.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progFragment_1.dxbc",
+      "bytes": 2888,
+      "sha256": "30370bcbfb2e844af65d0c8fd87839b530756a13b844e1c8905fa63ac536bde3",
+      "selector": {
+        "path_id": 580,
+        "subshader": 0,
+        "pass_index": 1,
+        "stage": "progFragment",
+        "group": 3,
+        "variant": 1,
+        "blob_index": 18,
+        "offset_in_decompressed": 58518,
+        "bytes": 2888
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progFragment_1.asm",
+      "bytes": 3893,
+      "sha256": "ded37ded9614a86cf32abffdc5c02127917fbc443aa7bbebeb5edd5df8d6a483",
+      "selector": {
+        "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progFragment_1.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progFragment_2.dxbc",
+      "bytes": 2888,
+      "sha256": "30370bcbfb2e844af65d0c8fd87839b530756a13b844e1c8905fa63ac536bde3",
+      "selector": {
+        "path_id": 580,
+        "subshader": 0,
+        "pass_index": 1,
+        "stage": "progFragment",
+        "group": 3,
+        "variant": 2,
+        "blob_index": 19,
+        "offset_in_decompressed": 61510,
+        "bytes": 2888
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progFragment_2.asm",
+      "bytes": 3893,
+      "sha256": "ded37ded9614a86cf32abffdc5c02127917fbc443aa7bbebeb5edd5df8d6a483",
+      "selector": {
+        "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progFragment_2.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progFragment_3.dxbc",
+      "bytes": 2888,
+      "sha256": "30370bcbfb2e844af65d0c8fd87839b530756a13b844e1c8905fa63ac536bde3",
+      "selector": {
+        "path_id": 580,
+        "subshader": 0,
+        "pass_index": 1,
+        "stage": "progFragment",
+        "group": 3,
+        "variant": 3,
+        "blob_index": 20,
+        "offset_in_decompressed": 64526,
+        "bytes": 2888
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progFragment_3.asm",
+      "bytes": 3893,
+      "sha256": "ded37ded9614a86cf32abffdc5c02127917fbc443aa7bbebeb5edd5df8d6a483",
+      "selector": {
+        "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progFragment_3.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progVertex_0.dxbc",
+      "bytes": 1124,
+      "sha256": "b10244257101bcf3b27d52bdd58f426c88121fdaefa8fc298a61237aeb2ac900",
+      "selector": {
+        "path_id": 580,
+        "subshader": 0,
+        "pass_index": 2,
+        "stage": "progVertex",
+        "group": 3,
+        "variant": 0,
+        "blob_index": 22,
+        "offset_in_decompressed": 67546,
+        "bytes": 1124
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progVertex_0.asm",
+      "bytes": 1972,
+      "sha256": "8b2de36a27ff777cc588742a24220bbd2b7e7ada64642a0b916a2bf847f60b92",
+      "selector": {
+        "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progVertex_0.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progVertex_1.dxbc",
+      "bytes": 1124,
+      "sha256": "b10244257101bcf3b27d52bdd58f426c88121fdaefa8fc298a61237aeb2ac900",
+      "selector": {
+        "path_id": 580,
+        "subshader": 0,
+        "pass_index": 2,
+        "stage": "progVertex",
+        "group": 3,
+        "variant": 1,
+        "blob_index": 23,
+        "offset_in_decompressed": 68782,
+        "bytes": 1124
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progVertex_1.asm",
+      "bytes": 1972,
+      "sha256": "8b2de36a27ff777cc588742a24220bbd2b7e7ada64642a0b916a2bf847f60b92",
+      "selector": {
+        "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progVertex_1.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progVertex_2.dxbc",
+      "bytes": 1124,
+      "sha256": "b10244257101bcf3b27d52bdd58f426c88121fdaefa8fc298a61237aeb2ac900",
+      "selector": {
+        "path_id": 580,
+        "subshader": 0,
+        "pass_index": 2,
+        "stage": "progVertex",
+        "group": 3,
+        "variant": 2,
+        "blob_index": 24,
+        "offset_in_decompressed": 70018,
+        "bytes": 1124
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progVertex_2.asm",
+      "bytes": 1972,
+      "sha256": "8b2de36a27ff777cc588742a24220bbd2b7e7ada64642a0b916a2bf847f60b92",
+      "selector": {
+        "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progVertex_2.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progVertex_3.dxbc",
+      "bytes": 1124,
+      "sha256": "b10244257101bcf3b27d52bdd58f426c88121fdaefa8fc298a61237aeb2ac900",
+      "selector": {
+        "path_id": 580,
+        "subshader": 0,
+        "pass_index": 2,
+        "stage": "progVertex",
+        "group": 3,
+        "variant": 3,
+        "blob_index": 25,
+        "offset_in_decompressed": 71278,
+        "bytes": 1124
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progVertex_3.asm",
+      "bytes": 1972,
+      "sha256": "8b2de36a27ff777cc588742a24220bbd2b7e7ada64642a0b916a2bf847f60b92",
+      "selector": {
+        "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progVertex_3.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progFragment_0.dxbc",
+      "bytes": 180,
+      "sha256": "952f65211d986c3e8ea81c2056ab88dd97c5a63b410401368db2bf6e72ca6538",
+      "selector": {
+        "path_id": 580,
+        "subshader": 0,
+        "pass_index": 2,
+        "stage": "progFragment",
+        "group": 3,
+        "variant": 0,
+        "blob_index": 27,
+        "offset_in_decompressed": 72518,
+        "bytes": 180
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progFragment_0.asm",
+      "bytes": 610,
+      "sha256": "ad999d8986a62b9146ab1285695425ed222a178d1abc0553f1846056d7f515a0",
+      "selector": {
+        "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progFragment_0.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progFragment_1.dxbc",
+      "bytes": 180,
+      "sha256": "952f65211d986c3e8ea81c2056ab88dd97c5a63b410401368db2bf6e72ca6538",
+      "selector": {
+        "path_id": 580,
+        "subshader": 0,
+        "pass_index": 2,
+        "stage": "progFragment",
+        "group": 3,
+        "variant": 1,
+        "blob_index": 28,
+        "offset_in_decompressed": 72802,
+        "bytes": 180
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progFragment_1.asm",
+      "bytes": 610,
+      "sha256": "ad999d8986a62b9146ab1285695425ed222a178d1abc0553f1846056d7f515a0",
+      "selector": {
+        "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progFragment_1.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progFragment_2.dxbc",
+      "bytes": 180,
+      "sha256": "952f65211d986c3e8ea81c2056ab88dd97c5a63b410401368db2bf6e72ca6538",
+      "selector": {
+        "path_id": 580,
+        "subshader": 0,
+        "pass_index": 2,
+        "stage": "progFragment",
+        "group": 3,
+        "variant": 2,
+        "blob_index": 29,
+        "offset_in_decompressed": 73086,
+        "bytes": 180
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progFragment_2.asm",
+      "bytes": 610,
+      "sha256": "ad999d8986a62b9146ab1285695425ed222a178d1abc0553f1846056d7f515a0",
+      "selector": {
+        "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progFragment_2.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progFragment_3.dxbc",
+      "bytes": 180,
+      "sha256": "952f65211d986c3e8ea81c2056ab88dd97c5a63b410401368db2bf6e72ca6538",
+      "selector": {
+        "path_id": 580,
+        "subshader": 0,
+        "pass_index": 2,
+        "stage": "progFragment",
+        "group": 3,
+        "variant": 3,
+        "blob_index": 30,
+        "offset_in_decompressed": 73394,
+        "bytes": 180
+      }
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progFragment_3.asm",
+      "bytes": 610,
+      "sha256": "ad999d8986a62b9146ab1285695425ed222a178d1abc0553f1846056d7f515a0",
+      "selector": {
+        "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progFragment_3.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    }
+  ],
+  "programs": [
+    {
+      "name": "Forward_progVertex_0",
+      "bytecode": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progVertex_0.dxbc",
+        "bytes": 2380,
+        "sha256": "3dbf80280f7bbf436051c22398196171f36399f683de4eb1571104ac38e77cab",
+        "selector": {
+          "path_id": 580,
+          "subshader": 0,
+          "pass_index": 0,
+          "stage": "progVertex",
+          "group": 3,
+          "variant": 0,
+          "blob_index": 1,
+          "offset_in_decompressed": 550,
+          "bytes": 2380
+        }
+      },
+      "assembly": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progVertex_0.asm",
+        "bytes": 3540,
+        "sha256": "691f6328d6b5a12159708def5252a219272870fae3c40d6cb93548a86bee341b",
+        "selector": {
+          "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progVertex_0.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [],
+        "m_BufferParams": [
+          {
+            "m_NameIndex": 6,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 7,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 3,
+                "m_Index": 800,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              },
+              {
+                "m_NameIndex": 4,
+                "m_Index": 992,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 2,
+                "m_Index": 96,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 2240,
+            "m_IsPartialCB": true
+          },
+          {
+            "m_NameIndex": 1,
+            "m_MatrixParams": [],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 5,
+                "m_Index": 16,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 48,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 1,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerMaterial",
+          1
+        ],
+        [
+          "_MainLightWorldToShadow",
+          20
+        ],
+        [
+          "_ScaleBiasRt",
+          11
+        ],
+        [
+          "_ScaledScreenParams",
+          10
+        ],
+        [
+          "_ShadowMap",
+          8
+        ],
+        [
+          "_WorldSpaceCameraPos",
+          2
+        ],
+        [
+          "aliveList",
+          7
+        ],
+        [
+          "atlasMap",
+          9
+        ],
+        [
+          "atlasMap_ST",
+          21
+        ],
+        [
+          "beachSize",
+          13
+        ],
+        [
+          "glstate_matrix_projection",
+          18
+        ],
+        [
+          "moonColor",
+          17
+        ],
+        [
+          "moonDirection",
+          15
+        ],
+        [
+          "pivotOffset",
+          5
+        ],
+        [
+          "plants",
+          6
+        ],
+        [
+          "sunColor",
+          16
+        ],
+        [
+          "sunDirection",
+          14
+        ],
+        [
+          "unity_AmbientSky",
+          12
+        ],
+        [
+          "unity_MatrixInvVP",
+          19
+        ],
+        [
+          "unity_MatrixV",
+          3
+        ],
+        [
+          "unity_MatrixVP",
+          4
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 1,
+        "m_KeywordIndices": [
+          6
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 16
+      }
+    },
+    {
+      "name": "Forward_progVertex_1",
+      "bytecode": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progVertex_1.dxbc",
+        "bytes": 2380,
+        "sha256": "3dbf80280f7bbf436051c22398196171f36399f683de4eb1571104ac38e77cab",
+        "selector": {
+          "path_id": 580,
+          "subshader": 0,
+          "pass_index": 0,
+          "stage": "progVertex",
+          "group": 3,
+          "variant": 1,
+          "blob_index": 2,
+          "offset_in_decompressed": 3070,
+          "bytes": 2380
+        }
+      },
+      "assembly": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progVertex_1.asm",
+        "bytes": 3540,
+        "sha256": "691f6328d6b5a12159708def5252a219272870fae3c40d6cb93548a86bee341b",
+        "selector": {
+          "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progVertex_1.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [],
+        "m_BufferParams": [
+          {
+            "m_NameIndex": 6,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 7,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 3,
+                "m_Index": 800,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              },
+              {
+                "m_NameIndex": 4,
+                "m_Index": 992,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 2,
+                "m_Index": 96,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 2240,
+            "m_IsPartialCB": true
+          },
+          {
+            "m_NameIndex": 1,
+            "m_MatrixParams": [],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 5,
+                "m_Index": 16,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 48,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 1,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerMaterial",
+          1
+        ],
+        [
+          "_MainLightWorldToShadow",
+          20
+        ],
+        [
+          "_ScaleBiasRt",
+          11
+        ],
+        [
+          "_ScaledScreenParams",
+          10
+        ],
+        [
+          "_ShadowMap",
+          8
+        ],
+        [
+          "_WorldSpaceCameraPos",
+          2
+        ],
+        [
+          "aliveList",
+          7
+        ],
+        [
+          "atlasMap",
+          9
+        ],
+        [
+          "atlasMap_ST",
+          21
+        ],
+        [
+          "beachSize",
+          13
+        ],
+        [
+          "glstate_matrix_projection",
+          18
+        ],
+        [
+          "moonColor",
+          17
+        ],
+        [
+          "moonDirection",
+          15
+        ],
+        [
+          "pivotOffset",
+          5
+        ],
+        [
+          "plants",
+          6
+        ],
+        [
+          "sunColor",
+          16
+        ],
+        [
+          "sunDirection",
+          14
+        ],
+        [
+          "unity_AmbientSky",
+          12
+        ],
+        [
+          "unity_MatrixInvVP",
+          19
+        ],
+        [
+          "unity_MatrixV",
+          3
+        ],
+        [
+          "unity_MatrixVP",
+          4
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 2,
+        "m_KeywordIndices": [
+          5,
+          6
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 16
+      }
+    },
+    {
+      "name": "Forward_progVertex_2",
+      "bytecode": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progVertex_2.dxbc",
+        "bytes": 2380,
+        "sha256": "3dbf80280f7bbf436051c22398196171f36399f683de4eb1571104ac38e77cab",
+        "selector": {
+          "path_id": 580,
+          "subshader": 0,
+          "pass_index": 0,
+          "stage": "progVertex",
+          "group": 3,
+          "variant": 2,
+          "blob_index": 3,
+          "offset_in_decompressed": 5590,
+          "bytes": 2380
+        }
+      },
+      "assembly": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progVertex_2.asm",
+        "bytes": 3540,
+        "sha256": "691f6328d6b5a12159708def5252a219272870fae3c40d6cb93548a86bee341b",
+        "selector": {
+          "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progVertex_2.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [],
+        "m_BufferParams": [
+          {
+            "m_NameIndex": 6,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 7,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 3,
+                "m_Index": 800,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              },
+              {
+                "m_NameIndex": 4,
+                "m_Index": 992,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 2,
+                "m_Index": 96,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 2240,
+            "m_IsPartialCB": true
+          },
+          {
+            "m_NameIndex": 1,
+            "m_MatrixParams": [],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 5,
+                "m_Index": 16,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 48,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 1,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerMaterial",
+          1
+        ],
+        [
+          "_MainLightWorldToShadow",
+          20
+        ],
+        [
+          "_ScaleBiasRt",
+          11
+        ],
+        [
+          "_ScaledScreenParams",
+          10
+        ],
+        [
+          "_ShadowMap",
+          8
+        ],
+        [
+          "_WorldSpaceCameraPos",
+          2
+        ],
+        [
+          "aliveList",
+          7
+        ],
+        [
+          "atlasMap",
+          9
+        ],
+        [
+          "atlasMap_ST",
+          21
+        ],
+        [
+          "beachSize",
+          13
+        ],
+        [
+          "glstate_matrix_projection",
+          18
+        ],
+        [
+          "moonColor",
+          17
+        ],
+        [
+          "moonDirection",
+          15
+        ],
+        [
+          "pivotOffset",
+          5
+        ],
+        [
+          "plants",
+          6
+        ],
+        [
+          "sunColor",
+          16
+        ],
+        [
+          "sunDirection",
+          14
+        ],
+        [
+          "unity_AmbientSky",
+          12
+        ],
+        [
+          "unity_MatrixInvVP",
+          19
+        ],
+        [
+          "unity_MatrixV",
+          3
+        ],
+        [
+          "unity_MatrixVP",
+          4
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 3,
+        "m_KeywordIndices": [
+          4,
+          6
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 16
+      }
+    },
+    {
+      "name": "Forward_progVertex_3",
+      "bytecode": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progVertex_3.dxbc",
+        "bytes": 2380,
+        "sha256": "3dbf80280f7bbf436051c22398196171f36399f683de4eb1571104ac38e77cab",
+        "selector": {
+          "path_id": 580,
+          "subshader": 0,
+          "pass_index": 0,
+          "stage": "progVertex",
+          "group": 3,
+          "variant": 3,
+          "blob_index": 4,
+          "offset_in_decompressed": 8134,
+          "bytes": 2380
+        }
+      },
+      "assembly": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progVertex_3.asm",
+        "bytes": 3540,
+        "sha256": "691f6328d6b5a12159708def5252a219272870fae3c40d6cb93548a86bee341b",
+        "selector": {
+          "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progVertex_3.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [],
+        "m_BufferParams": [
+          {
+            "m_NameIndex": 6,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 7,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 3,
+                "m_Index": 800,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              },
+              {
+                "m_NameIndex": 4,
+                "m_Index": 992,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 2,
+                "m_Index": 96,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 2240,
+            "m_IsPartialCB": true
+          },
+          {
+            "m_NameIndex": 1,
+            "m_MatrixParams": [],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 5,
+                "m_Index": 16,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 48,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 1,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerMaterial",
+          1
+        ],
+        [
+          "_MainLightWorldToShadow",
+          20
+        ],
+        [
+          "_ScaleBiasRt",
+          11
+        ],
+        [
+          "_ScaledScreenParams",
+          10
+        ],
+        [
+          "_ShadowMap",
+          8
+        ],
+        [
+          "_WorldSpaceCameraPos",
+          2
+        ],
+        [
+          "aliveList",
+          7
+        ],
+        [
+          "atlasMap",
+          9
+        ],
+        [
+          "atlasMap_ST",
+          21
+        ],
+        [
+          "beachSize",
+          13
+        ],
+        [
+          "glstate_matrix_projection",
+          18
+        ],
+        [
+          "moonColor",
+          17
+        ],
+        [
+          "moonDirection",
+          15
+        ],
+        [
+          "pivotOffset",
+          5
+        ],
+        [
+          "plants",
+          6
+        ],
+        [
+          "sunColor",
+          16
+        ],
+        [
+          "sunDirection",
+          14
+        ],
+        [
+          "unity_AmbientSky",
+          12
+        ],
+        [
+          "unity_MatrixInvVP",
+          19
+        ],
+        [
+          "unity_MatrixV",
+          3
+        ],
+        [
+          "unity_MatrixVP",
+          4
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 4,
+        "m_KeywordIndices": [
+          4,
+          5,
+          6
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 16
+      }
+    },
+    {
+      "name": "Forward_progFragment_0",
+      "bytecode": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progFragment_0.dxbc",
+        "bytes": 7700,
+        "sha256": "ac8df16b29bb78a28fae7eb68dd07fc6f77f5b91903453bbfb4f0dc344b47a76",
+        "selector": {
+          "path_id": 580,
+          "subshader": 0,
+          "pass_index": 0,
+          "stage": "progFragment",
+          "group": 3,
+          "variant": 0,
+          "blob_index": 8,
+          "offset_in_decompressed": 11074,
+          "bytes": 7700
+        }
+      },
+      "assembly": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progFragment_0.asm",
+        "bytes": 9348,
+        "sha256": "dc751bc094ad03d080479084b9ded7b864e03cb651462d7e17757155aa288daf",
+        "selector": {
+          "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progFragment_0.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [
+          {
+            "m_NameIndex": 8,
+            "m_Index": 0,
+            "m_SamplerIndex": 0,
+            "m_MultiSampled": false,
+            "m_Dim": 2
+          },
+          {
+            "m_NameIndex": 9,
+            "m_Index": 1,
+            "m_SamplerIndex": 1,
+            "m_MultiSampled": false,
+            "m_Dim": 2
+          }
+        ],
+        "m_BufferParams": [],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 18,
+                "m_Index": 736,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              },
+              {
+                "m_NameIndex": 19,
+                "m_Index": 1056,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              },
+              {
+                "m_NameIndex": 20,
+                "m_Index": 2144,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 10,
+                "m_Index": 80,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              },
+              {
+                "m_NameIndex": 11,
+                "m_Index": 192,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              },
+              {
+                "m_NameIndex": 12,
+                "m_Index": 640,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              },
+              {
+                "m_NameIndex": 13,
+                "m_Index": 1856,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 14,
+                "m_Index": 1968,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 15,
+                "m_Index": 1984,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 16,
+                "m_Index": 2000,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 17,
+                "m_Index": 2016,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 2240,
+            "m_IsPartialCB": true
+          },
+          {
+            "m_NameIndex": 1,
+            "m_MatrixParams": [],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 21,
+                "m_Index": 0,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              },
+              {
+                "m_NameIndex": 5,
+                "m_Index": 16,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 48,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 1,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": [
+          {
+            "sampler": 84,
+            "bindPoint": 2
+          }
+        ]
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerMaterial",
+          1
+        ],
+        [
+          "_MainLightWorldToShadow",
+          20
+        ],
+        [
+          "_ScaleBiasRt",
+          11
+        ],
+        [
+          "_ScaledScreenParams",
+          10
+        ],
+        [
+          "_ShadowMap",
+          8
+        ],
+        [
+          "_WorldSpaceCameraPos",
+          2
+        ],
+        [
+          "aliveList",
+          7
+        ],
+        [
+          "atlasMap",
+          9
+        ],
+        [
+          "atlasMap_ST",
+          21
+        ],
+        [
+          "beachSize",
+          13
+        ],
+        [
+          "glstate_matrix_projection",
+          18
+        ],
+        [
+          "moonColor",
+          17
+        ],
+        [
+          "moonDirection",
+          15
+        ],
+        [
+          "pivotOffset",
+          5
+        ],
+        [
+          "plants",
+          6
+        ],
+        [
+          "sunColor",
+          16
+        ],
+        [
+          "sunDirection",
+          14
+        ],
+        [
+          "unity_AmbientSky",
+          12
+        ],
+        [
+          "unity_MatrixInvVP",
+          19
+        ],
+        [
+          "unity_MatrixV",
+          3
+        ],
+        [
+          "unity_MatrixVP",
+          4
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 8,
+        "m_KeywordIndices": [
+          6
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 18
+      }
+    },
+    {
+      "name": "Forward_progFragment_1",
+      "bytecode": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progFragment_1.dxbc",
+        "bytes": 8092,
+        "sha256": "9068289030d3af3608879a2edd483afc48e17a4c9c0f977dff5a9612a6f1a610",
+        "selector": {
+          "path_id": 580,
+          "subshader": 0,
+          "pass_index": 0,
+          "stage": "progFragment",
+          "group": 3,
+          "variant": 1,
+          "blob_index": 9,
+          "offset_in_decompressed": 18898,
+          "bytes": 8092
+        }
+      },
+      "assembly": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progFragment_1.asm",
+        "bytes": 9850,
+        "sha256": "bac52a943332862849213ecbab7c308a7c641e527549923587aff24e5621baa7",
+        "selector": {
+          "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progFragment_1.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [
+          {
+            "m_NameIndex": 8,
+            "m_Index": 0,
+            "m_SamplerIndex": 0,
+            "m_MultiSampled": false,
+            "m_Dim": 2
+          },
+          {
+            "m_NameIndex": 9,
+            "m_Index": 1,
+            "m_SamplerIndex": 1,
+            "m_MultiSampled": false,
+            "m_Dim": 2
+          }
+        ],
+        "m_BufferParams": [],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 18,
+                "m_Index": 736,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              },
+              {
+                "m_NameIndex": 19,
+                "m_Index": 1056,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              },
+              {
+                "m_NameIndex": 20,
+                "m_Index": 2144,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 10,
+                "m_Index": 80,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              },
+              {
+                "m_NameIndex": 11,
+                "m_Index": 192,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              },
+              {
+                "m_NameIndex": 12,
+                "m_Index": 640,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              },
+              {
+                "m_NameIndex": 13,
+                "m_Index": 1856,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 14,
+                "m_Index": 1968,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 15,
+                "m_Index": 1984,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 16,
+                "m_Index": 2000,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 17,
+                "m_Index": 2016,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 2240,
+            "m_IsPartialCB": true
+          },
+          {
+            "m_NameIndex": 1,
+            "m_MatrixParams": [],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 21,
+                "m_Index": 0,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              },
+              {
+                "m_NameIndex": 5,
+                "m_Index": 16,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 48,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 1,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": [
+          {
+            "sampler": 84,
+            "bindPoint": 2
+          }
+        ]
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerMaterial",
+          1
+        ],
+        [
+          "_MainLightWorldToShadow",
+          20
+        ],
+        [
+          "_ScaleBiasRt",
+          11
+        ],
+        [
+          "_ScaledScreenParams",
+          10
+        ],
+        [
+          "_ShadowMap",
+          8
+        ],
+        [
+          "_WorldSpaceCameraPos",
+          2
+        ],
+        [
+          "aliveList",
+          7
+        ],
+        [
+          "atlasMap",
+          9
+        ],
+        [
+          "atlasMap_ST",
+          21
+        ],
+        [
+          "beachSize",
+          13
+        ],
+        [
+          "glstate_matrix_projection",
+          18
+        ],
+        [
+          "moonColor",
+          17
+        ],
+        [
+          "moonDirection",
+          15
+        ],
+        [
+          "pivotOffset",
+          5
+        ],
+        [
+          "plants",
+          6
+        ],
+        [
+          "sunColor",
+          16
+        ],
+        [
+          "sunDirection",
+          14
+        ],
+        [
+          "unity_AmbientSky",
+          12
+        ],
+        [
+          "unity_MatrixInvVP",
+          19
+        ],
+        [
+          "unity_MatrixV",
+          3
+        ],
+        [
+          "unity_MatrixVP",
+          4
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 9,
+        "m_KeywordIndices": [
+          5,
+          6
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 18
+      }
+    },
+    {
+      "name": "Forward_progFragment_2",
+      "bytecode": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progFragment_2.dxbc",
+        "bytes": 9356,
+        "sha256": "48f9d464a1ed0b3d6351e75bf7952a85c1e02c5d24f9e6a2637855c64a9e9cc3",
+        "selector": {
+          "path_id": 580,
+          "subshader": 0,
+          "pass_index": 0,
+          "stage": "progFragment",
+          "group": 3,
+          "variant": 2,
+          "blob_index": 10,
+          "offset_in_decompressed": 27114,
+          "bytes": 9356
+        }
+      },
+      "assembly": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progFragment_2.asm",
+        "bytes": 11186,
+        "sha256": "15ae1b38a0395673181146e7663d257fddfcdb37827ae6cbdd182be12c5577b2",
+        "selector": {
+          "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progFragment_2.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [
+          {
+            "m_NameIndex": 8,
+            "m_Index": 0,
+            "m_SamplerIndex": 0,
+            "m_MultiSampled": false,
+            "m_Dim": 2
+          },
+          {
+            "m_NameIndex": 9,
+            "m_Index": 1,
+            "m_SamplerIndex": 1,
+            "m_MultiSampled": false,
+            "m_Dim": 2
+          }
+        ],
+        "m_BufferParams": [],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 18,
+                "m_Index": 736,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              },
+              {
+                "m_NameIndex": 19,
+                "m_Index": 1056,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              },
+              {
+                "m_NameIndex": 20,
+                "m_Index": 2144,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 10,
+                "m_Index": 80,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              },
+              {
+                "m_NameIndex": 11,
+                "m_Index": 192,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              },
+              {
+                "m_NameIndex": 12,
+                "m_Index": 640,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              },
+              {
+                "m_NameIndex": 13,
+                "m_Index": 1856,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 14,
+                "m_Index": 1968,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 15,
+                "m_Index": 1984,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 16,
+                "m_Index": 2000,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 17,
+                "m_Index": 2016,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 2240,
+            "m_IsPartialCB": true
+          },
+          {
+            "m_NameIndex": 1,
+            "m_MatrixParams": [],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 21,
+                "m_Index": 0,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              },
+              {
+                "m_NameIndex": 5,
+                "m_Index": 16,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 48,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 1,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": [
+          {
+            "sampler": 84,
+            "bindPoint": 2
+          }
+        ]
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerMaterial",
+          1
+        ],
+        [
+          "_MainLightWorldToShadow",
+          20
+        ],
+        [
+          "_ScaleBiasRt",
+          11
+        ],
+        [
+          "_ScaledScreenParams",
+          10
+        ],
+        [
+          "_ShadowMap",
+          8
+        ],
+        [
+          "_WorldSpaceCameraPos",
+          2
+        ],
+        [
+          "aliveList",
+          7
+        ],
+        [
+          "atlasMap",
+          9
+        ],
+        [
+          "atlasMap_ST",
+          21
+        ],
+        [
+          "beachSize",
+          13
+        ],
+        [
+          "glstate_matrix_projection",
+          18
+        ],
+        [
+          "moonColor",
+          17
+        ],
+        [
+          "moonDirection",
+          15
+        ],
+        [
+          "pivotOffset",
+          5
+        ],
+        [
+          "plants",
+          6
+        ],
+        [
+          "sunColor",
+          16
+        ],
+        [
+          "sunDirection",
+          14
+        ],
+        [
+          "unity_AmbientSky",
+          12
+        ],
+        [
+          "unity_MatrixInvVP",
+          19
+        ],
+        [
+          "unity_MatrixV",
+          3
+        ],
+        [
+          "unity_MatrixVP",
+          4
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 10,
+        "m_KeywordIndices": [
+          4,
+          6
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 18
+      }
+    },
+    {
+      "name": "Forward_progFragment_3",
+      "bytecode": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progFragment_3.dxbc",
+        "bytes": 9656,
+        "sha256": "00aab4abd48763c30a7a0018e1cbc96110bc82e905505e11c569f4267072a055",
+        "selector": {
+          "path_id": 580,
+          "subshader": 0,
+          "pass_index": 0,
+          "stage": "progFragment",
+          "group": 3,
+          "variant": 3,
+          "blob_index": 11,
+          "offset_in_decompressed": 36618,
+          "bytes": 9656
+        }
+      },
+      "assembly": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progFragment_3.asm",
+        "bytes": 11576,
+        "sha256": "accbf5c7894cd6e1996db2df662185d0484c606e74dfda6c080bf2348dd42285",
+        "selector": {
+          "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\Forward_progFragment_3.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [
+          {
+            "m_NameIndex": 8,
+            "m_Index": 0,
+            "m_SamplerIndex": 0,
+            "m_MultiSampled": false,
+            "m_Dim": 2
+          },
+          {
+            "m_NameIndex": 9,
+            "m_Index": 1,
+            "m_SamplerIndex": 1,
+            "m_MultiSampled": false,
+            "m_Dim": 2
+          }
+        ],
+        "m_BufferParams": [],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 18,
+                "m_Index": 736,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              },
+              {
+                "m_NameIndex": 19,
+                "m_Index": 1056,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              },
+              {
+                "m_NameIndex": 20,
+                "m_Index": 2144,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 10,
+                "m_Index": 80,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              },
+              {
+                "m_NameIndex": 11,
+                "m_Index": 192,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              },
+              {
+                "m_NameIndex": 12,
+                "m_Index": 640,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              },
+              {
+                "m_NameIndex": 13,
+                "m_Index": 1856,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 14,
+                "m_Index": 1968,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 15,
+                "m_Index": 1984,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 16,
+                "m_Index": 2000,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 17,
+                "m_Index": 2016,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 2240,
+            "m_IsPartialCB": true
+          },
+          {
+            "m_NameIndex": 1,
+            "m_MatrixParams": [],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 21,
+                "m_Index": 0,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              },
+              {
+                "m_NameIndex": 5,
+                "m_Index": 16,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 48,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 1,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": [
+          {
+            "sampler": 84,
+            "bindPoint": 2
+          }
+        ]
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerMaterial",
+          1
+        ],
+        [
+          "_MainLightWorldToShadow",
+          20
+        ],
+        [
+          "_ScaleBiasRt",
+          11
+        ],
+        [
+          "_ScaledScreenParams",
+          10
+        ],
+        [
+          "_ShadowMap",
+          8
+        ],
+        [
+          "_WorldSpaceCameraPos",
+          2
+        ],
+        [
+          "aliveList",
+          7
+        ],
+        [
+          "atlasMap",
+          9
+        ],
+        [
+          "atlasMap_ST",
+          21
+        ],
+        [
+          "beachSize",
+          13
+        ],
+        [
+          "glstate_matrix_projection",
+          18
+        ],
+        [
+          "moonColor",
+          17
+        ],
+        [
+          "moonDirection",
+          15
+        ],
+        [
+          "pivotOffset",
+          5
+        ],
+        [
+          "plants",
+          6
+        ],
+        [
+          "sunColor",
+          16
+        ],
+        [
+          "sunDirection",
+          14
+        ],
+        [
+          "unity_AmbientSky",
+          12
+        ],
+        [
+          "unity_MatrixInvVP",
+          19
+        ],
+        [
+          "unity_MatrixV",
+          3
+        ],
+        [
+          "unity_MatrixVP",
+          4
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 11,
+        "m_KeywordIndices": [
+          4,
+          5,
+          6
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 18
+      }
+    },
+    {
+      "name": "ShadowCaster_progVertex_0",
+      "bytecode": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progVertex_0.dxbc",
+        "bytes": 2160,
+        "sha256": "c269cfdac9e9dae23ce08dbe20e14a19453c630e5f7f987d41e8be91c1e3172d",
+        "selector": {
+          "path_id": 580,
+          "subshader": 0,
+          "pass_index": 1,
+          "stage": "progVertex",
+          "group": 3,
+          "variant": 0,
+          "blob_index": 13,
+          "offset_in_decompressed": 46438,
+          "bytes": 2160
+        }
+      },
+      "assembly": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progVertex_0.asm",
+        "bytes": 3276,
+        "sha256": "09431eb8833208ffd069183577752b4e010ffd190dcacb9efcef83e94a29105f",
+        "selector": {
+          "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progVertex_0.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [],
+        "m_BufferParams": [
+          {
+            "m_NameIndex": 6,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 7,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 2,
+                "m_Index": 800,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              },
+              {
+                "m_NameIndex": 3,
+                "m_Index": 864,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              },
+              {
+                "m_NameIndex": 4,
+                "m_Index": 992,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [],
+            "m_StructParams": [],
+            "m_Size": 2208,
+            "m_IsPartialCB": true
+          },
+          {
+            "m_NameIndex": 1,
+            "m_MatrixParams": [],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 5,
+                "m_Index": 16,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 48,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 1,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerMaterial",
+          1
+        ],
+        [
+          "aliveList",
+          7
+        ],
+        [
+          "atlasMap",
+          8
+        ],
+        [
+          "atlasMap_ST",
+          11
+        ],
+        [
+          "beachSize",
+          9
+        ],
+        [
+          "glstate_matrix_projection",
+          10
+        ],
+        [
+          "pivotOffset",
+          5
+        ],
+        [
+          "plants",
+          6
+        ],
+        [
+          "shadowDepthBiais",
+          12
+        ],
+        [
+          "unity_MatrixInvV",
+          3
+        ],
+        [
+          "unity_MatrixV",
+          2
+        ],
+        [
+          "unity_MatrixVP",
+          4
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 13,
+        "m_KeywordIndices": [],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 16
+      }
+    },
+    {
+      "name": "ShadowCaster_progVertex_1",
+      "bytecode": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progVertex_1.dxbc",
+        "bytes": 2160,
+        "sha256": "c269cfdac9e9dae23ce08dbe20e14a19453c630e5f7f987d41e8be91c1e3172d",
+        "selector": {
+          "path_id": 580,
+          "subshader": 0,
+          "pass_index": 1,
+          "stage": "progVertex",
+          "group": 3,
+          "variant": 1,
+          "blob_index": 14,
+          "offset_in_decompressed": 48710,
+          "bytes": 2160
+        }
+      },
+      "assembly": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progVertex_1.asm",
+        "bytes": 3276,
+        "sha256": "09431eb8833208ffd069183577752b4e010ffd190dcacb9efcef83e94a29105f",
+        "selector": {
+          "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progVertex_1.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [],
+        "m_BufferParams": [
+          {
+            "m_NameIndex": 6,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 7,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 2,
+                "m_Index": 800,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              },
+              {
+                "m_NameIndex": 3,
+                "m_Index": 864,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              },
+              {
+                "m_NameIndex": 4,
+                "m_Index": 992,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [],
+            "m_StructParams": [],
+            "m_Size": 2208,
+            "m_IsPartialCB": true
+          },
+          {
+            "m_NameIndex": 1,
+            "m_MatrixParams": [],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 5,
+                "m_Index": 16,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 48,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 1,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerMaterial",
+          1
+        ],
+        [
+          "aliveList",
+          7
+        ],
+        [
+          "atlasMap",
+          8
+        ],
+        [
+          "atlasMap_ST",
+          11
+        ],
+        [
+          "beachSize",
+          9
+        ],
+        [
+          "glstate_matrix_projection",
+          10
+        ],
+        [
+          "pivotOffset",
+          5
+        ],
+        [
+          "plants",
+          6
+        ],
+        [
+          "shadowDepthBiais",
+          12
+        ],
+        [
+          "unity_MatrixInvV",
+          3
+        ],
+        [
+          "unity_MatrixV",
+          2
+        ],
+        [
+          "unity_MatrixVP",
+          4
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 14,
+        "m_KeywordIndices": [
+          5
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 16
+      }
+    },
+    {
+      "name": "ShadowCaster_progVertex_2",
+      "bytecode": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progVertex_2.dxbc",
+        "bytes": 2160,
+        "sha256": "c269cfdac9e9dae23ce08dbe20e14a19453c630e5f7f987d41e8be91c1e3172d",
+        "selector": {
+          "path_id": 580,
+          "subshader": 0,
+          "pass_index": 1,
+          "stage": "progVertex",
+          "group": 3,
+          "variant": 2,
+          "blob_index": 15,
+          "offset_in_decompressed": 50982,
+          "bytes": 2160
+        }
+      },
+      "assembly": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progVertex_2.asm",
+        "bytes": 3276,
+        "sha256": "09431eb8833208ffd069183577752b4e010ffd190dcacb9efcef83e94a29105f",
+        "selector": {
+          "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progVertex_2.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [],
+        "m_BufferParams": [
+          {
+            "m_NameIndex": 6,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 7,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 2,
+                "m_Index": 800,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              },
+              {
+                "m_NameIndex": 3,
+                "m_Index": 864,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              },
+              {
+                "m_NameIndex": 4,
+                "m_Index": 992,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [],
+            "m_StructParams": [],
+            "m_Size": 2208,
+            "m_IsPartialCB": true
+          },
+          {
+            "m_NameIndex": 1,
+            "m_MatrixParams": [],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 5,
+                "m_Index": 16,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 48,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 1,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerMaterial",
+          1
+        ],
+        [
+          "aliveList",
+          7
+        ],
+        [
+          "atlasMap",
+          8
+        ],
+        [
+          "atlasMap_ST",
+          11
+        ],
+        [
+          "beachSize",
+          9
+        ],
+        [
+          "glstate_matrix_projection",
+          10
+        ],
+        [
+          "pivotOffset",
+          5
+        ],
+        [
+          "plants",
+          6
+        ],
+        [
+          "shadowDepthBiais",
+          12
+        ],
+        [
+          "unity_MatrixInvV",
+          3
+        ],
+        [
+          "unity_MatrixV",
+          2
+        ],
+        [
+          "unity_MatrixVP",
+          4
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 15,
+        "m_KeywordIndices": [
+          4
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 16
+      }
+    },
+    {
+      "name": "ShadowCaster_progVertex_3",
+      "bytecode": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progVertex_3.dxbc",
+        "bytes": 2160,
+        "sha256": "c269cfdac9e9dae23ce08dbe20e14a19453c630e5f7f987d41e8be91c1e3172d",
+        "selector": {
+          "path_id": 580,
+          "subshader": 0,
+          "pass_index": 1,
+          "stage": "progVertex",
+          "group": 3,
+          "variant": 3,
+          "blob_index": 16,
+          "offset_in_decompressed": 53278,
+          "bytes": 2160
+        }
+      },
+      "assembly": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progVertex_3.asm",
+        "bytes": 3276,
+        "sha256": "09431eb8833208ffd069183577752b4e010ffd190dcacb9efcef83e94a29105f",
+        "selector": {
+          "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progVertex_3.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [],
+        "m_BufferParams": [
+          {
+            "m_NameIndex": 6,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 7,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 2,
+                "m_Index": 800,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              },
+              {
+                "m_NameIndex": 3,
+                "m_Index": 864,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              },
+              {
+                "m_NameIndex": 4,
+                "m_Index": 992,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [],
+            "m_StructParams": [],
+            "m_Size": 2208,
+            "m_IsPartialCB": true
+          },
+          {
+            "m_NameIndex": 1,
+            "m_MatrixParams": [],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 5,
+                "m_Index": 16,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 48,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 1,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerMaterial",
+          1
+        ],
+        [
+          "aliveList",
+          7
+        ],
+        [
+          "atlasMap",
+          8
+        ],
+        [
+          "atlasMap_ST",
+          11
+        ],
+        [
+          "beachSize",
+          9
+        ],
+        [
+          "glstate_matrix_projection",
+          10
+        ],
+        [
+          "pivotOffset",
+          5
+        ],
+        [
+          "plants",
+          6
+        ],
+        [
+          "shadowDepthBiais",
+          12
+        ],
+        [
+          "unity_MatrixInvV",
+          3
+        ],
+        [
+          "unity_MatrixV",
+          2
+        ],
+        [
+          "unity_MatrixVP",
+          4
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 16,
+        "m_KeywordIndices": [
+          4,
+          5
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 16
+      }
+    },
+    {
+      "name": "ShadowCaster_progFragment_0",
+      "bytecode": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progFragment_0.dxbc",
+        "bytes": 2888,
+        "sha256": "30370bcbfb2e844af65d0c8fd87839b530756a13b844e1c8905fa63ac536bde3",
+        "selector": {
+          "path_id": 580,
+          "subshader": 0,
+          "pass_index": 1,
+          "stage": "progFragment",
+          "group": 3,
+          "variant": 0,
+          "blob_index": 17,
+          "offset_in_decompressed": 55526,
+          "bytes": 2888
+        }
+      },
+      "assembly": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progFragment_0.asm",
+        "bytes": 3893,
+        "sha256": "ded37ded9614a86cf32abffdc5c02127917fbc443aa7bbebeb5edd5df8d6a483",
+        "selector": {
+          "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progFragment_0.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [
+          {
+            "m_NameIndex": 8,
+            "m_Index": 0,
+            "m_SamplerIndex": -1,
+            "m_MultiSampled": false,
+            "m_Dim": 2
+          }
+        ],
+        "m_BufferParams": [],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 10,
+                "m_Index": 736,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 9,
+                "m_Index": 1856,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 2208,
+            "m_IsPartialCB": true
+          },
+          {
+            "m_NameIndex": 1,
+            "m_MatrixParams": [],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 11,
+                "m_Index": 0,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              },
+              {
+                "m_NameIndex": 5,
+                "m_Index": 16,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              },
+              {
+                "m_NameIndex": 12,
+                "m_Index": 32,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 1
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 48,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 1,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": [
+          {
+            "sampler": 84,
+            "bindPoint": 0
+          }
+        ]
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerMaterial",
+          1
+        ],
+        [
+          "aliveList",
+          7
+        ],
+        [
+          "atlasMap",
+          8
+        ],
+        [
+          "atlasMap_ST",
+          11
+        ],
+        [
+          "beachSize",
+          9
+        ],
+        [
+          "glstate_matrix_projection",
+          10
+        ],
+        [
+          "pivotOffset",
+          5
+        ],
+        [
+          "plants",
+          6
+        ],
+        [
+          "shadowDepthBiais",
+          12
+        ],
+        [
+          "unity_MatrixInvV",
+          3
+        ],
+        [
+          "unity_MatrixV",
+          2
+        ],
+        [
+          "unity_MatrixVP",
+          4
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 17,
+        "m_KeywordIndices": [],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 18
+      }
+    },
+    {
+      "name": "ShadowCaster_progFragment_1",
+      "bytecode": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progFragment_1.dxbc",
+        "bytes": 2888,
+        "sha256": "30370bcbfb2e844af65d0c8fd87839b530756a13b844e1c8905fa63ac536bde3",
+        "selector": {
+          "path_id": 580,
+          "subshader": 0,
+          "pass_index": 1,
+          "stage": "progFragment",
+          "group": 3,
+          "variant": 1,
+          "blob_index": 18,
+          "offset_in_decompressed": 58518,
+          "bytes": 2888
+        }
+      },
+      "assembly": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progFragment_1.asm",
+        "bytes": 3893,
+        "sha256": "ded37ded9614a86cf32abffdc5c02127917fbc443aa7bbebeb5edd5df8d6a483",
+        "selector": {
+          "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progFragment_1.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [
+          {
+            "m_NameIndex": 8,
+            "m_Index": 0,
+            "m_SamplerIndex": -1,
+            "m_MultiSampled": false,
+            "m_Dim": 2
+          }
+        ],
+        "m_BufferParams": [],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 10,
+                "m_Index": 736,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 9,
+                "m_Index": 1856,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 2208,
+            "m_IsPartialCB": true
+          },
+          {
+            "m_NameIndex": 1,
+            "m_MatrixParams": [],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 11,
+                "m_Index": 0,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              },
+              {
+                "m_NameIndex": 5,
+                "m_Index": 16,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              },
+              {
+                "m_NameIndex": 12,
+                "m_Index": 32,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 1
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 48,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 1,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": [
+          {
+            "sampler": 84,
+            "bindPoint": 0
+          }
+        ]
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerMaterial",
+          1
+        ],
+        [
+          "aliveList",
+          7
+        ],
+        [
+          "atlasMap",
+          8
+        ],
+        [
+          "atlasMap_ST",
+          11
+        ],
+        [
+          "beachSize",
+          9
+        ],
+        [
+          "glstate_matrix_projection",
+          10
+        ],
+        [
+          "pivotOffset",
+          5
+        ],
+        [
+          "plants",
+          6
+        ],
+        [
+          "shadowDepthBiais",
+          12
+        ],
+        [
+          "unity_MatrixInvV",
+          3
+        ],
+        [
+          "unity_MatrixV",
+          2
+        ],
+        [
+          "unity_MatrixVP",
+          4
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 18,
+        "m_KeywordIndices": [
+          5
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 18
+      }
+    },
+    {
+      "name": "ShadowCaster_progFragment_2",
+      "bytecode": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progFragment_2.dxbc",
+        "bytes": 2888,
+        "sha256": "30370bcbfb2e844af65d0c8fd87839b530756a13b844e1c8905fa63ac536bde3",
+        "selector": {
+          "path_id": 580,
+          "subshader": 0,
+          "pass_index": 1,
+          "stage": "progFragment",
+          "group": 3,
+          "variant": 2,
+          "blob_index": 19,
+          "offset_in_decompressed": 61510,
+          "bytes": 2888
+        }
+      },
+      "assembly": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progFragment_2.asm",
+        "bytes": 3893,
+        "sha256": "ded37ded9614a86cf32abffdc5c02127917fbc443aa7bbebeb5edd5df8d6a483",
+        "selector": {
+          "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progFragment_2.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [
+          {
+            "m_NameIndex": 8,
+            "m_Index": 0,
+            "m_SamplerIndex": -1,
+            "m_MultiSampled": false,
+            "m_Dim": 2
+          }
+        ],
+        "m_BufferParams": [],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 10,
+                "m_Index": 736,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 9,
+                "m_Index": 1856,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 2208,
+            "m_IsPartialCB": true
+          },
+          {
+            "m_NameIndex": 1,
+            "m_MatrixParams": [],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 11,
+                "m_Index": 0,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              },
+              {
+                "m_NameIndex": 5,
+                "m_Index": 16,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              },
+              {
+                "m_NameIndex": 12,
+                "m_Index": 32,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 1
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 48,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 1,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": [
+          {
+            "sampler": 84,
+            "bindPoint": 0
+          }
+        ]
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerMaterial",
+          1
+        ],
+        [
+          "aliveList",
+          7
+        ],
+        [
+          "atlasMap",
+          8
+        ],
+        [
+          "atlasMap_ST",
+          11
+        ],
+        [
+          "beachSize",
+          9
+        ],
+        [
+          "glstate_matrix_projection",
+          10
+        ],
+        [
+          "pivotOffset",
+          5
+        ],
+        [
+          "plants",
+          6
+        ],
+        [
+          "shadowDepthBiais",
+          12
+        ],
+        [
+          "unity_MatrixInvV",
+          3
+        ],
+        [
+          "unity_MatrixV",
+          2
+        ],
+        [
+          "unity_MatrixVP",
+          4
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 19,
+        "m_KeywordIndices": [
+          4
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 18
+      }
+    },
+    {
+      "name": "ShadowCaster_progFragment_3",
+      "bytecode": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progFragment_3.dxbc",
+        "bytes": 2888,
+        "sha256": "30370bcbfb2e844af65d0c8fd87839b530756a13b844e1c8905fa63ac536bde3",
+        "selector": {
+          "path_id": 580,
+          "subshader": 0,
+          "pass_index": 1,
+          "stage": "progFragment",
+          "group": 3,
+          "variant": 3,
+          "blob_index": 20,
+          "offset_in_decompressed": 64526,
+          "bytes": 2888
+        }
+      },
+      "assembly": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progFragment_3.asm",
+        "bytes": 3893,
+        "sha256": "ded37ded9614a86cf32abffdc5c02127917fbc443aa7bbebeb5edd5df8d6a483",
+        "selector": {
+          "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\ShadowCaster_progFragment_3.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [
+          {
+            "m_NameIndex": 8,
+            "m_Index": 0,
+            "m_SamplerIndex": -1,
+            "m_MultiSampled": false,
+            "m_Dim": 2
+          }
+        ],
+        "m_BufferParams": [],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 10,
+                "m_Index": 736,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 9,
+                "m_Index": 1856,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 2208,
+            "m_IsPartialCB": true
+          },
+          {
+            "m_NameIndex": 1,
+            "m_MatrixParams": [],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 11,
+                "m_Index": 0,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              },
+              {
+                "m_NameIndex": 5,
+                "m_Index": 16,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              },
+              {
+                "m_NameIndex": 12,
+                "m_Index": 32,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 1
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 48,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 1,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": [
+          {
+            "sampler": 84,
+            "bindPoint": 0
+          }
+        ]
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerMaterial",
+          1
+        ],
+        [
+          "aliveList",
+          7
+        ],
+        [
+          "atlasMap",
+          8
+        ],
+        [
+          "atlasMap_ST",
+          11
+        ],
+        [
+          "beachSize",
+          9
+        ],
+        [
+          "glstate_matrix_projection",
+          10
+        ],
+        [
+          "pivotOffset",
+          5
+        ],
+        [
+          "plants",
+          6
+        ],
+        [
+          "shadowDepthBiais",
+          12
+        ],
+        [
+          "unity_MatrixInvV",
+          3
+        ],
+        [
+          "unity_MatrixV",
+          2
+        ],
+        [
+          "unity_MatrixVP",
+          4
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 20,
+        "m_KeywordIndices": [
+          4,
+          5
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 18
+      }
+    },
+    {
+      "name": "VoxelizerShadowCaster_progVertex_0",
+      "bytecode": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progVertex_0.dxbc",
+        "bytes": 1124,
+        "sha256": "b10244257101bcf3b27d52bdd58f426c88121fdaefa8fc298a61237aeb2ac900",
+        "selector": {
+          "path_id": 580,
+          "subshader": 0,
+          "pass_index": 2,
+          "stage": "progVertex",
+          "group": 3,
+          "variant": 0,
+          "blob_index": 22,
+          "offset_in_decompressed": 67546,
+          "bytes": 1124
+        }
+      },
+      "assembly": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progVertex_0.asm",
+        "bytes": 1972,
+        "sha256": "8b2de36a27ff777cc588742a24220bbd2b7e7ada64642a0b916a2bf847f60b92",
+        "selector": {
+          "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progVertex_0.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [],
+        "m_BufferParams": [
+          {
+            "m_NameIndex": 2,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 3,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 1,
+                "m_Index": 992,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [],
+            "m_StructParams": [],
+            "m_Size": 2208,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "aliveList",
+          3
+        ],
+        [
+          "plants",
+          2
+        ],
+        [
+          "unity_MatrixVP",
+          1
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 22,
+        "m_KeywordIndices": [],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 16
+      }
+    },
+    {
+      "name": "VoxelizerShadowCaster_progVertex_1",
+      "bytecode": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progVertex_1.dxbc",
+        "bytes": 1124,
+        "sha256": "b10244257101bcf3b27d52bdd58f426c88121fdaefa8fc298a61237aeb2ac900",
+        "selector": {
+          "path_id": 580,
+          "subshader": 0,
+          "pass_index": 2,
+          "stage": "progVertex",
+          "group": 3,
+          "variant": 1,
+          "blob_index": 23,
+          "offset_in_decompressed": 68782,
+          "bytes": 1124
+        }
+      },
+      "assembly": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progVertex_1.asm",
+        "bytes": 1972,
+        "sha256": "8b2de36a27ff777cc588742a24220bbd2b7e7ada64642a0b916a2bf847f60b92",
+        "selector": {
+          "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progVertex_1.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [],
+        "m_BufferParams": [
+          {
+            "m_NameIndex": 2,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 3,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 1,
+                "m_Index": 992,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [],
+            "m_StructParams": [],
+            "m_Size": 2208,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "aliveList",
+          3
+        ],
+        [
+          "plants",
+          2
+        ],
+        [
+          "unity_MatrixVP",
+          1
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 23,
+        "m_KeywordIndices": [
+          5
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 16
+      }
+    },
+    {
+      "name": "VoxelizerShadowCaster_progVertex_2",
+      "bytecode": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progVertex_2.dxbc",
+        "bytes": 1124,
+        "sha256": "b10244257101bcf3b27d52bdd58f426c88121fdaefa8fc298a61237aeb2ac900",
+        "selector": {
+          "path_id": 580,
+          "subshader": 0,
+          "pass_index": 2,
+          "stage": "progVertex",
+          "group": 3,
+          "variant": 2,
+          "blob_index": 24,
+          "offset_in_decompressed": 70018,
+          "bytes": 1124
+        }
+      },
+      "assembly": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progVertex_2.asm",
+        "bytes": 1972,
+        "sha256": "8b2de36a27ff777cc588742a24220bbd2b7e7ada64642a0b916a2bf847f60b92",
+        "selector": {
+          "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progVertex_2.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [],
+        "m_BufferParams": [
+          {
+            "m_NameIndex": 2,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 3,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 1,
+                "m_Index": 992,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [],
+            "m_StructParams": [],
+            "m_Size": 2208,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "aliveList",
+          3
+        ],
+        [
+          "plants",
+          2
+        ],
+        [
+          "unity_MatrixVP",
+          1
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 24,
+        "m_KeywordIndices": [
+          4
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 16
+      }
+    },
+    {
+      "name": "VoxelizerShadowCaster_progVertex_3",
+      "bytecode": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progVertex_3.dxbc",
+        "bytes": 1124,
+        "sha256": "b10244257101bcf3b27d52bdd58f426c88121fdaefa8fc298a61237aeb2ac900",
+        "selector": {
+          "path_id": 580,
+          "subshader": 0,
+          "pass_index": 2,
+          "stage": "progVertex",
+          "group": 3,
+          "variant": 3,
+          "blob_index": 25,
+          "offset_in_decompressed": 71278,
+          "bytes": 1124
+        }
+      },
+      "assembly": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progVertex_3.asm",
+        "bytes": 1972,
+        "sha256": "8b2de36a27ff777cc588742a24220bbd2b7e7ada64642a0b916a2bf847f60b92",
+        "selector": {
+          "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progVertex_3.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [],
+        "m_BufferParams": [
+          {
+            "m_NameIndex": 2,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 3,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 1,
+                "m_Index": 992,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [],
+            "m_StructParams": [],
+            "m_Size": 2208,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "aliveList",
+          3
+        ],
+        [
+          "plants",
+          2
+        ],
+        [
+          "unity_MatrixVP",
+          1
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 25,
+        "m_KeywordIndices": [
+          4,
+          5
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 16
+      }
+    },
+    {
+      "name": "VoxelizerShadowCaster_progFragment_0",
+      "bytecode": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progFragment_0.dxbc",
+        "bytes": 180,
+        "sha256": "952f65211d986c3e8ea81c2056ab88dd97c5a63b410401368db2bf6e72ca6538",
+        "selector": {
+          "path_id": 580,
+          "subshader": 0,
+          "pass_index": 2,
+          "stage": "progFragment",
+          "group": 3,
+          "variant": 0,
+          "blob_index": 27,
+          "offset_in_decompressed": 72518,
+          "bytes": 180
+        }
+      },
+      "assembly": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progFragment_0.asm",
+        "bytes": 610,
+        "sha256": "ad999d8986a62b9146ab1285695425ed222a178d1abc0553f1846056d7f515a0",
+        "selector": {
+          "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progFragment_0.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [],
+        "m_BufferParams": [],
+        "m_ConstantBuffers": [],
+        "m_ConstantBufferBindings": [],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "aliveList",
+          3
+        ],
+        [
+          "plants",
+          2
+        ],
+        [
+          "unity_MatrixVP",
+          1
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 27,
+        "m_KeywordIndices": [],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 18
+      }
+    },
+    {
+      "name": "VoxelizerShadowCaster_progFragment_1",
+      "bytecode": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progFragment_1.dxbc",
+        "bytes": 180,
+        "sha256": "952f65211d986c3e8ea81c2056ab88dd97c5a63b410401368db2bf6e72ca6538",
+        "selector": {
+          "path_id": 580,
+          "subshader": 0,
+          "pass_index": 2,
+          "stage": "progFragment",
+          "group": 3,
+          "variant": 1,
+          "blob_index": 28,
+          "offset_in_decompressed": 72802,
+          "bytes": 180
+        }
+      },
+      "assembly": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progFragment_1.asm",
+        "bytes": 610,
+        "sha256": "ad999d8986a62b9146ab1285695425ed222a178d1abc0553f1846056d7f515a0",
+        "selector": {
+          "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progFragment_1.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [],
+        "m_BufferParams": [],
+        "m_ConstantBuffers": [],
+        "m_ConstantBufferBindings": [],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "aliveList",
+          3
+        ],
+        [
+          "plants",
+          2
+        ],
+        [
+          "unity_MatrixVP",
+          1
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 28,
+        "m_KeywordIndices": [
+          5
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 18
+      }
+    },
+    {
+      "name": "VoxelizerShadowCaster_progFragment_2",
+      "bytecode": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progFragment_2.dxbc",
+        "bytes": 180,
+        "sha256": "952f65211d986c3e8ea81c2056ab88dd97c5a63b410401368db2bf6e72ca6538",
+        "selector": {
+          "path_id": 580,
+          "subshader": 0,
+          "pass_index": 2,
+          "stage": "progFragment",
+          "group": 3,
+          "variant": 2,
+          "blob_index": 29,
+          "offset_in_decompressed": 73086,
+          "bytes": 180
+        }
+      },
+      "assembly": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progFragment_2.asm",
+        "bytes": 610,
+        "sha256": "ad999d8986a62b9146ab1285695425ed222a178d1abc0553f1846056d7f515a0",
+        "selector": {
+          "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progFragment_2.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [],
+        "m_BufferParams": [],
+        "m_ConstantBuffers": [],
+        "m_ConstantBufferBindings": [],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "aliveList",
+          3
+        ],
+        [
+          "plants",
+          2
+        ],
+        [
+          "unity_MatrixVP",
+          1
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 29,
+        "m_KeywordIndices": [
+          4
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 18
+      }
+    },
+    {
+      "name": "VoxelizerShadowCaster_progFragment_3",
+      "bytecode": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progFragment_3.dxbc",
+        "bytes": 180,
+        "sha256": "952f65211d986c3e8ea81c2056ab88dd97c5a63b410401368db2bf6e72ca6538",
+        "selector": {
+          "path_id": 580,
+          "subshader": 0,
+          "pass_index": 2,
+          "stage": "progFragment",
+          "group": 3,
+          "variant": 3,
+          "blob_index": 30,
+          "offset_in_decompressed": 73394,
+          "bytes": 180
+        }
+      },
+      "assembly": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progFragment_3.asm",
+        "bytes": 610,
+        "sha256": "ad999d8986a62b9146ab1285695425ed222a178d1abc0553f1846056d7f515a0",
+        "selector": {
+          "derived_from": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\shader_v1\\VoxelizerShadowCaster_progFragment_3.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [],
+        "m_BufferParams": [],
+        "m_ConstantBuffers": [],
+        "m_ConstantBufferBindings": [],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "aliveList",
+          3
+        ],
+        [
+          "plants",
+          2
+        ],
+        [
+          "unity_MatrixVP",
+          1
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 30,
+        "m_KeywordIndices": [
+          4,
+          5
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 18
+      }
+    }
+  ],
+  "errors": [],
+  "entries": [
+    {
+      "index": 0,
+      "offset": 376,
+      "bytes": 84,
+      "segment": 0
+    },
+    {
+      "index": 1,
+      "offset": 460,
+      "bytes": 2496,
+      "segment": 0
+    },
+    {
+      "index": 2,
+      "offset": 2956,
+      "bytes": 2520,
+      "segment": 0
+    },
+    {
+      "index": 3,
+      "offset": 5476,
+      "bytes": 2520,
+      "segment": 0
+    },
+    {
+      "index": 4,
+      "offset": 7996,
+      "bytes": 2544,
+      "segment": 0
+    },
+    {
+      "index": 5,
+      "offset": 10540,
+      "bytes": 112,
+      "segment": 0
+    },
+    {
+      "index": 6,
+      "offset": 10652,
+      "bytes": 152,
+      "segment": 0
+    },
+    {
+      "index": 7,
+      "offset": 10804,
+      "bytes": 180,
+      "segment": 0
+    },
+    {
+      "index": 8,
+      "offset": 10984,
+      "bytes": 7800,
+      "segment": 0
+    },
+    {
+      "index": 9,
+      "offset": 18784,
+      "bytes": 8216,
+      "segment": 0
+    },
+    {
+      "index": 10,
+      "offset": 27000,
+      "bytes": 9480,
+      "segment": 0
+    },
+    {
+      "index": 11,
+      "offset": 36480,
+      "bytes": 9804,
+      "segment": 0
+    },
+    {
+      "index": 12,
+      "offset": 46284,
+      "bytes": 84,
+      "segment": 0
+    },
+    {
+      "index": 13,
+      "offset": 46368,
+      "bytes": 2248,
+      "segment": 0
+    },
+    {
+      "index": 14,
+      "offset": 48616,
+      "bytes": 2272,
+      "segment": 0
+    },
+    {
+      "index": 15,
+      "offset": 50888,
+      "bytes": 2272,
+      "segment": 0
+    },
+    {
+      "index": 16,
+      "offset": 53160,
+      "bytes": 2296,
+      "segment": 0
+    },
+    {
+      "index": 17,
+      "offset": 55456,
+      "bytes": 2968,
+      "segment": 0
+    },
+    {
+      "index": 18,
+      "offset": 58424,
+      "bytes": 2992,
+      "segment": 0
+    },
+    {
+      "index": 19,
+      "offset": 61416,
+      "bytes": 2992,
+      "segment": 0
+    },
+    {
+      "index": 20,
+      "offset": 64408,
+      "bytes": 3016,
+      "segment": 0
+    },
+    {
+      "index": 21,
+      "offset": 67424,
+      "bytes": 52,
+      "segment": 0
+    },
+    {
+      "index": 22,
+      "offset": 67476,
+      "bytes": 1212,
+      "segment": 0
+    },
+    {
+      "index": 23,
+      "offset": 68688,
+      "bytes": 1236,
+      "segment": 0
+    },
+    {
+      "index": 24,
+      "offset": 69924,
+      "bytes": 1236,
+      "segment": 0
+    },
+    {
+      "index": 25,
+      "offset": 71160,
+      "bytes": 1260,
+      "segment": 0
+    },
+    {
+      "index": 26,
+      "offset": 72420,
+      "bytes": 28,
+      "segment": 0
+    },
+    {
+      "index": 27,
+      "offset": 72448,
+      "bytes": 260,
+      "segment": 0
+    },
+    {
+      "index": 28,
+      "offset": 72708,
+      "bytes": 284,
+      "segment": 0
+    },
+    {
+      "index": 29,
+      "offset": 72992,
+      "bytes": 284,
+      "segment": 0
+    },
+    {
+      "index": 30,
+      "offset": 73276,
+      "bytes": 308,
+      "segment": 0
+    }
+  ],
+  "helper": {
+    "path": "D:\\godot\\project\\sandcastle\\tests\\investigation\\competitor_transport\\analyze_transport.py",
+    "bytes": 8152,
+    "sha256": "fb718cf5697a8191b59df65a396f3c7f702f2f0d41cf83d077ab8bab8c2e4c0a"
+  },
+  "d3dcompiler": {
+    "path": "C:\\WINDOWS\\System32\\d3dcompiler_47.dll",
+    "bytes": 4517376,
+    "sha256": "f642940ffb5dca7e548ba2270686798cf6b4c74b60e88bbb22f0991868cae3e5"
+  },
+  "source_after": {
+    "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+    "bytes": 76135784,
+    "sha256": "6dd7bb6bc7d926fd43c08d22c9c767b7edf531cf11a4a555fcd41830f2f9c721"
+  },
+  "result": "PASS_STATIC_EXPORT"
+}

@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+Parameters="*res://scenes/parameters/parameter_windows.tscn"
 BeachScenes="*res://scripts/beach/beach_scene_service.gd"
 GodotIQRuntime="*uid://djxgaex0epfoy"
 

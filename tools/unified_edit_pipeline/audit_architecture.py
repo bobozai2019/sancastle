@@ -159,6 +159,9 @@ def main():
         ('prop_profile_callback','scripts/props/floating_prop_profile.gd','\nfunc forbidden(owner):owner.call("execute")\n'),
         ('compatibility_bypass',PREFIX+'consumer_checkpoint_sources.gd','\nstatic func forbidden(value):return {"error":&"","checkpoint":value}\n'),
         ('unstable_configuration_key_sort',PREFIX+'configuration.gd',''),
+        ('vegetation_private_schedule',PREFIX+'vegetation.gd','\nfunc forbidden():\n\tRenderingServer.call_on_render_thread(Callable())\n'),
+        ('vegetation_authority_write','shaders/simulation/vegetation_step.glsl','\nvoid forbidden(){imageStore(sand,ivec2(0),vec4(1));}\n'),
+        ('vegetation_profile_callback','scripts/visual/vegetation_profile.gd','\nfunc forbidden(owner):owner.call("execute")\n'),
     ]
     negatives=[]
     for name,path,addition in mutants:

@@ -7,7 +7,7 @@ signal look_started
 var look_active := false
 
 func _unhandled_input(event: InputEvent) -> void:
-	if current and event is InputEventMouseButton and event.button_index==MOUSE_BUTTON_RIGHT and event.pressed:
+	if current and get_window().has_focus() and event is InputEventMouseButton and event.button_index==MOUSE_BUTTON_RIGHT and event.pressed:
 		look_active=true
 		# Remove look_at roll before mouse-controlled yaw/pitch.
 		rotation.z=0.0
@@ -17,7 +17,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		get_viewport().set_input_as_handled()
 
 func _input(event: InputEvent) -> void:
-	if not current:
+	if not current or not get_window().has_focus():
 		_release_mouse()
 		return
 	if not look_active: return
@@ -38,7 +38,7 @@ func _input(event: InputEvent) -> void:
 		get_viewport().set_input_as_handled()
 
 func _process(delta: float) -> void:
-	if not current: _release_mouse();return
+	if not current or not get_window().has_focus(): _release_mouse();return
 	var focused:=get_viewport().gui_get_focus_owner()
 	if focused is LineEdit or focused is TextEdit or focused is SpinBox: return
 	var direction:=Vector3.ZERO
