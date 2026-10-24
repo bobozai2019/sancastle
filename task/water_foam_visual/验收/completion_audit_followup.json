@@ -1,0 +1,104 @@
+{
+  "created_utc": "2026-10-24T00:06:22.952438+00:00",
+  "overall_complete": false,
+  "previous_goal_turn": "progress: final cost20, both >=10min stability, PCK and delivery",
+  "this_goal_turn": "progress: tolerance applicability review, single-factor replay1003, latest UI switches237, exact original shaders replay499",
+  "production_source_snapshot_unchanged": {
+    "snapshot": "source_snapshots/final_static_ui_20261024",
+    "verified_files": 65
+  },
+  "evidence_revalidated": {
+    "G1/appearance_v1": {
+      "main": {
+        "pass": true,
+        "checks": 42
+      },
+      "test1_geometry": {
+        "pass": true,
+        "checks": 42
+      }
+    },
+    "G2/flow_isolated_quick_v1": {
+      "main": {
+        "pass": true,
+        "checks": 65
+      },
+      "test1_geometry": {
+        "pass": true,
+        "checks": 65
+      }
+    },
+    "G3/shore_edit_v2": {
+      "main": {
+        "pass": true,
+        "checks": 164
+      },
+      "test1_geometry": {
+        "pass": true,
+        "checks": 164
+      }
+    },
+    "G3/natural_shore_v1": {
+      "main": {
+        "pass": true,
+        "checks": 247
+      },
+      "test1_geometry": {
+        "pass": true,
+        "checks": 247
+      }
+    },
+    "G4/formal_direct_v2": {
+      "main": {
+        "pass": true,
+        "checks": 29
+      },
+      "test1_geometry": {
+        "pass": true,
+        "checks": 29
+      }
+    },
+    "G4/static_ui_lifecycle_v1": {
+      "main": {
+        "pass": true,
+        "checks": 109
+      },
+      "test1_geometry": {
+        "pass": true,
+        "checks": 109
+      }
+    },
+    "G5/final_stability_v2": {
+      "main": {
+        "pass": true,
+        "checks": 22
+      },
+      "test1_geometry": {
+        "pass": true,
+        "checks": 22
+      }
+    }
+  },
+  "requirements": {
+    "V01_V07": "Visual evidence retained; final shader/texture match selected identities. See G1-G3 artifacts.",
+    "V08": "Both current static UI109 and formal boot29 per scene pass.",
+    "V09": "Latest five-switch lifecycle237 pass; strict evolution AA/AB fail with new mode0 and exact original shaders.",
+    "V10": "Latest outside-project PCK main1428/geometry1424 pass; retained PCK hash verified in prior archive.",
+    "V11": "Not passed: final_cost_v3 all four terminal live AA fail and some AB over budget. Optimization stopped, no tuning resumed.",
+    "V12": "Both >=600s and >=3 cycles pass; latest UI five switches pass; technical source checks retained unchanged.",
+    "C04": "Strict numerical gate not passed; no existing applicable pointwise epsilon found.",
+    "C05": "Budget respected, performance acceptance not passed.",
+    "C06": "Available artifacts and code identities archived; null diagnostic fields explicit, no additional acceptance claim."
+  },
+  "pending_human_decision": {
+    "question": "Keep visual changes with failed items recorded, restore formal baseline, or expand numerical scope and separately define optimization budget",
+    "basis": "Master plan section7 and C05 rollback/time constraints; C01/C04 authority scope",
+    "answered": false
+  },
+  "blocked_audit": {
+    "condition": "No human decision permitting acceptance/rollback or expanded authority/performance scope after failed G4/G5",
+    "consecutive_goal_turns_observed": 2,
+    "basis": "Same unresolved scope condition remained after prior delivery and after this follow-up; both turns made independent progress. Do not mark blocked before a third consecutive revalidation.",
+    "status": "active; threshold not yet met"
+  }
+}

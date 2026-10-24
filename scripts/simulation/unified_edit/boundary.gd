@@ -24,17 +24,56 @@ static func for_scene(scene: String) -> Dictionary:
 	if scene=="test1_geometry":
 		var profile: Dictionary=Geometry.water_cycle()
 		if profile.is_empty():return {}
-		result.merge({"mode":3,"mean_level_m":profile.rest_level_m,"amplitude_m":profile.runup_height_m,"omega_rad_s":0.0,"phase_rad":0.0,"period_s":profile.period_s},true);return result
+		var overflow_profile: Dictionary=profile.get("overflow",{}).duplicate(true)
+		for key in ["version","strip_cells"]:
+			if number(overflow_profile.get(key),0,100) and overflow_profile[key]==floor(overflow_profile[key]):overflow_profile[key]=int(overflow_profile[key])
+		result.merge({"mode":3,"mean_level_m":profile.rest_level_m,"amplitude_m":profile.runup_height_m,"omega_rad_s":0.0,"phase_rad":0.0,"period_s":profile.period_s,"overflow":overflow_profile},true);return result
 	return {}
 
 static func number(value: Variant, minimum: float, maximum: float) -> bool:
 	return typeof(value) in [TYPE_FLOAT,TYPE_INT] and is_finite(value) and value>=minimum and value<=maximum
 
+static func overflow_error(value: Variant) -> StringName:
+	var keys:=["version","enabled","check_interval_s","start_level_m","stop_level_m","drain_rate_m_s","floor_level_m","strip_cells"]
+	if not value is Dictionary or value.size()!=keys.size():return &"invalid_overflow_profile"
+	for key in keys:
+		if not value.has(key):return &"invalid_overflow_profile"
+	if typeof(value.version)!=TYPE_INT or value.version!=1 or typeof(value.enabled)!=TYPE_BOOL:return &"invalid_overflow_profile"
+	if not number(value.check_interval_s,0.25,5.0) or not number(value.drain_rate_m_s,0.001,0.5):return &"invalid_overflow_profile"
+	for key in ["start_level_m","stop_level_m","floor_level_m"]:
+		if not number(value[key],0.0,4.0):return &"invalid_overflow_profile"
+	if value.floor_level_m>=value.stop_level_m or value.stop_level_m>=value.start_level_m:return &"invalid_overflow_profile"
+	if typeof(value.strip_cells)!=TYPE_INT or value.strip_cells<9 or value.strip_cells>32:return &"invalid_overflow_profile"
+	return &""
+
+# Native control 104..127 is a versioned optional boundary extension. The
+# complete block is already captured/restored atomically with native fields.
+static func overflow_control_error(control: PackedByteArray, config: Dictionary, time: float) -> StringName:
+	var profile: Variant=config.environment.get("boundary",{}).get("overflow",{})
+	if profile is Dictionary and profile.is_empty():
+		for offset in range(104,128,4):
+			if control.decode_u32(offset)!=0:return &"unsupported_control_extension"
+		return &""
+	if not overflow_error(profile).is_empty() or config.domain_id!="test1_geometry":return &"invalid_overflow_profile"
+	if not profile.enabled:
+		for offset in range(104,128,4):
+			if control.decode_u32(offset)!=0:return &"unsupported_control_extension"
+		return &""
+	if control.decode_u32(104)>1:return &"invalid_overflow_control"
+	if not number(control.decode_float(108),0.0,time+profile.check_interval_s+0.001):return &"invalid_overflow_control"
+	if not number(control.decode_float(112),0.0,100.0) or not number(control.decode_float(120),0.0,INF):return &"invalid_overflow_control"
+	if not number(control.decode_float(124),0.0,time):return &"invalid_overflow_control"
+	if control.decode_u32(116)>ceili(time/profile.check_interval_s)+1:return &"invalid_overflow_control"
+	if control.decode_u32(116)==0:
+		for offset in range(104,128,4):
+			if control.decode_u32(offset)!=0:return &"invalid_overflow_control"
+	return &""
+
 static func configuration_error(config: Dictionary) -> StringName:
 	var value: Variant=config.environment.get("boundary",{"enabled":false})
 	if not value is Dictionary or typeof(value.get("enabled"))!=TYPE_BOOL:return &"invalid_runtime_boundary"
 	if not value.enabled:return &"" if value.size()==1 else &"invalid_runtime_boundary"
-	if value.size()!=KEYS.size():return &"invalid_runtime_boundary"
+	if value.size()!=KEYS.size()+(1 if value.has("overflow") else 0):return &"invalid_runtime_boundary"
 	for key in KEYS:
 		if not value.has(key):return &"invalid_runtime_boundary"
 	if typeof(value.mode)!=TYPE_INT or value.mode<0 or value.mode>3:return &"invalid_runtime_boundary"
@@ -42,6 +81,8 @@ static func configuration_error(config: Dictionary) -> StringName:
 		var low: float={"mean_level_m":-16.0,"amplitude_m":0.0,"omega_rad_s":-100.0,"phase_rad":-1000000.0,"period_s":0.001}[key]
 		var high: float={"mean_level_m":16.0,"amplitude_m":0.6,"omega_rad_s":100.0,"phase_rad":1000000.0,"period_s":3600.0}[key]
 		if not number(value[key],low,high):return &"invalid_runtime_boundary"
+	if value.has("overflow"):
+		if value.mode!=3 or not overflow_error(value.overflow).is_empty():return &"invalid_overflow_boundary"
 	if value.mode==3 and (config.domain_id!="test1_geometry" or value!=for_scene("test1_geometry")):return &"geometry_boundary_profile_mismatch"
 	return &""
 
@@ -52,6 +93,7 @@ func configure(config: Dictionary, epoch: int, restored: Dictionary={}) -> void:
 
 func initialize_render(water) -> bool:
 	if not enabled:return true
+	water.overflow=parameters.get("overflow",{}).duplicate(true)
 	water.tide_mode=parameters.mode;water.tide_phase=parameters.phase_rad;water.tide_period=parameters.period_s
 	return water.configure_boundary(Vector3(parameters.mean_level_m,parameters.amplitude_m,parameters.omega_rad_s),packets())
 

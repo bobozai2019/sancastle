@@ -1,0 +1,11 @@
+Godot Engine v4.7.2.stable.steam.ed1daf0bf - https://godotengine.org
+D3D12 12_0 - Forward+ - Using Device #0: NVIDIA - NVIDIA GeForce GTX 1050
+
+PLAYABLE_PROBE formal_ready true
+PLAYABLE_PROBE scene_specific_allocation true
+SCRIPT ERROR: Invalid call. Nonexistent 'bool' constructor.
+   at: _run (res://tests/integration/surface_wetness_scene2_probe.gd:39)
+   GDScript backtrace (most recent call first):
+       [0] _run (res://tests/integration/surface_wetness_scene2_probe.gd:39)
+[GodotIQ] Runtime _ready() — debugger active: false
+[GodotIQ] Debugger not active, freeing runtime

@@ -1,0 +1,14 @@
+[
+  "D:/game/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe",
+  "--path",
+  "D:\\godot\\project\\sandcastle",
+  "--script",
+  "res://tests/visual_water_alignment/foam_edit_probe.gd",
+  "--",
+  "--scene=test1_geometry",
+  "--output=res://task/water_foam_visual/验收/G3/shore_edit_v2/test1_geometry",
+  "--foam-texture=res://assets/water_foam/foam_cells_organic.png",
+  "--foam-shader=res://assets/water_foam/flow_candidate.gdshader",
+  "--layer-only",
+  "--contact-gain=0.55"
+]

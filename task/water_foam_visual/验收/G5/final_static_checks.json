@@ -1,0 +1,34 @@
+{
+  "time_utc": "2026-10-23 23:14:04 UTC",
+  "engine": "4.7.2.stable.steam.ed1daf0bf",
+  "adapter": "NVIDIA GeForce GTX 1050",
+  "driver": "581.83",
+  "renderer": "D3D12 Forward+",
+  "checks": [
+    {
+      "command": "python -X utf8 tools/parameter_windows/build_windows.py --check",
+      "exit_code": 0
+    },
+    {
+      "command": "python -X utf8 tools/validate_main_presentation_hash.py --all",
+      "exit_code": 0,
+      "result": "all presentation hashes match (worktree)"
+    },
+    {
+      "command": "python -X utf8 tools/water_sides/build_shader.py --check",
+      "exit_code": 0,
+      "result": "WATER_SIDES_GEOMETRY_IDENTICAL"
+    },
+    {
+      "command": "bundled Python -X utf8 tools/docs/build_technical_panorama.py --check",
+      "exit_code": 0,
+      "result": "TECHNICAL_PANORAMA_CHECK PASS"
+    },
+    {
+      "command": "python -X utf8 tools/docs/build_execution_guide.py --check",
+      "exit_code": 0,
+      "result": "UNIFIED_GUIDE_CHECK PASS"
+    }
+  ],
+  "scope": "Static/source checks only. Does not grant authority replay or performance Gates."
+}

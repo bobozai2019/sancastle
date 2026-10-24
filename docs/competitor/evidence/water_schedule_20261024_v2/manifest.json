@@ -1,0 +1,452 @@
+{
+  "scope": "Only test1 E1484..E1543 water compute chain, raw bytecode and bound constants. No GPU timing or original wall-clock/substep policy claim.",
+  "source": {
+    "path": "D:/godot/project/sandcastle/rdc/test1.rdc",
+    "bytes": 225224034,
+    "sha256": "761aa980c2426f75a1fa7364bf6d2655ff4dd20ea76566e630ee5b53ea0ec5b2"
+  },
+  "script": {
+    "path": "D:/godot/project/sandcastle/docs/competitor/tools/export_water_schedule.py",
+    "bytes": 4607,
+    "sha256": "c97c6d3843d4f6a1375855b443712d4f83ed1c003566af664deb8035187cabce"
+  },
+  "events": [
+    {
+      "event": 1484,
+      "historical_name": "UpdateFloor",
+      "groups": [
+        16,
+        8,
+        1
+      ],
+      "constants": [
+        {
+          "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_schedule_20261024_v2/e1484_cb0.bin",
+          "bytes": 2496,
+          "sha256": "a8baa52f94c6b4128452de742365b48184bb9b0f026474151063285054d07759",
+          "selector": "E1484 CS cb0 ResourceId::336 offset=267264 bytes=2496"
+        }
+      ],
+      "shader_resource": "ResourceId::1402",
+      "shader": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_schedule_20261024_v2/e1484.dxbc",
+        "bytes": 3376,
+        "sha256": "f6f8c17d743aa60c2fa01cf4cd0a9a03ab1bddad297da2a8f729aef6356d6bc3",
+        "selector": "E1484 CS rawBytes"
+      },
+      "disassembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_schedule_20261024_v2/e1484.asm",
+        "bytes": 4413,
+        "sha256": "1cc63ef6767545fb533cc69d9e4dc06b59f9cd08e8482a0ad9dc85d703fc121c",
+        "selector": "E1484 CS disassembly"
+      },
+      "readonly_names": [
+        "structuredbuffer0"
+      ],
+      "readwrite_names": [
+        "uav0"
+      ],
+      "matches_known_shader": null
+    },
+    {
+      "event": 1490,
+      "historical_name": "VelocityIntegration",
+      "groups": [
+        16,
+        8,
+        1
+      ],
+      "constants": [
+        {
+          "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_schedule_20261024_v2/e1490_cb0.bin",
+          "bytes": 2560,
+          "sha256": "1963297b76a0709be3cde8ffe1e2729f0114e87b0d848a5bd029dbe943a6c1b1",
+          "selector": "E1490 CS cb0 ResourceId::336 offset=269824 bytes=2560"
+        }
+      ],
+      "shader_resource": "ResourceId::3235",
+      "shader": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_schedule_20261024_v2/e1490.dxbc",
+        "bytes": 5540,
+        "sha256": "9e5c7da8738200d374076a6cc3b48be52fdbad70e8c8dc2bd27eb75431d30523",
+        "selector": "E1490 CS rawBytes"
+      },
+      "disassembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_schedule_20261024_v2/e1490.asm",
+        "bytes": 7274,
+        "sha256": "4b5858e067ceeec361f24d474b17e90ebdf04866ca603e5ac1e69c897ddc729b",
+        "selector": "E1490 CS disassembly"
+      },
+      "readonly_names": [],
+      "readwrite_names": [
+        "uav0"
+      ],
+      "matches_known_shader": true
+    },
+    {
+      "event": 1495,
+      "historical_name": "HeightIntegration",
+      "groups": [
+        16,
+        8,
+        1
+      ],
+      "constants": [
+        {
+          "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_schedule_20261024_v2/e1495_cb0.bin",
+          "bytes": 2528,
+          "sha256": "b4b0918dea990165b43f2bee4ca30260486c7892cf3401a06a14336dea469201",
+          "selector": "E1495 CS cb0 ResourceId::336 offset=272384 bytes=2528"
+        }
+      ],
+      "shader_resource": "ResourceId::3237",
+      "shader": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_schedule_20261024_v2/e1495.dxbc",
+        "bytes": 4204,
+        "sha256": "549114c23f1921610bacaf1d9ae375814fda1fb1de492cc2a4acfc53a502c64f",
+        "selector": "E1495 CS rawBytes"
+      },
+      "disassembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_schedule_20261024_v2/e1495.asm",
+        "bytes": 5352,
+        "sha256": "eba8b6ff242ac798c7b4d8e3e534405231ff229145ebe88c88ff1bcd3d1272e0",
+        "selector": "E1495 CS disassembly"
+      },
+      "readonly_names": [],
+      "readwrite_names": [
+        "uav0"
+      ],
+      "matches_known_shader": true
+    },
+    {
+      "event": 1500,
+      "historical_name": "Advection",
+      "groups": [
+        16,
+        8,
+        1
+      ],
+      "constants": [
+        {
+          "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_schedule_20261024_v2/e1500_cb0.bin",
+          "bytes": 2544,
+          "sha256": "59c59e892caee568c27cfd73e6924b472ef74fe231a0424ee7faf4409ec4bc4c",
+          "selector": "E1500 CS cb0 ResourceId::336 offset=274944 bytes=2544"
+        }
+      ],
+      "shader_resource": "ResourceId::3239",
+      "shader": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_schedule_20261024_v2/e1500.dxbc",
+        "bytes": 3560,
+        "sha256": "b2794ecb18de815ff607fffd734ff4cde859bab1efd7fa3dfe9a24eb5a9f7a3c",
+        "selector": "E1500 CS rawBytes"
+      },
+      "disassembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_schedule_20261024_v2/e1500.asm",
+        "bytes": 4863,
+        "sha256": "0fa672b1e34de5cf5191052e25a38049e7fb98f38c103c8c3d08e0c72e4dd54b",
+        "selector": "E1500 CS disassembly"
+      },
+      "readonly_names": [],
+      "readwrite_names": [
+        "uav0"
+      ],
+      "matches_known_shader": true
+    },
+    {
+      "event": 1505,
+      "historical_name": "VelocityIntegration",
+      "groups": [
+        16,
+        8,
+        1
+      ],
+      "constants": [
+        {
+          "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_schedule_20261024_v2/e1505_cb0.bin",
+          "bytes": 2560,
+          "sha256": "1963297b76a0709be3cde8ffe1e2729f0114e87b0d848a5bd029dbe943a6c1b1",
+          "selector": "E1505 CS cb0 ResourceId::336 offset=277504 bytes=2560"
+        }
+      ],
+      "shader_resource": "ResourceId::3235",
+      "shader": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_schedule_20261024_v2/e1505.dxbc",
+        "bytes": 5540,
+        "sha256": "9e5c7da8738200d374076a6cc3b48be52fdbad70e8c8dc2bd27eb75431d30523",
+        "selector": "E1505 CS rawBytes"
+      },
+      "disassembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_schedule_20261024_v2/e1505.asm",
+        "bytes": 7274,
+        "sha256": "4b5858e067ceeec361f24d474b17e90ebdf04866ca603e5ac1e69c897ddc729b",
+        "selector": "E1505 CS disassembly"
+      },
+      "readonly_names": [],
+      "readwrite_names": [
+        "uav0"
+      ],
+      "matches_known_shader": true
+    },
+    {
+      "event": 1510,
+      "historical_name": "HeightIntegration",
+      "groups": [
+        16,
+        8,
+        1
+      ],
+      "constants": [
+        {
+          "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_schedule_20261024_v2/e1510_cb0.bin",
+          "bytes": 2528,
+          "sha256": "b4b0918dea990165b43f2bee4ca30260486c7892cf3401a06a14336dea469201",
+          "selector": "E1510 CS cb0 ResourceId::336 offset=280064 bytes=2528"
+        }
+      ],
+      "shader_resource": "ResourceId::3237",
+      "shader": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_schedule_20261024_v2/e1510.dxbc",
+        "bytes": 4204,
+        "sha256": "549114c23f1921610bacaf1d9ae375814fda1fb1de492cc2a4acfc53a502c64f",
+        "selector": "E1510 CS rawBytes"
+      },
+      "disassembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_schedule_20261024_v2/e1510.asm",
+        "bytes": 5352,
+        "sha256": "eba8b6ff242ac798c7b4d8e3e534405231ff229145ebe88c88ff1bcd3d1272e0",
+        "selector": "E1510 CS disassembly"
+      },
+      "readonly_names": [],
+      "readwrite_names": [
+        "uav0"
+      ],
+      "matches_known_shader": true
+    },
+    {
+      "event": 1515,
+      "historical_name": "Advection",
+      "groups": [
+        16,
+        8,
+        1
+      ],
+      "constants": [
+        {
+          "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_schedule_20261024_v2/e1515_cb0.bin",
+          "bytes": 2544,
+          "sha256": "59c59e892caee568c27cfd73e6924b472ef74fe231a0424ee7faf4409ec4bc4c",
+          "selector": "E1515 CS cb0 ResourceId::336 offset=282624 bytes=2544"
+        }
+      ],
+      "shader_resource": "ResourceId::3239",
+      "shader": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_schedule_20261024_v2/e1515.dxbc",
+        "bytes": 3560,
+        "sha256": "b2794ecb18de815ff607fffd734ff4cde859bab1efd7fa3dfe9a24eb5a9f7a3c",
+        "selector": "E1515 CS rawBytes"
+      },
+      "disassembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_schedule_20261024_v2/e1515.asm",
+        "bytes": 4863,
+        "sha256": "0fa672b1e34de5cf5191052e25a38049e7fb98f38c103c8c3d08e0c72e4dd54b",
+        "selector": "E1515 CS disassembly"
+      },
+      "readonly_names": [],
+      "readwrite_names": [
+        "uav0"
+      ],
+      "matches_known_shader": true
+    },
+    {
+      "event": 1520,
+      "historical_name": "VelocityIntegration",
+      "groups": [
+        16,
+        8,
+        1
+      ],
+      "constants": [
+        {
+          "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_schedule_20261024_v2/e1520_cb0.bin",
+          "bytes": 2560,
+          "sha256": "1963297b76a0709be3cde8ffe1e2729f0114e87b0d848a5bd029dbe943a6c1b1",
+          "selector": "E1520 CS cb0 ResourceId::336 offset=285184 bytes=2560"
+        }
+      ],
+      "shader_resource": "ResourceId::3235",
+      "shader": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_schedule_20261024_v2/e1520.dxbc",
+        "bytes": 5540,
+        "sha256": "9e5c7da8738200d374076a6cc3b48be52fdbad70e8c8dc2bd27eb75431d30523",
+        "selector": "E1520 CS rawBytes"
+      },
+      "disassembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_schedule_20261024_v2/e1520.asm",
+        "bytes": 7274,
+        "sha256": "4b5858e067ceeec361f24d474b17e90ebdf04866ca603e5ac1e69c897ddc729b",
+        "selector": "E1520 CS disassembly"
+      },
+      "readonly_names": [],
+      "readwrite_names": [
+        "uav0"
+      ],
+      "matches_known_shader": true
+    },
+    {
+      "event": 1525,
+      "historical_name": "HeightIntegration",
+      "groups": [
+        16,
+        8,
+        1
+      ],
+      "constants": [
+        {
+          "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_schedule_20261024_v2/e1525_cb0.bin",
+          "bytes": 2528,
+          "sha256": "b4b0918dea990165b43f2bee4ca30260486c7892cf3401a06a14336dea469201",
+          "selector": "E1525 CS cb0 ResourceId::336 offset=287744 bytes=2528"
+        }
+      ],
+      "shader_resource": "ResourceId::3237",
+      "shader": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_schedule_20261024_v2/e1525.dxbc",
+        "bytes": 4204,
+        "sha256": "549114c23f1921610bacaf1d9ae375814fda1fb1de492cc2a4acfc53a502c64f",
+        "selector": "E1525 CS rawBytes"
+      },
+      "disassembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_schedule_20261024_v2/e1525.asm",
+        "bytes": 5352,
+        "sha256": "eba8b6ff242ac798c7b4d8e3e534405231ff229145ebe88c88ff1bcd3d1272e0",
+        "selector": "E1525 CS disassembly"
+      },
+      "readonly_names": [],
+      "readwrite_names": [
+        "uav0"
+      ],
+      "matches_known_shader": true
+    },
+    {
+      "event": 1530,
+      "historical_name": "Advection",
+      "groups": [
+        16,
+        8,
+        1
+      ],
+      "constants": [
+        {
+          "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_schedule_20261024_v2/e1530_cb0.bin",
+          "bytes": 2544,
+          "sha256": "59c59e892caee568c27cfd73e6924b472ef74fe231a0424ee7faf4409ec4bc4c",
+          "selector": "E1530 CS cb0 ResourceId::336 offset=290304 bytes=2544"
+        }
+      ],
+      "shader_resource": "ResourceId::3239",
+      "shader": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_schedule_20261024_v2/e1530.dxbc",
+        "bytes": 3560,
+        "sha256": "b2794ecb18de815ff607fffd734ff4cde859bab1efd7fa3dfe9a24eb5a9f7a3c",
+        "selector": "E1530 CS rawBytes"
+      },
+      "disassembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_schedule_20261024_v2/e1530.asm",
+        "bytes": 4863,
+        "sha256": "0fa672b1e34de5cf5191052e25a38049e7fb98f38c103c8c3d08e0c72e4dd54b",
+        "selector": "E1530 CS disassembly"
+      },
+      "readonly_names": [],
+      "readwrite_names": [
+        "uav0"
+      ],
+      "matches_known_shader": true
+    },
+    {
+      "event": 1537,
+      "historical_name": "UpdateAmount",
+      "groups": [
+        16,
+        8,
+        1
+      ],
+      "constants": [
+        {
+          "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_schedule_20261024_v2/e1537_cb0.bin",
+          "bytes": 2560,
+          "sha256": "e5ecdff1bf7d8d5b9c2c2c0b0a4643e4a6eafa693ba706bb4244811f932e24ca",
+          "selector": "E1537 CS cb0 ResourceId::336 offset=292864 bytes=2560"
+        }
+      ],
+      "shader_resource": "ResourceId::3241",
+      "shader": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_schedule_20261024_v2/e1537.dxbc",
+        "bytes": 4416,
+        "sha256": "a61d34e411e8eee5c795bf233908a9b2a5b85ee272f5d0fbcb1481da27a62b80",
+        "selector": "E1537 CS rawBytes"
+      },
+      "disassembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_schedule_20261024_v2/e1537.asm",
+        "bytes": 5581,
+        "sha256": "48b31a75b8f690297895c438b0b8d4a151cbd4781bb40b51e90016d616545643",
+        "selector": "E1537 CS disassembly"
+      },
+      "readonly_names": [
+        "texture0",
+        "structuredbuffer1"
+      ],
+      "readwrite_names": [
+        "uav0"
+      ],
+      "matches_known_shader": true
+    },
+    {
+      "event": 1543,
+      "historical_name": "UpdateTangent",
+      "groups": [
+        16,
+        8,
+        1
+      ],
+      "constants": [
+        {
+          "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_schedule_20261024_v2/e1543_cb0.bin",
+          "bytes": 2496,
+          "sha256": "bef4fb10a4e240cd57fcb4191fba8339178d9ff8b3fb0479e8cc7fc9b3ff864d",
+          "selector": "E1543 CS cb0 ResourceId::336 offset=295424 bytes=2496"
+        }
+      ],
+      "shader_resource": "ResourceId::1404",
+      "shader": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_schedule_20261024_v2/e1543.dxbc",
+        "bytes": 3256,
+        "sha256": "38a7f089261c54713b583b0f9a6bdd876d09cdb7859e64a804c06e08d64fa2a6",
+        "selector": "E1543 CS rawBytes"
+      },
+      "disassembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_schedule_20261024_v2/e1543.asm",
+        "bytes": 4385,
+        "sha256": "14fc1dba701ec3758261a90e964f9cf3e4877535d4641d3cab16c0ce3eff1e28",
+        "selector": "E1543 CS disassembly"
+      },
+      "readonly_names": [],
+      "readwrite_names": [
+        "uav0"
+      ],
+      "matches_known_shader": null
+    }
+  ],
+  "tool": {
+    "version": "1.46",
+    "command": "D:/other_software/RenderDoc/qrenderdoc.exe --python D:/godot/project/sandcastle/docs/competitor/tools/export_water_schedule.py"
+  },
+  "open_file": "<Result: 'Success'>",
+  "open_capture": "<Result: 'Success'>",
+  "source_after": {
+    "path": "D:/godot/project/sandcastle/rdc/test1.rdc",
+    "bytes": 225224034,
+    "sha256": "761aa980c2426f75a1fa7364bf6d2655ff4dd20ea76566e630ee5b53ea0ec5b2"
+  },
+  "pass": true
+}

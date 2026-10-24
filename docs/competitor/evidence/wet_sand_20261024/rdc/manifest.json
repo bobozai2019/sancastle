@@ -1,0 +1,915 @@
+{
+  "source": {
+    "path": "D:/godot/project/sandcastle/rdc/test1.rdc",
+    "bytes": 225224034,
+    "sha256": "761aa980c2426f75a1fa7364bf6d2655ff4dd20ea76566e630ee5b53ea0ec5b2"
+  },
+  "script": {
+    "path": "D:/godot/project/sandcastle/docs/competitor/tools/export_wet_sand_capture.py",
+    "bytes": 4348,
+    "sha256": "b6cf841c9a7d0ec0c649661b30c6bb7efed558a9077051decde3458dd6f16d81"
+  },
+  "exports": [
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e1537_cs.dxbc",
+      "bytes": 4416,
+      "sha256": "a61d34e411e8eee5c795bf233908a9b2a5b85ee272f5d0fbcb1481da27a62b80",
+      "selector": "E1537 cs rawBytes"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e1537_cs.asm",
+      "bytes": 5581,
+      "sha256": "48b31a75b8f690297895c438b0b8d4a151cbd4781bb40b51e90016d616545643",
+      "selector": "E1537 cs derived disassembly"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e1537_cs_cb0.bin",
+      "bytes": 2560,
+      "sha256": "e5ecdff1bf7d8d5b9c2c2c0b0a4643e4a6eafa693ba706bb4244811f932e24ca",
+      "selector": "E1537 cs cb0, ResourceId::336 offset=292864 length=2560"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e1537_buffer_139590.bin",
+      "bytes": 8192,
+      "sha256": "5292a36471ca0d7b2c4a1bcb5ca088d4348696c7d5253e19a3a3005bc2d829cd",
+      "selector": "E1537 ResourceId::139590, complete buffer offset=0 bytes=8192"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e1537_buffer_139573.bin",
+      "bytes": 2097152,
+      "sha256": "62625473b88c2f1222751572c715077e72ed94c726ca92ddb1c18a0c8e99929f",
+      "selector": "E1537 ResourceId::139573, complete buffer offset=0 bytes=2097152"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e5006_vs.dxbc",
+      "bytes": 5196,
+      "sha256": "6e1ed3c4a1c4c69100371509e65f8bfa9d5c2ee05b1ea2e52a50df17cedf6644",
+      "selector": "E5006 vs rawBytes"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e5006_vs.asm",
+      "bytes": 6508,
+      "sha256": "a7f5e975dd1834041aee4b38c645376ae39f598360f7e2552275353959d7ea92",
+      "selector": "E5006 vs derived disassembly"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e5006_vs_cb0.bin",
+      "bytes": 2272,
+      "sha256": "988013f5a488df03183c161ecaaab664725edf7d424e7e68b0b1f333f9f50df4",
+      "selector": "E5006 vs cb0, ResourceId::336 offset=1441792 length=2272"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e5006_vs_cb1.bin",
+      "bytes": 64,
+      "sha256": "8128057d05c0ce6cf287fbdae917e3b7026cfaf1fb2a8f78bb230cad44d815f5",
+      "selector": "E5006 vs cb1, ResourceId::336 offset=1459968 length=64"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e5006_buffer_139571.bin",
+      "bytes": 8388608,
+      "sha256": "7098f99fa8e1de2f39f1e0f0477a231fcdbed8c679563f7e21152b54ef8d41ff",
+      "selector": "E5006 ResourceId::139571, complete buffer offset=0 bytes=8388608"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e5006_buffer_139573.bin",
+      "bytes": 2097152,
+      "sha256": "2168385f9f5497fc82d009c42f99cd93bb0b348783c84e61d89f861feb0535a9",
+      "selector": "E5006 ResourceId::139573, complete buffer offset=0 bytes=2097152"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e5006_ps.dxbc",
+      "bytes": 5272,
+      "sha256": "b7f1ac50d5312f20e829e8788a7256d4cc84266880fca4fdedc7d39f98148aa2",
+      "selector": "E5006 ps rawBytes"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e5006_ps.asm",
+      "bytes": 6793,
+      "sha256": "386b51bfab73d6a7aed96cb095c318dd44f537c895841df184a9108a652a5170",
+      "selector": "E5006 ps derived disassembly"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e5006_ps_cb0.bin",
+      "bytes": 2304,
+      "sha256": "862ce1a62c530cc861e838a0d49b98d8483b703b6a656c6057d785ca627cb270",
+      "selector": "E5006 ps cb0, ResourceId::336 offset=1441792 length=2304"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e5006_buffer_139590.bin",
+      "bytes": 8192,
+      "sha256": "5292a36471ca0d7b2c4a1bcb5ca088d4348696c7d5253e19a3a3005bc2d829cd",
+      "selector": "E5006 ResourceId::139590, complete buffer offset=0 bytes=8192"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e6083_vs.dxbc",
+      "bytes": 4056,
+      "sha256": "19c2bc50402c753bc2a21061dd82d417edc5b450a1fe047018f20d67ecd8d45e",
+      "selector": "E6083 vs rawBytes"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e6083_vs.asm",
+      "bytes": 5326,
+      "sha256": "4c5deb779fb9b3a5bca9ebc0e3e1ac58d7fa8ff5ff9d1080c72581dddf73923e",
+      "selector": "E6083 vs derived disassembly"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e6083_vs_cb0.bin",
+      "bytes": 2272,
+      "sha256": "9622f5440ca0dfafd8c732ea8e94bdc22ee499d0642a9d8d4c9f51cc841a1b54",
+      "selector": "E6083 vs cb0, ResourceId::336 offset=1572864 length=2272"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e6083_vs_cb1.bin",
+      "bytes": 64,
+      "sha256": "2a24d3b0455cb9e6aa788a488dabbcd8adbaab08ad8d706c92346d4964a3dbbb",
+      "selector": "E6083 vs cb1, ResourceId::336 offset=1585664 length=64"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e6083_buffer_139571.bin",
+      "bytes": 8388608,
+      "sha256": "86debc837543b72696d7ca2fc014d42deaee567a25a0cd988b12a1ff69d3898a",
+      "selector": "E6083 ResourceId::139571, complete buffer offset=0 bytes=8388608"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e6083_buffer_139573.bin",
+      "bytes": 2097152,
+      "sha256": "0e5c3842a56322e2385375ed1a5f286675662a0a85ec9afeac9e7a1bdfe48545",
+      "selector": "E6083 ResourceId::139573, complete buffer offset=0 bytes=2097152"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e6083_ps.dxbc",
+      "bytes": 4416,
+      "sha256": "6b7870c1b83924ba8a7319d3bae374933ecff0873caa5109f3c2e7d8338e9961",
+      "selector": "E6083 ps rawBytes"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e6083_ps.asm",
+      "bytes": 5914,
+      "sha256": "c2a6684baf4723433e4e6f35e1a2edfce5a836fd3acccb9026c9c2c8cb845fa1",
+      "selector": "E6083 ps derived disassembly"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e6083_ps_cb0.bin",
+      "bytes": 2208,
+      "sha256": "5b63864b00b7d71c4a73eba3fb246fb310ca0750b9b088e4474dc18ecf13a4a5",
+      "selector": "E6083 ps cb0, ResourceId::336 offset=1572864 length=2208"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e6083_ps_cb1.bin",
+      "bytes": 16,
+      "sha256": "363a0ee6883021561a7891f63b03a5c8f0715a9ff81804456f2019cb6b8a8401",
+      "selector": "E6083 ps cb1, ResourceId::1392 offset=0 length=16"
+    }
+  ],
+  "events": [
+    {
+      "event": 1537,
+      "selector": "Fresh OpenCapture; SetFrameEvent(event,True), post-event",
+      "stages": {
+        "cs": {
+          "shader": "ResourceId::3241",
+          "constants": [
+            {
+              "index": 0,
+              "resource": "ResourceId::336",
+              "offset": 292864,
+              "bytes": 2560,
+              "raw": {
+                "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e1537_cs_cb0.bin",
+                "bytes": 2560,
+                "sha256": "e5ecdff1bf7d8d5b9c2c2c0b0a4643e4a6eafa693ba706bb4244811f932e24ca",
+                "selector": "E1537 cs cb0, ResourceId::336 offset=292864 length=2560"
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "access": "ro",
+              "index": 0,
+              "name": "texture0",
+              "resource": "ResourceId::139724",
+              "descriptor": {
+                "bufferStructCount": 0,
+                "byteOffset": 0,
+                "byteSize": 0,
+                "counterByteOffset": 0,
+                "elementByteSize": 4,
+                "firstMip": 0,
+                "firstSlice": 0,
+                "flags": 0,
+                "format": "<Swig Object of type 'ResourceFormat *' at 0x000002BBC3173830>",
+                "minLODClamp": 0.0,
+                "numMips": 1,
+                "numSlices": 1,
+                "resource": "ResourceId::139724",
+                "secondary": "ResourceId::0",
+                "swizzle": "<Swig Object of type 'TextureSwizzle4 *' at 0x000002BBC3173AB0>",
+                "textureType": 4,
+                "type": 4,
+                "view": "ResourceId::0"
+              },
+              "texture": {
+                "width": 512,
+                "height": 256,
+                "depth": 1,
+                "mips": 1,
+                "format": "R16G16_FLOAT"
+              }
+            },
+            {
+              "access": "ro",
+              "index": 1,
+              "name": "structuredbuffer1",
+              "resource": "ResourceId::139590",
+              "descriptor": {
+                "bufferStructCount": 0,
+                "byteOffset": 0,
+                "byteSize": 8192,
+                "counterByteOffset": 0,
+                "elementByteSize": 16,
+                "firstMip": 0,
+                "firstSlice": 0,
+                "flags": 0,
+                "format": "<Swig Object of type 'ResourceFormat *' at 0x000002BBC3173A30>",
+                "minLODClamp": 0.0,
+                "numMips": 1,
+                "numSlices": 1,
+                "resource": "ResourceId::139590",
+                "secondary": "ResourceId::0",
+                "swizzle": "<Swig Object of type 'TextureSwizzle4 *' at 0x000002BBC3173BF0>",
+                "textureType": 1,
+                "type": 5,
+                "view": "ResourceId::0"
+              },
+              "buffer_bytes": 8192,
+              "raw": {
+                "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e1537_buffer_139590.bin",
+                "bytes": 8192,
+                "sha256": "5292a36471ca0d7b2c4a1bcb5ca088d4348696c7d5253e19a3a3005bc2d829cd",
+                "selector": "E1537 ResourceId::139590, complete buffer offset=0 bytes=8192"
+              }
+            },
+            {
+              "access": "rw",
+              "index": 0,
+              "name": "uav0",
+              "resource": "ResourceId::139573",
+              "descriptor": {
+                "bufferStructCount": 0,
+                "byteOffset": 0,
+                "byteSize": 2097152,
+                "counterByteOffset": 0,
+                "elementByteSize": 16,
+                "firstMip": 0,
+                "firstSlice": 0,
+                "flags": 0,
+                "format": "<Swig Object of type 'ResourceFormat *' at 0x000002BBC3173DF0>",
+                "minLODClamp": 0.0,
+                "numMips": 1,
+                "numSlices": 1,
+                "resource": "ResourceId::139573",
+                "secondary": "ResourceId::0",
+                "swizzle": "<Swig Object of type 'TextureSwizzle4 *' at 0x000002BBC3173EB0>",
+                "textureType": 1,
+                "type": 9,
+                "view": "ResourceId::0"
+              },
+              "buffer_bytes": 2097152,
+              "raw": {
+                "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e1537_buffer_139573.bin",
+                "bytes": 2097152,
+                "sha256": "62625473b88c2f1222751572c715077e72ed94c726ca92ddb1c18a0c8e99929f",
+                "selector": "E1537 ResourceId::139573, complete buffer offset=0 bytes=2097152"
+              }
+            }
+          ],
+          "bytecode": {
+            "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e1537_cs.dxbc",
+            "bytes": 4416,
+            "sha256": "a61d34e411e8eee5c795bf233908a9b2a5b85ee272f5d0fbcb1481da27a62b80",
+            "selector": "E1537 cs rawBytes"
+          },
+          "assembly": {
+            "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e1537_cs.asm",
+            "bytes": 5581,
+            "sha256": "48b31a75b8f690297895c438b0b8d4a151cbd4781bb40b51e90016d616545643",
+            "selector": "E1537 cs derived disassembly"
+          }
+        }
+      }
+    },
+    {
+      "event": 5006,
+      "selector": "Fresh OpenCapture; SetFrameEvent(event,True), post-event",
+      "stages": {
+        "vs": {
+          "shader": "ResourceId::3381",
+          "constants": [
+            {
+              "index": 0,
+              "resource": "ResourceId::336",
+              "offset": 1441792,
+              "bytes": 2272,
+              "raw": {
+                "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e5006_vs_cb0.bin",
+                "bytes": 2272,
+                "sha256": "988013f5a488df03183c161ecaaab664725edf7d424e7e68b0b1f333f9f50df4",
+                "selector": "E5006 vs cb0, ResourceId::336 offset=1441792 length=2272"
+              }
+            },
+            {
+              "index": 1,
+              "resource": "ResourceId::336",
+              "offset": 1459968,
+              "bytes": 64,
+              "raw": {
+                "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e5006_vs_cb1.bin",
+                "bytes": 64,
+                "sha256": "8128057d05c0ce6cf287fbdae917e3b7026cfaf1fb2a8f78bb230cad44d815f5",
+                "selector": "E5006 vs cb1, ResourceId::336 offset=1459968 length=64"
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "access": "ro",
+              "index": 0,
+              "name": "structuredbuffer0",
+              "resource": "ResourceId::139571",
+              "descriptor": {
+                "bufferStructCount": 0,
+                "byteOffset": 0,
+                "byteSize": 8388608,
+                "counterByteOffset": 0,
+                "elementByteSize": 16,
+                "firstMip": 0,
+                "firstSlice": 0,
+                "flags": 0,
+                "format": "<Swig Object of type 'ResourceFormat *' at 0x000002BBC31730B0>",
+                "minLODClamp": 0.0,
+                "numMips": 1,
+                "numSlices": 1,
+                "resource": "ResourceId::139571",
+                "secondary": "ResourceId::0",
+                "swizzle": "<Swig Object of type 'TextureSwizzle4 *' at 0x000002BBC31739B0>",
+                "textureType": 1,
+                "type": 5,
+                "view": "ResourceId::0"
+              },
+              "buffer_bytes": 8388608,
+              "raw": {
+                "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e5006_buffer_139571.bin",
+                "bytes": 8388608,
+                "sha256": "7098f99fa8e1de2f39f1e0f0477a231fcdbed8c679563f7e21152b54ef8d41ff",
+                "selector": "E5006 ResourceId::139571, complete buffer offset=0 bytes=8388608"
+              }
+            },
+            {
+              "access": "ro",
+              "index": 1,
+              "name": "structuredbuffer1",
+              "resource": "ResourceId::139573",
+              "descriptor": {
+                "bufferStructCount": 0,
+                "byteOffset": 0,
+                "byteSize": 2097152,
+                "counterByteOffset": 0,
+                "elementByteSize": 16,
+                "firstMip": 0,
+                "firstSlice": 0,
+                "flags": 0,
+                "format": "<Swig Object of type 'ResourceFormat *' at 0x000002BBC3161EB0>",
+                "minLODClamp": 0.0,
+                "numMips": 1,
+                "numSlices": 1,
+                "resource": "ResourceId::139573",
+                "secondary": "ResourceId::0",
+                "swizzle": "<Swig Object of type 'TextureSwizzle4 *' at 0x000002BBC3161E30>",
+                "textureType": 1,
+                "type": 5,
+                "view": "ResourceId::0"
+              },
+              "buffer_bytes": 2097152,
+              "raw": {
+                "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e5006_buffer_139573.bin",
+                "bytes": 2097152,
+                "sha256": "2168385f9f5497fc82d009c42f99cd93bb0b348783c84e61d89f861feb0535a9",
+                "selector": "E5006 ResourceId::139573, complete buffer offset=0 bytes=2097152"
+              }
+            }
+          ],
+          "bytecode": {
+            "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e5006_vs.dxbc",
+            "bytes": 5196,
+            "sha256": "6e1ed3c4a1c4c69100371509e65f8bfa9d5c2ee05b1ea2e52a50df17cedf6644",
+            "selector": "E5006 vs rawBytes"
+          },
+          "assembly": {
+            "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e5006_vs.asm",
+            "bytes": 6508,
+            "sha256": "a7f5e975dd1834041aee4b38c645376ae39f598360f7e2552275353959d7ea92",
+            "selector": "E5006 vs derived disassembly"
+          }
+        },
+        "ps": {
+          "shader": "ResourceId::3382",
+          "constants": [
+            {
+              "index": 0,
+              "resource": "ResourceId::336",
+              "offset": 1441792,
+              "bytes": 2304,
+              "raw": {
+                "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e5006_ps_cb0.bin",
+                "bytes": 2304,
+                "sha256": "862ce1a62c530cc861e838a0d49b98d8483b703b6a656c6057d785ca627cb270",
+                "selector": "E5006 ps cb0, ResourceId::336 offset=1441792 length=2304"
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "access": "ro",
+              "index": 0,
+              "name": "texture0",
+              "resource": "ResourceId::3344",
+              "descriptor": {
+                "bufferStructCount": 0,
+                "byteOffset": 0,
+                "byteSize": 0,
+                "counterByteOffset": 0,
+                "elementByteSize": 4,
+                "firstMip": 0,
+                "firstSlice": 0,
+                "flags": 0,
+                "format": "<Swig Object of type 'ResourceFormat *' at 0x000002BBC3173130>",
+                "minLODClamp": 0.0,
+                "numMips": 1,
+                "numSlices": 1,
+                "resource": "ResourceId::3344",
+                "secondary": "ResourceId::0",
+                "swizzle": "<Swig Object of type 'TextureSwizzle4 *' at 0x000002BBC31619B0>",
+                "textureType": 4,
+                "type": 4,
+                "view": "ResourceId::0"
+              },
+              "texture": {
+                "width": 2048,
+                "height": 2048,
+                "depth": 1,
+                "mips": 1,
+                "format": "D32"
+              }
+            },
+            {
+              "access": "ro",
+              "index": 1,
+              "name": "structuredbuffer1",
+              "resource": "ResourceId::139590",
+              "descriptor": {
+                "bufferStructCount": 0,
+                "byteOffset": 0,
+                "byteSize": 8192,
+                "counterByteOffset": 0,
+                "elementByteSize": 16,
+                "firstMip": 0,
+                "firstSlice": 0,
+                "flags": 0,
+                "format": "<Swig Object of type 'ResourceFormat *' at 0x000002BBC3173030>",
+                "minLODClamp": 0.0,
+                "numMips": 1,
+                "numSlices": 1,
+                "resource": "ResourceId::139590",
+                "secondary": "ResourceId::0",
+                "swizzle": "<Swig Object of type 'TextureSwizzle4 *' at 0x000002BBC31618B0>",
+                "textureType": 1,
+                "type": 5,
+                "view": "ResourceId::0"
+              },
+              "buffer_bytes": 8192,
+              "raw": {
+                "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e5006_buffer_139590.bin",
+                "bytes": 8192,
+                "sha256": "5292a36471ca0d7b2c4a1bcb5ca088d4348696c7d5253e19a3a3005bc2d829cd",
+                "selector": "E5006 ResourceId::139590, complete buffer offset=0 bytes=8192"
+              }
+            },
+            {
+              "access": "ro",
+              "index": 2,
+              "name": "texture2",
+              "resource": "ResourceId::139723",
+              "descriptor": {
+                "bufferStructCount": 0,
+                "byteOffset": 0,
+                "byteSize": 0,
+                "counterByteOffset": 0,
+                "elementByteSize": 8,
+                "firstMip": 0,
+                "firstSlice": 0,
+                "flags": 0,
+                "format": "<Swig Object of type 'ResourceFormat *' at 0x000002BBC3161730>",
+                "minLODClamp": 0.0,
+                "numMips": 1,
+                "numSlices": 1,
+                "resource": "ResourceId::139723",
+                "secondary": "ResourceId::0",
+                "swizzle": "<Swig Object of type 'TextureSwizzle4 *' at 0x000002BBC3161670>",
+                "textureType": 4,
+                "type": 4,
+                "view": "ResourceId::0"
+              },
+              "texture": {
+                "width": 256,
+                "height": 128,
+                "depth": 1,
+                "mips": 1,
+                "format": "R16G16B16A16_FLOAT"
+              }
+            },
+            {
+              "access": "ro",
+              "index": 3,
+              "name": "texture3",
+              "resource": "ResourceId::617",
+              "descriptor": {
+                "bufferStructCount": 0,
+                "byteOffset": 0,
+                "byteSize": 0,
+                "counterByteOffset": 0,
+                "elementByteSize": 4,
+                "firstMip": 0,
+                "firstSlice": 0,
+                "flags": 0,
+                "format": "<Swig Object of type 'ResourceFormat *' at 0x000002BBC3161770>",
+                "minLODClamp": 0.0,
+                "numMips": 11,
+                "numSlices": 1,
+                "resource": "ResourceId::617",
+                "secondary": "ResourceId::0",
+                "swizzle": "<Swig Object of type 'TextureSwizzle4 *' at 0x000002BBC31614B0>",
+                "textureType": 4,
+                "type": 4,
+                "view": "ResourceId::0"
+              },
+              "texture": {
+                "width": 1024,
+                "height": 1024,
+                "depth": 1,
+                "mips": 11,
+                "format": "R8G8B8A8_UNORM"
+              }
+            },
+            {
+              "access": "ro",
+              "index": 4,
+              "name": "texture4",
+              "resource": "ResourceId::1105",
+              "descriptor": {
+                "bufferStructCount": 0,
+                "byteOffset": 0,
+                "byteSize": 0,
+                "counterByteOffset": 0,
+                "elementByteSize": 1,
+                "firstMip": 0,
+                "firstSlice": 0,
+                "flags": 0,
+                "format": "<Swig Object of type 'ResourceFormat *' at 0x000002BBC31615B0>",
+                "minLODClamp": 0.0,
+                "numMips": 9,
+                "numSlices": 1,
+                "resource": "ResourceId::1105",
+                "secondary": "ResourceId::0",
+                "swizzle": "<Swig Object of type 'TextureSwizzle4 *' at 0x000002BBC3161330>",
+                "textureType": 9,
+                "type": 4,
+                "view": "ResourceId::0"
+              },
+              "texture": {
+                "width": 256,
+                "height": 256,
+                "depth": 64,
+                "mips": 9,
+                "format": "R8_UNORM"
+              }
+            }
+          ],
+          "bytecode": {
+            "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e5006_ps.dxbc",
+            "bytes": 5272,
+            "sha256": "b7f1ac50d5312f20e829e8788a7256d4cc84266880fca4fdedc7d39f98148aa2",
+            "selector": "E5006 ps rawBytes"
+          },
+          "assembly": {
+            "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e5006_ps.asm",
+            "bytes": 6793,
+            "sha256": "386b51bfab73d6a7aed96cb095c318dd44f537c895841df184a9108a652a5170",
+            "selector": "E5006 ps derived disassembly"
+          }
+        }
+      }
+    },
+    {
+      "event": 6083,
+      "selector": "Fresh OpenCapture; SetFrameEvent(event,True), post-event",
+      "stages": {
+        "vs": {
+          "shader": "ResourceId::3409",
+          "constants": [
+            {
+              "index": 0,
+              "resource": "ResourceId::336",
+              "offset": 1572864,
+              "bytes": 2272,
+              "raw": {
+                "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e6083_vs_cb0.bin",
+                "bytes": 2272,
+                "sha256": "9622f5440ca0dfafd8c732ea8e94bdc22ee499d0642a9d8d4c9f51cc841a1b54",
+                "selector": "E6083 vs cb0, ResourceId::336 offset=1572864 length=2272"
+              }
+            },
+            {
+              "index": 1,
+              "resource": "ResourceId::336",
+              "offset": 1585664,
+              "bytes": 64,
+              "raw": {
+                "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e6083_vs_cb1.bin",
+                "bytes": 64,
+                "sha256": "2a24d3b0455cb9e6aa788a488dabbcd8adbaab08ad8d706c92346d4964a3dbbb",
+                "selector": "E6083 vs cb1, ResourceId::336 offset=1585664 length=64"
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "access": "ro",
+              "index": 0,
+              "name": "structuredbuffer0",
+              "resource": "ResourceId::139571",
+              "descriptor": {
+                "bufferStructCount": 0,
+                "byteOffset": 0,
+                "byteSize": 8388608,
+                "counterByteOffset": 0,
+                "elementByteSize": 16,
+                "firstMip": 0,
+                "firstSlice": 0,
+                "flags": 0,
+                "format": "<Swig Object of type 'ResourceFormat *' at 0x000002BBC31619F0>",
+                "minLODClamp": 0.0,
+                "numMips": 1,
+                "numSlices": 1,
+                "resource": "ResourceId::139571",
+                "secondary": "ResourceId::0",
+                "swizzle": "<Swig Object of type 'TextureSwizzle4 *' at 0x000002BB80110E30>",
+                "textureType": 1,
+                "type": 5,
+                "view": "ResourceId::0"
+              },
+              "buffer_bytes": 8388608,
+              "raw": {
+                "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e6083_buffer_139571.bin",
+                "bytes": 8388608,
+                "sha256": "86debc837543b72696d7ca2fc014d42deaee567a25a0cd988b12a1ff69d3898a",
+                "selector": "E6083 ResourceId::139571, complete buffer offset=0 bytes=8388608"
+              }
+            },
+            {
+              "access": "ro",
+              "index": 1,
+              "name": "structuredbuffer1",
+              "resource": "ResourceId::139573",
+              "descriptor": {
+                "bufferStructCount": 0,
+                "byteOffset": 0,
+                "byteSize": 2097152,
+                "counterByteOffset": 0,
+                "elementByteSize": 16,
+                "firstMip": 0,
+                "firstSlice": 0,
+                "flags": 0,
+                "format": "<Swig Object of type 'ResourceFormat *' at 0x000002BB80110C30>",
+                "minLODClamp": 0.0,
+                "numMips": 1,
+                "numSlices": 1,
+                "resource": "ResourceId::139573",
+                "secondary": "ResourceId::0",
+                "swizzle": "<Swig Object of type 'TextureSwizzle4 *' at 0x000002BB80110BB0>",
+                "textureType": 1,
+                "type": 5,
+                "view": "ResourceId::0"
+              },
+              "buffer_bytes": 2097152,
+              "raw": {
+                "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e6083_buffer_139573.bin",
+                "bytes": 2097152,
+                "sha256": "0e5c3842a56322e2385375ed1a5f286675662a0a85ec9afeac9e7a1bdfe48545",
+                "selector": "E6083 ResourceId::139573, complete buffer offset=0 bytes=2097152"
+              }
+            }
+          ],
+          "bytecode": {
+            "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e6083_vs.dxbc",
+            "bytes": 4056,
+            "sha256": "19c2bc50402c753bc2a21061dd82d417edc5b450a1fe047018f20d67ecd8d45e",
+            "selector": "E6083 vs rawBytes"
+          },
+          "assembly": {
+            "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e6083_vs.asm",
+            "bytes": 5326,
+            "sha256": "4c5deb779fb9b3a5bca9ebc0e3e1ac58d7fa8ff5ff9d1080c72581dddf73923e",
+            "selector": "E6083 vs derived disassembly"
+          }
+        },
+        "ps": {
+          "shader": "ResourceId::3410",
+          "constants": [
+            {
+              "index": 0,
+              "resource": "ResourceId::336",
+              "offset": 1572864,
+              "bytes": 2208,
+              "raw": {
+                "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e6083_ps_cb0.bin",
+                "bytes": 2208,
+                "sha256": "5b63864b00b7d71c4a73eba3fb246fb310ca0750b9b088e4474dc18ecf13a4a5",
+                "selector": "E6083 ps cb0, ResourceId::336 offset=1572864 length=2208"
+              }
+            },
+            {
+              "index": 1,
+              "resource": "ResourceId::1392",
+              "offset": 0,
+              "bytes": 16,
+              "raw": {
+                "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e6083_ps_cb1.bin",
+                "bytes": 16,
+                "sha256": "363a0ee6883021561a7891f63b03a5c8f0715a9ff81804456f2019cb6b8a8401",
+                "selector": "E6083 ps cb1, ResourceId::1392 offset=0 length=16"
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "access": "ro",
+              "index": 0,
+              "name": "texture0",
+              "resource": "ResourceId::3344",
+              "descriptor": {
+                "bufferStructCount": 0,
+                "byteOffset": 0,
+                "byteSize": 0,
+                "counterByteOffset": 0,
+                "elementByteSize": 4,
+                "firstMip": 0,
+                "firstSlice": 0,
+                "flags": 0,
+                "format": "<Swig Object of type 'ResourceFormat *' at 0x000002BB801106F0>",
+                "minLODClamp": 0.0,
+                "numMips": 1,
+                "numSlices": 1,
+                "resource": "ResourceId::3344",
+                "secondary": "ResourceId::0",
+                "swizzle": "<Swig Object of type 'TextureSwizzle4 *' at 0x000002BB801105F0>",
+                "textureType": 4,
+                "type": 4,
+                "view": "ResourceId::0"
+              },
+              "texture": {
+                "width": 2048,
+                "height": 2048,
+                "depth": 1,
+                "mips": 1,
+                "format": "D32"
+              }
+            },
+            {
+              "access": "ro",
+              "index": 1,
+              "name": "texture1",
+              "resource": "ResourceId::3375",
+              "descriptor": {
+                "bufferStructCount": 0,
+                "byteOffset": 0,
+                "byteSize": 0,
+                "counterByteOffset": 0,
+                "elementByteSize": 8,
+                "firstMip": 0,
+                "firstSlice": 0,
+                "flags": 0,
+                "format": "<Swig Object of type 'ResourceFormat *' at 0x000002BBC3161830>",
+                "minLODClamp": 0.0,
+                "numMips": 1,
+                "numSlices": 1,
+                "resource": "ResourceId::3375",
+                "secondary": "ResourceId::0",
+                "swizzle": "<Swig Object of type 'TextureSwizzle4 *' at 0x000002BB801104B0>",
+                "textureType": 4,
+                "type": 4,
+                "view": "ResourceId::0"
+              },
+              "texture": {
+                "width": 1280,
+                "height": 720,
+                "depth": 1,
+                "mips": 1,
+                "format": "R16G16B16A16_FLOAT"
+              }
+            },
+            {
+              "access": "ro",
+              "index": 2,
+              "name": "texture2",
+              "resource": "ResourceId::3386",
+              "descriptor": {
+                "bufferStructCount": 0,
+                "byteOffset": 0,
+                "byteSize": 0,
+                "counterByteOffset": 0,
+                "elementByteSize": 8,
+                "firstMip": 0,
+                "firstSlice": 0,
+                "flags": 0,
+                "format": "<Swig Object of type 'ResourceFormat *' at 0x000002BB80110530>",
+                "minLODClamp": 0.0,
+                "numMips": 1,
+                "numSlices": 1,
+                "resource": "ResourceId::3386",
+                "secondary": "ResourceId::0",
+                "swizzle": "<Swig Object of type 'TextureSwizzle4 *' at 0x000002BB80110370>",
+                "textureType": 4,
+                "type": 4,
+                "view": "ResourceId::0"
+              },
+              "texture": {
+                "width": 1280,
+                "height": 720,
+                "depth": 1,
+                "mips": 1,
+                "format": "D32S8"
+              }
+            },
+            {
+              "access": "ro",
+              "index": 3,
+              "name": "texture3",
+              "resource": "ResourceId::681",
+              "descriptor": {
+                "bufferStructCount": 0,
+                "byteOffset": 0,
+                "byteSize": 0,
+                "counterByteOffset": 0,
+                "elementByteSize": 4,
+                "firstMip": 0,
+                "firstSlice": 0,
+                "flags": 0,
+                "format": "<Swig Object of type 'ResourceFormat *' at 0x000002BB801103F0>",
+                "minLODClamp": 0.0,
+                "numMips": 11,
+                "numSlices": 1,
+                "resource": "ResourceId::681",
+                "secondary": "ResourceId::0",
+                "swizzle": "<Swig Object of type 'TextureSwizzle4 *' at 0x000002BB80110130>",
+                "textureType": 4,
+                "type": 4,
+                "view": "ResourceId::0"
+              },
+              "texture": {
+                "width": 1024,
+                "height": 1024,
+                "depth": 1,
+                "mips": 11,
+                "format": "R8G8B8A8_UNORM"
+              }
+            }
+          ],
+          "bytecode": {
+            "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e6083_ps.dxbc",
+            "bytes": 4416,
+            "sha256": "6b7870c1b83924ba8a7319d3bae374933ecff0873caa5109f3c2e7d8338e9961",
+            "selector": "E6083 ps rawBytes"
+          },
+          "assembly": {
+            "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e6083_ps.asm",
+            "bytes": 5914,
+            "sha256": "c2a6684baf4723433e4e6f35e1a2edfce5a836fd3acccb9026c9c2c8cb845fa1",
+            "selector": "E6083 ps derived disassembly"
+          }
+        }
+      }
+    }
+  ],
+  "pass_": true,
+  "scope": "Fresh replay per selected event. Full selected buffers, selected cbuffer ranges, VS/PS/CS compiled instructions; no original source or elapsed-time claim.",
+  "tool": {
+    "version": "1.46",
+    "command": "D:/other_software/RenderDoc/qrenderdoc.exe --python D:/godot/project/sandcastle/docs/competitor/tools/export_wet_sand_capture.py"
+  },
+  "open": "<Result: 'Success'>",
+  "source_after": {
+    "path": "D:/godot/project/sandcastle/rdc/test1.rdc",
+    "bytes": 225224034,
+    "sha256": "761aa980c2426f75a1fa7364bf6d2655ff4dd20ea76566e630ee5b53ea0ec5b2"
+  }
+}

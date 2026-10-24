@@ -1,0 +1,420 @@
+{
+  "scope": "Per-image ablation footprints, not additive layer area or cross-game similarity. Only a single captured competitor frame.",
+  "competitor": {
+    "instances": 29950,
+    "flat_y_max_range": 0.0,
+    "width_percentiles_0_5_50_95_100_scene_units": [
+      0.01844501495361328,
+      0.021616977453231812,
+      0.040022850036621094,
+      0.07700101137161255,
+      0.08846020698547363
+    ],
+    "strength_percentiles_0_50_100": [
+      0.20389162003993988,
+      0.4000000059604645,
+      0.4000000059604645
+    ],
+    "alpha_center_upper_bound_from_instructions": 0.2
+  },
+  "scenes": {
+    "main": {
+      "probe_pass": true,
+      "frames": [
+        {
+          "file": "t0.png",
+          "state_seq": 0,
+          "tick": 0,
+          "time_s": 0.0
+        },
+        {
+          "file": "t120.png",
+          "state_seq": 120,
+          "tick": 120,
+          "time_s": 3.99999761581421
+        },
+        {
+          "file": "t240.png",
+          "state_seq": 240,
+          "tick": 240,
+          "time_s": 7.99999380111694
+        },
+        {
+          "file": "t360.png",
+          "state_seq": 360,
+          "tick": 360,
+          "time_s": 12.0000467300415
+        }
+      ],
+      "render": {
+        "adapter": "NVIDIA GeForce GTX 1050",
+        "engine": {
+          "build": "steam",
+          "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+          "hex": 263938,
+          "major": 4,
+          "minor": 7,
+          "patch": 2,
+          "status": "stable",
+          "string": "4.7.2-stable (steam)",
+          "timestamp": 0
+        },
+        "size": "Vector2i(1280, 720)"
+      },
+      "camera": {
+        "fov": 62.0,
+        "transform": "Transform3D(0.8574929, 0.2353796, -0.4574957, 0, 0.8892119, 0.4574957, 0.51449573, -0.39229935, 0.7624929, -6, 6, 10)"
+      },
+      "layers": {
+        "GpuWaterSurface": {
+          "visible": true,
+          "vertices": 262144,
+          "shader": "res://assets/water_material_natural_candidate/async_rdc_water.gdshader",
+          "shader_sha256": "26a503bd375f88e43f7b1a7fdac1812fd2d7da4ad4217423aa5ae6d398ed0a61"
+        },
+        "PrototypeFrontFoamDense": {
+          "visible": true,
+          "vertices": 32768,
+          "shader": "res://assets/water_material_natural_candidate/foam_distribution.gdshader",
+          "shader_sha256": "55077448b1b78594922c05db6bcfac25822d9742d2aeef2e3aea7dbf2191ef65"
+        },
+        "ShoreContactOverlay": {
+          "visible": true,
+          "vertices": 262144,
+          "shader": "res://assets/water_material_natural_candidate/contact_shape.gdshader",
+          "shader_sha256": "df877260fd31aae4785dc937cc23c7d24e742ed7d16895f612ebb6e600e9fba8"
+        }
+      },
+      "ablation_pixels_channel_delta_gt_2_of_255": {
+        "240": {
+          "t240_no_PrototypeFrontFoamDense": 17,
+          "t240_no_ShoreContactOverlay": 180,
+          "t240_no_water_foam": 0
+        },
+        "360": {
+          "t360_no_PrototypeFrontFoamDense": 112,
+          "t360_no_ShoreContactOverlay": 2576,
+          "t360_no_water_foam": 206
+        }
+      }
+    },
+    "geometry": {
+      "probe_pass": true,
+      "frames": [
+        {
+          "file": "t0.png",
+          "state_seq": 0,
+          "tick": 0,
+          "time_s": 0.0
+        },
+        {
+          "file": "t120.png",
+          "state_seq": 120,
+          "tick": 120,
+          "time_s": 3.99999761581421
+        },
+        {
+          "file": "t240.png",
+          "state_seq": 240,
+          "tick": 240,
+          "time_s": 7.99999380111694
+        },
+        {
+          "file": "t360.png",
+          "state_seq": 360,
+          "tick": 360,
+          "time_s": 12.0000467300415
+        }
+      ],
+      "render": {
+        "adapter": "NVIDIA GeForce GTX 1050",
+        "engine": {
+          "build": "steam",
+          "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+          "hex": 263938,
+          "major": 4,
+          "minor": 7,
+          "patch": 2,
+          "status": "stable",
+          "string": "4.7.2-stable (steam)",
+          "timestamp": 0
+        },
+        "size": "Vector2i(1280, 720)"
+      },
+      "camera": {
+        "fov": 30.0,
+        "transform": "Transform3D(-0.9396924, 0.2418453, -0.24184528, 0, 0.70710677, 0.7071068, 0.3420209, 0.66446286, -0.6644628, -10.024885, 29.31078, -27.54313)"
+      },
+      "layers": {
+        "GpuWaterSurface": {
+          "visible": true,
+          "vertices": 115921,
+          "shader": "res://assets/water_material_natural_candidate/async_rdc_water.gdshader",
+          "shader_sha256": "26a503bd375f88e43f7b1a7fdac1812fd2d7da4ad4217423aa5ae6d398ed0a61"
+        },
+        "PrototypeFrontFoamDense": {
+          "visible": true,
+          "vertices": 32768,
+          "shader": "res://assets/water_material_natural_candidate/foam_distribution.gdshader",
+          "shader_sha256": "55077448b1b78594922c05db6bcfac25822d9742d2aeef2e3aea7dbf2191ef65"
+        },
+        "ShoreContactOverlay": {
+          "visible": true,
+          "vertices": 115921,
+          "shader": "res://assets/water_material_natural_candidate/contact_shape.gdshader",
+          "shader_sha256": "df877260fd31aae4785dc937cc23c7d24e742ed7d16895f612ebb6e600e9fba8"
+        }
+      },
+      "ablation_pixels_channel_delta_gt_2_of_255": {
+        "240": {
+          "t240_no_PrototypeFrontFoamDense": 985,
+          "t240_no_ShoreContactOverlay": 1012,
+          "t240_no_water_foam": 5731
+        },
+        "360": {
+          "t360_no_PrototypeFrontFoamDense": 2015,
+          "t360_no_ShoreContactOverlay": 2573,
+          "t360_no_water_foam": 10034
+        }
+      }
+    }
+  },
+  "source_snapshots": [
+    {
+      "source": {
+        "path": "assets/test1_beach/test1_front_foam_sparse_mesh.tres",
+        "bytes": 1354758,
+        "sha256": "f343b5354ad4b18da405bd538d79e021112f58b39d129f307d248a13261f7b1b"
+      },
+      "snapshot": {
+        "path": "docs/competitor/evidence/foam_comparison_20261024/sources/assets/test1_beach/test1_front_foam_sparse_mesh.tres",
+        "bytes": 1354758,
+        "sha256": "f343b5354ad4b18da405bd538d79e021112f58b39d129f307d248a13261f7b1b"
+      }
+    },
+    {
+      "source": {
+        "path": "assets/unified_edit/presentation/main.json",
+        "bytes": 149891,
+        "sha256": "0bacfb54376cba9772e072c25b1b7ed03813e1581f7e8ed28086c700ee741c12"
+      },
+      "snapshot": {
+        "path": "docs/competitor/evidence/foam_comparison_20261024/sources/assets/unified_edit/presentation/main.json",
+        "bytes": 149891,
+        "sha256": "0bacfb54376cba9772e072c25b1b7ed03813e1581f7e8ed28086c700ee741c12"
+      }
+    },
+    {
+      "source": {
+        "path": "assets/unified_edit/presentation/test1_geometry.json",
+        "bytes": 151620,
+        "sha256": "01a97e2e77afdab688ce9c2ce16762b38094c669d9b3e131ebbf9236c4785ebd"
+      },
+      "snapshot": {
+        "path": "docs/competitor/evidence/foam_comparison_20261024/sources/assets/unified_edit/presentation/test1_geometry.json",
+        "bytes": 151620,
+        "sha256": "01a97e2e77afdab688ce9c2ce16762b38094c669d9b3e131ebbf9236c4785ebd"
+      }
+    },
+    {
+      "source": {
+        "path": "assets/water_material_natural_candidate/async_rdc_water.gdshader",
+        "bytes": 71029,
+        "sha256": "26a503bd375f88e43f7b1a7fdac1812fd2d7da4ad4217423aa5ae6d398ed0a61"
+      },
+      "snapshot": {
+        "path": "docs/competitor/evidence/foam_comparison_20261024/sources/assets/water_material_natural_candidate/async_rdc_water.gdshader",
+        "bytes": 71029,
+        "sha256": "26a503bd375f88e43f7b1a7fdac1812fd2d7da4ad4217423aa5ae6d398ed0a61"
+      }
+    },
+    {
+      "source": {
+        "path": "assets/water_material_natural_candidate/contact_shape.gdshader",
+        "bytes": 15681,
+        "sha256": "df877260fd31aae4785dc937cc23c7d24e742ed7d16895f612ebb6e600e9fba8"
+      },
+      "snapshot": {
+        "path": "docs/competitor/evidence/foam_comparison_20261024/sources/assets/water_material_natural_candidate/contact_shape.gdshader",
+        "bytes": 15681,
+        "sha256": "df877260fd31aae4785dc937cc23c7d24e742ed7d16895f612ebb6e600e9fba8"
+      }
+    },
+    {
+      "source": {
+        "path": "assets/water_material_natural_candidate/foam_distribution.gdshader",
+        "bytes": 9063,
+        "sha256": "55077448b1b78594922c05db6bcfac25822d9742d2aeef2e3aea7dbf2191ef65"
+      },
+      "snapshot": {
+        "path": "docs/competitor/evidence/foam_comparison_20261024/sources/assets/water_material_natural_candidate/foam_distribution.gdshader",
+        "bytes": 9063,
+        "sha256": "55077448b1b78594922c05db6bcfac25822d9742d2aeef2e3aea7dbf2191ef65"
+      }
+    },
+    {
+      "source": {
+        "path": "scenes/unified_edit/presentation/main.tscn",
+        "bytes": 15466368,
+        "sha256": "926f1a831ca4fe16bd2ad403fdc4fd04c223db2c4e0b98908b75559155cdc8de"
+      },
+      "snapshot": {
+        "path": "docs/competitor/evidence/foam_comparison_20261024/sources/scenes/unified_edit/presentation/main.tscn",
+        "bytes": 15466368,
+        "sha256": "926f1a831ca4fe16bd2ad403fdc4fd04c223db2c4e0b98908b75559155cdc8de"
+      }
+    },
+    {
+      "source": {
+        "path": "scenes/unified_edit/presentation/test1_geometry.tscn",
+        "bytes": 120443,
+        "sha256": "a2fa48761c669326d5c432e31ccf5a368d558d7c32fdd8e473f41499cd673cb0"
+      },
+      "snapshot": {
+        "path": "docs/competitor/evidence/foam_comparison_20261024/sources/scenes/unified_edit/presentation/test1_geometry.tscn",
+        "bytes": 120443,
+        "sha256": "a2fa48761c669326d5c432e31ccf5a368d558d7c32fdd8e473f41499cd673cb0"
+      }
+    },
+    {
+      "source": {
+        "path": "scripts/beach/unified_playable_entry.gd",
+        "bytes": 32844,
+        "sha256": "3141e87aeccaedacd0b5022f63e494f951507d5eeaffb6d3dbbf9f81c86a4b0f"
+      },
+      "snapshot": {
+        "path": "docs/competitor/evidence/foam_comparison_20261024/sources/scripts/beach/unified_playable_entry.gd",
+        "bytes": 32844,
+        "sha256": "3141e87aeccaedacd0b5022f63e494f951507d5eeaffb6d3dbbf9f81c86a4b0f"
+      }
+    },
+    {
+      "source": {
+        "path": "scripts/simulation/unified_edit/visuals.gd",
+        "bytes": 15623,
+        "sha256": "ed42b02cf5a0e6b65fb1bdb4121722637ae821e0615e52e624292729d8431738"
+      },
+      "snapshot": {
+        "path": "docs/competitor/evidence/foam_comparison_20261024/sources/scripts/simulation/unified_edit/visuals.gd",
+        "bytes": 15623,
+        "sha256": "ed42b02cf5a0e6b65fb1bdb4121722637ae821e0615e52e624292729d8431738"
+      }
+    },
+    {
+      "source": {
+        "path": "shaders/simulation/visual_foam_step.glsl",
+        "bytes": 4040,
+        "sha256": "19d7bec7f157791f75e0b4a63bd04c7ae8dc06eb82e016f1ea96ae8174e6edb0"
+      },
+      "snapshot": {
+        "path": "docs/competitor/evidence/foam_comparison_20261024/sources/shaders/simulation/visual_foam_step.glsl",
+        "bytes": 4040,
+        "sha256": "19d7bec7f157791f75e0b4a63bd04c7ae8dc06eb82e016f1ea96ae8174e6edb0"
+      }
+    },
+    {
+      "source": {
+        "path": "tests/visual_water_alignment/prototypes/reference_local_front_x.glsl",
+        "bytes": 1639,
+        "sha256": "1ca06648fc517bc6d01b66780af1d1e66cfe2978ddd2f00e5ac763658799d13d"
+      },
+      "snapshot": {
+        "path": "docs/competitor/evidence/foam_comparison_20261024/sources/tests/visual_water_alignment/prototypes/reference_local_front_x.glsl",
+        "bytes": 1639,
+        "sha256": "1ca06648fc517bc6d01b66780af1d1e66cfe2978ddd2f00e5ac763658799d13d"
+      }
+    },
+    {
+      "source": {
+        "path": "tests/visual_water_alignment/prototypes/reference_local_front_x_wide.glsl",
+        "bytes": 1709,
+        "sha256": "3e8c3729eb40b07a36772aa25ae8c3f10b5d3f137e7b19721669df6ed4098004"
+      },
+      "snapshot": {
+        "path": "docs/competitor/evidence/foam_comparison_20261024/sources/tests/visual_water_alignment/prototypes/reference_local_front_x_wide.glsl",
+        "bytes": 1709,
+        "sha256": "3e8c3729eb40b07a36772aa25ae8c3f10b5d3f137e7b19721669df6ed4098004"
+      }
+    },
+    {
+      "source": {
+        "path": "tests/visual_water_alignment/prototypes/reference_local_front_z.glsl",
+        "bytes": 933,
+        "sha256": "dc986bfa7e64e6f05f814a1eed3cef2eef1bd5e72025a1c9475d90c4855ddfae"
+      },
+      "snapshot": {
+        "path": "docs/competitor/evidence/foam_comparison_20261024/sources/tests/visual_water_alignment/prototypes/reference_local_front_z.glsl",
+        "bytes": 933,
+        "sha256": "dc986bfa7e64e6f05f814a1eed3cef2eef1bd5e72025a1c9475d90c4855ddfae"
+      }
+    }
+  ],
+  "figure_panels": [
+    {
+      "title": "竞品 test1：浪头细沫（捕帧局部）",
+      "source": "rdc/capture_thumbnail.png",
+      "crop_xyxy": [
+        1000,
+        230,
+        1450,
+        610
+      ],
+      "resampling": "nearest; original RGB unchanged"
+    },
+    {
+      "title": "当前原比例场景：8 模拟秒",
+      "source": "geometry/t240.png",
+      "crop_xyxy": [
+        530,
+        235,
+        845,
+        515
+      ],
+      "resampling": "nearest; original RGB unchanged"
+    },
+    {
+      "title": "当前主场景：12 模拟秒",
+      "source": "main/t360.png",
+      "crop_xyxy": [
+        380,
+        405,
+        760,
+        710
+      ],
+      "resampling": "nearest; original RGB unchanged"
+    },
+    {
+      "title": "同一状态：关闭水面内白沫",
+      "source": "geometry/t240_no_water_foam.png",
+      "crop_xyxy": [
+        530,
+        235,
+        845,
+        515
+      ],
+      "resampling": "nearest; original RGB unchanged"
+    },
+    {
+      "title": "同一状态：关闭独立细沫",
+      "source": "geometry/t240_no_PrototypeFrontFoamDense.png",
+      "crop_xyxy": [
+        530,
+        235,
+        845,
+        515
+      ],
+      "resampling": "nearest; original RGB unchanged"
+    },
+    {
+      "title": "同一状态：关闭岸边接触层",
+      "source": "main/t360_no_ShoreContactOverlay.png",
+      "crop_xyxy": [
+        380,
+        405,
+        760,
+        710
+      ],
+      "resampling": "nearest; original RGB unchanged"
+    }
+  ]
+}

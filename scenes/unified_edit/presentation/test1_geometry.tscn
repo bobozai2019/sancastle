@@ -40,6 +40,8 @@
 
 [ext_resource type="PackedScene" path="res://scenes/components/vegetation_layer.tscn" id="vegetation_layer"]
 
+[ext_resource type="Texture2D" path="res://assets/water_foam/foam_detail.png" id="water_foam_detail"]
+
 [sub_resource type="Environment" id="Environment_j7kgc"]
 resource_local_to_scene = true
 background_mode = 1
@@ -51,6 +53,7 @@ ambient_light_energy = 0.65
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_e4n6i"]
 render_priority = 0
 shader = ExtResource("2_s1kjk")
+shader_parameter/use_surface_wetness = true
 shader_parameter/natural_caustic_override = true
 shader_parameter/natural_caustic_enabled = true
 shader_parameter/natural_caustic_strength = 0.8
@@ -248,6 +251,14 @@ shader_parameter/rdc_normal_gain = 1.0
 shader_parameter/rdc_time_scale = 1.0
 shader_parameter/rdc_surface_gain = 1.0
 shader_parameter/rdc_refraction_scale = 0.0121
+shader_parameter/foam_detail_mode = 1
+shader_parameter/foam_detail_texture = ExtResource("water_foam_detail")
+shader_parameter/foam_detail_scale_per_m = 1.0
+shader_parameter/foam_hole_strength = 1.0
+shader_parameter/foam_flow_cycle_s = 4.0
+shader_parameter/foam_flow_gain = 1.0
+shader_parameter/foam_flow_speed_cap_m_s = 2.0
+shader_parameter/foam_flow_debug = false
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tmy5q"]
 resource_local_to_scene = true
@@ -331,7 +342,6 @@ render_priority = 1
 shader = ExtResource("21_l13h7")
 shader_parameter/enabled = true
 shader_parameter/natural_contact_enabled = true
-shader_parameter/natural_contact_gain = 1.0
 shader_parameter/surface_offset_m = 0.016
 shader_parameter/wet_epsilon_m = 0.001
 shader_parameter/water_surface_bias_m = 0.003
@@ -361,6 +371,7 @@ shader_parameter/natural_contact_shape_mode = 1
 shader_parameter/natural_contact_shape_scale_per_m = 6.0
 shader_parameter/natural_contact_shared_surface = true
 shader_parameter/natural_contact_separation_m = 0.001
+shader_parameter/natural_contact_gain = 0.55
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_up2bp"]
 render_priority = 0
@@ -838,15 +849,11 @@ layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
 selected = 3
-item_count = 4
+item_count = 2
 popup/item_0/text = "主沙滩"
 popup/item_0/id = 0
-popup/item_1/text = "test1 沙床 · 可编辑"
+popup/item_1/text = "test1 原比例沙滩 · 30×15"
 popup/item_1/id = 1
-popup/item_2/text = "上滩回流 · 可编辑适配"
-popup/item_2/id = 2
-popup/item_3/text = "test1 原比例沙滩 · 30×15"
-popup/item_3/id = 3
 
 [node name="Switch" type="Button" parent="Interface/EditPanel/Margin/Controls/SceneSwitcher/Actions" unique_id=1226411751]
 layout_mode = 2
@@ -1009,6 +1016,7 @@ custom_aabb = AABB(-16.5, -2, -16.5, 33, 6, 33)
 mesh = ExtResource("15_o0smm")
 
 [node name="PrototypeFrontFoamDense" type="MeshInstance3D" parent="." unique_id=1515188556]
+visible = false
 material_override = SubResource("ShaderMaterial_4rymf")
 custom_aabb = AABB(-16.5, -2, -16.5, 33, 6, 33)
 mesh = ExtResource("17_6tk4k")

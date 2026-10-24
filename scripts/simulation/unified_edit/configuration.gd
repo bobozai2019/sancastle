@@ -5,6 +5,7 @@ const P=preload("res://scripts/simulation/unified_edit/tool_profile.gd")
 const Wire=preload("res://scripts/simulation/unified_edit/protocol.gd")
 const ParameterSchema=preload("res://scripts/parameters/parameter_schema.gd")
 const Numerics=preload("res://scripts/simulation/unified_edit/water_numerics.gd")
+const Wet=preload("res://scripts/simulation/unified_edit/surface_wetness.gd")
 const FAMILY="unified_edit"
 const SCHEMA:=1
 const MATERIAL_PATH="res://assets/brushes/molded_material_candidate.json"
@@ -136,6 +137,8 @@ static func _validate_snapshot(snapshot: Variant, verify_disk: bool, expected_le
 		for value in group.values():
 			if typeof(value)!=TYPE_BOOL:return &"invalid_feature_flag"
 	if not snapshot.profiles is Dictionary or snapshot.profiles.is_empty() or snapshot.profiles.size()>L.MAX_PROFILES or not snapshot.sources is Dictionary or snapshot.sources.is_empty() or not snapshot.environment is Dictionary or snapshot.ledger_policy!=expected_ledger_policy:return &"invalid_configuration_catalog"
+	var wet_error:=Wet.configuration_error(snapshot)
+	if not wet_error.is_empty():return wet_error
 	var numerical_error:=Numerics.configuration_error(snapshot.environment)
 	if not numerical_error.is_empty():return numerical_error
 	var coupling_error:=ParameterSchema.coupling_error(snapshot.environment.get("coupling_parameters",{}))

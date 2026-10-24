@@ -17,7 +17,7 @@ func _run() -> void:
 	var camera: Transform3D=scene.player_camera.transform
 	var old=scene;var saved_seq: int=old.runtime.current.completed_state_seq
 	service.inject_target_failure_once=true
-	check("failure_switch_admitted",service.request_switch("test1_capture"))
+	check("failure_switch_admitted",service.request_switch("test1_geometry"))
 	await _wait_switch(service)
 	scene=service.active_scene
 	check("failed_target_rollback_in_same_family",scene!=null and scene.scene_key=="main" and scene.get_script().resource_path=="res://scripts/beach/unified_playable_entry.gd" and not service.last_error.is_empty())
@@ -25,10 +25,10 @@ func _run() -> void:
 	check("rollback_released_previous_node",not is_instance_valid(old))
 	check("rollback_keeps_native_progress_and_controls",scene.runtime.current.completed_state_seq==saved_seq and scene.selected_sand_tool==&"wall_v1" and scene.hide_hud and scene.player_camera.transform.is_equal_approx(camera))
 	observations.main_sources=scene.configuration.sources.duplicate(true)
-	check("real_switch_admitted",service.request_switch("test1_capture"))
+	check("real_switch_admitted",service.request_switch("test1_geometry"))
 	await _wait_switch(service);scene=service.active_scene
-	check("real_switch_new_family_capture",scene.scene_key=="test1_capture" and scene.get_script().resource_path=="res://scripts/beach/unified_playable_entry.gd" and service.last_error.is_empty())
-	check("capture_keeps_exact_entry_path",scene.scene_file_path==_entry_path("test1_capture"))
+	check("real_switch_new_family_geometry",scene.scene_key=="test1_geometry" and scene.get_script().resource_path=="res://scripts/beach/unified_playable_entry.gd" and service.last_error.is_empty())
+	check("capture_keeps_exact_entry_path",scene.scene_file_path==_entry_path("test1_geometry"))
 	check("shared_brush_controls_preserved",scene.selected_sand_tool==&"wall_v1" and scene.hide_hud and not scene.playing)
 	observations.capture_sources=scene.configuration.sources.duplicate(true)
 	check("return_switch_admitted",service.request_switch("main"))

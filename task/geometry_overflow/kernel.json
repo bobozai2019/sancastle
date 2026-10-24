@@ -1,0 +1,74 @@
+{
+	"checks": [
+		{
+			"name": "old_compile",
+			"pass": true
+		},
+		{
+			"name": "new_compile",
+			"pass": true
+		},
+		{
+			"name": "disabled_exact_legacy",
+			"pass": true
+		},
+		{
+			"name": "low_level_inactive",
+			"pass": true
+		},
+		{
+			"name": "high_level_active",
+			"pass": true
+		},
+		{
+			"name": "fresh_high_state_drains_gradually",
+			"pass": true
+		},
+		{
+			"name": "sink_only_right_edge_strip",
+			"pass": true
+		},
+		{
+			"name": "continuous_drop_rate_bounded",
+			"pass": true
+		},
+		{
+			"name": "momentum_scales_with_depth",
+			"pass": true
+		},
+		{
+			"name": "removed_volume_matches_sink",
+			"pass": true
+		},
+		{
+			"name": "no_resample_before_interval",
+			"pass": true
+		},
+		{
+			"name": "hysteresis_between_thresholds",
+			"pass": true
+		},
+		{
+			"name": "stops_below_low_threshold",
+			"pass": true
+		},
+		{
+			"name": "drain_floor",
+			"pass": true
+		},
+		{
+			"name": "rejected_tick_has_no_effect",
+			"pass": true
+		},
+		{
+			"name": "reject_inverted_thresholds",
+			"pass": true
+		},
+		{
+			"name": "reject_unbounded_strip",
+			"pass": true
+		}
+	],
+	"pass": true,
+	"scope": "Private fixed-input boundary kernel: legacy parity, sink volume, localization, cadence, hysteresis, floor, momentum and rejection. Not a whole-scene performance measurement."
+}

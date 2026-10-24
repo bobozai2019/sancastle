@@ -3,7 +3,7 @@ import run_display as runner
 
 runner.CASES = {"snapshot": ("unified_edit_snapshot_preview_probe.gd", "snapshot", False),
                 **{"entry_" + key: ("unified_edit_live_preview_probe.gd", key, True)
-                   for key in ["main", "test1_capture", "test1_backwash", "test1_geometry"]},
+                   for key in ["main", "test1_geometry"]},
                 "views_core": ("unified_edit_views_probe.gd", "views_core", False),
                 "views_fatal": ("unified_edit_views_probe.gd", "views_fatal", False),
                 "handoff_preview": ("unified_edit_handoff_probe.gd", "handoff_preview", False),

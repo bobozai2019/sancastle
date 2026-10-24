@@ -1,0 +1,25 @@
+{
+  "command": [
+    "C:\\Users\\18205\\Documents\\Codex\\2026-10-24\\go\\work\\foam_video_deps\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+    "-framerate",
+    "5",
+    "-i",
+    "D:\\godot\\project\\sandcastle\\task\\water_foam_visual\\验收\\G3\\natural_shore_v1\\test1_geometry\\natural_%03d.png",
+    "-frames:v",
+    "121",
+    "-c:v",
+    "libx264",
+    "-crf",
+    "18",
+    "-pix_fmt",
+    "yuv420p",
+    "D:\\godot\\project\\sandcastle\\task\\water_foam_visual\\验收\\G3\\natural_shore_v1\\test1_geometry\\natural_simulation_time.mp4"
+  ],
+  "frames": 121,
+  "fps": 5,
+  "source_time_s": [
+    0,
+    24
+  ],
+  "note": "Completed simulation time axis; not wall-clock performance footage."
+}

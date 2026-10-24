@@ -1,0 +1,49 @@
+{
+  "samples": 37,
+  "accepted": {
+    "min": 9,
+    "mean": 13.621621621621621,
+    "max": 20
+  },
+  "rejected": {
+    "min": 0,
+    "mean": 7.5675675675675675,
+    "max": 19
+  },
+  "used_trials": {
+    "min": 9,
+    "mean": 21.18918918918919,
+    "max": 39
+  },
+  "unused_trials": {
+    "min": 25,
+    "mean": 42.810810810810814,
+    "max": 55
+  },
+  "unused_reductions_mean": 85.62162162162163,
+  "all_reductions_per_tick": 129,
+  "unused_speed_tile_loads_mean": 87676.54054054055,
+  "unused_reduction_fraction": 0.6637335009428034,
+  "advance_seconds": {
+    "min": 0.0333333350718021,
+    "max": 0.0333333350718021
+  },
+  "source_drift": [],
+  "configuration_hash": "527da684df11d75ccc5067e8d44677020e4c377ccd52f9f2ed38b6fb33705bac",
+  "histogram": {
+    "10": 10,
+    "9": 5,
+    "33": 3,
+    "17": 3,
+    "35": 2,
+    "37": 4,
+    "27": 4,
+    "23": 1,
+    "13": 1,
+    "39": 1,
+    "30": 1,
+    "26": 1,
+    "32": 1
+  },
+  "note": "Counts from real decision snapshots, not a measured optimization or cost result."
+}

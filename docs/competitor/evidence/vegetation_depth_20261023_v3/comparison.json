@@ -1,0 +1,96 @@
+{
+  "scope": "Static shader comparison; no controlled Godot visual causality test and no runtime shader changes.",
+  "capture_sha256": "761aa980c2426f75a1fa7364bf6d2655ff4dd20ea76566e630ee5b53ea0ec5b2",
+  "source_ps_selector": "E5760 PS Resource3506 instructions 54-57,108-111,158-161,171-188",
+  "source_vs_selector": "E5760 VS Resource3505 instructions41-45",
+  "reference_delta_alpha": 0.1,
+  "inverse_size_example": 1.5617109537124634,
+  "source_view_z_delta_example": 0.06403233566511288,
+  "godot_front_view_z_delta_example": -0.06403233566511288,
+  "claims": {
+    "depth_delta_sign": "C3, fixed view/UV/scale, source observed subtracts (0.5-alpha)/w from view Z; Godot current front-view ray reconstruction produces opposite derivative.",
+    "white_cup_cause": "C1 plausible symptom attribution; has not isolated depth vs refraction/lighting by Godot A/B."
+  },
+  "artifacts": [
+    {
+      "path": "e5760.asm",
+      "bytes": 12399,
+      "sha256": "620a0c06eb7ffcd24cb388f2de518c93d175dd875af7b1534fa43cb02efe3aa1"
+    },
+    {
+      "path": "e5760.dxbc",
+      "bytes": 9656,
+      "sha256": "00aab4abd48763c30a7a0018e1cbc96110bc82e905505e11c569f4267072a055"
+    },
+    {
+      "path": "e5760_cb0.bin",
+      "bytes": 2240,
+      "sha256": "ae97d9974b30b791fbc11aee1f3d67ede29a50d8338d8e0e993a6e8365e36deb"
+    },
+    {
+      "path": "e5760_cb1.bin",
+      "bytes": 32,
+      "sha256": "2e0df9b2e560bf472d062174c6482ed5a2e1f2cd842ead98f727f639a99adfec"
+    },
+    {
+      "path": "e5760_vs.asm",
+      "bytes": 3012,
+      "sha256": "42b06d4ab6b975f67e128e07590ebeddf335ce9a6ebf6c50c65e303bc511fd18"
+    },
+    {
+      "path": "e5760_vs.dxbc",
+      "bytes": 2380,
+      "sha256": "3dbf80280f7bbf436051c22398196171f36399f683de4eb1571104ac38e77cab"
+    },
+    {
+      "path": "e6027.asm",
+      "bytes": 5914,
+      "sha256": "c2a6684baf4723433e4e6f35e1a2edfce5a836fd3acccb9026c9c2c8cb845fa1"
+    },
+    {
+      "path": "e6027.dxbc",
+      "bytes": 4416,
+      "sha256": "6b7870c1b83924ba8a7319d3bae374933ecff0873caa5109f3c2e7d8338e9961"
+    },
+    {
+      "path": "e6027_cb0.bin",
+      "bytes": 2208,
+      "sha256": "5b63864b00b7d71c4a73eba3fb246fb310ca0750b9b088e4474dc18ecf13a4a5"
+    },
+    {
+      "path": "e6027_cb1.bin",
+      "bytes": 16,
+      "sha256": "363a0ee6883021561a7891f63b03a5c8f0715a9ff81804456f2019cb6b8a8401"
+    },
+    {
+      "path": "e6027_vs.asm",
+      "bytes": 5326,
+      "sha256": "4c5deb779fb9b3a5bca9ebc0e3e1ac58d7fa8ff5ff9d1080c72581dddf73923e"
+    },
+    {
+      "path": "e6027_vs.dxbc",
+      "bytes": 4056,
+      "sha256": "19c2bc50402c753bc2a21061dd82d417edc5b450a1fe047018f20d67ecd8d45e"
+    },
+    {
+      "path": "export_vegetation_depth.py",
+      "bytes": 3375,
+      "sha256": "3d84ed58679a363595d0068c23080636598b9720c356c9a5b4a1cae27ad0718f"
+    },
+    {
+      "path": "godot_vegetation.gdshader",
+      "bytes": 4352,
+      "sha256": "802632735aad045b6e21e68c92d0ff9a9d64b09a928710b4e469ad70d11a2310"
+    },
+    {
+      "path": "godot_water.gdshader",
+      "bytes": 71029,
+      "sha256": "26a503bd375f88e43f7b1a7fdac1812fd2d7da4ad4217423aa5ae6d398ed0a61"
+    },
+    {
+      "path": "manifest.json",
+      "bytes": 23914,
+      "sha256": "7fc4edf922b9c258a933b0006ac17be6e6939812256664dbbdad9883bcfea14b"
+    }
+  ]
+}

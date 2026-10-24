@@ -1492,6 +1492,87 @@ layout_mode = 2
 autowrap_mode = 3
 theme_override_font_sizes/font_size = 12
 
+[node name="visual_foam_detail_scale_per_m" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_foam_detail_scale_per_m"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/visual_foam_detail_scale_per_m"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_foam_detail_scale_per_m/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "泡沫纹样密度"
+
+[node name="Value" type="SpinBox" parent="water/Margin/Rows/Scroll/Fields/visual_foam_detail_scale_per_m/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.5
+max_value = 12.0
+step = 0.1
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_foam_detail_scale_per_m"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_foam_hole_strength" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_foam_hole_strength"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/visual_foam_hole_strength"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_foam_hole_strength/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "泡沫破碎程度"
+
+[node name="Value" type="SpinBox" parent="water/Margin/Rows/Scroll/Fields/visual_foam_hole_strength/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.0
+max_value = 1.0
+step = 0.05
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_foam_hole_strength"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_foam_flow_cycle_s" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_foam_flow_cycle_s"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/visual_foam_flow_cycle_s"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_foam_flow_cycle_s/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "泡沫流动周期"
+
+[node name="Value" type="SpinBox" parent="water/Margin/Rows/Scroll/Fields/visual_foam_flow_cycle_s/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.5
+max_value = 8.0
+step = 0.5
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_foam_flow_cycle_s"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
 [node name="sand" type="Window" parent="."]
 title = "沙参数"
 size = Vector2i(780, 660)
@@ -3502,6 +3583,12 @@ text = "等待统计"
 [connection signal="color_changed" from="water/Margin/Rows/Scroll/Fields/visual_rdc_transmission_tint/Line/Value" to="water/Margin/Rows/Scroll/Fields/visual_rdc_transmission_tint" method="_color_changed"]
 
 [connection signal="color_changed" from="water/Margin/Rows/Scroll/Fields/visual_rdc_surface_color/Line/Value" to="water/Margin/Rows/Scroll/Fields/visual_rdc_surface_color" method="_color_changed"]
+
+[connection signal="value_changed" from="water/Margin/Rows/Scroll/Fields/visual_foam_detail_scale_per_m/Line/Value" to="water/Margin/Rows/Scroll/Fields/visual_foam_detail_scale_per_m" method="_changed"]
+
+[connection signal="value_changed" from="water/Margin/Rows/Scroll/Fields/visual_foam_hole_strength/Line/Value" to="water/Margin/Rows/Scroll/Fields/visual_foam_hole_strength" method="_changed"]
+
+[connection signal="value_changed" from="water/Margin/Rows/Scroll/Fields/visual_foam_flow_cycle_s/Line/Value" to="water/Margin/Rows/Scroll/Fields/visual_foam_flow_cycle_s" method="_changed"]
 
 [connection signal="close_requested" from="sand" to="." method="_close_group" binds=["sand"]]
 

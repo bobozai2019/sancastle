@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "water": "res://assets/water_material_natural_candidate/async_rdc_water.gdshader",
+  "water_sha256": "26a503bd375f88e43f7b1a7fdac1812fd2d7da4ad4217423aa5ae6d398ed0a61",
+  "bed": "res://assets/water_material_natural_candidate/async_rdc_bed.gdshader",
+  "bed_sha256": "afa82f79322754816c9574c74b0d9dcbc9d75ad45975f69296236b3ca8c9fa31",
+  "shader": "res://assets/water_sides/water_sides.gdshader",
+  "shader_sha256": "d69f77b8bd03a78461fb29ff5fd8084e1fc68b43b30ac9c0319a9b6dee757462",
+  "water_vertex_sha256": "f16c11f00c5b063d70c5b83e8a96c717313d45b700e5bcd4e1d95b1f49215d0e",
+  "bed_functions_sha256": "21f8748ebf0149f6a16f3d2a3f9414465686f01dfe4ff6b9b4a67b2633fd70bf",
+  "equivalent_sources": {
+    "res://assets/water_material_natural_candidate/rdc_water.gdshader": "16a93e3d6942429073cbcbcba73b59bbe42e80c61bf776e9f15170ca69fd8b89",
+    "res://assets/water_material_natural_candidate/rdc_bed.gdshader": "e36bf7c1d44dbc38f50c46b7405cf439a48fd6f427df6f95a3d5e3e50d650abf"
+  },
+  "scope": "Godot visual boundary adaptation; verbatim water vertex body and bed sampling, independent side optics; no physics writes."
+}

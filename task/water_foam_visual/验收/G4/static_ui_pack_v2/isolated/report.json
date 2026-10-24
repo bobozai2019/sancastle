@@ -1,0 +1,50 @@
+{
+  "pass": true,
+  "engine": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+  "pack": "D:\\godot\\project\\sandcastle\\task\\water_foam_visual\\验收\\G4\\static_ui_pack_v2\\sandcastle.pck",
+  "pack_sha256": "0f31991448429af4d70417c5403b5be2c06d6e30ee092c20180a4cb4a5212dd5",
+  "probe_sha256": "16d520ead9b24964e6bfa1b4eaf4cfb4aec854c0fd1f09e1a8d8fd87072027d3",
+  "runs": [
+    {
+      "scene": "main",
+      "pass": true,
+      "exit_code": 0,
+      "command": [
+        "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+        "--main-pack",
+        "D:\\godot\\project\\sandcastle\\task\\water_foam_visual\\验收\\G4\\static_ui_pack_v2\\sandcastle.pck",
+        "--script",
+        "D:\\godot\\project\\sandcastle\\tests\\integration\\export_startup_probe.gd",
+        "--log-file",
+        "D:\\godot\\project\\sandcastle\\task\\water_foam_visual\\验收\\G4\\static_ui_pack_v2\\isolated\\main\\engine.log",
+        "--",
+        "--output=D:/godot/project/sandcastle/task/water_foam_visual/验收/G4/static_ui_pack_v2/isolated/main",
+        "--scene=main",
+        "--ignore-parameter-config"
+      ],
+      "working_directory": "C:\\Users\\18205\\AppData\\Local\\Temp\\sandcastle_export_72fc_k0o",
+      "report": "D:\\godot\\project\\sandcastle\\task\\water_foam_visual\\验收\\G4\\static_ui_pack_v2\\isolated\\main\\report.json"
+    },
+    {
+      "scene": "test1_geometry",
+      "pass": true,
+      "exit_code": 0,
+      "command": [
+        "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+        "--main-pack",
+        "D:\\godot\\project\\sandcastle\\task\\water_foam_visual\\验收\\G4\\static_ui_pack_v2\\sandcastle.pck",
+        "--script",
+        "D:\\godot\\project\\sandcastle\\tests\\integration\\export_startup_probe.gd",
+        "--log-file",
+        "D:\\godot\\project\\sandcastle\\task\\water_foam_visual\\验收\\G4\\static_ui_pack_v2\\isolated\\test1_geometry\\engine.log",
+        "--",
+        "--output=D:/godot/project/sandcastle/task/water_foam_visual/验收/G4/static_ui_pack_v2/isolated/test1_geometry",
+        "--scene=test1_geometry",
+        "--ignore-parameter-config",
+        "--smoke"
+      ],
+      "working_directory": "C:\\Users\\18205\\AppData\\Local\\Temp\\sandcastle_export_72fc_k0o",
+      "report": "D:\\godot\\project\\sandcastle\\task\\water_foam_visual\\验收\\G4\\static_ui_pack_v2\\isolated\\test1_geometry\\report.json"
+    }
+  ]
+}

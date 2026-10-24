@@ -231,12 +231,12 @@ def main():
     appendix_heading(number+2,appendix[1])
     paragraph(doc,'下表来自各正式 manifest 的 metadata.settings。只列入口实际配置相关项，不把烘焙时的 metadata.configuration 或历史 checks 当作当前后端开关。数值求解器为空导出值时由 water_numerics.gd 解析为默认 MUSCL 二阶；历史检查点缺失数值字段仍按一阶解释。')
     keys=['water_policy','signed_speed_m_s','dig_amount_m3','fill_amount_m3','enable_erosion','enable_brush_water','foam_enabled','gravel_enabled','gravel_count','local_front_history','prototype_local_front_wide_field','render_subdivision','sand_cohesion_yield_height_m','use_player_camera']
-    cases=['main','test1_capture','test1_backwash','test1_geometry'];settings=[]
+    cases=['main','test1_geometry'];settings=[]
     for case in cases:
         path=f'assets/unified_edit/presentation/{case}.json';add_source(path)
         settings.append(json.loads((ROOT/path).read_text(encoding='utf-8'))['metadata']['settings'])
     rows=[[key]+[str(d.get(key,'未声明')) for d in settings] for key in keys]
-    table(doc,['设置','main','capture','backwash','geometry'],rows,[70,25,25,25,25])
+    table(doc,['设置','main','geometry'],rows,[90,40,40])
     appendix_heading(number+3,appendix[2])
     paragraph(doc,'动态字段映射来自 main manifest，并由 material_plan 对照静态场景校验。每项列出 shader 和采样器到公共完成态字段的关系；材质静态参数以实际 .tscn 资源为准，不把旧烘焙参数快照视为运行中的全部有效值。')
     metadata=json.loads((ROOT/'assets/unified_edit/presentation/main.json').read_text(encoding='utf-8'))['metadata']

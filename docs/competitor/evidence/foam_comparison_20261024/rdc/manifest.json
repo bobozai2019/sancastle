@@ -1,0 +1,609 @@
+{
+  "source": {
+    "path": "D:/godot/project/sandcastle/sandcastlegame/test1.rdc",
+    "bytes": 225224034,
+    "sha256": "761aa980c2426f75a1fa7364bf6d2655ff4dd20ea76566e630ee5b53ea0ec5b2"
+  },
+  "script": {
+    "path": "D:/godot/project/sandcastle/docs/competitor/tools/export_foam_comparison.py",
+    "bytes": 5990,
+    "sha256": "8b3043aee8ce14a8c9b84d34509fd21294294d2cf014c8ca486fdfefb87bdc13"
+  },
+  "exports": [
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e1550_cs.dxbc",
+      "bytes": 5072,
+      "sha256": "3c09ec7596cba811b72e42ba020bd818c8bfd6abdfe608a07d304dd16e406aeb",
+      "selector": "E1550 cs rawBytes",
+      "kind": "compiled_shader"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e1550_cs.asm",
+      "bytes": 6480,
+      "sha256": "50f05c5645c3bef39d8ab509be462df6c93807ad6a9a3184f3bdaf1993887e70",
+      "selector": "E1550 cs disassembly",
+      "kind": "derived_disassembly"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e1550_cs_cb0.bin",
+      "bytes": 2448,
+      "sha256": "e79d8626af882882069b9c5c83062215e3d556ff355cff2b4f3d36cf7f4c1ae4",
+      "selector": "E1550 cs cb0 ResourceId::336 offset=297984 length=2448",
+      "kind": "runtime_constants"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e1550_cs_read_139573.bin",
+      "bytes": 2097152,
+      "sha256": "84a1cc25d7184248a68b0b66690625556b611e20c83222ce598ef5038424bf64",
+      "selector": "E1550 cs read index=0 ResourceId::139573 whole buffer offset0 length=2097152",
+      "kind": "runtime_buffer"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e1550_cs_write_139582.bin",
+      "bytes": 8388608,
+      "sha256": "8bdd276437285d69383a5cb1c3c1a011235e7a3a66ef5a0379d4d0f7d2eb108a",
+      "selector": "E1550 cs write index=0 ResourceId::139582 whole buffer offset0 length=8388608",
+      "kind": "runtime_buffer"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e1634_cs.dxbc",
+      "bytes": 1304,
+      "sha256": "aca0e9ba7379cad90f74197b910a480e1fcbc059e47341cab71682c5968755c1",
+      "selector": "E1634 cs rawBytes",
+      "kind": "compiled_shader"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e1634_cs.asm",
+      "bytes": 1853,
+      "sha256": "59fc54a0003e0ff698c6e60becd966c549019f10c45402d623da9dd2a46595c4",
+      "selector": "E1634 cs disassembly",
+      "kind": "derived_disassembly"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e1634_cs_cb0.bin",
+      "bytes": 2416,
+      "sha256": "ed334debf2bdfc600537b26d1a4917b111389d4fb429dd4f6c93cd37cd8f2cfa",
+      "selector": "E1634 cs cb0 ResourceId::336 offset=340736 length=2416",
+      "kind": "runtime_constants"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e1634_cs_write_139575.bin",
+      "bytes": 2097152,
+      "sha256": "80323eb041cffcd676b7944954e334b8082ea6131eabb8f24932aff8091ed961",
+      "selector": "E1634 cs write index=0 ResourceId::139575 whole buffer offset0 length=2097152",
+      "kind": "runtime_buffer"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e1634_cs_write_139576.bin",
+      "bytes": 2097152,
+      "sha256": "de52684f707ebf7fc342787b5dfcb9dea49abd6b0a52ebdcff2d5157a5916623",
+      "selector": "E1634 cs write index=1 ResourceId::139576 whole buffer offset0 length=2097152",
+      "kind": "runtime_buffer"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e1634_cs_write_139579.bin",
+      "bytes": 20,
+      "sha256": "6e72e9d9b4beebae55bd48c36402cdcb418a5a58bdc41c307ac436aff30344f8",
+      "selector": "E1634 cs write index=2 ResourceId::139579 whole buffer offset0 length=20",
+      "kind": "runtime_buffer"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e1634_cs_write_139581.bin",
+      "bytes": 20,
+      "sha256": "6e72e9d9b4beebae55bd48c36402cdcb418a5a58bdc41c307ac436aff30344f8",
+      "selector": "E1634 cs write index=3 ResourceId::139581 whole buffer offset0 length=20",
+      "kind": "runtime_buffer"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e1634_cs_write_139582.bin",
+      "bytes": 8388608,
+      "sha256": "56c5e9017b267807a7de5756dc8edc3c0a2324b3e78c4968fc62cea426ac4fd5",
+      "selector": "E1634 cs write index=4 ResourceId::139582 whole buffer offset0 length=8388608",
+      "kind": "runtime_buffer"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e3867_cs.dxbc",
+      "bytes": 6056,
+      "sha256": "e5b7cabc819c0a16d344a6c8dd44ff163b58973cb9c11212d72d155e29d85d59",
+      "selector": "E3867 cs rawBytes",
+      "kind": "compiled_shader"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e3867_cs.asm",
+      "bytes": 8599,
+      "sha256": "7cd4270b7bf36c1b1288f44fe2a34597359fe55933107ab7dff90cbd3579b968",
+      "selector": "E3867 cs disassembly",
+      "kind": "derived_disassembly"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e3867_cs_cb0.bin",
+      "bytes": 2240,
+      "sha256": "4089bce54fb6757b1a11ef941b05e6163c7c18f9acb1f3c04b77174da413c24e",
+      "selector": "E3867 cs cb0 ResourceId::336 offset=788992 length=2240",
+      "kind": "runtime_constants"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e3867_cs_read_139720.bin",
+      "bytes": 262144,
+      "sha256": "77fb1885fbd87339581e67e1f1d290f69262c1dff40a11dee03c36d65f70e1a4",
+      "selector": "E3867 cs read index=0 ResourceId::139720 mip0 slice0 sample0",
+      "kind": "runtime_texels"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e3867_cs_write_139722.bin",
+      "bytes": 262144,
+      "sha256": "8e04ac10e887f3272fd7fcb4d7c749d14f707f643980ca4f76234b3b0750e6b9",
+      "selector": "E3867 cs write index=0 ResourceId::139722 mip0 slice0 sample0",
+      "kind": "runtime_texels"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e3872_cs.dxbc",
+      "bytes": 548,
+      "sha256": "67486a3fdb4eca905139ff92faa67a32af42827ca4343c8d589129223f267415",
+      "selector": "E3872 cs rawBytes",
+      "kind": "compiled_shader"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e3872_cs.asm",
+      "bytes": 1061,
+      "sha256": "7a88235af62ad8e6f4277e22dcfbde71644f6224e65a201e86459830f8fa22a6",
+      "selector": "E3872 cs disassembly",
+      "kind": "derived_disassembly"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e3872_cs_write_139722.bin",
+      "bytes": 262144,
+      "sha256": "b09a3364bfc079267f44c02ec70bd091111a24643f329f6b81e12e8f93dc7100",
+      "selector": "E3872 cs write index=0 ResourceId::139722 mip0 slice0 sample0",
+      "kind": "runtime_texels"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e3872_cs_write_139723.bin",
+      "bytes": 262144,
+      "sha256": "9f211d303b8384813ad62695a9c55eba6a80e038bccb54d7eee49550a65e1f0d",
+      "selector": "E3872 cs write index=1 ResourceId::139723 mip0 slice0 sample0",
+      "kind": "runtime_texels"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e6196_vs.dxbc",
+      "bytes": 1112,
+      "sha256": "58425558f8c03af4d8b19adaac35c1d5824bc011160dfe5cdf4fe1abe2de022c",
+      "selector": "E6196 vs rawBytes",
+      "kind": "compiled_shader"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e6196_vs.asm",
+      "bytes": 1431,
+      "sha256": "ae13a6fcdf6b1499df6fa9273ba854856634084153ab9781514a5f4c66074ab5",
+      "selector": "E6196 vs disassembly",
+      "kind": "derived_disassembly"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e6196_vs_cb0.bin",
+      "bytes": 1056,
+      "sha256": "be8b553a9fd2898d7e7aa892b7ef397c8966fec4f210c63072c9962527452b60",
+      "selector": "E6196 vs cb0 ResourceId::336 offset=1526528 length=1056",
+      "kind": "runtime_constants"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e6196_vs_cb1.bin",
+      "bytes": 64,
+      "sha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376",
+      "selector": "E6196 vs cb1 ResourceId::336 offset=1528832 length=64",
+      "kind": "runtime_constants"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e6196_vs_read_139582.bin",
+      "bytes": 8388608,
+      "sha256": "dd6dc0eccaa6e7e8727300f62d62f8c3c5bb40d515830dad5d5dca0f2b1b0817",
+      "selector": "E6196 vs read index=0 ResourceId::139582 whole buffer offset0 length=8388608",
+      "kind": "runtime_buffer"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e6196_vs_read_139575.bin",
+      "bytes": 2097152,
+      "sha256": "79491c22b235a0d5cfbd05d250f7781d5ad8537978400adc81018db78b4617e8",
+      "selector": "E6196 vs read index=1 ResourceId::139575 whole buffer offset0 length=2097152",
+      "kind": "runtime_buffer"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e6196_vsout.bin",
+      "bytes": 4792000,
+      "sha256": "5f4b9737c5713e3e11e21688cafb428522fb7ea9752b57a8a9fe756d36908250",
+      "selector": "E6196 VSOut instance0 view0 ResourceId::1000000000000000580 offset=0 stride=40 requested_bytes=4792000",
+      "kind": "runtime_vsout"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e6196_ps.dxbc",
+      "bytes": 3180,
+      "sha256": "d3650a9711d811e028331d5ac0e1919f61c703c10ce4b549bb68cbd918200bea",
+      "selector": "E6196 ps rawBytes",
+      "kind": "compiled_shader"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e6196_ps.asm",
+      "bytes": 4115,
+      "sha256": "7561583efdb293fceb1773868d451217009f895e0bebbc1d5c4c11977824babf",
+      "selector": "E6196 ps disassembly",
+      "kind": "derived_disassembly"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e6196_ps_cb0.bin",
+      "bytes": 2240,
+      "sha256": "ad0c9e61e4e176162f4fc5079ffd974dc9609029a95f63bf0abbb0f584e71602",
+      "selector": "E6196 ps cb0 ResourceId::336 offset=1526528 length=2240",
+      "kind": "runtime_constants"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e6196_ps_read_139590.bin",
+      "bytes": 8192,
+      "sha256": "5292a36471ca0d7b2c4a1bcb5ca088d4348696c7d5253e19a3a3005bc2d829cd",
+      "selector": "E6196 ps read index=1 ResourceId::139590 whole buffer offset0 length=8192",
+      "kind": "runtime_buffer"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e6196_ps_read_139723.bin",
+      "bytes": 262144,
+      "sha256": "351dedd96d50c977a0499b8fce6876675a01b4c91418bb45a8248b959403b150",
+      "selector": "E6196 ps read index=2 ResourceId::139723 mip0 slice0 sample0",
+      "kind": "runtime_texels"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/capture_thumbnail.png",
+      "bytes": 3092510,
+      "sha256": "c60827834fa2f6d52a0dfa1c58784bb16cd404c4475d907bc37fb22ddb3d23e5",
+      "selector": "CaptureFile.GetThumbnail PNG maxsize2048",
+      "kind": "derived_thumbnail"
+    }
+  ],
+  "events": [
+    {
+      "event": 1550,
+      "num_indices": 0,
+      "num_instances": 0,
+      "stages": {
+        "cs": {
+          "constants": [
+            {
+              "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e1550_cs_cb0.bin",
+              "bytes": 2448,
+              "sha256": "e79d8626af882882069b9c5c83062215e3d556ff355cff2b4f3d36cf7f4c1ae4",
+              "selector": "E1550 cs cb0 ResourceId::336 offset=297984 length=2448",
+              "kind": "runtime_constants"
+            }
+          ],
+          "resources": [
+            {
+              "access": "read",
+              "index": 0,
+              "resource": "ResourceId::139573",
+              "raw": {
+                "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e1550_cs_read_139573.bin",
+                "bytes": 2097152,
+                "sha256": "84a1cc25d7184248a68b0b66690625556b611e20c83222ce598ef5038424bf64",
+                "selector": "E1550 cs read index=0 ResourceId::139573 whole buffer offset0 length=2097152",
+                "kind": "runtime_buffer"
+              }
+            },
+            {
+              "access": "write",
+              "index": 0,
+              "resource": "ResourceId::139582",
+              "raw": {
+                "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e1550_cs_write_139582.bin",
+                "bytes": 8388608,
+                "sha256": "8bdd276437285d69383a5cb1c3c1a011235e7a3a66ef5a0379d4d0f7d2eb108a",
+                "selector": "E1550 cs write index=0 ResourceId::139582 whole buffer offset0 length=8388608",
+                "kind": "runtime_buffer"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "event": 1634,
+      "num_indices": 0,
+      "num_instances": 0,
+      "stages": {
+        "cs": {
+          "constants": [
+            {
+              "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e1634_cs_cb0.bin",
+              "bytes": 2416,
+              "sha256": "ed334debf2bdfc600537b26d1a4917b111389d4fb429dd4f6c93cd37cd8f2cfa",
+              "selector": "E1634 cs cb0 ResourceId::336 offset=340736 length=2416",
+              "kind": "runtime_constants"
+            }
+          ],
+          "resources": [
+            {
+              "access": "write",
+              "index": 0,
+              "resource": "ResourceId::139575",
+              "raw": {
+                "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e1634_cs_write_139575.bin",
+                "bytes": 2097152,
+                "sha256": "80323eb041cffcd676b7944954e334b8082ea6131eabb8f24932aff8091ed961",
+                "selector": "E1634 cs write index=0 ResourceId::139575 whole buffer offset0 length=2097152",
+                "kind": "runtime_buffer"
+              }
+            },
+            {
+              "access": "write",
+              "index": 1,
+              "resource": "ResourceId::139576",
+              "raw": {
+                "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e1634_cs_write_139576.bin",
+                "bytes": 2097152,
+                "sha256": "de52684f707ebf7fc342787b5dfcb9dea49abd6b0a52ebdcff2d5157a5916623",
+                "selector": "E1634 cs write index=1 ResourceId::139576 whole buffer offset0 length=2097152",
+                "kind": "runtime_buffer"
+              }
+            },
+            {
+              "access": "write",
+              "index": 2,
+              "resource": "ResourceId::139579",
+              "raw": {
+                "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e1634_cs_write_139579.bin",
+                "bytes": 20,
+                "sha256": "6e72e9d9b4beebae55bd48c36402cdcb418a5a58bdc41c307ac436aff30344f8",
+                "selector": "E1634 cs write index=2 ResourceId::139579 whole buffer offset0 length=20",
+                "kind": "runtime_buffer"
+              }
+            },
+            {
+              "access": "write",
+              "index": 3,
+              "resource": "ResourceId::139581",
+              "raw": {
+                "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e1634_cs_write_139581.bin",
+                "bytes": 20,
+                "sha256": "6e72e9d9b4beebae55bd48c36402cdcb418a5a58bdc41c307ac436aff30344f8",
+                "selector": "E1634 cs write index=3 ResourceId::139581 whole buffer offset0 length=20",
+                "kind": "runtime_buffer"
+              }
+            },
+            {
+              "access": "write",
+              "index": 4,
+              "resource": "ResourceId::139582",
+              "raw": {
+                "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e1634_cs_write_139582.bin",
+                "bytes": 8388608,
+                "sha256": "56c5e9017b267807a7de5756dc8edc3c0a2324b3e78c4968fc62cea426ac4fd5",
+                "selector": "E1634 cs write index=4 ResourceId::139582 whole buffer offset0 length=8388608",
+                "kind": "runtime_buffer"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "event": 3867,
+      "num_indices": 0,
+      "num_instances": 0,
+      "stages": {
+        "cs": {
+          "constants": [
+            {
+              "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e3867_cs_cb0.bin",
+              "bytes": 2240,
+              "sha256": "4089bce54fb6757b1a11ef941b05e6163c7c18f9acb1f3c04b77174da413c24e",
+              "selector": "E3867 cs cb0 ResourceId::336 offset=788992 length=2240",
+              "kind": "runtime_constants"
+            }
+          ],
+          "resources": [
+            {
+              "access": "read",
+              "index": 0,
+              "resource": "ResourceId::139720",
+              "texture": {
+                "width": 256,
+                "height": 128,
+                "format": "R16G16B16A16_FLOAT"
+              },
+              "raw": {
+                "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e3867_cs_read_139720.bin",
+                "bytes": 262144,
+                "sha256": "77fb1885fbd87339581e67e1f1d290f69262c1dff40a11dee03c36d65f70e1a4",
+                "selector": "E3867 cs read index=0 ResourceId::139720 mip0 slice0 sample0",
+                "kind": "runtime_texels"
+              }
+            },
+            {
+              "access": "write",
+              "index": 0,
+              "resource": "ResourceId::139722",
+              "texture": {
+                "width": 256,
+                "height": 128,
+                "format": "R16G16B16A16_FLOAT"
+              },
+              "raw": {
+                "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e3867_cs_write_139722.bin",
+                "bytes": 262144,
+                "sha256": "8e04ac10e887f3272fd7fcb4d7c749d14f707f643980ca4f76234b3b0750e6b9",
+                "selector": "E3867 cs write index=0 ResourceId::139722 mip0 slice0 sample0",
+                "kind": "runtime_texels"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "event": 3872,
+      "num_indices": 0,
+      "num_instances": 0,
+      "stages": {
+        "cs": {
+          "constants": [],
+          "resources": [
+            {
+              "access": "write",
+              "index": 0,
+              "resource": "ResourceId::139722",
+              "texture": {
+                "width": 256,
+                "height": 128,
+                "format": "R16G16B16A16_FLOAT"
+              },
+              "raw": {
+                "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e3872_cs_write_139722.bin",
+                "bytes": 262144,
+                "sha256": "b09a3364bfc079267f44c02ec70bd091111a24643f329f6b81e12e8f93dc7100",
+                "selector": "E3872 cs write index=0 ResourceId::139722 mip0 slice0 sample0",
+                "kind": "runtime_texels"
+              }
+            },
+            {
+              "access": "write",
+              "index": 1,
+              "resource": "ResourceId::139723",
+              "texture": {
+                "width": 256,
+                "height": 128,
+                "format": "R16G16B16A16_FLOAT"
+              },
+              "raw": {
+                "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e3872_cs_write_139723.bin",
+                "bytes": 262144,
+                "sha256": "9f211d303b8384813ad62695a9c55eba6a80e038bccb54d7eee49550a65e1f0d",
+                "selector": "E3872 cs write index=1 ResourceId::139723 mip0 slice0 sample0",
+                "kind": "runtime_texels"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "event": 6196,
+      "num_indices": 6,
+      "num_instances": 29950,
+      "stages": {
+        "vs": {
+          "constants": [
+            {
+              "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e6196_vs_cb0.bin",
+              "bytes": 1056,
+              "sha256": "be8b553a9fd2898d7e7aa892b7ef397c8966fec4f210c63072c9962527452b60",
+              "selector": "E6196 vs cb0 ResourceId::336 offset=1526528 length=1056",
+              "kind": "runtime_constants"
+            },
+            {
+              "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e6196_vs_cb1.bin",
+              "bytes": 64,
+              "sha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376",
+              "selector": "E6196 vs cb1 ResourceId::336 offset=1528832 length=64",
+              "kind": "runtime_constants"
+            }
+          ],
+          "resources": [
+            {
+              "access": "read",
+              "index": 0,
+              "resource": "ResourceId::139582",
+              "raw": {
+                "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e6196_vs_read_139582.bin",
+                "bytes": 8388608,
+                "sha256": "dd6dc0eccaa6e7e8727300f62d62f8c3c5bb40d515830dad5d5dca0f2b1b0817",
+                "selector": "E6196 vs read index=0 ResourceId::139582 whole buffer offset0 length=8388608",
+                "kind": "runtime_buffer"
+              }
+            },
+            {
+              "access": "read",
+              "index": 1,
+              "resource": "ResourceId::139575",
+              "raw": {
+                "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e6196_vs_read_139575.bin",
+                "bytes": 2097152,
+                "sha256": "79491c22b235a0d5cfbd05d250f7781d5ad8537978400adc81018db78b4617e8",
+                "selector": "E6196 vs read index=1 ResourceId::139575 whole buffer offset0 length=2097152",
+                "kind": "runtime_buffer"
+              }
+            }
+          ]
+        },
+        "ps": {
+          "constants": [
+            {
+              "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e6196_ps_cb0.bin",
+              "bytes": 2240,
+              "sha256": "ad0c9e61e4e176162f4fc5079ffd974dc9609029a95f63bf0abbb0f584e71602",
+              "selector": "E6196 ps cb0 ResourceId::336 offset=1526528 length=2240",
+              "kind": "runtime_constants"
+            }
+          ],
+          "resources": [
+            {
+              "access": "read",
+              "index": 0,
+              "resource": "ResourceId::3344",
+              "texture": {
+                "width": 2048,
+                "height": 2048,
+                "format": "D32"
+              }
+            },
+            {
+              "access": "read",
+              "index": 1,
+              "resource": "ResourceId::139590",
+              "raw": {
+                "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e6196_ps_read_139590.bin",
+                "bytes": 8192,
+                "sha256": "5292a36471ca0d7b2c4a1bcb5ca088d4348696c7d5253e19a3a3005bc2d829cd",
+                "selector": "E6196 ps read index=1 ResourceId::139590 whole buffer offset0 length=8192",
+                "kind": "runtime_buffer"
+              }
+            },
+            {
+              "access": "read",
+              "index": 2,
+              "resource": "ResourceId::139723",
+              "texture": {
+                "width": 256,
+                "height": 128,
+                "format": "R16G16B16A16_FLOAT"
+              },
+              "raw": {
+                "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e6196_ps_read_139723.bin",
+                "bytes": 262144,
+                "sha256": "351dedd96d50c977a0499b8fce6876675a01b4c91418bb45a8248b959403b150",
+                "selector": "E6196 ps read index=2 ResourceId::139723 mip0 slice0 sample0",
+                "kind": "runtime_texels"
+              }
+            }
+          ]
+        }
+      },
+      "vsout": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/foam_comparison_20261024/rdc/e6196_vsout.bin",
+        "bytes": 4792000,
+        "sha256": "5f4b9737c5713e3e11e21688cafb428522fb7ea9752b57a8a9fe756d36908250",
+        "selector": "E6196 VSOut instance0 view0 ResourceId::1000000000000000580 offset=0 stride=40 requested_bytes=4792000",
+        "kind": "runtime_vsout"
+      },
+      "vsout_stride": 40
+    }
+  ],
+  "pass": true,
+  "scope": "Captured foam state, geometry and shading; no original lifetime, emission or real-time cost claim.",
+  "tool": {
+    "version": "1.46",
+    "command": "D:/other_software/RenderDoc/qrenderdoc.exe --python D:/godot/project/sandcastle/docs/competitor/tools/export_foam_comparison.py"
+  },
+  "open": "<Result: 'Success'>",
+  "replay": "<Result: 'Success'>",
+  "source_after": {
+    "path": "D:/godot/project/sandcastle/sandcastlegame/test1.rdc",
+    "bytes": 225224034,
+    "sha256": "761aa980c2426f75a1fa7364bf6d2655ff4dd20ea76566e630ee5b53ea0ec5b2"
+  }
+}

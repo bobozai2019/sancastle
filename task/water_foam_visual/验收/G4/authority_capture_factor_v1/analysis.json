@@ -1,0 +1,1575 @@
+{
+  "scope": "Exact original bytes and float component magnitudes, no tolerance. Raw control identity differences are diagnostic and do not by themselves imply changed physics.",
+  "process": {
+    "exit_code": 1,
+    "timeout": false,
+    "source_drift": []
+  },
+  "probe_pass": false,
+  "checks": 1003,
+  "failed_checks": [
+    "end_only_AA_authority_sand",
+    "end_only_AA_authority_water",
+    "end_only_AA_authority_momentum_x",
+    "end_only_AA_authority_momentum_z",
+    "end_only_AA_authority_sediment",
+    "end_only_AA_authority_flux",
+    "end_only_AA_history_foam_0",
+    "end_only_AA_history_bed_0",
+    "end_only_AA_history_foam_1",
+    "end_only_AA_history_bed_1",
+    "end_only_AA_front",
+    "end_only_AB_authority_sand",
+    "end_only_AB_authority_water",
+    "end_only_AB_authority_momentum_x",
+    "end_only_AB_authority_momentum_z",
+    "end_only_AB_authority_sediment",
+    "end_only_AB_authority_flux",
+    "end_only_AB_history_foam_0",
+    "end_only_AB_history_bed_0",
+    "end_only_AB_history_foam_1",
+    "end_only_AB_history_bed_1",
+    "end_only_AB_front",
+    "end_only_AA_all_native_fields",
+    "end_only_AB_all_native_fields",
+    "end_only_AA_all_native_spare",
+    "end_only_AB_all_native_spare",
+    "end_only_AA_all_native_foam",
+    "end_only_AB_all_native_foam",
+    "end_only_AA_all_native_histories",
+    "end_only_AB_all_native_histories",
+    "end_only_AA_all_native_control",
+    "end_only_AB_all_native_control",
+    "with_middle_AA_authority_sand",
+    "with_middle_AA_authority_water",
+    "with_middle_AA_authority_momentum_x",
+    "with_middle_AA_authority_momentum_z",
+    "with_middle_AA_authority_sediment",
+    "with_middle_AA_authority_flux",
+    "with_middle_AA_history_foam_0",
+    "with_middle_AA_history_bed_0",
+    "with_middle_AA_history_foam_1",
+    "with_middle_AA_history_bed_1",
+    "with_middle_AA_front",
+    "with_middle_AB_authority_sand",
+    "with_middle_AB_authority_water",
+    "with_middle_AB_authority_momentum_x",
+    "with_middle_AB_authority_momentum_z",
+    "with_middle_AB_authority_sediment",
+    "with_middle_AB_authority_flux",
+    "with_middle_AB_history_foam_0",
+    "with_middle_AB_history_bed_0",
+    "with_middle_AB_history_foam_1",
+    "with_middle_AB_history_bed_1",
+    "with_middle_AB_front",
+    "with_middle_AA_all_native_fields",
+    "with_middle_AB_all_native_fields",
+    "with_middle_AA_all_native_spare",
+    "with_middle_AB_all_native_spare",
+    "with_middle_AA_all_native_foam",
+    "with_middle_AB_all_native_foam",
+    "with_middle_AA_all_native_histories",
+    "with_middle_AB_all_native_histories",
+    "with_middle_AA_all_native_control",
+    "with_middle_AB_all_native_control"
+  ],
+  "analysis_tool_sha256": "07730d832e42a10ff6a97c378aa42619031612fdf41a449a66d7073a3233424f",
+  "groups": {
+    "end_only": {
+      "AA": {
+        "fields": {
+          "rock": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "sand": {
+            "bytes_equal": false,
+            "different_components": 5,
+            "max_abs": 2.384185791015625e-07
+          },
+          "water": {
+            "bytes_equal": false,
+            "different_components": 121,
+            "max_abs": 2.9802322387695312e-08
+          },
+          "momentum_x": {
+            "bytes_equal": false,
+            "different_components": 359,
+            "max_abs": 1.752050593495369e-08
+          },
+          "momentum_z": {
+            "bytes_equal": false,
+            "different_components": 336,
+            "max_abs": 1.4901161193847656e-08
+          },
+          "sediment": {
+            "bytes_equal": false,
+            "different_components": 248,
+            "max_abs": 3.4924596548080444e-10
+          },
+          "wetness": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "compaction": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "obstacle": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "flux": {
+            "bytes_equal": false,
+            "different_components": 707,
+            "max_abs": 3.4924596548080444e-09
+          }
+        },
+        "native_groups_exact": {
+          "version": true,
+          "current_index": true,
+          "fields": false,
+          "spare": false,
+          "material": true,
+          "foam": false,
+          "histories": false,
+          "control": false
+        },
+        "metadata_exact": {
+          "configuration": true,
+          "simulation": true,
+          "selection": true,
+          "wave_requests": true,
+          "wave_start_times": true,
+          "cohesion_yield_height_m": true,
+          "sim_tick": true,
+          "advanced_time_s": true
+        },
+        "control_u32_differences": [
+          {
+            "word": 2,
+            "a": 1002,
+            "b": 1003
+          }
+        ],
+        "physical_fields_exact": false
+      },
+      "AB": {
+        "fields": {
+          "rock": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "sand": {
+            "bytes_equal": false,
+            "different_components": 5,
+            "max_abs": 2.384185791015625e-07
+          },
+          "water": {
+            "bytes_equal": false,
+            "different_components": 121,
+            "max_abs": 2.9802322387695312e-08
+          },
+          "momentum_x": {
+            "bytes_equal": false,
+            "different_components": 359,
+            "max_abs": 1.752050593495369e-08
+          },
+          "momentum_z": {
+            "bytes_equal": false,
+            "different_components": 336,
+            "max_abs": 1.4901161193847656e-08
+          },
+          "sediment": {
+            "bytes_equal": false,
+            "different_components": 248,
+            "max_abs": 3.4924596548080444e-10
+          },
+          "wetness": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "compaction": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "obstacle": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "flux": {
+            "bytes_equal": false,
+            "different_components": 707,
+            "max_abs": 3.4924596548080444e-09
+          }
+        },
+        "native_groups_exact": {
+          "version": true,
+          "current_index": true,
+          "fields": false,
+          "spare": false,
+          "material": true,
+          "foam": false,
+          "histories": false,
+          "control": false
+        },
+        "metadata_exact": {
+          "configuration": true,
+          "simulation": true,
+          "selection": true,
+          "wave_requests": true,
+          "wave_start_times": true,
+          "cohesion_yield_height_m": true,
+          "sim_tick": true,
+          "advanced_time_s": true
+        },
+        "control_u32_differences": [
+          {
+            "word": 2,
+            "a": 1003,
+            "b": 1004
+          }
+        ],
+        "physical_fields_exact": false
+      }
+    },
+    "with_middle": {
+      "AA": {
+        "fields": {
+          "rock": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "sand": {
+            "bytes_equal": false,
+            "different_components": 4,
+            "max_abs": 1.1920928955078125e-07
+          },
+          "water": {
+            "bytes_equal": false,
+            "different_components": 225,
+            "max_abs": 5.960464477539063e-08
+          },
+          "momentum_x": {
+            "bytes_equal": false,
+            "different_components": 555,
+            "max_abs": 2.5087501853704453e-08
+          },
+          "momentum_z": {
+            "bytes_equal": false,
+            "different_components": 577,
+            "max_abs": 1.7695128917694092e-08
+          },
+          "sediment": {
+            "bytes_equal": false,
+            "different_components": 419,
+            "max_abs": 3.4924596548080444e-10
+          },
+          "wetness": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "compaction": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "obstacle": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "flux": {
+            "bytes_equal": false,
+            "different_components": 1168,
+            "max_abs": 4.6566128730773926e-09
+          }
+        },
+        "native_groups_exact": {
+          "version": true,
+          "current_index": true,
+          "fields": false,
+          "spare": false,
+          "material": true,
+          "foam": false,
+          "histories": false,
+          "control": false
+        },
+        "metadata_exact": {
+          "configuration": true,
+          "simulation": true,
+          "selection": true,
+          "wave_requests": true,
+          "wave_start_times": true,
+          "cohesion_yield_height_m": true,
+          "sim_tick": true,
+          "advanced_time_s": true
+        },
+        "control_u32_differences": [
+          {
+            "word": 2,
+            "a": 1005,
+            "b": 1006
+          }
+        ],
+        "physical_fields_exact": false
+      },
+      "AB": {
+        "fields": {
+          "rock": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "sand": {
+            "bytes_equal": false,
+            "different_components": 10,
+            "max_abs": 2.384185791015625e-07
+          },
+          "water": {
+            "bytes_equal": false,
+            "different_components": 341,
+            "max_abs": 5.960464477539063e-08
+          },
+          "momentum_x": {
+            "bytes_equal": false,
+            "different_components": 722,
+            "max_abs": 2.971501089632511e-08
+          },
+          "momentum_z": {
+            "bytes_equal": false,
+            "different_components": 757,
+            "max_abs": 2.7939677238464355e-08
+          },
+          "sediment": {
+            "bytes_equal": false,
+            "different_components": 627,
+            "max_abs": 3.4924596548080444e-10
+          },
+          "wetness": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "compaction": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "obstacle": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "flux": {
+            "bytes_equal": false,
+            "different_components": 1514,
+            "max_abs": 6.51925802230835e-09
+          }
+        },
+        "native_groups_exact": {
+          "version": true,
+          "current_index": true,
+          "fields": false,
+          "spare": false,
+          "material": true,
+          "foam": false,
+          "histories": false,
+          "control": false
+        },
+        "metadata_exact": {
+          "configuration": true,
+          "simulation": true,
+          "selection": true,
+          "wave_requests": true,
+          "wave_start_times": true,
+          "cohesion_yield_height_m": true,
+          "sim_tick": true,
+          "advanced_time_s": true
+        },
+        "control_u32_differences": [
+          {
+            "word": 2,
+            "a": 1006,
+            "b": 1007
+          }
+        ],
+        "physical_fields_exact": false
+      }
+    }
+  },
+  "middle_stages": {
+    "restored": {
+      "AA": {
+        "fields": {
+          "rock": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "sand": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "water": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "momentum_x": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "momentum_z": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "sediment": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "wetness": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "compaction": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "obstacle": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "flux": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          }
+        },
+        "native_groups_exact": {
+          "version": true,
+          "current_index": true,
+          "fields": true,
+          "spare": true,
+          "material": true,
+          "foam": true,
+          "histories": true,
+          "control": false
+        },
+        "metadata_exact": {
+          "configuration": true,
+          "simulation": true,
+          "selection": true,
+          "wave_requests": true,
+          "wave_start_times": true,
+          "cohesion_yield_height_m": true,
+          "sim_tick": true,
+          "advanced_time_s": true
+        },
+        "control_u32_differences": [
+          {
+            "word": 2,
+            "a": 1005,
+            "b": 1006
+          }
+        ],
+        "physical_fields_exact": true
+      },
+      "AB": {
+        "fields": {
+          "rock": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "sand": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "water": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "momentum_x": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "momentum_z": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "sediment": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "wetness": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "compaction": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "obstacle": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "flux": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          }
+        },
+        "native_groups_exact": {
+          "version": true,
+          "current_index": true,
+          "fields": true,
+          "spare": true,
+          "material": true,
+          "foam": true,
+          "histories": true,
+          "control": false
+        },
+        "metadata_exact": {
+          "configuration": true,
+          "simulation": true,
+          "selection": true,
+          "wave_requests": true,
+          "wave_start_times": true,
+          "cohesion_yield_height_m": true,
+          "sim_tick": true,
+          "advanced_time_s": true
+        },
+        "control_u32_differences": [
+          {
+            "word": 2,
+            "a": 1006,
+            "b": 1007
+          }
+        ],
+        "physical_fields_exact": true
+      }
+    },
+    "place_sand_0": {
+      "AA": {
+        "fields": {
+          "rock": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "sand": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "water": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "momentum_x": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "momentum_z": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "sediment": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "wetness": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "compaction": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "obstacle": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "flux": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          }
+        },
+        "native_groups_exact": {
+          "version": true,
+          "current_index": true,
+          "fields": true,
+          "spare": true,
+          "material": true,
+          "foam": true,
+          "histories": true,
+          "control": false
+        },
+        "metadata_exact": {
+          "configuration": true,
+          "simulation": true,
+          "selection": true,
+          "wave_requests": true,
+          "wave_start_times": true,
+          "cohesion_yield_height_m": true,
+          "sim_tick": true,
+          "advanced_time_s": true
+        },
+        "control_u32_differences": [
+          {
+            "word": 2,
+            "a": 1005,
+            "b": 1006
+          }
+        ],
+        "physical_fields_exact": true
+      },
+      "AB": {
+        "fields": {
+          "rock": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "sand": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "water": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "momentum_x": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "momentum_z": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "sediment": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "wetness": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "compaction": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "obstacle": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "flux": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          }
+        },
+        "native_groups_exact": {
+          "version": true,
+          "current_index": true,
+          "fields": true,
+          "spare": true,
+          "material": true,
+          "foam": true,
+          "histories": true,
+          "control": false
+        },
+        "metadata_exact": {
+          "configuration": true,
+          "simulation": true,
+          "selection": true,
+          "wave_requests": true,
+          "wave_start_times": true,
+          "cohesion_yield_height_m": true,
+          "sim_tick": true,
+          "advanced_time_s": true
+        },
+        "control_u32_differences": [
+          {
+            "word": 2,
+            "a": 1006,
+            "b": 1007
+          }
+        ],
+        "physical_fields_exact": true
+      }
+    },
+    "place_sand_1": {
+      "AA": {
+        "fields": {
+          "rock": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "sand": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "water": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "momentum_x": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "momentum_z": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "sediment": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "wetness": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "compaction": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "obstacle": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "flux": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          }
+        },
+        "native_groups_exact": {
+          "version": true,
+          "current_index": true,
+          "fields": true,
+          "spare": true,
+          "material": true,
+          "foam": true,
+          "histories": true,
+          "control": false
+        },
+        "metadata_exact": {
+          "configuration": true,
+          "simulation": true,
+          "selection": true,
+          "wave_requests": true,
+          "wave_start_times": true,
+          "cohesion_yield_height_m": true,
+          "sim_tick": true,
+          "advanced_time_s": true
+        },
+        "control_u32_differences": [
+          {
+            "word": 2,
+            "a": 1005,
+            "b": 1006
+          }
+        ],
+        "physical_fields_exact": true
+      },
+      "AB": {
+        "fields": {
+          "rock": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "sand": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "water": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "momentum_x": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "momentum_z": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "sediment": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "wetness": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "compaction": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "obstacle": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "flux": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          }
+        },
+        "native_groups_exact": {
+          "version": true,
+          "current_index": true,
+          "fields": true,
+          "spare": true,
+          "material": true,
+          "foam": true,
+          "histories": true,
+          "control": false
+        },
+        "metadata_exact": {
+          "configuration": true,
+          "simulation": true,
+          "selection": true,
+          "wave_requests": true,
+          "wave_start_times": true,
+          "cohesion_yield_height_m": true,
+          "sim_tick": true,
+          "advanced_time_s": true
+        },
+        "control_u32_differences": [
+          {
+            "word": 2,
+            "a": 1006,
+            "b": 1007
+          }
+        ],
+        "physical_fields_exact": true
+      }
+    },
+    "place_sand_30": {
+      "AA": {
+        "fields": {
+          "rock": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "sand": {
+            "bytes_equal": false,
+            "different_components": 2,
+            "max_abs": 5.960464477539063e-08
+          },
+          "water": {
+            "bytes_equal": false,
+            "different_components": 44,
+            "max_abs": 7.450580596923828e-09
+          },
+          "momentum_x": {
+            "bytes_equal": false,
+            "different_components": 77,
+            "max_abs": 2.444721758365631e-09
+          },
+          "momentum_z": {
+            "bytes_equal": false,
+            "different_components": 56,
+            "max_abs": 2.7939677238464355e-09
+          },
+          "sediment": {
+            "bytes_equal": false,
+            "different_components": 68,
+            "max_abs": 1.4551915228366852e-10
+          },
+          "wetness": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "compaction": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "obstacle": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "flux": {
+            "bytes_equal": false,
+            "different_components": 146,
+            "max_abs": 6.984919309616089e-10
+          }
+        },
+        "native_groups_exact": {
+          "version": true,
+          "current_index": true,
+          "fields": false,
+          "spare": false,
+          "material": true,
+          "foam": false,
+          "histories": false,
+          "control": false
+        },
+        "metadata_exact": {
+          "configuration": true,
+          "simulation": true,
+          "selection": true,
+          "wave_requests": true,
+          "wave_start_times": true,
+          "cohesion_yield_height_m": true,
+          "sim_tick": true,
+          "advanced_time_s": true
+        },
+        "control_u32_differences": [
+          {
+            "word": 2,
+            "a": 1005,
+            "b": 1006
+          }
+        ],
+        "physical_fields_exact": false
+      },
+      "AB": {
+        "fields": {
+          "rock": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "sand": {
+            "bytes_equal": false,
+            "different_components": 9,
+            "max_abs": 1.1920928955078125e-07
+          },
+          "water": {
+            "bytes_equal": false,
+            "different_components": 61,
+            "max_abs": 5.21540641784668e-08
+          },
+          "momentum_x": {
+            "bytes_equal": false,
+            "different_components": 130,
+            "max_abs": 1.1175870895385742e-08
+          },
+          "momentum_z": {
+            "bytes_equal": false,
+            "different_components": 114,
+            "max_abs": 1.6763806343078613e-08
+          },
+          "sediment": {
+            "bytes_equal": false,
+            "different_components": 99,
+            "max_abs": 3.4924596548080444e-10
+          },
+          "wetness": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "compaction": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "obstacle": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "flux": {
+            "bytes_equal": false,
+            "different_components": 278,
+            "max_abs": 4.0745362639427185e-09
+          }
+        },
+        "native_groups_exact": {
+          "version": true,
+          "current_index": true,
+          "fields": false,
+          "spare": false,
+          "material": true,
+          "foam": false,
+          "histories": false,
+          "control": false
+        },
+        "metadata_exact": {
+          "configuration": true,
+          "simulation": true,
+          "selection": true,
+          "wave_requests": true,
+          "wave_start_times": true,
+          "cohesion_yield_height_m": true,
+          "sim_tick": true,
+          "advanced_time_s": true
+        },
+        "control_u32_differences": [
+          {
+            "word": 2,
+            "a": 1006,
+            "b": 1007
+          }
+        ],
+        "physical_fields_exact": false
+      }
+    },
+    "remove_sand_0": {
+      "AA": {
+        "fields": {
+          "rock": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "sand": {
+            "bytes_equal": false,
+            "different_components": 2,
+            "max_abs": 5.960464477539063e-08
+          },
+          "water": {
+            "bytes_equal": false,
+            "different_components": 44,
+            "max_abs": 7.450580596923828e-09
+          },
+          "momentum_x": {
+            "bytes_equal": false,
+            "different_components": 77,
+            "max_abs": 2.444721758365631e-09
+          },
+          "momentum_z": {
+            "bytes_equal": false,
+            "different_components": 56,
+            "max_abs": 2.7939677238464355e-09
+          },
+          "sediment": {
+            "bytes_equal": false,
+            "different_components": 68,
+            "max_abs": 1.4551915228366852e-10
+          },
+          "wetness": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "compaction": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "obstacle": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "flux": {
+            "bytes_equal": false,
+            "different_components": 146,
+            "max_abs": 6.984919309616089e-10
+          }
+        },
+        "native_groups_exact": {
+          "version": true,
+          "current_index": true,
+          "fields": false,
+          "spare": false,
+          "material": true,
+          "foam": false,
+          "histories": false,
+          "control": false
+        },
+        "metadata_exact": {
+          "configuration": true,
+          "simulation": true,
+          "selection": true,
+          "wave_requests": true,
+          "wave_start_times": true,
+          "cohesion_yield_height_m": true,
+          "sim_tick": true,
+          "advanced_time_s": true
+        },
+        "control_u32_differences": [
+          {
+            "word": 2,
+            "a": 1005,
+            "b": 1006
+          }
+        ],
+        "physical_fields_exact": false
+      },
+      "AB": {
+        "fields": {
+          "rock": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "sand": {
+            "bytes_equal": false,
+            "different_components": 9,
+            "max_abs": 1.1920928955078125e-07
+          },
+          "water": {
+            "bytes_equal": false,
+            "different_components": 61,
+            "max_abs": 5.21540641784668e-08
+          },
+          "momentum_x": {
+            "bytes_equal": false,
+            "different_components": 130,
+            "max_abs": 1.1175870895385742e-08
+          },
+          "momentum_z": {
+            "bytes_equal": false,
+            "different_components": 114,
+            "max_abs": 1.6763806343078613e-08
+          },
+          "sediment": {
+            "bytes_equal": false,
+            "different_components": 99,
+            "max_abs": 3.4924596548080444e-10
+          },
+          "wetness": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "compaction": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "obstacle": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "flux": {
+            "bytes_equal": false,
+            "different_components": 278,
+            "max_abs": 4.0745362639427185e-09
+          }
+        },
+        "native_groups_exact": {
+          "version": true,
+          "current_index": true,
+          "fields": false,
+          "spare": false,
+          "material": true,
+          "foam": false,
+          "histories": false,
+          "control": false
+        },
+        "metadata_exact": {
+          "configuration": true,
+          "simulation": true,
+          "selection": true,
+          "wave_requests": true,
+          "wave_start_times": true,
+          "cohesion_yield_height_m": true,
+          "sim_tick": true,
+          "advanced_time_s": true
+        },
+        "control_u32_differences": [
+          {
+            "word": 2,
+            "a": 1006,
+            "b": 1007
+          }
+        ],
+        "physical_fields_exact": false
+      }
+    },
+    "remove_sand_1": {
+      "AA": {
+        "fields": {
+          "rock": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "sand": {
+            "bytes_equal": false,
+            "different_components": 2,
+            "max_abs": 5.960464477539063e-08
+          },
+          "water": {
+            "bytes_equal": false,
+            "different_components": 42,
+            "max_abs": 7.450580596923828e-09
+          },
+          "momentum_x": {
+            "bytes_equal": false,
+            "different_components": 82,
+            "max_abs": 2.6775524020195007e-09
+          },
+          "momentum_z": {
+            "bytes_equal": false,
+            "different_components": 61,
+            "max_abs": 2.7939677238464355e-09
+          },
+          "sediment": {
+            "bytes_equal": false,
+            "different_components": 66,
+            "max_abs": 1.3096723705530167e-10
+          },
+          "wetness": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "compaction": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "obstacle": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "flux": {
+            "bytes_equal": false,
+            "different_components": 144,
+            "max_abs": 1.367880031466484e-09
+          }
+        },
+        "native_groups_exact": {
+          "version": true,
+          "current_index": true,
+          "fields": false,
+          "spare": false,
+          "material": true,
+          "foam": false,
+          "histories": false,
+          "control": false
+        },
+        "metadata_exact": {
+          "configuration": true,
+          "simulation": true,
+          "selection": true,
+          "wave_requests": true,
+          "wave_start_times": true,
+          "cohesion_yield_height_m": true,
+          "sim_tick": true,
+          "advanced_time_s": true
+        },
+        "control_u32_differences": [
+          {
+            "word": 2,
+            "a": 1005,
+            "b": 1006
+          }
+        ],
+        "physical_fields_exact": false
+      },
+      "AB": {
+        "fields": {
+          "rock": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "sand": {
+            "bytes_equal": false,
+            "different_components": 8,
+            "max_abs": 1.1920928955078125e-07
+          },
+          "water": {
+            "bytes_equal": false,
+            "different_components": 62,
+            "max_abs": 4.842877388000488e-08
+          },
+          "momentum_x": {
+            "bytes_equal": false,
+            "different_components": 156,
+            "max_abs": 1.1175870895385742e-08
+          },
+          "momentum_z": {
+            "bytes_equal": false,
+            "different_components": 135,
+            "max_abs": 1.5832483768463135e-08
+          },
+          "sediment": {
+            "bytes_equal": false,
+            "different_components": 104,
+            "max_abs": 3.4924596548080444e-10
+          },
+          "wetness": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "compaction": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "obstacle": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "flux": {
+            "bytes_equal": false,
+            "different_components": 305,
+            "max_abs": 2.3283064365386963e-09
+          }
+        },
+        "native_groups_exact": {
+          "version": true,
+          "current_index": true,
+          "fields": false,
+          "spare": false,
+          "material": true,
+          "foam": false,
+          "histories": false,
+          "control": false
+        },
+        "metadata_exact": {
+          "configuration": true,
+          "simulation": true,
+          "selection": true,
+          "wave_requests": true,
+          "wave_start_times": true,
+          "cohesion_yield_height_m": true,
+          "sim_tick": true,
+          "advanced_time_s": true
+        },
+        "control_u32_differences": [
+          {
+            "word": 2,
+            "a": 1006,
+            "b": 1007
+          }
+        ],
+        "physical_fields_exact": false
+      }
+    },
+    "remove_sand_30": {
+      "AA": {
+        "fields": {
+          "rock": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "sand": {
+            "bytes_equal": false,
+            "different_components": 4,
+            "max_abs": 1.1920928955078125e-07
+          },
+          "water": {
+            "bytes_equal": false,
+            "different_components": 225,
+            "max_abs": 5.960464477539063e-08
+          },
+          "momentum_x": {
+            "bytes_equal": false,
+            "different_components": 555,
+            "max_abs": 2.5087501853704453e-08
+          },
+          "momentum_z": {
+            "bytes_equal": false,
+            "different_components": 577,
+            "max_abs": 1.7695128917694092e-08
+          },
+          "sediment": {
+            "bytes_equal": false,
+            "different_components": 419,
+            "max_abs": 3.4924596548080444e-10
+          },
+          "wetness": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "compaction": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "obstacle": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "flux": {
+            "bytes_equal": false,
+            "different_components": 1168,
+            "max_abs": 4.6566128730773926e-09
+          }
+        },
+        "native_groups_exact": {
+          "version": true,
+          "current_index": true,
+          "fields": false,
+          "spare": false,
+          "material": true,
+          "foam": false,
+          "histories": false,
+          "control": false
+        },
+        "metadata_exact": {
+          "configuration": true,
+          "simulation": true,
+          "selection": true,
+          "wave_requests": true,
+          "wave_start_times": true,
+          "cohesion_yield_height_m": true,
+          "sim_tick": true,
+          "advanced_time_s": true
+        },
+        "control_u32_differences": [
+          {
+            "word": 2,
+            "a": 1005,
+            "b": 1006
+          }
+        ],
+        "physical_fields_exact": false
+      },
+      "AB": {
+        "fields": {
+          "rock": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "sand": {
+            "bytes_equal": false,
+            "different_components": 10,
+            "max_abs": 2.384185791015625e-07
+          },
+          "water": {
+            "bytes_equal": false,
+            "different_components": 341,
+            "max_abs": 5.960464477539063e-08
+          },
+          "momentum_x": {
+            "bytes_equal": false,
+            "different_components": 722,
+            "max_abs": 2.971501089632511e-08
+          },
+          "momentum_z": {
+            "bytes_equal": false,
+            "different_components": 757,
+            "max_abs": 2.7939677238464355e-08
+          },
+          "sediment": {
+            "bytes_equal": false,
+            "different_components": 627,
+            "max_abs": 3.4924596548080444e-10
+          },
+          "wetness": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "compaction": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "obstacle": {
+            "bytes_equal": true,
+            "different_components": 0,
+            "max_abs": 0.0
+          },
+          "flux": {
+            "bytes_equal": false,
+            "different_components": 1514,
+            "max_abs": 6.51925802230835e-09
+          }
+        },
+        "native_groups_exact": {
+          "version": true,
+          "current_index": true,
+          "fields": false,
+          "spare": false,
+          "material": true,
+          "foam": false,
+          "histories": false,
+          "control": false
+        },
+        "metadata_exact": {
+          "configuration": true,
+          "simulation": true,
+          "selection": true,
+          "wave_requests": true,
+          "wave_start_times": true,
+          "cohesion_yield_height_m": true,
+          "sim_tick": true,
+          "advanced_time_s": true
+        },
+        "control_u32_differences": [
+          {
+            "word": 2,
+            "a": 1006,
+            "b": 1007
+          }
+        ],
+        "physical_fields_exact": false
+      }
+    }
+  }
+}

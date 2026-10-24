@@ -2,9 +2,9 @@ extends RefCounted
 
 # Both families instantiate the same unified backend. Family follows the actual
 # PackedScene identity, never an execution-mode flag or a legacy fallback.
-const KEYS=["main","test1_capture","test1_backwash","test1_geometry"]
-const FORMAL={"main":"res://scenes/main.tscn","test1_capture":"res://scenes/playable/test1_capture.tscn","test1_backwash":"res://scenes/playable/test1_backwash.tscn","test1_geometry":"res://scenes/playable/test1_geometry.tscn"}
-const CANDIDATE={"main":"res://scenes/unified_edit/playable/main.tscn","test1_capture":"res://scenes/unified_edit/playable/test1_capture.tscn","test1_backwash":"res://scenes/unified_edit/playable/test1_backwash.tscn","test1_geometry":"res://scenes/unified_edit/playable/test1_geometry.tscn"}
+const KEYS=["main","test1_geometry"]
+const FORMAL={"main":"res://scenes/main.tscn","test1_geometry":"res://scenes/playable/test1_geometry.tscn"}
+const CANDIDATE={"main":"res://scenes/unified_edit/playable/main.tscn","test1_geometry":"res://scenes/unified_edit/playable/test1_geometry.tscn"}
 
 static func family(path: String, key: String) -> String:
 	if FORMAL.get(key,"")==path and not path.is_empty():return "formal"

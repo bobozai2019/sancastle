@@ -9,8 +9,9 @@ const CheckpointRouter=preload("res://scripts/simulation/unified_edit/checkpoint
 const ParameterSchema=preload("res://scripts/parameters/parameter_schema.gd")
 const SceneRoutes=preload("res://scripts/beach/unified_scene_routes.gd")
 const SOURCES=["res://scripts/beach/unified_playable_entry.gd","res://scripts/beach/unified_performance_panel.gd","res://scripts/simulation/unified_edit/player_input.gd","res://scripts/beach/beach_scene_service.gd","res://scripts/beach/scene_switch_panel.gd","res://scripts/beach/free_camera.gd","res://scripts/beach/ui_visibility.gd","res://scripts/beach/ui_drag.gd","res://scripts/sand/brushes/brush_tool_panel.gd","res://scripts/sand/brushes/brush_preview_view.gd","res://scripts/visual/brush_indicator.gd","res://scripts/visual/water_boundary_sides.gd","res://assets/water_sides/geometry_manifest.json"]
+@export var surface_wetness_enabled:=false
 @export var presentation_manifest: String
-@export_enum("main","test1_capture","test1_backwash","test1_geometry") var scene_key:="main"
+@export_enum("main","test1_geometry") var scene_key:="main"
 # Empty selects the release default. A different algorithm is frozen before
 # boot, never switched in place on an active generation.
 @export var water_solver_id: String=""
@@ -118,6 +119,7 @@ func _ready() -> void:
 	var gravel:=Pipeline.Visuals.Gravel.default_profile(scene_key,int(settings.gravel_count));gravel.bed_reconstruction=settings.render_subdivision>1
 	var simulation:={"enable_erosion":settings.enable_erosion,"enable_brush_water":settings.enable_brush_water,"unrestricted_sand_tools":true,"enable_structures":false,"local_front_history":settings.local_front_history,"rise_front_history":false,"contact_history":false}
 	var environment:={"engine":Engine.get_version_info().string,"boundary":Pipeline.Boundary.for_scene(_domain_id()),"ordinary_cohesion_yield_height_m":settings.sand_cohesion_yield_height_m,"local_front_wide_field":settings.prototype_local_front_wide_field,"gravel_profile":gravel}
+	if surface_wetness_enabled:environment.surface_wetness_profile=Pipeline.Wet.PROFILE.duplicate()
 	if vegetation_layer!=null:
 		if vegetation_layer.profile==null or vegetation_layer.profile.get_script()!=Pipeline.Visuals.Vegetation.Profile:_fail(&"invalid_vegetation_resource");return
 		environment.vegetation_profile=vegetation_layer.profile.snapshot(scene_key)

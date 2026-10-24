@@ -11,8 +11,8 @@ from run_presentation import ROOT, ENGINE, execute, local, sha
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", type=Path, required=True)
-    parser.add_argument("--cases", nargs="+", choices=["main", "test1_capture", "test1_backwash", "test1_geometry", "scene_service", "pointer"],
-                        default=["main", "test1_capture", "test1_backwash", "test1_geometry", "scene_service", "pointer"])
+    parser.add_argument("--cases", nargs="+", choices=["main", "test1_geometry", "scene_service", "pointer"],
+                        default=["main", "test1_geometry", "scene_service", "pointer"])
     args = parser.parse_args()
     folder = args.output.resolve()
     folder.mkdir(parents=True, exist_ok=False)

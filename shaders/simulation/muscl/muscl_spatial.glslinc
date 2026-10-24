@@ -43,16 +43,28 @@ bool reconstructable(ivec2 q){
  }
  return true;
 }
+vec4 face_slope(ivec2 q,ivec2 axis,vec4 c){
+ vec4 slope=retained_slopes(c-primitive(q-axis),primitive(q+axis)-c,p.wave_retention);
+ slope.x*=min(1.0,2.0*c.x/max(abs(slope.x),1.17549435e-38));
+ return slope;
+}
 vec4 face(ivec2 q,ivec2 axis,float side){
  vec4 c=primitive(q);
  if(!reconstructable(q))return c;
- vec4 slope=retained_slopes(c-primitive(q-axis),primitive(q+axis)-c,p.wave_retention);
- slope.x*=min(1.0,2.0*c.x/max(abs(slope.x),1.17549435e-38));
- return c+0.5*side*slope;
+ return c+0.5*side*face_slope(q,axis,c);
 }
-vec4 evaluate_edge(ivec2 q,ivec2 axis,out vec2 corrections){
+// A cell's state is immutable during this pass. Reuse its reconstruction for
+// both shared edges and the bed source without changing face arithmetic.
+void cell_faces(ivec2 q,out vec4 xm,out vec4 xp,out vec4 zm,out vec4 zp){
+ vec4 c=primitive(q);
+ if(!reconstructable(q)){xm=c;xp=c;zm=c;zp=c;return;}
+ vec4 xs=face_slope(q,ivec2(1,0),c),zs=face_slope(q,ivec2(0,1),c);
+ xm=c+0.5*(-1.0)*xs;xp=c+0.5*xs;
+ zm=c+0.5*(-1.0)*zs;zp=c+0.5*zs;
+}
+vec4 evaluate_edge(ivec2 q,ivec2 axis,vec4 l,out vec2 corrections){
  ivec2 other=q+axis;
- vec4 l=face(q,axis,1.0),r=inside(other)?face(other,axis,-1.0):l;
+ vec4 r=inside(other)?face(other,axis,-1.0):l;
  float zmax=max(l.y-l.x,r.y-r.x),hl=max(0.0,l.y-zmax),hr=max(0.0,r.y-zmax);
  float ul=axis.x==1?l.z:l.w,ur=axis.x==1?r.z:r.w;
  float a=max(abs(ul)+sqrt(G*hl),abs(ur)+sqrt(G*hr));

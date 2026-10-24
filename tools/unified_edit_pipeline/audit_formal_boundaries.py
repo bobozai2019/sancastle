@@ -25,7 +25,7 @@ def main():
 
     report = json.loads((folder / "report.json").read_text("utf-8"))
     expected = {m + "_" + k for m in ["capture", "height", "physics", "recorded", "save", "close", "candidate"] for k in ["main", "test1_geometry"]}
-    expected |= {"suite_" + k for k in ["main", "test1_capture", "test1_backwash", "test1_geometry"]}
+    expected |= {"suite_" + k for k in ["main", "test1_geometry"]}
     check("all_eighteen_cases", report["pass"] and {r["case"] for r in report["runs"]} == expected)
     with zipfile.ZipFile(report["source_zip"]) as z:
         check("source_zip_sha256", sha(Path(report["source_zip"])) == report["source_zip_sha256"])

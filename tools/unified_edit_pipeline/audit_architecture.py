@@ -13,8 +13,7 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[2]
 PREFIX = 'scripts/simulation/unified_edit/'
-ROOTS = ['scenes/main.tscn', 'scenes/playable/test1_capture.tscn',
-         'scenes/playable/test1_backwash.tscn', 'scenes/playable/test1_geometry.tscn',
+ROOTS = ['scenes/main.tscn',  'scenes/playable/test1_geometry.tscn',
          'scripts/beach/beach_scene_service.gd', 'assets/unified_edit/extensions/extension_catalog.tres']
 TEXT = {'.gd', '.tscn', '.tres', '.glsl', '.gdshader', '.glslinc', '.json', '.godot'}
 PATH = re.compile(r'res://[A-Za-z0-9_./-]+\.[A-Za-z0-9]+')
@@ -145,7 +144,7 @@ def main():
     checks=evaluate(sources,policy)
     checks.append({'name':'missing_references_match_explicit_nonruntime_evidence', 'pass':set(missing)==set(policy.get('nonruntime_missing_references',{})) and all(policy['nonruntime_missing_references'].values())})
     actual=json.loads((ROOT/policy['actual_nodes_evidence']['path']).read_text('utf-8-sig'))
-    checks.append({'name':'actual_packed_scene_nodes_identity', 'pass':actual['pass'] and len(actual['entries'])==4 and sha((ROOT/policy['actual_nodes_evidence']['path']).read_bytes())==policy['actual_nodes_evidence']['sha256'] and all(sha((ROOT/e['path'].removeprefix('res://')).read_bytes())==e['sha256'] for e in actual['entries'])})
+    checks.append({'name':'actual_packed_scene_nodes_identity', 'pass':actual['pass'] and len(actual['entries'])==2 and sha((ROOT/policy['actual_nodes_evidence']['path']).read_bytes())==policy['actual_nodes_evidence']['sha256'] and all(sha((ROOT/e['path'].removeprefix('res://')).read_bytes())==e['sha256'] for e in actual['entries'])})
     mutants=[
         ('private_writer',PREFIX+'player_input.gd','\nfunc forbidden():\n\trd.texture_update(authority,0,bytes)\n'),
         ('tool_name_branch',PREFIX+'executor.gd','\nfunc forbidden(value):\n\tif value.profile_id==&"wide_fill_v1":return\n'),

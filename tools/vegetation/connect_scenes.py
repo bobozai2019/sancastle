@@ -11,7 +11,7 @@ KINDS=('seagrass','kelp','shore_grass','dune_grass','red_algae','switch_grass','
 
 
 def main():
-    for key in ('main','test1_capture','test1_backwash','test1_geometry'):
+    for key in ('main','test1_geometry'):
         scene=ROOT/f'scenes/unified_edit/presentation/{key}.tscn'
         text=scene.read_text(encoding='utf8')
         if '[node name="VegetationLayer"' not in text:

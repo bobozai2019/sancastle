@@ -66,12 +66,12 @@ def verify(staged: bool, manifest: str = MANIFEST) -> list[str]:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--staged", action="store_true", help="validate Git index bytes")
-    parser.add_argument("--all", action="store_true", help="validate all four formal presentation manifests")
+    parser.add_argument("--all", action="store_true", help="validate all formal presentation manifests")
     args = parser.parse_args()
     try:
         manifests = [MANIFEST] if not args.all else [
             f"assets/unified_edit/presentation/{key}.json"
-            for key in ("main", "test1_capture", "test1_backwash", "test1_geometry")
+            for key in ("main", "test1_geometry")
         ]
         errors = [f"{manifest}: {error}" for manifest in manifests for error in verify(args.staged, manifest)]
     except (KeyError, TypeError, ValueError, json.JSONDecodeError) as error:

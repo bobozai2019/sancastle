@@ -1,0 +1,12 @@
+{
+  "budget_s": 1800,
+  "started_utc": "2026-10-23T21:40:00+00:00",
+  "deadline_utc": "2026-10-23T22:10:00+00:00",
+  "started_monotonic": 451676.7097306,
+  "used_s": 1664.7103316999855,
+  "remaining_s": 135.28966830001445,
+  "running": false,
+  "reason": "Conservatively includes CPU-component attribution preparation and subsequent GPU waits since 05:40; initial baseline collection before that excluded. No production optimization applied yet.",
+  "stopped_utc": "2026-10-23T22:07:44.710452+00:00",
+  "stop_reason": "Frame pacing diagnostic associates regression with VSync-on presentation; no verified in-scope product fix. Stop optimization; no production optimization changes to retain or revert. Final read-only stability/report only."
+}

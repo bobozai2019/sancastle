@@ -1,0 +1,92 @@
+{
+  "pass": true,
+  "failed_checks": [],
+  "source_drift": [],
+  "command": [
+    "D:/game/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe",
+    "--path",
+    "D:\\godot\\project\\sandcastle",
+    "--rendering-driver",
+    "d3d12",
+    "--script",
+    "res://tests/integration/surface_wetness_scene2_probe.gd",
+    "--log-file",
+    "D:\\godot\\project\\sandcastle\\test_output\\wet_sand_main\\main_v1\\godot.log",
+    "--",
+    "--output=D:\\godot\\project\\sandcastle\\test_output\\wet_sand_main\\main_v1",
+    "--scene=main",
+    "--ignore-parameter-config"
+  ],
+  "files": [
+    {
+      "path": "task\\wet_sand_visual\\evidence\\scene1_integration\\main_v1\\executed_probe.gd",
+      "sha256": "6b1344e3ee2e7883091230b7d1ae4468621952268e0eb9c1037eb1ceb9cdcc6d",
+      "bytes": 6224
+    },
+    {
+      "path": "task\\wet_sand_visual\\evidence\\scene1_integration\\main_v1\\godot.log",
+      "sha256": "a879f7767b032ecb0def2b6afdbb2e58541df4cb0ce9a6338d73a0ae10630e46",
+      "bytes": 2037
+    },
+    {
+      "path": "task\\wet_sand_visual\\evidence\\scene1_integration\\main_v1\\paused.bin",
+      "sha256": "a0667ec6e0e17dd7c3093d7da04874d55674aa6a6e7b3bd01337c69911d44962",
+      "bytes": 262144
+    },
+    {
+      "path": "task\\wet_sand_visual\\evidence\\scene1_integration\\main_v1\\probe.json",
+      "sha256": "021c7ac7838222d45108fc0ff25a382147e506255c4c896464f43c94352c93ce",
+      "bytes": 95435
+    },
+    {
+      "path": "task\\wet_sand_visual\\evidence\\scene1_integration\\main_v1\\restored.bin",
+      "sha256": "a0667ec6e0e17dd7c3093d7da04874d55674aa6a6e7b3bd01337c69911d44962",
+      "bytes": 262144
+    },
+    {
+      "path": "task\\wet_sand_visual\\evidence\\scene1_integration\\main_v1\\restored.png",
+      "sha256": "be03771f2f106f6264a3968c730a4a21510f6bf9f503bd9bd75573f552424bb2",
+      "bytes": 850688
+    },
+    {
+      "path": "task\\wet_sand_visual\\evidence\\scene1_integration\\main_v1\\restored.sandue",
+      "sha256": "cf9f8a5d4ce98ecdeff17cde296b569d3e15f19e778772c8127d4047bd8c70f0",
+      "bytes": 9076408
+    },
+    {
+      "path": "task\\wet_sand_visual\\evidence\\scene1_integration\\main_v1\\saved.sandue",
+      "sha256": "9f50954bcce6dc0edacf0a8b4bc0e16110b2151f50bc47b2ecfc2b8dc928a244",
+      "bytes": 9076408
+    },
+    {
+      "path": "task\\wet_sand_visual\\evidence\\scene1_integration\\main_v1\\t16.bin",
+      "sha256": "e14c6a2147ad7e3adcf3ae1fbd99f68fc6a6c02e36f63ad14824dd55d14bceb6",
+      "bytes": 262144
+    },
+    {
+      "path": "task\\wet_sand_visual\\evidence\\scene1_integration\\main_v1\\t16.png",
+      "sha256": "9fcb527cda878729116bc94f92abfca5f5a39e931e6d4e980392dc2aa36fb191",
+      "bytes": 856866
+    },
+    {
+      "path": "task\\wet_sand_visual\\evidence\\scene1_integration\\main_v1\\t24.bin",
+      "sha256": "a0667ec6e0e17dd7c3093d7da04874d55674aa6a6e7b3bd01337c69911d44962",
+      "bytes": 262144
+    },
+    {
+      "path": "task\\wet_sand_visual\\evidence\\scene1_integration\\main_v1\\t24.png",
+      "sha256": "0f438c6f95427b23aa42a665618636b31588456b62c7f2f511a730642ebd1c97",
+      "bytes": 850432
+    },
+    {
+      "path": "task\\wet_sand_visual\\evidence\\scene1_integration\\main_v1\\t6.bin",
+      "sha256": "8a77712e81beaf35b62bff287a258195b38de59a9b206179b01474c83df10b7e",
+      "bytes": 262144
+    },
+    {
+      "path": "task\\wet_sand_visual\\evidence\\scene1_integration\\main_v1\\t6.png",
+      "sha256": "27e1aaa17dceb0cb3f11de3578141774b62718a590fedbd9f70c6375e293b8bd",
+      "bytes": 858895
+    }
+  ]
+}

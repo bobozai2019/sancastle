@@ -30,6 +30,27 @@ static func initial_domain(data: Dictionary, epoch: int) -> Dictionary:
 	for key in value.get("metadata",{}):domain.set_meta(key,value.metadata[key])
 	return {"error":&"","domain":domain}
 
+static func foam_detail_error(material: ShaderMaterial) -> StringName:
+	var has_mode:=false
+	for uniform in material.shader.get_shader_uniform_list():
+		if uniform.name==&"foam_detail_mode":has_mode=true;break
+	if not has_mode:return &""
+	var mode: Variant=material.get_shader_parameter("foam_detail_mode")
+	if mode==null:mode=RenderingServer.shader_get_parameter_default(material.shader.get_rid(),"foam_detail_mode")
+	if typeof(mode)!=TYPE_INT or mode not in [0,1]:return &"presentation_foam_detail_mode_invalid"
+	if mode==0:return &""
+	var bounds:={"foam_detail_scale_per_m":[0.5,12.0],"foam_hole_strength":[0.0,1.0],"foam_flow_cycle_s":[0.5,8.0],"foam_flow_gain":[0.0,2.0],"foam_flow_speed_cap_m_s":[0.0,4.0]}
+	for field in bounds:
+		var value: Variant=material.get_shader_parameter(field)
+		if value==null:value=RenderingServer.shader_get_parameter_default(material.shader.get_rid(),field)
+		var limits: Array=bounds[field]
+		if typeof(value) not in [TYPE_FLOAT,TYPE_INT] or not is_finite(float(value)) or value<limits[0] or value>limits[1]:return &"presentation_foam_detail_parameter_invalid"
+	var texture: Variant=material.get_shader_parameter("foam_detail_texture")
+	if not texture is Texture2D:return &"presentation_foam_detail_texture_missing"
+	var image: Image=texture.get_image()
+	if image==null or image.is_empty() or image.get_mipmap_count()<1 or image.get_data_size()>2097152:return &"presentation_foam_detail_texture_invalid"
+	return &""
+
 static func material_plan(scene: Node, data: Dictionary, root_script: Script=null) -> Dictionary:
 	if scene.get_script()!=root_script or scene.has_node("GpuCollisionProxy"):return {"error":&"presentation_legacy_root"}
 	if root_script!=null and (root_script.get_base_script()!=null or root_script.get_instance_base_type()!=&"Node3D"):return {"error":&"presentation_legacy_root"}
@@ -45,6 +66,8 @@ static func material_plan(scene: Node, data: Dictionary, root_script: Script=nul
 		if parts[1] in ["material_override","material_overlay"] and node is GeometryInstance3D:material=node.get(parts[1])
 		elif parts[1].begins_with("surface_") and node is MeshInstance3D:material=node.get_surface_override_material(int(parts[1].trim_prefix("surface_")))
 		if not material is ShaderMaterial or material.shader.resource_path!=data.materials[index].shader:return {"error":&"presentation_binding_material"}
+		var foam_error:=foam_detail_error(material)
+		if not foam_error.is_empty():return {"error":foam_error}
 		if identities.has(index) and identities[index]!=material.get_instance_id():return {"error":&"presentation_shared_material_changed"}
 		identities[index]=material.get_instance_id()
 		for uniform in data.materials[index].fields:

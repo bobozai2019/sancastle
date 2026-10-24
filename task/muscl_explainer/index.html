@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>水为什么会动，电脑为什么会慢？｜Sandcastle MUSCL 入门讲义</title>
+<style>
+:root{--paper:#f5f3ed;--panel:#fffefa;--ink:#182e3a;--muted:#596970;--line:#d9dfd9;--blue:#167d9a;--blue-soft:#e4f2f5;--sand:#e6cca0;--green:#356e58;--green-soft:#eaf3ec;--orange:#965721;--orange-soft:#fbefdf;--radius:18px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:30px}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.85 "Segoe UI","Microsoft YaHei",sans-serif}a{color:var(--blue);text-underline-offset:4px}button,input,select{font:inherit}button,select{cursor:pointer}button{border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:9px 16px;border-radius:9px;line-height:1.45}button:hover{border-color:var(--blue)}button[aria-pressed=true],button.primary{background:var(--ink);color:white;border-color:var(--ink)}button:disabled{cursor:default;opacity:.45}button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--blue);outline-offset:4px}input[type=range]{width:100%;accent-color:var(--blue);min-height:30px}select{padding:8px;border:1px solid var(--line);background:var(--panel);border-radius:7px;max-width:100%}svg{display:block;width:100%;height:auto}svg text{font-family:"Segoe UI","Microsoft YaHei",sans-serif;fill:var(--ink)}p{margin:12px 0 18px}h1,h2,h3,h4{line-height:1.35;margin:0 0 18px}h1{font-size:clamp(36px,4.6vw,62px);letter-spacing:-2px;font-weight:750}h2{font-size:30px;letter-spacing:-.8px}h3{font-size:21px}h4{font-size:17px}strong{font-weight:700}small,.small{font-size:13px;color:var(--muted)}code{font:14px/1.6 Consolas,monospace;background:#edf0ec;border-radius:4px;padding:2px 5px;overflow-wrap:anywhere}ul,ol{padding-left:23px}li{margin:7px 0}.shell{max-width:1460px;margin:auto;display:grid;grid-template-columns:236px minmax(0,1fr);gap:52px;padding:0 48px}.side{position:sticky;top:0;height:100vh;padding:38px 0;display:flex;flex-direction:column}.brand{font-weight:750;letter-spacing:1px;font-size:17px}.brand small{display:block;letter-spacing:0;font-weight:400;margin-top:4px}.side nav{display:grid;gap:5px;margin:34px 0}.side nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:7px;font-size:14px;line-height:1.6}.side nav a.active{background:var(--blue-soft);color:#125c73;font-weight:700}.side nav span{font-family:Consolas,monospace;margin-right:9px;opacity:.65}.side-note{margin-top:auto;border-top:1px solid var(--line);padding-top:18px;font-size:12px;color:var(--muted)}main{min-width:0;padding:55px 0 36px}.eyebrow{font-size:12px;font-weight:700;letter-spacing:2px;color:var(--blue);text-transform:uppercase;margin-bottom:20px}.lead{font-size:19px;color:#405a65;max-width:780px}.hero{padding:16px 0 40px}.hero-visual{background:var(--ink);border-radius:var(--radius);margin-top:32px;overflow:hidden}.hero-visual svg text{fill:#dcecf0}.hero-caption{padding:0 24px 20px;color:#b7cbd2;font-size:13px}.hero-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:23px}.hero-metrics div{border-top:1px solid var(--line);padding-top:16px}.hero-metrics b{display:block;font-size:27px;font-weight:650;line-height:1.4}.hero-metrics span{font-size:13px;color:var(--muted)}section{border-top:1px solid var(--line);padding:48px 0 44px;scroll-margin-top:25px}.section-no{font-size:13px;letter-spacing:2px;color:var(--blue);margin-bottom:12px}.intro{font-size:18px;max-width:800px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin:24px 0}.card{background:var(--panel);padding:23px;border:1px solid var(--line);border-radius:var(--radius)}.card p:last-child{margin-bottom:0}.card .tag{margin-bottom:14px}.tag{display:inline-block;padding:3px 9px;border-radius:5px;font-size:12px;line-height:1.6;background:var(--blue-soft);color:#17627a}.tag.done{color:var(--green);background:var(--green-soft)}.tag.idea{color:var(--orange);background:var(--orange-soft)}.callout{padding:18px 22px;background:var(--blue-soft);border-left:3px solid var(--blue);border-radius:0 10px 10px 0;margin:24px 0}.callout p{margin:5px 0}.callout.warm{background:var(--orange-soft);border-left-color:var(--orange)}.lab{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:24px;margin:25px 0}.lab-head{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:18px}.lab-head h3{margin:0}.lab-note{font-size:13px;color:var(--muted);margin:12px 0 0}.control label{display:flex;justify-content:space-between;gap:15px;font-size:14px;font-weight:600}.control output{font-variant-numeric:tabular-nums;color:var(--blue);white-space:nowrap}.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}.formula{font:18px/1.9 Consolas,"Microsoft YaHei",monospace;padding:18px 22px;background:#eef1eb;border-radius:10px;overflow-wrap:anywhere;margin:20px 0}.formula small{font:13px/1.8 "Microsoft YaHei",sans-serif;display:block}.mathline{display:block;margin:6px 0}.source{font-size:12px;color:var(--muted);margin-top:22px}.source a{color:var(--muted)}.table-wrap{overflow-x:auto;margin:23px 0}table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;vertical-align:top;padding:13px 12px;border-bottom:1px solid var(--line)}th{font-weight:650;background:#ecefe9}td:first-child{font-weight:600}caption{text-align:left;font-size:13px;color:var(--muted);padding-bottom:12px}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:18px 0}.steps button{text-align:left;min-height:72px;padding:12px;font-size:14px}.steps b{display:block;font-size:12px;opacity:.7}.step-detail{background:#edf4f4;border-radius:12px;padding:23px;min-height:210px}.step-detail h4{font-size:21px}.step-detail p{margin:8px 0}.step-nav{justify-content:space-between;margin-top:18px}.live-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:22px 0}.live-stats div{background:#edf4f4;border-radius:10px;padding:16px}.live-stats b{display:block;font-size:24px;font-variant-numeric:tabular-nums;line-height:1.5}.live-stats span{font-size:12px;color:var(--muted)}.slot-grid{display:grid;grid-template-columns:repeat(16,1fr);gap:5px;margin:15px 0}.slot{aspect-ratio:1.6;background:#e9ede8;border-radius:3px}.slot.used{background:var(--blue)}.legend{display:flex;gap:20px;font-size:13px;color:var(--muted);flex-wrap:wrap}.dot{display:inline-block;width:10px;height:10px;background:var(--blue);border-radius:2px;margin-right:6px}.dot.empty{background:#dfe4de}.dot.ink{background:var(--ink)}details{border:1px solid var(--line);border-radius:11px;background:var(--panel);margin:13px 0;padding:0 20px}summary{cursor:pointer;padding:17px 0;font-weight:650}details p{margin:0 0 17px}details .formula{font-size:15px}.opt{padding:26px 0;border-bottom:1px solid var(--line)}.opt:last-child{border-bottom:0}.opt-title{display:flex;align-items:center;gap:12px;margin-bottom:12px;flex-wrap:wrap}.opt-title h3{margin:0}.opt-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.opt-grid p{margin:5px 0 12px}.opt-grid .small{display:block}.mini-flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:18px 0}.mini-flow span{background:#eaf0ee;padding:8px 12px;border-radius:7px;font-size:14px}.mini-flow i{font-style:normal;color:var(--muted)}.quiz{border-bottom:1px solid var(--line);padding:22px 0}.quiz:last-child{border:0}.quiz h3{font-size:18px}.quiz-result{min-height:31px;font-size:14px;margin-top:12px}.quiz-result.correct{color:var(--green)}.quiz-result.wrong{color:#9c4b24}.ref-list{font-size:14px}.ref-list li{padding:7px 0}.footer{font-size:13px;color:var(--muted);padding-top:25px;border-top:1px solid var(--line)}.mobile-top{display:none}.print-button{font-size:13px}.source-link{white-space:normal}.compare-cost{display:flex;align-items:flex-end;gap:35px;height:170px;padding:12px 18px 0;background:#f0f3ee;border-radius:11px;margin:20px 0}.cost-item{flex:1;display:flex;flex-direction:column;justify-content:flex-end;height:100%;text-align:center;font-size:12px}.cost-bar{background:#a9cdd5;border-radius:6px 6px 0 0;display:flex;align-items:flex-start;justify-content:center;padding-top:8px}.cost-item:last-child .cost-bar{background:#247d95;color:white}.cost-item span{padding:4px 0}.hero-gridline{stroke:#56737d;stroke-width:1;opacity:.45}.no-js{padding:15px;background:var(--orange-soft)}
+@media(min-width:1500px){body{font-size:17px}}
+@media(max-width:1100px){.shell{grid-template-columns:190px minmax(0,1fr);gap:30px;padding:0 28px}.cards{grid-template-columns:1fr}.cards .card{padding:20px}.side nav a{font-size:13px}.hero-metrics b{font-size:23px}}
+@media(max-width:760px){.shell{display:block;padding:0 20px}.side{position:static;height:auto;padding:20px 0 0}.side .brand{font-size:15px}.side nav{display:flex;overflow-x:auto;gap:6px;margin:15px 0;padding-bottom:10px}.side nav a{flex-shrink:0;padding:7px}.side-note{display:none}main{padding:18px 0 30px}h1{font-size:39px;letter-spacing:-1px}h2{font-size:26px}h3{font-size:20px}.lead{font-size:17px}.hero{padding-bottom:25px}.hero-metrics{gap:10px}.hero-metrics b{font-size:22px}.hero-metrics span{font-size:12px}.two,.opt-grid{grid-template-columns:1fr;gap:15px}.lab{padding:17px}.steps{grid-template-columns:1fr 1fr}.step-detail{padding:18px;min-height:260px}.live-stats{grid-template-columns:1fr;gap:8px}.live-stats div{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 14px}.live-stats b{font-size:22px}.formula{font-size:15px;padding:15px}section{padding:35px 0}.hero-caption{font-size:12px;padding:0 15px 15px}.compare-cost{gap:16px}.table-wrap table{min-width:580px}.lab-head .tag{font-size:11px}}
+@media print{body{background:white;color:black;font-size:11pt;line-height:1.6}.shell{display:block;max-width:none;padding:0}.side,.print-button,.step-nav{display:none}main{padding:0}.hero{padding-top:0}h1{font-size:30pt}h2{font-size:21pt}.lab,.card,details,.opt{break-inside:avoid}section{padding:25px 0}.cards{grid-template-columns:repeat(3,1fr)}.steps{grid-template-columns:repeat(4,1fr)}.two,.opt-grid{grid-template-columns:1fr 1fr}.live-stats{grid-template-columns:repeat(3,1fr)}.live-stats div{display:block}a{color:inherit}.hero-visual{-webkit-print-color-adjust:exact;print-color-adjust:exact}.tag,.slot,.cost-bar,.callout,.lab{-webkit-print-color-adjust:exact;print-color-adjust:exact}.table-wrap{overflow:visible}.table-wrap table{min-width:0}.source{font-size:9pt}details[open] summary{margin-bottom:0}}
+.texture-intro{max-width:850px}.texture-controls{display:flex;align-items:end;gap:14px;flex-wrap:wrap;margin:20px 0}.texture-controls label{display:grid;gap:5px;font-size:13px;font-weight:650}.texture-controls select{font-size:14px}.texture-board{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:20px 0}.texture-card{min-width:0;background:#f4f6f1;border:1px solid var(--line);border-radius:12px;padding:13px}.texture-card h4{font-size:16px;margin:6px 0}.texture-card p{font-size:12px;line-height:1.65;min-height:40px;margin:7px 0}.texture-card select{width:100%;font-size:12px;margin:0 0 8px}.texture-label{font:11px/1.5 Consolas,monospace;color:var(--muted);overflow-wrap:anywhere}.texture-grid{display:grid;grid-template-columns:17px repeat(6,minmax(0,1fr));gap:2px;align-items:center}.texture-axis{font:10px/1.8 Consolas,monospace;text-align:center;color:var(--muted)}.texel{position:relative;min-width:0;aspect-ratio:1;padding:0;border:1px solid #bacdcc;border-radius:2px;font:11px/1.1 Consolas,monospace;font-variant-numeric:tabular-nums;color:#183540!important}.texel:hover{border-color:#142e3a;z-index:1}.texel[aria-pressed=true]{outline:3px solid #182e3a;outline-offset:-3px;z-index:1;border-color:#182e3a}.texel.neighbor{border-style:dashed;border-color:#547d86}.texel.changed:after{content:"";position:absolute;right:1px;top:1px;width:4px;height:4px;background:#a95e22;border-radius:50%}.texel.empty{background:repeating-linear-gradient(135deg,#eef0eb,#eef0eb 5px,#e1e6df 5px,#e1e6df 6px)!important;color:#77837e!important}.texture-legend{font-size:12px;display:flex;gap:16px;flex-wrap:wrap;color:var(--muted)}.texture-scale{display:inline-block;width:65px;height:9px;background:linear-gradient(90deg,#f3f7f3,#59abc5);margin:0 7px}.texture-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:16px 0}.texture-metrics>div{padding:12px 14px;background:#edf4f4;border-radius:9px}.texture-metrics b{display:block;font-size:18px;font-variant-numeric:tabular-nums}.texture-metrics span{font-size:12px;color:var(--muted)}.pixel-inspector{border:1px solid #b8ced2;border-radius:12px;padding:20px;margin-top:20px}.pixel-inspector h4{margin:0 0 10px}.pixel-values{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:10px 0}.pixel-values>div{border-left:2px solid #94c1ca;padding-left:10px;min-width:0}.pixel-values b{display:block;font:17px/1.8 Consolas,monospace;overflow-wrap:anywhere}.pixel-values span{font-size:12px;color:var(--muted)}.pixel-explain{font-size:14px;line-height:1.9;overflow-wrap:anywhere}.pixel-explain .formula{font-size:14px;margin:12px 0;padding:14px}.pixel-explain ol{margin-bottom:0}.pixel-timeline{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px;margin-top:15px}.pixel-timeline div{background:#eef1eb;border-radius:7px;padding:9px;min-width:0}.pixel-timeline .ready{background:#e4f2f5}.pixel-timeline span{font-size:11px;color:var(--muted);display:block}.pixel-timeline b{font:13px/1.7 Consolas,monospace;overflow-wrap:anywhere}.pixel-cross{width:100%;max-width:560px;margin:15px auto}.texture-route{font-size:13px;padding:12px 15px;border-left:3px solid var(--blue);background:#eaf2f2;margin:15px 0;overflow-wrap:anywhere}.texture-lesson{padding:14px 0;border-top:1px solid var(--line);margin-top:22px}.texture-lesson .table-wrap{margin:10px 0}.texture-summary{font-size:13px;color:var(--muted)}#texture-lab .step-detail{min-height:0}#texture-lab .step-nav{position:sticky;bottom:10px;z-index:3;background:rgba(255,254,250,.97);border:1px solid var(--line);border-radius:11px;padding:10px;box-shadow:0 4px 16px #19344214}#texture-lab .step-nav .row{gap:8px}#texture-error{color:#9c4b24}.texture-work-chooser{min-height:36px}.texture-readme{font-size:14px}.texture-readme strong{color:#17627a}
+@media(max-width:1100px){.texture-board{grid-template-columns:1fr 1fr}.texture-card.work{grid-column:1/-1}.texture-card.work .texture-grid{max-width:350px;margin:auto}.texture-card.work p{min-height:0}.texel{font-size:12px}}
+@media(max-width:760px){.texture-board{grid-template-columns:1fr}.texture-card.work{grid-column:auto}.texture-grid{max-width:360px;margin:auto}.texture-card p{min-height:0}.texture-metrics{grid-template-columns:1fr}.texture-metrics>div{display:flex;justify-content:space-between;align-items:center;gap:12px}.pixel-inspector{padding:13px}.pixel-values b{font-size:13px}.pixel-timeline{grid-template-columns:repeat(3,minmax(0,1fr))}.texture-controls{align-items:stretch}.texture-controls label{flex:1 1 180px}#texture-lab .step-nav{bottom:4px;gap:7px;font-size:13px}#texture-lab .step-nav button{padding:8px;font-size:13px}.pixel-explain .formula{font-size:12px;padding:10px}}
+.texture-card{display:flex;flex-direction:column}.texture-card .texture-grid{width:100%;margin-top:auto}.texture-grid{container-type:inline-size}.texel{font-size:clamp(9px,3.3cqi,12px)}.texture-axis{overflow-wrap:anywhere;line-height:1.2}
+@media print{#texture-lab{break-inside:auto}.texture-controls,#texture-lab .step-nav{display:none}.texture-board{grid-template-columns:repeat(3,minmax(0,1fr));break-inside:avoid}.texture-card.work{grid-column:auto}.texel{-webkit-print-color-adjust:exact;print-color-adjust:exact}.texture-metrics{grid-template-columns:repeat(3,1fr)}.pixel-inspector{break-inside:avoid}.texture-lesson details{break-inside:auto}.pixel-timeline{grid-template-columns:repeat(5,1fr)}}
+</style>
+</head>
+<body>
+<noscript><p class="no-js">正文可以直接阅读；启用 JavaScript 后可以使用水量、重构和步长交互示例。</p></noscript>
+<div class="shell">
+<aside class="side" aria-label="讲义目录">
+ <div class="brand">SANDCASTLE <small>一堂关于水模拟的入门课</small></div>
+ <nav>
+  <a href="#overview"><span>00</span>先把三个概念分开</a>
+  <a href="#cells"><span>01</span>把水装进格子</a>
+  <a href="#muscl"><span>02</span>MUSCL 多做了什么</a>
+  <a href="#steps"><span>03</span>一次水更新的旅程</a>
+  <a href="#cfl"><span>04</span>为什么要分很多小步</a>
+  <a href="#cost"><span>05</span>时间花在哪里</a>
+  <a href="#optimize"><span>06</span>还能怎样优化</a>
+  <a href="#tradeoffs"><span>07</span>哪些优化会改变效果</a>
+  <a href="#quiz"><span>08</span>检查自己是否理解</a>
+  <a href="#sources"><span>09</span>源码与延伸阅读</a>
+ </nav>
+ <div class="side-note">面向刚入大学的读者。<br>不需要微积分基础。<br>阅读与实验约 30 分钟。<br><br>代码核对：2026-10-24<br>教学讲义 · 含待验证优化建议</div>
+</aside>
+<main>
+<header class="hero">
+ <div class="eyebrow">Water simulation / A first lecture</div>
+ <h1>水为什么会动，<br>电脑为什么会慢？</h1>
+ <p class="lead">从一格水出发，读懂当前游戏里的浅水模拟、MUSCL，以及“保持效果，还能不能更快”这件事。</p>
+ <p>我们先不背算法名称。想象你面前是一块沙盘：挖一个坑、堆一座沙丘、推一下水。电脑要回答的是——<strong>下一小段时间，水去了哪里，带走了多少沙？</strong></p>
+ <div class="row"><a href="#cells">从第一个实验开始 →</a><button class="print-button" id="print-page" type="button">打印 / 保存 PDF</button></div>
+ <div class="hero-visual">
+  <svg viewBox="0 0 920 250" role="img" aria-labelledby="hero-title hero-desc">
+   <title id="hero-title">一片水面，许多计算格子</title><desc id="hero-desc">侧视图中，变化的沙床上覆盖水层；格子分别记录水深，格子边界交换水。水面高度等于床面高度加水深。</desc>
+   <defs><linearGradient id="water-grad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#62c5d8" stop-opacity=".8"/><stop offset="1" stop-color="#27839b" stop-opacity=".25"/></linearGradient></defs>
+   <path d="M45 112 C140 117 175 70 260 87 S390 122 460 105 S610 99 680 110 S790 117 875 110 L875 183 L770 178 L665 191 L560 210 L455 213 L350 195 L245 176 L140 190 L45 202Z" fill="url(#water-grad)"/>
+   <path d="M45 202L140 190L245 176L350 195L455 213L560 210L665 191L770 178L875 183L875 233L45 233Z" fill="#dcc18d"/>
+   <path d="M45 112 C140 117 175 70 260 87 S390 122 460 105 S610 99 680 110 S790 117 875 110" fill="none" stroke="#86dce7" stroke-width="3"/>
+   <g class="hero-gridline"><path d="M45 60V234M140 60V234M245 60V234M350 60V234M455 60V234M560 60V234M665 60V234M770 60V234M875 60V234"/></g>
+   <text x="48" y="34" font-size="15">一格一个账本，边界负责交换</text><text x="650" y="38" font-size="13">示意图 · 非游戏截图</text>
+   <path d="M504 121V200M498 127L504 121L510 127M498 194L504 200L510 194" fill="none" stroke="#d5eff4" stroke-width="1.5"/>
+   <text x="518" y="163" font-size="14">水深 h</text><text x="728" y="214" font-size="14" style="fill:#273e45">床面 b</text>
+   <path d="M290 141H326M320 136L327 141L320 146" stroke="#ecfbff" fill="none" stroke-width="2"/><text x="275" y="165" font-size="12">搬运水量</text>
+  </svg>
+  <div class="hero-caption">水面高度 η = 床面高度 b + 水深 h。水深不同，不一定意味着水面不平；沙床也可能有高低。</div>
+ </div>
+ <div class="hero-metrics"><div><b>65,536</b><span>当前权威网格中的格子数</span></div><div><b>1 / 30 秒</b><span>外层每次请求推进的模拟时间</span></div><div><b>64 次</b><span>候选试算容量，包含被拒绝的尝试</span></div></div>
+</header>
+
+<section id="overview">
+ <div class="section-no">00 / 先建立地图</div><h2>方程、算法、硬件，是三件不同的事</h2>
+ <p class="intro">“用 MUSCL”与“每个格子计算浅水方程”可以同时成立。当前项目就是这样做的。</p>
+ <div class="cards">
+  <article class="card"><span class="tag">物理模型</span><h3>浅水方程</h3><p>规定水深和水平运动怎样变化。它把一根水柱沿深度概括成一份状态，适合描述摊在地面上的水和长波。</p><p class="small">它不逐粒追踪水，也不能直接解析翻卷浪头、飞散水滴等完整三维运动。</p></article>
+  <article class="card"><span class="tag">数值方法</span><h3>MUSCL + SSPRK2</h3><p>MUSCL 改善“格子边上应该是什么状态”的估计；SSPRK2 改善“从现在走到下一刻”的计算。</p><p class="small">当前还包含 Rusanov 通量、床面修正、湿干处理和防止负水深的限制。</p></article>
+  <article class="card"><span class="tag">执行硬件</span><h3>CPU + GPU</h3><p>CPU 安排计算顺序与资源，GPU 并行计算大量格子。这个项目的步长判断和试算接受／拒绝也在 GPU 上完成。</p><p class="small">“GPU 在算”并不意味着 CPU 没有录制、提交和管理成本。</p></article>
+ </div>
+ <div class="callout"><strong>用课堂打比方：</strong>浅水方程是题目规则，MUSCL 是解题方法，GPU 是同时做很多份计算的学生，CPU 负责发题和安排顺序。</div>
+ <p>“浅”主要指水深相对水平变化尺度较小，不只是“水不到膝盖”。二维网格记录水平 X、Z 方向，水深是每格的一个数；画面上的三维水面由这些状态和渲染材质共同构成。<a href="https://www.clawpack.org/riemann_book/html/Shallow_water.html" target="_blank" rel="noopener">浅水模型参考</a></p>
+</section>
+
+<section id="cells">
+ <div class="section-no">01 / 从账本开始</div><h2>先保证：左边少的水，右边确实收到了</h2>
+ <p>当前沙盘的模拟区域是 <strong>32 × 32 米</strong>，划成 <strong>256 × 256 格</strong>。每格边长 0.125 米。你可以把它想成一排排没有隔板、能够相互交换水的小盒子。</p>
+ <div class="two"><div><h3>每个格子记什么？</h3><ul><li><strong>床面 b：</strong>岩层加沙层的高度。</li><li><strong>水深 h：</strong>床面上有多厚的水。</li><li><strong>动量 q：</strong>与水深和速度共同有关，q<sub>x</sub> = h × u，q<sub>z</sub> = h × v。</li><li><strong>悬沙 s：</strong>水里带着的沙，另有湿度与压实度等材料状态。</li></ul></div><div><h3>为什么不是只记水位？</h3><p>同样高的水面，可能有很深的坑，也可能只有薄薄一层水。水已经向右流时，还存在惯性。只知道水面高度，无法完整描述运动。</p><p class="small">这里的 q 是省略常密度后的浅水动量变量，单位 m²/s，不是整个格子的 kg·m/s。干格和极薄水层有专门的速度处理。</p></div></div>
+ <div class="lab" id="volume-lab">
+  <div class="lab-head"><h3>实验 A：搬水，但不造水</h3><span class="tag">守恒记账示意</span></div>
+  <p class="small">两个格子面积相同，初始水深分别为 0.8 m、0.4 m。拖动滑块，指定从左边搬多少水到右边。</p>
+  <svg id="volume-svg" viewBox="0 0 760 310" role="img" aria-label="左右格子搬水示意"></svg>
+  <div class="control"><label for="transfer">从左到右搬运的体积 <output id="transfer-out">0.000 L</output></label><input id="transfer" type="range" min="0" max="3.125" step="0.125" value="0"></div>
+  <div class="live-stats"><div><span>左格水量</span><b id="left-volume">12.500 L</b></div><div><span>右格水量</span><b id="right-volume">6.250 L</b></div><div><span>总水量保持</span><b id="total-volume">18.750 L</b></div></div>
+  <p class="lab-note">这只演示同一份搬运量怎样同时记在两边；没有计算压力、惯性或真实流速，不是一个完整浅水求解器。</p>
+ </div>
+ <div class="formula">新水量 = 旧水量 + 流入 − 流出 + 外部加入 − 外部移除<small>单格体积 V = h × Δx²。当前单格面积为 0.015625 m²；水深增加 1 米，对应水量增加 15.625 升。</small></div>
+ <p>相邻格子共用一条边。我们先算这条边通过多少水，再让一侧扣除、另一侧增加。这个“跨边搬运率”叫<strong>通量</strong>。如果一格只有半杯水，就不能让它流出一整杯；当前算法因此还有出流限制，保护水深不变成负数。</p>
+ <p>在封闭区域内，这种配对是守恒的基础。游戏还有边界供水、排水与数值修正，需要分别核对。<strong>守恒不等于所有场景总水量永远不变</strong>，而是变化应能解释、能对账。</p>
+ <p class="source">实现依据：<a href="../../docs/当前技术规格.md">域坐标、单位与字段</a> · <a href="../../shaders/simulation/muscl/rk_drain.glsl">出流限制</a> · <a href="../../shaders/simulation/muscl/rk_euler.glsl">水与悬沙搬运</a></p>
+</section>
+
+<section id="muscl">
+ <div class="section-no">02 / 空间上的细致</div><h2>MUSCL：每格一个平均数，还能推断什么？</h2>
+ <p>假设三个相邻格子的平均水深依次是 0.2、0.4、0.6 米。只把中间一格看成平平的 0.4 米，会丢掉“水面正在向右升高”的信息。MUSCL 会参考邻格，给这一格估计一段坡度。</p>
+ <p><strong>一阶方法</strong>把每格内部当作一个常数；<strong>MUSCL 重构</strong>允许每格内部是一小段倾斜直线。平均数仍然保留，但格子左边和右边可以给出更合适的状态，再据此计算边通量。</p>
+ <div class="lab">
+  <div class="lab-head"><h3>实验 B：同一组平均数，两种表达</h3><span class="tag">一维重构示意 · 无时间推进</span></div>
+  <div class="row" role="group" aria-label="重构显示方式"><button type="button" class="recon-mode" data-mode="first" aria-pressed="false">只看一阶</button><button type="button" class="recon-mode" data-mode="muscl" aria-pressed="false">只看 MUSCL</button><button type="button" class="recon-mode" data-mode="both" aria-pressed="true">叠加比较</button></div>
+  <svg id="recon-svg" viewBox="0 0 800 300" role="img" aria-label="一阶常数重构和 MUSCL 线性重构比较"></svg>
+  <div class="legend"><span><i class="dot ink"></i>圆点：格子的平均值</span><span><i class="dot empty"></i>灰色横线：一阶</span><span><i class="dot"></i>蓝色线段：MUSCL</span></div>
+  <div class="control" style="margin-top:20px"><label for="retention">教学图中的保波程度 r <output id="retention-out">0.0 · MC</output></label><input id="retention" type="range" min="0" max="1" step="0.1" value="0"></div>
+  <p class="lab-note">每条蓝线都穿过自己的平均值；它们不必在边界接上。边界两侧的不同估计，正是通量计算要处理的输入。此图只重构平床上的标量水深，省略二维流动、床面修正与干湿边界。</p>
+ </div>
+ <h3>为什么还要加“限幅器”？</h3>
+ <p>如果照着坡度大胆延伸，在波峰、陡坡或水边，可能猜出虚假的尖峰，甚至负水深。<strong>限幅器</strong>会在这些位置收敛一些。当前默认使用 MC；局部越不平滑，越可能退回更保守的估计。</p>
+ <div class="callout"><p><strong>MUSCL 的目的不是让水“更快扩散”。</strong>它主要提高空间估计的准确性，减少数值计算把波形过度抹平的现象。这里的“抹平”叫数值耗散，不等同于真实水的黏性。</p><p>它也不能保证所有波都保留：网格太粗、波太短，或者限幅与湿干保护介入，波仍然会衰减。</p></div>
+ <details><summary>想看一点公式：怎样算出格内坡度？</summary><p>先算左边差值 a = 本格平均值 − 左格平均值，右边差值 b = 右格平均值 − 本格平均值。如果 a、b 符号不同，说明可能到达了峰或谷，此处取零坡度。</p><div class="formula">MC(a,b) = sign(a) × min(2|a|, 2|b|, |a+b|/2)<small>上式用于 a、b 同号；异号或含零时为 0。格子左右端值 = 平均值 ± 坡度/2。</small></div><p>当前保波参数在 MC 与 Superbee 坡度之间混合：坡度 = (1−r) × MC + r × Superbee。r 的范围是 0～1。增大它可能让某些轮廓更锐利，但并不保证任何场景的波幅、传播距离或性能都单调增加。</p></details>
+ <p class="source">实现依据：<a href="../../shaders/simulation/muscl/muscl_spatial.glslinc">重构与共享边通量</a> · <a href="../../shaders/simulation/muscl/muscl_math.glslinc">MC、Superbee 与安全限制</a></p>
+</section>
+
+<section id="steps">
+ <div class="section-no">03 / 时间上的细致</div><h2>一次更新，并不是“算一遍所有格子”</h2>
+ <p>现在我们能估计水往哪里走，但还要决定走多久。当前 CPU 每次请求推进 1/30 秒；GPU 会把这段时间拆成若干小步。每个小步又有两阶段试算、检查和水沙交换。</p>
+ <div class="lab" id="texture-lab">
+  <div class="lab-head"><h3>实验 C：把 GPU 纹理放大，一步一步算</h3><span class="tag">可点击像素 · 数值教学算例</span></div>
+  <p class="texture-intro">把 256 × 256 的大沙盘缩成 <strong>6 × 6 格</strong>。下面每个小方块就是纹理中的一个像素，也对应一根水柱。先看第 01 步，再点“下一步”：你会看到数值从旧状态，经过两张草稿，变成可发布的新状态。</p>
+  <div class="texture-readme callout"><strong>这里的像素存的是数，不是蓝色颜料。</strong>例如 h = 0.300 表示水深 0.300 米。颜色只是把数字画给人看；它不是 0～255 的水量，也不是游戏截图。浏览器用 JavaScript 实际计算这个小算例，采用双精度；游戏使用 GPU 的 32 位浮点纹理，不能据此声称逐像素一致。</div>
+  <div class="texture-controls">
+   <label for="texture-preset">初始水面<select id="texture-preset"><option value="pulse">中心水包 + 少量悬沙</option><option value="still">完全平静的水面（对照）</option></select></label>
+   <label for="texture-channel">观察状态通道<select id="texture-channel"><option value="0">h · 水深 / m</option><option value="1">qx · X 向动量 / m²/s</option><option value="2">qz · Z 向动量 / m²/s</option><option value="3">s · 悬沙面密度等效厚度 / m</option></select></label>
+   <button type="button" id="texture-reset">恢复初态</button>
+  </div>
+  <p class="small">算例：Δx = 0.125 m，g = 9.81，MC 限幅，平床 b = 0，四周封闭，无工具与造浪，关闭侵蚀／沉积及材料更新。每轮只请求 <strong>4 ms</strong>；正式游戏每 tick 请求 33.333 ms，通常要重复多个子步。默认先跟踪像素 (3, 2)，也可以点任意格子。</p>
+  <div class="steps" id="step-buttons" role="group" aria-label="模拟过程阶段">
+   <button data-step="0" type="button" aria-pressed="true"><b>01 / CPU → GPU</b>提出推进请求</button><button data-step="1" type="button" aria-pressed="false"><b>02 / GPU</b>算边界与步长</button><button data-step="2" type="button" aria-pressed="false"><b>03 / GPU</b>第一阶段试算</button><button data-step="3" type="button" aria-pressed="false"><b>04 / GPU</b>复查是否安全</button><button data-step="4" type="button" aria-pressed="false"><b>05 / GPU</b>第二阶段试算</button><button data-step="5" type="button" aria-pressed="false"><b>06 / GPU</b>合成候选结果</button><button data-step="6" type="button" aria-pressed="false"><b>07 / GPU</b>耦合沙与材料</button><button data-step="7" type="button" aria-pressed="false"><b>08 / 完成态</b>重复并最终发布</button>
+  </div>
+  <div class="step-detail" id="step-detail" aria-live="polite"></div>
+  <div id="texture-route" class="texture-route"></div>
+  <div class="texture-board">
+   <article class="texture-card"><span class="tag">读取 · 这一阶段的输入</span><h4 id="texture-input-title"></h4><div id="texture-input-format" class="texture-label"></div><p id="texture-input-note"></p><div id="texture-input" class="texture-grid" role="group" aria-label="输入纹理像素"></div></article>
+   <article class="texture-card work"><span class="tag idea">计算 · 中间工作纹理</span><h4 id="texture-work-title"></h4><div class="texture-work-chooser"><select id="texture-work-select" aria-label="查看本步的工作纹理"></select></div><p id="texture-work-note"></p><div id="texture-work" class="texture-grid" role="group" aria-label="工作纹理像素"></div></article>
+   <article class="texture-card"><span class="tag done">写入 · 这一阶段的结果</span><h4 id="texture-output-title"></h4><div id="texture-output-format" class="texture-label"></div><p id="texture-output-note"></p><div id="texture-output" class="texture-grid" role="group" aria-label="输出纹理像素"></div></article>
+  </div>
+  <div class="texture-legend"><span>粗框：选中像素；虚线框：四邻格</span><span>右上角棕点：与本步输入不同</span><span>斜线 / —：本步还没有这份结果，不能当成 0</span></div>
+  <p id="texture-color-note" class="small"></p>
+  <div class="texture-metrics"><div><span>当前查看 / 本轮步长</span><b id="texture-clock">—</b></div><div><span>当前输出中的总水量</span><b id="texture-mass">—</b></div><div><span>对外可见的完成时间</span><b id="texture-published">—</b></div></div>
+  <div class="pixel-inspector" aria-live="polite">
+   <h4 id="pixel-title">跟踪一个像素</h4>
+   <div class="pixel-values"><div><span>本步输入</span><b id="pixel-before">—</b></div><div><span>本步输出</span><b id="pixel-after">—</b></div><div><span>本步变化 Δ</span><b id="pixel-delta">—</b></div></div>
+   <div id="pixel-explain" class="pixel-explain"></div>
+   <div id="pixel-timeline" class="pixel-timeline" aria-label="选中像素的状态历程"></div>
+  </div>
+  <p id="texture-summary" class="texture-summary"></p><p id="texture-error" role="alert" hidden></p>
+  <div class="row step-nav"><button type="button" id="step-prev" disabled>← 上一步</button><span id="step-counter" class="small">1 / 8</span><div class="row"><button type="button" id="texture-continue" disabled>再推进一轮 4 ms</button><button type="button" id="step-next">下一步 →</button></div></div>
+  <p class="lab-note">点阶段按钮只是在查看同一轮已计算的快照；回看不会再次推进水。第 08 步之后点“再推进一轮”，才用本轮结果作为新的 U₀。边看边点任意像素，三个网格会跟踪同一坐标。</p>
+  <div class="texture-lesson">
+   <details><summary>先读这张“纹理字典”：R、G、B、A 分别是什么意思？</summary>
+    <div class="table-wrap"><table><thead><tr><th>项目中的存储</th><th>一个像素里的数</th><th>这里怎样显示</th></tr></thead><tbody>
+     <tr><td>water_state、qx_state、qz_state、sediment_state</td><td>4 张 R32F，各存 h、qx、qz、s 中的一个数。</td><td>左、右图的“状态通道”选择器。相同坐标指同一格水。</td></tr>
+     <tr><td>stage_in / stage_out</td><td>RGBA32F，依次打包 (h, qx, qz, s)。U₁、U₂ 是试算草稿。</td><td>切换通道，只看其中一个数，不把四个数当作颜色混合。</td></tr>
+     <tr><td>edge_x / edge_z</td><td>RGBA32F = (水量通量, qx 通量, qz 通量, 波速上界)。像素 (x,z) 存本格右边 / 下边的共享边。</td><td>中图可切换通量与波速。右边缘 / 下边缘为墙，穿墙通量为 0。</td></tr>
+     <tr><td>drain</td><td>R32F，供水系数 θ，范围 0～1；1 表示水够用，0.8 表示出流只保留八成。</td><td>第 03、05 步中图。温和算例里全为 1 是正常的。</td></tr>
+     <tr><td>speed_tiles</td><td>RG32F，每个 8 × 8 工作组的 X / Z 波速最大值；再归约成两个全局最大值。</td><td>中图展示归约前的逐边波速，下面给出全局结果；6 × 6 图不是 speed_tiles 的真实布局。</td></tr>
+     <tr><td>Trial / Decision</td><td>控制缓冲区，存候选步长、接受标记和完成时间等；不是水纹理。</td><td>步长与时钟读数，不伪装成另一张水深图。</td></tr>
+    </tbody></table></div>
+    <p class="small">edge 的通量是单位边长的搬运率；水量通量的单位为 m²/s。乘以边长 Δx 才是整条边的 m³/s。项目另有给耦合消费者使用的公共 flux 纹理，内容与这里的 edge RGBA 不同。</p>
+   </details>
+   <details><summary>为什么会读邻格，但不会按屏幕顺序“一格接一格”推进？</summary><p>一次派发的全部线程都读取同一份旧状态，把结果写入另一份纹理。比如 (3,2) 的线程即使先完成，也不会让 (4,2) 提前用到它的新水深。阶段之间再通过依赖与同步，让下一阶段看到完整结果。</p><p>因此点击一个像素只是放大观察，不是让那个像素先动。减少纹理复制或复用缓存时，必须保留这条读写规则，以及水、沙、动量和完成时间的一致性。</p></details>
+   <details><summary>这 6 × 6 格到底算了什么，哪些没有算？</summary><p>这里实际计算平床、全湿、封闭边界条件下的 MC 重构、Rusanov 通量、二维 CFL、两次供水限制与 Euler 更新、SSPRK2 合成，以及随水搬运的悬沙。边界使用墙面压力；有干格速度处理与速度上限。水包初态的中心有一小片悬沙，平静对照的悬沙为 0。</p><p>没有模拟变高低的床面、障碍物、边界造浪、侵蚀沉积、湿度压实、坡面沙流、故障审计或真实 GPU 调度；因此第 07 步明确显示“耦合关闭，状态不变”。不是把尚未实现的沙流画成计算结果。</p><p>当前预设每轮 4 ms 可用一个子步完成。页面同时检查第二阶段 CFL；若后续状态需要更小步长，就报告并停止本轮教学推进，不把未完成的时间冒充完成。需要拆步、重试的完整流程请结合第 04 章理解。</p></details>
+  </div>
+ </div>
+ <details id="rk-details"><summary>两次试算，为什么只推进一次小步的时间？</summary><p>把一整份水状态叫作 U，把“计算当前变化率”的操作叫作 L。SSPRK2 的结构如下：</p><div class="formula"><span class="mathline">U₁ = U₀ + Δt × L(U₀)</span><span class="mathline">U₂ = U₁ + Δt × L(U₁)</span><span class="mathline">U新 = ½U₀ + ½U₂</span><small>这是时间积分的骨架。项目在各阶段还有供水限制、速度限制、床面项和合法性检查。</small></div><p>两次计算是为了更准确地估计同一段 Δt 内的演变。最后要和起点取组合，所以接受后累计的是 <strong>Δt，不是 2Δt</strong>。可以理解为：先做预测，再用预测后的状态检查趋势，最后修正答案。</p></details>
+ <p>完成的水深和流速会被白沫、湿沙、碎石、植被和漂浮物读取。侵蚀与沉积则会反过来改变沙床，影响下一次水流。这也是为什么不能只替换一段水算法，就假定其他表现完全不变。</p>
+ <p class="source">实现依据：<a href="../../scripts/simulation/unified_edit/water_muscl.gd">计算阶段录制</a> · <a href="../../scripts/simulation/unified_edit/coupled.gd">水沙和材料耦合</a> · <a href="../../shaders/simulation/muscl/rk_finalize.glsl">RK 合成</a></p>
+</section>
+
+<section id="cfl">
+ <div class="section-no">04 / 步子不能太大</div><h2>水流越快，一秒钟反而要算更多次</h2>
+ <p>想象相邻同学按顺序传递消息。如果一次时间跨度太长，消息本该已经越过好几个位置，你却只用邻座的旧信息算答案，就容易出错。显式网格算法因此需要限制时间步长，这类约束叫 <strong>CFL 条件</strong>。</p>
+ <p>水的信息传播速度不只取决于“水本身流得多快”。浅水重力波的速度还与水深有关，近似为 √(g × h)。所以<strong>深一些的静水，也可能需要更小的步长</strong>。</p>
+ <div class="formula">候选 Δt = min(剩余时间, 0.2 × Δx / (aₓ + a𝓏), 重试上限)<small>Δx 是格子边长；aₓ、a𝓏 是当前各方向传播速度上界。当前实现用 GPU 归约获取它们，并在第一阶段后再次检查。两个方向的最大值不必来自同一格。</small></div>
+ <div class="lab" id="cfl-lab">
+  <div class="lab-head"><h3>实验 D：改变水深，观察需要几小步</h3><span class="tag">假设计算器 · 不修改游戏</span></div>
+  <p class="small">假设全场同样深、只沿 X 流动、速度不变、没有重试，且 g = 9.81、CFL = 0.2。此时 aₓ + a𝓏 ≈ |u| + 2√(gh)。真实游戏每步重新计算，实际步数可能不同。</p>
+  <div class="two"><div class="control"><label for="depth">假设水深 h <output id="depth-out">0.25 m</output></label><input id="depth" type="range" min="0.01" max="10" step="0.01" value="0.25"></div><div class="control"><label for="speed">假设 X 向流速 |u| <output id="speed-out">0.5 m/s</output></label><input id="speed" type="range" min="0" max="10" step="0.1" value="0.5"></div></div>
+  <div class="row"><label for="cell-size">假设格子边长</label><select id="cell-size"><option value="0.25">0.25 m · 较粗</option><option value="0.125" selected>0.125 m · 当前值</option><option value="0.0625">0.0625 m · 更细</option></select><button type="button" id="cfl-reset">恢复示例初值</button></div>
+  <div class="live-stats"><div><span>该假设下的 CFL 步长上限</span><b id="dt-out">—</b></div><div><span>推进 1/30 秒的估算步数</span><b id="count-out">—</b></div><div><span>32 × 32 m 区域的假设格数</span><b id="grid-out">65,536</b></div></div>
+  <div class="slot-grid" id="slots" aria-hidden="true"></div>
+  <div class="legend"><span><i class="dot"></i>估算需要的候选槽</span><span><i class="dot empty"></i>剩余容量</span></div>
+  <p id="cfl-explain" aria-live="polite"></p>
+  <p class="lab-note">64 格表示试算容量，不是 64 帧。真实试算被拒绝也会占用一个槽。这里的数字只解释量级关系，不是场景 2 的性能预测。</p>
+ </div>
+ <div class="callout warm"><strong>两种“快”要分清：</strong>电脑把同样一秒水运动算得更快，是性能优化；让水在现实一秒内只演化半秒，是模拟变慢。后者不能算同等效果下的性能提升。</div>
+ <p>还有一个很实用的推论：固定区域内，如果格子边长减半，格子数约增至 4 倍，CFL 允许的步长又大约减半，基础格子更新工作可能接近 8 倍。它只是均匀条件下的工作量估算，<strong>不是 FPS 必然变成八分之一</strong>。</p>
+ <p class="source">实现依据：<a href="../../shaders/simulation/muscl/rk_decide.glsl">GPU 步长与接受／拒绝决策</a> · <a href="../../scripts/beach/unified_playable_entry.gd">外层 1/30 秒请求</a></p>
+</section>
+
+<section id="cost">
+ <div class="section-no">05 / 从方法到机器</div><h2>耗时来自算数，也来自搬运和安排</h2>
+ <p>给你一张卷子，算题需要时间；反复找资料、抄中间结果、等待上一组交卷，同样需要时间。GPU 计算也是如此。</p>
+ <div class="table-wrap"><table><thead><tr><th>工作</th><th>主要在哪里</th><th>当前项目中的具体例子</th></tr></thead><tbody><tr><td>重构与通量计算</td><td>GPU</td><td>读取自己及邻格，估计面状态，计算流动、压力和传播速度。</td></tr><tr><td>全场扫描与归约</td><td>GPU</td><td>各工作组算局部最大速度，再合成全场上界，决定安全步长。</td></tr><tr><td>纹理读写与状态复制</td><td>GPU / 显存</td><td>阶段间读写中间结果；每个接受子步把多张状态图复制回固定槽位。</td></tr><tr><td>检查与同步</td><td>GPU / 引擎</td><td>必须等边通量可用，才能算出流限制；必须等试算检查完成，才能接受结果。</td></tr><tr><td>命令录制</td><td>CPU / 引擎</td><td>绑定计算程序和资源，发出 dispatch。即使某次间接派发不做格子工作，也仍有录制成本。</td></tr><tr><td>其他场景负载</td><td>CPU + GPU</td><td>画水面、沙面、反射和白沫，处理材料、浮物与交互。</td></tr></tbody></table></div>
+ <h3>为什么说“超过 1,500 个阶段”，却不是全做 1,500 次大计算？</h3>
+ <p>标准 MUSCL 加水沙耦合路径，每个候选槽约录制 24 个阶段；64 个槽就是 1,536 个，另有初始化、收尾和表现消费者。这里混合了全场核、小控制核和间接派发。GPU 完成目标时间后，后面的无效槽会让大核工作组数为零；部分小核仍被调用。</p>
+ <p><strong>“预留了命令”与“真正执行了多少格子计算”是两个统计口径。</strong>现在已经跳过无效槽的速度扫描；继续优化要找到剩下的真实成本，不能仅按命令数量判断。</p>
+ <div class="lab">
+  <div class="lab-head"><h3>历史场景 2 对照：上一轮哪里有效？</h3><span class="tag done">已有测量 · 非当前重新测试</span></div>
+  <div class="table-wrap"><table><thead><tr><th>版本</th><th>平均 FPS</th><th>平均帧间隔</th></tr></thead><tbody><tr><td>优化前</td><td>21.59</td><td>46.308 ms</td></tr><tr><td>跳过无效速度归约</td><td>21.70</td><td>46.089 ms</td></tr><tr><td>再复用线程内面状态</td><td>32.48</td><td>30.787 ms</td></tr><tr><td>再合并 CPU 固定命令描述</td><td>32.78</td><td>30.508 ms</td></tr></tbody></table></div>
+  <p>主要改善来自第三行：<strong>同一条线程少算了重复的面状态。</strong>无效归约和 CPU 描述优化在这组帧率比较中的变化很小，不能夸大为显著 FPS 收益。</p>
+  <p class="lab-note">固定 test1_geometry 入口，i5-9300H / GTX 1050，D3D12 Forward+，1280 × 720，VSync 开启，完整负载、无操作、参数窗隐藏，正常段采样 20 秒。未锁定功耗、时钟或排除所有桌面负载。最终仍存在 60–70 ms 级长帧。数据只代表这轮条件，来源：<a href="../water_execution_optimization/结果.md">原始测试说明</a>。</p>
+ </div>
+ <details><summary>为什么某段计算快一倍，整帧不一定快一倍？</summary><p>做一个纯算术例子：总耗时 100 份，其中热点占 60 份。只把热点加速到两倍，它变成 30 份，其余 40 份仍在，总时间是 70 份，整体加速约 1.43 倍。</p><div class="compare-cost" aria-label="教学例子：总耗时从100份变为70份"><div class="cost-item"><div class="cost-bar" style="height:120px">100</div><span>原耗时</span></div><div class="cost-item"><div class="cost-bar" style="height:84px">70</div><span>热点加速两倍后</span></div></div><p class="small">这是可相加耗时的教学模型，不是本项目的占比。真实 CPU 与 GPU 可能重叠执行，还存在等待、VSync 和排队，不能把所有计时简单相加。</p></details>
+ <p class="source">计数依据：<a href="../../scripts/simulation/unified_edit/water_muscl.gd">64 槽录制循环</a>与<a href="../../scripts/simulation/unified_edit/coupled.gd">标准耦合阶段</a>。自定义回调或不同配置不能直接套用这个数量。</p>
+</section>
+
+<section id="optimize">
+ <div class="section-no">06 / 尽量让答案不变</div><h2>下一轮优化：少做重复劳动</h2>
+ <div class="callout"><strong>优化的首要约束：架构稳定、系统完整。</strong>保留权威状态归属、资源生命周期、阶段同步、完成态发布、沙水耦合与恢复契约。任何省时方案都先过这些约束，再比较性能；不能用跳过系统或混读新旧状态换取帧率。</div>
+ <p class="intro">保留 MUSCL，不等于必须保留现在每一次读取、复制和 API 调用。公式可以一样，组织计算的方式可以更经济。</p>
+ <div class="callout"><strong>状态说明：</strong>无效归约跳过、线程内面状态复用、CPU 命令描述缓存及固定耦合展开已经实现。下面四项是从当前代码发现的候选方向，<strong>尚未实现，也没有新的实测收益</strong>。</div>
+ <article class="opt"><div class="opt-title"><span class="tag idea">候选 1 · GPU</span><h3>邻格资料，能否大家共用一次？</h3></div><div class="opt-grid"><div><h4>现在怎样做</h4><p>A 线程算 A 格时会读 B 格；B 线程算 B 格时又会读取、重构 B 格。上轮解决了线程内部的重复，线程之间仍可能重复。</p><h4>准备怎样改</h4><p>尝试让一组线程把附近数据共同读到共享缓存，或者先计算可复用的重构量，再让边通量读取。</p></div><div><h4>像什么？</h4><p>从“每个同学都去图书馆抄同一页”，变成“这组先取一份，大家查阅”。</p><h4>为什么还要实测？</h4><p>共享缓存占空间，等同组同学准备好也要同步。预计算还会多一次写入和读取，可能抵消收益。</p></div></div><p class="small">保持公式与限幅条件；核对边缘、障碍、干湿区域和异常输入。共享缓存方法的通用依据见 <a href="https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#shared-memory-in-matrix-multiplication-c-ab" target="_blank" rel="noopener">NVIDIA 文档</a>；文档中的 CUDA 案例不等于本项目 GLSL 的收益保证。</p></article>
+ <article class="opt"><div class="opt-title"><span class="tag idea">候选 2 · GPU</span><h3>试算失败，是否必须从第一道题重做？</h3></div><div class="opt-grid"><div><h4>现在怎样做</h4><p>第一阶段后的 CFL 检查可能拒绝当前步长，然后减半重试。此时原始水状态尚未接受改动，但下一次仍会重算初始状态的边通量。</p><h4>准备怎样改</h4><p>保留不依赖这次 Δt 的第一阶段结果；重算出流限制、更新量等确实依赖新 Δt 的部分。</p></div><div><h4>像什么？</h4><p>计算题最后一步不合格，前面的已知条件和一部分中间结果仍可使用。</p><h4>为什么还要实测？</h4><p>如果几乎没有拒绝，这项收益很小；若保存中间结果增加了常规路径成本，也可能得不偿失。必须先统计拒绝率。</p></div></div><p class="small">当前有些阶段工作纹理会被下一阶段覆盖，不能直接假定它们还在；缓存身份、错误标志和审计语义也要保持正确。</p></article>
+ <article class="opt"><div class="opt-title"><span class="tag idea">候选 3 · GPU / 显存</span><h3>两本账本，能否交换名字而不整本重抄？</h3></div><div class="opt-grid"><div><h4>现在怎样做</h4><p>接受子步后，水深、动量、悬沙、沙和材料等字段会被复制回公共槽 0。大量格子反复执行同样的搬运。</p><h4>准备怎样改</h4><p>评估两组读写槽交替使用，或把部分复制并入已有写入阶段，减少专门的全场复制。</p></div><div><h4>像什么？</h4><p>新答案已经写在 B 本上，考虑下次直接用 B 本，而不是先把它抄回 A 本。</p><h4>为什么改动更大？</h4><p>水沙耦合、工具与发布流程目前有固定槽位假设。所有消费者必须读到正确的完整状态，不能混用新旧两本账。</p></div></div><p class="small">目标可以是不改变公式，但涉及接口和资源绑定。还需遵守跨线程读写依赖，不能让一个线程覆盖另一线程尚未读取的旧值。</p></article>
+ <article class="opt"><div class="opt-title"><span class="tag idea">候选 4 · CPU / 引擎</span><h3>发题更省事，学生仍做同样的题</h3></div><div class="opt-grid"><div><h4>现在怎样做</h4><p>命令描述已缓存，但每 tick 仍逐条调用 RenderingDevice：开始列表、绑定、派发、结束列表。</p><h4>准备怎样改</h4><p>评估把合适的计算放进同一列表，保留必要同步；必要时用原生 C++ 录制器减少脚本调用成本。</p></div><div><h4>像什么？</h4><p>老师把一组有顺序的题一次安排好，减少每道题重新分发材料的过程。</p><h4>为什么未必大幅提升 FPS？</h4><p>它主要减少 CPU 组织成本，GPU 仍做相同计算。如果瓶颈在 GPU，整体收益就有限。</p></div></div><p class="small">Godot 的计算列表支持多次 dispatch；本项目需要另行验证列表合并后的资源可见性和间接参数依赖。<a href="https://docs.godotengine.org/en/stable/classes/class_renderingdevice.html#class-renderingdevice-method-compute-list-begin" target="_blank" rel="noopener">官方接口说明</a></p></article>
+ <h3 style="margin-top:30px">按什么顺序做，才不会“忙了很久却没变快”？</h3>
+ <div class="mini-flow"><span>先量出热点</span><i>→</i><span>只改一个因素</span><i>→</i><span>核对结果</span><i>→</i><span>看整场景收益</span></div>
+ <ol><li><strong>先测：</strong>把重构、阶段更新、复制、水沙耦合、控制核与 CPU 录制分开计时，同时记录接受和拒绝次数。详细标记用于诊断，正常帧率另测，避免计时本身干扰结论。</li><li><strong>再选：</strong>若重构最重，优先候选 1；若重试占比高，验证候选 2；若复制或 CPU 占比更高，再调整顺序。目前没有足够细的新计时替它们确定收益排名。</li><li><strong>查答案：</strong>相同初态、相同工具输入和相同模拟时间，对照水、沙、动量、账本与完成时钟。以保持结果为目标的改动，先争取逐字节一致；出现差异必须解释，不能只说“看着差不多”。</li><li><strong>看体验：</strong>在场景 2 的真实可见窗口测平均帧间隔、P95/P99 长帧、实际模拟进度，并覆盖挖填、造浪和保存恢复。阶段耗时改善不自动代表整场景改善。</li></ol>
+</section>
+
+<section id="tradeoffs">
+ <div class="section-no">07 / 优化的边界</div><h2>“算法还是 MUSCL”，也可能已经改变水的行为</h2>
+ <div class="table-wrap"><table><thead><tr><th>做法</th><th>为什么可能更快</th><th>代价或前提</th></tr></thead><tbody><tr><td>复用计算、减少复制、优化录制</td><td>同样的答案少做重复工作。</td><td>目标是保持结果；仍需检查算术次序、同步和状态一致性。</td></tr><tr><td>把 CFL 从 0.2 调大</td><td>可能用更大步长，减少子步。</td><td>改变稳定性余量与误差；必须重新验证湿干、高速和陡坡，不能视为无损开关。</td></tr><tr><td>降低网格分辨率</td><td>格子更少，允许的步长也可能更大。</td><td>小波、小坑和岸线细节变粗，工具和碰撞尺度也需要核对。</td></tr><tr><td>降低侵蚀／材料更新频率</td><td>减少每个子步的耦合计算。</td><td>改变水沙相互作用的时序；即使按秒换算速率，也不能保证结果相同。</td></tr><tr><td>限制速度、减少造浪强度</td><td>传播速度上界降低时，子步可能减少。</td><td>实际运动本身改变；效果与性能需要一起评价。</td></tr><tr><td>降低候选容量，或让模拟少推进</td><td>录制或实际工作减少。</td><td>可能更常算不完请求时间。即使画面 FPS 升高，也可能只是水运动变慢。</td></tr><tr><td>换成另一种水求解器</td><td>每步结构可能更简单。</td><td>波形、流速、侵蚀、浮物和恢复兼容性都要重新评估。</td></tr></tbody></table></div>
+ <p>如果目标是“保留现在的水感”，先做第一行。如果目标变成“接受不同水感，换更高帧率”，再讨论后面的取舍。无论选哪条路，都需要把水量、沙量、时间和其他消费者一起核对。</p>
+ <div class="callout"><strong>对当前项目的建议：</strong>保留 MUSCL，先测清重构、重试与状态复制的比例，再验证执行层优化。当前证据支持“还有可研究的冗余”，还不足以承诺“继续优化就一定稳定 60 FPS”。</div>
+</section>
+
+<section id="quiz">
+ <div class="section-no">08 / 三道随堂题</div><h2>不用背公式，能解释这三点就抓住了主线</h2>
+ <div class="lab">
+  <div class="quiz" data-quiz="0"><h3>1. MUSCL 和浅水方程是什么关系？</h3><div class="row"><button type="button" data-answer="0">互相替代的两种物理模型</button><button type="button" data-answer="1">MUSCL 可以用于求解浅水方程</button></div><p class="quiz-result" aria-live="polite"></p></div>
+  <div class="quiz" data-quiz="1"><h3>2. 预留 64 个候选槽意味着什么？</h3><div class="row"><button type="button" data-answer="0">每 tick 必须做完 64 个有效子步</button><button type="button" data-answer="1">最多尝试 64 次，拒绝也占容量</button></div><p class="quiz-result" aria-live="polite"></p></div>
+  <div class="quiz" data-quiz="2"><h3>3. 只把 CPU 命令录制加快一倍，能承诺 FPS 翻倍吗？</h3><div class="row"><button type="button" data-answer="0">能，计算都会同步变快</button><button type="button" data-answer="1">不能，还要看其他耗时与等待</button></div><p class="quiz-result" aria-live="polite"></p></div>
+ </div>
+ <p class="intro">学完这页，你可以这样描述当前方案：<strong>我们在 GPU 上用网格求解浅水方程，MUSCL 改善空间重构，SSPRK2 改善时间推进；安全检查与水沙耦合增加了成本。优化先从重复计算、搬运和录制入手。</strong></p>
+</section>
+
+<section id="sources">
+ <div class="section-no">09 / 回到实际项目</div><h2>源码与延伸阅读</h2>
+ <p>正文中的“当前实现”来自以下本地源码与规格；“历史测量”来自已有测试记录；“候选优化”属于工程分析。四个实验仅用于解释概念，不运行游戏，也不预测真实 FPS。纹理实验在浏览器中计算简化的二维浅水算例，数值不是游戏 GPU 回读。</p>
+ <ol class="ref-list">
+  <li><a href="../../docs/当前技术规格.md">当前技术规格</a>：网格、字段单位、MUSCL、时钟、保波参数与已知限制。</li>
+  <li><a href="../../scripts/simulation/unified_edit/water_muscl.gd">water_muscl.gd</a>：64 次候选尝试、阶段顺序、缓存与 CPU 录制。</li>
+  <li><a href="../../shaders/simulation/muscl/muscl_spatial.glslinc">muscl_spatial.glslinc</a> 与 <a href="../../shaders/simulation/muscl/muscl_math.glslinc">muscl_math.glslinc</a>：重构、通量、限幅与安全规则。</li>
+  <li><a href="../../shaders/simulation/muscl/rk_decide.glsl">rk_decide.glsl</a>、<a href="../../shaders/simulation/muscl/rk_finalize.glsl">rk_finalize.glsl</a> 与 <a href="../../shaders/simulation/muscl/rk_normalize.glsl">rk_normalize.glsl</a>：步长、重试、合成与状态复制。</li>
+  <li><a href="../../scripts/simulation/unified_edit/coupled.gd">coupled.gd</a>：悬沙、侵蚀／沉积与材料更新。</li>
+  <li><a href="../water_execution_optimization/结果.md">水传播执行优化结果</a>：本文历史场景 2 数值的完整条件与限制。</li>
+  <li><a href="https://www.clawpack.org/riemann_book/html/Shallow_water.html" target="_blank" rel="noopener">Clawpack：The shallow water equations</a>：浅水模型及传播速度的进一步解释。</li>
+  <li><a href="https://docs.godotengine.org/en/stable/classes/class_renderingdevice.html" target="_blank" rel="noopener">Godot：RenderingDevice</a>：GPU 命令录制、时间戳、计算列表与同步接口。</li>
+  <li><a href="https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html" target="_blank" rel="noopener">NVIDIA：CUDA Best Practices Guide</a>：理解缓存、访存和性能测量；这里只借鉴通用原理。</li>
+ </ol>
+ <p class="small">核对日期：2026-10-24。<a href="sources.json">讲义来源指纹</a>用于标识本次读取的版本；它不是自动更新服务。当前代码后续变化时，应重新核对本页。页面本身为单文件离线讲义，外部链接和本地源码链接仅供延伸阅读。</p>
+</section>
+<footer class="footer">Sandcastle · MUSCL 入门讲义 <span style="float:right"><a href="#overview">回到概念地图 ↑</a></span><p>先理解它在算什么，再决定哪些工作可以省。</p></footer>
+</main>
+</div>
+<script>
+(()=>{
+'use strict';
+const $=id=>document.getElementById(id);
+const svgText=(x,y,text,size=16,extra='')=>`<text x="${x}" y="${y}" font-size="${size}" ${extra}>${text}</text>`;
+function drawVolume(){
+ const moved=Number($('transfer').value),left=12.5-moved,right=6.25+moved,hl=left/15.625,hr=right/15.625;
+ $('transfer-out').textContent=moved.toFixed(3)+' L';$('left-volume').textContent=left.toFixed(3)+' L';$('right-volume').textContent=right.toFixed(3)+' L';$('total-volume').textContent=(left+right).toFixed(3)+' L';
+ const base=250,scale=220;
+ $('volume-svg').innerHTML=`<title>左右格子水量，总量 ${(left+right).toFixed(3)} 升</title><desc>左格 ${left.toFixed(3)} 升，右格 ${right.toFixed(3)} 升，从左向右搬 ${moved.toFixed(3)} 升。</desc><rect x="65" y="30" width="240" height="220" rx="5" fill="#f0f4f2"/><rect x="455" y="30" width="240" height="220" rx="5" fill="#f0f4f2"/><rect x="65" y="${base-hl*scale}" width="240" height="${hl*scale}" fill="#93d0de"/><rect x="455" y="${base-hr*scale}" width="240" height="${hr*scale}" fill="#93d0de"/><path d="M65 30V250H305V30M455 30V250H695V30" fill="none" stroke="#68838a" stroke-width="2"/><path d="M331 144H427M417 136L427 144L417 152" fill="none" stroke="#167d9a" stroke-width="3"/>${svgText(185,280,'左格 A',17,'text-anchor="middle"')}${svgText(575,280,'右格 B',17,'text-anchor="middle"')}${svgText(185,226,hl.toFixed(3)+' m',18,'text-anchor="middle"')}${svgText(575,226,hr.toFixed(3)+' m',18,'text-anchor="middle"')}${svgText(380,125,moved.toFixed(3)+' L',15,'text-anchor="middle"')}${svgText(380,177,'同一笔转移',13,'text-anchor="middle"')}`;
+}
+$('transfer').addEventListener('input',drawVolume);drawVolume();
+
+let reconMode='both';const avg=[.2,.2,.3,.55,.8,.85,.65,.4,.25,.2];
+function slope(a,b,r){if(a*b<=0)return 0;const s=Math.sign(a),aa=Math.abs(a),bb=Math.abs(b),mc=s*Math.min(2*aa,2*bb,.5*Math.abs(a+b)),sb=s*Math.max(Math.min(2*aa,bb),Math.min(aa,2*bb));return r<=0?mc:(1-r)*mc+r*sb;}
+function drawRecon(){
+ const r=Number($('retention').value),x0=55,w=69,y=v=>250-v*220;
+ $('retention-out').textContent=r.toFixed(1)+(r===0?' · MC':r===1?' · Superbee':' · 混合');
+ let out='<title>同一组格均值的一阶和 MUSCL 重构</title><desc>圆点为相同的平均水深。蓝色线段通过参考邻格估计坡度；在峰谷处坡度受到限制。</desc>';
+ for(let j=0;j<=4;j++){const v=j*.25;out+=`<path d="M50 ${y(v)}H748" stroke="#e0e5de"/>`+svgText(43,y(v)+5,v.toFixed(2),12,'text-anchor="end"');}
+ avg.forEach((v,i)=>{const x=x0+i*w,mid=x+w/2;out+=`<path d="M${x} 24V250" stroke="#e3e6df"/>`;if(reconMode!=='muscl')out+=`<path d="M${x+2} ${y(v)}H${x+w-2}" stroke="#9ba9a8" stroke-width="3"/>`;if(reconMode!=='first'){let sl=i>0&&i<avg.length-1?slope(v-avg[i-1],avg[i+1]-v,r):0;sl*=Math.min(1,2*v/Math.max(Math.abs(sl),1.17549435e-38));out+=`<path d="M${x} ${y(v-.5*sl)}L${x+w} ${y(v+.5*sl)}" stroke="#167d9a" stroke-width="3" fill="none"/>`;}out+=`<circle cx="${mid}" cy="${y(v)}" r="4" fill="#182e3a"/>`+svgText(mid,276,String(i+1),12,'text-anchor="middle"');});
+ out+=svgText(60,17,'平均水深 / m',12)+svgText(738,295,'格子编号',12,'text-anchor="end"');$('recon-svg').innerHTML=out;
+}
+document.querySelectorAll('.recon-mode').forEach(b=>b.addEventListener('click',()=>{reconMode=b.dataset.mode;document.querySelectorAll('.recon-mode').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));drawRecon();}));$('retention').addEventListener('input',drawRecon);drawRecon();
+
+const stages=[
+ ['请求一段时间，录制计算顺序','CPU 根据累积时间提出推进 1/30 秒的请求，录制所需 GPU 命令；GPU 先做初始化和合法性检查，按配置处理边界。','理解要点：请求的时间只是目标，只有接受的子步才计入实际完成时间。'],
+ ['从旧状态计算面状态与安全步长','GPU 读取每格和邻格，重构边上的水深与速度，计算共享边通量和波速上界。归约之后，结合剩余时间和重试上限选出 Δt。','理解要点：MUSCL 仍然在格子上算；“归约”就是把许多局部最大值汇总成一个全局上界。'],
+ ['保护供水，再得到第一阶段 U₁','先看每格准备流出多少水，必要时缩小出流，避免透支。然后搬运水、动量和悬沙，加入床面相关项，得到暂存状态 U₁。','理解要点：U₁ 是中间草稿，不是已经对外发布的最终水面。'],
+ ['用 U₁ 复查 CFL，决定接受步长还是重试','重新重构 U₁ 的边状态，计算新的传播速度上界。如果原 Δt 太大，就拒绝本次，减小上限并从未提交的原状态重新尝试。非有限值等异常会走故障路径。','理解要点：拒绝会消耗一个候选槽，但不会把这份试算时间记成完成时间。'],
+ ['第二次受限更新，得到 U₂','通过检查后，再做一次出流限制与更新，从 U₁ 得到 U₂。两阶段都要计算，才能获得 SSPRK2 的时间推进结构。','理解要点：算两遍带来成本，但不能直接删掉一遍还声称结果相同。'],
+ ['将起点与第二阶段组合','按 U新 = ½U₀ + ½U₂ 合成候选水状态，并应用合法性与速度等保护，整理供后续使用的通量。','理解要点：两次试算最终对应一次 Δt 的推进，不是 2Δt。'],
+ ['更新侵蚀、沉积和沙体材料','在接受子步后进行侵蚀／沉积交换、湿度、压实和坡面等材料处理，整理回公共状态槽，再累计实际 Δt。','理解要点：MUSCL 的水搬运与悬沙输运已在两个阶段发生；这里继续处理沙与水之间的交换。'],
+ ['继续小步，直到结束，再发布完成态','若还剩目标时间且未耗尽容量，就继续下一候选槽。最后验证、收尾，完成后发布一致状态给渲染和其他消费者。容量不足时报告真实完成时间。','理解要点：tick 编号、现实时间、累计模拟时间不是同一个东西，不能用 tick/30 替代实际完成时钟。']
+];let currentStep=0;
+
+// TEXTURE_MODEL_BEGIN — offline teaching model; no game state or GPU resources.
+const TX_N=6,TX_DX=.125,TX_G=9.81,TX_REQUEST=.004;
+const texIndex=(x,z)=>z*TX_N+x;
+function texMC(a,b){return a*b>0?Math.sign(a)*Math.min(2*Math.abs(a),2*Math.abs(b),.5*Math.abs(a+b)):0;}
+function texInitial(preset){return Array.from({length:TX_N*TX_N},(_,i)=>{const x=i%TX_N,z=Math.floor(i/TX_N),h=preset==='still'?.3:.2+.3*Math.exp(-((x-2.25)**2+(z-2.4)**2)/1.4);return [h,0,0,preset==='still'?0:(x===2||x===3)&&(z===2||z===3)?.02*h:0];});}
+function texPrimitive(u,i){const a=u[i],d=Math.max(a[0],.005);return [a[0],a[0]>.001?a[1]/d:0,a[0]>.001?a[2]/d:0];}
+function texSlope(u,i,axis){const x=i%TX_N,z=Math.floor(i/TX_N);if(x===0||z===0||x===TX_N-1||z===TX_N-1||u[i][0]<=.001||[i-1,i+1,i-TX_N,i+TX_N].some(j=>u[j][0]<=.001))return [0,0,0];const d=axis===0?1:TX_N,c=texPrimitive(u,i),l=texPrimitive(u,i-d),r=texPrimitive(u,i+d),s=c.map((v,k)=>texMC(v-l[k],r[k]-v));s[0]*=Math.min(1,2*c[0]/Math.max(Math.abs(s[0]),1.17549435e-38));return s;}
+function texFace(u,i,axis,side){const c=texPrimitive(u,i),s=texSlope(u,i,axis);return c.map((v,k)=>v+.5*side*s[k]);}
+function texEdge(u,i,axis){const x=i%TX_N,z=Math.floor(i/TX_N),wall=axis===0?x===TX_N-1:z===TX_N-1,j=i+(axis===0?1:TX_N),l=texFace(u,i,axis,1),r=wall?l:texFace(u,j,axis,-1),ul=l[axis+1],ur=r[axis+1],a=Math.max(Math.abs(ul)+Math.sqrt(TX_G*l[0]),Math.abs(ur)+Math.sqrt(TX_G*r[0]));
+ const ql=[l[0],l[0]*l[1],l[0]*l[2]],qr=[r[0],r[0]*r[1],r[0]*r[2]],fl=ql.map(v=>v*ul),fr=qr.map(v=>v*ur);fl[axis+1]+=.5*TX_G*l[0]*l[0];fr[axis+1]+=.5*TX_G*r[0]*r[0];
+ return {flux:wall?[0,0,0]:fl.map((v,k)=>.5*(v+fr[k])-.5*a*(qr[k]-ql[k])),speed:a,l,r,wall};
+}
+function texEdges(u){const x=u.map((_,i)=>texEdge(u,i,0)),z=u.map((_,i)=>texEdge(u,i,1)),ax=Math.max(...x.map(e=>e.speed)),az=Math.max(...z.map(e=>e.speed));return {x,z,ax,az,limit:.2*TX_DX/Math.max(ax+az,.01)};}
+function texDrain(u,e,dt){return u.map((a,i)=>{const x=i%TX_N,z=Math.floor(i/TX_N),out=Math.max(e.x[i].flux[0],0)+Math.max(e.z[i].flux[0],0)+(x>0?Math.max(-e.x[i-1].flux[0],0):0)+(z>0?Math.max(-e.z[i-TX_N].flux[0],0):0);return out>0?Math.min(1,a[0]/((dt/TX_DX)*out)):1;});}
+function texTransfer(u,theta,edge,i,j){const donor=edge.flux[0]>=0?i:j,f=edge.flux.map(v=>v*theta[donor]),c=u[donor][0]>0?u[donor][3]/u[donor][0]:0;return [...f,f[0]*c];}
+function texCap(a){const r=a.slice();if(r[0]<=.001){r[1]=r[2]=0;return r;}const q=Math.hypot(r[1],r[2]),cap=r[0]*Math.max(1.5,3*Math.sqrt(TX_G*r[0]));if(q>cap){r[1]*=cap/q;r[2]*=cap/q;}return r;}
+function texEuler(u,e,dt){const theta=texDrain(u,e,dt),details=[],ratio=dt/TX_DX;const state=u.map((a,i)=>{const x=i%TX_N,z=Math.floor(i/TX_N),zero=()=>[0,0,0,0];const l=x>0?texTransfer(u,theta,e.x[i-1],i-1,i):zero(),r=x<TX_N-1?texTransfer(u,theta,e.x[i],i,i+1):zero(),t=z>0?texTransfer(u,theta,e.z[i-TX_N],i-TX_N,i):zero(),b=z<TX_N-1?texTransfer(u,theta,e.z[i],i,i+TX_N):zero();
+ const pressure=[0,(x===0?.5*TX_G*a[0]*a[0]:0)-(x===TX_N-1?.5*TX_G*a[0]*a[0]:0),(z===0?.5*TX_G*a[0]*a[0]:0)-(z===TX_N-1?.5*TX_G*a[0]*a[0]:0),0];const raw=a.map((v,k)=>v+ratio*(l[k]-r[k]+t[k]-b[k])+ratio*pressure[k]);
+ if(raw.some(v=>!Number.isFinite(v))||raw[0]<-1e-12||raw[3]<-1e-12)throw new Error('算例出现非有限值或负量，停止推进。');const result=texCap(raw);details.push({l,r,t,b,pressure,raw});return result;
+ });return {state,theta,details};}
+function texFrame(u){const u0=u.map(a=>a.slice()),edge0=texEdges(u0),dt=Math.min(TX_REQUEST,edge0.limit),euler0=texEuler(u0,edge0,dt),u1=euler0.state,edge1=texEdges(u1);
+ // Deliberately stop rather than silently publish a partially completed request.
+ if(dt<TX_REQUEST-1e-12||dt>edge1.limit*(1+8*1.1920928955078125e-7))throw new Error('当前状态需要拆步或缩步重试，超出这份单子步教学视图。请恢复初态；不能把 4 ms 记为已完成。');
+ const euler1=texEuler(u1,edge1,dt),u2=euler1.state,final=u0.map((a,i)=>texCap(a.map((v,k)=>.5*v+.5*u2[i][k])));return {u0,u1,u2,final,edge0,edge1,euler0,euler1,dt};
+}
+const texVolume=u=>u.reduce((sum,a)=>sum+a[0]*TX_DX*TX_DX*1000,0);
+// TEXTURE_MODEL_END
+
+const textureChannels=[{name:'h · 水深',symbol:'h',unit:'m',lo:.2,hi:.5},{name:'qx · X 向动量',symbol:'qx',unit:'m²/s',lo:-.2,hi:.2},{name:'qz · Z 向动量',symbol:'qz',unit:'m²/s',lo:-.2,hi:.2},{name:'s · 悬沙等效厚度',symbol:'s',unit:'m',lo:0,hi:.01}];
+let textureFrame=texFrame(texInitial('pulse')),textureTime=0,textureRound=1,texturePixel=texIndex(3,2),textureWorkStep=-1,textureFailed=false;
+const texNum=(v,d=6)=>Math.abs(v)<.5*10**(-d)?(0).toFixed(d):v.toFixed(d);
+const texSigned=v=>(v>0?'+':'')+texNum(v);
+function textureColor(v,lo,hi){const t=Math.max(0,Math.min(1,(v-lo)/(hi-lo)));let a,b,f;if(lo<0){a=t<.5?[237,183,119]:[243,247,243];b=t<.5?[243,247,243]:[89,171,197];f=t<.5?t*2:(t-.5)*2;}else{a=[243,247,243];b=[89,171,197];f=t;}return 'rgb('+a.map((n,i)=>Math.round(n+(b[i]-n)*f)).join(',')+')';}
+function textureGrid(id,values,scale,reference){let html='<span class="texture-axis">z↓ x→</span>'+Array.from({length:TX_N},(_,i)=>'<span class="texture-axis">'+i+'</span>').join('');const sx=texturePixel%TX_N,sz=Math.floor(texturePixel/TX_N);for(let z=0;z<TX_N;z++){html+='<span class="texture-axis">'+z+'</span>';for(let x=0;x<TX_N;x++){const i=texIndex(x,z),v=values?values[i]:null,selected=i===texturePixel,near=Math.abs(x-sx)+Math.abs(z-sz)===1,changed=v!==null&&reference&&Math.abs(v-reference[i])>1e-12;html+='<button type="button" class="texel'+(v===null?' empty':'')+(near?' neighbor':'')+(changed?' changed':'')+'" data-pixel="'+i+'"'+(v!==null?' data-value="'+v+'"':'')+' aria-pressed="'+selected+'" tabindex="'+(selected?0:-1)+'" style="background:'+ (v===null?'#eef0eb':textureColor(v,scale.lo,scale.hi))+'" aria-label="像素 ('+x+', '+z+')，'+(v===null?'尚未写入':texNum(v)+' '+scale.unit)+'" title="('+x+', '+z+') '+(v===null?'尚未写入':texNum(v,9)+' '+scale.unit)+'">'+(v===null?'—':texNum(v,3))+'</button>';}}$(id).innerHTML=html;}
+function textureWorkOptions(){const f=textureFrame,k=Number($('texture-channel').value),stage=currentStep,e=stage>=3?f.edge1:f.edge0;
+ if(stage===0)return [{key:'none',name:'尚无工作纹理',values:null,lo:0,hi:1,unit:'',note:'本步只提出时间请求。斜线表示未计算，不表示零水深。'}];
+ if(stage===1||stage===3)return [
+  {key:'fx',name:'edge_x.R · 向右的水量通量',values:e.x.map(a=>a.flux[0]),lo:-.2,hi:.2,unit:'m²/s',note:'正值向右，负值向左。右边第 5 列是墙，通量为 0。'},
+  {key:'fz',name:'edge_z.R · 向下的水量通量',values:e.z.map(a=>a.flux[0]),lo:-.2,hi:.2,unit:'m²/s',note:'这里的向下是网格 +Z 方向，不是重力方向。第 5 行是墙。'},
+  {key:'ax',name:'edge_x.A · X 向波速上界',values:e.x.map(a=>a.speed),lo:0,hi:3,unit:'m/s',note:'每条边的上界；局部最大值继续归约。水静止也会有重力波速度。'},
+  {key:'az',name:'edge_z.A · Z 向波速上界',values:e.z.map(a=>a.speed),lo:0,hi:3,unit:'m/s',note:'与 X 方向分别取全场最大值；两个最大值不必来自同一像素。'},
+  {key:'momentum',name:'edge_x.G · qx 的通量',values:e.x.map(a=>a.flux[1]),lo:0,hi:1.5,unit:'m³/s²',note:'不仅有随流搬运，还有水压项。静水有压力通量，两侧相抵后可以不动。'}];
+ if(stage===2||stage===4)return [{key:'theta',name:'drain.R · 供水系数 θ',values:(stage===2?f.euler0:f.euler1).theta,lo:0,hi:1,unit:'',note:'1 表示不削减出流。只有将要流出的水多于本格存水时，才小于 1。'}];
+ if(stage===5)return [{...textureChannels[k],key:'u2',name:'U₂ · 第二张草稿的 '+textureChannels[k].symbol,values:f.u2.map(a=>a[k]),note:'从 U₁ 再试算得到的草稿，与左边 U₀ 各取一半；不能直接发布 U₂。'}];
+ if(stage===6)return [{key:'bed',name:'床面 b · 固定为 0',values:Array(TX_N*TX_N).fill(0),lo:0,hi:.5,unit:'m',note:'本算例关闭沙水交换和材料更新，所以床面不动；真实项目还会处理这些系统。'}];
+ return [{key:'change',name:'本轮总变化 · Δ'+textureChannels[k].symbol,values:f.final.map((a,i)=>a[k]-f.u0[i][k]),lo:k===3?-.002:-.02,hi:k===3?.002:.02,unit:textureChannels[k].unit,note:'与本轮起点 U₀ 比较。蓝色增加，棕色减少；这是教学差值图，不是项目新增的 GPU 纹理。'}];
+}
+function textureCross(u,k){const x=texturePixel%TX_N,z=Math.floor(texturePixel/TX_N),points=[[-1,0,'左'],[0,-1,'上'],[0,0,'本格'],[1,0,'右'],[0,1,'下']];return '<svg class="pixel-cross" viewBox="0 0 420 180" role="img" aria-label="选中格与四邻格的输入数值"><path d="M145 90H275M210 40V140" stroke="#93b8bd" stroke-width="2"/>'+points.map(([dx,dz,label])=>{const px=155+dx*130,py=65+dz*57,inside=x+dx>=0&&x+dx<TX_N&&z+dz>=0&&z+dz<TX_N;return '<rect x="'+px+'" y="'+py+'" width="110" height="49" rx="6" fill="'+(dx===0&&dz===0?'#d8ebef':'#edf1eb')+'" stroke="#93b8bd"/>'+svgText(px+55,py+17,label+(inside?' ('+(x+dx)+','+(z+dz)+')':' · 墙外'),11,'text-anchor="middle"')+svgText(px+55,py+37,inside?texNum(u[texIndex(x+dx,z+dz)][k]):'无邻格',13,'text-anchor="middle"');}).join('')+'</svg>';}
+function textureExplanation(input,output,work,k){const f=textureFrame,i=texturePixel,x=i%TX_N,z=Math.floor(i/TX_N),c=textureChannels[k],n=texNum,stage=currentStep;let text='';
+ if(stage===0){text='<p><strong>先认像素：</strong>坐标 ('+x+','+z+') 的四个数为 (h, qx, qz, s) = ('+f.u0[i].map(v=>n(v)).join(', ')+')。水深乘面积才是这一格的水量。</p><div class="formula">V = h × Δx² = '+n(f.u0[i][0])+' × 0.125² = '+n(f.u0[i][0]*TX_DX*TX_DX*1000)+' L</div><p>本轮请求 4 ms，尚未修改水。左、右图一样；CPU 负责安排计算，以下大规模数值运算在游戏里由 GPU 执行。</p>';}
+ else if(stage===1||stage===3){const axis=work.key==='fz'||work.key==='az'?1:0,edge=(stage===1?f.edge0:f.edge1),u=stage===1?f.u0:f.u1,a=(axis===0?edge.x:edge.z)[i],sl=texSlope(u,i,axis),label=axis===0?'右':'下';text='<p><strong>① 读本格和邻格。</strong>这是 '+(stage===1?'U₀':'U₁')+' 的 '+c.symbol+'；MUSCL 实际对水深、水面高度与速度做重构，平床时水面高度等于水深。</p>'+textureCross(u,k)+'<p><strong>② 把平均水深推到'+label+'边。</strong>本格 h = '+n(u[i][0])+'；该方向限幅坡度 σ = '+n(sl[0])+'。边值 hL = h + σ/2 = <strong>'+n(a.l[0])+'</strong>；邻格迎面边值 hR = <strong>'+n(a.r[0])+'</strong>。边界格或局部峰谷处，坡度可能为 0。</p>'+(a.wall?'<div class="formula">这条边是墙：水量通量 Fh = 0。波速上界仍为 '+n(a.speed)+' m/s。</div>':'<div class="formula">a = max(|uL| + √(g hL), |uR| + √(g hR)) = '+n(a.speed)+' m/s<br>Fh = ½(hL uL + hR uR) − ½a(hR − hL)<br>= ½('+n(a.l[0])+' × '+n(a.l[axis+1])+' + '+n(a.r[0])+' × '+n(a.r[axis+1])+') − ½ × '+n(a.speed)+' × ('+n(a.r[0])+' − '+n(a.l[0])+')<br>= <strong>'+n(a.flux[0])+' m²/s</strong></div>')+'<p><strong>③ 把全场波速取最大值。</strong>aₓ = '+n(edge.ax)+'，a𝓏 = '+n(edge.az)+' m/s。下面这一步是全场归约，不是只看选中的像素。</p><div class="formula">CFL 上限 = 0.2 × 0.125 / ('+n(edge.ax)+' + '+n(edge.az)+') = '+n(edge.limit*1000,3)+' ms<br>'+(stage===1?'Δt = min(剩余 4 ms, CFL 上限) = '+n(f.dt*1000,3)+' ms':'复查：'+n(f.dt*1000,3)+' ms ≤ '+n(edge.limit*1000,3)+' ms → 通过')+'</div><p>'+(stage===1?'本步写出共享边和控制数据，还没更新水深。':'本步重算 U₁ 的边状态；通过检查不代表又推进了一段时间。如果超限，真实项目会保持 U₀，减小步长重新尝试。')+'</p>';}
+ else if(stage===2||stage===4){const e=stage===2?f.euler0:f.euler1,d=e.details[i],t=e.theta[i],edge=stage===2?f.edge0:f.edge1;const out=Math.max(edge.x[i].flux[0],0)+Math.max(edge.z[i].flux[0],0)+(x>0?Math.max(-edge.x[i-1].flux[0],0):0)+(z>0?Math.max(-edge.z[i-TX_N].flux[0],0):0);text='<p><strong>① 先检查本格够不够供水。</strong>计划出流的水深总量 = (Δt/Δx) × 四条边的向外通量之和 = '+n(f.dt/TX_DX)+' × '+n(out)+' = '+n(f.dt/TX_DX*out)+' m。可用水深 '+n(input[i][0])+' m，因此 θ = <strong>'+n(t)+'</strong>。</p><p><strong>② 每条边使用供水方的 θ。</strong>读四边通量，左和上加，右和下减；通量自身有正负号，因此倒流也会正确计入。悬沙通量还乘供水方的 s/h。</p><div class="formula">'+c.symbol+'新 = '+c.symbol+'旧 + (Δt/Δx) × (F左 − F右 + F上 − F下)'+(k===1||k===2?' + 墙面压力修正':'')+'<br>= '+n(input[i][k])+' + '+n(f.dt/TX_DX)+' × ('+n(d.l[k])+' − ('+n(d.r[k])+') + '+n(d.t[k])+' − ('+n(d.b[k])+'))'+(k===1||k===2?' + '+n(f.dt/TX_DX*d.pressure[k]):'')+'<br>= <strong>'+n(d.raw[k])+' '+c.unit+'</strong>（保护前）<br>保护后写入 '+(stage===2?'U₁':'U₂')+' = '+n(output[i][k])+' '+c.unit+'</div><p><strong>③ 写进另一张纹理。</strong>棕点标记本阶段发生变化的像素；其他线程仍读取同一份旧输入，不能边读边覆盖它。'+(stage===4?'U₂ 是第二张草稿，下一步还要与 U₀ 合成。':'U₁ 只是预测，下一步先检查新波速。')+'</p>';}
+ else if(stage===5){text='<p><strong>把两端信息组合起来：</strong>左图是本轮起点 U₀，中图是第二张草稿 U₂，右图是它们的平均值。不要把 U₁ 和 U₂ 平均，也不要直接发布 U₂。</p><div class="formula">'+c.symbol+'候选 = ½ × '+n(f.u0[i][k])+' + ½ × '+n(f.u2[i][k])+'<br>= <strong>'+n(.5*f.u0[i][k]+.5*f.u2[i][k])+' '+c.unit+'</strong><br>保护后 = '+n(f.final[i][k])+' '+c.unit+'</div><p>虽然写了两张试算草稿，合成后的物理时间只前进 '+n(f.dt*1000,3)+' ms。水、两个方向动量和悬沙都按这个结构组合。</p>';}
+ else if(stage===6){text='<p><strong>这一步不要编造变化：</strong>小算例的侵蚀／沉积及材料更新关闭，固定床面 b = 0；所以 '+c.symbol+' 从 '+n(input[i][k])+' 到 '+n(output[i][k])+'，变化为 0。</p><p>真实游戏在这个位置继续做沙水交换、湿度、压实和坡面等处理。减少水求解开销时，要保留它们读到的状态、实际 Δt、源汇记账和生命周期，不能把这一阶段一并跳过。</p><div class="formula">候选水状态 → 沙水 / 材料耦合 → 归一到约定状态槽 → 累计接受的 Δt</div>';}
+ else {text='<p><strong>本轮的 '+n(f.dt*1000,3)+' ms 已完成。</strong>发布前与发布后的数值相同，因为发布是让完整状态变成可见状态，不是再算一次水流。中图显示与本轮 U₀ 的总差值。</p><div class="formula">'+c.symbol+'完成 = '+n(f.final[i][k])+' '+c.unit+'<br>本轮总变化 = '+n(f.final[i][k])+' − '+n(f.u0[i][k])+' = '+texSigned(f.final[i][k]-f.u0[i][k])+' '+c.unit+'<br>完成时间 = '+n(textureTime*1000,3)+' + '+n(f.dt*1000,3)+' = '+n((textureTime+f.dt)*1000,3)+' ms</div><p>正式游戏若尚有请求时间，会先继续子步，再发布最终一致状态。此处 4 ms 请求恰好完成；点“再推进一轮”，可以继续看水包向周围传开，平静对照则保持不动。</p>';}
+ return text+'<p class="small">中图所选值：'+work.name+'['+x+','+z+'] = '+(work.values?'<strong>'+n(work.values[i])+' '+work.unit+'</strong>':'尚未生成')+'。网格保留 3 位小数，计算与详情使用更多位，显示四舍五入可能掩盖细小变化。</p>';
+}
+function renderTextures(){const f=textureFrame,k=Number($('texture-channel').value),c=textureChannels[k],s=currentStep;const input=[f.u0,f.u0,f.u0,f.u1,f.u1,f.u0,f.final,f.final][s],output=[f.u0,f.u0,f.u1,f.u1,f.u2,f.final,f.final,f.final][s],namesIn=['U₀ · 本轮旧状态','U₀ · 本轮旧状态','U₀ · 本轮旧状态','U₁ · 第一张草稿','U₁ · 第一张草稿','U₀ · 本轮旧状态','候选 · 合成后','完成候选 · 待发布'],namesOut=['U₀ · 尚未改动','U₀ · 仍未改动','U₁ · 第一张草稿','U₁ · 通过检查，值不变','U₂ · 第二张草稿','候选 · ½U₀ + ½U₂','耦合后 · 本例不变','完成态 · 可供其他系统读取'];
+ $('texture-input-title').textContent=namesIn[s];$('texture-output-title').textContent=namesOut[s];$('texture-input-format').textContent=(s===3||s===4?'RGBA32F 中的 '+c.symbol:'独立 R32F 中的 '+c.symbol)+' / '+c.unit;$('texture-output-format').textContent=(s===2||s===3||s===4?'RGBA32F 中的 '+c.symbol:'独立 R32F 中的 '+c.symbol)+' / '+c.unit;
+ $('texture-input-note').textContent='输入在本阶段保持只读。X 向右、Z 向下；点击格子看具体计算。';$('texture-output-note').textContent=s===0||s===1?'此处保留旧水，尚未写出新的水状态。':s===3?'安全检查更新控制标记，水值保持不变。':s===7?'现在才能把本轮完整结果交给渲染等消费者。':'这份结果'+(s<6?'仍是内部试算或候选状态。':'保持各字段与接受步长一致。');
+ const routes=['CPU 请求 4 ms → GPU 初始化控制数据；U₀ 不变','读 U₀ 和邻格 → 重构 → edge_x / edge_z → speed_tiles → Trial 步长','读 U₀ + edge → drain → Euler → 写 U₁','读 U₁ → 重新计算 edge / 波速 → Decision 检查；U₁ 不变','读 U₁ + 新 edge → 新 drain → Euler → 写 U₂','读 U₀ + U₂ → RK 合成与保护 → 写候选状态','读水候选 + 沙 / 材料 → 耦合（本例关闭）→ 状态整理','检查完整状态与实际完成时间 → 发布 → 渲染及其他消费者'];$('texture-route').textContent=routes[s];
+ const options=textureWorkOptions(),select=$('texture-work-select'),previous=select.value;select.innerHTML=options.map(o=>'<option value="'+o.key+'">'+o.name+'</option>').join('');if(textureWorkStep===s&&options.some(o=>o.key===previous))select.value=previous;else select.value=s===3?'ax':options[0].key;textureWorkStep=s;const work=options.find(o=>o.key===select.value)||options[0];select.disabled=options.length===1;$('texture-work-title').textContent=s===1||s===3?'同坐标的共享边数据':s===2||s===4?'先限制，再搬运':s===5?'用于合成的另一份输入':s===6?'固定床面':s===7?'这一轮到底改变了多少':'等待第一轮计算';$('texture-work-note').textContent=work.note+' 色标 '+work.lo+' ～ '+work.hi+' '+work.unit+'。';
+ const inValues=input.map(a=>a[k]),outValues=output.map(a=>a[k]);textureGrid('texture-input',inValues,c);textureGrid('texture-work',work.values,work);textureGrid('texture-output',outValues,c,inValues);
+ $('texture-color-note').innerHTML='状态图固定色标 <span class="texture-scale"></span> '+c.lo+' ～ '+c.hi+' '+c.unit+'；'+(c.lo<0?'棕色为负，近白为 0，蓝色为正。':'越蓝表示数值越大。')+' 切换阶段不会重新拉伸色标，超出色标只截断颜色、不截断数值。中图使用自己的单位与色标。';
+ $('texture-clock').textContent='第 '+textureRound+' 轮 / '+(s===0?'待选步长':texNum(f.dt*1000,3)+' ms');const mass=texVolume(output);$('texture-mass').textContent=texNum(mass,6)+' L';$('texture-mass').dataset.value=String(mass);$('texture-published').textContent=texNum((textureTime+(s===7?f.dt:0))*1000,3)+' ms';$('texture-published').dataset.seconds=String(textureTime+(s===7?f.dt:0));
+ $('pixel-title').textContent='像素 ('+(texturePixel%TX_N)+', '+Math.floor(texturePixel/TX_N)+') · '+c.name+' / '+c.unit;$('pixel-before').textContent=texNum(input[texturePixel][k]);$('pixel-after').textContent=texNum(output[texturePixel][k]);$('pixel-delta').textContent=texSigned(output[texturePixel][k]-input[texturePixel][k]);$('pixel-explain').innerHTML=textureExplanation(input,output,work,k);
+ const history=[['U₀ · 起点',f.u0,0],['U₁ · 预测',f.u1,2],['U₂ · 再试算',f.u2,4],['候选 · 合成',f.final,5],['完成态 · 发布',f.final,7]];$('pixel-timeline').innerHTML=history.map(([name,u,at])=>'<div class="'+(s>=at?'ready':'')+'"><span>'+name+'</span><b>'+(s>=at?texNum(u[texturePixel][k]):'尚未到达')+'</b></div>').join('');
+ $('texture-summary').textContent='本轮起点总水量 '+texNum(texVolume(f.u0),6)+' L；当前输出较起点差 '+(mass-texVolume(f.u0)).toExponential(2)+' L。封闭边界没有水源／水汇，内部交换应守恒；微小尾差来自浮点计算。';$('texture-continue').disabled=s!==7||textureFailed;$('texture-lab').dataset.stage=String(s);
+}
+function restartTexture(){textureFailed=false;textureTime=0;textureRound=1;texturePixel=texIndex(3,2);textureWorkStep=-1;textureFrame=texFrame(texInitial($('texture-preset').value));currentStep=0;$('texture-error').hidden=true;showStep();}
+['texture-input','texture-work','texture-output'].forEach(id=>{const grid=$(id);grid.addEventListener('click',e=>{const cell=e.target.closest('[data-pixel]');if(!cell)return;texturePixel=Number(cell.dataset.pixel);renderTextures();grid.querySelector('[data-pixel="'+texturePixel+'"]').focus({preventScroll:true});});grid.addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(e.key))return;e.preventDefault();const x=texturePixel%TX_N,z=Math.floor(texturePixel/TX_N);texturePixel=texIndex(Math.max(0,Math.min(TX_N-1,x+(e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0))),Math.max(0,Math.min(TX_N-1,z+(e.key==='ArrowDown'?1:e.key==='ArrowUp'?-1:0))));renderTextures();grid.querySelector('[data-pixel="'+texturePixel+'"]').focus({preventScroll:true});});});
+$('texture-channel').addEventListener('change',renderTextures);$('texture-work-select').addEventListener('change',renderTextures);$('texture-preset').addEventListener('change',restartTexture);$('texture-reset').addEventListener('click',restartTexture);
+$('texture-continue').addEventListener('click',()=>{if(currentStep!==7||textureFailed)return;try{const next=texFrame(textureFrame.final);textureTime+=textureFrame.dt;textureRound++;textureFrame=next;currentStep=0;showStep();}catch(error){textureFailed=true;$('texture-error').textContent=error.message;$('texture-error').hidden=false;$('texture-continue').disabled=true;}});
+function showStep(){const s=stages[currentStep];$('step-detail').innerHTML='<h4>'+s[0]+'</h4><p>'+s[1]+'</p><p class="small">'+s[2]+'</p>';document.querySelectorAll('[data-step]').forEach(b=>b.setAttribute('aria-pressed',String(Number(b.dataset.step)===currentStep)));$('step-prev').disabled=currentStep===0;$('step-next').disabled=currentStep===7;$('step-counter').textContent=(currentStep+1)+' / 8';renderTextures();}
+document.querySelectorAll('[data-step]').forEach(b=>b.addEventListener('click',()=>{currentStep=Number(b.dataset.step);showStep();}));$('step-prev').addEventListener('click',()=>{currentStep=Math.max(0,currentStep-1);showStep();});$('step-next').addEventListener('click',()=>{currentStep=Math.min(7,currentStep+1);showStep();});showStep();
+
+$('slots').innerHTML=Array.from({length:64},()=>'<span class="slot"></span>').join('');
+function updateCfl(){const h=Number($('depth').value),u=Number($('speed').value),dx=Number($('cell-size').value),a=u+2*Math.sqrt(9.81*h),dt=.2*dx/Math.max(a,.01),n=Math.ceil((1/30)/dt),side=Math.round(32/dx),cells=side*side;
+ $('depth-out').textContent=h.toFixed(2)+' m';$('speed-out').textContent=u.toFixed(1)+' m/s';$('dt-out').textContent=(dt*1000).toFixed(3)+' ms';$('count-out').textContent=n+' 步';$('grid-out').textContent=cells.toLocaleString('en-US');document.querySelectorAll('.slot').forEach((s,i)=>s.classList.toggle('used',i<Math.min(n,64)));
+ $('cfl-explain').textContent=n<=64?`在这个恒定条件的简化例子里，推进 33.333 ms 需要约 ${n} 个小步，最后一步可以更短。蓝色槽数不是游戏实测。`:`这个假设需要约 ${n} 步，超过 64 槽容量；即使没有重试，64 步也只能推进约 ${(64*dt*1000).toFixed(2)} ms。真实实现按每次实际接受的 Δt 累计，而不是套用这个恒速例子的乘法。`;
+ $('cfl-lab').dataset.estimatedSteps=String(n);
+}
+['depth','speed','cell-size'].forEach(id=>$(id).addEventListener('input',updateCfl));$('cell-size').addEventListener('change',updateCfl);$('cfl-reset').addEventListener('click',()=>{$('depth').value='0.25';$('speed').value='0.5';$('cell-size').value='0.125';updateCfl();});updateCfl();
+
+const feedback=['MUSCL 是空间重构方法，当前项目用它提高浅水方程的数值求解质量；它不是另一套物理方程。','64 是最多尝试次数。有效步数由状态与步长决定，被拒绝的试算也占用容量。','CPU 录制只是总工作的一部分。GPU 计算、渲染、等待与长帧仍可能限制整体帧率。'];
+document.querySelectorAll('.quiz').forEach(q=>q.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{const ok=b.dataset.answer==='1',out=q.querySelector('.quiz-result');q.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));out.className='quiz-result '+(ok?'correct':'wrong');out.textContent=(ok?'答对了。':'再想一想。')+feedback[Number(q.dataset.quiz)];})));
+let printExpanded=null;
+function preparePrint(){if(printExpanded)return;printExpanded=[...document.querySelectorAll('details')].map(d=>[d,d.open]);printExpanded.forEach(([d])=>d.open=true);const node=document.createElement('div');node.id='print-stages';node.innerHTML='<h3>完整流程文字</h3>'+stages.map((s,i)=>'<p><strong>'+(i+1)+'. '+s[0]+'</strong><br>'+s[1]+'<br>'+s[2]+'</p>').join('');$('step-detail').after(node);$('step-detail').hidden=true;}
+function finishPrint(){if(!printExpanded)return;printExpanded.forEach(([d,open])=>d.open=open);printExpanded=null;$('print-stages')?.remove();$('step-detail').hidden=false;}
+$('print-page').addEventListener('click',()=>window.print());window.addEventListener('beforeprint',preparePrint);window.addEventListener('afterprint',finishPrint);
+const links=[...document.querySelectorAll('.side nav a')];let scrollQueued=false;
+function setActive(){let chosen=links[0];for(const a of links){if(document.querySelector(a.getAttribute('href')).getBoundingClientRect().top<180)chosen=a;}links.forEach(a=>{a.classList.toggle('active',a===chosen);if(a===chosen)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});scrollQueued=false;}
+window.addEventListener('scroll',()=>{if(!scrollQueued){scrollQueued=true;requestAnimationFrame(setActive);}},{passive:true});setActive();
+})();
+</script>
+</body>
+</html>

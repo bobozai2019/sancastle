@@ -1,28 +1,26 @@
 {
-  "version": 2,
+  "version": 3,
   "capture": {
-    "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\test1.rdc",
+    "path": "D:\\godot\\project\\sandcastle\\rdc\\test1.rdc",
     "bytes": 225224034,
     "sha256": "761aa980c2426f75a1fa7364bf6d2655ff4dd20ea76566e630ee5b53ea0ec5b2"
   },
   "inputs": [
     {
-      "path": "D:\\godot\\project\\sandcastle\\test_output\\test1_geometry_20261018\\replay_v3\\e5006_vs_buffer0.bin",
-      "bytes": 8388608,
-      "sha256": "119cd8a703e909b6f14ba87ed88c1287caf50c38b0c1d09d34ffb5286371cf2d",
-      "selector": "e5006_vs t-index0 ResourceId::139571 offset0 length8388608"
+      "path": "D:\\godot\\project\\sandcastle\\assets\\test1_geometry\\source_sand_1024x512.f32",
+      "bytes": 2097152,
+      "sha256": "954e9ce7fa17992cc7c6eb632349d8fae94e7c72eb05f622a2466f848efaeb51"
     },
     {
-      "path": "D:\\godot\\project\\sandcastle\\test_output\\test1_geometry_20261018\\replay_v3\\e5006_vs_buffer1.bin",
-      "bytes": 2097152,
-      "sha256": "02d4588eef02e58d17bdb3a7107f9a0e673580a052b7420d48f832b798921285",
-      "selector": "e5006_vs t-index1 ResourceId::139573 offset0 length2097152"
+      "path": "D:\\godot\\project\\sandcastle\\assets\\test1_geometry\\channels.json",
+      "bytes": 2364,
+      "sha256": "73a938f4381ce1b86e3bbac208f1517d99c3c3026a76da58ce308515d70ebb11"
     }
   ],
   "tool": {
-    "path": "D:\\godot\\project\\sandcastle\\tools\\test1_geometry\\build_initial_state.py",
-    "bytes": 4403,
-    "sha256": "d69286cbb47a284116be79449658397cc4542e3e488a77764d0613925d2d0cfc"
+    "path": "D:\\godot\\project\\sandcastle\\tools\\test1_geometry\\build_channel_state.py",
+    "bytes": 4366,
+    "sha256": "6d70a963210edd4aa3de2199532417f5ca86fef488f3969e8ba74b34c9b381a9"
   },
   "numpy": "2.4.4",
   "fields": [
@@ -38,35 +36,28 @@
     30,
     15
   ],
-  "source_to_godot": "(-x, y, z); keep absolute captured surface Y",
+  "source_to_godot": "(-x,y,z); captured base plus authored channels",
   "rock_base": 0,
-  "sand_thickness": "resampled captured height above project rock Y=0; Godot adaptation",
-  "padding": "Z outside +/-7.5 is a solid dry mask; X continues nearest edge to the existing +/-16 simulation boundary. Visible mesh and picking stop at +/-15.",
-  "water": "h=max(configured rest_level_m-bilinear(captured sand),0); zero initial momentum; dry Z padding",
+  "adaptation": "Three curved inlets and one branch, smooth banks; only lower the initial bed. Initial inventories derive from this terrain, not runtime editing.",
+  "water": "h=max(rest_level_m-bed,0), zero momentum; dry blocked Z padding",
   "water_cycle_profile": {
     "path": "D:\\godot\\project\\sandcastle\\assets\\test1_geometry\\water_cycle.json",
     "bytes": 258,
     "sha256": "b95e55ec01bfe639ad58c757092b76c6f2f67bf63d6dd52cd8b4ea0fc9a561c9"
   },
-  "source_height_range": [
-    0.0029907706193625927,
-    6.643254280090332
-  ],
   "visible_height_range": [
     0.003000162076205015,
     6.5883331298828125
   ],
   "visible_cells": 28800,
+  "changed_cells": 6518,
+  "removed_initial_sand_m3": 24.021795285865664,
+  "added_initial_water_m3": 11.82829987257719,
   "artifacts": [
     {
       "path": "D:\\godot\\project\\sandcastle\\assets\\test1_geometry\\initial_state.f32",
       "bytes": 1310720,
-      "sha256": "0d2afa78195b675600e2d36bf4dc4539b9575bb7fd5e25019c43b5df341bd3b3"
-    },
-    {
-      "path": "D:\\godot\\project\\sandcastle\\assets\\test1_geometry\\source_sand_1024x512.f32",
-      "bytes": 2097152,
-      "sha256": "954e9ce7fa17992cc7c6eb632349d8fae94e7c72eb05f622a2466f848efaeb51"
+      "sha256": "4d3a4335963645c93c27b8880a26725bc128f3fd138e126aee0620d227d86fc8"
     }
   ]
 }

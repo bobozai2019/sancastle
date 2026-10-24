@@ -1,0 +1,22 @@
+{
+  "checks": [
+    "GPU seed and inland shallow water",
+    "10 simulated seconds including boundary rise and recession",
+    "channel fill and exact native sand/water restore",
+    "two formal scene switches and target-failure rollback",
+    "static scene ownership and architecture rejection checks",
+    "three inland channel endpoints flood-connected to ocean at initial water level"
+  ],
+  "runtime_report": "test_output/scene_channels/runtime_v2/probe.json",
+  "switch_report": "test_output/scene_channels/switch/probe.json",
+  "architecture_report": "test_output/scene_channels/architecture/report.json",
+  "preview_sha256": "42415f8d965e98c18da375408b84c5c9d0026ea6056630ad6fa7828f7806a1e1",
+  "scope": "Functional and visual verification only; no performance or long-soak claim",
+  "final_sources": {
+    "assets/test1_geometry/channels.json": "73a938f4381ce1b86e3bbac208f1517d99c3c3026a76da58ce308515d70ebb11",
+    "assets/test1_geometry/initial_state.f32": "4d3a4335963645c93c27b8880a26725bc128f3fd138e126aee0620d227d86fc8",
+    "assets/unified_edit/presentation/test1_geometry.variant": "d7b42b57f192e6144953f2f7307265e9762a89fde6c1873aafe94bcf2c8e8676",
+    "scripts/beach/unified_scene_routes.gd": "69df264fa0c92852814a2db72a032433f7e2f9fa1592402f88a565bec9a60234",
+    "scenes/unified_edit/presentation/test1_geometry.tscn": "a2fa48761c669326d5c432e31ccf5a368d558d7c32fdd8e473f41499cd673cb0"
+  }
+}

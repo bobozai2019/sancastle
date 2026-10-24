@@ -18,6 +18,15 @@ uniform float natural_reflection_edge_margin_px = 2.0;
 uniform float natural_reflection_edge_fade_px = 8.0;
 uniform int natural_reflection_debug = 0;
 uniform float natural_main_foam_gain = 1.0;
+uniform int foam_detail_mode = 0;
+uniform sampler2D foam_detail_texture : filter_linear_mipmap, repeat_enable;
+uniform float foam_detail_scale_per_m = 1.0;
+uniform float foam_hole_strength = 1.0;
+uniform bool foam_flow_debug = false;
+uniform float foam_flow_cycle_s = 4.0;
+uniform float foam_flow_gain = 1.0;
+uniform float foam_flow_speed_cap_m_s = 2.0;
+
 uniform sampler2D rock_state : filter_nearest, repeat_disable;
 uniform sampler2D sand_state : filter_nearest, repeat_disable;
 uniform sampler2D water_state : filter_nearest, repeat_disable;
@@ -458,6 +467,36 @@ float prototype_whitewater(vec2 uv, vec2 uv_m, float depth, float t,
         return 0.0;
     }
     float coverage = clamp(texture(foam_state, uv).r, 0.0, 1.0);
+    if (foam_detail_mode == 1) {
+        // History defines existence. The texture opens holes as history fades.
+        vec2 flux = vec2(textureLod(momentum_x_state, uv, 0.0).r,
+            textureLod(momentum_z_state, uv, 0.0).r);
+        vec2 velocity = flux / max(depth, 0.02);
+        float speed = length(velocity);
+        velocity *= min(1.0, max(foam_flow_speed_cap_m_s, 0.0) / max(speed, 0.00001));
+        velocity *= max(foam_flow_gain, 0.0);
+        float cycle = max(foam_flow_cycle_s, 0.5);
+        float phase_a = fract(t / cycle);
+        float phase_b = fract(t / cycle + 0.5);
+        float weight_a = 1.0 - abs(phase_a * 2.0 - 1.0);
+        vec2 base_uv = uv_m * foam_detail_scale_per_m;
+        vec2 flow_uv_a = (uv_m - velocity * ((phase_a - 0.5) * cycle)) * foam_detail_scale_per_m;
+        vec2 flow_uv_b = (uv_m - velocity * ((phase_b - 0.5) * cycle)) * foam_detail_scale_per_m;
+        vec2 dx = dFdx(base_uv);
+        vec2 dy = dFdy(base_uv);
+        float detail_a = textureGrad(foam_detail_texture, flow_uv_a, dx, dy).r;
+        float detail_b = textureGrad(foam_detail_texture, flow_uv_b, dx, dy).r;
+        // Equal samples (zero velocity) must remain exactly constant in time.
+        float detail = detail_a + (detail_b - detail_a) * (1.0 - weight_a);
+        float threshold = mix(0.96, 0.22, pow(coverage, 0.65));
+        float edge = max(fwidth(detail), 0.025);
+        float broken = smoothstep(threshold - edge, threshold + edge, detail);
+        float shape = mix(smoothstep(0.13, 0.62, coverage), broken,
+            clamp(foam_hole_strength, 0.0, 1.0));
+        return shape * smoothstep(0.0, 0.04, coverage) *
+            smoothstep(wet_epsilon_m, 0.012, depth);
+    }
+
     if (false) {
         vec2 step_uv = vec2(1.0 / 256.0, 0.0);
         float near_left = textureLod(foam_state,
@@ -1212,13 +1251,23 @@ void fragment() {
                 ALBEDO += vec3(1.0, 0.96, 0.86) * glint;
             }
             ALPHA = smoothstep(wet_epsilon_m, 0.015, depth);
-            float white_fraction = prototype_whitewater(UV, uv_m, depth, t,
-                prototype_crest_lift_v) * (test1_whitewater_gain * natural_main_foam_gain) *
+            float foam_coverage = prototype_whitewater(UV, uv_m, depth, t,
+                prototype_crest_lift_v);
+            float white_fraction = foam_coverage *
+                (test1_whitewater_gain * natural_main_foam_gain) *
                 (prototype_crest_white_face ? 0.94 : 0.78);
             natural_scatter_layer *= 1.0 - white_fraction;
             natural_foam_layer = foam_tint * white_fraction;
+            if (foam_detail_mode == 1) {
+                float foam_mix = clamp(white_fraction, 0.0, 1.0);
+                ALBEDO = mix(ALBEDO, foam_tint, foam_mix);
+                ALPHA = mix(ALPHA, 0.93, clamp(foam_coverage *
+                    test1_whitewater_gain * natural_main_foam_gain, 0.0, 1.0));
+                natural_glint_depth_gate *= 1.0 - foam_mix;
+            } else {
             prototype_apply_whitewater(ALBEDO, ALPHA, UV, uv_m, depth, t,
                 prototype_crest_lift_v, SCREEN_UV, INV_PROJECTION_MATRIX, VERTEX.z);
+            }
             if (true) {
                 ALPHA *= smoothstep(0.0, 0.8, surface.z);
             }
@@ -1385,6 +1434,13 @@ void fragment() {
         ALPHA=1.0;
     }
 
+    if (foam_flow_debug && foam_detail_mode == 1) {
+        EMISSION = vec3(natural_foam_layer.r * 6.0);
+        natural_scatter_layer = vec3(0.0);
+        natural_foam_layer = vec3(0.0);
+        natural_glint_depth_gate = 0.0;
+        ALPHA = 1.0;
+    }
 }
 
 

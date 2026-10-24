@@ -1,0 +1,21 @@
+{
+  "pid": 12732,
+  "started_unix": 1792814962.0649579,
+  "command": [
+    "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+    "--path",
+    "D:\\godot\\project\\sandcastle",
+    "--rendering-method",
+    "forward_plus",
+    "--rendering-driver",
+    "d3d12",
+    "--resolution",
+    "1280x720",
+    "--script",
+    "res://tests/integration/water_execution_exact_probe.gd",
+    "--",
+    "--output=D:/godot/project/sandcastle/test_output/muscl_performance_round2/baseline_exact",
+    "--parameter-config=D:/godot/project/sandcastle/test_output/muscl_performance_round2/baseline_exact/parameters/startup.json",
+    "--reference=res://task/muscl_performance_round2/reference/"
+  ]
+}

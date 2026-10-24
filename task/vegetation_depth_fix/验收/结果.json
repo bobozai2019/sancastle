@@ -1,0 +1,43 @@
+{
+  "controlled_source_changes": [
+    "assets/unified_edit/presentation/main.json",
+    "shaders/visual/vegetation.gdshader",
+    "assets/unified_edit/presentation/test1_geometry.json"
+  ],
+  "same_initial_gpu_fields": true,
+  "same_configuration": true,
+  "counts": [
+    123,
+    7,
+    70,
+    32,
+    11,
+    34,
+    4,
+    2,
+    2
+  ],
+  "functional_runs": {
+    "control_before_v2": {
+      "pass": true,
+      "checks": 39,
+      "source_drift": []
+    },
+    "control_after_v2": {
+      "pass": true,
+      "checks": 39,
+      "source_drift": []
+    },
+    "behavior_main": {
+      "pass": true,
+      "checks": 61,
+      "source_drift": []
+    },
+    "smoke_test1_geometry": {
+      "pass": true,
+      "checks": 38,
+      "source_drift": []
+    }
+  },
+  "archive_sha256": "b1c350b76f7af38583942c4146fe470daeee626e99669e6db3dc7f0546ad8c44"
+}

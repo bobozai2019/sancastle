@@ -1,0 +1,1604 @@
+{
+	"checks": [
+		{
+			"label": "input_container",
+			"pass": true
+		},
+		{
+			"label": "source_configuration_disk_identity",
+			"pass": true
+		},
+		{
+			"label": "resume_configure",
+			"pass": true
+		},
+		{
+			"label": "initialized",
+			"pass": true
+		},
+		{
+			"label": "actual_muscl_and_both_visuals",
+			"pass": true
+		},
+		{
+			"label": "private_scratch_zero:trial",
+			"pass": true
+		},
+		{
+			"label": "private_scratch_zero:audit",
+			"pass": true
+		},
+		{
+			"label": "private_scratch_zero:safety",
+			"pass": true
+		},
+		{
+			"label": "idle",
+			"pass": true
+		},
+		{
+			"label": "save_admitted:restored",
+			"pass": true
+		},
+		{
+			"label": "save_completed:restored",
+			"pass": true
+		},
+		{
+			"label": "saved_container_valid:restored",
+			"pass": true
+		},
+		{
+			"label": "paused_clock_stable",
+			"pass": true
+		},
+		{
+			"label": "idle",
+			"pass": true
+		},
+		{
+			"label": "published:before_continuation",
+			"pass": true
+		},
+		{
+			"label": "public_probe_admitted",
+			"pass": true
+		},
+		{
+			"label": "probe_complete_identity",
+			"pass": true
+		},
+		{
+			"label": "probe_final_water_bed_momentum",
+			"pass": true
+		},
+		{
+			"label": "continuation_tick_admitted",
+			"pass": true
+		},
+		{
+			"label": "idle",
+			"pass": true
+		},
+		{
+			"label": "continuation_tick_admitted",
+			"pass": true
+		},
+		{
+			"label": "idle",
+			"pass": true
+		},
+		{
+			"label": "continuation_tick_admitted",
+			"pass": true
+		},
+		{
+			"label": "idle",
+			"pass": true
+		},
+		{
+			"label": "idle",
+			"pass": true
+		},
+		{
+			"label": "save_admitted:continuation",
+			"pass": true
+		},
+		{
+			"label": "save_completed:continuation",
+			"pass": true
+		},
+		{
+			"label": "saved_container_valid:continuation",
+			"pass": true
+		},
+		{
+			"label": "idle",
+			"pass": true
+		},
+		{
+			"label": "published:after_continuation",
+			"pass": true
+		},
+		{
+			"label": "all_owners_released",
+			"pass": true
+		},
+		{
+			"label": "source_identity",
+			"pass": true
+		}
+	],
+	"configuration": {
+		"abi_version": 1,
+		"cell_size_m": 0.125,
+		"configuration_hash": "3a1020bb1b3d20ff2ddfbbdd34340a132324ac975ec0e79e69315e5cf03e5636",
+		"diagnostics": {
+			"collision_observe": false,
+			"profile_passes": false
+		},
+		"domain_id": "main_beach",
+		"effects": {
+			"foam_enabled": true,
+			"gravel_enabled": true
+		},
+		"environment": {
+			"boundary": {
+				"enabled": false
+			},
+			"gravel_profile": {
+				"bed_reconstruction": true,
+				"capacity": 1024,
+				"count": 80,
+				"h_epsilon_m": 0.006,
+				"h_off_m": 0.006,
+				"h_on_m": 0.012,
+				"material_path": "res://assets/gravel/stone_material.tres",
+				"max_microsteps": 8,
+				"max_step_cell_fraction": 0.5,
+				"mesh_path": "res://assets/gravel/stone_mesh.tres",
+				"radius_max_m": 0.05,
+				"radius_min_m": 0.02,
+				"response_max": 0.65,
+				"response_min": 0.25,
+				"schema_version": 1,
+				"seed": 57849,
+				"spawn_bounds_xz": [
+					-10.0,
+					-6.0,
+					6.0,
+					6.0
+				],
+				"speed_cap_m_s": 4.0,
+				"speed_off_m_s": 0.04,
+				"speed_on_m_s": 0.08
+			},
+			"water_numerics": {
+				"schema": 1,
+				"solver_id": "muscl_mc_ssprk2_v1"
+			}
+		},
+		"family": "unified_edit",
+		"grid_size": 256,
+		"ledger_policy": {
+			"control": "unchanged_v1",
+			"field_adjust": "unchanged_v1",
+			"redistribute": "unchanged_v1",
+			"target_height": "exact_external_v1",
+			"transfer": "balanced_conservative_or_capped_exact_sink_v2",
+			"volume_delta": "approximate_on_known_recording_v1"
+		},
+		"material": {
+			"cohesion_yield_height_m": 0.9,
+			"compaction_storage_value": 0.9501953125,
+			"compaction_target": 0.95,
+			"path": "res://assets/brushes/molded_material_candidate.json",
+			"saturation_tagged_depth_m": 0.125,
+			"sha256": "1936e7dfc654a7a5dc5e9307d880c85e7cc7f48b128372ec622f5b68b7af2890"
+		},
+		"profiles": {
+			"castle_v1": {
+				"allowed_features": {
+					"material_policy": [
+						0,
+						1
+					],
+					"water_policy": [
+						0,
+						1,
+						2,
+						3
+					]
+				},
+				"defaults": {
+					"height_m": 0.7,
+					"scale_xz": 1.0,
+					"speed_m_s": 0.0,
+					"yaw_rad": 0.0
+				},
+				"derived_fields": 63,
+				"destination": 0,
+				"display_name": "",
+				"height_reference": 1,
+				"material_policy": 1,
+				"operation": 1,
+				"profile_hash": "410632fd6ee93e38c48c094ccaf515a6ff763653596c2699bf94854667be9b4e",
+				"profile_id": "castle_v1",
+				"ranges": {
+					"height_m": [
+						0.5,
+						1.0
+					],
+					"scale_xz": [
+						1.0,
+						1.5
+					],
+					"speed_m_s": [
+						-1.0,
+						1.0
+					],
+					"yaw_rad": [
+						-3.14159265358979,
+						3.14159265358979
+					]
+				},
+				"resource_identity": {
+					"model_sha256": "5ec7ad018abaf9099e64f0c85acf7f106acc9c2ea013767166d4a394f17c38d8",
+					"path": "res://assets/unified_edit/castle_v1.tres",
+					"sha256": "4944fa37e4d037a96ab2bc8c41191b4590c6778ddb56d4bf03b43472cce3520d"
+				},
+				"sampling": {
+					"max_buffer_points": 256,
+					"max_segment_m": 2.0,
+					"spacing_m": 0.125
+				},
+				"schema": 1,
+				"shape": 2,
+				"stroke_policy": 1,
+				"target_rule": 1,
+				"template": {
+					"height": 65,
+					"model_sha256": "a2b8d8d940f8ef7b2af13232c0f7bd0b1888e5ed8f1e074885f656b2203f48d0",
+					"payload_path": "res://assets/brushes/castle/four_towers_v1.rgba32f",
+					"resource_path": "res://assets/unified_edit/four_towers_v1.tres",
+					"resource_sha256": "4a0a2b40adca14741b5365a1b25736e2d4e21778f1576d1455792eda0b1b98f9",
+					"sha256": "42f4654b2a40688fdfb936a790c1c08f0d2f4efbe6d1aa3bef91f2598089e833",
+					"spacing_m": 0.0625,
+					"template_id": "four_towers_v1",
+					"width": 65
+				},
+				"transfer_policy": 0,
+				"version": 1,
+				"volume_sign": 0,
+				"water_policy": 3
+			},
+			"compact_v1": {
+				"allowed_features": {
+					"material_policy": [
+						2
+					],
+					"water_policy": [
+						0
+					]
+				},
+				"defaults": {
+					"radius_m": 0.75,
+					"strength": 1.0
+				},
+				"derived_fields": 4,
+				"destination": 2,
+				"display_name": "",
+				"height_reference": 0,
+				"material_policy": 2,
+				"operation": 4,
+				"profile_hash": "7df55b452aab60e877a53dca49bc9ee33581846a7d5f7af59203a4ce40943645",
+				"profile_id": "compact_v1",
+				"ranges": {
+					"radius_m": [
+						0.0,
+						4.0
+					],
+					"strength": [
+						0.0,
+						1.0
+					]
+				},
+				"resource_identity": {
+					"model_sha256": "5ec7ad018abaf9099e64f0c85acf7f106acc9c2ea013767166d4a394f17c38d8",
+					"path": "res://assets/unified_edit/compact_v1.tres",
+					"sha256": "4054a6df232ea8eb63e69fb20284d98cd7dbba945cab6ee2cf6518379fb37802"
+				},
+				"sampling": {
+					"max_buffer_points": 256,
+					"max_segment_m": 2.0,
+					"spacing_m": 0.125
+				},
+				"schema": 1,
+				"shape": 0,
+				"stroke_policy": 0,
+				"target_rule": 0,
+				"template": {},
+				"transfer_policy": 0,
+				"version": 1,
+				"volume_sign": 0,
+				"water_policy": 0
+			},
+			"dig_sweep_v1": {
+				"allowed_features": {
+					"material_policy": [
+						0
+					],
+					"water_policy": [
+						0,
+						1,
+						2,
+						3
+					]
+				},
+				"defaults": {
+					"amount_m3": 0.1,
+					"radius_m": 0.75,
+					"speed_m_s": 0.0,
+					"strength": 1.0
+				},
+				"derived_fields": 31,
+				"destination": 0,
+				"display_name": "",
+				"height_reference": 0,
+				"material_policy": 0,
+				"operation": 0,
+				"profile_hash": "b2b3bda6713d4cf068f8a706d5c8d186de881dee3a740e4bd697cd4883011996",
+				"profile_id": "dig_sweep_v1",
+				"ranges": {
+					"amount_m3": [
+						0.01,
+						1.0
+					],
+					"radius_m": [
+						0.0,
+						4.0
+					],
+					"speed_m_s": [
+						-1.0,
+						1.0
+					],
+					"strength": [
+						0.0,
+						1.0
+					]
+				},
+				"resource_identity": {
+					"model_sha256": "5ec7ad018abaf9099e64f0c85acf7f106acc9c2ea013767166d4a394f17c38d8",
+					"path": "res://assets/unified_edit/dig_sweep_v1.tres",
+					"sha256": "f24798e571f6cb309292ff78b0fdfb4cc93b480739fbf200acd873e6b1749cd5"
+				},
+				"sampling": {
+					"max_buffer_points": 256,
+					"max_segment_m": 64.0,
+					"spacing_m": 0.125
+				},
+				"schema": 1,
+				"shape": 1,
+				"stroke_policy": 0,
+				"target_rule": 0,
+				"template": {},
+				"transfer_policy": 0,
+				"version": 1,
+				"volume_sign": 2,
+				"water_policy": 3
+			},
+			"dig_v1": {
+				"allowed_features": {
+					"material_policy": [
+						0
+					],
+					"water_policy": [
+						0,
+						1,
+						2,
+						3
+					]
+				},
+				"defaults": {
+					"amount_m3": 0.1,
+					"radius_m": 0.75,
+					"speed_m_s": 0.0,
+					"strength": 1.0
+				},
+				"derived_fields": 31,
+				"destination": 0,
+				"display_name": "",
+				"height_reference": 0,
+				"material_policy": 0,
+				"operation": 0,
+				"profile_hash": "46722a6d4b54b03b2997a40ec64dbf48c0fd01fc33eb8b73379e5658f75058e0",
+				"profile_id": "dig_v1",
+				"ranges": {
+					"amount_m3": [
+						0.01,
+						1.0
+					],
+					"radius_m": [
+						0.0,
+						4.0
+					],
+					"speed_m_s": [
+						-1.0,
+						1.0
+					],
+					"strength": [
+						0.0,
+						1.0
+					]
+				},
+				"resource_identity": {
+					"model_sha256": "5ec7ad018abaf9099e64f0c85acf7f106acc9c2ea013767166d4a394f17c38d8",
+					"path": "res://assets/unified_edit/dig_v1.tres",
+					"sha256": "c282b0206f1961e6ed43fd7d4a7bd983ab847057da54502917fcfea0bc97e136"
+				},
+				"sampling": {
+					"max_buffer_points": 256,
+					"max_segment_m": 2.0,
+					"spacing_m": 0.125
+				},
+				"schema": 1,
+				"shape": 0,
+				"stroke_policy": 0,
+				"target_rule": 0,
+				"template": {},
+				"transfer_policy": 0,
+				"version": 1,
+				"volume_sign": 2,
+				"water_policy": 3
+			},
+			"fill_sweep_v1": {
+				"allowed_features": {
+					"material_policy": [
+						0
+					],
+					"water_policy": [
+						0,
+						1,
+						2,
+						3
+					]
+				},
+				"defaults": {
+					"amount_m3": 0.1,
+					"radius_m": 0.75,
+					"speed_m_s": 0.0,
+					"strength": 1.0
+				},
+				"derived_fields": 31,
+				"destination": 0,
+				"display_name": "",
+				"height_reference": 0,
+				"material_policy": 0,
+				"operation": 0,
+				"profile_hash": "3e057a2a22931c91536ac4b325d3a86e55bd8bee2a39f925755f58ceee981d62",
+				"profile_id": "fill_sweep_v1",
+				"ranges": {
+					"amount_m3": [
+						0.01,
+						1.0
+					],
+					"radius_m": [
+						0.0,
+						4.0
+					],
+					"speed_m_s": [
+						-1.0,
+						1.0
+					],
+					"strength": [
+						0.0,
+						1.0
+					]
+				},
+				"resource_identity": {
+					"model_sha256": "5ec7ad018abaf9099e64f0c85acf7f106acc9c2ea013767166d4a394f17c38d8",
+					"path": "res://assets/unified_edit/fill_sweep_v1.tres",
+					"sha256": "9be98ddd1489278f7544b7bb8555018b8668c3e203d1b291cc23b8dfbe014fff"
+				},
+				"sampling": {
+					"max_buffer_points": 256,
+					"max_segment_m": 64.0,
+					"spacing_m": 0.125
+				},
+				"schema": 1,
+				"shape": 1,
+				"stroke_policy": 0,
+				"target_rule": 0,
+				"template": {},
+				"transfer_policy": 0,
+				"version": 1,
+				"volume_sign": 1,
+				"water_policy": 3
+			},
+			"fill_v1": {
+				"allowed_features": {
+					"material_policy": [
+						0
+					],
+					"water_policy": [
+						0,
+						1,
+						2,
+						3
+					]
+				},
+				"defaults": {
+					"amount_m3": 0.1,
+					"radius_m": 0.75,
+					"speed_m_s": 0.0,
+					"strength": 1.0
+				},
+				"derived_fields": 31,
+				"destination": 0,
+				"display_name": "",
+				"height_reference": 0,
+				"material_policy": 0,
+				"operation": 0,
+				"profile_hash": "8ec74c38f5688140d959c8dd0961bb171cbec8f0ed6ec9cb15bc7ee7e9bf74c1",
+				"profile_id": "fill_v1",
+				"ranges": {
+					"amount_m3": [
+						0.01,
+						1.0
+					],
+					"radius_m": [
+						0.0,
+						4.0
+					],
+					"speed_m_s": [
+						-1.0,
+						1.0
+					],
+					"strength": [
+						0.0,
+						1.0
+					]
+				},
+				"resource_identity": {
+					"model_sha256": "5ec7ad018abaf9099e64f0c85acf7f106acc9c2ea013767166d4a394f17c38d8",
+					"path": "res://assets/unified_edit/fill_v1.tres",
+					"sha256": "59ab1c2ac14b40b20fc082c0ab13d783c28167da89c652ee03cf178d9e81d49e"
+				},
+				"sampling": {
+					"max_buffer_points": 256,
+					"max_segment_m": 2.0,
+					"spacing_m": 0.125
+				},
+				"schema": 1,
+				"shape": 0,
+				"stroke_policy": 0,
+				"target_rule": 0,
+				"template": {},
+				"transfer_policy": 0,
+				"version": 1,
+				"volume_sign": 1,
+				"water_policy": 3
+			},
+			"shovel_v1": {
+				"allowed_features": {
+					"material_policy": [
+						2
+					],
+					"water_policy": [
+						0,
+						1,
+						2,
+						3
+					]
+				},
+				"defaults": {
+					"depth_m": 0.15,
+					"shoulder_width_m": 0.5,
+					"speed_m_s": 0.0,
+					"trench_width_m": 0.5
+				},
+				"derived_fields": 63,
+				"destination": 0,
+				"display_name": "",
+				"height_reference": 2,
+				"material_policy": 2,
+				"operation": 2,
+				"profile_hash": "33213f663fb2ff8398c11ed50d712c6e6f9f8f3373f2641a881c072bc2d5b24b",
+				"profile_id": "shovel_v1",
+				"ranges": {
+					"depth_m": [
+						0.05,
+						0.3
+					],
+					"shoulder_width_m": [
+						0.5,
+						1.0
+					],
+					"speed_m_s": [
+						-1.0,
+						1.0
+					],
+					"trench_width_m": [
+						0.5,
+						1.0
+					]
+				},
+				"resource_identity": {
+					"model_sha256": "5ec7ad018abaf9099e64f0c85acf7f106acc9c2ea013767166d4a394f17c38d8",
+					"path": "res://assets/unified_edit/shovel_v1.tres",
+					"sha256": "62ff4641dbbe8b866da6954579cda64d608cb1cd0c308aa0c7a807d22bd09ff9"
+				},
+				"sampling": {
+					"max_buffer_points": 256,
+					"max_segment_m": 2.0,
+					"spacing_m": 0.125
+				},
+				"schema": 1,
+				"shape": 1,
+				"stroke_policy": 1,
+				"target_rule": 0,
+				"template": {},
+				"transfer_policy": 2,
+				"version": 2,
+				"volume_sign": 0,
+				"water_policy": 3
+			},
+			"smooth_v1": {
+				"allowed_features": {
+					"material_policy": [
+						2
+					],
+					"water_policy": [
+						0
+					]
+				},
+				"defaults": {
+					"radius_m": 0.75,
+					"strength": 1.0
+				},
+				"derived_fields": 5,
+				"destination": 0,
+				"display_name": "",
+				"height_reference": 0,
+				"material_policy": 2,
+				"operation": 3,
+				"profile_hash": "2874cf1d6512915013e1532a38e9969c2097fa28ca3b5626df93a1a6f1a4b713",
+				"profile_id": "smooth_v1",
+				"ranges": {
+					"radius_m": [
+						0.0,
+						4.0
+					],
+					"strength": [
+						0.0,
+						1.0
+					]
+				},
+				"resource_identity": {
+					"model_sha256": "5ec7ad018abaf9099e64f0c85acf7f106acc9c2ea013767166d4a394f17c38d8",
+					"path": "res://assets/unified_edit/smooth_v1.tres",
+					"sha256": "01731a291186884bd9cebaa76babd7acf09c9cc6fa2db82c4b243f06b0160fb7"
+				},
+				"sampling": {
+					"max_buffer_points": 256,
+					"max_segment_m": 2.0,
+					"spacing_m": 0.125
+				},
+				"schema": 1,
+				"shape": 0,
+				"stroke_policy": 0,
+				"target_rule": 0,
+				"template": {},
+				"transfer_policy": 0,
+				"version": 1,
+				"volume_sign": 0,
+				"water_policy": 0
+			},
+			"suspended_sweep_v1": {
+				"allowed_features": {
+					"material_policy": [
+						0
+					],
+					"water_policy": [
+						0
+					]
+				},
+				"defaults": {
+					"amount_m3": 0.1,
+					"radius_m": 0.75,
+					"speed_m_s": 0.0,
+					"strength": 1.0
+				},
+				"derived_fields": 2,
+				"destination": 1,
+				"display_name": "",
+				"height_reference": 0,
+				"material_policy": 0,
+				"operation": 0,
+				"profile_hash": "cd3f3fe40fd022bbdb4f25119e7cbf4da948b4ce084c21247b85d138760bdca9",
+				"profile_id": "suspended_sweep_v1",
+				"ranges": {
+					"amount_m3": [
+						0.01,
+						1.0
+					],
+					"radius_m": [
+						0.0,
+						4.0
+					],
+					"speed_m_s": [
+						0.0,
+						0.0
+					],
+					"strength": [
+						0.0,
+						1.0
+					]
+				},
+				"resource_identity": {
+					"model_sha256": "5ec7ad018abaf9099e64f0c85acf7f106acc9c2ea013767166d4a394f17c38d8",
+					"path": "res://assets/unified_edit/suspended_sweep_v1.tres",
+					"sha256": "d1551bb2e05169355778754f8fa38469ace041f035fbcaf460c32bf37c6d4c9d"
+				},
+				"sampling": {
+					"max_buffer_points": 256,
+					"max_segment_m": 64.0,
+					"spacing_m": 0.125
+				},
+				"schema": 1,
+				"shape": 1,
+				"stroke_policy": 0,
+				"target_rule": 0,
+				"template": {},
+				"transfer_policy": 0,
+				"version": 1,
+				"volume_sign": 1,
+				"water_policy": 0
+			},
+			"suspended_v1": {
+				"allowed_features": {
+					"material_policy": [
+						0
+					],
+					"water_policy": [
+						0
+					]
+				},
+				"defaults": {
+					"amount_m3": 0.1,
+					"radius_m": 0.75,
+					"speed_m_s": 0.0,
+					"strength": 1.0
+				},
+				"derived_fields": 2,
+				"destination": 1,
+				"display_name": "",
+				"height_reference": 0,
+				"material_policy": 0,
+				"operation": 0,
+				"profile_hash": "fa63df577eae03ec94f0495abe1cbf83563119fe531727ecd5b1427997efe770",
+				"profile_id": "suspended_v1",
+				"ranges": {
+					"amount_m3": [
+						0.01,
+						1.0
+					],
+					"radius_m": [
+						0.0,
+						4.0
+					],
+					"speed_m_s": [
+						0.0,
+						0.0
+					],
+					"strength": [
+						0.0,
+						1.0
+					]
+				},
+				"resource_identity": {
+					"model_sha256": "5ec7ad018abaf9099e64f0c85acf7f106acc9c2ea013767166d4a394f17c38d8",
+					"path": "res://assets/unified_edit/suspended_v1.tres",
+					"sha256": "587a3926894f434d1a95a41ab91b56559b4d70f25913982c59ba817cd45eb90a"
+				},
+				"sampling": {
+					"max_buffer_points": 256,
+					"max_segment_m": 2.0,
+					"spacing_m": 0.125
+				},
+				"schema": 1,
+				"shape": 0,
+				"stroke_policy": 0,
+				"target_rule": 0,
+				"template": {},
+				"transfer_policy": 0,
+				"version": 1,
+				"volume_sign": 1,
+				"water_policy": 0
+			},
+			"wall_v1": {
+				"allowed_features": {
+					"material_policy": [
+						0,
+						1
+					],
+					"water_policy": [
+						0,
+						1,
+						2,
+						3
+					]
+				},
+				"defaults": {
+					"bottom_width_m": 1.0,
+					"height_m": 0.3,
+					"speed_m_s": 0.0,
+					"top_width_m": 0.5
+				},
+				"derived_fields": 63,
+				"destination": 0,
+				"display_name": "",
+				"height_reference": 2,
+				"material_policy": 1,
+				"operation": 1,
+				"profile_hash": "8304f61c0e9d7d862f1a76f3f90d3c52d0790c97d940e0730bbf1a2283d5a8e5",
+				"profile_id": "wall_v1",
+				"ranges": {
+					"bottom_width_m": [
+						1.0,
+						2.0
+					],
+					"height_m": [
+						0.15,
+						0.6
+					],
+					"speed_m_s": [
+						-1.0,
+						1.0
+					],
+					"top_width_m": [
+						0.5,
+						1.5
+					]
+				},
+				"resource_identity": {
+					"model_sha256": "5ec7ad018abaf9099e64f0c85acf7f106acc9c2ea013767166d4a394f17c38d8",
+					"path": "res://assets/unified_edit/wall_v1.tres",
+					"sha256": "181374910e104a061a37ac78520881f3a70741248f49fcfb94931daab66f17ad"
+				},
+				"sampling": {
+					"max_buffer_points": 256,
+					"max_segment_m": 2.0,
+					"spacing_m": 0.125
+				},
+				"schema": 1,
+				"shape": 1,
+				"stroke_policy": 1,
+				"target_rule": 1,
+				"template": {},
+				"transfer_policy": 0,
+				"version": 1,
+				"volume_sign": 0,
+				"water_policy": 3
+			}
+		},
+		"schema": 1,
+		"simulation": {
+			"contact_history": false,
+			"enable_brush_water": true,
+			"enable_erosion": true,
+			"enable_structures": false,
+			"local_front_history": false,
+			"rise_front_history": false,
+			"unrestricted_sand_tools": true
+		},
+		"sources": {
+			"res://assets/brushes/castle/four_towers_v1.rgba32f": "42f4654b2a40688fdfb936a790c1c08f0d2f4efbe6d1aa3bef91f2598089e833",
+			"res://assets/brushes/castle_v1.tres": "47b6f19647d04996d4be6f6df5b3b99f0bc76abd3a90a3e1792d26506b6b9a0b",
+			"res://assets/brushes/molded_material_candidate.json": "1936e7dfc654a7a5dc5e9307d880c85e7cc7f48b128372ec622f5b68b7af2890",
+			"res://assets/brushes/protocol_v2.json": "c74983277c081285385896b7d91b52e2b83b212444086a18e2dd007445aeb507",
+			"res://assets/brushes/shovel_v1.tres": "8681fbfe01a98a5af25ddbfe2a78bd747e43313174b4094db80176fb3c0fc343",
+			"res://assets/brushes/wall_v1.tres": "e65b5949fff433149f5274f289f12ff6cac4c924d39ae9b2a4dd350a28a9cf34",
+			"res://assets/parameters/catalog.json": "c550e30e4ed3380e6b5caf0de97c3400177ceccc8ffea4166b57e28d54790ec9",
+			"res://assets/test1_geometry/initial_state.f32": "4d3a4335963645c93c27b8880a26725bc128f3fd138e126aee0620d227d86fc8",
+			"res://assets/test1_geometry/water_cycle.json": "49e20c9ef51d55b1331657c823c98782af68fade76eb4bb65c93dc2db874e5e6",
+			"res://assets/test1_water_motion/capture_state.rgba32f": "06540acafd57583465e0d5e3926819f27b33e51afb3134a700d684cc52fa8523",
+			"res://assets/unified_edit/castle_v1.tres": "4944fa37e4d037a96ab2bc8c41191b4590c6778ddb56d4bf03b43472cce3520d",
+			"res://assets/unified_edit/compact_v1.tres": "4054a6df232ea8eb63e69fb20284d98cd7dbba945cab6ee2cf6518379fb37802",
+			"res://assets/unified_edit/dig_sweep_v1.tres": "f24798e571f6cb309292ff78b0fdfb4cc93b480739fbf200acd873e6b1749cd5",
+			"res://assets/unified_edit/dig_v1.tres": "c282b0206f1961e6ed43fd7d4a7bd983ab847057da54502917fcfea0bc97e136",
+			"res://assets/unified_edit/fill_sweep_v1.tres": "9be98ddd1489278f7544b7bb8555018b8668c3e203d1b291cc23b8dfbe014fff",
+			"res://assets/unified_edit/fill_v1.tres": "59ab1c2ac14b40b20fc082c0ab13d783c28167da89c652ee03cf178d9e81d49e",
+			"res://assets/unified_edit/four_towers_v1.tres": "4a0a2b40adca14741b5365a1b25736e2d4e21778f1576d1455792eda0b1b98f9",
+			"res://assets/unified_edit/shovel_v1.tres": "62ff4641dbbe8b866da6954579cda64d608cb1cd0c308aa0c7a807d22bd09ff9",
+			"res://assets/unified_edit/smooth_v1.tres": "01731a291186884bd9cebaa76babd7acf09c9cc6fa2db82c4b243f06b0160fb7",
+			"res://assets/unified_edit/suspended_sweep_v1.tres": "d1551bb2e05169355778754f8fa38469ace041f035fbcaf460c32bf37c6d4c9d",
+			"res://assets/unified_edit/suspended_v1.tres": "587a3926894f434d1a95a41ab91b56559b4d70f25913982c59ba817cd45eb90a",
+			"res://assets/unified_edit/wall_v1.tres": "181374910e104a061a37ac78520881f3a70741248f49fcfb94931daab66f17ad",
+			"res://scenes/parameters/parameter_windows.tscn": "f9b14a3e61e1bcef3ee032858a9b2f774b0adea8e033bdb92fde41d9afddc4e9",
+			"res://scripts/beach/beach_recovery_entry.gd": "238ea012bc1d2b281d2428c6c5ac4a6d8a7e81545bc522b42e572830585fd3c0",
+			"res://scripts/collision/collision_prepare_job.gd": "629fcfde9d4edb14e446ee1970f03b9ae9d4da364979150f35a0182aab46fb6b",
+			"res://scripts/parameters/parameter_row.gd": "d8690a0d661113b88c331f28e92b601a218bda758fbdfb2f447225a2a89c6372",
+			"res://scripts/parameters/parameter_schema.gd": "db40e772107e02b23a505c0c13982f6c434938949581a770815cd09d2fbf4495",
+			"res://scripts/parameters/parameter_service.gd": "b7d9f61c9dd60a36c1ccf76fcc9424f3373154b19566c6dbb4661e0bee6d47a0",
+			"res://scripts/sand/brushes/brush_definition.gd": "63f682e4f20161b4bbd193bd5264bd9f51cab79606ba38b9695d8b512d66c161",
+			"res://scripts/sand/brushes/brush_registry.gd": "64d3520ce0c519cb34f46636ba59a6bcb3c8aae45edbcca2ae1ffecd10f35631",
+			"res://scripts/sand/brushes/brush_spec.gd": "2532c325b5ad6a615731830a08d86b2c33dd446e8a115aa336b9371b539d644c",
+			"res://scripts/scenarios/test1_geometry_layout.gd": "80a3241eebec98159109df76e68f623e0ffebab2ef3f0bcd32ac9d0c836e5695",
+			"res://scripts/scenarios/test1_playable_layout.gd": "96d0f46fec8f86cfad5d47a38572c957359e78f3be65739baee805f80848375e",
+			"res://scripts/simulation/brushes/brush_checkpoint_codec.gd": "382a60b69ed7b0930099142d56c2adbbe54d58753d217aa7a8112c984798adab",
+			"res://scripts/simulation/brushes/brush_material_state_codec.gd": "c0d0394abc3b89c3587dc5057ae6a54e1458e97ab087a81a40bd4bde353b6ca4",
+			"res://scripts/simulation/brushes/brush_protocol.gd": "94083fc3cd6869a28bb2b68b024e469781ae2b6cb54f16d1b79ecd672f8ad463",
+			"res://scripts/simulation/checkpoint_store.gd": "cab0e52ee89bcd9fd08bf7265dd7b952dec2ba319e6c884796ac2ac9e32a459e",
+			"res://scripts/simulation/edit_validation/frame_pipeline/async_boundary.glsl": "a6226484e71e726a1ba7d68bc3d50a8ff89891904eeef6d71a659be484203477",
+			"res://scripts/simulation/edit_validation/frame_pipeline/async_cfl_tiles.glsl": "06875caf6af822cb96ee8f1f009e246ec689a0a1feba4aaf73bebfb3f3824ac1",
+			"res://scripts/simulation/edit_validation/frame_pipeline/async_checkpoint_codec.gd": "ef0e368736579cc6a1a6a11eb10d2c7bf6c92d2db4d2836c67578da3c444765a",
+			"res://scripts/simulation/edit_validation/frame_pipeline/async_normalize.glsl": "52cca694a0bf455d386541782ed2d765d05541ffd19c2f235390c0d6f3fc75ba",
+			"res://scripts/simulation/edit_validation/frame_pipeline/async_sim_finish.glsl": "71229a60bbea62762a77ae3ee481819792eae4cf6ff11ea30a7ebb833be87a8a",
+			"res://scripts/simulation/unified_edit/api_adapter.gd": "a12f2df91586143a6c69fa89249d121a03c0dd3265d7feeb42bee12542f5834e",
+			"res://scripts/simulation/unified_edit/boundary.gd": "20a62b9c4b580868b261103fe034e7e61646a8fb40de61a555c6ee546861bcf1",
+			"res://scripts/simulation/unified_edit/boundary.glsl": "8949333ac4ca60f02c07ba1bb39346657bc5cce0d60b078c8f7135bfc6c089ea",
+			"res://scripts/simulation/unified_edit/cfl_decide.glsl": "8d246db53a1d2b72ae252e68d906b71166b64bc7782244c4f3c6c47757e19e5e",
+			"res://scripts/simulation/unified_edit/checkpoint_accounting.gd": "ed42766ab86b9073b0cb46c4c917689576c9a2c949866aede023525a1c4c0df8",
+			"res://scripts/simulation/unified_edit/checkpoint_capture.gd": "2d0d85e92a8302ac1badb1b84bafccd015baf69777ec300837501c1b447550ef",
+			"res://scripts/simulation/unified_edit/checkpoint_codec.gd": "1780c840b9e4b5126472baada8fd04086f28b485ca1a47cee5753c08f1b36451",
+			"res://scripts/simulation/unified_edit/configuration.gd": "51eeaeb3163a58fd2256984d469c49c336962bc370aabba27b24fd5d250c5258",
+			"res://scripts/simulation/unified_edit/coupled.gd": "b80c7b7aca3fb5b351811390f9ed9ecc6c9e2c715518496ba09f6f346001ff62",
+			"res://scripts/simulation/unified_edit/diagnostics.gd": "c66cd305ced9e692b8739cd7aa124586cbcdfabca388a74c5425ebe05f3b5780",
+			"res://scripts/simulation/unified_edit/display_emit.glsl": "840c6b01b244d21cd0914312df3ace652536d80727a0e34726b767216e775115",
+			"res://scripts/simulation/unified_edit/display_intent.gd": "5ddd0f9019350efbe388c1862ecda7b4c44ba8b47682e93c60b36d0843d90f21",
+			"res://scripts/simulation/unified_edit/edit.glsl": "57553c4b755f629d60d61d73ee6f457eacf83b176230e6884396a9750cf48973",
+			"res://scripts/simulation/unified_edit/executor.gd": "f57c4bf157df609b9e922e038c7546914a9ae0d0cc76c7d23b9b92d270001751",
+			"res://scripts/simulation/unified_edit/gpu.gd": "fcb28e68b22c0b29b31d2d7c4c20822782018ddc3f7a55e107e3c2fb54926f68",
+			"res://scripts/simulation/unified_edit/height.gd": "2675c1caf640099c600e4f9245132013c8a9a3057788418b4dabdce15b96f969",
+			"res://scripts/simulation/unified_edit/height.glsl": "9f08382aafd9706f017298cb9721b897b0fd3a4023a21c3e91510ab51650153d",
+			"res://scripts/simulation/unified_edit/height_codec.gd": "f8472a265358da3fb21c3a00f5f7598426bb32457b0a2cea8c314833c59f8fcd",
+			"res://scripts/simulation/unified_edit/height_stamp.gd": "a2b8d8d940f8ef7b2af13232c0f7bd0b1888e5ed8f1e074885f656b2203f48d0",
+			"res://scripts/simulation/unified_edit/idle_fence.glsl": "1268fcb20b1d592fac6b71fb68ddeca4eae63a23bcf217b02161cebb44005e77",
+			"res://scripts/simulation/unified_edit/intent.gd": "347fbc161a5295d8c597dd2a5c6b2853fd146f9b9a45eaa6aefd7a7805f6319f",
+			"res://scripts/simulation/unified_edit/layout.gd": "0249e55b8005bef604ead7ba62f4adf8a5875d2786e0ea48035d259937686da0",
+			"res://scripts/simulation/unified_edit/legacy_sources.gd": "a53ddb381060b5c9e0f928db6fd22f83269992e6d5e356e271c85df961fcc567",
+			"res://scripts/simulation/unified_edit/pipeline.gd": "540db2a352694d02aac8c00c86f589d33ae26787a348e19fba3dc034313a87e6",
+			"res://scripts/simulation/unified_edit/probe.gd": "de1a09c4c6a0f128d9461c91248edfb8ea2a01bccd4da49fd4478f92d6676645",
+			"res://scripts/simulation/unified_edit/probe.glsl": "ab45f4e46692b78f40d1c3329a23ecdd100b384de966dcc0aa80e19e50546d10",
+			"res://scripts/simulation/unified_edit/probe_codec.gd": "577de99be1b546a29908df5392c10a0d7138e2e0aeda13e71deb58c3012c7441",
+			"res://scripts/simulation/unified_edit/profile_catalog.gd": "6d4651c5d6cc5209cfe0696e3f6ef7375b9444ed2426fe94b1592c0b2473e0a4",
+			"res://scripts/simulation/unified_edit/profile_registry.gd": "f1911785ae05e56816c63641fbd98ece60a9de323bd365962df9331246ba558b",
+			"res://scripts/simulation/unified_edit/protocol.gd": "d27781aa931455a8434564712f256bb87cbae370858b1aaafbaa8982e42e70ab",
+			"res://scripts/simulation/unified_edit/protocol.glslinc": "431faa2b39ebdfc3be501ab597d0c3eeb4f912fd1b2417840e1a56c000bb75f6",
+			"res://scripts/simulation/unified_edit/publish.glsl": "84f60cbb6d59a60e5481b2ce7b00ce438ff90f659c03d2bf7ad3971308dba0f8",
+			"res://scripts/simulation/unified_edit/restore_verifier.gd": "48206e6631bc40169c661e1f254e96b66ba5e88eb7606eba91ae556f353a05d1",
+			"res://scripts/simulation/unified_edit/slots.gd": "b4c73feb63692894ee9420d4c05cf31892355d4d5380399f3c0bf58c0b101cab",
+			"res://scripts/simulation/unified_edit/state.gd": "75bdfe876a504a81fc469fbb1afe16b484a0652432e774533f87679e46dc614b",
+			"res://scripts/simulation/unified_edit/tool_profile.gd": "5ec7ad018abaf9099e64f0c85acf7f106acc9c2ea013767166d4a394f17c38d8",
+			"res://scripts/simulation/unified_edit/transport.gd": "060e00341524fd7605def902e2936449c839e57722c7fe56ffd79d1e8adedc78",
+			"res://scripts/simulation/unified_edit/unit_half.gd": "3d0d323b653df1f9237525e3b42a2c395ffe3a585ecb68ab8a5bd0d9a03e573a",
+			"res://scripts/simulation/unified_edit/vegetation.gd": "cb5437ab5dcccc327f8ff7a05d7315389fdb19423183774e70c50c2374cecee2",
+			"res://scripts/simulation/unified_edit/view_publish.glsl": "56160ffa358b59456f754126204042edf3e3cea77fc3d505e43fb5891fdc9816",
+			"res://scripts/simulation/unified_edit/view_query.glsl": "9a1c36a38c6c02107aa60d499018635b85ae76849aa11788ff47af8e09ad24fa",
+			"res://scripts/simulation/unified_edit/views.gd": "08bb89331235170bbcbd1038ab5870c36fd88dde5ed86d6cb0cdb6bf2a3547eb",
+			"res://scripts/simulation/unified_edit/visual_edit_finish.glsl": "0a6c2a1ef102918ed5b234f85cd859048d1a8d3befcef5f189809a7361f4f987",
+			"res://scripts/simulation/unified_edit/visual_finish.glsl": "10f2a79bec43f77b80d77f674e60df7123876931d1473a5cf38c47182b38e5c7",
+			"res://scripts/simulation/unified_edit/visual_publish.glsl": "e517e7dd58218ee764a1d773c20e2c714e880dfc01f151188834c43cfa70967d",
+			"res://scripts/simulation/unified_edit/visuals.gd": "ed42b02cf5a0e6b65fb1bdb4121722637ae821e0615e52e624292729d8431738",
+			"res://scripts/simulation/unified_edit/water.gd": "8b6d8093f3e2518eda1b41f790a2e1affb202f193ffae7b38dd3670faa2a2a6a",
+			"res://scripts/simulation/unified_edit/water_muscl.gd": "383b8d1c8371e607ee935580c1b8edc872cf1164cb7e347a962a3f9432fa257d",
+			"res://scripts/simulation/unified_edit/water_numerics.gd": "794d56cfc7259260590b0dd790e299106602e0b88e5b8feee17f79efc78f31d2",
+			"res://scripts/simulation/unified_edit/water_packed_parallel.glsl": "8e48a46ade6d9a608b9fe9aa5b10f1127f4b036b22a788f392c069d9585d481d",
+			"res://scripts/simulation/unified_edit/water_packed_topology.glsl": "876056fb1b25c7eaea97e513dddcc882b7ea2cd723abb5409828ea0d389710cf",
+			"res://scripts/simulation/unified_edit/water_response.gd": "9ccb1a9d714ef5427e6a5534feac26e6e16d0886f3df5edac816d7a15a6ab5bc",
+			"res://scripts/simulation/unified_edit/water_response.glsl": "19fca940f8886393fc683a6e2bc962dcda3298520ebff2aa04c208def16751f0",
+			"res://scripts/simulation/unified_edit/water_velocity_prepare.glsl": "9ad4fb084b7e4713fcd0030f85e59b9af1b440e891a9ce5ee86201cfadd27a6c",
+			"res://scripts/simulation/unified_edit/work_begin.glsl": "940538b9e13f01da456c959a7d409c188420675b46d49fbb9e508fe662d72f1a",
+			"res://scripts/simulation/unified_edit/work_seal.glsl": "26434191421521492b5a63160cb4ae8674b1b8773205cb868b083bc1f8d6866e",
+			"res://scripts/visual/gpu_gravel_field.gd": "f634064e9f279faf16827229157b7435f12903579324fbefe64b07f2e42b367d",
+			"res://scripts/visual/gravel_checkpoint_codec.gd": "8cd4f7f0b50ff08f3be9cc7d52a1270ebef3bbed41d17b457a3c0cbc42ae6ba4",
+			"res://scripts/visual/vegetation_layer.gd": "fab851b62913d8278ce2bfae7aa425eb16c6ecab10945759aa10542406a70dd7",
+			"res://scripts/visual/vegetation_profile.gd": "29e5141396351bd98d709b2f625cfce34a56553581fa975e9c7f67919112ba49",
+			"res://scripts/visual/vegetation_species.gd": "4467634e8713eaaf963062a3b8a9fa6841d33ddfb5acdee9729a996e29be3ebd",
+			"res://shaders/simulation/brushes/mold_support_step.glsl": "02b3dd96f818c304fa723336f4891c4666bf8562c9a874a737b6416a51324e03",
+			"res://shaders/simulation/brushes/molded_slope.glsl": "808103f691329ca21bba69cc6e309c857134b5fe666d22a6a4a50c47abe0417d",
+			"res://shaders/simulation/edit_validation/staged_slope.glsl": "8777b5baa680a9fb4d1eb66176a92b058972b2cb1fe713b49c07ae8d2d39bf00",
+			"res://shaders/simulation/edit_validation/staged_slope_consume.glsl": "da10584e13400f2c9e957ba32aa6dfecdc4cd08cf1bd07c74877028773ef83ba",
+			"res://shaders/simulation/edit_validation/water_displace_compensated.glsl": "8b161dbf853c8916de189f745e1573380fcd2f687680cbe83887d5e8867c0641",
+			"res://shaders/simulation/edit_validation/water_packed_cached.glsl": "cd8dd0f5419d1b423158caf004ed3d5a297ee51e801159748005ad49103cd543",
+			"res://shaders/simulation/edit_validation/water_velocity_prefetch.glsl": "9cf7459b99ae2932a63068416cac6875844e8582dc5e58a33771f0c595f3c77d",
+			"res://shaders/simulation/erosion/sediment_copy.glsl": "b444f30ce8c9ede98a7c5dbeb7d281be0d716145382242a96f639ed5bff80140",
+			"res://shaders/simulation/erosion/sediment_exchange.glsl": "da563ac4f8273e16ec95a58deb15eb443bfcc386d656037bb0436fd879d82a02",
+			"res://shaders/simulation/erosion/sediment_step.glsl": "02ff254c037da330de571d2ecc2edc13711295a44d226917fcfdb98412c743c9",
+			"res://shaders/simulation/material/material_commit.glsl": "a5ecfc44668a97d519677fc9769eb22638cab5bd4b932e6e225abd4642977979",
+			"res://shaders/simulation/material/material_step.glsl": "290b44d3fb13ab2b4d7da27e4fa4f93e070244ba11ad450b8356067280f60aef",
+			"res://shaders/simulation/muscl/muscl_math.glslinc": "aa864531e88cf8b0cd9adf63431ec7a6db48863aa4fc7e8da9072d1d7a3f9fc0",
+			"res://shaders/simulation/muscl/muscl_spatial.glslinc": "d4f22c0889af5eb089dfb3dccec767c56b27731452cc1c222867a7e71f3d2106",
+			"res://shaders/simulation/muscl/muscl_stats.glslinc": "70e147a8a112354fb8a6dbd2da0dcceb4e2045a8d98f05b903122ad20b6744b1",
+			"res://shaders/simulation/muscl/rk_decide.glsl": "6d51c59ed047d333f8855016d00b2a6cc464f4cb00c8b854c42ed96811bbd3f7",
+			"res://shaders/simulation/muscl/rk_drain.glsl": "8a649a8379954fed16f4a18424da70a83a05511043f943f164a9b2ea7b8c0d11",
+			"res://shaders/simulation/muscl/rk_edge.glsl": "4929b19439ede7280c7d4931b72f5d3ebc2d448da4c856eab97874273ef034a0",
+			"res://shaders/simulation/muscl/rk_euler.glsl": "daf72a12c24352106a2b9e6aa8fbc1a935b5d13b380e2090042c344b553b2d06",
+			"res://shaders/simulation/muscl/rk_finalize.glsl": "0dbffbbb3cf88ad43761ca6f2b6f155fc360c57aebdc5379298ac69823613ae6",
+			"res://shaders/simulation/muscl/rk_normalize.glsl": "517ea7d43c1b42b6aa18bff7259d5b7ab0ee11d13e61769242ed4a4fd9d1840e",
+			"res://shaders/simulation/muscl/rk_validate.glsl": "c53f4fc33334174cd0b458e441a9aa3bf106f0452330638163707829adbd2120",
+			"res://shaders/simulation/shallow_drain_scale.glsl": "f36e5a1a0b50f867ca89571a12033ba8dbb059a5a1a481bca07e43a1cf87fdbe",
+			"res://shaders/simulation/shallow_edge_flux.glsl": "621bc8ec3738d896cdf68c2fe20d306f0d1bd87817f3e917214a9f91b84dea4e",
+			"res://shaders/simulation/shallow_update_state.glsl": "fe373e7d793d0cc126db241fe0c81e5b3aa2b7d70b37c7299f21418d81b76185",
+			"res://shaders/simulation/vegetation_publish.glsl": "d0c6a2dc18f0768f30c4267095cd958a77272a3e78756b54d00ded06890bc58f",
+			"res://shaders/simulation/vegetation_step.glsl": "1981271f0f8ecbb63d56339424270a85175f31e6ccf9754b85048352a5197b46",
+			"res://shaders/simulation/visual_foam_step.glsl": "19d7bec7f157791f75e0b4a63bd04c7ae8dc06eb82e016f1ea96ae8174e6edb0",
+			"res://shaders/simulation/visual_gravel_step.glsl": "187e52c7ae677aba712bf441c29fe4268578327dab6fb19186a2439c5e0e6799",
+			"res://shaders/visual/vegetation.gdshader": "6666635aaa2c6a1fb642cb206ca8e9efb9a37db028747cbc1400bd46e1cdf99a",
+			"res://tests/visual_water_alignment/prototypes/reference_local_front_x.glsl": "1ca06648fc517bc6d01b66780af1d1e66cfe2978ddd2f00e5ac763658799d13d",
+			"res://tests/visual_water_alignment/prototypes/reference_local_front_x_wide.glsl": "3e8c3729eb40b07a36772aa25ae8c3f10b5d3f137e7b19721669df6ed4098004",
+			"res://tests/visual_water_alignment/prototypes/reference_local_front_z.glsl": "dc986bfa7e64e6f05f814a1eed3cef2eef1bd5e72025a1c9475d90c4855ddfae",
+			"res://tools/wave_propagation/gpu_probe.gd": "2d323172a05660afc1b514c2a4298a516c30bf678145c78ceb2f571c4cd963f5",
+			"res://tools/wave_propagation/native_restart_probe.gd": "8381f83eed798eb9c2ecfdef7737ce0473b724993bd5299a3ce625c46943e172"
+		}
+	},
+	"mode": "resume",
+	"outcome": "pass",
+	"probe": {
+		"captured_revision": 13,
+		"captured_state_seq": 3,
+		"captured_tick": 3,
+		"captured_time_s": 0.100000008940697,
+		"domain_id": "main_beach",
+		"error": "",
+		"footprint_change_bounds": {
+			"27": 0.0,
+			"28": 0.0,
+			"35": 0.0,
+			"36": 0.0
+		},
+		"footprint_versions": {
+			"27": 3,
+			"28": 3,
+			"35": 3,
+			"36": 3
+		},
+		"generation": 1002,
+		"owner_token": 1,
+		"points": [
+			{
+				"bed": 0.400023847818375,
+				"body_id": 1,
+				"eta": 0.499907225370407,
+				"h": 0.0998833850026131,
+				"point_id": 1,
+				"sample_position": "(0.0625, 0.0, 0.0625)",
+				"u_xz": "(-0.001174, 0.0)",
+				"valid": true
+			}
+		],
+		"pose_seq": 1,
+		"raw": "[3, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 234, 3, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 13, 0, 0, 0, 0, 0, 0, 0, 206, 204, 204, 61, 1, 0, 0, 0, 0, 0, 0, 24, 24, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 12, 233, 82, 236, 89, 69, 119, 140, 154, 132, 124, 60, 46, 66, 80, 193, 57, 38, 86, 34, 241, 180, 10, 9, 28, 49, 243, 228, 178, 208, 204, 155, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 61, 0, 0, 0, 0, 0, 0, 128, 61, 237, 207, 204, 62, 169, 143, 204, 61, 215, 243, 255, 62, 61, 208, 153, 186, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 28, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 35, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 36, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]",
+		"request_id": 1,
+		"schema": 3
+	},
+	"saved": [
+		{
+			"capture": {
+				"capture_id": 1,
+				"end_id": 0,
+				"end_result": {},
+				"error": "",
+				"generation": 1002,
+				"highwater_id": 0,
+				"phase": "finished",
+				"records": {
+					"clock": {
+						"bytes": 4,
+						"sha256": "8782bb3f9b7bec48a864c6997c9af696d76a39740d39fde7196a14dac9f67b58"
+					},
+					"control": {
+						"bytes": 128,
+						"sha256": "4892b57dbea970aacf5b764d183fb536ba47cac40b801b1dfe22ce77402e3f87"
+					},
+					"display_active_count": {
+						"bytes": 4,
+						"sha256": "29374cfdd45d8433713bb3252954e48841401c4ee254a651cfffd2287f5360de"
+					},
+					"field/compaction": {
+						"bytes": 131072,
+						"sha256": "f5383762283a391eb98d3dc5d458820b11243bca4606a82dff776f59f084b5f3"
+					},
+					"field/flux": {
+						"bytes": 1048576,
+						"sha256": "1fd4f2d2ff7f92669913c51f0d8ef06339907bba673d3c53501fe3bdf31235b4"
+					},
+					"field/momentum_x": {
+						"bytes": 262144,
+						"sha256": "95f1ae31b35770b3f8b26cdc2b773100f991129a72011bb94bb933559298cfde"
+					},
+					"field/momentum_z": {
+						"bytes": 262144,
+						"sha256": "bda64b7875e8a42c3c19b9abc607a3a61620c1fbdf08d8179064e809e8f0ce48"
+					},
+					"field/obstacle": {
+						"bytes": 65536,
+						"sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+					},
+					"field/rock": {
+						"bytes": 262144,
+						"sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+					},
+					"field/sand": {
+						"bytes": 262144,
+						"sha256": "a8168c5ce716ab0ef5e23ef0baa11bc604cfb3d2c32648f8c11c5507b905737c"
+					},
+					"field/sediment": {
+						"bytes": 262144,
+						"sha256": "b7250823e51d54a164caefca5215e37e366b74fc20838755b5c010d58a1a4534"
+					},
+					"field/water": {
+						"bytes": 262144,
+						"sha256": "3ca918c30222a5f96344ec93396eddd935c831ddf1dfa4a38073d4ee5ede2335"
+					},
+					"field/wetness": {
+						"bytes": 131072,
+						"sha256": "08119643e4aef9445f69ce5b7dc8202d31f151ae37fa150c521913ff613fcfdf"
+					},
+					"material/0": {
+						"bytes": 524288,
+						"sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+					},
+					"material/1": {
+						"bytes": 524288,
+						"sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+					},
+					"published_sand": {
+						"bytes": 262144,
+						"sha256": "a8168c5ce716ab0ef5e23ef0baa11bc604cfb3d2c32648f8c11c5507b905737c"
+					},
+					"published_water": {
+						"bytes": 262144,
+						"sha256": "3ca918c30222a5f96344ec93396eddd935c831ddf1dfa4a38073d4ee5ede2335"
+					},
+					"spare/compaction": {
+						"bytes": 131072,
+						"sha256": "f5383762283a391eb98d3dc5d458820b11243bca4606a82dff776f59f084b5f3"
+					},
+					"spare/flux": {
+						"bytes": 1048576,
+						"sha256": "1fd4f2d2ff7f92669913c51f0d8ef06339907bba673d3c53501fe3bdf31235b4"
+					},
+					"spare/momentum_x": {
+						"bytes": 262144,
+						"sha256": "95f1ae31b35770b3f8b26cdc2b773100f991129a72011bb94bb933559298cfde"
+					},
+					"spare/momentum_z": {
+						"bytes": 262144,
+						"sha256": "bda64b7875e8a42c3c19b9abc607a3a61620c1fbdf08d8179064e809e8f0ce48"
+					},
+					"spare/sand": {
+						"bytes": 262144,
+						"sha256": "a8168c5ce716ab0ef5e23ef0baa11bc604cfb3d2c32648f8c11c5507b905737c"
+					},
+					"spare/sediment": {
+						"bytes": 262144,
+						"sha256": "b7250823e51d54a164caefca5215e37e366b74fc20838755b5c010d58a1a4534"
+					},
+					"spare/water": {
+						"bytes": 262144,
+						"sha256": "3ca918c30222a5f96344ec93396eddd935c831ddf1dfa4a38073d4ee5ede2335"
+					},
+					"spare/wetness": {
+						"bytes": 131072,
+						"sha256": "08119643e4aef9445f69ce5b7dc8202d31f151ae37fa150c521913ff613fcfdf"
+					},
+					"stamp": {
+						"bytes": 32,
+						"sha256": "eeb4a2a1b7da3291e0d76e3bc904ea91f4f5e96d2ce52e7a19b15aa6a217b37c"
+					},
+					"stroke": {
+						"bytes": 64,
+						"sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b"
+					},
+					"visual/bed_0": {
+						"bytes": 262144,
+						"sha256": "a8168c5ce716ab0ef5e23ef0baa11bc604cfb3d2c32648f8c11c5507b905737c"
+					},
+					"visual/bed_1": {
+						"bytes": 262144,
+						"sha256": "a8168c5ce716ab0ef5e23ef0baa11bc604cfb3d2c32648f8c11c5507b905737c"
+					},
+					"visual/foam_0": {
+						"bytes": 524288,
+						"sha256": "6ae9cc7593c89caac397ad33a99081df54643610b4a070278e51bdbc82650f13"
+					},
+					"visual/foam_1": {
+						"bytes": 524288,
+						"sha256": "6ae9cc7593c89caac397ad33a99081df54643610b4a070278e51bdbc82650f13"
+					},
+					"visual/gravel_0": {
+						"bytes": 16384,
+						"sha256": "c7fe01fb4336af59d6fb1f7c83aa178137b2df4cc84d6bec0574fcc1a0fd934d"
+					},
+					"visual/gravel_1": {
+						"bytes": 16384,
+						"sha256": "c7fe01fb4336af59d6fb1f7c83aa178137b2df4cc84d6bec0574fcc1a0fd934d"
+					},
+					"visual_view/foam": {
+						"bytes": 524288,
+						"sha256": "6ae9cc7593c89caac397ad33a99081df54643610b4a070278e51bdbc82650f13"
+					},
+					"visual_view/gravel": {
+						"bytes": 16384,
+						"sha256": "c7fe01fb4336af59d6fb1f7c83aa178137b2df4cc84d6bec0574fcc1a0fd934d"
+					}
+				},
+				"registered": 35,
+				"state_seq": 3
+			},
+			"label": "restored",
+			"path": "res://resume/data/restored.sandue",
+			"revision": "13",
+			"sha256": "0d94f2c51a02aee596ad6481093fbc0043a8bde321e6e4ff08b7f34304143f7c",
+			"state_seq": "3",
+			"tick": "3",
+			"time_s": 0.100000008940697
+		},
+		{
+			"capture": {
+				"capture_id": 2,
+				"end_id": 0,
+				"end_result": {},
+				"error": "",
+				"generation": 1002,
+				"highwater_id": 0,
+				"phase": "finished",
+				"records": {
+					"clock": {
+						"bytes": 4,
+						"sha256": "5d96a77c55b4ac1eea2d77815396c4349292b85e3b07beaca6aff933e7ef8752"
+					},
+					"control": {
+						"bytes": 128,
+						"sha256": "b2106df78f50b36dc86bac5237edcc7c4b747ae6dd8160be2d97a16ac75307f2"
+					},
+					"display_active_count": {
+						"bytes": 4,
+						"sha256": "29374cfdd45d8433713bb3252954e48841401c4ee254a651cfffd2287f5360de"
+					},
+					"field/compaction": {
+						"bytes": 131072,
+						"sha256": "b3ef389b5eba05dadd4afb3430815ec692c7cf547d6269b30a2cefb1c5a10755"
+					},
+					"field/flux": {
+						"bytes": 1048576,
+						"sha256": "9e62a2d38c7f3dbc4dbf79b20240ec151b7e043122ebebff03732cf269dcaad7"
+					},
+					"field/momentum_x": {
+						"bytes": 262144,
+						"sha256": "99063b9ea69fb6c38ac2bae15bddf78191a8f1c4100add8774223217e76564de"
+					},
+					"field/momentum_z": {
+						"bytes": 262144,
+						"sha256": "1abf375fd3a39cbaee8c825c887116597c7ebdf40057f1022cfa938ab5cd14f1"
+					},
+					"field/obstacle": {
+						"bytes": 65536,
+						"sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+					},
+					"field/rock": {
+						"bytes": 262144,
+						"sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+					},
+					"field/sand": {
+						"bytes": 262144,
+						"sha256": "cc7839c92ac4dbec0f04dd8286c763839edb249295113bac55eefacb2186f12a"
+					},
+					"field/sediment": {
+						"bytes": 262144,
+						"sha256": "72bebb7d7f813415f3caf85106c9903f8b710376f3d5e5525ccc2b1b09fd8e74"
+					},
+					"field/water": {
+						"bytes": 262144,
+						"sha256": "20db701f1f02f440bc89e19372bfc0687baba741612f40048869305074656320"
+					},
+					"field/wetness": {
+						"bytes": 131072,
+						"sha256": "906478412cafcf210abacd92fd3c42e3cd976dd40b57cf64789df0a492c310e2"
+					},
+					"material/0": {
+						"bytes": 524288,
+						"sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+					},
+					"material/1": {
+						"bytes": 524288,
+						"sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+					},
+					"published_sand": {
+						"bytes": 262144,
+						"sha256": "cc7839c92ac4dbec0f04dd8286c763839edb249295113bac55eefacb2186f12a"
+					},
+					"published_water": {
+						"bytes": 262144,
+						"sha256": "20db701f1f02f440bc89e19372bfc0687baba741612f40048869305074656320"
+					},
+					"spare/compaction": {
+						"bytes": 131072,
+						"sha256": "b3ef389b5eba05dadd4afb3430815ec692c7cf547d6269b30a2cefb1c5a10755"
+					},
+					"spare/flux": {
+						"bytes": 1048576,
+						"sha256": "9e62a2d38c7f3dbc4dbf79b20240ec151b7e043122ebebff03732cf269dcaad7"
+					},
+					"spare/momentum_x": {
+						"bytes": 262144,
+						"sha256": "99063b9ea69fb6c38ac2bae15bddf78191a8f1c4100add8774223217e76564de"
+					},
+					"spare/momentum_z": {
+						"bytes": 262144,
+						"sha256": "1abf375fd3a39cbaee8c825c887116597c7ebdf40057f1022cfa938ab5cd14f1"
+					},
+					"spare/sand": {
+						"bytes": 262144,
+						"sha256": "cc7839c92ac4dbec0f04dd8286c763839edb249295113bac55eefacb2186f12a"
+					},
+					"spare/sediment": {
+						"bytes": 262144,
+						"sha256": "72bebb7d7f813415f3caf85106c9903f8b710376f3d5e5525ccc2b1b09fd8e74"
+					},
+					"spare/water": {
+						"bytes": 262144,
+						"sha256": "20db701f1f02f440bc89e19372bfc0687baba741612f40048869305074656320"
+					},
+					"spare/wetness": {
+						"bytes": 131072,
+						"sha256": "906478412cafcf210abacd92fd3c42e3cd976dd40b57cf64789df0a492c310e2"
+					},
+					"stamp": {
+						"bytes": 32,
+						"sha256": "9ed1bb1a185f9602b56131a93730487646a67906edfad07cd4e5d84076548191"
+					},
+					"stroke": {
+						"bytes": 64,
+						"sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b"
+					},
+					"visual/bed_0": {
+						"bytes": 262144,
+						"sha256": "cc7839c92ac4dbec0f04dd8286c763839edb249295113bac55eefacb2186f12a"
+					},
+					"visual/bed_1": {
+						"bytes": 262144,
+						"sha256": "cc7839c92ac4dbec0f04dd8286c763839edb249295113bac55eefacb2186f12a"
+					},
+					"visual/foam_0": {
+						"bytes": 524288,
+						"sha256": "50cea058e235a217017da7aa74954a12547b7ac8726025d6549fc0f03ba22760"
+					},
+					"visual/foam_1": {
+						"bytes": 524288,
+						"sha256": "50cea058e235a217017da7aa74954a12547b7ac8726025d6549fc0f03ba22760"
+					},
+					"visual/gravel_0": {
+						"bytes": 16384,
+						"sha256": "0b655bd9fcca9bec212d8b5de8019e8d63d3f1582fd5df8b1e0f28b443c7f076"
+					},
+					"visual/gravel_1": {
+						"bytes": 16384,
+						"sha256": "0b655bd9fcca9bec212d8b5de8019e8d63d3f1582fd5df8b1e0f28b443c7f076"
+					},
+					"visual_view/foam": {
+						"bytes": 524288,
+						"sha256": "50cea058e235a217017da7aa74954a12547b7ac8726025d6549fc0f03ba22760"
+					},
+					"visual_view/gravel": {
+						"bytes": 16384,
+						"sha256": "0b655bd9fcca9bec212d8b5de8019e8d63d3f1582fd5df8b1e0f28b443c7f076"
+					}
+				},
+				"registered": 35,
+				"state_seq": 6
+			},
+			"label": "continuation",
+			"path": "res://resume/data/continuation.sandue",
+			"revision": "24",
+			"sha256": "0ecbf853476f83115e18bcebbd81d92b41a372234720a2f95748329455e91843",
+			"state_seq": "6",
+			"tick": "6",
+			"time_s": 0.200000002980232
+		}
+	],
+	"schema": 1,
+	"scope": "Real main RD with foam/gravel, actual save capture, cold source/resume processes; compare native files separately",
+	"scratch": {
+		"audit": {
+			"bytes": 2048,
+			"sha256": "e5a00aa9991ac8a5ee3109844d84a55583bd20572ad3ffcd42792f3c36b183ad",
+			"zero": true
+		},
+		"safety": {
+			"bytes": 128,
+			"sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca",
+			"zero": true
+		},
+		"trial": {
+			"bytes": 128,
+			"sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca",
+			"zero": true
+		}
+	},
+	"snapshots": [
+		{
+			"advanced_time_s": 0.100000008940697,
+			"fields": {
+				"audit": {
+					"bytes": 2048,
+					"path": "res://resume/data/before_continuation_audit.bin",
+					"sha256": "e5a00aa9991ac8a5ee3109844d84a55583bd20572ad3ffcd42792f3c36b183ad"
+				},
+				"control": {
+					"bytes": 128,
+					"path": "res://resume/data/before_continuation_control.bin",
+					"sha256": "4892b57dbea970aacf5b764d183fb536ba47cac40b801b1dfe22ce77402e3f87"
+				},
+				"decision": {
+					"bytes": 64,
+					"path": "res://resume/data/before_continuation_decision.bin",
+					"sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b"
+				},
+				"flux": {
+					"bytes": 1048576,
+					"path": "res://resume/data/before_continuation_flux.bin",
+					"sha256": "1fd4f2d2ff7f92669913c51f0d8ef06339907bba673d3c53501fe3bdf31235b4"
+				},
+				"momentum_x": {
+					"bytes": 262144,
+					"path": "res://resume/data/before_continuation_momentum_x.bin",
+					"sha256": "95f1ae31b35770b3f8b26cdc2b773100f991129a72011bb94bb933559298cfde"
+				},
+				"momentum_z": {
+					"bytes": 262144,
+					"path": "res://resume/data/before_continuation_momentum_z.bin",
+					"sha256": "bda64b7875e8a42c3c19b9abc607a3a61620c1fbdf08d8179064e809e8f0ce48"
+				},
+				"rock": {
+					"bytes": 262144,
+					"path": "res://resume/data/before_continuation_rock.bin",
+					"sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+				},
+				"safety": {
+					"bytes": 128,
+					"path": "res://resume/data/before_continuation_safety.bin",
+					"sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+				},
+				"sand": {
+					"bytes": 262144,
+					"path": "res://resume/data/before_continuation_sand.bin",
+					"sha256": "a8168c5ce716ab0ef5e23ef0baa11bc604cfb3d2c32648f8c11c5507b905737c"
+				},
+				"sediment": {
+					"bytes": 262144,
+					"path": "res://resume/data/before_continuation_sediment.bin",
+					"sha256": "b7250823e51d54a164caefca5215e37e366b74fc20838755b5c010d58a1a4534"
+				},
+				"trial": {
+					"bytes": 128,
+					"path": "res://resume/data/before_continuation_trial.bin",
+					"sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+				},
+				"water": {
+					"bytes": 262144,
+					"path": "res://resume/data/before_continuation_water.bin",
+					"sha256": "3ca918c30222a5f96344ec93396eddd935c831ddf1dfa4a38073d4ee5ede2335"
+				}
+			},
+			"generation": "1002",
+			"label": "before_continuation",
+			"revision": "13",
+			"state_seq": "3",
+			"tick": "3"
+		},
+		{
+			"advanced_time_s": 0.200000002980232,
+			"fields": {
+				"audit": {
+					"bytes": 2048,
+					"path": "res://resume/data/after_continuation_audit.bin",
+					"sha256": "03e744fa662946136de8fccb9e7c9bfed9fcea03668c63ee5a14a31019ed11bc"
+				},
+				"control": {
+					"bytes": 128,
+					"path": "res://resume/data/after_continuation_control.bin",
+					"sha256": "b2106df78f50b36dc86bac5237edcc7c4b747ae6dd8160be2d97a16ac75307f2"
+				},
+				"decision": {
+					"bytes": 64,
+					"path": "res://resume/data/after_continuation_decision.bin",
+					"sha256": "f46bdf69369d76621321720bc47f115a1fa42b6007a90841702378c27c2389be"
+				},
+				"drain0": {
+					"bytes": 262144,
+					"path": "res://resume/data/after_continuation_drain0.bin",
+					"sha256": "17faa485f5409354c6aed458c8cc8dfad1922c98532b3e0349c26f9349388261"
+				},
+				"drain1": {
+					"bytes": 262144,
+					"path": "res://resume/data/after_continuation_drain1.bin",
+					"sha256": "17faa485f5409354c6aed458c8cc8dfad1922c98532b3e0349c26f9349388261"
+				},
+				"edge0_x": {
+					"bytes": 1048576,
+					"path": "res://resume/data/after_continuation_edge0_x.bin",
+					"sha256": "c1257d795b5df505b2e9ee3f84acbaa4d1aff57a8c8f08749e37ea5b8b793699"
+				},
+				"edge0_z": {
+					"bytes": 1048576,
+					"path": "res://resume/data/after_continuation_edge0_z.bin",
+					"sha256": "207293bcd96ba4393fdcba6797613eccd6124d8e1fe71fd6513241228498c0c6"
+				},
+				"edge1_x": {
+					"bytes": 1048576,
+					"path": "res://resume/data/after_continuation_edge1_x.bin",
+					"sha256": "0f9c34d338f264f8e74ecf491f66cdfbf6a22ece53e644be87769c8551b3c7b5"
+				},
+				"edge1_z": {
+					"bytes": 1048576,
+					"path": "res://resume/data/after_continuation_edge1_z.bin",
+					"sha256": "6db3880c8fa7be4906a81b05366d23ac51fc2537b2dc0c7be55971b23396a7d7"
+				},
+				"flux": {
+					"bytes": 1048576,
+					"path": "res://resume/data/after_continuation_flux.bin",
+					"sha256": "9e62a2d38c7f3dbc4dbf79b20240ec151b7e043122ebebff03732cf269dcaad7"
+				},
+				"momentum_x": {
+					"bytes": 262144,
+					"path": "res://resume/data/after_continuation_momentum_x.bin",
+					"sha256": "99063b9ea69fb6c38ac2bae15bddf78191a8f1c4100add8774223217e76564de"
+				},
+				"momentum_z": {
+					"bytes": 262144,
+					"path": "res://resume/data/after_continuation_momentum_z.bin",
+					"sha256": "1abf375fd3a39cbaee8c825c887116597c7ebdf40057f1022cfa938ab5cd14f1"
+				},
+				"rock": {
+					"bytes": 262144,
+					"path": "res://resume/data/after_continuation_rock.bin",
+					"sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+				},
+				"safety": {
+					"bytes": 128,
+					"path": "res://resume/data/after_continuation_safety.bin",
+					"sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+				},
+				"sand": {
+					"bytes": 262144,
+					"path": "res://resume/data/after_continuation_sand.bin",
+					"sha256": "cc7839c92ac4dbec0f04dd8286c763839edb249295113bac55eefacb2186f12a"
+				},
+				"sediment": {
+					"bytes": 262144,
+					"path": "res://resume/data/after_continuation_sediment.bin",
+					"sha256": "72bebb7d7f813415f3caf85106c9903f8b710376f3d5e5525ccc2b1b09fd8e74"
+				},
+				"trial": {
+					"bytes": 128,
+					"path": "res://resume/data/after_continuation_trial.bin",
+					"sha256": "cafe425fc1d23e38930011fd7c3ddb5789457d917643525eebefa72afe26e16e"
+				},
+				"u1": {
+					"bytes": 1048576,
+					"path": "res://resume/data/after_continuation_u1.bin",
+					"sha256": "cc8a6ee3fd95b74009efbabbced26dcaabfc62faea97ed15c8374b1cbcafebd3"
+				},
+				"u2": {
+					"bytes": 1048576,
+					"path": "res://resume/data/after_continuation_u2.bin",
+					"sha256": "e1a12798cadfce4f1a6affa7076cb499ede1411e124292f70a4f7cad4a2aa6e5"
+				},
+				"water": {
+					"bytes": 262144,
+					"path": "res://resume/data/after_continuation_water.bin",
+					"sha256": "20db701f1f02f440bc89e19372bfc0687baba741612f40048869305074656320"
+				}
+			},
+			"generation": "1002",
+			"label": "after_continuation",
+			"revision": "24",
+			"state_seq": "6",
+			"tick": "6"
+		}
+	],
+	"source_drift": []
+}

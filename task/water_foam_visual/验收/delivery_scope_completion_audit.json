@@ -1,0 +1,36 @@
+{
+  "schema": "foam_accepted_delivery_completion_v1",
+  "recorded_at": "2026-10-24T11:24:36.898949+08:00",
+  "human_answer_verbatim": "保留新效果，将两项未通过列为遗留问题",
+  "delivery_status": "completed_with_accepted_outstanding_issues",
+  "delivery_scope_complete": true,
+  "technical_overall_pass": false,
+  "gates": {
+    "G0": "not_passed_aa_noise",
+    "G1": "pass",
+    "G2": "pass",
+    "G3": "pass",
+    "G4": "not_passed_strict_authority_replay",
+    "G5": "not_passed_performance"
+  },
+  "accepted_outstanding_issues": [
+    "FOAM-LEGACY-01",
+    "FOAM-LEGACY-02"
+  ],
+  "checks": {
+    "explicit_human_delivery_decision_recorded": true,
+    "retained_runtime_sources_match": true,
+    "passed_visual_ui_pck_stability_retained": true,
+    "failed_gates_preserved": true,
+    "no_further_optimization": true,
+    "two_unresolved_issues_registered": true
+  },
+  "source_count": 412,
+  "source_drift": [],
+  "historical_audits_preserved": [
+    "completion_audit_followup.json",
+    "blocked_audit_20261024.json"
+  ],
+  "decision": "delivery_decision_20261024.json",
+  "issue_register": "遗留问题.md"
+}

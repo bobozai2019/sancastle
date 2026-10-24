@@ -19,6 +19,9 @@ var async_transport
 var textures: Dictionary={}
 var pipelines: Array[RID]=[]
 var uniform_sets: Array=[]
+var surface_wetness:=RID()
+var surface_wetness_enabled:=false
+var restored_surface_wetness:=PackedByteArray()
 var published_sand:=RID()
 var published_water:=RID()
 var published_stamp:=RID()
@@ -100,8 +103,14 @@ func initialize(device: RenderingDevice, domain, transport, native: Dictionary={
 	if not native.is_empty():
 		stamp.encode_s64(8,native.control.decode_s64(16));stamp.encode_s64(16,native.control.decode_s64(40));stamp.encode_s64(24,native.control.decode_s64(24))
 	published_stamp=own(rd.storage_buffer_create(32,stamp))
-	if not compile("publish","res://scripts/simulation/unified_edit/publish.glsl"):return false
-	publish_set=binding("publish",{0:transport.control,1:published_stamp},{2:textures.sand[0],3:textures.water[0],4:published_sand,5:published_water})
+	if surface_wetness_enabled:
+		var initial: PackedByteArray=restored_surface_wetness if not restored_surface_wetness.is_empty() else preload("res://scripts/simulation/unified_edit/surface_wetness.gd").seed(domain.sand,domain.water)
+		surface_wetness=_create_texture(RenderingDevice.DATA_FORMAT_R32_SFLOAT,initial)
+		if not surface_wetness.is_valid():last_error="surface_wetness_texture";return false
+	if not compile("publish","res://scripts/simulation/unified_edit/publish_wet_sand.glsl" if surface_wetness_enabled else "res://scripts/simulation/unified_edit/publish.glsl"):return false
+	var publication:={2:textures.sand[0],3:textures.water[0],4:published_sand,5:published_water}
+	if surface_wetness_enabled:publication[6]=surface_wetness
+	publish_set=binding("publish",{0:transport.control,1:published_stamp},publication)
 	return published_sand.is_valid() and published_water.is_valid() and published_stamp.is_valid() and publish_set.is_valid()
 
 func publish_sand() -> void:
@@ -113,4 +122,4 @@ func publish_sand() -> void:
 
 func release() -> void:
 	if async_transport!=null and async_transport.has_owned():push_error("state release while unified work owns resources");return
-	textures.clear();pipelines.clear();uniform_sets.clear();super.release()
+	textures.clear();pipelines.clear();uniform_sets.clear();surface_wetness=RID();restored_surface_wetness.clear();super.release()

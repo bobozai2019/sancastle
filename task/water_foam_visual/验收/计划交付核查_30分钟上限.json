@@ -1,0 +1,69 @@
+{
+  "schema": "foam_plan_delivery_check_v1",
+  "date": "2026-10-24",
+  "scope": "Plan-only amendment: user hard limit of 30 minutes cumulative performance optimization; no runtime validation",
+  "pass": true,
+  "task_count": 6,
+  "goals_count": 24,
+  "implementation_completed_goals": 0,
+  "optimization_budget_s": 1800,
+  "optimization_used_s": 0,
+  "local_links_checked": 30,
+  "errors": [],
+  "method": "Relative-link existence; cap present in six affected documents; task and state goal IDs reconciled; current Markdown SHA256 capture",
+  "previous_plan_check": "计划交付核查.json",
+  "documents": [
+    {
+      "path": "契约/表现与性能.md",
+      "sha256": "5fa90a4b85467db6805f210e087ca89474ea407eed182477d2fe7081e3b512e2"
+    },
+    {
+      "path": "总纲.md",
+      "sha256": "50d9d4dc1c0fa3e78cf67d14a10ac0204eeea0760d245a54b9ec272f0def4daf"
+    },
+    {
+      "path": "执行状态.md",
+      "sha256": "cc32b779813ce36b9ce29157f5fd789a5ab402dc7d5ddb54d8344f6dc7ccf400"
+    },
+    {
+      "path": "细则/README.md",
+      "sha256": "01cb7baba9fff3cf3b1e5f5026230fcb85052cc9b0f677b042c139a3d1023dd7"
+    },
+    {
+      "path": "细则/T00_基线与契约.md",
+      "sha256": "7c45601bd6aa8384deba1914f278fbc815f40a647a33d32a283a9ac556fd0e08"
+    },
+    {
+      "path": "细则/T01_泡沫形态与受光.md",
+      "sha256": "b12def5b1761fd207c6cc70c534a55c1165425971927b1d222dd5da296f2d588"
+    },
+    {
+      "path": "细则/T02_随流与时间连续性.md",
+      "sha256": "6e6730bed0bf2d55d7e90019946d610cd4a2e9ed6236b662b9db6e9fc63a5263"
+    },
+    {
+      "path": "细则/T03_岸边与动态沙床.md",
+      "sha256": "3f317547b0213cc7c715852105b4b242e37481214697bba46afea46aa968b6c9"
+    },
+    {
+      "path": "细则/T04_正式场景与生命周期.md",
+      "sha256": "efe164a053dabc3982809e08c037794dba9dbe543754b5e95e345ba403ff5e00"
+    },
+    {
+      "path": "细则/T05_性能与交付.md",
+      "sha256": "1ed4eb9df8f8de83d1b6f661d8ff5704990fbe95b5d2d5e05854aaa4b51dcbe7"
+    },
+    {
+      "path": "需求映射.md",
+      "sha256": "c4032195a4193cd4b78301ccb832e49e96d61991ca4a690d7321823f24a0c35d"
+    },
+    {
+      "path": "验收/README.md",
+      "sha256": "d967a236ac2d76370377f0a77be17b5387877c820d11433ba513c64d26c67d6b"
+    },
+    {
+      "path": "验证计划.md",
+      "sha256": "5963daee34339d397a8390a443ff1031136af715b0085a4c3b21324a175a3648"
+    }
+  ]
+}

@@ -18,7 +18,8 @@ uniform float natural_caustic_strength = 0.8;
 uniform float natural_caustic_softness = 1.0;
 uniform float natural_caustic_uv_scale = 2.0;
 uniform sampler2D rock_state : filter_nearest, repeat_disable;
-uniform sampler2D sand_state : filter_nearest, repeat_disable;
+// Filter thickness for continuous sand/rock tint; bed_cell uses exact texelFetch.
+uniform sampler2D sand_state : filter_linear, repeat_disable;
 uniform sampler2D wetness_state : filter_nearest, repeat_disable;
 uniform sampler2D compaction_state : filter_nearest, repeat_disable;
 uniform sampler2D water_state : filter_nearest, repeat_disable;
@@ -36,6 +37,8 @@ uniform sampler2D async_clock : filter_nearest, repeat_disable;
 uniform bool use_grain = true;
 uniform bool use_grain_normal = true;
 uniform bool use_wet_finish = true;
+uniform bool use_surface_wetness = false;
+uniform sampler2D surface_wetness_state : filter_linear, repeat_disable;
 uniform float prototype_wet_trace_gain = 0.0;
 uniform bool use_compaction_tint = true;
 uniform int debug_mode = 0;
@@ -121,7 +124,9 @@ void fragment() {
     } else {
         vec3 dry = sand_dry_color;
         vec3 damp = sand_wet_color;
-        vec3 color = mix(dry, damp, (use_wet_finish ? wet : 0.0) * 0.65);
+        float wet_color = wet * 0.65;
+        if (use_surface_wetness) wet_color = smoothstep(0.0, 0.4, texture(surface_wetness_state, UV).r);
+        vec3 color = mix(dry, damp, use_wet_finish ? wet_color : 0.0);
         if (use_compaction_tint) {
             color = mix(color, color * vec3(0.89, 0.91, 0.96), compact * 0.25);
         }

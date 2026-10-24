@@ -1,0 +1,142 @@
+{
+  "schema": "foam_visual_evidence_index_v1",
+  "updated_at": "2026-10-24T11:24:36.898949+08:00",
+  "gates": {
+    "G0": "not_passed_aa_noise",
+    "G1": "pass",
+    "G2": "pass",
+    "G3": "pass",
+    "G4": "not_passed_strict_authority_replay",
+    "G5": "not_passed_performance"
+  },
+  "runs": [
+    {
+      "run_id": "G0/baseline_20261024/main",
+      "manifest": "G0/baseline_20261024/main/run.json",
+      "process_result": {
+        "exit_code": 0,
+        "timeout": false
+      },
+      "gate_status": "not_passed"
+    },
+    {
+      "run_id": "G0/baseline_20261024/test1_geometry",
+      "manifest": "G0/baseline_20261024/test1_geometry/run.json",
+      "process_result": {
+        "exit_code": 0,
+        "timeout": false
+      },
+      "gate_status": "not_passed"
+    },
+    {
+      "run_id": "G0/timing_20261024/main_1080_A1",
+      "manifest": "G0/timing_20261024/main_1080_A1/run.json",
+      "process_result": {
+        "exit_code": 0,
+        "timeout": false
+      },
+      "gate_status": "not_passed"
+    },
+    {
+      "run_id": "G0/timing_20261024/main_1080_A2",
+      "manifest": "G0/timing_20261024/main_1080_A2/run.json",
+      "process_result": {
+        "exit_code": 0,
+        "timeout": false
+      },
+      "gate_status": "not_passed"
+    },
+    {
+      "run_id": "G0/timing_20261024/main_720_A1",
+      "manifest": "G0/timing_20261024/main_720_A1/run.json",
+      "process_result": {
+        "exit_code": 0,
+        "timeout": false
+      },
+      "gate_status": "not_passed"
+    },
+    {
+      "run_id": "G0/timing_20261024/main_720_A2",
+      "manifest": "G0/timing_20261024/main_720_A2/run.json",
+      "process_result": {
+        "exit_code": 0,
+        "timeout": false
+      },
+      "gate_status": "not_passed"
+    },
+    {
+      "run_id": "G0/timing_20261024/test1_geometry_720_A1",
+      "manifest": "G0/timing_20261024/test1_geometry_720_A1/run.json",
+      "process_result": {
+        "exit_code": 1,
+        "timeout": false
+      },
+      "gate_status": "not_passed"
+    }
+  ],
+  "gate_reports": {
+    "G0": "G0_基线与契约.md",
+    "G1": "G1_静态候选.md",
+    "G2": "G2_随流候选.md",
+    "G3": "G3_岸边衔接.md"
+  },
+  "visual_indexes": [
+    "G1/visual_index.json",
+    "G2/visual_index.json",
+    "G3/visual_index.json"
+  ],
+  "resolved_blocker": {
+    "kind": "concurrent_shared_source_and_gpu_work",
+    "verified_consecutive_goal_turns": 3,
+    "dependency_thread": "01a1696a-a9da-7a70-81b7-4cd01fb2a9ff",
+    "latest_cursor": "940226f1-9c52-428e-ac1f-12846f8e7a81:15",
+    "observed_at": "2026-10-23T18:30:06.570880+00:00"
+  },
+  "final_acceptance": {
+    "overall_pass": false,
+    "visual_pass": true,
+    "static_ui_pass": true,
+    "outside_project_pck_pass": true,
+    "final_stability_pass": true,
+    "performance_pass": false,
+    "strict_authority_replay_pass": false,
+    "optimization_used_s": 1664.7103316999855,
+    "optimization_running": false,
+    "latest_runs": {
+      "ui": "G4/static_ui_lifecycle_v1",
+      "pack": "G4/static_ui_pack_v2/isolated/report.json",
+      "cost": "G5/final_cost_v3/analysis.json",
+      "cost_audit": "G5/final_cost_v3/cost_summary.md",
+      "stability": "G5/final_stability_v2/summary.json",
+      "latest_ui_switches": "G4/latest_ui_switch_v1/main/run.json",
+      "capture_factor": "G4/authority_capture_factor_v1/analysis.json",
+      "exact_original_replay": "G4/exact_original_authority_v2/analysis.json",
+      "tolerance_audit": "G4/existing_tolerance_audit.md",
+      "completion_audit": "completion_audit_followup.json",
+      "delivery_scope_completion_audit": "delivery_scope_completion_audit.json"
+    },
+    "limitations": [
+      "Old mode AA strict replay differs about 1e-7; root cause unresolved; authority simulation untouched.",
+      "All four terminal live AA fail; some AB full-frame tails/throughput exceed C05; no tolerance widening or further optimization."
+    ],
+    "human_waiver": true,
+    "pending_human_decision": {
+      "question": "Keep visual changes with failed items recorded, restore formal baseline, or expand numerical scope and separately define optimization budget",
+      "basis": "Master plan section7 and C05 rollback/time constraints; C01/C04 authority scope",
+      "answered": true,
+      "answer_verbatim": "保留新效果，将两项未通过列为遗留问题",
+      "recorded_at": "2026-10-24T11:24:36.898949+08:00",
+      "evidence": "delivery_decision_20261024.json"
+    },
+    "human_waiver_scope": "Delivery disposition only; failed gates and technical overall_pass remain false",
+    "delivery_scope_accepted": true
+  },
+  "final_source_snapshot": "source_snapshots/authority_followup_20261024/identity.json",
+  "execution_inventory": "source_snapshots/authority_followup_20261024/run_inventory.json",
+  "execution_status": "completed_with_accepted_outstanding_issues",
+  "blocked_audit": "blocked_audit_20261024.json",
+  "delivery_scope_accepted": true,
+  "delivery_decision": "delivery_decision_20261024.json",
+  "outstanding_issues": "遗留问题.md",
+  "blocked_audit_resolved_by": "delivery_decision_20261024.json"
+}

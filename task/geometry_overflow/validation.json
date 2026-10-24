@@ -1,0 +1,42 @@
+{
+  "runtime": {
+    "source": "test_output\\overflow\\runtime_v1\\probe.json",
+    "sha256": "29f4033d25845281df99d28faa7d54c3013e3b34c50ffb4f8ab0be0329d83fa0",
+    "checks": 76
+  },
+  "cost": {
+    "source": "test_output\\overflow\\cost_v1\\probe.json",
+    "sha256": "0f5d783fed7a509dee2814a36b62fd5a727713c9a5bc46324a7d53545d8e23b9",
+    "checks": 9
+  },
+  "kernel": {
+    "source": "test_output\\overflow\\kernel_delivery\\probe.json",
+    "sha256": "12150ba243d81d06e5cb87d275deb8ce93715e75f9070b1481e82706c5f244a0",
+    "checks": 17
+  },
+  "first_order": {
+    "source": "test_output\\overflow\\first_order\\probe.json",
+    "sha256": "535029881799dfb180b8a8aa7881da613a8d98f6d72dc7a11156558a1a28a78f",
+    "checks": 9
+  },
+  "main": {
+    "source": "test_output\\overflow\\main\\probe.json",
+    "sha256": "778ff0333f3fe4c7ac6f619cc647d4669b85192759f64f2d2bcbd9207f91c473",
+    "checks": 10
+  },
+  "architecture": {
+    "source": "test_output/overflow/architecture_delivery/report.json",
+    "sha256": "4d5db0d14d0933efaad69068b44d2d29d2b3f5753b8b74e77648841568307f72",
+    "checks": 1734
+  },
+  "current_source_hashes": {
+    "assets/test1_geometry/water_cycle.json": "49e20c9ef51d55b1331657c823c98782af68fade76eb4bb65c93dc2db874e5e6",
+    "scripts/simulation/unified_edit/boundary.gd": "20a62b9c4b580868b261103fe034e7e61646a8fb40de61a555c6ee546861bcf1",
+    "scripts/simulation/unified_edit/boundary.glsl": "8949333ac4ca60f02c07ba1bb39346657bc5cce0d60b078c8f7135bfc6c089ea",
+    "scripts/simulation/unified_edit/checkpoint_codec.gd": "1780c840b9e4b5126472baada8fd04086f28b485ca1a47cee5753c08f1b36451",
+    "scripts/simulation/unified_edit/water.gd": "8b6d8093f3e2518eda1b41f790a2e1affb202f193ffae7b38dd3670faa2a2a6a",
+    "scripts/simulation/unified_edit/water_muscl.gd": "9653432ad607a464f65d476f2d0bb1acc8b84504b0311b74f44143398efd0f7a",
+    "scripts/simulation/unified_edit/pipeline.gd": "540db2a352694d02aac8c00c86f589d33ae26787a348e19fba3dc034313a87e6",
+    "tools/unified_edit_pipeline/architecture_policy.json": "e0ccf199544c71d94af792ffa29314e97a2f797975ccedb5ec1bc4048d91e305"
+  }
+}

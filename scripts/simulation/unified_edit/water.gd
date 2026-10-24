@@ -33,6 +33,7 @@ var tide:=Vector3(0.10,0.11,0.35)
 var tide_mode:=0
 var tide_phase:=0.0
 var tide_period:=16.0
+var overflow: Dictionary={}
 var last_recording_us:=0
 var recorded_ticks:=0
 var inject_boundary_upload_failure_once:=false
@@ -83,7 +84,7 @@ func initialize(owner) -> bool:
 	indirect=_own(rd.storage_buffer_create(64*12,PackedByteArray(),RenderingDevice.STORAGE_BUFFER_USAGE_DISPATCH_INDIRECT))
 	var base:="res://scripts/simulation/edit_validation/frame_pipeline/"
 	for name in ["cfl_tiles","cfl_decide","sim_finish","normalize","boundary"]:
-		if not _compile(name,"res://scripts/simulation/unified_edit/cfl_decide.glsl" if name=="cfl_decide" else base+"async_"+name+".glsl"):return false
+		if not _compile(name,"res://scripts/simulation/unified_edit/cfl_decide.glsl" if name=="cfl_decide" else ("res://scripts/simulation/unified_edit/boundary.glsl" if name=="boundary" else base+"async_"+name+".glsl")):return false
 	for name in ["drain_scale","update_state"]:
 		if not _compile(name,"res://shaders/simulation/shallow_"+name+".glsl",{"params.delta_over_cell_size":"uintBitsToFloat(async_d[9])"}):return false
 	kernels.cfl_tiles.binding=_make_binding(kernels.cfl_tiles.shader,0,[owner.textures.water[0],owner.textures.momentum_x[0],owner.textures.momentum_z[0],owner.textures.cfl_tiles],[])
@@ -95,7 +96,7 @@ func initialize(owner) -> bool:
 		images.append(owner.textures[field][0])
 	kernels.normalize.binding=_make_binding(kernels.normalize.shader,0,images,[])
 	waves=_own(rd.storage_buffer_create(MAX_WAVES*16))
-	kernels.boundary.binding=_make_binding(kernels.boundary.shader,0,[owner.textures.rock,owner.textures.sand[0],owner.textures.water[0],owner.textures.momentum_x[0],owner.textures.momentum_z[0]],[owner.async_transport.control,decision,waves])
+	kernels.boundary.binding=_make_binding(kernels.boundary.shader,0,[owner.textures.rock,owner.textures.sand[0],owner.textures.water[0],owner.textures.momentum_x[0],owner.textures.momentum_z[0],owner.textures.obstacle],[owner.async_transport.control,decision,waves])
 	# Cache only the fixed numerical stages and borrowed bindings for this owner.
 	# List boundaries and the GPU-selected 64 indirect dispatches stay unchanged.
 	var drain_push:=PackedFloat32Array([0.0,0.0,0.0,0.0]).to_byte_array()
@@ -129,8 +130,22 @@ func configure_boundary(parameters: Vector3, packets: Array) -> bool:
 	solver.prescribed_tide_boundary=true
 	return true
 
+func boundary_push_constants() -> PackedByteArray:
+	var push:=PackedFloat32Array([solver.cell_size_m*solver.cell_size_m,tide.x,tide.y,tide.z]).to_byte_array()
+	push.append_array(PackedInt32Array([wave_count,tide_mode,0,0]).to_byte_array())
+	push.encode_float(24,tide_phase);push.encode_float(28,tide_period)
+	push.resize(64)
+	if overflow.get("enabled",false):
+		push.encode_u32(32,1)
+		push.encode_float(36,overflow.check_interval_s)
+		push.encode_float(40,overflow.start_level_m);push.encode_float(44,overflow.stop_level_m)
+		push.encode_float(48,overflow.drain_rate_m_s);push.encode_float(52,overflow.floor_level_m)
+		push.encode_u32(56,overflow.strip_cells)
+	return push
+
 func _dispatch(name: String, binding: RID, push: PackedByteArray, step: int=-1) -> void:
 	var k: Dictionary=kernels[name]
+	if name=="boundary" and solver.profile_passes:rd.capture_timestamp("sandcastle_boundary_start")
 	var list:=rd.compute_list_begin()
 	rd.compute_list_bind_compute_pipeline(list,k.pipeline)
 	rd.compute_list_bind_uniform_set(list,binding,0)
@@ -139,6 +154,7 @@ func _dispatch(name: String, binding: RID, push: PackedByteArray, step: int=-1) 
 	if step>=0:rd.compute_list_dispatch_indirect(list,indirect,step*12)
 	else:rd.compute_list_dispatch(list,1 if name in ["cfl_decide","sim_finish","boundary"] else solver.grid_size/8,1 if name in ["cfl_decide","sim_finish","boundary"] else solver.grid_size/8,1)
 	rd.compute_list_end()
+	if name=="boundary" and solver.profile_passes:rd.capture_timestamp("sandcastle_boundary_end")
 
 func record_tick(_input: RID, _control: RID, _output: RID, _count: int, requested_dt: float) -> void:
 	if muscl!=null:
@@ -150,11 +166,7 @@ func record_tick(_input: RID, _control: RID, _output: RID, _count: int, requeste
 	push.encode_u32(12,solver.grid_size)
 	_dispatch("cfl_decide",kernels.cfl_decide.binding,push)
 	if boundary_enabled:
-		var boundary_push:=PackedFloat32Array([solver.cell_size_m*solver.cell_size_m,tide.x,tide.y,tide.z]).to_byte_array()
-		boundary_push.append_array(PackedInt32Array([wave_count,tide_mode,0,0]).to_byte_array())
-		boundary_push.encode_float(24,tide_phase)
-		boundary_push.encode_float(28,tide_period)
-		_dispatch("boundary",kernels.boundary.binding,boundary_push)
+		_dispatch("boundary",kernels.boundary.binding,boundary_push_constants())
 		# Validate before changing authority; recalculate the safe CFL bound after
 		# the boundary change. Neither decision leaves the GPU sequence.
 		_dispatch("cfl_tiles",kernels.cfl_tiles.binding,PackedByteArray())

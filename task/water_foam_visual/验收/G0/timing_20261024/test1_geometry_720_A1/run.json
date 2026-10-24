@@ -1,0 +1,77 @@
+{
+  "schema": "foam_visual_run_v1",
+  "run_id": "G0/timing_20261024/test1_geometry_720_A1",
+  "variant": "baseline",
+  "case_id": "V01",
+  "scene": null,
+  "source_hashes": {},
+  "resource_hashes": {},
+  "configuration_hash": null,
+  "effective_uniforms": {},
+  "engine": null,
+  "adapter": null,
+  "renderer": "Forward+",
+  "driver": null,
+  "viewport": null,
+  "camera": null,
+  "seed_hash": null,
+  "generation": null,
+  "state_seq": [],
+  "tick": [],
+  "time_s": [],
+  "timing": {
+    "api": null,
+    "vsync": null,
+    "intervals": [],
+    "sample_count": 0,
+    "simulation_compute_coverage": "not established"
+  },
+  "optimization_time": {
+    "budget_s": 1800,
+    "used_s": 0,
+    "remaining_s": 1800,
+    "segments": []
+  },
+  "metrics": null,
+  "assertions": [
+    {
+      "id": "process_exit",
+      "status": "fail",
+      "actual": {
+        "exit_code": 1,
+        "timeout": false
+      }
+    },
+    {
+      "id": "source_stability",
+      "status": "not_measured"
+    },
+    {
+      "id": "G0",
+      "status": "not_measured",
+      "reason": "Contract freeze, stable source, continuous evidence and complete A/A acceptance still required"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "command.json",
+      "sha256": "57f6706c1c7729d852aba8f8d86df8c85d4cc6c354f023a67b174208be5750a8",
+      "bytes": 348
+    },
+    {
+      "path": "result.json",
+      "sha256": "1e954421aa62f6eebc55f6c83053b1125530cb220b75cfe90189b288bac28942",
+      "bytes": 34
+    },
+    {
+      "path": "stderr.log",
+      "sha256": "f0aa526f812c549fbc204be1717e2ab38f59d5e1e7f203a8fad3ee95136b892d",
+      "bytes": 201
+    },
+    {
+      "path": "stdout.log",
+      "sha256": "be6469b3f77519e3c12718a647b4cbfb416b715c6422dd30c0b9e34ec0049096",
+      "bytes": 147
+    }
+  ]
+}

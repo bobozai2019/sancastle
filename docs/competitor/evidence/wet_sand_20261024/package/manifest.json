@@ -1,0 +1,6587 @@
+{
+  "source": {
+    "path": "D:/godot/project/sandcastle/sandcastlegame/Sandcastle_Data/sharedassets0.assets",
+    "bytes": 76135784,
+    "sha256": "6dd7bb6bc7d926fd43c08d22c9c767b7edf531cf11a4a555fcd41830f2f9c721"
+  },
+  "tool": {
+    "path": "D:/godot/project/sandcastle/docs/competitor/tools/export_wet_sand_package.py",
+    "bytes": 5110,
+    "sha256": "f98d25f2f65b1315a835596e7f11c490ef7dc0e20a86f51654eb7e9bbe61fc1e"
+  },
+  "unitypy": "1.25.4",
+  "command": [
+    "docs/competitor/tools/export_wet_sand_package.py"
+  ],
+  "artifacts": [
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/object_20.bin",
+      "bytes": 1080,
+      "sha256": "068e0a86c50fdc8f05990ac651c8ad5e5104bc54203f6bc3d7e3eda07eb8e6f9",
+      "selector": {
+        "path_id": 20,
+        "source_offset": 334976,
+        "bytes": 1080
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/material_20.json",
+      "bytes": 3879,
+      "sha256": "cc5080ab3b4ff1dac086ca8fa43abb3d3ef2a5d63d89e9a1f570117f12f5e574",
+      "selector": {
+        "path_id": 20,
+        "kind": "derived_typetree"
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/object_605.bin",
+      "bytes": 21688,
+      "sha256": "f6458d676e44e9271058ad91131c9027679c8f8ec7834ae5d79861307516a874",
+      "selector": {
+        "path_id": 605,
+        "source_offset": 50073216,
+        "bytes": 21688
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/sand_shader_compressed.lz4",
+      "bytes": 8814,
+      "sha256": "e3f2759165a579c11dc5789992189660edcba98c865b3c2f543eb6a80d0e19da",
+      "selector": {
+        "path_id": 605,
+        "object_offset": 12828,
+        "source_offset": 50086044
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/sand_shader_decompressed.bin",
+      "bytes": 98128,
+      "sha256": "b64cc4e6a5fd4819fb22e2d661a45d2a8e836cd1af9abd31e38d2247ecedd335",
+      "selector": {
+        "derived_from": "sand_shader_compressed.lz4",
+        "codec": "lz4"
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progVertex_3_0.dxbc",
+      "bytes": 5196,
+      "sha256": "6e1ed3c4a1c4c69100371509e65f8bfa9d5c2ee05b1ea2e52a50df17cedf6644",
+      "selector": {
+        "path_id": 605,
+        "subshader": 0,
+        "pass_index": 0,
+        "stage": "progVertex",
+        "group": 3,
+        "variant": 0,
+        "blob_index": 1,
+        "decompressed_offset": 702,
+        "bytes": 5196
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progVertex_3_0.asm",
+      "bytes": 6502,
+      "sha256": "49c322de1876e7ad777df94c6991a85dab380de8d3c6af4379d6dc6bd5098108",
+      "selector": {
+        "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progVertex_3_0.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progVertex_3_1.dxbc",
+      "bytes": 5196,
+      "sha256": "6e1ed3c4a1c4c69100371509e65f8bfa9d5c2ee05b1ea2e52a50df17cedf6644",
+      "selector": {
+        "path_id": 605,
+        "subshader": 0,
+        "pass_index": 0,
+        "stage": "progVertex",
+        "group": 3,
+        "variant": 1,
+        "blob_index": 2,
+        "decompressed_offset": 6030,
+        "bytes": 5196
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progVertex_3_1.asm",
+      "bytes": 6502,
+      "sha256": "49c322de1876e7ad777df94c6991a85dab380de8d3c6af4379d6dc6bd5098108",
+      "selector": {
+        "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progVertex_3_1.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progVertex_3_2.dxbc",
+      "bytes": 5196,
+      "sha256": "6e1ed3c4a1c4c69100371509e65f8bfa9d5c2ee05b1ea2e52a50df17cedf6644",
+      "selector": {
+        "path_id": 605,
+        "subshader": 0,
+        "pass_index": 0,
+        "stage": "progVertex",
+        "group": 3,
+        "variant": 2,
+        "blob_index": 3,
+        "decompressed_offset": 11358,
+        "bytes": 5196
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progVertex_3_2.asm",
+      "bytes": 6502,
+      "sha256": "49c322de1876e7ad777df94c6991a85dab380de8d3c6af4379d6dc6bd5098108",
+      "selector": {
+        "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progVertex_3_2.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progVertex_3_3.dxbc",
+      "bytes": 5196,
+      "sha256": "6e1ed3c4a1c4c69100371509e65f8bfa9d5c2ee05b1ea2e52a50df17cedf6644",
+      "selector": {
+        "path_id": 605,
+        "subshader": 0,
+        "pass_index": 0,
+        "stage": "progVertex",
+        "group": 3,
+        "variant": 3,
+        "blob_index": 4,
+        "decompressed_offset": 16710,
+        "bytes": 5196
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progVertex_3_3.asm",
+      "bytes": 6502,
+      "sha256": "49c322de1876e7ad777df94c6991a85dab380de8d3c6af4379d6dc6bd5098108",
+      "selector": {
+        "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progVertex_3_3.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progFragment_3_0.dxbc",
+      "bytes": 3232,
+      "sha256": "efa0741937c93b5107c2f9ac954e84076a90fd623dc7dd747e30567d5fc1729e",
+      "selector": {
+        "path_id": 605,
+        "subshader": 0,
+        "pass_index": 0,
+        "stage": "progFragment",
+        "group": 3,
+        "variant": 0,
+        "blob_index": 9,
+        "decompressed_offset": 22774,
+        "bytes": 3232
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progFragment_3_0.asm",
+      "bytes": 4435,
+      "sha256": "3394fda497c20f681c4c81796e99b2a35e5a5d5b15e1326c40d9f531ce99d2ed",
+      "selector": {
+        "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progFragment_3_0.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progFragment_3_1.dxbc",
+      "bytes": 3668,
+      "sha256": "4e172a5b734f681528499c4c614e3073f62e0f598baf693f855a62953d157bcd",
+      "selector": {
+        "path_id": 605,
+        "subshader": 0,
+        "pass_index": 0,
+        "stage": "progFragment",
+        "group": 3,
+        "variant": 1,
+        "blob_index": 10,
+        "decompressed_offset": 26130,
+        "bytes": 3668
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progFragment_3_1.asm",
+      "bytes": 5005,
+      "sha256": "a5be0b6d06c25e7958d9ac149c4430fa8d9b956565fee035608dd994112c3197",
+      "selector": {
+        "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progFragment_3_1.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progFragment_3_2.dxbc",
+      "bytes": 4888,
+      "sha256": "542a5cafae19605363259936064969358e7a49cfc0fe889623777fa2b02ebdbf",
+      "selector": {
+        "path_id": 605,
+        "subshader": 0,
+        "pass_index": 0,
+        "stage": "progFragment",
+        "group": 3,
+        "variant": 2,
+        "blob_index": 11,
+        "decompressed_offset": 29922,
+        "bytes": 4888
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progFragment_3_2.asm",
+      "bytes": 6273,
+      "sha256": "4b81f696d66c099097a505efda8f40ddc5e2bd08d7b6a6a49891667919aa4358",
+      "selector": {
+        "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progFragment_3_2.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progFragment_3_3.dxbc",
+      "bytes": 5272,
+      "sha256": "b7f1ac50d5312f20e829e8788a7256d4cc84266880fca4fdedc7d39f98148aa2",
+      "selector": {
+        "path_id": 605,
+        "subshader": 0,
+        "pass_index": 0,
+        "stage": "progFragment",
+        "group": 3,
+        "variant": 3,
+        "blob_index": 12,
+        "decompressed_offset": 34958,
+        "bytes": 5272
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progFragment_3_3.asm",
+      "bytes": 6755,
+      "sha256": "ab36f532cc842e05e848580dc7fa6d6c8b20093569e3de04b49bbeabd3f08237",
+      "selector": {
+        "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progFragment_3_3.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progVertex_3_0.dxbc",
+      "bytes": 3804,
+      "sha256": "59458479f39449dd07397726b4a37869cfe07f116e5d08ecdd5896889a2984e0",
+      "selector": {
+        "path_id": 605,
+        "subshader": 0,
+        "pass_index": 1,
+        "stage": "progVertex",
+        "group": 3,
+        "variant": 0,
+        "blob_index": 14,
+        "decompressed_offset": 40390,
+        "bytes": 3804
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progVertex_3_0.asm",
+      "bytes": 5134,
+      "sha256": "f056d05a07d5b119c39e075eac2b9f31c9aeccd7dc2ed8c0e88f8f0c04478194",
+      "selector": {
+        "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progVertex_3_0.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progVertex_3_1.dxbc",
+      "bytes": 3804,
+      "sha256": "59458479f39449dd07397726b4a37869cfe07f116e5d08ecdd5896889a2984e0",
+      "selector": {
+        "path_id": 605,
+        "subshader": 0,
+        "pass_index": 1,
+        "stage": "progVertex",
+        "group": 3,
+        "variant": 1,
+        "blob_index": 15,
+        "decompressed_offset": 44306,
+        "bytes": 3804
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progVertex_3_1.asm",
+      "bytes": 5134,
+      "sha256": "f056d05a07d5b119c39e075eac2b9f31c9aeccd7dc2ed8c0e88f8f0c04478194",
+      "selector": {
+        "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progVertex_3_1.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progVertex_3_2.dxbc",
+      "bytes": 3804,
+      "sha256": "59458479f39449dd07397726b4a37869cfe07f116e5d08ecdd5896889a2984e0",
+      "selector": {
+        "path_id": 605,
+        "subshader": 0,
+        "pass_index": 1,
+        "stage": "progVertex",
+        "group": 3,
+        "variant": 2,
+        "blob_index": 16,
+        "decompressed_offset": 48222,
+        "bytes": 3804
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progVertex_3_2.asm",
+      "bytes": 5134,
+      "sha256": "f056d05a07d5b119c39e075eac2b9f31c9aeccd7dc2ed8c0e88f8f0c04478194",
+      "selector": {
+        "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progVertex_3_2.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progVertex_3_3.dxbc",
+      "bytes": 3804,
+      "sha256": "59458479f39449dd07397726b4a37869cfe07f116e5d08ecdd5896889a2984e0",
+      "selector": {
+        "path_id": 605,
+        "subshader": 0,
+        "pass_index": 1,
+        "stage": "progVertex",
+        "group": 3,
+        "variant": 3,
+        "blob_index": 17,
+        "decompressed_offset": 52162,
+        "bytes": 3804
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progVertex_3_3.asm",
+      "bytes": 5134,
+      "sha256": "f056d05a07d5b119c39e075eac2b9f31c9aeccd7dc2ed8c0e88f8f0c04478194",
+      "selector": {
+        "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progVertex_3_3.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progFragment_3_0.dxbc",
+      "bytes": 216,
+      "sha256": "4336efdc63ae4c9403e6aad8920f8b8fc8b5011a13d8184c0e72a0e60406cc9a",
+      "selector": {
+        "path_id": 605,
+        "subshader": 0,
+        "pass_index": 1,
+        "stage": "progFragment",
+        "group": 3,
+        "variant": 0,
+        "blob_index": 19,
+        "decompressed_offset": 56082,
+        "bytes": 216
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progFragment_3_0.asm",
+      "bytes": 671,
+      "sha256": "3ac575a969cc985732bfbd282588d06484490a283bc7593d4a27bb5c0f4380ca",
+      "selector": {
+        "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progFragment_3_0.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progFragment_3_1.dxbc",
+      "bytes": 216,
+      "sha256": "4336efdc63ae4c9403e6aad8920f8b8fc8b5011a13d8184c0e72a0e60406cc9a",
+      "selector": {
+        "path_id": 605,
+        "subshader": 0,
+        "pass_index": 1,
+        "stage": "progFragment",
+        "group": 3,
+        "variant": 1,
+        "blob_index": 20,
+        "decompressed_offset": 56402,
+        "bytes": 216
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progFragment_3_1.asm",
+      "bytes": 671,
+      "sha256": "3ac575a969cc985732bfbd282588d06484490a283bc7593d4a27bb5c0f4380ca",
+      "selector": {
+        "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progFragment_3_1.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progFragment_3_2.dxbc",
+      "bytes": 216,
+      "sha256": "4336efdc63ae4c9403e6aad8920f8b8fc8b5011a13d8184c0e72a0e60406cc9a",
+      "selector": {
+        "path_id": 605,
+        "subshader": 0,
+        "pass_index": 1,
+        "stage": "progFragment",
+        "group": 3,
+        "variant": 2,
+        "blob_index": 21,
+        "decompressed_offset": 56722,
+        "bytes": 216
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progFragment_3_2.asm",
+      "bytes": 671,
+      "sha256": "3ac575a969cc985732bfbd282588d06484490a283bc7593d4a27bb5c0f4380ca",
+      "selector": {
+        "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progFragment_3_2.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progFragment_3_3.dxbc",
+      "bytes": 216,
+      "sha256": "4336efdc63ae4c9403e6aad8920f8b8fc8b5011a13d8184c0e72a0e60406cc9a",
+      "selector": {
+        "path_id": 605,
+        "subshader": 0,
+        "pass_index": 1,
+        "stage": "progFragment",
+        "group": 3,
+        "variant": 3,
+        "blob_index": 22,
+        "decompressed_offset": 57066,
+        "bytes": 216
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progFragment_3_3.asm",
+      "bytes": 671,
+      "sha256": "3ac575a969cc985732bfbd282588d06484490a283bc7593d4a27bb5c0f4380ca",
+      "selector": {
+        "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progFragment_3_3.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progVertex_3_0.dxbc",
+      "bytes": 5248,
+      "sha256": "c8911c503a2928477e956e816d22cc5c764a73d20d56869621035b503f1eec40",
+      "selector": {
+        "path_id": 605,
+        "subshader": 0,
+        "pass_index": 2,
+        "stage": "progVertex",
+        "group": 3,
+        "variant": 0,
+        "blob_index": 24,
+        "decompressed_offset": 57462,
+        "bytes": 5248
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progVertex_3_0.asm",
+      "bytes": 7066,
+      "sha256": "64859aabaafd4d3ca2eaa8cdccb5772a060ea24b6ebe4b25e3550ffb2e897883",
+      "selector": {
+        "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progVertex_3_0.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progVertex_3_1.dxbc",
+      "bytes": 5248,
+      "sha256": "c8911c503a2928477e956e816d22cc5c764a73d20d56869621035b503f1eec40",
+      "selector": {
+        "path_id": 605,
+        "subshader": 0,
+        "pass_index": 2,
+        "stage": "progVertex",
+        "group": 3,
+        "variant": 1,
+        "blob_index": 25,
+        "decompressed_offset": 62842,
+        "bytes": 5248
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progVertex_3_1.asm",
+      "bytes": 7066,
+      "sha256": "64859aabaafd4d3ca2eaa8cdccb5772a060ea24b6ebe4b25e3550ffb2e897883",
+      "selector": {
+        "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progVertex_3_1.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progVertex_3_2.dxbc",
+      "bytes": 5248,
+      "sha256": "c8911c503a2928477e956e816d22cc5c764a73d20d56869621035b503f1eec40",
+      "selector": {
+        "path_id": 605,
+        "subshader": 0,
+        "pass_index": 2,
+        "stage": "progVertex",
+        "group": 3,
+        "variant": 2,
+        "blob_index": 26,
+        "decompressed_offset": 68222,
+        "bytes": 5248
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progVertex_3_2.asm",
+      "bytes": 7066,
+      "sha256": "64859aabaafd4d3ca2eaa8cdccb5772a060ea24b6ebe4b25e3550ffb2e897883",
+      "selector": {
+        "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progVertex_3_2.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progVertex_3_3.dxbc",
+      "bytes": 5248,
+      "sha256": "c8911c503a2928477e956e816d22cc5c764a73d20d56869621035b503f1eec40",
+      "selector": {
+        "path_id": 605,
+        "subshader": 0,
+        "pass_index": 2,
+        "stage": "progVertex",
+        "group": 3,
+        "variant": 3,
+        "blob_index": 27,
+        "decompressed_offset": 73626,
+        "bytes": 5248
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progVertex_3_3.asm",
+      "bytes": 7066,
+      "sha256": "64859aabaafd4d3ca2eaa8cdccb5772a060ea24b6ebe4b25e3550ffb2e897883",
+      "selector": {
+        "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progVertex_3_3.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progFragment_3_0.dxbc",
+      "bytes": 1008,
+      "sha256": "4dac38d9d73f2ada9b7824487c3f6fc6e83bb1f9600bae697a9a2534d5fc239a",
+      "selector": {
+        "path_id": 605,
+        "subshader": 0,
+        "pass_index": 2,
+        "stage": "progFragment",
+        "group": 3,
+        "variant": 0,
+        "blob_index": 32,
+        "decompressed_offset": 79502,
+        "bytes": 1008
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progFragment_3_0.asm",
+      "bytes": 1781,
+      "sha256": "f74e11f69fca02d569415bdf2a3c04738919d14cf80dee21251849f88f876ea1",
+      "selector": {
+        "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progFragment_3_0.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progFragment_3_1.dxbc",
+      "bytes": 1444,
+      "sha256": "da87394a6606ebebab38c3ce498976c8595db8019b82d7bd8dccfbd8bae08fa0",
+      "selector": {
+        "path_id": 605,
+        "subshader": 0,
+        "pass_index": 2,
+        "stage": "progFragment",
+        "group": 3,
+        "variant": 1,
+        "blob_index": 33,
+        "decompressed_offset": 80634,
+        "bytes": 1444
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progFragment_3_1.asm",
+      "bytes": 2351,
+      "sha256": "36a549ef8c61ea49b73601581a03650aa6b872553b2fc242a2c76a5e5d1ea086",
+      "selector": {
+        "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progFragment_3_1.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progFragment_3_2.dxbc",
+      "bytes": 2664,
+      "sha256": "a955fafd0fb4d5ceb4853e505ea55da8cc25be9cff9c60aefb160c2b70700ef3",
+      "selector": {
+        "path_id": 605,
+        "subshader": 0,
+        "pass_index": 2,
+        "stage": "progFragment",
+        "group": 3,
+        "variant": 2,
+        "blob_index": 34,
+        "decompressed_offset": 82202,
+        "bytes": 2664
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progFragment_3_2.asm",
+      "bytes": 3619,
+      "sha256": "b185c6610bc046cfcaabe74f8164b87908835d4965a923d213870a1475d33bb1",
+      "selector": {
+        "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progFragment_3_2.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progFragment_3_3.dxbc",
+      "bytes": 2976,
+      "sha256": "8d8054caef074d0e33379ab3322290373b2397da92e9870db90aed00878b5a3c",
+      "selector": {
+        "path_id": 605,
+        "subshader": 0,
+        "pass_index": 2,
+        "stage": "progFragment",
+        "group": 3,
+        "variant": 3,
+        "blob_index": 35,
+        "decompressed_offset": 85014,
+        "bytes": 2976
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progFragment_3_3.asm",
+      "bytes": 4064,
+      "sha256": "9f21a2286cc88bad373759c521fb4554116df60ca3d22d85d390fa4b88b4293b",
+      "selector": {
+        "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progFragment_3_3.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progVertex_3_0.dxbc",
+      "bytes": 2136,
+      "sha256": "d09ea68715232356c8f70018a39de54e34ce140399a604e49f2ad66358bf186b",
+      "selector": {
+        "path_id": 605,
+        "subshader": 0,
+        "pass_index": 3,
+        "stage": "progVertex",
+        "group": 3,
+        "variant": 0,
+        "blob_index": 36,
+        "decompressed_offset": 88070,
+        "bytes": 2136
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progVertex_3_0.asm",
+      "bytes": 2886,
+      "sha256": "9d5a327c4424427832296ed62e1b91c173c9e10534153c7c40ab61d7f3788d1b",
+      "selector": {
+        "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progVertex_3_0.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progVertex_3_1.dxbc",
+      "bytes": 2136,
+      "sha256": "d09ea68715232356c8f70018a39de54e34ce140399a604e49f2ad66358bf186b",
+      "selector": {
+        "path_id": 605,
+        "subshader": 0,
+        "pass_index": 3,
+        "stage": "progVertex",
+        "group": 3,
+        "variant": 1,
+        "blob_index": 37,
+        "decompressed_offset": 90318,
+        "bytes": 2136
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progVertex_3_1.asm",
+      "bytes": 2886,
+      "sha256": "9d5a327c4424427832296ed62e1b91c173c9e10534153c7c40ab61d7f3788d1b",
+      "selector": {
+        "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progVertex_3_1.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progVertex_3_2.dxbc",
+      "bytes": 2136,
+      "sha256": "d09ea68715232356c8f70018a39de54e34ce140399a604e49f2ad66358bf186b",
+      "selector": {
+        "path_id": 605,
+        "subshader": 0,
+        "pass_index": 3,
+        "stage": "progVertex",
+        "group": 3,
+        "variant": 2,
+        "blob_index": 38,
+        "decompressed_offset": 92566,
+        "bytes": 2136
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progVertex_3_2.asm",
+      "bytes": 2886,
+      "sha256": "9d5a327c4424427832296ed62e1b91c173c9e10534153c7c40ab61d7f3788d1b",
+      "selector": {
+        "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progVertex_3_2.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progVertex_3_3.dxbc",
+      "bytes": 2136,
+      "sha256": "d09ea68715232356c8f70018a39de54e34ce140399a604e49f2ad66358bf186b",
+      "selector": {
+        "path_id": 605,
+        "subshader": 0,
+        "pass_index": 3,
+        "stage": "progVertex",
+        "group": 3,
+        "variant": 3,
+        "blob_index": 39,
+        "decompressed_offset": 94838,
+        "bytes": 2136
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progVertex_3_3.asm",
+      "bytes": 2886,
+      "sha256": "9d5a327c4424427832296ed62e1b91c173c9e10534153c7c40ab61d7f3788d1b",
+      "selector": {
+        "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progVertex_3_3.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progFragment_3_0.dxbc",
+      "bytes": 180,
+      "sha256": "952f65211d986c3e8ea81c2056ab88dd97c5a63b410401368db2bf6e72ca6538",
+      "selector": {
+        "path_id": 605,
+        "subshader": 0,
+        "pass_index": 3,
+        "stage": "progFragment",
+        "group": 3,
+        "variant": 0,
+        "blob_index": 40,
+        "decompressed_offset": 97062,
+        "bytes": 180
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progFragment_3_0.asm",
+      "bytes": 610,
+      "sha256": "ad999d8986a62b9146ab1285695425ed222a178d1abc0553f1846056d7f515a0",
+      "selector": {
+        "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progFragment_3_0.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progFragment_3_1.dxbc",
+      "bytes": 180,
+      "sha256": "952f65211d986c3e8ea81c2056ab88dd97c5a63b410401368db2bf6e72ca6538",
+      "selector": {
+        "path_id": 605,
+        "subshader": 0,
+        "pass_index": 3,
+        "stage": "progFragment",
+        "group": 3,
+        "variant": 1,
+        "blob_index": 41,
+        "decompressed_offset": 97346,
+        "bytes": 180
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progFragment_3_1.asm",
+      "bytes": 610,
+      "sha256": "ad999d8986a62b9146ab1285695425ed222a178d1abc0553f1846056d7f515a0",
+      "selector": {
+        "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progFragment_3_1.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progFragment_3_2.dxbc",
+      "bytes": 180,
+      "sha256": "952f65211d986c3e8ea81c2056ab88dd97c5a63b410401368db2bf6e72ca6538",
+      "selector": {
+        "path_id": 605,
+        "subshader": 0,
+        "pass_index": 3,
+        "stage": "progFragment",
+        "group": 3,
+        "variant": 2,
+        "blob_index": 42,
+        "decompressed_offset": 97630,
+        "bytes": 180
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progFragment_3_2.asm",
+      "bytes": 610,
+      "sha256": "ad999d8986a62b9146ab1285695425ed222a178d1abc0553f1846056d7f515a0",
+      "selector": {
+        "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progFragment_3_2.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progFragment_3_3.dxbc",
+      "bytes": 180,
+      "sha256": "952f65211d986c3e8ea81c2056ab88dd97c5a63b410401368db2bf6e72ca6538",
+      "selector": {
+        "path_id": 605,
+        "subshader": 0,
+        "pass_index": 3,
+        "stage": "progFragment",
+        "group": 3,
+        "variant": 3,
+        "blob_index": 43,
+        "decompressed_offset": 97938,
+        "bytes": 180
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progFragment_3_3.asm",
+      "bytes": 610,
+      "sha256": "ad999d8986a62b9146ab1285695425ed222a178d1abc0553f1846056d7f515a0",
+      "selector": {
+        "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progFragment_3_3.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/object_636.bin",
+      "bytes": 85008,
+      "sha256": "3b5942cc51243f156bf3ae04a01a0779d5af7953b77e7ae72d4099f962b7d01f",
+      "selector": {
+        "path_id": 636,
+        "source_offset": 50965856,
+        "bytes": 85008
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Water_UpdateAmount_0.dxbc",
+      "bytes": 4416,
+      "sha256": "a61d34e411e8eee5c795bf233908a9b2a5b85ee272f5d0fbcb1481da27a62b80",
+      "selector": {
+        "path_id": 636,
+        "variant": 0,
+        "kernel": 6,
+        "unique_variant": 0,
+        "object_offsets": [
+          20632,
+          63128
+        ],
+        "source_offsets": [
+          50986488,
+          51028984
+        ]
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Water_UpdateAmount_0.asm",
+      "bytes": 5149,
+      "sha256": "e6160ae72468515f134bcd5e917bff258a00d4ce9284ceda7b78afba72c6f3b3",
+      "selector": {
+        "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Water_UpdateAmount_0.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/object_640.bin",
+      "bytes": 65520,
+      "sha256": "a7e85702bfe2df48ad290883b1d22fd78b680529f843d64099cadf5054494fca",
+      "selector": {
+        "path_id": 640,
+        "source_offset": 51486848,
+        "bytes": 65520
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Ground_HeightIntegration_0.dxbc",
+      "bytes": 7844,
+      "sha256": "3fef86f5de5380fa58d06f8cafe3614aaac1e63081247f807082f6eded113f83",
+      "selector": {
+        "path_id": 640,
+        "variant": 0,
+        "kernel": 1,
+        "unique_variant": 0,
+        "object_offsets": [
+          600,
+          33352
+        ],
+        "source_offsets": [
+          51487448,
+          51520200
+        ]
+      }
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Ground_HeightIntegration_0.asm",
+      "bytes": 8703,
+      "sha256": "ab7c959195b5d91d7e9770dee5479fcb3847b8895ad4be80739e7b2fb90af395",
+      "selector": {
+        "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Ground_HeightIntegration_0.dxbc",
+        "tool": "D3DDisassemble"
+      }
+    }
+  ],
+  "objects": [
+    {
+      "path_id": 20,
+      "type": "Material",
+      "unity_version": "6000.4.10f1",
+      "raw": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/object_20.bin",
+        "bytes": 1080,
+        "sha256": "068e0a86c50fdc8f05990ac651c8ad5e5104bc54203f6bc3d7e3eda07eb8e6f9",
+        "selector": {
+          "path_id": 20,
+          "source_offset": 334976,
+          "bytes": 1080
+        }
+      },
+      "external_payload": "None for selected serialized shader/material data; referenced textures not exported by this tool."
+    },
+    {
+      "path_id": 605,
+      "type": "Shader",
+      "unity_version": "6000.4.10f1",
+      "raw": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/object_605.bin",
+        "bytes": 21688,
+        "sha256": "f6458d676e44e9271058ad91131c9027679c8f8ec7834ae5d79861307516a874",
+        "selector": {
+          "path_id": 605,
+          "source_offset": 50073216,
+          "bytes": 21688
+        }
+      },
+      "external_payload": "None for selected serialized shader/material data; referenced textures not exported by this tool."
+    },
+    {
+      "path_id": 636,
+      "type": "ComputeShader",
+      "unity_version": "6000.4.10f1",
+      "raw": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/object_636.bin",
+        "bytes": 85008,
+        "sha256": "3b5942cc51243f156bf3ae04a01a0779d5af7953b77e7ae72d4099f962b7d01f",
+        "selector": {
+          "path_id": 636,
+          "source_offset": 50965856,
+          "bytes": 85008
+        }
+      },
+      "external_payload": "None for selected serialized shader/material data; referenced textures not exported by this tool."
+    },
+    {
+      "path_id": 640,
+      "type": "ComputeShader",
+      "unity_version": "6000.4.10f1",
+      "raw": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/object_640.bin",
+        "bytes": 65520,
+        "sha256": "a7e85702bfe2df48ad290883b1d22fd78b680529f843d64099cadf5054494fca",
+        "selector": {
+          "path_id": 640,
+          "source_offset": 51486848,
+          "bytes": 65520
+        }
+      },
+      "external_payload": "None for selected serialized shader/material data; referenced textures not exported by this tool."
+    }
+  ],
+  "programs": [
+    {
+      "name": "Sand_0_0_progVertex_3_0",
+      "bytecode": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progVertex_3_0.dxbc",
+        "bytes": 5196,
+        "sha256": "6e1ed3c4a1c4c69100371509e65f8bfa9d5c2ee05b1ea2e52a50df17cedf6644",
+        "selector": {
+          "path_id": 605,
+          "subshader": 0,
+          "pass_index": 0,
+          "stage": "progVertex",
+          "group": 3,
+          "variant": 0,
+          "blob_index": 1,
+          "decompressed_offset": 702,
+          "bytes": 5196
+        }
+      },
+      "assembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progVertex_3_0.asm",
+        "bytes": 6502,
+        "sha256": "49c322de1876e7ad777df94c6991a85dab380de8d3c6af4379d6dc6bd5098108",
+        "selector": {
+          "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progVertex_3_0.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [],
+        "m_BufferParams": [
+          {
+            "m_NameIndex": 7,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 8,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 5,
+                "m_Index": 992,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 2,
+                "m_Index": 1856,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 3,
+                "m_Index": 2224,
+                "m_ArraySize": 0,
+                "m_Type": 1,
+                "m_Dim": 2
+              },
+              {
+                "m_NameIndex": 4,
+                "m_Index": 2256,
+                "m_ArraySize": 0,
+                "m_Type": 1,
+                "m_Dim": 2
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 2304,
+            "m_IsPartialCB": true
+          },
+          {
+            "m_NameIndex": 1,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 6,
+                "m_Index": 0,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [],
+            "m_StructParams": [],
+            "m_Size": 656,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 1,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerDraw",
+          1
+        ],
+        [
+          "_MainLightWorldToShadow",
+          19
+        ],
+        [
+          "_ShadowMap",
+          9
+        ],
+        [
+          "beachSize",
+          2
+        ],
+        [
+          "groundCells",
+          7
+        ],
+        [
+          "groundResolution",
+          3
+        ],
+        [
+          "moonColor",
+          15
+        ],
+        [
+          "moonDirection",
+          13
+        ],
+        [
+          "sandColor",
+          16
+        ],
+        [
+          "sedimentColor",
+          18
+        ],
+        [
+          "sunColor",
+          14
+        ],
+        [
+          "sunDirection",
+          12
+        ],
+        [
+          "time",
+          11
+        ],
+        [
+          "unity_AmbientSky",
+          10
+        ],
+        [
+          "unity_MatrixVP",
+          5
+        ],
+        [
+          "unity_ObjectToWorld",
+          6
+        ],
+        [
+          "waterCells",
+          8
+        ],
+        [
+          "waterResolution",
+          4
+        ],
+        [
+          "wetSandColor",
+          17
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 1,
+        "m_KeywordIndices": [
+          6
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 16
+      }
+    },
+    {
+      "name": "Sand_0_0_progVertex_3_1",
+      "bytecode": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progVertex_3_1.dxbc",
+        "bytes": 5196,
+        "sha256": "6e1ed3c4a1c4c69100371509e65f8bfa9d5c2ee05b1ea2e52a50df17cedf6644",
+        "selector": {
+          "path_id": 605,
+          "subshader": 0,
+          "pass_index": 0,
+          "stage": "progVertex",
+          "group": 3,
+          "variant": 1,
+          "blob_index": 2,
+          "decompressed_offset": 6030,
+          "bytes": 5196
+        }
+      },
+      "assembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progVertex_3_1.asm",
+        "bytes": 6502,
+        "sha256": "49c322de1876e7ad777df94c6991a85dab380de8d3c6af4379d6dc6bd5098108",
+        "selector": {
+          "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progVertex_3_1.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [],
+        "m_BufferParams": [
+          {
+            "m_NameIndex": 7,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 8,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 5,
+                "m_Index": 992,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 2,
+                "m_Index": 1856,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 3,
+                "m_Index": 2224,
+                "m_ArraySize": 0,
+                "m_Type": 1,
+                "m_Dim": 2
+              },
+              {
+                "m_NameIndex": 4,
+                "m_Index": 2256,
+                "m_ArraySize": 0,
+                "m_Type": 1,
+                "m_Dim": 2
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 2304,
+            "m_IsPartialCB": true
+          },
+          {
+            "m_NameIndex": 1,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 6,
+                "m_Index": 0,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [],
+            "m_StructParams": [],
+            "m_Size": 656,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 1,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerDraw",
+          1
+        ],
+        [
+          "_MainLightWorldToShadow",
+          19
+        ],
+        [
+          "_ShadowMap",
+          9
+        ],
+        [
+          "beachSize",
+          2
+        ],
+        [
+          "groundCells",
+          7
+        ],
+        [
+          "groundResolution",
+          3
+        ],
+        [
+          "moonColor",
+          15
+        ],
+        [
+          "moonDirection",
+          13
+        ],
+        [
+          "sandColor",
+          16
+        ],
+        [
+          "sedimentColor",
+          18
+        ],
+        [
+          "sunColor",
+          14
+        ],
+        [
+          "sunDirection",
+          12
+        ],
+        [
+          "time",
+          11
+        ],
+        [
+          "unity_AmbientSky",
+          10
+        ],
+        [
+          "unity_MatrixVP",
+          5
+        ],
+        [
+          "unity_ObjectToWorld",
+          6
+        ],
+        [
+          "waterCells",
+          8
+        ],
+        [
+          "waterResolution",
+          4
+        ],
+        [
+          "wetSandColor",
+          17
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 2,
+        "m_KeywordIndices": [
+          5,
+          6
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 16
+      }
+    },
+    {
+      "name": "Sand_0_0_progVertex_3_2",
+      "bytecode": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progVertex_3_2.dxbc",
+        "bytes": 5196,
+        "sha256": "6e1ed3c4a1c4c69100371509e65f8bfa9d5c2ee05b1ea2e52a50df17cedf6644",
+        "selector": {
+          "path_id": 605,
+          "subshader": 0,
+          "pass_index": 0,
+          "stage": "progVertex",
+          "group": 3,
+          "variant": 2,
+          "blob_index": 3,
+          "decompressed_offset": 11358,
+          "bytes": 5196
+        }
+      },
+      "assembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progVertex_3_2.asm",
+        "bytes": 6502,
+        "sha256": "49c322de1876e7ad777df94c6991a85dab380de8d3c6af4379d6dc6bd5098108",
+        "selector": {
+          "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progVertex_3_2.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [],
+        "m_BufferParams": [
+          {
+            "m_NameIndex": 7,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 8,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 5,
+                "m_Index": 992,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 2,
+                "m_Index": 1856,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 3,
+                "m_Index": 2224,
+                "m_ArraySize": 0,
+                "m_Type": 1,
+                "m_Dim": 2
+              },
+              {
+                "m_NameIndex": 4,
+                "m_Index": 2256,
+                "m_ArraySize": 0,
+                "m_Type": 1,
+                "m_Dim": 2
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 2304,
+            "m_IsPartialCB": true
+          },
+          {
+            "m_NameIndex": 1,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 6,
+                "m_Index": 0,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [],
+            "m_StructParams": [],
+            "m_Size": 656,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 1,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerDraw",
+          1
+        ],
+        [
+          "_MainLightWorldToShadow",
+          19
+        ],
+        [
+          "_ShadowMap",
+          9
+        ],
+        [
+          "beachSize",
+          2
+        ],
+        [
+          "groundCells",
+          7
+        ],
+        [
+          "groundResolution",
+          3
+        ],
+        [
+          "moonColor",
+          15
+        ],
+        [
+          "moonDirection",
+          13
+        ],
+        [
+          "sandColor",
+          16
+        ],
+        [
+          "sedimentColor",
+          18
+        ],
+        [
+          "sunColor",
+          14
+        ],
+        [
+          "sunDirection",
+          12
+        ],
+        [
+          "time",
+          11
+        ],
+        [
+          "unity_AmbientSky",
+          10
+        ],
+        [
+          "unity_MatrixVP",
+          5
+        ],
+        [
+          "unity_ObjectToWorld",
+          6
+        ],
+        [
+          "waterCells",
+          8
+        ],
+        [
+          "waterResolution",
+          4
+        ],
+        [
+          "wetSandColor",
+          17
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 3,
+        "m_KeywordIndices": [
+          4,
+          6
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 16
+      }
+    },
+    {
+      "name": "Sand_0_0_progVertex_3_3",
+      "bytecode": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progVertex_3_3.dxbc",
+        "bytes": 5196,
+        "sha256": "6e1ed3c4a1c4c69100371509e65f8bfa9d5c2ee05b1ea2e52a50df17cedf6644",
+        "selector": {
+          "path_id": 605,
+          "subshader": 0,
+          "pass_index": 0,
+          "stage": "progVertex",
+          "group": 3,
+          "variant": 3,
+          "blob_index": 4,
+          "decompressed_offset": 16710,
+          "bytes": 5196
+        }
+      },
+      "assembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progVertex_3_3.asm",
+        "bytes": 6502,
+        "sha256": "49c322de1876e7ad777df94c6991a85dab380de8d3c6af4379d6dc6bd5098108",
+        "selector": {
+          "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progVertex_3_3.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [],
+        "m_BufferParams": [
+          {
+            "m_NameIndex": 7,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 8,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 5,
+                "m_Index": 992,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 2,
+                "m_Index": 1856,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 3,
+                "m_Index": 2224,
+                "m_ArraySize": 0,
+                "m_Type": 1,
+                "m_Dim": 2
+              },
+              {
+                "m_NameIndex": 4,
+                "m_Index": 2256,
+                "m_ArraySize": 0,
+                "m_Type": 1,
+                "m_Dim": 2
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 2304,
+            "m_IsPartialCB": true
+          },
+          {
+            "m_NameIndex": 1,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 6,
+                "m_Index": 0,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [],
+            "m_StructParams": [],
+            "m_Size": 656,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 1,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerDraw",
+          1
+        ],
+        [
+          "_MainLightWorldToShadow",
+          19
+        ],
+        [
+          "_ShadowMap",
+          9
+        ],
+        [
+          "beachSize",
+          2
+        ],
+        [
+          "groundCells",
+          7
+        ],
+        [
+          "groundResolution",
+          3
+        ],
+        [
+          "moonColor",
+          15
+        ],
+        [
+          "moonDirection",
+          13
+        ],
+        [
+          "sandColor",
+          16
+        ],
+        [
+          "sedimentColor",
+          18
+        ],
+        [
+          "sunColor",
+          14
+        ],
+        [
+          "sunDirection",
+          12
+        ],
+        [
+          "time",
+          11
+        ],
+        [
+          "unity_AmbientSky",
+          10
+        ],
+        [
+          "unity_MatrixVP",
+          5
+        ],
+        [
+          "unity_ObjectToWorld",
+          6
+        ],
+        [
+          "waterCells",
+          8
+        ],
+        [
+          "waterResolution",
+          4
+        ],
+        [
+          "wetSandColor",
+          17
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 4,
+        "m_KeywordIndices": [
+          4,
+          5,
+          6
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 16
+      }
+    },
+    {
+      "name": "Sand_0_0_progFragment_3_0",
+      "bytecode": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progFragment_3_0.dxbc",
+        "bytes": 3232,
+        "sha256": "efa0741937c93b5107c2f9ac954e84076a90fd623dc7dd747e30567d5fc1729e",
+        "selector": {
+          "path_id": 605,
+          "subshader": 0,
+          "pass_index": 0,
+          "stage": "progFragment",
+          "group": 3,
+          "variant": 0,
+          "blob_index": 9,
+          "decompressed_offset": 22774,
+          "bytes": 3232
+        }
+      },
+      "assembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progFragment_3_0.asm",
+        "bytes": 4435,
+        "sha256": "3394fda497c20f681c4c81796e99b2a35e5a5d5b15e1326c40d9f531ce99d2ed",
+        "selector": {
+          "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progFragment_3_0.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [
+          {
+            "m_NameIndex": 9,
+            "m_Index": 0,
+            "m_SamplerIndex": 0,
+            "m_MultiSampled": false,
+            "m_Dim": 2
+          }
+        ],
+        "m_BufferParams": [],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 19,
+                "m_Index": 2144,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 10,
+                "m_Index": 640,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              },
+              {
+                "m_NameIndex": 11,
+                "m_Index": 1812,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 1
+              },
+              {
+                "m_NameIndex": 12,
+                "m_Index": 1968,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 13,
+                "m_Index": 1984,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 14,
+                "m_Index": 2000,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 15,
+                "m_Index": 2016,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 16,
+                "m_Index": 2032,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 17,
+                "m_Index": 2064,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 18,
+                "m_Index": 2080,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 2304,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerDraw",
+          1
+        ],
+        [
+          "_MainLightWorldToShadow",
+          19
+        ],
+        [
+          "_ShadowMap",
+          9
+        ],
+        [
+          "beachSize",
+          2
+        ],
+        [
+          "groundCells",
+          7
+        ],
+        [
+          "groundResolution",
+          3
+        ],
+        [
+          "moonColor",
+          15
+        ],
+        [
+          "moonDirection",
+          13
+        ],
+        [
+          "sandColor",
+          16
+        ],
+        [
+          "sedimentColor",
+          18
+        ],
+        [
+          "sunColor",
+          14
+        ],
+        [
+          "sunDirection",
+          12
+        ],
+        [
+          "time",
+          11
+        ],
+        [
+          "unity_AmbientSky",
+          10
+        ],
+        [
+          "unity_MatrixVP",
+          5
+        ],
+        [
+          "unity_ObjectToWorld",
+          6
+        ],
+        [
+          "waterCells",
+          8
+        ],
+        [
+          "waterResolution",
+          4
+        ],
+        [
+          "wetSandColor",
+          17
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 9,
+        "m_KeywordIndices": [
+          6
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 18
+      }
+    },
+    {
+      "name": "Sand_0_0_progFragment_3_1",
+      "bytecode": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progFragment_3_1.dxbc",
+        "bytes": 3668,
+        "sha256": "4e172a5b734f681528499c4c614e3073f62e0f598baf693f855a62953d157bcd",
+        "selector": {
+          "path_id": 605,
+          "subshader": 0,
+          "pass_index": 0,
+          "stage": "progFragment",
+          "group": 3,
+          "variant": 1,
+          "blob_index": 10,
+          "decompressed_offset": 26130,
+          "bytes": 3668
+        }
+      },
+      "assembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progFragment_3_1.asm",
+        "bytes": 5005,
+        "sha256": "a5be0b6d06c25e7958d9ac149c4430fa8d9b956565fee035608dd994112c3197",
+        "selector": {
+          "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progFragment_3_1.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [
+          {
+            "m_NameIndex": 9,
+            "m_Index": 0,
+            "m_SamplerIndex": 0,
+            "m_MultiSampled": false,
+            "m_Dim": 2
+          }
+        ],
+        "m_BufferParams": [],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 19,
+                "m_Index": 2144,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 10,
+                "m_Index": 640,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              },
+              {
+                "m_NameIndex": 11,
+                "m_Index": 1812,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 1
+              },
+              {
+                "m_NameIndex": 12,
+                "m_Index": 1968,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 13,
+                "m_Index": 1984,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 14,
+                "m_Index": 2000,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 15,
+                "m_Index": 2016,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 16,
+                "m_Index": 2032,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 17,
+                "m_Index": 2064,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 18,
+                "m_Index": 2080,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 2304,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerDraw",
+          1
+        ],
+        [
+          "_MainLightWorldToShadow",
+          19
+        ],
+        [
+          "_ShadowMap",
+          9
+        ],
+        [
+          "beachSize",
+          2
+        ],
+        [
+          "groundCells",
+          7
+        ],
+        [
+          "groundResolution",
+          3
+        ],
+        [
+          "moonColor",
+          15
+        ],
+        [
+          "moonDirection",
+          13
+        ],
+        [
+          "sandColor",
+          16
+        ],
+        [
+          "sedimentColor",
+          18
+        ],
+        [
+          "sunColor",
+          14
+        ],
+        [
+          "sunDirection",
+          12
+        ],
+        [
+          "time",
+          11
+        ],
+        [
+          "unity_AmbientSky",
+          10
+        ],
+        [
+          "unity_MatrixVP",
+          5
+        ],
+        [
+          "unity_ObjectToWorld",
+          6
+        ],
+        [
+          "waterCells",
+          8
+        ],
+        [
+          "waterResolution",
+          4
+        ],
+        [
+          "wetSandColor",
+          17
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 10,
+        "m_KeywordIndices": [
+          5,
+          6
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 18
+      }
+    },
+    {
+      "name": "Sand_0_0_progFragment_3_2",
+      "bytecode": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progFragment_3_2.dxbc",
+        "bytes": 4888,
+        "sha256": "542a5cafae19605363259936064969358e7a49cfc0fe889623777fa2b02ebdbf",
+        "selector": {
+          "path_id": 605,
+          "subshader": 0,
+          "pass_index": 0,
+          "stage": "progFragment",
+          "group": 3,
+          "variant": 2,
+          "blob_index": 11,
+          "decompressed_offset": 29922,
+          "bytes": 4888
+        }
+      },
+      "assembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progFragment_3_2.asm",
+        "bytes": 6273,
+        "sha256": "4b81f696d66c099097a505efda8f40ddc5e2bd08d7b6a6a49891667919aa4358",
+        "selector": {
+          "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progFragment_3_2.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [
+          {
+            "m_NameIndex": 9,
+            "m_Index": 0,
+            "m_SamplerIndex": 0,
+            "m_MultiSampled": false,
+            "m_Dim": 2
+          }
+        ],
+        "m_BufferParams": [],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 19,
+                "m_Index": 2144,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 10,
+                "m_Index": 640,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              },
+              {
+                "m_NameIndex": 11,
+                "m_Index": 1812,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 1
+              },
+              {
+                "m_NameIndex": 12,
+                "m_Index": 1968,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 13,
+                "m_Index": 1984,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 14,
+                "m_Index": 2000,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 15,
+                "m_Index": 2016,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 16,
+                "m_Index": 2032,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 17,
+                "m_Index": 2064,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 18,
+                "m_Index": 2080,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 2304,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerDraw",
+          1
+        ],
+        [
+          "_MainLightWorldToShadow",
+          19
+        ],
+        [
+          "_ShadowMap",
+          9
+        ],
+        [
+          "beachSize",
+          2
+        ],
+        [
+          "groundCells",
+          7
+        ],
+        [
+          "groundResolution",
+          3
+        ],
+        [
+          "moonColor",
+          15
+        ],
+        [
+          "moonDirection",
+          13
+        ],
+        [
+          "sandColor",
+          16
+        ],
+        [
+          "sedimentColor",
+          18
+        ],
+        [
+          "sunColor",
+          14
+        ],
+        [
+          "sunDirection",
+          12
+        ],
+        [
+          "time",
+          11
+        ],
+        [
+          "unity_AmbientSky",
+          10
+        ],
+        [
+          "unity_MatrixVP",
+          5
+        ],
+        [
+          "unity_ObjectToWorld",
+          6
+        ],
+        [
+          "waterCells",
+          8
+        ],
+        [
+          "waterResolution",
+          4
+        ],
+        [
+          "wetSandColor",
+          17
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 11,
+        "m_KeywordIndices": [
+          4,
+          6
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 18
+      }
+    },
+    {
+      "name": "Sand_0_0_progFragment_3_3",
+      "bytecode": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progFragment_3_3.dxbc",
+        "bytes": 5272,
+        "sha256": "b7f1ac50d5312f20e829e8788a7256d4cc84266880fca4fdedc7d39f98148aa2",
+        "selector": {
+          "path_id": 605,
+          "subshader": 0,
+          "pass_index": 0,
+          "stage": "progFragment",
+          "group": 3,
+          "variant": 3,
+          "blob_index": 12,
+          "decompressed_offset": 34958,
+          "bytes": 5272
+        }
+      },
+      "assembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progFragment_3_3.asm",
+        "bytes": 6755,
+        "sha256": "ab36f532cc842e05e848580dc7fa6d6c8b20093569e3de04b49bbeabd3f08237",
+        "selector": {
+          "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_0_progFragment_3_3.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [
+          {
+            "m_NameIndex": 9,
+            "m_Index": 0,
+            "m_SamplerIndex": 0,
+            "m_MultiSampled": false,
+            "m_Dim": 2
+          }
+        ],
+        "m_BufferParams": [],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 19,
+                "m_Index": 2144,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 10,
+                "m_Index": 640,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              },
+              {
+                "m_NameIndex": 11,
+                "m_Index": 1812,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 1
+              },
+              {
+                "m_NameIndex": 12,
+                "m_Index": 1968,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 13,
+                "m_Index": 1984,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 14,
+                "m_Index": 2000,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 15,
+                "m_Index": 2016,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 16,
+                "m_Index": 2032,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 17,
+                "m_Index": 2064,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 18,
+                "m_Index": 2080,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 2304,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerDraw",
+          1
+        ],
+        [
+          "_MainLightWorldToShadow",
+          19
+        ],
+        [
+          "_ShadowMap",
+          9
+        ],
+        [
+          "beachSize",
+          2
+        ],
+        [
+          "groundCells",
+          7
+        ],
+        [
+          "groundResolution",
+          3
+        ],
+        [
+          "moonColor",
+          15
+        ],
+        [
+          "moonDirection",
+          13
+        ],
+        [
+          "sandColor",
+          16
+        ],
+        [
+          "sedimentColor",
+          18
+        ],
+        [
+          "sunColor",
+          14
+        ],
+        [
+          "sunDirection",
+          12
+        ],
+        [
+          "time",
+          11
+        ],
+        [
+          "unity_AmbientSky",
+          10
+        ],
+        [
+          "unity_MatrixVP",
+          5
+        ],
+        [
+          "unity_ObjectToWorld",
+          6
+        ],
+        [
+          "waterCells",
+          8
+        ],
+        [
+          "waterResolution",
+          4
+        ],
+        [
+          "wetSandColor",
+          17
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 12,
+        "m_KeywordIndices": [
+          4,
+          5,
+          6
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 18
+      }
+    },
+    {
+      "name": "Sand_0_1_progVertex_3_0",
+      "bytecode": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progVertex_3_0.dxbc",
+        "bytes": 3804,
+        "sha256": "59458479f39449dd07397726b4a37869cfe07f116e5d08ecdd5896889a2984e0",
+        "selector": {
+          "path_id": 605,
+          "subshader": 0,
+          "pass_index": 1,
+          "stage": "progVertex",
+          "group": 3,
+          "variant": 0,
+          "blob_index": 14,
+          "decompressed_offset": 40390,
+          "bytes": 3804
+        }
+      },
+      "assembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progVertex_3_0.asm",
+        "bytes": 5134,
+        "sha256": "f056d05a07d5b119c39e075eac2b9f31c9aeccd7dc2ed8c0e88f8f0c04478194",
+        "selector": {
+          "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progVertex_3_0.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [],
+        "m_BufferParams": [
+          {
+            "m_NameIndex": 8,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 6,
+                "m_Index": 992,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 2,
+                "m_Index": 1856,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 3,
+                "m_Index": 1968,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 4,
+                "m_Index": 2128,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 2
+              },
+              {
+                "m_NameIndex": 5,
+                "m_Index": 2224,
+                "m_ArraySize": 0,
+                "m_Type": 1,
+                "m_Dim": 2
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 2272,
+            "m_IsPartialCB": true
+          },
+          {
+            "m_NameIndex": 1,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 7,
+                "m_Index": 0,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [],
+            "m_StructParams": [],
+            "m_Size": 656,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 1,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerDraw",
+          1
+        ],
+        [
+          "_ShadowBias",
+          4
+        ],
+        [
+          "beachSize",
+          2
+        ],
+        [
+          "groundCells",
+          8
+        ],
+        [
+          "groundResolution",
+          5
+        ],
+        [
+          "sunDirection",
+          3
+        ],
+        [
+          "unity_MatrixVP",
+          6
+        ],
+        [
+          "unity_ObjectToWorld",
+          7
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 14,
+        "m_KeywordIndices": [],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 16
+      }
+    },
+    {
+      "name": "Sand_0_1_progVertex_3_1",
+      "bytecode": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progVertex_3_1.dxbc",
+        "bytes": 3804,
+        "sha256": "59458479f39449dd07397726b4a37869cfe07f116e5d08ecdd5896889a2984e0",
+        "selector": {
+          "path_id": 605,
+          "subshader": 0,
+          "pass_index": 1,
+          "stage": "progVertex",
+          "group": 3,
+          "variant": 1,
+          "blob_index": 15,
+          "decompressed_offset": 44306,
+          "bytes": 3804
+        }
+      },
+      "assembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progVertex_3_1.asm",
+        "bytes": 5134,
+        "sha256": "f056d05a07d5b119c39e075eac2b9f31c9aeccd7dc2ed8c0e88f8f0c04478194",
+        "selector": {
+          "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progVertex_3_1.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [],
+        "m_BufferParams": [
+          {
+            "m_NameIndex": 8,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 6,
+                "m_Index": 992,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 2,
+                "m_Index": 1856,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 3,
+                "m_Index": 1968,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 4,
+                "m_Index": 2128,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 2
+              },
+              {
+                "m_NameIndex": 5,
+                "m_Index": 2224,
+                "m_ArraySize": 0,
+                "m_Type": 1,
+                "m_Dim": 2
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 2272,
+            "m_IsPartialCB": true
+          },
+          {
+            "m_NameIndex": 1,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 7,
+                "m_Index": 0,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [],
+            "m_StructParams": [],
+            "m_Size": 656,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 1,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerDraw",
+          1
+        ],
+        [
+          "_ShadowBias",
+          4
+        ],
+        [
+          "beachSize",
+          2
+        ],
+        [
+          "groundCells",
+          8
+        ],
+        [
+          "groundResolution",
+          5
+        ],
+        [
+          "sunDirection",
+          3
+        ],
+        [
+          "unity_MatrixVP",
+          6
+        ],
+        [
+          "unity_ObjectToWorld",
+          7
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 15,
+        "m_KeywordIndices": [
+          5
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 16
+      }
+    },
+    {
+      "name": "Sand_0_1_progVertex_3_2",
+      "bytecode": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progVertex_3_2.dxbc",
+        "bytes": 3804,
+        "sha256": "59458479f39449dd07397726b4a37869cfe07f116e5d08ecdd5896889a2984e0",
+        "selector": {
+          "path_id": 605,
+          "subshader": 0,
+          "pass_index": 1,
+          "stage": "progVertex",
+          "group": 3,
+          "variant": 2,
+          "blob_index": 16,
+          "decompressed_offset": 48222,
+          "bytes": 3804
+        }
+      },
+      "assembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progVertex_3_2.asm",
+        "bytes": 5134,
+        "sha256": "f056d05a07d5b119c39e075eac2b9f31c9aeccd7dc2ed8c0e88f8f0c04478194",
+        "selector": {
+          "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progVertex_3_2.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [],
+        "m_BufferParams": [
+          {
+            "m_NameIndex": 8,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 6,
+                "m_Index": 992,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 2,
+                "m_Index": 1856,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 3,
+                "m_Index": 1968,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 4,
+                "m_Index": 2128,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 2
+              },
+              {
+                "m_NameIndex": 5,
+                "m_Index": 2224,
+                "m_ArraySize": 0,
+                "m_Type": 1,
+                "m_Dim": 2
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 2272,
+            "m_IsPartialCB": true
+          },
+          {
+            "m_NameIndex": 1,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 7,
+                "m_Index": 0,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [],
+            "m_StructParams": [],
+            "m_Size": 656,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 1,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerDraw",
+          1
+        ],
+        [
+          "_ShadowBias",
+          4
+        ],
+        [
+          "beachSize",
+          2
+        ],
+        [
+          "groundCells",
+          8
+        ],
+        [
+          "groundResolution",
+          5
+        ],
+        [
+          "sunDirection",
+          3
+        ],
+        [
+          "unity_MatrixVP",
+          6
+        ],
+        [
+          "unity_ObjectToWorld",
+          7
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 16,
+        "m_KeywordIndices": [
+          4
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 16
+      }
+    },
+    {
+      "name": "Sand_0_1_progVertex_3_3",
+      "bytecode": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progVertex_3_3.dxbc",
+        "bytes": 3804,
+        "sha256": "59458479f39449dd07397726b4a37869cfe07f116e5d08ecdd5896889a2984e0",
+        "selector": {
+          "path_id": 605,
+          "subshader": 0,
+          "pass_index": 1,
+          "stage": "progVertex",
+          "group": 3,
+          "variant": 3,
+          "blob_index": 17,
+          "decompressed_offset": 52162,
+          "bytes": 3804
+        }
+      },
+      "assembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progVertex_3_3.asm",
+        "bytes": 5134,
+        "sha256": "f056d05a07d5b119c39e075eac2b9f31c9aeccd7dc2ed8c0e88f8f0c04478194",
+        "selector": {
+          "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progVertex_3_3.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [],
+        "m_BufferParams": [
+          {
+            "m_NameIndex": 8,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 6,
+                "m_Index": 992,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 2,
+                "m_Index": 1856,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 3,
+                "m_Index": 1968,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 4,
+                "m_Index": 2128,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 2
+              },
+              {
+                "m_NameIndex": 5,
+                "m_Index": 2224,
+                "m_ArraySize": 0,
+                "m_Type": 1,
+                "m_Dim": 2
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 2272,
+            "m_IsPartialCB": true
+          },
+          {
+            "m_NameIndex": 1,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 7,
+                "m_Index": 0,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [],
+            "m_StructParams": [],
+            "m_Size": 656,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 1,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerDraw",
+          1
+        ],
+        [
+          "_ShadowBias",
+          4
+        ],
+        [
+          "beachSize",
+          2
+        ],
+        [
+          "groundCells",
+          8
+        ],
+        [
+          "groundResolution",
+          5
+        ],
+        [
+          "sunDirection",
+          3
+        ],
+        [
+          "unity_MatrixVP",
+          6
+        ],
+        [
+          "unity_ObjectToWorld",
+          7
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 17,
+        "m_KeywordIndices": [
+          4,
+          5
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 16
+      }
+    },
+    {
+      "name": "Sand_0_1_progFragment_3_0",
+      "bytecode": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progFragment_3_0.dxbc",
+        "bytes": 216,
+        "sha256": "4336efdc63ae4c9403e6aad8920f8b8fc8b5011a13d8184c0e72a0e60406cc9a",
+        "selector": {
+          "path_id": 605,
+          "subshader": 0,
+          "pass_index": 1,
+          "stage": "progFragment",
+          "group": 3,
+          "variant": 0,
+          "blob_index": 19,
+          "decompressed_offset": 56082,
+          "bytes": 216
+        }
+      },
+      "assembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progFragment_3_0.asm",
+        "bytes": 671,
+        "sha256": "3ac575a969cc985732bfbd282588d06484490a283bc7593d4a27bb5c0f4380ca",
+        "selector": {
+          "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progFragment_3_0.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [],
+        "m_BufferParams": [],
+        "m_ConstantBuffers": [],
+        "m_ConstantBufferBindings": [],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerDraw",
+          1
+        ],
+        [
+          "_ShadowBias",
+          4
+        ],
+        [
+          "beachSize",
+          2
+        ],
+        [
+          "groundCells",
+          8
+        ],
+        [
+          "groundResolution",
+          5
+        ],
+        [
+          "sunDirection",
+          3
+        ],
+        [
+          "unity_MatrixVP",
+          6
+        ],
+        [
+          "unity_ObjectToWorld",
+          7
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 19,
+        "m_KeywordIndices": [],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 18
+      }
+    },
+    {
+      "name": "Sand_0_1_progFragment_3_1",
+      "bytecode": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progFragment_3_1.dxbc",
+        "bytes": 216,
+        "sha256": "4336efdc63ae4c9403e6aad8920f8b8fc8b5011a13d8184c0e72a0e60406cc9a",
+        "selector": {
+          "path_id": 605,
+          "subshader": 0,
+          "pass_index": 1,
+          "stage": "progFragment",
+          "group": 3,
+          "variant": 1,
+          "blob_index": 20,
+          "decompressed_offset": 56402,
+          "bytes": 216
+        }
+      },
+      "assembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progFragment_3_1.asm",
+        "bytes": 671,
+        "sha256": "3ac575a969cc985732bfbd282588d06484490a283bc7593d4a27bb5c0f4380ca",
+        "selector": {
+          "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progFragment_3_1.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [],
+        "m_BufferParams": [],
+        "m_ConstantBuffers": [],
+        "m_ConstantBufferBindings": [],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerDraw",
+          1
+        ],
+        [
+          "_ShadowBias",
+          4
+        ],
+        [
+          "beachSize",
+          2
+        ],
+        [
+          "groundCells",
+          8
+        ],
+        [
+          "groundResolution",
+          5
+        ],
+        [
+          "sunDirection",
+          3
+        ],
+        [
+          "unity_MatrixVP",
+          6
+        ],
+        [
+          "unity_ObjectToWorld",
+          7
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 20,
+        "m_KeywordIndices": [
+          5
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 18
+      }
+    },
+    {
+      "name": "Sand_0_1_progFragment_3_2",
+      "bytecode": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progFragment_3_2.dxbc",
+        "bytes": 216,
+        "sha256": "4336efdc63ae4c9403e6aad8920f8b8fc8b5011a13d8184c0e72a0e60406cc9a",
+        "selector": {
+          "path_id": 605,
+          "subshader": 0,
+          "pass_index": 1,
+          "stage": "progFragment",
+          "group": 3,
+          "variant": 2,
+          "blob_index": 21,
+          "decompressed_offset": 56722,
+          "bytes": 216
+        }
+      },
+      "assembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progFragment_3_2.asm",
+        "bytes": 671,
+        "sha256": "3ac575a969cc985732bfbd282588d06484490a283bc7593d4a27bb5c0f4380ca",
+        "selector": {
+          "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progFragment_3_2.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [],
+        "m_BufferParams": [],
+        "m_ConstantBuffers": [],
+        "m_ConstantBufferBindings": [],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerDraw",
+          1
+        ],
+        [
+          "_ShadowBias",
+          4
+        ],
+        [
+          "beachSize",
+          2
+        ],
+        [
+          "groundCells",
+          8
+        ],
+        [
+          "groundResolution",
+          5
+        ],
+        [
+          "sunDirection",
+          3
+        ],
+        [
+          "unity_MatrixVP",
+          6
+        ],
+        [
+          "unity_ObjectToWorld",
+          7
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 21,
+        "m_KeywordIndices": [
+          4
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 18
+      }
+    },
+    {
+      "name": "Sand_0_1_progFragment_3_3",
+      "bytecode": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progFragment_3_3.dxbc",
+        "bytes": 216,
+        "sha256": "4336efdc63ae4c9403e6aad8920f8b8fc8b5011a13d8184c0e72a0e60406cc9a",
+        "selector": {
+          "path_id": 605,
+          "subshader": 0,
+          "pass_index": 1,
+          "stage": "progFragment",
+          "group": 3,
+          "variant": 3,
+          "blob_index": 22,
+          "decompressed_offset": 57066,
+          "bytes": 216
+        }
+      },
+      "assembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progFragment_3_3.asm",
+        "bytes": 671,
+        "sha256": "3ac575a969cc985732bfbd282588d06484490a283bc7593d4a27bb5c0f4380ca",
+        "selector": {
+          "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_1_progFragment_3_3.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [],
+        "m_BufferParams": [],
+        "m_ConstantBuffers": [],
+        "m_ConstantBufferBindings": [],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerDraw",
+          1
+        ],
+        [
+          "_ShadowBias",
+          4
+        ],
+        [
+          "beachSize",
+          2
+        ],
+        [
+          "groundCells",
+          8
+        ],
+        [
+          "groundResolution",
+          5
+        ],
+        [
+          "sunDirection",
+          3
+        ],
+        [
+          "unity_MatrixVP",
+          6
+        ],
+        [
+          "unity_ObjectToWorld",
+          7
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 22,
+        "m_KeywordIndices": [
+          4,
+          5
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 18
+      }
+    },
+    {
+      "name": "Sand_0_2_progVertex_3_0",
+      "bytecode": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progVertex_3_0.dxbc",
+        "bytes": 5248,
+        "sha256": "c8911c503a2928477e956e816d22cc5c764a73d20d56869621035b503f1eec40",
+        "selector": {
+          "path_id": 605,
+          "subshader": 0,
+          "pass_index": 2,
+          "stage": "progVertex",
+          "group": 3,
+          "variant": 0,
+          "blob_index": 24,
+          "decompressed_offset": 57462,
+          "bytes": 5248
+        }
+      },
+      "assembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progVertex_3_0.asm",
+        "bytes": 7066,
+        "sha256": "64859aabaafd4d3ca2eaa8cdccb5772a060ea24b6ebe4b25e3550ffb2e897883",
+        "selector": {
+          "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progVertex_3_0.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [],
+        "m_BufferParams": [
+          {
+            "m_NameIndex": 10,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 11,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 8,
+                "m_Index": 992,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 2,
+                "m_Index": 1856,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 3,
+                "m_Index": 2032,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 4,
+                "m_Index": 2096,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 5,
+                "m_Index": 2112,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 6,
+                "m_Index": 2224,
+                "m_ArraySize": 0,
+                "m_Type": 1,
+                "m_Dim": 2
+              },
+              {
+                "m_NameIndex": 7,
+                "m_Index": 2256,
+                "m_ArraySize": 0,
+                "m_Type": 1,
+                "m_Dim": 2
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 2320,
+            "m_IsPartialCB": true
+          },
+          {
+            "m_NameIndex": 1,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 9,
+                "m_Index": 0,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [],
+            "m_StructParams": [],
+            "m_Size": 656,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 1,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerDraw",
+          1
+        ],
+        [
+          "_MainLightWorldToShadow",
+          18
+        ],
+        [
+          "_ShadowMap",
+          12
+        ],
+        [
+          "beachSize",
+          2
+        ],
+        [
+          "groundCells",
+          10
+        ],
+        [
+          "groundResolution",
+          6
+        ],
+        [
+          "moonColor",
+          17
+        ],
+        [
+          "moonDirection",
+          15
+        ],
+        [
+          "sandColor",
+          3
+        ],
+        [
+          "sunColor",
+          16
+        ],
+        [
+          "sunDirection",
+          14
+        ],
+        [
+          "unity_AmbientSky",
+          13
+        ],
+        [
+          "unity_MatrixVP",
+          8
+        ],
+        [
+          "unity_ObjectToWorld",
+          9
+        ],
+        [
+          "waterCells",
+          11
+        ],
+        [
+          "waterColor",
+          4
+        ],
+        [
+          "waterResolution",
+          7
+        ],
+        [
+          "waterScatteringColor",
+          5
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 24,
+        "m_KeywordIndices": [
+          6
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 16
+      }
+    },
+    {
+      "name": "Sand_0_2_progVertex_3_1",
+      "bytecode": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progVertex_3_1.dxbc",
+        "bytes": 5248,
+        "sha256": "c8911c503a2928477e956e816d22cc5c764a73d20d56869621035b503f1eec40",
+        "selector": {
+          "path_id": 605,
+          "subshader": 0,
+          "pass_index": 2,
+          "stage": "progVertex",
+          "group": 3,
+          "variant": 1,
+          "blob_index": 25,
+          "decompressed_offset": 62842,
+          "bytes": 5248
+        }
+      },
+      "assembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progVertex_3_1.asm",
+        "bytes": 7066,
+        "sha256": "64859aabaafd4d3ca2eaa8cdccb5772a060ea24b6ebe4b25e3550ffb2e897883",
+        "selector": {
+          "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progVertex_3_1.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [],
+        "m_BufferParams": [
+          {
+            "m_NameIndex": 10,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 11,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 8,
+                "m_Index": 992,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 2,
+                "m_Index": 1856,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 3,
+                "m_Index": 2032,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 4,
+                "m_Index": 2096,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 5,
+                "m_Index": 2112,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 6,
+                "m_Index": 2224,
+                "m_ArraySize": 0,
+                "m_Type": 1,
+                "m_Dim": 2
+              },
+              {
+                "m_NameIndex": 7,
+                "m_Index": 2256,
+                "m_ArraySize": 0,
+                "m_Type": 1,
+                "m_Dim": 2
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 2320,
+            "m_IsPartialCB": true
+          },
+          {
+            "m_NameIndex": 1,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 9,
+                "m_Index": 0,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [],
+            "m_StructParams": [],
+            "m_Size": 656,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 1,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerDraw",
+          1
+        ],
+        [
+          "_MainLightWorldToShadow",
+          18
+        ],
+        [
+          "_ShadowMap",
+          12
+        ],
+        [
+          "beachSize",
+          2
+        ],
+        [
+          "groundCells",
+          10
+        ],
+        [
+          "groundResolution",
+          6
+        ],
+        [
+          "moonColor",
+          17
+        ],
+        [
+          "moonDirection",
+          15
+        ],
+        [
+          "sandColor",
+          3
+        ],
+        [
+          "sunColor",
+          16
+        ],
+        [
+          "sunDirection",
+          14
+        ],
+        [
+          "unity_AmbientSky",
+          13
+        ],
+        [
+          "unity_MatrixVP",
+          8
+        ],
+        [
+          "unity_ObjectToWorld",
+          9
+        ],
+        [
+          "waterCells",
+          11
+        ],
+        [
+          "waterColor",
+          4
+        ],
+        [
+          "waterResolution",
+          7
+        ],
+        [
+          "waterScatteringColor",
+          5
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 25,
+        "m_KeywordIndices": [
+          5,
+          6
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 16
+      }
+    },
+    {
+      "name": "Sand_0_2_progVertex_3_2",
+      "bytecode": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progVertex_3_2.dxbc",
+        "bytes": 5248,
+        "sha256": "c8911c503a2928477e956e816d22cc5c764a73d20d56869621035b503f1eec40",
+        "selector": {
+          "path_id": 605,
+          "subshader": 0,
+          "pass_index": 2,
+          "stage": "progVertex",
+          "group": 3,
+          "variant": 2,
+          "blob_index": 26,
+          "decompressed_offset": 68222,
+          "bytes": 5248
+        }
+      },
+      "assembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progVertex_3_2.asm",
+        "bytes": 7066,
+        "sha256": "64859aabaafd4d3ca2eaa8cdccb5772a060ea24b6ebe4b25e3550ffb2e897883",
+        "selector": {
+          "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progVertex_3_2.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [],
+        "m_BufferParams": [
+          {
+            "m_NameIndex": 10,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 11,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 8,
+                "m_Index": 992,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 2,
+                "m_Index": 1856,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 3,
+                "m_Index": 2032,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 4,
+                "m_Index": 2096,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 5,
+                "m_Index": 2112,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 6,
+                "m_Index": 2224,
+                "m_ArraySize": 0,
+                "m_Type": 1,
+                "m_Dim": 2
+              },
+              {
+                "m_NameIndex": 7,
+                "m_Index": 2256,
+                "m_ArraySize": 0,
+                "m_Type": 1,
+                "m_Dim": 2
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 2320,
+            "m_IsPartialCB": true
+          },
+          {
+            "m_NameIndex": 1,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 9,
+                "m_Index": 0,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [],
+            "m_StructParams": [],
+            "m_Size": 656,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 1,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerDraw",
+          1
+        ],
+        [
+          "_MainLightWorldToShadow",
+          18
+        ],
+        [
+          "_ShadowMap",
+          12
+        ],
+        [
+          "beachSize",
+          2
+        ],
+        [
+          "groundCells",
+          10
+        ],
+        [
+          "groundResolution",
+          6
+        ],
+        [
+          "moonColor",
+          17
+        ],
+        [
+          "moonDirection",
+          15
+        ],
+        [
+          "sandColor",
+          3
+        ],
+        [
+          "sunColor",
+          16
+        ],
+        [
+          "sunDirection",
+          14
+        ],
+        [
+          "unity_AmbientSky",
+          13
+        ],
+        [
+          "unity_MatrixVP",
+          8
+        ],
+        [
+          "unity_ObjectToWorld",
+          9
+        ],
+        [
+          "waterCells",
+          11
+        ],
+        [
+          "waterColor",
+          4
+        ],
+        [
+          "waterResolution",
+          7
+        ],
+        [
+          "waterScatteringColor",
+          5
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 26,
+        "m_KeywordIndices": [
+          4,
+          6
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 16
+      }
+    },
+    {
+      "name": "Sand_0_2_progVertex_3_3",
+      "bytecode": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progVertex_3_3.dxbc",
+        "bytes": 5248,
+        "sha256": "c8911c503a2928477e956e816d22cc5c764a73d20d56869621035b503f1eec40",
+        "selector": {
+          "path_id": 605,
+          "subshader": 0,
+          "pass_index": 2,
+          "stage": "progVertex",
+          "group": 3,
+          "variant": 3,
+          "blob_index": 27,
+          "decompressed_offset": 73626,
+          "bytes": 5248
+        }
+      },
+      "assembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progVertex_3_3.asm",
+        "bytes": 7066,
+        "sha256": "64859aabaafd4d3ca2eaa8cdccb5772a060ea24b6ebe4b25e3550ffb2e897883",
+        "selector": {
+          "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progVertex_3_3.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [],
+        "m_BufferParams": [
+          {
+            "m_NameIndex": 10,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 11,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 8,
+                "m_Index": 992,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 2,
+                "m_Index": 1856,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 3,
+                "m_Index": 2032,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 4,
+                "m_Index": 2096,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 5,
+                "m_Index": 2112,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 6,
+                "m_Index": 2224,
+                "m_ArraySize": 0,
+                "m_Type": 1,
+                "m_Dim": 2
+              },
+              {
+                "m_NameIndex": 7,
+                "m_Index": 2256,
+                "m_ArraySize": 0,
+                "m_Type": 1,
+                "m_Dim": 2
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 2320,
+            "m_IsPartialCB": true
+          },
+          {
+            "m_NameIndex": 1,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 9,
+                "m_Index": 0,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [],
+            "m_StructParams": [],
+            "m_Size": 656,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 1,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerDraw",
+          1
+        ],
+        [
+          "_MainLightWorldToShadow",
+          18
+        ],
+        [
+          "_ShadowMap",
+          12
+        ],
+        [
+          "beachSize",
+          2
+        ],
+        [
+          "groundCells",
+          10
+        ],
+        [
+          "groundResolution",
+          6
+        ],
+        [
+          "moonColor",
+          17
+        ],
+        [
+          "moonDirection",
+          15
+        ],
+        [
+          "sandColor",
+          3
+        ],
+        [
+          "sunColor",
+          16
+        ],
+        [
+          "sunDirection",
+          14
+        ],
+        [
+          "unity_AmbientSky",
+          13
+        ],
+        [
+          "unity_MatrixVP",
+          8
+        ],
+        [
+          "unity_ObjectToWorld",
+          9
+        ],
+        [
+          "waterCells",
+          11
+        ],
+        [
+          "waterColor",
+          4
+        ],
+        [
+          "waterResolution",
+          7
+        ],
+        [
+          "waterScatteringColor",
+          5
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 27,
+        "m_KeywordIndices": [
+          4,
+          5,
+          6
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 16
+      }
+    },
+    {
+      "name": "Sand_0_2_progFragment_3_0",
+      "bytecode": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progFragment_3_0.dxbc",
+        "bytes": 1008,
+        "sha256": "4dac38d9d73f2ada9b7824487c3f6fc6e83bb1f9600bae697a9a2534d5fc239a",
+        "selector": {
+          "path_id": 605,
+          "subshader": 0,
+          "pass_index": 2,
+          "stage": "progFragment",
+          "group": 3,
+          "variant": 0,
+          "blob_index": 32,
+          "decompressed_offset": 79502,
+          "bytes": 1008
+        }
+      },
+      "assembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progFragment_3_0.asm",
+        "bytes": 1781,
+        "sha256": "f74e11f69fca02d569415bdf2a3c04738919d14cf80dee21251849f88f876ea1",
+        "selector": {
+          "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progFragment_3_0.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [
+          {
+            "m_NameIndex": 12,
+            "m_Index": 0,
+            "m_SamplerIndex": 0,
+            "m_MultiSampled": false,
+            "m_Dim": 2
+          }
+        ],
+        "m_BufferParams": [],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 18,
+                "m_Index": 2144,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 13,
+                "m_Index": 640,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              },
+              {
+                "m_NameIndex": 14,
+                "m_Index": 1968,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 15,
+                "m_Index": 1984,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 16,
+                "m_Index": 2000,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 17,
+                "m_Index": 2016,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 2320,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerDraw",
+          1
+        ],
+        [
+          "_MainLightWorldToShadow",
+          18
+        ],
+        [
+          "_ShadowMap",
+          12
+        ],
+        [
+          "beachSize",
+          2
+        ],
+        [
+          "groundCells",
+          10
+        ],
+        [
+          "groundResolution",
+          6
+        ],
+        [
+          "moonColor",
+          17
+        ],
+        [
+          "moonDirection",
+          15
+        ],
+        [
+          "sandColor",
+          3
+        ],
+        [
+          "sunColor",
+          16
+        ],
+        [
+          "sunDirection",
+          14
+        ],
+        [
+          "unity_AmbientSky",
+          13
+        ],
+        [
+          "unity_MatrixVP",
+          8
+        ],
+        [
+          "unity_ObjectToWorld",
+          9
+        ],
+        [
+          "waterCells",
+          11
+        ],
+        [
+          "waterColor",
+          4
+        ],
+        [
+          "waterResolution",
+          7
+        ],
+        [
+          "waterScatteringColor",
+          5
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 32,
+        "m_KeywordIndices": [
+          6
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 18
+      }
+    },
+    {
+      "name": "Sand_0_2_progFragment_3_1",
+      "bytecode": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progFragment_3_1.dxbc",
+        "bytes": 1444,
+        "sha256": "da87394a6606ebebab38c3ce498976c8595db8019b82d7bd8dccfbd8bae08fa0",
+        "selector": {
+          "path_id": 605,
+          "subshader": 0,
+          "pass_index": 2,
+          "stage": "progFragment",
+          "group": 3,
+          "variant": 1,
+          "blob_index": 33,
+          "decompressed_offset": 80634,
+          "bytes": 1444
+        }
+      },
+      "assembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progFragment_3_1.asm",
+        "bytes": 2351,
+        "sha256": "36a549ef8c61ea49b73601581a03650aa6b872553b2fc242a2c76a5e5d1ea086",
+        "selector": {
+          "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progFragment_3_1.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [
+          {
+            "m_NameIndex": 12,
+            "m_Index": 0,
+            "m_SamplerIndex": 0,
+            "m_MultiSampled": false,
+            "m_Dim": 2
+          }
+        ],
+        "m_BufferParams": [],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 18,
+                "m_Index": 2144,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 13,
+                "m_Index": 640,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              },
+              {
+                "m_NameIndex": 14,
+                "m_Index": 1968,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 15,
+                "m_Index": 1984,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 16,
+                "m_Index": 2000,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 17,
+                "m_Index": 2016,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 2320,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerDraw",
+          1
+        ],
+        [
+          "_MainLightWorldToShadow",
+          18
+        ],
+        [
+          "_ShadowMap",
+          12
+        ],
+        [
+          "beachSize",
+          2
+        ],
+        [
+          "groundCells",
+          10
+        ],
+        [
+          "groundResolution",
+          6
+        ],
+        [
+          "moonColor",
+          17
+        ],
+        [
+          "moonDirection",
+          15
+        ],
+        [
+          "sandColor",
+          3
+        ],
+        [
+          "sunColor",
+          16
+        ],
+        [
+          "sunDirection",
+          14
+        ],
+        [
+          "unity_AmbientSky",
+          13
+        ],
+        [
+          "unity_MatrixVP",
+          8
+        ],
+        [
+          "unity_ObjectToWorld",
+          9
+        ],
+        [
+          "waterCells",
+          11
+        ],
+        [
+          "waterColor",
+          4
+        ],
+        [
+          "waterResolution",
+          7
+        ],
+        [
+          "waterScatteringColor",
+          5
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 33,
+        "m_KeywordIndices": [
+          5,
+          6
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 18
+      }
+    },
+    {
+      "name": "Sand_0_2_progFragment_3_2",
+      "bytecode": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progFragment_3_2.dxbc",
+        "bytes": 2664,
+        "sha256": "a955fafd0fb4d5ceb4853e505ea55da8cc25be9cff9c60aefb160c2b70700ef3",
+        "selector": {
+          "path_id": 605,
+          "subshader": 0,
+          "pass_index": 2,
+          "stage": "progFragment",
+          "group": 3,
+          "variant": 2,
+          "blob_index": 34,
+          "decompressed_offset": 82202,
+          "bytes": 2664
+        }
+      },
+      "assembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progFragment_3_2.asm",
+        "bytes": 3619,
+        "sha256": "b185c6610bc046cfcaabe74f8164b87908835d4965a923d213870a1475d33bb1",
+        "selector": {
+          "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progFragment_3_2.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [
+          {
+            "m_NameIndex": 12,
+            "m_Index": 0,
+            "m_SamplerIndex": 0,
+            "m_MultiSampled": false,
+            "m_Dim": 2
+          }
+        ],
+        "m_BufferParams": [],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 18,
+                "m_Index": 2144,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 13,
+                "m_Index": 640,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              },
+              {
+                "m_NameIndex": 14,
+                "m_Index": 1968,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 15,
+                "m_Index": 1984,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 16,
+                "m_Index": 2000,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 17,
+                "m_Index": 2016,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 2320,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerDraw",
+          1
+        ],
+        [
+          "_MainLightWorldToShadow",
+          18
+        ],
+        [
+          "_ShadowMap",
+          12
+        ],
+        [
+          "beachSize",
+          2
+        ],
+        [
+          "groundCells",
+          10
+        ],
+        [
+          "groundResolution",
+          6
+        ],
+        [
+          "moonColor",
+          17
+        ],
+        [
+          "moonDirection",
+          15
+        ],
+        [
+          "sandColor",
+          3
+        ],
+        [
+          "sunColor",
+          16
+        ],
+        [
+          "sunDirection",
+          14
+        ],
+        [
+          "unity_AmbientSky",
+          13
+        ],
+        [
+          "unity_MatrixVP",
+          8
+        ],
+        [
+          "unity_ObjectToWorld",
+          9
+        ],
+        [
+          "waterCells",
+          11
+        ],
+        [
+          "waterColor",
+          4
+        ],
+        [
+          "waterResolution",
+          7
+        ],
+        [
+          "waterScatteringColor",
+          5
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 34,
+        "m_KeywordIndices": [
+          4,
+          6
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 18
+      }
+    },
+    {
+      "name": "Sand_0_2_progFragment_3_3",
+      "bytecode": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progFragment_3_3.dxbc",
+        "bytes": 2976,
+        "sha256": "8d8054caef074d0e33379ab3322290373b2397da92e9870db90aed00878b5a3c",
+        "selector": {
+          "path_id": 605,
+          "subshader": 0,
+          "pass_index": 2,
+          "stage": "progFragment",
+          "group": 3,
+          "variant": 3,
+          "blob_index": 35,
+          "decompressed_offset": 85014,
+          "bytes": 2976
+        }
+      },
+      "assembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progFragment_3_3.asm",
+        "bytes": 4064,
+        "sha256": "9f21a2286cc88bad373759c521fb4554116df60ca3d22d85d390fa4b88b4293b",
+        "selector": {
+          "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_2_progFragment_3_3.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [
+          {
+            "m_NameIndex": 12,
+            "m_Index": 0,
+            "m_SamplerIndex": 0,
+            "m_MultiSampled": false,
+            "m_Dim": 2
+          }
+        ],
+        "m_BufferParams": [],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 18,
+                "m_Index": 2144,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 13,
+                "m_Index": 640,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 4
+              },
+              {
+                "m_NameIndex": 14,
+                "m_Index": 1968,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 15,
+                "m_Index": 1984,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 16,
+                "m_Index": 2000,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 17,
+                "m_Index": 2016,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 2320,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerDraw",
+          1
+        ],
+        [
+          "_MainLightWorldToShadow",
+          18
+        ],
+        [
+          "_ShadowMap",
+          12
+        ],
+        [
+          "beachSize",
+          2
+        ],
+        [
+          "groundCells",
+          10
+        ],
+        [
+          "groundResolution",
+          6
+        ],
+        [
+          "moonColor",
+          17
+        ],
+        [
+          "moonDirection",
+          15
+        ],
+        [
+          "sandColor",
+          3
+        ],
+        [
+          "sunColor",
+          16
+        ],
+        [
+          "sunDirection",
+          14
+        ],
+        [
+          "unity_AmbientSky",
+          13
+        ],
+        [
+          "unity_MatrixVP",
+          8
+        ],
+        [
+          "unity_ObjectToWorld",
+          9
+        ],
+        [
+          "waterCells",
+          11
+        ],
+        [
+          "waterColor",
+          4
+        ],
+        [
+          "waterResolution",
+          7
+        ],
+        [
+          "waterScatteringColor",
+          5
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 35,
+        "m_KeywordIndices": [
+          4,
+          5,
+          6
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 18
+      }
+    },
+    {
+      "name": "Sand_0_3_progVertex_3_0",
+      "bytecode": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progVertex_3_0.dxbc",
+        "bytes": 2136,
+        "sha256": "d09ea68715232356c8f70018a39de54e34ce140399a604e49f2ad66358bf186b",
+        "selector": {
+          "path_id": 605,
+          "subshader": 0,
+          "pass_index": 3,
+          "stage": "progVertex",
+          "group": 3,
+          "variant": 0,
+          "blob_index": 36,
+          "decompressed_offset": 88070,
+          "bytes": 2136
+        }
+      },
+      "assembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progVertex_3_0.asm",
+        "bytes": 2886,
+        "sha256": "9d5a327c4424427832296ed62e1b91c173c9e10534153c7c40ab61d7f3788d1b",
+        "selector": {
+          "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progVertex_3_0.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [],
+        "m_BufferParams": [
+          {
+            "m_NameIndex": 6,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 4,
+                "m_Index": 992,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 2,
+                "m_Index": 1856,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 3,
+                "m_Index": 2224,
+                "m_ArraySize": 0,
+                "m_Type": 1,
+                "m_Dim": 2
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 2272,
+            "m_IsPartialCB": true
+          },
+          {
+            "m_NameIndex": 1,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 5,
+                "m_Index": 0,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [],
+            "m_StructParams": [],
+            "m_Size": 656,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 1,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerDraw",
+          1
+        ],
+        [
+          "beachSize",
+          2
+        ],
+        [
+          "groundCells",
+          6
+        ],
+        [
+          "groundResolution",
+          3
+        ],
+        [
+          "unity_MatrixVP",
+          4
+        ],
+        [
+          "unity_ObjectToWorld",
+          5
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 36,
+        "m_KeywordIndices": [],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 16
+      }
+    },
+    {
+      "name": "Sand_0_3_progVertex_3_1",
+      "bytecode": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progVertex_3_1.dxbc",
+        "bytes": 2136,
+        "sha256": "d09ea68715232356c8f70018a39de54e34ce140399a604e49f2ad66358bf186b",
+        "selector": {
+          "path_id": 605,
+          "subshader": 0,
+          "pass_index": 3,
+          "stage": "progVertex",
+          "group": 3,
+          "variant": 1,
+          "blob_index": 37,
+          "decompressed_offset": 90318,
+          "bytes": 2136
+        }
+      },
+      "assembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progVertex_3_1.asm",
+        "bytes": 2886,
+        "sha256": "9d5a327c4424427832296ed62e1b91c173c9e10534153c7c40ab61d7f3788d1b",
+        "selector": {
+          "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progVertex_3_1.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [],
+        "m_BufferParams": [
+          {
+            "m_NameIndex": 6,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 4,
+                "m_Index": 992,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 2,
+                "m_Index": 1856,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 3,
+                "m_Index": 2224,
+                "m_ArraySize": 0,
+                "m_Type": 1,
+                "m_Dim": 2
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 2272,
+            "m_IsPartialCB": true
+          },
+          {
+            "m_NameIndex": 1,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 5,
+                "m_Index": 0,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [],
+            "m_StructParams": [],
+            "m_Size": 656,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 1,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerDraw",
+          1
+        ],
+        [
+          "beachSize",
+          2
+        ],
+        [
+          "groundCells",
+          6
+        ],
+        [
+          "groundResolution",
+          3
+        ],
+        [
+          "unity_MatrixVP",
+          4
+        ],
+        [
+          "unity_ObjectToWorld",
+          5
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 37,
+        "m_KeywordIndices": [
+          5
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 16
+      }
+    },
+    {
+      "name": "Sand_0_3_progVertex_3_2",
+      "bytecode": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progVertex_3_2.dxbc",
+        "bytes": 2136,
+        "sha256": "d09ea68715232356c8f70018a39de54e34ce140399a604e49f2ad66358bf186b",
+        "selector": {
+          "path_id": 605,
+          "subshader": 0,
+          "pass_index": 3,
+          "stage": "progVertex",
+          "group": 3,
+          "variant": 2,
+          "blob_index": 38,
+          "decompressed_offset": 92566,
+          "bytes": 2136
+        }
+      },
+      "assembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progVertex_3_2.asm",
+        "bytes": 2886,
+        "sha256": "9d5a327c4424427832296ed62e1b91c173c9e10534153c7c40ab61d7f3788d1b",
+        "selector": {
+          "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progVertex_3_2.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [],
+        "m_BufferParams": [
+          {
+            "m_NameIndex": 6,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 4,
+                "m_Index": 992,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 2,
+                "m_Index": 1856,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 3,
+                "m_Index": 2224,
+                "m_ArraySize": 0,
+                "m_Type": 1,
+                "m_Dim": 2
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 2272,
+            "m_IsPartialCB": true
+          },
+          {
+            "m_NameIndex": 1,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 5,
+                "m_Index": 0,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [],
+            "m_StructParams": [],
+            "m_Size": 656,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 1,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerDraw",
+          1
+        ],
+        [
+          "beachSize",
+          2
+        ],
+        [
+          "groundCells",
+          6
+        ],
+        [
+          "groundResolution",
+          3
+        ],
+        [
+          "unity_MatrixVP",
+          4
+        ],
+        [
+          "unity_ObjectToWorld",
+          5
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 38,
+        "m_KeywordIndices": [
+          4
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 16
+      }
+    },
+    {
+      "name": "Sand_0_3_progVertex_3_3",
+      "bytecode": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progVertex_3_3.dxbc",
+        "bytes": 2136,
+        "sha256": "d09ea68715232356c8f70018a39de54e34ce140399a604e49f2ad66358bf186b",
+        "selector": {
+          "path_id": 605,
+          "subshader": 0,
+          "pass_index": 3,
+          "stage": "progVertex",
+          "group": 3,
+          "variant": 3,
+          "blob_index": 39,
+          "decompressed_offset": 94838,
+          "bytes": 2136
+        }
+      },
+      "assembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progVertex_3_3.asm",
+        "bytes": 2886,
+        "sha256": "9d5a327c4424427832296ed62e1b91c173c9e10534153c7c40ab61d7f3788d1b",
+        "selector": {
+          "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progVertex_3_3.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [],
+        "m_BufferParams": [
+          {
+            "m_NameIndex": 6,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_ConstantBuffers": [
+          {
+            "m_NameIndex": 0,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 4,
+                "m_Index": 992,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [
+              {
+                "m_NameIndex": 2,
+                "m_Index": 1856,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_Dim": 3
+              },
+              {
+                "m_NameIndex": 3,
+                "m_Index": 2224,
+                "m_ArraySize": 0,
+                "m_Type": 1,
+                "m_Dim": 2
+              }
+            ],
+            "m_StructParams": [],
+            "m_Size": 2272,
+            "m_IsPartialCB": true
+          },
+          {
+            "m_NameIndex": 1,
+            "m_MatrixParams": [
+              {
+                "m_NameIndex": 5,
+                "m_Index": 0,
+                "m_ArraySize": 0,
+                "m_Type": 0,
+                "m_RowCount": 4
+              }
+            ],
+            "m_VectorParams": [],
+            "m_StructParams": [],
+            "m_Size": 656,
+            "m_IsPartialCB": true
+          }
+        ],
+        "m_ConstantBufferBindings": [
+          {
+            "m_NameIndex": 0,
+            "m_Index": 0,
+            "m_ArraySize": 1
+          },
+          {
+            "m_NameIndex": 1,
+            "m_Index": 1,
+            "m_ArraySize": 1
+          }
+        ],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerDraw",
+          1
+        ],
+        [
+          "beachSize",
+          2
+        ],
+        [
+          "groundCells",
+          6
+        ],
+        [
+          "groundResolution",
+          3
+        ],
+        [
+          "unity_MatrixVP",
+          4
+        ],
+        [
+          "unity_ObjectToWorld",
+          5
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 39,
+        "m_KeywordIndices": [
+          4,
+          5
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 16
+      }
+    },
+    {
+      "name": "Sand_0_3_progFragment_3_0",
+      "bytecode": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progFragment_3_0.dxbc",
+        "bytes": 180,
+        "sha256": "952f65211d986c3e8ea81c2056ab88dd97c5a63b410401368db2bf6e72ca6538",
+        "selector": {
+          "path_id": 605,
+          "subshader": 0,
+          "pass_index": 3,
+          "stage": "progFragment",
+          "group": 3,
+          "variant": 0,
+          "blob_index": 40,
+          "decompressed_offset": 97062,
+          "bytes": 180
+        }
+      },
+      "assembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progFragment_3_0.asm",
+        "bytes": 610,
+        "sha256": "ad999d8986a62b9146ab1285695425ed222a178d1abc0553f1846056d7f515a0",
+        "selector": {
+          "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progFragment_3_0.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [],
+        "m_BufferParams": [],
+        "m_ConstantBuffers": [],
+        "m_ConstantBufferBindings": [],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerDraw",
+          1
+        ],
+        [
+          "beachSize",
+          2
+        ],
+        [
+          "groundCells",
+          6
+        ],
+        [
+          "groundResolution",
+          3
+        ],
+        [
+          "unity_MatrixVP",
+          4
+        ],
+        [
+          "unity_ObjectToWorld",
+          5
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 40,
+        "m_KeywordIndices": [],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 18
+      }
+    },
+    {
+      "name": "Sand_0_3_progFragment_3_1",
+      "bytecode": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progFragment_3_1.dxbc",
+        "bytes": 180,
+        "sha256": "952f65211d986c3e8ea81c2056ab88dd97c5a63b410401368db2bf6e72ca6538",
+        "selector": {
+          "path_id": 605,
+          "subshader": 0,
+          "pass_index": 3,
+          "stage": "progFragment",
+          "group": 3,
+          "variant": 1,
+          "blob_index": 41,
+          "decompressed_offset": 97346,
+          "bytes": 180
+        }
+      },
+      "assembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progFragment_3_1.asm",
+        "bytes": 610,
+        "sha256": "ad999d8986a62b9146ab1285695425ed222a178d1abc0553f1846056d7f515a0",
+        "selector": {
+          "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progFragment_3_1.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [],
+        "m_BufferParams": [],
+        "m_ConstantBuffers": [],
+        "m_ConstantBufferBindings": [],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerDraw",
+          1
+        ],
+        [
+          "beachSize",
+          2
+        ],
+        [
+          "groundCells",
+          6
+        ],
+        [
+          "groundResolution",
+          3
+        ],
+        [
+          "unity_MatrixVP",
+          4
+        ],
+        [
+          "unity_ObjectToWorld",
+          5
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 41,
+        "m_KeywordIndices": [
+          5
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 18
+      }
+    },
+    {
+      "name": "Sand_0_3_progFragment_3_2",
+      "bytecode": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progFragment_3_2.dxbc",
+        "bytes": 180,
+        "sha256": "952f65211d986c3e8ea81c2056ab88dd97c5a63b410401368db2bf6e72ca6538",
+        "selector": {
+          "path_id": 605,
+          "subshader": 0,
+          "pass_index": 3,
+          "stage": "progFragment",
+          "group": 3,
+          "variant": 2,
+          "blob_index": 42,
+          "decompressed_offset": 97630,
+          "bytes": 180
+        }
+      },
+      "assembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progFragment_3_2.asm",
+        "bytes": 610,
+        "sha256": "ad999d8986a62b9146ab1285695425ed222a178d1abc0553f1846056d7f515a0",
+        "selector": {
+          "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progFragment_3_2.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [],
+        "m_BufferParams": [],
+        "m_ConstantBuffers": [],
+        "m_ConstantBufferBindings": [],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerDraw",
+          1
+        ],
+        [
+          "beachSize",
+          2
+        ],
+        [
+          "groundCells",
+          6
+        ],
+        [
+          "groundResolution",
+          3
+        ],
+        [
+          "unity_MatrixVP",
+          4
+        ],
+        [
+          "unity_ObjectToWorld",
+          5
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 42,
+        "m_KeywordIndices": [
+          4
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 18
+      }
+    },
+    {
+      "name": "Sand_0_3_progFragment_3_3",
+      "bytecode": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progFragment_3_3.dxbc",
+        "bytes": 180,
+        "sha256": "952f65211d986c3e8ea81c2056ab88dd97c5a63b410401368db2bf6e72ca6538",
+        "selector": {
+          "path_id": 605,
+          "subshader": 0,
+          "pass_index": 3,
+          "stage": "progFragment",
+          "group": 3,
+          "variant": 3,
+          "blob_index": 43,
+          "decompressed_offset": 97938,
+          "bytes": 180
+        }
+      },
+      "assembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progFragment_3_3.asm",
+        "bytes": 610,
+        "sha256": "ad999d8986a62b9146ab1285695425ed222a178d1abc0553f1846056d7f515a0",
+        "selector": {
+          "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Sand_0_3_progFragment_3_3.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "parameters": {
+        "m_VectorParams": [],
+        "m_MatrixParams": [],
+        "m_TextureParams": [],
+        "m_BufferParams": [],
+        "m_ConstantBuffers": [],
+        "m_ConstantBufferBindings": [],
+        "m_UAVParams": [],
+        "m_Samplers": []
+      },
+      "name_indices": [
+        [
+          "$Globals",
+          0
+        ],
+        [
+          "UnityPerDraw",
+          1
+        ],
+        [
+          "beachSize",
+          2
+        ],
+        [
+          "groundCells",
+          6
+        ],
+        [
+          "groundResolution",
+          3
+        ],
+        [
+          "unity_MatrixVP",
+          4
+        ],
+        [
+          "unity_ObjectToWorld",
+          5
+        ]
+      ],
+      "variant": {
+        "m_BlobIndex": 43,
+        "m_KeywordIndices": [
+          4,
+          5
+        ],
+        "m_ShaderRequirements": 1101803,
+        "m_GpuProgramType": 18
+      }
+    },
+    {
+      "name": "Water_UpdateAmount_0",
+      "bytecode": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Water_UpdateAmount_0.dxbc",
+        "bytes": 4416,
+        "sha256": "a61d34e411e8eee5c795bf233908a9b2a5b85ee272f5d0fbcb1481da27a62b80",
+        "selector": {
+          "path_id": 636,
+          "variant": 0,
+          "kernel": 6,
+          "unique_variant": 0,
+          "object_offsets": [
+            20632,
+            63128
+          ],
+          "source_offsets": [
+            50986488,
+            51028984
+          ]
+        }
+      },
+      "assembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Water_UpdateAmount_0.asm",
+        "bytes": 5149,
+        "sha256": "e6160ae72468515f134bcd5e917bff258a00d4ce9284ceda7b78afba72c6f3b3",
+        "selector": {
+          "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Water_UpdateAmount_0.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "bindings": {
+        "cbs": [
+          {
+            "name": "$Globals",
+            "generatedName": "",
+            "bindPoint": 0,
+            "samplerBindPoint": -1,
+            "texDimension": -1,
+            "resType": 0
+          }
+        ],
+        "inBuffers": [
+          {
+            "name": "airCells",
+            "generatedName": "",
+            "bindPoint": 1,
+            "samplerBindPoint": -1,
+            "texDimension": -1,
+            "resType": 0
+          }
+        ],
+        "outBuffers": [
+          {
+            "name": "input",
+            "generatedName": "",
+            "bindPoint": 0,
+            "samplerBindPoint": -1,
+            "texDimension": -1,
+            "resType": 0
+          }
+        ],
+        "textures": [
+          {
+            "name": "obstaclesMap",
+            "generatedName": "",
+            "bindPoint": 0,
+            "samplerBindPoint": -1,
+            "texDimension": 2,
+            "resType": 0
+          }
+        ]
+      },
+      "constants": [
+        {
+          "name": "$Globals",
+          "byteSize": 2560,
+          "params": [
+            {
+              "name": "playTime",
+              "type": 0,
+              "offset": 1816,
+              "arraySize": 0,
+              "rowCount": 1,
+              "colCount": 1
+            },
+            {
+              "name": "beachMin",
+              "type": 0,
+              "offset": 1824,
+              "arraySize": 0,
+              "rowCount": 1,
+              "colCount": 3
+            },
+            {
+              "name": "beachMax",
+              "type": 0,
+              "offset": 1840,
+              "arraySize": 0,
+              "rowCount": 1,
+              "colCount": 3
+            },
+            {
+              "name": "sunColor",
+              "type": 0,
+              "offset": 2000,
+              "arraySize": 0,
+              "rowCount": 1,
+              "colCount": 3
+            },
+            {
+              "name": "waterResolution",
+              "type": 1,
+              "offset": 2480,
+              "arraySize": 0,
+              "rowCount": 1,
+              "colCount": 2
+            },
+            {
+              "name": "airResolution",
+              "type": 1,
+              "offset": 2512,
+              "arraySize": 0,
+              "rowCount": 1,
+              "colCount": 2
+            },
+            {
+              "name": "deltaTime",
+              "type": 0,
+              "offset": 2520,
+              "arraySize": 0,
+              "rowCount": 1,
+              "colCount": 1
+            },
+            {
+              "name": "evaporationFactor",
+              "type": 0,
+              "offset": 2532,
+              "arraySize": 0,
+              "rowCount": 1,
+              "colCount": 1
+            },
+            {
+              "name": "waveAmplitude",
+              "type": 0,
+              "offset": 2540,
+              "arraySize": 0,
+              "rowCount": 1,
+              "colCount": 1
+            },
+            {
+              "name": "customWave",
+              "type": 0,
+              "offset": 2544,
+              "arraySize": 0,
+              "rowCount": 1,
+              "colCount": 1
+            },
+            {
+              "name": "level",
+              "type": 0,
+              "offset": 2552,
+              "arraySize": 0,
+              "rowCount": 1,
+              "colCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ground_HeightIntegration_0",
+      "bytecode": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Ground_HeightIntegration_0.dxbc",
+        "bytes": 7844,
+        "sha256": "3fef86f5de5380fa58d06f8cafe3614aaac1e63081247f807082f6eded113f83",
+        "selector": {
+          "path_id": 640,
+          "variant": 0,
+          "kernel": 1,
+          "unique_variant": 0,
+          "object_offsets": [
+            600,
+            33352
+          ],
+          "source_offsets": [
+            51487448,
+            51520200
+          ]
+        }
+      },
+      "assembly": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Ground_HeightIntegration_0.asm",
+        "bytes": 8703,
+        "sha256": "ab7c959195b5d91d7e9770dee5479fcb3847b8895ad4be80739e7b2fb90af395",
+        "selector": {
+          "derived_from": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/Ground_HeightIntegration_0.dxbc",
+          "tool": "D3DDisassemble"
+        }
+      },
+      "bindings": {
+        "cbs": [
+          {
+            "name": "$Globals",
+            "generatedName": "",
+            "bindPoint": 0,
+            "samplerBindPoint": -1,
+            "texDimension": -1,
+            "resType": 0
+          }
+        ],
+        "inBuffers": [
+          {
+            "name": "waterCells",
+            "generatedName": "",
+            "bindPoint": 0,
+            "samplerBindPoint": -1,
+            "texDimension": -1,
+            "resType": 0
+          }
+        ],
+        "outBuffers": [
+          {
+            "name": "input",
+            "generatedName": "",
+            "bindPoint": 0,
+            "samplerBindPoint": -1,
+            "texDimension": -1,
+            "resType": 0
+          }
+        ],
+        "textures": []
+      },
+      "constants": [
+        {
+          "name": "$Globals",
+          "byteSize": 2544,
+          "params": [
+            {
+              "name": "beachMin",
+              "type": 0,
+              "offset": 1824,
+              "arraySize": 0,
+              "rowCount": 1,
+              "colCount": 3
+            },
+            {
+              "name": "beachMax",
+              "type": 0,
+              "offset": 1840,
+              "arraySize": 0,
+              "rowCount": 1,
+              "colCount": 3
+            },
+            {
+              "name": "groundCellSize",
+              "type": 0,
+              "offset": 2208,
+              "arraySize": 0,
+              "rowCount": 1,
+              "colCount": 4
+            },
+            {
+              "name": "groundResolution",
+              "type": 1,
+              "offset": 2224,
+              "arraySize": 0,
+              "rowCount": 1,
+              "colCount": 2
+            },
+            {
+              "name": "waterResolution",
+              "type": 1,
+              "offset": 2256,
+              "arraySize": 0,
+              "rowCount": 1,
+              "colCount": 2
+            },
+            {
+              "name": "deltaTime",
+              "type": 0,
+              "offset": 2472,
+              "arraySize": 0,
+              "rowCount": 1,
+              "colCount": 1
+            },
+            {
+              "name": "amountKappa",
+              "type": 0,
+              "offset": 2496,
+              "arraySize": 0,
+              "rowCount": 1,
+              "colCount": 1
+            },
+            {
+              "name": "sedimentWaterSpeedGamma",
+              "type": 0,
+              "offset": 2512,
+              "arraySize": 0,
+              "rowCount": 1,
+              "colCount": 1
+            },
+            {
+              "name": "sedimentCapacity",
+              "type": 0,
+              "offset": 2520,
+              "arraySize": 0,
+              "rowCount": 1,
+              "colCount": 1
+            },
+            {
+              "name": "sedimentSuspension",
+              "type": 0,
+              "offset": 2524,
+              "arraySize": 0,
+              "rowCount": 1,
+              "colCount": 1
+            },
+            {
+              "name": "sedimentDeposition",
+              "type": 0,
+              "offset": 2528,
+              "arraySize": 0,
+              "rowCount": 1,
+              "colCount": 1
+            },
+            {
+              "name": "sedimentKappa",
+              "type": 0,
+              "offset": 2536,
+              "arraySize": 0,
+              "rowCount": 1,
+              "colCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "scope": "Material 20, Lit/Sand 605, Water 636 UpdateAmount, Ground 640 HeightIntegration only. No business methods. Compiled instructions are not original HLSL.",
+  "source_after": {
+    "path": "D:/godot/project/sandcastle/sandcastlegame/Sandcastle_Data/sharedassets0.assets",
+    "bytes": 76135784,
+    "sha256": "6dd7bb6bc7d926fd43c08d22c9c767b7edf531cf11a4a555fcd41830f2f9c721"
+  },
+  "pass": true
+}

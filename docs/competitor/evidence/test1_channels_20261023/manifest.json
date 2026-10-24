@@ -1,0 +1,38 @@
+{
+  "source": {
+    "path": "D:\\godot\\project\\sandcastle\\rdc\\test1.rdc",
+    "bytes": 225224034,
+    "sha256": "761aa980c2426f75a1fa7364bf6d2655ff4dd20ea76566e630ee5b53ea0ec5b2"
+  },
+  "tool": {
+    "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\tools\\export_test1_channels.py",
+    "bytes": 2429,
+    "sha256": "4a57aa2d7b1e1539fcea656d712ce7e6e029e809a0e4e8af6a9a289c0f98b6c0"
+  },
+  "exports": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\test1_channels_20261023\\e5006_ground.bin",
+      "bytes": 8388608,
+      "sha256": "f0a6a2a9ea98ef470bd788f43e861531d7c388e69184741f0422e3d6e0c397fa",
+      "kind": "runtime_buffer",
+      "selector": "E5006 VS t0 ResourceId::139571 offset=0 length=8388608"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\test1_channels_20261023\\capture_thumbnail.png",
+      "bytes": 3092510,
+      "sha256": "c60827834fa2f6d52a0dfa1c58784bb16cd404c4475d907bc37fb22ddb3d23e5",
+      "kind": "derived_capture_thumbnail",
+      "selector": "CaptureFile.GetThumbnail(PNG,2048)"
+    }
+  ],
+  "success": true,
+  "version": "1.46",
+  "open": "<Result: 'Success'>",
+  "replay": "<Result: 'Success'>",
+  "source_after": {
+    "path": "D:\\godot\\project\\sandcastle\\rdc\\test1.rdc",
+    "bytes": 225224034,
+    "sha256": "761aa980c2426f75a1fa7364bf6d2655ff4dd20ea76566e630ee5b53ea0ec5b2"
+  },
+  "command": "D:/other_software/RenderDoc/qrenderdoc.exe --python D:\\godot\\project\\sandcastle\\docs\\competitor\\tools\\export_test1_channels.py"
+}

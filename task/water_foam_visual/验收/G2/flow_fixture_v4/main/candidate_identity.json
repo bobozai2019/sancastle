@@ -1,0 +1,33 @@
+{
+  "scope": "Visual probe only; not full Gate or performance acceptance",
+  "probe_pass": false,
+  "checks": 221,
+  "texture": "res://assets/water_foam/foam_cells_organic.png",
+  "shader_sha256": "6506719ce13eae6bb94b96ea4c09afa4275741b1faf9bdb075e18cff0f4a877e",
+  "sources": [
+    {
+      "path": "sources/assets/water_foam/flow_candidate.gdshader",
+      "sha256": "6506719ce13eae6bb94b96ea4c09afa4275741b1faf9bdb075e18cff0f4a877e"
+    },
+    {
+      "path": "sources/assets/water_foam/foam_cells_organic.png",
+      "sha256": "05c18a800db479f3e2a2568867051d29a3438d2cd7225830e000e8598935e50b"
+    },
+    {
+      "path": "sources/assets/water_foam/foam_cells_organic.png.import",
+      "sha256": "325a08370e962179fa5dcc48b00ad10f8a36512b6d75f09666ad53aeb100e3ce"
+    }
+  ],
+  "command": [
+    "D:/game/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe",
+    "--path",
+    "D:\\godot\\project\\sandcastle",
+    "--script",
+    "res://tests/visual_water_alignment/foam_flow_probe.gd",
+    "--",
+    "--scene=main",
+    "--output=res://task/water_foam_visual/验收/G2/flow_fixture_v4/main",
+    "--foam-texture=res://assets/water_foam/foam_cells_organic.png",
+    "--foam-shader=res://assets/water_foam/flow_candidate.gdshader"
+  ]
+}

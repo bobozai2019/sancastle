@@ -1,0 +1,640 @@
+{
+  "scope": "Two formal scenes, D3D12 GTX 1050, 1280x720, generation 1001, fixed authored cameras, default parameters, manual 0.1 m / 3 s wave plus normal boundary. Snapshots at completed simulation time targets 0/3/6/10/16/24 s, then frozen material-only forced-wetness tests. No new competitor claim; no production modification.",
+  "runs": {
+    "main": {
+      "files": [
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main/godot.log",
+          "bytes": 482,
+          "sha256": "c2e8c30a6f0402334f353bb574b8022d040b7139a488b4035f972b6ccae5b05b"
+        }
+      ],
+      "pass": false,
+      "failure": "Initial diagnostic script parse error; no scene executed. Preserved original log."
+    },
+    "main_v2": {
+      "files": [
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/analysis.json",
+          "bytes": 6954,
+          "sha256": "91f7ebe20391d751c4bff619e26f234f47d75a116493cc3367d62eb7fa9cdd29"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/cohort.json",
+          "bytes": 256,
+          "sha256": "f3e23983927ff8df715d1984658a5f93f069cdda9306536952701f253742939f"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/forced_wet_0.png",
+          "bytes": 845314,
+          "sha256": "71bc93411d000e4d388dcd2abfa8ea0ec4a8e854ea0d4790fa67ef7bcd590876"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/forced_wet_1.png",
+          "bytes": 835253,
+          "sha256": "15ebf65ccd75772e5f125073d70bef72810fbcafc68e45f9059a97ac0bca094f"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/godot.log",
+          "bytes": 1729,
+          "sha256": "45f4e598a3fd4125f8d2732f3d31d7028fdf95e9227b200c097e28b164af1ab7"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/probe.json",
+          "bytes": 104760,
+          "sha256": "7b90236e97239e705d22f453a124ad23660b491ff1b7df339aa8de64f793c765"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/restored.png",
+          "bytes": 844565,
+          "sha256": "f5dc562e6c7dcc4bf39a42773b916927fc1102de4592fd9ee465660784e09b46"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/restored_compaction.bin",
+          "bytes": 131072,
+          "sha256": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/restored_rock.bin",
+          "bytes": 262144,
+          "sha256": "e5bebff58c79121549c5d1fbd484f90280de59fb99e1940fd8d54502cce0ad6c"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/restored_sand.bin",
+          "bytes": 262144,
+          "sha256": "60a8bd82972aa73adc869e63bf9ab21c13189a4e053467be8a39a75a0fc97a82"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/restored_view_wetness.bin",
+          "bytes": 131072,
+          "sha256": "f7ecdd478e240af3161a8714b188fff772d950ee92a67a9ac14a8e4d01499160"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/restored_water.bin",
+          "bytes": 262144,
+          "sha256": "5d297235efc1739ae43fddca20e3a4c8621cb5fb6629d9008598fc7520cfd6bf"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/restored_wetness.bin",
+          "bytes": 131072,
+          "sha256": "f7ecdd478e240af3161a8714b188fff772d950ee92a67a9ac14a8e4d01499160"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t00.png",
+          "bytes": 749128,
+          "sha256": "31930669e43a773f1ae431daf5b58a2a217c62b18059351cfa3cbad72ababeb6"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t00_compaction.bin",
+          "bytes": 131072,
+          "sha256": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t00_rock.bin",
+          "bytes": 262144,
+          "sha256": "e5bebff58c79121549c5d1fbd484f90280de59fb99e1940fd8d54502cce0ad6c"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t00_sand.bin",
+          "bytes": 262144,
+          "sha256": "e4229dd131b89dc44a8f08df893d938028cda47737983b548d8e947cb2d0df74"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t00_view_wetness.bin",
+          "bytes": 131072,
+          "sha256": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t00_water.bin",
+          "bytes": 262144,
+          "sha256": "db5d6ed1a720bfcbcc09e51799709e65ae609e405f6a8701c8b3f8ea36245e82"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t00_wetness.bin",
+          "bytes": 131072,
+          "sha256": "5a205eb36c80e92d5d8db84fb01549610c621439af2f396e4352a88ca017872e"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t03.png",
+          "bytes": 853081,
+          "sha256": "8370d5f7260c5c678c5c897199b5592c8a896f6f18f8654379bec90e8c1bca5f"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t03_compaction.bin",
+          "bytes": 131072,
+          "sha256": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t03_rock.bin",
+          "bytes": 262144,
+          "sha256": "e5bebff58c79121549c5d1fbd484f90280de59fb99e1940fd8d54502cce0ad6c"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t03_sand.bin",
+          "bytes": 262144,
+          "sha256": "85d6e020187c77aaa9af49dbe879f4b146f5423268b0f668ef32dc45e6b640d0"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t03_view_wetness.bin",
+          "bytes": 131072,
+          "sha256": "0524c309d5f65ad959d47fabdfb6bd228847d161dc59140d1dcbea090e80342a"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t03_water.bin",
+          "bytes": 262144,
+          "sha256": "53dd6eadde4f8e6548cd1c72a6c26719a4ed31dd2fd9a6c05549c9e4a367b54b"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t03_wetness.bin",
+          "bytes": 131072,
+          "sha256": "0524c309d5f65ad959d47fabdfb6bd228847d161dc59140d1dcbea090e80342a"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t06.png",
+          "bytes": 854482,
+          "sha256": "69b1c738d238c46799c8c5e43b5f2244914b5aed7ff7f5f753086916a4c22943"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t06_compaction.bin",
+          "bytes": 131072,
+          "sha256": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t06_rock.bin",
+          "bytes": 262144,
+          "sha256": "e5bebff58c79121549c5d1fbd484f90280de59fb99e1940fd8d54502cce0ad6c"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t06_sand.bin",
+          "bytes": 262144,
+          "sha256": "28bac9cc2140964cd6142968f2e8046c5a44455843e0d9a55b74434597a438b9"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t06_view_wetness.bin",
+          "bytes": 131072,
+          "sha256": "9f0e600790b8fe57a7342ccc8e1e0127adb9669180fd143c13e23b78357cdee6"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t06_water.bin",
+          "bytes": 262144,
+          "sha256": "403c1643fd94a9d803b74679733d53e906be3cb8bee796aea440c9da0ff8ff29"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t06_wetness.bin",
+          "bytes": 131072,
+          "sha256": "9f0e600790b8fe57a7342ccc8e1e0127adb9669180fd143c13e23b78357cdee6"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t10.png",
+          "bytes": 867394,
+          "sha256": "06695d93b2266fcb40b3fa47f195b7775161944ad0eedef610bb03ba7015dac1"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t10_compaction.bin",
+          "bytes": 131072,
+          "sha256": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t10_rock.bin",
+          "bytes": 262144,
+          "sha256": "e5bebff58c79121549c5d1fbd484f90280de59fb99e1940fd8d54502cce0ad6c"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t10_sand.bin",
+          "bytes": 262144,
+          "sha256": "929636d110d1bec655caeda0139f2f0d69f4e691c37ff5764e8ab0553e28dcc1"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t10_view_wetness.bin",
+          "bytes": 131072,
+          "sha256": "fd8b1fc84b2f8712dc6ad867471ec1f1b183a7bca35b46cb471f9486afa3305d"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t10_water.bin",
+          "bytes": 262144,
+          "sha256": "6696dcc0e88c18562d3839bd6ba3e0f03d5c1f79afe5762485025cff071964df"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t10_wetness.bin",
+          "bytes": 131072,
+          "sha256": "fd8b1fc84b2f8712dc6ad867471ec1f1b183a7bca35b46cb471f9486afa3305d"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t16.png",
+          "bytes": 861941,
+          "sha256": "8cd9730581af1629370bdc80b5374a4f1415b25ec860a4e53326e255a0b3ccb0"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t16_compaction.bin",
+          "bytes": 131072,
+          "sha256": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t16_rock.bin",
+          "bytes": 262144,
+          "sha256": "e5bebff58c79121549c5d1fbd484f90280de59fb99e1940fd8d54502cce0ad6c"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t16_sand.bin",
+          "bytes": 262144,
+          "sha256": "970ad31eae1aec79ba5a4a16a1ea51dd2f94e82abdf32c677caee2e14427777a"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t16_view_wetness.bin",
+          "bytes": 131072,
+          "sha256": "da48c3c957990794143c6b5da0a1671d11c68342df4d470f0dce9c17610c84bb"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t16_water.bin",
+          "bytes": 262144,
+          "sha256": "0b6852617a429b26af1cc6da70b29d9e4353ebb16e87afb2699243429a72ad5b"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t16_wetness.bin",
+          "bytes": 131072,
+          "sha256": "da48c3c957990794143c6b5da0a1671d11c68342df4d470f0dce9c17610c84bb"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t24.png",
+          "bytes": 844565,
+          "sha256": "f5dc562e6c7dcc4bf39a42773b916927fc1102de4592fd9ee465660784e09b46"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t24_compaction.bin",
+          "bytes": 131072,
+          "sha256": "2a82d878b4638976f6218abd93e8b3bb7434e399f890d3d75c71e7ad12fac7de"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t24_rock.bin",
+          "bytes": 262144,
+          "sha256": "e5bebff58c79121549c5d1fbd484f90280de59fb99e1940fd8d54502cce0ad6c"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t24_sand.bin",
+          "bytes": 262144,
+          "sha256": "60a8bd82972aa73adc869e63bf9ab21c13189a4e053467be8a39a75a0fc97a82"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t24_view_wetness.bin",
+          "bytes": 131072,
+          "sha256": "f7ecdd478e240af3161a8714b188fff772d950ee92a67a9ac14a8e4d01499160"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t24_water.bin",
+          "bytes": 262144,
+          "sha256": "5d297235efc1739ae43fddca20e3a4c8621cb5fb6629d9008598fc7520cfd6bf"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/t24_wetness.bin",
+          "bytes": 131072,
+          "sha256": "f7ecdd478e240af3161a8714b188fff772d950ee92a67a9ac14a8e4d01499160"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/main_v2/wetness_debug.png",
+          "bytes": 541027,
+          "sha256": "9882249eebef59eb507e096f8d8e732b90cda6dd9ca55dbc4f8ccb3336dec4ca"
+        }
+      ],
+      "pass": true,
+      "failed_checks": [],
+      "source_drift": [],
+      "all_captured_authority_unchanged_by_visual_variants": true,
+      "clock_unchanged_by_visual_variants": true,
+      "cohort": {
+        "definition": "Initially exposed thick sand; observed flooded at t03/t06/t10; exposed at both t16 and t24. Intermediate rewetting is not excluded.",
+        "cells": 349,
+        "wetness_t16_median": 0.236083984375,
+        "wetness_t24_median": 0.04998779296875
+      },
+      "command": [
+        "D:/game/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe",
+        "--path",
+        "D:\\godot\\project\\sandcastle",
+        "--rendering-driver",
+        "d3d12",
+        "--script",
+        "res://task/wet_sand_diagnosis/probe.gd",
+        "--log-file",
+        "D:\\godot\\project\\sandcastle\\test_output\\wet_sand_diagnosis\\main_v2\\godot.log",
+        "--",
+        "--output=D:\\godot\\project\\sandcastle\\test_output\\wet_sand_diagnosis\\main_v2",
+        "--scene=main",
+        "--ignore-parameter-config"
+      ]
+    },
+    "geometry": {
+      "files": [
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/analysis.json",
+          "bytes": 5513,
+          "sha256": "c79c24237ee2d0ef3aae1fcb423853342e08f80748d3be250240c32c6b6bf022"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/cohort.json",
+          "bytes": 254,
+          "sha256": "fc24feaa88f92cf3f679c91a631d46c777196624071d6e79dcb5ab7ee4f7e08b"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/forced_wet_0.png",
+          "bytes": 521939,
+          "sha256": "a720dbfe0c7b283f36d587a3cc94bd9088f696b13818174c278bbadcbbb3574e"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/forced_wet_1.png",
+          "bytes": 514994,
+          "sha256": "629c3dc13ed0c00a77836ad7b6bd265ee63e0f11ffd06c5c3dd8f289d060ded5"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/godot.log",
+          "bytes": 1728,
+          "sha256": "56cf1e3acc7880eb771d801516d913d2811ee0e0fe89782273ffbb6bcb21e7e9"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/probe.json",
+          "bytes": 103109,
+          "sha256": "829701f645653d6fc9325365e1836f9ddcc851bdcdaa228eb5d5a6e3592f941d"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/restored.png",
+          "bytes": 519453,
+          "sha256": "76734f28dd13baa9bee293d808f4c1c19f88a1f2805e12f43890ad47358f898e"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/restored_compaction.bin",
+          "bytes": 131072,
+          "sha256": "1380e31c56afd4c212e28cdebf1fe1cd1b3a4c96144d3debbc596be84c9ea194"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/restored_rock.bin",
+          "bytes": 262144,
+          "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/restored_sand.bin",
+          "bytes": 262144,
+          "sha256": "92a1030c8dadbfd0f8a1365713303986c25517b1e5e24e347249c6301e7c8f39"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/restored_view_wetness.bin",
+          "bytes": 131072,
+          "sha256": "0bee5b98734a7664d7022897c416a8f300da99eeab38d6953dd78928d2c55d2a"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/restored_water.bin",
+          "bytes": 262144,
+          "sha256": "c3fc85af7b164f09a145d55feba784a2d802fe36a17e411e78005de2573f2739"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/restored_wetness.bin",
+          "bytes": 131072,
+          "sha256": "0bee5b98734a7664d7022897c416a8f300da99eeab38d6953dd78928d2c55d2a"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t00.png",
+          "bytes": 433139,
+          "sha256": "5a95b479c002ef6e240bec5132d928ffe83556887b9dc7bcf3c5dc473956769e"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t00_compaction.bin",
+          "bytes": 131072,
+          "sha256": "1380e31c56afd4c212e28cdebf1fe1cd1b3a4c96144d3debbc596be84c9ea194"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t00_rock.bin",
+          "bytes": 262144,
+          "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t00_sand.bin",
+          "bytes": 262144,
+          "sha256": "6689a315db764ba3486562844855bfbc0b4701a7c2fd9a523ec19cd3caaa2f7a"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t00_view_wetness.bin",
+          "bytes": 131072,
+          "sha256": "896bfe4531d9da82a8644657c6908bdd1849af01d9fe7a262571b18aae847e16"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t00_water.bin",
+          "bytes": 262144,
+          "sha256": "42b01b515e0b676b73464708a06e23ddee0bf664074e6384fd53e66779e6b251"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t00_wetness.bin",
+          "bytes": 131072,
+          "sha256": "896bfe4531d9da82a8644657c6908bdd1849af01d9fe7a262571b18aae847e16"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t03.png",
+          "bytes": 516464,
+          "sha256": "b7ec25d26abb43075661eff1bc1f1ff4779d5aa236b8017192663570ffa63981"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t03_compaction.bin",
+          "bytes": 131072,
+          "sha256": "1380e31c56afd4c212e28cdebf1fe1cd1b3a4c96144d3debbc596be84c9ea194"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t03_rock.bin",
+          "bytes": 262144,
+          "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t03_sand.bin",
+          "bytes": 262144,
+          "sha256": "04f335540df1b4959d4536b8d5e1904d36c32d95045e86ef0a6e91e7d9bf1f5d"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t03_view_wetness.bin",
+          "bytes": 131072,
+          "sha256": "69f152a0cf0c00c092bee897854f3b77d07b27cc4e60246414cf00c8ddcb39a1"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t03_water.bin",
+          "bytes": 262144,
+          "sha256": "0807cc17e213f609aef73b3d704eb3e08b49ebee55de4a4f526d4a79817d3638"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t03_wetness.bin",
+          "bytes": 131072,
+          "sha256": "69f152a0cf0c00c092bee897854f3b77d07b27cc4e60246414cf00c8ddcb39a1"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t06.png",
+          "bytes": 498598,
+          "sha256": "a3518170802c90797d4f8c247811d8766a724a1b1b8c40dd94e42135ef5e9938"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t06_compaction.bin",
+          "bytes": 131072,
+          "sha256": "1380e31c56afd4c212e28cdebf1fe1cd1b3a4c96144d3debbc596be84c9ea194"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t06_rock.bin",
+          "bytes": 262144,
+          "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t06_sand.bin",
+          "bytes": 262144,
+          "sha256": "1e4905454830fe0c41126a753cb5cb5a1c96af95221a2f34a93fcb4d4494d899"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t06_view_wetness.bin",
+          "bytes": 131072,
+          "sha256": "6e0adc385fc9aee17e9b34749d50baeb8bebd6a4cc7f4294e128b589eda74926"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t06_water.bin",
+          "bytes": 262144,
+          "sha256": "8ef97c92ffc4961809ae6934db817154758847e19fbfc57c9fe735186d7a23e6"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t06_wetness.bin",
+          "bytes": 131072,
+          "sha256": "6e0adc385fc9aee17e9b34749d50baeb8bebd6a4cc7f4294e128b589eda74926"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t10.png",
+          "bytes": 515282,
+          "sha256": "983ec90543a32d48f2e521a4804e9f12335134dea58e87fe81eea3a0961fc43b"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t10_compaction.bin",
+          "bytes": 131072,
+          "sha256": "1380e31c56afd4c212e28cdebf1fe1cd1b3a4c96144d3debbc596be84c9ea194"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t10_rock.bin",
+          "bytes": 262144,
+          "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t10_sand.bin",
+          "bytes": 262144,
+          "sha256": "9024f3c11b49b6f1ca06541117ed9a9d10eab7a4eb917d06142db980763051af"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t10_view_wetness.bin",
+          "bytes": 131072,
+          "sha256": "76334b03de052b9f67b5725945664978ea3e8cb3e5a53874fdd5494b34e9f35a"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t10_water.bin",
+          "bytes": 262144,
+          "sha256": "0464c27cbfdedf29c551a9ba49a1958de7f4426e920298d782941345378590b8"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t10_wetness.bin",
+          "bytes": 131072,
+          "sha256": "76334b03de052b9f67b5725945664978ea3e8cb3e5a53874fdd5494b34e9f35a"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t16.png",
+          "bytes": 527131,
+          "sha256": "8964b07ebdb3955ae0d987681284620032ead512c5da36b6b8939517f6e20250"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t16_compaction.bin",
+          "bytes": 131072,
+          "sha256": "1380e31c56afd4c212e28cdebf1fe1cd1b3a4c96144d3debbc596be84c9ea194"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t16_rock.bin",
+          "bytes": 262144,
+          "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t16_sand.bin",
+          "bytes": 262144,
+          "sha256": "a7b99e603ddccc853d92a297072a8a04ec3bab89831404441bacd2a2bfa62e60"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t16_view_wetness.bin",
+          "bytes": 131072,
+          "sha256": "bba39f52aa0b5b92df3ff3b16829cc016e6f89eb70fb3e74a100f264e34b0c77"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t16_water.bin",
+          "bytes": 262144,
+          "sha256": "d8311327cf251eaafecdd54bacc8d8a243ecae07fbe8a46d46aeef7bda3bf8aa"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t16_wetness.bin",
+          "bytes": 131072,
+          "sha256": "bba39f52aa0b5b92df3ff3b16829cc016e6f89eb70fb3e74a100f264e34b0c77"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t24.png",
+          "bytes": 519453,
+          "sha256": "76734f28dd13baa9bee293d808f4c1c19f88a1f2805e12f43890ad47358f898e"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t24_compaction.bin",
+          "bytes": 131072,
+          "sha256": "1380e31c56afd4c212e28cdebf1fe1cd1b3a4c96144d3debbc596be84c9ea194"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t24_rock.bin",
+          "bytes": 262144,
+          "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t24_sand.bin",
+          "bytes": 262144,
+          "sha256": "92a1030c8dadbfd0f8a1365713303986c25517b1e5e24e347249c6301e7c8f39"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t24_view_wetness.bin",
+          "bytes": 131072,
+          "sha256": "0bee5b98734a7664d7022897c416a8f300da99eeab38d6953dd78928d2c55d2a"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t24_water.bin",
+          "bytes": 262144,
+          "sha256": "c3fc85af7b164f09a145d55feba784a2d802fe36a17e411e78005de2573f2739"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/t24_wetness.bin",
+          "bytes": 131072,
+          "sha256": "0bee5b98734a7664d7022897c416a8f300da99eeab38d6953dd78928d2c55d2a"
+        },
+        {
+          "path": "task/wet_sand_diagnosis/evidence/geometry/wetness_debug.png",
+          "bytes": 424820,
+          "sha256": "b9526c61cb02635379fe9f50ff554c872495dacb9f1d48a4592d871c339a1459"
+        }
+      ],
+      "pass": true,
+      "failed_checks": [],
+      "source_drift": [],
+      "all_captured_authority_unchanged_by_visual_variants": true,
+      "clock_unchanged_by_visual_variants": true,
+      "cohort": {
+        "definition": "Initially exposed thick sand; observed flooded at t03/t06/t10; exposed at both t16 and t24. Intermediate rewetting is not excluded.",
+        "cells": 292,
+        "wetness_t16_median": 0.41796875,
+        "wetness_t24_median": 0.0508575439453125
+      },
+      "command": [
+        "D:/game/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe",
+        "--path",
+        "D:\\godot\\project\\sandcastle",
+        "--rendering-driver",
+        "d3d12",
+        "--script",
+        "res://task/wet_sand_diagnosis/probe.gd",
+        "--log-file",
+        "D:\\godot\\project\\sandcastle\\test_output\\wet_sand_diagnosis\\geometry\\godot.log",
+        "--",
+        "--output=D:\\godot\\project\\sandcastle\\test_output\\wet_sand_diagnosis\\geometry",
+        "--scene=test1_geometry",
+        "--ignore-parameter-config"
+      ]
+    }
+  },
+  "source_archive": {
+    "path": "task/wet_sand_diagnosis/inspected_sources.zip",
+    "sha256": "7c17619f8ad881d92ebe3639f823e5b77616797b547035e07b77944e85fd7101"
+  }
+}

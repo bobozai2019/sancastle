@@ -1,0 +1,12 @@
+[
+  "D:/game/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe",
+  "--path",
+  "D:\\godot\\project\\sandcastle",
+  "--script",
+  "res://tests/visual_water_alignment/foam_flow_probe.gd",
+  "--",
+  "--scene=main",
+  "--output=res://task/water_foam_visual/验收/G2/flow_fixture_v4/main",
+  "--foam-texture=res://assets/water_foam/foam_cells_organic.png",
+  "--foam-shader=res://assets/water_foam/flow_candidate.gdshader"
+]

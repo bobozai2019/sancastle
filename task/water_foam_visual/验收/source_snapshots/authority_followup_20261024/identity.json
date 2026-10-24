@@ -1,0 +1,361 @@
+{
+  "created_utc": "2026-10-24T00:06:23.686464+00:00",
+  "scope": "Current source snapshot. Historical run identity comes from each run, never inferred from this snapshot.",
+  "sources": [
+    {
+      "path": "assets/parameters/catalog.json",
+      "bytes": 33803,
+      "sha256": "421aa8e311d5d67baeefdcfcfe1205242f5202e441a8a5d02804989b29d39cf8"
+    },
+    {
+      "path": "assets/unified_edit/presentation/main.json",
+      "bytes": 152631,
+      "sha256": "b2c9b71719a9e29afee13bf90a917e8f2bbebc9519704d8e5f8dc1764e1d74e5"
+    },
+    {
+      "path": "assets/unified_edit/presentation/test1_geometry.json",
+      "bytes": 154446,
+      "sha256": "7c7d4a9f623b65785382eeccb601a8c7df1b48307b1febc5ffae294ac5af915d"
+    },
+    {
+      "path": "assets/water_foam/README.md",
+      "bytes": 1631,
+      "sha256": "0b880f464478b6f8b038c3e608372f980b70ee08fe821f64ad97c3d8f29d4679"
+    },
+    {
+      "path": "assets/water_foam/foam_detail.png",
+      "bytes": 187557,
+      "sha256": "05c18a800db479f3e2a2568867051d29a3438d2cd7225830e000e8598935e50b"
+    },
+    {
+      "path": "assets/water_foam/foam_detail.png.import",
+      "bytes": 955,
+      "sha256": "3ecd645cc66f5c31cf0ffa94c93315cd57ca635ecf29be27c0f1e47d96cc28fe"
+    },
+    {
+      "path": "assets/water_foam/organic_generation.json",
+      "bytes": 286,
+      "sha256": "5b17d1cbcced7ce7c7071a725a5dbe15d004c95a6d08cda5db7c0613e9d798d4"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/async_rdc_water.gdshader",
+      "bytes": 75292,
+      "sha256": "6506719ce13eae6bb94b96ea4c09afa4275741b1faf9bdb075e18cff0f4a877e"
+    },
+    {
+      "path": "assets/water_sides/geometry_manifest.json",
+      "bytes": 1134,
+      "sha256": "352fe2a32eea0ca9cd8f4acf828d2a7c1cf5537d2a387e52d9209d8c78edaf30"
+    },
+    {
+      "path": "assets/water_sides/water_sides.gdshader",
+      "bytes": 45354,
+      "sha256": "0091b72293ee8aeb9ca81daa3f678b4c4ae2a07f0c00c3cfbc326e44d485bbf2"
+    },
+    {
+      "path": "docs/project-execution-guide.sources.json",
+      "bytes": 51512,
+      "sha256": "def050cddb5611fb4ad7eb9fcd28f545849ef91042c68c6618fe93b2e5fe2556"
+    },
+    {
+      "path": "docs/technical-panorama.sources.json",
+      "bytes": 13862,
+      "sha256": "4db96d208acb507bc81a8cbf6aa8d4c06cecb2088d9a9a46b4793bca6934bed7"
+    },
+    {
+      "path": "docs/参数窗口.md",
+      "bytes": 6797,
+      "sha256": "77ac2b1314bebf5d6ca4d792221d1133887e56294561d1f096b478b260611ee6"
+    },
+    {
+      "path": "docs/当前技术规格.md",
+      "bytes": 30370,
+      "sha256": "a76de2c95f64eae3d1f6c4181d14e0b19d4f3ae17af2c40e325faad633d78d00"
+    },
+    {
+      "path": "docs/当前项目技术方案.md",
+      "bytes": 19616,
+      "sha256": "29b8c3f9b3c60c6444e41b8747c47d5dfce3fcdeec91b9e8d5ac767b4c14b8b0"
+    },
+    {
+      "path": "project.godot",
+      "bytes": 2291,
+      "sha256": "7c59f92820a80f6de25bd832f3aff4131edb71868e04621684ce87fbd5997e08"
+    },
+    {
+      "path": "scenes/parameters/parameter_windows.tscn",
+      "bytes": 140532,
+      "sha256": "75f7b16c1281be4ead9337e6a5e5c03e0ceb88bea8a79106f83a8dd8c64c20f4"
+    },
+    {
+      "path": "scenes/unified_edit/presentation/main.tscn",
+      "bytes": 15466865,
+      "sha256": "5748525e314dd128f546db2daf0b2f4346027d28059d8054fc66238895913a9e"
+    },
+    {
+      "path": "scenes/unified_edit/presentation/test1_geometry.tscn",
+      "bytes": 120985,
+      "sha256": "7fa9de92d5b15f56d2aa2127821295d415eae1fcd315887a16e76862da752646"
+    },
+    {
+      "path": "scripts/parameters/parameter_service.gd",
+      "bytes": 21209,
+      "sha256": "d2520a1c0c1afb8509e749d3e5dfc8a86120f896650dd724eaa8cc498c8fb45e"
+    },
+    {
+      "path": "scripts/simulation/unified_edit/presentation.gd",
+      "bytes": 7271,
+      "sha256": "1f52465a37673b4fb3f040255026b7e5aa3a14896f0929748616b2241040df73"
+    },
+    {
+      "path": "tests/integration/export_startup_probe.gd",
+      "bytes": 9668,
+      "sha256": "16d520ead9b24964e6bfa1b4eaf4cfb4aec854c0fd1f09e1a8d8fd87072027d3"
+    },
+    {
+      "path": "tests/visual_water_alignment/foam_appearance_probe.gd",
+      "bytes": 2908,
+      "sha256": "63bc1325bd474213655c8dad88d40eee58198fb696bafccd802a938f6299b907"
+    },
+    {
+      "path": "tests/visual_water_alignment/foam_authority_boundary_probe.gd",
+      "bytes": 2966,
+      "sha256": "15e5c98014b5618e03ee4295a500803e21b91a88ef1ac7c0b7ba208a4e217ec5"
+    },
+    {
+      "path": "tests/visual_water_alignment/foam_authority_capture_factor_probe.gd",
+      "bytes": 3293,
+      "sha256": "188ca7454aa19e982c668aa4843d60442299d9a1481d4e1ec5d8152bb3a1ee8f"
+    },
+    {
+      "path": "tests/visual_water_alignment/foam_authority_switch_probe.gd",
+      "bytes": 4660,
+      "sha256": "2fa2f19d3bbf094a6384bf1a9e17689150d06e782de44eb7dae8584c494d277c"
+    },
+    {
+      "path": "tests/visual_water_alignment/foam_edit_probe.gd",
+      "bytes": 7135,
+      "sha256": "25107b3e0e98c1e83916e9253516ad2992b50337318455d30efa3d6f67edd63e"
+    },
+    {
+      "path": "tests/visual_water_alignment/foam_flow_probe.gd",
+      "bytes": 7954,
+      "sha256": "47a1e61b2ed3f76b0abd3b649362a4b92dfaadc9c51704fd330cf581bda79bc2"
+    },
+    {
+      "path": "tests/visual_water_alignment/foam_formal_probe.gd",
+      "bytes": 1637,
+      "sha256": "bd6e2f8af6b248c1f73fd94fe0f75c35dda7309154597ff0891c62c18664b8db"
+    },
+    {
+      "path": "tests/visual_water_alignment/foam_latest_ui_switch_probe.gd",
+      "bytes": 4463,
+      "sha256": "bbd8484d1c4596a428473a36d71c8e165428320ede35e1f6dd44ea45ce001a8e"
+    },
+    {
+      "path": "tests/visual_water_alignment/foam_lifecycle_probe.gd",
+      "bytes": 9067,
+      "sha256": "91962620c1fd6743ff4f9abed45b74f13059f820fb93ad3765e2d01a153a2c02"
+    },
+    {
+      "path": "tests/visual_water_alignment/foam_natural_sequence.gd",
+      "bytes": 4491,
+      "sha256": "5c30fda0eb79fc9391cc20c9fc60bbce3406d544d31b62065d33a510cf125a2e"
+    },
+    {
+      "path": "tests/visual_water_alignment/foam_original_authority_probe.gd",
+      "bytes": 5191,
+      "sha256": "962d8d63c6219a72923da4f4fe8b75117001c05178129018d1afa1b5d20f3a3c"
+    },
+    {
+      "path": "tests/visual_water_alignment/foam_original_gain_probe.gd",
+      "bytes": 1108,
+      "sha256": "475e9578026e98b08502aec29fba199ad0234150a8c3cfd53451df8953b92d69"
+    },
+    {
+      "path": "tests/visual_water_alignment/foam_scale_probe.gd",
+      "bytes": 1459,
+      "sha256": "a02080420f8885ad2d68337f50af4773fac3e67859871b4fba943e6e7ee0f8cd"
+    },
+    {
+      "path": "tests/visual_water_alignment/foam_shore_gain_probe.gd",
+      "bytes": 1046,
+      "sha256": "3da6b83f635ebed7d84fe4a639371187510467012dc76d257b72dfdd73b11ea4"
+    },
+    {
+      "path": "tests/visual_water_alignment/foam_shore_layers_probe.gd",
+      "bytes": 1064,
+      "sha256": "6f5fd0c55f15a97a9edd13a28fd9e49e9a5ea79498c05dc4573f3c0dcc588277"
+    },
+    {
+      "path": "tests/visual_water_alignment/foam_stability_probe.gd",
+      "bytes": 3873,
+      "sha256": "fdac87c51f53beba511f30ca7fe59ce6263219e4cdd4c3843a3418f58dfb6abe"
+    },
+    {
+      "path": "tests/visual_water_alignment/foam_static_candidate_probe.gd",
+      "bytes": 1843,
+      "sha256": "40acb8c34aafb12ae1108b8f2676837c001866c7e9f48e1def36a8d878af4182"
+    },
+    {
+      "path": "tests/visual_water_alignment/foam_strength_probe.gd",
+      "bytes": 1518,
+      "sha256": "3ba11fa96bcc800c38cd53585b29b140815102cd1476cc4e2ff2f1d4a5d39c0f"
+    },
+    {
+      "path": "tests/visual_water_alignment/foam_visual_probe.gd",
+      "bytes": 2740,
+      "sha256": "fc5283484717ed1fec8b87054e300b104d2a1d997e24b07a0c450e301e857e07"
+    },
+    {
+      "path": "tools/docs/build_unified_execution_guide.py",
+      "bytes": 17336,
+      "sha256": "9f310d0ef26343f2a7c00f1c7f6cc4be33ad95f77a8cd7758640721bda8ccd1f"
+    },
+    {
+      "path": "tools/docs/technical_panorama_content.py",
+      "bytes": 56134,
+      "sha256": "626ed29ef4a56a6f52d370b105d8e06bdffc0bb08dab617d0bdcf4f9458abf3c"
+    },
+    {
+      "path": "tools/parameter_windows/build_windows.py",
+      "bytes": 14740,
+      "sha256": "782f83727d25182fbe732493bc6fb85c04b4ad39a15da30250dc987c8fd47d05"
+    },
+    {
+      "path": "tools/validate_export.py",
+      "bytes": 3490,
+      "sha256": "0c97e6e4a9b16c898fd6ef39a85149337944f7cf45ad5b21bd994f4251641cf1"
+    },
+    {
+      "path": "tools/water_foam/analyze_authority_factor.py",
+      "bytes": 3739,
+      "sha256": "07730d832e42a10ff6a97c378aa42619031612fdf41a449a66d7073a3233424f"
+    },
+    {
+      "path": "tools/water_foam/analyze_final_cost.py",
+      "bytes": 5361,
+      "sha256": "1d9ae2ce77a448964c7cdf6ef78cadbd945b675c6f23f024a24a7a630078a675"
+    },
+    {
+      "path": "tools/water_foam/analyze_flow_sequence.py",
+      "bytes": 2938,
+      "sha256": "6229ebaa270c14339e8cb03203921224bab00859d30baa5765a2df9254e427f0"
+    },
+    {
+      "path": "tools/water_foam/analyze_g0_timing.py",
+      "bytes": 3703,
+      "sha256": "0557ea8fb6abbdf12a59c70ad94cea2bd293b000507d398058be58ad0ca23c48"
+    },
+    {
+      "path": "tools/water_foam/analyze_original_authority.py",
+      "bytes": 2764,
+      "sha256": "06ed3343fd2230d4c5a0fc11c4c37626b82a3a36e666d366591b1c087c841efb"
+    },
+    {
+      "path": "tools/water_foam/build_flow_candidate.py",
+      "bytes": 3026,
+      "sha256": "25084b8e45bb020fbe141bcfe2abc59e1779d06d7fb2a04d331a1c660e5aff9d"
+    },
+    {
+      "path": "tools/water_foam/build_organic_texture.py",
+      "bytes": 2054,
+      "sha256": "af4d8a0a2590e784c3938d22809af5c11a63f3df4604ffda32ae5985e6eaf2e1"
+    },
+    {
+      "path": "tools/water_foam/build_static_candidate.py",
+      "bytes": 5477,
+      "sha256": "59036c2eed3aed570257262c813039ba2f3feeccf3d3a31f18724520637d3fc5"
+    },
+    {
+      "path": "tools/water_foam/capture_baseline.py",
+      "bytes": 2508,
+      "sha256": "31e23692aa44dd41202e8064e556a40a07deb949e3ab446910bbcf6768a8b6b9"
+    },
+    {
+      "path": "tools/water_foam/capture_sequence.py",
+      "bytes": 2712,
+      "sha256": "227eb9c6cd205ba95f2af0229803aaf9260be87dd95621b9b2bc0be6607ebd57"
+    },
+    {
+      "path": "tools/water_foam/encode_flow_sequence.py",
+      "bytes": 1196,
+      "sha256": "81f9feb9f385249c67536f52b8a92a7e94a64404eb55b85c76701a8aff5b7c58"
+    },
+    {
+      "path": "tools/water_foam/encode_natural_sequence.py",
+      "bytes": 1200,
+      "sha256": "f5091e872e96e440d74feb37b1097a5233417ef408a3386355eb847553d0655e"
+    },
+    {
+      "path": "tools/water_foam/frame_pacing_diagnostic.gd",
+      "bytes": 2877,
+      "sha256": "2fc39d1332f7b17ba8958d97dd1adb62fbec8795faa1140eeb317ea79cc1a543"
+    },
+    {
+      "path": "tools/water_foam/g0_timing.gd",
+      "bytes": 6106,
+      "sha256": "7e199f0847cc20182e2c6da1c7207e993443e879f519a2602b54d9dd5d54b90b"
+    },
+    {
+      "path": "tools/water_foam/index_evidence.py",
+      "bytes": 4005,
+      "sha256": "c757f8a4d5ad9986c9e62bd9569a20185d7ec63b331ec3e107e0f0a123e641ca"
+    },
+    {
+      "path": "tools/water_foam/inspect_geometry.gd",
+      "bytes": 1415,
+      "sha256": "4e81f892e119fea59c805f65de218f1cc749e110eaa94c755f4444f194024eaf"
+    },
+    {
+      "path": "tools/water_foam/inspect_imports.gd",
+      "bytes": 825,
+      "sha256": "e049bcf3ffcb1ee38b9fad31c42da317be74b3351ba2f4c0c2e74614df1b2eb0"
+    },
+    {
+      "path": "tools/water_foam/integrate_foam.py",
+      "bytes": 5655,
+      "sha256": "257dd66eb1e550b77f774b213c0a71bbcabc1b4cc97318c6a0d42ad837f4e51d"
+    },
+    {
+      "path": "tools/water_foam/run_authority_factor.py",
+      "bytes": 1680,
+      "sha256": "1287bb15ba1ab082cbd446c70791c0656b01fae3a7c60a0515ba177b950bb5d1"
+    },
+    {
+      "path": "tools/water_foam/run_export_foam.py",
+      "bytes": 1250,
+      "sha256": "056ec531a6d00880a663a0fce9e17a982d0d39d2592c031224ceb95c5c5e4459"
+    },
+    {
+      "path": "tools/water_foam/run_final_cost.py",
+      "bytes": 3273,
+      "sha256": "314ddcbc7e7592799bd6fd0cec1d30cf8e59943ff04ee47271af5c88c50c0256"
+    },
+    {
+      "path": "tools/water_foam/run_g0_timing.py",
+      "bytes": 2846,
+      "sha256": "897810d3e0e10f6adfb1511ca1e97a7b813c3cb80f99e28abe243ad7209ef366"
+    },
+    {
+      "path": "tools/water_foam/run_stability.py",
+      "bytes": 1671,
+      "sha256": "88a844ffe2f8cfed6b3c4baae12844a297dfad61451c125bd1317b7ff8290274"
+    },
+    {
+      "path": "tools/water_foam/run_static_candidate.py",
+      "bytes": 3700,
+      "sha256": "5a8ca4f0aad909cfc0abb500ffee1c9ed90ad1f38b63a4a8bc76c30c194d2df9"
+    },
+    {
+      "path": "tools/water_foam/seal_final_evidence.py",
+      "bytes": 6139,
+      "sha256": "f7a85950a1222a01d9d096cc8a4c97903ed03c08175c0e46d4311ce62dcee6d7"
+    },
+    {
+      "path": "tools/water_foam/seal_visual_evidence.py",
+      "bytes": 2310,
+      "sha256": "c972a41fdeb61a2c859da3584ed87923fb33fc5e0af9172931f220d838de38d3"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "command": [
+    "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+    "--path",
+    "D:\\godot\\project\\sandcastle",
+    "--rendering-driver",
+    "d3d12",
+    "--script",
+    "res://tools/wave_propagation/coupling_gpu_probe.gd",
+    "--log-file",
+    "D:\\godot\\project\\sandcastle\\test_output\\water_execution_optimization\\final_erosion\\godot.log",
+    "--",
+    "--output=D:\\godot\\project\\sandcastle\\test_output\\water_execution_optimization\\final_erosion",
+    "--solver=rusanov_first_order_v1",
+    "--case=erosion",
+    "--duration=0.1",
+    "--tick-dt=0.03333333333333333",
+    "--depth=0.1",
+    "--amplitude=0.0001"
+  ],
+  "started_unix": 1792774755.6509068,
+  "engine_sha256": "12310c74bdda7dcd43f28e971f33047dcecadd436b68169d61ce41009006df38",
+  "probe_sha256": "ca6717baee4b6ed4ab8cfd32ac297f01a891d2f02118dbfd1ebade6f81b7c741",
+  "scope": "Numerical GPU verification, no performance measurement",
+  "outcome": "pass",
+  "pid": 102768,
+  "exit_code": 0,
+  "elapsed_wall_s": 6.382249593734741
+}

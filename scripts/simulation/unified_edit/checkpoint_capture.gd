@@ -42,6 +42,8 @@ func render_capture() -> void:
 		expected_sizes["field/"+field]=65536*Codec.Old.FIELD_BYTES[field]
 	for field in Codec.Old.SPARE:images["spare/"+field]=_owner.state.textures[field][1];expected_sizes["spare/"+field]=65536*Codec.Old.FIELD_BYTES[field]
 	for index in 2:images["material/"+str(index)]=_owner.state.textures.mold_support[index];expected_sizes["material/"+str(index)]=65536*8
+	if _owner.state.surface_wetness.is_valid():
+		images.surface_wetness=_owner.state.surface_wetness;expected_sizes.surface_wetness=262144
 	images.published_sand=_owner.state.published_sand;images.published_water=_owner.state.published_water;images.clock=_owner.transport.clock_texture
 	for key in _owner.visuals.capture_images():
 		images[key]=_owner.visuals.capture_images()[key]
@@ -154,6 +156,7 @@ func assemble(owner, data: Dictionary) -> Dictionary:
 	if owner.visuals.gravel_enabled:
 		value.visual_extensions.gravel_v1=owner.visuals.gravel_extension(value.generation,value.sim_tick,value.revision,data)
 		if data["visual_view/gravel"]!=data["visual/gravel_"+str(owner.visuals.gravel_index)]:return {"error":&"checkpoint_visual_publication_mismatch"}
+	if owner.state.surface_wetness.is_valid():value.visual_extensions.wet_sand_v1=Codec.Wet.record(value,data.surface_wetness)
 	value.ledger=water.value
 	var failure:=Codec.validate(value,value.configuration)
 	if not failure.is_empty():return {"error":failure}

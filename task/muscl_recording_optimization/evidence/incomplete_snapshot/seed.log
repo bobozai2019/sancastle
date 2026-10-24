@@ -1,0 +1,17 @@
+Godot Engine v4.7.2.stable.steam.ed1daf0bf - https://godotengine.org
+D3D12 12_0 - Forward+ - Using Device #0: NVIDIA - NVIDIA GeForce GTX 1050
+
+SCRIPT ERROR: Parse Error: Could not resolve script "res://scripts/beach/beach_recovery_entry.gd".
+   at: GDScript::reload (res://scripts/simulation/unified_edit/legacy_sources.gd:6)
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+   at: GDScript::reload (res://scripts/simulation/unified_edit/checkpoint_codec.gd:0)
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+   at: GDScript::reload (res://scripts/simulation/unified_edit/pipeline.gd:0)
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+   at: GDScript::reload (res://tools/wave_propagation/gpu_probe.gd:0)
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+   at: GDScript::reload (res://tools/wave_propagation/native_restart_probe.gd:0)
+ERROR: Failed to load script "res://tools/wave_propagation/native_restart_probe.gd" with error "Compilation failed".
+   at: load (modules/gdscript/gdscript_resource_format.cpp:46)
+GPU_WAVE before_continuation t=0.1000000089407 revision=13
+GPU_WAVE after_continuation t=0.20000000298023 revision=24

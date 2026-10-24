@@ -1,0 +1,334 @@
+{
+  "scope": "Scene 2 default wet history; main stays disabled. Functional checks, not a full performance acceptance.",
+  "runs": {
+    "geometry_v1": {
+      "files": [
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\geometry_v1\\godot.log",
+          "bytes": 249,
+          "sha256": "9e5b77e024a6ced6baed04a57c8deac179633fc10e52d26e8c5dc240e600172b"
+        },
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\geometry_v1\\probe.json",
+          "bytes": 391,
+          "sha256": "1e2166c9368feacc45e33aa7c9d343742a01433bd6f96c67e3eb6760e2f65c15"
+        }
+      ],
+      "passed": false,
+      "failed_checks": [
+        {
+          "name": "formal_ready",
+          "pass": false
+        }
+      ],
+      "note": "Earlier diagnostic attempt preserved; intermediate probe source was not separately sealed."
+    },
+    "geometry_v2": {
+      "files": [
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\geometry_v2\\godot.log",
+          "bytes": 1996,
+          "sha256": "ec8ffd617a5e70126961f65fc746c1508df55bac80fe2bb9d59252c90af14932"
+        },
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\geometry_v2\\paused.bin",
+          "bytes": 262144,
+          "sha256": "9a76c4b6b1ebf410e3277feba32ed990df9dd534e840c591e708adc2c3aa4903"
+        },
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\geometry_v2\\probe.json",
+          "bytes": 92852,
+          "sha256": "b13ed82083c66359f7f8c4c2de69daabe8cec79b7c5375ee2cb83764ac715ee5"
+        },
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\geometry_v2\\restored.bin",
+          "bytes": 262144,
+          "sha256": "9a76c4b6b1ebf410e3277feba32ed990df9dd534e840c591e708adc2c3aa4903"
+        },
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\geometry_v2\\restored.png",
+          "bytes": 519742,
+          "sha256": "d06d797b115593b0b8cc2480983df968cfb2c4e2302cfb19ce0773ffd95af791"
+        },
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\geometry_v2\\restored.sandue",
+          "bytes": 9075272,
+          "sha256": "7bc47cd907961ea152369a61e9219ad88afeb9bf47766a130ebe90625c19e5f7"
+        },
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\geometry_v2\\saved.sandue",
+          "bytes": 9075272,
+          "sha256": "8f2ecbddba4110319ff572b3b2631093def10079190a8b316eb70953ca0e7b90"
+        },
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\geometry_v2\\t16.bin",
+          "bytes": 262144,
+          "sha256": "3ec3e3dec2686b662ad5b137ff95cb37a8d5b996e8279763ca3ad8f952da6139"
+        },
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\geometry_v2\\t16.png",
+          "bytes": 521921,
+          "sha256": "c70ab4c665f67fb84be03edcbcf72405fed8d9871ccbe44b087c2c65f9a1c604"
+        },
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\geometry_v2\\t24.bin",
+          "bytes": 262144,
+          "sha256": "9a76c4b6b1ebf410e3277feba32ed990df9dd534e840c591e708adc2c3aa4903"
+        },
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\geometry_v2\\t24.png",
+          "bytes": 516564,
+          "sha256": "088773e11f862995312a99ca641a5b77f380cd8ad1680dd85a63cada6796dbd2"
+        },
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\geometry_v2\\t6.bin",
+          "bytes": 262144,
+          "sha256": "9fd4bc495aa6366c85b6db430101db6f6e4c2affa9792e25bf7f43061a6c5729"
+        },
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\geometry_v2\\t6.png",
+          "bytes": 498442,
+          "sha256": "b7dff9f8c654f49485d311ac73736eb77841f3e58a8b58909ac32256f3a2c4de"
+        }
+      ],
+      "passed": true,
+      "failed_checks": [],
+      "note": "Earlier diagnostic attempt preserved; intermediate probe source was not separately sealed."
+    },
+    "geometry_v3": {
+      "files": [
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\geometry_v3\\godot.log",
+          "bytes": 279,
+          "sha256": "39fa26802e85f890d4c446ca182b9c18a950b3a12805fa8890a256f773a48f97"
+        }
+      ],
+      "passed": false,
+      "note": "Test error or initialization timeout; process stopped after recording failure log. No completion report; reason is in the retained log."
+    },
+    "geometry_v4": {
+      "files": [
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\geometry_v4\\godot.log",
+          "bytes": 2037,
+          "sha256": "a879f7767b032ecb0def2b6afdbb2e58541df4cb0ce9a6338d73a0ae10630e46"
+        },
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\geometry_v4\\paused.bin",
+          "bytes": 262144,
+          "sha256": "9a76c4b6b1ebf410e3277feba32ed990df9dd534e840c591e708adc2c3aa4903"
+        },
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\geometry_v4\\probe.json",
+          "bytes": 92946,
+          "sha256": "7b81c515f64d70aaab2572fa039597ad68c2d101808480d137e32d69f880e750"
+        },
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\geometry_v4\\restored.bin",
+          "bytes": 262144,
+          "sha256": "9a76c4b6b1ebf410e3277feba32ed990df9dd534e840c591e708adc2c3aa4903"
+        },
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\geometry_v4\\restored.png",
+          "bytes": 519837,
+          "sha256": "f6d16804fb822853c122e8ceb7b0b798a9780785e840a585388f749906c65059"
+        },
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\geometry_v4\\restored.sandue",
+          "bytes": 9075272,
+          "sha256": "f6504d7028f9627ef33a18eb11242e9105ffa83edaf6ff6fbf64e515e0bc344b"
+        },
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\geometry_v4\\saved.sandue",
+          "bytes": 9075272,
+          "sha256": "4951abae99167127e31e3041452a8c48f99b0c0eea4e667f9f88ecdeb65c240b"
+        },
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\geometry_v4\\t16.bin",
+          "bytes": 262144,
+          "sha256": "3ec3e3dec2686b662ad5b137ff95cb37a8d5b996e8279763ca3ad8f952da6139"
+        },
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\geometry_v4\\t16.png",
+          "bytes": 521870,
+          "sha256": "2290773c8e83a1eb48fe8404dbc9c69132b0f325164277acdf8c03914f2c409f"
+        },
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\geometry_v4\\t24.bin",
+          "bytes": 262144,
+          "sha256": "9a76c4b6b1ebf410e3277feba32ed990df9dd534e840c591e708adc2c3aa4903"
+        },
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\geometry_v4\\t24.png",
+          "bytes": 516523,
+          "sha256": "6a30c4c0e461885d388c4416e284e26004425d424117c15c7e176d642360a246"
+        },
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\geometry_v4\\t6.bin",
+          "bytes": 262144,
+          "sha256": "9fd4bc495aa6366c85b6db430101db6f6e4c2affa9792e25bf7f43061a6c5729"
+        },
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\geometry_v4\\t6.png",
+          "bytes": 497997,
+          "sha256": "86dcc552c23062fc42ff50d62d217dcbb02080d00a65d056cd77488d06b75878"
+        }
+      ],
+      "passed": true,
+      "failed_checks": [],
+      "source_drift": [],
+      "command": [
+        "D:/game/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe",
+        "--path",
+        "D:\\godot\\project\\sandcastle",
+        "--rendering-driver",
+        "d3d12",
+        "--script",
+        "res://tests/integration/surface_wetness_scene2_probe.gd",
+        "--log-file",
+        "D:\\godot\\project\\sandcastle\\test_output\\wet_sand_scene2\\geometry_v4\\godot.log",
+        "--",
+        "--output=D:\\godot\\project\\sandcastle\\test_output\\wet_sand_scene2\\geometry_v4",
+        "--scene=test1_geometry",
+        "--ignore-parameter-config"
+      ],
+      "executed_probe_sha256": "c96bb0a9188b594565c134b610fce76ee088538692dc55df6d09413bc8bac899"
+    },
+    "main_v1": {
+      "files": [
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\main_v1\\godot.log",
+          "bytes": 850,
+          "sha256": "23a56d26608de2f22142938e216bc12e3231c318fcd69c7e1276a95b7063f3ec"
+        },
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\main_v1\\probe.json",
+          "bytes": 92642,
+          "sha256": "cd5ad69ec7fcecdb52f3c43a24c8c720c3202b6bb47dcea343e46a4b032224aa"
+        },
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\main_v1\\saved.sandue",
+          "bytes": 8813104,
+          "sha256": "36568d7ff73a1ce3e7f38bd1d7ffd0b32470045fc671ef864ed94c37c11bb2af"
+        },
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\main_v1\\t1.png",
+          "bytes": 853552,
+          "sha256": "1c740ab1f46f37774d04ad079fe9928b5bfd6f350c86d172e635750b6dcec5ae"
+        }
+      ],
+      "passed": false,
+      "failed_checks": [
+        {
+          "name": "scene_specific_material",
+          "pass": false
+        },
+        {
+          "name": "save_after_restore",
+          "pass": false
+        },
+        {
+          "name": "restored_codec",
+          "pass": false
+        }
+      ],
+      "note": "Earlier diagnostic attempt preserved; intermediate probe source was not separately sealed."
+    },
+    "main_v2": {
+      "files": [
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\main_v2\\godot.log",
+          "bytes": 1374,
+          "sha256": "198ab7bf1321749ef312c69c4e99f8ba48596a089ad12f148cfa239aada414a5"
+        },
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\main_v2\\probe.json",
+          "bytes": 93428,
+          "sha256": "f689375c349227c6ecb31c6928072f8e74985753b123d76b7a0da9d71f81714d"
+        },
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\main_v2\\restored.sandue",
+          "bytes": 8813104,
+          "sha256": "fc3d3249d0735871c332753fb29e90f881d1a5c57dc52d96c3e5e6dbaa6eeaca"
+        },
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\main_v2\\saved.sandue",
+          "bytes": 8813104,
+          "sha256": "9f4e63763e4d5002eb2b94df880b399b60f6b4047e79128978cc5febed22baa9"
+        },
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\main_v2\\t1.png",
+          "bytes": 853550,
+          "sha256": "e4d5010b4c928e21ec0420ca62742fdf735992115d2630d38c211095549c5538"
+        }
+      ],
+      "passed": false,
+      "failed_checks": [
+        {
+          "name": "scene_specific_material",
+          "pass": false
+        }
+      ],
+      "note": "Earlier diagnostic attempt preserved; intermediate probe source was not separately sealed."
+    },
+    "main_v3": {
+      "files": [
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\main_v3\\godot.log",
+          "bytes": 582,
+          "sha256": "69df1cf3dba2e0005a27566a774b7b8f4342bbdacd6b17dabe85ab7870e22759"
+        }
+      ],
+      "passed": false,
+      "note": "Test error or initialization timeout; process stopped after recording failure log. No completion report; reason is in the retained log."
+    },
+    "main_v4": {
+      "files": [
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\main_v4\\godot.log",
+          "bytes": 1373,
+          "sha256": "0f0ad8c125fa459f240e0fbb4f938a6e495ba25d8adbf5a01a965dbfc1d11ee3"
+        },
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\main_v4\\probe.json",
+          "bytes": 93426,
+          "sha256": "63be7ac551b8a7018b94e9a010b7ff39d83834f926831f93419bbf0f64a434c4"
+        },
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\main_v4\\restored.sandue",
+          "bytes": 8813104,
+          "sha256": "1a4e1b75dced9180ea73a2bb8c24a46e71b393cfa669d06ae313f021ffba5970"
+        },
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\main_v4\\saved.sandue",
+          "bytes": 8813104,
+          "sha256": "de7a943028ce258dcb3472687decb00b1146d8b314a934f516a58a7557e07ca1"
+        },
+        {
+          "path": "task\\wet_sand_visual\\evidence\\scene2_integration\\main_v4\\t1.png",
+          "bytes": 854465,
+          "sha256": "44ff03da040d5cc1d084424891f4d400fe168014224eacd4b726e298319038fb"
+        }
+      ],
+      "passed": true,
+      "failed_checks": [],
+      "source_drift": [],
+      "command": [
+        "D:/game/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe",
+        "--path",
+        "D:\\godot\\project\\sandcastle",
+        "--rendering-driver",
+        "d3d12",
+        "--script",
+        "res://tests/integration/surface_wetness_scene2_probe.gd",
+        "--log-file",
+        "D:\\godot\\project\\sandcastle\\test_output\\wet_sand_scene2\\main_v4\\godot.log",
+        "--",
+        "--output=D:\\godot\\project\\sandcastle\\test_output\\wet_sand_scene2\\main_v4",
+        "--scene=main",
+        "--ignore-parameter-config"
+      ],
+      "executed_probe_sha256": "253f925449e2002241f2be7582a9172b04de4b997fd19e8f3928137ed028decb"
+    }
+  }
+}

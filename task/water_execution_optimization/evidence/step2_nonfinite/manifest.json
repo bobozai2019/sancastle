@@ -1,0 +1,29 @@
+{
+  "command": [
+    "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+    "--path",
+    "D:\\godot\\project\\sandcastle",
+    "--rendering-driver",
+    "d3d12",
+    "--script",
+    "res://tools/wave_propagation/special_gpu_probe.gd",
+    "--log-file",
+    "D:\\godot\\project\\sandcastle\\test_output\\water_execution_optimization\\step2_nonfinite\\godot.log",
+    "--",
+    "--output=D:\\godot\\project\\sandcastle\\test_output\\water_execution_optimization\\step2_nonfinite",
+    "--solver=muscl_mc_ssprk2_v1",
+    "--case=nonfinite",
+    "--duration=0.1",
+    "--tick-dt=0.03333333333333333",
+    "--depth=0.1",
+    "--amplitude=0.0001"
+  ],
+  "started_unix": 1792774312.3669457,
+  "engine_sha256": "12310c74bdda7dcd43f28e971f33047dcecadd436b68169d61ce41009006df38",
+  "probe_sha256": "aa6d617cb829365b29304ffe98860e7e9b845e66bc1b62b1d57c503b59e1feda",
+  "scope": "Numerical GPU verification, no performance measurement",
+  "outcome": "pass",
+  "pid": 107876,
+  "exit_code": 0,
+  "elapsed_wall_s": 5.36659574508667
+}

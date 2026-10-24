@@ -1,0 +1,60 @@
+{
+  "before": {
+    "counts": [
+      965,
+      59,
+      621,
+      289,
+      106,
+      243,
+      38,
+      21,
+      19
+    ],
+    "total": 2361,
+    "medians": {
+      "off_1": {
+        "frame_ms": 16.6665,
+        "viewport_gpu_ms": 10.8854999542236
+      },
+      "on_0": {
+        "frame_ms": 19.8385,
+        "viewport_gpu_ms": 15.8599996566772
+      },
+      "on_2": {
+        "frame_ms": 19.811500000000002,
+        "viewport_gpu_ms": 15.85300016403195
+      }
+    }
+  },
+  "after": {
+    "counts": [
+      244,
+      18,
+      155,
+      62,
+      23,
+      59,
+      9,
+      5,
+      5
+    ],
+    "total": 580,
+    "medians": {
+      "off_1": {
+        "frame_ms": 16.7975,
+        "viewport_gpu_ms": 10.8280000686646
+      },
+      "on_0": {
+        "frame_ms": 16.5625,
+        "viewport_gpu_ms": 13.8454999923706
+      },
+      "on_2": {
+        "frame_ms": 16.982,
+        "viewport_gpu_ms": 13.884500026702849
+      }
+    }
+  },
+  "archive_sha256": "d349b77e481a488f52d32509c1339aef4e04b7e16c78d575e19e6f2e100326bc",
+  "unchanged_word_render_payload": true
+}

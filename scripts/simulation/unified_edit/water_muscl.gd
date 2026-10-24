@@ -11,6 +11,100 @@ var buffers: Dictionary={}
 var sets: Dictionary={}
 var last_error:=""
 
+# CPU-only recording descriptors. RIDs remain owned by Water, and each pass
+# retains its original compute-list boundary and dispatch order.
+class RecordingPass:
+	var pipeline: RID
+	var uniform: RID
+	var decision_set: RID
+	var has_decision:=false
+	var push: PackedByteArray
+	var push_size: int
+	var indirect: RID
+	var indirect_dispatch:=false
+	var offset: int
+	var groups: Vector3i
+	var callback_kind:=0 # 1: dynamic boundary, 2: coupled substep
+	var step:=0
+	var diagnostic_label:=""
+	var diagnostic_slot:=-1
+	var diagnostic_phase:=-1
+
+var _recording: Array[RecordingPass]=[]
+var _recording_key: Array=[]
+# Optional developer observer. It owns only discardable diagnostic resources;
+# simulation scheduling, callbacks and resource ownership remain unchanged.
+var diagnostic
+var _standard_coupling:=false
+
+func _append_pass(name: String, binding: RID, push: PackedByteArray=PackedByteArray(), step: int=-1, accepted: bool=false, groups:=Vector3i(32,32,1)) -> void:
+	var stage:=RecordingPass.new()
+	stage.pipeline=water.kernels[name].pipeline;stage.uniform=binding
+	stage.push=push;stage.push_size=push.size();stage.groups=groups
+	stage.diagnostic_label=name.trim_prefix("rk_")
+	stage.diagnostic_slot=step
+	if name in ["rk_edge","rk_drain","rk_euler"]:stage.diagnostic_phase=push.decode_u32(0)
+	if step>=0:stage.indirect=water.indirect if accepted else buffers.trial_indirect;stage.offset=step*12;stage.indirect_dispatch=true
+	_recording.append(stage)
+
+func _append_coupled_pass(source, step: int, ordinal: int) -> void:
+	var stage:=RecordingPass.new()
+	stage.pipeline=source.pipeline;stage.uniform=source.uniform
+	stage.decision_set=source.decision_set;stage.has_decision=source.has_decision
+	stage.push=source.push;stage.push_size=source.push_size
+	stage.indirect=water.indirect;stage.offset=step*12;stage.indirect_dispatch=true
+	stage.diagnostic_label="coupled_%02d"%ordinal;stage.diagnostic_slot=step
+	_recording.append(stage)
+
+func _append_decision(mode: int, index: int, requested_dt: float) -> void:
+	var push:=PackedFloat32Array([0.0,0.0,requested_dt,water.solver.cell_size_m]).to_byte_array()
+	push.encode_u32(0,mode);push.encode_u32(4,index)
+	_append_pass("rk_decide",sets.rk_decide,push,-1,false,Vector3i.ONE)
+	_recording[-1].diagnostic_label="decision_%d"%mode
+	if mode in [1,2,3,4,5]:_recording[-1].diagnostic_slot=index
+
+func _prepare_recording(requested_dt: float) -> void:
+	var key: Array=[requested_dt,water.solver.cell_size_m,water.boundary_enabled,water.solver.wave_retention,water.coupled_recorder,water.solver.prescribed_tide_boundary]
+	if key==_recording_key:return
+	_recording.clear();_recording_key=key;_standard_coupling=false
+	var coupled_passes: Array=[]
+	if water.coupled_recorder.is_valid():
+		var provider=water.coupled_recorder.get_object()
+		# Only inline the provider's unwrapped fixed recorder. Instrumentation and
+		# custom callbacks retain the callback path at every original substep.
+		if provider!=null and provider.has_method("muscl_recording_passes") and water.coupled_recorder==Callable(provider,"record"):
+			coupled_passes=provider.muscl_recording_passes(1)
+			_standard_coupling=not coupled_passes.is_empty()
+	var push0:=PackedInt32Array([0,1 if water.boundary_enabled else 0,0,0]).to_byte_array()
+	var push1:=PackedInt32Array([1,1 if water.boundary_enabled else 0,0,0]).to_byte_array()
+	push0.encode_float(8,water.solver.wave_retention);push1.encode_float(8,water.solver.wave_retention)
+	_append_decision(0,1 if water.boundary_enabled else 0,requested_dt)
+	_append_pass("rk_edge",sets.rk_edge[0],push0)
+	_append_decision(7,0,requested_dt)
+	if water.boundary_enabled:
+		var boundary:=RecordingPass.new();boundary.callback_kind=1;boundary.diagnostic_label="boundary";_recording.append(boundary)
+	for step in 64:
+		_append_decision(1,step,requested_dt)
+		_append_pass("rk_edge",sets.rk_edge[0],push0,step)
+		_append_decision(2,step,requested_dt)
+		_append_pass("rk_drain",sets.rk_drain[0],push0,step)
+		_append_pass("rk_euler",sets.rk_euler[0],push0,step)
+		_append_pass("rk_edge",sets.rk_edge[1],push1,step)
+		_append_decision(3,step,requested_dt)
+		_append_pass("rk_drain",sets.rk_drain[1],push1,step,true)
+		_append_pass("rk_euler",sets.rk_euler[1],push1,step,true)
+		_append_decision(4,step,requested_dt)
+		_append_pass("rk_finalize",sets.rk_finalize,PackedByteArray(),step,true)
+		_append_decision(4,step,requested_dt)
+		if not coupled_passes.is_empty():
+			for ordinal in coupled_passes.size():_append_coupled_pass(coupled_passes[ordinal],step,ordinal)
+		else:
+			var coupled:=RecordingPass.new();coupled.callback_kind=2;coupled.step=step;coupled.diagnostic_slot=step;coupled.diagnostic_label="coupled_callback";_recording.append(coupled)
+		_append_pass("rk_normalize",sets.rk_normalize,PackedByteArray(),step,true)
+		_append_decision(5,step,requested_dt)
+	_append_pass("rk_validate",sets.rk_validate)
+	_append_decision(6,0,requested_dt)
+
 func _texture(format_id: int,width: int=256,height: int=256) -> RID:
 	var format:=RDTextureFormat.new();format.width=width;format.height=height;format.format=format_id
 	format.usage_bits=RenderingDevice.TEXTURE_USAGE_STORAGE_BIT|RenderingDevice.TEXTURE_USAGE_SAMPLING_BIT|RenderingDevice.TEXTURE_USAGE_CAN_COPY_FROM_BIT|RenderingDevice.TEXTURE_USAGE_CAN_COPY_TO_BIT
@@ -68,57 +162,36 @@ func initialize(recorder) -> bool:
 			if not binding.is_valid():last_error="muscl_uniform_set";return false
 	return true
 
-func _dispatch(name: String,binding: RID,push: PackedByteArray=PackedByteArray(),step: int=-1,accepted: bool=false,direct_groups: Vector3i=Vector3i(32,32,1)) -> void:
-	var list:=rd.compute_list_begin()
-	rd.compute_list_bind_compute_pipeline(list,water.kernels[name].pipeline)
-	rd.compute_list_bind_uniform_set(list,binding,0)
-	if not push.is_empty():rd.compute_list_set_push_constant(list,push,push.size())
-	if step>=0:rd.compute_list_dispatch_indirect(list,water.indirect if accepted else buffers.trial_indirect,step*12)
-	else:rd.compute_list_dispatch(list,direct_groups.x,direct_groups.y,direct_groups.z)
-	rd.compute_list_end()
-
-func _decide(mode: int,index: int,requested_dt: float) -> void:
-	var push:=PackedFloat32Array([0.0,0.0,requested_dt,water.solver.cell_size_m]).to_byte_array()
-	push.encode_u32(0,mode);push.encode_u32(4,index)
-	_dispatch("rk_decide",sets.rk_decide,push,-1,false,Vector3i.ONE)
-
 func record_tick(requested_dt: float) -> void:
 	var began:=Time.get_ticks_usec() if water.solver.profile_passes else 0
 	if water.solver.profile_passes:rd.capture_timestamp("sandcastle_async_water_tick_start")
-	var push0:=PackedInt32Array([0,1 if water.boundary_enabled else 0,0,0]).to_byte_array()
-	var push1:=PackedInt32Array([1,1 if water.boundary_enabled else 0,0,0]).to_byte_array()
-	push0.encode_float(8,water.solver.wave_retention)
-	push1.encode_float(8,water.solver.wave_retention)
-	_decide(0,1 if water.boundary_enabled else 0,requested_dt)
-	_dispatch("rk_edge",sets.rk_edge[0],push0)
-	_decide(7,0,requested_dt)
-	if water.boundary_enabled:
-		var boundary_push:=PackedFloat32Array([water.solver.cell_size_m*water.solver.cell_size_m,water.tide.x,water.tide.y,water.tide.z]).to_byte_array()
-		boundary_push.append_array(PackedInt32Array([water.wave_count,water.tide_mode,0,0]).to_byte_array())
-		boundary_push.encode_float(24,water.tide_phase);boundary_push.encode_float(28,water.tide_period)
-		water._dispatch("boundary",water.kernels.boundary.binding,boundary_push)
-	for step in 64:
-		_decide(1,step,requested_dt)
-		_dispatch("rk_edge",sets.rk_edge[0],push0,step)
-		_decide(2,step,requested_dt)
-		_dispatch("rk_drain",sets.rk_drain[0],push0,step)
-		_dispatch("rk_euler",sets.rk_euler[0],push0,step)
-		_dispatch("rk_edge",sets.rk_edge[1],push1,step)
-		_decide(3,step,requested_dt)
-		_dispatch("rk_drain",sets.rk_drain[1],push1,step,true)
-		_dispatch("rk_euler",sets.rk_euler[1],push1,step,true)
-		_decide(4,step,requested_dt)
-		_dispatch("rk_finalize",sets.rk_finalize,PackedByteArray(),step,true)
-		_decide(4,step,requested_dt)
-		if water.coupled_recorder.is_valid():water.coupled_recorder.call(water.decision,water.indirect,step,1)
-		_dispatch("rk_normalize",sets.rk_normalize,PackedByteArray(),step,true)
-		_decide(5,step,requested_dt)
-	_dispatch("rk_validate",sets.rk_validate)
-	_decide(6,0,requested_dt)
+	_prepare_recording(requested_dt)
+	var sampled: bool=diagnostic.begin_tick(_standard_coupling,requested_dt) if diagnostic!=null else false
+	for stage: RecordingPass in _recording:
+		if sampled:diagnostic.pass_begin(stage.diagnostic_label,stage.diagnostic_slot,stage.diagnostic_phase)
+		if stage.callback_kind==1:
+			water._dispatch("boundary",water.kernels.boundary.binding,water.boundary_push_constants())
+			continue
+		if stage.callback_kind==2:
+			if water.coupled_recorder.is_valid():water.coupled_recorder.call(water.decision,water.indirect,stage.step,1)
+			continue
+		var list:=rd.compute_list_begin()
+		rd.compute_list_bind_compute_pipeline(list,stage.pipeline)
+		rd.compute_list_bind_uniform_set(list,stage.uniform,0)
+		if stage.has_decision:rd.compute_list_bind_uniform_set(list,stage.decision_set,1)
+		if stage.push_size>0:rd.compute_list_set_push_constant(list,stage.push,stage.push_size)
+		if stage.indirect_dispatch:rd.compute_list_dispatch_indirect(list,stage.indirect,stage.offset)
+		else:rd.compute_list_dispatch(list,stage.groups.x,stage.groups.y,stage.groups.z)
+		rd.compute_list_end()
+	if sampled:diagnostic.pass_begin("finish",-1,-1)
 	water._dispatch("sim_finish",water.kernels.sim_finish.binding,PackedByteArray())
+	if sampled:diagnostic.pass_begin("tail",-1,-1)
 	if water.tail_recorder.is_valid():water.tail_recorder.call(water.decision)
+	if sampled:diagnostic.end_tick(water.decision,buffers.audit,water.solver.async_transport.control)
 	if water.solver.profile_passes:
 		rd.capture_timestamp("sandcastle_async_water_tick_end");water.last_recording_us=Time.get_ticks_usec()-began;water.recorded_ticks+=1
 
 func release() -> void:
+	if diagnostic!=null:diagnostic.close();diagnostic=null
+	_recording.clear();_recording_key.clear()
 	sets.clear();images.clear();buffers.clear();water=null;rd=null

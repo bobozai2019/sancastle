@@ -62,7 +62,9 @@ vec4 sample_frame(vec2 frame,vec3 ray,out float surface_t){
  float inside=step(0.0,uv.x)*step(uv.x,1.0)*step(0.0,uv.y)*step(uv.y,1.0);
  // The source PS uses smoothstep(0,0.4,packed_depth) for coverage.
  float coverage=smoothstep(0.0,0.4,pixel.a)*inside;
- surface_t=plane_t+(0.5-pixel.a)/(pivot_offset.w*min(denominator,-0.0001));
+ // Packed alpha increases toward the camera; ray points away from it.
+ // Match the source view-Z increment, not its opposite.
+ surface_t=plane_t+(pixel.a-0.5)/(pivot_offset.w*min(denominator,-0.0001));
  return vec4(pixel.rgb,coverage);
 }
 void fragment(){

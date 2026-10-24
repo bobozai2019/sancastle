@@ -84,9 +84,14 @@ func initialize(bundle, recorder, material: Dictionary) -> bool:
 	water.coupled_recorder=record
 	return true
 
+func muscl_recording_passes(live: int) -> Array:
+	# MUSCL owns the flattened descriptors; the boundary selector is part of its
+	# cache key. These resources and constants remain owned by this instance.
+	for passes in _passes:passes[0].push=_erosion_pushes[1 if state.prescribed_tide_boundary else 0]
+	return _passes[live]
+
 func record(_decision: RID, _indirect: RID, step: int, live: int) -> void:
-	if step==0:
-		for passes in _passes:passes[0].push=_erosion_pushes[1 if state.prescribed_tide_boundary else 0]
+	if step==0:muscl_recording_passes(live)
 	for stage: Recorder.RecordingPass in _passes[live]:
 		var list:=rd.compute_list_begin()
 		rd.compute_list_bind_compute_pipeline(list,stage.pipeline)

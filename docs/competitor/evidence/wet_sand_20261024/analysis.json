@@ -1,0 +1,319 @@
+{
+  "tool": {
+    "path": "D:/godot/project/sandcastle/docs/competitor/tools/analyze_wet_sand.py",
+    "bytes": 8310,
+    "sha256": "0627eef8b0436c5e8b94d34581894869fc395cec2bc1cfefe83bcfa4904190ac"
+  },
+  "command": "python docs/competitor/tools/analyze_wet_sand.py",
+  "package_manifest": {
+    "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/package/manifest.json",
+    "bytes": 178324,
+    "sha256": "c555268a43b07f84d7ca3c758a14c72c005cb47e1c3df58454ec9da85c87bf71"
+  },
+  "rdc_manifest": {
+    "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/manifest.json",
+    "bytes": 38083,
+    "sha256": "072825eaed070f270932016986fb352a35831ae9c009ad13ff5ff6f1a6b5c04d"
+  },
+  "verified_artifacts": 100,
+  "matches": [
+    {
+      "event": 5006,
+      "stage": "vs",
+      "shader": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e5006_vs.dxbc",
+        "bytes": 5196,
+        "sha256": "6e1ed3c4a1c4c69100371509e65f8bfa9d5c2ee05b1ea2e52a50df17cedf6644",
+        "selector": "E5006 vs rawBytes"
+      },
+      "package_programs": [
+        "Sand_0_0_progVertex_3_0",
+        "Sand_0_0_progVertex_3_1",
+        "Sand_0_0_progVertex_3_2",
+        "Sand_0_0_progVertex_3_3"
+      ]
+    },
+    {
+      "event": 5006,
+      "stage": "ps",
+      "shader": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e5006_ps.dxbc",
+        "bytes": 5272,
+        "sha256": "b7f1ac50d5312f20e829e8788a7256d4cc84266880fca4fdedc7d39f98148aa2",
+        "selector": "E5006 ps rawBytes"
+      },
+      "package_programs": [
+        "Sand_0_0_progFragment_3_3"
+      ]
+    },
+    {
+      "event": 1537,
+      "stage": "cs",
+      "shader": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e1537_cs.dxbc",
+        "bytes": 4416,
+        "sha256": "a61d34e411e8eee5c795bf233908a9b2a5b85ee272f5d0fbcb1481da27a62b80",
+        "selector": "E1537 cs rawBytes"
+      },
+      "package_programs": [
+        "Water_UpdateAmount_0"
+      ]
+    },
+    {
+      "event": 6083,
+      "stage": "vs",
+      "shader": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e6083_vs.dxbc",
+        "bytes": 4056,
+        "sha256": "19c2bc50402c753bc2a21061dd82d417edc5b450a1fe047018f20d67ecd8d45e",
+        "selector": "E6083 vs rawBytes"
+      },
+      "package_programs": []
+    },
+    {
+      "event": 6083,
+      "stage": "ps",
+      "shader": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e6083_ps.dxbc",
+        "bytes": 4416,
+        "sha256": "6b7870c1b83924ba8a7319d3bae374933ecff0873caa5109f3c2e7d8338e9961",
+        "selector": "E6083 ps rawBytes"
+      },
+      "package_programs": []
+    }
+  ],
+  "constants": {
+    "sandColor": {
+      "offset": 2032,
+      "value": [
+        0.8387991189956665,
+        0.7605246305465698,
+        0.48514997959136963
+      ]
+    },
+    "wetSandColor": {
+      "offset": 2064,
+      "value": [
+        0.5853505730628967,
+        0.5370103120803833,
+        0.37692710757255554
+      ]
+    },
+    "sedimentColor": {
+      "offset": 2080,
+      "value": [
+        0.6038274168968201,
+        0.2746773660182953,
+        0.1384316235780716
+      ]
+    }
+  },
+  "water_states": {
+    "1537": {
+      "raw": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e1537_buffer_139573.bin",
+        "bytes": 2097152,
+        "sha256": "62625473b88c2f1222751572c715077e72ed94c726ca92ddb1c18a0c8e99929f"
+      },
+      "shape": [
+        256,
+        512
+      ],
+      "amount_minmax": [
+        0.03343185782432556,
+        2.6109602451324463
+      ],
+      "zero_display_depth": 59248,
+      "under_water_discard_threshold": 59450,
+      "wet_weight_minmax": [
+        1.0,
+        1.0
+      ],
+      "fully_wet_with_zero_display_depth": 59248,
+      "note": "Native cell sample classification, not raster pixel coverage; sand VS bilinear interpolation and water mesh interpolation differ."
+    },
+    "5006": {
+      "raw": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e5006_buffer_139573.bin",
+        "bytes": 2097152,
+        "sha256": "2168385f9f5497fc82d009c42f99cd93bb0b348783c84e61d89f861feb0535a9"
+      },
+      "shape": [
+        256,
+        512
+      ],
+      "amount_minmax": [
+        0.03343185782432556,
+        2.6109602451324463
+      ],
+      "zero_display_depth": 59248,
+      "under_water_discard_threshold": 59450,
+      "wet_weight_minmax": [
+        1.0,
+        1.0
+      ],
+      "fully_wet_with_zero_display_depth": 59248,
+      "note": "Native cell sample classification, not raster pixel coverage; sand VS bilinear interpolation and water mesh interpolation differ."
+    },
+    "6083": {
+      "raw": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e6083_buffer_139573.bin",
+        "bytes": 2097152,
+        "sha256": "0e5c3842a56322e2385375ed1a5f286675662a0a85ec9afeac9e7a1bdfe48545"
+      },
+      "shape": [
+        256,
+        512
+      ],
+      "amount_minmax": [
+        0.03343185782432556,
+        2.6109602451324463
+      ],
+      "zero_display_depth": 59248,
+      "under_water_discard_threshold": 59450,
+      "wet_weight_minmax": [
+        1.0,
+        1.0
+      ],
+      "fully_wet_with_zero_display_depth": 59248,
+      "note": "Native cell sample classification, not raster pixel coverage; sand VS bilinear interpolation and water mesh interpolation differ."
+    }
+  },
+  "derived": [
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e5006_vs_hex.asm",
+      "bytes": 9576,
+      "sha256": "ca82769489dc09d38aef490f773d70d5f0082c3795716508450432396e953f70",
+      "selector": "D3DDisassemble flags 0xa0 from E5006 vs rawBytes"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e5006_ps_hex.asm",
+      "bytes": 9384,
+      "sha256": "ef7160ef15b085942130d9c8cb8ab6bd1af6aadff51c79d5376877ff729c8c4b",
+      "selector": "D3DDisassemble flags 0xa0 from E5006 ps rawBytes"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e1537_cs_hex.asm",
+      "bytes": 7803,
+      "sha256": "1fee22329d00f81e2f7dd86eabe3b11390203f5220e448d29f7f4711a4c57af8",
+      "selector": "D3DDisassemble flags 0xa0 from E1537 cs rawBytes"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e6083_vs_hex.asm",
+      "bytes": 7876,
+      "sha256": "2986d94078d0d5f277960834ca5a3cf213d14018e47553ba8d2d2f5bd1656d30",
+      "selector": "D3DDisassemble flags 0xa0 from E6083 vs rawBytes"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/rdc/e6083_ps_hex.asm",
+      "bytes": 7911,
+      "sha256": "ca8a4f3979e7d083772a0e16d9a0290a825d595841868bcf7412cb712c2d30e3",
+      "selector": "D3DDisassemble flags 0xa0 from E6083 ps rawBytes"
+    },
+    {
+      "path": "D:/godot/project/sandcastle/docs/competitor/evidence/wet_sand_20261024/wet_color_mechanism.png",
+      "bytes": 73306,
+      "sha256": "83230eda5eded20ba35b9428a31c8f3ed48e5c074019648f1edbe46aa0d662dd",
+      "selector": "E5006 raw cells + PS/VS reconstructed transfer; schematic, not screenshot"
+    }
+  ],
+  "scope": "Instruction and captured-data facts. No calibrated original elapsed seconds or before/after dynamics claim.",
+  "disassembler": {
+    "path": "C:/Windows/System32/d3dcompiler_47.dll",
+    "bytes": 4517376,
+    "sha256": "f642940ffb5dca7e548ba2270686798cf6b4c74b60e88bbb22f0991868cae3e5"
+  },
+  "water_update_constants": {
+    "playTime": [
+      284.71783447265625
+    ],
+    "beachMin": [
+      -15.0,
+      0.0,
+      -7.5
+    ],
+    "beachMax": [
+      15.0,
+      10.0,
+      7.5
+    ],
+    "sunColor": [
+      1.0,
+      0.9404290914535522,
+      0.8723527789115906
+    ],
+    "waterResolution": [
+      512,
+      256
+    ],
+    "airResolution": [
+      32,
+      16
+    ],
+    "deltaTime": [
+      0.02500000037252903
+    ],
+    "evaporationFactor": [
+      0.10000000149011612
+    ],
+    "waveAmplitude": [
+      0.049701884388923645
+    ],
+    "customWave": [
+      1.6163164377212524
+    ],
+    "level": [
+      1.0
+    ]
+  },
+  "formula": {
+    "amount_decode": {
+      "word": 2,
+      "mask": "0x00ffffff",
+      "scale_bits": "0x3521999b",
+      "scale": 6.020069918122317e-07
+    },
+    "visible_depth": "max(A - 0.05, 0); water PS discards depth < 0.00001",
+    "wet_weight": "t=clamp((clamp(A,0,1)-0.001)*52.63158,0,1); W=t*t*(3-2*t)",
+    "base_color": "lerp(sandColor,wetSandColor,W), then sediment color and grain modulation",
+    "sand_instruction_locations": {
+      "vs_water_amount": "54-105",
+      "ps_wet_color": "40-49",
+      "ps_sediment_color": "50-52"
+    },
+    "evaporation": "A_before_other_terms = A - dt * 0.001 * sunColor.r * evaporationFactor * exp2(-0.721348 * air_term); other source/boundary/clamp/quantization terms follow"
+  },
+  "wet_to_dry_linear_rgb_ratio": [
+    0.6978435716095701,
+    0.7061050891861945,
+    0.7769290393251842
+  ],
+  "replay_water_bytes_identical_across_selected_events": false,
+  "independent_replay_differences": {
+    "1537": {
+      "different_words_by_channel": [
+        48899,
+        10625,
+        9661,
+        1
+      ],
+      "different_amount_words": 9640
+    },
+    "6083": {
+      "different_words_by_channel": [
+        7413,
+        10455,
+        9498,
+        0
+      ],
+      "different_amount_words": 9468
+    }
+  },
+  "limits": [
+    "No independent wetness texture read by this selected sand VS/PS; no claim about all game stages or other materials.",
+    "All captured water cells have A > 0.02 and therefore full wet-color weight; this frame does not exhibit the dry-to-wet color transition.",
+    "Evaporation code and captured deltaTime do not establish actual wall-clock drying duration; no original 20-30 s claim.",
+    "A has an internal offset and is not interchangeable with Godot true water depth.",
+    "Full buffers differ between independent event replays, including some amount words. Do not interpret their subtraction as one deterministic update or a temporal derivative; reported threshold classes are unchanged."
+  ]
+}

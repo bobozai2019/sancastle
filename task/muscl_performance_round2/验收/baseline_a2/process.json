@@ -1,0 +1,20 @@
+{
+  "pid": 12740,
+  "started_unix": 1792814897.3427012,
+  "command": [
+    "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+    "--path",
+    "D:\\godot\\project\\sandcastle",
+    "--rendering-method",
+    "forward_plus",
+    "--rendering-driver",
+    "d3d12",
+    "--resolution",
+    "1280x720",
+    "--script",
+    "res://tools/muscl_performance/scene_baseline.gd",
+    "--",
+    "--output=D:/godot/project/sandcastle/test_output/muscl_performance_round2/baseline_a2",
+    "--parameter-config=D:/godot/project/sandcastle/test_output/muscl_performance_round2/baseline_a2/parameters/startup.json"
+  ]
+}

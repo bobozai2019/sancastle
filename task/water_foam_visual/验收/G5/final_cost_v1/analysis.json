@@ -1,0 +1,202 @@
+{
+  "runs": {
+    "main_720_A1": {
+      "metadata": {
+        "engine": {
+          "build": "steam",
+          "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+          "hex": 263938,
+          "major": 4,
+          "minor": 7,
+          "patch": 2,
+          "status": "stable",
+          "string": "4.7.2-stable (steam)",
+          "timestamp": 0
+        },
+        "adapter": "NVIDIA GeForce GTX 1050",
+        "driver": "d3d12",
+        "window": "(1280, 720)",
+        "viewport": "(1280, 720)",
+        "vsync": 1,
+        "max_fps": 0,
+        "last_error": "",
+        "foam_variant": "baseline",
+        "water_shader_sha256": "26a503bd375f88e43f7b1a7fdac1812fd2d7da4ad4217423aa5ae6d398ed0a61",
+        "contact_gain": 1.0
+      },
+      "phases": {
+        "paused": {
+          "samples": 1795,
+          "wall_s": 30.008334,
+          "sim_s_per_wall_s": 0.0,
+          "start_tick": 240,
+          "end_tick": 240,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 13.918999671936035,
+            "p95": 14.326200008392334,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 16.367,
+            "p95": 19.4279,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.28600001335144043,
+            "p95": 1.1073000073432921,
+            "nonpositive": 0
+          }
+        },
+        "live": {
+          "samples": 832,
+          "wall_s": 34.148278,
+          "sim_s_per_wall_s": 0.8394633910397145,
+          "start_tick": 538,
+          "end_tick": 1398,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 14.026500225067139,
+            "p95": 16.98970041275024,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 30.338,
+            "p95": 79.15354999999995,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.3140000104904175,
+            "p95": 0.5596499949693668,
+            "nonpositive": 0
+          }
+        }
+      },
+      "valid": true
+    },
+    "main_720_A2": {
+      "metadata": {
+        "engine": {
+          "build": "steam",
+          "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+          "hex": 263938,
+          "major": 4,
+          "minor": 7,
+          "patch": 2,
+          "status": "stable",
+          "string": "4.7.2-stable (steam)",
+          "timestamp": 0
+        },
+        "adapter": "NVIDIA GeForce GTX 1050",
+        "driver": "d3d12",
+        "window": "(1280, 720)",
+        "viewport": "(1280, 720)",
+        "vsync": 1,
+        "max_fps": 0,
+        "last_error": "",
+        "foam_variant": "baseline",
+        "water_shader_sha256": "26a503bd375f88e43f7b1a7fdac1812fd2d7da4ad4217423aa5ae6d398ed0a61",
+        "contact_gain": 1.0
+      },
+      "phases": {
+        "paused": {
+          "samples": 1794,
+          "wall_s": 30.013156,
+          "sim_s_per_wall_s": 0.0,
+          "start_tick": 240,
+          "end_tick": 240,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 14.04699993133545,
+            "p95": 14.447699832916259,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 16.5165,
+            "p95": 18.20205,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.2770000100135803,
+            "p95": 1.1009999513626099,
+            "nonpositive": 0
+          }
+        },
+        "live": {
+          "samples": 908,
+          "wall_s": 32.310701,
+          "sim_s_per_wall_s": 0.8892686945251028,
+          "start_tick": 538,
+          "end_tick": 1400,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 14.023000240325928,
+            "p95": 14.972649574279785,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 28.2335,
+            "p95": 66.89094999999996,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.3140000104904175,
+            "p95": 0.4925999954342841,
+            "nonpositive": 0
+          }
+        }
+      },
+      "valid": true
+    }
+  },
+  "groups": {
+    "main_720": {
+      "aa": {
+        "phases": {
+          "paused": {
+            "gpu_p50_delta_ms": 0.12800025939941406,
+            "gpu_p95_delta_ms": 0.12149982452392472,
+            "frame_p95_delta_ms": -1.2258500000000012,
+            "throughput_ratio": null,
+            "limits": {
+              "gpu_p50_ms": 0.5,
+              "gpu_p95_ms": 1.0,
+              "frame_p95_ms": 1.0
+            },
+            "checks": {
+              "gpu_p50": true,
+              "gpu_p95": true,
+              "frame_p95": false
+            },
+            "pass": false
+          },
+          "live": {
+            "gpu_p50_delta_ms": -0.0034999847412109375,
+            "gpu_p95_delta_ms": -2.0170508384704533,
+            "frame_p95_delta_ms": -12.262599999999992,
+            "throughput_ratio": 1.0593299291154343,
+            "limits": {
+              "gpu_p50_ms": 0.5,
+              "gpu_p95_ms": 1.0,
+              "frame_p95_ms": 3.9576774999999977
+            },
+            "checks": {
+              "gpu_p50": true,
+              "gpu_p95": false,
+              "frame_p95": false,
+              "throughput": false
+            },
+            "pass": false
+          }
+        },
+        "pass": false
+      },
+      "ab_pairs": [],
+      "complete": false,
+      "pass": false
+    }
+  },
+  "complete": false,
+  "pass": false,
+  "scope": "Viewport GPU render timing does not assert asynchronous compute coverage; full frame and completed simulation throughput are separately measured. Original pre-integration water shader and contact gain 1.0 versus final formal shader and gain 0.55. No optimization or automatic tuning."
+}

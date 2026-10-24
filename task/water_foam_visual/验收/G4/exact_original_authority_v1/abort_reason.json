@@ -1,0 +1,9 @@
+{
+  "status": "intentionally_aborted_before_replay_comparisons",
+  "reason": "The inherited material evidence helper hashes a resource path, but the exact original shader is an in-memory Shader with an empty path. Stopped the owned process before consuming that faulty evidence path, replaced the helper with direct code SHA256/uniform capture, and also included the exact original side shader in the next run.",
+  "owned_engine_pid": 109544,
+  "owner_parent_pid": 111540,
+  "editor_pid_untouched": 7164,
+  "source_snapshot": "probe_sources/foam_original_authority_probe.gd",
+  "acceptance": "incomplete; no A/A or A/B verdict"
+}

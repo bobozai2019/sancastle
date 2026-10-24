@@ -1,0 +1,1006 @@
+{
+  "scope": "Paused tick 0, default startup settings; per-image differences only within each run. No cross-game similarity or performance claim.",
+  "runs": {
+    "main": {
+      "probe": {
+        "path": "docs/competitor/evidence/material_quality_20261023/main/probe.json",
+        "bytes": 103974,
+        "sha256": "72379bc5f84167e0425aae75cd03d95031655e1182a2bd476096b577b9270e40"
+      },
+      "pass_as_recorded": true,
+      "failed_checks": [],
+      "source_drift": [],
+      "images": {
+        "baseline": {
+          "path": "docs/competitor/evidence/material_quality_20261023/main/baseline.png",
+          "bytes": 771399,
+          "sha256": "cba4b5e74d6e107515b4f694987331e9f975598f16441ebf3d610f82f0c1c98e",
+          "changed_pixels": 0,
+          "mean_abs_channel_8bit": 0.0,
+          "changed_bbox": null,
+          "foreground_sand_crop_changed_pixels": 0
+        },
+        "msaa_4x": {
+          "path": "docs/competitor/evidence/material_quality_20261023/main/msaa_4x.png",
+          "bytes": 778850,
+          "sha256": "f9b81cc5a0cf3a4a3ca9bdde5e4324388f2cabd53e5f2a52cd7b3a42a8fbc29e",
+          "changed_pixels": 24189,
+          "mean_abs_channel_8bit": 0.12054796006944445,
+          "changed_bbox": [
+            0,
+            152,
+            1280,
+            720
+          ],
+          "foreground_sand_crop_changed_pixels": 1183
+        },
+        "restored": {
+          "path": "docs/competitor/evidence/material_quality_20261023/main/restored.png",
+          "bytes": 771399,
+          "sha256": "cba4b5e74d6e107515b4f694987331e9f975598f16441ebf3d610f82f0c1c98e",
+          "changed_pixels": 0,
+          "mean_abs_channel_8bit": 0.0,
+          "changed_bbox": null,
+          "foreground_sand_crop_changed_pixels": 0
+        },
+        "sand_color_006": {
+          "path": "docs/competitor/evidence/material_quality_20261023/main/sand_color_006.png",
+          "bytes": 721278,
+          "sha256": "37f081eeaf93b988a8e7d50c2737d91db3ad31681b5fa78a8fee34b70b0a510e",
+          "changed_pixels": 359647,
+          "mean_abs_channel_8bit": 0.5723860677083333,
+          "changed_bbox": [
+            0,
+            158,
+            1280,
+            720
+          ],
+          "foreground_sand_crop_changed_pixels": 101964
+        },
+        "sand_density_70": {
+          "path": "docs/competitor/evidence/material_quality_20261023/main/sand_density_70.png",
+          "bytes": 635545,
+          "sha256": "8e3e7e441b48db8b2f97fa4c49a4928bc968a15e3ed519345faf9d8e626b195c",
+          "changed_pixels": 400057,
+          "mean_abs_channel_8bit": 1.1177741608796297,
+          "changed_bbox": [
+            0,
+            157,
+            1280,
+            720
+          ],
+          "foreground_sand_crop_changed_pixels": 104600
+        },
+        "sand_pixel_lighting": {
+          "path": "docs/competitor/evidence/material_quality_20261023/main/sand_pixel_lighting.png",
+          "bytes": 771429,
+          "sha256": "7a03179067f2c3f13c1f2a3bf673b7c01653f21712734ac1985394701a313f1d",
+          "changed_pixels": 3762,
+          "mean_abs_channel_8bit": 0.0024052372685185184,
+          "changed_bbox": [
+            1,
+            152,
+            1276,
+            720
+          ],
+          "foreground_sand_crop_changed_pixels": 68
+        },
+        "sand_specular_1": {
+          "path": "docs/competitor/evidence/material_quality_20261023/main/sand_specular_1.png",
+          "bytes": 771399,
+          "sha256": "cba4b5e74d6e107515b4f694987331e9f975598f16441ebf3d610f82f0c1c98e",
+          "changed_pixels": 0,
+          "mean_abs_channel_8bit": 0.0,
+          "changed_bbox": null,
+          "foreground_sand_crop_changed_pixels": 0
+        },
+        "water_normal_055": {
+          "path": "docs/competitor/evidence/material_quality_20261023/main/water_normal_055.png",
+          "bytes": 746462,
+          "sha256": "0bdbb406f9d8bcdc82b44853b9a1615c71415bef1b56ca6f7d9bf568011dadc1",
+          "changed_pixels": 215396,
+          "mean_abs_channel_8bit": 0.5795489728009259,
+          "changed_bbox": [
+            0,
+            178,
+            1069,
+            720
+          ],
+          "foreground_sand_crop_changed_pixels": 5747
+        },
+        "water_scale_03": {
+          "path": "docs/competitor/evidence/material_quality_20261023/main/water_scale_03.png",
+          "bytes": 774615,
+          "sha256": "0832563c9e8450921c7b2a81d08b75f0d9cfc847f4bf6f3c4459092893081471",
+          "changed_pixels": 259182,
+          "mean_abs_channel_8bit": 1.4632208478009259,
+          "changed_bbox": [
+            0,
+            178,
+            1069,
+            720
+          ],
+          "foreground_sand_crop_changed_pixels": 10005
+        }
+      },
+      "probe_script": {
+        "path": "docs/competitor/evidence/material_quality_20261023/main/probe_material_quality.gd",
+        "bytes": 3639,
+        "sha256": "bcc3c961039b7e708fbf0cbf7a20b59b16f189ff38c972f7fe79c057764a4cf5"
+      },
+      "command": [
+        "D:/game/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe",
+        "--path",
+        "D:\\godot\\project\\sandcastle",
+        "--rendering-driver",
+        "d3d12",
+        "--script",
+        "res://docs/competitor/tools/probe_material_quality.gd",
+        "--log-file",
+        "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\material_quality_20261023\\main\\godot.log",
+        "--",
+        "--output=D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\material_quality_20261023\\main",
+        "--scene=main",
+        "--ignore-parameter-config"
+      ]
+    },
+    "main_v2": {
+      "probe": {
+        "path": "docs/competitor/evidence/material_quality_20261023/main_v2/probe.json",
+        "bytes": 104041,
+        "sha256": "7d56ec2b4c7ff0958459a7e18f1e99940a84151aa96c132681729ff50956831b"
+      },
+      "pass_as_recorded": true,
+      "failed_checks": [],
+      "source_drift": [],
+      "images": {
+        "baseline": {
+          "path": "docs/competitor/evidence/material_quality_20261023/main_v2/baseline.png",
+          "bytes": 749453,
+          "sha256": "856de6643d2e8a33a0ac52a3049dc652c247bee2277123b1681d7c55bae50425",
+          "changed_pixels": 0,
+          "mean_abs_channel_8bit": 0.0,
+          "changed_bbox": null,
+          "foreground_sand_crop_changed_pixels": 0
+        },
+        "msaa_4x": {
+          "path": "docs/competitor/evidence/material_quality_20261023/main_v2/msaa_4x.png",
+          "bytes": 759483,
+          "sha256": "ebecb33ddb425b48c7c267e1cda9b5a6e123049428312cb075c926718a1ad973",
+          "changed_pixels": 29399,
+          "mean_abs_channel_8bit": 0.15646484375,
+          "changed_bbox": [
+            0,
+            152,
+            1280,
+            720
+          ],
+          "foreground_sand_crop_changed_pixels": 1183
+        },
+        "restored": {
+          "path": "docs/competitor/evidence/material_quality_20261023/main_v2/restored.png",
+          "bytes": 749453,
+          "sha256": "856de6643d2e8a33a0ac52a3049dc652c247bee2277123b1681d7c55bae50425",
+          "changed_pixels": 0,
+          "mean_abs_channel_8bit": 0.0,
+          "changed_bbox": null,
+          "foreground_sand_crop_changed_pixels": 0
+        },
+        "sand_color_006": {
+          "path": "docs/competitor/evidence/material_quality_20261023/main_v2/sand_color_006.png",
+          "bytes": 695042,
+          "sha256": "3ab8cf34f0741c9d6c4d6c24dc66af8f6ff74d02b52a264a3f2165ec87ede1e7",
+          "changed_pixels": 423855,
+          "mean_abs_channel_8bit": 0.7703237123842592,
+          "changed_bbox": [
+            0,
+            158,
+            1280,
+            720
+          ],
+          "foreground_sand_crop_changed_pixels": 101964
+        },
+        "sand_density_70": {
+          "path": "docs/competitor/evidence/material_quality_20261023/main_v2/sand_density_70.png",
+          "bytes": 598449,
+          "sha256": "bf6f226a55a086311a186a0a04415cd9eae3ebca28dba37fc2c9de4f399a61f9",
+          "changed_pixels": 448763,
+          "mean_abs_channel_8bit": 1.4891022858796297,
+          "changed_bbox": [
+            0,
+            157,
+            1280,
+            720
+          ],
+          "foreground_sand_crop_changed_pixels": 104600
+        },
+        "sand_pixel_lighting": {
+          "path": "docs/competitor/evidence/material_quality_20261023/main_v2/sand_pixel_lighting.png",
+          "bytes": 749386,
+          "sha256": "ce7b8f2c85e267275e37821f7d6910b21406a57ae18e9f48311dfb6d7247c449",
+          "changed_pixels": 6345,
+          "mean_abs_channel_8bit": 0.004109519675925926,
+          "changed_bbox": [
+            1,
+            152,
+            1276,
+            720
+          ],
+          "foreground_sand_crop_changed_pixels": 68
+        },
+        "sand_specular_1": {
+          "path": "docs/competitor/evidence/material_quality_20261023/main_v2/sand_specular_1.png",
+          "bytes": 749453,
+          "sha256": "856de6643d2e8a33a0ac52a3049dc652c247bee2277123b1681d7c55bae50425",
+          "changed_pixels": 0,
+          "mean_abs_channel_8bit": 0.0,
+          "changed_bbox": null,
+          "foreground_sand_crop_changed_pixels": 0
+        },
+        "sand_wetness_linear": {
+          "path": "docs/competitor/evidence/material_quality_20261023/main_v2/sand_wetness_linear.png",
+          "bytes": 751326,
+          "sha256": "3ca01abe1bbe9afa717693ba6e6c665766b83fa2b7450bec67334dd3152e6979",
+          "changed_pixels": 17677,
+          "mean_abs_channel_8bit": 0.0522486255787037,
+          "changed_bbox": [
+            389,
+            177,
+            1106,
+            720
+          ],
+          "foreground_sand_crop_changed_pixels": 7225
+        },
+        "water_normal_055": {
+          "path": "docs/competitor/evidence/material_quality_20261023/main_v2/water_normal_055.png",
+          "bytes": 722253,
+          "sha256": "07b74775960dcd1d80431a317632d86f0f77a03f801a8ff1e844799e0fc8c84e",
+          "changed_pixels": 229304,
+          "mean_abs_channel_8bit": 0.6869469762731482,
+          "changed_bbox": [
+            0,
+            178,
+            1069,
+            720
+          ],
+          "foreground_sand_crop_changed_pixels": 5747
+        },
+        "water_scale_03": {
+          "path": "docs/competitor/evidence/material_quality_20261023/main_v2/water_scale_03.png",
+          "bytes": 753248,
+          "sha256": "d85e028d7d09b1448ecac85fff8ccfdc9152a7c8be828d65f7b589c45fe07328",
+          "changed_pixels": 267732,
+          "mean_abs_channel_8bit": 1.7796155237268518,
+          "changed_bbox": [
+            0,
+            178,
+            1069,
+            720
+          ],
+          "foreground_sand_crop_changed_pixels": 10005
+        }
+      },
+      "probe_script": {
+        "path": "docs/competitor/evidence/material_quality_20261023/main_v2/probe_material_quality.gd",
+        "bytes": 3892,
+        "sha256": "b2ebe5efcf7948b5e912ce118968c98c0ffe4d1f9b8b74e28c9ec7b19df8c20f"
+      },
+      "command": [
+        "D:/game/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe",
+        "--path",
+        "D:\\godot\\project\\sandcastle",
+        "--rendering-driver",
+        "d3d12",
+        "--script",
+        "res://docs/competitor/tools/probe_material_quality.gd",
+        "--log-file",
+        "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\material_quality_20261023\\main_v2\\godot.log",
+        "--",
+        "--output=D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\material_quality_20261023\\main_v2",
+        "--scene=main",
+        "--ignore-parameter-config"
+      ]
+    },
+    "geometry": {
+      "probe": {
+        "path": "docs/competitor/evidence/material_quality_20261023/geometry/probe.json",
+        "bytes": 102342,
+        "sha256": "e344e64048ad2f4f69593509c5e9d4b304d9db1ce0e9804d24aca89ec676e259"
+      },
+      "pass_as_recorded": true,
+      "failed_checks": [],
+      "source_drift": [],
+      "images": {
+        "baseline": {
+          "path": "docs/competitor/evidence/material_quality_20261023/geometry/baseline.png",
+          "bytes": 433500,
+          "sha256": "a7ae115ff89c703cce152becf3d7db79fa4709b8567f3d925b009ceaab035819",
+          "changed_pixels": 0,
+          "mean_abs_channel_8bit": 0.0,
+          "changed_bbox": null,
+          "foreground_sand_crop_changed_pixels": 0
+        },
+        "msaa_4x": {
+          "path": "docs/competitor/evidence/material_quality_20261023/geometry/msaa_4x.png",
+          "bytes": 443781,
+          "sha256": "5b30375c3567a62bda4f1c7f54e5ba33563da3d148d89bce6832de380b884287",
+          "changed_pixels": 38409,
+          "mean_abs_channel_8bit": 0.20023111979166666,
+          "changed_bbox": [
+            60,
+            81,
+            1171,
+            715
+          ],
+          "foreground_sand_crop_changed_pixels": 3330
+        },
+        "restored": {
+          "path": "docs/competitor/evidence/material_quality_20261023/geometry/restored.png",
+          "bytes": 433500,
+          "sha256": "a7ae115ff89c703cce152becf3d7db79fa4709b8567f3d925b009ceaab035819",
+          "changed_pixels": 0,
+          "mean_abs_channel_8bit": 0.0,
+          "changed_bbox": null,
+          "foreground_sand_crop_changed_pixels": 0
+        },
+        "sand_color_006": {
+          "path": "docs/competitor/evidence/material_quality_20261023/geometry/sand_color_006.png",
+          "bytes": 415398,
+          "sha256": "2c21b84a74c2090b553201c4391c947b42e7cc193c8201e0c15b5bdbaf681845",
+          "changed_pixels": 151030,
+          "mean_abs_channel_8bit": 0.10668655960648148,
+          "changed_bbox": [
+            61,
+            107,
+            1159,
+            701
+          ],
+          "foreground_sand_crop_changed_pixels": 25997
+        },
+        "sand_density_70": {
+          "path": "docs/competitor/evidence/material_quality_20261023/geometry/sand_density_70.png",
+          "bytes": 363267,
+          "sha256": "d0ed7236e81ba0abb603532b1047a732db9addd1fd0b70c7b9d7862bd7d04985",
+          "changed_pixels": 189901,
+          "mean_abs_channel_8bit": 0.20902452256944445,
+          "changed_bbox": [
+            61,
+            107,
+            1160,
+            701
+          ],
+          "foreground_sand_crop_changed_pixels": 30492
+        },
+        "sand_pixel_lighting": {
+          "path": "docs/competitor/evidence/material_quality_20261023/geometry/sand_pixel_lighting.png",
+          "bytes": 433629,
+          "sha256": "b28d7061485367720df8c813f6b92dac7734a749368c80a0438bc4870c2a4fde",
+          "changed_pixels": 18933,
+          "mean_abs_channel_8bit": 0.01625,
+          "changed_bbox": [
+            107,
+            83,
+            1155,
+            681
+          ],
+          "foreground_sand_crop_changed_pixels": 169
+        },
+        "sand_specular_1": {
+          "path": "docs/competitor/evidence/material_quality_20261023/geometry/sand_specular_1.png",
+          "bytes": 433500,
+          "sha256": "a7ae115ff89c703cce152becf3d7db79fa4709b8567f3d925b009ceaab035819",
+          "changed_pixels": 0,
+          "mean_abs_channel_8bit": 0.0,
+          "changed_bbox": null,
+          "foreground_sand_crop_changed_pixels": 0
+        },
+        "sand_wetness_linear": {
+          "path": "docs/competitor/evidence/material_quality_20261023/geometry/sand_wetness_linear.png",
+          "bytes": 433422,
+          "sha256": "5765484f2abae36e631e35f07d4ae5671b2b3ec0ef2810fb1da55e9d81578a99",
+          "changed_pixels": 10527,
+          "mean_abs_channel_8bit": 0.041169343171296294,
+          "changed_bbox": [
+            323,
+            181,
+            1141,
+            701
+          ],
+          "foreground_sand_crop_changed_pixels": 2137
+        },
+        "water_normal_055": {
+          "path": "docs/competitor/evidence/material_quality_20261023/geometry/water_normal_055.png",
+          "bytes": 423991,
+          "sha256": "919cda9cdb7facbd82789b4af6435e10598e17cff794640f672e806639782645",
+          "changed_pixels": 165497,
+          "mean_abs_channel_8bit": 0.25494212962962964,
+          "changed_bbox": [
+            329,
+            186,
+            1171,
+            702
+          ],
+          "foreground_sand_crop_changed_pixels": 28452
+        },
+        "water_scale_03": {
+          "path": "docs/competitor/evidence/material_quality_20261023/geometry/water_scale_03.png",
+          "bytes": 433540,
+          "sha256": "957af1f3a5ca35610ec8a0414cd91f49c4ed37867cc484ff47e166dd25d917e9",
+          "changed_pixels": 198489,
+          "mean_abs_channel_8bit": 0.5705360243055555,
+          "changed_bbox": [
+            329,
+            186,
+            1171,
+            702
+          ],
+          "foreground_sand_crop_changed_pixels": 32676
+        }
+      },
+      "probe_script": {
+        "path": "docs/competitor/evidence/material_quality_20261023/geometry/probe_material_quality.gd",
+        "bytes": 3892,
+        "sha256": "b2ebe5efcf7948b5e912ce118968c98c0ffe4d1f9b8b74e28c9ec7b19df8c20f"
+      },
+      "command": [
+        "D:/game/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe",
+        "--path",
+        "D:\\godot\\project\\sandcastle",
+        "--rendering-driver",
+        "d3d12",
+        "--script",
+        "res://docs/competitor/tools/probe_material_quality.gd",
+        "--log-file",
+        "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\material_quality_20261023\\geometry\\godot.log",
+        "--",
+        "--output=D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\material_quality_20261023\\geometry",
+        "--scene=test1_geometry",
+        "--ignore-parameter-config"
+      ]
+    },
+    "layers": {
+      "probe": {
+        "path": "docs/competitor/evidence/material_quality_20261023/layers/probe.json",
+        "bytes": 103971,
+        "sha256": "1194e744cc952ce0a7c230c167374a16bffdc7a854dd94d9cb002e34dfd7e7bc"
+      },
+      "pass_as_recorded": false,
+      "failed_checks": [
+        {
+          "name": "baseline_restored_identical",
+          "pass": false
+        }
+      ],
+      "source_drift": [],
+      "images": {
+        "baseline": {
+          "path": "docs/competitor/evidence/material_quality_20261023/layers/baseline.png",
+          "bytes": 749453,
+          "sha256": "856de6643d2e8a33a0ac52a3049dc652c247bee2277123b1681d7c55bae50425",
+          "changed_pixels": 0,
+          "mean_abs_channel_8bit": 0.0,
+          "changed_bbox": null,
+          "foreground_sand_crop_changed_pixels": 0
+        },
+        "GpuWaterSurface_hidden": {
+          "path": "docs/competitor/evidence/material_quality_20261023/layers/GpuWaterSurface_hidden.png",
+          "bytes": 708120,
+          "sha256": "8bca27403fb5b4e7cb91802fd6455627dc668cfa8154d277174e75b20559968e",
+          "changed_pixels": 306183,
+          "mean_abs_channel_8bit": 20.597459129050925,
+          "changed_bbox": [
+            0,
+            177,
+            1095,
+            720
+          ],
+          "foreground_sand_crop_changed_pixels": 20437
+        },
+        "PrototypeFrontFoamDense_hidden": {
+          "path": "docs/competitor/evidence/material_quality_20261023/layers/PrototypeFrontFoamDense_hidden.png",
+          "bytes": 749453,
+          "sha256": "856de6643d2e8a33a0ac52a3049dc652c247bee2277123b1681d7c55bae50425",
+          "changed_pixels": 0,
+          "mean_abs_channel_8bit": 0.0,
+          "changed_bbox": null,
+          "foreground_sand_crop_changed_pixels": 0
+        },
+        "rdc_caustics_enabled_off": {
+          "path": "docs/competitor/evidence/material_quality_20261023/layers/rdc_caustics_enabled_off.png",
+          "bytes": 747986,
+          "sha256": "3a225878f2b8a31811c3325a6de861b38f5e429ca0a15da3786fdc6fd9f43602",
+          "changed_pixels": 292396,
+          "mean_abs_channel_8bit": 1.686574435763889,
+          "changed_bbox": [
+            0,
+            178,
+            1083,
+            720
+          ],
+          "foreground_sand_crop_changed_pixels": 16753
+        },
+        "restored": {
+          "path": "docs/competitor/evidence/material_quality_20261023/layers/restored.png",
+          "bytes": 749466,
+          "sha256": "48ca29fe114478a032ccd3e0555e58b62fa3765bded8926908ab4ba04b787f25",
+          "changed_pixels": 7,
+          "mean_abs_channel_8bit": 0.0006759982638888889,
+          "changed_bbox": [
+            525,
+            197,
+            535,
+            199
+          ],
+          "foreground_sand_crop_changed_pixels": 0
+        },
+        "ShoreContactOverlay_hidden": {
+          "path": "docs/competitor/evidence/material_quality_20261023/layers/ShoreContactOverlay_hidden.png",
+          "bytes": 749453,
+          "sha256": "856de6643d2e8a33a0ac52a3049dc652c247bee2277123b1681d7c55bae50425",
+          "changed_pixels": 0,
+          "mean_abs_channel_8bit": 0.0,
+          "changed_bbox": null,
+          "foreground_sand_crop_changed_pixels": 0
+        },
+        "use_compaction_tint_off": {
+          "path": "docs/competitor/evidence/material_quality_20261023/layers/use_compaction_tint_off.png",
+          "bytes": 750950,
+          "sha256": "1469b0ca07d4f720db01913f09eac9d869d495f9e945eeb9690ee75eed594294",
+          "changed_pixels": 576617,
+          "mean_abs_channel_8bit": 0.5561975549768519,
+          "changed_bbox": [
+            0,
+            152,
+            1280,
+            720
+          ],
+          "foreground_sand_crop_changed_pixels": 108452
+        },
+        "use_wet_finish_off": {
+          "path": "docs/competitor/evidence/material_quality_20261023/layers/use_wet_finish_off.png",
+          "bytes": 752809,
+          "sha256": "2ef3c413a59af2624173686486f659766e1dc42765d965a35855845c7a1b8b0b",
+          "changed_pixels": 615634,
+          "mean_abs_channel_8bit": 3.2087807436342595,
+          "changed_bbox": [
+            0,
+            152,
+            1280,
+            720
+          ],
+          "foreground_sand_crop_changed_pixels": 108477
+        }
+      },
+      "probe_script": {
+        "path": "docs/competitor/evidence/material_quality_20261023/layers/probe_material_quality.gd",
+        "bytes": 4769,
+        "sha256": "afa6d37e4ac42605354933929cd4fe8744b20e13f2170f0d28f42fbe145545d3"
+      },
+      "command": [
+        "D:/game/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe",
+        "--path",
+        "D:\\godot\\project\\sandcastle",
+        "--rendering-driver",
+        "d3d12",
+        "--script",
+        "res://docs/competitor/tools/probe_material_quality.gd",
+        "--log-file",
+        "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\material_quality_20261023\\layers\\godot.log",
+        "--",
+        "--output=D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\material_quality_20261023\\layers",
+        "--scene=main",
+        "--ignore-parameter-config",
+        "--layers"
+      ]
+    },
+    "layers_v2": {
+      "probe": {
+        "path": "docs/competitor/evidence/material_quality_20261023/layers_v2/probe.json",
+        "bytes": 104310,
+        "sha256": "dc0ae9c90d456cd4c5682d60a2f3e46431c3de3e5291143943d7085bb3fbb25b"
+      },
+      "pass_as_recorded": false,
+      "failed_checks": [
+        {
+          "name": "baseline_restored_identical",
+          "pass": false
+        }
+      ],
+      "source_drift": [],
+      "images": {
+        "baseline": {
+          "path": "docs/competitor/evidence/material_quality_20261023/layers_v2/baseline.png",
+          "bytes": 749453,
+          "sha256": "856de6643d2e8a33a0ac52a3049dc652c247bee2277123b1681d7c55bae50425",
+          "changed_pixels": 0,
+          "mean_abs_channel_8bit": 0.0,
+          "changed_bbox": null,
+          "foreground_sand_crop_changed_pixels": 0
+        },
+        "GpuWaterSurface_hidden": {
+          "path": "docs/competitor/evidence/material_quality_20261023/layers_v2/GpuWaterSurface_hidden.png",
+          "bytes": 708120,
+          "sha256": "8bca27403fb5b4e7cb91802fd6455627dc668cfa8154d277174e75b20559968e",
+          "changed_pixels": 306183,
+          "mean_abs_channel_8bit": 20.597459129050925,
+          "changed_bbox": [
+            0,
+            177,
+            1095,
+            720
+          ],
+          "foreground_sand_crop_changed_pixels": 20437
+        },
+        "PrototypeFrontFoamDense_hidden": {
+          "path": "docs/competitor/evidence/material_quality_20261023/layers_v2/PrototypeFrontFoamDense_hidden.png",
+          "bytes": 749466,
+          "sha256": "48ca29fe114478a032ccd3e0555e58b62fa3765bded8926908ab4ba04b787f25",
+          "changed_pixels": 7,
+          "mean_abs_channel_8bit": 0.0006759982638888889,
+          "changed_bbox": [
+            525,
+            197,
+            535,
+            199
+          ],
+          "foreground_sand_crop_changed_pixels": 0
+        },
+        "rdc_caustics_enabled_off": {
+          "path": "docs/competitor/evidence/material_quality_20261023/layers_v2/rdc_caustics_enabled_off.png",
+          "bytes": 747986,
+          "sha256": "3a225878f2b8a31811c3325a6de861b38f5e429ca0a15da3786fdc6fd9f43602",
+          "changed_pixels": 292396,
+          "mean_abs_channel_8bit": 1.686574435763889,
+          "changed_bbox": [
+            0,
+            178,
+            1083,
+            720
+          ],
+          "foreground_sand_crop_changed_pixels": 16753
+        },
+        "restored": {
+          "path": "docs/competitor/evidence/material_quality_20261023/layers_v2/restored.png",
+          "bytes": 749466,
+          "sha256": "48ca29fe114478a032ccd3e0555e58b62fa3765bded8926908ab4ba04b787f25",
+          "changed_pixels": 7,
+          "mean_abs_channel_8bit": 0.0006759982638888889,
+          "changed_bbox": [
+            525,
+            197,
+            535,
+            199
+          ],
+          "foreground_sand_crop_changed_pixels": 0
+        },
+        "ShoreContactOverlay_hidden": {
+          "path": "docs/competitor/evidence/material_quality_20261023/layers_v2/ShoreContactOverlay_hidden.png",
+          "bytes": 749466,
+          "sha256": "48ca29fe114478a032ccd3e0555e58b62fa3765bded8926908ab4ba04b787f25",
+          "changed_pixels": 7,
+          "mean_abs_channel_8bit": 0.0006759982638888889,
+          "changed_bbox": [
+            525,
+            197,
+            535,
+            199
+          ],
+          "foreground_sand_crop_changed_pixels": 0
+        },
+        "sun_shadow_off": {
+          "path": "docs/competitor/evidence/material_quality_20261023/layers_v2/sun_shadow_off.png",
+          "bytes": 746685,
+          "sha256": "bf1a291aed7874093b87b5560d3e6c7309a63c3e0138f5f0ccc6575d472ea983",
+          "changed_pixels": 5352,
+          "mean_abs_channel_8bit": 0.13371310763888888,
+          "changed_bbox": [
+            219,
+            246,
+            1257,
+            371
+          ],
+          "foreground_sand_crop_changed_pixels": 0
+        },
+        "use_compaction_tint_off": {
+          "path": "docs/competitor/evidence/material_quality_20261023/layers_v2/use_compaction_tint_off.png",
+          "bytes": 750950,
+          "sha256": "1469b0ca07d4f720db01913f09eac9d869d495f9e945eeb9690ee75eed594294",
+          "changed_pixels": 576617,
+          "mean_abs_channel_8bit": 0.5561975549768519,
+          "changed_bbox": [
+            0,
+            152,
+            1280,
+            720
+          ],
+          "foreground_sand_crop_changed_pixels": 108452
+        },
+        "use_wet_finish_off": {
+          "path": "docs/competitor/evidence/material_quality_20261023/layers_v2/use_wet_finish_off.png",
+          "bytes": 752809,
+          "sha256": "2ef3c413a59af2624173686486f659766e1dc42765d965a35855845c7a1b8b0b",
+          "changed_pixels": 615634,
+          "mean_abs_channel_8bit": 3.2087807436342595,
+          "changed_bbox": [
+            0,
+            152,
+            1280,
+            720
+          ],
+          "foreground_sand_crop_changed_pixels": 108477
+        }
+      },
+      "probe_script": {
+        "path": "docs/competitor/evidence/material_quality_20261023/layers_v2/probe_material_quality.gd",
+        "bytes": 5175,
+        "sha256": "7c9bc98378ed8b6517be6bcdcab4d25679599675fa03334bc9357554abbc8591"
+      },
+      "command": [
+        "D:/game/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe",
+        "--path",
+        "D:\\godot\\project\\sandcastle",
+        "--rendering-driver",
+        "d3d12",
+        "--script",
+        "res://docs/competitor/tools/probe_material_quality.gd",
+        "--log-file",
+        "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\material_quality_20261023\\layers_v2\\godot.log",
+        "--",
+        "--output=D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\material_quality_20261023\\layers_v2",
+        "--scene=main",
+        "--ignore-parameter-config",
+        "--layers"
+      ]
+    },
+    "layers_v3": {
+      "probe": {
+        "path": "docs/competitor/evidence/material_quality_20261023/layers_v3/probe.json",
+        "bytes": 104374,
+        "sha256": "b55fbf3f784a69a8ab93c40ad8566689349855bbcf08a315ebd269dc8605814e"
+      },
+      "pass_as_recorded": true,
+      "failed_checks": [],
+      "source_drift": [],
+      "images": {
+        "baseline": {
+          "path": "docs/competitor/evidence/material_quality_20261023/layers_v3/baseline.png",
+          "bytes": 749453,
+          "sha256": "856de6643d2e8a33a0ac52a3049dc652c247bee2277123b1681d7c55bae50425",
+          "changed_pixels": 0,
+          "mean_abs_channel_8bit": 0.0,
+          "changed_bbox": null,
+          "foreground_sand_crop_changed_pixels": 0
+        },
+        "GpuWaterSurface_hidden": {
+          "path": "docs/competitor/evidence/material_quality_20261023/layers_v3/GpuWaterSurface_hidden.png",
+          "bytes": 708120,
+          "sha256": "8bca27403fb5b4e7cb91802fd6455627dc668cfa8154d277174e75b20559968e",
+          "changed_pixels": 306183,
+          "mean_abs_channel_8bit": 20.597459129050925,
+          "changed_bbox": [
+            0,
+            177,
+            1095,
+            720
+          ],
+          "foreground_sand_crop_changed_pixels": 20437
+        },
+        "PrototypeFrontFoamDense_hidden": {
+          "path": "docs/competitor/evidence/material_quality_20261023/layers_v3/PrototypeFrontFoamDense_hidden.png",
+          "bytes": 749453,
+          "sha256": "856de6643d2e8a33a0ac52a3049dc652c247bee2277123b1681d7c55bae50425",
+          "changed_pixels": 0,
+          "mean_abs_channel_8bit": 0.0,
+          "changed_bbox": null,
+          "foreground_sand_crop_changed_pixels": 0
+        },
+        "rdc_caustics_enabled_off": {
+          "path": "docs/competitor/evidence/material_quality_20261023/layers_v3/rdc_caustics_enabled_off.png",
+          "bytes": 747977,
+          "sha256": "516c8d8ed037ff1e004c1316e58c747d027682a9f1e77292bea3070ddcda61ad",
+          "changed_pixels": 292389,
+          "mean_abs_channel_8bit": 1.6858984375,
+          "changed_bbox": [
+            0,
+            178,
+            1083,
+            720
+          ],
+          "foreground_sand_crop_changed_pixels": 16753
+        },
+        "restored": {
+          "path": "docs/competitor/evidence/material_quality_20261023/layers_v3/restored.png",
+          "bytes": 749453,
+          "sha256": "856de6643d2e8a33a0ac52a3049dc652c247bee2277123b1681d7c55bae50425",
+          "changed_pixels": 0,
+          "mean_abs_channel_8bit": 0.0,
+          "changed_bbox": null,
+          "foreground_sand_crop_changed_pixels": 0
+        },
+        "sand_amount_linear": {
+          "path": "docs/competitor/evidence/material_quality_20261023/layers_v3/sand_amount_linear.png",
+          "bytes": 749128,
+          "sha256": "31930669e43a773f1ae431daf5b58a2a217c62b18059351cfa3cbad72ababeb6",
+          "changed_pixels": 29737,
+          "mean_abs_channel_8bit": 0.058101490162037035,
+          "changed_bbox": [
+            0,
+            258,
+            1250,
+            720
+          ],
+          "foreground_sand_crop_changed_pixels": 16665
+        },
+        "ShoreContactOverlay_hidden": {
+          "path": "docs/competitor/evidence/material_quality_20261023/layers_v3/ShoreContactOverlay_hidden.png",
+          "bytes": 749453,
+          "sha256": "856de6643d2e8a33a0ac52a3049dc652c247bee2277123b1681d7c55bae50425",
+          "changed_pixels": 0,
+          "mean_abs_channel_8bit": 0.0,
+          "changed_bbox": null,
+          "foreground_sand_crop_changed_pixels": 0
+        },
+        "sun_shadow_off": {
+          "path": "docs/competitor/evidence/material_quality_20261023/layers_v3/sun_shadow_off.png",
+          "bytes": 746685,
+          "sha256": "bf1a291aed7874093b87b5560d3e6c7309a63c3e0138f5f0ccc6575d472ea983",
+          "changed_pixels": 5352,
+          "mean_abs_channel_8bit": 0.13371310763888888,
+          "changed_bbox": [
+            219,
+            246,
+            1257,
+            371
+          ],
+          "foreground_sand_crop_changed_pixels": 0
+        },
+        "use_compaction_tint_off": {
+          "path": "docs/competitor/evidence/material_quality_20261023/layers_v3/use_compaction_tint_off.png",
+          "bytes": 750937,
+          "sha256": "4b3c7bd553f51890e8ab3a302ec09298646ebbb222a0db3ebf93d994f82e3ffe",
+          "changed_pixels": 576610,
+          "mean_abs_channel_8bit": 0.555521556712963,
+          "changed_bbox": [
+            0,
+            152,
+            1280,
+            720
+          ],
+          "foreground_sand_crop_changed_pixels": 108452
+        },
+        "use_wet_finish_off": {
+          "path": "docs/competitor/evidence/material_quality_20261023/layers_v3/use_wet_finish_off.png",
+          "bytes": 752795,
+          "sha256": "658c833326140671e2c486769cd12bbb3cebc1636c20c69b3f55ff1d7ad18138",
+          "changed_pixels": 615627,
+          "mean_abs_channel_8bit": 3.2081047453703704,
+          "changed_bbox": [
+            0,
+            152,
+            1280,
+            720
+          ],
+          "foreground_sand_crop_changed_pixels": 108477
+        }
+      },
+      "probe_script": {
+        "path": "docs/competitor/evidence/material_quality_20261023/layers_v3/probe_material_quality.gd",
+        "bytes": 5459,
+        "sha256": "d6b11e89793353ee1ca7b74d86df752f980a75b5fa1bee12ee471a4e0786485d"
+      },
+      "command": [
+        "D:/game/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe",
+        "--path",
+        "D:\\godot\\project\\sandcastle",
+        "--rendering-driver",
+        "d3d12",
+        "--script",
+        "res://docs/competitor/tools/probe_material_quality.gd",
+        "--log-file",
+        "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\material_quality_20261023\\layers_v3\\godot.log",
+        "--",
+        "--output=D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\material_quality_20261023\\layers_v3",
+        "--scene=main",
+        "--ignore-parameter-config",
+        "--layers"
+      ]
+    }
+  },
+  "sources": [
+    {
+      "path": "project.godot",
+      "bytes": 2291,
+      "sha256": "7c59f92820a80f6de25bd832f3aff4131edb71868e04621684ce87fbd5997e08"
+    },
+    {
+      "path": "assets/parameters/catalog.json",
+      "bytes": 31279,
+      "sha256": "c550e30e4ed3380e6b5caf0de97c3400177ceccc8ffea4166b57e28d54790ec9"
+    },
+    {
+      "path": "scripts/parameters/parameter_schema.gd",
+      "bytes": 3183,
+      "sha256": "db40e772107e02b23a505c0c13982f6c434938949581a770815cd09d2fbf4495"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/async_rdc_bed.gdshader",
+      "bytes": 11507,
+      "sha256": "db674d509d26f848e6e203d61e6e1a6a11e53f090b450d92a353c7042081f42f"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/async_rdc_water.gdshader",
+      "bytes": 71029,
+      "sha256": "26a503bd375f88e43f7b1a7fdac1812fd2d7da4ad4217423aa5ae6d398ed0a61"
+    },
+    {
+      "path": "scenes/unified_edit/presentation/main.tscn",
+      "bytes": 15466368,
+      "sha256": "926f1a831ca4fe16bd2ad403fdc4fd04c223db2c4e0b98908b75559155cdc8de"
+    },
+    {
+      "path": "scenes/unified_edit/presentation/test1_geometry.tscn",
+      "bytes": 120443,
+      "sha256": "a2fa48761c669326d5c432e31ccf5a368d558d7c32fdd8e473f41499cd673cb0"
+    },
+    {
+      "path": "docs/competitor/tools/probe_material_quality.gd",
+      "bytes": 5459,
+      "sha256": "d6b11e89793353ee1ca7b74d86df752f980a75b5fa1bee12ee471a4e0786485d"
+    },
+    {
+      "path": "docs/competitor/tools/export_material_quality.py",
+      "bytes": 7417,
+      "sha256": "438b139fd89821dbd457a6ac01787d95464d63246f22344af8d0f8c6daef47d0"
+    },
+    {
+      "path": "docs/competitor/tools/analyze_material_quality.py",
+      "bytes": 5307,
+      "sha256": "3dd208d6c037873f3647cb0493bce3de0f9b187e82c9576bfa8bbd32d945f1db"
+    }
+  ],
+  "comparison": {
+    "path": "docs/competitor/evidence/material_quality_20261023/sand_comparison.png",
+    "bytes": 273614,
+    "sha256": "99e4b27c4ea97bbdd3f58738f010799f7a77388a50dcd747059f803565ac2a3e",
+    "crop": [
+      430,
+      490,
+      930,
+      710
+    ],
+    "columns": [
+      [
+        "当前默认",
+        "main_v2/baseline.png"
+      ],
+      [
+        "仅沙粒密度 30 → 70",
+        "main_v2/sand_density_70.png"
+      ],
+      [
+        "仅沙量着色采样改线性",
+        "layers_v3/sand_amount_linear.png"
+      ]
+    ],
+    "note": "No resizing or color correction; these are independent changes, not a combined candidate."
+  },
+  "rdc": {
+    "manifest": {
+      "path": "docs/competitor/evidence/material_quality_20261023/rdc/manifest.json",
+      "bytes": 360528,
+      "sha256": "9fe7eddab9fe8479e096fb427306734bf48e91ec0af96cb9c853db6c93e9ebac"
+    },
+    "source": {
+      "path": "D:\\godot\\project\\sandcastle\\rdc\\test1.rdc",
+      "bytes": 225224034,
+      "sha256": "761aa980c2426f75a1fa7364bf6d2655ff4dd20ea76566e630ee5b53ea0ec5b2"
+    },
+    "pass_as_recorded": true,
+    "exports_verified": true
+  },
+  "archive": {
+    "path": "docs/competitor/evidence/material_quality_20261023/inspected_sources.zip",
+    "bytes": 3745866,
+    "sha256": "c5a944475e490ef68ffe56149309662db5d9c2f74aa951cd29557f3580f3ab71"
+  }
+}

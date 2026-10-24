@@ -1,0 +1,71 @@
+{
+  "test1_geometry": {
+    "roi": [
+      800,
+      390,
+      170,
+      100
+    ],
+    "screen_world_x": [
+      -30.280762,
+      -7.793274
+    ],
+    "probe_pass": false,
+    "fixtures": {
+      "positive": {
+        "frames": 81,
+        "time_s": [
+          0.0,
+          8.0
+        ],
+        "local_motion_0_to_02_s": {
+          "dx": -2,
+          "dy": -1,
+          "mse": 1553.18017578125,
+          "pixels": 1954
+        },
+        "projected_direction_cosine": 0.9776651907289391,
+        "mean_abs_step": 0.0994453295134008,
+        "p95_abs_step": 0.13999371528625487,
+        "boundary_abs_step": {
+          "2.0": 0.14120936393737793,
+          "4.0": 0.14120936393737793,
+          "6.0": 0.14120936393737793
+        },
+        "boundary_to_p95_ratio": {
+          "2.0": 1.0086835944644896,
+          "4.0": 1.0086835944644896,
+          "6.0": 1.0086835944644896
+        },
+        "note": "Motion is local integer-pixel matching on grayscale water mask; phase blending need not preserve every individual bubble."
+      },
+      "negative": {
+        "frames": 81,
+        "time_s": [
+          0.0,
+          8.0
+        ],
+        "local_motion_0_to_02_s": {
+          "dx": 2,
+          "dy": 1,
+          "mse": 1563.0755615234375,
+          "pixels": 2016
+        },
+        "projected_direction_cosine": 0.9776651907289391,
+        "mean_abs_step": 0.09966772226616741,
+        "p95_abs_step": 0.14005455151200294,
+        "boundary_abs_step": {
+          "2.0": 0.14120960235595703,
+          "4.0": 0.14120952785015106,
+          "6.0": 0.14120936393737793
+        },
+        "boundary_to_p95_ratio": {
+          "2.0": 1.0082471496390826,
+          "4.0": 1.008246617662041,
+          "6.0": 1.0082454473125497
+        },
+        "note": "Motion is local integer-pixel matching on grayscale water mask; phase blending need not preserve every individual bubble."
+      }
+    }
+  }
+}

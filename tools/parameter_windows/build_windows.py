@@ -96,6 +96,12 @@ for name,label in [("bottle","水瓶"),("wood_plank","木板"),("wood_stick","�
         ("drag_time_vertical_s","垂直阻力时间 s",.001,5,.01)]:
         add(name+"_"+field,"props",label+title,0,lo,hi,step,"restart","prop",body=name,field=field)
 
+for field,label,default,lo,hi,step in [
+    ("foam_detail_scale_per_m","泡沫纹样密度",1.0,0.5,12.0,0.1),
+    ("foam_hole_strength","泡沫破碎程度",1.0,0.0,1.0,0.05),
+    ("foam_flow_cycle_s","泡沫流动周期",4.0,0.5,8.0,0.5)]:
+    add("visual_"+field,"water",label,default,lo,hi,step,target="uniform",node="GpuWaterSurface",field=field)
+
 def quote(value):
     return json.dumps(value,ensure_ascii=False)
 

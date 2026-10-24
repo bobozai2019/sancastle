@@ -23,7 +23,7 @@
 python tools/unified_edit_pipeline/audit_architecture.py --policy tools/unified_edit_pipeline/architecture_policy.json --output test_output/unified_edit_pipeline/architecture_fresh
 ```
 
-检查器从四正式场景、场景服务和扩展catalog建立保守资源引用闭包，跟踪继承、preload/路径、场景/资源绑定。当前配置的执行文件、恢复工厂、动态注册和敏感方法按已审阅身份封存；任何未审阅执行资源、方法改变、工具特例、私有写点或绑定替换都须失败并重新审阅。不要用重新生成hash来替代语义核对和相关Gate回归。
+检查器从两个正式场景、场景服务和扩展catalog建立保守资源引用闭包，跟踪继承、preload/路径、场景/资源绑定。当前配置的执行文件、恢复工厂、动态注册和敏感方法按已审阅身份封存；任何未审阅执行资源、方法改变、工具特例、私有写点或绑定替换都须失败并重新审阅。不要用重新生成hash来替代语义核对和相关Gate回归。
 
 闭包包含来源清单和历史脚本中仅供取证的路径，因此它是引用上界，并不声称旧类都在执行。旧Recovery/codec仅按当前统一导入方的静态数据验证入口使用；GodotIQ为已有共享调试器autoload，列为开发工具边界。公共GPU dispatch、多阶段水响应、模拟tick、显示状态、只读表现/碰撞复制及完成后的worker回收都有明确owner和理由。`height.physics_consume`仅在is_task_completed后回收任务；执行工作槽不等待碰撞版本收敛。
 

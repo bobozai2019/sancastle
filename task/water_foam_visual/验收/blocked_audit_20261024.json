@@ -1,0 +1,41 @@
+{
+  "created_utc": "2026-10-24T00:11:11.346919+00:00",
+  "audit_outcome": "blocked_threshold_met",
+  "goal_status_requested": "blocked",
+  "objective": "/D:/godot/project/sandcastle/task/water_foam_visual/总纲.md",
+  "overall_complete": false,
+  "previous_goal_turn_classification": "progress: latest UI237, single-factor1003, exact original shader499 and archives",
+  "this_goal_turn_classification": "no progress: authoritative current-state revalidation only; no newly authorized repair",
+  "consecutive_goal_turns_same_condition": 3,
+  "previous_audit_sha256": "350cf11a0a7701b9263cdf07bbcb4d7664ae0eff5d4190854cd25b1951a3b278",
+  "condition": "Failed strict authority replay and performance Gates require a human delivery/scope/budget decision; no such answer has arrived. Automated goal continuation is not a scope waiver.",
+  "revalidated": {
+    "runtime_sources_checked": 412,
+    "source_drift": [],
+    "delivery_hash_mismatch": [],
+    "live_test_processes": 0,
+    "editor_pid_untouched": 7164,
+    "ui_five_switch_checks": 237,
+    "ui_five_switch_pass": true,
+    "exact_original_AA_pass": false,
+    "original_to_formal_AB_pass": false,
+    "cost20_complete": true,
+    "cost_pass": false
+  },
+  "constraints": {
+    "authority_read_only": "Master plan scope and C01/C04",
+    "optimization_used_s": 1664.7103316999855,
+    "optimization_remaining_s": 135.28966830001445,
+    "optimization_running": false,
+    "minimum_full_ABBA_warmup_sampling_s": 1280,
+    "bound_note": "Two scenes x two sizes x four runs x paused/live x (10s warmup+30s sample), excluding startup and extra A/A. Post-optimization candidate validation counts toward the optimization budget.",
+    "no_tolerance_widening": true
+  },
+  "choices_pending": [
+    "Keep the visual result and explicitly accept failed items as outstanding",
+    "Restore formal baseline and retain visual candidate",
+    "Expand numerical investigation/repair scope and separately define performance optimization budget"
+  ],
+  "human_waiver": false,
+  "next_action": "Wait for explicit user choice or an external-state change; do not launch new probes merely to restate failures."
+}

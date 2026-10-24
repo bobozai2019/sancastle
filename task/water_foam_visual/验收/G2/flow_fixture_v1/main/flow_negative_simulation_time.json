@@ -1,0 +1,26 @@
+{
+  "command": [
+    "C:\\Users\\18205\\Documents\\Codex\\2026-10-24\\go\\work\\foam_video_deps\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+    "-y",
+    "-framerate",
+    "10",
+    "-i",
+    "D:\\godot\\project\\sandcastle\\task\\water_foam_visual\\\u9a8c\u6536\\G2\\flow_fixture_v1\\main\\flow_negative_%03d.png",
+    "-frames:v",
+    "81",
+    "-c:v",
+    "libx264",
+    "-crf",
+    "18",
+    "-pix_fmt",
+    "yuv420p",
+    "D:\\godot\\project\\sandcastle\\task\\water_foam_visual\\\u9a8c\u6536\\G2\\flow_fixture_v1\\main\\flow_negative_simulation_time.mp4"
+  ],
+  "frames": 81,
+  "fps": 10,
+  "source_time_s": [
+    0,
+    8
+  ],
+  "note": "Material diagnostic sequence on simulation-time axis; not real-time performance footage"
+}

@@ -1,0 +1,78 @@
+{
+	"pass": true,
+	"report": {
+		"checks": [
+			{
+				"name": "initialize",
+				"pass": true
+			},
+			{
+				"name": "saturated_queue_drops",
+				"pass": true
+			},
+			{
+				"name": "sample_admitted",
+				"pass": true
+			},
+			{
+				"name": "one_outstanding_readback",
+				"pass": true
+			},
+			{
+				"name": "same_frame_budget_drops",
+				"pass": true
+			},
+			{
+				"name": "close_keeps_inflight_rid",
+				"pass": true
+			},
+			{
+				"name": "close_blocks_new_sample",
+				"pass": true
+			},
+			{
+				"name": "close_delivery_discarded",
+				"pass": true
+			},
+			{
+				"name": "all_staging_rids_released",
+				"pass": true
+			},
+			{
+				"name": "read_failure_fixture",
+				"pass": true
+			},
+			{
+				"name": "short_read_isolated",
+				"pass": true
+			},
+			{
+				"name": "short_read_resources_released",
+				"pass": true
+			}
+		],
+		"observer": {
+			"dropped": {
+				"budget": 1,
+				"capacity": 0,
+				"closed": 1,
+				"copy": 0,
+				"markers": 0,
+				"queue": 1,
+				"readback": 0,
+				"registration": 0
+			},
+			"max_extra_marks_per_frame": 64,
+			"max_samples": 1024,
+			"pending": 0,
+			"queue_capacity": 4,
+			"recorded_ticks": 3,
+			"sample_attempts": 3,
+			"samples": [],
+			"snapshot_bytes": 2240,
+			"staging_bytes": 8960,
+			"stride": 1
+		},
+		"scope": "Developer diagnostic ownership/queue/budget/short-read/close; no numerical performance claim"
+	}
+}

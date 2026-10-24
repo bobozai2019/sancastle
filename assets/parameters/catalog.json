@@ -1550,5 +1550,47 @@
     "kind": "number",
     "body": "wood_stick",
     "field": "drag_time_vertical_s"
+  },
+  {
+    "id": "visual_foam_detail_scale_per_m",
+    "group": "water",
+    "label": "泡沫纹样密度",
+    "default": 1.0,
+    "min": 0.5,
+    "max": 12.0,
+    "step": 0.1,
+    "mode": "live",
+    "target": "uniform",
+    "kind": "number",
+    "node": "GpuWaterSurface",
+    "field": "foam_detail_scale_per_m"
+  },
+  {
+    "id": "visual_foam_hole_strength",
+    "group": "water",
+    "label": "泡沫破碎程度",
+    "default": 1.0,
+    "min": 0.0,
+    "max": 1.0,
+    "step": 0.05,
+    "mode": "live",
+    "target": "uniform",
+    "kind": "number",
+    "node": "GpuWaterSurface",
+    "field": "foam_hole_strength"
+  },
+  {
+    "id": "visual_foam_flow_cycle_s",
+    "group": "water",
+    "label": "泡沫流动周期",
+    "default": 4.0,
+    "min": 0.5,
+    "max": 8.0,
+    "step": 0.5,
+    "mode": "live",
+    "target": "uniform",
+    "kind": "number",
+    "node": "GpuWaterSurface",
+    "field": "foam_flow_cycle_s"
   }
 ]

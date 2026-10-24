@@ -1,0 +1,165 @@
+{
+  "schema": "foam_visual_plan_sources_v1",
+  "date": "2026-10-24",
+  "timezone": "Asia/Shanghai",
+  "role": "planning_source_snapshot",
+  "implementation_started": false,
+  "note": "Planning-time identities only. T00 must recapture the current effective runtime baseline; earlier task results do not count toward this plan.",
+  "sources": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 10094,
+      "sha256": "8492dd1b27fe812c544f881726c11f5ba52fa167d36c8b2085f0c7f9722467b8"
+    },
+    {
+      "path": ".codex/skills/myplan/SKILL.md",
+      "bytes": 3010,
+      "sha256": "37e5bee35e55cd1a69ea15ff253975ad8ebf715013df2401d1118fbb96e0280d"
+    },
+    {
+      "path": ".codex/skills/myplan/references/execution-plan-template.md",
+      "bytes": 13072,
+      "sha256": "9690d06caad828c6d5d787fac54db8ab90b6ab081fe24c4f79c1f9bb66877d2e"
+    },
+    {
+      "path": "docs/README.md",
+      "bytes": 3028,
+      "sha256": "0ec805839122d304a35177a44a889fd08880e59036bb3666325e5d5825efc893"
+    },
+    {
+      "path": "docs/当前项目技术方案.md",
+      "bytes": 18142,
+      "sha256": "553a538eee8624c036488be591dcc3cb4a306f7d8a77d3f3d3a441a821410a6f"
+    },
+    {
+      "path": "docs/当前技术规格.md",
+      "bytes": 28152,
+      "sha256": "23aa36eee2064c1723d1c12f7876a8dd69f9a7b836bd8f3b9bcd3010a181350b"
+    },
+    {
+      "path": "docs/参数窗口.md",
+      "bytes": 6162,
+      "sha256": "8efed2dbf51a9babe8772030c4d2d9f51f337c0f39164c1980d592d7a1568664"
+    },
+    {
+      "path": "docs/knowledge/README.md",
+      "bytes": 3011,
+      "sha256": "b582dcf3801544f56ef74ac6068851762fa4851a8e5263280f89bfb7c22ad8e7"
+    },
+    {
+      "path": "docs/competitor/公开泡沫方案与性能取舍.md",
+      "bytes": 9259,
+      "sha256": "4e0fe58db3e60bd41d578e54314f8c4b1d7fce7ee0c1b015d08dbeff51e47329"
+    },
+    {
+      "path": "docs/competitor/泡沫与当前项目对照.md",
+      "bytes": 12017,
+      "sha256": "7d2bfba3cc67aff883f5da66cd0ad5e8329f53c87e642f6b8e8fbd86cafb012a"
+    },
+    {
+      "path": ".shared/knowledge/godot/export.md",
+      "bytes": 8558,
+      "sha256": "9c303b81ec9cf6721bcf91d3d0d11a6e8991c7724231565ce2169f26f30d95fe"
+    },
+    {
+      "path": "shaders/simulation/visual_foam_step.glsl",
+      "bytes": 4040,
+      "sha256": "19d7bec7f157791f75e0b4a63bd04c7ae8dc06eb82e016f1ea96ae8174e6edb0"
+    },
+    {
+      "path": "scripts/simulation/unified_edit/visuals.gd",
+      "bytes": 15623,
+      "sha256": "ed42b02cf5a0e6b65fb1bdb4121722637ae821e0615e52e624292729d8431738"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/async_rdc_water.gdshader",
+      "bytes": 71029,
+      "sha256": "26a503bd375f88e43f7b1a7fdac1812fd2d7da4ad4217423aa5ae6d398ed0a61"
+    },
+    {
+      "path": "assets/water_material_natural_candidate/contact_shape.gdshader",
+      "bytes": 15681,
+      "sha256": "df877260fd31aae4785dc937cc23c7d24e742ed7d16895f612ebb6e600e9fba8"
+    },
+    {
+      "path": "scenes/unified_edit/presentation/main.tscn",
+      "bytes": 15466385,
+      "sha256": "fc5a76877d5f9a5b60341791e3c07a032c216974e94fb1b59bed7b566fd62bed"
+    },
+    {
+      "path": "scenes/unified_edit/presentation/test1_geometry.tscn",
+      "bytes": 120460,
+      "sha256": "286c16c3fa6053038cf55ea7bd3f8cac94043ca2b4a162685add13e039e6b651"
+    },
+    {
+      "path": "assets/unified_edit/presentation/main.json",
+      "bytes": 152631,
+      "sha256": "70570935bad3d583b0a8e087756946b0123821b43c34b5dbb7e3ca910d9efcbd"
+    },
+    {
+      "path": "assets/unified_edit/presentation/test1_geometry.json",
+      "bytes": 154391,
+      "sha256": "5df553938772803bcf41e1d6c8f5a9902bd2bdbc9caa2f372d051f5d0042fae7"
+    },
+    {
+      "path": "assets/parameters/catalog.json",
+      "bytes": 31279,
+      "sha256": "c550e30e4ed3380e6b5caf0de97c3400177ceccc8ffea4166b57e28d54790ec9"
+    },
+    {
+      "path": "scripts/parameters/parameter_service.gd",
+      "bytes": 20994,
+      "sha256": "371c3b1a12bbfc6b08632d37cd9210f51ba1f8ef66b61f72484afecda85a2d7b"
+    },
+    {
+      "path": "scripts/parameters/parameter_schema.gd",
+      "bytes": 3183,
+      "sha256": "db40e772107e02b23a505c0c13982f6c434938949581a770815cd09d2fbf4495"
+    },
+    {
+      "path": "scripts/beach/unified_playable_entry.gd",
+      "bytes": 32844,
+      "sha256": "3141e87aeccaedacd0b5022f63e494f951507d5eeaffb6d3dbbf9f81c86a4b0f"
+    },
+    {
+      "path": "scripts/simulation/unified_edit/configuration.gd",
+      "bytes": 13681,
+      "sha256": "51eeaeb3163a58fd2256984d469c49c336962bc370aabba27b24fd5d250c5258"
+    },
+    {
+      "path": "docs/competitor/tools/probe_foam_comparison.gd",
+      "bytes": 3318,
+      "sha256": "96e37b2fd0ba3e5d92ea8321af01f92476de8eabb48371304d0cf7a402eb901e"
+    },
+    {
+      "path": "docs/competitor/tools/probe_material_quality.gd",
+      "bytes": 5459,
+      "sha256": "d6b11e89793353ee1ca7b74d86df752f980a75b5fa1bee12ee471a4e0786485d"
+    },
+    {
+      "path": "tests/integration/unified_edit_playable_probe.gd",
+      "bytes": 7359,
+      "sha256": "c4812125737649d20244ac4e843d0298dd21185f237abe18b5f9dadb2098d876"
+    },
+    {
+      "path": "tools/parameter_windows/scene_profile.gd",
+      "bytes": 5645,
+      "sha256": "5c39ee3e73359794e3b7c471fd6cc8f020348d68e836f7391852c0a99c5debaf"
+    },
+    {
+      "path": "tools/parameter_windows/idle_profile.gd",
+      "bytes": 4436,
+      "sha256": "670f52d69a5bafc405dab560d622c136db0241c9e5f802be3552a3cb4819810f"
+    },
+    {
+      "path": "tools/validate_main_presentation_hash.py",
+      "bytes": 3283,
+      "sha256": "7a4b217a29c523d4e8b8a52cd55341918e3bcafbe3217601864782859badec7b"
+    },
+    {
+      "path": "tools/validate_export.py",
+      "bytes": 3461,
+      "sha256": "72c6e6348fa71317482f7976de7fc1087e993e94d61c2747e7fe72ae9186144f"
+    }
+  ]
+}

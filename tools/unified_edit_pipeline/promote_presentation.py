@@ -20,7 +20,7 @@ def main():
     report = json.loads((evidence / "report.json").read_text("utf-8"))
     audit = json.loads((evidence / "audit.json").read_text("utf-8"))
     assert report["pass"] and audit["pass"]
-    for key in ["main", "test1_capture", "test1_backwash", "test1_geometry"]:
+    for key in ["main", "test1_geometry"]:
         raw = evidence / (key + "_bake") / "bake.json"
         manifest = json.loads(raw.read_text("utf-8"))
         data = manifest["metadata"]

@@ -1,0 +1,21 @@
+{
+	"checks": [
+		{
+			"name": "formal_entry_ready",
+			"pass": false
+		},
+		{
+			"name": "entry_released",
+			"pass": true
+		},
+		{
+			"name": "no_orphan_nodes",
+			"pass": true
+		}
+	],
+	"observations": {
+		"error": "water_side_stale_geometry:bed"
+	},
+	"pass": false,
+	"scope": "Unified playable entry; executed checks and consumed sources define family and coverage. No performance acceptance is implied."
+}

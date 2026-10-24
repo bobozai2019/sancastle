@@ -1,0 +1,47 @@
+{
+  "scope": "Seven analysis inputs, not a complete runnable project snapshot. Full runtime identities are in attempts.json configuration.sources.",
+  "files": [
+    {
+      "source": "scripts/simulation/unified_edit/water_muscl.gd",
+      "snapshot": "sources/scripts/simulation/unified_edit/water_muscl.gd",
+      "bytes": 9516,
+      "sha256": "1c924c4384a6a5726f4d58337a89af1796ddbadedd01ac28736e1bf97bf08adf"
+    },
+    {
+      "source": "scripts/simulation/unified_edit/coupled.gd",
+      "snapshot": "sources/scripts/simulation/unified_edit/coupled.gd",
+      "bytes": 9691,
+      "sha256": "39a016a6e3bcac204192161ccaf5c0e253d167c6257615e51a50f49a71743bb7"
+    },
+    {
+      "source": "shaders/simulation/muscl/rk_decide.glsl",
+      "snapshot": "sources/shaders/simulation/muscl/rk_decide.glsl",
+      "bytes": 4676,
+      "sha256": "f6f651534ee8e78d531c713bb4979b890c0137d368a7859027c3bf24b0979849"
+    },
+    {
+      "source": "shaders/simulation/muscl/rk_edge.glsl",
+      "snapshot": "sources/shaders/simulation/muscl/rk_edge.glsl",
+      "bytes": 1039,
+      "sha256": "c8cd8c28cc8b9290e4db83a994c6f71f4eec78287894818f88211ef008df2a69"
+    },
+    {
+      "source": "shaders/simulation/muscl/muscl_spatial.glslinc",
+      "snapshot": "sources/shaders/simulation/muscl/muscl_spatial.glslinc",
+      "bytes": 3391,
+      "sha256": "fa016738dbcde7540c37406fb255ee5955660fcf09b936fca5a3d130edaf4797"
+    },
+    {
+      "source": "shaders/simulation/muscl/rk_normalize.glsl",
+      "snapshot": "sources/shaders/simulation/muscl/rk_normalize.glsl",
+      "bytes": 1488,
+      "sha256": "517ea7d43c1b42b6aa18bff7259d5b7ab0ee11d13e61769242ed4a4fd9d1840e"
+    },
+    {
+      "source": "shaders/simulation/muscl/rk_finalize.glsl",
+      "snapshot": "sources/shaders/simulation/muscl/rk_finalize.glsl",
+      "bytes": 3083,
+      "sha256": "0dbffbbb3cf88ad43761ca6f2b6f155fc360c57aebdc5379298ac69823613ae6"
+    }
+  ]
+}

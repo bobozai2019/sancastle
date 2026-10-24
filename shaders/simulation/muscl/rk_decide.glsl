@@ -25,6 +25,9 @@ void fatal(uint flags){
 }
 void main(){
  uint lane=gl_LocalInvocationID.x;
+ // Uniform across the workgroup; inactive trials have no reduction consumer.
+ // Keep mode 7 input validation and all audit/fatal gates on their original paths.
+ if((p.mode==2u||p.mode==3u)&&(tr[6]==0u||control[1]!=0u))return;
  if(p.mode==2u||p.mode==3u||p.mode==7u){
   float ax=0.0,az=0.0;ivec2 size=imageSize(speed_tiles);
   for(uint j=lane;j<uint(size.x*size.y);j+=64u){vec2 a=imageLoad(speed_tiles,ivec2(j%uint(size.x),j/uint(size.x))).xy;ax=max(ax,a.x);az=max(az,a.y);}

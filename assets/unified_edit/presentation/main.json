@@ -336,8 +336,6 @@
         "res://scenes/gpu_water_preview.tscn": "d9e34df4fd869fba098eb883a8623c52d2960520a59204ec232c4af7f006c251",
         "res://scenes/legacy/sandcastle_test1_beach_coupled_pre_natural.tscn": "0e322de1f462221f10e89ade7d0e887bd57f755065bb32e62034a3c534533570",
         "res://scenes/main.tscn": "5b7b49be7db8f981df14af2d8f9f1799652ca4908d6fb79deb409a786cf99c4b",
-        "res://scenes/playable/test1_backwash.tscn": "c0f5308c933fb6b04447cabc778176d0038c71587b18caaeec8b07106ac59f80",
-        "res://scenes/playable/test1_capture.tscn": "400df22caf0bc0657cd9ac53a075bf30f90d2a2f2ef57fc0ce21abfed9f53921",
         "res://scenes/playable/test1_geometry.tscn": "fa727d2efa1255b2b1a41eb1c63ced303dfdcc16f42efd792b8ab20aa14d5e1c",
         "res://scenes/shape_brushes/brush_playable_candidate.tscn": "bf2ee9665419981446a823ecf968e0303a489c60a465d74d37c608222d1a666a",
         "res://scenes/terrain_preview_mesh.tscn": "29cfba0b5179dd6d4f285fa240478ece983e459d76da8dc362f4e5536c01db33",
@@ -795,7 +793,8 @@
           "rock_state": "rock",
           "sand_state": "sand",
           "water_state": "water",
-          "wetness_state": "wetness"
+          "wetness_state": "wetness",
+          "surface_wetness_state": "surface_wetness"
         },
         "id": 0,
         "parameters": {
@@ -830,7 +829,7 @@
           "visual_time_s": 0.0
         },
         "shader": "res://assets/water_material_natural_candidate/async_rdc_bed.gdshader",
-        "shader_sha256": "db674d509d26f848e6e203d61e6e1a6a11e53f090b450d92a353c7042081f42f"
+        "shader_sha256": "afa82f79322754816c9574c74b0d9dcbc9d75ad45975f69296236b3ca8c9fa31"
       },
       {
         "fields": {
@@ -1009,7 +1008,7 @@
           "wet_epsilon_m": 0.001
         },
         "shader": "res://assets/water_material_natural_candidate/async_rdc_water.gdshader",
-        "shader_sha256": "26a503bd375f88e43f7b1a7fdac1812fd2d7da4ad4217423aa5ae6d398ed0a61"
+        "shader_sha256": "7b8ba4e71577953569b44e15e17e7122cebc950d6796c34676d2bd775b307ed7"
       },
       {
         "fields": {
@@ -1515,11 +1514,11 @@
           "wet_epsilon_m": 0.001
         },
         "shader": "res://assets/water_sides/water_sides.gdshader",
-        "shader_sha256": "d69f77b8bd03a78461fb29ff5fd8084e1fc68b43b30ac9c0319a9b6dee757462"
+        "shader_sha256": "0091b72293ee8aeb9ca81daa3f678b4c4ae2a07f0c00c3cfbc326e44d485bbf2"
       },
       {
         "shader": "res://shaders/visual/vegetation.gdshader",
-        "shader_sha256": "802632735aad045b6e21e68c92d0ff9a9d64b09a928710b4e469ad70d11a2310",
+        "shader_sha256": "6666635aaa2c6a1fb642cb206ca8e9efb9a37db028747cbc1400bd46e1cdf99a",
         "fields": {
           "vegetation_roots": "vegetation_roots",
           "vegetation_motion": "vegetation_motion",
@@ -1536,7 +1535,7 @@
       },
       {
         "shader": "res://shaders/visual/vegetation.gdshader",
-        "shader_sha256": "802632735aad045b6e21e68c92d0ff9a9d64b09a928710b4e469ad70d11a2310",
+        "shader_sha256": "6666635aaa2c6a1fb642cb206ca8e9efb9a37db028747cbc1400bd46e1cdf99a",
         "fields": {
           "vegetation_roots": "vegetation_roots",
           "vegetation_motion": "vegetation_motion",
@@ -1553,7 +1552,7 @@
       },
       {
         "shader": "res://shaders/visual/vegetation.gdshader",
-        "shader_sha256": "802632735aad045b6e21e68c92d0ff9a9d64b09a928710b4e469ad70d11a2310",
+        "shader_sha256": "6666635aaa2c6a1fb642cb206ca8e9efb9a37db028747cbc1400bd46e1cdf99a",
         "fields": {
           "vegetation_roots": "vegetation_roots",
           "vegetation_motion": "vegetation_motion",
@@ -1570,7 +1569,7 @@
       },
       {
         "shader": "res://shaders/visual/vegetation.gdshader",
-        "shader_sha256": "802632735aad045b6e21e68c92d0ff9a9d64b09a928710b4e469ad70d11a2310",
+        "shader_sha256": "6666635aaa2c6a1fb642cb206ca8e9efb9a37db028747cbc1400bd46e1cdf99a",
         "fields": {
           "vegetation_roots": "vegetation_roots",
           "vegetation_motion": "vegetation_motion",
@@ -1587,7 +1586,7 @@
       },
       {
         "shader": "res://shaders/visual/vegetation.gdshader",
-        "shader_sha256": "802632735aad045b6e21e68c92d0ff9a9d64b09a928710b4e469ad70d11a2310",
+        "shader_sha256": "6666635aaa2c6a1fb642cb206ca8e9efb9a37db028747cbc1400bd46e1cdf99a",
         "fields": {
           "vegetation_roots": "vegetation_roots",
           "vegetation_motion": "vegetation_motion",
@@ -1604,7 +1603,7 @@
       },
       {
         "shader": "res://shaders/visual/vegetation.gdshader",
-        "shader_sha256": "802632735aad045b6e21e68c92d0ff9a9d64b09a928710b4e469ad70d11a2310",
+        "shader_sha256": "6666635aaa2c6a1fb642cb206ca8e9efb9a37db028747cbc1400bd46e1cdf99a",
         "fields": {
           "vegetation_roots": "vegetation_roots",
           "vegetation_motion": "vegetation_motion",
@@ -1621,7 +1620,7 @@
       },
       {
         "shader": "res://shaders/visual/vegetation.gdshader",
-        "shader_sha256": "802632735aad045b6e21e68c92d0ff9a9d64b09a928710b4e469ad70d11a2310",
+        "shader_sha256": "6666635aaa2c6a1fb642cb206ca8e9efb9a37db028747cbc1400bd46e1cdf99a",
         "fields": {
           "vegetation_roots": "vegetation_roots",
           "vegetation_motion": "vegetation_motion",
@@ -1638,7 +1637,7 @@
       },
       {
         "shader": "res://shaders/visual/vegetation.gdshader",
-        "shader_sha256": "802632735aad045b6e21e68c92d0ff9a9d64b09a928710b4e469ad70d11a2310",
+        "shader_sha256": "6666635aaa2c6a1fb642cb206ca8e9efb9a37db028747cbc1400bd46e1cdf99a",
         "fields": {
           "vegetation_roots": "vegetation_roots",
           "vegetation_motion": "vegetation_motion",
@@ -1655,7 +1654,7 @@
       },
       {
         "shader": "res://shaders/visual/vegetation.gdshader",
-        "shader_sha256": "802632735aad045b6e21e68c92d0ff9a9d64b09a928710b4e469ad70d11a2310",
+        "shader_sha256": "6666635aaa2c6a1fb642cb206ca8e9efb9a37db028747cbc1400bd46e1cdf99a",
         "fields": {
           "vegetation_roots": "vegetation_roots",
           "vegetation_motion": "vegetation_motion",
@@ -2699,7 +2698,7 @@
     },
     "scene": {
       "path": "res://scenes/unified_edit/presentation/main.tscn",
-      "sha256": "01ab0b5295dc3467babcc3599c8437efed4fe6c285b07d288ff9ced20a527ea3"
+      "sha256": "f8bc356adc7465ef6c5f90e4c767858583e2c7ce964e0d6904c0d8302e5f379a"
     },
     "seed": {
       "path": "res://assets/unified_edit/presentation/main.variant",

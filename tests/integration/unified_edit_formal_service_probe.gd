@@ -25,11 +25,11 @@ func _run() -> void:
 	var saved_seq: int=scene.runtime.current.completed_state_seq
 	var old=scene
 	service.inject_target_failure_once=true
-	check("formal_failure_switch_admitted",service.request_switch("test1_capture"));await _wait_switch(service);scene=service.active_scene
+	check("formal_failure_switch_admitted",service.request_switch("test1_geometry"));await _wait_switch(service);scene=service.active_scene
 	check("formal_rollback_exact_path",scene.scene_file_path==Routes.FORMAL.main and scene.playable_scene_family()=="formal" and not service.last_error.is_empty())
 	check("formal_rollback_freed_old_root",not is_instance_valid(old))
 	check("formal_rollback_preserves_progress_and_controls",scene.runtime.current.completed_state_seq==saved_seq and scene.selected_sand_tool==&"wall_v1" and scene.hide_hud and scene.player_camera.transform.is_equal_approx(camera));_sources()
-	for key in ["test1_capture","test1_backwash","test1_geometry","main"]:
+	for key in ["test1_geometry","main"]:
 		check("formal_switch_admitted_"+key,service.request_switch(key));await _wait_switch(service);scene=service.active_scene
 		check("formal_exact_target_"+key,scene.scene_key==key and scene.scene_file_path==Routes.FORMAL[key] and scene.playable_scene_family()=="formal" and service.last_error.is_empty())
 		check("formal_no_legacy_root_"+key,scene.get_script().resource_path==service.ENTRY and not "solver" in scene and not "async_pipeline_enabled" in scene)
@@ -37,8 +37,8 @@ func _run() -> void:
 	check("formal_return_main_native_and_camera",scene.runtime.current.completed_state_seq==saved_seq and scene.player_camera.transform.is_equal_approx(camera))
 	var clean:=true
 	for row in service.release_records:clean=clean and row.gpu_released and row.node_freed
-	check("all_formal_roots_released",clean and service.release_records.size()>=5)
-	check("all_four_formal_progress_files_retained",service.saved.size()==4)
+	check("all_formal_roots_released",clean and service.release_records.size()>=3)
+	check("both_formal_progress_files_retained",service.saved.size()==2)
 	for key in service.saved:check("cache_family_"+key,String(key).begins_with("formal:"))
 	observations.saved=service.saved.duplicate(true);observations.release_records=service.release_records.duplicate(true)
 	await _close()
@@ -51,5 +51,5 @@ func _sources() -> void:
 	check("factory_sources_consistent_"+scene.scene_key+"_"+str(scene.generation),consistent)
 
 func finish() -> void:
-	FileAccess.open(output+"/probe.json",FileAccess.WRITE).store_string(JSON.stringify({"pass":not failed,"checks":checks,"observations":observations,"scope":"Formal four-entry routing, family-separated native progress, failed target rollback, controls/camera and unified release; G7 and full final lifecycle/cost remain"},"\t"))
+	FileAccess.open(output+"/probe.json",FileAccess.WRITE).store_string(JSON.stringify({"pass":not failed,"checks":checks,"observations":observations,"scope":"Formal two-entry routing, family-separated native progress, failed target rollback, controls/camera and unified release; G7 and full final lifecycle/cost remain"},"\t"))
 	quit(1 if failed else 0)

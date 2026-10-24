@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[2]
 ENGINE = Path("D:/game/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe")
 SCENES = {"main": "res://scenes/main.tscn", **{
     key: f"res://scenes/playable/{key}.tscn"
-    for key in ("test1_capture", "test1_backwash", "test1_geometry")}}
+    for key in ("test1_geometry")}}
 FATAL = re.compile(r"ERROR:|SCRIPT ERROR:|were leaked|was leaked|Stray Node:|resources still in use|ObjectDB instances were leaked", re.I)
 
 

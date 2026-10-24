@@ -1,0 +1,1608 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/beach/free_camera.gd" id="1_ocv4d"]
+[ext_resource type="Shader" path="res://assets/water_material_natural_candidate/async_rdc_bed.gdshader" id="2_s1kjk"]
+[ext_resource type="Texture2D" path="res://tests/visual_water_alignment/prototypes/caustic_fold_v1.png" id="3_0yrjk"]
+[ext_resource type="ImageTexture3D" path="res://assets/water_material_natural_candidate/rdc_caustic_1105_mipped.res" id="4_vmo2w"]
+[ext_resource type="Texture2D" path="res://assets/water_material_natural_candidate/water_normal_681.png" id="5_a71sy"]
+[ext_resource type="ArrayMesh" path="res://assets/test1_geometry/visible_grid.res" id="6_xr6j3"]
+[ext_resource type="Shader" path="res://assets/water_material_natural_candidate/async_rdc_water.gdshader" id="7_50s5p"]
+[ext_resource type="Script" path="res://scripts/visual/brush_indicator.gd" id="8_gsxt1"]
+[ext_resource type="Theme" path="res://assets/ui/main_explicit_font.tres" id="9_lsrjp"]
+[ext_resource type="Script" path="res://scripts/beach/scene_switch_panel.gd" id="10_bf3fg"]
+[ext_resource type="Script" path="res://scripts/sand/brushes/brush_tool_panel.gd" id="11_7nsx8"]
+[ext_resource type="Shader" path="res://tests/visual_water_alignment/prototypes/reference_crest_continuous_lip.gdshader" id="12_x1p1n"]
+[ext_resource type="ArrayMesh" path="res://tests/visual_water_alignment/prototypes/reference_front_lip_row_mesh.tres" id="13_wetdi"]
+[ext_resource type="ArrayMesh" path="res://tests/visual_water_alignment/prototypes/reference_front_lip_branch_mesh.tres" id="14_c00lr"]
+[ext_resource type="ArrayMesh" path="res://tests/visual_water_alignment/prototypes/reference_front_lip_patch_mesh.tres" id="15_o0smm"]
+[ext_resource type="Shader" path="res://assets/water_material_natural_candidate/foam_distribution.gdshader" id="16_g172i"]
+[ext_resource type="ArrayMesh" path="res://assets/test1_beach/test1_front_foam_sparse_mesh.tres" id="17_6tk4k"]
+[ext_resource type="ArrayMesh" path="res://tests/visual_water_alignment/prototypes/reflection_rock_0.tres" id="18_fw76y"]
+[ext_resource type="ArrayMesh" path="res://tests/visual_water_alignment/prototypes/reflection_rock_1.tres" id="19_eqsw1"]
+[ext_resource type="ArrayMesh" path="res://tests/visual_water_alignment/prototypes/reflection_rock_2.tres" id="20_rmsul"]
+[ext_resource type="Shader" path="res://assets/water_material_natural_candidate/contact_shape.gdshader" id="21_l13h7"]
+[ext_resource type="Script" path="res://scripts/sand/brushes/brush_preview_view.gd" id="22_syvyf"]
+[ext_resource type="Shader" path="res://shaders/brushes/castle_preview.gdshader" id="23_tyqta"]
+[ext_resource type="Texture2D" path="res://assets/brushes/castle/four_towers_preview.tres" id="24_q7vo3"]
+[ext_resource type="Shader" path="res://shaders/brushes/footprint_preview.gdshader" id="25_1hxje"]
+[ext_resource type="Shader" path="res://shaders/visual/gpu_gravel.gdshader" id="26_nwv3r"]
+[ext_resource type="SphereMesh" path="res://assets/gravel/stone_mesh.tres" id="27_ca336"]
+[ext_resource type="Script" path="res://scripts/beach/ui_visibility.gd" id="28_1vu7a"]
+[ext_resource type="Script" path="res://scripts/beach/ui_drag.gd" id="29_vwqbr"]
+[ext_resource type="Shader" path="res://shaders/visual/suspended_sand_cloud.gdshader" id="30_gcame"]
+[ext_resource type="Shader" path="res://assets/water_sides/water_sides.gdshader" id="31_vwouh"]
+[ext_resource type="ArrayMesh" path="res://assets/water_sides/test1_boundary.res" id="32_yisjo"]
+[ext_resource type="Script" path="res://scripts/visual/water_boundary_sides.gd" id="33_rbobw"]
+[ext_resource type="Shader" path="res://assets/test1_geometry/sand_sides.gdshader" id="34_06x7e"]
+[ext_resource type="ArrayMesh" path="res://assets/test1_geometry/sand_sides.res" id="35_c00ro"]
+[ext_resource type="Script" path="res://scripts/simulation/unified_edit/domain_runtime.gd" id="36_kilie"]
+[ext_resource type="Script" path="res://scripts/simulation/unified_edit/height_surface.gd" id="37_xy87y"]
+
+[ext_resource type="PackedScene" path="res://scenes/components/vegetation_layer.tscn" id="vegetation_layer"]
+
+[ext_resource type="Texture2D" path="res://assets/water_foam/foam_detail.png" id="water_foam_detail"]
+
+[sub_resource type="Environment" id="Environment_j7kgc"]
+resource_local_to_scene = true
+background_mode = 1
+background_color = Color(0.73, 0.86, 0.93, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.93, 0.91, 0.84, 1)
+ambient_light_energy = 0.65
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e4n6i"]
+render_priority = 0
+shader = ExtResource("2_s1kjk")
+shader_parameter/use_surface_wetness = true
+shader_parameter/natural_caustic_override = true
+shader_parameter/natural_caustic_enabled = true
+shader_parameter/natural_caustic_strength = 0.8
+shader_parameter/natural_caustic_softness = 0.5
+shader_parameter/natural_caustic_uv_scale = 3.0
+shader_parameter/display_reconstruction = true
+shader_parameter/phase2_caustics = true
+shader_parameter/prototype_caustic_strength = 0.8
+shader_parameter/prototype_caustic_depth_decay_m = 0.17
+shader_parameter/prototype_caustic_uv_scale = 2.0
+shader_parameter/prototype_caustic_softness = 1.0
+shader_parameter/prototype_texture_caustics = true
+shader_parameter/caustic_pattern = ExtResource("3_0yrjk")
+shader_parameter/visual_time_s = 0.0
+shader_parameter/use_async_clock = true
+shader_parameter/use_grain = true
+shader_parameter/use_grain_normal = true
+shader_parameter/use_wet_finish = true
+shader_parameter/prototype_wet_trace_gain = 0.0
+shader_parameter/use_compaction_tint = true
+shader_parameter/debug_mode = 0
+shader_parameter/grid_size = 256.0
+shader_parameter/domain_size_m = 32.0
+shader_parameter/rdc_caustics_enabled = true
+shader_parameter/rdc_caustic_volume = ExtResource("4_vmo2w")
+shader_parameter/rdc_phase_texture = ExtResource("5_a71sy")
+shader_parameter/rdc_caustic_scale = 0.25
+shader_parameter/rdc_caustic_depth_decay = 1.2
+shader_parameter/rdc_caustic_time_scale = 1.0
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_m51v3"]
+viewport_path = NodePath("ReflectionViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_wvwp2"]
+viewport_path = NodePath("ReflectionViewport")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1dsaq"]
+render_priority = 0
+shader = ExtResource("7_50s5p")
+shader_parameter/natural_reflection_protected = true
+shader_parameter/natural_reflection_perturbation = true
+shader_parameter/natural_reflection_gain = 1.0
+shader_parameter/natural_planar_reflection_srgb = SubResource("ViewportTexture_m51v3")
+shader_parameter/natural_reflection_srgb = true
+shader_parameter/natural_reflection_flip_y = true
+shader_parameter/natural_reflection_sky_linear = Vector3(0.49190503, 0.7105665, 0.84808826)
+shader_parameter/natural_reflection_shift_m = 0.25
+shader_parameter/natural_reflection_uv_limit = 0.03
+shader_parameter/natural_reflection_edge_margin_px = 2.0
+shader_parameter/natural_reflection_edge_fade_px = 8.0
+shader_parameter/natural_reflection_debug = 0
+shader_parameter/natural_main_foam_gain = 1.0
+shader_parameter/prototype_planar_reflection = SubResource("ViewportTexture_wvwp2")
+shader_parameter/wet_epsilon_m = 0.001
+shader_parameter/water_surface_bias_m = 0.003
+shader_parameter/debug_mode = 0
+shader_parameter/extinction_depth_m = 0.09
+shader_parameter/shallow_tint = Vector3(0.36, 0.71, 0.76)
+shader_parameter/deep_tint = Vector3(0.045, 0.24, 0.5)
+shader_parameter/foam_tint = Vector3(0.93, 0.96, 0.97)
+shader_parameter/foam_speed_m_s = 0.85
+shader_parameter/foam_depth_m = 0.05
+shader_parameter/foam_strength = 0.55
+shader_parameter/test1_whitewater_gain = 0.32
+shader_parameter/ripple_frequency = 150.0
+shader_parameter/ripple_speed = 2.6
+shader_parameter/ripple_strength = 0.045
+shader_parameter/visual_time_s = 0.0
+shader_parameter/use_async_clock = true
+shader_parameter/phase2_optics = true
+shader_parameter/phase2_foam = true
+shader_parameter/display_reconstruction = true
+shader_parameter/radial_shore = false
+shader_parameter/prototype_shore_unscaled_depth = false
+shader_parameter/prototype_shore_linear_weights = false
+shader_parameter/shoreline_debug = false
+shader_parameter/prototype_contact_alpha_debug = false
+shader_parameter/prototype_shore_source_debug = false
+shader_parameter/prototype_contact_foam_source_debug = false
+shader_parameter/prototype_contact_foam_candidate = false
+shader_parameter/prototype_contact_front_gate = false
+shader_parameter/prototype_contact_wide_band = false
+shader_parameter/prototype_contact_relaxed_front_gate = false
+shader_parameter/prototype_contact_history_gate = false
+shader_parameter/prototype_contact_foam_spread = false
+shader_parameter/prototype_contact_scene_gap_gate = false
+shader_parameter/prototype_contact_independent_history_gate = false
+shader_parameter/prototype_contact_depth_debug = false
+shader_parameter/prototype_contact_height_debug = false
+shader_parameter/prototype_vertex_fragment_delta_debug = false
+shader_parameter/prototype_visible_bed_height_debug = false
+shader_parameter/prototype_contact_residual_debug = false
+shader_parameter/prototype_render_grid_size = 512.0
+shader_parameter/midpoint_clip = false
+shader_parameter/use_detail_normals = true
+shader_parameter/natural_normal_mode = 1
+shader_parameter/natural_normal_texture = ExtResource("5_a71sy")
+shader_parameter/natural_layer0 = Vector4(0.18, 0.035, 0.06, 0)
+shader_parameter/natural_layer1 = Vector4(0.47, -0.022, 0.025, 0)
+shader_parameter/natural_direction0 = Vector2(1, 0)
+shader_parameter/natural_direction1 = Vector2(0.6, 0.8)
+shader_parameter/natural_normal_debug = 0
+shader_parameter/use_specular = true
+shader_parameter/use_caustics = true
+shader_parameter/prototype_eta_normals = true
+shader_parameter/prototype_eta_normal_debug = false
+shader_parameter/prototype_eta_normal_space_debug = false
+shader_parameter/prototype_eta_light_space_debug = false
+shader_parameter/prototype_light_direction_world = Vector3(-0.3531289, 0.78801066, -0.5043204)
+shader_parameter/prototype_screen_optics = true
+shader_parameter/prototype_screen_world_glint = false
+shader_parameter/natural_glint_enabled = true
+shader_parameter/natural_glint_gain = 1.0
+shader_parameter/natural_glint_exponent = 1500.0
+shader_parameter/natural_scatter_direct_fraction = 0.45
+shader_parameter/natural_foam_direct_fraction = 0.5
+shader_parameter/natural_lighting_debug = 0
+shader_parameter/prototype_screen_sky_gradient = false
+shader_parameter/prototype_optical_shallow_preserve = true
+shader_parameter/prototype_screen_deep_scatter_scale = 1.0
+shader_parameter/prototype_screen_sky_reflection_scale = 1.0
+shader_parameter/prototype_screen_fresnel_debug = false
+shader_parameter/prototype_screen_abs_fresnel = true
+shader_parameter/prototype_screen_face_normal = true
+shader_parameter/prototype_screen_scene_reflection = false
+shader_parameter/prototype_screen_reflection_debug = false
+shader_parameter/prototype_screen_bed_only = false
+shader_parameter/prototype_shallow_extinction_m = 0.25
+shader_parameter/prototype_planar_reflection_enabled = true
+shader_parameter/prototype_planar_reflection_debug = false
+shader_parameter/prototype_planar_reflection_projected = true
+shader_parameter/prototype_planar_reflection_softness_px = 0.0
+shader_parameter/prototype_planar_view_projection = Projection(1.9726759, 0.9025793, 0.24185106, 0.24184501, 2.189718e-07, -2.6389573, 0.7071249, 0.7071072, -0.7179968, 2.4798105, 0.6644792, 0.66446257, -2.4024335e-05, 0.00010677482, 41.35275, 41.451714)
+shader_parameter/prototype_depth_bands = false
+shader_parameter/prototype_depth_gray_debug = false
+shader_parameter/prototype_depth_layers_debug = false
+shader_parameter/prototype_refraction_scale = 0.02
+shader_parameter/prototype_depth_guard = true
+shader_parameter/prototype_legacy_edge_clamp = false
+shader_parameter/prototype_refraction_fallback_debug = false
+shader_parameter/prototype_crest_height_m = 0.25
+shader_parameter/prototype_local_back_cells = 7.5
+shader_parameter/prototype_local_face_cells = 1.8
+shader_parameter/prototype_local_lift_depth_scale = 1.5
+shader_parameter/prototype_crest_shore_depth_m = 0.0
+shader_parameter/prototype_curl_forward_m = 0.0
+shader_parameter/prototype_local_overturn_m = 0.0
+shader_parameter/prototype_crest_white_face = false
+shader_parameter/prototype_crest_span_smoothing = false
+shader_parameter/prototype_crest_depth_gate_bypass = false
+shader_parameter/prototype_geometry_silhouette = false
+shader_parameter/prototype_geometry_alpha = 1.0
+shader_parameter/prototype_geometry_keep_alpha = false
+shader_parameter/prototype_geometry_keep_color = false
+shader_parameter/prototype_crest_fragment_foam = false
+shader_parameter/prototype_crest_broken_core = false
+shader_parameter/prototype_offshore_core = false
+shader_parameter/prototype_offshore_core_broken = false
+shader_parameter/prototype_offshore_core_crown = false
+shader_parameter/prototype_offshore_core_source_started = false
+shader_parameter/prototype_front_face_rim_tone = false
+shader_parameter/prototype_front_face_foam_gate = false
+shader_parameter/prototype_front_face_source_gate = false
+shader_parameter/prototype_front_face_source_started = false
+shader_parameter/prototype_irregular_foam = false
+shader_parameter/prototype_aperiodic_foam = false
+shader_parameter/prototype_front_foam_blend = false
+shader_parameter/prototype_front_foam_ribbon = false
+shader_parameter/prototype_foam_flow_detail = false
+shader_parameter/prototype_broad_crest = false
+shader_parameter/prototype_shared_bed_triangles = false
+shader_parameter/prototype_rise_crest = false
+shader_parameter/prototype_use_front_field = false
+shader_parameter/prototype_use_local_front = true
+shader_parameter/phase2_extinction_m = 0.11
+shader_parameter/prototype_deep_extinction_m = 0.4
+shader_parameter/prototype_caustic_recovery_gain = 0.0
+shader_parameter/prototype_caustic_recovery_uv_scale = 1.0
+shader_parameter/phase2_shallow_tint = Vector3(0.04, 0.72, 0.69)
+shader_parameter/phase2_deep_tint = Vector3(0.02, 0.29, 0.37)
+shader_parameter/natural_path_mode = 0
+shader_parameter/natural_path_unrefracted = true
+shader_parameter/natural_optics_debug = 0
+shader_parameter/natural_scatter_gain = 1.0
+shader_parameter/natural_height_surface_normal = true
+shader_parameter/rdc_optics_enabled = true
+shader_parameter/rdc_normal_enabled = true
+shader_parameter/rdc_refracted_path = false
+shader_parameter/rdc_absorption_rgb = Vector3(6, 0.856013, 0.336771)
+shader_parameter/rdc_transmission_tint = Vector3(0.75897, 0.883854, 0.968461)
+shader_parameter/rdc_surface_color = Vector3(0.49190503, 0.71056646, 0.84808826)
+shader_parameter/rdc_distance_scale = 1.0
+shader_parameter/rdc_normal_scale = 0.2
+shader_parameter/rdc_normal_gain = 1.0
+shader_parameter/rdc_time_scale = 1.0
+shader_parameter/rdc_surface_gain = 1.0
+shader_parameter/rdc_refraction_scale = 0.0121
+shader_parameter/foam_detail_mode = 1
+shader_parameter/foam_detail_texture = ExtResource("water_foam_detail")
+shader_parameter/foam_detail_scale_per_m = 1.0
+shader_parameter/foam_hole_strength = 1.0
+shader_parameter/foam_flow_cycle_s = 4.0
+shader_parameter/foam_flow_gain = 1.0
+shader_parameter/foam_flow_speed_cap_m_s = 2.0
+shader_parameter/foam_flow_debug = false
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tmy5q"]
+resource_local_to_scene = true
+transparency = 1
+no_depth_test = true
+shading_mode = 0
+albedo_color = Color(0.16, 0.18, 0.22, 0.75)
+
+[sub_resource type="TorusMesh" id="TorusMesh_brush"]
+inner_radius = 0.3425
+outer_radius = 0.4175
+rings = 48
+ring_segments = 6
+
+[sub_resource type="StyleBoxFlat" id="Style_edit_panel"]
+bg_color = Color(0.06, 0.09, 0.12, 0.92)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_j7g1x"]
+
+[sub_resource type="StyleBoxFlat" id="Panel"]
+bg_color = Color(0.06, 0.09, 0.12, 0.94)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_wjx3u"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1gynk"]
+render_priority = 1
+shader = ExtResource("12_x1p1n")
+shader_parameter/display_reconstruction = true
+shader_parameter/prototype_branch_face = false
+shader_parameter/prototype_branch_face_capped = false
+shader_parameter/prototype_branch_face_2d = false
+shader_parameter/prototype_branch_face_row_center = false
+shader_parameter/prototype_branch_face_soft_material = false
+shader_parameter/prototype_branch_face_surface_join = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4rymf"]
+render_priority = 2
+shader = ExtResource("16_g172i")
+shader_parameter/display_reconstruction = true
+shader_parameter/front_concentrated = false
+shader_parameter/front_local_dense = true
+shader_parameter/front_smooth_support = false
+shader_parameter/raised_local_front = true
+shader_parameter/crest_height_m = 0.25
+shader_parameter/surface_bias_m = 0.018
+shader_parameter/splat_half_width_m = 0.018
+shader_parameter/splat_jitter_m = 0.05
+shader_parameter/target_diameter_px = 3.5
+shader_parameter/viewport_height_px = 1080.0
+shader_parameter/natural_foam_direct_fraction = 0.5
+shader_parameter/natural_lighting_debug = 0
+shader_parameter/natural_fine_enabled = true
+shader_parameter/natural_fine_size_mode = 1
+shader_parameter/natural_fine_size_range = Vector2(0.65, 2.2)
+shader_parameter/natural_fine_gain = 1.0
+shader_parameter/natural_cluster_strength = 0.35
+shader_parameter/natural_cluster_scale_per_m = 1.0
+
+[sub_resource type="StandardMaterial3D" id="Material_opaque"]
+shading_mode = 0
+albedo_color = Color(1, 0, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wall"]
+size = Vector3(1.5, 2, 0.25)
+
+[sub_resource type="StandardMaterial3D" id="Material_transparent"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0, 1, 0, 0.6)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_52npj"]
+render_priority = 1
+shader = ExtResource("21_l13h7")
+shader_parameter/enabled = true
+shader_parameter/natural_contact_enabled = true
+shader_parameter/surface_offset_m = 0.016
+shader_parameter/wet_epsilon_m = 0.001
+shader_parameter/water_surface_bias_m = 0.003
+shader_parameter/display_reconstruction = true
+shader_parameter/radial_shore = false
+shader_parameter/prototype_shore_unscaled_depth = false
+shader_parameter/prototype_shore_linear_weights = false
+shader_parameter/prototype_render_grid_size = 512.0
+shader_parameter/midpoint_clip = false
+shader_parameter/prototype_crest_height_m = 0.25
+shader_parameter/prototype_local_back_cells = 7.5
+shader_parameter/prototype_local_face_cells = 1.8
+shader_parameter/prototype_local_lift_depth_scale = 1.5
+shader_parameter/prototype_crest_shore_depth_m = 0.0
+shader_parameter/prototype_curl_forward_m = 0.0
+shader_parameter/prototype_local_overturn_m = 0.0
+shader_parameter/prototype_crest_span_smoothing = false
+shader_parameter/prototype_crest_depth_gate_bypass = false
+shader_parameter/prototype_front_face_source_gate = false
+shader_parameter/prototype_front_face_source_started = false
+shader_parameter/prototype_broad_crest = false
+shader_parameter/prototype_shared_bed_triangles = false
+shader_parameter/prototype_rise_crest = false
+shader_parameter/prototype_use_front_field = false
+shader_parameter/prototype_use_local_front = true
+shader_parameter/natural_contact_shape_mode = 1
+shader_parameter/natural_contact_shape_scale_per_m = 6.0
+shader_parameter/natural_contact_shared_surface = true
+shader_parameter/natural_contact_separation_m = 0.001
+shader_parameter/natural_contact_gain = 0.55
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_up2bp"]
+render_priority = 0
+shader = ExtResource("23_tyqta")
+shader_parameter/template_texture = ExtResource("24_q7vo3")
+shader_parameter/height_m = 0.7
+shader_parameter/tint = Color(0.25, 1, 0.55, 0.4)
+
+[sub_resource type="PlaneMesh" id="CastleMesh"]
+size = Vector2(4, 4)
+subdivide_width = 63
+subdivide_depth = 63
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1n6pn"]
+render_priority = 0
+shader = ExtResource("25_1hxje")
+shader_parameter/use_stroke_baseline = false
+shader_parameter/operation = 2
+shader_parameter/start_xz = Vector2(0, 0)
+shader_parameter/end_xz = Vector2(0, 0)
+shader_parameter/height_m = 0.3
+shader_parameter/bottom_width_m = 1.0
+shader_parameter/top_width_m = 0.5
+shader_parameter/trench_width_m = 0.5
+shader_parameter/depth_m = 0.15
+shader_parameter/shoulder_width_m = 0.5
+shader_parameter/tint = Color(0.25, 1, 0.55, 0.45)
+
+[sub_resource type="PlaneMesh" id="FootprintMesh"]
+size = Vector2(8, 8)
+subdivide_width = 64
+subdivide_depth = 64
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_llbfc"]
+render_priority = 0
+shader = ExtResource("26_nwv3r")
+shader_parameter/seed = 57849
+shader_parameter/radius_min_m = 0.02
+shader_parameter/radius_max_m = 0.05
+
+[sub_resource type="MultiMesh" id="MultiMesh_bqmep"]
+transform_format = 1
+custom_aabb = AABB(-16.1, -0.1, -16.1, 32.2, 67292.445, 32.2)
+instance_count = 1024
+visible_instance_count = 0
+mesh = ExtResource("27_ca336")
+buffer = PackedFloat32Array(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_mayok"]
+viewport_path = NodePath("ReflectionViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_dx8eh"]
+viewport_path = NodePath("ReflectionViewport")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xbnpx"]
+render_priority = 2
+shader = ExtResource("30_gcame")
+shader_parameter/natural_reflection_protected = true
+shader_parameter/natural_reflection_perturbation = true
+shader_parameter/natural_reflection_gain = 1.0
+shader_parameter/natural_planar_reflection_srgb = SubResource("ViewportTexture_mayok")
+shader_parameter/natural_reflection_srgb = true
+shader_parameter/natural_reflection_flip_y = true
+shader_parameter/natural_reflection_sky_linear = Vector3(0.49190503, 0.7105665, 0.84808826)
+shader_parameter/natural_reflection_shift_m = 0.25
+shader_parameter/natural_reflection_uv_limit = 0.03
+shader_parameter/natural_reflection_edge_margin_px = 2.0
+shader_parameter/natural_reflection_edge_fade_px = 8.0
+shader_parameter/natural_reflection_debug = 0
+shader_parameter/natural_main_foam_gain = 1.0
+shader_parameter/prototype_planar_reflection = SubResource("ViewportTexture_dx8eh")
+shader_parameter/wet_epsilon_m = 0.001
+shader_parameter/water_surface_bias_m = 0.004
+shader_parameter/debug_mode = 0
+shader_parameter/extinction_depth_m = 0.09
+shader_parameter/shallow_tint = Vector3(0.36, 0.71, 0.76)
+shader_parameter/deep_tint = Vector3(0.045, 0.24, 0.5)
+shader_parameter/foam_tint = Vector3(0.93, 0.96, 0.97)
+shader_parameter/foam_speed_m_s = 0.85
+shader_parameter/foam_depth_m = 0.05
+shader_parameter/foam_strength = 0.55
+shader_parameter/test1_whitewater_gain = 0.32
+shader_parameter/ripple_frequency = 150.0
+shader_parameter/ripple_speed = 2.6
+shader_parameter/ripple_strength = 0.045
+shader_parameter/visual_time_s = 0.0
+shader_parameter/phase2_optics = true
+shader_parameter/phase2_foam = true
+shader_parameter/display_reconstruction = true
+shader_parameter/radial_shore = false
+shader_parameter/prototype_shore_unscaled_depth = false
+shader_parameter/prototype_shore_linear_weights = false
+shader_parameter/shoreline_debug = false
+shader_parameter/prototype_contact_alpha_debug = false
+shader_parameter/prototype_shore_source_debug = false
+shader_parameter/prototype_contact_foam_source_debug = false
+shader_parameter/prototype_contact_foam_candidate = false
+shader_parameter/prototype_contact_front_gate = false
+shader_parameter/prototype_contact_wide_band = false
+shader_parameter/prototype_contact_relaxed_front_gate = false
+shader_parameter/prototype_contact_history_gate = false
+shader_parameter/prototype_contact_foam_spread = false
+shader_parameter/prototype_contact_scene_gap_gate = false
+shader_parameter/prototype_contact_independent_history_gate = false
+shader_parameter/prototype_contact_depth_debug = false
+shader_parameter/prototype_contact_height_debug = false
+shader_parameter/prototype_vertex_fragment_delta_debug = false
+shader_parameter/prototype_visible_bed_height_debug = false
+shader_parameter/prototype_contact_residual_debug = false
+shader_parameter/prototype_render_grid_size = 512.0
+shader_parameter/midpoint_clip = false
+shader_parameter/use_detail_normals = true
+shader_parameter/natural_normal_mode = 1
+shader_parameter/natural_normal_texture = ExtResource("5_a71sy")
+shader_parameter/natural_layer0 = Vector4(0.18, 0.035, 0.06, 0)
+shader_parameter/natural_layer1 = Vector4(0.47, -0.022, 0.025, 0)
+shader_parameter/natural_direction0 = Vector2(1, 0)
+shader_parameter/natural_direction1 = Vector2(0.6, 0.8)
+shader_parameter/natural_normal_debug = 0
+shader_parameter/use_specular = true
+shader_parameter/use_caustics = true
+shader_parameter/prototype_eta_normals = true
+shader_parameter/prototype_eta_normal_debug = false
+shader_parameter/prototype_eta_normal_space_debug = false
+shader_parameter/prototype_eta_light_space_debug = false
+shader_parameter/prototype_light_direction_world = Vector3(-0.3531289, 0.78801066, -0.5043204)
+shader_parameter/prototype_screen_optics = true
+shader_parameter/prototype_screen_world_glint = false
+shader_parameter/natural_glint_enabled = true
+shader_parameter/natural_glint_gain = 1.0
+shader_parameter/natural_glint_exponent = 1500.0
+shader_parameter/natural_scatter_direct_fraction = 0.45
+shader_parameter/natural_foam_direct_fraction = 0.5
+shader_parameter/natural_lighting_debug = 0
+shader_parameter/prototype_screen_sky_gradient = false
+shader_parameter/prototype_optical_shallow_preserve = true
+shader_parameter/prototype_screen_deep_scatter_scale = 1.0
+shader_parameter/prototype_screen_sky_reflection_scale = 1.0
+shader_parameter/prototype_screen_fresnel_debug = false
+shader_parameter/prototype_screen_abs_fresnel = true
+shader_parameter/prototype_screen_face_normal = true
+shader_parameter/prototype_screen_scene_reflection = false
+shader_parameter/prototype_screen_reflection_debug = false
+shader_parameter/prototype_screen_bed_only = false
+shader_parameter/prototype_shallow_extinction_m = 0.25
+shader_parameter/prototype_planar_reflection_enabled = true
+shader_parameter/prototype_planar_reflection_debug = false
+shader_parameter/prototype_planar_reflection_projected = true
+shader_parameter/prototype_planar_reflection_softness_px = 0.0
+shader_parameter/prototype_planar_view_projection = Projection(1.9726759, 0.9025793, 0.24185106, 0.24184501, 2.189718e-07, -2.6389573, 0.7071249, 0.7071072, -0.7179968, 2.4798105, 0.6644792, 0.66446257, -2.4024335e-05, 0.00010677482, 41.35275, 41.451714)
+shader_parameter/prototype_depth_bands = false
+shader_parameter/prototype_depth_gray_debug = false
+shader_parameter/prototype_depth_layers_debug = false
+shader_parameter/prototype_refraction_scale = 0.02
+shader_parameter/prototype_depth_guard = true
+shader_parameter/prototype_legacy_edge_clamp = false
+shader_parameter/prototype_refraction_fallback_debug = false
+shader_parameter/prototype_crest_height_m = 0.25
+shader_parameter/prototype_local_back_cells = 7.5
+shader_parameter/prototype_local_face_cells = 1.8
+shader_parameter/prototype_local_lift_depth_scale = 1.5
+shader_parameter/prototype_crest_shore_depth_m = 0.0
+shader_parameter/prototype_curl_forward_m = 0.0
+shader_parameter/prototype_local_overturn_m = 0.0
+shader_parameter/prototype_crest_white_face = false
+shader_parameter/prototype_crest_span_smoothing = false
+shader_parameter/prototype_crest_depth_gate_bypass = false
+shader_parameter/prototype_geometry_silhouette = false
+shader_parameter/prototype_geometry_alpha = 1.0
+shader_parameter/prototype_geometry_keep_alpha = false
+shader_parameter/prototype_geometry_keep_color = false
+shader_parameter/prototype_crest_fragment_foam = false
+shader_parameter/prototype_crest_broken_core = false
+shader_parameter/prototype_offshore_core = false
+shader_parameter/prototype_offshore_core_broken = false
+shader_parameter/prototype_offshore_core_crown = false
+shader_parameter/prototype_offshore_core_source_started = false
+shader_parameter/prototype_front_face_rim_tone = false
+shader_parameter/prototype_front_face_foam_gate = false
+shader_parameter/prototype_front_face_source_gate = false
+shader_parameter/prototype_front_face_source_started = false
+shader_parameter/prototype_irregular_foam = false
+shader_parameter/prototype_aperiodic_foam = false
+shader_parameter/prototype_front_foam_blend = false
+shader_parameter/prototype_front_foam_ribbon = false
+shader_parameter/prototype_foam_flow_detail = false
+shader_parameter/prototype_broad_crest = false
+shader_parameter/prototype_shared_bed_triangles = false
+shader_parameter/prototype_rise_crest = false
+shader_parameter/prototype_use_front_field = false
+shader_parameter/prototype_use_local_front = true
+shader_parameter/phase2_extinction_m = 0.11
+shader_parameter/prototype_deep_extinction_m = 0.4
+shader_parameter/prototype_caustic_recovery_gain = 0.0
+shader_parameter/prototype_caustic_recovery_uv_scale = 1.0
+shader_parameter/phase2_shallow_tint = Vector3(0.04, 0.72, 0.69)
+shader_parameter/phase2_deep_tint = Vector3(0.02, 0.29, 0.37)
+shader_parameter/natural_path_mode = 0
+shader_parameter/natural_path_unrefracted = true
+shader_parameter/natural_optics_debug = 0
+shader_parameter/natural_scatter_gain = 1.0
+shader_parameter/natural_height_surface_normal = true
+shader_parameter/rdc_optics_enabled = true
+shader_parameter/rdc_normal_enabled = true
+shader_parameter/rdc_refracted_path = false
+shader_parameter/rdc_absorption_rgb = Vector3(6, 0.856013, 0.336771)
+shader_parameter/rdc_transmission_tint = Vector3(0.75897, 0.883854, 0.968461)
+shader_parameter/rdc_surface_color = Vector3(0.49190503, 0.71056646, 0.84808826)
+shader_parameter/rdc_distance_scale = 1.0
+shader_parameter/rdc_normal_scale = 0.2
+shader_parameter/rdc_normal_gain = 1.0
+shader_parameter/rdc_time_scale = 1.0
+shader_parameter/rdc_surface_gain = 1.0
+shader_parameter/rdc_refraction_scale = 0.0121
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_7o8on"]
+viewport_path = NodePath("ReflectionViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_cy3vx"]
+viewport_path = NodePath("ReflectionViewport")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_iffjm"]
+render_priority = 0
+shader = ExtResource("31_vwouh")
+shader_parameter/natural_reflection_protected = true
+shader_parameter/natural_reflection_perturbation = true
+shader_parameter/natural_reflection_gain = 1.0
+shader_parameter/natural_planar_reflection_srgb = SubResource("ViewportTexture_7o8on")
+shader_parameter/natural_reflection_srgb = true
+shader_parameter/natural_reflection_flip_y = true
+shader_parameter/natural_reflection_sky_linear = Vector3(0.49190503, 0.7105665, 0.84808826)
+shader_parameter/natural_reflection_shift_m = 0.25
+shader_parameter/natural_reflection_uv_limit = 0.03
+shader_parameter/natural_reflection_edge_margin_px = 2.0
+shader_parameter/natural_reflection_edge_fade_px = 8.0
+shader_parameter/natural_reflection_debug = 0
+shader_parameter/natural_main_foam_gain = 1.0
+shader_parameter/prototype_planar_reflection = SubResource("ViewportTexture_cy3vx")
+shader_parameter/wet_epsilon_m = 0.001
+shader_parameter/water_surface_bias_m = 0.003
+shader_parameter/debug_mode = 0
+shader_parameter/extinction_depth_m = 0.09
+shader_parameter/shallow_tint = Vector3(0.36, 0.71, 0.76)
+shader_parameter/deep_tint = Vector3(0.045, 0.24, 0.5)
+shader_parameter/foam_tint = Vector3(0.93, 0.96, 0.97)
+shader_parameter/foam_speed_m_s = 0.85
+shader_parameter/foam_depth_m = 0.05
+shader_parameter/foam_strength = 0.55
+shader_parameter/test1_whitewater_gain = 0.32
+shader_parameter/ripple_frequency = 150.0
+shader_parameter/ripple_speed = 2.6
+shader_parameter/ripple_strength = 0.045
+shader_parameter/visual_time_s = 0.0
+shader_parameter/use_async_clock = true
+shader_parameter/phase2_optics = true
+shader_parameter/phase2_foam = true
+shader_parameter/display_reconstruction = true
+shader_parameter/radial_shore = false
+shader_parameter/prototype_shore_unscaled_depth = false
+shader_parameter/prototype_shore_linear_weights = false
+shader_parameter/shoreline_debug = false
+shader_parameter/prototype_contact_alpha_debug = false
+shader_parameter/prototype_shore_source_debug = false
+shader_parameter/prototype_contact_foam_source_debug = false
+shader_parameter/prototype_contact_foam_candidate = false
+shader_parameter/prototype_contact_front_gate = false
+shader_parameter/prototype_contact_wide_band = false
+shader_parameter/prototype_contact_relaxed_front_gate = false
+shader_parameter/prototype_contact_history_gate = false
+shader_parameter/prototype_contact_foam_spread = false
+shader_parameter/prototype_contact_scene_gap_gate = false
+shader_parameter/prototype_contact_independent_history_gate = false
+shader_parameter/prototype_contact_depth_debug = false
+shader_parameter/prototype_contact_height_debug = false
+shader_parameter/prototype_vertex_fragment_delta_debug = false
+shader_parameter/prototype_visible_bed_height_debug = false
+shader_parameter/prototype_contact_residual_debug = false
+shader_parameter/prototype_render_grid_size = 512.0
+shader_parameter/midpoint_clip = false
+shader_parameter/use_detail_normals = true
+shader_parameter/natural_normal_mode = 1
+shader_parameter/natural_normal_texture = ExtResource("5_a71sy")
+shader_parameter/natural_layer0 = Vector4(0.18, 0.035, 0.06, 0)
+shader_parameter/natural_layer1 = Vector4(0.47, -0.022, 0.025, 0)
+shader_parameter/natural_direction0 = Vector2(1, 0)
+shader_parameter/natural_direction1 = Vector2(0.6, 0.8)
+shader_parameter/natural_normal_debug = 0
+shader_parameter/use_specular = true
+shader_parameter/use_caustics = true
+shader_parameter/prototype_eta_normals = true
+shader_parameter/prototype_eta_normal_debug = false
+shader_parameter/prototype_eta_normal_space_debug = false
+shader_parameter/prototype_eta_light_space_debug = false
+shader_parameter/prototype_light_direction_world = Vector3(-0.3531289, 0.78801066, -0.5043204)
+shader_parameter/prototype_screen_optics = true
+shader_parameter/prototype_screen_world_glint = false
+shader_parameter/natural_glint_enabled = true
+shader_parameter/natural_glint_gain = 1.0
+shader_parameter/natural_glint_exponent = 1500.0
+shader_parameter/natural_scatter_direct_fraction = 0.45
+shader_parameter/natural_foam_direct_fraction = 0.5
+shader_parameter/natural_lighting_debug = 0
+shader_parameter/prototype_screen_sky_gradient = false
+shader_parameter/prototype_optical_shallow_preserve = true
+shader_parameter/prototype_screen_deep_scatter_scale = 1.0
+shader_parameter/prototype_screen_sky_reflection_scale = 1.0
+shader_parameter/prototype_screen_fresnel_debug = false
+shader_parameter/prototype_screen_abs_fresnel = true
+shader_parameter/prototype_screen_face_normal = true
+shader_parameter/prototype_screen_scene_reflection = false
+shader_parameter/prototype_screen_reflection_debug = false
+shader_parameter/prototype_screen_bed_only = false
+shader_parameter/prototype_shallow_extinction_m = 0.25
+shader_parameter/prototype_planar_reflection_enabled = true
+shader_parameter/prototype_planar_reflection_debug = false
+shader_parameter/prototype_planar_reflection_projected = true
+shader_parameter/prototype_planar_reflection_softness_px = 0.0
+shader_parameter/prototype_planar_view_projection = Projection(1.9726759, 0.9025793, 0.24185106, 0.24184501, 2.189718e-07, -2.6389573, 0.7071249, 0.7071072, -0.7179968, 2.4798105, 0.6644792, 0.66446257, -2.4024335e-05, 0.00010677482, 41.35275, 41.451714)
+shader_parameter/prototype_depth_bands = false
+shader_parameter/prototype_depth_gray_debug = false
+shader_parameter/prototype_depth_layers_debug = false
+shader_parameter/prototype_refraction_scale = 0.02
+shader_parameter/prototype_depth_guard = true
+shader_parameter/prototype_legacy_edge_clamp = false
+shader_parameter/prototype_refraction_fallback_debug = false
+shader_parameter/prototype_crest_height_m = 0.25
+shader_parameter/prototype_local_back_cells = 7.5
+shader_parameter/prototype_local_face_cells = 1.8
+shader_parameter/prototype_local_lift_depth_scale = 1.5
+shader_parameter/prototype_crest_shore_depth_m = 0.0
+shader_parameter/prototype_curl_forward_m = 0.0
+shader_parameter/prototype_local_overturn_m = 0.0
+shader_parameter/prototype_crest_white_face = false
+shader_parameter/prototype_crest_span_smoothing = false
+shader_parameter/prototype_crest_depth_gate_bypass = false
+shader_parameter/prototype_geometry_silhouette = false
+shader_parameter/prototype_geometry_alpha = 1.0
+shader_parameter/prototype_geometry_keep_alpha = false
+shader_parameter/prototype_geometry_keep_color = false
+shader_parameter/prototype_crest_fragment_foam = false
+shader_parameter/prototype_crest_broken_core = false
+shader_parameter/prototype_offshore_core = false
+shader_parameter/prototype_offshore_core_broken = false
+shader_parameter/prototype_offshore_core_crown = false
+shader_parameter/prototype_offshore_core_source_started = false
+shader_parameter/prototype_front_face_rim_tone = false
+shader_parameter/prototype_front_face_foam_gate = false
+shader_parameter/prototype_front_face_source_gate = false
+shader_parameter/prototype_front_face_source_started = false
+shader_parameter/prototype_irregular_foam = false
+shader_parameter/prototype_aperiodic_foam = false
+shader_parameter/prototype_front_foam_blend = false
+shader_parameter/prototype_front_foam_ribbon = false
+shader_parameter/prototype_foam_flow_detail = false
+shader_parameter/prototype_broad_crest = false
+shader_parameter/prototype_shared_bed_triangles = false
+shader_parameter/prototype_rise_crest = false
+shader_parameter/prototype_use_front_field = false
+shader_parameter/prototype_use_local_front = true
+shader_parameter/phase2_extinction_m = 0.11
+shader_parameter/prototype_deep_extinction_m = 0.4
+shader_parameter/prototype_caustic_recovery_gain = 0.0
+shader_parameter/prototype_caustic_recovery_uv_scale = 1.0
+shader_parameter/phase2_shallow_tint = Vector3(0.04, 0.72, 0.69)
+shader_parameter/phase2_deep_tint = Vector3(0.02, 0.29, 0.37)
+shader_parameter/rdc_optics_enabled = true
+shader_parameter/rdc_normal_enabled = true
+shader_parameter/rdc_refracted_path = false
+shader_parameter/rdc_absorption_rgb = Vector3(6, 0.856013, 0.336771)
+shader_parameter/rdc_transmission_tint = Vector3(0.75897, 0.883854, 0.968461)
+shader_parameter/rdc_surface_color = Vector3(0.49190503, 0.71056646, 0.84808826)
+shader_parameter/rdc_distance_scale = 1.0
+shader_parameter/rdc_normal_scale = 0.2
+shader_parameter/rdc_normal_gain = 1.0
+shader_parameter/rdc_time_scale = 1.0
+shader_parameter/rdc_surface_gain = 1.0
+shader_parameter/rdc_refraction_scale = 0.0121
+shader_parameter/side_min_xz = Vector2(-15, -7.5)
+shader_parameter/side_max_xz = Vector2(15, 7.5)
+shader_parameter/side_scatter_color = Color(0.075, 0.32, 0.36, 1)
+shader_parameter/side_debug = 0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5175j"]
+render_priority = 0
+shader = ExtResource("34_06x7e")
+
+[node name="Test1OriginalGeometry" type="Node3D" unique_id=758474557]
+
+[node name="GpuOverviewCamera" type="Camera3D" parent="." unique_id=570027196]
+transform = Transform3D(-0.9396924, 0.2418453, -0.24184528, 0, 0.70710677, 0.7071068, 0.3420209, 0.66446286, -0.6644628, -10.024885, 29.31078, -27.54313)
+fov = 30.0
+
+[node name="GpuPlayerCamera" type="Camera3D" parent="." unique_id=311793688]
+transform = Transform3D(-0.9396924, 0.2418453, -0.24184528, 0, 0.70710677, 0.7071068, 0.3420209, 0.66446286, -0.6644628, -10.024885, 29.31078, -27.54313)
+current = true
+fov = 30.0
+script = ExtResource("1_ocv4d")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1892735178]
+environment = SubResource("Environment_j7kgc")
+
+[node name="SandFixtureSun" type="DirectionalLight3D" parent="." unique_id=985847788]
+transform = Transform3D(-0.81915206, 0.45198435, -0.3531289, 0, 0.6156615, 0.7880107, 0.5735764, 0.6455006, -0.5043204, 0, 0, 0)
+light_color = Color(1, 0.93, 0.82, 1)
+light_energy = 0.85
+shadow_enabled = true
+directional_shadow_mode = 0
+
+[node name="GpuSandTerrain" type="MeshInstance3D" parent="." unique_id=669152083]
+material_override = SubResource("ShaderMaterial_e4n6i")
+custom_aabb = AABB(-16.1, -1, -16.1, 32.2, 3, 32.2)
+mesh = ExtResource("6_xr6j3")
+
+[node name="GpuWaterSurface" type="MeshInstance3D" parent="." unique_id=905922761]
+material_override = SubResource("ShaderMaterial_1dsaq")
+custom_aabb = AABB(-16.1, -1, -16.1, 32.2, 3, 32.2)
+mesh = ExtResource("6_xr6j3")
+
+[node name="BrushIndicator" type="MeshInstance3D" parent="." unique_id=832173633]
+visible = false
+material_override = SubResource("StandardMaterial3D_tmy5q")
+mesh = SubResource("TorusMesh_brush")
+script = ExtResource("8_gsxt1")
+
+[node name="Interface" type="CanvasLayer" parent="." unique_id=246363526]
+
+[node name="StatusLabel" type="Label" parent="Interface" unique_id=1404980900]
+offset_left = 18.0
+offset_top = 18.0
+theme = ExtResource("9_lsrjp")
+theme_override_colors/font_color = Color(0.08, 0.12, 0.16, 1)
+theme_override_font_sizes/font_size = 18
+text = "GPU 水沙状态预览 | 256² | 场景 1：test1 原比例沙滩 · 30×15 | 暂停 | 调试：画面
+Tick 0 · 模拟 0.00 s
+左键使用选定工具 右键转向 WASD移动 空格暂停 V 调试 F5 自由视角 F6 隐藏 HUD。水沙耦合实验模式。
+GPU编辑 成功0 跳过0 · 源汇估算"
+
+[node name="EditPanel" type="PanelContainer" parent="Interface" unique_id=399276036]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -300.0
+offset_top = 58.0
+offset_right = -18.0
+offset_bottom = 318.0
+grow_horizontal = 0
+theme = ExtResource("9_lsrjp")
+theme_override_styles/panel = SubResource("Style_edit_panel")
+
+[node name="Margin" type="MarginContainer" parent="Interface/EditPanel" unique_id=1463644974]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 14
+
+[node name="Controls" type="VBoxContainer" parent="Interface/EditPanel/Margin" unique_id=1054890899]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Title" type="Label" parent="Interface/EditPanel/Margin/Controls" unique_id=1861301498]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "场景操作"
+
+[node name="SceneSwitcher" type="VBoxContainer" parent="Interface/EditPanel/Margin/Controls" unique_id=283084814]
+layout_mode = 2
+script = ExtResource("10_bf3fg")
+
+[node name="Actions" type="HBoxContainer" parent="Interface/EditPanel/Margin/Controls/SceneSwitcher" unique_id=735141658]
+layout_mode = 2
+
+[node name="Targets" type="OptionButton" parent="Interface/EditPanel/Margin/Controls/SceneSwitcher/Actions" unique_id=85033146]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+selected = 3
+item_count = 2
+popup/item_0/text = "主沙滩"
+popup/item_0/id = 0
+popup/item_1/text = "test1 原比例沙滩 · 30×15"
+popup/item_1/id = 1
+
+[node name="Switch" type="Button" parent="Interface/EditPanel/Margin/Controls/SceneSwitcher/Actions" unique_id=1226411751]
+layout_mode = 2
+focus_mode = 0
+text = "切换"
+
+[node name="Status" type="Label" parent="Interface/EditPanel/Margin/Controls/SceneSwitcher" unique_id=1540539065]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "切换保留各场景进度"
+autowrap_mode = 2
+
+[node name="WaveSeparator" type="HSeparator" parent="Interface/EditPanel/Margin/Controls" unique_id=225883237]
+layout_mode = 2
+
+[node name="TriggerWave" type="Button" parent="Interface/EditPanel/Margin/Controls" unique_id=1971601384]
+layout_mode = 2
+focus_mode = 0
+text = "触发波浪"
+
+[node name="WaveStatus" type="Label" parent="Interface/EditPanel/Margin/Controls" unique_id=1100947252]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "点击触发一波；暂停时等待继续"
+
+[node name="ShapeBrushPanel" type="PanelContainer" parent="Interface" unique_id=1400261106]
+custom_minimum_size = Vector2(296, 0)
+offset_left = 20.0
+offset_top = 100.0
+offset_right = 316.0
+theme = ExtResource("9_lsrjp")
+theme_override_styles/panel = SubResource("Panel")
+script = ExtResource("11_7nsx8")
+
+[node name="Margin" type="MarginContainer" parent="Interface/ShapeBrushPanel" unique_id=839736126]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 12
+
+[node name="Controls" type="VBoxContainer" parent="Interface/ShapeBrushPanel/Margin" unique_id=1675717659]
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="Title" type="Label" parent="Interface/ShapeBrushPanel/Margin/Controls" unique_id=170219408]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "沙形工具"
+
+[node name="Tools" type="GridContainer" parent="Interface/ShapeBrushPanel/Margin/Controls" unique_id=1922543270]
+layout_mode = 2
+columns = 3
+
+[node name="Dig" type="Button" parent="Interface/ShapeBrushPanel/Margin/Controls/Tools" unique_id=2072663134]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 36)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+toggle_mode = true
+button_pressed = true
+button_group = SubResource("ButtonGroup_wjx3u")
+text = "挖沙"
+
+[node name="Fill" type="Button" parent="Interface/ShapeBrushPanel/Margin/Controls/Tools" unique_id=1674058669]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 36)
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "直接填高沙床；可在水下使用"
+focus_mode = 0
+toggle_mode = true
+button_group = SubResource("ButtonGroup_wjx3u")
+text = "填沙床"
+
+[node name="Castle" type="Button" parent="Interface/ShapeBrushPanel/Margin/Controls/Tools" unique_id=888628572]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 36)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+toggle_mode = true
+button_group = SubResource("ButtonGroup_wjx3u")
+text = "城堡"
+
+[node name="Shovel" type="Button" parent="Interface/ShapeBrushPanel/Margin/Controls/Tools" unique_id=1077320213]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 36)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+toggle_mode = true
+button_group = SubResource("ButtonGroup_wjx3u")
+text = "铲子"
+
+[node name="Wall" type="Button" parent="Interface/ShapeBrushPanel/Margin/Controls/Tools" unique_id=1271255076]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 36)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+toggle_mode = true
+button_group = SubResource("ButtonGroup_wjx3u")
+text = "沙墙"
+
+[node name="SuspendedSand" type="Button" parent="Interface/ShapeBrushPanel/Margin/Controls/Tools" unique_id=846750180]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 36)
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "投放随水流输运的悬沙，之后自然沉降；不直接抬高沙床"
+focus_mode = 0
+toggle_mode = true
+button_group = SubResource("ButtonGroup_wjx3u")
+text = "投流沙"
+
+[node name="GravelDrop" type="Button" parent="Interface/ShapeBrushPanel/Margin/Controls/Tools" unique_id=1492690802]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 36)
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "在指定沙地或水中投放碎石，随水流搬运；不会挤掉已有碎石"
+focus_mode = 0
+toggle_mode = true
+button_group = SubResource("ButtonGroup_wjx3u")
+text = "投碎石"
+
+[node name="Help" type="Label" parent="Interface/ShapeBrushPanel/Margin/Controls" unique_id=1264630393]
+unique_name_in_owner = true
+layout_mode = 2
+text = "按住左键拖动
+右键转向，WASD移动"
+autowrap_mode = 3
+
+[node name="BrushStatus" type="Label" parent="Interface/ShapeBrushPanel/Margin/Controls" unique_id=91573640]
+unique_name_in_owner = true
+layout_mode = 2
+text = "等待沙场准备"
+autowrap_mode = 3
+
+[node name="PrototypeFrontLips" type="Node3D" parent="." unique_id=1771125855]
+
+[node name="RowFrontLip" type="MeshInstance3D" parent="PrototypeFrontLips" unique_id=1055148544]
+visible = false
+material_override = SubResource("ShaderMaterial_1gynk")
+custom_aabb = AABB(-16.5, -2, -16.5, 33, 6, 33)
+mesh = ExtResource("13_wetdi")
+
+[node name="BranchFrontLip" type="MeshInstance3D" parent="PrototypeFrontLips" unique_id=1200891919]
+visible = false
+material_override = SubResource("ShaderMaterial_1gynk")
+custom_aabb = AABB(-16.5, -2, -16.5, 33, 6, 33)
+mesh = ExtResource("14_c00lr")
+
+[node name="PatchFrontLip" type="MeshInstance3D" parent="PrototypeFrontLips" unique_id=1559922472]
+visible = false
+material_override = SubResource("ShaderMaterial_1gynk")
+custom_aabb = AABB(-16.5, -2, -16.5, 33, 6, 33)
+mesh = ExtResource("15_o0smm")
+
+[node name="PrototypeFrontFoamDense" type="MeshInstance3D" parent="." unique_id=1515188556]
+visible = false
+material_override = SubResource("ShaderMaterial_4rymf")
+custom_aabb = AABB(-16.5, -2, -16.5, 33, 6, 33)
+mesh = ExtResource("17_6tk4k")
+
+[node name="PrototypeForegroundOccluders" type="Node3D" parent="." unique_id=1513660989]
+
+[node name="OpaqueWall" type="MeshInstance3D" parent="PrototypeForegroundOccluders" unique_id=1021355275]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 7)
+visible = false
+material_override = SubResource("Material_opaque")
+mesh = SubResource("BoxMesh_wall")
+
+[node name="TransparentWall" type="MeshInstance3D" parent="PrototypeForegroundOccluders" unique_id=360839621]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 7)
+visible = false
+material_override = SubResource("Material_transparent")
+mesh = SubResource("BoxMesh_wall")
+
+[node name="SubmergedTransparentWall" type="MeshInstance3D" parent="PrototypeForegroundOccluders" unique_id=185901927]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.3, 7)
+visible = false
+material_override = SubResource("Material_transparent")
+mesh = SubResource("BoxMesh_wall")
+
+[node name="ReflectionRockEnvironment" type="Node3D" parent="." unique_id=1798447624]
+visible = false
+
+[node name="LeftRock" type="MeshInstance3D" parent="ReflectionRockEnvironment" unique_id=1412914216]
+transform = Transform3D(1.45, 0, 0, 0, 0.9, 0, 0, 0, 0.95, -6.6, 0.35, -6.1)
+layers = 5
+mesh = ExtResource("18_fw76y")
+
+[node name="MiddleRock" type="MeshInstance3D" parent="ReflectionRockEnvironment" unique_id=249893882]
+transform = Transform3D(0.9, 0, 0, 0, 1.2, 0, 0, 0, 1.05, -4.6, 0.45, -6.6)
+layers = 5
+mesh = ExtResource("19_eqsw1")
+
+[node name="RightRock" type="MeshInstance3D" parent="ReflectionRockEnvironment" unique_id=1673624707]
+transform = Transform3D(1.25, 0, 0, 0, 0.75, 0, 0, 0, 0.9, -2.9, 0.25, -6.4)
+layers = 5
+mesh = ExtResource("20_rmsul")
+
+[node name="ReflectionViewport" type="SubViewport" parent="." unique_id=53406637]
+size = Vector2i(960, 540)
+render_target_update_mode = 1
+
+[node name="ReflectionCamera" type="Camera3D" parent="ReflectionViewport" unique_id=1102978902]
+transform = Transform3D(0.9396924, 0.2418454, -0.241845, 1.067701e-07, -0.7071064, -0.7071071, -0.34202075, 0.66446316, -0.66446257, -10.024885, -29.31078, -27.54313)
+cull_mask = 4
+current = true
+fov = 30.0
+
+[node name="ShoreContactOverlay" type="MeshInstance3D" parent="." unique_id=1719437700]
+material_override = SubResource("ShaderMaterial_52npj")
+custom_aabb = AABB(-16.1, -1, -16.1, 32.2, 3, 32.2)
+mesh = ExtResource("6_xr6j3")
+
+[node name="CameraAnchors" type="Node3D" parent="." unique_id=1631587940]
+
+[node name="Oblique" type="Camera3D" parent="CameraAnchors" unique_id=174401497]
+transform = Transform3D(-0.9396924, 0.2418453, -0.2418453, 0, 0.70710677, 0.70710677, 0.3420209, 0.66446286, -0.66446286, -10.024885, 29.31078, -27.54313)
+fov = 30.0
+
+[node name="Close" type="Camera3D" parent="CameraAnchors" unique_id=1179309155]
+transform = Transform3D(0.9393727, 0.08483428, -0.33223793, 0, 0.9689124, 0.24740396, 0.3428978, -0.23240453, 0.9101699, 0, 3, 8)
+fov = 58.0
+
+[node name="Grazing" type="Camera3D" parent="CameraAnchors" unique_id=1316417444]
+transform = Transform3D(0.90044713, 0.043424096, -0.4327925, 0, 0.9950042, 0.09983342, 0.43496552, -0.08989472, 0.89594865, -4, 1.8, 5.5)
+fov = 54.0
+
+[node name="LightFacing" type="Camera3D" parent="CameraAnchors" unique_id=61878650]
+transform = Transform3D(-0.81371, 0.45804787, -0.35786626, 0, 0.6156615, 0.7880107, 0.5812711, 0.64121217, -0.5009699, -10, 22, -14)
+fov = 55.0
+
+[node name="BrushPreview" type="Node3D" parent="." unique_id=746009183]
+script = ExtResource("22_syvyf")
+
+[node name="CastleGhost" type="MeshInstance3D" parent="BrushPreview" unique_id=86196249]
+visible = false
+material_override = SubResource("ShaderMaterial_up2bp")
+cast_shadow = 0
+mesh = SubResource("CastleMesh")
+
+[node name="Footprint" type="MeshInstance3D" parent="BrushPreview" unique_id=1826741255]
+visible = false
+material_override = SubResource("ShaderMaterial_1n6pn")
+cast_shadow = 0
+mesh = SubResource("FootprintMesh")
+
+[node name="GravelLayer" type="MultiMeshInstance3D" parent="." unique_id=776313671]
+visible = false
+material_override = SubResource("ShaderMaterial_llbfc")
+multimesh = SubResource("MultiMesh_bqmep")
+
+[node name="UIVisibility" type="CanvasLayer" parent="." unique_id=1204283920]
+layer = 10
+script = ExtResource("28_1vu7a")
+
+[node name="ToggleUI" type="Button" parent="UIVisibility" unique_id=1385714332]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -126.0
+offset_top = 12.0
+offset_right = -18.0
+offset_bottom = 48.0
+grow_horizontal = 0
+tooltip_text = "显示 / 隐藏全部面板（F6）；隐藏后仍可编辑沙子"
+focus_mode = 0
+toggle_mode = true
+text = "隐藏 UI"
+
+[node name="UIDrag" type="Node" parent="." unique_id=971959024]
+script = ExtResource("29_vwqbr")
+
+[node name="SuspendedSandCloud" type="MeshInstance3D" parent="." unique_id=264975377]
+material_override = SubResource("ShaderMaterial_xbnpx")
+cast_shadow = 0
+custom_aabb = AABB(-16.1, -1, -16.1, 32.2, 3, 32.2)
+mesh = ExtResource("6_xr6j3")
+
+[node name="WaterSides" type="MeshInstance3D" parent="." unique_id=1395702806]
+material_override = SubResource("ShaderMaterial_iffjm")
+cast_shadow = 0
+custom_aabb = AABB(-15, -0.15, -7.5, 30, 10.15, 15)
+mesh = ExtResource("32_yisjo")
+script = ExtResource("33_rbobw")
+boundary_min = Vector2(-15, -7.5)
+boundary_max = Vector2(15, 7.5)
+
+[node name="SandSides" type="MeshInstance3D" parent="." unique_id=517089482]
+material_override = SubResource("ShaderMaterial_5175j")
+custom_aabb = AABB(-15, -0.15, -7.5, 30, 10.15, 15)
+mesh = ExtResource("35_c00ro")
+
+[node name="UnifiedEditRuntime" type="Node3D" parent="." unique_id=1682717567]
+script = ExtResource("36_kilie")
+
+[node name="SurfaceA" type="Node3D" parent="UnifiedEditRuntime" unique_id=56761101]
+script = ExtResource("37_xy87y")
+collision_enabled = false
+
+[node name="Terrain" type="StaticBody3D" parent="UnifiedEditRuntime/SurfaceA" unique_id=914464945]
+
+[node name="Chunk_0" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=715173705]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -13.9375, 0, -13.9375)
+
+[node name="Chunk_1" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=1633533739]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -9.9375, 0, -13.9375)
+
+[node name="Chunk_2" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=30702862]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -5.9375, 0, -13.9375)
+
+[node name="Chunk_3" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=1540185474]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -1.9375, 0, -13.9375)
+
+[node name="Chunk_4" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=1296712499]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 2.0625, 0, -13.9375)
+
+[node name="Chunk_5" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=1262598391]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 6.0625, 0, -13.9375)
+
+[node name="Chunk_6" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=120977094]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 10.0625, 0, -13.9375)
+
+[node name="Chunk_7" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=163668214]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 14.0625, 0, -13.9375)
+
+[node name="Chunk_8" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=369342667]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -13.9375, 0, -9.9375)
+
+[node name="Chunk_9" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=784595442]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -9.9375, 0, -9.9375)
+
+[node name="Chunk_10" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=1419630863]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -5.9375, 0, -9.9375)
+
+[node name="Chunk_11" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=464679085]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -1.9375, 0, -9.9375)
+
+[node name="Chunk_12" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=219350850]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 2.0625, 0, -9.9375)
+
+[node name="Chunk_13" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=1833726528]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 6.0625, 0, -9.9375)
+
+[node name="Chunk_14" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=932305467]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 10.0625, 0, -9.9375)
+
+[node name="Chunk_15" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=222265064]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 14.0625, 0, -9.9375)
+
+[node name="Chunk_16" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=1094903682]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -13.9375, 0, -5.9375)
+
+[node name="Chunk_17" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=238133868]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -9.9375, 0, -5.9375)
+
+[node name="Chunk_18" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=1672934274]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -5.9375, 0, -5.9375)
+
+[node name="Chunk_19" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=1566136629]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -1.9375, 0, -5.9375)
+
+[node name="Chunk_20" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=692505892]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 2.0625, 0, -5.9375)
+
+[node name="Chunk_21" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=782405364]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 6.0625, 0, -5.9375)
+
+[node name="Chunk_22" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=2020044747]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 10.0625, 0, -5.9375)
+
+[node name="Chunk_23" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=1300545070]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 14.0625, 0, -5.9375)
+
+[node name="Chunk_24" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=1094868983]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -13.9375, 0, -1.9375)
+
+[node name="Chunk_25" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=976427548]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -9.9375, 0, -1.9375)
+
+[node name="Chunk_26" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=1080071883]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -5.9375, 0, -1.9375)
+
+[node name="Chunk_27" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=1908727172]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -1.9375, 0, -1.9375)
+
+[node name="Chunk_28" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=1149842136]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 2.0625, 0, -1.9375)
+
+[node name="Chunk_29" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=2122020783]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 6.0625, 0, -1.9375)
+
+[node name="Chunk_30" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=2076114513]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 10.0625, 0, -1.9375)
+
+[node name="Chunk_31" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=71214827]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 14.0625, 0, -1.9375)
+
+[node name="Chunk_32" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=9846287]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -13.9375, 0, 2.0625)
+
+[node name="Chunk_33" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=1612817501]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -9.9375, 0, 2.0625)
+
+[node name="Chunk_34" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=1332298016]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -5.9375, 0, 2.0625)
+
+[node name="Chunk_35" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=853200980]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -1.9375, 0, 2.0625)
+
+[node name="Chunk_36" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=107137806]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 2.0625, 0, 2.0625)
+
+[node name="Chunk_37" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=149831160]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 6.0625, 0, 2.0625)
+
+[node name="Chunk_38" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=877859083]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 10.0625, 0, 2.0625)
+
+[node name="Chunk_39" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=938335155]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 14.0625, 0, 2.0625)
+
+[node name="Chunk_40" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=1816423999]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -13.9375, 0, 6.0625)
+
+[node name="Chunk_41" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=206088171]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -9.9375, 0, 6.0625)
+
+[node name="Chunk_42" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=744914923]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -5.9375, 0, 6.0625)
+
+[node name="Chunk_43" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=289152461]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -1.9375, 0, 6.0625)
+
+[node name="Chunk_44" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=1432237069]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 2.0625, 0, 6.0625)
+
+[node name="Chunk_45" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=1373333577]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 6.0625, 0, 6.0625)
+
+[node name="Chunk_46" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=1054876385]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 10.0625, 0, 6.0625)
+
+[node name="Chunk_47" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=866926332]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 14.0625, 0, 6.0625)
+
+[node name="Chunk_48" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=263143244]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -13.9375, 0, 10.0625)
+
+[node name="Chunk_49" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=756232610]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -9.9375, 0, 10.0625)
+
+[node name="Chunk_50" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=767697403]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -5.9375, 0, 10.0625)
+
+[node name="Chunk_51" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=187126207]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -1.9375, 0, 10.0625)
+
+[node name="Chunk_52" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=278185131]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 2.0625, 0, 10.0625)
+
+[node name="Chunk_53" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=1792690089]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 6.0625, 0, 10.0625)
+
+[node name="Chunk_54" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=262929024]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 10.0625, 0, 10.0625)
+
+[node name="Chunk_55" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=507489816]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 14.0625, 0, 10.0625)
+
+[node name="Chunk_56" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=573946057]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -13.9375, 0, 14.0625)
+
+[node name="Chunk_57" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=381750827]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -9.9375, 0, 14.0625)
+
+[node name="Chunk_58" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=1763371034]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -5.9375, 0, 14.0625)
+
+[node name="Chunk_59" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=776370076]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -1.9375, 0, 14.0625)
+
+[node name="Chunk_60" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=715932266]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 2.0625, 0, 14.0625)
+
+[node name="Chunk_61" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=760097950]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 6.0625, 0, 14.0625)
+
+[node name="Chunk_62" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=1184892372]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 10.0625, 0, 14.0625)
+
+[node name="Chunk_63" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceA/Terrain" unique_id=211712356]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 14.0625, 0, 14.0625)
+
+[node name="SurfaceB" type="Node3D" parent="UnifiedEditRuntime" unique_id=1325531941]
+script = ExtResource("37_xy87y")
+collision_enabled = false
+
+[node name="Terrain" type="StaticBody3D" parent="UnifiedEditRuntime/SurfaceB" unique_id=1014361386]
+
+[node name="Chunk_0" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=966727772]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -13.9375, 0, -13.9375)
+
+[node name="Chunk_1" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=299024835]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -9.9375, 0, -13.9375)
+
+[node name="Chunk_2" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=87637587]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -5.9375, 0, -13.9375)
+
+[node name="Chunk_3" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=164649051]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -1.9375, 0, -13.9375)
+
+[node name="Chunk_4" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=1936375134]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 2.0625, 0, -13.9375)
+
+[node name="Chunk_5" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=2045591321]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 6.0625, 0, -13.9375)
+
+[node name="Chunk_6" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=1939425412]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 10.0625, 0, -13.9375)
+
+[node name="Chunk_7" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=827449914]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 14.0625, 0, -13.9375)
+
+[node name="Chunk_8" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=1234468133]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -13.9375, 0, -9.9375)
+
+[node name="Chunk_9" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=196272327]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -9.9375, 0, -9.9375)
+
+[node name="Chunk_10" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=1120709840]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -5.9375, 0, -9.9375)
+
+[node name="Chunk_11" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=542127152]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -1.9375, 0, -9.9375)
+
+[node name="Chunk_12" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=287930293]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 2.0625, 0, -9.9375)
+
+[node name="Chunk_13" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=213191747]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 6.0625, 0, -9.9375)
+
+[node name="Chunk_14" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=144172020]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 10.0625, 0, -9.9375)
+
+[node name="Chunk_15" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=1140442116]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 14.0625, 0, -9.9375)
+
+[node name="Chunk_16" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=1418154245]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -13.9375, 0, -5.9375)
+
+[node name="Chunk_17" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=1120915995]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -9.9375, 0, -5.9375)
+
+[node name="Chunk_18" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=1420828690]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -5.9375, 0, -5.9375)
+
+[node name="Chunk_19" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=1979875323]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -1.9375, 0, -5.9375)
+
+[node name="Chunk_20" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=1078238160]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 2.0625, 0, -5.9375)
+
+[node name="Chunk_21" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=304919271]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 6.0625, 0, -5.9375)
+
+[node name="Chunk_22" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=1500342637]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 10.0625, 0, -5.9375)
+
+[node name="Chunk_23" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=974266216]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 14.0625, 0, -5.9375)
+
+[node name="Chunk_24" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=960703481]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -13.9375, 0, -1.9375)
+
+[node name="Chunk_25" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=340596157]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -9.9375, 0, -1.9375)
+
+[node name="Chunk_26" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=1211280565]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -5.9375, 0, -1.9375)
+
+[node name="Chunk_27" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=1533464173]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -1.9375, 0, -1.9375)
+
+[node name="Chunk_28" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=947345675]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 2.0625, 0, -1.9375)
+
+[node name="Chunk_29" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=136692868]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 6.0625, 0, -1.9375)
+
+[node name="Chunk_30" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=1798265759]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 10.0625, 0, -1.9375)
+
+[node name="Chunk_31" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=212386041]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 14.0625, 0, -1.9375)
+
+[node name="Chunk_32" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=1828869496]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -13.9375, 0, 2.0625)
+
+[node name="Chunk_33" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=509317768]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -9.9375, 0, 2.0625)
+
+[node name="Chunk_34" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=1894138156]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -5.9375, 0, 2.0625)
+
+[node name="Chunk_35" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=192937834]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -1.9375, 0, 2.0625)
+
+[node name="Chunk_36" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=725434843]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 2.0625, 0, 2.0625)
+
+[node name="Chunk_37" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=1092277636]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 6.0625, 0, 2.0625)
+
+[node name="Chunk_38" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=1411396743]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 10.0625, 0, 2.0625)
+
+[node name="Chunk_39" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=939590436]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 14.0625, 0, 2.0625)
+
+[node name="Chunk_40" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=176023148]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -13.9375, 0, 6.0625)
+
+[node name="Chunk_41" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=2059981991]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -9.9375, 0, 6.0625)
+
+[node name="Chunk_42" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=1139743279]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -5.9375, 0, 6.0625)
+
+[node name="Chunk_43" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=406942883]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -1.9375, 0, 6.0625)
+
+[node name="Chunk_44" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=500164292]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 2.0625, 0, 6.0625)
+
+[node name="Chunk_45" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=665891021]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 6.0625, 0, 6.0625)
+
+[node name="Chunk_46" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=1369303564]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 10.0625, 0, 6.0625)
+
+[node name="Chunk_47" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=2059404619]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 14.0625, 0, 6.0625)
+
+[node name="Chunk_48" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=124959555]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -13.9375, 0, 10.0625)
+
+[node name="Chunk_49" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=1379057144]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -9.9375, 0, 10.0625)
+
+[node name="Chunk_50" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=536144722]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -5.9375, 0, 10.0625)
+
+[node name="Chunk_51" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=556971632]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -1.9375, 0, 10.0625)
+
+[node name="Chunk_52" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=1031199257]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 2.0625, 0, 10.0625)
+
+[node name="Chunk_53" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=1604971143]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 6.0625, 0, 10.0625)
+
+[node name="Chunk_54" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=1382407154]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 10.0625, 0, 10.0625)
+
+[node name="Chunk_55" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=703831256]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 14.0625, 0, 10.0625)
+
+[node name="Chunk_56" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=1636047310]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -13.9375, 0, 14.0625)
+
+[node name="Chunk_57" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=2082552694]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -9.9375, 0, 14.0625)
+
+[node name="Chunk_58" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=1595390268]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -5.9375, 0, 14.0625)
+
+[node name="Chunk_59" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=54569889]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, -1.9375, 0, 14.0625)
+
+[node name="Chunk_60" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=999641783]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 2.0625, 0, 14.0625)
+
+[node name="Chunk_61" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=2040056352]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 6.0625, 0, 14.0625)
+
+[node name="Chunk_62" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=1310982856]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 10.0625, 0, 14.0625)
+
+[node name="Chunk_63" type="CollisionShape3D" parent="UnifiedEditRuntime/SurfaceB/Terrain" unique_id=1242309700]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 0.125, 14.0625, 0, 14.0625)
+
+[connection signal="pressed" from="Interface/EditPanel/Margin/Controls/SceneSwitcher/Actions/Switch" to="Interface/EditPanel/Margin/Controls/SceneSwitcher" method="_on_switch_pressed"]
+[connection signal="pressed" from="Interface/ShapeBrushPanel/Margin/Controls/Tools/Dig" to="Interface/ShapeBrushPanel" method="_on_tool_pressed" binds= [&"remove_sand"]]
+[connection signal="pressed" from="Interface/ShapeBrushPanel/Margin/Controls/Tools/Fill" to="Interface/ShapeBrushPanel" method="_on_tool_pressed" binds= [&"place_sand"]]
+[connection signal="pressed" from="Interface/ShapeBrushPanel/Margin/Controls/Tools/Castle" to="Interface/ShapeBrushPanel" method="_on_tool_pressed" binds= [&"castle_v1"]]
+[connection signal="pressed" from="Interface/ShapeBrushPanel/Margin/Controls/Tools/Shovel" to="Interface/ShapeBrushPanel" method="_on_tool_pressed" binds= [&"shovel_v1"]]
+[connection signal="pressed" from="Interface/ShapeBrushPanel/Margin/Controls/Tools/Wall" to="Interface/ShapeBrushPanel" method="_on_tool_pressed" binds= [&"wall_v1"]]
+[connection signal="pressed" from="Interface/ShapeBrushPanel/Margin/Controls/Tools/SuspendedSand" to="Interface/ShapeBrushPanel" method="_on_tool_pressed" binds= [&"suspended_sand"]]
+[connection signal="pressed" from="Interface/ShapeBrushPanel/Margin/Controls/Tools/GravelDrop" to="Interface/ShapeBrushPanel" method="_on_tool_pressed" binds= [&"gravel_drop"]]
+[connection signal="pressed" from="UIVisibility/ToggleUI" to="UIVisibility" method="_on_toggle_pressed"]
+
+[node name="ParameterWindows" type="MenuButton" parent="Interface/EditPanel/Margin/Controls"]
+layout_mode = 2
+text = "参数窗口"
+focus_mode = 0
+item_count = 6
+popup/item_0/text = "工具参数"
+popup/item_0/id = 0
+popup/item_1/text = "水参数"
+popup/item_1/id = 1
+popup/item_2/text = "沙参数"
+popup/item_2/id = 2
+popup/item_3/text = "道具参数"
+popup/item_3/id = 3
+popup/item_4/text = "环境与显示"
+popup/item_4/id = 4
+popup/item_5/text = "性能与诊断"
+popup/item_5/id = 5
+
+[node name="Pause" type="Button" parent="Interface/EditPanel/Margin/Controls"]
+layout_mode = 2
+focus_mode = 0
+text = "暂停／继续"
+
+[node name="Camera" type="Button" parent="Interface/EditPanel/Margin/Controls"]
+layout_mode = 2
+focus_mode = 0
+text = "切换视角"
+
+[node name="Smooth" type="Button" parent="Interface/ShapeBrushPanel/Margin/Controls/Tools"]
+layout_mode = 2
+focus_mode = 0
+toggle_mode = true
+text = "平滑"
+
+[node name="Compact" type="Button" parent="Interface/ShapeBrushPanel/Margin/Controls/Tools"]
+layout_mode = 2
+focus_mode = 0
+toggle_mode = true
+text = "压实"
+
+[connection signal="pressed" from="Interface/ShapeBrushPanel/Margin/Controls/Tools/Smooth" to="Interface/ShapeBrushPanel" method="_on_tool_pressed" binds=[&"smooth_v1"]]
+[connection signal="pressed" from="Interface/ShapeBrushPanel/Margin/Controls/Tools/Compact" to="Interface/ShapeBrushPanel" method="_on_tool_pressed" binds=[&"compact_v1"]]
+
+[node name="VegetationLayer" parent="." instance=ExtResource("vegetation_layer")]

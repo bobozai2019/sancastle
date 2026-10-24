@@ -1,0 +1,128 @@
+{
+  "phases": {
+    "old_on": {
+      "frame_ms": {
+        "p50": 16.429000000000002,
+        "p95": 19.418749999999996
+      },
+      "render_gpu_ms": {
+        "p50": 13.9755001068115,
+        "p95": 14.3620004653931
+      },
+      "process_ms": {
+        "p50": 21.087,
+        "p95": 31.601
+      },
+      "render_cpu_ms": {
+        "p50": 0.284000009298325,
+        "p95": 1.1390500068664529
+      }
+    },
+    "new_on": {
+      "frame_ms": {
+        "p50": 16.026,
+        "p95": 25.012200000000004
+      },
+      "render_gpu_ms": {
+        "p50": 13.5559997558594,
+        "p95": 13.97070026397704
+      },
+      "process_ms": {
+        "p50": 29.071,
+        "p95": 31.686
+      },
+      "render_cpu_ms": {
+        "p50": 0.282000005245209,
+        "p95": 1.120100009441374
+      }
+    },
+    "new_off": {
+      "frame_ms": {
+        "p50": 16.1215,
+        "p95": 17.581799999999998
+      },
+      "render_gpu_ms": {
+        "p50": 13.673999786377,
+        "p95": 14.021199893951449
+      },
+      "process_ms": {
+        "p50": 16.425,
+        "p95": 17.048
+      },
+      "render_cpu_ms": {
+        "p50": 0.437999993562698,
+        "p95": 1.1422999620437633
+      }
+    },
+    "old_off": {
+      "frame_ms": {
+        "p50": 16.5955,
+        "p95": 17.7256
+      },
+      "render_gpu_ms": {
+        "p50": 14.1529998779297,
+        "p95": 14.493800401687635
+      },
+      "process_ms": {
+        "p50": 16.884,
+        "p95": 17.33
+      },
+      "render_cpu_ms": {
+        "p50": 0.444000005722046,
+        "p95": 1.1249000012874604
+      }
+    }
+  },
+  "metadata": {
+    "adapter": "NVIDIA GeForce GTX 1050",
+    "engine": {
+      "build": "steam",
+      "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+      "hex": 263938,
+      "major": 4,
+      "minor": 7,
+      "patch": 2,
+      "status": "stable",
+      "string": "4.7.2-stable (steam)",
+      "timestamp": 0
+    },
+    "error": "",
+    "intervals": [
+      {
+        "end_tick": 240,
+        "end_time_s": 7.99999380111694,
+        "phase": "old_on",
+        "shader_sha256": "26a503bd375f88e43f7b1a7fdac1812fd2d7da4ad4217423aa5ae6d398ed0a61",
+        "vsync": 1,
+        "wall_s": 10.018827
+      },
+      {
+        "end_tick": 240,
+        "end_time_s": 7.99999380111694,
+        "phase": "new_on",
+        "shader_sha256": "6506719ce13eae6bb94b96ea4c09afa4275741b1faf9bdb075e18cff0f4a877e",
+        "vsync": 1,
+        "wall_s": 10.016387
+      },
+      {
+        "end_tick": 240,
+        "end_time_s": 7.99999380111694,
+        "phase": "new_off",
+        "shader_sha256": "6506719ce13eae6bb94b96ea4c09afa4275741b1faf9bdb075e18cff0f4a877e",
+        "vsync": 0,
+        "wall_s": 10.011253
+      },
+      {
+        "end_tick": 240,
+        "end_time_s": 7.99999380111694,
+        "phase": "old_off",
+        "shader_sha256": "26a503bd375f88e43f7b1a7fdac1812fd2d7da4ad4217423aa5ae6d398ed0a61",
+        "vsync": 0,
+        "wall_s": 10.006028
+      }
+    ],
+    "scope": "Frozen frame pacing attribution only, 10s warm/10s sample. VSync-off cases are diagnostic, never C05 acceptance.",
+    "tick": 240,
+    "time_s": 7.99999380111694
+  }
+}

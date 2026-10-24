@@ -14,6 +14,7 @@ script = ExtResource("2")
 
 scene_key = "main"
 
+surface_wetness_enabled = true
 presentation_manifest = "res://assets/unified_edit/presentation/main.json"
 
 [connection signal="look_started" from="GpuPlayerCamera" to="." method="_on_camera_look_started"]

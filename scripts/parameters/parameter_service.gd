@@ -5,6 +5,7 @@ const Schema=preload("res://scripts/parameters/parameter_schema.gd")
 const FILE="user://parameters/startup.json"
 const LAYOUT="user://parameters/windows.cfg"
 const GROUPS=["tools","water","sand","props","environment","diagnostics"]
+const FOAM_DETAIL_PARAMETERS=["visual_foam_detail_scale_per_m","visual_foam_hole_strength","visual_foam_flow_cycle_s"]
 var scene: Node
 var startup: Dictionary={}
 var saved: Dictionary={}
@@ -153,6 +154,7 @@ func _enabled(id: String) -> bool:
 	if not available.get(id,false) or not is_instance_valid(scene):return false
 	var row: Dictionary=Schema.rows()[id]
 	if row.target!="uniform":return true
+	if row.get("node","")=="PrototypeFrontFoamDense" and not scene.get_node("PrototypeFrontFoamDense").is_visible_in_tree():return false
 	var material=_material(row)
 	if material==null:return false
 	match row.field:
@@ -223,6 +225,7 @@ func _read(row: Dictionary) -> Variant:
 		"uniform","uniform_component":
 			var material=_material(row)
 			if material==null:return null
+			if row.id in FOAM_DETAIL_PARAMETERS and _uniform(material,"foam_detail_mode")!=1:return null
 			var value: Variant=_uniform(material,row.field)
 			if value==null:return null
 			return value[int(row.component)] if row.target=="uniform_component" else _encode(value)

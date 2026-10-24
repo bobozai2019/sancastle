@@ -1,0 +1,12 @@
+{
+  "question_id": "Q04_authority_replay_timing",
+  "origin": "G4/authority_replay_audit.md: end-only strict replay fails while a different intermediate-capture probe passes",
+  "registration_note": "This explicit matrix was saved after launch; the factor and control were already encoded in the launched probe. End-only failure had been observed; intermediate group was still running.",
+  "hypotheses": [
+    {"id": "H1", "claim": "A requested tick may not have completed exactly once", "distinguishing_observation": "Identical before/after completed_tick checks in both groups"},
+    {"id": "H2", "claim": "An edit may still have an unconsumed END", "distinguishing_observation": "finish admission and empty end_requested checks in both groups"},
+    {"id": "H3", "claim": "Adding intermediate saves alone is sufficient to eliminate the replay difference", "distinguishing_observation": "Only intermediate-save calls change; original Codec.load snapshot decoder retained in both groups"}
+  ],
+  "invariants": ["No runtime numerical code changes", "No tolerance changes", "Same start checkpoint", "Same fill/dig input and completed tick", "Same source before/after", "No performance optimization or acceptance claim"],
+  "extra_native_control_note": "Raw control equality is supplemental only: restored-generation identity may differ by design. Physical-field assertions remain independently reported."
+}

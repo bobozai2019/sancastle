@@ -21,7 +21,7 @@ def main() -> None:
     parser.add_argument("--pack", type=Path, default=ROOT / "release/sandcastle.pck")
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--smoke", action="store_true", help="skip checkpoint byte comparisons; still verify GPU fill/dig receipts")
-    parser.add_argument("--scenes", nargs="+", choices=["main", "test1_capture", "test1_backwash", "test1_geometry"], default=["main", "test1_capture", "test1_backwash", "test1_geometry"])
+    parser.add_argument("--scenes", nargs="+", choices=["main", "test1_geometry"], default=["main", "test1_geometry"])
     args = parser.parse_args()
     destination = args.output.resolve()
     destination.mkdir(parents=True, exist_ok=False)
@@ -37,7 +37,7 @@ def main() -> None:
                 folder = destination / scene
                 folder.mkdir()
                 log = folder / "engine.log"
-                command = [str(engine), "--main-pack", str(pack), "--script", str(PROBE), "--log-file", str(log), "--", f"--output={folder.as_posix()}", f"--scene={scene}"]
+                command = [str(engine), "--main-pack", str(pack), "--script", str(PROBE), "--log-file", str(log), "--", f"--output={folder.as_posix()}", f"--scene={scene}", "--ignore-parameter-config"]
                 if args.smoke or scene != "main":
                     command.append("--smoke")
                 with (folder / "stdout.txt").open("w", encoding="utf-8") as stream:

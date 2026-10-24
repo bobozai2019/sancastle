@@ -1,0 +1,23 @@
+{
+  "validation_status": "pass",
+  "base_water_sha256": "26a503bd375f88e43f7b1a7fdac1812fd2d7da4ad4217423aa5ae6d398ed0a61",
+  "candidate_sha256": "6506719ce13eae6bb94b96ea4c09afa4275741b1faf9bdb075e18cff0f4a877e",
+  "texture_sha256": "05c18a800db479f3e2a2568867051d29a3438d2cd7225830e000e8598935e50b",
+  "foam_detail_scale_per_m": 1.0,
+  "foam_hole_strength": 1.0,
+  "foam_flow_cycle_s": 4.0,
+  "foam_flow_gain": 1.0,
+  "foam_flow_speed_cap_m_s": 2.0,
+  "natural_contact_gain": 0.55,
+  "evidence": [
+    "G1/appearance_v1",
+    "G2/flow_fixture_v4",
+    "G2/flow_fixture_v4_geometry",
+    "G2/flow_isolated_quick_v1",
+    "G2/natural_flow_v1",
+    "G3/shore_layers_v1",
+    "G3/shore_gain_v1",
+    "G3/shore_edit_v2",
+    "G3/natural_shore_v1"
+  ]
+}

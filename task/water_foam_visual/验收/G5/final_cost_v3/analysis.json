@@ -1,0 +1,2769 @@
+{
+  "runs": {
+    "main_1080_A1": {
+      "metadata": {
+        "engine": {
+          "build": "steam",
+          "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+          "hex": 263938,
+          "major": 4,
+          "minor": 7,
+          "patch": 2,
+          "status": "stable",
+          "string": "4.7.2-stable (steam)",
+          "timestamp": 0
+        },
+        "adapter": "NVIDIA GeForce GTX 1050",
+        "driver": "d3d12",
+        "window": "(1920, 1080)",
+        "viewport": "(1920, 1080)",
+        "vsync": 1,
+        "max_fps": 0,
+        "last_error": "",
+        "foam_variant": "baseline",
+        "water_shader_sha256": "26a503bd375f88e43f7b1a7fdac1812fd2d7da4ad4217423aa5ae6d398ed0a61",
+        "contact_gain": 1.0
+      },
+      "phases": {
+        "paused": {
+          "samples": 1267,
+          "wall_s": 30.024443,
+          "sim_s_per_wall_s": 0.0,
+          "start_tick": 240,
+          "end_tick": 240,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 21.086999893188477,
+            "p95": 21.53869972229004,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 23.696,
+            "p95": 25.320600000000002,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.3330000042915344,
+            "p95": 1.354700005054474,
+            "nonpositive": 0
+          },
+          "process_ms": {
+            "p50": 23.964,
+            "p95": 24.261000000000003,
+            "nonpositive": 0
+          },
+          "physics_ms": {
+            "p50": 1.527,
+            "p95": 2.4789999999999996,
+            "nonpositive": 0
+          },
+          "setup_cpu_ms": {
+            "p50": 0.077,
+            "p95": 0.272,
+            "nonpositive": 0
+          }
+        },
+        "live": {
+          "samples": 438,
+          "wall_s": 30.033437,
+          "sim_s_per_wall_s": 0.6958813203493645,
+          "start_tick": 451,
+          "end_tick": 1078,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 22.348999977111816,
+            "p95": 40.806250381469724,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 47.4675,
+            "p95": 103.77759999999999,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.3149999976158142,
+            "p95": 0.5376000016927718,
+            "nonpositive": 0
+          },
+          "process_ms": {
+            "p50": 77.289,
+            "p95": 625.7011499999995,
+            "nonpositive": 0
+          },
+          "physics_ms": {
+            "p50": 5.412,
+            "p95": 9.57,
+            "nonpositive": 0
+          },
+          "setup_cpu_ms": {
+            "p50": 0.057,
+            "p95": 0.08614999999999998,
+            "nonpositive": 0
+          }
+        }
+      },
+      "valid": true
+    },
+    "main_1080_A2": {
+      "metadata": {
+        "engine": {
+          "build": "steam",
+          "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+          "hex": 263938,
+          "major": 4,
+          "minor": 7,
+          "patch": 2,
+          "status": "stable",
+          "string": "4.7.2-stable (steam)",
+          "timestamp": 0
+        },
+        "adapter": "NVIDIA GeForce GTX 1050",
+        "driver": "d3d12",
+        "window": "(1920, 1080)",
+        "viewport": "(1920, 1080)",
+        "vsync": 1,
+        "max_fps": 0,
+        "last_error": "",
+        "foam_variant": "baseline",
+        "water_shader_sha256": "26a503bd375f88e43f7b1a7fdac1812fd2d7da4ad4217423aa5ae6d398ed0a61",
+        "contact_gain": 1.0
+      },
+      "phases": {
+        "paused": {
+          "samples": 1264,
+          "wall_s": 30.008467,
+          "sim_s_per_wall_s": 0.0,
+          "start_tick": 240,
+          "end_tick": 240,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 21.10949993133545,
+            "p95": 21.576699829101564,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 23.75,
+            "p95": 25.7061,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.31200000643730164,
+            "p95": 1.3258499860763548,
+            "nonpositive": 0
+          },
+          "process_ms": {
+            "p50": 24.069,
+            "p95": 24.389999999999997,
+            "nonpositive": 0
+          },
+          "physics_ms": {
+            "p50": 1.823,
+            "p95": 3.13,
+            "nonpositive": 0
+          },
+          "setup_cpu_ms": {
+            "p50": 0.071,
+            "p95": 0.2648499999999999,
+            "nonpositive": 0
+          }
+        },
+        "live": {
+          "samples": 588,
+          "wall_s": 30.00924,
+          "sim_s_per_wall_s": 0.8530580792378969,
+          "start_tick": 463,
+          "end_tick": 1231,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 21.467000007629395,
+            "p95": 27.81575078964233,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 39.1295,
+            "p95": 76.54694999999997,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.3109999895095825,
+            "p95": 0.5135000228881834,
+            "nonpositive": 0
+          },
+          "process_ms": {
+            "p50": 57.27,
+            "p95": 595.248,
+            "nonpositive": 0
+          },
+          "physics_ms": {
+            "p50": 7.594,
+            "p95": 11.048,
+            "nonpositive": 0
+          },
+          "setup_cpu_ms": {
+            "p50": 0.057,
+            "p95": 0.08464999999999999,
+            "nonpositive": 0
+          }
+        }
+      },
+      "valid": true
+    },
+    "main_1080_A3": {
+      "metadata": {
+        "engine": {
+          "build": "steam",
+          "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+          "hex": 263938,
+          "major": 4,
+          "minor": 7,
+          "patch": 2,
+          "status": "stable",
+          "string": "4.7.2-stable (steam)",
+          "timestamp": 0
+        },
+        "adapter": "NVIDIA GeForce GTX 1050",
+        "driver": "d3d12",
+        "window": "(1920, 1080)",
+        "viewport": "(1920, 1080)",
+        "vsync": 1,
+        "max_fps": 0,
+        "last_error": "",
+        "foam_variant": "baseline",
+        "water_shader_sha256": "26a503bd375f88e43f7b1a7fdac1812fd2d7da4ad4217423aa5ae6d398ed0a61",
+        "contact_gain": 1.0
+      },
+      "phases": {
+        "paused": {
+          "samples": 1262,
+          "wall_s": 30.021432,
+          "sim_s_per_wall_s": 0.0,
+          "start_tick": 240,
+          "end_tick": 240,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 21.13800048828125,
+            "p95": 21.608849334716798,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 23.806,
+            "p95": 25.726450000000003,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.3109999895095825,
+            "p95": 1.335849964618683,
+            "nonpositive": 0
+          },
+          "process_ms": {
+            "p50": 24.026,
+            "p95": 24.329,
+            "nonpositive": 0
+          },
+          "physics_ms": {
+            "p50": 1.6869999999999998,
+            "p95": 2.334,
+            "nonpositive": 0
+          },
+          "setup_cpu_ms": {
+            "p50": 0.073,
+            "p95": 0.2719500000000001,
+            "nonpositive": 0
+          }
+        },
+        "live": {
+          "samples": 536,
+          "wall_s": 30.023015,
+          "sim_s_per_wall_s": 0.7893823577245396,
+          "start_tick": 483,
+          "end_tick": 1194,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 21.57900047302246,
+            "p95": 27.243999481201172,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 40.819500000000005,
+            "p95": 78.9735,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.3199999928474426,
+            "p95": 0.539249986410141,
+            "nonpositive": 0
+          },
+          "process_ms": {
+            "p50": 62.726000000000006,
+            "p95": 554.352,
+            "nonpositive": 0
+          },
+          "physics_ms": {
+            "p50": 4.553,
+            "p95": 9.886000000000001,
+            "nonpositive": 0
+          },
+          "setup_cpu_ms": {
+            "p50": 0.058,
+            "p95": 0.08825,
+            "nonpositive": 0
+          }
+        }
+      },
+      "valid": true
+    },
+    "main_1080_B1": {
+      "metadata": {
+        "engine": {
+          "build": "steam",
+          "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+          "hex": 263938,
+          "major": 4,
+          "minor": 7,
+          "patch": 2,
+          "status": "stable",
+          "string": "4.7.2-stable (steam)",
+          "timestamp": 0
+        },
+        "adapter": "NVIDIA GeForce GTX 1050",
+        "driver": "d3d12",
+        "window": "(1920, 1080)",
+        "viewport": "(1920, 1080)",
+        "vsync": 1,
+        "max_fps": 0,
+        "last_error": "",
+        "foam_variant": "candidate",
+        "water_shader_sha256": "6506719ce13eae6bb94b96ea4c09afa4275741b1faf9bdb075e18cff0f4a877e",
+        "contact_gain": 0.55
+      },
+      "phases": {
+        "paused": {
+          "samples": 1313,
+          "wall_s": 30.013165,
+          "sim_s_per_wall_s": 0.0,
+          "start_tick": 240,
+          "end_tick": 240,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 20.229999542236328,
+            "p95": 20.643999099731445,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 22.861,
+            "p95": 24.433999999999997,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.30300000309944153,
+            "p95": 1.2957999944686887,
+            "nonpositive": 0
+          },
+          "process_ms": {
+            "p50": 23.189,
+            "p95": 23.421999999999997,
+            "nonpositive": 0
+          },
+          "physics_ms": {
+            "p50": 1.671,
+            "p95": 2.2230000000000003,
+            "nonpositive": 0
+          },
+          "setup_cpu_ms": {
+            "p50": 0.076,
+            "p95": 0.29779999999999973,
+            "nonpositive": 0
+          }
+        },
+        "live": {
+          "samples": 527,
+          "wall_s": 30.01093,
+          "sim_s_per_wall_s": 0.786368162951902,
+          "start_tick": 489,
+          "end_tick": 1197,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 20.875,
+            "p95": 34.20740165710449,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 41.699,
+            "p95": 80.53309999999999,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.31700000166893005,
+            "p95": 0.49739999473094937,
+            "nonpositive": 0
+          },
+          "process_ms": {
+            "p50": 69.65,
+            "p95": 638.019,
+            "nonpositive": 0
+          },
+          "physics_ms": {
+            "p50": 4.527,
+            "p95": 11.088000000000001,
+            "nonpositive": 0
+          },
+          "setup_cpu_ms": {
+            "p50": 0.06,
+            "p95": 0.09069999999999999,
+            "nonpositive": 0
+          }
+        }
+      },
+      "valid": true
+    },
+    "main_1080_B2": {
+      "metadata": {
+        "engine": {
+          "build": "steam",
+          "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+          "hex": 263938,
+          "major": 4,
+          "minor": 7,
+          "patch": 2,
+          "status": "stable",
+          "string": "4.7.2-stable (steam)",
+          "timestamp": 0
+        },
+        "adapter": "NVIDIA GeForce GTX 1050",
+        "driver": "d3d12",
+        "window": "(1920, 1080)",
+        "viewport": "(1920, 1080)",
+        "vsync": 1,
+        "max_fps": 0,
+        "last_error": "",
+        "foam_variant": "candidate",
+        "water_shader_sha256": "6506719ce13eae6bb94b96ea4c09afa4275741b1faf9bdb075e18cff0f4a877e",
+        "contact_gain": 0.55
+      },
+      "phases": {
+        "paused": {
+          "samples": 1307,
+          "wall_s": 30.004589,
+          "sim_s_per_wall_s": 0.0,
+          "start_tick": 240,
+          "end_tick": 240,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 20.35300064086914,
+            "p95": 20.812000274658203,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 22.924,
+            "p95": 24.3335,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.32499998807907104,
+            "p95": 1.3657000422477723,
+            "nonpositive": 0
+          },
+          "process_ms": {
+            "p50": 23.159,
+            "p95": 23.498,
+            "nonpositive": 0
+          },
+          "physics_ms": {
+            "p50": 1.6280000000000001,
+            "p95": 3.779,
+            "nonpositive": 0
+          },
+          "setup_cpu_ms": {
+            "p50": 0.085,
+            "p95": 0.303,
+            "nonpositive": 0
+          }
+        },
+        "live": {
+          "samples": 578,
+          "wall_s": 30.018498,
+          "sim_s_per_wall_s": 0.8205926045499043,
+          "start_tick": 493,
+          "end_tick": 1232,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 20.802000045776367,
+            "p95": 27.078850364685056,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 37.903999999999996,
+            "p95": 79.81994999999999,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.31299999356269836,
+            "p95": 0.5543000161647796,
+            "nonpositive": 0
+          },
+          "process_ms": {
+            "p50": 63.528,
+            "p95": 589.127,
+            "nonpositive": 0
+          },
+          "physics_ms": {
+            "p50": 4.3229999999999995,
+            "p95": 9.942,
+            "nonpositive": 0
+          },
+          "setup_cpu_ms": {
+            "p50": 0.059,
+            "p95": 0.08814999999999998,
+            "nonpositive": 0
+          }
+        }
+      },
+      "valid": true
+    },
+    "main_720_A1": {
+      "metadata": {
+        "engine": {
+          "build": "steam",
+          "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+          "hex": 263938,
+          "major": 4,
+          "minor": 7,
+          "patch": 2,
+          "status": "stable",
+          "string": "4.7.2-stable (steam)",
+          "timestamp": 0
+        },
+        "adapter": "NVIDIA GeForce GTX 1050",
+        "driver": "d3d12",
+        "window": "(1280, 720)",
+        "viewport": "(1280, 720)",
+        "vsync": 1,
+        "max_fps": 0,
+        "last_error": "",
+        "foam_variant": "baseline",
+        "water_shader_sha256": "26a503bd375f88e43f7b1a7fdac1812fd2d7da4ad4217423aa5ae6d398ed0a61",
+        "contact_gain": 1.0
+      },
+      "phases": {
+        "paused": {
+          "samples": 1793,
+          "wall_s": 30.018266,
+          "sim_s_per_wall_s": 0.0,
+          "start_tick": 240,
+          "end_tick": 240,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 14.050999641418457,
+            "p95": 14.516399955749511,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 16.592,
+            "p95": 18.2094,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.27799999713897705,
+            "p95": 1.128999948501587,
+            "nonpositive": 0
+          },
+          "process_ms": {
+            "p50": 19.608,
+            "p95": 31.544999999999998,
+            "nonpositive": 0
+          },
+          "physics_ms": {
+            "p50": 1.663,
+            "p95": 2.154,
+            "nonpositive": 0
+          },
+          "setup_cpu_ms": {
+            "p50": 0.062,
+            "p95": 0.13539999999999988,
+            "nonpositive": 0
+          }
+        },
+        "live": {
+          "samples": 849,
+          "wall_s": 30.020389,
+          "sim_s_per_wall_s": 0.9104784171772599,
+          "start_tick": 538,
+          "end_tick": 1358,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 13.984000205993652,
+            "p95": 15.994000625610349,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 28.963,
+            "p95": 62.988,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.3199999928474426,
+            "p95": 0.5465999960899353,
+            "nonpositive": 0
+          },
+          "process_ms": {
+            "p50": 38.423,
+            "p95": 619.722,
+            "nonpositive": 0
+          },
+          "physics_ms": {
+            "p50": 4.343,
+            "p95": 10.048,
+            "nonpositive": 0
+          },
+          "setup_cpu_ms": {
+            "p50": 0.06,
+            "p95": 0.113,
+            "nonpositive": 0
+          }
+        }
+      },
+      "valid": true
+    },
+    "main_720_A2": {
+      "metadata": {
+        "engine": {
+          "build": "steam",
+          "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+          "hex": 263938,
+          "major": 4,
+          "minor": 7,
+          "patch": 2,
+          "status": "stable",
+          "string": "4.7.2-stable (steam)",
+          "timestamp": 0
+        },
+        "adapter": "NVIDIA GeForce GTX 1050",
+        "driver": "d3d12",
+        "window": "(1280, 720)",
+        "viewport": "(1280, 720)",
+        "vsync": 1,
+        "max_fps": 0,
+        "last_error": "",
+        "foam_variant": "baseline",
+        "water_shader_sha256": "26a503bd375f88e43f7b1a7fdac1812fd2d7da4ad4217423aa5ae6d398ed0a61",
+        "contact_gain": 1.0
+      },
+      "phases": {
+        "paused": {
+          "samples": 1789,
+          "wall_s": 30.017189,
+          "sim_s_per_wall_s": 0.0,
+          "start_tick": 240,
+          "end_tick": 240,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 13.973999977111816,
+            "p95": 14.420000076293945,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 16.429,
+            "p95": 19.150199999999973,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.2879999876022339,
+            "p95": 1.102799987792968,
+            "nonpositive": 0
+          },
+          "process_ms": {
+            "p50": 22.394000000000002,
+            "p95": 31.182000000000002,
+            "nonpositive": 0
+          },
+          "physics_ms": {
+            "p50": 1.506,
+            "p95": 2.0509999999999997,
+            "nonpositive": 0
+          },
+          "setup_cpu_ms": {
+            "p50": 0.063,
+            "p95": 0.13,
+            "nonpositive": 0
+          }
+        },
+        "live": {
+          "samples": 861,
+          "wall_s": 30.034281,
+          "sim_s_per_wall_s": 0.9089474602391379,
+          "start_tick": 538,
+          "end_tick": 1357,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 13.98799991607666,
+            "p95": 15.11400032043457,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 29.097,
+            "p95": 60.029,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.32199999690055847,
+            "p95": 0.6140000224113464,
+            "nonpositive": 0
+          },
+          "process_ms": {
+            "p50": 32.28,
+            "p95": 473.687,
+            "nonpositive": 0
+          },
+          "physics_ms": {
+            "p50": 4.492999999999999,
+            "p95": 10.075000000000001,
+            "nonpositive": 0
+          },
+          "setup_cpu_ms": {
+            "p50": 0.063,
+            "p95": 0.128,
+            "nonpositive": 0
+          }
+        }
+      },
+      "valid": true
+    },
+    "main_720_A3": {
+      "metadata": {
+        "engine": {
+          "build": "steam",
+          "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+          "hex": 263938,
+          "major": 4,
+          "minor": 7,
+          "patch": 2,
+          "status": "stable",
+          "string": "4.7.2-stable (steam)",
+          "timestamp": 0
+        },
+        "adapter": "NVIDIA GeForce GTX 1050",
+        "driver": "d3d12",
+        "window": "(1280, 720)",
+        "viewport": "(1280, 720)",
+        "vsync": 1,
+        "max_fps": 0,
+        "last_error": "",
+        "foam_variant": "baseline",
+        "water_shader_sha256": "26a503bd375f88e43f7b1a7fdac1812fd2d7da4ad4217423aa5ae6d398ed0a61",
+        "contact_gain": 1.0
+      },
+      "phases": {
+        "paused": {
+          "samples": 1791,
+          "wall_s": 30.016893,
+          "sim_s_per_wall_s": 0.0,
+          "start_tick": 240,
+          "end_tick": 240,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 14.0600004196167,
+            "p95": 14.474500179290771,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 16.593,
+            "p95": 18.1755,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.2770000100135803,
+            "p95": 1.1160000562667847,
+            "nonpositive": 0
+          },
+          "process_ms": {
+            "p50": 19.497,
+            "p95": 30.898,
+            "nonpositive": 0
+          },
+          "physics_ms": {
+            "p50": 1.6139999999999999,
+            "p95": 3.492,
+            "nonpositive": 0
+          },
+          "setup_cpu_ms": {
+            "p50": 0.061,
+            "p95": 0.13,
+            "nonpositive": 0
+          }
+        },
+        "live": {
+          "samples": 840,
+          "wall_s": 30.026236,
+          "sim_s_per_wall_s": 0.8670063106208652,
+          "start_tick": 523,
+          "end_tick": 1304,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 13.982999801635742,
+            "p95": 16.806000328063963,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 27.782,
+            "p95": 63.50539999999999,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.31700000166893005,
+            "p95": 0.55930001437664,
+            "nonpositive": 0
+          },
+          "process_ms": {
+            "p50": 31.907999999999998,
+            "p95": 570.9494999999997,
+            "nonpositive": 0
+          },
+          "physics_ms": {
+            "p50": 6.49,
+            "p95": 11.145,
+            "nonpositive": 0
+          },
+          "setup_cpu_ms": {
+            "p50": 0.059,
+            "p95": 0.103,
+            "nonpositive": 0
+          }
+        }
+      },
+      "valid": true
+    },
+    "main_720_B1": {
+      "metadata": {
+        "engine": {
+          "build": "steam",
+          "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+          "hex": 263938,
+          "major": 4,
+          "minor": 7,
+          "patch": 2,
+          "status": "stable",
+          "string": "4.7.2-stable (steam)",
+          "timestamp": 0
+        },
+        "adapter": "NVIDIA GeForce GTX 1050",
+        "driver": "d3d12",
+        "window": "(1280, 720)",
+        "viewport": "(1280, 720)",
+        "vsync": 1,
+        "max_fps": 0,
+        "last_error": "",
+        "foam_variant": "candidate",
+        "water_shader_sha256": "6506719ce13eae6bb94b96ea4c09afa4275741b1faf9bdb075e18cff0f4a877e",
+        "contact_gain": 0.55
+      },
+      "phases": {
+        "paused": {
+          "samples": 1795,
+          "wall_s": 30.017406,
+          "sim_s_per_wall_s": 0.0,
+          "start_tick": 240,
+          "end_tick": 240,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 13.60099983215332,
+            "p95": 14.126300239562989,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 16.113,
+            "p95": 23.5418,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.2759999930858612,
+            "p95": 1.1119999885559082,
+            "nonpositive": 0
+          },
+          "process_ms": {
+            "p50": 26.716,
+            "p95": 31.648000000000003,
+            "nonpositive": 0
+          },
+          "physics_ms": {
+            "p50": 1.478,
+            "p95": 2.1220000000000003,
+            "nonpositive": 0
+          },
+          "setup_cpu_ms": {
+            "p50": 0.059,
+            "p95": 0.126,
+            "nonpositive": 0
+          }
+        },
+        "live": {
+          "samples": 902,
+          "wall_s": 30.039786,
+          "sim_s_per_wall_s": 0.9265348822406861,
+          "start_tick": 478,
+          "end_tick": 1313,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 13.625,
+            "p95": 14.559800386428833,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 28.063499999999998,
+            "p95": 57.39529999999999,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.3160000145435333,
+            "p95": 0.6127999782562253,
+            "nonpositive": 0
+          },
+          "process_ms": {
+            "p50": 33.027,
+            "p95": 406.726,
+            "nonpositive": 0
+          },
+          "physics_ms": {
+            "p50": 4.315,
+            "p95": 8.685,
+            "nonpositive": 0
+          },
+          "setup_cpu_ms": {
+            "p50": 0.057,
+            "p95": 0.097,
+            "nonpositive": 0
+          }
+        }
+      },
+      "valid": true
+    },
+    "main_720_B2": {
+      "metadata": {
+        "engine": {
+          "build": "steam",
+          "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+          "hex": 263938,
+          "major": 4,
+          "minor": 7,
+          "patch": 2,
+          "status": "stable",
+          "string": "4.7.2-stable (steam)",
+          "timestamp": 0
+        },
+        "adapter": "NVIDIA GeForce GTX 1050",
+        "driver": "d3d12",
+        "window": "(1280, 720)",
+        "viewport": "(1280, 720)",
+        "vsync": 1,
+        "max_fps": 0,
+        "last_error": "",
+        "foam_variant": "candidate",
+        "water_shader_sha256": "6506719ce13eae6bb94b96ea4c09afa4275741b1faf9bdb075e18cff0f4a877e",
+        "contact_gain": 0.55
+      },
+      "phases": {
+        "paused": {
+          "samples": 1796,
+          "wall_s": 30.016738,
+          "sim_s_per_wall_s": 0.0,
+          "start_tick": 240,
+          "end_tick": 240,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 13.547500133514404,
+            "p95": 14.063499689102173,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 16.0215,
+            "p95": 25.029249999999998,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.28200000524520874,
+            "p95": 1.055999994277954,
+            "nonpositive": 0
+          },
+          "process_ms": {
+            "p50": 26.724999999999998,
+            "p95": 31.475,
+            "nonpositive": 0
+          },
+          "physics_ms": {
+            "p50": 1.5070000000000001,
+            "p95": 2.52,
+            "nonpositive": 0
+          },
+          "setup_cpu_ms": {
+            "p50": 0.0605,
+            "p95": 0.128,
+            "nonpositive": 0
+          }
+        },
+        "live": {
+          "samples": 469,
+          "wall_s": 30.015045,
+          "sim_s_per_wall_s": 0.6629907218229276,
+          "start_tick": 509,
+          "end_tick": 1106,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 13.96399974822998,
+            "p95": 28.15599937438964,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 35.286,
+            "p95": 109.41439999999989,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.3149999976158142,
+            "p95": 0.5339999794960022,
+            "nonpositive": 0
+          },
+          "process_ms": {
+            "p50": 94.45,
+            "p95": 663.273,
+            "nonpositive": 0
+          },
+          "physics_ms": {
+            "p50": 5.829,
+            "p95": 10.834,
+            "nonpositive": 0
+          },
+          "setup_cpu_ms": {
+            "p50": 0.059,
+            "p95": 0.1051999999999996,
+            "nonpositive": 0
+          }
+        }
+      },
+      "valid": true
+    },
+    "test1_geometry_1080_A1": {
+      "metadata": {
+        "engine": {
+          "build": "steam",
+          "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+          "hex": 263938,
+          "major": 4,
+          "minor": 7,
+          "patch": 2,
+          "status": "stable",
+          "string": "4.7.2-stable (steam)",
+          "timestamp": 0
+        },
+        "adapter": "NVIDIA GeForce GTX 1050",
+        "driver": "d3d12",
+        "window": "(1920, 1080)",
+        "viewport": "(1920, 1080)",
+        "vsync": 1,
+        "max_fps": 0,
+        "last_error": "",
+        "foam_variant": "baseline",
+        "water_shader_sha256": "26a503bd375f88e43f7b1a7fdac1812fd2d7da4ad4217423aa5ae6d398ed0a61",
+        "contact_gain": 1.0
+      },
+      "phases": {
+        "paused": {
+          "samples": 1754,
+          "wall_s": 30.014688,
+          "sim_s_per_wall_s": 0.0,
+          "start_tick": 240,
+          "end_tick": 240,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 16.620500564575195,
+            "p95": 16.909350204467774,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 17.0925,
+            "p95": 17.64105,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.35899999737739563,
+            "p95": 1.2920500159263608,
+            "nonpositive": 0
+          },
+          "process_ms": {
+            "p50": 17.569000000000003,
+            "p95": 18.255,
+            "nonpositive": 0
+          },
+          "physics_ms": {
+            "p50": 0.19,
+            "p95": 0.331,
+            "nonpositive": 0
+          },
+          "setup_cpu_ms": {
+            "p50": 0.074,
+            "p95": 0.16,
+            "nonpositive": 0
+          }
+        },
+        "live": {
+          "samples": 472,
+          "wall_s": 30.041537,
+          "sim_s_per_wall_s": 0.7833482266097618,
+          "start_tick": 468,
+          "end_tick": 1174,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 17.983500480651855,
+            "p95": 26.560999584197997,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 46.6425,
+            "p95": 85.14759999999998,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.35249999165534973,
+            "p95": 0.6013999998569487,
+            "nonpositive": 0
+          },
+          "process_ms": {
+            "p50": 75.52799999999999,
+            "p95": 599.099,
+            "nonpositive": 0
+          },
+          "physics_ms": {
+            "p50": 2.89,
+            "p95": 3.9569999999999994,
+            "nonpositive": 0
+          },
+          "setup_cpu_ms": {
+            "p50": 0.052,
+            "p95": 0.09,
+            "nonpositive": 0
+          }
+        }
+      },
+      "valid": true
+    },
+    "test1_geometry_1080_A2": {
+      "metadata": {
+        "engine": {
+          "build": "steam",
+          "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+          "hex": 263938,
+          "major": 4,
+          "minor": 7,
+          "patch": 2,
+          "status": "stable",
+          "string": "4.7.2-stable (steam)",
+          "timestamp": 0
+        },
+        "adapter": "NVIDIA GeForce GTX 1050",
+        "driver": "d3d12",
+        "window": "(1920, 1080)",
+        "viewport": "(1920, 1080)",
+        "vsync": 1,
+        "max_fps": 0,
+        "last_error": "",
+        "foam_variant": "baseline",
+        "water_shader_sha256": "26a503bd375f88e43f7b1a7fdac1812fd2d7da4ad4217423aa5ae6d398ed0a61",
+        "contact_gain": 1.0
+      },
+      "phases": {
+        "paused": {
+          "samples": 1763,
+          "wall_s": 30.013162,
+          "sim_s_per_wall_s": 0.0,
+          "start_tick": 240,
+          "end_tick": 240,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 16.56100082397461,
+            "p95": 16.822999954223633,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 17.009,
+            "p95": 17.4577,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.36500000953674316,
+            "p95": 1.205899977684021,
+            "nonpositive": 0
+          },
+          "process_ms": {
+            "p50": 17.397,
+            "p95": 17.662,
+            "nonpositive": 0
+          },
+          "physics_ms": {
+            "p50": 0.19699999999999998,
+            "p95": 0.281,
+            "nonpositive": 0
+          },
+          "setup_cpu_ms": {
+            "p50": 0.082,
+            "p95": 0.161,
+            "nonpositive": 0
+          }
+        },
+        "live": {
+          "samples": 451,
+          "wall_s": 30.199981,
+          "sim_s_per_wall_s": 0.7450222130022562,
+          "start_tick": 504,
+          "end_tick": 1179,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 18.006999969482422,
+            "p95": 33.696998596191406,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 47.546,
+            "p95": 84.92699999999999,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.3409999907016754,
+            "p95": 0.5710000097751617,
+            "nonpositive": 0
+          },
+          "process_ms": {
+            "p50": 81.452,
+            "p95": 629.549,
+            "nonpositive": 0
+          },
+          "physics_ms": {
+            "p50": 3.378,
+            "p95": 4.127,
+            "nonpositive": 0
+          },
+          "setup_cpu_ms": {
+            "p50": 0.052,
+            "p95": 0.082,
+            "nonpositive": 0
+          }
+        }
+      },
+      "valid": true
+    },
+    "test1_geometry_1080_A3": {
+      "metadata": {
+        "engine": {
+          "build": "steam",
+          "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+          "hex": 263938,
+          "major": 4,
+          "minor": 7,
+          "patch": 2,
+          "status": "stable",
+          "string": "4.7.2-stable (steam)",
+          "timestamp": 0
+        },
+        "adapter": "NVIDIA GeForce GTX 1050",
+        "driver": "d3d12",
+        "window": "(1920, 1080)",
+        "viewport": "(1920, 1080)",
+        "vsync": 1,
+        "max_fps": 0,
+        "last_error": "",
+        "foam_variant": "baseline",
+        "water_shader_sha256": "26a503bd375f88e43f7b1a7fdac1812fd2d7da4ad4217423aa5ae6d398ed0a61",
+        "contact_gain": 1.0
+      },
+      "phases": {
+        "paused": {
+          "samples": 1759,
+          "wall_s": 30.00335,
+          "sim_s_per_wall_s": 0.0,
+          "start_tick": 240,
+          "end_tick": 240,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 16.57699966430664,
+            "p95": 16.85710029602051,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 17.036,
+            "p95": 17.5453,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.3569999933242798,
+            "p95": 1.2612000346183776,
+            "nonpositive": 0
+          },
+          "process_ms": {
+            "p50": 17.464,
+            "p95": 17.883,
+            "nonpositive": 0
+          },
+          "physics_ms": {
+            "p50": 0.184,
+            "p95": 0.229,
+            "nonpositive": 0
+          },
+          "setup_cpu_ms": {
+            "p50": 0.078,
+            "p95": 0.1620999999999999,
+            "nonpositive": 0
+          }
+        },
+        "live": {
+          "samples": 454,
+          "wall_s": 30.336639,
+          "sim_s_per_wall_s": 0.7416661609941274,
+          "start_tick": 477,
+          "end_tick": 1152,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 18.054500579833984,
+            "p95": 27.599500560760408,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 46.777,
+            "p95": 86.81805,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.33899998664855957,
+            "p95": 0.5746999919414519,
+            "nonpositive": 0
+          },
+          "process_ms": {
+            "p50": 89.432,
+            "p95": 638.2719999999999,
+            "nonpositive": 0
+          },
+          "physics_ms": {
+            "p50": 3.192,
+            "p95": 4.435299999999997,
+            "nonpositive": 0
+          },
+          "setup_cpu_ms": {
+            "p50": 0.052,
+            "p95": 0.074,
+            "nonpositive": 0
+          }
+        }
+      },
+      "valid": true
+    },
+    "test1_geometry_1080_B1": {
+      "metadata": {
+        "engine": {
+          "build": "steam",
+          "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+          "hex": 263938,
+          "major": 4,
+          "minor": 7,
+          "patch": 2,
+          "status": "stable",
+          "string": "4.7.2-stable (steam)",
+          "timestamp": 0
+        },
+        "adapter": "NVIDIA GeForce GTX 1050",
+        "driver": "d3d12",
+        "window": "(1920, 1080)",
+        "viewport": "(1920, 1080)",
+        "vsync": 1,
+        "max_fps": 0,
+        "last_error": "",
+        "foam_variant": "candidate",
+        "water_shader_sha256": "6506719ce13eae6bb94b96ea4c09afa4275741b1faf9bdb075e18cff0f4a877e",
+        "contact_gain": 0.55
+      },
+      "phases": {
+        "paused": {
+          "samples": 1799,
+          "wall_s": 30.014573,
+          "sim_s_per_wall_s": 0.0,
+          "start_tick": 240,
+          "end_tick": 240,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 15.645999908447266,
+            "p95": 15.888999938964844,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 16.137,
+            "p95": 23.383699999999994,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.3409999907016754,
+            "p95": 1.066099989414215,
+            "nonpositive": 0
+          },
+          "process_ms": {
+            "p50": 26.365,
+            "p95": 30.505999999999997,
+            "nonpositive": 0
+          },
+          "physics_ms": {
+            "p50": 0.159,
+            "p95": 0.212,
+            "nonpositive": 0
+          },
+          "setup_cpu_ms": {
+            "p50": 0.074,
+            "p95": 0.147,
+            "nonpositive": 0
+          }
+        },
+        "live": {
+          "samples": 511,
+          "wall_s": 30.086456,
+          "sim_s_per_wall_s": 0.8065521704091286,
+          "start_tick": 509,
+          "end_tick": 1237,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 17.010000228881836,
+            "p95": 21.72499942779541,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 44.837,
+            "p95": 79.629,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.34299999475479126,
+            "p95": 0.5930000245571136,
+            "nonpositive": 0
+          },
+          "process_ms": {
+            "p50": 76.18700000000001,
+            "p95": 575.723,
+            "nonpositive": 0
+          },
+          "physics_ms": {
+            "p50": 3.1870000000000003,
+            "p95": 4.793,
+            "nonpositive": 0
+          },
+          "setup_cpu_ms": {
+            "p50": 0.052,
+            "p95": 0.0895,
+            "nonpositive": 0
+          }
+        }
+      },
+      "valid": true
+    },
+    "test1_geometry_1080_B2": {
+      "metadata": {
+        "engine": {
+          "build": "steam",
+          "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+          "hex": 263938,
+          "major": 4,
+          "minor": 7,
+          "patch": 2,
+          "status": "stable",
+          "string": "4.7.2-stable (steam)",
+          "timestamp": 0
+        },
+        "adapter": "NVIDIA GeForce GTX 1050",
+        "driver": "d3d12",
+        "window": "(1920, 1080)",
+        "viewport": "(1920, 1080)",
+        "vsync": 1,
+        "max_fps": 0,
+        "last_error": "",
+        "foam_variant": "candidate",
+        "water_shader_sha256": "6506719ce13eae6bb94b96ea4c09afa4275741b1faf9bdb075e18cff0f4a877e",
+        "contact_gain": 0.55
+      },
+      "phases": {
+        "paused": {
+          "samples": 1793,
+          "wall_s": 30.015425,
+          "sim_s_per_wall_s": 0.0,
+          "start_tick": 240,
+          "end_tick": 240,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 15.623000144958496,
+            "p95": 15.859000205993652,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 16.103,
+            "p95": 23.8126,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.3540000021457672,
+            "p95": 1.0553999662399292,
+            "nonpositive": 0
+          },
+          "process_ms": {
+            "p50": 26.898,
+            "p95": 31.705,
+            "nonpositive": 0
+          },
+          "physics_ms": {
+            "p50": 0.18100000000000002,
+            "p95": 0.25,
+            "nonpositive": 0
+          },
+          "setup_cpu_ms": {
+            "p50": 0.076,
+            "p95": 0.152,
+            "nonpositive": 0
+          }
+        },
+        "live": {
+          "samples": 501,
+          "wall_s": 30.067707,
+          "sim_s_per_wall_s": 0.7937519974580827,
+          "start_tick": 518,
+          "end_tick": 1234,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 16.856000900268555,
+            "p95": 21.410999298095703,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 44.347,
+            "p95": 79.748,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.33500000834465027,
+            "p95": 0.5419999957084656,
+            "nonpositive": 0
+          },
+          "process_ms": {
+            "p50": 75.288,
+            "p95": 667.135,
+            "nonpositive": 0
+          },
+          "physics_ms": {
+            "p50": 3.2030000000000003,
+            "p95": 4.069999999999999,
+            "nonpositive": 0
+          },
+          "setup_cpu_ms": {
+            "p50": 0.052,
+            "p95": 0.079,
+            "nonpositive": 0
+          }
+        }
+      },
+      "valid": true
+    },
+    "test1_geometry_720_A1": {
+      "metadata": {
+        "engine": {
+          "build": "steam",
+          "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+          "hex": 263938,
+          "major": 4,
+          "minor": 7,
+          "patch": 2,
+          "status": "stable",
+          "string": "4.7.2-stable (steam)",
+          "timestamp": 0
+        },
+        "adapter": "NVIDIA GeForce GTX 1050",
+        "driver": "d3d12",
+        "window": "(1280, 720)",
+        "viewport": "(1280, 720)",
+        "vsync": 1,
+        "max_fps": 0,
+        "last_error": "",
+        "foam_variant": "baseline",
+        "water_shader_sha256": "26a503bd375f88e43f7b1a7fdac1812fd2d7da4ad4217423aa5ae6d398ed0a61",
+        "contact_gain": 1.0
+      },
+      "phases": {
+        "paused": {
+          "samples": 1797,
+          "wall_s": 30.00723,
+          "sim_s_per_wall_s": 0.0,
+          "start_tick": 240,
+          "end_tick": 240,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 11.420000076293945,
+            "p95": 11.813199806213378,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 15.824,
+            "p95": 30.067199999999996,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.3019999861717224,
+            "p95": 1.1820000410079956,
+            "nonpositive": 0
+          },
+          "process_ms": {
+            "p50": 31.377000000000002,
+            "p95": 32.114999999999995,
+            "nonpositive": 0
+          },
+          "physics_ms": {
+            "p50": 0.157,
+            "p95": 0.196,
+            "nonpositive": 0
+          },
+          "setup_cpu_ms": {
+            "p50": 0.057,
+            "p95": 0.13,
+            "nonpositive": 0
+          }
+        },
+        "live": {
+          "samples": 535,
+          "wall_s": 30.214465,
+          "sim_s_per_wall_s": 0.7237041267423566,
+          "start_tick": 523,
+          "end_tick": 1179,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 11.972999572753906,
+            "p95": 17.33790054321289,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 36.776,
+            "p95": 98.06629999999997,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.32899999618530273,
+            "p95": 0.5748000085353848,
+            "nonpositive": 0
+          },
+          "process_ms": {
+            "p50": 67.468,
+            "p95": 672.449,
+            "nonpositive": 0
+          },
+          "physics_ms": {
+            "p50": 3.0959999999999996,
+            "p95": 4.211,
+            "nonpositive": 0
+          },
+          "setup_cpu_ms": {
+            "p50": 0.052,
+            "p95": 0.09289999999999986,
+            "nonpositive": 0
+          }
+        }
+      },
+      "valid": true
+    },
+    "test1_geometry_720_A2": {
+      "metadata": {
+        "engine": {
+          "build": "steam",
+          "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+          "hex": 263938,
+          "major": 4,
+          "minor": 7,
+          "patch": 2,
+          "status": "stable",
+          "string": "4.7.2-stable (steam)",
+          "timestamp": 0
+        },
+        "adapter": "NVIDIA GeForce GTX 1050",
+        "driver": "d3d12",
+        "window": "(1280, 720)",
+        "viewport": "(1280, 720)",
+        "vsync": 1,
+        "max_fps": 0,
+        "last_error": "",
+        "foam_variant": "baseline",
+        "water_shader_sha256": "26a503bd375f88e43f7b1a7fdac1812fd2d7da4ad4217423aa5ae6d398ed0a61",
+        "contact_gain": 1.0
+      },
+      "phases": {
+        "paused": {
+          "samples": 1794,
+          "wall_s": 30.009378,
+          "sim_s_per_wall_s": 0.0,
+          "start_tick": 240,
+          "end_tick": 240,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 11.491999626159668,
+            "p95": 11.888999938964844,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 15.874500000000001,
+            "p95": 30.046,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.30799999833106995,
+            "p95": 1.2680000066757202,
+            "nonpositive": 0
+          },
+          "process_ms": {
+            "p50": 31.726,
+            "p95": 32.415,
+            "nonpositive": 0
+          },
+          "physics_ms": {
+            "p50": 0.176,
+            "p95": 0.21000000000000002,
+            "nonpositive": 0
+          },
+          "setup_cpu_ms": {
+            "p50": 0.06,
+            "p95": 0.14,
+            "nonpositive": 0
+          }
+        },
+        "live": {
+          "samples": 725,
+          "wall_s": 30.006058,
+          "sim_s_per_wall_s": 0.9086915252363894,
+          "start_tick": 506,
+          "end_tick": 1324,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 11.980999946594238,
+            "p95": 13.782400321960447,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 34.807,
+            "p95": 70.7004,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.32899999618530273,
+            "p95": 0.5406000018119811,
+            "nonpositive": 0
+          },
+          "process_ms": {
+            "p50": 67.36200000000001,
+            "p95": 574.468,
+            "nonpositive": 0
+          },
+          "physics_ms": {
+            "p50": 2.699,
+            "p95": 3.8400000000000003,
+            "nonpositive": 0
+          },
+          "setup_cpu_ms": {
+            "p50": 0.054,
+            "p95": 0.08879999999999995,
+            "nonpositive": 0
+          }
+        }
+      },
+      "valid": true
+    },
+    "test1_geometry_720_A3": {
+      "metadata": {
+        "engine": {
+          "build": "steam",
+          "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+          "hex": 263938,
+          "major": 4,
+          "minor": 7,
+          "patch": 2,
+          "status": "stable",
+          "string": "4.7.2-stable (steam)",
+          "timestamp": 0
+        },
+        "adapter": "NVIDIA GeForce GTX 1050",
+        "driver": "d3d12",
+        "window": "(1280, 720)",
+        "viewport": "(1280, 720)",
+        "vsync": 1,
+        "max_fps": 0,
+        "last_error": "",
+        "foam_variant": "baseline",
+        "water_shader_sha256": "26a503bd375f88e43f7b1a7fdac1812fd2d7da4ad4217423aa5ae6d398ed0a61",
+        "contact_gain": 1.0
+      },
+      "phases": {
+        "paused": {
+          "samples": 1792,
+          "wall_s": 30.013886,
+          "sim_s_per_wall_s": 0.0,
+          "start_tick": 240,
+          "end_tick": 240,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 11.468000411987305,
+            "p95": 11.864050006866453,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 15.788,
+            "p95": 30.373099999999994,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.3149999976158142,
+            "p95": 1.3689000189304348,
+            "nonpositive": 0
+          },
+          "process_ms": {
+            "p50": 31.477999999999998,
+            "p95": 32.033,
+            "nonpositive": 0
+          },
+          "physics_ms": {
+            "p50": 0.16899999999999998,
+            "p95": 0.194,
+            "nonpositive": 0
+          },
+          "setup_cpu_ms": {
+            "p50": 0.057,
+            "p95": 0.137,
+            "nonpositive": 0
+          }
+        },
+        "live": {
+          "samples": 725,
+          "wall_s": 30.020806,
+          "sim_s_per_wall_s": 0.8771560469946972,
+          "start_tick": 509,
+          "end_tick": 1299,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 11.895999908447266,
+            "p95": 14.457600021362286,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 33.376,
+            "p95": 70.245,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.3400000035762787,
+            "p95": 0.6094000101089476,
+            "nonpositive": 0
+          },
+          "process_ms": {
+            "p50": 66.055,
+            "p95": 611.324,
+            "nonpositive": 0
+          },
+          "physics_ms": {
+            "p50": 2.8609999999999998,
+            "p95": 4.006,
+            "nonpositive": 0
+          },
+          "setup_cpu_ms": {
+            "p50": 0.054,
+            "p95": 0.098,
+            "nonpositive": 0
+          }
+        }
+      },
+      "valid": true
+    },
+    "test1_geometry_720_B1": {
+      "metadata": {
+        "engine": {
+          "build": "steam",
+          "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+          "hex": 263938,
+          "major": 4,
+          "minor": 7,
+          "patch": 2,
+          "status": "stable",
+          "string": "4.7.2-stable (steam)",
+          "timestamp": 0
+        },
+        "adapter": "NVIDIA GeForce GTX 1050",
+        "driver": "d3d12",
+        "window": "(1280, 720)",
+        "viewport": "(1280, 720)",
+        "vsync": 1,
+        "max_fps": 0,
+        "last_error": "",
+        "foam_variant": "candidate",
+        "water_shader_sha256": "6506719ce13eae6bb94b96ea4c09afa4275741b1faf9bdb075e18cff0f4a877e",
+        "contact_gain": 0.55
+      },
+      "phases": {
+        "paused": {
+          "samples": 1792,
+          "wall_s": 30.015796,
+          "sim_s_per_wall_s": 0.0,
+          "start_tick": 240,
+          "end_tick": 240,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 11.263999938964844,
+            "p95": 11.635000228881836,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 15.866,
+            "p95": 30.26245,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.3140000104904175,
+            "p95": 1.2400000095367432,
+            "nonpositive": 0
+          },
+          "process_ms": {
+            "p50": 31.385,
+            "p95": 32.228,
+            "nonpositive": 0
+          },
+          "physics_ms": {
+            "p50": 0.186,
+            "p95": 0.21800000000000003,
+            "nonpositive": 0
+          },
+          "setup_cpu_ms": {
+            "p50": 0.059,
+            "p95": 0.134,
+            "nonpositive": 0
+          }
+        },
+        "live": {
+          "samples": 306,
+          "wall_s": 30.037203,
+          "sim_s_per_wall_s": 0.509360559987138,
+          "start_tick": 483,
+          "end_tick": 942,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 13.263000011444092,
+            "p95": 25.851749897003174,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 52.7085,
+            "p95": 547.7165,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.36550000309944153,
+            "p95": 0.5672500133514404,
+            "nonpositive": 0
+          },
+          "process_ms": {
+            "p50": 588.206,
+            "p95": 688.844,
+            "nonpositive": 0
+          },
+          "physics_ms": {
+            "p50": 3.348,
+            "p95": 4.276000000000001,
+            "nonpositive": 0
+          },
+          "setup_cpu_ms": {
+            "p50": 0.0535,
+            "p95": 0.08175,
+            "nonpositive": 0
+          }
+        }
+      },
+      "valid": true
+    },
+    "test1_geometry_720_B2": {
+      "metadata": {
+        "engine": {
+          "build": "steam",
+          "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+          "hex": 263938,
+          "major": 4,
+          "minor": 7,
+          "patch": 2,
+          "status": "stable",
+          "string": "4.7.2-stable (steam)",
+          "timestamp": 0
+        },
+        "adapter": "NVIDIA GeForce GTX 1050",
+        "driver": "d3d12",
+        "window": "(1280, 720)",
+        "viewport": "(1280, 720)",
+        "vsync": 1,
+        "max_fps": 0,
+        "last_error": "",
+        "foam_variant": "candidate",
+        "water_shader_sha256": "6506719ce13eae6bb94b96ea4c09afa4275741b1faf9bdb075e18cff0f4a877e",
+        "contact_gain": 0.55
+      },
+      "phases": {
+        "paused": {
+          "samples": 1794,
+          "wall_s": 30.022699,
+          "sim_s_per_wall_s": 0.0,
+          "start_tick": 240,
+          "end_tick": 240,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 11.269000053405762,
+            "p95": 11.675049877166748,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 15.8245,
+            "p95": 30.12575,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.30799999833106995,
+            "p95": 1.2264499664306634,
+            "nonpositive": 0
+          },
+          "process_ms": {
+            "p50": 31.4105,
+            "p95": 32.096,
+            "nonpositive": 0
+          },
+          "physics_ms": {
+            "p50": 0.17049999999999998,
+            "p95": 0.236,
+            "nonpositive": 0
+          },
+          "setup_cpu_ms": {
+            "p50": 0.061,
+            "p95": 0.141,
+            "nonpositive": 0
+          }
+        },
+        "live": {
+          "samples": 843,
+          "wall_s": 30.002307,
+          "sim_s_per_wall_s": 0.9454684210012115,
+          "start_tick": 520,
+          "end_tick": 1371,
+          "focused_fraction": 1.0,
+          "render_gpu_ms": {
+            "p50": 11.739999771118164,
+            "p95": 12.18090009689331,
+            "nonpositive": 0
+          },
+          "frame_ms": {
+            "p50": 31.849,
+            "p95": 67.3865,
+            "nonpositive": 0
+          },
+          "render_cpu_ms": {
+            "p50": 0.335999995470047,
+            "p95": 0.6077999830245971,
+            "nonpositive": 0
+          },
+          "process_ms": {
+            "p50": 62.76800000000001,
+            "p95": 502.976,
+            "nonpositive": 0
+          },
+          "physics_ms": {
+            "p50": 3.021,
+            "p95": 3.9258999999999986,
+            "nonpositive": 0
+          },
+          "setup_cpu_ms": {
+            "p50": 0.055,
+            "p95": 0.09389999999999998,
+            "nonpositive": 0
+          }
+        }
+      },
+      "valid": true
+    }
+  },
+  "groups": {
+    "main_720": {
+      "aa": {
+        "phases": {
+          "paused": {
+            "gpu_p50_delta_ms": -0.07699966430664062,
+            "gpu_p95_delta_ms": -0.09639987945556605,
+            "frame_p95_delta_ms": 0.9407999999999745,
+            "throughput_ratio": null,
+            "limits": {
+              "gpu_p50_ms": 0.5,
+              "gpu_p95_ms": 1.0,
+              "frame_p95_ms": 1.0
+            },
+            "checks": {
+              "gpu_p50": true,
+              "gpu_p95": true,
+              "frame_p95": true
+            },
+            "pass": true
+          },
+          "live": {
+            "gpu_p50_delta_ms": 0.0039997100830078125,
+            "gpu_p95_delta_ms": -0.8800003051757788,
+            "frame_p95_delta_ms": -2.958999999999996,
+            "throughput_ratio": 0.9983185137514096,
+            "limits": {
+              "gpu_p50_ms": 0.5,
+              "gpu_p95_ms": 1.0,
+              "frame_p95_ms": 3.1494
+            },
+            "checks": {
+              "gpu_p50": true,
+              "gpu_p95": true,
+              "frame_p95": true,
+              "throughput": true
+            },
+            "pass": true
+          }
+        },
+        "pass": true
+      },
+      "terminal_aa": {
+        "phases": {
+          "paused": {
+            "gpu_p50_delta_ms": 0.08600044250488281,
+            "gpu_p95_delta_ms": 0.05450010299682617,
+            "frame_p95_delta_ms": -0.9746999999999737,
+            "throughput_ratio": null,
+            "limits": {
+              "gpu_p50_ms": 0.5,
+              "gpu_p95_ms": 1.0,
+              "frame_p95_ms": 1.0
+            },
+            "checks": {
+              "gpu_p50": true,
+              "gpu_p95": true,
+              "frame_p95": true
+            },
+            "pass": true
+          },
+          "live": {
+            "gpu_p50_delta_ms": -0.005000114440917969,
+            "gpu_p95_delta_ms": 1.6920000076293924,
+            "frame_p95_delta_ms": 3.476399999999984,
+            "throughput_ratio": 0.9538574544152,
+            "limits": {
+              "gpu_p50_ms": 0.5,
+              "gpu_p95_ms": 1.0,
+              "frame_p95_ms": 3.00145
+            },
+            "checks": {
+              "gpu_p50": true,
+              "gpu_p95": false,
+              "frame_p95": false,
+              "throughput": false
+            },
+            "pass": false
+          }
+        },
+        "pass": false
+      },
+      "ab_pairs": [
+        {
+          "baseline": "A2",
+          "candidate": "B1",
+          "phases": {
+            "paused": {
+              "gpu_p50_delta_ms": -0.3730001449584961,
+              "gpu_p95_delta_ms": -0.2936998367309567,
+              "frame_p95_delta_ms": 4.391600000000025,
+              "throughput_ratio": null,
+              "limits": {
+                "gpu_p50_ms": 0.5,
+                "gpu_p95_ms": 1.0,
+                "frame_p95_ms": 1.0
+              },
+              "checks": {
+                "gpu_p50": true,
+                "gpu_p95": true,
+                "frame_p95": false
+              },
+              "pass": false
+            },
+            "live": {
+              "gpu_p50_delta_ms": -0.36299991607666016,
+              "gpu_p95_delta_ms": -0.5541999340057373,
+              "frame_p95_delta_ms": -2.6337000000000117,
+              "throughput_ratio": 1.0193492173870216,
+              "limits": {
+                "gpu_p50_ms": 0.5,
+                "gpu_p95_ms": 1.0,
+                "frame_p95_ms": 3.00145
+              },
+              "checks": {
+                "gpu_p50": true,
+                "gpu_p95": true,
+                "frame_p95": true,
+                "throughput": true
+              },
+              "pass": true
+            }
+          },
+          "pass": false
+        },
+        {
+          "baseline": "A3",
+          "candidate": "B2",
+          "phases": {
+            "paused": {
+              "gpu_p50_delta_ms": -0.5125002861022949,
+              "gpu_p95_delta_ms": -0.41100049018859863,
+              "frame_p95_delta_ms": 6.853749999999998,
+              "throughput_ratio": null,
+              "limits": {
+                "gpu_p50_ms": 0.5,
+                "gpu_p95_ms": 1.0,
+                "frame_p95_ms": 1.0
+              },
+              "checks": {
+                "gpu_p50": true,
+                "gpu_p95": true,
+                "frame_p95": false
+              },
+              "pass": false
+            },
+            "live": {
+              "gpu_p50_delta_ms": -0.01900005340576172,
+              "gpu_p95_delta_ms": 11.349999046325678,
+              "frame_p95_delta_ms": 45.9089999999999,
+              "throughput_ratio": 0.764689614944277,
+              "limits": {
+                "gpu_p50_ms": 0.5,
+                "gpu_p95_ms": 1.0,
+                "frame_p95_ms": 3.1752699999999994
+              },
+              "checks": {
+                "gpu_p50": true,
+                "gpu_p95": false,
+                "frame_p95": false,
+                "throughput": false
+              },
+              "pass": false
+            }
+          },
+          "pass": false
+        }
+      ],
+      "complete": true,
+      "pass": false
+    },
+    "main_1080": {
+      "aa": {
+        "phases": {
+          "paused": {
+            "gpu_p50_delta_ms": 0.022500038146972656,
+            "gpu_p95_delta_ms": 0.03800010681152344,
+            "frame_p95_delta_ms": 0.38549999999999685,
+            "throughput_ratio": null,
+            "limits": {
+              "gpu_p50_ms": 0.8,
+              "gpu_p95_ms": 1.5,
+              "frame_p95_ms": 1.2660300000000002
+            },
+            "checks": {
+              "gpu_p50": true,
+              "gpu_p95": true,
+              "frame_p95": true
+            },
+            "pass": true
+          },
+          "live": {
+            "gpu_p50_delta_ms": -0.8819999694824219,
+            "gpu_p95_delta_ms": -12.990499591827394,
+            "frame_p95_delta_ms": -27.230650000000026,
+            "throughput_ratio": 1.2258671907008833,
+            "limits": {
+              "gpu_p50_ms": 0.8,
+              "gpu_p95_ms": 1.5,
+              "frame_p95_ms": 5.18888
+            },
+            "checks": {
+              "gpu_p50": false,
+              "gpu_p95": false,
+              "frame_p95": false,
+              "throughput": false
+            },
+            "pass": false
+          }
+        },
+        "pass": false
+      },
+      "terminal_aa": {
+        "phases": {
+          "paused": {
+            "gpu_p50_delta_ms": 0.02850055694580078,
+            "gpu_p95_delta_ms": 0.032149505615233664,
+            "frame_p95_delta_ms": 0.020350000000004087,
+            "throughput_ratio": null,
+            "limits": {
+              "gpu_p50_ms": 0.8,
+              "gpu_p95_ms": 1.5,
+              "frame_p95_ms": 1.2853050000000001
+            },
+            "checks": {
+              "gpu_p50": true,
+              "gpu_p95": true,
+              "frame_p95": true
+            },
+            "pass": true
+          },
+          "live": {
+            "gpu_p50_delta_ms": 0.1120004653930664,
+            "gpu_p95_delta_ms": -0.5717513084411578,
+            "frame_p95_delta_ms": 2.4265500000000344,
+            "throughput_ratio": 0.9253559364091085,
+            "limits": {
+              "gpu_p50_ms": 0.8,
+              "gpu_p95_ms": 1.5,
+              "frame_p95_ms": 3.8273474999999983
+            },
+            "checks": {
+              "gpu_p50": true,
+              "gpu_p95": true,
+              "frame_p95": true,
+              "throughput": false
+            },
+            "pass": false
+          }
+        },
+        "pass": false
+      },
+      "ab_pairs": [
+        {
+          "baseline": "A2",
+          "candidate": "B1",
+          "phases": {
+            "paused": {
+              "gpu_p50_delta_ms": -0.8795003890991211,
+              "gpu_p95_delta_ms": -0.9327007293701186,
+              "frame_p95_delta_ms": -1.2721000000000018,
+              "throughput_ratio": null,
+              "limits": {
+                "gpu_p50_ms": 0.8,
+                "gpu_p95_ms": 1.5,
+                "frame_p95_ms": 1.2853050000000001
+              },
+              "checks": {
+                "gpu_p50": true,
+                "gpu_p95": true,
+                "frame_p95": true
+              },
+              "pass": true
+            },
+            "live": {
+              "gpu_p50_delta_ms": -0.5920000076293945,
+              "gpu_p95_delta_ms": 6.391650867462161,
+              "frame_p95_delta_ms": 3.9861500000000234,
+              "throughput_ratio": 0.9218225371646744,
+              "limits": {
+                "gpu_p50_ms": 0.8,
+                "gpu_p95_ms": 1.5,
+                "frame_p95_ms": 3.8273474999999983
+              },
+              "checks": {
+                "gpu_p50": true,
+                "gpu_p95": false,
+                "frame_p95": false,
+                "throughput": false
+              },
+              "pass": false
+            }
+          },
+          "pass": false
+        },
+        {
+          "baseline": "A3",
+          "candidate": "B2",
+          "phases": {
+            "paused": {
+              "gpu_p50_delta_ms": -0.7849998474121094,
+              "gpu_p95_delta_ms": -0.7968490600585945,
+              "frame_p95_delta_ms": -1.3929500000000026,
+              "throughput_ratio": null,
+              "limits": {
+                "gpu_p50_ms": 0.8,
+                "gpu_p95_ms": 1.5,
+                "frame_p95_ms": 1.2863225000000003
+              },
+              "checks": {
+                "gpu_p50": true,
+                "gpu_p95": true,
+                "frame_p95": true
+              },
+              "pass": true
+            },
+            "live": {
+              "gpu_p50_delta_ms": -0.7770004272460938,
+              "gpu_p95_delta_ms": -0.1651491165161154,
+              "frame_p95_delta_ms": 0.8464499999999902,
+              "throughput_ratio": 1.0395375530247863,
+              "limits": {
+                "gpu_p50_ms": 0.8,
+                "gpu_p95_ms": 1.5,
+                "frame_p95_ms": 3.948675
+              },
+              "checks": {
+                "gpu_p50": true,
+                "gpu_p95": true,
+                "frame_p95": true,
+                "throughput": true
+              },
+              "pass": true
+            }
+          },
+          "pass": true
+        }
+      ],
+      "complete": true,
+      "pass": false
+    },
+    "test1_geometry_720": {
+      "aa": {
+        "phases": {
+          "paused": {
+            "gpu_p50_delta_ms": 0.07199954986572266,
+            "gpu_p95_delta_ms": 0.07580013275146591,
+            "frame_p95_delta_ms": -0.021199999999996777,
+            "throughput_ratio": null,
+            "limits": {
+              "gpu_p50_ms": 0.5,
+              "gpu_p95_ms": 1.0,
+              "frame_p95_ms": 1.5033599999999998
+            },
+            "checks": {
+              "gpu_p50": true,
+              "gpu_p95": true,
+              "frame_p95": true
+            },
+            "pass": true
+          },
+          "live": {
+            "gpu_p50_delta_ms": 0.008000373840332031,
+            "gpu_p95_delta_ms": -3.5555002212524425,
+            "frame_p95_delta_ms": -27.365899999999968,
+            "throughput_ratio": 1.2556119160557027,
+            "limits": {
+              "gpu_p50_ms": 0.5,
+              "gpu_p95_ms": 1.0,
+              "frame_p95_ms": 4.903314999999999
+            },
+            "checks": {
+              "gpu_p50": true,
+              "gpu_p95": false,
+              "frame_p95": false,
+              "throughput": false
+            },
+            "pass": false
+          }
+        },
+        "pass": false
+      },
+      "terminal_aa": {
+        "phases": {
+          "paused": {
+            "gpu_p50_delta_ms": -0.02399921417236328,
+            "gpu_p95_delta_ms": -0.024949932098390804,
+            "frame_p95_delta_ms": 0.3270999999999944,
+            "throughput_ratio": null,
+            "limits": {
+              "gpu_p50_ms": 0.5,
+              "gpu_p95_ms": 1.0,
+              "frame_p95_ms": 1.5023
+            },
+            "checks": {
+              "gpu_p50": true,
+              "gpu_p95": true,
+              "frame_p95": true
+            },
+            "pass": true
+          },
+          "live": {
+            "gpu_p50_delta_ms": -0.08500003814697266,
+            "gpu_p95_delta_ms": 0.6751996994018388,
+            "frame_p95_delta_ms": -0.45539999999999736,
+            "throughput_ratio": 0.9652957275754404,
+            "limits": {
+              "gpu_p50_ms": 0.5,
+              "gpu_p95_ms": 1.0,
+              "frame_p95_ms": 3.5350200000000003
+            },
+            "checks": {
+              "gpu_p50": true,
+              "gpu_p95": true,
+              "frame_p95": true,
+              "throughput": false
+            },
+            "pass": false
+          }
+        },
+        "pass": false
+      },
+      "ab_pairs": [
+        {
+          "baseline": "A2",
+          "candidate": "B1",
+          "phases": {
+            "paused": {
+              "gpu_p50_delta_ms": -0.22799968719482422,
+              "gpu_p95_delta_ms": -0.2539997100830078,
+              "frame_p95_delta_ms": 0.2164500000000018,
+              "throughput_ratio": null,
+              "limits": {
+                "gpu_p50_ms": 0.5,
+                "gpu_p95_ms": 1.0,
+                "frame_p95_ms": 1.5023
+              },
+              "checks": {
+                "gpu_p50": true,
+                "gpu_p95": true,
+                "frame_p95": true
+              },
+              "pass": true
+            },
+            "live": {
+              "gpu_p50_delta_ms": 1.2820000648498535,
+              "gpu_p95_delta_ms": 12.069349575042727,
+              "frame_p95_delta_ms": 477.0161,
+              "throughput_ratio": 0.5605428749372694,
+              "limits": {
+                "gpu_p50_ms": 0.5,
+                "gpu_p95_ms": 1.0,
+                "frame_p95_ms": 3.5350200000000003
+              },
+              "checks": {
+                "gpu_p50": false,
+                "gpu_p95": false,
+                "frame_p95": false,
+                "throughput": false
+              },
+              "pass": false
+            }
+          },
+          "pass": false
+        },
+        {
+          "baseline": "A3",
+          "candidate": "B2",
+          "phases": {
+            "paused": {
+              "gpu_p50_delta_ms": -0.19900035858154297,
+              "gpu_p95_delta_ms": -0.18900012969970525,
+              "frame_p95_delta_ms": -0.24734999999999374,
+              "throughput_ratio": null,
+              "limits": {
+                "gpu_p50_ms": 0.5,
+                "gpu_p95_ms": 1.0,
+                "frame_p95_ms": 1.5186549999999999
+              },
+              "checks": {
+                "gpu_p50": true,
+                "gpu_p95": true,
+                "frame_p95": true
+              },
+              "pass": true
+            },
+            "live": {
+              "gpu_p50_delta_ms": -0.15600013732910156,
+              "gpu_p95_delta_ms": -2.276699924468975,
+              "frame_p95_delta_ms": -2.8585000000000065,
+              "throughput_ratio": 1.0778793855900162,
+              "limits": {
+                "gpu_p50_ms": 0.5,
+                "gpu_p95_ms": 1.0,
+                "frame_p95_ms": 3.5122500000000003
+              },
+              "checks": {
+                "gpu_p50": true,
+                "gpu_p95": true,
+                "frame_p95": true,
+                "throughput": true
+              },
+              "pass": true
+            }
+          },
+          "pass": true
+        }
+      ],
+      "complete": true,
+      "pass": false
+    },
+    "test1_geometry_1080": {
+      "aa": {
+        "phases": {
+          "paused": {
+            "gpu_p50_delta_ms": -0.05949974060058594,
+            "gpu_p95_delta_ms": -0.08635025024414134,
+            "frame_p95_delta_ms": -0.1833500000000008,
+            "throughput_ratio": null,
+            "limits": {
+              "gpu_p50_ms": 0.8,
+              "gpu_p95_ms": 1.5,
+              "frame_p95_ms": 1.0
+            },
+            "checks": {
+              "gpu_p50": true,
+              "gpu_p95": true,
+              "frame_p95": true
+            },
+            "pass": true
+          },
+          "live": {
+            "gpu_p50_delta_ms": 0.023499488830566406,
+            "gpu_p95_delta_ms": 7.135999011993409,
+            "frame_p95_delta_ms": -0.22059999999999036,
+            "throughput_ratio": 0.9510741043311275,
+            "limits": {
+              "gpu_p50_ms": 0.8,
+              "gpu_p95_ms": 1.5,
+              "frame_p95_ms": 4.2573799999999995
+            },
+            "checks": {
+              "gpu_p50": true,
+              "gpu_p95": false,
+              "frame_p95": true,
+              "throughput": false
+            },
+            "pass": false
+          }
+        },
+        "pass": false
+      },
+      "terminal_aa": {
+        "phases": {
+          "paused": {
+            "gpu_p50_delta_ms": 0.01599884033203125,
+            "gpu_p95_delta_ms": 0.03410034179687571,
+            "frame_p95_delta_ms": 0.0876000000000019,
+            "throughput_ratio": null,
+            "limits": {
+              "gpu_p50_ms": 0.8,
+              "gpu_p95_ms": 1.5,
+              "frame_p95_ms": 1.0
+            },
+            "checks": {
+              "gpu_p50": true,
+              "gpu_p95": true,
+              "frame_p95": true
+            },
+            "pass": true
+          },
+          "live": {
+            "gpu_p50_delta_ms": 0.0475006103515625,
+            "gpu_p95_delta_ms": -6.097498035430998,
+            "frame_p95_delta_ms": 1.891050000000007,
+            "throughput_ratio": 0.9954953665145033,
+            "limits": {
+              "gpu_p50_ms": 0.8,
+              "gpu_p95_ms": 1.5,
+              "frame_p95_ms": 4.24635
+            },
+            "checks": {
+              "gpu_p50": true,
+              "gpu_p95": false,
+              "frame_p95": true,
+              "throughput": true
+            },
+            "pass": false
+          }
+        },
+        "pass": false
+      },
+      "ab_pairs": [
+        {
+          "baseline": "A2",
+          "candidate": "B1",
+          "phases": {
+            "paused": {
+              "gpu_p50_delta_ms": -0.9150009155273438,
+              "gpu_p95_delta_ms": -0.9340000152587891,
+              "frame_p95_delta_ms": 5.925999999999995,
+              "throughput_ratio": null,
+              "limits": {
+                "gpu_p50_ms": 0.8,
+                "gpu_p95_ms": 1.5,
+                "frame_p95_ms": 1.0
+              },
+              "checks": {
+                "gpu_p50": true,
+                "gpu_p95": true,
+                "frame_p95": false
+              },
+              "pass": false
+            },
+            "live": {
+              "gpu_p50_delta_ms": -0.9969997406005859,
+              "gpu_p95_delta_ms": -11.971999168395996,
+              "frame_p95_delta_ms": -5.297999999999988,
+              "throughput_ratio": 1.0825880843994191,
+              "limits": {
+                "gpu_p50_ms": 0.8,
+                "gpu_p95_ms": 1.5,
+                "frame_p95_ms": 4.24635
+              },
+              "checks": {
+                "gpu_p50": true,
+                "gpu_p95": true,
+                "frame_p95": true,
+                "throughput": true
+              },
+              "pass": true
+            }
+          },
+          "pass": false
+        },
+        {
+          "baseline": "A3",
+          "candidate": "B2",
+          "phases": {
+            "paused": {
+              "gpu_p50_delta_ms": -0.9539995193481445,
+              "gpu_p95_delta_ms": -0.9981000900268562,
+              "frame_p95_delta_ms": 6.267299999999999,
+              "throughput_ratio": null,
+              "limits": {
+                "gpu_p50_ms": 0.8,
+                "gpu_p95_ms": 1.5,
+                "frame_p95_ms": 1.0
+              },
+              "checks": {
+                "gpu_p50": true,
+                "gpu_p95": true,
+                "frame_p95": false
+              },
+              "pass": false
+            },
+            "live": {
+              "gpu_p50_delta_ms": -1.1984996795654297,
+              "gpu_p95_delta_ms": -6.188501262664705,
+              "frame_p95_delta_ms": -7.070049999999995,
+              "throughput_ratio": 1.0702281419906492,
+              "limits": {
+                "gpu_p50_ms": 0.8,
+                "gpu_p95_ms": 1.5,
+                "frame_p95_ms": 4.3409025
+              },
+              "checks": {
+                "gpu_p50": true,
+                "gpu_p95": true,
+                "frame_p95": true,
+                "throughput": true
+              },
+              "pass": true
+            }
+          },
+          "pass": false
+        }
+      ],
+      "complete": true,
+      "pass": false
+    }
+  },
+  "complete": true,
+  "pass": false,
+  "scope": "Viewport GPU render timing does not assert asynchronous compute coverage; full frame and completed simulation throughput are separately measured. Original pre-integration water shader and contact gain 1.0 versus final formal shader and gain 0.55. No optimization or automatic tuning."
+}

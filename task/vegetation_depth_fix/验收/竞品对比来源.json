@@ -1,0 +1,25 @@
+{
+  "scope": "Different camera, depth and lighting; no pixel similarity or matched-scale claim. No color adjustment.",
+  "inputs": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\test1_channels_20261023\\capture_thumbnail.png",
+      "sha256": "c60827834fa2f6d52a0dfa1c58784bb16cd404c4475d907bc37fb22ddb3d23e5",
+      "crop": [
+        1410,
+        520,
+        1890,
+        840
+      ]
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\task\\vegetation_depth_fix\\验收\\修正后.png",
+      "sha256": "e62c6e7d88df6b66b58109cbbb01eb1047ad66304dcc01c24eacd7753e70c417",
+      "crop": [
+        100,
+        370,
+        580,
+        690
+      ]
+    }
+  ]
+}

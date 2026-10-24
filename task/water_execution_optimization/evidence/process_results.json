@@ -1,0 +1,88 @@
+{
+  "step1_exact_v2": {
+    "exit_code": 0,
+    "basis": "Observed subprocess.run return code; stdout saved in run.log."
+  },
+  "step1_cost": {
+    "exit_code": 0,
+    "basis": "Observed subprocess.run return code; stdout saved in run.log."
+  },
+  "step2_exact": {
+    "exit_code": 0,
+    "basis": "Observed subprocess.run return code; stdout saved in run.log."
+  },
+  "step2_cost": {
+    "exit_code": 0,
+    "basis": "Observed subprocess.run return code; stdout saved in run.log."
+  },
+  "step3_exact": {
+    "exit_code": 0,
+    "basis": "Observed subprocess.run return code; stdout saved in run.log."
+  },
+  "step3_cost": {
+    "exit_code": 0,
+    "basis": "Observed subprocess.run return code; stdout saved in run.log."
+  },
+  "step3_cpu_abba": {
+    "exit_code": 0,
+    "basis": "Observed subprocess.run return code; stdout saved in run.log."
+  },
+  "shader_compile": {
+    "exit_code": 0,
+    "basis": "Observed subprocess.run return code; stdout saved in run.log."
+  },
+  "final_exact": {
+    "exit_code": 0,
+    "basis": "Observed subprocess.run return code; stdout saved in run.log."
+  },
+  "reverse_baseline": {
+    "exit_code": 0,
+    "basis": "Observed subprocess.run return code; stdout saved in run.log."
+  },
+  "controlled_candidate": {
+    "exit_code": 0,
+    "basis": "Observed subprocess.run return code; stdout saved in run.log."
+  },
+  "step1_exact": {
+    "exit_code": 1,
+    "basis": "Observed first fixture failure: oversized requested dt; original log/probe/result preserved."
+  },
+  "baseline": {
+    "exit_code": null,
+    "basis": "GUI executable detached from PowerShell; capture complete, process ended; exit code unavailable."
+  },
+  "step1_negative": {
+    "exit_code": 0,
+    "basis": "Original run_gpu.py manifest",
+    "outcome": "pass"
+  },
+  "step1_nonfinite": {
+    "exit_code": 0,
+    "basis": "Original run_gpu.py manifest",
+    "outcome": "pass"
+  },
+  "step2_negative": {
+    "exit_code": 0,
+    "basis": "Original run_gpu.py manifest",
+    "outcome": "pass"
+  },
+  "step2_nonfinite": {
+    "exit_code": 0,
+    "basis": "Original run_gpu.py manifest",
+    "outcome": "pass"
+  },
+  "final_strong_shovel": {
+    "exit_code": 0,
+    "basis": "Original run_gpu.py manifest",
+    "outcome": "pass"
+  },
+  "final_erosion": {
+    "exit_code": 0,
+    "basis": "Original run_gpu.py manifest",
+    "outcome": "pass"
+  },
+  "final_restart": {
+    "exit_code": 0,
+    "basis": "run_muscl_restart.py returned 0 after check=True seed, resume and compare subprocesses; logs/results archived."
+  }
+}

@@ -1,0 +1,3748 @@
+{
+  "schema": "foam_functional_audit_run_v1",
+  "run_id": "G4/exact_original_authority_v2/main",
+  "variant": "exact_original_authority_v2",
+  "case_id": "see assertion names and snapshot keys",
+  "scene": "main",
+  "command": [
+    "D:/game/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe",
+    "--path",
+    "D:\\godot\\project\\sandcastle",
+    "--script",
+    "res://tests/visual_water_alignment/foam_original_authority_probe.gd",
+    "--",
+    "--scene=main",
+    "--output=res://task/water_foam_visual/验收/G4/exact_original_authority_v2/main",
+    "--ignore-parameter-config"
+  ],
+  "source_hashes": {
+    "scripts/audit/audit_recorder.gd": "0da4a1b1f80059946938be5cdc5e509c895afae5961f7461d0337e9bddf6a92d",
+    "scripts/beach/async_pipeline_entry.gd": "d77d1a28f02c65e57a8cdc56021c2d88ce9e22e6e0563f1b0cf784d31c8d656b",
+    "scripts/beach/beach_checkpoint_entry.gd": "9939e0442c08c9b6f0988ee85ef8735e16bef615522a339bf0896405ca2b49d6",
+    "scripts/beach/beach_gpu_entry.gd": "ee62687afc6558dda563f16318ecbcb8f6681da0426451b89d5fe706b832059f",
+    "scripts/beach/beach_interaction_entry.gd": "60b70f73f4f65554545872dba43980b1c702d81f19e8881dad25e600ef6426f6",
+    "scripts/beach/beach_lab_entry.gd": "e092c3626e29d88ae87733c85304922c6bde7d3b43d25bddcf30c216ed577c4c",
+    "scripts/beach/beach_playable_entry.gd": "cb74ed9266f814aa9a5db821d0503e2c163caa66521aa586155426250eb1f3f9",
+    "scripts/beach/beach_recovery_entry.gd": "238ea012bc1d2b281d2428c6c5ac4a6d8a7e81545bc522b42e572830585fd3c0",
+    "scripts/beach/beach_scene_service.gd": "47b808e6e256709cd92af337cfc5f38fef7751d4c3e13801af557397601be016",
+    "scripts/beach/floating_props_panel.gd": "a095db4e55fad1dc78d5f7746830fd632a72d103e76cc23dcf16386e3df2feb4",
+    "scripts/beach/free_camera.gd": "04be91f88635bdd5a6d5b6192e773e097f20bc13ca8159fd9a2e0d565fd5c8b0",
+    "scripts/beach/gravel_playable_entry.gd": "157785de185399cb0f566777df9f89aa70d916dea84d0cecdad9e07ca26cb62b",
+    "scripts/beach/performance_panel.gd": "a909de8156725999f0c0db29cddb3fb0223ad02c2faf5d0b273f677826630d8d",
+    "scripts/beach/release_config.gd": "006e91856bd21ad9b002ac35ba3d4a3db43395c042e68c2ba6b4910acefd757e",
+    "scripts/beach/scene_switch_panel.gd": "4f776a94af9628a1e06fa064fdf201ffc5b23084a6ba5d5bffbf87b7da4d28dd",
+    "scripts/beach/shape_brush_entry.gd": "a552320612c75c1aa99b48def562213075e94a1f75c52414edefa8823ca91bd6",
+    "scripts/beach/shape_brush_playable_entry.gd": "1e254c0b318e7fcfb44b89f6af455a402256736b382278906742c14800231323",
+    "scripts/beach/test1_geometry_entry.gd": "faa8715add9cb617655d2b890bd57768098bdef1f4d152844297e988639b39be",
+    "scripts/beach/ui_drag.gd": "0e81b46fe7c887e18d4a00e7c4747eae2df804b903f063c3105f9afcfe67460b",
+    "scripts/beach/ui_visibility.gd": "d89b99bab669376a089ff39647160669b10ecec0b04eaeaa22dd75f8d1efe5f5",
+    "scripts/beach/unified_performance_panel.gd": "f5c9c835358f0434174147e9eb65a444fa39d7611bafb35cb0fd35d7879b2935",
+    "scripts/beach/unified_playable_entry.gd": "67243cb8270825d897dd039ee5b364bebaa9ba39de24dbefd152f7547dc25396",
+    "scripts/beach/unified_scene_routes.gd": "69df264fa0c92852814a2db72a032433f7e2f9fa1592402f88a565bec9a60234",
+    "scripts/collision/collision_prepare_job.gd": "629fcfde9d4edb14e446ee1970f03b9ae9d4da364979150f35a0182aab46fb6b",
+    "scripts/collision/collision_prepare_scheduler.gd": "e2dfe7c2acf3e330743c42ca3e3a6f010f8e18a9105d8a6779c5edac602d320c",
+    "scripts/collision/gpu_collision_proxy.gd": "4018308026913806fb980905e87d0786b6ce8a2f7f177006df93323ac32b294d",
+    "scripts/demo/gpu_water_preview.gd": "c9edbd1f31ea076b0c74b5299f8a764c119367dd35c720b48e097e25ba563bb0",
+    "scripts/demo/sandcastle_demo.gd": "11311755ba929f9a79ec0b11114c87a55a10e467d9760c31276d3cefffb6c1bd",
+    "scripts/demo/sandcastle_main.gd": "295e973c28487448d3543cc1b08816da2b31ddb1b96220cd43ae9f2dab81a1ee",
+    "scripts/parameters/parameter_row.gd": "d8690a0d661113b88c331f28e92b601a218bda758fbdfb2f447225a2a89c6372",
+    "scripts/parameters/parameter_schema.gd": "db40e772107e02b23a505c0c13982f6c434938949581a770815cd09d2fbf4495",
+    "scripts/parameters/parameter_service.gd": "d2520a1c0c1afb8509e749d3e5dfc8a86120f896650dd724eaa8cc498c8fb45e",
+    "scripts/props/floating_prop.gd": "cf046be6914fc9d1a240b64a7630c0b387fc9b0f82670e5c028c25584a8183df",
+    "scripts/props/floating_props_service.gd": "1552a5e386bba23c4723f0f38928431e172857e892aea6d6c5521ef53c0ab08e",
+    "scripts/props/floating_prop_contact.gd": "a377b0ea1b1114b7d8d30cfa68b81e91223f8ac5dfbce5c4958fe6eb241035e1",
+    "scripts/props/floating_prop_profile.gd": "0ac16e7ec8188e6cce91e1cf9adda75c4b6949fab2d1d0bcff3e52afd60f16b6",
+    "scripts/sand/tool_command_queue.gd": "17c3dd19158edab5999374c1839a0e0fe8ed69d3f9f3b0579abc8fa59fc8777c",
+    "scripts/scenarios/sand_visual_fixture.gd": "96cb265467869f245e89e41906399e8f72160a883f273d566796fe4e2dbc8bf3",
+    "scripts/scenarios/standard_scenarios.gd": "3bf32552b7d9ea7a0e7a92aedba9bfb58e086c8cd98c14a58fd878c1d41c406e",
+    "scripts/scenarios/test1_geometry_layout.gd": "80a3241eebec98159109df76e68f623e0ffebab2ef3f0bcd32ac9d0c836e5695",
+    "scripts/scenarios/test1_playable_layout.gd": "96d0f46fec8f86cfad5d47a38572c957359e78f3be65739baee805f80848375e",
+    "scripts/scenarios/water_visual_fixture.gd": "4d7d718a8644e62f20d0e1f979bbb81b6d52a5985e78dc05c1ba38e1281eaf8e",
+    "scripts/simulation/checkpoint_store.gd": "cab0e52ee89bcd9fd08bf7265dd7b952dec2ba319e6c884796ac2ac9e32a459e",
+    "scripts/simulation/gpu_sand_audit.gd": "4e0c483ef76dba0d2862622ab4434fdbe1519d6d5fc6df76bb061031ec8d1588",
+    "scripts/simulation/gpu_scalar_pingpong.gd": "e50431ba680e073d35dd5ea5fb7a6dc4595952d76d61580653f99c4aa05f6110",
+    "scripts/simulation/gpu_shallow_solver.gd": "ada3029ee6bf71d185988a1587c8e71e8b54226e97503a9fe076e36e53058aab",
+    "scripts/simulation/sand_water_domain.gd": "449b69482a2de6347a3562b6610507b2669bb8bcdc34cb6e15e363946866cadc",
+    "scripts/structures/gpu_obstacle_remap.gd": "cc6b54b4d7c147b07b56954abddd8a4756500413d6240c75c564c1a3a6a9a5a7",
+    "scripts/structures/structure_field.gd": "94f35646a6ea9c4584d8a6ab6f8d52cdc3921c29514f9a7872665b994fd6e92e",
+    "scripts/structures/structure_state.gd": "0dbaaa6a29933cf3f0d894e814ed503779fdbe5d5f20355f76b7803b945ebe48",
+    "scripts/visual/bed_display_sampler.gd": "8aa3add12d5b74342464fc5d46d14bddc62354723bdcbc7ae86ab8a8b1fb3f32",
+    "scripts/visual/brush_indicator.gd": "641e1267cc8edbe45ba537102e089ebbb0b157cea7ea2bca4d76797f082f700a",
+    "scripts/visual/gpu_foam_field.gd": "61328906de62d414a197516d38895ae1a376eb45a6a4fe201a0b5598035a1cc4",
+    "scripts/visual/gpu_gravel_field.gd": "f634064e9f279faf16827229157b7435f12903579324fbefe64b07f2e42b367d",
+    "scripts/visual/gravel_checkpoint_codec.gd": "8cd4f7f0b50ff08f3be9cc7d52a1270ebef3bbed41d17b457a3c0cbc42ae6ba4",
+    "scripts/visual/sand_display_sampler.gd": "8f33423f0145c7e18957ae5983684a6133073ef3bd0f4ac3d3fb932c27e50ff1",
+    "scripts/visual/scene_preview_controller.gd": "51ca5b8aecfbc315e5808dcc51262428c775c772099b115c0c677b5408511a93",
+    "scripts/visual/suspended_sand_cloud.gd": "d9a782de8b8dcf6f2783c84787fbfbed68d4d1e0e56a6f91c2a9b1f740891325",
+    "scripts/visual/test1_beach_edit_worker_entry.gd": "c9b4a4d15b9fe1df97f653df9330a08ccf54312fa275f9d505873f850f9c0582",
+    "scripts/visual/test1_beach_fixed_entry.gd": "fb33d9826d3354f91d15c9ff25156955379cb2460391c4e4e869b3120aa6e681",
+    "scripts/visual/test1_beach_hybrid_trial_entry.gd": "53eb4e34fe47aac1cc009a6b280ad0dda07ed4777f2a800bd4c1af6c943b3ba2",
+    "scripts/visual/test1_main_presentation.gd": "b4dde405588be136d8a230bb33e650cbbb70a8740252fd8707d4475d3974b421",
+    "scripts/visual/test1_water_motion_trial.gd": "f1028ff065a6f1f7a0265cd420826292f65f47d21418373b14617a8249acdeac",
+    "scripts/visual/vegetation_layer.gd": "fab851b62913d8278ce2bfae7aa425eb16c6ecab10945759aa10542406a70dd7",
+    "scripts/visual/vegetation_profile.gd": "29e5141396351bd98d709b2f625cfce34a56553581fa975e9c7f67919112ba49",
+    "scripts/visual/vegetation_species.gd": "4467634e8713eaaf963062a3b8a9fa6841d33ddfb5acdee9729a996e29be3ebd",
+    "scripts/visual/water_boundary_sides.gd": "cc6cb7cdd2bc92560c94551e3d220705feccc2249f51fbd46eb6cc4ad277ab64",
+    "scripts/visual/water_render_profile.gd": "033978698ceeca9b9365b01541196349f22094a448ed71766471a6f200e3e147",
+    "scripts/visual/water_render_staging_entry.gd": "08e4bde7cfa9a968fc06cdae538788542afcbe0698fac2585473eb564090abd3",
+    "scripts/visual/water_render_uniform_snapshot.gd": "fd5327458ee51ac092979c36cc2d94125a83af8bbcd3be3abafdbaf44cf772c0",
+    "scripts/visual/water_render_wave_workload.gd": "f16fbc73346c39aa57b6b13ec3824a8fcf63f12d1454cfe26fc1208b79233d21",
+    "scripts/water/reference/shallow_water_solver.gd": "7ca778eb5dd98c8fb6a8c4c6ca804a436bcb607eea49a2852e54d9b2bd4fbdc2",
+    "scripts/simulation/brushes/brush_checkpoint_codec.gd": "382a60b69ed7b0930099142d56c2adbbe54d58753d217aa7a8112c984798adab",
+    "scripts/simulation/brushes/brush_gpu.gd": "a9ff955f47af20516ab358edd40d021e0dabb4754a8dd1e412d323b8238397d1",
+    "scripts/simulation/brushes/brush_material_coupler.gd": "2a5b99a4fd8774eed32b46d59ab6ec81fe070b329c6b1cbf8ea88063f6c1e6a8",
+    "scripts/simulation/brushes/brush_material_solver.gd": "4229d6c9fc7321ce46ef93c742427c80e19f46a4c78b4a53138afc4461ccca6d",
+    "scripts/simulation/brushes/brush_material_state_codec.gd": "c0d0394abc3b89c3587dc5057ae6a54e1458e97ab087a81a40bd4bde353b6ca4",
+    "scripts/simulation/brushes/brush_material_transaction.gd": "b28f0106f5d18c380725ae422086f161659b28449dafc764e39b05a8ba2a44a5",
+    "scripts/simulation/brushes/brush_preview_query.gd": "d2e4f842fa83633cc5ae60be653bbfbf5e09e2e31f85d7907195ee01c6d21978",
+    "scripts/simulation/brushes/brush_protocol.gd": "94083fc3cd6869a28bb2b68b024e469781ae2b6cb54f16d1b79ecd672f8ad463",
+    "scripts/simulation/brushes/brush_scheduler.gd": "9e58c174cdc4cfcb961c547d69cc896440ca62a999d1b3fe8855a9f368b260a9",
+    "scripts/simulation/brushes/brush_water_transaction.gd": "744e89495bb88958c2a056945f47fd94b44a7758a467e59d9c3b2c66a7ebb56e",
+    "scripts/simulation/edit_validation/beach_gpu_edit_history.gd": "8878f88edb82d7e34be94577e5014691fb71aaefa00be9525e0eed1b223e5779",
+    "scripts/simulation/edit_validation/beach_native_codec.gd": "ee0b3a5935a9d5dd1c2d1519b10754a9a31519e7b142bb827630b9578b23b243",
+    "scripts/simulation/edit_validation/beach_restore_bundle.gd": "82eb4ae56d28300cc0e6d21a8024e88a4c66424f7eff080f0b3f3cbc251e37f0",
+    "scripts/simulation/edit_validation/beach_sand_copy_trace.gd": "80b5627ca6f9d2576524da89619d0a9e14362ac3a824cceae82a716c89312a48",
+    "scripts/simulation/edit_validation/checkpoint_foam_field.gd": "1cfaa95ec19bde30c6769a26746275994cb634efad4f760c4925f13945de74ce",
+    "scripts/simulation/edit_validation/collision_chunk_selection.gd": "81ad1db63c6baf3ef876a8050ebe9550bd6130669cba810698049ddf70570892",
+    "scripts/simulation/edit_validation/collision_proxy.gd": "9b8cf79e4b1722c97cf5e2ef5fdff303ae51906d872a5babba7c03f3a322b6a8",
+    "scripts/simulation/edit_validation/edit_protocol.gd": "7c00201b41929064945fa502bcb9f28cc9d60d346941091c1b4abb9d58e33de6",
+    "scripts/simulation/edit_validation/gpu_checkpoint_codec.gd": "b67acc0842599328d240a261ecf19ea9a36658e66425c935590159522a110e6d",
+    "scripts/simulation/edit_validation/gpu_edit_history.gd": "37cd8136f38498a7931119ebc99d42396765620a802c55671423d4fd8e2e3163",
+    "scripts/simulation/edit_validation/gpu_edit_scheduler.gd": "88e251442e047d3c63d8216ce3d84c61ecd1c3ae80cb716cbcc8585c75936d10",
+    "scripts/simulation/edit_validation/gpu_redo_codec.gd": "d3b7c2481fa2df5be712f143dbaa6a99c44bae3c9c0cb2b63410241d240663b9",
+    "scripts/simulation/edit_validation/gpu_sand_editor.gd": "e67d3ca773fe9349cd504fc53d5c5da39db3cb6e1466e2d05e036e3634fb1a00",
+    "scripts/simulation/edit_validation/gpu_water_diagnostic_editor.gd": "db60c7d733f31ed04b197d31002d81b3b9da07b457eb8148debee0416682f808",
+    "scripts/simulation/edit_validation/gpu_water_editor.gd": "3907e942d3910a0d0e39b97aa5f357eb748f1702da6b7d9076f91dd4703e02a9",
+    "scripts/simulation/edit_validation/lab_solver.gd": "4bc319179b9699229f69bb6ba7e8b56e2255a65b39757090ffa221b6e9e8d8dc",
+    "scripts/simulation/edit_validation/material_copy_fence.gd": "75af8340b0fbf6543356359d75e31bac1e58225b6805943561597c7c1e7bd827",
+    "scripts/simulation/edit_validation/material_stage_trace.gd": "938f16fcdebb217869ec16acd04861a2b257ff8ff198034e6ca472596ceda124",
+    "scripts/simulation/edit_validation/ordered_material_coupler.gd": "457da25beca5220c2fe3ed0e6efc5b6e5d564e99b1b718b8fb3545e445b9a712",
+    "scripts/simulation/edit_validation/precise_material_coupler.gd": "cd8d7cdb8266401b75393c17153fed064ed3d3a3caea91bedebd90de391fcc5e",
+    "scripts/simulation/edit_validation/slope_record_coupler.gd": "ce43fb94b5aedcbabee84dd008c6e25def8716ee28ad785713316c59f2bda8da",
+    "scripts/simulation/edit_validation/split_material_coupler.gd": "cd87f350c76226f4c6e9128f374e994ebbc16bf62699834f21a2c9c45a52f7f5",
+    "scripts/simulation/edit_validation/staged_slope_coupler.gd": "3786237bafb640995bfabb66ef7a758bf9ceb892681e32a7df56399f136162d6",
+    "scripts/simulation/edit_validation/traced_material_coupler.gd": "c1e2c4fe9f2572444d4f63c0e14e7429ca82d26229deb9a69ca1a290b80eac7e",
+    "scripts/simulation/edit_validation/water_displacement_reference.gd": "9a159190c93113482c7880cd45cb06fb0448269fbf9c316b6203d30a1655b361",
+    "scripts/simulation/erosion/gpu_sediment_coupler.gd": "9d5dc9449f3d722cb981204f90bf9b033136914ce61959c3f62e821c6d79381e",
+    "scripts/simulation/material/gpu_material_coupler.gd": "81bd1712b4f3d6923848387b625a0933fe6669ecb3dd1b4eac95f25816cb0e7e",
+    "scripts/simulation/unified_edit/api_adapter.gd": "a12f2df91586143a6c69fa89249d121a03c0dd3265d7feeb42bee12542f5834e",
+    "scripts/simulation/unified_edit/boundary.gd": "20a62b9c4b580868b261103fe034e7e61646a8fb40de61a555c6ee546861bcf1",
+    "scripts/simulation/unified_edit/checkpoint_accounting.gd": "ed42766ab86b9073b0cb46c4c917689576c9a2c949866aede023525a1c4c0df8",
+    "scripts/simulation/unified_edit/checkpoint_capture.gd": "ad00a701170cfa30e17eca26fd448b212c76f9119dfd7e6d0ea7a0158e1da05c",
+    "scripts/simulation/unified_edit/checkpoint_codec.gd": "80ccbfd6826722b354b412777dec5e6d9a85d4406008b8de2f55d066bd0f104f",
+    "scripts/simulation/unified_edit/checkpoint_router.gd": "2d51e651ae6e4119f2189ac9e4d40e8502ab0b31a668825ddc7d18fa456fc0ac",
+    "scripts/simulation/unified_edit/configuration.gd": "25d0e019a20bc8851595942a049c46e6441abb2a208bbe2eb6aa1517eaf265bc",
+    "scripts/simulation/unified_edit/consumer_checkpoint_sources.gd": "8360687b6ade3e4b29903b36b3462c32f83805d69bd7e069ca97a437d102fc91",
+    "scripts/simulation/unified_edit/coupled.gd": "b80c7b7aca3fb5b351811390f9ed9ecc6c9e2c715518496ba09f6f346001ff62",
+    "scripts/simulation/unified_edit/diagnostics.gd": "c66cd305ced9e692b8739cd7aa124586cbcdfabca388a74c5425ebe05f3b5780",
+    "scripts/simulation/unified_edit/display_intent.gd": "5ddd0f9019350efbe388c1862ecda7b4c44ba8b47682e93c60b36d0843d90f21",
+    "scripts/simulation/unified_edit/domain_runtime.gd": "4a2020e166e20e71ea1ef734ee860fd17d9f3e732b414df80d33bec512bcefc5",
+    "scripts/simulation/unified_edit/executor.gd": "f57c4bf157df609b9e922e038c7546914a9ae0d0cc76c7d23b9b92d270001751",
+    "scripts/simulation/unified_edit/gpu.gd": "fcb28e68b22c0b29b31d2d7c4c20822782018ddc3f7a55e107e3c2fb54926f68",
+    "scripts/simulation/unified_edit/height.gd": "2675c1caf640099c600e4f9245132013c8a9a3057788418b4dabdce15b96f969",
+    "scripts/simulation/unified_edit/height_codec.gd": "f8472a265358da3fb21c3a00f5f7598426bb32457b0a2cea8c314833c59f8fcd",
+    "scripts/simulation/unified_edit/height_stamp.gd": "a2b8d8d940f8ef7b2af13232c0f7bd0b1888e5ed8f1e074885f656b2203f48d0",
+    "scripts/simulation/unified_edit/height_surface.gd": "257d20fce15c3090a01d8a18207e2176aba7d4be52b0426790073048ec72d716",
+    "scripts/simulation/unified_edit/intent.gd": "347fbc161a5295d8c597dd2a5c6b2853fd146f9b9a45eaa6aefd7a7805f6319f",
+    "scripts/simulation/unified_edit/layout.gd": "0249e55b8005bef604ead7ba62f4adf8a5875d2786e0ea48035d259937686da0",
+    "scripts/simulation/unified_edit/legacy_sources.gd": "a53ddb381060b5c9e0f928db6fd22f83269992e6d5e356e271c85df961fcc567",
+    "scripts/simulation/unified_edit/numerics_checkpoint_sources.gd": "2a899cbfa5a693b83fc3880c1cbea1391b20dcc72079a42ae226b4d581e77e91",
+    "scripts/simulation/unified_edit/pipeline.gd": "e793f63080062f9eb72a8f241e0e181fcba31140b1cb88e5faa587355bd23ad1",
+    "scripts/simulation/unified_edit/player_input.gd": "c0d9105c3a0d20afbf55808de2f5643a7f9f4f7bf8ebe23f4d0e628627e969ac",
+    "scripts/simulation/unified_edit/presentation.gd": "1f52465a37673b4fb3f040255026b7e5aa3a14896f0929748616b2241040df73",
+    "scripts/simulation/unified_edit/probe.gd": "de1a09c4c6a0f128d9461c91248edfb8ea2a01bccd4da49fd4478f92d6676645",
+    "scripts/simulation/unified_edit/probe_codec.gd": "577de99be1b546a29908df5392c10a0d7138e2e0aeda13e71deb58c3012c7441",
+    "scripts/simulation/unified_edit/profile_catalog.gd": "6d4651c5d6cc5209cfe0696e3f6ef7375b9444ed2426fe94b1592c0b2473e0a4",
+    "scripts/simulation/unified_edit/profile_registry.gd": "f1911785ae05e56816c63641fbd98ece60a9de323bd365962df9331246ba558b",
+    "scripts/simulation/unified_edit/protocol.gd": "d27781aa931455a8434564712f256bb87cbae370858b1aaafbaa8982e42e70ab",
+    "scripts/simulation/unified_edit/restore_verifier.gd": "eb1abbf3776b41d599720230efc5980d4d5babe50dd27edf6790420fcbad9512",
+    "scripts/simulation/unified_edit/slots.gd": "b4c73feb63692894ee9420d4c05cf31892355d4d5380399f3c0bf58c0b101cab",
+    "scripts/simulation/unified_edit/state.gd": "e9d784d9cc9e0a39d20952aa2c8f8c5dbc3a934d5a8715a08124cf7356ecd6f3",
+    "scripts/simulation/unified_edit/surface_wetness.gd": "a89565fff3f972070432b9efda35d002bd56382ffa1fdcd1f56623cec302666f",
+    "scripts/simulation/unified_edit/tool_profile.gd": "5ec7ad018abaf9099e64f0c85acf7f106acc9c2ea013767166d4a394f17c38d8",
+    "scripts/simulation/unified_edit/transport.gd": "060e00341524fd7605def902e2936449c839e57722c7fe56ffd79d1e8adedc78",
+    "scripts/simulation/unified_edit/unit_half.gd": "3d0d323b653df1f9237525e3b42a2c395ffe3a585ecb68ab8a5bd0d9a03e573a",
+    "scripts/simulation/unified_edit/vegetation.gd": "cb5437ab5dcccc327f8ff7a05d7315389fdb19423183774e70c50c2374cecee2",
+    "scripts/simulation/unified_edit/views.gd": "6322c8faea0416edb6f1ae46f3931d1aeb422687ba21b43dcd27d6defae88fd2",
+    "scripts/simulation/unified_edit/visuals.gd": "ed42b02cf5a0e6b65fb1bdb4121722637ae821e0615e52e624292729d8431738",
+    "scripts/simulation/unified_edit/water.gd": "8b6d8093f3e2518eda1b41f790a2e1affb202f193ffae7b38dd3670faa2a2a6a",
+    "scripts/simulation/unified_edit/water_muscl.gd": "383b8d1c8371e607ee935580c1b8edc872cf1164cb7e347a962a3f9432fa257d",
+    "scripts/simulation/unified_edit/water_numerics.gd": "794d56cfc7259260590b0dd790e299106602e0b88e5b8feee17f79efc78f31d2",
+    "scripts/simulation/unified_edit/water_response.gd": "9ccb1a9d714ef5427e6a5534feac26e6e16d0886f3df5edac816d7a15a6ab5bc",
+    "scripts/simulation/edit_validation/frame_pipeline/async_checkpoint_capture.gd": "558544b896d6069f973b3f2e8568bb6ca9fa9cd8d3370b33065deacda9c865b9",
+    "scripts/simulation/edit_validation/frame_pipeline/async_checkpoint_codec.gd": "ef0e368736579cc6a1a6a11eb10d2c7bf6c92d2db4d2836c67578da3c444765a",
+    "scripts/simulation/edit_validation/frame_pipeline/async_clock_variants.gd": "3c96c317fb78116f57ad3e3f8bf39d23486de303a82e8d2a9be73ff7be1f0d73",
+    "scripts/simulation/edit_validation/frame_pipeline/async_collision.gd": "d5a83fbee79228128fd3307535b46817ddb3b18dfbb7f819dd465f7e8ca5c6c1",
+    "scripts/simulation/edit_validation/frame_pipeline/async_controller.gd": "562cd38053e8c5f7fef96d70268b0e4f17f5f3ef9a121c9b94b93c37cdbbabc4",
+    "scripts/simulation/edit_validation/frame_pipeline/async_coupled.gd": "779f48e98f58d4818a0b1d6b5aeec28bbc5b32dfe6019a63c5f722dac62c3aa3",
+    "scripts/simulation/edit_validation/frame_pipeline/async_editor.gd": "1a7bd53a0d2bff0154993f9cd172edb07d1121b05e41c32c46514f931aee2b7e",
+    "scripts/simulation/edit_validation/frame_pipeline/async_height_codec.gd": "d5e5b03c8ae9a1c77fb3c458ff6886676126c77c666eb79c1d195c5485c9588e",
+    "scripts/simulation/edit_validation/frame_pipeline/async_legacy_migration.gd": "4609f53f315a2688e7ff368ba0b198881069739abaab31c2d3ee879ddb3f9fc1",
+    "scripts/simulation/edit_validation/frame_pipeline/async_protocol.gd": "312ed81688880954a12c1e6d4df3c34ca7d9f22ca0c9e184b8e2e9f4925e6750",
+    "scripts/simulation/edit_validation/frame_pipeline/async_restore_bundle.gd": "bd57e8138ed0627847071d1cff8007519a0d544eb17a1c662b13f0e70c7add09",
+    "scripts/simulation/edit_validation/frame_pipeline/async_scheduler.gd": "bb143cbb8142648cebf7d0c156d35cd399df4be99c378f9fd4432fd9fca98fba",
+    "scripts/simulation/edit_validation/frame_pipeline/async_shadow_read.gd": "40c7669054d467d12d82d582884e8ba3b2064687e4d7d4945466fd05cacb0533",
+    "scripts/simulation/edit_validation/frame_pipeline/async_slots.gd": "7dbad972285e515eeea88d5586e149536b27444eb869ca8061ab8b98314ac2ba",
+    "scripts/simulation/edit_validation/frame_pipeline/async_terminal_guard.gd": "08c47247c2a6f7a4d8a0c7937d580cb575ca28e23c02c8e0f388d7b1cfef518c",
+    "scripts/simulation/edit_validation/frame_pipeline/async_tools.gd": "7ac26ea4c5d5f0020c5a6f5afeb04652cbe7fe66c0895d3d017159bfdc817451",
+    "scripts/simulation/edit_validation/frame_pipeline/async_transport.gd": "bd1fad594d7cdff8b6225850b644672d3c95f3f26c8f36b9b791fd57a05221be",
+    "scripts/simulation/edit_validation/frame_pipeline/async_visuals.gd": "246712a7dde239f6312c4fe52267bdcfc3b55cdb833fbc07547873d5668a1856",
+    "scripts/simulation/edit_validation/frame_pipeline/async_water.gd": "82f3d2a13987fb704b9f13ea8898df056c427f78b02416cd7818adbd5fde17a4",
+    "scripts/simulation/edit_validation/frame_pipeline/controller.gd": "eba3874aac33266f449ccde99b56285aae7975345eb00fc8cc7f02655bd514f7",
+    "scripts/simulation/edit_validation/frame_pipeline/editor.gd": "ff306de8483aa9b244c1465e4167653176d4670ccadf6531fd79204954702160",
+    "scripts/simulation/edit_validation/frame_pipeline/layout.gd": "4c3e25e5b803edc54ed954e711f59f21cb3cab92580fc888af0154dd2ecc52ad",
+    "scripts/simulation/edit_validation/frame_pipeline/validation.gd": "aa329de59d707ce5444906f2b93d57d17ed53d447ffa9ef4989f878c459e5dd9",
+    "scripts/sand/brushes/brush_command_queue.gd": "f08f39aa7b80fc99a6756ff195ae1481ab8d8bdb7a5a3efe6514eb9c23c77c7b",
+    "scripts/sand/brushes/brush_definition.gd": "63f682e4f20161b4bbd193bd5264bd9f51cab79606ba38b9695d8b512d66c161",
+    "scripts/sand/brushes/brush_preview_view.gd": "7ad3096626b81c6b831ef56188c1343b3f56c2f1e81e8667343b3829be7aad24",
+    "scripts/sand/brushes/brush_registry.gd": "64d3520ce0c519cb34f46636ba59a6bcb3c8aae45edbcca2ae1ffecd10f35631",
+    "scripts/sand/brushes/brush_spec.gd": "2532c325b5ad6a615731830a08d86b2c33dd446e8a115aa336b9371b539d644c",
+    "scripts/sand/brushes/brush_tool_panel.gd": "1fec3c63d945190b98910e75c3a5758cdadb907b56e810f14accf09ed9fe0ef7",
+    "scripts/sand/brushes/stroke_controller.gd": "29fdca82d9f4836760fa46bc3f120b70b3d55204cce14f97a8ea3804bcc4b45f",
+    "scripts/experiments/approx_gpu_edit/exact_dispatch_adapter.gd": "f3495410d6d2adc54ff1e4e8e066f36935c57c53f30169bbd614d8ddf3a53dc4",
+    "scripts/experiments/approx_gpu_edit/exact_trial_solver.gd": "c8f7073f16a86b13070759c26f625a271c5c5d644eefbbfb6440a68bca42c646",
+    "scripts/experiments/approx_gpu_edit/trial_entry.gd": "20c54cb09a140cdd626db154d8c141caec30bb41e7ae76e492e4f89542f50ce2",
+    "scripts/experiments/approx_gpu_edit/trial_lifecycle.gd": "5206be916229c98d9ef012bd5ac24d7ae408a723d9c5b8d311d732a3483d5937",
+    "scripts/experiments/approx_gpu_edit/trial_profile.gd": "73c7c7fba408ee73967ae4c746ec6b64597af7d1e17380b6008b4a815b280890",
+    "scripts/experiments/approx_gpu_edit/trial_solver.gd": "cfd46dc0fa8866befd4fba3692d27e9a9d6486c79566fa71f0d5c47fadc530d6",
+    "scripts/simulation/unified_edit/boundary.glsl": "8949333ac4ca60f02c07ba1bb39346657bc5cce0d60b078c8f7135bfc6c089ea",
+    "scripts/simulation/unified_edit/cfl_decide.glsl": "8d246db53a1d2b72ae252e68d906b71166b64bc7782244c4f3c6c47757e19e5e",
+    "scripts/simulation/unified_edit/display_emit.glsl": "840c6b01b244d21cd0914312df3ace652536d80727a0e34726b767216e775115",
+    "scripts/simulation/unified_edit/edit.glsl": "57553c4b755f629d60d61d73ee6f457eacf83b176230e6884396a9750cf48973",
+    "scripts/simulation/unified_edit/height.glsl": "9f08382aafd9706f017298cb9721b897b0fd3a4023a21c3e91510ab51650153d",
+    "scripts/simulation/unified_edit/idle_fence.glsl": "1268fcb20b1d592fac6b71fb68ddeca4eae63a23bcf217b02161cebb44005e77",
+    "scripts/simulation/unified_edit/probe.glsl": "ab45f4e46692b78f40d1c3329a23ecdd100b384de966dcc0aa80e19e50546d10",
+    "scripts/simulation/unified_edit/publish.glsl": "84f60cbb6d59a60e5481b2ce7b00ce438ff90f659c03d2bf7ad3971308dba0f8",
+    "scripts/simulation/unified_edit/publish_wet_sand.glsl": "a114f544ae918e638e34d4fe7682092435da2040cf5ecfebd6a5afa5c97bcfcc",
+    "scripts/simulation/unified_edit/view_publish.glsl": "56160ffa358b59456f754126204042edf3e3cea77fc3d505e43fb5891fdc9816",
+    "scripts/simulation/unified_edit/view_query.glsl": "9a1c36a38c6c02107aa60d499018635b85ae76849aa11788ff47af8e09ad24fa",
+    "scripts/simulation/unified_edit/visual_edit_finish.glsl": "0a6c2a1ef102918ed5b234f85cd859048d1a8d3befcef5f189809a7361f4f987",
+    "scripts/simulation/unified_edit/visual_finish.glsl": "10f2a79bec43f77b80d77f674e60df7123876931d1473a5cf38c47182b38e5c7",
+    "scripts/simulation/unified_edit/visual_publish.glsl": "e517e7dd58218ee764a1d773c20e2c714e880dfc01f151188834c43cfa70967d",
+    "scripts/simulation/unified_edit/water_packed_parallel.glsl": "8e48a46ade6d9a608b9fe9aa5b10f1127f4b036b22a788f392c069d9585d481d",
+    "scripts/simulation/unified_edit/water_packed_topology.glsl": "876056fb1b25c7eaea97e513dddcc882b7ea2cd723abb5409828ea0d389710cf",
+    "scripts/simulation/unified_edit/water_response.glsl": "19fca940f8886393fc683a6e2bc962dcda3298520ebff2aa04c208def16751f0",
+    "scripts/simulation/unified_edit/water_velocity_prepare.glsl": "9ad4fb084b7e4713fcd0030f85e59b9af1b440e891a9ce5ee86201cfadd27a6c",
+    "scripts/simulation/unified_edit/work_begin.glsl": "940538b9e13f01da456c959a7d409c188420675b46d49fbb9e508fe662d72f1a",
+    "scripts/simulation/unified_edit/work_seal.glsl": "26434191421521492b5a63160cb4ae8674b1b8773205cb868b083bc1f8d6866e",
+    "scripts/simulation/edit_validation/frame_pipeline/async_boundary.glsl": "a6226484e71e726a1ba7d68bc3d50a8ff89891904eeef6d71a659be484203477",
+    "scripts/simulation/edit_validation/frame_pipeline/async_bridge.glsl": "5d12ebefb8ebbd3a86a77ffeabd7dea3fe6d923b412d7951dcbac74ee927f960",
+    "scripts/simulation/edit_validation/frame_pipeline/async_capture.glsl": "9cf9a6f9caed1835e7adce9ee76f1b3331ce613e295fe483a77dc45e6a4db780",
+    "scripts/simulation/edit_validation/frame_pipeline/async_cfl_decide.glsl": "e7dfb3973a447415ddca4a0d6f19ad496dc5499d025016d804d9d4ee96a6c6b6",
+    "scripts/simulation/edit_validation/frame_pipeline/async_cfl_tiles.glsl": "06875caf6af822cb96ee8f1f009e246ec689a0a1feba4aaf73bebfb3f3824ac1",
+    "scripts/simulation/edit_validation/frame_pipeline/async_gravel_normalize.glsl": "19ad04695cb760264e6080bb46c9b00d4b07ff5cb6ebaa124458566c5e4d17a0",
+    "scripts/simulation/edit_validation/frame_pipeline/async_height_pack.glsl": "f0e0674b4676d990916776bbac5cd71b96fdae31d0500f9ba83218516d1ae32a",
+    "scripts/simulation/edit_validation/frame_pipeline/async_normalize.glsl": "52cca694a0bf455d386541782ed2d765d05541ffd19c2f235390c0d6f3fc75ba",
+    "scripts/simulation/edit_validation/frame_pipeline/async_seal.glsl": "11ab3b18d815e81a2b1906ff27b894ce8225c512962881bd6ec995365037d098",
+    "scripts/simulation/edit_validation/frame_pipeline/async_select.glsl": "95436c3861967f9a67c17eca18563fb26a48de613878784d9bde286ff8c35043",
+    "scripts/simulation/edit_validation/frame_pipeline/async_sim_finish.glsl": "71229a60bbea62762a77ae3ee481819792eae4cf6ff11ea30a7ebb833be87a8a",
+    "scripts/simulation/edit_validation/frame_pipeline/async_smooth.glsl": "787d664ce2a6762bc9b4d526357d6d2f63241a8e8ff33e6e723abf2a4c95320a",
+    "scripts/simulation/edit_validation/frame_pipeline/async_tool_capture.glsl": "07b77d4c0cfea25e0dbc80bc8e5fee98876885d8d7aef92182bb975756b71630",
+    "scripts/simulation/edit_validation/frame_pipeline/async_tool_select.glsl": "ae6be9e16289e1a2766a0448c41640192833a6bec23a0b90420ae06766168059",
+    "scripts/simulation/edit_validation/frame_pipeline/async_visual_normalize.glsl": "ba58d5b1739cb5078e5eb87438ba101e8df5f8adac0f3acfb80b8149e96a39d8",
+    "scripts/simulation/edit_validation/frame_pipeline/capture.glsl": "861e5463638fbead36e918884656f454b742608c464df2940bbbf40250a32fce",
+    "scripts/simulation/edit_validation/frame_pipeline/select.glsl": "b9fd2ff6aeb24836cf809c28382ccd6356b7061d033cc91f5d8ea75e3f009acb",
+    "shaders/benchmarks/checker_compute.glsl": "8bb0bceae1675afdeab674386cf359e946392320d797bf9b32dec51ebf913996",
+    "shaders/benchmarks/frame_value_compute.glsl": "c3e39843c1dbc55b11dfb80fc67ff1f561363fca1c3622ae1d0efcdda9c94ef2",
+    "shaders/benchmarks/pack_dirty_chunks.glsl": "b2c18c1669bdf62f972793fd376fe62eb36e39802eff6a6e7ac1df0685b847fc",
+    "shaders/simulation/scalar_pingpong.glsl": "3ae534a8a661cdf984df699150a978c269683ff2c21effcb4a2e14195f1c6512",
+    "shaders/simulation/shallow_audit_tiles.glsl": "f9deb50fd988d4db627a86fc42c6b57204298f8016c530762eef6e20f2a7f71f",
+    "shaders/simulation/shallow_cfl_tiles.glsl": "bc636e57f1feb1d9e24606bc64b5753f07035925cb97882f09a0fec3c2a3833c",
+    "shaders/simulation/shallow_collision_pack.glsl": "21e58b4e4bd906e98c0b0e894c514332a9a1b2ca9251c539275a209749ca9b9d",
+    "shaders/simulation/shallow_drain_scale.glsl": "f36e5a1a0b50f867ca89571a12033ba8dbb059a5a1a481bca07e43a1cf87fdbe",
+    "shaders/simulation/shallow_edge_flux.glsl": "621bc8ec3738d896cdf68c2fe20d306f0d1bd87817f3e917214a9f91b84dea4e",
+    "shaders/simulation/shallow_gauge_depth.glsl": "f9d9219e8957645c14708fe4f4ca1d88cb4bb4d0cd1c507c47fbd203db792790",
+    "shaders/simulation/shallow_sand_audit_tiles.glsl": "40adab5f7447f987418daec6e6cfc64b866ae4894960cd7e6b8d89ba45d5e503",
+    "shaders/simulation/shallow_tide_boundary.glsl": "e6911fc637aacfc1ded6f0eb002942aed06a79022eec4c65ce31db6270ce7835",
+    "shaders/simulation/shallow_tool_patch.glsl": "d0fbfea07be64cf31f7fabed61b7440b67d768657091d4287d976e8c313f4168",
+    "shaders/simulation/shallow_update_state.glsl": "fe373e7d793d0cc126db241fe0c81e5b3aa2b7d70b37c7299f21418d81b76185",
+    "shaders/simulation/test1_main_display.glsl": "bb6cd5427b3f15a70daa1ace4eca7d58d21ce0f98695de3c86e769c13254d210",
+    "shaders/simulation/test1_water_motion.glsl": "9f167d80fab66457d81b7dd27aaad14a8bbaf0901284e6b8b5a4f876496b45a0",
+    "shaders/simulation/vegetation_publish.glsl": "d0c6a2dc18f0768f30c4267095cd958a77272a3e78756b54d00ded06890bc58f",
+    "shaders/simulation/vegetation_step.glsl": "1981271f0f8ecbb63d56339424270a85175f31e6ccf9754b85048352a5197b46",
+    "shaders/simulation/visual_foam_step.glsl": "19d7bec7f157791f75e0b4a63bd04c7ae8dc06eb82e016f1ea96ae8174e6edb0",
+    "shaders/simulation/visual_gravel_step.glsl": "187e52c7ae677aba712bf441c29fe4268578327dab6fb19186a2439c5e0e6799",
+    "shaders/simulation/brushes/begin.glsl": "12126b800654cfbcb6512b1d61a785722808b6b52805e12ae25d0b1f5395e0e5",
+    "shaders/simulation/brushes/commit.glsl": "9bccb43c473dd835cc28161a0fb65a9231d6be03fb6a211dabfebf89ad16eab2",
+    "shaders/simulation/brushes/legacy_material_transaction.glsl": "8453cb09251f4789f9f686acf535b7a5e53c23f5f0d7b949b5480c65870191fc",
+    "shaders/simulation/brushes/material_transaction.glsl": "b9339e0506fd782df072276a21bace49304a824b9652602dab8cbeb6383bcbb9",
+    "shaders/simulation/brushes/molded_slope.glsl": "808103f691329ca21bba69cc6e309c857134b5fe666d22a6a4a50c47abe0417d",
+    "shaders/simulation/brushes/mold_support_step.glsl": "02b3dd96f818c304fa723336f4891c4666bf8562c9a874a737b6416a51324e03",
+    "shaders/simulation/brushes/prepare.glsl": "2794b89aee803e86d3f2a3baeee15e58d82b2ac7906bafd477b172053dbde953",
+    "shaders/simulation/brushes/preview_base.glsl": "62f49d2dec4badcc7d0fee4aebe04f03aeeb8e581624d360fc41ca26b9b423c7",
+    "shaders/simulation/brushes/reduce.glsl": "7fc831d8009102fe8b0fc9734eef03e7db5b9c17cccfeff261c14984eec2d4fe",
+    "shaders/simulation/brushes/rollback.glsl": "7a1b409a3cd13ddc817c446b2a56cf9d0c64f674afad5bce9dc6cc1673ca98ff",
+    "shaders/simulation/brushes/shovel_allocate.glsl": "c22323a34812e73deab3636c55b263d17b745715da1a3c97cf043e56dc0cfc8f",
+    "shaders/simulation/brushes/validate.glsl": "7ee33b4d16acaa29baa464844f903d4baf12927999261f1b4a14625363f5b206",
+    "shaders/simulation/brushes/water_commit.glsl": "e4ca3b23ee15a49c84861593c5f2fc240025199a3b2bcede0c6728eed82c9ade",
+    "shaders/simulation/brushes/water_merge.glsl": "95b79fb07335f17fe2c1f734afacbc3ef479617dc94057a394df3ca303a8e43f",
+    "shaders/simulation/brushes/water_prepare.glsl": "b83883b3e464978444683a109b99c0acd5fe056098243c0ab3478c692519b65e",
+    "shaders/simulation/brushes/water_velocity.glsl": "8eb603352628990694c6726be12f2243d4ff46993dfb8fadcd851c1ffbf1f784",
+    "shaders/simulation/edit_validation/precise_slope_relax.glsl": "bba97470ac846db8185ecbd476987a880c9a06ff438c47b6174b04e142a66b6c",
+    "shaders/simulation/edit_validation/sand_apply.glsl": "ed863879d0a83f150b7932a1575ebea2f3677486c572660fab6ed2bc2d259d3d",
+    "shaders/simulation/edit_validation/sand_commit.glsl": "02f1b912b03d69d28ddf7cf238c28d25ec884f1a20c8c06ba305c73353795a1e",
+    "shaders/simulation/edit_validation/sand_prepare.glsl": "5db63768d1c7cf7c5e9c71c3a4f88c04dd714dd7c68fcfdc39dd6d24d7eb822b",
+    "shaders/simulation/edit_validation/sand_publish.glsl": "d94074c81e66ad2a0060034c5b95951e472f3ac9903eeef5167a1ec31b17d0fd",
+    "shaders/simulation/edit_validation/sand_reduce.glsl": "a80849d71fee0d2a51d4be7f78fe99d3c274997aa324a7dadd57b83bc98d7211",
+    "shaders/simulation/edit_validation/sand_reduce_audit.glsl": "0d1b03b8c8117d49329a64ab5c737923439706aa4e1e2ce4c6ee4e2bf06743d5",
+    "shaders/simulation/edit_validation/shallow_update_diagnostic.glsl": "afa5061db9efe652cb0908e8d1ac23c01b3304f23e3970c4c47136e7ba2c0464",
+    "shaders/simulation/edit_validation/slope_counter.glsl": "1d9ca25f0b42f8869d4fff2fab60f562a9592470bd9c4eb3b78eca2f639ccefd",
+    "shaders/simulation/edit_validation/slope_output_record.glsl": "52375b43f0dd48863ccb1ed5af2b025e8d571091dc0fe4af1760767076eb2f12",
+    "shaders/simulation/edit_validation/slope_record.glsl": "989b016872974340db663d54b99d1a35559a63c8fe5f141de7d3173e0cda8602",
+    "shaders/simulation/edit_validation/staged_slope.glsl": "8777b5baa680a9fb4d1eb66176a92b058972b2cb1fe713b49c07ae8d2d39bf00",
+    "shaders/simulation/edit_validation/staged_slope_consume.glsl": "da10584e13400f2c9e957ba32aa6dfecdc4cd08cf1bd07c74877028773ef83ba",
+    "shaders/simulation/edit_validation/water_commit.glsl": "3c66875f4c2b2e193a95ab53bfe0072887fffaac9638249381b70cad3484e669",
+    "shaders/simulation/edit_validation/water_connected_runs.glsl": "374496b6b992e31c0844fa3bbf0c1c2cf89c4dc72f7b7b253c1fc422ba27fe0e",
+    "shaders/simulation/edit_validation/water_displace.glsl": "2cc36d4082d4dfb8234edb8599853278446c59701a5874acafdc87dc41506f5d",
+    "shaders/simulation/edit_validation/water_displace_compensated.glsl": "8b161dbf853c8916de189f745e1573380fcd2f687680cbe83887d5e8867c0641",
+    "shaders/simulation/edit_validation/water_displace_compensated_audit.glsl": "5225c8c2b23dddec7c14a6580e544b49c689556a3022e060eaff4847af7e557a",
+    "shaders/simulation/edit_validation/water_full_wet.glsl": "a7f1786415760e7b9399c11baa2f3d46e4c7d821e7bfb71a983ea1f306fae336",
+    "shaders/simulation/edit_validation/water_merge_receipt.glsl": "28d6d32fb7c87404f7c8d4057104def45ed2998b5dff4561563907cce48d0c65",
+    "shaders/simulation/edit_validation/water_packed_cached.glsl": "cd8dd0f5419d1b423158caf004ed3d5a297ee51e801159748005ad49103cd543",
+    "shaders/simulation/edit_validation/water_packed_cached_idle.glsl": "40888083334a7b4bd1b09a6e4f48f9283f3b278d2b0fc56fea2f8e0c5bd9944f",
+    "shaders/simulation/edit_validation/water_packed_compensated.glsl": "398f720005d05580a73489bb93a79af2aeb3bbac2965dad9244db015d34e3422",
+    "shaders/simulation/edit_validation/water_packed_runs.glsl": "a56fc8c05babcf9c82abb1707b324639dc28b4b794a3751d97f62c1bbefcfd98",
+    "shaders/simulation/edit_validation/water_prepare.glsl": "c22dd62287e8a4fa3fa202cf5af89ecd37882cb5d762f914a231064848bef64a",
+    "shaders/simulation/edit_validation/water_publish.glsl": "92ea11794ce0c1b4dab367dd50a8f4f7887afd3d3485671b7157d18c2606f7f7",
+    "shaders/simulation/edit_validation/water_velocity_apply.glsl": "596f7218795638eb4f780671eed62f2cffecf3ad9ebaf2177fe460927a55f0b7",
+    "shaders/simulation/edit_validation/water_velocity_prefetch.glsl": "9cf7459b99ae2932a63068416cac6875844e8582dc5e58a33771f0c595f3c77d",
+    "shaders/simulation/edit_validation/water_velocity_reduce.glsl": "d73f86bfc1d13604c50171fa119eea6ed21c6165d79a85f1f477bca163f5d759",
+    "shaders/simulation/erosion/copy_after_boundary.glsl": "dbae28c2350fb4551bfb214a38c60ac90d2e660b2ad68575ab62cb5e04306282",
+    "shaders/simulation/erosion/sediment_copy.glsl": "b444f30ce8c9ede98a7c5dbeb7d281be0d716145382242a96f639ed5bff80140",
+    "shaders/simulation/erosion/sediment_exchange.glsl": "da563ac4f8273e16ec95a58deb15eb443bfcc386d656037bb0436fd879d82a02",
+    "shaders/simulation/erosion/sediment_step.glsl": "02ff254c037da330de571d2ecc2edc13711295a44d226917fcfdb98412c743c9",
+    "shaders/simulation/material/material_commit.glsl": "a5ecfc44668a97d519677fc9769eb22638cab5bd4b932e6e225abd4642977979",
+    "shaders/simulation/material/material_step.glsl": "290b44d3fb13ab2b4d7da27e4fa4f93e070244ba11ad450b8356067280f60aef",
+    "shaders/simulation/material/slope_relax.glsl": "3a84a74ea96425febabf5dcca59fdd5509a069c508d8702236e14de0a984ccfe",
+    "shaders/simulation/muscl/rk_decide.glsl": "6d51c59ed047d333f8855016d00b2a6cc464f4cb00c8b854c42ed96811bbd3f7",
+    "shaders/simulation/muscl/rk_drain.glsl": "8a649a8379954fed16f4a18424da70a83a05511043f943f164a9b2ea7b8c0d11",
+    "shaders/simulation/muscl/rk_edge.glsl": "4929b19439ede7280c7d4931b72f5d3ebc2d448da4c856eab97874273ef034a0",
+    "shaders/simulation/muscl/rk_euler.glsl": "daf72a12c24352106a2b9e6aa8fbc1a935b5d13b380e2090042c344b553b2d06",
+    "shaders/simulation/muscl/rk_finalize.glsl": "0dbffbbb3cf88ad43761ca6f2b6f155fc360c57aebdc5379298ac69823613ae6",
+    "shaders/simulation/muscl/rk_normalize.glsl": "517ea7d43c1b42b6aa18bff7259d5b7ab0ee11d13e61769242ed4a4fd9d1840e",
+    "shaders/simulation/muscl/rk_validate.glsl": "c53f4fc33334174cd0b458e441a9aa3bf106f0452330638163707829adbd2120",
+    "shaders/simulation/structures/obstacle_commit.glsl": "98afc576f237c5acac4ec0f09ee8d0c7d4ad59a1b0f480b4acb76ab842a3d655",
+    "shaders/simulation/structures/obstacle_remap.glsl": "a54a87ec0b648ed1fed2053815082e4b395904d6ed664b953d4749f9cddb922a",
+    "shaders/experiments/approx_gpu_edit/brush.glsl": "e5368847c767879571c4f1166029a8b9059766d7c8a788facb1d014ab0b0d81b",
+    "assets/test1_beach/test1_bed_dry_overlay_trial.gdshader": "4f17c7b16b5b23928d9bd0298ce33b361eb6ffb27f0e68e8a2b91246efcd5530",
+    "assets/test1_beach/test1_bed_dry_vertex_depth14_trial.gdshader": "185f75135e98faf65025498ae768a36bde484dc8fff6d55ca324c58ed693a534",
+    "assets/test1_beach/test1_bed_dry_vertex_trial.gdshader": "869e178b39d54edcbfed60c5fdfa34ec749138f2d4d1e6f3d6c657b1227eacc4",
+    "assets/test1_beach/test1_bed_lit.gdshader": "5eb82335a471c821cc2c10e9fd2590d979fa06ae62d317fe13574b40a2e7e6a2",
+    "assets/test1_beach/test1_bed_lit_fast.gdshader": "0e8340b6e20e3d5a8380549995610e5a442b04524ff72e50c996b5cb4f9e7366",
+    "assets/test1_beach/test1_bed_vertex_light_trial.gdshader": "0e8340b6e20e3d5a8380549995610e5a442b04524ff72e50c996b5cb4f9e7366",
+    "assets/test1_beach/test1_front_foam_splats.gdshader": "45a43cf1ea48a0913e2a06012f1eef90bac837ecc610319cab5718505075f03b",
+    "assets/test1_beach/test1_water_front.gdshader": "deac308744b85960c239d6722d59a3b12507ebc6741ec2b81600718d63b81017",
+    "assets/test1_geometry/sand_sides.gdshader": "0e5a93f7918069b224e28818970bee1e3469649a6cdf0de5acb66afbddcae0f5",
+    "assets/test1_water_motion/bed.gdshader": "8f5c0ce36782ca5d100f2a9279b1e1be84cd28ede5ee39461e4adcad90accf08",
+    "assets/test1_water_motion/water.gdshader": "cb056818df603daeb483d9a8fa0b408d7b8af6b1733eef89586662ca66c3c4c9",
+    "assets/water_foam/flow_candidate.gdshader": "6506719ce13eae6bb94b96ea4c09afa4275741b1faf9bdb075e18cff0f4a877e",
+    "assets/water_foam/static_candidate.gdshader": "de441badc8f37e188e5e6a52c806215e5fda4e8c0648bd13df8ee7b8254101bb",
+    "assets/water_material_natural_candidate/async_rdc_bed.gdshader": "afa82f79322754816c9574c74b0d9dcbc9d75ad45975f69296236b3ca8c9fa31",
+    "assets/water_material_natural_candidate/async_rdc_water.gdshader": "6506719ce13eae6bb94b96ea4c09afa4275741b1faf9bdb075e18cff0f4a877e",
+    "assets/water_material_natural_candidate/bed_geometry_specialized.gdshader": "77bd0939f5523e1cacb1461f13cc4db647f6941c0f8832ae5940779ce32fdc5f",
+    "assets/water_material_natural_candidate/bed_material_specialized.gdshader": "c9176f1ed527d7e3851115514acb299aa57d5fb7bda48a835f3b87e210e59261",
+    "assets/water_material_natural_candidate/bed_style.gdshader": "271b03cfa840795410a7165650de3e6ecff102e137eec910fb9ab9f57b759c11",
+    "assets/water_material_natural_candidate/contact_foam.gdshader": "101325f41af40f36af1fef3288aeb618403ac59cb483e38065996fa985e6fa85",
+    "assets/water_material_natural_candidate/contact_geometry_specialized.gdshader": "b51c5b11d063e2832290619262cda9054c4d4c44cda52c135f425bc680b0cdc6",
+    "assets/water_material_natural_candidate/contact_lazy.gdshader": "d5fc6f57690585e6679ab70e0fc3bbf9a1514f7abb073c657f300ebd00bcd8df",
+    "assets/water_material_natural_candidate/contact_shape.gdshader": "df877260fd31aae4785dc937cc23c7d24e742ed7d16895f612ebb6e600e9fba8",
+    "assets/water_material_natural_candidate/contact_shared.gdshader": "88f53f8cc33f0bf12b629b9352c541a063150189f6553359e6649bddce246c18",
+    "assets/water_material_natural_candidate/foam_distribution.gdshader": "55077448b1b78594922c05db6bcfac25822d9742d2aeef2e3aea7dbf2191ef65",
+    "assets/water_material_natural_candidate/foam_engine_light.gdshader": "16e73f843c92b45ba1be07763e0c93c2f3e3184f093e7cf068ee84c699fe1b8b",
+    "assets/water_material_natural_candidate/rdc_bed.gdshader": "e36bf7c1d44dbc38f50c46b7405cf439a48fd6f427df6f95a3d5e3e50d650abf",
+    "assets/water_material_natural_candidate/rdc_water.gdshader": "16a93e3d6942429073cbcbcba73b59bbe42e80c61bf776e9f15170ca69fd8b89",
+    "assets/water_material_natural_candidate/water_debug_specialized.gdshader": "bd239c50be0177bbb5a16c39683d39bd87f70a7112e21240d305ac48071773c7",
+    "assets/water_material_natural_candidate/water_engine_light.gdshader": "6a4db171e15a19a5b90f30b5e29497c7b1625fd4a6241b59a380a6a849397def",
+    "assets/water_material_natural_candidate/water_engine_light_no_standard_specular.gdshader": "5494ae1ad94bcffab292345c744725b5d7730078bcc306b3f979f1480788ffc4",
+    "assets/water_material_natural_candidate/water_engine_light_packed.gdshader": "832821660f3914169133bcb9c988cdfa7bd40ca9f57520bdd4602355a0dff8dd",
+    "assets/water_material_natural_candidate/water_engine_light_specialized.gdshader": "f17a029bc8486d97f48efe65ede283a226b07d2934b3ab3c9d65574f94f523b8",
+    "assets/water_material_natural_candidate/water_foam.gdshader": "b13ac3e56eecfe56adf427c06f0ec1442cd989bffddbd11fec36b0dea42d59ce",
+    "assets/water_material_natural_candidate/water_geometry_specialized.gdshader": "eb75e87315bf72fcf42d5911b85540dc63e556e23f02bd441f7ea2ad3dabd59f",
+    "assets/water_material_natural_candidate/water_height.gdshader": "f7f9108fde01ee288349a2fdde9d57a003e457b25fc7cbea666f484d58ba151d",
+    "assets/water_material_natural_candidate/water_macro.gdshader": "530ccf9ef93d1b85cfa61b4b406c7a5d4a0fd94b1efe321aad1f44ce59526e78",
+    "assets/water_material_natural_candidate/water_manual_glint.gdshader": "8eb8160e55cc0ec91fac6c04583b70794167ae924061f053c231de8f8261f487",
+    "assets/water_material_natural_candidate/water_normal.gdshader": "5a84c97bb21859a4064ed7933323fe53987029cd0056fb8da3a61a7ecafb6671",
+    "assets/water_material_natural_candidate/water_optics.gdshader": "cc9d989dfc2be0c88e527a16bd32f6e29e1b4003da10b3554924d584ade55473",
+    "assets/water_material_natural_candidate/water_optics_unrefracted.gdshader": "70b415a9f3e68a724fe8f075c5588b52eddd32c5dda15544ba3d3b298e896ba6",
+    "assets/water_material_natural_candidate/water_path_diagnostic.gdshader": "f6e345959a4d466627bad923d732d9404ff4e37be35efb832ecb12ac3b87db57",
+    "assets/water_material_natural_candidate/water_reflection.gdshader": "92ffedb04d08672b09bc0dc4dabaada7066cb42bf87288c66bc2237a0ef2195c",
+    "assets/water_material_natural_candidate/water_reflection_flip_y_probe.gdshader": "e8eb22f171fc3049788dc6e42e1056f752fea8cc514e01b7cd2a203c4f18b497",
+    "assets/water_material_natural_candidate/water_reflection_specialized.gdshader": "69ffc455f6f8c384c6c5d6c61ee1222b979eb0500260d14c530808e072658f29",
+    "assets/water_material_natural_candidate/water_reflection_srgb_probe.gdshader": "af3f018b6b1edff78e271d09c2cf1064a5cfdbc9286b254187650ff18fb7f97f",
+    "assets/water_material_natural_candidate/water_route_specialized.gdshader": "7a225ea82c286b8d8be53f116a96e701b2773a7da25b6a8579ba6a7359789b2d",
+    "assets/water_sides/water_sides.gdshader": "0091b72293ee8aeb9ca81daa3f678b4c4ae2a07f0c00c3cfbc326e44d485bbf2",
+    "scenes/approx_gpu_edit.tscn": "fd3abe86c3c9a760b15549ce28e80fec18d13d43a1c551008591ecda3e60e926",
+    "scenes/brush_indicator.tscn": "e9856acb89eae8eb2b511b93758cde65f8cff3688fe9c13a38c058f26f8d49a8",
+    "scenes/editor_scene_preview.tscn": "8bc4c9e55a34171c21566079f3bbb765a2127b2083e8b4315711a44fd94f3be0",
+    "scenes/gpu_collision_proxy.tscn": "4dc48e7f01848866ddf990fdf0262b326835b7333fb01a136bfdaf107acdf8ce",
+    "scenes/gpu_water_preview.tscn": "d9e34df4fd869fba098eb883a8623c52d2960520a59204ec232c4af7f006c251",
+    "scenes/main.tscn": "a3cef8fb63fdfac3272d7b2a95e5acaeac391b0277c0d16a456a377726de5135",
+    "scenes/terrain_preview_mesh.tscn": "29cfba0b5179dd6d4f285fa240478ece983e459d76da8dc362f4e5536c01db33",
+    "scenes/unified_edit_height_surface.tscn": "76ec932ebd6694b9d4bfafa10ab94e0083e88ef85a3dc0669afd35b8d5559dd7",
+    "scenes/unified_edit_runtime.tscn": "bbc141dba36f68247494840a42f6d29e76222eb4904d12eab4f28e5c8f5f9e34",
+    "scenes/water_preview_mesh.tscn": "21a0c4be933f29fd9e7aac65e5a4795d1a466e96b99d2c022eb21c0ec281be8e",
+    "scenes/water_render_coupled.tscn": "4169a5fe18d6fbebde61349e8fbb812f8e119673749d1d80f1dc4be3c0763b51",
+    "scenes/water_render_coupled_continuous.tscn": "8ba013fa1a40b4ea08432b911668f2f895241c9cf5b2d72c649d151f21a8fe5f",
+    "scenes/water_render_coupled_rock_reflection_candidate.tscn": "56622a93b0732139c7e3d366976dcbb11ff813f34261cab4e395434e2406445d",
+    "scenes/water_render_coupled_v7_preview.tscn": "c306db4b4b3da24cbb954dafa3967d658a5c287bdf2781e6a8d3188564b626fa",
+    "scenes/water_render_coupled_v8_preview.tscn": "561e5bfc35784cac2ce048296ede748535968e881d78d65300aff49c94e56fec",
+    "scenes/components/floating_props.tscn": "ef7a0f919704405376e2c1241c0fb1fb22d4a83c4d90fb3c1973fb7bf992fcd8",
+    "scenes/components/floating_props_panel.tscn": "61be2d8fd49b965ee21b0da2d7c167c58a84b746461dcc30eeb21b977632cb53",
+    "scenes/components/gravel_layer.tscn": "f88adad1987092235135af44f8dc13bec66d5aa1078a21095d494cf1d957d1b6",
+    "scenes/components/scene_switch_panel.tscn": "34f6340834e01dd01aa13a5f4e9c0f2c75be74b7c3c4a94b17785a2812200a6e",
+    "scenes/components/suspended_sand_cloud.tscn": "8db905e01323a0201403f080588162259498b9b960c266fcf634326cd74db3af",
+    "scenes/components/ui_visibility.tscn": "94bd334f6d45eb946de5a5600bc62c284b75ba22cfe12d1490c15fe66983f6f7",
+    "scenes/components/unified_performance_panel.tscn": "8a9804ecb2de81fa796b90e263d0adfbe908c89a05b4433c96bedf6becb05c3a",
+    "scenes/components/vegetation_layer.tscn": "cc2cde498655f723d2ff71608aedb192865506ad6a611325092d51d193e0b8a2",
+    "scenes/components/water_boundary_sides.tscn": "613f98726654fb43bbd47ecea32e085806a1eddfc5747dc558856f2495011524",
+    "scenes/components/wave_settings.tscn": "483f4a9229fce0129dd4b573081e5a66ff634e71ad060136b2a4bc8fece0bce1",
+    "scenes/experiments/main_water_momentum.tscn": "299f843d0fbb77965536f6b16118628a1db4184f2fb771764ca8bd39ee52276e",
+    "scenes/experiments/water_momentum_lab.tscn": "e79466c4b9d2893e160fa62f4bdeef58ffacb5e468b23aa4f9dcec2a5112fa4d",
+    "scenes/legacy/sandcastle_test1_beach_coupled_pre_natural.tscn": "0e322de1f462221f10e89ade7d0e887bd57f755065bb32e62034a3c534533570",
+    "scenes/parameters/parameter_windows.tscn": "75f7b16c1281be4ead9337e6a5e5c03e0ceb88bea8a79106f83a8dd8c64c20f4",
+    "scenes/playable/test1_geometry.tscn": "193925903ceba7b1e0cb81d1e6c80556838b75cc7df50bb455aab4324ea99042",
+    "scenes/props/bottle.tscn": "4ae799a270b29de188ae4db21ec2a1d849416fe55d564ef934927434a80cb32f",
+    "scenes/props/wood_plank.tscn": "6f08f5161d6815c74997ca74ecfe805facce698b7aec26d85e0e4cc975ffbc8f",
+    "scenes/props/wood_stick.tscn": "2a8b6f4089b9a354da84ca7f461a4549dfaa07396f44ca295b4d2f594d46b6da",
+    "scenes/shape_brushes/brush_playable_candidate.tscn": "bac9af74be09de49bb0e7775ee21b856d2aaf6cefcb560b987aaa6e83175e164",
+    "scenes/water_material_natural_candidate/rdc_v1_coupled.tscn": "4aafc7e046b9cbe80aead54a4588a75d3219a6a07166c565ad06432b570952b7",
+    "scenes/water_material_natural_candidate/reference_v1_coupled.tscn": "1f28006b481d309b7ed5aa566e413615631dcf0d16a1bca11c5adec028ad2a60",
+    "scenes/water_material_natural_candidate/style_compiled_v1_coupled.tscn": "14ceb68148144fc0d74b551e5d49b1fcf1fd2fa630fd63717d870f52a547c795",
+    "scenes/water_material_natural_candidate/style_height_coupled.tscn": "ed9dad0c2adb3b4bdcb258c58e772929ab1faccefefa5aaf44a1e0bcc6ed7640",
+    "scenes/unified_edit/playable/main.tscn": "971a68bffdca41bc0a0e38f0fb4ee449243b8d35c797e7c891654186ad65b202",
+    "scenes/unified_edit/playable/test1_geometry.tscn": "193925903ceba7b1e0cb81d1e6c80556838b75cc7df50bb455aab4324ea99042",
+    "scenes/unified_edit/presentation/main.tscn": "5748525e314dd128f546db2daf0b2f4346027d28059d8054fc66238895913a9e",
+    "scenes/unified_edit/presentation/test1_geometry.tscn": "7fa9de92d5b15f56d2aa2127821295d415eae1fcd315887a16e76862da752646",
+    "scenes/components/brushes/brush_preview.tscn": "71416823361c77badf81fca882aa1423607fa314ee473147cf4dcfd1c3531c18",
+    "scenes/components/brushes/brush_tool_panel.tscn": "622bfca880ccebba611a8653a08cd5c874d8cde0d7d419cfa281d2e1d8313793",
+    "scenes/components/water_visual/reference_coupled.tscn": "0fc8b4d2a7fc8b213960b79d82008ef6f4c7a663e909549d665bffd33009396e",
+    "scenes/components/water_visual/reference_foreground_occluders.tscn": "e0fd715fc43d6a759ef4eca3d77a35046b65c947654c474050e7d2e73af0bcca",
+    "scenes/components/water_visual/reference_front_foam_dense.tscn": "bd8c12d5c02aacebebafc7e397a477f87382126784b40e015fff48724a6be2e7",
+    "scenes/components/water_visual/reference_front_lips.tscn": "71dd667685df0833c58536b0ef81b74558698a74de52ea80d94c4cf6378906c6",
+    "scenes/components/water_visual/reflection_rock_environment.tscn": "6910e246c00e35d2c29e3982dd878cc0dadfeb93d651d961e538513b34dccd3f",
+    "assets/unified_edit/presentation/main.json": "b2c9b71719a9e29afee13bf90a917e8f2bbebc9519704d8e5f8dc1764e1d74e5",
+    "assets/unified_edit/presentation/test1_geometry.json": "7c7d4a9f623b65785382eeccb601a8c7df1b48307b1febc5ffae294ac5af915d",
+    "project.godot": "7c59f92820a80f6de25bd832f3aff4131edb71868e04621684ce87fbd5997e08",
+    "assets/parameters/catalog.json": "421aa8e311d5d67baeefdcfcfe1205242f5202e441a8a5d02804989b29d39cf8",
+    "assets/water_foam/foam_detail.png": "05c18a800db479f3e2a2568867051d29a3438d2cd7225830e000e8598935e50b",
+    "assets/water_foam/foam_detail.png.import": "3ecd645cc66f5c31cf0ffa94c93315cd57ca635ecf29be27c0f1e47d96cc28fe",
+    "tools/water_foam/g0_timing.gd": "7e199f0847cc20182e2c6da1c7207e993443e879f519a2602b54d9dd5d54b90b",
+    "tests/visual_water_alignment/foam_original_authority_probe.gd": "962d8d63c6219a72923da4f4fe8b75117001c05178129018d1afa1b5d20f3a3c"
+  },
+  "resource_hashes": {
+    "assets/test1_beach/test1_bed_dry_overlay_trial.gdshader": "4f17c7b16b5b23928d9bd0298ce33b361eb6ffb27f0e68e8a2b91246efcd5530",
+    "assets/test1_beach/test1_bed_dry_vertex_depth14_trial.gdshader": "185f75135e98faf65025498ae768a36bde484dc8fff6d55ca324c58ed693a534",
+    "assets/test1_beach/test1_bed_dry_vertex_trial.gdshader": "869e178b39d54edcbfed60c5fdfa34ec749138f2d4d1e6f3d6c657b1227eacc4",
+    "assets/test1_beach/test1_bed_lit.gdshader": "5eb82335a471c821cc2c10e9fd2590d979fa06ae62d317fe13574b40a2e7e6a2",
+    "assets/test1_beach/test1_bed_lit_fast.gdshader": "0e8340b6e20e3d5a8380549995610e5a442b04524ff72e50c996b5cb4f9e7366",
+    "assets/test1_beach/test1_bed_vertex_light_trial.gdshader": "0e8340b6e20e3d5a8380549995610e5a442b04524ff72e50c996b5cb4f9e7366",
+    "assets/test1_beach/test1_front_foam_splats.gdshader": "45a43cf1ea48a0913e2a06012f1eef90bac837ecc610319cab5718505075f03b",
+    "assets/test1_beach/test1_water_front.gdshader": "deac308744b85960c239d6722d59a3b12507ebc6741ec2b81600718d63b81017",
+    "assets/test1_geometry/sand_sides.gdshader": "0e5a93f7918069b224e28818970bee1e3469649a6cdf0de5acb66afbddcae0f5",
+    "assets/test1_water_motion/bed.gdshader": "8f5c0ce36782ca5d100f2a9279b1e1be84cd28ede5ee39461e4adcad90accf08",
+    "assets/test1_water_motion/water.gdshader": "cb056818df603daeb483d9a8fa0b408d7b8af6b1733eef89586662ca66c3c4c9",
+    "assets/water_foam/flow_candidate.gdshader": "6506719ce13eae6bb94b96ea4c09afa4275741b1faf9bdb075e18cff0f4a877e",
+    "assets/water_foam/static_candidate.gdshader": "de441badc8f37e188e5e6a52c806215e5fda4e8c0648bd13df8ee7b8254101bb",
+    "assets/water_material_natural_candidate/async_rdc_bed.gdshader": "afa82f79322754816c9574c74b0d9dcbc9d75ad45975f69296236b3ca8c9fa31",
+    "assets/water_material_natural_candidate/async_rdc_water.gdshader": "6506719ce13eae6bb94b96ea4c09afa4275741b1faf9bdb075e18cff0f4a877e",
+    "assets/water_material_natural_candidate/bed_geometry_specialized.gdshader": "77bd0939f5523e1cacb1461f13cc4db647f6941c0f8832ae5940779ce32fdc5f",
+    "assets/water_material_natural_candidate/bed_material_specialized.gdshader": "c9176f1ed527d7e3851115514acb299aa57d5fb7bda48a835f3b87e210e59261",
+    "assets/water_material_natural_candidate/bed_style.gdshader": "271b03cfa840795410a7165650de3e6ecff102e137eec910fb9ab9f57b759c11",
+    "assets/water_material_natural_candidate/contact_foam.gdshader": "101325f41af40f36af1fef3288aeb618403ac59cb483e38065996fa985e6fa85",
+    "assets/water_material_natural_candidate/contact_geometry_specialized.gdshader": "b51c5b11d063e2832290619262cda9054c4d4c44cda52c135f425bc680b0cdc6",
+    "assets/water_material_natural_candidate/contact_lazy.gdshader": "d5fc6f57690585e6679ab70e0fc3bbf9a1514f7abb073c657f300ebd00bcd8df",
+    "assets/water_material_natural_candidate/contact_shape.gdshader": "df877260fd31aae4785dc937cc23c7d24e742ed7d16895f612ebb6e600e9fba8",
+    "assets/water_material_natural_candidate/contact_shared.gdshader": "88f53f8cc33f0bf12b629b9352c541a063150189f6553359e6649bddce246c18",
+    "assets/water_material_natural_candidate/foam_distribution.gdshader": "55077448b1b78594922c05db6bcfac25822d9742d2aeef2e3aea7dbf2191ef65",
+    "assets/water_material_natural_candidate/foam_engine_light.gdshader": "16e73f843c92b45ba1be07763e0c93c2f3e3184f093e7cf068ee84c699fe1b8b",
+    "assets/water_material_natural_candidate/rdc_bed.gdshader": "e36bf7c1d44dbc38f50c46b7405cf439a48fd6f427df6f95a3d5e3e50d650abf",
+    "assets/water_material_natural_candidate/rdc_water.gdshader": "16a93e3d6942429073cbcbcba73b59bbe42e80c61bf776e9f15170ca69fd8b89",
+    "assets/water_material_natural_candidate/water_debug_specialized.gdshader": "bd239c50be0177bbb5a16c39683d39bd87f70a7112e21240d305ac48071773c7",
+    "assets/water_material_natural_candidate/water_engine_light.gdshader": "6a4db171e15a19a5b90f30b5e29497c7b1625fd4a6241b59a380a6a849397def",
+    "assets/water_material_natural_candidate/water_engine_light_no_standard_specular.gdshader": "5494ae1ad94bcffab292345c744725b5d7730078bcc306b3f979f1480788ffc4",
+    "assets/water_material_natural_candidate/water_engine_light_packed.gdshader": "832821660f3914169133bcb9c988cdfa7bd40ca9f57520bdd4602355a0dff8dd",
+    "assets/water_material_natural_candidate/water_engine_light_specialized.gdshader": "f17a029bc8486d97f48efe65ede283a226b07d2934b3ab3c9d65574f94f523b8",
+    "assets/water_material_natural_candidate/water_foam.gdshader": "b13ac3e56eecfe56adf427c06f0ec1442cd989bffddbd11fec36b0dea42d59ce",
+    "assets/water_material_natural_candidate/water_geometry_specialized.gdshader": "eb75e87315bf72fcf42d5911b85540dc63e556e23f02bd441f7ea2ad3dabd59f",
+    "assets/water_material_natural_candidate/water_height.gdshader": "f7f9108fde01ee288349a2fdde9d57a003e457b25fc7cbea666f484d58ba151d",
+    "assets/water_material_natural_candidate/water_macro.gdshader": "530ccf9ef93d1b85cfa61b4b406c7a5d4a0fd94b1efe321aad1f44ce59526e78",
+    "assets/water_material_natural_candidate/water_manual_glint.gdshader": "8eb8160e55cc0ec91fac6c04583b70794167ae924061f053c231de8f8261f487",
+    "assets/water_material_natural_candidate/water_normal.gdshader": "5a84c97bb21859a4064ed7933323fe53987029cd0056fb8da3a61a7ecafb6671",
+    "assets/water_material_natural_candidate/water_optics.gdshader": "cc9d989dfc2be0c88e527a16bd32f6e29e1b4003da10b3554924d584ade55473",
+    "assets/water_material_natural_candidate/water_optics_unrefracted.gdshader": "70b415a9f3e68a724fe8f075c5588b52eddd32c5dda15544ba3d3b298e896ba6",
+    "assets/water_material_natural_candidate/water_path_diagnostic.gdshader": "f6e345959a4d466627bad923d732d9404ff4e37be35efb832ecb12ac3b87db57",
+    "assets/water_material_natural_candidate/water_reflection.gdshader": "92ffedb04d08672b09bc0dc4dabaada7066cb42bf87288c66bc2237a0ef2195c",
+    "assets/water_material_natural_candidate/water_reflection_flip_y_probe.gdshader": "e8eb22f171fc3049788dc6e42e1056f752fea8cc514e01b7cd2a203c4f18b497",
+    "assets/water_material_natural_candidate/water_reflection_specialized.gdshader": "69ffc455f6f8c384c6c5d6c61ee1222b979eb0500260d14c530808e072658f29",
+    "assets/water_material_natural_candidate/water_reflection_srgb_probe.gdshader": "af3f018b6b1edff78e271d09c2cf1064a5cfdbc9286b254187650ff18fb7f97f",
+    "assets/water_material_natural_candidate/water_route_specialized.gdshader": "7a225ea82c286b8d8be53f116a96e701b2773a7da25b6a8579ba6a7359789b2d",
+    "assets/water_sides/water_sides.gdshader": "0091b72293ee8aeb9ca81daa3f678b4c4ae2a07f0c00c3cfbc326e44d485bbf2",
+    "scenes/approx_gpu_edit.tscn": "fd3abe86c3c9a760b15549ce28e80fec18d13d43a1c551008591ecda3e60e926",
+    "scenes/brush_indicator.tscn": "e9856acb89eae8eb2b511b93758cde65f8cff3688fe9c13a38c058f26f8d49a8",
+    "scenes/editor_scene_preview.tscn": "8bc4c9e55a34171c21566079f3bbb765a2127b2083e8b4315711a44fd94f3be0",
+    "scenes/gpu_collision_proxy.tscn": "4dc48e7f01848866ddf990fdf0262b326835b7333fb01a136bfdaf107acdf8ce",
+    "scenes/gpu_water_preview.tscn": "d9e34df4fd869fba098eb883a8623c52d2960520a59204ec232c4af7f006c251",
+    "scenes/main.tscn": "a3cef8fb63fdfac3272d7b2a95e5acaeac391b0277c0d16a456a377726de5135",
+    "scenes/terrain_preview_mesh.tscn": "29cfba0b5179dd6d4f285fa240478ece983e459d76da8dc362f4e5536c01db33",
+    "scenes/unified_edit_height_surface.tscn": "76ec932ebd6694b9d4bfafa10ab94e0083e88ef85a3dc0669afd35b8d5559dd7",
+    "scenes/unified_edit_runtime.tscn": "bbc141dba36f68247494840a42f6d29e76222eb4904d12eab4f28e5c8f5f9e34",
+    "scenes/water_preview_mesh.tscn": "21a0c4be933f29fd9e7aac65e5a4795d1a466e96b99d2c022eb21c0ec281be8e",
+    "scenes/water_render_coupled.tscn": "4169a5fe18d6fbebde61349e8fbb812f8e119673749d1d80f1dc4be3c0763b51",
+    "scenes/water_render_coupled_continuous.tscn": "8ba013fa1a40b4ea08432b911668f2f895241c9cf5b2d72c649d151f21a8fe5f",
+    "scenes/water_render_coupled_rock_reflection_candidate.tscn": "56622a93b0732139c7e3d366976dcbb11ff813f34261cab4e395434e2406445d",
+    "scenes/water_render_coupled_v7_preview.tscn": "c306db4b4b3da24cbb954dafa3967d658a5c287bdf2781e6a8d3188564b626fa",
+    "scenes/water_render_coupled_v8_preview.tscn": "561e5bfc35784cac2ce048296ede748535968e881d78d65300aff49c94e56fec",
+    "scenes/components/floating_props.tscn": "ef7a0f919704405376e2c1241c0fb1fb22d4a83c4d90fb3c1973fb7bf992fcd8",
+    "scenes/components/floating_props_panel.tscn": "61be2d8fd49b965ee21b0da2d7c167c58a84b746461dcc30eeb21b977632cb53",
+    "scenes/components/gravel_layer.tscn": "f88adad1987092235135af44f8dc13bec66d5aa1078a21095d494cf1d957d1b6",
+    "scenes/components/scene_switch_panel.tscn": "34f6340834e01dd01aa13a5f4e9c0f2c75be74b7c3c4a94b17785a2812200a6e",
+    "scenes/components/suspended_sand_cloud.tscn": "8db905e01323a0201403f080588162259498b9b960c266fcf634326cd74db3af",
+    "scenes/components/ui_visibility.tscn": "94bd334f6d45eb946de5a5600bc62c284b75ba22cfe12d1490c15fe66983f6f7",
+    "scenes/components/unified_performance_panel.tscn": "8a9804ecb2de81fa796b90e263d0adfbe908c89a05b4433c96bedf6becb05c3a",
+    "scenes/components/vegetation_layer.tscn": "cc2cde498655f723d2ff71608aedb192865506ad6a611325092d51d193e0b8a2",
+    "scenes/components/water_boundary_sides.tscn": "613f98726654fb43bbd47ecea32e085806a1eddfc5747dc558856f2495011524",
+    "scenes/components/wave_settings.tscn": "483f4a9229fce0129dd4b573081e5a66ff634e71ad060136b2a4bc8fece0bce1",
+    "scenes/experiments/main_water_momentum.tscn": "299f843d0fbb77965536f6b16118628a1db4184f2fb771764ca8bd39ee52276e",
+    "scenes/experiments/water_momentum_lab.tscn": "e79466c4b9d2893e160fa62f4bdeef58ffacb5e468b23aa4f9dcec2a5112fa4d",
+    "scenes/legacy/sandcastle_test1_beach_coupled_pre_natural.tscn": "0e322de1f462221f10e89ade7d0e887bd57f755065bb32e62034a3c534533570",
+    "scenes/parameters/parameter_windows.tscn": "75f7b16c1281be4ead9337e6a5e5c03e0ceb88bea8a79106f83a8dd8c64c20f4",
+    "scenes/playable/test1_geometry.tscn": "193925903ceba7b1e0cb81d1e6c80556838b75cc7df50bb455aab4324ea99042",
+    "scenes/props/bottle.tscn": "4ae799a270b29de188ae4db21ec2a1d849416fe55d564ef934927434a80cb32f",
+    "scenes/props/wood_plank.tscn": "6f08f5161d6815c74997ca74ecfe805facce698b7aec26d85e0e4cc975ffbc8f",
+    "scenes/props/wood_stick.tscn": "2a8b6f4089b9a354da84ca7f461a4549dfaa07396f44ca295b4d2f594d46b6da",
+    "scenes/shape_brushes/brush_playable_candidate.tscn": "bac9af74be09de49bb0e7775ee21b856d2aaf6cefcb560b987aaa6e83175e164",
+    "scenes/water_material_natural_candidate/rdc_v1_coupled.tscn": "4aafc7e046b9cbe80aead54a4588a75d3219a6a07166c565ad06432b570952b7",
+    "scenes/water_material_natural_candidate/reference_v1_coupled.tscn": "1f28006b481d309b7ed5aa566e413615631dcf0d16a1bca11c5adec028ad2a60",
+    "scenes/water_material_natural_candidate/style_compiled_v1_coupled.tscn": "14ceb68148144fc0d74b551e5d49b1fcf1fd2fa630fd63717d870f52a547c795",
+    "scenes/water_material_natural_candidate/style_height_coupled.tscn": "ed9dad0c2adb3b4bdcb258c58e772929ab1faccefefa5aaf44a1e0bcc6ed7640",
+    "scenes/unified_edit/playable/main.tscn": "971a68bffdca41bc0a0e38f0fb4ee449243b8d35c797e7c891654186ad65b202",
+    "scenes/unified_edit/playable/test1_geometry.tscn": "193925903ceba7b1e0cb81d1e6c80556838b75cc7df50bb455aab4324ea99042",
+    "scenes/unified_edit/presentation/main.tscn": "5748525e314dd128f546db2daf0b2f4346027d28059d8054fc66238895913a9e",
+    "scenes/unified_edit/presentation/test1_geometry.tscn": "7fa9de92d5b15f56d2aa2127821295d415eae1fcd315887a16e76862da752646",
+    "scenes/components/brushes/brush_preview.tscn": "71416823361c77badf81fca882aa1423607fa314ee473147cf4dcfd1c3531c18",
+    "scenes/components/brushes/brush_tool_panel.tscn": "622bfca880ccebba611a8653a08cd5c874d8cde0d7d419cfa281d2e1d8313793",
+    "scenes/components/water_visual/reference_coupled.tscn": "0fc8b4d2a7fc8b213960b79d82008ef6f4c7a663e909549d665bffd33009396e",
+    "scenes/components/water_visual/reference_foreground_occluders.tscn": "e0fd715fc43d6a759ef4eca3d77a35046b65c947654c474050e7d2e73af0bcca",
+    "scenes/components/water_visual/reference_front_foam_dense.tscn": "bd8c12d5c02aacebebafc7e397a477f87382126784b40e015fff48724a6be2e7",
+    "scenes/components/water_visual/reference_front_lips.tscn": "71dd667685df0833c58536b0ef81b74558698a74de52ea80d94c4cf6378906c6",
+    "scenes/components/water_visual/reflection_rock_environment.tscn": "6910e246c00e35d2c29e3982dd878cc0dadfeb93d651d961e538513b34dccd3f",
+    "assets/unified_edit/presentation/main.json": "b2c9b71719a9e29afee13bf90a917e8f2bbebc9519704d8e5f8dc1764e1d74e5",
+    "assets/unified_edit/presentation/test1_geometry.json": "7c7d4a9f623b65785382eeccb601a8c7df1b48307b1febc5ffae294ac5af915d",
+    "assets/parameters/catalog.json": "421aa8e311d5d67baeefdcfcfe1205242f5202e441a8a5d02804989b29d39cf8",
+    "assets/water_foam/foam_detail.png": "05c18a800db479f3e2a2568867051d29a3438d2cd7225830e000e8598935e50b",
+    "assets/water_foam/foam_detail.png.import": "3ecd645cc66f5c31cf0ffa94c93315cd57ca635ecf29be27c0f1e47d96cc28fe"
+  },
+  "configuration_hash": "2b3c3c10aae47d1678a7cc774d6327b503e4a9949616b6fe349ca1445e2e39d3",
+  "effective_uniforms": [
+    {
+      "case": 0,
+      "contact_gain": 1.0,
+      "material": {
+        "shader": "",
+        "shader_sha256": "26a503bd375f88e43f7b1a7fdac1812fd2d7da4ad4217423aa5ae6d398ed0a61",
+        "uniforms": {
+          "async_clock": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "contact_history_state": "null",
+          "debug_mode": "0",
+          "deep_tint": "Vector3(0.045, 0.24, 0.5)",
+          "display_reconstruction": "true",
+          "extinction_depth_m": "0.09",
+          "foam_depth_m": "0.05",
+          "foam_previous_state": "null",
+          "foam_speed_m_s": "0.85",
+          "foam_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "foam_strength": "0.55",
+          "foam_tint": "Vector3(0.93, 0.96, 0.97)",
+          "local_front_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "midpoint_clip": "false",
+          "momentum_x_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "momentum_z_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "natural_direction0": "Vector2(1, 0)",
+          "natural_direction1": "Vector2(0.6, 0.8)",
+          "natural_foam_direct_fraction": "0.5",
+          "natural_glint_enabled": "true",
+          "natural_glint_exponent": "1500.0",
+          "natural_glint_gain": "1.0",
+          "natural_height_surface_normal": "true",
+          "natural_layer0": "Vector4(0.18, 0.035, 0.06, 0)",
+          "natural_layer1": "Vector4(0.47, -0.022, 0.025, 0)",
+          "natural_lighting_debug": "0",
+          "natural_main_foam_gain": "1.0",
+          "natural_normal_debug": "0",
+          "natural_normal_mode": "1",
+          "natural_normal_texture": "Resource(\"uid://c006tri8krysy\", \"res://assets/water_material_natural_candidate/water_normal_681.png\")",
+          "natural_optics_debug": "0",
+          "natural_path_mode": "0",
+          "natural_path_unrefracted": "true",
+          "natural_planar_reflection_srgb": "Object(ViewportTexture,\"resource_local_to_scene\":true,\"resource_name\":\"\",\"viewport_path\":NodePath(\"ReflectionViewport\"),\"script\":null)\n",
+          "natural_reflection_debug": "0",
+          "natural_reflection_edge_fade_px": "8.0",
+          "natural_reflection_edge_margin_px": "2.0",
+          "natural_reflection_flip_y": "true",
+          "natural_reflection_gain": "1.0",
+          "natural_reflection_perturbation": "true",
+          "natural_reflection_protected": "true",
+          "natural_reflection_shift_m": "0.25",
+          "natural_reflection_sky_linear": "Vector3(0.49190503, 0.7105665, 0.84808826)",
+          "natural_reflection_srgb": "true",
+          "natural_reflection_uv_limit": "0.03",
+          "natural_scatter_direct_fraction": "0.45",
+          "natural_scatter_gain": "1.0",
+          "phase2_deep_tint": "Vector3(0.02, 0.29, 0.37)",
+          "phase2_extinction_m": "0.11",
+          "phase2_foam": "true",
+          "phase2_optics": "true",
+          "phase2_shallow_tint": "Vector3(0.04, 0.72, 0.69)",
+          "prototype_aperiodic_foam": "false",
+          "prototype_broad_crest": "false",
+          "prototype_caustic_pattern": "null",
+          "prototype_caustic_recovery_gain": "0.0",
+          "prototype_caustic_recovery_uv_scale": "1.0",
+          "prototype_contact_alpha_debug": "false",
+          "prototype_contact_depth_debug": "false",
+          "prototype_contact_foam_candidate": "false",
+          "prototype_contact_foam_source_debug": "false",
+          "prototype_contact_foam_spread": "false",
+          "prototype_contact_front_gate": "false",
+          "prototype_contact_height_debug": "false",
+          "prototype_contact_history_gate": "false",
+          "prototype_contact_independent_history_gate": "false",
+          "prototype_contact_relaxed_front_gate": "false",
+          "prototype_contact_residual_debug": "false",
+          "prototype_contact_scene_gap_gate": "false",
+          "prototype_contact_wide_band": "false",
+          "prototype_crest_broken_core": "false",
+          "prototype_crest_depth_gate_bypass": "false",
+          "prototype_crest_fragment_foam": "false",
+          "prototype_crest_height_m": "0.25",
+          "prototype_crest_shore_depth_m": "0.0",
+          "prototype_crest_span_smoothing": "false",
+          "prototype_crest_white_face": "false",
+          "prototype_curl_forward_m": "0.0",
+          "prototype_deep_extinction_m": "0.4",
+          "prototype_depth_bands": "false",
+          "prototype_depth_gray_debug": "false",
+          "prototype_depth_guard": "true",
+          "prototype_depth_layers_debug": "false",
+          "prototype_eta_light_space_debug": "false",
+          "prototype_eta_normal_debug": "false",
+          "prototype_eta_normal_space_debug": "false",
+          "prototype_eta_normals": "true",
+          "prototype_foam_flow_detail": "false",
+          "prototype_front_face_foam_gate": "false",
+          "prototype_front_face_rim_tone": "false",
+          "prototype_front_face_source_gate": "false",
+          "prototype_front_face_source_started": "false",
+          "prototype_front_foam_blend": "false",
+          "prototype_front_foam_ribbon": "false",
+          "prototype_geometry_alpha": "1.0",
+          "prototype_geometry_keep_alpha": "false",
+          "prototype_geometry_keep_color": "false",
+          "prototype_geometry_silhouette": "false",
+          "prototype_irregular_foam": "false",
+          "prototype_legacy_edge_clamp": "false",
+          "prototype_light_direction_world": "Vector3(-0.3531289, 0.78801066, -0.5043204)",
+          "prototype_local_back_cells": "7.5",
+          "prototype_local_face_cells": "1.8",
+          "prototype_local_lift_depth_scale": "1.5",
+          "prototype_local_overturn_m": "0.0",
+          "prototype_offshore_core": "false",
+          "prototype_offshore_core_broken": "false",
+          "prototype_offshore_core_crown": "false",
+          "prototype_offshore_core_source_started": "false",
+          "prototype_optical_shallow_preserve": "true",
+          "prototype_planar_reflection": "Object(ViewportTexture,\"resource_local_to_scene\":true,\"resource_name\":\"\",\"viewport_path\":NodePath(\"ReflectionViewport\"),\"script\":null)\n",
+          "prototype_planar_reflection_debug": "false",
+          "prototype_planar_reflection_enabled": "true",
+          "prototype_planar_reflection_projected": "true",
+          "prototype_planar_reflection_softness_px": "0.0",
+          "prototype_planar_view_projection": "Projection(-0.80274826, 0.39173743, 0.457507, 0.45749557, -1.1159863e-07, -1.4798971, 0.45750704, 0.4574956, -0.4816488, -0.65289557, -0.7625121, -0.762493, -2.678367e-06, -2.3807709e-06, 13.015204, 13.114878)",
+          "prototype_refraction_fallback_debug": "false",
+          "prototype_refraction_scale": "0.02",
+          "prototype_render_grid_size": "512.0",
+          "prototype_rise_crest": "false",
+          "prototype_screen_abs_fresnel": "true",
+          "prototype_screen_bed_only": "false",
+          "prototype_screen_deep_scatter_scale": "1.0",
+          "prototype_screen_face_normal": "true",
+          "prototype_screen_fresnel_debug": "false",
+          "prototype_screen_optics": "true",
+          "prototype_screen_reflection_debug": "false",
+          "prototype_screen_scene_reflection": "false",
+          "prototype_screen_sky_gradient": "false",
+          "prototype_screen_sky_reflection_scale": "1.0",
+          "prototype_screen_world_glint": "false",
+          "prototype_shallow_extinction_m": "0.25",
+          "prototype_shared_bed_triangles": "false",
+          "prototype_shore_linear_weights": "false",
+          "prototype_shore_source_debug": "false",
+          "prototype_shore_unscaled_depth": "false",
+          "prototype_use_front_field": "false",
+          "prototype_use_local_front": "true",
+          "prototype_vertex_fragment_delta_debug": "false",
+          "prototype_visible_bed_height_debug": "false",
+          "radial_shore": "false",
+          "rdc_absorption_rgb": "Vector3(6, 0.856013, 0.336771)",
+          "rdc_distance_scale": "1.0",
+          "rdc_normal_enabled": "true",
+          "rdc_normal_gain": "1.0",
+          "rdc_normal_scale": "0.2",
+          "rdc_optics_enabled": "true",
+          "rdc_refracted_path": "false",
+          "rdc_refraction_scale": "0.0121",
+          "rdc_surface_color": "Vector3(0.49190503, 0.71056646, 0.84808826)",
+          "rdc_surface_gain": "1.0",
+          "rdc_time_scale": "1.0",
+          "rdc_transmission_tint": "Vector3(0.75897, 0.883854, 0.968461)",
+          "ripple_frequency": "150.0",
+          "ripple_speed": "2.6",
+          "ripple_strength": "0.045",
+          "rise_front_state": "null",
+          "rock_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "sand_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "shallow_tint": "Vector3(0.36, 0.71, 0.76)",
+          "shoreline_debug": "false",
+          "test1_whitewater_gain": "0.32",
+          "use_async_clock": "true",
+          "use_caustics": "true",
+          "use_detail_normals": "true",
+          "use_specular": "true",
+          "visual_time_s": "0.0",
+          "water_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "water_surface_bias_m": "0.003",
+          "wet_epsilon_m": "0.001"
+        }
+      },
+      "shader_sha256": "26a503bd375f88e43f7b1a7fdac1812fd2d7da4ad4217423aa5ae6d398ed0a61",
+      "sides_material": {
+        "shader": "",
+        "shader_sha256": "d69f77b8bd03a78461fb29ff5fd8084e1fc68b43b30ac9c0319a9b6dee757462",
+        "uniforms": {
+          "async_clock": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "contact_history_state": "null",
+          "debug_mode": "0",
+          "deep_tint": "Vector3(0.045, 0.24, 0.5)",
+          "display_reconstruction": "true",
+          "extinction_depth_m": "0.09",
+          "foam_depth_m": "0.05",
+          "foam_previous_state": "null",
+          "foam_speed_m_s": "0.85",
+          "foam_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "foam_strength": "0.55",
+          "foam_tint": "Vector3(0.93, 0.96, 0.97)",
+          "local_front_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "midpoint_clip": "false",
+          "momentum_x_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "momentum_z_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "natural_direction0": "Vector2(1, 0)",
+          "natural_direction1": "Vector2(0.6, 0.8)",
+          "natural_foam_direct_fraction": "0.5",
+          "natural_glint_enabled": "true",
+          "natural_glint_exponent": "1500.0",
+          "natural_glint_gain": "1.0",
+          "natural_layer0": "Vector4(0.18, 0.035, 0.06, 0)",
+          "natural_layer1": "Vector4(0.47, -0.022, 0.025, 0)",
+          "natural_lighting_debug": "0",
+          "natural_main_foam_gain": "1.0",
+          "natural_normal_debug": "0",
+          "natural_normal_mode": "1",
+          "natural_normal_texture": "Resource(\"uid://c006tri8krysy\", \"res://assets/water_material_natural_candidate/water_normal_681.png\")",
+          "natural_planar_reflection_srgb": "Object(ViewportTexture,\"resource_local_to_scene\":true,\"resource_name\":\"\",\"viewport_path\":NodePath(\"ReflectionViewport\"),\"script\":null)\n",
+          "natural_reflection_debug": "0",
+          "natural_reflection_edge_fade_px": "8.0",
+          "natural_reflection_edge_margin_px": "2.0",
+          "natural_reflection_flip_y": "true",
+          "natural_reflection_gain": "1.0",
+          "natural_reflection_perturbation": "true",
+          "natural_reflection_protected": "true",
+          "natural_reflection_shift_m": "0.25",
+          "natural_reflection_sky_linear": "Vector3(0.49190503, 0.7105665, 0.84808826)",
+          "natural_reflection_srgb": "true",
+          "natural_reflection_uv_limit": "0.03",
+          "natural_scatter_direct_fraction": "0.45",
+          "phase2_deep_tint": "Vector3(0.02, 0.29, 0.37)",
+          "phase2_extinction_m": "0.11",
+          "phase2_foam": "true",
+          "phase2_optics": "true",
+          "phase2_shallow_tint": "Vector3(0.04, 0.72, 0.69)",
+          "prototype_aperiodic_foam": "false",
+          "prototype_broad_crest": "false",
+          "prototype_caustic_pattern": "null",
+          "prototype_caustic_recovery_gain": "0.0",
+          "prototype_caustic_recovery_uv_scale": "1.0",
+          "prototype_contact_alpha_debug": "false",
+          "prototype_contact_depth_debug": "false",
+          "prototype_contact_foam_candidate": "false",
+          "prototype_contact_foam_source_debug": "false",
+          "prototype_contact_foam_spread": "false",
+          "prototype_contact_front_gate": "false",
+          "prototype_contact_height_debug": "false",
+          "prototype_contact_history_gate": "false",
+          "prototype_contact_independent_history_gate": "false",
+          "prototype_contact_relaxed_front_gate": "false",
+          "prototype_contact_residual_debug": "false",
+          "prototype_contact_scene_gap_gate": "false",
+          "prototype_contact_wide_band": "false",
+          "prototype_crest_broken_core": "false",
+          "prototype_crest_depth_gate_bypass": "false",
+          "prototype_crest_fragment_foam": "false",
+          "prototype_crest_height_m": "0.25",
+          "prototype_crest_shore_depth_m": "0.0",
+          "prototype_crest_span_smoothing": "false",
+          "prototype_crest_white_face": "false",
+          "prototype_curl_forward_m": "0.0",
+          "prototype_deep_extinction_m": "0.4",
+          "prototype_depth_bands": "false",
+          "prototype_depth_gray_debug": "false",
+          "prototype_depth_guard": "true",
+          "prototype_depth_layers_debug": "false",
+          "prototype_eta_light_space_debug": "false",
+          "prototype_eta_normal_debug": "false",
+          "prototype_eta_normal_space_debug": "false",
+          "prototype_eta_normals": "true",
+          "prototype_foam_flow_detail": "false",
+          "prototype_front_face_foam_gate": "false",
+          "prototype_front_face_rim_tone": "false",
+          "prototype_front_face_source_gate": "false",
+          "prototype_front_face_source_started": "false",
+          "prototype_front_foam_blend": "false",
+          "prototype_front_foam_ribbon": "false",
+          "prototype_geometry_alpha": "1.0",
+          "prototype_geometry_keep_alpha": "false",
+          "prototype_geometry_keep_color": "false",
+          "prototype_geometry_silhouette": "false",
+          "prototype_irregular_foam": "false",
+          "prototype_legacy_edge_clamp": "false",
+          "prototype_light_direction_world": "Vector3(-0.3531289, 0.78801066, -0.5043204)",
+          "prototype_local_back_cells": "7.5",
+          "prototype_local_face_cells": "1.8",
+          "prototype_local_lift_depth_scale": "1.5",
+          "prototype_local_overturn_m": "0.0",
+          "prototype_offshore_core": "false",
+          "prototype_offshore_core_broken": "false",
+          "prototype_offshore_core_crown": "false",
+          "prototype_offshore_core_source_started": "false",
+          "prototype_optical_shallow_preserve": "true",
+          "prototype_planar_reflection": "Object(ViewportTexture,\"resource_local_to_scene\":true,\"resource_name\":\"\",\"viewport_path\":NodePath(\"ReflectionViewport\"),\"script\":null)\n",
+          "prototype_planar_reflection_debug": "false",
+          "prototype_planar_reflection_enabled": "true",
+          "prototype_planar_reflection_projected": "true",
+          "prototype_planar_reflection_softness_px": "0.0",
+          "prototype_planar_view_projection": "Projection(-0.80274826, 0.39173743, 0.457507, 0.45749557, -1.1159863e-07, -1.4798971, 0.45750704, 0.4574956, -0.4816488, -0.65289557, -0.7625121, -0.762493, -2.678367e-06, -2.3807709e-06, 13.015204, 13.114878)",
+          "prototype_refraction_fallback_debug": "false",
+          "prototype_refraction_scale": "0.02",
+          "prototype_render_grid_size": "512.0",
+          "prototype_rise_crest": "false",
+          "prototype_screen_abs_fresnel": "true",
+          "prototype_screen_bed_only": "false",
+          "prototype_screen_deep_scatter_scale": "1.0",
+          "prototype_screen_face_normal": "true",
+          "prototype_screen_fresnel_debug": "false",
+          "prototype_screen_optics": "true",
+          "prototype_screen_reflection_debug": "false",
+          "prototype_screen_scene_reflection": "false",
+          "prototype_screen_sky_gradient": "false",
+          "prototype_screen_sky_reflection_scale": "1.0",
+          "prototype_screen_world_glint": "false",
+          "prototype_shallow_extinction_m": "0.25",
+          "prototype_shared_bed_triangles": "false",
+          "prototype_shore_linear_weights": "false",
+          "prototype_shore_source_debug": "false",
+          "prototype_shore_unscaled_depth": "false",
+          "prototype_use_front_field": "false",
+          "prototype_use_local_front": "true",
+          "prototype_vertex_fragment_delta_debug": "false",
+          "prototype_visible_bed_height_debug": "false",
+          "radial_shore": "false",
+          "rdc_absorption_rgb": "Vector3(6, 0.856013, 0.336771)",
+          "rdc_distance_scale": "1.0",
+          "rdc_normal_enabled": "true",
+          "rdc_normal_gain": "1.0",
+          "rdc_normal_scale": "0.2",
+          "rdc_optics_enabled": "true",
+          "rdc_refracted_path": "false",
+          "rdc_refraction_scale": "0.0121",
+          "rdc_surface_color": "Vector3(0.49190503, 0.71056646, 0.84808826)",
+          "rdc_surface_gain": "1.0",
+          "rdc_time_scale": "1.0",
+          "rdc_transmission_tint": "Vector3(0.75897, 0.883854, 0.968461)",
+          "ripple_frequency": "150.0",
+          "ripple_speed": "2.6",
+          "ripple_strength": "0.045",
+          "rise_front_state": "null",
+          "rock_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "sand_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "shallow_tint": "Vector3(0.36, 0.71, 0.76)",
+          "shoreline_debug": "false",
+          "side_debug": "0",
+          "side_max_xz": "Vector2(15.96875, 15.96875)",
+          "side_min_xz": "Vector2(-15.96875, -15.96875)",
+          "side_scatter_color": "Color(0.075, 0.32, 0.36, 1)",
+          "test1_whitewater_gain": "0.32",
+          "use_async_clock": "true",
+          "use_caustics": "true",
+          "use_detail_normals": "true",
+          "use_specular": "true",
+          "visual_time_s": "0.0",
+          "water_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "water_surface_bias_m": "0.003",
+          "wet_epsilon_m": "0.001"
+        }
+      },
+      "sides_sha256": "d69f77b8bd03a78461fb29ff5fd8084e1fc68b43b30ac9c0319a9b6dee757462"
+    },
+    {
+      "case": 1,
+      "contact_gain": 1.0,
+      "material": {
+        "shader": "",
+        "shader_sha256": "26a503bd375f88e43f7b1a7fdac1812fd2d7da4ad4217423aa5ae6d398ed0a61",
+        "uniforms": {
+          "async_clock": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "contact_history_state": "null",
+          "debug_mode": "0",
+          "deep_tint": "Vector3(0.045, 0.24, 0.5)",
+          "display_reconstruction": "true",
+          "extinction_depth_m": "0.09",
+          "foam_depth_m": "0.05",
+          "foam_previous_state": "null",
+          "foam_speed_m_s": "0.85",
+          "foam_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "foam_strength": "0.55",
+          "foam_tint": "Vector3(0.93, 0.96, 0.97)",
+          "local_front_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "midpoint_clip": "false",
+          "momentum_x_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "momentum_z_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "natural_direction0": "Vector2(1, 0)",
+          "natural_direction1": "Vector2(0.6, 0.8)",
+          "natural_foam_direct_fraction": "0.5",
+          "natural_glint_enabled": "true",
+          "natural_glint_exponent": "1500.0",
+          "natural_glint_gain": "1.0",
+          "natural_height_surface_normal": "true",
+          "natural_layer0": "Vector4(0.18, 0.035, 0.06, 0)",
+          "natural_layer1": "Vector4(0.47, -0.022, 0.025, 0)",
+          "natural_lighting_debug": "0",
+          "natural_main_foam_gain": "1.0",
+          "natural_normal_debug": "0",
+          "natural_normal_mode": "1",
+          "natural_normal_texture": "Resource(\"uid://c006tri8krysy\", \"res://assets/water_material_natural_candidate/water_normal_681.png\")",
+          "natural_optics_debug": "0",
+          "natural_path_mode": "0",
+          "natural_path_unrefracted": "true",
+          "natural_planar_reflection_srgb": "Object(ViewportTexture,\"resource_local_to_scene\":true,\"resource_name\":\"\",\"viewport_path\":NodePath(\"ReflectionViewport\"),\"script\":null)\n",
+          "natural_reflection_debug": "0",
+          "natural_reflection_edge_fade_px": "8.0",
+          "natural_reflection_edge_margin_px": "2.0",
+          "natural_reflection_flip_y": "true",
+          "natural_reflection_gain": "1.0",
+          "natural_reflection_perturbation": "true",
+          "natural_reflection_protected": "true",
+          "natural_reflection_shift_m": "0.25",
+          "natural_reflection_sky_linear": "Vector3(0.49190503, 0.7105665, 0.84808826)",
+          "natural_reflection_srgb": "true",
+          "natural_reflection_uv_limit": "0.03",
+          "natural_scatter_direct_fraction": "0.45",
+          "natural_scatter_gain": "1.0",
+          "phase2_deep_tint": "Vector3(0.02, 0.29, 0.37)",
+          "phase2_extinction_m": "0.11",
+          "phase2_foam": "true",
+          "phase2_optics": "true",
+          "phase2_shallow_tint": "Vector3(0.04, 0.72, 0.69)",
+          "prototype_aperiodic_foam": "false",
+          "prototype_broad_crest": "false",
+          "prototype_caustic_pattern": "null",
+          "prototype_caustic_recovery_gain": "0.0",
+          "prototype_caustic_recovery_uv_scale": "1.0",
+          "prototype_contact_alpha_debug": "false",
+          "prototype_contact_depth_debug": "false",
+          "prototype_contact_foam_candidate": "false",
+          "prototype_contact_foam_source_debug": "false",
+          "prototype_contact_foam_spread": "false",
+          "prototype_contact_front_gate": "false",
+          "prototype_contact_height_debug": "false",
+          "prototype_contact_history_gate": "false",
+          "prototype_contact_independent_history_gate": "false",
+          "prototype_contact_relaxed_front_gate": "false",
+          "prototype_contact_residual_debug": "false",
+          "prototype_contact_scene_gap_gate": "false",
+          "prototype_contact_wide_band": "false",
+          "prototype_crest_broken_core": "false",
+          "prototype_crest_depth_gate_bypass": "false",
+          "prototype_crest_fragment_foam": "false",
+          "prototype_crest_height_m": "0.25",
+          "prototype_crest_shore_depth_m": "0.0",
+          "prototype_crest_span_smoothing": "false",
+          "prototype_crest_white_face": "false",
+          "prototype_curl_forward_m": "0.0",
+          "prototype_deep_extinction_m": "0.4",
+          "prototype_depth_bands": "false",
+          "prototype_depth_gray_debug": "false",
+          "prototype_depth_guard": "true",
+          "prototype_depth_layers_debug": "false",
+          "prototype_eta_light_space_debug": "false",
+          "prototype_eta_normal_debug": "false",
+          "prototype_eta_normal_space_debug": "false",
+          "prototype_eta_normals": "true",
+          "prototype_foam_flow_detail": "false",
+          "prototype_front_face_foam_gate": "false",
+          "prototype_front_face_rim_tone": "false",
+          "prototype_front_face_source_gate": "false",
+          "prototype_front_face_source_started": "false",
+          "prototype_front_foam_blend": "false",
+          "prototype_front_foam_ribbon": "false",
+          "prototype_geometry_alpha": "1.0",
+          "prototype_geometry_keep_alpha": "false",
+          "prototype_geometry_keep_color": "false",
+          "prototype_geometry_silhouette": "false",
+          "prototype_irregular_foam": "false",
+          "prototype_legacy_edge_clamp": "false",
+          "prototype_light_direction_world": "Vector3(-0.3531289, 0.78801066, -0.5043204)",
+          "prototype_local_back_cells": "7.5",
+          "prototype_local_face_cells": "1.8",
+          "prototype_local_lift_depth_scale": "1.5",
+          "prototype_local_overturn_m": "0.0",
+          "prototype_offshore_core": "false",
+          "prototype_offshore_core_broken": "false",
+          "prototype_offshore_core_crown": "false",
+          "prototype_offshore_core_source_started": "false",
+          "prototype_optical_shallow_preserve": "true",
+          "prototype_planar_reflection": "Object(ViewportTexture,\"resource_local_to_scene\":true,\"resource_name\":\"\",\"viewport_path\":NodePath(\"ReflectionViewport\"),\"script\":null)\n",
+          "prototype_planar_reflection_debug": "false",
+          "prototype_planar_reflection_enabled": "true",
+          "prototype_planar_reflection_projected": "true",
+          "prototype_planar_reflection_softness_px": "0.0",
+          "prototype_planar_view_projection": "Projection(-0.80274826, 0.39173743, 0.457507, 0.45749557, -1.1159863e-07, -1.4798971, 0.45750704, 0.4574956, -0.4816488, -0.65289557, -0.7625121, -0.762493, -2.678367e-06, -2.3807709e-06, 13.015204, 13.114878)",
+          "prototype_refraction_fallback_debug": "false",
+          "prototype_refraction_scale": "0.02",
+          "prototype_render_grid_size": "512.0",
+          "prototype_rise_crest": "false",
+          "prototype_screen_abs_fresnel": "true",
+          "prototype_screen_bed_only": "false",
+          "prototype_screen_deep_scatter_scale": "1.0",
+          "prototype_screen_face_normal": "true",
+          "prototype_screen_fresnel_debug": "false",
+          "prototype_screen_optics": "true",
+          "prototype_screen_reflection_debug": "false",
+          "prototype_screen_scene_reflection": "false",
+          "prototype_screen_sky_gradient": "false",
+          "prototype_screen_sky_reflection_scale": "1.0",
+          "prototype_screen_world_glint": "false",
+          "prototype_shallow_extinction_m": "0.25",
+          "prototype_shared_bed_triangles": "false",
+          "prototype_shore_linear_weights": "false",
+          "prototype_shore_source_debug": "false",
+          "prototype_shore_unscaled_depth": "false",
+          "prototype_use_front_field": "false",
+          "prototype_use_local_front": "true",
+          "prototype_vertex_fragment_delta_debug": "false",
+          "prototype_visible_bed_height_debug": "false",
+          "radial_shore": "false",
+          "rdc_absorption_rgb": "Vector3(6, 0.856013, 0.336771)",
+          "rdc_distance_scale": "1.0",
+          "rdc_normal_enabled": "true",
+          "rdc_normal_gain": "1.0",
+          "rdc_normal_scale": "0.2",
+          "rdc_optics_enabled": "true",
+          "rdc_refracted_path": "false",
+          "rdc_refraction_scale": "0.0121",
+          "rdc_surface_color": "Vector3(0.49190503, 0.71056646, 0.84808826)",
+          "rdc_surface_gain": "1.0",
+          "rdc_time_scale": "1.0",
+          "rdc_transmission_tint": "Vector3(0.75897, 0.883854, 0.968461)",
+          "ripple_frequency": "150.0",
+          "ripple_speed": "2.6",
+          "ripple_strength": "0.045",
+          "rise_front_state": "null",
+          "rock_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "sand_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "shallow_tint": "Vector3(0.36, 0.71, 0.76)",
+          "shoreline_debug": "false",
+          "test1_whitewater_gain": "0.32",
+          "use_async_clock": "true",
+          "use_caustics": "true",
+          "use_detail_normals": "true",
+          "use_specular": "true",
+          "visual_time_s": "0.0",
+          "water_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "water_surface_bias_m": "0.003",
+          "wet_epsilon_m": "0.001"
+        }
+      },
+      "shader_sha256": "26a503bd375f88e43f7b1a7fdac1812fd2d7da4ad4217423aa5ae6d398ed0a61",
+      "sides_material": {
+        "shader": "",
+        "shader_sha256": "d69f77b8bd03a78461fb29ff5fd8084e1fc68b43b30ac9c0319a9b6dee757462",
+        "uniforms": {
+          "async_clock": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "contact_history_state": "null",
+          "debug_mode": "0",
+          "deep_tint": "Vector3(0.045, 0.24, 0.5)",
+          "display_reconstruction": "true",
+          "extinction_depth_m": "0.09",
+          "foam_depth_m": "0.05",
+          "foam_previous_state": "null",
+          "foam_speed_m_s": "0.85",
+          "foam_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "foam_strength": "0.55",
+          "foam_tint": "Vector3(0.93, 0.96, 0.97)",
+          "local_front_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "midpoint_clip": "false",
+          "momentum_x_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "momentum_z_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "natural_direction0": "Vector2(1, 0)",
+          "natural_direction1": "Vector2(0.6, 0.8)",
+          "natural_foam_direct_fraction": "0.5",
+          "natural_glint_enabled": "true",
+          "natural_glint_exponent": "1500.0",
+          "natural_glint_gain": "1.0",
+          "natural_layer0": "Vector4(0.18, 0.035, 0.06, 0)",
+          "natural_layer1": "Vector4(0.47, -0.022, 0.025, 0)",
+          "natural_lighting_debug": "0",
+          "natural_main_foam_gain": "1.0",
+          "natural_normal_debug": "0",
+          "natural_normal_mode": "1",
+          "natural_normal_texture": "Resource(\"uid://c006tri8krysy\", \"res://assets/water_material_natural_candidate/water_normal_681.png\")",
+          "natural_planar_reflection_srgb": "Object(ViewportTexture,\"resource_local_to_scene\":true,\"resource_name\":\"\",\"viewport_path\":NodePath(\"ReflectionViewport\"),\"script\":null)\n",
+          "natural_reflection_debug": "0",
+          "natural_reflection_edge_fade_px": "8.0",
+          "natural_reflection_edge_margin_px": "2.0",
+          "natural_reflection_flip_y": "true",
+          "natural_reflection_gain": "1.0",
+          "natural_reflection_perturbation": "true",
+          "natural_reflection_protected": "true",
+          "natural_reflection_shift_m": "0.25",
+          "natural_reflection_sky_linear": "Vector3(0.49190503, 0.7105665, 0.84808826)",
+          "natural_reflection_srgb": "true",
+          "natural_reflection_uv_limit": "0.03",
+          "natural_scatter_direct_fraction": "0.45",
+          "phase2_deep_tint": "Vector3(0.02, 0.29, 0.37)",
+          "phase2_extinction_m": "0.11",
+          "phase2_foam": "true",
+          "phase2_optics": "true",
+          "phase2_shallow_tint": "Vector3(0.04, 0.72, 0.69)",
+          "prototype_aperiodic_foam": "false",
+          "prototype_broad_crest": "false",
+          "prototype_caustic_pattern": "null",
+          "prototype_caustic_recovery_gain": "0.0",
+          "prototype_caustic_recovery_uv_scale": "1.0",
+          "prototype_contact_alpha_debug": "false",
+          "prototype_contact_depth_debug": "false",
+          "prototype_contact_foam_candidate": "false",
+          "prototype_contact_foam_source_debug": "false",
+          "prototype_contact_foam_spread": "false",
+          "prototype_contact_front_gate": "false",
+          "prototype_contact_height_debug": "false",
+          "prototype_contact_history_gate": "false",
+          "prototype_contact_independent_history_gate": "false",
+          "prototype_contact_relaxed_front_gate": "false",
+          "prototype_contact_residual_debug": "false",
+          "prototype_contact_scene_gap_gate": "false",
+          "prototype_contact_wide_band": "false",
+          "prototype_crest_broken_core": "false",
+          "prototype_crest_depth_gate_bypass": "false",
+          "prototype_crest_fragment_foam": "false",
+          "prototype_crest_height_m": "0.25",
+          "prototype_crest_shore_depth_m": "0.0",
+          "prototype_crest_span_smoothing": "false",
+          "prototype_crest_white_face": "false",
+          "prototype_curl_forward_m": "0.0",
+          "prototype_deep_extinction_m": "0.4",
+          "prototype_depth_bands": "false",
+          "prototype_depth_gray_debug": "false",
+          "prototype_depth_guard": "true",
+          "prototype_depth_layers_debug": "false",
+          "prototype_eta_light_space_debug": "false",
+          "prototype_eta_normal_debug": "false",
+          "prototype_eta_normal_space_debug": "false",
+          "prototype_eta_normals": "true",
+          "prototype_foam_flow_detail": "false",
+          "prototype_front_face_foam_gate": "false",
+          "prototype_front_face_rim_tone": "false",
+          "prototype_front_face_source_gate": "false",
+          "prototype_front_face_source_started": "false",
+          "prototype_front_foam_blend": "false",
+          "prototype_front_foam_ribbon": "false",
+          "prototype_geometry_alpha": "1.0",
+          "prototype_geometry_keep_alpha": "false",
+          "prototype_geometry_keep_color": "false",
+          "prototype_geometry_silhouette": "false",
+          "prototype_irregular_foam": "false",
+          "prototype_legacy_edge_clamp": "false",
+          "prototype_light_direction_world": "Vector3(-0.3531289, 0.78801066, -0.5043204)",
+          "prototype_local_back_cells": "7.5",
+          "prototype_local_face_cells": "1.8",
+          "prototype_local_lift_depth_scale": "1.5",
+          "prototype_local_overturn_m": "0.0",
+          "prototype_offshore_core": "false",
+          "prototype_offshore_core_broken": "false",
+          "prototype_offshore_core_crown": "false",
+          "prototype_offshore_core_source_started": "false",
+          "prototype_optical_shallow_preserve": "true",
+          "prototype_planar_reflection": "Object(ViewportTexture,\"resource_local_to_scene\":true,\"resource_name\":\"\",\"viewport_path\":NodePath(\"ReflectionViewport\"),\"script\":null)\n",
+          "prototype_planar_reflection_debug": "false",
+          "prototype_planar_reflection_enabled": "true",
+          "prototype_planar_reflection_projected": "true",
+          "prototype_planar_reflection_softness_px": "0.0",
+          "prototype_planar_view_projection": "Projection(-0.80274826, 0.39173743, 0.457507, 0.45749557, -1.1159863e-07, -1.4798971, 0.45750704, 0.4574956, -0.4816488, -0.65289557, -0.7625121, -0.762493, -2.678367e-06, -2.3807709e-06, 13.015204, 13.114878)",
+          "prototype_refraction_fallback_debug": "false",
+          "prototype_refraction_scale": "0.02",
+          "prototype_render_grid_size": "512.0",
+          "prototype_rise_crest": "false",
+          "prototype_screen_abs_fresnel": "true",
+          "prototype_screen_bed_only": "false",
+          "prototype_screen_deep_scatter_scale": "1.0",
+          "prototype_screen_face_normal": "true",
+          "prototype_screen_fresnel_debug": "false",
+          "prototype_screen_optics": "true",
+          "prototype_screen_reflection_debug": "false",
+          "prototype_screen_scene_reflection": "false",
+          "prototype_screen_sky_gradient": "false",
+          "prototype_screen_sky_reflection_scale": "1.0",
+          "prototype_screen_world_glint": "false",
+          "prototype_shallow_extinction_m": "0.25",
+          "prototype_shared_bed_triangles": "false",
+          "prototype_shore_linear_weights": "false",
+          "prototype_shore_source_debug": "false",
+          "prototype_shore_unscaled_depth": "false",
+          "prototype_use_front_field": "false",
+          "prototype_use_local_front": "true",
+          "prototype_vertex_fragment_delta_debug": "false",
+          "prototype_visible_bed_height_debug": "false",
+          "radial_shore": "false",
+          "rdc_absorption_rgb": "Vector3(6, 0.856013, 0.336771)",
+          "rdc_distance_scale": "1.0",
+          "rdc_normal_enabled": "true",
+          "rdc_normal_gain": "1.0",
+          "rdc_normal_scale": "0.2",
+          "rdc_optics_enabled": "true",
+          "rdc_refracted_path": "false",
+          "rdc_refraction_scale": "0.0121",
+          "rdc_surface_color": "Vector3(0.49190503, 0.71056646, 0.84808826)",
+          "rdc_surface_gain": "1.0",
+          "rdc_time_scale": "1.0",
+          "rdc_transmission_tint": "Vector3(0.75897, 0.883854, 0.968461)",
+          "ripple_frequency": "150.0",
+          "ripple_speed": "2.6",
+          "ripple_strength": "0.045",
+          "rise_front_state": "null",
+          "rock_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "sand_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "shallow_tint": "Vector3(0.36, 0.71, 0.76)",
+          "shoreline_debug": "false",
+          "side_debug": "0",
+          "side_max_xz": "Vector2(15.96875, 15.96875)",
+          "side_min_xz": "Vector2(-15.96875, -15.96875)",
+          "side_scatter_color": "Color(0.075, 0.32, 0.36, 1)",
+          "test1_whitewater_gain": "0.32",
+          "use_async_clock": "true",
+          "use_caustics": "true",
+          "use_detail_normals": "true",
+          "use_specular": "true",
+          "visual_time_s": "0.0",
+          "water_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "water_surface_bias_m": "0.003",
+          "wet_epsilon_m": "0.001"
+        }
+      },
+      "sides_sha256": "d69f77b8bd03a78461fb29ff5fd8084e1fc68b43b30ac9c0319a9b6dee757462"
+    },
+    {
+      "case": 2,
+      "contact_gain": 0.55,
+      "material": {
+        "shader": "res://assets/water_material_natural_candidate/async_rdc_water.gdshader",
+        "shader_sha256": "6506719ce13eae6bb94b96ea4c09afa4275741b1faf9bdb075e18cff0f4a877e",
+        "uniforms": {
+          "async_clock": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "contact_history_state": "null",
+          "debug_mode": "0",
+          "deep_tint": "Vector3(0.045, 0.24, 0.5)",
+          "display_reconstruction": "true",
+          "extinction_depth_m": "0.09",
+          "foam_depth_m": "0.05",
+          "foam_detail_mode": "1",
+          "foam_detail_scale_per_m": "1.0",
+          "foam_detail_texture": "Resource(\"uid://cqqx8ns0qtghc\", \"res://assets/water_foam/foam_detail.png\")",
+          "foam_flow_cycle_s": "4.0",
+          "foam_flow_debug": "false",
+          "foam_flow_gain": "1.0",
+          "foam_flow_speed_cap_m_s": "2.0",
+          "foam_hole_strength": "1.0",
+          "foam_previous_state": "null",
+          "foam_speed_m_s": "0.85",
+          "foam_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "foam_strength": "0.55",
+          "foam_tint": "Vector3(0.93, 0.96, 0.97)",
+          "local_front_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "midpoint_clip": "false",
+          "momentum_x_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "momentum_z_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "natural_direction0": "Vector2(1, 0)",
+          "natural_direction1": "Vector2(0.6, 0.8)",
+          "natural_foam_direct_fraction": "0.5",
+          "natural_glint_enabled": "true",
+          "natural_glint_exponent": "1500.0",
+          "natural_glint_gain": "1.0",
+          "natural_height_surface_normal": "true",
+          "natural_layer0": "Vector4(0.18, 0.035, 0.06, 0)",
+          "natural_layer1": "Vector4(0.47, -0.022, 0.025, 0)",
+          "natural_lighting_debug": "0",
+          "natural_main_foam_gain": "1.0",
+          "natural_normal_debug": "0",
+          "natural_normal_mode": "1",
+          "natural_normal_texture": "Resource(\"uid://c006tri8krysy\", \"res://assets/water_material_natural_candidate/water_normal_681.png\")",
+          "natural_optics_debug": "0",
+          "natural_path_mode": "0",
+          "natural_path_unrefracted": "true",
+          "natural_planar_reflection_srgb": "Object(ViewportTexture,\"resource_local_to_scene\":true,\"resource_name\":\"\",\"viewport_path\":NodePath(\"ReflectionViewport\"),\"script\":null)\n",
+          "natural_reflection_debug": "0",
+          "natural_reflection_edge_fade_px": "8.0",
+          "natural_reflection_edge_margin_px": "2.0",
+          "natural_reflection_flip_y": "true",
+          "natural_reflection_gain": "1.0",
+          "natural_reflection_perturbation": "true",
+          "natural_reflection_protected": "true",
+          "natural_reflection_shift_m": "0.25",
+          "natural_reflection_sky_linear": "Vector3(0.49190503, 0.7105665, 0.84808826)",
+          "natural_reflection_srgb": "true",
+          "natural_reflection_uv_limit": "0.03",
+          "natural_scatter_direct_fraction": "0.45",
+          "natural_scatter_gain": "1.0",
+          "phase2_deep_tint": "Vector3(0.02, 0.29, 0.37)",
+          "phase2_extinction_m": "0.11",
+          "phase2_foam": "true",
+          "phase2_optics": "true",
+          "phase2_shallow_tint": "Vector3(0.04, 0.72, 0.69)",
+          "prototype_aperiodic_foam": "false",
+          "prototype_broad_crest": "false",
+          "prototype_caustic_pattern": "null",
+          "prototype_caustic_recovery_gain": "0.0",
+          "prototype_caustic_recovery_uv_scale": "1.0",
+          "prototype_contact_alpha_debug": "false",
+          "prototype_contact_depth_debug": "false",
+          "prototype_contact_foam_candidate": "false",
+          "prototype_contact_foam_source_debug": "false",
+          "prototype_contact_foam_spread": "false",
+          "prototype_contact_front_gate": "false",
+          "prototype_contact_height_debug": "false",
+          "prototype_contact_history_gate": "false",
+          "prototype_contact_independent_history_gate": "false",
+          "prototype_contact_relaxed_front_gate": "false",
+          "prototype_contact_residual_debug": "false",
+          "prototype_contact_scene_gap_gate": "false",
+          "prototype_contact_wide_band": "false",
+          "prototype_crest_broken_core": "false",
+          "prototype_crest_depth_gate_bypass": "false",
+          "prototype_crest_fragment_foam": "false",
+          "prototype_crest_height_m": "0.25",
+          "prototype_crest_shore_depth_m": "0.0",
+          "prototype_crest_span_smoothing": "false",
+          "prototype_crest_white_face": "false",
+          "prototype_curl_forward_m": "0.0",
+          "prototype_deep_extinction_m": "0.4",
+          "prototype_depth_bands": "false",
+          "prototype_depth_gray_debug": "false",
+          "prototype_depth_guard": "true",
+          "prototype_depth_layers_debug": "false",
+          "prototype_eta_light_space_debug": "false",
+          "prototype_eta_normal_debug": "false",
+          "prototype_eta_normal_space_debug": "false",
+          "prototype_eta_normals": "true",
+          "prototype_foam_flow_detail": "false",
+          "prototype_front_face_foam_gate": "false",
+          "prototype_front_face_rim_tone": "false",
+          "prototype_front_face_source_gate": "false",
+          "prototype_front_face_source_started": "false",
+          "prototype_front_foam_blend": "false",
+          "prototype_front_foam_ribbon": "false",
+          "prototype_geometry_alpha": "1.0",
+          "prototype_geometry_keep_alpha": "false",
+          "prototype_geometry_keep_color": "false",
+          "prototype_geometry_silhouette": "false",
+          "prototype_irregular_foam": "false",
+          "prototype_legacy_edge_clamp": "false",
+          "prototype_light_direction_world": "Vector3(-0.3531289, 0.78801066, -0.5043204)",
+          "prototype_local_back_cells": "7.5",
+          "prototype_local_face_cells": "1.8",
+          "prototype_local_lift_depth_scale": "1.5",
+          "prototype_local_overturn_m": "0.0",
+          "prototype_offshore_core": "false",
+          "prototype_offshore_core_broken": "false",
+          "prototype_offshore_core_crown": "false",
+          "prototype_offshore_core_source_started": "false",
+          "prototype_optical_shallow_preserve": "true",
+          "prototype_planar_reflection": "Object(ViewportTexture,\"resource_local_to_scene\":true,\"resource_name\":\"\",\"viewport_path\":NodePath(\"ReflectionViewport\"),\"script\":null)\n",
+          "prototype_planar_reflection_debug": "false",
+          "prototype_planar_reflection_enabled": "true",
+          "prototype_planar_reflection_projected": "true",
+          "prototype_planar_reflection_softness_px": "0.0",
+          "prototype_planar_view_projection": "Projection(-0.80274826, 0.39173743, 0.457507, 0.45749557, -1.1159863e-07, -1.4798971, 0.45750704, 0.4574956, -0.4816488, -0.65289557, -0.7625121, -0.762493, -2.678367e-06, -2.3807709e-06, 13.015204, 13.114878)",
+          "prototype_refraction_fallback_debug": "false",
+          "prototype_refraction_scale": "0.02",
+          "prototype_render_grid_size": "512.0",
+          "prototype_rise_crest": "false",
+          "prototype_screen_abs_fresnel": "true",
+          "prototype_screen_bed_only": "false",
+          "prototype_screen_deep_scatter_scale": "1.0",
+          "prototype_screen_face_normal": "true",
+          "prototype_screen_fresnel_debug": "false",
+          "prototype_screen_optics": "true",
+          "prototype_screen_reflection_debug": "false",
+          "prototype_screen_scene_reflection": "false",
+          "prototype_screen_sky_gradient": "false",
+          "prototype_screen_sky_reflection_scale": "1.0",
+          "prototype_screen_world_glint": "false",
+          "prototype_shallow_extinction_m": "0.25",
+          "prototype_shared_bed_triangles": "false",
+          "prototype_shore_linear_weights": "false",
+          "prototype_shore_source_debug": "false",
+          "prototype_shore_unscaled_depth": "false",
+          "prototype_use_front_field": "false",
+          "prototype_use_local_front": "true",
+          "prototype_vertex_fragment_delta_debug": "false",
+          "prototype_visible_bed_height_debug": "false",
+          "radial_shore": "false",
+          "rdc_absorption_rgb": "Vector3(6, 0.856013, 0.336771)",
+          "rdc_distance_scale": "1.0",
+          "rdc_normal_enabled": "true",
+          "rdc_normal_gain": "1.0",
+          "rdc_normal_scale": "0.2",
+          "rdc_optics_enabled": "true",
+          "rdc_refracted_path": "false",
+          "rdc_refraction_scale": "0.0121",
+          "rdc_surface_color": "Vector3(0.49190503, 0.71056646, 0.84808826)",
+          "rdc_surface_gain": "1.0",
+          "rdc_time_scale": "1.0",
+          "rdc_transmission_tint": "Vector3(0.75897, 0.883854, 0.968461)",
+          "ripple_frequency": "150.0",
+          "ripple_speed": "2.6",
+          "ripple_strength": "0.045",
+          "rise_front_state": "null",
+          "rock_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "sand_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "shallow_tint": "Vector3(0.36, 0.71, 0.76)",
+          "shoreline_debug": "false",
+          "test1_whitewater_gain": "0.32",
+          "use_async_clock": "true",
+          "use_caustics": "true",
+          "use_detail_normals": "true",
+          "use_specular": "true",
+          "visual_time_s": "0.0",
+          "water_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "water_surface_bias_m": "0.003",
+          "wet_epsilon_m": "0.001"
+        }
+      },
+      "shader_sha256": "6506719ce13eae6bb94b96ea4c09afa4275741b1faf9bdb075e18cff0f4a877e",
+      "sides_material": {
+        "shader": "res://assets/water_sides/water_sides.gdshader",
+        "shader_sha256": "0091b72293ee8aeb9ca81daa3f678b4c4ae2a07f0c00c3cfbc326e44d485bbf2",
+        "uniforms": {
+          "async_clock": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "contact_history_state": "null",
+          "debug_mode": "0",
+          "deep_tint": "Vector3(0.045, 0.24, 0.5)",
+          "display_reconstruction": "true",
+          "extinction_depth_m": "0.09",
+          "foam_depth_m": "0.05",
+          "foam_detail_mode": "1",
+          "foam_detail_scale_per_m": "1.0",
+          "foam_detail_texture": "Resource(\"uid://cqqx8ns0qtghc\", \"res://assets/water_foam/foam_detail.png\")",
+          "foam_flow_cycle_s": "4.0",
+          "foam_flow_debug": "false",
+          "foam_flow_gain": "1.0",
+          "foam_flow_speed_cap_m_s": "2.0",
+          "foam_hole_strength": "1.0",
+          "foam_previous_state": "null",
+          "foam_speed_m_s": "0.85",
+          "foam_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "foam_strength": "0.55",
+          "foam_tint": "Vector3(0.93, 0.96, 0.97)",
+          "local_front_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "midpoint_clip": "false",
+          "momentum_x_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "momentum_z_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "natural_direction0": "Vector2(1, 0)",
+          "natural_direction1": "Vector2(0.6, 0.8)",
+          "natural_foam_direct_fraction": "0.5",
+          "natural_glint_enabled": "true",
+          "natural_glint_exponent": "1500.0",
+          "natural_glint_gain": "1.0",
+          "natural_layer0": "Vector4(0.18, 0.035, 0.06, 0)",
+          "natural_layer1": "Vector4(0.47, -0.022, 0.025, 0)",
+          "natural_lighting_debug": "0",
+          "natural_main_foam_gain": "1.0",
+          "natural_normal_debug": "0",
+          "natural_normal_mode": "1",
+          "natural_normal_texture": "Resource(\"uid://c006tri8krysy\", \"res://assets/water_material_natural_candidate/water_normal_681.png\")",
+          "natural_planar_reflection_srgb": "Object(ViewportTexture,\"resource_local_to_scene\":true,\"resource_name\":\"\",\"viewport_path\":NodePath(\"ReflectionViewport\"),\"script\":null)\n",
+          "natural_reflection_debug": "0",
+          "natural_reflection_edge_fade_px": "8.0",
+          "natural_reflection_edge_margin_px": "2.0",
+          "natural_reflection_flip_y": "true",
+          "natural_reflection_gain": "1.0",
+          "natural_reflection_perturbation": "true",
+          "natural_reflection_protected": "true",
+          "natural_reflection_shift_m": "0.25",
+          "natural_reflection_sky_linear": "Vector3(0.49190503, 0.7105665, 0.84808826)",
+          "natural_reflection_srgb": "true",
+          "natural_reflection_uv_limit": "0.03",
+          "natural_scatter_direct_fraction": "0.45",
+          "phase2_deep_tint": "Vector3(0.02, 0.29, 0.37)",
+          "phase2_extinction_m": "0.11",
+          "phase2_foam": "true",
+          "phase2_optics": "true",
+          "phase2_shallow_tint": "Vector3(0.04, 0.72, 0.69)",
+          "prototype_aperiodic_foam": "false",
+          "prototype_broad_crest": "false",
+          "prototype_caustic_pattern": "null",
+          "prototype_caustic_recovery_gain": "0.0",
+          "prototype_caustic_recovery_uv_scale": "1.0",
+          "prototype_contact_alpha_debug": "false",
+          "prototype_contact_depth_debug": "false",
+          "prototype_contact_foam_candidate": "false",
+          "prototype_contact_foam_source_debug": "false",
+          "prototype_contact_foam_spread": "false",
+          "prototype_contact_front_gate": "false",
+          "prototype_contact_height_debug": "false",
+          "prototype_contact_history_gate": "false",
+          "prototype_contact_independent_history_gate": "false",
+          "prototype_contact_relaxed_front_gate": "false",
+          "prototype_contact_residual_debug": "false",
+          "prototype_contact_scene_gap_gate": "false",
+          "prototype_contact_wide_band": "false",
+          "prototype_crest_broken_core": "false",
+          "prototype_crest_depth_gate_bypass": "false",
+          "prototype_crest_fragment_foam": "false",
+          "prototype_crest_height_m": "0.25",
+          "prototype_crest_shore_depth_m": "0.0",
+          "prototype_crest_span_smoothing": "false",
+          "prototype_crest_white_face": "false",
+          "prototype_curl_forward_m": "0.0",
+          "prototype_deep_extinction_m": "0.4",
+          "prototype_depth_bands": "false",
+          "prototype_depth_gray_debug": "false",
+          "prototype_depth_guard": "true",
+          "prototype_depth_layers_debug": "false",
+          "prototype_eta_light_space_debug": "false",
+          "prototype_eta_normal_debug": "false",
+          "prototype_eta_normal_space_debug": "false",
+          "prototype_eta_normals": "true",
+          "prototype_foam_flow_detail": "false",
+          "prototype_front_face_foam_gate": "false",
+          "prototype_front_face_rim_tone": "false",
+          "prototype_front_face_source_gate": "false",
+          "prototype_front_face_source_started": "false",
+          "prototype_front_foam_blend": "false",
+          "prototype_front_foam_ribbon": "false",
+          "prototype_geometry_alpha": "1.0",
+          "prototype_geometry_keep_alpha": "false",
+          "prototype_geometry_keep_color": "false",
+          "prototype_geometry_silhouette": "false",
+          "prototype_irregular_foam": "false",
+          "prototype_legacy_edge_clamp": "false",
+          "prototype_light_direction_world": "Vector3(-0.3531289, 0.78801066, -0.5043204)",
+          "prototype_local_back_cells": "7.5",
+          "prototype_local_face_cells": "1.8",
+          "prototype_local_lift_depth_scale": "1.5",
+          "prototype_local_overturn_m": "0.0",
+          "prototype_offshore_core": "false",
+          "prototype_offshore_core_broken": "false",
+          "prototype_offshore_core_crown": "false",
+          "prototype_offshore_core_source_started": "false",
+          "prototype_optical_shallow_preserve": "true",
+          "prototype_planar_reflection": "Object(ViewportTexture,\"resource_local_to_scene\":true,\"resource_name\":\"\",\"viewport_path\":NodePath(\"ReflectionViewport\"),\"script\":null)\n",
+          "prototype_planar_reflection_debug": "false",
+          "prototype_planar_reflection_enabled": "true",
+          "prototype_planar_reflection_projected": "true",
+          "prototype_planar_reflection_softness_px": "0.0",
+          "prototype_planar_view_projection": "Projection(-0.80274826, 0.39173743, 0.457507, 0.45749557, -1.1159863e-07, -1.4798971, 0.45750704, 0.4574956, -0.4816488, -0.65289557, -0.7625121, -0.762493, -2.678367e-06, -2.3807709e-06, 13.015204, 13.114878)",
+          "prototype_refraction_fallback_debug": "false",
+          "prototype_refraction_scale": "0.02",
+          "prototype_render_grid_size": "512.0",
+          "prototype_rise_crest": "false",
+          "prototype_screen_abs_fresnel": "true",
+          "prototype_screen_bed_only": "false",
+          "prototype_screen_deep_scatter_scale": "1.0",
+          "prototype_screen_face_normal": "true",
+          "prototype_screen_fresnel_debug": "false",
+          "prototype_screen_optics": "true",
+          "prototype_screen_reflection_debug": "false",
+          "prototype_screen_scene_reflection": "false",
+          "prototype_screen_sky_gradient": "false",
+          "prototype_screen_sky_reflection_scale": "1.0",
+          "prototype_screen_world_glint": "false",
+          "prototype_shallow_extinction_m": "0.25",
+          "prototype_shared_bed_triangles": "false",
+          "prototype_shore_linear_weights": "false",
+          "prototype_shore_source_debug": "false",
+          "prototype_shore_unscaled_depth": "false",
+          "prototype_use_front_field": "false",
+          "prototype_use_local_front": "true",
+          "prototype_vertex_fragment_delta_debug": "false",
+          "prototype_visible_bed_height_debug": "false",
+          "radial_shore": "false",
+          "rdc_absorption_rgb": "Vector3(6, 0.856013, 0.336771)",
+          "rdc_distance_scale": "1.0",
+          "rdc_normal_enabled": "true",
+          "rdc_normal_gain": "1.0",
+          "rdc_normal_scale": "0.2",
+          "rdc_optics_enabled": "true",
+          "rdc_refracted_path": "false",
+          "rdc_refraction_scale": "0.0121",
+          "rdc_surface_color": "Vector3(0.49190503, 0.71056646, 0.84808826)",
+          "rdc_surface_gain": "1.0",
+          "rdc_time_scale": "1.0",
+          "rdc_transmission_tint": "Vector3(0.75897, 0.883854, 0.968461)",
+          "ripple_frequency": "150.0",
+          "ripple_speed": "2.6",
+          "ripple_strength": "0.045",
+          "rise_front_state": "null",
+          "rock_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "sand_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "shallow_tint": "Vector3(0.36, 0.71, 0.76)",
+          "shoreline_debug": "false",
+          "side_debug": "0",
+          "side_max_xz": "Vector2(15.96875, 15.96875)",
+          "side_min_xz": "Vector2(-15.96875, -15.96875)",
+          "side_scatter_color": "Color(0.075, 0.32, 0.36, 1)",
+          "test1_whitewater_gain": "0.32",
+          "use_async_clock": "true",
+          "use_caustics": "true",
+          "use_detail_normals": "true",
+          "use_specular": "true",
+          "visual_time_s": "0.0",
+          "water_state": "Object(Texture2DRD,\"resource_local_to_scene\":false,\"resource_name\":\"\",\"script\":null)\n",
+          "water_surface_bias_m": "0.003",
+          "wet_epsilon_m": "0.001"
+        }
+      },
+      "sides_sha256": "0091b72293ee8aeb9ca81daa3f678b4c4ae2a07f0c00c3cfbc326e44d485bbf2"
+    }
+  ],
+  "engine": {
+    "path": "D:/game/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe",
+    "stdout_banner": [
+      "Godot Engine v4.7.2.stable.steam.ed1daf0bf - https://godotengine.org",
+      "D3D12 12_0 - Forward+ - Using Device #0: NVIDIA - NVIDIA GeForce GTX 1050",
+      ""
+    ]
+  },
+  "adapter_renderer": "D3D12 12_0 - Forward+ - Using Device #0: NVIDIA - NVIDIA GeForce GTX 1050",
+  "driver": null,
+  "driver_reference": "G5/final_static_checks.json; host driver not resampled inside this functional run",
+  "viewport": null,
+  "camera": null,
+  "seed_hash": null,
+  "snapshots": {
+    "case0_final.sandue": {
+      "sha256": "01672e1af9287185ae6aa5afe36bf20905c893abaf789f5f116d1970b16825b7",
+      "generation": 1002,
+      "state_seq": 92,
+      "tick": 90,
+      "time_s": 2.9999985694885254
+    },
+    "case1_final.sandue": {
+      "sha256": "7a5e8cf51b2f8115f1c2bfa5dab1b2972cf271b5bc0ab20cd1ffb648e1dd05db",
+      "generation": 1003,
+      "state_seq": 92,
+      "tick": 90,
+      "time_s": 2.9999985694885254
+    },
+    "case2_final.sandue": {
+      "sha256": "d739706bf7612ea384e01ccca27a6ca00b4aebb6fe3e141dd3c1f158b813a024",
+      "generation": 1004,
+      "state_seq": 92,
+      "tick": 90,
+      "time_s": 2.9999985694885254
+    },
+    "start.sandue": {
+      "sha256": "9858dbea04e2af20707a78eebb237f28b4d22c010ce2faa477c4d1e752a3e985",
+      "generation": 1001,
+      "state_seq": 30,
+      "tick": 30,
+      "time_s": 1.0000003576278687
+    }
+  },
+  "timing": {
+    "performance_sample": false,
+    "wall_interval": null
+  },
+  "optimization_time": {
+    "budget_s": 1800,
+    "used_s": 1664.7103316999855,
+    "remaining_s": 135.28966830001445,
+    "running": false,
+    "purpose": "numerical/functional read-only acceptance; no performance optimization"
+  },
+  "metrics": {
+    "gpu_ms": null,
+    "frame_ms": null,
+    "throughput": null,
+    "resource_counts": {}
+  },
+  "assertions": [
+    {
+      "name": "entry_ready",
+      "pass": true
+    },
+    {
+      "name": "props_hold",
+      "pass": true
+    },
+    {
+      "name": "original_shader_identity",
+      "pass": true
+    },
+    {
+      "name": "original_sides_identity",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_4",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_5",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_6",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_7",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_8",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_9",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_10",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_11",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_12",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_13",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_14",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_15",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_16",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_17",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_18",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_19",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_20",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_21",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_22",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_23",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_24",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_25",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_26",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_27",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_28",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_29",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_30",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_31",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_32",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_33",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_34",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_35",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_36",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_37",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_38",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_39",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_40",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_41",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_42",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_43",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_44",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_45",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_46",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_47",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_48",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_49",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_50",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_51",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_52",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_53",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_54",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_55",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_56",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_57",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_58",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_59",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_60",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_61",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_62",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_63",
+      "pass": true
+    },
+    {
+      "name": "start_save",
+      "pass": true
+    },
+    {
+      "name": "start_load",
+      "pass": true
+    },
+    {
+      "name": "restore_0",
+      "pass": true
+    },
+    {
+      "name": "common_queue_idle_67",
+      "pass": true
+    },
+    {
+      "name": "props_held_0",
+      "pass": true
+    },
+    {
+      "name": "admit_0_place_sand",
+      "pass": true
+    },
+    {
+      "name": "finish_0_place_sand",
+      "pass": true
+    },
+    {
+      "name": "common_queue_idle_71",
+      "pass": true
+    },
+    {
+      "name": "end_empty_0_place_sand",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_73",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_74",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_75",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_76",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_77",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_78",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_79",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_80",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_81",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_82",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_83",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_84",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_85",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_86",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_87",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_88",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_89",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_90",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_91",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_92",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_93",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_94",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_95",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_96",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_97",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_98",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_99",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_100",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_101",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_102",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_103",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_104",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_105",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_106",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_107",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_108",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_109",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_110",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_111",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_112",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_113",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_114",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_115",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_116",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_117",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_118",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_119",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_120",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_121",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_122",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_123",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_124",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_125",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_126",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_127",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_128",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_129",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_130",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_131",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_132",
+      "pass": true
+    },
+    {
+      "name": "admit_0_remove_sand",
+      "pass": true
+    },
+    {
+      "name": "finish_0_remove_sand",
+      "pass": true
+    },
+    {
+      "name": "common_queue_idle_135",
+      "pass": true
+    },
+    {
+      "name": "end_empty_0_remove_sand",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_137",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_138",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_139",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_140",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_141",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_142",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_143",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_144",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_145",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_146",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_147",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_148",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_149",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_150",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_151",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_152",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_153",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_154",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_155",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_156",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_157",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_158",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_159",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_160",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_161",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_162",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_163",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_164",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_165",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_166",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_167",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_168",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_169",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_170",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_171",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_172",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_173",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_174",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_175",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_176",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_177",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_178",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_179",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_180",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_181",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_182",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_183",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_184",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_185",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_186",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_187",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_188",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_189",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_190",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_191",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_192",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_193",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_194",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_195",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_196",
+      "pass": true
+    },
+    {
+      "name": "case0_final_save",
+      "pass": true
+    },
+    {
+      "name": "case0_final_load",
+      "pass": true
+    },
+    {
+      "name": "restore_1",
+      "pass": true
+    },
+    {
+      "name": "common_queue_idle_200",
+      "pass": true
+    },
+    {
+      "name": "props_held_1",
+      "pass": true
+    },
+    {
+      "name": "admit_1_place_sand",
+      "pass": true
+    },
+    {
+      "name": "finish_1_place_sand",
+      "pass": true
+    },
+    {
+      "name": "common_queue_idle_204",
+      "pass": true
+    },
+    {
+      "name": "end_empty_1_place_sand",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_206",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_207",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_208",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_209",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_210",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_211",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_212",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_213",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_214",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_215",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_216",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_217",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_218",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_219",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_220",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_221",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_222",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_223",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_224",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_225",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_226",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_227",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_228",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_229",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_230",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_231",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_232",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_233",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_234",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_235",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_236",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_237",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_238",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_239",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_240",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_241",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_242",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_243",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_244",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_245",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_246",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_247",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_248",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_249",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_250",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_251",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_252",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_253",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_254",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_255",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_256",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_257",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_258",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_259",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_260",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_261",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_262",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_263",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_264",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_265",
+      "pass": true
+    },
+    {
+      "name": "admit_1_remove_sand",
+      "pass": true
+    },
+    {
+      "name": "finish_1_remove_sand",
+      "pass": true
+    },
+    {
+      "name": "common_queue_idle_268",
+      "pass": true
+    },
+    {
+      "name": "end_empty_1_remove_sand",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_270",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_271",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_272",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_273",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_274",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_275",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_276",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_277",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_278",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_279",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_280",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_281",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_282",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_283",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_284",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_285",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_286",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_287",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_288",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_289",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_290",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_291",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_292",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_293",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_294",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_295",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_296",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_297",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_298",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_299",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_300",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_301",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_302",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_303",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_304",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_305",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_306",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_307",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_308",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_309",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_310",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_311",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_312",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_313",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_314",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_315",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_316",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_317",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_318",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_319",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_320",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_321",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_322",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_323",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_324",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_325",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_326",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_327",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_328",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_329",
+      "pass": true
+    },
+    {
+      "name": "case1_final_save",
+      "pass": true
+    },
+    {
+      "name": "case1_final_load",
+      "pass": true
+    },
+    {
+      "name": "restore_2",
+      "pass": true
+    },
+    {
+      "name": "common_queue_idle_333",
+      "pass": true
+    },
+    {
+      "name": "props_held_2",
+      "pass": true
+    },
+    {
+      "name": "admit_2_place_sand",
+      "pass": true
+    },
+    {
+      "name": "finish_2_place_sand",
+      "pass": true
+    },
+    {
+      "name": "common_queue_idle_337",
+      "pass": true
+    },
+    {
+      "name": "end_empty_2_place_sand",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_339",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_340",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_341",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_342",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_343",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_344",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_345",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_346",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_347",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_348",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_349",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_350",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_351",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_352",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_353",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_354",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_355",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_356",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_357",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_358",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_359",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_360",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_361",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_362",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_363",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_364",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_365",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_366",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_367",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_368",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_369",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_370",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_371",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_372",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_373",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_374",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_375",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_376",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_377",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_378",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_379",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_380",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_381",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_382",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_383",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_384",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_385",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_386",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_387",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_388",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_389",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_390",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_391",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_392",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_393",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_394",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_395",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_396",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_397",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_398",
+      "pass": true
+    },
+    {
+      "name": "admit_2_remove_sand",
+      "pass": true
+    },
+    {
+      "name": "finish_2_remove_sand",
+      "pass": true
+    },
+    {
+      "name": "common_queue_idle_401",
+      "pass": true
+    },
+    {
+      "name": "end_empty_2_remove_sand",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_403",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_404",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_405",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_406",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_407",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_408",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_409",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_410",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_411",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_412",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_413",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_414",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_415",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_416",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_417",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_418",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_419",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_420",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_421",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_422",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_423",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_424",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_425",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_426",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_427",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_428",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_429",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_430",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_431",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_432",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_433",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_434",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_435",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_436",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_437",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_438",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_439",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_440",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_441",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_442",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_443",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_444",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_445",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_446",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_447",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_448",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_449",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_450",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_451",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_452",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_453",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_454",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_455",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_456",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_457",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_458",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_459",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_460",
+      "pass": true
+    },
+    {
+      "name": "tick_admitted_461",
+      "pass": true
+    },
+    {
+      "name": "tick_completed_once_462",
+      "pass": true
+    },
+    {
+      "name": "case2_final_save",
+      "pass": true
+    },
+    {
+      "name": "case2_final_load",
+      "pass": true
+    },
+    {
+      "name": "exact_original_AA_tick_time",
+      "pass": true
+    },
+    {
+      "name": "exact_original_AA_authority_rock",
+      "pass": true
+    },
+    {
+      "name": "exact_original_AA_authority_sand",
+      "pass": false
+    },
+    {
+      "name": "exact_original_AA_authority_water",
+      "pass": false
+    },
+    {
+      "name": "exact_original_AA_authority_momentum_x",
+      "pass": false
+    },
+    {
+      "name": "exact_original_AA_authority_momentum_z",
+      "pass": false
+    },
+    {
+      "name": "exact_original_AA_authority_sediment",
+      "pass": false
+    },
+    {
+      "name": "exact_original_AA_authority_wetness",
+      "pass": true
+    },
+    {
+      "name": "exact_original_AA_authority_compaction",
+      "pass": true
+    },
+    {
+      "name": "exact_original_AA_authority_obstacle",
+      "pass": true
+    },
+    {
+      "name": "exact_original_AA_authority_flux",
+      "pass": false
+    },
+    {
+      "name": "exact_original_AA_history_foam_0",
+      "pass": false
+    },
+    {
+      "name": "exact_original_AA_history_bed_0",
+      "pass": false
+    },
+    {
+      "name": "exact_original_AA_history_foam_1",
+      "pass": false
+    },
+    {
+      "name": "exact_original_AA_history_bed_1",
+      "pass": false
+    },
+    {
+      "name": "exact_original_AA_front",
+      "pass": false
+    },
+    {
+      "name": "original_vs_formal_AB_tick_time",
+      "pass": true
+    },
+    {
+      "name": "original_vs_formal_AB_authority_rock",
+      "pass": true
+    },
+    {
+      "name": "original_vs_formal_AB_authority_sand",
+      "pass": false
+    },
+    {
+      "name": "original_vs_formal_AB_authority_water",
+      "pass": false
+    },
+    {
+      "name": "original_vs_formal_AB_authority_momentum_x",
+      "pass": false
+    },
+    {
+      "name": "original_vs_formal_AB_authority_momentum_z",
+      "pass": false
+    },
+    {
+      "name": "original_vs_formal_AB_authority_sediment",
+      "pass": false
+    },
+    {
+      "name": "original_vs_formal_AB_authority_wetness",
+      "pass": true
+    },
+    {
+      "name": "original_vs_formal_AB_authority_compaction",
+      "pass": true
+    },
+    {
+      "name": "original_vs_formal_AB_authority_obstacle",
+      "pass": true
+    },
+    {
+      "name": "original_vs_formal_AB_authority_flux",
+      "pass": false
+    },
+    {
+      "name": "original_vs_formal_AB_history_foam_0",
+      "pass": false
+    },
+    {
+      "name": "original_vs_formal_AB_history_bed_0",
+      "pass": false
+    },
+    {
+      "name": "original_vs_formal_AB_history_foam_1",
+      "pass": false
+    },
+    {
+      "name": "original_vs_formal_AB_history_bed_1",
+      "pass": false
+    },
+    {
+      "name": "original_vs_formal_AB_front",
+      "pass": false
+    },
+    {
+      "name": "entry_released",
+      "pass": true
+    },
+    {
+      "name": "no_orphan_nodes",
+      "pass": true
+    }
+  ],
+  "process": {
+    "exit_code": 1,
+    "timeout": false,
+    "source_drift": []
+  },
+  "pass": false,
+  "not_recorded": "Null fields were not acquired by this diagnostic. Do not infer a full visual or performance Gate from this header.",
+  "artifacts": [
+    {
+      "path": "case0_final.sandue",
+      "sha256": "01672e1af9287185ae6aa5afe36bf20905c893abaf789f5f116d1970b16825b7",
+      "bytes": 8813248
+    },
+    {
+      "path": "case1_final.sandue",
+      "sha256": "7a5e8cf51b2f8115f1c2bfa5dab1b2972cf271b5bc0ab20cd1ffb648e1dd05db",
+      "bytes": 8813248
+    },
+    {
+      "path": "case2_final.sandue",
+      "sha256": "d739706bf7612ea384e01ccca27a6ca00b4aebb6fe3e141dd3c1f158b813a024",
+      "bytes": 8813248
+    },
+    {
+      "path": "command.json",
+      "sha256": "1b47501ebf8a359a1466356e073c64debf731c047804a65eb46b92dbc5b53067",
+      "bytes": 370
+    },
+    {
+      "path": "probe.json",
+      "sha256": "27b820a36303992c10026d3f48bb1a639344ce66d3dd82ed4e70d359c4816787",
+      "bytes": 143313
+    },
+    {
+      "path": "result.json",
+      "sha256": "0f6cafa45892f8a7a5765e62f119610e4f76e2d6974968914de5a32e11e4c90a",
+      "bytes": 66
+    },
+    {
+      "path": "sources_after.json",
+      "sha256": "a285f3e028def1374913f8b33a502aafe7f96e0e5c109c8fd4955febea63677e",
+      "bytes": 51277
+    },
+    {
+      "path": "sources_before.json",
+      "sha256": "a285f3e028def1374913f8b33a502aafe7f96e0e5c109c8fd4955febea63677e",
+      "bytes": 51277
+    },
+    {
+      "path": "start.sandue",
+      "sha256": "9858dbea04e2af20707a78eebb237f28b4d22c010ce2faa477c4d1e752a3e985",
+      "bytes": 8813236
+    },
+    {
+      "path": "stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "stdout.log",
+      "sha256": "4374b9ab486f8db686e51ac340e0fda663b88a4d04e98d3592e737a745f162a5",
+      "bytes": 21499
+    }
+  ]
+}

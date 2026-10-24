@@ -1,0 +1,20 @@
+// stats[] and tr[] must be bound before including this file.
+void add_float(uint at,float value){
+ if(value==0.0)return;
+ uint old=stats[at],seen;
+ do{seen=old;old=atomicCompSwap(stats[at],seen,floatBitsToUint(uintBitsToFloat(seen)+value));}while(old!=seen);
+}
+void add_counter(uint at,uint amount){
+ if(amount==0u)return;
+ uint old=atomicAdd(stats[at],amount);
+ if(old>0xffffffffu-amount)atomicAdd(stats[at+1u],1u);
+}
+float nonnegative(float value,float magnitude,uint base,uint count_offset,uint volume_offset,float area){
+ if(!finite1(value)){atomicOr(tr[14],1u);return 0.0;}
+ if(value<0.0){
+  float bound=min(2e-6,8.0*EPS*magnitude);
+  if(-value>bound){atomicOr(tr[14],2u);return 0.0;}
+  add_counter(base+count_offset,1u);add_float(base+volume_offset,-value*area);return 0.0;
+ }
+ return value;
+}

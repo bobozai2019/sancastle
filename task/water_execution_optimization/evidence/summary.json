@@ -1,0 +1,370 @@
+{
+  "scope": "Visible scene2, sequential processes; CPU ABBA is a separate instrumented run.",
+  "scenes": {
+    "baseline": {
+      "phases": {
+        "live": {
+          "frame_ms": {
+            "n": 433,
+            "mean": 46.30795381062356,
+            "p95": 84.354,
+            "p99": 89.706,
+            "max": 95.826
+          },
+          "fps": 21.594562439305815,
+          "viewport_gpu_ms": {
+            "n": 433,
+            "mean": 11.861018491397003,
+            "p95": 12.36299991607666,
+            "p99": 12.57699966430664,
+            "max": 12.66100025177002
+          },
+          "focused_fraction": 1.0,
+          "simulation_ratio": 0.9604235432940091,
+          "completed_ticks": 578
+        },
+        "paused": {
+          "frame_ms": {
+            "n": 600,
+            "mean": 16.661886666666668,
+            "p95": 17.198,
+            "p99": 17.402,
+            "max": 17.884
+          },
+          "fps": 60.017212936670234,
+          "viewport_gpu_ms": {
+            "n": 600,
+            "mean": 11.812868336041769,
+            "p95": 12.208000183105469,
+            "p99": 12.345999717712402,
+            "max": 12.477999687194824
+          },
+          "focused_fraction": 1.0,
+          "simulation_ratio": 0.0,
+          "completed_ticks": 0
+        }
+      },
+      "window": "(1280, 720)",
+      "vsync": 1,
+      "configuration_hash": "527da684df11d75ccc5067e8d44677020e4c377ccd52f9f2ed38b6fb33705bac",
+      "runtime_override": null
+    },
+    "step1_cost": {
+      "phases": {
+        "live": {
+          "frame_ms": {
+            "n": 435,
+            "mean": 46.088908045977014,
+            "p95": 84.223,
+            "p99": 89.389,
+            "max": 97.78
+          },
+          "fps": 21.69719445300001,
+          "viewport_gpu_ms": {
+            "n": 435,
+            "mean": 11.896020685393236,
+            "p95": 12.36400032043457,
+            "p99": 12.569999694824219,
+            "max": 12.64799976348877
+          },
+          "focused_fraction": 1.0,
+          "simulation_ratio": 0.9655979782485506,
+          "completed_ticks": 581
+        },
+        "paused": {
+          "frame_ms": {
+            "n": 600,
+            "mean": 16.663353333333333,
+            "p95": 17.196,
+            "p99": 17.408,
+            "max": 19.369
+          },
+          "fps": 60.011930371757906,
+          "viewport_gpu_ms": {
+            "n": 600,
+            "mean": 11.804268342653911,
+            "p95": 12.175000190734863,
+            "p99": 12.331000328063965,
+            "max": 12.468000411987305
+          },
+          "focused_fraction": 1.0,
+          "simulation_ratio": 0.0,
+          "completed_ticks": 0
+        }
+      },
+      "window": "(1280, 720)",
+      "vsync": 1,
+      "configuration_hash": "dbb37c16ea9c393f100145e1a7117464068078447dc6a7a2c4e6150d136eaf58",
+      "runtime_override": null
+    },
+    "step2_cost": {
+      "phases": {
+        "live": {
+          "frame_ms": {
+            "n": 650,
+            "mean": 30.78728153846154,
+            "p95": 60.544,
+            "p99": 71.81,
+            "max": 75.466
+          },
+          "fps": 32.480945053584314,
+          "viewport_gpu_ms": {
+            "n": 650,
+            "mean": 11.861747671274038,
+            "p95": 12.267000198364258,
+            "p99": 12.48799991607666,
+            "max": 12.657999992370605
+          },
+          "focused_fraction": 1.0,
+          "simulation_ratio": 0.9925495484585322,
+          "completed_ticks": 596
+        },
+        "paused": {
+          "frame_ms": {
+            "n": 600,
+            "mean": 16.661576666666665,
+            "p95": 17.195,
+            "p99": 17.376,
+            "max": 17.86
+          },
+          "fps": 60.01832959785919,
+          "viewport_gpu_ms": {
+            "n": 600,
+            "mean": 11.852510024706522,
+            "p95": 12.222999572753906,
+            "p99": 12.319000244140625,
+            "max": 12.517000198364258
+          },
+          "focused_fraction": 1.0,
+          "simulation_ratio": 0.0,
+          "completed_ticks": 0
+        }
+      },
+      "window": "(1280, 720)",
+      "vsync": 1,
+      "configuration_hash": "cd4e88a1d0e6b898a8ae8e21eeeba6fd49a48eb662950c5fdfbf9ef3ace92f16",
+      "runtime_override": null
+    },
+    "step3_cost": {
+      "phases": {
+        "live": {
+          "frame_ms": {
+            "n": 657,
+            "mean": 30.507558599695585,
+            "p95": 61.478,
+            "p99": 68.901,
+            "max": 74.305
+          },
+          "fps": 32.77876191672638,
+          "viewport_gpu_ms": {
+            "n": 657,
+            "mean": 11.8461811364695,
+            "p95": 12.1899995803833,
+            "p99": 12.4399995803833,
+            "max": 12.713000297546387
+          },
+          "focused_fraction": 1.0,
+          "simulation_ratio": 0.992614951070617,
+          "completed_ticks": 597
+        },
+        "paused": {
+          "frame_ms": {
+            "n": 599,
+            "mean": 16.690469115191988,
+            "p95": 17.371,
+            "p99": 19.332,
+            "max": 33.569
+          },
+          "fps": 59.91443338700292,
+          "viewport_gpu_ms": {
+            "n": 599,
+            "mean": 11.859552604726241,
+            "p95": 12.232000350952148,
+            "p99": 12.430000305175781,
+            "max": 12.503999710083008
+          },
+          "focused_fraction": 0.5542570951585977,
+          "simulation_ratio": 0.0,
+          "completed_ticks": 0
+        }
+      },
+      "window": "(1280, 720)",
+      "vsync": 1,
+      "configuration_hash": "b4217c8cfa03a0095b25e2eaa2e0c5f9267bdcf58bdcbead76cb389a55fcef29",
+      "runtime_override": null
+    },
+    "reverse_baseline": {
+      "phases": {
+        "live": {
+          "frame_ms": {
+            "n": 322,
+            "mean": 62.144276397515526,
+            "p95": 120.866,
+            "p99": 126.738,
+            "max": 131.836
+          },
+          "fps": 16.09158651399116,
+          "viewport_gpu_ms": {
+            "n": 322,
+            "mean": 11.98225774824249,
+            "p95": 12.331999778747559,
+            "p99": 12.60099983215332,
+            "max": 12.704999923706055
+          },
+          "focused_fraction": 1.0,
+          "simulation_ratio": 0.8039505910389589,
+          "completed_ticks": 483
+        },
+        "paused": {
+          "frame_ms": {
+            "n": 600,
+            "mean": 16.662418333333335,
+            "p95": 17.115,
+            "p99": 17.306,
+            "max": 17.595
+          },
+          "fps": 60.01529789943456,
+          "viewport_gpu_ms": {
+            "n": 600,
+            "mean": 11.828245010375976,
+            "p95": 12.140999794006348,
+            "p99": 12.300999641418457,
+            "max": 12.463000297546387
+          },
+          "focused_fraction": 1.0,
+          "simulation_ratio": 0.0,
+          "completed_ticks": 0
+        }
+      },
+      "window": "(1280, 720)",
+      "vsync": 1,
+      "configuration_hash": "b4217c8cfa03a0095b25e2eaa2e0c5f9267bdcf58bdcbead76cb389a55fcef29",
+      "runtime_override": {
+        "note": "Reference MUSCL pipelines and CPU recorders installed after draining boot; all other resources match production configuration.",
+        "root": "res://task/water_execution_optimization/baseline/",
+        "sources": {
+          "scripts/simulation/unified_edit/coupled.gd": "39a016a6e3bcac204192161ccaf5c0e253d167c6257615e51a50f49a71743bb7",
+          "scripts/simulation/unified_edit/water.gd": "8b6d8093f3e2518eda1b41f790a2e1affb202f193ffae7b38dd3670faa2a2a6a",
+          "scripts/simulation/unified_edit/water_muscl.gd": "1c924c4384a6a5726f4d58337a89af1796ddbadedd01ac28736e1bf97bf08adf",
+          "shaders/simulation/muscl/muscl_math.glslinc": "aa864531e88cf8b0cd9adf63431ec7a6db48863aa4fc7e8da9072d1d7a3f9fc0",
+          "shaders/simulation/muscl/muscl_spatial.glslinc": "fa016738dbcde7540c37406fb255ee5955660fcf09b936fca5a3d130edaf4797",
+          "shaders/simulation/muscl/muscl_stats.glslinc": "70e147a8a112354fb8a6dbd2da0dcceb4e2045a8d98f05b903122ad20b6744b1",
+          "shaders/simulation/muscl/rk_decide.glsl": "f6f651534ee8e78d531c713bb4979b890c0137d368a7859027c3bf24b0979849",
+          "shaders/simulation/muscl/rk_drain.glsl": "8a649a8379954fed16f4a18424da70a83a05511043f943f164a9b2ea7b8c0d11",
+          "shaders/simulation/muscl/rk_edge.glsl": "c8cd8c28cc8b9290e4db83a994c6f71f4eec78287894818f88211ef008df2a69",
+          "shaders/simulation/muscl/rk_euler.glsl": "daf72a12c24352106a2b9e6aa8fbc1a935b5d13b380e2090042c344b553b2d06",
+          "shaders/simulation/muscl/rk_finalize.glsl": "0dbffbbb3cf88ad43761ca6f2b6f155fc360c57aebdc5379298ac69823613ae6",
+          "shaders/simulation/muscl/rk_normalize.glsl": "517ea7d43c1b42b6aa18bff7259d5b7ab0ee11d13e61769242ed4a4fd9d1840e",
+          "shaders/simulation/muscl/rk_validate.glsl": "c53f4fc33334174cd0b458e441a9aa3bf106f0452330638163707829adbd2120"
+        }
+      }
+    },
+    "controlled_candidate": {
+      "phases": {
+        "live": {
+          "frame_ms": {
+            "n": 656,
+            "mean": 30.484231707317072,
+            "p95": 61.637,
+            "p99": 69.874,
+            "max": 74.627
+          },
+          "fps": 32.803844610588364,
+          "viewport_gpu_ms": {
+            "n": 656,
+            "mean": 11.849820126847524,
+            "p95": 12.204999923706055,
+            "p99": 12.503000259399414,
+            "max": 12.645000457763672
+          },
+          "focused_fraction": 1.0,
+          "simulation_ratio": 0.9932829083386219,
+          "completed_ticks": 596
+        },
+        "paused": {
+          "frame_ms": {
+            "n": 598,
+            "mean": 16.717829431438126,
+            "p95": 17.356,
+            "p99": 19.799,
+            "max": 33.068
+          },
+          "fps": 59.81637772422089,
+          "viewport_gpu_ms": {
+            "n": 598,
+            "mean": 11.738212373344396,
+            "p95": 11.956999778747559,
+            "p99": 12.243000030517578,
+            "max": 12.390999794006348
+          },
+          "focused_fraction": 0.9498327759197325,
+          "simulation_ratio": 0.0,
+          "completed_ticks": 0
+        }
+      },
+      "window": "(1280, 720)",
+      "vsync": 1,
+      "configuration_hash": "b4217c8cfa03a0095b25e2eaa2e0c5f9267bdcf58bdcbead76cb389a55fcef29",
+      "runtime_override": {
+        "note": "Reference MUSCL pipelines and CPU recorders installed after draining boot; all other resources match production configuration.",
+        "root": "res://task/water_execution_optimization/final/",
+        "sources": {
+          "scripts/simulation/unified_edit/coupled.gd": "b80c7b7aca3fb5b351811390f9ed9ecc6c9e2c715518496ba09f6f346001ff62",
+          "scripts/simulation/unified_edit/water.gd": "8b6d8093f3e2518eda1b41f790a2e1affb202f193ffae7b38dd3670faa2a2a6a",
+          "scripts/simulation/unified_edit/water_muscl.gd": "383b8d1c8371e607ee935580c1b8edc872cf1164cb7e347a962a3f9432fa257d",
+          "shaders/simulation/muscl/muscl_math.glslinc": "aa864531e88cf8b0cd9adf63431ec7a6db48863aa4fc7e8da9072d1d7a3f9fc0",
+          "shaders/simulation/muscl/muscl_spatial.glslinc": "d4f22c0889af5eb089dfb3dccec767c56b27731452cc1c222867a7e71f3d2106",
+          "shaders/simulation/muscl/muscl_stats.glslinc": "70e147a8a112354fb8a6dbd2da0dcceb4e2045a8d98f05b903122ad20b6744b1",
+          "shaders/simulation/muscl/rk_decide.glsl": "6d51c59ed047d333f8855016d00b2a6cc464f4cb00c8b854c42ed96811bbd3f7",
+          "shaders/simulation/muscl/rk_drain.glsl": "8a649a8379954fed16f4a18424da70a83a05511043f943f164a9b2ea7b8c0d11",
+          "shaders/simulation/muscl/rk_edge.glsl": "4929b19439ede7280c7d4931b72f5d3ebc2d448da4c856eab97874273ef034a0",
+          "shaders/simulation/muscl/rk_euler.glsl": "daf72a12c24352106a2b9e6aa8fbc1a935b5d13b380e2090042c344b553b2d06",
+          "shaders/simulation/muscl/rk_finalize.glsl": "0dbffbbb3cf88ad43761ca6f2b6f155fc360c57aebdc5379298ac69823613ae6",
+          "shaders/simulation/muscl/rk_normalize.glsl": "517ea7d43c1b42b6aa18bff7259d5b7ab0ee11d13e61769242ed4a4fd9d1840e",
+          "shaders/simulation/muscl/rk_validate.glsl": "c53f4fc33334174cd0b458e441a9aa3bf106f0452330638163707829adbd2120"
+        }
+      }
+    }
+  },
+  "sequential_source_changes": {
+    "step1_cost": [
+      "res://shaders/simulation/muscl/rk_decide.glsl"
+    ],
+    "step2_cost": [
+      "res://shaders/simulation/muscl/muscl_spatial.glslinc",
+      "res://shaders/simulation/muscl/rk_edge.glsl"
+    ],
+    "step3_cost": [
+      "res://scripts/simulation/unified_edit/coupled.gd",
+      "res://scripts/simulation/unified_edit/water_muscl.gd"
+    ]
+  },
+  "exact": {
+    "step1_exact_v2": {
+      "checks": 363,
+      "states": 36
+    },
+    "step2_exact": {
+      "checks": 363,
+      "states": 36
+    },
+    "step3_exact": {
+      "checks": 363,
+      "states": 36
+    },
+    "final_exact": {
+      "checks": 365,
+      "states": 36
+    }
+  },
+  "cpu_abba": {
+    "before_ms": 5.272849030470915,
+    "after_ms": 4.34668340306834,
+    "reduction_fraction": 0.17564804568657622,
+    "scope": "Entire CPU submit batch, not isolated MUSCL self time; evolving scene."
+  },
+  "cold_restart": {
+    "outcome": "pass",
+    "checks": 47
+  }
+}

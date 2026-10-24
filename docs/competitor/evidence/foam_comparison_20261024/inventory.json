@@ -1,0 +1,621 @@
+{
+  "date": "2026-10-24",
+  "sources": [
+    {
+      "source": {
+        "path": "assets/test1_beach/test1_front_foam_sparse_mesh.tres",
+        "bytes": 1354758,
+        "sha256": "f343b5354ad4b18da405bd538d79e021112f58b39d129f307d248a13261f7b1b"
+      },
+      "snapshot": {
+        "path": "docs/competitor/evidence/foam_comparison_20261024/sources/assets/test1_beach/test1_front_foam_sparse_mesh.tres",
+        "bytes": 1354758,
+        "sha256": "f343b5354ad4b18da405bd538d79e021112f58b39d129f307d248a13261f7b1b"
+      }
+    },
+    {
+      "source": {
+        "path": "assets/unified_edit/presentation/main.json",
+        "bytes": 149891,
+        "sha256": "0bacfb54376cba9772e072c25b1b7ed03813e1581f7e8ed28086c700ee741c12"
+      },
+      "snapshot": {
+        "path": "docs/competitor/evidence/foam_comparison_20261024/sources/assets/unified_edit/presentation/main.json",
+        "bytes": 149891,
+        "sha256": "0bacfb54376cba9772e072c25b1b7ed03813e1581f7e8ed28086c700ee741c12"
+      }
+    },
+    {
+      "source": {
+        "path": "assets/unified_edit/presentation/test1_geometry.json",
+        "bytes": 151620,
+        "sha256": "01a97e2e77afdab688ce9c2ce16762b38094c669d9b3e131ebbf9236c4785ebd"
+      },
+      "snapshot": {
+        "path": "docs/competitor/evidence/foam_comparison_20261024/sources/assets/unified_edit/presentation/test1_geometry.json",
+        "bytes": 151620,
+        "sha256": "01a97e2e77afdab688ce9c2ce16762b38094c669d9b3e131ebbf9236c4785ebd"
+      }
+    },
+    {
+      "source": {
+        "path": "assets/water_material_natural_candidate/async_rdc_water.gdshader",
+        "bytes": 71029,
+        "sha256": "26a503bd375f88e43f7b1a7fdac1812fd2d7da4ad4217423aa5ae6d398ed0a61"
+      },
+      "snapshot": {
+        "path": "docs/competitor/evidence/foam_comparison_20261024/sources/assets/water_material_natural_candidate/async_rdc_water.gdshader",
+        "bytes": 71029,
+        "sha256": "26a503bd375f88e43f7b1a7fdac1812fd2d7da4ad4217423aa5ae6d398ed0a61"
+      }
+    },
+    {
+      "source": {
+        "path": "assets/water_material_natural_candidate/contact_shape.gdshader",
+        "bytes": 15681,
+        "sha256": "df877260fd31aae4785dc937cc23c7d24e742ed7d16895f612ebb6e600e9fba8"
+      },
+      "snapshot": {
+        "path": "docs/competitor/evidence/foam_comparison_20261024/sources/assets/water_material_natural_candidate/contact_shape.gdshader",
+        "bytes": 15681,
+        "sha256": "df877260fd31aae4785dc937cc23c7d24e742ed7d16895f612ebb6e600e9fba8"
+      }
+    },
+    {
+      "source": {
+        "path": "assets/water_material_natural_candidate/foam_distribution.gdshader",
+        "bytes": 9063,
+        "sha256": "55077448b1b78594922c05db6bcfac25822d9742d2aeef2e3aea7dbf2191ef65"
+      },
+      "snapshot": {
+        "path": "docs/competitor/evidence/foam_comparison_20261024/sources/assets/water_material_natural_candidate/foam_distribution.gdshader",
+        "bytes": 9063,
+        "sha256": "55077448b1b78594922c05db6bcfac25822d9742d2aeef2e3aea7dbf2191ef65"
+      }
+    },
+    {
+      "source": {
+        "path": "scenes/unified_edit/presentation/main.tscn",
+        "bytes": 15466368,
+        "sha256": "926f1a831ca4fe16bd2ad403fdc4fd04c223db2c4e0b98908b75559155cdc8de"
+      },
+      "snapshot": {
+        "path": "docs/competitor/evidence/foam_comparison_20261024/sources/scenes/unified_edit/presentation/main.tscn",
+        "bytes": 15466368,
+        "sha256": "926f1a831ca4fe16bd2ad403fdc4fd04c223db2c4e0b98908b75559155cdc8de"
+      }
+    },
+    {
+      "source": {
+        "path": "scenes/unified_edit/presentation/test1_geometry.tscn",
+        "bytes": 120443,
+        "sha256": "a2fa48761c669326d5c432e31ccf5a368d558d7c32fdd8e473f41499cd673cb0"
+      },
+      "snapshot": {
+        "path": "docs/competitor/evidence/foam_comparison_20261024/sources/scenes/unified_edit/presentation/test1_geometry.tscn",
+        "bytes": 120443,
+        "sha256": "a2fa48761c669326d5c432e31ccf5a368d558d7c32fdd8e473f41499cd673cb0"
+      }
+    },
+    {
+      "source": {
+        "path": "scripts/beach/unified_playable_entry.gd",
+        "bytes": 32844,
+        "sha256": "3141e87aeccaedacd0b5022f63e494f951507d5eeaffb6d3dbbf9f81c86a4b0f"
+      },
+      "snapshot": {
+        "path": "docs/competitor/evidence/foam_comparison_20261024/sources/scripts/beach/unified_playable_entry.gd",
+        "bytes": 32844,
+        "sha256": "3141e87aeccaedacd0b5022f63e494f951507d5eeaffb6d3dbbf9f81c86a4b0f"
+      }
+    },
+    {
+      "source": {
+        "path": "scripts/simulation/unified_edit/visuals.gd",
+        "bytes": 15623,
+        "sha256": "ed42b02cf5a0e6b65fb1bdb4121722637ae821e0615e52e624292729d8431738"
+      },
+      "snapshot": {
+        "path": "docs/competitor/evidence/foam_comparison_20261024/sources/scripts/simulation/unified_edit/visuals.gd",
+        "bytes": 15623,
+        "sha256": "ed42b02cf5a0e6b65fb1bdb4121722637ae821e0615e52e624292729d8431738"
+      }
+    },
+    {
+      "source": {
+        "path": "shaders/simulation/visual_foam_step.glsl",
+        "bytes": 4040,
+        "sha256": "19d7bec7f157791f75e0b4a63bd04c7ae8dc06eb82e016f1ea96ae8174e6edb0"
+      },
+      "snapshot": {
+        "path": "docs/competitor/evidence/foam_comparison_20261024/sources/shaders/simulation/visual_foam_step.glsl",
+        "bytes": 4040,
+        "sha256": "19d7bec7f157791f75e0b4a63bd04c7ae8dc06eb82e016f1ea96ae8174e6edb0"
+      }
+    },
+    {
+      "source": {
+        "path": "tests/visual_water_alignment/prototypes/reference_local_front_x.glsl",
+        "bytes": 1639,
+        "sha256": "1ca06648fc517bc6d01b66780af1d1e66cfe2978ddd2f00e5ac763658799d13d"
+      },
+      "snapshot": {
+        "path": "docs/competitor/evidence/foam_comparison_20261024/sources/tests/visual_water_alignment/prototypes/reference_local_front_x.glsl",
+        "bytes": 1639,
+        "sha256": "1ca06648fc517bc6d01b66780af1d1e66cfe2978ddd2f00e5ac763658799d13d"
+      }
+    },
+    {
+      "source": {
+        "path": "tests/visual_water_alignment/prototypes/reference_local_front_x_wide.glsl",
+        "bytes": 1709,
+        "sha256": "3e8c3729eb40b07a36772aa25ae8c3f10b5d3f137e7b19721669df6ed4098004"
+      },
+      "snapshot": {
+        "path": "docs/competitor/evidence/foam_comparison_20261024/sources/tests/visual_water_alignment/prototypes/reference_local_front_x_wide.glsl",
+        "bytes": 1709,
+        "sha256": "3e8c3729eb40b07a36772aa25ae8c3f10b5d3f137e7b19721669df6ed4098004"
+      }
+    },
+    {
+      "source": {
+        "path": "tests/visual_water_alignment/prototypes/reference_local_front_z.glsl",
+        "bytes": 933,
+        "sha256": "dc986bfa7e64e6f05f814a1eed3cef2eef1bd5e72025a1c9475d90c4855ddfae"
+      },
+      "snapshot": {
+        "path": "docs/competitor/evidence/foam_comparison_20261024/sources/tests/visual_water_alignment/prototypes/reference_local_front_z.glsl",
+        "bytes": 933,
+        "sha256": "dc986bfa7e64e6f05f814a1eed3cef2eef1bd5e72025a1c9475d90c4855ddfae"
+      }
+    }
+  ],
+  "tools": [
+    {
+      "path": "docs/competitor/tools/export_foam_comparison.py",
+      "bytes": 5990,
+      "sha256": "8b3043aee8ce14a8c9b84d34509fd21294294d2cf014c8ca486fdfefb87bdc13"
+    },
+    {
+      "path": "docs/competitor/tools/probe_foam_comparison.gd",
+      "bytes": 3318,
+      "sha256": "96e37b2fd0ba3e5d92ea8321af01f92476de8eabb48371304d0cf7a402eb901e"
+    },
+    {
+      "path": "docs/competitor/tools/analyze_foam_comparison.py",
+      "bytes": 7014,
+      "sha256": "80ad8514bfedf67096c979015a989d1ceeb37c24816016c6d759365252f94b21"
+    }
+  ],
+  "competitor_manifest": "rdc/manifest.json",
+  "probe": "docs/competitor/tools/probe_foam_comparison.gd",
+  "commands": [
+    "godot.windows.opt.tools.64.exe --path D:/godot/project/sandcastle --script res://docs/competitor/tools/probe_foam_comparison.gd -- --scene=main --output=res://docs/competitor/evidence/foam_comparison_20261024/main",
+    "godot.windows.opt.tools.64.exe --path D:/godot/project/sandcastle --script res://docs/competitor/tools/probe_foam_comparison.gd -- --scene=test1_geometry --output=res://docs/competitor/evidence/foam_comparison_20261024/geometry",
+    "python -X utf8 docs/competitor/tools/analyze_foam_comparison.py"
+  ],
+  "attempts": [
+    {
+      "kind": "initial_renderdoc_launch",
+      "status": "no output observed",
+      "detail": "Initial script used __file__ before report initialization; changed to an explicit script path. No raw evidence was produced by that attempt; exact UI exception was not captured."
+    }
+  ],
+  "files": [
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/.gdignore",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/analysis.json",
+      "bytes": 14505,
+      "sha256": "d33ee7f88e661f93aaa94aada9317bf10a1284417e768247ef45e2c82b5300ea"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/comparison.png",
+      "bytes": 1327041,
+      "sha256": "4ef657a41cc39f5b570673175f9cfa4da5650f5a81762e6851cb36081075faeb"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/geometry/error.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/geometry/probe.json",
+      "bytes": 70725,
+      "sha256": "9d6c4a287d735e7687fb86a7612baec4f0f454a884459f62e9dd89d7e585fb0d"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/geometry/run.log",
+      "bytes": 1144,
+      "sha256": "344f2984a61fa711520fcfbff5b42e82878b6b31933163f64351ecf7053e20c9"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/geometry/t0.png",
+      "bytes": 433139,
+      "sha256": "5a95b479c002ef6e240bec5132d928ffe83556887b9dc7bcf3c5dc473956769e"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/geometry/t120.png",
+      "bytes": 514155,
+      "sha256": "86a3aed43c4e1cb86bb9b7dc56c1a1fae781f7f35015c716dfef0bdde8738f02"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/geometry/t240.png",
+      "bytes": 501969,
+      "sha256": "7dab11dc98a7d63e409f85331fea498d937a51e45eff7b1abb006e54894769c0"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/geometry/t240_no_PrototypeFrontFoamDense.png",
+      "bytes": 499447,
+      "sha256": "992b3cece00bb0757a6c2f3e078585ca0142645cd430231bf044cb0435eca55b"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/geometry/t240_no_ShoreContactOverlay.png",
+      "bytes": 501132,
+      "sha256": "3ed82adcddb291a70d30e9d26e57c9f2b6d2e143f290da0be3f60d32679b2bcf"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/geometry/t240_no_water_foam.png",
+      "bytes": 500850,
+      "sha256": "2d19e2d6c154cd043399bfe8b904fe0c3b172a1e57fe1d8aaa9e64a89c3f1642"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/geometry/t240_restored.png",
+      "bytes": 501969,
+      "sha256": "7dab11dc98a7d63e409f85331fea498d937a51e45eff7b1abb006e54894769c0"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/geometry/t360.png",
+      "bytes": 524976,
+      "sha256": "df02fbcad7c3819293695f929a003d538b9c5e3df775051903202e0b582b6035"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/geometry/t360_no_PrototypeFrontFoamDense.png",
+      "bytes": 520588,
+      "sha256": "bd1e027880533805087aa550dab83a6db1ccf1e5b5888c28f8b0da2c3f72af4b"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/geometry/t360_no_ShoreContactOverlay.png",
+      "bytes": 522719,
+      "sha256": "e7f21f33f04c2a4b076a3d3a8bdffbbaaf1e006f24928d7ffdc1dd6e9cb67870"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/geometry/t360_no_water_foam.png",
+      "bytes": 523023,
+      "sha256": "b884092007a815ab84ab3607412e2fd389baf9c6ae559911f0d762759ca959bc"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/geometry/t360_restored.png",
+      "bytes": 524976,
+      "sha256": "df02fbcad7c3819293695f929a003d538b9c5e3df775051903202e0b582b6035"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/main/probe.json",
+      "bytes": 71450,
+      "sha256": "b1f734be452333296698d3a09a01f3d91fd514407e3bc0aa6a1bd235617d6a9e"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/main/run.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/main/t0.png",
+      "bytes": 749128,
+      "sha256": "31930669e43a773f1ae431daf5b58a2a217c62b18059351cfa3cbad72ababeb6"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/main/t120.png",
+      "bytes": 851864,
+      "sha256": "2c313fb7ebf384d70fe230b4a339aae775443b6e1769d88546c7a8ef8c51c780"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/main/t240.png",
+      "bytes": 846863,
+      "sha256": "557d773575ce4c7d32cf06ac95303fd9bdddfc7c8815953d65c5442682ee25a2"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/main/t240_no_PrototypeFrontFoamDense.png",
+      "bytes": 846846,
+      "sha256": "2c1ee4f0fde0cb816b5ee5808437317984b5d22d19c5d5f1bbb21c7c9cd32068"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/main/t240_no_ShoreContactOverlay.png",
+      "bytes": 846524,
+      "sha256": "0712584f448c0273a8077363328d58a9566098c13c472b73abb121e705d5dded"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/main/t240_no_water_foam.png",
+      "bytes": 846863,
+      "sha256": "557d773575ce4c7d32cf06ac95303fd9bdddfc7c8815953d65c5442682ee25a2"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/main/t240_restored.png",
+      "bytes": 846863,
+      "sha256": "557d773575ce4c7d32cf06ac95303fd9bdddfc7c8815953d65c5442682ee25a2"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/main/t360.png",
+      "bytes": 863516,
+      "sha256": "af2118b26ad6412df7371e71d86f133ba313e4f16d3946be5703cff3ae5c36ac"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/main/t360_no_PrototypeFrontFoamDense.png",
+      "bytes": 863361,
+      "sha256": "22084ca7152955229d07329b8d81988b8a9852b043a1f6646d3d622e40a94975"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/main/t360_no_ShoreContactOverlay.png",
+      "bytes": 862770,
+      "sha256": "4ecf3880102f2bb266c81ff67e0c2cbb1cb70c164b337c6fa7fc3c4a49a84415"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/main/t360_no_water_foam.png",
+      "bytes": 863468,
+      "sha256": "6ff18a331e010b44cf0d20a31a0347b21737c83548104b7d4b4eb2ae9c0f34e8"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/main/t360_restored.png",
+      "bytes": 863516,
+      "sha256": "af2118b26ad6412df7371e71d86f133ba313e4f16d3946be5703cff3ae5c36ac"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/rdc/capture_thumbnail.png",
+      "bytes": 3092510,
+      "sha256": "c60827834fa2f6d52a0dfa1c58784bb16cd404c4475d907bc37fb22ddb3d23e5"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/rdc/e1550_cs.asm",
+      "bytes": 6480,
+      "sha256": "50f05c5645c3bef39d8ab509be462df6c93807ad6a9a3184f3bdaf1993887e70"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/rdc/e1550_cs.dxbc",
+      "bytes": 5072,
+      "sha256": "3c09ec7596cba811b72e42ba020bd818c8bfd6abdfe608a07d304dd16e406aeb"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/rdc/e1550_cs_cb0.bin",
+      "bytes": 2448,
+      "sha256": "e79d8626af882882069b9c5c83062215e3d556ff355cff2b4f3d36cf7f4c1ae4"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/rdc/e1550_cs_read_139573.bin",
+      "bytes": 2097152,
+      "sha256": "84a1cc25d7184248a68b0b66690625556b611e20c83222ce598ef5038424bf64"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/rdc/e1550_cs_write_139582.bin",
+      "bytes": 8388608,
+      "sha256": "8bdd276437285d69383a5cb1c3c1a011235e7a3a66ef5a0379d4d0f7d2eb108a"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/rdc/e1634_cs.asm",
+      "bytes": 1853,
+      "sha256": "59fc54a0003e0ff698c6e60becd966c549019f10c45402d623da9dd2a46595c4"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/rdc/e1634_cs.dxbc",
+      "bytes": 1304,
+      "sha256": "aca0e9ba7379cad90f74197b910a480e1fcbc059e47341cab71682c5968755c1"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/rdc/e1634_cs_cb0.bin",
+      "bytes": 2416,
+      "sha256": "ed334debf2bdfc600537b26d1a4917b111389d4fb429dd4f6c93cd37cd8f2cfa"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/rdc/e1634_cs_write_139575.bin",
+      "bytes": 2097152,
+      "sha256": "80323eb041cffcd676b7944954e334b8082ea6131eabb8f24932aff8091ed961"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/rdc/e1634_cs_write_139576.bin",
+      "bytes": 2097152,
+      "sha256": "de52684f707ebf7fc342787b5dfcb9dea49abd6b0a52ebdcff2d5157a5916623"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/rdc/e1634_cs_write_139579.bin",
+      "bytes": 20,
+      "sha256": "6e72e9d9b4beebae55bd48c36402cdcb418a5a58bdc41c307ac436aff30344f8"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/rdc/e1634_cs_write_139581.bin",
+      "bytes": 20,
+      "sha256": "6e72e9d9b4beebae55bd48c36402cdcb418a5a58bdc41c307ac436aff30344f8"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/rdc/e1634_cs_write_139582.bin",
+      "bytes": 8388608,
+      "sha256": "56c5e9017b267807a7de5756dc8edc3c0a2324b3e78c4968fc62cea426ac4fd5"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/rdc/e3867_cs.asm",
+      "bytes": 8599,
+      "sha256": "7cd4270b7bf36c1b1288f44fe2a34597359fe55933107ab7dff90cbd3579b968"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/rdc/e3867_cs.dxbc",
+      "bytes": 6056,
+      "sha256": "e5b7cabc819c0a16d344a6c8dd44ff163b58973cb9c11212d72d155e29d85d59"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/rdc/e3867_cs_cb0.bin",
+      "bytes": 2240,
+      "sha256": "4089bce54fb6757b1a11ef941b05e6163c7c18f9acb1f3c04b77174da413c24e"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/rdc/e3867_cs_read_139720.bin",
+      "bytes": 262144,
+      "sha256": "77fb1885fbd87339581e67e1f1d290f69262c1dff40a11dee03c36d65f70e1a4"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/rdc/e3867_cs_write_139722.bin",
+      "bytes": 262144,
+      "sha256": "8e04ac10e887f3272fd7fcb4d7c749d14f707f643980ca4f76234b3b0750e6b9"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/rdc/e3872_cs.asm",
+      "bytes": 1061,
+      "sha256": "7a88235af62ad8e6f4277e22dcfbde71644f6224e65a201e86459830f8fa22a6"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/rdc/e3872_cs.dxbc",
+      "bytes": 548,
+      "sha256": "67486a3fdb4eca905139ff92faa67a32af42827ca4343c8d589129223f267415"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/rdc/e3872_cs_write_139722.bin",
+      "bytes": 262144,
+      "sha256": "b09a3364bfc079267f44c02ec70bd091111a24643f329f6b81e12e8f93dc7100"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/rdc/e3872_cs_write_139723.bin",
+      "bytes": 262144,
+      "sha256": "9f211d303b8384813ad62695a9c55eba6a80e038bccb54d7eee49550a65e1f0d"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/rdc/e6196_ps.asm",
+      "bytes": 4115,
+      "sha256": "7561583efdb293fceb1773868d451217009f895e0bebbc1d5c4c11977824babf"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/rdc/e6196_ps.dxbc",
+      "bytes": 3180,
+      "sha256": "d3650a9711d811e028331d5ac0e1919f61c703c10ce4b549bb68cbd918200bea"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/rdc/e6196_ps_cb0.bin",
+      "bytes": 2240,
+      "sha256": "ad0c9e61e4e176162f4fc5079ffd974dc9609029a95f63bf0abbb0f584e71602"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/rdc/e6196_ps_read_139590.bin",
+      "bytes": 8192,
+      "sha256": "5292a36471ca0d7b2c4a1bcb5ca088d4348696c7d5253e19a3a3005bc2d829cd"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/rdc/e6196_ps_read_139723.bin",
+      "bytes": 262144,
+      "sha256": "351dedd96d50c977a0499b8fce6876675a01b4c91418bb45a8248b959403b150"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/rdc/e6196_vs.asm",
+      "bytes": 1431,
+      "sha256": "ae13a6fcdf6b1499df6fa9273ba854856634084153ab9781514a5f4c66074ab5"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/rdc/e6196_vs.dxbc",
+      "bytes": 1112,
+      "sha256": "58425558f8c03af4d8b19adaac35c1d5824bc011160dfe5cdf4fe1abe2de022c"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/rdc/e6196_vs_cb0.bin",
+      "bytes": 1056,
+      "sha256": "be8b553a9fd2898d7e7aa892b7ef397c8966fec4f210c63072c9962527452b60"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/rdc/e6196_vs_cb1.bin",
+      "bytes": 64,
+      "sha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/rdc/e6196_vs_read_139575.bin",
+      "bytes": 2097152,
+      "sha256": "79491c22b235a0d5cfbd05d250f7781d5ad8537978400adc81018db78b4617e8"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/rdc/e6196_vs_read_139582.bin",
+      "bytes": 8388608,
+      "sha256": "dd6dc0eccaa6e7e8727300f62d62f8c3c5bb40d515830dad5d5dca0f2b1b0817"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/rdc/e6196_vsout.bin",
+      "bytes": 4792000,
+      "sha256": "5f4b9737c5713e3e11e21688cafb428522fb7ea9752b57a8a9fe756d36908250"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/rdc/manifest.json",
+      "bytes": 27295,
+      "sha256": "c6eee98860b3ac2457cd7622fbc0e7da50cb1c1b4dcdc523a58a4fd92ac69f23"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/rdc/manifest_partial.json",
+      "bytes": 26748,
+      "sha256": "728ce05ad19643832f243056b3a7ed8f8c99ff3a89cf6a69c5591d011b280ae9"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/sources/assets/test1_beach/test1_front_foam_sparse_mesh.tres",
+      "bytes": 1354758,
+      "sha256": "f343b5354ad4b18da405bd538d79e021112f58b39d129f307d248a13261f7b1b"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/sources/assets/unified_edit/presentation/main.json",
+      "bytes": 149891,
+      "sha256": "0bacfb54376cba9772e072c25b1b7ed03813e1581f7e8ed28086c700ee741c12"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/sources/assets/unified_edit/presentation/test1_geometry.json",
+      "bytes": 151620,
+      "sha256": "01a97e2e77afdab688ce9c2ce16762b38094c669d9b3e131ebbf9236c4785ebd"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/sources/assets/water_material_natural_candidate/async_rdc_water.gdshader",
+      "bytes": 71029,
+      "sha256": "26a503bd375f88e43f7b1a7fdac1812fd2d7da4ad4217423aa5ae6d398ed0a61"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/sources/assets/water_material_natural_candidate/contact_shape.gdshader",
+      "bytes": 15681,
+      "sha256": "df877260fd31aae4785dc937cc23c7d24e742ed7d16895f612ebb6e600e9fba8"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/sources/assets/water_material_natural_candidate/foam_distribution.gdshader",
+      "bytes": 9063,
+      "sha256": "55077448b1b78594922c05db6bcfac25822d9742d2aeef2e3aea7dbf2191ef65"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/sources/scenes/unified_edit/presentation/main.tscn",
+      "bytes": 15466368,
+      "sha256": "926f1a831ca4fe16bd2ad403fdc4fd04c223db2c4e0b98908b75559155cdc8de"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/sources/scenes/unified_edit/presentation/test1_geometry.tscn",
+      "bytes": 120443,
+      "sha256": "a2fa48761c669326d5c432e31ccf5a368d558d7c32fdd8e473f41499cd673cb0"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/sources/scripts/beach/unified_playable_entry.gd",
+      "bytes": 32844,
+      "sha256": "3141e87aeccaedacd0b5022f63e494f951507d5eeaffb6d3dbbf9f81c86a4b0f"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/sources/scripts/simulation/unified_edit/visuals.gd",
+      "bytes": 15623,
+      "sha256": "ed42b02cf5a0e6b65fb1bdb4121722637ae821e0615e52e624292729d8431738"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/sources/shaders/simulation/visual_foam_step.glsl",
+      "bytes": 4040,
+      "sha256": "19d7bec7f157791f75e0b4a63bd04c7ae8dc06eb82e016f1ea96ae8174e6edb0"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/sources/tests/visual_water_alignment/prototypes/reference_local_front_x.glsl",
+      "bytes": 1639,
+      "sha256": "1ca06648fc517bc6d01b66780af1d1e66cfe2978ddd2f00e5ac763658799d13d"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/sources/tests/visual_water_alignment/prototypes/reference_local_front_x_wide.glsl",
+      "bytes": 1709,
+      "sha256": "3e8c3729eb40b07a36772aa25ae8c3f10b5d3f137e7b19721669df6ed4098004"
+    },
+    {
+      "path": "docs/competitor/evidence/foam_comparison_20261024/sources/tests/visual_water_alignment/prototypes/reference_local_front_z.glsl",
+      "bytes": 933,
+      "sha256": "dc986bfa7e64e6f05f814a1eed3cef2eef1bd5e72025a1c9475d90c4855ddfae"
+    }
+  ]
+}

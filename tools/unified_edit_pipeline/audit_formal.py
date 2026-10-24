@@ -9,7 +9,7 @@ import zipfile
 from native_variant import VariantReader
 
 ROOT = Path(__file__).resolve().parents[2]
-KEYS = ["main", "test1_capture", "test1_backwash", "test1_geometry"]
+KEYS = ["main", "test1_geometry"]
 FORMAL = {key: "res://scenes/main.tscn" if key == "main" else f"res://scenes/playable/{key}.tscn" for key in KEYS}
 CANDIDATE = {key: f"res://scenes/unified_edit/playable/{key}.tscn" for key in KEYS}
 

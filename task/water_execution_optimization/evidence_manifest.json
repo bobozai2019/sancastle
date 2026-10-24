@@ -1,0 +1,2431 @@
+{
+  "source_output_directory": "D:/godot/project/sandcastle/test_output/water_execution_optimization",
+  "relocation": "Evidence subdirectories preserve original relative layout except final_restart ZIP. Raw path strings are unchanged.",
+  "files": [
+    {
+      "path": ".gdignore",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "baseline/identity.json",
+      "bytes": 1517,
+      "sha256": "863e181dc05ac2c640867495979e1bc6033d5f350ef8a12290723761dc7a6078"
+    },
+    {
+      "path": "baseline/scripts/simulation/unified_edit/coupled.gd",
+      "bytes": 9691,
+      "sha256": "39a016a6e3bcac204192161ccaf5c0e253d167c6257615e51a50f49a71743bb7"
+    },
+    {
+      "path": "baseline/scripts/simulation/unified_edit/water.gd",
+      "bytes": 11164,
+      "sha256": "8b6d8093f3e2518eda1b41f790a2e1affb202f193ffae7b38dd3670faa2a2a6a"
+    },
+    {
+      "path": "baseline/scripts/simulation/unified_edit/water_muscl.gd",
+      "bytes": 9516,
+      "sha256": "1c924c4384a6a5726f4d58337a89af1796ddbadedd01ac28736e1bf97bf08adf"
+    },
+    {
+      "path": "baseline/shaders/simulation/muscl/muscl_math.glslinc",
+      "bytes": 1217,
+      "sha256": "aa864531e88cf8b0cd9adf63431ec7a6db48863aa4fc7e8da9072d1d7a3f9fc0"
+    },
+    {
+      "path": "baseline/shaders/simulation/muscl/muscl_spatial.glslinc",
+      "bytes": 3391,
+      "sha256": "fa016738dbcde7540c37406fb255ee5955660fcf09b936fca5a3d130edaf4797"
+    },
+    {
+      "path": "baseline/shaders/simulation/muscl/muscl_stats.glslinc",
+      "bytes": 801,
+      "sha256": "70e147a8a112354fb8a6dbd2da0dcceb4e2045a8d98f05b903122ad20b6744b1"
+    },
+    {
+      "path": "baseline/shaders/simulation/muscl/rk_decide.glsl",
+      "bytes": 4676,
+      "sha256": "f6f651534ee8e78d531c713bb4979b890c0137d368a7859027c3bf24b0979849"
+    },
+    {
+      "path": "baseline/shaders/simulation/muscl/rk_drain.glsl",
+      "bytes": 536,
+      "sha256": "8a649a8379954fed16f4a18424da70a83a05511043f943f164a9b2ea7b8c0d11"
+    },
+    {
+      "path": "baseline/shaders/simulation/muscl/rk_edge.glsl",
+      "bytes": 1039,
+      "sha256": "c8cd8c28cc8b9290e4db83a994c6f71f4eec78287894818f88211ef008df2a69"
+    },
+    {
+      "path": "baseline/shaders/simulation/muscl/rk_euler.glsl",
+      "bytes": 1754,
+      "sha256": "daf72a12c24352106a2b9e6aa8fbc1a935b5d13b380e2090042c344b553b2d06"
+    },
+    {
+      "path": "baseline/shaders/simulation/muscl/rk_finalize.glsl",
+      "bytes": 3083,
+      "sha256": "0dbffbbb3cf88ad43761ca6f2b6f155fc360c57aebdc5379298ac69823613ae6"
+    },
+    {
+      "path": "baseline/shaders/simulation/muscl/rk_normalize.glsl",
+      "bytes": 1488,
+      "sha256": "517ea7d43c1b42b6aa18bff7259d5b7ab0ee11d13e61769242ed4a4fd9d1840e"
+    },
+    {
+      "path": "baseline/shaders/simulation/muscl/rk_validate.glsl",
+      "bytes": 1075,
+      "sha256": "c53f4fc33334174cd0b458e441a9aa3bf106f0452330638163707829adbd2120"
+    },
+    {
+      "path": "evidence/baseline/capture.json",
+      "bytes": 686042,
+      "sha256": "08653661a61e143aa7c9dd05646b2aa0433e0ccb391d147960420eab34c879e6"
+    },
+    {
+      "path": "evidence/baseline/scene.png",
+      "bytes": 538510,
+      "sha256": "757fd446f469ead569cb8d244085df334da34b0921228eb7d37e4f553ecd30a5"
+    },
+    {
+      "path": "evidence/controlled_candidate/capture.json",
+      "bytes": 827248,
+      "sha256": "59d229529022ab79e1017e15db29e0113171f3ba2cb5a303b24a05396290d584"
+    },
+    {
+      "path": "evidence/controlled_candidate/probe.gd",
+      "bytes": 8665,
+      "sha256": "4c52d6c29fa50617955b20ba1e9f6c1968e20051d9d4467b4157838c14851f8d"
+    },
+    {
+      "path": "evidence/controlled_candidate/run.log",
+      "bytes": 465,
+      "sha256": "b22d420cb6324d69e5d1f8ceaa7a29ba65b686749290c5192170a64efaa5d57c"
+    },
+    {
+      "path": "evidence/controlled_candidate/scene.png",
+      "bytes": 538510,
+      "sha256": "757fd446f469ead569cb8d244085df334da34b0921228eb7d37e4f553ecd30a5"
+    },
+    {
+      "path": "evidence/final_erosion/godot.log",
+      "bytes": 320,
+      "sha256": "7e1df5f544e5d3abe9bc1bba54f76dc4f51acbf90f7c07a6d9260783ec0304d1"
+    },
+    {
+      "path": "evidence/final_erosion/initial_compaction.bin",
+      "bytes": 131072,
+      "sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+    },
+    {
+      "path": "evidence/final_erosion/initial_compaction_spare.bin",
+      "bytes": 131072,
+      "sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+    },
+    {
+      "path": "evidence/final_erosion/initial_control.bin",
+      "bytes": 128,
+      "sha256": "c977a3cd342c166ce2e9393047c9c5de0dfd50d5640fd7f9b6c1048427e312e1"
+    },
+    {
+      "path": "evidence/final_erosion/initial_coupled_dirty.bin",
+      "bytes": 256,
+      "sha256": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1"
+    },
+    {
+      "path": "evidence/final_erosion/initial_coupled_flags.bin",
+      "bytes": 4,
+      "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+    },
+    {
+      "path": "evidence/final_erosion/initial_coupled_support.bin",
+      "bytes": 524288,
+      "sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+    },
+    {
+      "path": "evidence/final_erosion/initial_decision.bin",
+      "bytes": 64,
+      "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b"
+    },
+    {
+      "path": "evidence/final_erosion/initial_flux.bin",
+      "bytes": 1048576,
+      "sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+    },
+    {
+      "path": "evidence/final_erosion/initial_mold_support.bin",
+      "bytes": 524288,
+      "sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+    },
+    {
+      "path": "evidence/final_erosion/initial_mold_support_spare.bin",
+      "bytes": 524288,
+      "sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+    },
+    {
+      "path": "evidence/final_erosion/initial_momentum_x.bin",
+      "bytes": 262144,
+      "sha256": "6b0b5b2a109e5366b05de9eb57c9b9241276a7e885f2697db76ea4002c96685d"
+    },
+    {
+      "path": "evidence/final_erosion/initial_momentum_z.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/final_erosion/initial_obstacle.bin",
+      "bytes": 65536,
+      "sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    {
+      "path": "evidence/final_erosion/initial_rock.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/final_erosion/initial_sand.bin",
+      "bytes": 262144,
+      "sha256": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e"
+    },
+    {
+      "path": "evidence/final_erosion/initial_sand_spare.bin",
+      "bytes": 262144,
+      "sha256": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e"
+    },
+    {
+      "path": "evidence/final_erosion/initial_sediment.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/final_erosion/initial_sediment_spare.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/final_erosion/initial_water.bin",
+      "bytes": 262144,
+      "sha256": "b4b0b2f147c4b7459ed33b2fdd3e7dbb4fab2ba3d005fd70d66926e968646aab"
+    },
+    {
+      "path": "evidence/final_erosion/initial_wetness.bin",
+      "bytes": 131072,
+      "sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+    },
+    {
+      "path": "evidence/final_erosion/initial_wetness_spare.bin",
+      "bytes": 131072,
+      "sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+    },
+    {
+      "path": "evidence/final_erosion/manifest.json",
+      "bytes": 1082,
+      "sha256": "9bfa4128475e245c758cc629f2de35b28e40c1a7c4eb27ec37a317353a4d920c"
+    },
+    {
+      "path": "evidence/final_erosion/probe.gd",
+      "bytes": 9131,
+      "sha256": "ca6717baee4b6ed4ab8cfd32ac297f01a891d2f02118dbfd1ebade6f81b7c741"
+    },
+    {
+      "path": "evidence/final_erosion/result.json",
+      "bytes": 58297,
+      "sha256": "6761cceb76cc5d1fe10284aa7f1945af90247805e04416d6fe992e315e952672"
+    },
+    {
+      "path": "evidence/final_erosion/stdout.txt",
+      "bytes": 327,
+      "sha256": "b6f10bc6bd9aed5be42d97e770ad386775c49cea0fd08e68bb1bea03a57a2d4e"
+    },
+    {
+      "path": "evidence/final_erosion/tick_001_compaction.bin",
+      "bytes": 131072,
+      "sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+    },
+    {
+      "path": "evidence/final_erosion/tick_001_compaction_spare.bin",
+      "bytes": 131072,
+      "sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+    },
+    {
+      "path": "evidence/final_erosion/tick_001_control.bin",
+      "bytes": 128,
+      "sha256": "da458ac1adf2579b91aed4723b9203a0860712d646fc23191fe6911c1a346285"
+    },
+    {
+      "path": "evidence/final_erosion/tick_001_coupled_dirty.bin",
+      "bytes": 256,
+      "sha256": "b70f82a8448c9c4a00d72b6f8cb6d098780d000b7f40a4c56a19913bf85cb0e5"
+    },
+    {
+      "path": "evidence/final_erosion/tick_001_coupled_flags.bin",
+      "bytes": 4,
+      "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+    },
+    {
+      "path": "evidence/final_erosion/tick_001_coupled_support.bin",
+      "bytes": 524288,
+      "sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+    },
+    {
+      "path": "evidence/final_erosion/tick_001_decision.bin",
+      "bytes": 64,
+      "sha256": "dc39e0de9c9936bc533bf07a252503629d790f34d922d22b3738a73cd77ffe0b"
+    },
+    {
+      "path": "evidence/final_erosion/tick_001_flux.bin",
+      "bytes": 1048576,
+      "sha256": "2cb78bc6c8308c044b447abc9cd1bd0bd50c65590496e705c0945af32fee388c"
+    },
+    {
+      "path": "evidence/final_erosion/tick_001_mold_support.bin",
+      "bytes": 524288,
+      "sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+    },
+    {
+      "path": "evidence/final_erosion/tick_001_mold_support_spare.bin",
+      "bytes": 524288,
+      "sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+    },
+    {
+      "path": "evidence/final_erosion/tick_001_momentum_x.bin",
+      "bytes": 262144,
+      "sha256": "d09e3f782b68a0a5c76bc215c4da2a77cd15540e589fa4dc984c0a8fbf464652"
+    },
+    {
+      "path": "evidence/final_erosion/tick_001_momentum_z.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/final_erosion/tick_001_obstacle.bin",
+      "bytes": 65536,
+      "sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    {
+      "path": "evidence/final_erosion/tick_001_rock.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/final_erosion/tick_001_sand.bin",
+      "bytes": 262144,
+      "sha256": "cb65a9375a526501d3ed7a1fef597b58852c0afc42b21616f55fa4c7c7941a42"
+    },
+    {
+      "path": "evidence/final_erosion/tick_001_sand_spare.bin",
+      "bytes": 262144,
+      "sha256": "cb65a9375a526501d3ed7a1fef597b58852c0afc42b21616f55fa4c7c7941a42"
+    },
+    {
+      "path": "evidence/final_erosion/tick_001_sediment.bin",
+      "bytes": 262144,
+      "sha256": "5cd43e9b6e7c8b32987934e3da5b448c395025dc748e7abe5a8a3581b3d170b7"
+    },
+    {
+      "path": "evidence/final_erosion/tick_001_sediment_spare.bin",
+      "bytes": 262144,
+      "sha256": "5cd43e9b6e7c8b32987934e3da5b448c395025dc748e7abe5a8a3581b3d170b7"
+    },
+    {
+      "path": "evidence/final_erosion/tick_001_water.bin",
+      "bytes": 262144,
+      "sha256": "efbf095d330a4f0a3060a29782f51b3073b6b6dd77544bedb5b76a20ed0bf3e5"
+    },
+    {
+      "path": "evidence/final_erosion/tick_001_wetness.bin",
+      "bytes": 131072,
+      "sha256": "c341c370fde0b4a69ae026d928fb423f3c360d7c577f81dc427580260384a660"
+    },
+    {
+      "path": "evidence/final_erosion/tick_001_wetness_spare.bin",
+      "bytes": 131072,
+      "sha256": "c341c370fde0b4a69ae026d928fb423f3c360d7c577f81dc427580260384a660"
+    },
+    {
+      "path": "evidence/final_erosion/tick_002_compaction.bin",
+      "bytes": 131072,
+      "sha256": "82a72a315760176c1e78b7c70f43387e61b53abc14f825c51ee6c9dde555a4f3"
+    },
+    {
+      "path": "evidence/final_erosion/tick_002_compaction_spare.bin",
+      "bytes": 131072,
+      "sha256": "82a72a315760176c1e78b7c70f43387e61b53abc14f825c51ee6c9dde555a4f3"
+    },
+    {
+      "path": "evidence/final_erosion/tick_002_control.bin",
+      "bytes": 128,
+      "sha256": "5cb4e1af61b6e5be4e4c393401e3a71cbaf98e2759ee9cd6df4c5e3492560a98"
+    },
+    {
+      "path": "evidence/final_erosion/tick_002_coupled_dirty.bin",
+      "bytes": 256,
+      "sha256": "b70f82a8448c9c4a00d72b6f8cb6d098780d000b7f40a4c56a19913bf85cb0e5"
+    },
+    {
+      "path": "evidence/final_erosion/tick_002_coupled_flags.bin",
+      "bytes": 4,
+      "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+    },
+    {
+      "path": "evidence/final_erosion/tick_002_coupled_support.bin",
+      "bytes": 524288,
+      "sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+    },
+    {
+      "path": "evidence/final_erosion/tick_002_decision.bin",
+      "bytes": 64,
+      "sha256": "b46abb6077ace6db1163591e824902148b387d5edea95e7fb6507329122ef056"
+    },
+    {
+      "path": "evidence/final_erosion/tick_002_flux.bin",
+      "bytes": 1048576,
+      "sha256": "da244849694d3feebdd7c4f51e987a37c7339e85db3d1a704a9c3671a6b409ff"
+    },
+    {
+      "path": "evidence/final_erosion/tick_002_mold_support.bin",
+      "bytes": 524288,
+      "sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+    },
+    {
+      "path": "evidence/final_erosion/tick_002_mold_support_spare.bin",
+      "bytes": 524288,
+      "sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+    },
+    {
+      "path": "evidence/final_erosion/tick_002_momentum_x.bin",
+      "bytes": 262144,
+      "sha256": "78d9401c415212e669ba67be3dad63db314879b243c76a6d8eedb446a3f0c4ec"
+    },
+    {
+      "path": "evidence/final_erosion/tick_002_momentum_z.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/final_erosion/tick_002_obstacle.bin",
+      "bytes": 65536,
+      "sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    {
+      "path": "evidence/final_erosion/tick_002_rock.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/final_erosion/tick_002_sand.bin",
+      "bytes": 262144,
+      "sha256": "bc8b7c4a36f5ea74136fcc6f84a36dcc6b788993d453c4e839036e5a3341df32"
+    },
+    {
+      "path": "evidence/final_erosion/tick_002_sand_spare.bin",
+      "bytes": 262144,
+      "sha256": "bc8b7c4a36f5ea74136fcc6f84a36dcc6b788993d453c4e839036e5a3341df32"
+    },
+    {
+      "path": "evidence/final_erosion/tick_002_sediment.bin",
+      "bytes": 262144,
+      "sha256": "9521aca1348d83dfe08d02ba67ebe834754f0ee188203074cf5668be7169683e"
+    },
+    {
+      "path": "evidence/final_erosion/tick_002_sediment_spare.bin",
+      "bytes": 262144,
+      "sha256": "9521aca1348d83dfe08d02ba67ebe834754f0ee188203074cf5668be7169683e"
+    },
+    {
+      "path": "evidence/final_erosion/tick_002_water.bin",
+      "bytes": 262144,
+      "sha256": "94b0e8da6c1bc7cd7d07e160fe744c957152709edc4c9a95859e4a3c1889d197"
+    },
+    {
+      "path": "evidence/final_erosion/tick_002_wetness.bin",
+      "bytes": 131072,
+      "sha256": "7aa7568ca3f516748a9db88eaec717e474a2fc02bf7b11c049238572b1563efb"
+    },
+    {
+      "path": "evidence/final_erosion/tick_002_wetness_spare.bin",
+      "bytes": 131072,
+      "sha256": "7aa7568ca3f516748a9db88eaec717e474a2fc02bf7b11c049238572b1563efb"
+    },
+    {
+      "path": "evidence/final_erosion/tick_003_compaction.bin",
+      "bytes": 131072,
+      "sha256": "751f431401ae2e906b9458a723273b5ff6a8d85620e89ac60a6780a09009502c"
+    },
+    {
+      "path": "evidence/final_erosion/tick_003_compaction_spare.bin",
+      "bytes": 131072,
+      "sha256": "751f431401ae2e906b9458a723273b5ff6a8d85620e89ac60a6780a09009502c"
+    },
+    {
+      "path": "evidence/final_erosion/tick_003_control.bin",
+      "bytes": 128,
+      "sha256": "8b220262634b319958a159c1f91531c6db727a1160cf7e65fc67b82eea59d8bc"
+    },
+    {
+      "path": "evidence/final_erosion/tick_003_coupled_dirty.bin",
+      "bytes": 256,
+      "sha256": "b70f82a8448c9c4a00d72b6f8cb6d098780d000b7f40a4c56a19913bf85cb0e5"
+    },
+    {
+      "path": "evidence/final_erosion/tick_003_coupled_flags.bin",
+      "bytes": 4,
+      "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+    },
+    {
+      "path": "evidence/final_erosion/tick_003_coupled_support.bin",
+      "bytes": 524288,
+      "sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+    },
+    {
+      "path": "evidence/final_erosion/tick_003_decision.bin",
+      "bytes": 64,
+      "sha256": "843f1e1134432e4261212cbb46c911a9ac162a274d0d494836db269d1f778c5e"
+    },
+    {
+      "path": "evidence/final_erosion/tick_003_flux.bin",
+      "bytes": 1048576,
+      "sha256": "31eadf2147b49c1d5defafbc4f13127c741a5981dadad52bdfb6701162215333"
+    },
+    {
+      "path": "evidence/final_erosion/tick_003_mold_support.bin",
+      "bytes": 524288,
+      "sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+    },
+    {
+      "path": "evidence/final_erosion/tick_003_mold_support_spare.bin",
+      "bytes": 524288,
+      "sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+    },
+    {
+      "path": "evidence/final_erosion/tick_003_momentum_x.bin",
+      "bytes": 262144,
+      "sha256": "3c194f2ab620255f9f7294de05c30544198afa7b9a71d21970a7cdbb599e71b1"
+    },
+    {
+      "path": "evidence/final_erosion/tick_003_momentum_z.bin",
+      "bytes": 262144,
+      "sha256": "df041e6b1bab1a545092cb5006adfb8ab79b6e7396dacba2d26393138a63ceb1"
+    },
+    {
+      "path": "evidence/final_erosion/tick_003_obstacle.bin",
+      "bytes": 65536,
+      "sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    {
+      "path": "evidence/final_erosion/tick_003_rock.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/final_erosion/tick_003_sand.bin",
+      "bytes": 262144,
+      "sha256": "679821299880142a075d2e995d0f0414b0145e51742827cc8b871d33e580b385"
+    },
+    {
+      "path": "evidence/final_erosion/tick_003_sand_spare.bin",
+      "bytes": 262144,
+      "sha256": "679821299880142a075d2e995d0f0414b0145e51742827cc8b871d33e580b385"
+    },
+    {
+      "path": "evidence/final_erosion/tick_003_sediment.bin",
+      "bytes": 262144,
+      "sha256": "c5775ff3197f13a7a5514efcf63527863f396837823753780c5b4ebf5bf68336"
+    },
+    {
+      "path": "evidence/final_erosion/tick_003_sediment_spare.bin",
+      "bytes": 262144,
+      "sha256": "c5775ff3197f13a7a5514efcf63527863f396837823753780c5b4ebf5bf68336"
+    },
+    {
+      "path": "evidence/final_erosion/tick_003_water.bin",
+      "bytes": 262144,
+      "sha256": "73eb9a71477eec8ddfd33eca6a8f5b17d5871a7366f5e40d6e9efc552ef41ba3"
+    },
+    {
+      "path": "evidence/final_erosion/tick_003_wetness.bin",
+      "bytes": 131072,
+      "sha256": "bd073b51d27ebff72207c649c8ba837139c306842e27ae47613151acf3e1ff46"
+    },
+    {
+      "path": "evidence/final_erosion/tick_003_wetness_spare.bin",
+      "bytes": 131072,
+      "sha256": "bd073b51d27ebff72207c649c8ba837139c306842e27ae47613151acf3e1ff46"
+    },
+    {
+      "path": "evidence/final_exact/exact.json",
+      "bytes": 121383,
+      "sha256": "170f77ca5b118a24e71a535e1a98ed01dae872ea982631bbc7416c7a19365518"
+    },
+    {
+      "path": "evidence/final_exact/probe.gd",
+      "bytes": 11752,
+      "sha256": "ccd624dc84c7570c3de560af8cee6f6eb5b0e8a306ddd542d39e0471083ff2a3"
+    },
+    {
+      "path": "evidence/final_exact/run.log",
+      "bytes": 14754,
+      "sha256": "7a0ea4b91a26177cf3b5a375c32c6461e8d3f6100596b40f8f6a0bf3cc524d76"
+    },
+    {
+      "path": "evidence/final_exact/source_hashes.json",
+      "bytes": 1488,
+      "sha256": "d8798e4fd29d40b55c1ecd7aa75bdbbeda122edcef4597e994c9d2fb54f693db"
+    },
+    {
+      "path": "evidence/final_restart/archive.json",
+      "bytes": 272,
+      "sha256": "83cfa3b22ec0f73d604e42c5abdadf076c1371bddcf7f63b8f6de1d49338107f"
+    },
+    {
+      "path": "evidence/final_restart/comparison.json",
+      "bytes": 3982,
+      "sha256": "fba6b01e91fbb69fa24e3b58429f2121910171cdc0cd782932a8436a1d02ec16"
+    },
+    {
+      "path": "evidence/final_restart/comparison.log",
+      "bytes": 2223,
+      "sha256": "03f3c352e0f9d5ea0eff0bd31f6b12197dec118e5ed2512892b72eb9dc6d46d1"
+    },
+    {
+      "path": "evidence/final_restart/resume-result.json",
+      "bytes": 64243,
+      "sha256": "c9244d4de486113b2f8d84b8abe9ade90dbfe7f5df97709b0599760d09a335a9"
+    },
+    {
+      "path": "evidence/final_restart/resume.log",
+      "bytes": 267,
+      "sha256": "eef0c07266a948815b33627913e74ad2ca11a58ca46a23421d53681f4b1de4f4"
+    },
+    {
+      "path": "evidence/final_restart/seed-result.json",
+      "bytes": 64473,
+      "sha256": "de0d32daa026a6b7ab9bdc21182933b0bf9fff61061a23ef3344e2c3030e990f"
+    },
+    {
+      "path": "evidence/final_restart/seed.log",
+      "bytes": 267,
+      "sha256": "eef0c07266a948815b33627913e74ad2ca11a58ca46a23421d53681f4b1de4f4"
+    },
+    {
+      "path": "evidence/final_restart/source-and-results.zip",
+      "bytes": 3057953,
+      "sha256": "66736ac935fe8488cf7e3f3be075912440ae310f4f17111a33ff1ad5861eee56"
+    },
+    {
+      "path": "evidence/final_restart/source_hashes.json",
+      "bytes": 44865,
+      "sha256": "612e944aebb8d1eebff3ef46a4d7d9b5984e3ca8446a5af59d17f49310fdfa9f"
+    },
+    {
+      "path": "evidence/final_strong_shovel/edited_audit.bin",
+      "bytes": 2048,
+      "sha256": "e5a00aa9991ac8a5ee3109844d84a55583bd20572ad3ffcd42792f3c36b183ad"
+    },
+    {
+      "path": "evidence/final_strong_shovel/edited_control.bin",
+      "bytes": 128,
+      "sha256": "00e9213fea25a6a638deb6bee0c6a2d02d7c1d7b3dc8c6c3d6a33013fb2b0054"
+    },
+    {
+      "path": "evidence/final_strong_shovel/edited_decision.bin",
+      "bytes": 64,
+      "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b"
+    },
+    {
+      "path": "evidence/final_strong_shovel/edited_flux.bin",
+      "bytes": 1048576,
+      "sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+    },
+    {
+      "path": "evidence/final_strong_shovel/edited_momentum_x.bin",
+      "bytes": 262144,
+      "sha256": "bab37abafd831f10f3095418e8bfa1f5b94a69e810e59e25b337fb159492b646"
+    },
+    {
+      "path": "evidence/final_strong_shovel/edited_momentum_z.bin",
+      "bytes": 262144,
+      "sha256": "9d1512777c71ce3899274b8e5ee8e73e684508ddcb6dcf75a7e32232e552f70f"
+    },
+    {
+      "path": "evidence/final_strong_shovel/edited_obstacle.bin",
+      "bytes": 65536,
+      "sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    {
+      "path": "evidence/final_strong_shovel/edited_public_water.bin",
+      "bytes": 262144,
+      "sha256": "33635e51e385b7b916ff777d8e117f783912feb0460e2805ef609a237d500c64"
+    },
+    {
+      "path": "evidence/final_strong_shovel/edited_rock.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/final_strong_shovel/edited_safety.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "evidence/final_strong_shovel/edited_sand.bin",
+      "bytes": 262144,
+      "sha256": "ef273c35a376164c797d5723101466324ecd673da27105504efd21497522a4e1"
+    },
+    {
+      "path": "evidence/final_strong_shovel/edited_sediment.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/final_strong_shovel/edited_trial.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "evidence/final_strong_shovel/edited_water.bin",
+      "bytes": 262144,
+      "sha256": "33635e51e385b7b916ff777d8e117f783912feb0460e2805ef609a237d500c64"
+    },
+    {
+      "path": "evidence/final_strong_shovel/godot.log",
+      "bytes": 318,
+      "sha256": "9575a91daa85875952390c9df695898b0b0cab1c871ea8af8ac51873fdb1b370"
+    },
+    {
+      "path": "evidence/final_strong_shovel/initial_audit.bin",
+      "bytes": 2048,
+      "sha256": "e5a00aa9991ac8a5ee3109844d84a55583bd20572ad3ffcd42792f3c36b183ad"
+    },
+    {
+      "path": "evidence/final_strong_shovel/initial_control.bin",
+      "bytes": 128,
+      "sha256": "c977a3cd342c166ce2e9393047c9c5de0dfd50d5640fd7f9b6c1048427e312e1"
+    },
+    {
+      "path": "evidence/final_strong_shovel/initial_decision.bin",
+      "bytes": 64,
+      "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b"
+    },
+    {
+      "path": "evidence/final_strong_shovel/initial_flux.bin",
+      "bytes": 1048576,
+      "sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+    },
+    {
+      "path": "evidence/final_strong_shovel/initial_momentum_x.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/final_strong_shovel/initial_momentum_z.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/final_strong_shovel/initial_obstacle.bin",
+      "bytes": 65536,
+      "sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    {
+      "path": "evidence/final_strong_shovel/initial_public_water.bin",
+      "bytes": 262144,
+      "sha256": "33635e51e385b7b916ff777d8e117f783912feb0460e2805ef609a237d500c64"
+    },
+    {
+      "path": "evidence/final_strong_shovel/initial_rock.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/final_strong_shovel/initial_safety.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "evidence/final_strong_shovel/initial_sand.bin",
+      "bytes": 262144,
+      "sha256": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e"
+    },
+    {
+      "path": "evidence/final_strong_shovel/initial_sediment.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/final_strong_shovel/initial_trial.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "evidence/final_strong_shovel/initial_water.bin",
+      "bytes": 262144,
+      "sha256": "33635e51e385b7b916ff777d8e117f783912feb0460e2805ef609a237d500c64"
+    },
+    {
+      "path": "evidence/final_strong_shovel/manifest.json",
+      "bytes": 1095,
+      "sha256": "e35e9d7a446e9ed9ecbdd08f0cb09a4fab5c7faa86b2b0b834c06fefce5efb9c"
+    },
+    {
+      "path": "evidence/final_strong_shovel/probe.gd",
+      "bytes": 8741,
+      "sha256": "aa6d617cb829365b29304ffe98860e7e9b845e66bc1b62b1d57c503b59e1feda"
+    },
+    {
+      "path": "evidence/final_strong_shovel/result.json",
+      "bytes": 55331,
+      "sha256": "38a58d84aa9e3fbffaabee7bee6f47fdf966d4df4c5d71fef7fea8ebc2fde94b"
+    },
+    {
+      "path": "evidence/final_strong_shovel/stdout.txt",
+      "bytes": 326,
+      "sha256": "9a58c29f5d257c212ed85baff4647ea8adbff15df4dc9a81ff194e9a8dd6180e"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_001_audit.bin",
+      "bytes": 2048,
+      "sha256": "3cfc8fcf33ab8b5bc011dc11de0fb0d2b762bf496066b4a4d0a0d44c136c848b"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_001_control.bin",
+      "bytes": 128,
+      "sha256": "c98bc9aaaa6acce1296e571a8ce2856af1e8b2941d146777828cd610182305ef"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_001_decision.bin",
+      "bytes": 64,
+      "sha256": "e8391725e19a819e65934f45bf4fba1b08795287ade578a044402c421ac57c03"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_001_flux.bin",
+      "bytes": 1048576,
+      "sha256": "3516c55f25013c6e9be6a63671e599ad8fd493cb1764c5e30e3af39f5fd8d642"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_001_momentum_x.bin",
+      "bytes": 262144,
+      "sha256": "7caaba849406511741b7c4be2192e2abafa53be537ee9216284d7110d674c855"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_001_momentum_z.bin",
+      "bytes": 262144,
+      "sha256": "d02322b3fa1aba3446fa8390d52247c869dd410782e4a5ad6cacc31b05c6bdc2"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_001_obstacle.bin",
+      "bytes": 65536,
+      "sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_001_public_water.bin",
+      "bytes": 262144,
+      "sha256": "dffce0159edf1eae7b85e49205f3ad9908dd3e811242b4b29bf5b356f1575f45"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_001_rock.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_001_safety.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_001_sand.bin",
+      "bytes": 262144,
+      "sha256": "ef273c35a376164c797d5723101466324ecd673da27105504efd21497522a4e1"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_001_sediment.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_001_trial.bin",
+      "bytes": 128,
+      "sha256": "bc917b267afb41031c5d2214c16a5ff58f689b6e834bb0cf72ed93732b5800a1"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_001_water.bin",
+      "bytes": 262144,
+      "sha256": "dffce0159edf1eae7b85e49205f3ad9908dd3e811242b4b29bf5b356f1575f45"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_002_audit.bin",
+      "bytes": 2048,
+      "sha256": "b2957e8bb725717a7f123e10e4e0f774dcbe129b7b41c7f9e37cb5f55a6f407f"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_002_control.bin",
+      "bytes": 128,
+      "sha256": "e2a7d283b6951fc5d21f5da7f4031b7d00f89a31883f3d69d497946e306666bb"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_002_decision.bin",
+      "bytes": 64,
+      "sha256": "6d0ee2c70fbe7788cdf477ef3676d0ba6d404eed17dd4244a958125ab8d35308"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_002_flux.bin",
+      "bytes": 1048576,
+      "sha256": "78fc7bbad76dee2264beb055bb68a96fefd3ac260898ee322ddaf3e7158a6128"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_002_momentum_x.bin",
+      "bytes": 262144,
+      "sha256": "641b4039b7c1cd1379ab4d04fd4d2942b4344c9c1ef8c79853bf46a4b301fd56"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_002_momentum_z.bin",
+      "bytes": 262144,
+      "sha256": "1ac00ff158d2371754bf7a3eb1349d4d4c9d0b02c1435320acf86a4645a226d9"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_002_obstacle.bin",
+      "bytes": 65536,
+      "sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_002_public_water.bin",
+      "bytes": 262144,
+      "sha256": "0a6dca894bfbc2cbae47b7651abe191b39925170db37e5130105b041cedef21f"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_002_rock.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_002_safety.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_002_sand.bin",
+      "bytes": 262144,
+      "sha256": "ef273c35a376164c797d5723101466324ecd673da27105504efd21497522a4e1"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_002_sediment.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_002_trial.bin",
+      "bytes": 128,
+      "sha256": "249156b0716e6c5871026a59ec59d1fa08cb51710dedf53e9aba7cacd5eb485b"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_002_water.bin",
+      "bytes": 262144,
+      "sha256": "0a6dca894bfbc2cbae47b7651abe191b39925170db37e5130105b041cedef21f"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_003_audit.bin",
+      "bytes": 2048,
+      "sha256": "5a93c9712e9ba28c9f9855e4b3f1a59d4622b60f5c24131f5c3f7d94a2cc8a28"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_003_control.bin",
+      "bytes": 128,
+      "sha256": "ae3da7219fa5bc82f50b4244d7d8092a24dee9146b4c4ed3fa218321f985e9f8"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_003_decision.bin",
+      "bytes": 64,
+      "sha256": "7df104c1db36311088364786f4ad8d9ca9973f228f5bfded961246dd59cf4816"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_003_flux.bin",
+      "bytes": 1048576,
+      "sha256": "1c7a2ee98d1830ce39e14e554cfb1db8fe44f7844c5e3defa8fbf172b11180bf"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_003_momentum_x.bin",
+      "bytes": 262144,
+      "sha256": "858ac11bdb9ed9ccfeeb701475a30c668dd386938a22c64d4002e11c09f7cdd6"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_003_momentum_z.bin",
+      "bytes": 262144,
+      "sha256": "cd1722b03ed434420da091dbd3fec02bf8fb635f1763d69527c9782de0fd8993"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_003_obstacle.bin",
+      "bytes": 65536,
+      "sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_003_public_water.bin",
+      "bytes": 262144,
+      "sha256": "d0bd719bc02108aa8ae2db4f8a0e08f80873b2008f50edb2d69d18c09b5a309f"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_003_rock.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_003_safety.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_003_sand.bin",
+      "bytes": 262144,
+      "sha256": "ef273c35a376164c797d5723101466324ecd673da27105504efd21497522a4e1"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_003_sediment.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_003_trial.bin",
+      "bytes": 128,
+      "sha256": "5b7dbb47586682ad3b86780d354e7482b4094ca88d4c7976f82610cc3c2a0f1d"
+    },
+    {
+      "path": "evidence/final_strong_shovel/tick_003_water.bin",
+      "bytes": 262144,
+      "sha256": "d0bd719bc02108aa8ae2db4f8a0e08f80873b2008f50edb2d69d18c09b5a309f"
+    },
+    {
+      "path": "evidence/process_results.json",
+      "bytes": 2612,
+      "sha256": "3ea057730deb82e44fde5f2b048fe766c2b75b534c7e672fea2b9f1a9aaeaa69"
+    },
+    {
+      "path": "evidence/reverse_baseline/capture.json",
+      "bytes": 622196,
+      "sha256": "fd3f2a1b564d8a4e5e13d4801a2c2f7c2adb78740ce3cac3317d9d30df695ef8"
+    },
+    {
+      "path": "evidence/reverse_baseline/probe.gd",
+      "bytes": 8580,
+      "sha256": "b82e00df795caa2ac6b2c2bb1208e6ddd7984198d2214aac4d64c86e55812842"
+    },
+    {
+      "path": "evidence/reverse_baseline/run.log",
+      "bytes": 461,
+      "sha256": "c97326c5612e80f9e2a78f44f10f664aaadc983d62eebf97d6ec4db96887d0d3"
+    },
+    {
+      "path": "evidence/reverse_baseline/scene.png",
+      "bytes": 539299,
+      "sha256": "87b25b514aee9f03c417ad4d34b289e1fae7ad6b42a8b8cae6c2ced520972601"
+    },
+    {
+      "path": "evidence/shader_compile/baseline_rk_decide.glsl",
+      "bytes": 6625,
+      "sha256": "9bf6442627f519bd973c2d979ecf808cd5eae7ab759a42c827c721909301ea39"
+    },
+    {
+      "path": "evidence/shader_compile/baseline_rk_decide.spv",
+      "bytes": 23380,
+      "sha256": "db2e75acb5ed80da2437b15295f3d6d7b0dc3e6ec1b5e88ad34c2041f78c1811"
+    },
+    {
+      "path": "evidence/shader_compile/baseline_rk_edge.glsl",
+      "bytes": 6347,
+      "sha256": "2d5f85436edf4923429331c5f90d0594b8aaff52a9a49bc42fef18d19d1049f0"
+    },
+    {
+      "path": "evidence/shader_compile/baseline_rk_edge.spv",
+      "bytes": 23876,
+      "sha256": "1b7b2704cb9cb5b89460279f8ec31335ab388127405f69ca1a69f543deec5cbb"
+    },
+    {
+      "path": "evidence/shader_compile/baseline_rk_euler.glsl",
+      "bytes": 7062,
+      "sha256": "b7c8e674914bb8a9bfed13ba47f546d99577291e01cd4628d26da7d8dbffa8ba"
+    },
+    {
+      "path": "evidence/shader_compile/baseline_rk_euler.spv",
+      "bytes": 25608,
+      "sha256": "dd7ef287ac4c0ebec71422d1f6eca3d937004cd695e9339dc1c11d3237af2203"
+    },
+    {
+      "path": "evidence/shader_compile/candidate_rk_decide.glsl",
+      "bytes": 6856,
+      "sha256": "930becf77cb9104b66169b5c798b8d534f8f78ac9f586c9101db062d2f6bfa4c"
+    },
+    {
+      "path": "evidence/shader_compile/candidate_rk_decide.spv",
+      "bytes": 23932,
+      "sha256": "ee568cbcdb9d3385b8a4f6f6e618e396689e1e4a20e9d7a73f58eb9cd4cb895f"
+    },
+    {
+      "path": "evidence/shader_compile/candidate_rk_edge.glsl",
+      "bytes": 6779,
+      "sha256": "3d0ff1ba53ee02c3d5329fe961b8c86d1c529689caa7da9ddb7b34c79bbbcb1e"
+    },
+    {
+      "path": "evidence/shader_compile/candidate_rk_edge.spv",
+      "bytes": 25188,
+      "sha256": "1b8881c3a6f01e93afed81831a3b631a37b585de14ce11b522c29d09408c9fdf"
+    },
+    {
+      "path": "evidence/shader_compile/candidate_rk_euler.glsl",
+      "bytes": 7563,
+      "sha256": "f3048d21de834b9b01846472887e2e3f17f584f394211e7a425f4f494ab4d1b3"
+    },
+    {
+      "path": "evidence/shader_compile/candidate_rk_euler.spv",
+      "bytes": 25988,
+      "sha256": "080cf05b028f543b705830a84a25dc2e5c43986a365f37e92ef6235b272ea5ab"
+    },
+    {
+      "path": "evidence/shader_compile/result.json",
+      "bytes": 1402,
+      "sha256": "4e128d1a001282fe1ff1b2c08ae37a7ed9feda3904ad5e57ed4d6a854b80c80e"
+    },
+    {
+      "path": "evidence/shader_compile/run.log",
+      "bytes": 147,
+      "sha256": "be6469b3f77519e3c12718a647b4cbfb416b715c6422dd30c0b9e34ec0049096"
+    },
+    {
+      "path": "evidence/step1_cost/capture.json",
+      "bytes": 688270,
+      "sha256": "7cce78194d6dc67e24ef2299b569ecfbda0fec184fba90db3f9d300f51df578c"
+    },
+    {
+      "path": "evidence/step1_cost/run.log",
+      "bytes": 455,
+      "sha256": "80058fce123ec7913317806310ffaec5bb334d65faf5db6b50b36441dcbecebe"
+    },
+    {
+      "path": "evidence/step1_cost/scene.png",
+      "bytes": 538510,
+      "sha256": "757fd446f469ead569cb8d244085df334da34b0921228eb7d37e4f553ecd30a5"
+    },
+    {
+      "path": "evidence/step1_exact/exact.json",
+      "bytes": 119898,
+      "sha256": "a4cf4d7c0a7355ee9c66350cca5b08e8833f4c31766298421cf9162b3a6cfeb6"
+    },
+    {
+      "path": "evidence/step1_exact/probe.gd",
+      "bytes": 10066,
+      "sha256": "c910423cb0af10dd6139e9700b8e984f54e07c542e2ff8860e1b3547edd0707d"
+    },
+    {
+      "path": "evidence/step1_exact/run.log",
+      "bytes": 13604,
+      "sha256": "277721f940cce79629803aa2be87d630219afa7b434602287bc6187febe8b08b"
+    },
+    {
+      "path": "evidence/step1_exact_v2/exact.json",
+      "bytes": 121229,
+      "sha256": "30f04a50ab72173d1cedecccccddd8f9c9946a10d18cc7839dedc9adf98e4559"
+    },
+    {
+      "path": "evidence/step1_exact_v2/probe.gd",
+      "bytes": 10763,
+      "sha256": "0a387203fe3ed5dd74e67019babb69108a8fec66c2d02bd27ec9da7955c9d31d"
+    },
+    {
+      "path": "evidence/step1_exact_v2/run.log",
+      "bytes": 14642,
+      "sha256": "23a61228a5ebda1f81cd065871b2fc45209c6a0a2e7e314b250e1204b658a708"
+    },
+    {
+      "path": "evidence/step1_exact_v2/source_hashes.json",
+      "bytes": 1488,
+      "sha256": "aad685a5b3ef289eb0b7cced7b6d0bb9fe685497ec5945411702bf8716e42e71"
+    },
+    {
+      "path": "evidence/step1_negative/after_fault_audit.bin",
+      "bytes": 2048,
+      "sha256": "4fd6472741ae386561645a6440baaed90b725c2892e8965bd3218040d24ecba2"
+    },
+    {
+      "path": "evidence/step1_negative/after_fault_control.bin",
+      "bytes": 128,
+      "sha256": "677f05e221ba4f5642071e7257fa5e2ee5bd07003dd24b6c1662f4bc7a9afa1c"
+    },
+    {
+      "path": "evidence/step1_negative/after_fault_decision.bin",
+      "bytes": 64,
+      "sha256": "506378b41d5625382ac55d7e1d8743fa5b4ffb5815ae048639921a934fcba68d"
+    },
+    {
+      "path": "evidence/step1_negative/after_fault_flux.bin",
+      "bytes": 1048576,
+      "sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+    },
+    {
+      "path": "evidence/step1_negative/after_fault_momentum_x.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step1_negative/after_fault_momentum_z.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step1_negative/after_fault_obstacle.bin",
+      "bytes": 65536,
+      "sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    {
+      "path": "evidence/step1_negative/after_fault_public_water.bin",
+      "bytes": 262144,
+      "sha256": "b4b0b2f147c4b7459ed33b2fdd3e7dbb4fab2ba3d005fd70d66926e968646aab"
+    },
+    {
+      "path": "evidence/step1_negative/after_fault_rock.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step1_negative/after_fault_safety.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "evidence/step1_negative/after_fault_sand.bin",
+      "bytes": 262144,
+      "sha256": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e"
+    },
+    {
+      "path": "evidence/step1_negative/after_fault_sediment.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step1_negative/after_fault_trial.bin",
+      "bytes": 128,
+      "sha256": "35df84412a88400d73be488807bd9c3522d87ddebee55628ebb53a482891c2ba"
+    },
+    {
+      "path": "evidence/step1_negative/after_fault_water.bin",
+      "bytes": 262144,
+      "sha256": "0a6e80a0ca7fd6cba5631e293f1009a8e4fde5eb726eb8a9b89d7ed607da2971"
+    },
+    {
+      "path": "evidence/step1_negative/godot.log",
+      "bytes": 230,
+      "sha256": "938418cece7f1f4f0bd9c01b5efed5f005f64bb04bea340fe9106b7cf8d8752d"
+    },
+    {
+      "path": "evidence/step1_negative/initial_audit.bin",
+      "bytes": 2048,
+      "sha256": "e5a00aa9991ac8a5ee3109844d84a55583bd20572ad3ffcd42792f3c36b183ad"
+    },
+    {
+      "path": "evidence/step1_negative/initial_control.bin",
+      "bytes": 128,
+      "sha256": "c977a3cd342c166ce2e9393047c9c5de0dfd50d5640fd7f9b6c1048427e312e1"
+    },
+    {
+      "path": "evidence/step1_negative/initial_decision.bin",
+      "bytes": 64,
+      "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b"
+    },
+    {
+      "path": "evidence/step1_negative/initial_flux.bin",
+      "bytes": 1048576,
+      "sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+    },
+    {
+      "path": "evidence/step1_negative/initial_momentum_x.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step1_negative/initial_momentum_z.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step1_negative/initial_obstacle.bin",
+      "bytes": 65536,
+      "sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    {
+      "path": "evidence/step1_negative/initial_public_water.bin",
+      "bytes": 262144,
+      "sha256": "b4b0b2f147c4b7459ed33b2fdd3e7dbb4fab2ba3d005fd70d66926e968646aab"
+    },
+    {
+      "path": "evidence/step1_negative/initial_rock.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step1_negative/initial_safety.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "evidence/step1_negative/initial_sand.bin",
+      "bytes": 262144,
+      "sha256": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e"
+    },
+    {
+      "path": "evidence/step1_negative/initial_sediment.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step1_negative/initial_trial.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "evidence/step1_negative/initial_water.bin",
+      "bytes": 262144,
+      "sha256": "b4b0b2f147c4b7459ed33b2fdd3e7dbb4fab2ba3d005fd70d66926e968646aab"
+    },
+    {
+      "path": "evidence/step1_negative/injected_audit.bin",
+      "bytes": 2048,
+      "sha256": "e5a00aa9991ac8a5ee3109844d84a55583bd20572ad3ffcd42792f3c36b183ad"
+    },
+    {
+      "path": "evidence/step1_negative/injected_control.bin",
+      "bytes": 128,
+      "sha256": "c977a3cd342c166ce2e9393047c9c5de0dfd50d5640fd7f9b6c1048427e312e1"
+    },
+    {
+      "path": "evidence/step1_negative/injected_decision.bin",
+      "bytes": 64,
+      "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b"
+    },
+    {
+      "path": "evidence/step1_negative/injected_flux.bin",
+      "bytes": 1048576,
+      "sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+    },
+    {
+      "path": "evidence/step1_negative/injected_momentum_x.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step1_negative/injected_momentum_z.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step1_negative/injected_obstacle.bin",
+      "bytes": 65536,
+      "sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    {
+      "path": "evidence/step1_negative/injected_public_water.bin",
+      "bytes": 262144,
+      "sha256": "b4b0b2f147c4b7459ed33b2fdd3e7dbb4fab2ba3d005fd70d66926e968646aab"
+    },
+    {
+      "path": "evidence/step1_negative/injected_rock.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step1_negative/injected_safety.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "evidence/step1_negative/injected_sand.bin",
+      "bytes": 262144,
+      "sha256": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e"
+    },
+    {
+      "path": "evidence/step1_negative/injected_sediment.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step1_negative/injected_trial.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "evidence/step1_negative/injected_water.bin",
+      "bytes": 262144,
+      "sha256": "0a6e80a0ca7fd6cba5631e293f1009a8e4fde5eb726eb8a9b89d7ed607da2971"
+    },
+    {
+      "path": "evidence/step1_negative/manifest.json",
+      "bytes": 1081,
+      "sha256": "a20496e6cd5cd507695c1f04287eaf205994c3c99f6443dce893cb65403822f7"
+    },
+    {
+      "path": "evidence/step1_negative/probe.gd",
+      "bytes": 8741,
+      "sha256": "aa6d617cb829365b29304ffe98860e7e9b845e66bc1b62b1d57c503b59e1feda"
+    },
+    {
+      "path": "evidence/step1_negative/result.json",
+      "bytes": 45895,
+      "sha256": "979d04f07d74facafea504bb322b6880e7ef9490954a9959cfc65196cb2810b1"
+    },
+    {
+      "path": "evidence/step1_negative/stdout.txt",
+      "bytes": 236,
+      "sha256": "bb2d48303f07756b36e567ce6c12bc419b4170eba2f113325b7ffde7d4c67a08"
+    },
+    {
+      "path": "evidence/step1_nonfinite/after_fault_audit.bin",
+      "bytes": 2048,
+      "sha256": "f492766a2d28ff3acb7d6b49b47821365b0f57c5a364dc83d5184555b62e914b"
+    },
+    {
+      "path": "evidence/step1_nonfinite/after_fault_control.bin",
+      "bytes": 128,
+      "sha256": "677f05e221ba4f5642071e7257fa5e2ee5bd07003dd24b6c1662f4bc7a9afa1c"
+    },
+    {
+      "path": "evidence/step1_nonfinite/after_fault_decision.bin",
+      "bytes": 64,
+      "sha256": "506378b41d5625382ac55d7e1d8743fa5b4ffb5815ae048639921a934fcba68d"
+    },
+    {
+      "path": "evidence/step1_nonfinite/after_fault_flux.bin",
+      "bytes": 1048576,
+      "sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+    },
+    {
+      "path": "evidence/step1_nonfinite/after_fault_momentum_x.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step1_nonfinite/after_fault_momentum_z.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step1_nonfinite/after_fault_obstacle.bin",
+      "bytes": 65536,
+      "sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    {
+      "path": "evidence/step1_nonfinite/after_fault_public_water.bin",
+      "bytes": 262144,
+      "sha256": "b4b0b2f147c4b7459ed33b2fdd3e7dbb4fab2ba3d005fd70d66926e968646aab"
+    },
+    {
+      "path": "evidence/step1_nonfinite/after_fault_rock.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step1_nonfinite/after_fault_safety.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "evidence/step1_nonfinite/after_fault_sand.bin",
+      "bytes": 262144,
+      "sha256": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e"
+    },
+    {
+      "path": "evidence/step1_nonfinite/after_fault_sediment.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step1_nonfinite/after_fault_trial.bin",
+      "bytes": 128,
+      "sha256": "5dd8a943322b543b00da41aa8fba3cea93adb7e286d94e8601145eb2982263ec"
+    },
+    {
+      "path": "evidence/step1_nonfinite/after_fault_water.bin",
+      "bytes": 262144,
+      "sha256": "cf66268c53e6064f19937ef379917fc8c9e4a5a8685c0add504679bc2bff1dfd"
+    },
+    {
+      "path": "evidence/step1_nonfinite/godot.log",
+      "bytes": 230,
+      "sha256": "938418cece7f1f4f0bd9c01b5efed5f005f64bb04bea340fe9106b7cf8d8752d"
+    },
+    {
+      "path": "evidence/step1_nonfinite/initial_audit.bin",
+      "bytes": 2048,
+      "sha256": "e5a00aa9991ac8a5ee3109844d84a55583bd20572ad3ffcd42792f3c36b183ad"
+    },
+    {
+      "path": "evidence/step1_nonfinite/initial_control.bin",
+      "bytes": 128,
+      "sha256": "c977a3cd342c166ce2e9393047c9c5de0dfd50d5640fd7f9b6c1048427e312e1"
+    },
+    {
+      "path": "evidence/step1_nonfinite/initial_decision.bin",
+      "bytes": 64,
+      "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b"
+    },
+    {
+      "path": "evidence/step1_nonfinite/initial_flux.bin",
+      "bytes": 1048576,
+      "sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+    },
+    {
+      "path": "evidence/step1_nonfinite/initial_momentum_x.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step1_nonfinite/initial_momentum_z.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step1_nonfinite/initial_obstacle.bin",
+      "bytes": 65536,
+      "sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    {
+      "path": "evidence/step1_nonfinite/initial_public_water.bin",
+      "bytes": 262144,
+      "sha256": "b4b0b2f147c4b7459ed33b2fdd3e7dbb4fab2ba3d005fd70d66926e968646aab"
+    },
+    {
+      "path": "evidence/step1_nonfinite/initial_rock.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step1_nonfinite/initial_safety.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "evidence/step1_nonfinite/initial_sand.bin",
+      "bytes": 262144,
+      "sha256": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e"
+    },
+    {
+      "path": "evidence/step1_nonfinite/initial_sediment.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step1_nonfinite/initial_trial.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "evidence/step1_nonfinite/initial_water.bin",
+      "bytes": 262144,
+      "sha256": "b4b0b2f147c4b7459ed33b2fdd3e7dbb4fab2ba3d005fd70d66926e968646aab"
+    },
+    {
+      "path": "evidence/step1_nonfinite/injected_audit.bin",
+      "bytes": 2048,
+      "sha256": "e5a00aa9991ac8a5ee3109844d84a55583bd20572ad3ffcd42792f3c36b183ad"
+    },
+    {
+      "path": "evidence/step1_nonfinite/injected_control.bin",
+      "bytes": 128,
+      "sha256": "c977a3cd342c166ce2e9393047c9c5de0dfd50d5640fd7f9b6c1048427e312e1"
+    },
+    {
+      "path": "evidence/step1_nonfinite/injected_decision.bin",
+      "bytes": 64,
+      "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b"
+    },
+    {
+      "path": "evidence/step1_nonfinite/injected_flux.bin",
+      "bytes": 1048576,
+      "sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+    },
+    {
+      "path": "evidence/step1_nonfinite/injected_momentum_x.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step1_nonfinite/injected_momentum_z.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step1_nonfinite/injected_obstacle.bin",
+      "bytes": 65536,
+      "sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    {
+      "path": "evidence/step1_nonfinite/injected_public_water.bin",
+      "bytes": 262144,
+      "sha256": "b4b0b2f147c4b7459ed33b2fdd3e7dbb4fab2ba3d005fd70d66926e968646aab"
+    },
+    {
+      "path": "evidence/step1_nonfinite/injected_rock.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step1_nonfinite/injected_safety.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "evidence/step1_nonfinite/injected_sand.bin",
+      "bytes": 262144,
+      "sha256": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e"
+    },
+    {
+      "path": "evidence/step1_nonfinite/injected_sediment.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step1_nonfinite/injected_trial.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "evidence/step1_nonfinite/injected_water.bin",
+      "bytes": 262144,
+      "sha256": "cf66268c53e6064f19937ef379917fc8c9e4a5a8685c0add504679bc2bff1dfd"
+    },
+    {
+      "path": "evidence/step1_nonfinite/manifest.json",
+      "bytes": 1082,
+      "sha256": "d6b7dc6414fd7b935a666250fe573bd0dec71f349e4517f036e731593997c9d9"
+    },
+    {
+      "path": "evidence/step1_nonfinite/probe.gd",
+      "bytes": 8741,
+      "sha256": "aa6d617cb829365b29304ffe98860e7e9b845e66bc1b62b1d57c503b59e1feda"
+    },
+    {
+      "path": "evidence/step1_nonfinite/result.json",
+      "bytes": 45938,
+      "sha256": "a9129031cebef4c75a5fb833eddf1ca36f5020b586ce618a8e65ce20f3b5220e"
+    },
+    {
+      "path": "evidence/step1_nonfinite/stdout.txt",
+      "bytes": 236,
+      "sha256": "bb2d48303f07756b36e567ce6c12bc419b4170eba2f113325b7ffde7d4c67a08"
+    },
+    {
+      "path": "evidence/step2_cost/capture.json",
+      "bytes": 818585,
+      "sha256": "8fcd17d6d67c5d67082a4e69c4e47ca384b14f2d6a156f5ad7dec002eba071b0"
+    },
+    {
+      "path": "evidence/step2_cost/run.log",
+      "bytes": 455,
+      "sha256": "f12be3be2048af4cf78f2a793a2a3a4a05ff771d980c29db8faa54987e344d5b"
+    },
+    {
+      "path": "evidence/step2_cost/scene.png",
+      "bytes": 538630,
+      "sha256": "64415879f1ed5b3c084f7d1944327a8563d1fe560224098499e81616a0093005"
+    },
+    {
+      "path": "evidence/step2_exact/exact.json",
+      "bytes": 121226,
+      "sha256": "9d5d06cbf7b0baad7daa82e1cc8d0bd69b845540264105aa608922a7143f69b0"
+    },
+    {
+      "path": "evidence/step2_exact/probe.gd",
+      "bytes": 10763,
+      "sha256": "0a387203fe3ed5dd74e67019babb69108a8fec66c2d02bd27ec9da7955c9d31d"
+    },
+    {
+      "path": "evidence/step2_exact/run.log",
+      "bytes": 14642,
+      "sha256": "ab80228bb5533fd47beb5945673e83330e8cb7a9c38c3c403d7eca77e61d5e29"
+    },
+    {
+      "path": "evidence/step2_exact/source_hashes.json",
+      "bytes": 1488,
+      "sha256": "63a8a77df89f10394813fc8ae31dbf201b35ac070ba48d7f422996bad9cca7ad"
+    },
+    {
+      "path": "evidence/step2_negative/after_fault_audit.bin",
+      "bytes": 2048,
+      "sha256": "4fd6472741ae386561645a6440baaed90b725c2892e8965bd3218040d24ecba2"
+    },
+    {
+      "path": "evidence/step2_negative/after_fault_control.bin",
+      "bytes": 128,
+      "sha256": "677f05e221ba4f5642071e7257fa5e2ee5bd07003dd24b6c1662f4bc7a9afa1c"
+    },
+    {
+      "path": "evidence/step2_negative/after_fault_decision.bin",
+      "bytes": 64,
+      "sha256": "506378b41d5625382ac55d7e1d8743fa5b4ffb5815ae048639921a934fcba68d"
+    },
+    {
+      "path": "evidence/step2_negative/after_fault_flux.bin",
+      "bytes": 1048576,
+      "sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+    },
+    {
+      "path": "evidence/step2_negative/after_fault_momentum_x.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step2_negative/after_fault_momentum_z.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step2_negative/after_fault_obstacle.bin",
+      "bytes": 65536,
+      "sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    {
+      "path": "evidence/step2_negative/after_fault_public_water.bin",
+      "bytes": 262144,
+      "sha256": "b4b0b2f147c4b7459ed33b2fdd3e7dbb4fab2ba3d005fd70d66926e968646aab"
+    },
+    {
+      "path": "evidence/step2_negative/after_fault_rock.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step2_negative/after_fault_safety.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "evidence/step2_negative/after_fault_sand.bin",
+      "bytes": 262144,
+      "sha256": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e"
+    },
+    {
+      "path": "evidence/step2_negative/after_fault_sediment.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step2_negative/after_fault_trial.bin",
+      "bytes": 128,
+      "sha256": "35df84412a88400d73be488807bd9c3522d87ddebee55628ebb53a482891c2ba"
+    },
+    {
+      "path": "evidence/step2_negative/after_fault_water.bin",
+      "bytes": 262144,
+      "sha256": "0a6e80a0ca7fd6cba5631e293f1009a8e4fde5eb726eb8a9b89d7ed607da2971"
+    },
+    {
+      "path": "evidence/step2_negative/godot.log",
+      "bytes": 230,
+      "sha256": "938418cece7f1f4f0bd9c01b5efed5f005f64bb04bea340fe9106b7cf8d8752d"
+    },
+    {
+      "path": "evidence/step2_negative/initial_audit.bin",
+      "bytes": 2048,
+      "sha256": "e5a00aa9991ac8a5ee3109844d84a55583bd20572ad3ffcd42792f3c36b183ad"
+    },
+    {
+      "path": "evidence/step2_negative/initial_control.bin",
+      "bytes": 128,
+      "sha256": "c977a3cd342c166ce2e9393047c9c5de0dfd50d5640fd7f9b6c1048427e312e1"
+    },
+    {
+      "path": "evidence/step2_negative/initial_decision.bin",
+      "bytes": 64,
+      "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b"
+    },
+    {
+      "path": "evidence/step2_negative/initial_flux.bin",
+      "bytes": 1048576,
+      "sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+    },
+    {
+      "path": "evidence/step2_negative/initial_momentum_x.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step2_negative/initial_momentum_z.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step2_negative/initial_obstacle.bin",
+      "bytes": 65536,
+      "sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    {
+      "path": "evidence/step2_negative/initial_public_water.bin",
+      "bytes": 262144,
+      "sha256": "b4b0b2f147c4b7459ed33b2fdd3e7dbb4fab2ba3d005fd70d66926e968646aab"
+    },
+    {
+      "path": "evidence/step2_negative/initial_rock.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step2_negative/initial_safety.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "evidence/step2_negative/initial_sand.bin",
+      "bytes": 262144,
+      "sha256": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e"
+    },
+    {
+      "path": "evidence/step2_negative/initial_sediment.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step2_negative/initial_trial.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "evidence/step2_negative/initial_water.bin",
+      "bytes": 262144,
+      "sha256": "b4b0b2f147c4b7459ed33b2fdd3e7dbb4fab2ba3d005fd70d66926e968646aab"
+    },
+    {
+      "path": "evidence/step2_negative/injected_audit.bin",
+      "bytes": 2048,
+      "sha256": "e5a00aa9991ac8a5ee3109844d84a55583bd20572ad3ffcd42792f3c36b183ad"
+    },
+    {
+      "path": "evidence/step2_negative/injected_control.bin",
+      "bytes": 128,
+      "sha256": "c977a3cd342c166ce2e9393047c9c5de0dfd50d5640fd7f9b6c1048427e312e1"
+    },
+    {
+      "path": "evidence/step2_negative/injected_decision.bin",
+      "bytes": 64,
+      "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b"
+    },
+    {
+      "path": "evidence/step2_negative/injected_flux.bin",
+      "bytes": 1048576,
+      "sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+    },
+    {
+      "path": "evidence/step2_negative/injected_momentum_x.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step2_negative/injected_momentum_z.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step2_negative/injected_obstacle.bin",
+      "bytes": 65536,
+      "sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    {
+      "path": "evidence/step2_negative/injected_public_water.bin",
+      "bytes": 262144,
+      "sha256": "b4b0b2f147c4b7459ed33b2fdd3e7dbb4fab2ba3d005fd70d66926e968646aab"
+    },
+    {
+      "path": "evidence/step2_negative/injected_rock.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step2_negative/injected_safety.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "evidence/step2_negative/injected_sand.bin",
+      "bytes": 262144,
+      "sha256": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e"
+    },
+    {
+      "path": "evidence/step2_negative/injected_sediment.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step2_negative/injected_trial.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "evidence/step2_negative/injected_water.bin",
+      "bytes": 262144,
+      "sha256": "0a6e80a0ca7fd6cba5631e293f1009a8e4fde5eb726eb8a9b89d7ed607da2971"
+    },
+    {
+      "path": "evidence/step2_negative/manifest.json",
+      "bytes": 1079,
+      "sha256": "578070020a8e9190f793a761fcb5e59d5203dbb58641d5eca503d1a0696d74d2"
+    },
+    {
+      "path": "evidence/step2_negative/probe.gd",
+      "bytes": 8741,
+      "sha256": "aa6d617cb829365b29304ffe98860e7e9b845e66bc1b62b1d57c503b59e1feda"
+    },
+    {
+      "path": "evidence/step2_negative/result.json",
+      "bytes": 45895,
+      "sha256": "fcebb540f66a238dfb34a2f848ee3af3aab0696bb93d552baff715b770cd8c73"
+    },
+    {
+      "path": "evidence/step2_negative/stdout.txt",
+      "bytes": 236,
+      "sha256": "bb2d48303f07756b36e567ce6c12bc419b4170eba2f113325b7ffde7d4c67a08"
+    },
+    {
+      "path": "evidence/step2_nonfinite/after_fault_audit.bin",
+      "bytes": 2048,
+      "sha256": "f492766a2d28ff3acb7d6b49b47821365b0f57c5a364dc83d5184555b62e914b"
+    },
+    {
+      "path": "evidence/step2_nonfinite/after_fault_control.bin",
+      "bytes": 128,
+      "sha256": "677f05e221ba4f5642071e7257fa5e2ee5bd07003dd24b6c1662f4bc7a9afa1c"
+    },
+    {
+      "path": "evidence/step2_nonfinite/after_fault_decision.bin",
+      "bytes": 64,
+      "sha256": "506378b41d5625382ac55d7e1d8743fa5b4ffb5815ae048639921a934fcba68d"
+    },
+    {
+      "path": "evidence/step2_nonfinite/after_fault_flux.bin",
+      "bytes": 1048576,
+      "sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+    },
+    {
+      "path": "evidence/step2_nonfinite/after_fault_momentum_x.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step2_nonfinite/after_fault_momentum_z.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step2_nonfinite/after_fault_obstacle.bin",
+      "bytes": 65536,
+      "sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    {
+      "path": "evidence/step2_nonfinite/after_fault_public_water.bin",
+      "bytes": 262144,
+      "sha256": "b4b0b2f147c4b7459ed33b2fdd3e7dbb4fab2ba3d005fd70d66926e968646aab"
+    },
+    {
+      "path": "evidence/step2_nonfinite/after_fault_rock.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step2_nonfinite/after_fault_safety.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "evidence/step2_nonfinite/after_fault_sand.bin",
+      "bytes": 262144,
+      "sha256": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e"
+    },
+    {
+      "path": "evidence/step2_nonfinite/after_fault_sediment.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step2_nonfinite/after_fault_trial.bin",
+      "bytes": 128,
+      "sha256": "5dd8a943322b543b00da41aa8fba3cea93adb7e286d94e8601145eb2982263ec"
+    },
+    {
+      "path": "evidence/step2_nonfinite/after_fault_water.bin",
+      "bytes": 262144,
+      "sha256": "cf66268c53e6064f19937ef379917fc8c9e4a5a8685c0add504679bc2bff1dfd"
+    },
+    {
+      "path": "evidence/step2_nonfinite/godot.log",
+      "bytes": 230,
+      "sha256": "938418cece7f1f4f0bd9c01b5efed5f005f64bb04bea340fe9106b7cf8d8752d"
+    },
+    {
+      "path": "evidence/step2_nonfinite/initial_audit.bin",
+      "bytes": 2048,
+      "sha256": "e5a00aa9991ac8a5ee3109844d84a55583bd20572ad3ffcd42792f3c36b183ad"
+    },
+    {
+      "path": "evidence/step2_nonfinite/initial_control.bin",
+      "bytes": 128,
+      "sha256": "c977a3cd342c166ce2e9393047c9c5de0dfd50d5640fd7f9b6c1048427e312e1"
+    },
+    {
+      "path": "evidence/step2_nonfinite/initial_decision.bin",
+      "bytes": 64,
+      "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b"
+    },
+    {
+      "path": "evidence/step2_nonfinite/initial_flux.bin",
+      "bytes": 1048576,
+      "sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+    },
+    {
+      "path": "evidence/step2_nonfinite/initial_momentum_x.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step2_nonfinite/initial_momentum_z.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step2_nonfinite/initial_obstacle.bin",
+      "bytes": 65536,
+      "sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    {
+      "path": "evidence/step2_nonfinite/initial_public_water.bin",
+      "bytes": 262144,
+      "sha256": "b4b0b2f147c4b7459ed33b2fdd3e7dbb4fab2ba3d005fd70d66926e968646aab"
+    },
+    {
+      "path": "evidence/step2_nonfinite/initial_rock.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step2_nonfinite/initial_safety.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "evidence/step2_nonfinite/initial_sand.bin",
+      "bytes": 262144,
+      "sha256": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e"
+    },
+    {
+      "path": "evidence/step2_nonfinite/initial_sediment.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step2_nonfinite/initial_trial.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "evidence/step2_nonfinite/initial_water.bin",
+      "bytes": 262144,
+      "sha256": "b4b0b2f147c4b7459ed33b2fdd3e7dbb4fab2ba3d005fd70d66926e968646aab"
+    },
+    {
+      "path": "evidence/step2_nonfinite/injected_audit.bin",
+      "bytes": 2048,
+      "sha256": "e5a00aa9991ac8a5ee3109844d84a55583bd20572ad3ffcd42792f3c36b183ad"
+    },
+    {
+      "path": "evidence/step2_nonfinite/injected_control.bin",
+      "bytes": 128,
+      "sha256": "c977a3cd342c166ce2e9393047c9c5de0dfd50d5640fd7f9b6c1048427e312e1"
+    },
+    {
+      "path": "evidence/step2_nonfinite/injected_decision.bin",
+      "bytes": 64,
+      "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b"
+    },
+    {
+      "path": "evidence/step2_nonfinite/injected_flux.bin",
+      "bytes": 1048576,
+      "sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+    },
+    {
+      "path": "evidence/step2_nonfinite/injected_momentum_x.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step2_nonfinite/injected_momentum_z.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step2_nonfinite/injected_obstacle.bin",
+      "bytes": 65536,
+      "sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    {
+      "path": "evidence/step2_nonfinite/injected_public_water.bin",
+      "bytes": 262144,
+      "sha256": "b4b0b2f147c4b7459ed33b2fdd3e7dbb4fab2ba3d005fd70d66926e968646aab"
+    },
+    {
+      "path": "evidence/step2_nonfinite/injected_rock.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step2_nonfinite/injected_safety.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "evidence/step2_nonfinite/injected_sand.bin",
+      "bytes": 262144,
+      "sha256": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e"
+    },
+    {
+      "path": "evidence/step2_nonfinite/injected_sediment.bin",
+      "bytes": 262144,
+      "sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "path": "evidence/step2_nonfinite/injected_trial.bin",
+      "bytes": 128,
+      "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+    },
+    {
+      "path": "evidence/step2_nonfinite/injected_water.bin",
+      "bytes": 262144,
+      "sha256": "cf66268c53e6064f19937ef379917fc8c9e4a5a8685c0add504679bc2bff1dfd"
+    },
+    {
+      "path": "evidence/step2_nonfinite/manifest.json",
+      "bytes": 1082,
+      "sha256": "8ade1493dd06ccda4a982fe00c3718e3a5148a2ac0d55f0d13e14e1e28cb15c6"
+    },
+    {
+      "path": "evidence/step2_nonfinite/probe.gd",
+      "bytes": 8741,
+      "sha256": "aa6d617cb829365b29304ffe98860e7e9b845e66bc1b62b1d57c503b59e1feda"
+    },
+    {
+      "path": "evidence/step2_nonfinite/result.json",
+      "bytes": 45938,
+      "sha256": "40b1a0844853c3c22b2a04e88761d1c0126b89d01e3ec95d67a506cce2dfbcbf"
+    },
+    {
+      "path": "evidence/step2_nonfinite/stdout.txt",
+      "bytes": 236,
+      "sha256": "bb2d48303f07756b36e567ce6c12bc419b4170eba2f113325b7ffde7d4c67a08"
+    },
+    {
+      "path": "evidence/step3_cost/capture.json",
+      "bytes": 823248,
+      "sha256": "62da9b7d7e87804371b95661568341285ee09aa00c97c909a861d14f8f218f0c"
+    },
+    {
+      "path": "evidence/step3_cost/run.log",
+      "bytes": 455,
+      "sha256": "9c69b6ac950df558f1162bd577f99f9cf3cc7fdcd960bd87fd4127303c4ab697"
+    },
+    {
+      "path": "evidence/step3_cost/scene.png",
+      "bytes": 540340,
+      "sha256": "5935dd5dc549caa0c7b0aea0ab1c90a51be142f0f3117dbd54a73cc52f576974"
+    },
+    {
+      "path": "evidence/step3_cpu_abba/capture.json",
+      "bytes": 4044421,
+      "sha256": "2b081296a948fa223aed5472e5bf09a9b525d3dd20aebc99efd37ac5c7a90b12"
+    },
+    {
+      "path": "evidence/step3_cpu_abba/run.log",
+      "bytes": 556,
+      "sha256": "869409019d74ada890f8e8ad26ba0eda2fe6637cf448ed14a80932d812a5f696"
+    },
+    {
+      "path": "evidence/step3_cpu_abba/summary.json",
+      "bytes": 4863,
+      "sha256": "dc0e5f39329ac4a016fb1246c28a4ebd6e31d1861d71c4d9cb6defa8259cd278"
+    },
+    {
+      "path": "evidence/step3_exact/exact.json",
+      "bytes": 121226,
+      "sha256": "76952d301c89812da5b46be659f092aa128b3f374c6ffad8b54c926bfc2cf78b"
+    },
+    {
+      "path": "evidence/step3_exact/probe.gd",
+      "bytes": 10763,
+      "sha256": "0a387203fe3ed5dd74e67019babb69108a8fec66c2d02bd27ec9da7955c9d31d"
+    },
+    {
+      "path": "evidence/step3_exact/run.log",
+      "bytes": 14642,
+      "sha256": "e0c4fd388c04a560268cd3dc67a3498b3252864b491d15352f30680cad43ca8f"
+    },
+    {
+      "path": "evidence/step3_exact/source_hashes.json",
+      "bytes": 1488,
+      "sha256": "d8798e4fd29d40b55c1ecd7aa75bdbbeda122edcef4597e994c9d2fb54f693db"
+    },
+    {
+      "path": "evidence/summary.json",
+      "bytes": 13497,
+      "sha256": "22efc997d16b3a58f4ca9bd2aa1a854ab561b89a6032a2e1dc33602a5857a48f"
+    },
+    {
+      "path": "final/identity.json",
+      "bytes": 1517,
+      "sha256": "1ada0009ca952a2410646db512da1a5582f0b0b55d8a49de471e49b9308a800d"
+    },
+    {
+      "path": "final/scripts/simulation/unified_edit/coupled.gd",
+      "bytes": 9943,
+      "sha256": "b80c7b7aca3fb5b351811390f9ed9ecc6c9e2c715518496ba09f6f346001ff62"
+    },
+    {
+      "path": "final/scripts/simulation/unified_edit/water.gd",
+      "bytes": 11164,
+      "sha256": "8b6d8093f3e2518eda1b41f790a2e1affb202f193ffae7b38dd3670faa2a2a6a"
+    },
+    {
+      "path": "final/scripts/simulation/unified_edit/water_muscl.gd",
+      "bytes": 10718,
+      "sha256": "383b8d1c8371e607ee935580c1b8edc872cf1164cb7e347a962a3f9432fa257d"
+    },
+    {
+      "path": "final/shaders/simulation/muscl/muscl_math.glslinc",
+      "bytes": 1217,
+      "sha256": "aa864531e88cf8b0cd9adf63431ec7a6db48863aa4fc7e8da9072d1d7a3f9fc0"
+    },
+    {
+      "path": "final/shaders/simulation/muscl/muscl_spatial.glslinc",
+      "bytes": 3892,
+      "sha256": "d4f22c0889af5eb089dfb3dccec767c56b27731452cc1c222867a7e71f3d2106"
+    },
+    {
+      "path": "final/shaders/simulation/muscl/muscl_stats.glslinc",
+      "bytes": 801,
+      "sha256": "70e147a8a112354fb8a6dbd2da0dcceb4e2045a8d98f05b903122ad20b6744b1"
+    },
+    {
+      "path": "final/shaders/simulation/muscl/rk_decide.glsl",
+      "bytes": 4907,
+      "sha256": "6d51c59ed047d333f8855016d00b2a6cc464f4cb00c8b854c42ed96811bbd3f7"
+    },
+    {
+      "path": "final/shaders/simulation/muscl/rk_drain.glsl",
+      "bytes": 536,
+      "sha256": "8a649a8379954fed16f4a18424da70a83a05511043f943f164a9b2ea7b8c0d11"
+    },
+    {
+      "path": "final/shaders/simulation/muscl/rk_edge.glsl",
+      "bytes": 970,
+      "sha256": "4929b19439ede7280c7d4931b72f5d3ebc2d448da4c856eab97874273ef034a0"
+    },
+    {
+      "path": "final/shaders/simulation/muscl/rk_euler.glsl",
+      "bytes": 1754,
+      "sha256": "daf72a12c24352106a2b9e6aa8fbc1a935b5d13b380e2090042c344b553b2d06"
+    },
+    {
+      "path": "final/shaders/simulation/muscl/rk_finalize.glsl",
+      "bytes": 3083,
+      "sha256": "0dbffbbb3cf88ad43761ca6f2b6f155fc360c57aebdc5379298ac69823613ae6"
+    },
+    {
+      "path": "final/shaders/simulation/muscl/rk_normalize.glsl",
+      "bytes": 1488,
+      "sha256": "517ea7d43c1b42b6aa18bff7259d5b7ab0ee11d13e61769242ed4a4fd9d1840e"
+    },
+    {
+      "path": "final/shaders/simulation/muscl/rk_validate.glsl",
+      "bytes": 1075,
+      "sha256": "c53f4fc33334174cd0b458e441a9aa3bf106f0452330638163707829adbd2120"
+    },
+    {
+      "path": "step1/identity.json",
+      "bytes": 1517,
+      "sha256": "a4036558faa3312b5b7fb96e03b984a676efc07fb6cd583bc3fdf0631aad62d5"
+    },
+    {
+      "path": "step1/scripts/simulation/unified_edit/coupled.gd",
+      "bytes": 9691,
+      "sha256": "39a016a6e3bcac204192161ccaf5c0e253d167c6257615e51a50f49a71743bb7"
+    },
+    {
+      "path": "step1/scripts/simulation/unified_edit/water.gd",
+      "bytes": 11164,
+      "sha256": "8b6d8093f3e2518eda1b41f790a2e1affb202f193ffae7b38dd3670faa2a2a6a"
+    },
+    {
+      "path": "step1/scripts/simulation/unified_edit/water_muscl.gd",
+      "bytes": 9516,
+      "sha256": "1c924c4384a6a5726f4d58337a89af1796ddbadedd01ac28736e1bf97bf08adf"
+    },
+    {
+      "path": "step1/shaders/simulation/muscl/muscl_math.glslinc",
+      "bytes": 1217,
+      "sha256": "aa864531e88cf8b0cd9adf63431ec7a6db48863aa4fc7e8da9072d1d7a3f9fc0"
+    },
+    {
+      "path": "step1/shaders/simulation/muscl/muscl_spatial.glslinc",
+      "bytes": 3391,
+      "sha256": "fa016738dbcde7540c37406fb255ee5955660fcf09b936fca5a3d130edaf4797"
+    },
+    {
+      "path": "step1/shaders/simulation/muscl/muscl_stats.glslinc",
+      "bytes": 801,
+      "sha256": "70e147a8a112354fb8a6dbd2da0dcceb4e2045a8d98f05b903122ad20b6744b1"
+    },
+    {
+      "path": "step1/shaders/simulation/muscl/rk_decide.glsl",
+      "bytes": 4907,
+      "sha256": "6d51c59ed047d333f8855016d00b2a6cc464f4cb00c8b854c42ed96811bbd3f7"
+    },
+    {
+      "path": "step1/shaders/simulation/muscl/rk_drain.glsl",
+      "bytes": 536,
+      "sha256": "8a649a8379954fed16f4a18424da70a83a05511043f943f164a9b2ea7b8c0d11"
+    },
+    {
+      "path": "step1/shaders/simulation/muscl/rk_edge.glsl",
+      "bytes": 1039,
+      "sha256": "c8cd8c28cc8b9290e4db83a994c6f71f4eec78287894818f88211ef008df2a69"
+    },
+    {
+      "path": "step1/shaders/simulation/muscl/rk_euler.glsl",
+      "bytes": 1754,
+      "sha256": "daf72a12c24352106a2b9e6aa8fbc1a935b5d13b380e2090042c344b553b2d06"
+    },
+    {
+      "path": "step1/shaders/simulation/muscl/rk_finalize.glsl",
+      "bytes": 3083,
+      "sha256": "0dbffbbb3cf88ad43761ca6f2b6f155fc360c57aebdc5379298ac69823613ae6"
+    },
+    {
+      "path": "step1/shaders/simulation/muscl/rk_normalize.glsl",
+      "bytes": 1488,
+      "sha256": "517ea7d43c1b42b6aa18bff7259d5b7ab0ee11d13e61769242ed4a4fd9d1840e"
+    },
+    {
+      "path": "step1/shaders/simulation/muscl/rk_validate.glsl",
+      "bytes": 1075,
+      "sha256": "c53f4fc33334174cd0b458e441a9aa3bf106f0452330638163707829adbd2120"
+    },
+    {
+      "path": "step2/identity.json",
+      "bytes": 1517,
+      "sha256": "1655ad2a61b191fd1cc9aefb06f32075177c8891b43c58fb848b901e0d01f5aa"
+    },
+    {
+      "path": "step2/scripts/simulation/unified_edit/coupled.gd",
+      "bytes": 9691,
+      "sha256": "39a016a6e3bcac204192161ccaf5c0e253d167c6257615e51a50f49a71743bb7"
+    },
+    {
+      "path": "step2/scripts/simulation/unified_edit/water.gd",
+      "bytes": 11164,
+      "sha256": "8b6d8093f3e2518eda1b41f790a2e1affb202f193ffae7b38dd3670faa2a2a6a"
+    },
+    {
+      "path": "step2/scripts/simulation/unified_edit/water_muscl.gd",
+      "bytes": 9516,
+      "sha256": "1c924c4384a6a5726f4d58337a89af1796ddbadedd01ac28736e1bf97bf08adf"
+    },
+    {
+      "path": "step2/shaders/simulation/muscl/muscl_math.glslinc",
+      "bytes": 1217,
+      "sha256": "aa864531e88cf8b0cd9adf63431ec7a6db48863aa4fc7e8da9072d1d7a3f9fc0"
+    },
+    {
+      "path": "step2/shaders/simulation/muscl/muscl_spatial.glslinc",
+      "bytes": 3892,
+      "sha256": "d4f22c0889af5eb089dfb3dccec767c56b27731452cc1c222867a7e71f3d2106"
+    },
+    {
+      "path": "step2/shaders/simulation/muscl/muscl_stats.glslinc",
+      "bytes": 801,
+      "sha256": "70e147a8a112354fb8a6dbd2da0dcceb4e2045a8d98f05b903122ad20b6744b1"
+    },
+    {
+      "path": "step2/shaders/simulation/muscl/rk_decide.glsl",
+      "bytes": 4907,
+      "sha256": "6d51c59ed047d333f8855016d00b2a6cc464f4cb00c8b854c42ed96811bbd3f7"
+    },
+    {
+      "path": "step2/shaders/simulation/muscl/rk_drain.glsl",
+      "bytes": 536,
+      "sha256": "8a649a8379954fed16f4a18424da70a83a05511043f943f164a9b2ea7b8c0d11"
+    },
+    {
+      "path": "step2/shaders/simulation/muscl/rk_edge.glsl",
+      "bytes": 970,
+      "sha256": "4929b19439ede7280c7d4931b72f5d3ebc2d448da4c856eab97874273ef034a0"
+    },
+    {
+      "path": "step2/shaders/simulation/muscl/rk_euler.glsl",
+      "bytes": 1754,
+      "sha256": "daf72a12c24352106a2b9e6aa8fbc1a935b5d13b380e2090042c344b553b2d06"
+    },
+    {
+      "path": "step2/shaders/simulation/muscl/rk_finalize.glsl",
+      "bytes": 3083,
+      "sha256": "0dbffbbb3cf88ad43761ca6f2b6f155fc360c57aebdc5379298ac69823613ae6"
+    },
+    {
+      "path": "step2/shaders/simulation/muscl/rk_normalize.glsl",
+      "bytes": 1488,
+      "sha256": "517ea7d43c1b42b6aa18bff7259d5b7ab0ee11d13e61769242ed4a4fd9d1840e"
+    },
+    {
+      "path": "step2/shaders/simulation/muscl/rk_validate.glsl",
+      "bytes": 1075,
+      "sha256": "c53f4fc33334174cd0b458e441a9aa3bf106f0452330638163707829adbd2120"
+    },
+    {
+      "path": "tools/analyze_muscl_cost.py",
+      "bytes": 2762,
+      "sha256": "ef88187716a49c451f94cc8f607b4ee518e40f3984afe1ccd2744a7f8612906f"
+    },
+    {
+      "path": "tools/analyze_water_execution.py",
+      "bytes": 3674,
+      "sha256": "7c9ca3c81189454bf93662a6ae48e39ccc7899c22769a30aa7e5709308062bdd"
+    },
+    {
+      "path": "tools/idle_profile.gd",
+      "bytes": 4436,
+      "sha256": "670f52d69a5bafc405dab560d622c136db0241c9e5f802be3552a3cb4819810f"
+    },
+    {
+      "path": "tools/run_muscl_restart.py",
+      "bytes": 4365,
+      "sha256": "40d6de58f6663162bbc87e12a07fe2678009fc79d8369c1321808c7bc8add47b"
+    },
+    {
+      "path": "tools/scene_profile.gd",
+      "bytes": 5645,
+      "sha256": "5c39ee3e73359794e3b7c471fd6cc8f020348d68e836f7391852c0a99c5debaf"
+    },
+    {
+      "path": "tools/water_execution_exact_probe.gd",
+      "bytes": 11752,
+      "sha256": "ccd624dc84c7570c3de560af8cee6f6eb5b0e8a306ddd542d39e0471083ff2a3"
+    },
+    {
+      "path": "tools/water_recording_cost.gd",
+      "bytes": 3249,
+      "sha256": "c433248cb1ac28dd8a1584dd02f6b8ac8cbe0391b72aed8ce0bc18e71aa2f556"
+    },
+    {
+      "path": "tools/water_reference_scene_profile.gd",
+      "bytes": 8665,
+      "sha256": "4c52d6c29fa50617955b20ba1e9f6c1968e20051d9d4467b4157838c14851f8d"
+    },
+    {
+      "path": "tools/water_shader_compile_probe.gd",
+      "bytes": 2007,
+      "sha256": "6bec4647fe838b64a5327b3a8f8d1c05c4ff41508e3287bfc4d2ac4ea55989e7"
+    },
+    {
+      "path": "\u7ed3\u679c.md",
+      "bytes": 9375,
+      "sha256": "61892050d93edd20e5251b5bde7303230675f009e91317c8b651c00892096fa2"
+    }
+  ]
+}

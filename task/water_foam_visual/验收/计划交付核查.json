@@ -1,0 +1,89 @@
+{
+  "schema": "foam_plan_delivery_check_v1",
+  "date": "2026-10-24",
+  "scope": "Plan documents only; no implementation gate or runtime validation claimed",
+  "pass": true,
+  "task_count": 6,
+  "goals_count": 24,
+  "implementation_completed_goals": 0,
+  "validation_cases": [
+    "V01",
+    "V02",
+    "V03",
+    "V04",
+    "V05",
+    "V06",
+    "V07",
+    "V08",
+    "V09",
+    "V10",
+    "V11",
+    "V12"
+  ],
+  "contracts": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06"
+  ],
+  "local_links_checked": 30,
+  "source_files": 31,
+  "errors": [],
+  "method": "UTF-8 document reads; relative link existence; six task files and four goal rows each; state ID reconciliation; contract/case ID sets; source SHA256 capture",
+  "documents": [
+    {
+      "path": "契约/表现与性能.md",
+      "sha256": "f168eb18f249f4a0855c024ad9dd644535e6ec09825deb6b3213052edbf41632"
+    },
+    {
+      "path": "总纲.md",
+      "sha256": "c69c1a4f0befa5aeb8a4d9d3e99255859c920c046f5a02363e88a020884b6167"
+    },
+    {
+      "path": "执行状态.md",
+      "sha256": "7e915008e857a74c53463899b06aceec8e1f1c838e956c9bf8f5b94d5f5820b3"
+    },
+    {
+      "path": "细则/README.md",
+      "sha256": "01cb7baba9fff3cf3b1e5f5026230fcb85052cc9b0f677b042c139a3d1023dd7"
+    },
+    {
+      "path": "细则/T00_基线与契约.md",
+      "sha256": "7c45601bd6aa8384deba1914f278fbc815f40a647a33d32a283a9ac556fd0e08"
+    },
+    {
+      "path": "细则/T01_泡沫形态与受光.md",
+      "sha256": "b12def5b1761fd207c6cc70c534a55c1165425971927b1d222dd5da296f2d588"
+    },
+    {
+      "path": "细则/T02_随流与时间连续性.md",
+      "sha256": "6e6730bed0bf2d55d7e90019946d610cd4a2e9ed6236b662b9db6e9fc63a5263"
+    },
+    {
+      "path": "细则/T03_岸边与动态沙床.md",
+      "sha256": "3f317547b0213cc7c715852105b4b242e37481214697bba46afea46aa968b6c9"
+    },
+    {
+      "path": "细则/T04_正式场景与生命周期.md",
+      "sha256": "efe164a053dabc3982809e08c037794dba9dbe543754b5e95e345ba403ff5e00"
+    },
+    {
+      "path": "细则/T05_性能与交付.md",
+      "sha256": "8b42da9cbea2beb3c101e9b593445e91174b26d84c12141fd5f1f60cd0757d7d"
+    },
+    {
+      "path": "需求映射.md",
+      "sha256": "4f07a6fb98565dadbd31037e5b4a0016a4d95786b09afff4006bceb6d674d2a7"
+    },
+    {
+      "path": "验收/README.md",
+      "sha256": "d967a236ac2d76370377f0a77be17b5387877c820d11433ba513c64d26c67d6b"
+    },
+    {
+      "path": "验证计划.md",
+      "sha256": "d0959fc368d9eae276b5fb209399404ce16e39975402c87a3fe3b428f0a7943c"
+    }
+  ]
+}

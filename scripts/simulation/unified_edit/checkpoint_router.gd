@@ -15,7 +15,7 @@ static func load_file(path: String, configuration: Dictionary, preserve_water_re
 	if file==null:return {"error":&"open_failed"}
 	if file.get_length()<48:return {"error":&"invalid_file_size"}
 	var magic:=file.get_buffer(8).get_string_from_ascii();file.close()
-	if magic==Codec.MAGIC:
+	if magic in [Codec.MAGIC,Codec.WET_MAGIC]:
 		var loaded:=Codec.read_container(path)
 		if not loaded.error.is_empty():return loaded
 		if preserve_water_retention:

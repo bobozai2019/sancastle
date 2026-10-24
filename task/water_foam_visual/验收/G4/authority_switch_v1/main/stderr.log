@@ -1,0 +1,7 @@
+SCRIPT ERROR: Invalid access to property or key 'sim_tick' on a base object of type 'Dictionary'.
+   at: _same (res://tests/visual_water_alignment/foam_authority_switch_probe.gd:16)
+   GDScript backtrace (most recent call first):
+       [0] _same (res://tests/visual_water_alignment/foam_authority_switch_probe.gd:16)
+       [1] _run (res://tests/visual_water_alignment/foam_authority_switch_probe.gd:63)
+       [2] _snapshot (res://tests/visual_water_alignment/foam_authority_switch_probe.gd:8)
+       [3] save_gpu_checkpoint (res://scripts/beach/unified_playable_entry.gd:423)

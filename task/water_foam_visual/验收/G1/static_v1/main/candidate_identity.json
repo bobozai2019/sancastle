@@ -1,0 +1,31 @@
+{
+  "scope": "Visual probe only; not full Gate or performance acceptance",
+  "probe_pass": true,
+  "checks": 29,
+  "texture": "res://assets/water_foam/foam_cells.png",
+  "shader_sha256": "0c75886d8f99999eb41d0a13f33350779b34ff3ff0da2e969c7e20deae986d04",
+  "sources": [
+    {
+      "path": "sources/assets/water_foam/static_candidate.gdshader",
+      "sha256": "0c75886d8f99999eb41d0a13f33350779b34ff3ff0da2e969c7e20deae986d04"
+    },
+    {
+      "path": "sources/assets/water_foam/foam_cells.png",
+      "sha256": "c8fe50495f7adbbdbb1e229b00c8ba7ad6a2226534d82fe66d1291fdbdf6de47"
+    },
+    {
+      "path": "sources/assets/water_foam/foam_cells.png.import",
+      "sha256": "f981b4cbb982f24cf5140c08b847407744bfdf045b193868dfa08309b4c4900a"
+    }
+  ],
+  "command": [
+    "D:/game/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe",
+    "--path",
+    "D:\\godot\\project\\sandcastle",
+    "--script",
+    "res://tests/visual_water_alignment/foam_static_candidate_probe.gd",
+    "--",
+    "--scene=main",
+    "--output=res://task/water_foam_visual/验收/G1/static_v1/main"
+  ]
+}

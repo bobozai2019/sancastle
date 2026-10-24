@@ -43,6 +43,8 @@ func verify_render(state, executor, views, transport, native: Dictionary, callba
 		images["view/"+field]=views.textures[field]
 		if field=="baseline":var zero:=PackedByteArray();zero.resize(65536*4);_expected["view/"+field]=zero
 		else:_expected["view/"+field]=native.material.current_support if field=="mold_support" else native.fields[field]
+	if state.surface_wetness.is_valid():
+		images.surface_wetness=state.surface_wetness;_expected.surface_wetness=extensions.wet_sand_v1.state
 	images.clock=transport.clock_texture;_expected.clock=native.control.slice(32,36)
 	if visuals!=null and visuals.foam_enabled:
 		for index in 2:

@@ -1,0 +1,90 @@
+{
+  "title": "Sandcastle MUSCL 入门讲义",
+  "checked_on": "2026-10-24",
+  "document_kind": "teaching_note_with_unimplemented_optimization_candidates",
+  "html": "index.html",
+  "facts": "Current implementation is based on the listed local source snapshots. Performance values are historical measurements, not a new benchmark.",
+  "demonstrations": [
+    "Volume transfer bookkeeping only; no shallow-water integration.",
+    "Scalar one-dimensional MC/Superbee reconstruction; no time integration.",
+    "CFL illustration assumes uniform depth, fixed x velocity, zero z velocity and no rejections.",
+    "Interactive 6x6 texture walkthrough: JavaScript double-precision MC reconstruction, flat-bed Rusanov flux, donor draining, passive sediment transport, wall pressure and SSPRK2. Fully wet initial states, closed boundaries, fixed zero bed, no erosion/deposition or material updates. Each teaching request is 4 ms; stops rather than publishes if a request requires splitting or CFL rejection. These are computed teaching values, not captured GPU textures or a performance benchmark."
+  ],
+  "sources": [
+    {
+      "path": "docs/当前技术规格.md",
+      "bytes": 31542,
+      "sha256": "ec40d6ecb2791c64f7f5402c97f2bc6d3603d4dae2925a3fb59d87588aa7657f"
+    },
+    {
+      "path": "scripts/beach/unified_playable_entry.gd",
+      "bytes": 32986,
+      "sha256": "67243cb8270825d897dd039ee5b364bebaa9ba39de24dbefd152f7547dc25396"
+    },
+    {
+      "path": "scripts/simulation/unified_edit/water_muscl.gd",
+      "bytes": 10718,
+      "sha256": "383b8d1c8371e607ee935580c1b8edc872cf1164cb7e347a962a3f9432fa257d"
+    },
+    {
+      "path": "scripts/simulation/unified_edit/water_numerics.gd",
+      "bytes": 1969,
+      "sha256": "794d56cfc7259260590b0dd790e299106602e0b88e5b8feee17f79efc78f31d2"
+    },
+    {
+      "path": "scripts/simulation/unified_edit/coupled.gd",
+      "bytes": 9943,
+      "sha256": "b80c7b7aca3fb5b351811390f9ed9ecc6c9e2c715518496ba09f6f346001ff62"
+    },
+    {
+      "path": "shaders/simulation/muscl/muscl_math.glslinc",
+      "bytes": 1217,
+      "sha256": "aa864531e88cf8b0cd9adf63431ec7a6db48863aa4fc7e8da9072d1d7a3f9fc0"
+    },
+    {
+      "path": "shaders/simulation/muscl/muscl_spatial.glslinc",
+      "bytes": 3892,
+      "sha256": "d4f22c0889af5eb089dfb3dccec767c56b27731452cc1c222867a7e71f3d2106"
+    },
+    {
+      "path": "shaders/simulation/muscl/rk_edge.glsl",
+      "bytes": 970,
+      "sha256": "4929b19439ede7280c7d4931b72f5d3ebc2d448da4c856eab97874273ef034a0"
+    },
+    {
+      "path": "shaders/simulation/muscl/rk_drain.glsl",
+      "bytes": 536,
+      "sha256": "8a649a8379954fed16f4a18424da70a83a05511043f943f164a9b2ea7b8c0d11"
+    },
+    {
+      "path": "shaders/simulation/muscl/rk_euler.glsl",
+      "bytes": 1754,
+      "sha256": "daf72a12c24352106a2b9e6aa8fbc1a935b5d13b380e2090042c344b553b2d06"
+    },
+    {
+      "path": "shaders/simulation/muscl/rk_decide.glsl",
+      "bytes": 4907,
+      "sha256": "6d51c59ed047d333f8855016d00b2a6cc464f4cb00c8b854c42ed96811bbd3f7"
+    },
+    {
+      "path": "shaders/simulation/muscl/rk_finalize.glsl",
+      "bytes": 3083,
+      "sha256": "0dbffbbb3cf88ad43761ca6f2b6f155fc360c57aebdc5379298ac69823613ae6"
+    },
+    {
+      "path": "shaders/simulation/muscl/rk_normalize.glsl",
+      "bytes": 1488,
+      "sha256": "517ea7d43c1b42b6aa18bff7259d5b7ab0ee11d13e61769242ed4a4fd9d1840e"
+    },
+    {
+      "path": "task/water_execution_optimization/结果.md",
+      "bytes": 9375,
+      "sha256": "61892050d93edd20e5251b5bde7303230675f009e91317c8b651c00892096fa2"
+    }
+  ],
+  "external_references": [
+    "https://www.clawpack.org/riemann_book/html/Shallow_water.html",
+    "https://docs.godotengine.org/en/stable/classes/class_renderingdevice.html",
+    "https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html"
+  ]
+}

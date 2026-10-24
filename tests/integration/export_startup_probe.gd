@@ -36,8 +36,33 @@ func _run() -> void:
 	while (not preview.ready_for_ticks or preview._booting) and preview.last_error.is_empty() and Time.get_ticks_msec() < deadline:
 		await process_frame
 	check("normal_defaults_ready", preview.ready_for_ticks and preview.last_error.is_empty())
+	# Let the parameter service publish the boot-to-ready busy transition before
+	# asserting native control availability (the first edit also emits changed).
+	await process_frame
 	evidence = {"error": preview.last_error, "engine": Engine.get_version_info(), "adapter": RenderingServer.get_video_adapter_name(), "scene": path, "main_pack": ProjectSettings.get_setting("application/run/main_scene")}
 	if preview.ready_for_ticks:
+		var water: ShaderMaterial=preview.get_node("GpuWaterSurface").material_override
+		var detail: Texture2D=water.get_shader_parameter("foam_detail_texture")
+		check("foam_formal_mode",water.get_shader_parameter("foam_detail_mode")==1)
+		check("foam_static_texture",detail!=null and detail.resource_path=="res://assets/water_foam/foam_detail.png")
+		check("foam_raw_texture_identity",FileAccess.get_sha256("res://assets/water_foam/foam_detail.png")=="05c18a800db479f3e2a2568867051d29a3438d2cd7225830e000e8598935e50b")
+		if detail!=null:
+			var image:=detail.get_image()
+			check("foam_imported_mips_budget",image!=null and image.get_width()==512 and image.get_mipmap_count()==9 and image.get_data_size()<=2097152)
+			if image!=null:evidence.foam={"path":detail.resource_path,"bytes":image.get_data_size(),"mips":image.get_mipmap_count(),"format":image.get_format()}
+		check("foam_debug_disabled",water.get_shader_parameter("foam_flow_debug")==false)
+		for item in [["visual_foam_detail_scale_per_m","foam_detail_scale_per_m",1.2],["visual_foam_hole_strength","foam_hole_strength",0.8],["visual_foam_flow_cycle_s","foam_flow_cycle_s",3.5]]:
+			var row=root.get_node("Parameters").get_node_or_null("water/Margin/Rows/Scroll/Fields/"+item[0])
+			check("foam_ui_row_"+item[0],row!=null)
+			if row!=null:
+				var control: SpinBox=row.get_node("Line/Value")
+				var previous: float=control.value
+				var expected: float=4.0 if item[0]=="visual_foam_flow_cycle_s" else 1.0
+				check("foam_ui_default_"+item[0],is_equal_approx(previous,expected))
+				check("foam_ui_enabled_"+item[0],control.editable)
+				control.value=item[2]
+				check("foam_ui_shader_consumes_"+item[0],is_equal_approx(float(water.get_shader_parameter(item[1])),float(item[2])))
+				control.value=previous
 		check("text_resources_preserved", ProjectSettings.get_setting("editor/export/convert_text_resources_to_binary") == false)
 		for profile in ["dig_v1", "dig_sweep_v1", "fill_v1", "fill_sweep_v1", "castle_v1", "wall_v1", "shovel_v1"]:
 			check(profile + "_water_policies_preserved", preview.configuration.profiles[profile].allowed_features.water_policy == [0, 1, 2, 3])
@@ -56,8 +81,17 @@ func _run() -> void:
 		check("water_simulation_advances", owner.completed_tick >= start_tick + 30)
 		preview.playing = false
 		await _idle()
+		check("props_held_before_fixed_ticks",(await preview._props_hold(true,&"user")).is_empty())
+		# Show the final foam resource under actual accumulated wave history.
+		while owner.completed_tick<720 and preview.last_error.is_empty():
+			var tick_error: StringName=preview.runtime.request_tick(1.0/30.0)
+			check("foam_tick_admitted_"+str(owner.completed_tick),tick_error.is_empty())
+			if not tick_error.is_empty():break
+			await _idle()
+		check("foam_completed_history",owner.completed_tick>=720)
 		evidence["completed_ticks"] = owner.completed_tick
 		evidence["visual_time_s"] = owner.advanced_time_s
+		evidence["props_error"] = String(preview.floating_props.last_error) if preview.floating_props!=null else ""
 		evidence["configuration"] = preview.configuration
 		await _capture("main")
 		var baseline := PackedByteArray() if smoke else await _sand_snapshot("before")

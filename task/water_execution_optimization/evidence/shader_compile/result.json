@@ -1,0 +1,59 @@
+{
+	"engine": {
+		"build": "steam",
+		"hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+		"hex": 263938,
+		"major": 4,
+		"minor": 7,
+		"patch": 2,
+		"status": "stable",
+		"string": "4.7.2-stable (steam)",
+		"timestamp": 0
+	},
+	"pass": true,
+	"rows": [
+		{
+			"bytes": 23380,
+			"error": "",
+			"kernel": "rk_decide",
+			"sha256": "db2e75acb5ed80da2437b15295f3d6d7b0dc3e6ec1b5e88ad34c2041f78c1811",
+			"variant": "baseline"
+		},
+		{
+			"bytes": 23876,
+			"error": "",
+			"kernel": "rk_edge",
+			"sha256": "1b7b2704cb9cb5b89460279f8ec31335ab388127405f69ca1a69f543deec5cbb",
+			"variant": "baseline"
+		},
+		{
+			"bytes": 25608,
+			"error": "",
+			"kernel": "rk_euler",
+			"sha256": "dd7ef287ac4c0ebec71422d1f6eca3d937004cd695e9339dc1c11d3237af2203",
+			"variant": "baseline"
+		},
+		{
+			"bytes": 23932,
+			"error": "",
+			"kernel": "rk_decide",
+			"sha256": "ee568cbcdb9d3385b8a4f6f6e618e396689e1e4a20e9d7a73f58eb9cd4cb895f",
+			"variant": "candidate"
+		},
+		{
+			"bytes": 25188,
+			"error": "",
+			"kernel": "rk_edge",
+			"sha256": "1b8881c3a6f01e93afed81831a3b631a37b585de14ce11b522c29d09408c9fdf",
+			"variant": "candidate"
+		},
+		{
+			"bytes": 25988,
+			"error": "",
+			"kernel": "rk_euler",
+			"sha256": "080cf05b028f543b705830a84a25dc2e5c43986a365f37e92ef6235b272ea5ab",
+			"variant": "candidate"
+		}
+	],
+	"scope": "Actual RD GLSL-to-SPIR-V output; not final D3D12 native ISA or a timing result."
+}

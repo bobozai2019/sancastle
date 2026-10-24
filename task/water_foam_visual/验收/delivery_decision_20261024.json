@@ -1,0 +1,32 @@
+{
+  "schema": "foam_delivery_scope_decision_v1",
+  "recorded_at": "2026-10-24T11:24:36.898949+08:00",
+  "authority": "direct_human_reply_to_pending_delivery_question",
+  "human_answer_verbatim": "保留新效果，将两项未通过列为遗留问题",
+  "disposition": "retain_current_formal_visual_effect",
+  "delivery_status": "completed_with_accepted_outstanding_issues",
+  "delivery_scope_accepted": true,
+  "technical_overall_pass": false,
+  "gate_thresholds_unchanged": true,
+  "accepted_outstanding_issues": [
+    "FOAM-LEGACY-01",
+    "FOAM-LEGACY-02"
+  ],
+  "overrides": "Master plan section 7 baseline fallback disposition for this delivery only",
+  "authorization_limits": [
+    "No further optimization or budget extension",
+    "No authority simulation or tolerance changes",
+    "No claim that failed technical gates passed"
+  ],
+  "retained_defaults": {
+    "mode": 1,
+    "detail_scale_per_m": 1,
+    "hole_strength": 1,
+    "flow_cycle_s": 4,
+    "shore_contact_gain": 0.55
+  },
+  "retained_source_count": 412,
+  "source_drift": [],
+  "source_identity_reference": "G4/exact_original_authority_v2/main/sources_after.json",
+  "resolves_current_blocker": "blocked_audit_20261024.json"
+}

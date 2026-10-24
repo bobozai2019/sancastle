@@ -39,6 +39,7 @@ var probe:=Probe.new()
 func initialize(bundle, executor, channel, catalog, config: Dictionary, epoch: int, height_dirty: RID) -> bool:
 	state=bundle;transport=channel;registry=catalog;configuration=config.duplicate(true);generation=epoch;rd=channel.rd
 	textures={"rock":state.textures.rock,"obstacle":state.textures.obstacle,"sand":state.published_sand,"water":state.published_water,"clock":transport.clock_texture}
+	if state.surface_wetness.is_valid():textures.surface_wetness=state.surface_wetness
 	textures.merge(visual_textures)
 	var images:={}
 	for index in FIELDS.size():

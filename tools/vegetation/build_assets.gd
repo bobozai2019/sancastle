@@ -31,7 +31,7 @@ func _build() -> void:
 		var row: Array=configuration[kind]
 		var species=Species.new()
 		species.label=row[0];species.depth_min_m=row[1];species.depth_max_m=row[2]
-		species.scale_min=row[3];species.scale_max=row[4];species.density=row[5]
+		species.scale_min=row[3];species.scale_max=row[4];species.density=row[5]*0.125
 		species.flow_response=row[6];species.max_slope=row[7];species.patch_min=row[8]
 		species.patch_max=row[9];species.response_hz=row[10]
 		profile.species.append(species)
