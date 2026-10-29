@@ -1,0 +1,16 @@
+[gd_resource type="Resource" format=3 uid="uid://bjbojf3m637n4"]
+
+[ext_resource type="Script" uid="uid://dwf14g3w5ar74" path="res://scripts/visual/vegetation_species.gd" id="1_p3lgj"]
+
+[resource]
+script = ExtResource("1_p3lgj")
+label = "一枝黄花"
+depth_max_m = 0.008
+scale_min = 0.75
+scale_max = 1.15
+density = 0.0125
+flow_response = 0.45
+max_slope = 1.1
+patch_min = 0.62
+patch_max = 0.9
+response_hz = 7.0

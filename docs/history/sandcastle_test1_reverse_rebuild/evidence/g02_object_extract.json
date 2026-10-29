@@ -1,0 +1,145 @@
+{
+  "indexed_objects": 16714,
+  "status_counts": {
+    "raw_only": 11310,
+    "ok": 5404
+  },
+  "payloads": 460,
+  "payload_status_counts": {
+    "ok": 460
+  },
+  "container_counts": {
+    "Sandcastle_Data/sharedassets0.assets": {
+      "unitypy_objects": 12448,
+      "type_counts": {
+        "PreloadData": 1,
+        "Material": 56,
+        "Texture2D": 271,
+        "Mesh": 244,
+        "Shader": 55,
+        "TextAsset": 1,
+        "ComputeShader": 22,
+        "AnimationClip": 119,
+        "AudioClip": 117,
+        "RenderTexture": 2,
+        "AnimatorController": 38,
+        "Texture3D": 6,
+        "Font": 5,
+        "PhysicMaterial": 3,
+        "Sprite": 196,
+        "AudioMixerController": 1,
+        "AudioMixerGroupController": 4,
+        "AudioMixerSnapshotController": 1,
+        "VideoClip": 1,
+        "GameObject": 2465,
+        "Transform": 699,
+        "MeshRenderer": 327,
+        "MeshFilter": 328,
+        "Rigidbody": 39,
+        "MeshCollider": 21,
+        "BoxCollider": 83,
+        "AudioSource": 53,
+        "Animator": 255,
+        "Light": 5,
+        "LineRenderer": 11,
+        "SphereCollider": 16,
+        "CapsuleCollider": 27,
+        "SkinnedMeshRenderer": 2,
+        "AudioReverbFilter": 1,
+        "AudioHighPassFilter": 1,
+        "AudioLowPassFilter": 1,
+        "ParticleSystem": 8,
+        "ParticleSystemRenderer": 8,
+        "LODGroup": 1,
+        "CanvasRenderer": 1471,
+        "RectTransform": 1766,
+        "CanvasGroup": 37,
+        "SpriteAtlas": 1,
+        "MonoBehaviour": 3679
+      }
+    },
+    "Sandcastle_Data/resources.assets": {
+      "unitypy_objects": 1979,
+      "type_counts": {
+        "Material": 2,
+        "Texture2D": 8,
+        "Shader": 1,
+        "TextAsset": 5,
+        "Font": 1,
+        "Sprite": 6,
+        "GameObject": 514,
+        "CanvasRenderer": 323,
+        "Canvas": 2,
+        "RectTransform": 514,
+        "MonoBehaviour": 603
+      }
+    },
+    "Sandcastle_Data/globalgamemanagers": {
+      "unitypy_objects": 19,
+      "type_counts": {
+        "PlayerSettings": 1,
+        "InputManager": 1,
+        "TagManager": 1,
+        "AudioManager": 1,
+        "ScriptMapper": 1,
+        "MonoManager": 1,
+        "GraphicsSettings": 1,
+        "TimeManager": 1,
+        "DelayedCallManager": 1,
+        "PhysicsManager": 1,
+        "BuildSettings": 1,
+        "QualitySettings": 1,
+        "ResourceManager": 1,
+        "NavMeshProjectSettings": 1,
+        "Physics2DSettings": 1,
+        "RuntimeInitializeOnLoadManager": 1,
+        "StreamingManager": 1,
+        "VFXManager": 1,
+        "Unknown (655991488)": 1
+      }
+    },
+    "Sandcastle_Data/globalgamemanagers.assets": {
+      "unitypy_objects": 1616,
+      "type_counts": {
+        "PreloadData": 1,
+        "Material": 3,
+        "Texture2D": 2,
+        "Shader": 2,
+        "MonoScript": 1600,
+        "Texture3D": 1,
+        "Sprite": 1,
+        "MonoBehaviour": 6
+      }
+    },
+    "Sandcastle_Data/level0": {
+      "unitypy_objects": 652,
+      "type_counts": {
+        "GameObject": 150,
+        "Transform": 62,
+        "Camera": 4,
+        "MeshRenderer": 9,
+        "MeshFilter": 9,
+        "MeshCollider": 1,
+        "BoxCollider": 5,
+        "AudioListener": 1,
+        "AudioSource": 5,
+        "Animator": 13,
+        "RenderSettings": 1,
+        "LightmapSettings": 1,
+        "NavMeshSettings": 1,
+        "CanvasRenderer": 74,
+        "Canvas": 1,
+        "RectTransform": 88,
+        "CanvasGroup": 3,
+        "VideoPlayer": 1,
+        "MonoBehaviour": 223
+      }
+    }
+  },
+  "failures": [],
+  "limits": [
+    "Texture2D, Texture3D and Mesh m_StreamData are extracted in this pass; other streaming fields are not assessed.",
+    "Dependency edges and P0 readable exports are pending.",
+    "MonoBehaviour typetree is not decoded in this pass."
+  ]
+}

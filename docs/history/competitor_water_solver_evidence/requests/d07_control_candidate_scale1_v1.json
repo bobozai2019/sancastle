@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0",
+  "decision_id": "D07",
+  "status": "proposed_before_acceptance_trial",
+  "purpose": "Extend unchanged observer cost/window criteria to public engine Time sidecar and held scale .5; no acceptance of original UI behavior",
+  "native_source_dt_seconds": 0.02500000037252903,
+  "criteria_derivation": {
+    "median_present_extra_seconds": "At most one eighth of observed source dt (3.125 ms nominal)",
+    "p95_present_extra_seconds": "At most one half of observed source dt (12.5 ms nominal); diagnostic jitter bound, not solver numeric tolerance",
+    "negative_differences": "Report actual signed difference; do not interpret negative values as speedup causality",
+    "scope": "Matched same-process B-A-A-B calibration, foreground visible unminimized 1280x720, no sampled held mouse buttons. OS/background load not proven absent. Bounds describe CPU Present observation disturbance only."
+  },
+  "calibration": {
+    "duration_seconds": 60,
+    "hook_schedule": "16:off,26:on,46:off",
+    "windows_from_before_resume_qpc_seconds": [
+      {
+        "mode": "off",
+        "begin": 18,
+        "end": 25
+      },
+      {
+        "mode": "on",
+        "begin": 28,
+        "end": 35
+      },
+      {
+        "mode": "on",
+        "begin": 38,
+        "end": 45
+      },
+      {
+        "mode": "off",
+        "begin": 48,
+        "end": 55
+      }
+    ],
+    "minimum_present_intervals_per_window": 100,
+    "minimum_window_state_samples_per_window": 12,
+    "maximum_window_state_gap_seconds": 1,
+    "require_all_window_states_visible_foreground_unminimized": true,
+    "actual_render_width": 1280,
+    "actual_render_height": 720,
+    "expected_present_sync_interval": 1,
+    "expected_present_flags": 0,
+    "dropped_samples": 0,
+    "hook_errors": 0,
+    "inflight_at_boundaries": 0,
+    "diagnostic_trajectory_usable_for_clock_or_solver_reference": false,
+    "clock_validation_scope": "calibration_windows",
+    "expected_time_scale": 1,
+    "reason": "New sidecar and driver require new matched calibration; native clock checked only in predeclared calibration windows, where scale must be fixed. Startup/action transitions remain raw, not discarded from continuity."
+  },
+  "recording": {
+    "trace_schema": "2.0",
+    "clock_sample_every": 1,
+    "shadow_every": 0,
+    "present_observer": true,
+    "guard": true,
+    "initial_state": "Opaque per-run copies of the same hashed user data; original data read-only",
+    "formal_no_capture_run_seconds": 45,
+    "formal_window_from_before_resume_qpc_seconds": [
+      15,
+      35
+    ],
+    "capture_mode": "Separate bounded run, one request at resume+18 seconds; no use of capture stall as source/integration dt",
+    "required_conditions": [
+      "reproducible quiescent state",
+      "natural wave progression",
+      "verified controllable input change"
+    ],
+    "reset": "Fresh owned process/private hive/private files; each restart new epoch; diagnostic off gaps invalidate continuous trajectories",
+    "required_closure": [
+      "all event sequence IDs",
+      "all three immutable state references",
+      "entry/return call IDs",
+      "no unmodeled required water API path",
+      "GPU constant spotcheck",
+      "actual resized output/window state",
+      "raw parameter values and native Unity clock samples"
+    ],
+    "native_scalars": true,
+    "public_time_control": true,
+    "required_control_actions": [
+      {
+        "at_seconds": 20,
+        "scale": 0.5
+      },
+      {
+        "at_seconds": 30,
+        "scale": 1
+      }
+    ],
+    "allowed_scales": [
+      0.5,
+      1
+    ]
+  },
+  "failure_policy": "Keep failed evidence. Do not relax these limits based on the acceptance trial. Rework instrumentation or obtain independent justification and a new decision version. No formal G03 trajectory is accepted before this decision passes.",
+  "candidate_version": 3,
+  "supersedes": {
+    "path": "D:/godot/project/sandcastle/task/competitor_water_solver_evidence/requests/d07_candidate_v2.json",
+    "sha256": "3fdc561c87343829c8e823684729c250b45075da6a7c065687e8c86220b0875e",
+    "reason": "Scope extension, not threshold relaxation; unchanged windows and cost limits"
+  },
+  "native_scalar_preconditions": [
+    "Frida 17.23.3 Windows x64 saved XMM context validated",
+    "Two-thread scalar helper IEEE754 checkpoints and caller/original Win32 error behavior passed",
+    "Capacity overflow signals failure; no replacement forwarding path",
+    "Full state shadow and actual game GPU constants must still agree"
+  ],
+  "created_at": "2026-10-25T12:15:01.008271+00:00"
+}

@@ -1,0 +1,159 @@
+{
+  "version": 1,
+  "classification": "Godot authored terrain adaptation; not recovered competitor geometry",
+  "coordinate_system": "Godot world XZ, metres; ocean is negative X",
+  "channels": [
+    {
+      "id": "north_inlet",
+      "points": [
+        [
+          -6,
+          -3.6
+        ],
+        [
+          -3.5,
+          -3
+        ],
+        [
+          -1,
+          -4
+        ],
+        [
+          2,
+          -4.6
+        ],
+        [
+          4.8,
+          -5.5
+        ],
+        [
+          7,
+          -5.3
+        ]
+      ],
+      "bed_y": [
+        0.64,
+        0.79
+      ],
+      "half_width": [
+        0.55,
+        0.42
+      ],
+      "bank_width": 0.72
+    },
+    {
+      "id": "central_inlet",
+      "points": [
+        [
+          -6,
+          0.2
+        ],
+        [
+          -3.7,
+          0
+        ],
+        [
+          -1.1,
+          -0.7
+        ],
+        [
+          0.8,
+          0.3
+        ],
+        [
+          2.1,
+          1
+        ],
+        [
+          4.1,
+          0
+        ],
+        [
+          4.9,
+          -1.8
+        ],
+        [
+          7,
+          -2.7
+        ]
+      ],
+      "bed_y": [
+        0.62,
+        0.82
+      ],
+      "half_width": [
+        0.62,
+        0.38
+      ],
+      "bank_width": 0.65
+    },
+    {
+      "id": "south_inlet",
+      "points": [
+        [
+          -6,
+          6
+        ],
+        [
+          -3.4,
+          6.1
+        ],
+        [
+          -0.8,
+          5.9
+        ],
+        [
+          1.5,
+          5.3
+        ],
+        [
+          3.8,
+          5.6
+        ],
+        [
+          6,
+          4.9
+        ]
+      ],
+      "bed_y": [
+        0.63,
+        0.78
+      ],
+      "half_width": [
+        0.58,
+        0.45
+      ],
+      "bank_width": 0.72
+    },
+    {
+      "id": "north_branch",
+      "points": [
+        [
+          -1.1,
+          -0.7
+        ],
+        [
+          0.1,
+          -2.2
+        ],
+        [
+          0.6,
+          -3.5
+        ],
+        [
+          2,
+          -4.6
+        ]
+      ],
+      "bed_y": [
+        0.71,
+        0.74
+      ],
+      "half_width": [
+        0.32,
+        0.32
+      ],
+      "bank_width": 0.55
+    }
+  ]
+}

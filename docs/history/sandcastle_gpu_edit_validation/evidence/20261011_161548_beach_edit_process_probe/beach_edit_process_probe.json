@@ -1,0 +1,198 @@
+{
+	"error": "",
+	"mode": "read",
+	"pass": true,
+	"rows": [
+		{
+			"case": "cold_preflight_configuration",
+			"pass": true
+		},
+		{
+			"case": "cold_preflight_ledger",
+			"pass": true
+		},
+		{
+			"case": "cold_preflight_identity",
+			"pass": true
+		},
+		{
+			"case": "cold_preflight_pending",
+			"pass": true
+		},
+		{
+			"case": "cold_preflight_selection",
+			"pass": true
+		},
+		{
+			"case": "full_edited_checkpoint_state_pixels_ledger_prefix",
+			"cohesion": 0.0,
+			"generation": 2,
+			"index": 1,
+			"mixed_cpu": true,
+			"pass": true,
+			"spare_exact": null,
+			"tick": 17
+		},
+		{
+			"case": "full_edited_seven_tick_continuation",
+			"cohesion": 0.0,
+			"metadata_exact": true,
+			"pass": true,
+			"tick": 24
+		},
+		{
+			"case": "actual_coupled_parameters_and_spirv_match",
+			"parameter_trace_enabled": true,
+			"parameters": [
+				{
+					"cell_size_m": 0.125,
+					"cohesion": 0.0,
+					"delta_s": 0.0166666666666667,
+					"index": 1,
+					"revision": 57,
+					"tick": 17
+				},
+				{
+					"cell_size_m": 0.125,
+					"cohesion": 0.0,
+					"delta_s": 0.0166666666666667,
+					"index": 0,
+					"revision": 58,
+					"tick": 17
+				},
+				{
+					"cell_size_m": 0.125,
+					"cohesion": 0.0,
+					"delta_s": 0.0166666666666667,
+					"index": 0,
+					"revision": 60,
+					"tick": 18
+				},
+				{
+					"cell_size_m": 0.125,
+					"cohesion": 0.0,
+					"delta_s": 0.0166666666666667,
+					"index": 1,
+					"revision": 61,
+					"tick": 18
+				},
+				{
+					"cell_size_m": 0.125,
+					"cohesion": 0.0,
+					"delta_s": 0.0166666666666667,
+					"index": 1,
+					"revision": 63,
+					"tick": 19
+				},
+				{
+					"cell_size_m": 0.125,
+					"cohesion": 0.0,
+					"delta_s": 0.0166666666666667,
+					"index": 0,
+					"revision": 64,
+					"tick": 19
+				},
+				{
+					"cell_size_m": 0.125,
+					"cohesion": 0.0,
+					"delta_s": 0.0166666666666667,
+					"index": 0,
+					"revision": 66,
+					"tick": 20
+				},
+				{
+					"cell_size_m": 0.125,
+					"cohesion": 0.0,
+					"delta_s": 0.0166666666666667,
+					"index": 1,
+					"revision": 67,
+					"tick": 20
+				},
+				{
+					"cell_size_m": 0.125,
+					"cohesion": 0.0,
+					"delta_s": 0.0166666666666667,
+					"index": 1,
+					"revision": 69,
+					"tick": 21
+				},
+				{
+					"cell_size_m": 0.125,
+					"cohesion": 0.0,
+					"delta_s": 0.0166666666666667,
+					"index": 0,
+					"revision": 70,
+					"tick": 21
+				},
+				{
+					"cell_size_m": 0.125,
+					"cohesion": 0.0,
+					"delta_s": 0.0166666666666667,
+					"index": 0,
+					"revision": 72,
+					"tick": 22
+				},
+				{
+					"cell_size_m": 0.125,
+					"cohesion": 0.0,
+					"delta_s": 0.0166666666666667,
+					"index": 1,
+					"revision": 73,
+					"tick": 22
+				},
+				{
+					"cell_size_m": 0.125,
+					"cohesion": 0.0,
+					"delta_s": 0.0166666666666667,
+					"index": 1,
+					"revision": 75,
+					"tick": 23
+				},
+				{
+					"cell_size_m": 0.125,
+					"cohesion": 0.0,
+					"delta_s": 0.0166666666666667,
+					"index": 0,
+					"revision": 76,
+					"tick": 23
+				}
+			],
+			"pass": true,
+			"spirv": [
+				"d4b1021bf915b40fa77dbf42849ec8bd938af44d91ab3d1ca765ba2ee64c5551",
+				"0300096d26527f6258e87e008df549ff65494270c70812a6dad26c91c91dcdc0",
+				"807d0002c972e44f561c92a34d9534c2a2dbc9a127dd81284507fd5175e4d8b6",
+				"1ca59e3c97e3e3b670945f2f2e0bd379b534fd2ca6c4fbd722d9301bb20900e0",
+				"d23600102933ca5ff866437535e67fd8b3f7e9f1fdcb43609545859e36a6ce1f",
+				"98ac64b06c739845e6ff6a06fcf9a66c369bf07bcc97bfd76d687955a93f247e",
+				"d7af1bbea47aec253ce8a18d0449b3136af7a8110f3570f10830f6f7c36e2b4c",
+				"7300525c2fa8ecf713beac84be9f6807d2555a041cab695feced3263aff521c2",
+				"d560bf7f8adfb5d98cd9b996f71e0ccc38d479e2b314f58576513dd9a26b2c5f",
+				"a06bdde61434c9d3ca7dd6f5378d9618795c43960356d2e81beec675d389df10",
+				"921aa83014d01f8d830d2d6116aa00cd74b342555c8ef088c334e49af6dbf24c",
+				"2bdb340c7d61f9cecdfee149d191523e26bad530b2e07ae9256309e1d4b4edd3",
+				"d08c9f853f340ec4e0eec797708e6bea9a85bfa3c7be45c9c95db7bb3ca7a260",
+				"b04708b6e3b778d7299594d1d8e650c325f62e68a2300c6dbb75962ef416e36f",
+				"b9aacaf6c9f3d0a207b1e199fb03410c0accc9524bd916bcecc19dad4ae4cac9",
+				"69c370e4473538fcd2690d6634302b9c620e492cd28540708495b408599f6ba4",
+				"402b9e26ca653f6f1f654ac1ed9c929a8256e38196c3c9f31950153a26996f1f",
+				"dcde31f78d9600c11c408d10ceb456869aaa1ccd2b42ff02942d8b9b68be0d16",
+				"6e8b78d6e73c4e83e974e898130c1bdce448177c7b6c37182f2b42814bca00f8",
+				"7f436e1773719d7b384373352127624a04d0bd750f5e1666e85192822f7314c5",
+				"54f55c44c1967ea158a425619520ec3366a8c12f38e7f6da810c977115586ef7",
+				"5e5adcb0ff19171a8ddc804955b38278db450e1b26628c57ffadd5f36bebb6a0",
+				"f5be548d292694470888af5b7e0bef947f5cfb2c2583eaa15799988c92241239",
+				"028f1cd86053f51ca909ec8eae928825d6bb5e0700711bbb2182407450127a23",
+				"82ea2d48d523d3a65ed2a8dcd33d32cc3f4faaf06b7d3433904cb5fb15f7ad02",
+				"1e8b434474d8c186cc0faec20d39b4e2b0653cb7b0cae2a0b7fc4e4a2006f73e",
+				"c7498f31171fd0d605189153b90a93956542b04ed960182a159e521fa4f236fe",
+				"5d1ad8c560b76d2e11518d921b237498116149356576d54edbd63b0d91ce7d67",
+				"bf405ba9af7d79f1c31161509bb2861fc6486a62585e11b74efe2c02262b1584",
+				"47b005b90c8cc7582eb0b6ac647c097c3083d2566a2958d5eb30373f250bf630",
+				"554e6fd4069601560ab72d11f5b120e50a2844910510153ca558eab6cce02b6c"
+			]
+		}
+	],
+	"scope": "full beach actual GPU edits, cold independent native checkpoint restore and continuation",
+	"source": "D:/godot/project/sandcastle/task/sandcastle_gpu_edit_validation/evidence/20261011_161429_beach_edit_process_probe"
+}

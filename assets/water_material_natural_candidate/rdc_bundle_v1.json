@@ -1,0 +1,23 @@
+{
+  "bundle_schema_version": 1,
+  "style_profile": "res://assets/water_material_natural_candidate/rdc_style_v1.json",
+  "style_profile_sha256": "dae5eebb564ac2d853a7daae58bd1c93261d83239a3df1eeeeb13fdab2e79fd1",
+  "source_style_profile": "res://assets/water_material_natural_candidate/style_reference_v1.json",
+  "source_style_profile_sha256": "19980a7955633e155f5cf31d2c8d5a2d9c1cafc486d32c5e6e65ca630886315b",
+  "components": [
+    {
+      "material": "water",
+      "shader": "res://assets/water_material_natural_candidate/rdc_water.gdshader",
+      "shader_sha256": "16a93e3d6942429073cbcbcba73b59bbe42e80c61bf776e9f15170ca69fd8b89",
+      "index": "res://assets/water_material_natural_candidate/rdc_water_index.json",
+      "index_sha256": "d0ba20a7f2d1277b233852465757e07d481f2ee53b40779cdbf9f44ff78fc304"
+    },
+    {
+      "material": "bed",
+      "shader": "res://assets/water_material_natural_candidate/rdc_bed.gdshader",
+      "shader_sha256": "e36bf7c1d44dbc38f50c46b7405cf439a48fd6f427df6f95a3d5e3e50d650abf",
+      "index": "res://assets/water_material_natural_candidate/rdc_bed_index.json",
+      "index_sha256": "71ae11192caa6e0dbae951506fb31d20e5079561e4373f8a2807a13e14035fc6"
+    }
+  ]
+}

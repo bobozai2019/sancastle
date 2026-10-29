@@ -1,0 +1,52 @@
+[gd_scene format=3]
+[ext_resource type="Theme" path="res://assets/ui/beach/beach_theme.tres" id="beach_theme"]
+[ext_resource type="Texture2D" path="res://assets/ui/beach/Dig.svg" id="icon_Dig"]
+[ext_resource type="Texture2D" path="res://assets/ui/beach/Fill.svg" id="icon_Fill"]
+[ext_resource type="Texture2D" path="res://assets/ui/beach/Castle.svg" id="icon_Castle"]
+[ext_resource type="Texture2D" path="res://assets/ui/beach/Shovel.svg" id="icon_Shovel"]
+[ext_resource type="Texture2D" path="res://assets/ui/beach/Wall.svg" id="icon_Wall"]
+[ext_resource type="Texture2D" path="res://assets/ui/beach/SuspendedSand.svg" id="icon_SuspendedSand"]
+[ext_resource type="Texture2D" path="res://assets/ui/beach/GravelDrop.svg" id="icon_GravelDrop"]
+[ext_resource type="Texture2D" path="res://assets/ui/beach/Smooth.svg" id="icon_Smooth"]
+[ext_resource type="Texture2D" path="res://assets/ui/beach/Compact.svg" id="icon_Compact"]
+[ext_resource type="Texture2D" path="res://assets/ui/beach/bottle.svg" id="icon_bottle"]
+[ext_resource type="Texture2D" path="res://assets/ui/beach/plank.svg" id="icon_plank"]
+[ext_resource type="Texture2D" path="res://assets/ui/beach/stick.svg" id="icon_stick"]
+[ext_resource type="Texture2D" path="res://assets/ui/beach/wave.svg" id="icon_wave"]
+[ext_resource type="Texture2D" path="res://assets/ui/beach/travel.svg" id="icon_travel"]
+
+[ext_resource type="Script" path="res://scripts/beach/scene_switch_panel.gd" id="1_script"]
+
+[node name="SceneSwitcher" type="VBoxContainer"]
+layout_mode = 2
+script = ExtResource("1_script")
+theme = ExtResource("beach_theme")
+
+[node name="Actions" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Targets" type="OptionButton" parent="Actions"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+item_count = 2
+selected = 0
+popup/item_0/text = "主沙滩"
+popup/item_0/id = 0
+popup/item_1/text = "潮汐沙滩 · test1"
+popup/item_1/id = 1
+custom_minimum_size = Vector2(0, 38)
+
+[node name="Switch" type="Button" parent="Actions"]
+layout_mode = 2
+focus_mode = 0
+text = "出发"
+
+[node name="Status" type="Label" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "切换保留各场景进度"
+autowrap_mode = 2
+mouse_filter = 2
+
+[connection signal="pressed" from="Actions/Switch" to="." method="_on_switch_pressed"]

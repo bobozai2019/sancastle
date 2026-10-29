@@ -1,0 +1,39 @@
+{
+  "source": "assets\\water_material_natural_candidate\\water_height.gdshader",
+  "source_sha256": "f7f9108fde01ee288349a2fdde9d57a003e457b25fc7cbea666f484d58ba151d",
+  "generated": "assets\\water_material_natural_candidate\\water_geometry_specialized.gdshader",
+  "generated_sha256": "eb75e87315bf72fcf42d5911b85540dc63e556e23f02bd441f7ea2ad3dabd59f",
+  "constants": {
+    "display_reconstruction": true,
+    "radial_shore": false,
+    "midpoint_clip": false,
+    "prototype_shore_unscaled_depth": false,
+    "prototype_shore_linear_weights": false,
+    "prototype_shared_bed_triangles": false,
+    "prototype_use_local_front": true,
+    "prototype_crest_span_smoothing": false,
+    "prototype_crest_depth_gate_bypass": false,
+    "prototype_broad_crest": false,
+    "prototype_rise_crest": false,
+    "prototype_use_front_field": false,
+    "prototype_curl_forward_m": 0.0,
+    "prototype_local_overturn_m": 0.0
+  },
+  "value_sources": {
+    "display_reconstruction": "actual_material_uniform",
+    "radial_shore": "actual_material_uniform",
+    "midpoint_clip": "actual_material_uniform",
+    "prototype_shore_unscaled_depth": "shader_declaration_default",
+    "prototype_shore_linear_weights": "shader_declaration_default",
+    "prototype_shared_bed_triangles": "shader_declaration_default",
+    "prototype_use_local_front": "actual_material_uniform",
+    "prototype_crest_span_smoothing": "shader_declaration_default",
+    "prototype_crest_depth_gate_bypass": "shader_declaration_default",
+    "prototype_broad_crest": "shader_declaration_default",
+    "prototype_rise_crest": "shader_declaration_default",
+    "prototype_use_front_field": "shader_declaration_default",
+    "prototype_curl_forward_m": "shader_declaration_default",
+    "prototype_local_overturn_m": "shader_declaration_default"
+  },
+  "rule": "Replace identifier references outside uniform declarations with exact effective constant; no arithmetic or dynamic fields changed. Diagnostic only, not selected."
+}

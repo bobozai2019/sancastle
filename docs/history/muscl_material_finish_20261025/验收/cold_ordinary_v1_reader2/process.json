@@ -1,0 +1,24 @@
+{
+  "pid": 3684,
+  "started_unix": 1792943620.5345275,
+  "command": [
+    "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+    "--path",
+    "D:\\godot\\project\\sandcastle\\test_output\\muscl_material_finish_20261025\\projects\\combined",
+    "--rendering-method",
+    "forward_plus",
+    "--rendering-driver",
+    "d3d12",
+    "--resolution",
+    "1280x720",
+    "--script",
+    "res://tools/muscl_performance/restart_probe.gd",
+    "--",
+    "--output=D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/cold_ordinary_v1_reader2",
+    "--parameter-config=D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/cold_ordinary_v1_reader2/parameters/startup.json",
+    "--mode=resume",
+    "--input=D:/godot/project/sandcastle/docs/history/muscl_material_finish_20261025/验收/cold_ordinary_v1_writer/data/seed.sandue",
+    "--case=ordinary"
+  ],
+  "telemetry": null
+}

@@ -1,0 +1,35 @@
+{
+  "resource_files": 124,
+  "scripts": 191,
+  "findings": [
+    {
+      "rule": "W001",
+      "severity": "warning_candidate",
+      "file": "scripts/sand/brushes/brush_registry.gd",
+      "line": 19,
+      "message": "Parameter hash shadows global hash(); cosmetic warning, not a startup failure"
+    },
+    {
+      "rule": "W001",
+      "severity": "warning_candidate",
+      "file": "scripts/simulation/unified_edit/profile_registry.gd",
+      "line": 42,
+      "message": "Parameter hash shadows global hash(); cosmetic warning, not a startup failure"
+    },
+    {
+      "rule": "W001",
+      "severity": "warning_candidate",
+      "file": "scripts/simulation/unified_edit/profile_registry.gd",
+      "line": 46,
+      "message": "Parameter hash shadows global hash(); cosmetic warning, not a startup failure"
+    },
+    {
+      "rule": "W001",
+      "severity": "warning_candidate",
+      "file": "scripts/simulation/unified_edit/profile_registry.gd",
+      "line": 49,
+      "message": "Parameter hash shadows global hash(); cosmetic warning, not a startup failure"
+    }
+  ],
+  "limitations": "Pattern scan is advisory; does not prove arbitrary control flow, lifetime or GPU correctness."
+}

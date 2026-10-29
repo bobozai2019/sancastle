@@ -1,0 +1,77 @@
+[gd_scene load_steps=12 format=3]
+
+[ext_resource type="Script" path="res://scripts/props/floating_prop.gd" id="1"]
+[ext_resource type="Resource" path="res://assets/props/bottle_profile.tres" id="2"]
+[sub_resource type="PhysicsMaterial" id="Physics"]
+friction = 0.6
+[sub_resource type="StandardMaterial3D" id="Plastic"]
+albedo_color = Color(0.23, 0.64, 0.67, 1)
+roughness = 0.24
+metallic_specular = 0.7
+[sub_resource type="StandardMaterial3D" id="Label"]
+albedo_color = Color(0.94, 0.96, 0.83, 1)
+roughness = 0.8
+[sub_resource type="StandardMaterial3D" id="CapMaterial"]
+albedo_color = Color(0.08, 0.2, 0.35, 1)
+roughness = 0.6
+[sub_resource type="CapsuleMesh" id="BottleMesh"]
+material = SubResource("Plastic")
+radius = 0.09
+height = 0.54
+[sub_resource type="CylinderMesh" id="LabelMesh"]
+material = SubResource("Label")
+top_radius = 0.091
+bottom_radius = 0.091
+height = 0.18
+[sub_resource type="CylinderMesh" id="CapMesh"]
+material = SubResource("CapMaterial")
+top_radius = 0.06
+bottom_radius = 0.06
+height = 0.065
+[sub_resource type="CapsuleShape3D" id="BodyShape"]
+radius = 0.09
+height = 0.54
+[sub_resource type="CapsuleShape3D" id="CapShape"]
+radius = 0.055
+height = 0.12
+
+[node name="Bottle" type="RigidBody3D"]
+mass = 0.65
+physics_material_override = SubResource("Physics")
+collision_layer = 2
+collision_mask = 3
+freeze = true
+can_sleep = true
+contact_monitor = true
+max_contacts_reported = 8
+continuous_cd = true
+center_of_mass_mode = 1
+center_of_mass = Vector3(-0.015, -0.015, 0)
+linear_damp_mode = 1
+linear_damp = 0.0
+angular_damp_mode = 1
+angular_damp = 0.8
+script = ExtResource("1")
+profile = ExtResource("2")
+
+[node name="Body" type="MeshInstance3D" parent="."]
+rotation_degrees = Vector3(0, 0, 90)
+mesh = SubResource("BottleMesh")
+[node name="Label" type="MeshInstance3D" parent="."]
+rotation_degrees = Vector3(0, 0, 90)
+mesh = SubResource("LabelMesh")
+[node name="Cap" type="MeshInstance3D" parent="."]
+position = Vector3(0.29, 0, 0)
+rotation_degrees = Vector3(0, 0, 90)
+mesh = SubResource("CapMesh")
+[node name="BodyCollision" type="CollisionShape3D" parent="."]
+rotation_degrees = Vector3(0, 0, 90)
+shape = SubResource("BodyShape")
+[node name="CapCollision" type="CollisionShape3D" parent="."]
+position = Vector3(0.27, 0, 0)
+rotation_degrees = Vector3(0, 0, 90)
+shape = SubResource("CapShape")
+[node name="FloatRear" type="Marker3D" parent="."]
+position = Vector3(-0.16, 0, 0)
+[node name="FloatFront" type="Marker3D" parent="."]
+position = Vector3(0.16, 0, 0)

@@ -1,0 +1,30 @@
+Godot Engine v4.7.2.stable.steam.ed1daf0bf - https://godotengine.org
+
+START_INSTANTIATE res://scenes/main.tscn
+ERROR: Instance count must be 0 to change the transform format.
+   at: set_transform_format (scene/resources/multimesh.cpp:357)
+   GDScript backtrace (most recent call first):
+       [0] _initialize (res://test_output/startup_diagnostics_20261026/instantiate.gd:6)
+ERROR: Instance count must be 0 to toggle whether colors are used.
+   at: set_use_colors (scene/resources/multimesh.cpp:339)
+   GDScript backtrace (most recent call first):
+       [0] _initialize (res://test_output/startup_diagnostics_20261026/instantiate.gd:6)
+ERROR: Instance count must be 0 to toggle whether custom data is used.
+   at: set_use_custom_data (scene/resources/multimesh.cpp:348)
+   GDScript backtrace (most recent call first):
+       [0] _initialize (res://test_output/startup_diagnostics_20261026/instantiate.gd:6)
+ERROR: Instance count must be 0 to change the transform format.
+   at: set_transform_format (scene/resources/multimesh.cpp:357)
+   GDScript backtrace (most recent call first):
+       [0] _initialize (res://test_output/startup_diagnostics_20261026/instantiate.gd:7)
+ERROR: Instance count must be 0 to toggle whether colors are used.
+   at: set_use_colors (scene/resources/multimesh.cpp:339)
+   GDScript backtrace (most recent call first):
+       [0] _initialize (res://test_output/startup_diagnostics_20261026/instantiate.gd:7)
+ERROR: Instance count must be 0 to toggle whether custom data is used.
+   at: set_use_custom_data (scene/resources/multimesh.cpp:348)
+   GDScript backtrace (most recent call first):
+       [0] _initialize (res://test_output/startup_diagnostics_20261026/instantiate.gd:7)
+SPLASH 1024 format=1 local=true
+START_INSTANTIATE res://scenes/playable/test1_geometry.tscn
+SPLASH 1024 format=1 local=true

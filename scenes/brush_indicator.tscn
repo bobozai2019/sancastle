@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/visual/brush_indicator.gd" id="1_brush"]
+
+[sub_resource type="TorusMesh" id="TorusMesh_brush"]
+inner_radius = 0.3425
+outer_radius = 0.4175
+rings = 48
+ring_segments = 6
+
+[sub_resource type="StandardMaterial3D" id="Material_brush"]
+resource_local_to_scene = true
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0.16, 0.18, 0.22, 0.75)
+no_depth_test = true
+
+[node name="BrushIndicator" type="MeshInstance3D"]
+visible = false
+mesh = SubResource("TorusMesh_brush")
+material_override = SubResource("Material_brush")
+script = ExtResource("1_brush")

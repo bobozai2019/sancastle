@@ -1,0 +1,28 @@
+[
+  {
+    "label": "variant_v1",
+    "pass": true,
+    "comparison": "D:\\godot\\project\\sandcastle\\docs\\history\\muscl_material_finish_20261025\\\u9a8c\u6536\\variant_v1_comparison.json"
+  },
+  {
+    "label": "first_order_v1",
+    "pass": true,
+    "comparison": "D:\\godot\\project\\sandcastle\\docs\\history\\muscl_material_finish_20261025\\\u9a8c\u6536\\first_order_v1_comparison.json"
+  },
+  {
+    "label": "negative",
+    "pass": true
+  },
+  {
+    "label": "nonfinite",
+    "pass": true
+  },
+  {
+    "label": "init_compile",
+    "pass": true
+  },
+  {
+    "pass": false,
+    "error": "CalledProcessError(1, ['C:\\\\Python313\\\\python.exe', 'D:\\\\godot\\\\project\\\\sandcastle\\\\tools\\\\muscl_performance\\\\compare_variant_states.py', '--a', 'D:\\\\godot\\\\project\\\\sandcastle\\\\docs\\\\history\\\\muscl_material_finish_20261025\\\\\u9a8c\u6536\\\\main_inputs_v1_a', '--b', 'D:\\\\godot\\\\project\\\\sandcastle\\\\docs\\\\history\\\\muscl_material_finish_20261025\\\\\u9a8c\u6536\\\\main_inputs_v1_b', '--output', 'D:\\\\godot\\\\project\\\\sandcastle\\\\docs\\\\history\\\\muscl_material_finish_20261025\\\\\u9a8c\u6536\\\\main_inputs_v1_comparison.json'])"
+  }
+]

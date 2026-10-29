@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/simulation/unified_edit/tool_profile.gd" id="1"]
+[resource]
+script = ExtResource("1")
+profile_id = &"dig_v1"
+operation = 0
+shape = 0
+destination = 0
+volume_sign = 2
+defaults = {"amount_m3": 0.1, "radius_m": 0.75, "speed_m_s": 0.0, "strength": 1.0}
+ranges = {"amount_m3": [0.01, 1.0], "radius_m": [0.0, 4.0], "speed_m_s": [-1.0, 1.0], "strength": [0.0, 1.0]}
+allowed_water_policies = PackedInt32Array(0, 1, 2, 3)
+allowed_material_policies = PackedInt32Array(0)

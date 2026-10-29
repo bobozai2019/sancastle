@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Shader" path="res://tests/fixtures/unified_edit/visual_consumer.gdshader" id="1"]
+
+[sub_resource type="ShaderMaterial" id="foam"]
+shader = ExtResource("1")
+shader_parameter/mode = 0
+
+[sub_resource type="ShaderMaterial" id="front"]
+shader = ExtResource("1")
+shader_parameter/mode = 1
+
+[sub_resource type="ShaderMaterial" id="gravel"]
+shader = ExtResource("1")
+shader_parameter/mode = 2
+
+[node name="EnabledVisualConsumer" type="SubViewport"]
+disable_3d = true
+size = Vector2i(48, 16)
+render_target_update_mode = 4
+
+[node name="Foam" type="ColorRect" parent="."]
+material = SubResource("foam")
+offset_right = 16.0
+offset_bottom = 16.0
+
+[node name="Front" type="ColorRect" parent="."]
+material = SubResource("front")
+offset_left = 16.0
+offset_right = 32.0
+offset_bottom = 16.0
+
+[node name="Gravel" type="ColorRect" parent="."]
+material = SubResource("gravel")
+offset_left = 32.0
+offset_right = 48.0
+offset_bottom = 16.0

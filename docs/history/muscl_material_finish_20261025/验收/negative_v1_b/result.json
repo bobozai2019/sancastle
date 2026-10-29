@@ -1,0 +1,1548 @@
+{
+	"case_id": "negative",
+	"checks": [
+		{
+			"label": "configuration",
+			"pass": true
+		},
+		{
+			"label": "configure",
+			"pass": true
+		},
+		{
+			"label": "initialized:",
+			"pass": true
+		},
+		{
+			"label": "injection_uploaded",
+			"pass": true
+		},
+		{
+			"label": "injection_verified",
+			"pass": true
+		},
+		{
+			"label": "injection_not_published",
+			"pass": true
+		},
+		{
+			"label": "request",
+			"pass": true
+		},
+		{
+			"label": "expected_numeric_fault",
+			"pass": true
+		},
+		{
+			"label": "public_view_preserved",
+			"pass": true
+		},
+		{
+			"label": "no_time_or_revision",
+			"pass": true
+		},
+		{
+			"label": "no_accepted_trial",
+			"pass": true
+		},
+		{
+			"label": "precise_numeric_reason",
+			"pass": true
+		},
+		{
+			"label": "terminal_cleanup",
+			"pass": true
+		},
+		{
+			"label": "released",
+			"pass": true
+		},
+		{
+			"label": "source_integrity",
+			"pass": true
+		}
+	],
+	"configuration": {
+		"abi_version": 1,
+		"cell_size_m": 0.125,
+		"configuration_hash": "68d8393eff2615ae918f970dab4743829fe52fffb5a827029d321e67770265f6",
+		"diagnostics": {
+			"collision_observe": false,
+			"profile_passes": false
+		},
+		"domain_id": "main_beach",
+		"effects": {
+			"foam_enabled": false,
+			"gravel_enabled": false
+		},
+		"environment": {
+			"boundary": {
+				"enabled": false
+			},
+			"water_numerics": {
+				"schema": 1,
+				"solver_id": "muscl_mc_ssprk2_v1"
+			}
+		},
+		"family": "unified_edit",
+		"grid_size": 256,
+		"ledger_policy": {
+			"control": "unchanged_v1",
+			"field_adjust": "unchanged_v1",
+			"redistribute": "unchanged_v1",
+			"target_height": "exact_external_v1",
+			"transfer": "balanced_conservative_or_capped_exact_sink_v2",
+			"volume_delta": "approximate_on_known_recording_v1"
+		},
+		"material": {
+			"cohesion_yield_height_m": 0.9,
+			"compaction_storage_value": 0.9501953125,
+			"compaction_target": 0.95,
+			"path": "res://assets/brushes/molded_material_candidate.json",
+			"saturation_tagged_depth_m": 0.125,
+			"sha256": "1936e7dfc654a7a5dc5e9307d880c85e7cc7f48b128372ec622f5b68b7af2890"
+		},
+		"profiles": {
+			"castle_v1": {
+				"allowed_features": {
+					"material_policy": [
+						0,
+						1
+					],
+					"water_policy": [
+						0,
+						1,
+						2,
+						3
+					]
+				},
+				"defaults": {
+					"datum_y_m": 0.0,
+					"height_m": 0.7,
+					"scale_xz": 1.0,
+					"speed_m_s": 0.0,
+					"yaw_rad": 0.0
+				},
+				"derived_fields": 63,
+				"destination": 0,
+				"display_name": "",
+				"height_reference": 1,
+				"material_policy": 1,
+				"operation": 1,
+				"profile_hash": "dda1aaac9e158dd10f0d0d767023152678e3d2e19b6ab3a32f90010ad304a753",
+				"profile_id": "castle_v1",
+				"ranges": {
+					"datum_y_m": [
+						-16.0,
+						16.0
+					],
+					"height_m": [
+						0.5,
+						1.0
+					],
+					"scale_xz": [
+						1.0,
+						1.5
+					],
+					"speed_m_s": [
+						-1.0,
+						1.0
+					],
+					"yaw_rad": [
+						-3.14159265358979,
+						3.14159265358979
+					]
+				},
+				"resource_identity": {
+					"model_sha256": "12b184ea0ef17f3efacf6695f2bfd1b492591e29c61c7e81128dff8498349a43",
+					"path": "res://assets/unified_edit/castle_v1.tres",
+					"sha256": "47e7f34a892cbfe8b3c7ed089c0db6e5f2a81944a51591e4ca6732fae4861c2c"
+				},
+				"sampling": {
+					"max_buffer_points": 256,
+					"max_segment_m": 2.0,
+					"spacing_m": 0.125
+				},
+				"schema": 1,
+				"shape": 2,
+				"stroke_policy": 1,
+				"target_rule": 1,
+				"template": {
+					"height": 65,
+					"model_sha256": "a2b8d8d940f8ef7b2af13232c0f7bd0b1888e5ed8f1e074885f656b2203f48d0",
+					"payload_path": "res://assets/brushes/castle/four_towers_v1.rgba32f",
+					"resource_path": "res://assets/unified_edit/four_towers_v1.tres",
+					"resource_sha256": "4a0a2b40adca14741b5365a1b25736e2d4e21778f1576d1455792eda0b1b98f9",
+					"sha256": "42f4654b2a40688fdfb936a790c1c08f0d2f4efbe6d1aa3bef91f2598089e833",
+					"spacing_m": 0.0625,
+					"template_id": "four_towers_v1",
+					"width": 65
+				},
+				"transfer_policy": 0,
+				"version": 2,
+				"volume_sign": 0,
+				"water_policy": 3
+			},
+			"compact_v1": {
+				"allowed_features": {
+					"material_policy": [
+						2
+					],
+					"water_policy": [
+						0
+					]
+				},
+				"defaults": {
+					"radius_m": 0.75,
+					"strength": 1.0
+				},
+				"derived_fields": 4,
+				"destination": 2,
+				"display_name": "",
+				"height_reference": 0,
+				"material_policy": 2,
+				"operation": 4,
+				"profile_hash": "de1551b6adb29aa3e9c9cad19a6095b5fbde760c2b7a7ea44299d5df1e310a5b",
+				"profile_id": "compact_v1",
+				"ranges": {
+					"radius_m": [
+						0.0,
+						4.0
+					],
+					"strength": [
+						0.0,
+						1.0
+					]
+				},
+				"resource_identity": {
+					"model_sha256": "12b184ea0ef17f3efacf6695f2bfd1b492591e29c61c7e81128dff8498349a43",
+					"path": "res://assets/unified_edit/compact_v1.tres",
+					"sha256": "4054a6df232ea8eb63e69fb20284d98cd7dbba945cab6ee2cf6518379fb37802"
+				},
+				"sampling": {
+					"max_buffer_points": 256,
+					"max_segment_m": 2.0,
+					"spacing_m": 0.125
+				},
+				"schema": 1,
+				"shape": 0,
+				"stroke_policy": 0,
+				"target_rule": 0,
+				"template": {},
+				"transfer_policy": 0,
+				"version": 1,
+				"volume_sign": 0,
+				"water_policy": 0
+			},
+			"dig_sweep_v1": {
+				"allowed_features": {
+					"material_policy": [
+						0
+					],
+					"water_policy": [
+						0,
+						1,
+						2,
+						3
+					]
+				},
+				"defaults": {
+					"amount_m3": 0.1,
+					"radius_m": 0.75,
+					"speed_m_s": 0.0,
+					"strength": 1.0
+				},
+				"derived_fields": 31,
+				"destination": 0,
+				"display_name": "",
+				"height_reference": 0,
+				"material_policy": 0,
+				"operation": 0,
+				"profile_hash": "82842515c57d1b08ab7e2805c54a6ad8170c1df6faefc52a92a4502520d3e893",
+				"profile_id": "dig_sweep_v1",
+				"ranges": {
+					"amount_m3": [
+						0.01,
+						1.0
+					],
+					"radius_m": [
+						0.0,
+						4.0
+					],
+					"speed_m_s": [
+						-1.0,
+						1.0
+					],
+					"strength": [
+						0.0,
+						1.0
+					]
+				},
+				"resource_identity": {
+					"model_sha256": "12b184ea0ef17f3efacf6695f2bfd1b492591e29c61c7e81128dff8498349a43",
+					"path": "res://assets/unified_edit/dig_sweep_v1.tres",
+					"sha256": "f24798e571f6cb309292ff78b0fdfb4cc93b480739fbf200acd873e6b1749cd5"
+				},
+				"sampling": {
+					"max_buffer_points": 256,
+					"max_segment_m": 64.0,
+					"spacing_m": 0.125
+				},
+				"schema": 1,
+				"shape": 1,
+				"stroke_policy": 0,
+				"target_rule": 0,
+				"template": {},
+				"transfer_policy": 0,
+				"version": 1,
+				"volume_sign": 2,
+				"water_policy": 3
+			},
+			"dig_v1": {
+				"allowed_features": {
+					"material_policy": [
+						0
+					],
+					"water_policy": [
+						0,
+						1,
+						2,
+						3
+					]
+				},
+				"defaults": {
+					"amount_m3": 0.1,
+					"radius_m": 0.75,
+					"speed_m_s": 0.0,
+					"strength": 1.0
+				},
+				"derived_fields": 31,
+				"destination": 0,
+				"display_name": "",
+				"height_reference": 0,
+				"material_policy": 0,
+				"operation": 0,
+				"profile_hash": "b2aad3bfff78bbe0523356ac33c4f22103ebd1f61b2055263970ced776c897af",
+				"profile_id": "dig_v1",
+				"ranges": {
+					"amount_m3": [
+						0.01,
+						1.0
+					],
+					"radius_m": [
+						0.0,
+						4.0
+					],
+					"speed_m_s": [
+						-1.0,
+						1.0
+					],
+					"strength": [
+						0.0,
+						1.0
+					]
+				},
+				"resource_identity": {
+					"model_sha256": "12b184ea0ef17f3efacf6695f2bfd1b492591e29c61c7e81128dff8498349a43",
+					"path": "res://assets/unified_edit/dig_v1.tres",
+					"sha256": "c282b0206f1961e6ed43fd7d4a7bd983ab847057da54502917fcfea0bc97e136"
+				},
+				"sampling": {
+					"max_buffer_points": 256,
+					"max_segment_m": 2.0,
+					"spacing_m": 0.125
+				},
+				"schema": 1,
+				"shape": 0,
+				"stroke_policy": 0,
+				"target_rule": 0,
+				"template": {},
+				"transfer_policy": 0,
+				"version": 1,
+				"volume_sign": 2,
+				"water_policy": 3
+			},
+			"fill_sweep_v1": {
+				"allowed_features": {
+					"material_policy": [
+						0
+					],
+					"water_policy": [
+						0,
+						1,
+						2,
+						3
+					]
+				},
+				"defaults": {
+					"amount_m3": 0.1,
+					"radius_m": 0.75,
+					"speed_m_s": 0.0,
+					"strength": 1.0
+				},
+				"derived_fields": 31,
+				"destination": 0,
+				"display_name": "",
+				"height_reference": 0,
+				"material_policy": 0,
+				"operation": 0,
+				"profile_hash": "a91329450ac0569bf800995406cfcb7ced138dc4f8f10cb78da39cd2e1708f76",
+				"profile_id": "fill_sweep_v1",
+				"ranges": {
+					"amount_m3": [
+						0.01,
+						1.0
+					],
+					"radius_m": [
+						0.0,
+						4.0
+					],
+					"speed_m_s": [
+						-1.0,
+						1.0
+					],
+					"strength": [
+						0.0,
+						1.0
+					]
+				},
+				"resource_identity": {
+					"model_sha256": "12b184ea0ef17f3efacf6695f2bfd1b492591e29c61c7e81128dff8498349a43",
+					"path": "res://assets/unified_edit/fill_sweep_v1.tres",
+					"sha256": "9be98ddd1489278f7544b7bb8555018b8668c3e203d1b291cc23b8dfbe014fff"
+				},
+				"sampling": {
+					"max_buffer_points": 256,
+					"max_segment_m": 64.0,
+					"spacing_m": 0.125
+				},
+				"schema": 1,
+				"shape": 1,
+				"stroke_policy": 0,
+				"target_rule": 0,
+				"template": {},
+				"transfer_policy": 0,
+				"version": 1,
+				"volume_sign": 1,
+				"water_policy": 3
+			},
+			"fill_v1": {
+				"allowed_features": {
+					"material_policy": [
+						0
+					],
+					"water_policy": [
+						0,
+						1,
+						2,
+						3
+					]
+				},
+				"defaults": {
+					"amount_m3": 0.1,
+					"radius_m": 0.75,
+					"speed_m_s": 0.0,
+					"strength": 1.0
+				},
+				"derived_fields": 31,
+				"destination": 0,
+				"display_name": "",
+				"height_reference": 0,
+				"material_policy": 0,
+				"operation": 0,
+				"profile_hash": "4c805fbb5cfaff1a4999512eef3aadc4703528bbf01edb8c9dd845a9d300a15e",
+				"profile_id": "fill_v1",
+				"ranges": {
+					"amount_m3": [
+						0.01,
+						1.0
+					],
+					"radius_m": [
+						0.0,
+						4.0
+					],
+					"speed_m_s": [
+						-1.0,
+						1.0
+					],
+					"strength": [
+						0.0,
+						1.0
+					]
+				},
+				"resource_identity": {
+					"model_sha256": "12b184ea0ef17f3efacf6695f2bfd1b492591e29c61c7e81128dff8498349a43",
+					"path": "res://assets/unified_edit/fill_v1.tres",
+					"sha256": "59ab1c2ac14b40b20fc082c0ab13d783c28167da89c652ee03cf178d9e81d49e"
+				},
+				"sampling": {
+					"max_buffer_points": 256,
+					"max_segment_m": 2.0,
+					"spacing_m": 0.125
+				},
+				"schema": 1,
+				"shape": 0,
+				"stroke_policy": 0,
+				"target_rule": 0,
+				"template": {},
+				"transfer_policy": 0,
+				"version": 1,
+				"volume_sign": 1,
+				"water_policy": 3
+			},
+			"shovel_v1": {
+				"allowed_features": {
+					"material_policy": [
+						2
+					],
+					"water_policy": [
+						0,
+						1,
+						2,
+						3
+					]
+				},
+				"defaults": {
+					"depth_m": 0.15,
+					"shoulder_width_m": 0.5,
+					"speed_m_s": 0.0,
+					"trench_width_m": 0.5
+				},
+				"derived_fields": 63,
+				"destination": 0,
+				"display_name": "",
+				"height_reference": 2,
+				"material_policy": 2,
+				"operation": 2,
+				"profile_hash": "9ab376626cff670e533c5c68883ad3857ef231c2abb5ab3fc40a823f33fddd27",
+				"profile_id": "shovel_v1",
+				"ranges": {
+					"depth_m": [
+						0.05,
+						0.3
+					],
+					"shoulder_width_m": [
+						0.5,
+						1.0
+					],
+					"speed_m_s": [
+						-1.0,
+						1.0
+					],
+					"trench_width_m": [
+						0.5,
+						1.0
+					]
+				},
+				"resource_identity": {
+					"model_sha256": "12b184ea0ef17f3efacf6695f2bfd1b492591e29c61c7e81128dff8498349a43",
+					"path": "res://assets/unified_edit/shovel_v1.tres",
+					"sha256": "62ff4641dbbe8b866da6954579cda64d608cb1cd0c308aa0c7a807d22bd09ff9"
+				},
+				"sampling": {
+					"max_buffer_points": 256,
+					"max_segment_m": 2.0,
+					"spacing_m": 0.125
+				},
+				"schema": 1,
+				"shape": 1,
+				"stroke_policy": 1,
+				"target_rule": 0,
+				"template": {},
+				"transfer_policy": 2,
+				"version": 2,
+				"volume_sign": 0,
+				"water_policy": 3
+			},
+			"smooth_v1": {
+				"allowed_features": {
+					"material_policy": [
+						2
+					],
+					"water_policy": [
+						0
+					]
+				},
+				"defaults": {
+					"radius_m": 0.75,
+					"strength": 1.0
+				},
+				"derived_fields": 5,
+				"destination": 0,
+				"display_name": "",
+				"height_reference": 0,
+				"material_policy": 2,
+				"operation": 3,
+				"profile_hash": "8cdd97120810721b8bcea415146a9f30a154ffb1bcd322d2ee648a353a743316",
+				"profile_id": "smooth_v1",
+				"ranges": {
+					"radius_m": [
+						0.0,
+						4.0
+					],
+					"strength": [
+						0.0,
+						1.0
+					]
+				},
+				"resource_identity": {
+					"model_sha256": "12b184ea0ef17f3efacf6695f2bfd1b492591e29c61c7e81128dff8498349a43",
+					"path": "res://assets/unified_edit/smooth_v1.tres",
+					"sha256": "01731a291186884bd9cebaa76babd7acf09c9cc6fa2db82c4b243f06b0160fb7"
+				},
+				"sampling": {
+					"max_buffer_points": 256,
+					"max_segment_m": 2.0,
+					"spacing_m": 0.125
+				},
+				"schema": 1,
+				"shape": 0,
+				"stroke_policy": 0,
+				"target_rule": 0,
+				"template": {},
+				"transfer_policy": 0,
+				"version": 1,
+				"volume_sign": 0,
+				"water_policy": 0
+			},
+			"suspended_sweep_v1": {
+				"allowed_features": {
+					"material_policy": [
+						0
+					],
+					"water_policy": [
+						0
+					]
+				},
+				"defaults": {
+					"amount_m3": 0.1,
+					"radius_m": 0.75,
+					"speed_m_s": 0.0,
+					"strength": 1.0
+				},
+				"derived_fields": 2,
+				"destination": 1,
+				"display_name": "",
+				"height_reference": 0,
+				"material_policy": 0,
+				"operation": 0,
+				"profile_hash": "5a4d264ca8b18e446d23546bd9b655776e33d683355567de7e79d3fbe25effc5",
+				"profile_id": "suspended_sweep_v1",
+				"ranges": {
+					"amount_m3": [
+						0.01,
+						1.0
+					],
+					"radius_m": [
+						0.0,
+						4.0
+					],
+					"speed_m_s": [
+						0.0,
+						0.0
+					],
+					"strength": [
+						0.0,
+						1.0
+					]
+				},
+				"resource_identity": {
+					"model_sha256": "12b184ea0ef17f3efacf6695f2bfd1b492591e29c61c7e81128dff8498349a43",
+					"path": "res://assets/unified_edit/suspended_sweep_v1.tres",
+					"sha256": "d1551bb2e05169355778754f8fa38469ace041f035fbcaf460c32bf37c6d4c9d"
+				},
+				"sampling": {
+					"max_buffer_points": 256,
+					"max_segment_m": 64.0,
+					"spacing_m": 0.125
+				},
+				"schema": 1,
+				"shape": 1,
+				"stroke_policy": 0,
+				"target_rule": 0,
+				"template": {},
+				"transfer_policy": 0,
+				"version": 1,
+				"volume_sign": 1,
+				"water_policy": 0
+			},
+			"suspended_v1": {
+				"allowed_features": {
+					"material_policy": [
+						0
+					],
+					"water_policy": [
+						0
+					]
+				},
+				"defaults": {
+					"amount_m3": 0.1,
+					"radius_m": 0.75,
+					"speed_m_s": 0.0,
+					"strength": 1.0
+				},
+				"derived_fields": 2,
+				"destination": 1,
+				"display_name": "",
+				"height_reference": 0,
+				"material_policy": 0,
+				"operation": 0,
+				"profile_hash": "de401b27d9f5daa15aa30199ebb3096933a1e59685b9db6250b0f5663483f9a5",
+				"profile_id": "suspended_v1",
+				"ranges": {
+					"amount_m3": [
+						0.01,
+						1.0
+					],
+					"radius_m": [
+						0.0,
+						4.0
+					],
+					"speed_m_s": [
+						0.0,
+						0.0
+					],
+					"strength": [
+						0.0,
+						1.0
+					]
+				},
+				"resource_identity": {
+					"model_sha256": "12b184ea0ef17f3efacf6695f2bfd1b492591e29c61c7e81128dff8498349a43",
+					"path": "res://assets/unified_edit/suspended_v1.tres",
+					"sha256": "587a3926894f434d1a95a41ab91b56559b4d70f25913982c59ba817cd45eb90a"
+				},
+				"sampling": {
+					"max_buffer_points": 256,
+					"max_segment_m": 2.0,
+					"spacing_m": 0.125
+				},
+				"schema": 1,
+				"shape": 0,
+				"stroke_policy": 0,
+				"target_rule": 0,
+				"template": {},
+				"transfer_policy": 0,
+				"version": 1,
+				"volume_sign": 1,
+				"water_policy": 0
+			},
+			"wall_v1": {
+				"allowed_features": {
+					"material_policy": [
+						0,
+						1
+					],
+					"water_policy": [
+						0,
+						1,
+						2,
+						3
+					]
+				},
+				"defaults": {
+					"bottom_width_m": 1.0,
+					"height_m": 0.3,
+					"speed_m_s": 0.0,
+					"top_width_m": 0.5
+				},
+				"derived_fields": 63,
+				"destination": 0,
+				"display_name": "",
+				"height_reference": 2,
+				"material_policy": 1,
+				"operation": 1,
+				"profile_hash": "127254b9e34342baebf54ad3e3b0118ded835367b06174c7fb1007b4c051e52e",
+				"profile_id": "wall_v1",
+				"ranges": {
+					"bottom_width_m": [
+						1.0,
+						2.0
+					],
+					"height_m": [
+						0.15,
+						0.6
+					],
+					"speed_m_s": [
+						-1.0,
+						1.0
+					],
+					"top_width_m": [
+						0.5,
+						1.5
+					]
+				},
+				"resource_identity": {
+					"model_sha256": "12b184ea0ef17f3efacf6695f2bfd1b492591e29c61c7e81128dff8498349a43",
+					"path": "res://assets/unified_edit/wall_v1.tres",
+					"sha256": "181374910e104a061a37ac78520881f3a70741248f49fcfb94931daab66f17ad"
+				},
+				"sampling": {
+					"max_buffer_points": 256,
+					"max_segment_m": 2.0,
+					"spacing_m": 0.125
+				},
+				"schema": 1,
+				"shape": 1,
+				"stroke_policy": 1,
+				"target_rule": 1,
+				"template": {},
+				"transfer_policy": 0,
+				"version": 1,
+				"volume_sign": 0,
+				"water_policy": 3
+			}
+		},
+		"schema": 1,
+		"simulation": {
+			"contact_history": false,
+			"enable_brush_water": true,
+			"enable_erosion": false,
+			"enable_structures": false,
+			"local_front_history": false,
+			"rise_front_history": false,
+			"unrestricted_sand_tools": true
+		},
+		"sources": {
+			"res://assets/brushes/castle/four_towers_v1.rgba32f": "42f4654b2a40688fdfb936a790c1c08f0d2f4efbe6d1aa3bef91f2598089e833",
+			"res://assets/brushes/castle_v1.tres": "47b6f19647d04996d4be6f6df5b3b99f0bc76abd3a90a3e1792d26506b6b9a0b",
+			"res://assets/brushes/molded_material_candidate.json": "1936e7dfc654a7a5dc5e9307d880c85e7cc7f48b128372ec622f5b68b7af2890",
+			"res://assets/brushes/protocol_v2.json": "c74983277c081285385896b7d91b52e2b83b212444086a18e2dd007445aeb507",
+			"res://assets/brushes/shovel_v1.tres": "8681fbfe01a98a5af25ddbfe2a78bd747e43313174b4094db80176fb3c0fc343",
+			"res://assets/brushes/wall_v1.tres": "e65b5949fff433149f5274f289f12ff6cac4c924d39ae9b2a4dd350a28a9cf34",
+			"res://assets/parameters/catalog.json": "918f255d2319626e2a8c089f0455fcc4037521a49c9ea90eaa0372dd82014e67",
+			"res://assets/test1_geometry/initial_state.f32": "4d3a4335963645c93c27b8880a26725bc128f3fd138e126aee0620d227d86fc8",
+			"res://assets/test1_geometry/water_cycle.json": "49e20c9ef51d55b1331657c823c98782af68fade76eb4bb65c93dc2db874e5e6",
+			"res://assets/test1_water_motion/capture_state.rgba32f": "06540acafd57583465e0d5e3926819f27b33e51afb3134a700d684cc52fa8523",
+			"res://assets/unified_edit/castle_v1.tres": "47e7f34a892cbfe8b3c7ed089c0db6e5f2a81944a51591e4ca6732fae4861c2c",
+			"res://assets/unified_edit/compact_v1.tres": "4054a6df232ea8eb63e69fb20284d98cd7dbba945cab6ee2cf6518379fb37802",
+			"res://assets/unified_edit/dig_sweep_v1.tres": "f24798e571f6cb309292ff78b0fdfb4cc93b480739fbf200acd873e6b1749cd5",
+			"res://assets/unified_edit/dig_v1.tres": "c282b0206f1961e6ed43fd7d4a7bd983ab847057da54502917fcfea0bc97e136",
+			"res://assets/unified_edit/fill_sweep_v1.tres": "9be98ddd1489278f7544b7bb8555018b8668c3e203d1b291cc23b8dfbe014fff",
+			"res://assets/unified_edit/fill_v1.tres": "59ab1c2ac14b40b20fc082c0ab13d783c28167da89c652ee03cf178d9e81d49e",
+			"res://assets/unified_edit/four_towers_v1.tres": "4a0a2b40adca14741b5365a1b25736e2d4e21778f1576d1455792eda0b1b98f9",
+			"res://assets/unified_edit/shovel_v1.tres": "62ff4641dbbe8b866da6954579cda64d608cb1cd0c308aa0c7a807d22bd09ff9",
+			"res://assets/unified_edit/smooth_v1.tres": "01731a291186884bd9cebaa76babd7acf09c9cc6fa2db82c4b243f06b0160fb7",
+			"res://assets/unified_edit/suspended_sweep_v1.tres": "d1551bb2e05169355778754f8fa38469ace041f035fbcaf460c32bf37c6d4c9d",
+			"res://assets/unified_edit/suspended_v1.tres": "587a3926894f434d1a95a41ab91b56559b4d70f25913982c59ba817cd45eb90a",
+			"res://assets/unified_edit/wall_v1.tres": "181374910e104a061a37ac78520881f3a70741248f49fcfb94931daab66f17ad",
+			"res://scenes/parameters/parameter_windows.tscn": "f90583693ecad29a1a96be098f035db0cc0453205d0afa021de3ba2ade6daf45",
+			"res://scripts/beach/beach_recovery_entry.gd": "238ea012bc1d2b281d2428c6c5ac4a6d8a7e81545bc522b42e572830585fd3c0",
+			"res://scripts/collision/collision_prepare_job.gd": "629fcfde9d4edb14e446ee1970f03b9ae9d4da364979150f35a0182aab46fb6b",
+			"res://scripts/parameters/parameter_row.gd": "d8690a0d661113b88c331f28e92b601a218bda758fbdfb2f447225a2a89c6372",
+			"res://scripts/parameters/parameter_schema.gd": "db40e772107e02b23a505c0c13982f6c434938949581a770815cd09d2fbf4495",
+			"res://scripts/parameters/parameter_service.gd": "c74f03edff7b6de72fdaf8604e2c1a20bf917f14c718571b991dd96d00c49eda",
+			"res://scripts/sand/brushes/brush_definition.gd": "63f682e4f20161b4bbd193bd5264bd9f51cab79606ba38b9695d8b512d66c161",
+			"res://scripts/sand/brushes/brush_registry.gd": "64d3520ce0c519cb34f46636ba59a6bcb3c8aae45edbcca2ae1ffecd10f35631",
+			"res://scripts/sand/brushes/brush_spec.gd": "2532c325b5ad6a615731830a08d86b2c33dd446e8a115aa336b9371b539d644c",
+			"res://scripts/scenarios/test1_geometry_layout.gd": "80a3241eebec98159109df76e68f623e0ffebab2ef3f0bcd32ac9d0c836e5695",
+			"res://scripts/scenarios/test1_playable_layout.gd": "96d0f46fec8f86cfad5d47a38572c957359e78f3be65739baee805f80848375e",
+			"res://scripts/simulation/brushes/brush_checkpoint_codec.gd": "382a60b69ed7b0930099142d56c2adbbe54d58753d217aa7a8112c984798adab",
+			"res://scripts/simulation/brushes/brush_material_state_codec.gd": "c0d0394abc3b89c3587dc5057ae6a54e1458e97ab087a81a40bd4bde353b6ca4",
+			"res://scripts/simulation/brushes/brush_protocol.gd": "94083fc3cd6869a28bb2b68b024e469781ae2b6cb54f16d1b79ecd672f8ad463",
+			"res://scripts/simulation/checkpoint_store.gd": "cab0e52ee89bcd9fd08bf7265dd7b952dec2ba319e6c884796ac2ac9e32a459e",
+			"res://scripts/simulation/edit_validation/frame_pipeline/async_boundary.glsl": "a6226484e71e726a1ba7d68bc3d50a8ff89891904eeef6d71a659be484203477",
+			"res://scripts/simulation/edit_validation/frame_pipeline/async_checkpoint_codec.gd": "ef0e368736579cc6a1a6a11eb10d2c7bf6c92d2db4d2836c67578da3c444765a",
+			"res://scripts/simulation/edit_validation/frame_pipeline/async_sim_finish.glsl": "71229a60bbea62762a77ae3ee481819792eae4cf6ff11ea30a7ebb833be87a8a",
+			"res://scripts/simulation/unified_edit/api_adapter.gd": "a12f2df91586143a6c69fa89249d121a03c0dd3265d7feeb42bee12542f5834e",
+			"res://scripts/simulation/unified_edit/boundary.gd": "11011812649e46f7f751df9fc9add824312a717459d959c71766eb6bf926e4be",
+			"res://scripts/simulation/unified_edit/boundary.glsl": "458ca5254ecf9d56b185b08f12e197f381f9e5d5119d4b4c66ddd25c244da285",
+			"res://scripts/simulation/unified_edit/cfl_decide.glsl": "8d246db53a1d2b72ae252e68d906b71166b64bc7782244c4f3c6c47757e19e5e",
+			"res://scripts/simulation/unified_edit/cfl_tiles_momentum.glsl": "a08f2d552fa467daf82b7aba2e2befe152c8c5823e2750d1c9d5edd69d28ad0f",
+			"res://scripts/simulation/unified_edit/checkpoint_accounting.gd": "ed42766ab86b9073b0cb46c4c917689576c9a2c949866aede023525a1c4c0df8",
+			"res://scripts/simulation/unified_edit/checkpoint_capture.gd": "9b723245975e6ee557fd062b10a23ce7df6995574defe3fb898c8245b5049a57",
+			"res://scripts/simulation/unified_edit/checkpoint_codec.gd": "80ccbfd6826722b354b412777dec5e6d9a85d4406008b8de2f55d066bd0f104f",
+			"res://scripts/simulation/unified_edit/configuration.gd": "25d0e019a20bc8851595942a049c46e6441abb2a208bbe2eb6aa1517eaf265bc",
+			"res://scripts/simulation/unified_edit/coupled.gd": "810428560d2209d2aac4686e9dabf5608bf80344caa93db5a61a25b98f579944",
+			"res://scripts/simulation/unified_edit/diagnostics.gd": "c66cd305ced9e692b8739cd7aa124586cbcdfabca388a74c5425ebe05f3b5780",
+			"res://scripts/simulation/unified_edit/display_emit.glsl": "840c6b01b244d21cd0914312df3ace652536d80727a0e34726b767216e775115",
+			"res://scripts/simulation/unified_edit/display_intent.gd": "5ddd0f9019350efbe388c1862ecda7b4c44ba8b47682e93c60b36d0843d90f21",
+			"res://scripts/simulation/unified_edit/edit.glsl": "57553c4b755f629d60d61d73ee6f457eacf83b176230e6884396a9750cf48973",
+			"res://scripts/simulation/unified_edit/executor.gd": "f57c4bf157df609b9e922e038c7546914a9ae0d0cc76c7d23b9b92d270001751",
+			"res://scripts/simulation/unified_edit/gpu.gd": "fcb28e68b22c0b29b31d2d7c4c20822782018ddc3f7a55e107e3c2fb54926f68",
+			"res://scripts/simulation/unified_edit/height.gd": "2675c1caf640099c600e4f9245132013c8a9a3057788418b4dabdce15b96f969",
+			"res://scripts/simulation/unified_edit/height.glsl": "9f08382aafd9706f017298cb9721b897b0fd3a4023a21c3e91510ab51650153d",
+			"res://scripts/simulation/unified_edit/height_codec.gd": "f8472a265358da3fb21c3a00f5f7598426bb32457b0a2cea8c314833c59f8fcd",
+			"res://scripts/simulation/unified_edit/height_stamp.gd": "a2b8d8d940f8ef7b2af13232c0f7bd0b1888e5ed8f1e074885f656b2203f48d0",
+			"res://scripts/simulation/unified_edit/idle_fence.glsl": "1268fcb20b1d592fac6b71fb68ddeca4eae63a23bcf217b02161cebb44005e77",
+			"res://scripts/simulation/unified_edit/intent.gd": "347fbc161a5295d8c597dd2a5c6b2853fd146f9b9a45eaa6aefd7a7805f6319f",
+			"res://scripts/simulation/unified_edit/layout.gd": "0249e55b8005bef604ead7ba62f4adf8a5875d2786e0ea48035d259937686da0",
+			"res://scripts/simulation/unified_edit/legacy_sources.gd": "a53ddb381060b5c9e0f928db6fd22f83269992e6d5e356e271c85df961fcc567",
+			"res://scripts/simulation/unified_edit/momentum_bytes.gd": "a3dcf96ef04ce7904ab44c596762e90675482cdc6395f537bf5545c66b7200d0",
+			"res://scripts/simulation/unified_edit/normalize_momentum.glsl": "f0c89cf3a3a4836c62b164919b559cba5f63396499588d22d8f128db9c173e0f",
+			"res://scripts/simulation/unified_edit/pipeline.gd": "0a4bcd68888619a2bcbe5dc1ba96a6b56ec91122b343f52f4bd048e0e25f9a7f",
+			"res://scripts/simulation/unified_edit/probe.gd": "73b47deab74b70743310f0cea034d671935c9515a9462afdbc1f3f86b62c2b30",
+			"res://scripts/simulation/unified_edit/probe.glsl": "8a5d2f0d161e03c91ac6ffc78b3f72725bc3e9c416141e46d5e6a19c7618f5f0",
+			"res://scripts/simulation/unified_edit/probe_codec.gd": "577de99be1b546a29908df5392c10a0d7138e2e0aeda13e71deb58c3012c7441",
+			"res://scripts/simulation/unified_edit/profile_catalog.gd": "6d4651c5d6cc5209cfe0696e3f6ef7375b9444ed2426fe94b1592c0b2473e0a4",
+			"res://scripts/simulation/unified_edit/profile_registry.gd": "f1911785ae05e56816c63641fbd98ece60a9de323bd365962df9331246ba558b",
+			"res://scripts/simulation/unified_edit/protocol.gd": "4563d0241a27a122c2500d56166a922a726b41fa48d3ab687f233f02a84ae096",
+			"res://scripts/simulation/unified_edit/protocol.glslinc": "431faa2b39ebdfc3be501ab597d0c3eeb4f912fd1b2417840e1a56c000bb75f6",
+			"res://scripts/simulation/unified_edit/publish.glsl": "84f60cbb6d59a60e5481b2ce7b00ce438ff90f659c03d2bf7ad3971308dba0f8",
+			"res://scripts/simulation/unified_edit/publish_wet_sand.glsl": "cf3e8d3baa2300586db457c22e19670a71cba83b9632b0d91ec0bf994631d3ff",
+			"res://scripts/simulation/unified_edit/restore_verifier.gd": "5f5eef001ff2982dd49ae36a13bb353324e9967a0d217936c176188c02ae0039",
+			"res://scripts/simulation/unified_edit/shore_splash.gd": "eeaabe7aa7f38a0796da28d68e2b9b29459ca834fa24d4949f81162286b163c5",
+			"res://scripts/simulation/unified_edit/slots.gd": "b4c73feb63692894ee9420d4c05cf31892355d4d5380399f3c0bf58c0b101cab",
+			"res://scripts/simulation/unified_edit/state.gd": "19893496aa852c9cf6e2dabe9e91f6a670fb5ab8fd12b9a05bdf2e133c519c36",
+			"res://scripts/simulation/unified_edit/surface_wetness.gd": "4955360ef11c09594d1080adac7a785f51e4c8721d0a71d5359efe899f1ab94c",
+			"res://scripts/simulation/unified_edit/tool_profile.gd": "12b184ea0ef17f3efacf6695f2bfd1b492591e29c61c7e81128dff8498349a43",
+			"res://scripts/simulation/unified_edit/transport.gd": "060e00341524fd7605def902e2936449c839e57722c7fe56ffd79d1e8adedc78",
+			"res://scripts/simulation/unified_edit/unit_half.gd": "3d0d323b653df1f9237525e3b42a2c395ffe3a585ecb68ab8a5bd0d9a03e573a",
+			"res://scripts/simulation/unified_edit/vegetation.gd": "3e1549c9be22ed2b1ee9aa211314237ab237b4a5501bf297f88e4d0af771e3ed",
+			"res://scripts/simulation/unified_edit/view_publish.glsl": "0c49d70f51a6a707b41d8e9e6e159616b5156eee089e519c0dbcb1fccff35ff7",
+			"res://scripts/simulation/unified_edit/view_query.glsl": "9a1c36a38c6c02107aa60d499018635b85ae76849aa11788ff47af8e09ad24fa",
+			"res://scripts/simulation/unified_edit/views.gd": "7cd7442003efd9bf15b18042bd35ab71301894f0d4616fbe4af9e3e51391b151",
+			"res://scripts/simulation/unified_edit/visual_edit_finish.glsl": "0a6c2a1ef102918ed5b234f85cd859048d1a8d3befcef5f189809a7361f4f987",
+			"res://scripts/simulation/unified_edit/visual_finish.glsl": "10f2a79bec43f77b80d77f674e60df7123876931d1473a5cf38c47182b38e5c7",
+			"res://scripts/simulation/unified_edit/visual_publish.glsl": "e517e7dd58218ee764a1d773c20e2c714e880dfc01f151188834c43cfa70967d",
+			"res://scripts/simulation/unified_edit/visuals.gd": "cd73c3edafc45cdf4ae20430378d97e971563619496ad5c33a66795265081715",
+			"res://scripts/simulation/unified_edit/water.gd": "2e8c0431d10eba02ec74fcd0b7f83e99fcca45313cffcaf84465520f0f073c34",
+			"res://scripts/simulation/unified_edit/water_muscl.gd": "dc25859b0bebf723a37f2961d4e2366a9749395f4072528e2a172486f9f7ed53",
+			"res://scripts/simulation/unified_edit/water_numerics.gd": "b342d3fd91ea630447dad0b6dcf29819a9223a14d5acd50586967b421f42a099",
+			"res://scripts/simulation/unified_edit/water_packed_parallel.glsl": "8e48a46ade6d9a608b9fe9aa5b10f1127f4b036b22a788f392c069d9585d481d",
+			"res://scripts/simulation/unified_edit/water_packed_topology.glsl": "876056fb1b25c7eaea97e513dddcc882b7ea2cd723abb5409828ea0d389710cf",
+			"res://scripts/simulation/unified_edit/water_response.gd": "1406e62896876d1e57214accf590b94032e6cde315e452e433e1789cdc6e1dc2",
+			"res://scripts/simulation/unified_edit/water_response.glsl": "898a6e09a2d81bb60ea408d165b2ed207b650094fc942cd606164b3d38aadcbe",
+			"res://scripts/simulation/unified_edit/water_velocity_prepare.glsl": "9ad4fb084b7e4713fcd0030f85e59b9af1b440e891a9ce5ee86201cfadd27a6c",
+			"res://scripts/simulation/unified_edit/work_begin.glsl": "940538b9e13f01da456c959a7d409c188420675b46d49fbb9e508fe662d72f1a",
+			"res://scripts/simulation/unified_edit/work_seal.glsl": "26434191421521492b5a63160cb4ae8674b1b8773205cb868b083bc1f8d6866e",
+			"res://scripts/visual/gpu_gravel_field.gd": "f634064e9f279faf16827229157b7435f12903579324fbefe64b07f2e42b367d",
+			"res://scripts/visual/gravel_checkpoint_codec.gd": "8cd4f7f0b50ff08f3be9cc7d52a1270ebef3bbed41d17b457a3c0cbc42ae6ba4",
+			"res://scripts/visual/vegetation_layer.gd": "fab851b62913d8278ce2bfae7aa425eb16c6ecab10945759aa10542406a70dd7",
+			"res://scripts/visual/vegetation_profile.gd": "29e5141396351bd98d709b2f625cfce34a56553581fa975e9c7f67919112ba49",
+			"res://scripts/visual/vegetation_species.gd": "4467634e8713eaaf963062a3b8a9fa6841d33ddfb5acdee9729a996e29be3ebd",
+			"res://shaders/simulation/brushes/mold_support_step.glsl": "02b3dd96f818c304fa723336f4891c4666bf8562c9a874a737b6416a51324e03",
+			"res://shaders/simulation/brushes/molded_slope.glsl": "808103f691329ca21bba69cc6e309c857134b5fe666d22a6a4a50c47abe0417d",
+			"res://shaders/simulation/edit_validation/staged_slope.glsl": "8777b5baa680a9fb4d1eb66176a92b058972b2cb1fe713b49c07ae8d2d39bf00",
+			"res://shaders/simulation/edit_validation/water_displace_compensated.glsl": "8b161dbf853c8916de189f745e1573380fcd2f687680cbe83887d5e8867c0641",
+			"res://shaders/simulation/edit_validation/water_packed_cached.glsl": "cd8dd0f5419d1b423158caf004ed3d5a297ee51e801159748005ad49103cd543",
+			"res://shaders/simulation/edit_validation/water_velocity_prefetch.glsl": "9cf7459b99ae2932a63068416cac6875844e8582dc5e58a33771f0c595f3c77d",
+			"res://shaders/simulation/erosion/sediment_exchange.glsl": "7864a80220f2b98c2dd9a089cbdb3933d42fb4b6bc4bfce3abf10a722c481199",
+			"res://shaders/simulation/erosion/sediment_step_momentum.glsl": "0007e6bce73beb17a64e77af97e06f193fc76066064f75936322a56a62a9516b",
+			"res://shaders/simulation/material/material_finish.glsl": "185c391a9c32c0c3ae8013dc789b14596a769c6a4ab75b00ae7a37a647e8b5e2",
+			"res://shaders/simulation/material/material_step.glsl": "290b44d3fb13ab2b4d7da27e4fa4f93e070244ba11ad450b8356067280f60aef",
+			"res://shaders/simulation/muscl/muscl_math.glslinc": "aa864531e88cf8b0cd9adf63431ec7a6db48863aa4fc7e8da9072d1d7a3f9fc0",
+			"res://shaders/simulation/muscl/muscl_spatial.glslinc": "cc516d850f3ccf112b8257852931bcd3b30e53614de16630d25eabf184a7eca0",
+			"res://shaders/simulation/muscl/muscl_stats.glslinc": "70e147a8a112354fb8a6dbd2da0dcceb4e2045a8d98f05b903122ad20b6744b1",
+			"res://shaders/simulation/muscl/rk_decide.glsl": "10005b66669bfbbf61a650fe202ebc5cb18e4a65eb680b80562a1cc6f5e54e4e",
+			"res://shaders/simulation/muscl/rk_drain.glsl": "8a649a8379954fed16f4a18424da70a83a05511043f943f164a9b2ea7b8c0d11",
+			"res://shaders/simulation/muscl/rk_edge.glsl": "24f59034506d5d62d03e35d2a5693146efbd1a013e39fb3151ade89cbfc2c840",
+			"res://shaders/simulation/muscl/rk_euler.glsl": "daf72a12c24352106a2b9e6aa8fbc1a935b5d13b380e2090042c344b553b2d06",
+			"res://shaders/simulation/muscl/rk_finalize.glsl": "84956fe9eb0c98599c0247de4c8b5953774e3072851ebf93d4d944c04ff71c3a",
+			"res://shaders/simulation/muscl/rk_normalize.glsl": "923a9175eb56204955d14653ac40164d89f26ddea05189b94a87f30e5af8e7fc",
+			"res://shaders/simulation/muscl/rk_validate.glsl": "ec9c2a7846705778ef1c4f297b29881b87c7f73f763a1d1a2972c1d7783ddcbd",
+			"res://shaders/simulation/shallow_drain_scale.glsl": "f36e5a1a0b50f867ca89571a12033ba8dbb059a5a1a481bca07e43a1cf87fdbe",
+			"res://shaders/simulation/shallow_edge_flux_momentum.glsl": "a505fb8c9d97c6c170e5beccebcc692b70e53b79a17b6dc24a9294defdd16602",
+			"res://shaders/simulation/shallow_update_state_momentum.glsl": "7995b33a4ec687a268ba27e9e1649051c212c1756dcf18fa6f5a98cab1aa66ec",
+			"res://shaders/simulation/shore_splash.glsl": "805fef0d0e9a5a20170f3ca8c6f50dbab867e9f29dee3d2f208a1ac2681f820e",
+			"res://shaders/simulation/vegetation_publish.glsl": "d0c6a2dc18f0768f30c4267095cd958a77272a3e78756b54d00ded06890bc58f",
+			"res://shaders/simulation/vegetation_step_momentum.glsl": "f9431772970af48c7a98810015f46865e83569194a8fb4954810948732b5adcf",
+			"res://shaders/simulation/visual_foam_step_momentum.glsl": "3facbc3b75d28b6fe086754d26caebd48b1f94079f03dce7fab8a30daeff7663",
+			"res://shaders/simulation/visual_gravel_step_momentum.glsl": "83e2f955c5690a3e40f389b3ac88aa569db3c2185efa9061a38a03e088f4ef03",
+			"res://shaders/visual/shore_splash.gdshader": "13fc48d1035110c9fc09e587b51df81afddaf92de0e23a16d03100f8f7134e01",
+			"res://shaders/visual/vegetation.gdshader": "6666635aaa2c6a1fb642cb206ca8e9efb9a37db028747cbc1400bd46e1cdf99a",
+			"res://tests/visual_water_alignment/prototypes/reference_local_front_x.glsl": "1ca06648fc517bc6d01b66780af1d1e66cfe2978ddd2f00e5ac763658799d13d",
+			"res://tests/visual_water_alignment/prototypes/reference_local_front_x_wide.glsl": "3e8c3729eb40b07a36772aa25ae8c3f10b5d3f137e7b19721669df6ed4098004",
+			"res://tests/visual_water_alignment/prototypes/reference_local_front_z.glsl": "dc986bfa7e64e6f05f814a1eed3cef2eef1bd5e72025a1c9475d90c4855ddfae",
+			"res://tools/wave_propagation/gpu_probe.gd": "e656b931ec8386b177c0edb2bb1f07e4df6077bfa96482a0f27882ed79774084",
+			"res://tools/wave_propagation/special_gpu_probe.gd": "8abb2bffd63ba4b3fe8a6e5c1892ffb0f6fd276d5bb63906fc0daffc4e500af2"
+		}
+	},
+	"expected_fault": true,
+	"fault": {
+		"control_flags": 16,
+		"reason": "completion_counter",
+		"trial_flags": 2
+	},
+	"outcome": "pass",
+	"scope": "Fixed-bed reflection or deliberate invalid-input rejection, not gameplay/cost",
+	"snapshots": [
+		{
+			"advanced_time_s": 0.0,
+			"fields": {
+				"audit": {
+					"bytes": 2048,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/initial_audit.bin",
+					"sha256": "e5a00aa9991ac8a5ee3109844d84a55583bd20572ad3ffcd42792f3c36b183ad"
+				},
+				"control": {
+					"bytes": 128,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/initial_control.bin",
+					"sha256": "c977a3cd342c166ce2e9393047c9c5de0dfd50d5640fd7f9b6c1048427e312e1"
+				},
+				"decision": {
+					"bytes": 64,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/initial_decision.bin",
+					"sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b"
+				},
+				"flux": {
+					"bytes": 1048576,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/initial_flux.bin",
+					"sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+				},
+				"momentum": {
+					"bytes": 524288,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/initial_momentum.bin",
+					"sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+				},
+				"momentum_x": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/initial_momentum_x.bin",
+					"sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+				},
+				"momentum_z": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/initial_momentum_z.bin",
+					"sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+				},
+				"obstacle": {
+					"bytes": 65536,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/initial_obstacle.bin",
+					"sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+				},
+				"public_water": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/initial_public_water.bin",
+					"sha256": "b4b0b2f147c4b7459ed33b2fdd3e7dbb4fab2ba3d005fd70d66926e968646aab"
+				},
+				"rock": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/initial_rock.bin",
+					"sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+				},
+				"safety": {
+					"bytes": 128,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/initial_safety.bin",
+					"sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+				},
+				"sand": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/initial_sand.bin",
+					"sha256": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e"
+				},
+				"sediment": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/initial_sediment.bin",
+					"sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+				},
+				"slot_cfl_tiles": {
+					"bytes": 4096,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/initial_slot_cfl_tiles.bin",
+					"sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+				},
+				"slot_compaction_0": {
+					"bytes": 131072,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/initial_slot_compaction_0.bin",
+					"sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+				},
+				"slot_compaction_1": {
+					"bytes": 131072,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/initial_slot_compaction_1.bin",
+					"sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+				},
+				"slot_drain": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/initial_slot_drain.bin",
+					"sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+				},
+				"slot_edge_x": {
+					"bytes": 1048576,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/initial_slot_edge_x.bin",
+					"sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+				},
+				"slot_edge_z": {
+					"bytes": 1048576,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/initial_slot_edge_z.bin",
+					"sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+				},
+				"slot_flux_0": {
+					"bytes": 1048576,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/initial_slot_flux_0.bin",
+					"sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+				},
+				"slot_flux_1": {
+					"bytes": 1048576,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/initial_slot_flux_1.bin",
+					"sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+				},
+				"slot_mold_support_0": {
+					"bytes": 524288,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/initial_slot_mold_support_0.bin",
+					"sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+				},
+				"slot_mold_support_1": {
+					"bytes": 524288,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/initial_slot_mold_support_1.bin",
+					"sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+				},
+				"slot_momentum_0": {
+					"bytes": 524288,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/initial_slot_momentum_0.bin",
+					"sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+				},
+				"slot_momentum_1": {
+					"bytes": 524288,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/initial_slot_momentum_1.bin",
+					"sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+				},
+				"slot_obstacle": {
+					"bytes": 65536,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/initial_slot_obstacle.bin",
+					"sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+				},
+				"slot_rock": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/initial_slot_rock.bin",
+					"sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+				},
+				"slot_sand_0": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/initial_slot_sand_0.bin",
+					"sha256": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e"
+				},
+				"slot_sand_1": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/initial_slot_sand_1.bin",
+					"sha256": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e"
+				},
+				"slot_sediment_0": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/initial_slot_sediment_0.bin",
+					"sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+				},
+				"slot_sediment_1": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/initial_slot_sediment_1.bin",
+					"sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+				},
+				"slot_water_0": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/initial_slot_water_0.bin",
+					"sha256": "b4b0b2f147c4b7459ed33b2fdd3e7dbb4fab2ba3d005fd70d66926e968646aab"
+				},
+				"slot_water_1": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/initial_slot_water_1.bin",
+					"sha256": "b4b0b2f147c4b7459ed33b2fdd3e7dbb4fab2ba3d005fd70d66926e968646aab"
+				},
+				"slot_wetness_0": {
+					"bytes": 131072,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/initial_slot_wetness_0.bin",
+					"sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+				},
+				"slot_wetness_1": {
+					"bytes": 131072,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/initial_slot_wetness_1.bin",
+					"sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+				},
+				"trial": {
+					"bytes": 128,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/initial_trial.bin",
+					"sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+				},
+				"water": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/initial_water.bin",
+					"sha256": "b4b0b2f147c4b7459ed33b2fdd3e7dbb4fab2ba3d005fd70d66926e968646aab"
+				}
+			},
+			"generation": "1001",
+			"label": "initial",
+			"revision": "0",
+			"state_seq": "0",
+			"tick": "0"
+		},
+		{
+			"advanced_time_s": 0.0,
+			"fields": {
+				"audit": {
+					"bytes": 2048,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/injected_audit.bin",
+					"sha256": "e5a00aa9991ac8a5ee3109844d84a55583bd20572ad3ffcd42792f3c36b183ad"
+				},
+				"control": {
+					"bytes": 128,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/injected_control.bin",
+					"sha256": "c977a3cd342c166ce2e9393047c9c5de0dfd50d5640fd7f9b6c1048427e312e1"
+				},
+				"decision": {
+					"bytes": 64,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/injected_decision.bin",
+					"sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b"
+				},
+				"flux": {
+					"bytes": 1048576,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/injected_flux.bin",
+					"sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+				},
+				"momentum": {
+					"bytes": 524288,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/injected_momentum.bin",
+					"sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+				},
+				"momentum_x": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/injected_momentum_x.bin",
+					"sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+				},
+				"momentum_z": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/injected_momentum_z.bin",
+					"sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+				},
+				"obstacle": {
+					"bytes": 65536,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/injected_obstacle.bin",
+					"sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+				},
+				"public_water": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/injected_public_water.bin",
+					"sha256": "b4b0b2f147c4b7459ed33b2fdd3e7dbb4fab2ba3d005fd70d66926e968646aab"
+				},
+				"rock": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/injected_rock.bin",
+					"sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+				},
+				"safety": {
+					"bytes": 128,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/injected_safety.bin",
+					"sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+				},
+				"sand": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/injected_sand.bin",
+					"sha256": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e"
+				},
+				"sediment": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/injected_sediment.bin",
+					"sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+				},
+				"slot_cfl_tiles": {
+					"bytes": 4096,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/injected_slot_cfl_tiles.bin",
+					"sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+				},
+				"slot_compaction_0": {
+					"bytes": 131072,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/injected_slot_compaction_0.bin",
+					"sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+				},
+				"slot_compaction_1": {
+					"bytes": 131072,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/injected_slot_compaction_1.bin",
+					"sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+				},
+				"slot_drain": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/injected_slot_drain.bin",
+					"sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+				},
+				"slot_edge_x": {
+					"bytes": 1048576,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/injected_slot_edge_x.bin",
+					"sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+				},
+				"slot_edge_z": {
+					"bytes": 1048576,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/injected_slot_edge_z.bin",
+					"sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+				},
+				"slot_flux_0": {
+					"bytes": 1048576,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/injected_slot_flux_0.bin",
+					"sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+				},
+				"slot_flux_1": {
+					"bytes": 1048576,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/injected_slot_flux_1.bin",
+					"sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+				},
+				"slot_mold_support_0": {
+					"bytes": 524288,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/injected_slot_mold_support_0.bin",
+					"sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+				},
+				"slot_mold_support_1": {
+					"bytes": 524288,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/injected_slot_mold_support_1.bin",
+					"sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+				},
+				"slot_momentum_0": {
+					"bytes": 524288,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/injected_slot_momentum_0.bin",
+					"sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+				},
+				"slot_momentum_1": {
+					"bytes": 524288,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/injected_slot_momentum_1.bin",
+					"sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+				},
+				"slot_obstacle": {
+					"bytes": 65536,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/injected_slot_obstacle.bin",
+					"sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+				},
+				"slot_rock": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/injected_slot_rock.bin",
+					"sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+				},
+				"slot_sand_0": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/injected_slot_sand_0.bin",
+					"sha256": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e"
+				},
+				"slot_sand_1": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/injected_slot_sand_1.bin",
+					"sha256": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e"
+				},
+				"slot_sediment_0": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/injected_slot_sediment_0.bin",
+					"sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+				},
+				"slot_sediment_1": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/injected_slot_sediment_1.bin",
+					"sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+				},
+				"slot_water_0": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/injected_slot_water_0.bin",
+					"sha256": "0a6e80a0ca7fd6cba5631e293f1009a8e4fde5eb726eb8a9b89d7ed607da2971"
+				},
+				"slot_water_1": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/injected_slot_water_1.bin",
+					"sha256": "b4b0b2f147c4b7459ed33b2fdd3e7dbb4fab2ba3d005fd70d66926e968646aab"
+				},
+				"slot_wetness_0": {
+					"bytes": 131072,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/injected_slot_wetness_0.bin",
+					"sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+				},
+				"slot_wetness_1": {
+					"bytes": 131072,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/injected_slot_wetness_1.bin",
+					"sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+				},
+				"trial": {
+					"bytes": 128,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/injected_trial.bin",
+					"sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+				},
+				"water": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/injected_water.bin",
+					"sha256": "0a6e80a0ca7fd6cba5631e293f1009a8e4fde5eb726eb8a9b89d7ed607da2971"
+				}
+			},
+			"generation": "1001",
+			"label": "injected",
+			"revision": "0",
+			"state_seq": "0",
+			"tick": "0"
+		},
+		{
+			"advanced_time_s": 0.0,
+			"fields": {
+				"audit": {
+					"bytes": 2048,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/after_fault_audit.bin",
+					"sha256": "4fd6472741ae386561645a6440baaed90b725c2892e8965bd3218040d24ecba2"
+				},
+				"control": {
+					"bytes": 128,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/after_fault_control.bin",
+					"sha256": "677f05e221ba4f5642071e7257fa5e2ee5bd07003dd24b6c1662f4bc7a9afa1c"
+				},
+				"decision": {
+					"bytes": 64,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/after_fault_decision.bin",
+					"sha256": "506378b41d5625382ac55d7e1d8743fa5b4ffb5815ae048639921a934fcba68d"
+				},
+				"flux": {
+					"bytes": 1048576,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/after_fault_flux.bin",
+					"sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+				},
+				"momentum": {
+					"bytes": 524288,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/after_fault_momentum.bin",
+					"sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+				},
+				"momentum_x": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/after_fault_momentum_x.bin",
+					"sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+				},
+				"momentum_z": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/after_fault_momentum_z.bin",
+					"sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+				},
+				"obstacle": {
+					"bytes": 65536,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/after_fault_obstacle.bin",
+					"sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+				},
+				"public_water": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/after_fault_public_water.bin",
+					"sha256": "b4b0b2f147c4b7459ed33b2fdd3e7dbb4fab2ba3d005fd70d66926e968646aab"
+				},
+				"rock": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/after_fault_rock.bin",
+					"sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+				},
+				"safety": {
+					"bytes": 128,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/after_fault_safety.bin",
+					"sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+				},
+				"sand": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/after_fault_sand.bin",
+					"sha256": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e"
+				},
+				"sediment": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/after_fault_sediment.bin",
+					"sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+				},
+				"slot_cfl_tiles": {
+					"bytes": 4096,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/after_fault_slot_cfl_tiles.bin",
+					"sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+				},
+				"slot_compaction_0": {
+					"bytes": 131072,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/after_fault_slot_compaction_0.bin",
+					"sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+				},
+				"slot_compaction_1": {
+					"bytes": 131072,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/after_fault_slot_compaction_1.bin",
+					"sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+				},
+				"slot_drain": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/after_fault_slot_drain.bin",
+					"sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+				},
+				"slot_edge_x": {
+					"bytes": 1048576,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/after_fault_slot_edge_x.bin",
+					"sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+				},
+				"slot_edge_z": {
+					"bytes": 1048576,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/after_fault_slot_edge_z.bin",
+					"sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+				},
+				"slot_flux_0": {
+					"bytes": 1048576,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/after_fault_slot_flux_0.bin",
+					"sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+				},
+				"slot_flux_1": {
+					"bytes": 1048576,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/after_fault_slot_flux_1.bin",
+					"sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+				},
+				"slot_mold_support_0": {
+					"bytes": 524288,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/after_fault_slot_mold_support_0.bin",
+					"sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+				},
+				"slot_mold_support_1": {
+					"bytes": 524288,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/after_fault_slot_mold_support_1.bin",
+					"sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+				},
+				"slot_momentum_0": {
+					"bytes": 524288,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/after_fault_slot_momentum_0.bin",
+					"sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+				},
+				"slot_momentum_1": {
+					"bytes": 524288,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/after_fault_slot_momentum_1.bin",
+					"sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+				},
+				"slot_obstacle": {
+					"bytes": 65536,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/after_fault_slot_obstacle.bin",
+					"sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+				},
+				"slot_rock": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/after_fault_slot_rock.bin",
+					"sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+				},
+				"slot_sand_0": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/after_fault_slot_sand_0.bin",
+					"sha256": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e"
+				},
+				"slot_sand_1": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/after_fault_slot_sand_1.bin",
+					"sha256": "adcf274f0fe7ac9a4b969de627286454e9f0fa5478fdcf6124b0680109e0a79e"
+				},
+				"slot_sediment_0": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/after_fault_slot_sediment_0.bin",
+					"sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+				},
+				"slot_sediment_1": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/after_fault_slot_sediment_1.bin",
+					"sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+				},
+				"slot_water_0": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/after_fault_slot_water_0.bin",
+					"sha256": "0a6e80a0ca7fd6cba5631e293f1009a8e4fde5eb726eb8a9b89d7ed607da2971"
+				},
+				"slot_water_1": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/after_fault_slot_water_1.bin",
+					"sha256": "b4b0b2f147c4b7459ed33b2fdd3e7dbb4fab2ba3d005fd70d66926e968646aab"
+				},
+				"slot_wetness_0": {
+					"bytes": 131072,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/after_fault_slot_wetness_0.bin",
+					"sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+				},
+				"slot_wetness_1": {
+					"bytes": 131072,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/after_fault_slot_wetness_1.bin",
+					"sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471"
+				},
+				"trial": {
+					"bytes": 128,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/after_fault_trial.bin",
+					"sha256": "35df84412a88400d73be488807bd9c3522d87ddebee55628ebb53a482891c2ba"
+				},
+				"water": {
+					"bytes": 262144,
+					"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/negative_v1_b/after_fault_water.bin",
+					"sha256": "0a6e80a0ca7fd6cba5631e293f1009a8e4fde5eb726eb8a9b89d7ed607da2971"
+				}
+			},
+			"generation": "1001",
+			"label": "after_fault",
+			"revision": "0",
+			"state_seq": "0",
+			"tick": "0"
+		}
+	],
+	"solver_id": "muscl_mc_ssprk2_v1",
+	"source_drift": []
+}

@@ -1,0 +1,181 @@
+{
+  "migration_date": "2026-10-11",
+  "scope": "runtime resources and fixed test fixtures",
+  "files": [
+    {
+      "new_path": "assets/test1_beach/g05_hybrid_trial.json",
+      "original_group": "task/sandcastle_test1_reverse_rebuild/implementation",
+      "bytes": 2031,
+      "sha256": "1d517d5de03bcc31c68a9adf73a3b9803675a1b5535de4cc5b8cb61a4fd7e356"
+    },
+    {
+      "new_path": "assets/test1_beach/g05_vertex_light_trial.json",
+      "original_group": "task/sandcastle_test1_reverse_rebuild/implementation",
+      "bytes": 2003,
+      "sha256": "922e7a5e036280e05b8bbaf390a308bea9449c95b9c939101f4d5f94c5120804"
+    },
+    {
+      "new_path": "assets/test1_beach/test1_beach_g03_entry.gd",
+      "original_group": "task/sandcastle_test1_reverse_rebuild/implementation",
+      "bytes": 3989,
+      "sha256": "44cdd17732e3efe6e4d0189693f1c2c8023886796dbcac39bb2ccf3b4ad2befa"
+    },
+    {
+      "new_path": "assets/test1_beach/test1_beach_g03_entry.gd.uid",
+      "original_group": "task/sandcastle_test1_reverse_rebuild/implementation",
+      "bytes": 20,
+      "sha256": "6d1ef3abf47d74bdd697fbbd17251d69e621e43d712359baa222b1e92d8e2eaf"
+    },
+    {
+      "new_path": "assets/test1_beach/test1_beach_release.json",
+      "original_group": "task/sandcastle_test1_reverse_rebuild/implementation",
+      "bytes": 1983,
+      "sha256": "f4eb200c58ed56358cf268edeba1042616ef29db09111c69c62487f9f86185ef"
+    },
+    {
+      "new_path": "assets/test1_beach/test1_beach_v8_base.json",
+      "original_group": "task/sandcastle_test1_reverse_rebuild/implementation",
+      "bytes": 1973,
+      "sha256": "da8716c85bafd28eb520df63d028ad7832cdec6e919fd77be4e78caece4137bb"
+    },
+    {
+      "new_path": "assets/test1_beach/test1_bed_dry_overlay_trial.gdshader",
+      "original_group": "task/sandcastle_test1_reverse_rebuild/implementation",
+      "bytes": 8894,
+      "sha256": "4f17c7b16b5b23928d9bd0298ce33b361eb6ffb27f0e68e8a2b91246efcd5530"
+    },
+    {
+      "new_path": "assets/test1_beach/test1_bed_dry_overlay_trial.gdshader.uid",
+      "original_group": "task/sandcastle_test1_reverse_rebuild/implementation",
+      "bytes": 19,
+      "sha256": "73ffa496c04a324ae95c9b5f41a31258fcff1e2173bf7976926ba5b315f33716"
+    },
+    {
+      "new_path": "assets/test1_beach/test1_bed_dry_vertex_depth14_trial.gdshader",
+      "original_group": "task/sandcastle_test1_reverse_rebuild/implementation",
+      "bytes": 8897,
+      "sha256": "185f75135e98faf65025498ae768a36bde484dc8fff6d55ca324c58ed693a534"
+    },
+    {
+      "new_path": "assets/test1_beach/test1_bed_dry_vertex_depth14_trial.gdshader.uid",
+      "original_group": "task/sandcastle_test1_reverse_rebuild/implementation",
+      "bytes": 20,
+      "sha256": "3e7ab390101f7e75c0af46b6276e295f56e9d9b6382da163e37cc00e330a30d1"
+    },
+    {
+      "new_path": "assets/test1_beach/test1_bed_dry_vertex_trial.gdshader",
+      "original_group": "task/sandcastle_test1_reverse_rebuild/implementation",
+      "bytes": 8896,
+      "sha256": "869e178b39d54edcbfed60c5fdfa34ec749138f2d4d1e6f3d6c657b1227eacc4"
+    },
+    {
+      "new_path": "assets/test1_beach/test1_bed_dry_vertex_trial.gdshader.uid",
+      "original_group": "task/sandcastle_test1_reverse_rebuild/implementation",
+      "bytes": 20,
+      "sha256": "d08af4335f3ff0bda0cf62ab4a39477a71d5d0ab6b121c8616fcf54e28547876"
+    },
+    {
+      "new_path": "assets/test1_beach/test1_bed_lit.gdshader",
+      "original_group": "task/sandcastle_test1_reverse_rebuild/implementation",
+      "bytes": 8788,
+      "sha256": "5eb82335a471c821cc2c10e9fd2590d979fa06ae62d317fe13574b40a2e7e6a2"
+    },
+    {
+      "new_path": "assets/test1_beach/test1_bed_lit.gdshader.uid",
+      "original_group": "task/sandcastle_test1_reverse_rebuild/implementation",
+      "bytes": 20,
+      "sha256": "053f9fed3014b2f3a32453be24a6b0178dae84399e016c8e5ffd3607a905bd84"
+    },
+    {
+      "new_path": "assets/test1_beach/test1_bed_lit_fast.gdshader",
+      "original_group": "task/sandcastle_test1_reverse_rebuild/implementation",
+      "bytes": 8826,
+      "sha256": "0e8340b6e20e3d5a8380549995610e5a442b04524ff72e50c996b5cb4f9e7366"
+    },
+    {
+      "new_path": "assets/test1_beach/test1_bed_lit_fast.gdshader.uid",
+      "original_group": "task/sandcastle_test1_reverse_rebuild/implementation",
+      "bytes": 20,
+      "sha256": "c3c5c772a7867d417d3b3b07919874471422f539f06bacdcbd2613057fe18edf"
+    },
+    {
+      "new_path": "assets/test1_beach/test1_bed_vertex_light_trial.gdshader",
+      "original_group": "task/sandcastle_test1_reverse_rebuild/implementation",
+      "bytes": 8826,
+      "sha256": "0e8340b6e20e3d5a8380549995610e5a442b04524ff72e50c996b5cb4f9e7366"
+    },
+    {
+      "new_path": "assets/test1_beach/test1_bed_vertex_light_trial.gdshader.uid",
+      "original_group": "task/sandcastle_test1_reverse_rebuild/implementation",
+      "bytes": 19,
+      "sha256": "1803a3cfb6d7b7285bf4022a6f2bb5846ff673fd34f16f72656b1129ceeb8b99"
+    },
+    {
+      "new_path": "assets/test1_beach/test1_front_foam_sparse32_mesh.tres",
+      "original_group": "task/sandcastle_test1_reverse_rebuild/implementation",
+      "bytes": 677554,
+      "sha256": "2a58ea791c66a7de014178eb6e4c8a4a3e5c567eed37829a9edc22c34fc3e124"
+    },
+    {
+      "new_path": "assets/test1_beach/test1_front_foam_sparse_mesh.tres",
+      "original_group": "task/sandcastle_test1_reverse_rebuild/implementation",
+      "bytes": 1354758,
+      "sha256": "f343b5354ad4b18da405bd538d79e021112f58b39d129f307d248a13261f7b1b"
+    },
+    {
+      "new_path": "assets/test1_beach/test1_front_foam_splats.gdshader",
+      "original_group": "task/sandcastle_test1_reverse_rebuild/implementation",
+      "bytes": 7453,
+      "sha256": "45a43cf1ea48a0913e2a06012f1eef90bac837ecc610319cab5718505075f03b"
+    },
+    {
+      "new_path": "assets/test1_beach/test1_front_foam_splats.gdshader.uid",
+      "original_group": "task/sandcastle_test1_reverse_rebuild/implementation",
+      "bytes": 20,
+      "sha256": "4e8774b21afc5b7f700f200db7fc49d8dbfc8312ba9f73758a131bdf070c5021"
+    },
+    {
+      "new_path": "assets/test1_beach/test1_water_front.gdshader",
+      "original_group": "task/sandcastle_test1_reverse_rebuild/implementation",
+      "bytes": 58684,
+      "sha256": "deac308744b85960c239d6722d59a3b12507ebc6741ec2b81600718d63b81017"
+    },
+    {
+      "new_path": "assets/test1_beach/test1_water_front.gdshader.uid",
+      "original_group": "task/sandcastle_test1_reverse_rebuild/implementation",
+      "bytes": 20,
+      "sha256": "aaabe75c67f2cdaed9a9f2295cfe6bbbfbb34aebc5c5583593ee8fe929aa31dd"
+    },
+    {
+      "new_path": "tests/fixtures/visual_water_alignment/caustic_cloud_v2.png",
+      "original_group": "task (fixed reference inputs)",
+      "bytes": 237523,
+      "sha256": "4eb883dc96a241ecda04b60e4dd5b69fa0f4b1948dcd511773164397374ea132"
+    },
+    {
+      "new_path": "tests/fixtures/visual_water_alignment/reference_prototype_20261007/wr_w07_reference_input_20261007_coupled_oblique.png",
+      "original_group": "task (fixed reference inputs)",
+      "bytes": 508185,
+      "sha256": "be19dccdbc86237445086c10efa305fbe135ffbfd5cd31d59870078352d9c21a"
+    },
+    {
+      "new_path": "tests/fixtures/visual_water_alignment/reference_prototype_20261007/wr_w07_reference_input_20261007_water_oblique.png",
+      "original_group": "task (fixed reference inputs)",
+      "bytes": 298741,
+      "sha256": "e9202959f1e985600cb4258079a5b82f530b15b656a056f466e81aaff7069fc1"
+    },
+    {
+      "new_path": "tests/fixtures/visual_water_alignment/test1_replayed_0.png",
+      "original_group": "task (fixed reference inputs)",
+      "bytes": 3617910,
+      "sha256": "c6e3a0b91f375d8e68b1be5f33e1686c9b1ccb1e667b37c9fc18b94ecc662ead"
+    },
+    {
+      "new_path": "tests/fixtures/visual_water_alignment/test35-frame20641_replayed_0.png",
+      "original_group": "task (fixed reference inputs)",
+      "bytes": 3504827,
+      "sha256": "6e068979b06e3b7ff223b42bd3a0d0f24ac1b7b768fd5550378d2e48deab99b1"
+    }
+  ],
+  "history_markdown_files": 432
+}

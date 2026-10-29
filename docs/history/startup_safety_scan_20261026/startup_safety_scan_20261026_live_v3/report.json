@@ -1,0 +1,155 @@
+{
+  "pass": true,
+  "exit_code": 0,
+  "runtime": {
+    "checks": [
+      {
+        "advanced": true,
+        "cycle": 0,
+        "error": "",
+        "live": true,
+        "path": "res://scenes/main.tscn",
+        "ready": true
+      },
+      {
+        "advanced": true,
+        "cycle": 1,
+        "error": "",
+        "live": true,
+        "path": "res://scenes/main.tscn",
+        "ready": true
+      },
+      {
+        "advanced": true,
+        "cycle": 0,
+        "error": "",
+        "live": true,
+        "path": "res://scenes/playable/test1_geometry.tscn",
+        "ready": true
+      },
+      {
+        "advanced": true,
+        "cycle": 1,
+        "error": "",
+        "live": true,
+        "path": "res://scenes/playable/test1_geometry.tscn",
+        "ready": true
+      }
+    ],
+    "engine": {
+      "build": "steam",
+      "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+      "hex": 263938,
+      "major": 4,
+      "minor": 7,
+      "patch": 2,
+      "status": "stable",
+      "string": "4.7.2-stable (steam)",
+      "timestamp": 0
+    },
+    "user_data_dir": "D:/godot/project/sandcastle/test_output/startup_safety_scan_20261026_live_v3/roaming/Godot/app_userdata/sandcastle"
+  },
+  "failed_checks": [],
+  "engine_messages": [],
+  "static_findings": [
+    {
+      "rule": "W002",
+      "severity": "warning_candidate",
+      "file": "scripts/beach/floating_props_panel.gd",
+      "line": 75,
+      "message": "material shadows an inherited property of PanelContainer; review with editor warning location"
+    },
+    {
+      "rule": "W002",
+      "severity": "warning_candidate",
+      "file": "scripts/beach/floating_props_panel.gd",
+      "line": 82,
+      "message": "position shadows an inherited property of PanelContainer; review with editor warning location"
+    },
+    {
+      "rule": "W002",
+      "severity": "warning_candidate",
+      "file": "scripts/beach/unified_playable_entry.gd",
+      "line": 298,
+      "message": "position shadows an inherited property of Node3D; review with editor warning location"
+    },
+    {
+      "rule": "W002",
+      "severity": "warning_candidate",
+      "file": "scripts/beach/unified_playable_entry.gd",
+      "line": 309,
+      "message": "position shadows an inherited property of Node3D; review with editor warning location"
+    },
+    {
+      "rule": "W002",
+      "severity": "warning_candidate",
+      "file": "scripts/beach/unified_playable_entry.gd",
+      "line": 408,
+      "message": "position shadows an inherited property of Node3D; review with editor warning location"
+    },
+    {
+      "rule": "W002",
+      "severity": "warning_candidate",
+      "file": "scripts/props/floating_props_service.gd",
+      "line": 271,
+      "message": "position shadows an inherited property of Node3D; review with editor warning location"
+    },
+    {
+      "rule": "W002",
+      "severity": "warning_candidate",
+      "file": "scripts/props/floating_props_service.gd",
+      "line": 340,
+      "message": "position shadows an inherited property of Node3D; review with editor warning location"
+    },
+    {
+      "rule": "W002",
+      "severity": "warning_candidate",
+      "file": "scripts/props/floating_props_service.gd",
+      "line": 480,
+      "message": "position shadows an inherited property of Node3D; review with editor warning location"
+    },
+    {
+      "rule": "W002",
+      "severity": "warning_candidate",
+      "file": "scripts/props/floating_props_service.gd",
+      "line": 514,
+      "message": "position shadows an inherited property of Node3D; review with editor warning location"
+    },
+    {
+      "rule": "W001",
+      "severity": "warning_candidate",
+      "file": "scripts/sand/brushes/brush_registry.gd",
+      "line": 19,
+      "message": "Parameter hash shadows global hash(); cosmetic warning, not a startup failure"
+    },
+    {
+      "rule": "W001",
+      "severity": "warning_candidate",
+      "file": "scripts/simulation/unified_edit/profile_registry.gd",
+      "line": 42,
+      "message": "Parameter hash shadows global hash(); cosmetic warning, not a startup failure"
+    },
+    {
+      "rule": "W001",
+      "severity": "warning_candidate",
+      "file": "scripts/simulation/unified_edit/profile_registry.gd",
+      "line": 46,
+      "message": "Parameter hash shadows global hash(); cosmetic warning, not a startup failure"
+    },
+    {
+      "rule": "W001",
+      "severity": "warning_candidate",
+      "file": "scripts/simulation/unified_edit/profile_registry.gd",
+      "line": 49,
+      "message": "Parameter hash shadows global hash(); cosmetic warning, not a startup failure"
+    },
+    {
+      "rule": "W002",
+      "severity": "warning_candidate",
+      "file": "scripts/visual/test1_water_motion_trial.gd",
+      "line": 125,
+      "message": "position shadows an inherited property of Node3D; review with editor warning location"
+    }
+  ],
+  "scope": "Resource load + two detached instances of every scenes/ entry; optional two live boot/advance/shutdown cycles of each formal entry. No performance or exhaustive gameplay claim."
+}

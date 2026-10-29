@@ -1,0 +1,15 @@
+# T05 实际 push 字节与捕帧工具探针
+
+2026-10-11。Godot4.7.2/D3D12/GTX1050，可见1920×1080，原完整负载和固定两笔GPU输入。各场景evidence目录含源hash、实际material_push_bytes.bin、原生字段/视觉histories/PNG、完整元数据、日志及artifact_index。
+
+084931_scenes写、085014_scenes读：首轮临时公共push辅助调用的诊断实现，28包实际提交字节、31 SPIR-V及当前/继续完成态全部配对。085140_scenes写、085223_scenes读：关闭push记录但仍保留临时公共辅助调用，继续配对通过；该默认路径有额外调用，不据此宣布旧问题已修复。
+
+随后恢复原默认材质代码的直接RD调用；观察仅存在于独立traced_material_coupler子类。085430_scenes写、085515_scenes读使用-BeachPushTrace -BeachNoParameterTrace -BeachLateShaderIdentity：五项冷预检负例通过，tick17十五状态/像素/五账本/prefix/当前选择精确；tick24继续FAIL，仍是25525/27334/28096/40900四格沙各一ULP（最大5.9604645e-08），bed_0相应不同。
+
+该失败窗口的actual_material_push_bytes_match为true：14个实际子步的step/slope共28份32byte包，连同revision/index/stage逐位一致。实际SPIR-V也一致。C3范围是主机RD调用边界，不外推为GPU消费或所有上游参数均已证实一致。
+
+090422_scenes写、090537_scenes读：当前源码、默认原材质路径，无push和子步参数记录，晚采集shader身份；当前及七tick继续严格配对回归通过。该新PASS与诊断子类的失败同时保留，G4不能据此放行。
+
+捕帧工具准备：tools/renderdoc_api_probe.py在独立隐藏qrenderdoc进程运行，通过owner PID文件核对自身身份；仅读取模块版本及ExecuteAndInject/CreateTargetControl/TriggerCapture/QueueCapture/ReceiveMessage/GetPID等实际API文档，随后只退出自身进程。版本1.46，本机已有。GetDefaultCaptureOptions未提供，不伪造为已支持。结果见tools/renderdoc_api_probe.json，二进制、脚本和产物索引见tools/renderdoc_api_probe_index.json。没有启动/注入Godot目标，也没有采集或重放新RDC。
+
+下一步须为本项目Godot捕帧核对目标PID及原始RDC hash/时间窗口，检查实际stage绑定输入与首个分歧pass；不能拿API文档探针PASS当捕帧或算法验收。完整活动恢复/撤销/重演和T06仍待完成。

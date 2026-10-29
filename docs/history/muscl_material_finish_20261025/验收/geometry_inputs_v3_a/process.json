@@ -1,0 +1,22 @@
+{
+  "pid": 20456,
+  "started_unix": 1792943043.6875648,
+  "command": [
+    "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+    "--path",
+    "D:\\godot\\project\\sandcastle\\test_output\\muscl_material_finish_20261025\\projects\\a0",
+    "--rendering-method",
+    "forward_plus",
+    "--rendering-driver",
+    "d3d12",
+    "--resolution",
+    "1280x720",
+    "--script",
+    "res://tools/muscl_performance/formal_material_inputs.gd",
+    "--",
+    "--output=D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/geometry_inputs_v3_a",
+    "--parameter-config=D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/geometry_inputs_v3_a/parameters/startup.json",
+    "--scene=res://scenes/playable/test1_geometry.tscn"
+  ],
+  "telemetry": null
+}

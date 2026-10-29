@@ -1,0 +1,7 @@
+[gd_resource type="Resource" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/simulation/unified_edit/height_stamp.gd" id="1"]
+[resource]
+script = ExtResource("1")
+template_id = &"stepped_mound_v1"
+payload_path = "res://assets/unified_edit/extensions/stepped_mound_v1.rgba32f"
+payload_sha256 = "90712a3db02056b3402dc301ec274c4d50582f5b2e79cf855ef12940b4f23a50"

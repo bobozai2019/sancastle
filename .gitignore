@@ -1,0 +1,40 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+.godotiq/
+
+# BEGIN sandcastle local-only files
+# Editor and local assistant state
+/.godotiq.json
+/.claude/
+/.codex/
+/.shared/
+/.mcp.json
+
+# Captures, downloaded game data, and generated results
+/rdc/
+/rdc_thumbs/
+/sandcastlegame/
+/test_output/
+/task/
+/logs/
+/release/
+
+# Local Python packages and caches used by investigation tools
+**/__pycache__/
+*.py[cod]
+**/.venv/
+/tests/investigation/brush_hit_competitor/deps/*
+!/tests/investigation/brush_hit_competitor/deps/.gdignore
+/tests/investigation/brush_hit_competitor/runtime_collider/deps/*
+!/tests/investigation/brush_hit_competitor/runtime_collider/deps/.gdignore
+/tests/investigation/brush_hit_competitor/runtime_collider/plot_deps/*
+!/tests/investigation/brush_hit_competitor/runtime_collider/plot_deps/.gdignore
+
+# Ad hoc console output
+/tests/capture_stdout.txt
+/tests/capture_stderr.txt
+# END sandcastle local-only files
+
+# Local competitor evidence (preserve on disk)
+/docs/competitor/evidence/

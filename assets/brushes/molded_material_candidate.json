@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "status": "candidate_unverified",
+  "id": "molded_v1",
+  "support_format": "RG32F",
+  "support_channels": ["tagged_sand_depth_m", "reference_sand_depth_m"],
+  "cohesion_yield_height_m": 0.9,
+  "saturation_tagged_depth_m": 0.125,
+  "compaction_target": 0.95,
+  "compaction_storage_value": 0.9501953125,
+  "loss_rule": "remove upper tagged depth first when total sand falls",
+  "transport_rule": "shared-edge sand transfer times donor tagged fraction",
+  "scope": "local material/edit transaction candidate; damage, full gates and native v2 still pending"
+}

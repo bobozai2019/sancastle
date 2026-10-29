@@ -1,0 +1,2502 @@
+{
+	"checks": [
+		{
+			"name": "footprint_freeze",
+			"pass": true
+		},
+		{
+			"name": "footprint_configure",
+			"pass": true
+		},
+		{
+			"name": "footprint_initialized",
+			"pass": true
+		},
+		{
+			"name": "footprint_invalid_dt_rejected",
+			"pass": true
+		},
+		{
+			"name": "footprint_tick_admitted",
+			"pass": true
+		},
+		{
+			"name": "footprint_completed",
+			"pass": true
+		},
+		{
+			"name": "footprint_captured",
+			"pass": true
+		},
+		{
+			"name": "footprint_tick_admitted",
+			"pass": true
+		},
+		{
+			"name": "footprint_completed",
+			"pass": true
+		},
+		{
+			"name": "footprint_captured",
+			"pass": true
+		},
+		{
+			"name": "footprint_tick_admitted",
+			"pass": true
+		},
+		{
+			"name": "footprint_completed",
+			"pass": true
+		},
+		{
+			"name": "footprint_captured",
+			"pass": true
+		},
+		{
+			"name": "footprint_tick_admitted",
+			"pass": true
+		},
+		{
+			"name": "footprint_completed",
+			"pass": true
+		},
+		{
+			"name": "footprint_captured",
+			"pass": true
+		},
+		{
+			"name": "footprint_tick_admitted",
+			"pass": true
+		},
+		{
+			"name": "footprint_completed",
+			"pass": true
+		},
+		{
+			"name": "footprint_captured",
+			"pass": true
+		},
+		{
+			"name": "footprint_released",
+			"pass": true
+		},
+		{
+			"name": "state_count",
+			"pass": true
+		},
+		{
+			"name": "all_owners_released",
+			"pass": true
+		}
+	],
+	"engine": {
+		"build": "steam",
+		"hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+		"hex": 263938,
+		"major": 4,
+		"minor": 7,
+		"patch": 2,
+		"status": "stable",
+		"string": "4.7.2-stable (steam)",
+		"timestamp": 0
+	},
+	"memory": [
+		{
+			"buffer_bytes": 1934460,
+			"label": "before",
+			"texture_bytes": 8421376
+		},
+		{
+			"buffer_bytes": 17582452,
+			"dispatch_descriptors": 1285,
+			"inventory": [
+				{
+					"format": 99,
+					"height": 256,
+					"name": "rock",
+					"owner_group": "state",
+					"payload_bytes": 262144,
+					"rid_id": 17471926960233,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "sand",
+					"owner_group": "state",
+					"payload_bytes": 262144,
+					"rid_id": 17476221927530,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "sand",
+					"owner_group": "state",
+					"payload_bytes": 262144,
+					"rid_id": 17480516894827,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "water",
+					"owner_group": "state",
+					"payload_bytes": 262144,
+					"rid_id": 17484811862124,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "water",
+					"owner_group": "state",
+					"payload_bytes": 262144,
+					"rid_id": 17489106829421,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "sediment",
+					"owner_group": "state",
+					"payload_bytes": 262144,
+					"rid_id": 17493401796718,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "sediment",
+					"owner_group": "state",
+					"payload_bytes": 262144,
+					"rid_id": 17497696764015,
+					"width": 256
+				},
+				{
+					"format": 75,
+					"height": 256,
+					"name": "wetness",
+					"owner_group": "state",
+					"payload_bytes": 131072,
+					"rid_id": 17501991731312,
+					"width": 256
+				},
+				{
+					"format": 75,
+					"height": 256,
+					"name": "wetness",
+					"owner_group": "state",
+					"payload_bytes": 131072,
+					"rid_id": 17506286698609,
+					"width": 256
+				},
+				{
+					"format": 75,
+					"height": 256,
+					"name": "compaction",
+					"owner_group": "state",
+					"payload_bytes": 131072,
+					"rid_id": 17510581665906,
+					"width": 256
+				},
+				{
+					"format": 75,
+					"height": 256,
+					"name": "compaction",
+					"owner_group": "state",
+					"payload_bytes": 131072,
+					"rid_id": 17514876633203,
+					"width": 256
+				},
+				{
+					"format": 8,
+					"height": 256,
+					"name": "obstacle",
+					"owner_group": "state",
+					"payload_bytes": 65536,
+					"rid_id": 17519171600500,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 256,
+					"name": "momentum",
+					"owner_group": "state",
+					"payload_bytes": 524288,
+					"rid_id": 17523466567797,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 256,
+					"name": "momentum",
+					"owner_group": "state",
+					"payload_bytes": 524288,
+					"rid_id": 17527761535094,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "flux",
+					"owner_group": "state",
+					"payload_bytes": 1048576,
+					"rid_id": 17532056502391,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "flux",
+					"owner_group": "state",
+					"payload_bytes": 1048576,
+					"rid_id": 17536351469688,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 256,
+					"name": "mold_support",
+					"owner_group": "state",
+					"payload_bytes": 524288,
+					"rid_id": 17540646436985,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 256,
+					"name": "mold_support",
+					"owner_group": "state",
+					"payload_bytes": 524288,
+					"rid_id": 17544941404282,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "edge_x",
+					"owner_group": "state",
+					"payload_bytes": 1048576,
+					"rid_id": 17549236371579,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "edge_z",
+					"owner_group": "state",
+					"payload_bytes": 1048576,
+					"rid_id": 17553531338876,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "drain",
+					"owner_group": "state",
+					"payload_bytes": 262144,
+					"rid_id": 17557826306173,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 32,
+					"name": "cfl_tiles",
+					"owner_group": "state",
+					"payload_bytes": 4096,
+					"rid_id": 17562121273470,
+					"width": 32
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "u1",
+					"owner_group": "muscl",
+					"payload_bytes": 1048576,
+					"rid_id": 18004502904965,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "u2",
+					"owner_group": "muscl",
+					"payload_bytes": 1048576,
+					"rid_id": 18008797872262,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "edge0_x",
+					"owner_group": "muscl",
+					"payload_bytes": 1048576,
+					"rid_id": 18013092839559,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "edge0_z",
+					"owner_group": "muscl",
+					"payload_bytes": 1048576,
+					"rid_id": 18017387806856,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "edge1_x",
+					"owner_group": "muscl",
+					"payload_bytes": 1048576,
+					"rid_id": 18021682774153,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "edge1_z",
+					"owner_group": "muscl",
+					"payload_bytes": 1048576,
+					"rid_id": 18025977741450,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "correction",
+					"owner_group": "muscl",
+					"payload_bytes": 1048576,
+					"rid_id": 18030272708747,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 256,
+					"name": "bed_source",
+					"owner_group": "muscl",
+					"payload_bytes": 524288,
+					"rid_id": 18034567676044,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 32,
+					"name": "speed_tiles",
+					"owner_group": "muscl",
+					"payload_bytes": 8192,
+					"rid_id": 18038862643341,
+					"width": 32
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "retry_correction",
+					"owner_group": "muscl",
+					"payload_bytes": 1048576,
+					"rid_id": 18043157610638,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 256,
+					"name": "retry_bed_source",
+					"owner_group": "muscl",
+					"payload_bytes": 524288,
+					"rid_id": 18047452577935,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 32,
+					"name": "retry_speed_tiles",
+					"owner_group": "muscl",
+					"payload_bytes": 8192,
+					"rid_id": 18051747545232,
+					"width": 32
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "drain0",
+					"owner_group": "muscl",
+					"payload_bytes": 262144,
+					"rid_id": 18056042512529,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "drain1",
+					"owner_group": "muscl",
+					"payload_bytes": 262144,
+					"rid_id": 18060337479826,
+					"width": 256
+				},
+				{
+					"format": 97,
+					"height": 8,
+					"name": "dirty",
+					"owner_group": "coupled",
+					"payload_bytes": 256,
+					"rid_id": 18189186498707,
+					"width": 8
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "sand",
+					"owner_group": "views",
+					"payload_bytes": 262144,
+					"rid_id": 17617955848319,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "water",
+					"owner_group": "views",
+					"payload_bytes": 262144,
+					"rid_id": 17622250815616,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 1,
+					"name": "clock",
+					"owner_group": "views",
+					"payload_bytes": 4,
+					"rid_id": 17381732647016,
+					"width": 1
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "sediment",
+					"owner_group": "views",
+					"payload_bytes": 262144,
+					"rid_id": 18360985190549,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 256,
+					"name": "momentum",
+					"owner_group": "views",
+					"payload_bytes": 524288,
+					"rid_id": 18365280157846,
+					"width": 256
+				},
+				{
+					"format": 75,
+					"height": 256,
+					"name": "wetness",
+					"owner_group": "views",
+					"payload_bytes": 131072,
+					"rid_id": 18369575125143,
+					"width": 256
+				},
+				{
+					"format": 75,
+					"height": 256,
+					"name": "compaction",
+					"owner_group": "views",
+					"payload_bytes": 131072,
+					"rid_id": 18373870092440,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 256,
+					"name": "mold_support",
+					"owner_group": "views",
+					"payload_bytes": 524288,
+					"rid_id": 18378165059737,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "flux",
+					"owner_group": "views",
+					"payload_bytes": 1048576,
+					"rid_id": 18382460027034,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "baseline",
+					"owner_group": "views",
+					"payload_bytes": 262144,
+					"rid_id": 18386754994331,
+					"width": 256
+				}
+			],
+			"inventory_scope": "State + MUSCL + Coupled + Views + state publication + Visuals, deduplicated by actual RID. Material wrappers borrow Views RIDs; engine render targets remain outside inventory. RD totals are separate. RD totals are separate.",
+			"label": "live",
+			"logical_texture_payload": 22368516,
+			"owners": {
+				"coupled": 11,
+				"executor": 15,
+				"height": 7,
+				"probe": 5,
+				"state": 46,
+				"transport": 23,
+				"views": 18,
+				"water": 88,
+				"water_response": 40
+			},
+			"shader_programs": {
+				"coupled": [
+					"finish",
+					"support"
+				],
+				"state": [
+					"edge_flux",
+					"drain_scale",
+					"update_state",
+					"publish"
+				],
+				"water": [
+					"cfl_tiles",
+					"cfl_decide",
+					"sim_finish",
+					"normalize",
+					"boundary",
+					"drain_scale",
+					"update_state",
+					"rk_edge",
+					"rk_drain",
+					"rk_euler",
+					"rk_decide",
+					"rk_finalize",
+					"rk_normalize",
+					"rk_validate",
+					"sediment",
+					"material_step",
+					"material_ordinary",
+					"material_molded"
+				]
+			},
+			"solver_coupled_texture_objects": 47,
+			"texture_bytes": 30588928
+		},
+		{
+			"buffer_bytes": 17582452,
+			"dispatch_descriptors": 1285,
+			"inventory": [
+				{
+					"format": 99,
+					"height": 256,
+					"name": "rock",
+					"owner_group": "state",
+					"payload_bytes": 262144,
+					"rid_id": 17471926960233,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "sand",
+					"owner_group": "state",
+					"payload_bytes": 262144,
+					"rid_id": 17476221927530,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "sand",
+					"owner_group": "state",
+					"payload_bytes": 262144,
+					"rid_id": 17480516894827,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "water",
+					"owner_group": "state",
+					"payload_bytes": 262144,
+					"rid_id": 17484811862124,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "water",
+					"owner_group": "state",
+					"payload_bytes": 262144,
+					"rid_id": 17489106829421,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "sediment",
+					"owner_group": "state",
+					"payload_bytes": 262144,
+					"rid_id": 17493401796718,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "sediment",
+					"owner_group": "state",
+					"payload_bytes": 262144,
+					"rid_id": 17497696764015,
+					"width": 256
+				},
+				{
+					"format": 75,
+					"height": 256,
+					"name": "wetness",
+					"owner_group": "state",
+					"payload_bytes": 131072,
+					"rid_id": 17501991731312,
+					"width": 256
+				},
+				{
+					"format": 75,
+					"height": 256,
+					"name": "wetness",
+					"owner_group": "state",
+					"payload_bytes": 131072,
+					"rid_id": 17506286698609,
+					"width": 256
+				},
+				{
+					"format": 75,
+					"height": 256,
+					"name": "compaction",
+					"owner_group": "state",
+					"payload_bytes": 131072,
+					"rid_id": 17510581665906,
+					"width": 256
+				},
+				{
+					"format": 75,
+					"height": 256,
+					"name": "compaction",
+					"owner_group": "state",
+					"payload_bytes": 131072,
+					"rid_id": 17514876633203,
+					"width": 256
+				},
+				{
+					"format": 8,
+					"height": 256,
+					"name": "obstacle",
+					"owner_group": "state",
+					"payload_bytes": 65536,
+					"rid_id": 17519171600500,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 256,
+					"name": "momentum",
+					"owner_group": "state",
+					"payload_bytes": 524288,
+					"rid_id": 17523466567797,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 256,
+					"name": "momentum",
+					"owner_group": "state",
+					"payload_bytes": 524288,
+					"rid_id": 17527761535094,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "flux",
+					"owner_group": "state",
+					"payload_bytes": 1048576,
+					"rid_id": 17532056502391,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "flux",
+					"owner_group": "state",
+					"payload_bytes": 1048576,
+					"rid_id": 17536351469688,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 256,
+					"name": "mold_support",
+					"owner_group": "state",
+					"payload_bytes": 524288,
+					"rid_id": 17540646436985,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 256,
+					"name": "mold_support",
+					"owner_group": "state",
+					"payload_bytes": 524288,
+					"rid_id": 17544941404282,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "edge_x",
+					"owner_group": "state",
+					"payload_bytes": 1048576,
+					"rid_id": 17549236371579,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "edge_z",
+					"owner_group": "state",
+					"payload_bytes": 1048576,
+					"rid_id": 17553531338876,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "drain",
+					"owner_group": "state",
+					"payload_bytes": 262144,
+					"rid_id": 17557826306173,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 32,
+					"name": "cfl_tiles",
+					"owner_group": "state",
+					"payload_bytes": 4096,
+					"rid_id": 17562121273470,
+					"width": 32
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "u1",
+					"owner_group": "muscl",
+					"payload_bytes": 1048576,
+					"rid_id": 18004502904965,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "u2",
+					"owner_group": "muscl",
+					"payload_bytes": 1048576,
+					"rid_id": 18008797872262,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "edge0_x",
+					"owner_group": "muscl",
+					"payload_bytes": 1048576,
+					"rid_id": 18013092839559,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "edge0_z",
+					"owner_group": "muscl",
+					"payload_bytes": 1048576,
+					"rid_id": 18017387806856,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "edge1_x",
+					"owner_group": "muscl",
+					"payload_bytes": 1048576,
+					"rid_id": 18021682774153,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "edge1_z",
+					"owner_group": "muscl",
+					"payload_bytes": 1048576,
+					"rid_id": 18025977741450,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "correction",
+					"owner_group": "muscl",
+					"payload_bytes": 1048576,
+					"rid_id": 18030272708747,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 256,
+					"name": "bed_source",
+					"owner_group": "muscl",
+					"payload_bytes": 524288,
+					"rid_id": 18034567676044,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 32,
+					"name": "speed_tiles",
+					"owner_group": "muscl",
+					"payload_bytes": 8192,
+					"rid_id": 18038862643341,
+					"width": 32
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "retry_correction",
+					"owner_group": "muscl",
+					"payload_bytes": 1048576,
+					"rid_id": 18043157610638,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 256,
+					"name": "retry_bed_source",
+					"owner_group": "muscl",
+					"payload_bytes": 524288,
+					"rid_id": 18047452577935,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 32,
+					"name": "retry_speed_tiles",
+					"owner_group": "muscl",
+					"payload_bytes": 8192,
+					"rid_id": 18051747545232,
+					"width": 32
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "drain0",
+					"owner_group": "muscl",
+					"payload_bytes": 262144,
+					"rid_id": 18056042512529,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "drain1",
+					"owner_group": "muscl",
+					"payload_bytes": 262144,
+					"rid_id": 18060337479826,
+					"width": 256
+				},
+				{
+					"format": 97,
+					"height": 8,
+					"name": "dirty",
+					"owner_group": "coupled",
+					"payload_bytes": 256,
+					"rid_id": 18189186498707,
+					"width": 8
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "sand",
+					"owner_group": "views",
+					"payload_bytes": 262144,
+					"rid_id": 17617955848319,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "water",
+					"owner_group": "views",
+					"payload_bytes": 262144,
+					"rid_id": 17622250815616,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 1,
+					"name": "clock",
+					"owner_group": "views",
+					"payload_bytes": 4,
+					"rid_id": 17381732647016,
+					"width": 1
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "sediment",
+					"owner_group": "views",
+					"payload_bytes": 262144,
+					"rid_id": 18360985190549,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 256,
+					"name": "momentum",
+					"owner_group": "views",
+					"payload_bytes": 524288,
+					"rid_id": 18365280157846,
+					"width": 256
+				},
+				{
+					"format": 75,
+					"height": 256,
+					"name": "wetness",
+					"owner_group": "views",
+					"payload_bytes": 131072,
+					"rid_id": 18369575125143,
+					"width": 256
+				},
+				{
+					"format": 75,
+					"height": 256,
+					"name": "compaction",
+					"owner_group": "views",
+					"payload_bytes": 131072,
+					"rid_id": 18373870092440,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 256,
+					"name": "mold_support",
+					"owner_group": "views",
+					"payload_bytes": 524288,
+					"rid_id": 18378165059737,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "flux",
+					"owner_group": "views",
+					"payload_bytes": 1048576,
+					"rid_id": 18382460027034,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "baseline",
+					"owner_group": "views",
+					"payload_bytes": 262144,
+					"rid_id": 18386754994331,
+					"width": 256
+				}
+			],
+			"inventory_scope": "State + MUSCL + Coupled + Views + state publication + Visuals, deduplicated by actual RID. Material wrappers borrow Views RIDs; engine render targets remain outside inventory. RD totals are separate. RD totals are separate.",
+			"label": "live",
+			"logical_texture_payload": 22368516,
+			"owners": {
+				"coupled": 11,
+				"executor": 15,
+				"height": 7,
+				"probe": 5,
+				"state": 46,
+				"transport": 23,
+				"views": 18,
+				"water": 88,
+				"water_response": 40
+			},
+			"shader_programs": {
+				"coupled": [
+					"finish",
+					"support"
+				],
+				"state": [
+					"edge_flux",
+					"drain_scale",
+					"update_state",
+					"publish"
+				],
+				"water": [
+					"cfl_tiles",
+					"cfl_decide",
+					"sim_finish",
+					"normalize",
+					"boundary",
+					"drain_scale",
+					"update_state",
+					"rk_edge",
+					"rk_drain",
+					"rk_euler",
+					"rk_decide",
+					"rk_finalize",
+					"rk_normalize",
+					"rk_validate",
+					"sediment",
+					"material_step",
+					"material_ordinary",
+					"material_molded"
+				]
+			},
+			"solver_coupled_texture_objects": 47,
+			"texture_bytes": 30588928
+		},
+		{
+			"buffer_bytes": 17582452,
+			"dispatch_descriptors": 1285,
+			"inventory": [
+				{
+					"format": 99,
+					"height": 256,
+					"name": "rock",
+					"owner_group": "state",
+					"payload_bytes": 262144,
+					"rid_id": 17471926960233,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "sand",
+					"owner_group": "state",
+					"payload_bytes": 262144,
+					"rid_id": 17476221927530,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "sand",
+					"owner_group": "state",
+					"payload_bytes": 262144,
+					"rid_id": 17480516894827,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "water",
+					"owner_group": "state",
+					"payload_bytes": 262144,
+					"rid_id": 17484811862124,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "water",
+					"owner_group": "state",
+					"payload_bytes": 262144,
+					"rid_id": 17489106829421,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "sediment",
+					"owner_group": "state",
+					"payload_bytes": 262144,
+					"rid_id": 17493401796718,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "sediment",
+					"owner_group": "state",
+					"payload_bytes": 262144,
+					"rid_id": 17497696764015,
+					"width": 256
+				},
+				{
+					"format": 75,
+					"height": 256,
+					"name": "wetness",
+					"owner_group": "state",
+					"payload_bytes": 131072,
+					"rid_id": 17501991731312,
+					"width": 256
+				},
+				{
+					"format": 75,
+					"height": 256,
+					"name": "wetness",
+					"owner_group": "state",
+					"payload_bytes": 131072,
+					"rid_id": 17506286698609,
+					"width": 256
+				},
+				{
+					"format": 75,
+					"height": 256,
+					"name": "compaction",
+					"owner_group": "state",
+					"payload_bytes": 131072,
+					"rid_id": 17510581665906,
+					"width": 256
+				},
+				{
+					"format": 75,
+					"height": 256,
+					"name": "compaction",
+					"owner_group": "state",
+					"payload_bytes": 131072,
+					"rid_id": 17514876633203,
+					"width": 256
+				},
+				{
+					"format": 8,
+					"height": 256,
+					"name": "obstacle",
+					"owner_group": "state",
+					"payload_bytes": 65536,
+					"rid_id": 17519171600500,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 256,
+					"name": "momentum",
+					"owner_group": "state",
+					"payload_bytes": 524288,
+					"rid_id": 17523466567797,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 256,
+					"name": "momentum",
+					"owner_group": "state",
+					"payload_bytes": 524288,
+					"rid_id": 17527761535094,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "flux",
+					"owner_group": "state",
+					"payload_bytes": 1048576,
+					"rid_id": 17532056502391,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "flux",
+					"owner_group": "state",
+					"payload_bytes": 1048576,
+					"rid_id": 17536351469688,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 256,
+					"name": "mold_support",
+					"owner_group": "state",
+					"payload_bytes": 524288,
+					"rid_id": 17540646436985,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 256,
+					"name": "mold_support",
+					"owner_group": "state",
+					"payload_bytes": 524288,
+					"rid_id": 17544941404282,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "edge_x",
+					"owner_group": "state",
+					"payload_bytes": 1048576,
+					"rid_id": 17549236371579,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "edge_z",
+					"owner_group": "state",
+					"payload_bytes": 1048576,
+					"rid_id": 17553531338876,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "drain",
+					"owner_group": "state",
+					"payload_bytes": 262144,
+					"rid_id": 17557826306173,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 32,
+					"name": "cfl_tiles",
+					"owner_group": "state",
+					"payload_bytes": 4096,
+					"rid_id": 17562121273470,
+					"width": 32
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "u1",
+					"owner_group": "muscl",
+					"payload_bytes": 1048576,
+					"rid_id": 18004502904965,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "u2",
+					"owner_group": "muscl",
+					"payload_bytes": 1048576,
+					"rid_id": 18008797872262,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "edge0_x",
+					"owner_group": "muscl",
+					"payload_bytes": 1048576,
+					"rid_id": 18013092839559,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "edge0_z",
+					"owner_group": "muscl",
+					"payload_bytes": 1048576,
+					"rid_id": 18017387806856,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "edge1_x",
+					"owner_group": "muscl",
+					"payload_bytes": 1048576,
+					"rid_id": 18021682774153,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "edge1_z",
+					"owner_group": "muscl",
+					"payload_bytes": 1048576,
+					"rid_id": 18025977741450,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "correction",
+					"owner_group": "muscl",
+					"payload_bytes": 1048576,
+					"rid_id": 18030272708747,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 256,
+					"name": "bed_source",
+					"owner_group": "muscl",
+					"payload_bytes": 524288,
+					"rid_id": 18034567676044,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 32,
+					"name": "speed_tiles",
+					"owner_group": "muscl",
+					"payload_bytes": 8192,
+					"rid_id": 18038862643341,
+					"width": 32
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "retry_correction",
+					"owner_group": "muscl",
+					"payload_bytes": 1048576,
+					"rid_id": 18043157610638,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 256,
+					"name": "retry_bed_source",
+					"owner_group": "muscl",
+					"payload_bytes": 524288,
+					"rid_id": 18047452577935,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 32,
+					"name": "retry_speed_tiles",
+					"owner_group": "muscl",
+					"payload_bytes": 8192,
+					"rid_id": 18051747545232,
+					"width": 32
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "drain0",
+					"owner_group": "muscl",
+					"payload_bytes": 262144,
+					"rid_id": 18056042512529,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "drain1",
+					"owner_group": "muscl",
+					"payload_bytes": 262144,
+					"rid_id": 18060337479826,
+					"width": 256
+				},
+				{
+					"format": 97,
+					"height": 8,
+					"name": "dirty",
+					"owner_group": "coupled",
+					"payload_bytes": 256,
+					"rid_id": 18189186498707,
+					"width": 8
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "sand",
+					"owner_group": "views",
+					"payload_bytes": 262144,
+					"rid_id": 17617955848319,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "water",
+					"owner_group": "views",
+					"payload_bytes": 262144,
+					"rid_id": 17622250815616,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 1,
+					"name": "clock",
+					"owner_group": "views",
+					"payload_bytes": 4,
+					"rid_id": 17381732647016,
+					"width": 1
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "sediment",
+					"owner_group": "views",
+					"payload_bytes": 262144,
+					"rid_id": 18360985190549,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 256,
+					"name": "momentum",
+					"owner_group": "views",
+					"payload_bytes": 524288,
+					"rid_id": 18365280157846,
+					"width": 256
+				},
+				{
+					"format": 75,
+					"height": 256,
+					"name": "wetness",
+					"owner_group": "views",
+					"payload_bytes": 131072,
+					"rid_id": 18369575125143,
+					"width": 256
+				},
+				{
+					"format": 75,
+					"height": 256,
+					"name": "compaction",
+					"owner_group": "views",
+					"payload_bytes": 131072,
+					"rid_id": 18373870092440,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 256,
+					"name": "mold_support",
+					"owner_group": "views",
+					"payload_bytes": 524288,
+					"rid_id": 18378165059737,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "flux",
+					"owner_group": "views",
+					"payload_bytes": 1048576,
+					"rid_id": 18382460027034,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "baseline",
+					"owner_group": "views",
+					"payload_bytes": 262144,
+					"rid_id": 18386754994331,
+					"width": 256
+				}
+			],
+			"inventory_scope": "State + MUSCL + Coupled + Views + state publication + Visuals, deduplicated by actual RID. Material wrappers borrow Views RIDs; engine render targets remain outside inventory. RD totals are separate. RD totals are separate.",
+			"label": "live",
+			"logical_texture_payload": 22368516,
+			"owners": {
+				"coupled": 11,
+				"executor": 15,
+				"height": 7,
+				"probe": 5,
+				"state": 46,
+				"transport": 23,
+				"views": 18,
+				"water": 88,
+				"water_response": 40
+			},
+			"shader_programs": {
+				"coupled": [
+					"finish",
+					"support"
+				],
+				"state": [
+					"edge_flux",
+					"drain_scale",
+					"update_state",
+					"publish"
+				],
+				"water": [
+					"cfl_tiles",
+					"cfl_decide",
+					"sim_finish",
+					"normalize",
+					"boundary",
+					"drain_scale",
+					"update_state",
+					"rk_edge",
+					"rk_drain",
+					"rk_euler",
+					"rk_decide",
+					"rk_finalize",
+					"rk_normalize",
+					"rk_validate",
+					"sediment",
+					"material_step",
+					"material_ordinary",
+					"material_molded"
+				]
+			},
+			"solver_coupled_texture_objects": 47,
+			"texture_bytes": 30588928
+		},
+		{
+			"buffer_bytes": 17582452,
+			"dispatch_descriptors": 1285,
+			"inventory": [
+				{
+					"format": 99,
+					"height": 256,
+					"name": "rock",
+					"owner_group": "state",
+					"payload_bytes": 262144,
+					"rid_id": 17471926960233,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "sand",
+					"owner_group": "state",
+					"payload_bytes": 262144,
+					"rid_id": 17476221927530,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "sand",
+					"owner_group": "state",
+					"payload_bytes": 262144,
+					"rid_id": 17480516894827,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "water",
+					"owner_group": "state",
+					"payload_bytes": 262144,
+					"rid_id": 17484811862124,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "water",
+					"owner_group": "state",
+					"payload_bytes": 262144,
+					"rid_id": 17489106829421,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "sediment",
+					"owner_group": "state",
+					"payload_bytes": 262144,
+					"rid_id": 17493401796718,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "sediment",
+					"owner_group": "state",
+					"payload_bytes": 262144,
+					"rid_id": 17497696764015,
+					"width": 256
+				},
+				{
+					"format": 75,
+					"height": 256,
+					"name": "wetness",
+					"owner_group": "state",
+					"payload_bytes": 131072,
+					"rid_id": 17501991731312,
+					"width": 256
+				},
+				{
+					"format": 75,
+					"height": 256,
+					"name": "wetness",
+					"owner_group": "state",
+					"payload_bytes": 131072,
+					"rid_id": 17506286698609,
+					"width": 256
+				},
+				{
+					"format": 75,
+					"height": 256,
+					"name": "compaction",
+					"owner_group": "state",
+					"payload_bytes": 131072,
+					"rid_id": 17510581665906,
+					"width": 256
+				},
+				{
+					"format": 75,
+					"height": 256,
+					"name": "compaction",
+					"owner_group": "state",
+					"payload_bytes": 131072,
+					"rid_id": 17514876633203,
+					"width": 256
+				},
+				{
+					"format": 8,
+					"height": 256,
+					"name": "obstacle",
+					"owner_group": "state",
+					"payload_bytes": 65536,
+					"rid_id": 17519171600500,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 256,
+					"name": "momentum",
+					"owner_group": "state",
+					"payload_bytes": 524288,
+					"rid_id": 17523466567797,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 256,
+					"name": "momentum",
+					"owner_group": "state",
+					"payload_bytes": 524288,
+					"rid_id": 17527761535094,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "flux",
+					"owner_group": "state",
+					"payload_bytes": 1048576,
+					"rid_id": 17532056502391,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "flux",
+					"owner_group": "state",
+					"payload_bytes": 1048576,
+					"rid_id": 17536351469688,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 256,
+					"name": "mold_support",
+					"owner_group": "state",
+					"payload_bytes": 524288,
+					"rid_id": 17540646436985,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 256,
+					"name": "mold_support",
+					"owner_group": "state",
+					"payload_bytes": 524288,
+					"rid_id": 17544941404282,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "edge_x",
+					"owner_group": "state",
+					"payload_bytes": 1048576,
+					"rid_id": 17549236371579,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "edge_z",
+					"owner_group": "state",
+					"payload_bytes": 1048576,
+					"rid_id": 17553531338876,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "drain",
+					"owner_group": "state",
+					"payload_bytes": 262144,
+					"rid_id": 17557826306173,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 32,
+					"name": "cfl_tiles",
+					"owner_group": "state",
+					"payload_bytes": 4096,
+					"rid_id": 17562121273470,
+					"width": 32
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "u1",
+					"owner_group": "muscl",
+					"payload_bytes": 1048576,
+					"rid_id": 18004502904965,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "u2",
+					"owner_group": "muscl",
+					"payload_bytes": 1048576,
+					"rid_id": 18008797872262,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "edge0_x",
+					"owner_group": "muscl",
+					"payload_bytes": 1048576,
+					"rid_id": 18013092839559,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "edge0_z",
+					"owner_group": "muscl",
+					"payload_bytes": 1048576,
+					"rid_id": 18017387806856,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "edge1_x",
+					"owner_group": "muscl",
+					"payload_bytes": 1048576,
+					"rid_id": 18021682774153,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "edge1_z",
+					"owner_group": "muscl",
+					"payload_bytes": 1048576,
+					"rid_id": 18025977741450,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "correction",
+					"owner_group": "muscl",
+					"payload_bytes": 1048576,
+					"rid_id": 18030272708747,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 256,
+					"name": "bed_source",
+					"owner_group": "muscl",
+					"payload_bytes": 524288,
+					"rid_id": 18034567676044,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 32,
+					"name": "speed_tiles",
+					"owner_group": "muscl",
+					"payload_bytes": 8192,
+					"rid_id": 18038862643341,
+					"width": 32
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "retry_correction",
+					"owner_group": "muscl",
+					"payload_bytes": 1048576,
+					"rid_id": 18043157610638,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 256,
+					"name": "retry_bed_source",
+					"owner_group": "muscl",
+					"payload_bytes": 524288,
+					"rid_id": 18047452577935,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 32,
+					"name": "retry_speed_tiles",
+					"owner_group": "muscl",
+					"payload_bytes": 8192,
+					"rid_id": 18051747545232,
+					"width": 32
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "drain0",
+					"owner_group": "muscl",
+					"payload_bytes": 262144,
+					"rid_id": 18056042512529,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "drain1",
+					"owner_group": "muscl",
+					"payload_bytes": 262144,
+					"rid_id": 18060337479826,
+					"width": 256
+				},
+				{
+					"format": 97,
+					"height": 8,
+					"name": "dirty",
+					"owner_group": "coupled",
+					"payload_bytes": 256,
+					"rid_id": 18189186498707,
+					"width": 8
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "sand",
+					"owner_group": "views",
+					"payload_bytes": 262144,
+					"rid_id": 17617955848319,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "water",
+					"owner_group": "views",
+					"payload_bytes": 262144,
+					"rid_id": 17622250815616,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 1,
+					"name": "clock",
+					"owner_group": "views",
+					"payload_bytes": 4,
+					"rid_id": 17381732647016,
+					"width": 1
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "sediment",
+					"owner_group": "views",
+					"payload_bytes": 262144,
+					"rid_id": 18360985190549,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 256,
+					"name": "momentum",
+					"owner_group": "views",
+					"payload_bytes": 524288,
+					"rid_id": 18365280157846,
+					"width": 256
+				},
+				{
+					"format": 75,
+					"height": 256,
+					"name": "wetness",
+					"owner_group": "views",
+					"payload_bytes": 131072,
+					"rid_id": 18369575125143,
+					"width": 256
+				},
+				{
+					"format": 75,
+					"height": 256,
+					"name": "compaction",
+					"owner_group": "views",
+					"payload_bytes": 131072,
+					"rid_id": 18373870092440,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 256,
+					"name": "mold_support",
+					"owner_group": "views",
+					"payload_bytes": 524288,
+					"rid_id": 18378165059737,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "flux",
+					"owner_group": "views",
+					"payload_bytes": 1048576,
+					"rid_id": 18382460027034,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "baseline",
+					"owner_group": "views",
+					"payload_bytes": 262144,
+					"rid_id": 18386754994331,
+					"width": 256
+				}
+			],
+			"inventory_scope": "State + MUSCL + Coupled + Views + state publication + Visuals, deduplicated by actual RID. Material wrappers borrow Views RIDs; engine render targets remain outside inventory. RD totals are separate. RD totals are separate.",
+			"label": "live",
+			"logical_texture_payload": 22368516,
+			"owners": {
+				"coupled": 11,
+				"executor": 15,
+				"height": 7,
+				"probe": 5,
+				"state": 46,
+				"transport": 23,
+				"views": 18,
+				"water": 88,
+				"water_response": 40
+			},
+			"shader_programs": {
+				"coupled": [
+					"finish",
+					"support"
+				],
+				"state": [
+					"edge_flux",
+					"drain_scale",
+					"update_state",
+					"publish"
+				],
+				"water": [
+					"cfl_tiles",
+					"cfl_decide",
+					"sim_finish",
+					"normalize",
+					"boundary",
+					"drain_scale",
+					"update_state",
+					"rk_edge",
+					"rk_drain",
+					"rk_euler",
+					"rk_decide",
+					"rk_finalize",
+					"rk_normalize",
+					"rk_validate",
+					"sediment",
+					"material_step",
+					"material_ordinary",
+					"material_molded"
+				]
+			},
+			"solver_coupled_texture_objects": 47,
+			"texture_bytes": 30588928
+		},
+		{
+			"buffer_bytes": 17582452,
+			"dispatch_descriptors": 1285,
+			"inventory": [
+				{
+					"format": 99,
+					"height": 256,
+					"name": "rock",
+					"owner_group": "state",
+					"payload_bytes": 262144,
+					"rid_id": 17471926960233,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "sand",
+					"owner_group": "state",
+					"payload_bytes": 262144,
+					"rid_id": 17476221927530,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "sand",
+					"owner_group": "state",
+					"payload_bytes": 262144,
+					"rid_id": 17480516894827,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "water",
+					"owner_group": "state",
+					"payload_bytes": 262144,
+					"rid_id": 17484811862124,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "water",
+					"owner_group": "state",
+					"payload_bytes": 262144,
+					"rid_id": 17489106829421,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "sediment",
+					"owner_group": "state",
+					"payload_bytes": 262144,
+					"rid_id": 17493401796718,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "sediment",
+					"owner_group": "state",
+					"payload_bytes": 262144,
+					"rid_id": 17497696764015,
+					"width": 256
+				},
+				{
+					"format": 75,
+					"height": 256,
+					"name": "wetness",
+					"owner_group": "state",
+					"payload_bytes": 131072,
+					"rid_id": 17501991731312,
+					"width": 256
+				},
+				{
+					"format": 75,
+					"height": 256,
+					"name": "wetness",
+					"owner_group": "state",
+					"payload_bytes": 131072,
+					"rid_id": 17506286698609,
+					"width": 256
+				},
+				{
+					"format": 75,
+					"height": 256,
+					"name": "compaction",
+					"owner_group": "state",
+					"payload_bytes": 131072,
+					"rid_id": 17510581665906,
+					"width": 256
+				},
+				{
+					"format": 75,
+					"height": 256,
+					"name": "compaction",
+					"owner_group": "state",
+					"payload_bytes": 131072,
+					"rid_id": 17514876633203,
+					"width": 256
+				},
+				{
+					"format": 8,
+					"height": 256,
+					"name": "obstacle",
+					"owner_group": "state",
+					"payload_bytes": 65536,
+					"rid_id": 17519171600500,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 256,
+					"name": "momentum",
+					"owner_group": "state",
+					"payload_bytes": 524288,
+					"rid_id": 17523466567797,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 256,
+					"name": "momentum",
+					"owner_group": "state",
+					"payload_bytes": 524288,
+					"rid_id": 17527761535094,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "flux",
+					"owner_group": "state",
+					"payload_bytes": 1048576,
+					"rid_id": 17532056502391,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "flux",
+					"owner_group": "state",
+					"payload_bytes": 1048576,
+					"rid_id": 17536351469688,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 256,
+					"name": "mold_support",
+					"owner_group": "state",
+					"payload_bytes": 524288,
+					"rid_id": 17540646436985,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 256,
+					"name": "mold_support",
+					"owner_group": "state",
+					"payload_bytes": 524288,
+					"rid_id": 17544941404282,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "edge_x",
+					"owner_group": "state",
+					"payload_bytes": 1048576,
+					"rid_id": 17549236371579,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "edge_z",
+					"owner_group": "state",
+					"payload_bytes": 1048576,
+					"rid_id": 17553531338876,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "drain",
+					"owner_group": "state",
+					"payload_bytes": 262144,
+					"rid_id": 17557826306173,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 32,
+					"name": "cfl_tiles",
+					"owner_group": "state",
+					"payload_bytes": 4096,
+					"rid_id": 17562121273470,
+					"width": 32
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "u1",
+					"owner_group": "muscl",
+					"payload_bytes": 1048576,
+					"rid_id": 18004502904965,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "u2",
+					"owner_group": "muscl",
+					"payload_bytes": 1048576,
+					"rid_id": 18008797872262,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "edge0_x",
+					"owner_group": "muscl",
+					"payload_bytes": 1048576,
+					"rid_id": 18013092839559,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "edge0_z",
+					"owner_group": "muscl",
+					"payload_bytes": 1048576,
+					"rid_id": 18017387806856,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "edge1_x",
+					"owner_group": "muscl",
+					"payload_bytes": 1048576,
+					"rid_id": 18021682774153,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "edge1_z",
+					"owner_group": "muscl",
+					"payload_bytes": 1048576,
+					"rid_id": 18025977741450,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "correction",
+					"owner_group": "muscl",
+					"payload_bytes": 1048576,
+					"rid_id": 18030272708747,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 256,
+					"name": "bed_source",
+					"owner_group": "muscl",
+					"payload_bytes": 524288,
+					"rid_id": 18034567676044,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 32,
+					"name": "speed_tiles",
+					"owner_group": "muscl",
+					"payload_bytes": 8192,
+					"rid_id": 18038862643341,
+					"width": 32
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "retry_correction",
+					"owner_group": "muscl",
+					"payload_bytes": 1048576,
+					"rid_id": 18043157610638,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 256,
+					"name": "retry_bed_source",
+					"owner_group": "muscl",
+					"payload_bytes": 524288,
+					"rid_id": 18047452577935,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 32,
+					"name": "retry_speed_tiles",
+					"owner_group": "muscl",
+					"payload_bytes": 8192,
+					"rid_id": 18051747545232,
+					"width": 32
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "drain0",
+					"owner_group": "muscl",
+					"payload_bytes": 262144,
+					"rid_id": 18056042512529,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "drain1",
+					"owner_group": "muscl",
+					"payload_bytes": 262144,
+					"rid_id": 18060337479826,
+					"width": 256
+				},
+				{
+					"format": 97,
+					"height": 8,
+					"name": "dirty",
+					"owner_group": "coupled",
+					"payload_bytes": 256,
+					"rid_id": 18189186498707,
+					"width": 8
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "sand",
+					"owner_group": "views",
+					"payload_bytes": 262144,
+					"rid_id": 17617955848319,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "water",
+					"owner_group": "views",
+					"payload_bytes": 262144,
+					"rid_id": 17622250815616,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 1,
+					"name": "clock",
+					"owner_group": "views",
+					"payload_bytes": 4,
+					"rid_id": 17381732647016,
+					"width": 1
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "sediment",
+					"owner_group": "views",
+					"payload_bytes": 262144,
+					"rid_id": 18360985190549,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 256,
+					"name": "momentum",
+					"owner_group": "views",
+					"payload_bytes": 524288,
+					"rid_id": 18365280157846,
+					"width": 256
+				},
+				{
+					"format": 75,
+					"height": 256,
+					"name": "wetness",
+					"owner_group": "views",
+					"payload_bytes": 131072,
+					"rid_id": 18369575125143,
+					"width": 256
+				},
+				{
+					"format": 75,
+					"height": 256,
+					"name": "compaction",
+					"owner_group": "views",
+					"payload_bytes": 131072,
+					"rid_id": 18373870092440,
+					"width": 256
+				},
+				{
+					"format": 102,
+					"height": 256,
+					"name": "mold_support",
+					"owner_group": "views",
+					"payload_bytes": 524288,
+					"rid_id": 18378165059737,
+					"width": 256
+				},
+				{
+					"format": 108,
+					"height": 256,
+					"name": "flux",
+					"owner_group": "views",
+					"payload_bytes": 1048576,
+					"rid_id": 18382460027034,
+					"width": 256
+				},
+				{
+					"format": 99,
+					"height": 256,
+					"name": "baseline",
+					"owner_group": "views",
+					"payload_bytes": 262144,
+					"rid_id": 18386754994331,
+					"width": 256
+				}
+			],
+			"inventory_scope": "State + MUSCL + Coupled + Views + state publication + Visuals, deduplicated by actual RID. Material wrappers borrow Views RIDs; engine render targets remain outside inventory. RD totals are separate. RD totals are separate.",
+			"label": "live",
+			"logical_texture_payload": 22368516,
+			"owners": {
+				"coupled": 11,
+				"executor": 15,
+				"height": 7,
+				"probe": 5,
+				"state": 46,
+				"transport": 23,
+				"views": 18,
+				"water": 88,
+				"water_response": 40
+			},
+			"shader_programs": {
+				"coupled": [
+					"finish",
+					"support"
+				],
+				"state": [
+					"edge_flux",
+					"drain_scale",
+					"update_state",
+					"publish"
+				],
+				"water": [
+					"cfl_tiles",
+					"cfl_decide",
+					"sim_finish",
+					"normalize",
+					"boundary",
+					"drain_scale",
+					"update_state",
+					"rk_edge",
+					"rk_drain",
+					"rk_euler",
+					"rk_decide",
+					"rk_finalize",
+					"rk_normalize",
+					"rk_validate",
+					"sediment",
+					"material_step",
+					"material_ordinary",
+					"material_molded"
+				]
+			},
+			"solver_coupled_texture_objects": 47,
+			"texture_bytes": 30588928
+		},
+		{
+			"buffer_bytes": 1934476,
+			"label": "after_release",
+			"texture_bytes": 6508544
+		}
+	],
+	"pass": true,
+	"scope": "Actual RenderingDevice-accounted texture/buffer bytes and owned RID release. Driver physical residency is not inferred."
+}

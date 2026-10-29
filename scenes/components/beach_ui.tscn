@@ -1,0 +1,374 @@
+[gd_scene format=3]
+
+[ext_resource type="Theme" path="res://assets/ui/beach/beach_theme.tres" id="beach_theme"]
+[ext_resource type="Texture2D" path="res://assets/ui/beach/Dig.svg" id="icon_Dig"]
+[ext_resource type="Texture2D" path="res://assets/ui/beach/Fill.svg" id="icon_Fill"]
+[ext_resource type="Texture2D" path="res://assets/ui/beach/Castle.svg" id="icon_Castle"]
+[ext_resource type="Texture2D" path="res://assets/ui/beach/Shovel.svg" id="icon_Shovel"]
+[ext_resource type="Texture2D" path="res://assets/ui/beach/Wall.svg" id="icon_Wall"]
+[ext_resource type="Texture2D" path="res://assets/ui/beach/SuspendedSand.svg" id="icon_SuspendedSand"]
+[ext_resource type="Texture2D" path="res://assets/ui/beach/GravelDrop.svg" id="icon_GravelDrop"]
+[ext_resource type="Texture2D" path="res://assets/ui/beach/Smooth.svg" id="icon_Smooth"]
+[ext_resource type="Texture2D" path="res://assets/ui/beach/Compact.svg" id="icon_Compact"]
+[ext_resource type="Texture2D" path="res://assets/ui/beach/wave.svg" id="icon_wave"]
+[ext_resource type="Script" path="res://scripts/beach/scene_switch_panel.gd" id="9_66sgi"]
+[ext_resource type="Script" path="res://scripts/sand/brushes/brush_tool_panel.gd" id="10_5lahb"]
+[ext_resource type="Script" path="res://scripts/beach/ui_visibility.gd" id="27_3yrxu"]
+[ext_resource type="Script" path="res://scripts/beach/ui_drag.gd" id="28_oyiu2"]
+[ext_resource type="PackedScene" path="res://scenes/components/floating_props_panel.tscn" id="props_panel"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_25ayq"]
+
+[node name="BeachUI" type="Node3D"]
+
+[node name="Interface" type="CanvasLayer" parent="."]
+
+[node name="StatusLabel" type="Label" parent="Interface"]
+offset_left = 18.0
+offset_top = 18.0
+theme = ExtResource("beach_theme")
+theme_override_colors/font_color = Color(0.08, 0.12, 0.16, 1)
+theme_override_font_sizes/font_size = 14
+text = "GPU 水沙状态预览 | 256² | 场景 1：sloped_coast | 暂停 | 调试：画面
+Tick 0 · 模拟 0.00 s
+左键使用选定工具 右键转向 WASD移动 空格暂停 V 调试 F5 自由视角 F6 隐藏 HUD。水沙耦合实验模式。
+GPU编辑 成功0 跳过0 · 源汇估算"
+mouse_filter = 2
+
+[node name="EditPanel" type="PanelContainer" parent="Interface"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -324.0
+offset_top = 66.0
+offset_right = -18.0
+offset_bottom = 400.0
+grow_horizontal = 0
+theme = ExtResource("beach_theme")
+
+[node name="Margin" type="MarginContainer" parent="Interface/EditPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 14
+
+[node name="Controls" type="VBoxContainer" parent="Interface/EditPanel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Title" type="Label" parent="Interface/EditPanel/Margin/Controls"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "沙滩旅行"
+
+[node name="SceneSwitcher" type="VBoxContainer" parent="Interface/EditPanel/Margin/Controls"]
+layout_mode = 2
+script = ExtResource("9_66sgi")
+theme = ExtResource("beach_theme")
+
+[node name="Actions" type="HBoxContainer" parent="Interface/EditPanel/Margin/Controls/SceneSwitcher"]
+layout_mode = 2
+
+[node name="Targets" type="OptionButton" parent="Interface/EditPanel/Margin/Controls/SceneSwitcher/Actions"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+selected = 0
+item_count = 2
+popup/item_0/text = "主沙滩"
+popup/item_0/id = 0
+popup/item_1/text = "潮汐沙滩 · test1"
+popup/item_1/id = 1
+custom_minimum_size = Vector2(0, 38)
+
+[node name="Switch" type="Button" parent="Interface/EditPanel/Margin/Controls/SceneSwitcher/Actions"]
+layout_mode = 2
+focus_mode = 0
+text = "出发"
+
+[node name="Status" type="Label" parent="Interface/EditPanel/Margin/Controls/SceneSwitcher"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "切换保留各场景进度"
+autowrap_mode = 2
+
+[node name="WaveSeparator" type="HSeparator" parent="Interface/EditPanel/Margin/Controls"]
+layout_mode = 2
+
+[node name="TriggerWave" type="Button" parent="Interface/EditPanel/Margin/Controls"]
+layout_mode = 2
+focus_mode = 0
+text = "触发波浪"
+icon = ExtResource("icon_wave")
+theme_override_constants/icon_max_width = 28
+expand_icon = true
+
+[node name="WaveStatus" type="Label" parent="Interface/EditPanel/Margin/Controls"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "点击触发一波；暂停时等待继续"
+
+[node name="ShapeBrushPanel" type="PanelContainer" parent="Interface"]
+custom_minimum_size = Vector2(712, 0)
+offset_left = -356.0
+offset_top = -188.0
+offset_right = 356.0
+theme = ExtResource("beach_theme")
+script = ExtResource("10_5lahb")
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Margin" type="MarginContainer" parent="Interface/ShapeBrushPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 12
+
+[node name="Controls" type="VBoxContainer" parent="Interface/ShapeBrushPanel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="Title" type="Label" parent="Interface/ShapeBrushPanel/Margin/Controls"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "沙滩工具"
+
+[node name="Tools" type="GridContainer" parent="Interface/ShapeBrushPanel/Margin/Controls"]
+layout_mode = 2
+columns = 9
+
+[node name="Dig" type="Button" parent="Interface/ShapeBrushPanel/Margin/Controls/Tools"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(68, 78)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+toggle_mode = true
+button_pressed = true
+button_group = SubResource("ButtonGroup_25ayq")
+text = "挖沙"
+icon = ExtResource("icon_Dig")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+theme_override_constants/icon_max_width = 42
+theme_override_font_sizes/font_size = 13
+
+[node name="Fill" type="Button" parent="Interface/ShapeBrushPanel/Margin/Controls/Tools"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(68, 78)
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "直接填高沙床；可在水下使用"
+focus_mode = 0
+toggle_mode = true
+button_group = SubResource("ButtonGroup_25ayq")
+text = "填沙床"
+icon = ExtResource("icon_Fill")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+theme_override_constants/icon_max_width = 42
+theme_override_font_sizes/font_size = 13
+
+[node name="Castle" type="Button" parent="Interface/ShapeBrushPanel/Margin/Controls/Tools"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(68, 78)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+toggle_mode = true
+button_group = SubResource("ButtonGroup_25ayq")
+text = "城堡"
+icon = ExtResource("icon_Castle")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+theme_override_constants/icon_max_width = 42
+theme_override_font_sizes/font_size = 13
+
+[node name="Shovel" type="Button" parent="Interface/ShapeBrushPanel/Margin/Controls/Tools"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(68, 78)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+toggle_mode = true
+button_group = SubResource("ButtonGroup_25ayq")
+text = "铲子"
+icon = ExtResource("icon_Shovel")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+theme_override_constants/icon_max_width = 42
+theme_override_font_sizes/font_size = 13
+
+[node name="Wall" type="Button" parent="Interface/ShapeBrushPanel/Margin/Controls/Tools"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(68, 78)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+toggle_mode = true
+button_group = SubResource("ButtonGroup_25ayq")
+text = "沙墙"
+icon = ExtResource("icon_Wall")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+theme_override_constants/icon_max_width = 42
+theme_override_font_sizes/font_size = 13
+
+[node name="SuspendedSand" type="Button" parent="Interface/ShapeBrushPanel/Margin/Controls/Tools"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(68, 78)
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "投放随水流输运的悬沙，之后自然沉降；不直接抬高沙床"
+focus_mode = 0
+toggle_mode = true
+button_group = SubResource("ButtonGroup_25ayq")
+text = "投流沙"
+icon = ExtResource("icon_SuspendedSand")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+theme_override_constants/icon_max_width = 42
+theme_override_font_sizes/font_size = 13
+
+[node name="GravelDrop" type="Button" parent="Interface/ShapeBrushPanel/Margin/Controls/Tools"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(68, 78)
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "在指定沙地或水中投放碎石，随水流搬运；不会挤掉已有碎石"
+focus_mode = 0
+toggle_mode = true
+button_group = SubResource("ButtonGroup_25ayq")
+text = "投碎石"
+icon = ExtResource("icon_GravelDrop")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+theme_override_constants/icon_max_width = 42
+theme_override_font_sizes/font_size = 13
+
+[node name="Help" type="Label" parent="Interface/ShapeBrushPanel/Margin/Controls"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "按住左键拖动
+右键转向，WASD移动"
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="BrushStatus" type="Label" parent="Interface/ShapeBrushPanel/Margin/Controls"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "等待沙场准备"
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="UIVisibility" type="CanvasLayer" parent="."]
+layer = 10
+script = ExtResource("27_3yrxu")
+
+[node name="ToggleUI" type="Button" parent="UIVisibility"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -126.0
+offset_top = 12.0
+offset_right = -18.0
+offset_bottom = 48.0
+grow_horizontal = 0
+tooltip_text = "显示 / 隐藏全部面板（F6）；隐藏后仍可编辑沙子"
+focus_mode = 0
+toggle_mode = true
+text = "隐藏 UI"
+theme = ExtResource("beach_theme")
+
+[node name="UIDrag" type="Node" parent="."]
+script = ExtResource("28_oyiu2")
+
+[node name="ParameterWindows" type="MenuButton" parent="Interface/EditPanel/Margin/Controls"]
+layout_mode = 2
+text = "参数窗口"
+focus_mode = 0
+item_count = 6
+popup/item_0/text = "工具参数"
+popup/item_0/id = 0
+popup/item_1/text = "水参数"
+popup/item_1/id = 1
+popup/item_2/text = "沙参数"
+popup/item_2/id = 2
+popup/item_3/text = "道具参数"
+popup/item_3/id = 3
+popup/item_4/text = "环境与显示"
+popup/item_4/id = 4
+popup/item_5/text = "性能与诊断"
+popup/item_5/id = 5
+flat = false
+
+[node name="Pause" type="Button" parent="Interface/EditPanel/Margin/Controls"]
+layout_mode = 2
+focus_mode = 0
+text = "暂停／继续"
+
+[node name="Camera" type="Button" parent="Interface/EditPanel/Margin/Controls"]
+layout_mode = 2
+focus_mode = 0
+text = "切换视角"
+
+[node name="Smooth" type="Button" parent="Interface/ShapeBrushPanel/Margin/Controls/Tools"]
+layout_mode = 2
+focus_mode = 0
+toggle_mode = true
+text = "平滑"
+icon = ExtResource("icon_Smooth")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+theme_override_constants/icon_max_width = 42
+custom_minimum_size = Vector2(68, 78)
+theme_override_font_sizes/font_size = 13
+
+[node name="Compact" type="Button" parent="Interface/ShapeBrushPanel/Margin/Controls/Tools"]
+layout_mode = 2
+focus_mode = 0
+toggle_mode = true
+text = "压实"
+icon = ExtResource("icon_Compact")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+theme_override_constants/icon_max_width = 42
+custom_minimum_size = Vector2(68, 78)
+theme_override_font_sizes/font_size = 13
+
+[node name="FloatingPropsPanel" parent="Interface" instance=ExtResource("props_panel")]
+
+[connection signal="pressed" from="Interface/EditPanel/Margin/Controls/SceneSwitcher/Actions/Switch" to="Interface/EditPanel/Margin/Controls/SceneSwitcher" method="_on_switch_pressed"]
+[connection signal="pressed" from="Interface/ShapeBrushPanel/Margin/Controls/Tools/Dig" to="Interface/ShapeBrushPanel" method="_on_tool_pressed" binds= [&"remove_sand"]]
+[connection signal="pressed" from="Interface/ShapeBrushPanel/Margin/Controls/Tools/Fill" to="Interface/ShapeBrushPanel" method="_on_tool_pressed" binds= [&"place_sand"]]
+[connection signal="pressed" from="Interface/ShapeBrushPanel/Margin/Controls/Tools/Castle" to="Interface/ShapeBrushPanel" method="_on_tool_pressed" binds= [&"castle_v1"]]
+[connection signal="pressed" from="Interface/ShapeBrushPanel/Margin/Controls/Tools/Shovel" to="Interface/ShapeBrushPanel" method="_on_tool_pressed" binds= [&"shovel_v1"]]
+[connection signal="pressed" from="Interface/ShapeBrushPanel/Margin/Controls/Tools/Wall" to="Interface/ShapeBrushPanel" method="_on_tool_pressed" binds= [&"wall_v1"]]
+[connection signal="pressed" from="Interface/ShapeBrushPanel/Margin/Controls/Tools/SuspendedSand" to="Interface/ShapeBrushPanel" method="_on_tool_pressed" binds= [&"suspended_sand"]]
+[connection signal="pressed" from="Interface/ShapeBrushPanel/Margin/Controls/Tools/GravelDrop" to="Interface/ShapeBrushPanel" method="_on_tool_pressed" binds= [&"gravel_drop"]]
+[connection signal="pressed" from="UIVisibility/ToggleUI" to="UIVisibility" method="_on_toggle_pressed"]
+
+[connection signal="pressed" from="Interface/ShapeBrushPanel/Margin/Controls/Tools/Smooth" to="Interface/ShapeBrushPanel" method="_on_tool_pressed" binds=[&"smooth_v1"]]
+[connection signal="pressed" from="Interface/ShapeBrushPanel/Margin/Controls/Tools/Compact" to="Interface/ShapeBrushPanel" method="_on_tool_pressed" binds=[&"compact_v1"]]
+
+[connection signal="tool_changed" from="Interface/ShapeBrushPanel" to="." method="_on_tool_changed"]
+[connection signal="mode_changed" from="Interface/FloatingPropsPanel" to="." method="_on_prop_mode_changed"]
+[connection signal="pressed" from="Interface/EditPanel/Margin/Controls/TriggerWave" to="." method="_on_trigger_wave_pressed"]
+[connection signal="pressed" from="Interface/EditPanel/Margin/Controls/Pause" to="." method="_toggle_pause"]
+[connection signal="pressed" from="Interface/EditPanel/Margin/Controls/Camera" to="." method="_toggle_camera"]

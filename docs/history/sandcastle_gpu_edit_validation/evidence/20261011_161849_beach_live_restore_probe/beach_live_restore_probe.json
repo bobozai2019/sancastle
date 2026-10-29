@@ -1,0 +1,107 @@
+{
+	"error": "",
+	"pass": true,
+	"rows": [
+		{
+			"case": "edited_full_anchor",
+			"pass": true
+		},
+		{
+			"case": "future_pending_restore_preserves_queue",
+			"pass": true
+		},
+		{
+			"case": "restore_requires_pause",
+			"pass": true
+		},
+		{
+			"case": "restore_preflight_preserves_active",
+			"pass": true
+		},
+		{
+			"case": "legacy_envelope_preflight_preserves_active",
+			"pass": true
+		},
+		{
+			"case": "isolated_build_failure_retains_complete_branch",
+			"error": "candidate_injected_failure",
+			"pass": true
+		},
+		{
+			"case": "staged_failed_bundle_releases_private_buffer",
+			"pass": true
+		},
+		{
+			"case": "live_restore_all_native_fields_history_ledger_prefix",
+			"error": "",
+			"pass": true,
+			"phase": "complete"
+		},
+		{
+			"case": "staged_swap_releases_old_private_buffer",
+			"pass": true
+		},
+		{
+			"case": "restore_owns_immutable_async_input",
+			"pass": true,
+			"pending_at_mutation": 23
+		},
+		{
+			"case": "live_restore_64_collision_chunks",
+			"pass": true
+		},
+		{
+			"case": "live_restore_published_pixels",
+			"pass": true
+		},
+		{
+			"case": "restored_generation_admission",
+			"pass": true,
+			"stale": {
+				"error": "inactive_generation"
+			}
+		},
+		{
+			"case": "restored_original_coupled_continuation",
+			"pass": true
+		},
+		{
+			"case": "staged_precommit_close_releases_both_buffers",
+			"pass": true
+		},
+		{
+			"active_release_us": 26353934,
+			"candidate_release_us": 26353479,
+			"case": "close_owns_actual_candidate_readbacks",
+			"error": "closed_before_restore_commit",
+			"last_callback_us": 26353116,
+			"pass": true,
+			"pending_at_close": 23
+		},
+		{
+			"case": "all_candidate_native_precommit_checks",
+			"checks": [
+				{
+					"error": "",
+					"expected": 23,
+					"observed": 23,
+					"pending": 0
+				},
+				{
+					"error": "",
+					"expected": 23,
+					"observed": 23,
+					"pending": 0
+				},
+				{
+					"error": "",
+					"expected": 23,
+					"observed": 23,
+					"pending": 0
+				}
+			],
+			"pass": true
+		}
+	],
+	"scope": "complete beach isolated resource bundle, native precommit verification, live publication and collision"
+}

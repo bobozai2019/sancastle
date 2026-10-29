@@ -1,0 +1,22 @@
+{
+  "pid": 14880,
+  "started_unix": 1792941680.7540424,
+  "command": [
+    "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+    "--path",
+    "D:\\godot\\project\\sandcastle\\test_output\\muscl_material_finish_20261025\\projects\\a0",
+    "--rendering-method",
+    "forward_plus",
+    "--rendering-driver",
+    "d3d12",
+    "--resolution",
+    "1280x720",
+    "--script",
+    "res://tools/muscl_performance/cache_footprint.gd",
+    "--",
+    "--output=D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/footprint_v1_a",
+    "--parameter-config=D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/footprint_v1_a/parameters/startup.json",
+    "--case=coupled"
+  ],
+  "telemetry": null
+}

@@ -1,0 +1,16 @@
+{
+  "source": "D:\\godot\\project\\sandcastle\\assets\\water_material_natural_candidate\\water_geometry_specialized.gdshader",
+  "source_sha256": "eb75e87315bf72fcf42d5911b85540dc63e556e23f02bd441f7ea2ad3dabd59f",
+  "generated": "D:\\godot\\project\\sandcastle\\assets\\water_material_natural_candidate\\water_route_specialized.gdshader",
+  "generated_sha256": "7a225ea82c286b8d8be53f116a96e701b2773a7da25b6a8579ba6a7359789b2d",
+  "constants": {
+    "natural_normal_mode": 2,
+    "natural_path_mode": 1,
+    "natural_path_unrefracted": true,
+    "natural_reflection_srgb": true,
+    "natural_reflection_flip_y": true,
+    "natural_reflection_protected": true
+  },
+  "scope": "Representation route only over previously verified geometry variant. Diagnostic, NOT selected; route field changes unsupported.",
+  "rule": "Replace references outside uniform declarations with exact effective literals; declarations retained; startup actual values must match."
+}

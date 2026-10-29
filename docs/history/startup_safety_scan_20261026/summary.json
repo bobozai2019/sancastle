@@ -1,0 +1,137 @@
+{
+  "scan_completed": true,
+  "resource_loads": 124,
+  "scene_double_instantiations": 50,
+  "formal_live_cycles": 4,
+  "runtime_red_errors_in_completed_scans": 0,
+  "static_multimesh_candidates": 9,
+  "warning_candidates": [
+    {
+      "rule": "W002",
+      "severity": "warning_candidate",
+      "file": "scripts/beach/floating_props_panel.gd",
+      "line": 75,
+      "message": "material shadows an inherited property of PanelContainer; review with editor warning location"
+    },
+    {
+      "rule": "W002",
+      "severity": "warning_candidate",
+      "file": "scripts/beach/floating_props_panel.gd",
+      "line": 82,
+      "message": "position shadows an inherited property of PanelContainer; review with editor warning location"
+    },
+    {
+      "rule": "W002",
+      "severity": "warning_candidate",
+      "file": "scripts/beach/unified_playable_entry.gd",
+      "line": 298,
+      "message": "position shadows an inherited property of Node3D; review with editor warning location"
+    },
+    {
+      "rule": "W002",
+      "severity": "warning_candidate",
+      "file": "scripts/beach/unified_playable_entry.gd",
+      "line": 309,
+      "message": "position shadows an inherited property of Node3D; review with editor warning location"
+    },
+    {
+      "rule": "W002",
+      "severity": "warning_candidate",
+      "file": "scripts/beach/unified_playable_entry.gd",
+      "line": 408,
+      "message": "position shadows an inherited property of Node3D; review with editor warning location"
+    },
+    {
+      "rule": "W002",
+      "severity": "warning_candidate",
+      "file": "scripts/props/floating_props_service.gd",
+      "line": 271,
+      "message": "position shadows an inherited property of Node3D; review with editor warning location"
+    },
+    {
+      "rule": "W002",
+      "severity": "warning_candidate",
+      "file": "scripts/props/floating_props_service.gd",
+      "line": 340,
+      "message": "position shadows an inherited property of Node3D; review with editor warning location"
+    },
+    {
+      "rule": "W002",
+      "severity": "warning_candidate",
+      "file": "scripts/props/floating_props_service.gd",
+      "line": 480,
+      "message": "position shadows an inherited property of Node3D; review with editor warning location"
+    },
+    {
+      "rule": "W002",
+      "severity": "warning_candidate",
+      "file": "scripts/props/floating_props_service.gd",
+      "line": 514,
+      "message": "position shadows an inherited property of Node3D; review with editor warning location"
+    },
+    {
+      "rule": "W001",
+      "severity": "warning_candidate",
+      "file": "scripts/sand/brushes/brush_registry.gd",
+      "line": 19,
+      "message": "Parameter hash shadows global hash(); cosmetic warning, not a startup failure"
+    },
+    {
+      "rule": "W001",
+      "severity": "warning_candidate",
+      "file": "scripts/simulation/unified_edit/profile_registry.gd",
+      "line": 42,
+      "message": "Parameter hash shadows global hash(); cosmetic warning, not a startup failure"
+    },
+    {
+      "rule": "W001",
+      "severity": "warning_candidate",
+      "file": "scripts/simulation/unified_edit/profile_registry.gd",
+      "line": 46,
+      "message": "Parameter hash shadows global hash(); cosmetic warning, not a startup failure"
+    },
+    {
+      "rule": "W001",
+      "severity": "warning_candidate",
+      "file": "scripts/simulation/unified_edit/profile_registry.gd",
+      "line": 49,
+      "message": "Parameter hash shadows global hash(); cosmetic warning, not a startup failure"
+    },
+    {
+      "rule": "W002",
+      "severity": "warning_candidate",
+      "file": "scripts/visual/test1_water_motion_trial.gd",
+      "line": 125,
+      "message": "position shadows an inherited property of Node3D; review with editor warning location"
+    }
+  ],
+  "vegetation_review_pass": true,
+  "generator_regression_fixed": true,
+  "unresolved_native_crash": {
+    "run": "startup_safety_scan_20261026_v1",
+    "exit": 3221225477,
+    "context": "Before first SCAN_BEGIN; stack includes nvwgf2umx.dll/d3d12core.dll. Cause not established; later separate formal-entry cycles passed.",
+    "confidence": "C0 cause unknown"
+  },
+  "coverage_limits": [
+    "Detached construction does not execute scene _ready.",
+    "Live checks cover only two formal entries, each twice; no gameplay or lifetime exhaustion.",
+    "Warning names are heuristic candidates, not a complete compiler-warning inventory.",
+    "Original .tres parser omission discovered and corrected using real before/after resource regression; initial static zero-risk conclusion superseded.",
+    "Archived sources captured after the runs, not falsely presented as before/after drift proof of old harness versions."
+  ],
+  "final_resource_loads": 125,
+  "final_scene_double_instantiations": 50,
+  "final_live_cycles": 4,
+  "final_checked_source_drift": [],
+  "static_requires_manual_review": true,
+  "latest_formal_runtime_pass": true,
+  "documentation_drift_action": "Change provenance was not established. Preserved current files instead of rolling back or forcing document source hashes; current resource construction and formal live startup were rechecked with source fingerprints.",
+  "documentation_source_drift_unattributed": [
+    "assets/unified_edit/presentation/main.json",
+    "assets/unified_edit/presentation/test1_geometry.json",
+    "scenes/unified_edit/presentation/main.tscn",
+    "scenes/unified_edit/presentation/test1_geometry.tscn"
+  ],
+  "test_output_indexing_isolated": true
+}

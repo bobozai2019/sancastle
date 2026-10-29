@@ -1,0 +1,16 @@
+{
+  "reflection_schema_version": 1,
+  "foam_profile": "res://assets/water_material_natural_candidate/foam_combination.json",
+  "foam_profile_sha256": "474dd58b1541ef01bd86ac76c31225b9618209a2893851ccbe5bdf85f1a1a65d",
+  "derived_foam_profile": "res://assets/water_material_natural_candidate/foam_reflection_derived.json",
+  "base_profile": "res://assets/water_material_natural_candidate/base_v8_reflection.json",
+  "water_shader": "res://assets/water_material_natural_candidate/water_reflection.gdshader",
+  "sampling_mode": "legacy",
+  "perturbation_enabled": false,
+  "normal_shift_m": 0.25,
+  "uv_shift_limit": 0.03,
+  "edge_margin_px": 2.0,
+  "edge_fade_px": 8.0,
+  "reflection_strength": 1.0,
+  "softness_px": 0.0
+}

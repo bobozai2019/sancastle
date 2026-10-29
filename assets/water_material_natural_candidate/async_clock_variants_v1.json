@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "transform": "completed_gpu_clock_v1",
+  "variants": [
+    {
+      "material": "water",
+      "source": "res://assets/water_material_natural_candidate/rdc_water.gdshader",
+      "source_sha256": "16a93e3d6942429073cbcbcba73b59bbe42e80c61bf776e9f15170ca69fd8b89",
+      "generated": "res://assets/water_material_natural_candidate/async_rdc_water.gdshader",
+      "generated_sha256": "26a503bd375f88e43f7b1a7fdac1812fd2d7da4ad4217423aa5ae6d398ed0a61",
+      "time_sites": 3
+    },
+    {
+      "material": "bed",
+      "source": "res://assets/water_material_natural_candidate/rdc_bed.gdshader",
+      "source_sha256": "e36bf7c1d44dbc38f50c46b7405cf439a48fd6f427df6f95a3d5e3e50d650abf",
+      "generated": "res://assets/water_material_natural_candidate/async_rdc_bed.gdshader",
+      "generated_sha256": "aefafca7ae8c6ea6131b6fae4dc712ca8e18916c72f97cbde338d5ce7bdf5977",
+      "time_sites": 1
+    }
+  ]
+}

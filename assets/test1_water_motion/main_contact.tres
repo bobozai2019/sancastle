@@ -1,0 +1,40 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://assets/water_material_natural_candidate/contact_shape.gdshader" id="1_uyadl"]
+
+[resource]
+resource_local_to_scene = true
+render_priority = 1
+shader = ExtResource("1_uyadl")
+shader_parameter/enabled = true
+shader_parameter/natural_contact_enabled = true
+shader_parameter/natural_contact_gain = 1.0
+shader_parameter/surface_offset_m = 0.016
+shader_parameter/wet_epsilon_m = 0.001
+shader_parameter/water_surface_bias_m = 0.003
+shader_parameter/display_reconstruction = true
+shader_parameter/radial_shore = false
+shader_parameter/prototype_shore_unscaled_depth = false
+shader_parameter/prototype_shore_linear_weights = false
+shader_parameter/prototype_render_grid_size = 512.0
+shader_parameter/midpoint_clip = false
+shader_parameter/prototype_crest_height_m = 0.25
+shader_parameter/prototype_local_back_cells = 7.5
+shader_parameter/prototype_local_face_cells = 1.8
+shader_parameter/prototype_local_lift_depth_scale = 1.5
+shader_parameter/prototype_crest_shore_depth_m = 0.0
+shader_parameter/prototype_curl_forward_m = 0.0
+shader_parameter/prototype_local_overturn_m = 0.0
+shader_parameter/prototype_crest_span_smoothing = false
+shader_parameter/prototype_crest_depth_gate_bypass = false
+shader_parameter/prototype_front_face_source_gate = false
+shader_parameter/prototype_front_face_source_started = false
+shader_parameter/prototype_broad_crest = false
+shader_parameter/prototype_shared_bed_triangles = false
+shader_parameter/prototype_rise_crest = false
+shader_parameter/prototype_use_front_field = false
+shader_parameter/prototype_use_local_front = true
+shader_parameter/natural_contact_shape_mode = 1
+shader_parameter/natural_contact_shape_scale_per_m = 6.0
+shader_parameter/natural_contact_shared_surface = true
+shader_parameter/natural_contact_separation_m = 0.001

@@ -1,0 +1,16 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/unified_edit/presentation/test1_geometry.tscn" id="1"]
+
+[ext_resource type="Script" path="res://scripts/beach/unified_playable_entry.gd" id="2"]
+
+[node name="UnifiedBeach" instance=ExtResource("1")]
+
+script = ExtResource("2")
+
+scene_key = "test1_geometry"
+surface_wetness_enabled = true
+
+presentation_manifest = "res://assets/unified_edit/presentation/test1_geometry.json"
+
+[connection signal="look_started" from="GpuPlayerCamera" to="." method="_on_camera_look_started"]

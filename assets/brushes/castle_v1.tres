@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="SandcastleBrushDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/sand/brushes/brush_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+brush_id = &"castle_v1"
+operation = &"stamp_target"
+default_params = {"scale_xz": 1.0, "height_m": 0.7, "yaw_rad": 0.0}
+param_ranges = {"scale_xz": [1.0, 1.5], "height_m": [0.5, 1.0], "yaw_rad": [-3.141592653589793, 3.141592653589793]}
+max_add_m3 = 48.0
+template_id = &"four_towers_v1"
+template_path = "res://assets/brushes/castle/four_towers_v1.rgba32f"

@@ -1,0 +1,298 @@
+{
+  "date": "2026-10-20",
+  "claim_id": "MOTION-COMPARE-WAVE-01",
+  "scope": "Fresh CS/constant replay and production GPU flat-wave diagnosis; candidate CPU characteristic model is design-only. No original timed wave observation, package re-decode, performance claim or production solver change.",
+  "source_and_outputs": [
+    {
+      "path": "sandcastlegame/test1.rdc",
+      "exists": true,
+      "bytes": 225224034,
+      "sha256": "761aa980c2426f75a1fa7364bf6d2655ff4dd20ea76566e630ee5b53ea0ec5b2"
+    },
+    {
+      "path": "sandcastlegame/Sandcastle_Data/sharedassets0.assets",
+      "exists": true,
+      "bytes": 76135784,
+      "sha256": "6dd7bb6bc7d926fd43c08d22c9c767b7edf531cf11a4a555fcd41830f2f9c721"
+    },
+    {
+      "path": "assets/test1_water_motion/capture_profile.json",
+      "exists": true,
+      "bytes": 1923,
+      "sha256": "db03153237e0e52eeb156c7780a728fd927f803bc5f1f9272ce5a01044763445"
+    },
+    {
+      "path": "assets/test1_water_motion/capture_state.rgba32f",
+      "exists": true,
+      "bytes": 2097152,
+      "sha256": "06540acafd57583465e0d5e3926819f27b33e51afb3134a700d684cc52fa8523"
+    },
+    {
+      "path": "assets/test1_water_motion/capture_aux.rgba32f",
+      "exists": true,
+      "bytes": 2097152,
+      "sha256": "3a19b6641139f883763961892bc94628d05259513857213d05dcf9954a44b7db"
+    },
+    {
+      "path": "shaders/simulation/shallow_edge_flux.glsl",
+      "exists": true,
+      "bytes": 3985,
+      "sha256": "621bc8ec3738d896cdf68c2fe20d306f0d1bd87817f3e917214a9f91b84dea4e"
+    },
+    {
+      "path": "shaders/simulation/shallow_update_state.glsl",
+      "exists": true,
+      "bytes": 6286,
+      "sha256": "fe373e7d793d0cc126db241fe0c81e5b3aa2b7d70b37c7299f21418d81b76185"
+    },
+    {
+      "path": "shaders/simulation/shallow_drain_scale.glsl",
+      "exists": true,
+      "bytes": 1461,
+      "sha256": "f36e5a1a0b50f867ca89571a12033ba8dbb059a5a1a481bca07e43a1cf87fdbe"
+    },
+    {
+      "path": "scripts/simulation/unified_edit/water.gd",
+      "exists": true,
+      "bytes": 8804,
+      "sha256": "0a0cbedc11d9fcb4d55f53e75b99da537c4ed4a166945bffcad90cac69600903"
+    },
+    {
+      "path": "scripts/simulation/unified_edit/state.gd",
+      "exists": true,
+      "bytes": 7636,
+      "sha256": "125b6317ebf10cf84df89fefb79c0ba0aa9a83a44ae5f890f5c4793a603421df"
+    },
+    {
+      "path": "scripts/simulation/unified_edit/water_response.glsl",
+      "exists": true,
+      "bytes": 11316,
+      "sha256": "19fca940f8886393fc683a6e2bc962dcda3298520ebff2aa04c208def16751f0"
+    },
+    {
+      "path": "scripts/props/floating_props_service.gd",
+      "exists": true,
+      "bytes": 37264,
+      "sha256": "1552a5e386bba23c4723f0f38928431e172857e892aea6d6c5521ef53c0ab08e"
+    },
+    {
+      "path": "shaders/simulation/test1_water_motion.glsl",
+      "exists": true,
+      "bytes": 3168,
+      "sha256": "9f167d80fab66457d81b7dd27aaad14a8bbaf0901284e6b8b5a4f876496b45a0"
+    },
+    {
+      "path": "assets/unified_edit/shovel_v1.tres",
+      "exists": true,
+      "bytes": 679,
+      "sha256": "62ff4641dbbe8b866da6954579cda64d608cb1cd0c308aa0c7a807d22bd09ff9"
+    },
+    {
+      "path": "tools/wave_propagation/compare_models.py",
+      "exists": true,
+      "bytes": 5152,
+      "sha256": "d446a52a91af20dc3014f75207da3829f62f0621b26b3d11c680e5a1b5036936"
+    },
+    {
+      "path": "tools/wave_propagation/recheck_competitor.py",
+      "exists": true,
+      "bytes": 4421,
+      "sha256": "63ee2f45f963a1c1c8c93e3b365ca0cc0884e105aa5bc17e5852ac61e89a00dc"
+    },
+    {
+      "path": "test_output/wave_solution_20261020/competitor_recheck/manifest.json",
+      "exists": true,
+      "bytes": 122539,
+      "sha256": "afabfd551c98707746a21ecb4d7f5efc3ec7b2da70280fde50d7bbbac86af4f0"
+    },
+    {
+      "path": "test_output/wave_solution_20261020/current_flat_recheck/manifest.json",
+      "exists": true,
+      "bytes": 940,
+      "sha256": "d0d65fbc0a8d5cbf4b86f6b9275742093cd5d6c4518d2407362010ed9f1138ba"
+    },
+    {
+      "path": "test_output/wave_solution_20261020/current_flat_recheck/diagnosis.json",
+      "exists": true,
+      "bytes": 327266,
+      "sha256": "eff29583a4dd6137457cf9a775782a6c1bfe7f4230e001ef7ed79720427edcc0"
+    },
+    {
+      "path": "test_output/wave_solution_20261020/model_comparison.json",
+      "exists": true,
+      "bytes": 21772,
+      "sha256": "fd4ea9c7b06587f89241bd34b50a0a504423e87ac51c7c1bcb9cd40712d49cc5"
+    }
+  ],
+  "historical_output_availability": [
+    {
+      "path": "test_output/test1_water_motion/capture_v1/manifest.json",
+      "exists": false
+    },
+    {
+      "path": "test_output/test1_water_motion/package_v1/manifest.json",
+      "exists": false
+    },
+    {
+      "path": "test_output/test1_water_motion/analysis_v1/stage_validation.json",
+      "exists": false
+    },
+    {
+      "path": "test_output/wave_propagation_20261020/analysis.json",
+      "exists": false
+    }
+  ],
+  "captured_constants": {
+    "1490": {
+      "cell_size": {
+        "register": "cb0[154].x",
+        "value": 0.05859375
+      },
+      "integration_dt": {
+        "register": "cb0[157].z",
+        "value": 0.00732421875
+      },
+      "gravity": {
+        "register": "cb0[157].w",
+        "value": 16.0
+      },
+      "max_velocity": {
+        "register": "cb0[158].x",
+        "value": 2.0
+      },
+      "damping": {
+        "register": "cb0[159].y",
+        "value": 0.0
+      },
+      "kappa": {
+        "register": "cb0[159].w",
+        "value": 1000.0
+      }
+    },
+    "1495": {
+      "cell_size": {
+        "register": "cb0[154].x",
+        "value": 0.05859375
+      },
+      "integration_dt": {
+        "register": "cb0[157].z",
+        "value": 0.00732421875
+      },
+      "gravity": {
+        "register": "cb0[157].w",
+        "value": 16.0
+      }
+    },
+    "1500": {
+      "integration_dt": {
+        "register": "cb0[157].z",
+        "value": 0.00732421875
+      },
+      "advection_factor": {
+        "register": "cb0[158].z",
+        "value": 0.20000000298023224
+      }
+    },
+    "1537": {
+      "source_dt": {
+        "register": "cb0[157].z",
+        "value": 0.02500000037252903
+      },
+      "evaporation_factor": {
+        "register": "cb0[158].y",
+        "value": 0.10000000149011612
+      },
+      "wave_amplitude": {
+        "register": "cb0[158].w",
+        "value": 0.049701884388923645
+      },
+      "custom_wave": {
+        "register": "cb0[159].x",
+        "value": 1.6163164377212524
+      },
+      "level": {
+        "register": "cb0[159].z",
+        "value": 1.0
+      }
+    }
+  },
+  "events": [
+    {
+      "event": 1490,
+      "historical_kernel_name": "VelocityIntegration",
+      "selection": "Independent OpenCapture; SetFrameEvent(event, True)",
+      "shader": {
+        "path": "D:/godot/project/sandcastle/test_output/wave_solution_20261020/competitor_recheck/e1490.dxbc",
+        "bytes": 5540,
+        "sha256": "9e5c7da8738200d374076a6cc3b48be52fdbad70e8c8dc2bd27eb75431d30523",
+        "selector": "E1490 CS rawBytes"
+      },
+      "matches_historical_shader_sha256": true,
+      "disassembly": {
+        "path": "D:/godot/project/sandcastle/test_output/wave_solution_20261020/competitor_recheck/e1490.asm",
+        "bytes": 7274,
+        "sha256": "4b5858e067ceeec361f24d474b17e90ebdf04866ca603e5ac1e69c897ddc729b",
+        "selector": "E1490 CS disassembly"
+      }
+    },
+    {
+      "event": 1495,
+      "historical_kernel_name": "HeightIntegration",
+      "selection": "Independent OpenCapture; SetFrameEvent(event, True)",
+      "shader": {
+        "path": "D:/godot/project/sandcastle/test_output/wave_solution_20261020/competitor_recheck/e1495.dxbc",
+        "bytes": 4204,
+        "sha256": "549114c23f1921610bacaf1d9ae375814fda1fb1de492cc2a4acfc53a502c64f",
+        "selector": "E1495 CS rawBytes"
+      },
+      "matches_historical_shader_sha256": true,
+      "disassembly": {
+        "path": "D:/godot/project/sandcastle/test_output/wave_solution_20261020/competitor_recheck/e1495.asm",
+        "bytes": 5352,
+        "sha256": "eba8b6ff242ac798c7b4d8e3e534405231ff229145ebe88c88ff1bcd3d1272e0",
+        "selector": "E1495 CS disassembly"
+      }
+    },
+    {
+      "event": 1500,
+      "historical_kernel_name": "Advection",
+      "selection": "Independent OpenCapture; SetFrameEvent(event, True)",
+      "shader": {
+        "path": "D:/godot/project/sandcastle/test_output/wave_solution_20261020/competitor_recheck/e1500.dxbc",
+        "bytes": 3560,
+        "sha256": "b2794ecb18de815ff607fffd734ff4cde859bab1efd7fa3dfe9a24eb5a9f7a3c",
+        "selector": "E1500 CS rawBytes"
+      },
+      "matches_historical_shader_sha256": true,
+      "disassembly": {
+        "path": "D:/godot/project/sandcastle/test_output/wave_solution_20261020/competitor_recheck/e1500.asm",
+        "bytes": 4863,
+        "sha256": "0fa672b1e34de5cf5191052e25a38049e7fb98f38c103c8c3d08e0c72e4dd54b",
+        "selector": "E1500 CS disassembly"
+      }
+    },
+    {
+      "event": 1537,
+      "historical_kernel_name": "UpdateAmount",
+      "selection": "Independent OpenCapture; SetFrameEvent(event, True)",
+      "shader": {
+        "path": "D:/godot/project/sandcastle/test_output/wave_solution_20261020/competitor_recheck/e1537.dxbc",
+        "bytes": 4416,
+        "sha256": "a61d34e411e8eee5c795bf233908a9b2a5b85ee272f5d0fbcb1481da27a62b80",
+        "selector": "E1537 CS rawBytes"
+      },
+      "matches_historical_shader_sha256": true,
+      "disassembly": {
+        "path": "D:/godot/project/sandcastle/test_output/wave_solution_20261020/competitor_recheck/e1537.asm",
+        "bytes": 5581,
+        "sha256": "48b31a75b8f690297895c438b0b8d4a151cbd4781bb40b51e90016d616545643",
+        "selector": "E1537 CS disassembly"
+      }
+    }
+  ],
+  "reproduction": [
+    "D:/other_software/RenderDoc/qrenderdoc.exe --python D:/godot/project/sandcastle/tools/wave_propagation/recheck_competitor.py (first choose a new OUT in script)",
+    "python tools/wave_propagation/run.py flat <new absolute output path>",
+    "python tools/wave_propagation/compare_models.py (adjust OUT to the new output root)"
+  ]
+}

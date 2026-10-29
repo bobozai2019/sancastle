@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="SandcastleBrushDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/sand/brushes/brush_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+brush_id = &"wall_v1"
+operation = &"wall_target"
+default_params = {"height_m": 0.3, "bottom_width_m": 1.0, "top_width_m": 0.5}
+param_ranges = {"height_m": [0.15, 0.6], "bottom_width_m": [1.0, 2.0], "top_width_m": [0.5, 1.5]}
+max_add_m3 = 8.0

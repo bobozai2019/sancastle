@@ -1,0 +1,39 @@
+[gd_scene format=3]
+[ext_resource type="Theme" path="res://assets/ui/beach/beach_theme.tres" id="beach_theme"]
+[ext_resource type="Texture2D" path="res://assets/ui/beach/Dig.svg" id="icon_Dig"]
+[ext_resource type="Texture2D" path="res://assets/ui/beach/Fill.svg" id="icon_Fill"]
+[ext_resource type="Texture2D" path="res://assets/ui/beach/Castle.svg" id="icon_Castle"]
+[ext_resource type="Texture2D" path="res://assets/ui/beach/Shovel.svg" id="icon_Shovel"]
+[ext_resource type="Texture2D" path="res://assets/ui/beach/Wall.svg" id="icon_Wall"]
+[ext_resource type="Texture2D" path="res://assets/ui/beach/SuspendedSand.svg" id="icon_SuspendedSand"]
+[ext_resource type="Texture2D" path="res://assets/ui/beach/GravelDrop.svg" id="icon_GravelDrop"]
+[ext_resource type="Texture2D" path="res://assets/ui/beach/Smooth.svg" id="icon_Smooth"]
+[ext_resource type="Texture2D" path="res://assets/ui/beach/Compact.svg" id="icon_Compact"]
+[ext_resource type="Texture2D" path="res://assets/ui/beach/bottle.svg" id="icon_bottle"]
+[ext_resource type="Texture2D" path="res://assets/ui/beach/plank.svg" id="icon_plank"]
+[ext_resource type="Texture2D" path="res://assets/ui/beach/stick.svg" id="icon_stick"]
+[ext_resource type="Texture2D" path="res://assets/ui/beach/wave.svg" id="icon_wave"]
+[ext_resource type="Texture2D" path="res://assets/ui/beach/travel.svg" id="icon_travel"]
+
+[ext_resource type="Script" path="res://scripts/beach/ui_visibility.gd" id="1"]
+
+[node name="UIVisibility" type="CanvasLayer"]
+layer = 10
+script = ExtResource("1")
+
+[node name="ToggleUI" type="Button" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -126.0
+offset_top = 12.0
+offset_right = -18.0
+offset_bottom = 48.0
+grow_horizontal = 0
+focus_mode = 0
+toggle_mode = true
+text = "隐藏 UI"
+tooltip_text = "显示 / 隐藏全部面板（F6）；隐藏后仍可编辑沙子"
+theme = ExtResource("beach_theme")
+
+[connection signal="pressed" from="ToggleUI" to="." method="_on_toggle_pressed"]

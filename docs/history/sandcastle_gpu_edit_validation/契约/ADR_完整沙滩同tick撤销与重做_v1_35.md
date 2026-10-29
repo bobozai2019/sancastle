@@ -1,0 +1,11 @@
+# ADR v1.35：完整沙滩同tick撤销与重做
+
+2026-10-11，仅 `edit_beach_undo_lab.tscn` 候选入口。当前范围是完整纯GPU堆挖同tick协调；跨tick、旧CPU混合和磁盘redo仍须完成，G4不放行。
+
+每笔原生事务在prepare前保存v1.34两物理槽前态。CPU匹配回执并结算后保留applied记录、丢弃rejected暂存；记录实际执行tick、64位身份、旧double库存、prefix长度、几何/seed与策略/速度。没有在每笔编辑热路径增加全图CPU读回。历史仍受32份/96MiB约束。
+
+同tick undo要求暂停、空pending/零预留、最后prefix与前态匹配。显式操作期间禁用输入与tick，取得完整当前检查点和10张前态R32读回，构造移除该编辑的完整目标：替换5字段两槽、恢复旧库存和prefix，保留未改foam/bed/front等原生历史。随后通过v1.33隔离候选实际23字段校验与原子恢复发布，更新64块碰撞并等待两物理帧。generation递增；undo的revision为当前revision+1，遵守v1.16单调语义，高水位ID不倒退。历史纹理独立于old solver，受控转移到new owner并重标代际；被消费前态的render释放完成回调到主线程后才结束操作。
+
+redo保留完整23字段hash/index/foam_index及五账本的基线和目标。先验证当前基线；按相同几何/seed/量/水策略与速度发起真实新事务，使用当前generation及新64位ID。核对新完成态严格目标；成功移除redo记录。目标不符时通过隔离恢复退回基线并保留已消费身份高水位，失败恢复则隔离。普通成功新编辑清空redo分支；普通显式检查点恢复清空GPU历史与redo；连续undo/redo允许通过完整基线而非历史generation数值识别同一分支。
+
+实际Ctrl+Z/Ctrl+Y复用以上公开方法。显式capture失败等待全部已提交回调后清除pending capture并隔离，避免shutdown等待永不完成的capture标志。shutdown禁止新输入并等待undo协调器完成，再释放历史和owner。跨tick/缺失前态/带rejected尾部仍转为requires_checkpoint_replay边界，当前未实现完整重演，不能累计为T05 G03完成。

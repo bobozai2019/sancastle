@@ -1,0 +1,204 @@
+{
+	"cases": {
+		"coupled": {
+			"comparisons": {
+				"240": {
+					"effective_profile_sha256": "cadd38cf89dbaff68ac052107fa28c41aaba0ee3772eca8a34d0001c099d552a",
+					"equal_gpu_fields": {
+						"foam_history": true,
+						"local_front_history": true,
+						"momentum_x": true,
+						"momentum_z": true,
+						"water": true
+					},
+					"front_face_source_started": null,
+					"image_sha256": "f8645c55ba442caf657b508355e499909899da0279b69fc8bff67ebff6e6161e",
+					"offshore_core_source_started": null,
+					"ok": true,
+					"readback_stamps": {
+						"original": {
+							"generation": 1,
+							"revision": 924,
+							"tick": 240
+						},
+						"restored": {
+							"generation": 2,
+							"revision": 0,
+							"tick": 240
+						}
+					},
+					"tick": 240,
+					"visual_time_s": 8.0
+				},
+				"270": {
+					"effective_profile_sha256": "b36cd9e614d3708102889a76dbef3f7d2ac5d5c5b51ce0b99d26212956c7727d",
+					"equal_gpu_fields": {
+						"foam_history": true,
+						"local_front_history": true,
+						"momentum_x": true,
+						"momentum_z": true,
+						"water": true
+					},
+					"front_face_source_started": null,
+					"image_sha256": "e6017a5c2fc1d8ebccf3341ebf892e92895235e1eecff2f1b96fcb4d3c4a974a",
+					"offshore_core_source_started": null,
+					"ok": true,
+					"readback_stamps": {
+						"original": {
+							"generation": 1,
+							"revision": 1044,
+							"tick": 270
+						},
+						"restored": {
+							"generation": 2,
+							"revision": 120,
+							"tick": 270
+						}
+					},
+					"tick": 270,
+					"visual_time_s": 9.0
+				},
+				"600": {
+					"effective_profile_sha256": "f3534b53f9f693e2dbd6841721ecfd97a884951d1d3be3fe6afb1265fdea540e",
+					"equal_gpu_fields": {
+						"foam_history": true,
+						"local_front_history": true,
+						"momentum_x": true,
+						"momentum_z": true,
+						"water": true
+					},
+					"front_face_source_started": null,
+					"image_sha256": "3071e75b151f831dfc55d252f5c6dbb24777f37a7d7d30f850ddf9e38dd56ba5",
+					"offshore_core_source_started": null,
+					"ok": true,
+					"readback_stamps": {
+						"original": {
+							"generation": 1,
+							"revision": 2291,
+							"tick": 600
+						},
+						"restored": {
+							"generation": 2,
+							"revision": 1367,
+							"tick": 600
+						}
+					},
+					"tick": 600,
+					"visual_time_s": 20.0
+				}
+			},
+			"effective_profile_sha256": "f3534b53f9f693e2dbd6841721ecfd97a884951d1d3be3fe6afb1265fdea540e",
+			"profile_sha256": "f07325a9eacbbfba293e2190107e2eb21982c60a638aef67980fad03f61d910a",
+			"save_foam_cells_gt_0_05": 1662,
+			"save_front_cells_gt_1e_6": 13707,
+			"save_tick": 240,
+			"saved_checkpoint": "D:/godot/project/sandcastle/task/sandcastle_test1_reverse_rebuild/implementation/g05_cost/release_final_pair_after_hook_coupled.sandcp",
+			"saved_checkpoint_sha256": "79186487313dba66fa552536744323832f1182e94818c80e1ebfd37b9f52bce6",
+			"target_tick": 600,
+			"visual_time_s": 20.0
+		},
+		"fixed": {
+			"comparisons": {
+				"240": {
+					"effective_profile_sha256": "0b0828b8bf9db3faaa08914ae0b5229fb46300c9758b44e2f67ec2a1806b16c2",
+					"equal_gpu_fields": {
+						"foam_history": true,
+						"local_front_history": true,
+						"momentum_x": true,
+						"momentum_z": true,
+						"water": true
+					},
+					"front_face_source_started": null,
+					"image_sha256": "d0f03ae43f8aa2e7ad7d2d2c4b79b46af206b980e4037ed80560bf96435e1c6f",
+					"offshore_core_source_started": null,
+					"ok": true,
+					"readback_stamps": {
+						"original": {
+							"generation": 1,
+							"revision": 924,
+							"tick": 240
+						},
+						"restored": {
+							"generation": 2,
+							"revision": 0,
+							"tick": 240
+						}
+					},
+					"tick": 240,
+					"visual_time_s": 8.0
+				},
+				"270": {
+					"effective_profile_sha256": "be1f1807d77ffadb61e35d50bfd8a402e53250a9f0fb4959c053687e9e10d73a",
+					"equal_gpu_fields": {
+						"foam_history": true,
+						"local_front_history": true,
+						"momentum_x": true,
+						"momentum_z": true,
+						"water": true
+					},
+					"front_face_source_started": null,
+					"image_sha256": "6efad9a48ddfd1b713de0ba3ae78c562b164d3e97554e181b057eef05408f1de",
+					"offshore_core_source_started": null,
+					"ok": true,
+					"readback_stamps": {
+						"original": {
+							"generation": 1,
+							"revision": 1044,
+							"tick": 270
+						},
+						"restored": {
+							"generation": 2,
+							"revision": 120,
+							"tick": 270
+						}
+					},
+					"tick": 270,
+					"visual_time_s": 9.0
+				},
+				"600": {
+					"effective_profile_sha256": "9064d8b2029d06270633ec9a9e237c4f7f20da3fc442d9f98a914d86f1f6aea6",
+					"equal_gpu_fields": {
+						"foam_history": true,
+						"local_front_history": true,
+						"momentum_x": true,
+						"momentum_z": true,
+						"water": true
+					},
+					"front_face_source_started": null,
+					"image_sha256": "4be23d06af70773e1a47dc14a34f456e2ff97a1912f8b48e97ffb58bceff60ef",
+					"offshore_core_source_started": null,
+					"ok": true,
+					"readback_stamps": {
+						"original": {
+							"generation": 1,
+							"revision": 2206,
+							"tick": 600
+						},
+						"restored": {
+							"generation": 2,
+							"revision": 1282,
+							"tick": 600
+						}
+					},
+					"tick": 600,
+					"visual_time_s": 20.0
+				}
+			},
+			"effective_profile_sha256": "9064d8b2029d06270633ec9a9e237c4f7f20da3fc442d9f98a914d86f1f6aea6",
+			"profile_sha256": "f07325a9eacbbfba293e2190107e2eb21982c60a638aef67980fad03f61d910a",
+			"save_foam_cells_gt_0_05": 1904,
+			"save_front_cells_gt_1e_6": 10338,
+			"save_tick": 240,
+			"saved_checkpoint": "D:/godot/project/sandcastle/task/sandcastle_test1_reverse_rebuild/implementation/g05_cost/release_final_pair_after_hook_fixed.sandcp",
+			"saved_checkpoint_sha256": "ade3bc20203d8284d8d9dd62c7a96b1ab4db08f7e75d0fe5a9e6e7b9eb84bed4",
+			"target_tick": 600,
+			"visual_time_s": 20.0
+		}
+	},
+	"front_face_source_gate": false,
+	"interactive_source_gate": false,
+	"pre_wave_source_gate": false,
+	"render_profile_path": "res://task/sandcastle_test1_reverse_rebuild/implementation/test1_beach_release.json",
+	"run_id": "release_final_pair_after_hook",
+	"source_start_tick": 8
+}

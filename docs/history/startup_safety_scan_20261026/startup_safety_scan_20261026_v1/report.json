@@ -1,0 +1,36 @@
+{
+  "exit_code": 3221225477,
+  "runtime": null,
+  "engine_messages": [],
+  "static_findings": [
+    {
+      "rule": "W001",
+      "severity": "warning_candidate",
+      "file": "scripts/sand/brushes/brush_registry.gd",
+      "line": 19,
+      "message": "Parameter hash shadows global hash(); cosmetic warning, not a startup failure"
+    },
+    {
+      "rule": "W001",
+      "severity": "warning_candidate",
+      "file": "scripts/simulation/unified_edit/profile_registry.gd",
+      "line": 42,
+      "message": "Parameter hash shadows global hash(); cosmetic warning, not a startup failure"
+    },
+    {
+      "rule": "W001",
+      "severity": "warning_candidate",
+      "file": "scripts/simulation/unified_edit/profile_registry.gd",
+      "line": 46,
+      "message": "Parameter hash shadows global hash(); cosmetic warning, not a startup failure"
+    },
+    {
+      "rule": "W001",
+      "severity": "warning_candidate",
+      "file": "scripts/simulation/unified_edit/profile_registry.gd",
+      "line": 49,
+      "message": "Parameter hash shadows global hash(); cosmetic warning, not a startup failure"
+    }
+  ],
+  "scope": "Resource load + two detached instances of every scenes/ entry; optional two live boot/advance/shutdown cycles of each formal entry. No performance or exhaustive gameplay claim."
+}

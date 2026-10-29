@@ -1,0 +1,174 @@
+{
+  "scope": "plan_structure_only",
+  "created_at": "2026-10-25T04:55:40.424636+00:00",
+  "status": "passed",
+  "execution_started": false,
+  "technical_gate_pass_count": 0,
+  "completed_task_count": 0,
+  "completed_goal_count": 0,
+  "task_count": 8,
+  "goal_count": 32,
+  "markdown_count": 17,
+  "link_count": 81,
+  "checks": {
+    "local_file_links": true,
+    "heading_links": true,
+    "eight_tasks": true,
+    "four_goals_per_task": true,
+    "thirty_two_unique_goals": true,
+    "state_goals_match": true,
+    "dag_acyclic_and_covers_tasks": true,
+    "requirements_R01_to_R13": true,
+    "contracts_C01_to_C05": true,
+    "no_technical_gate_reports": true,
+    "no_trailing_whitespace": true
+  },
+  "broken_links": [],
+  "bad_heading_links": [],
+  "trailing_whitespace": [],
+  "dag_edges": [
+    [
+      "T00",
+      "T01"
+    ],
+    [
+      "T01",
+      "T02"
+    ],
+    [
+      "T02",
+      "T03"
+    ],
+    [
+      "T01",
+      "T04"
+    ],
+    [
+      "T03",
+      "T05"
+    ],
+    [
+      "T04",
+      "T05"
+    ],
+    [
+      "T03",
+      "T06"
+    ],
+    [
+      "T05",
+      "T06"
+    ],
+    [
+      "T06",
+      "T07"
+    ]
+  ],
+  "goal_counts": {
+    "T00_基线与契约.md": 4,
+    "T01_API同步与阶段小样本.md": 4,
+    "T02_快照配对与重复性.md": 4,
+    "T03_参考路线与条件实现.md": 4,
+    "T04_多捕帧参数比较.md": 4,
+    "T05_运行参数与时钟观察.md": 4,
+    "T06_Godot核与短序列对照.md": 4,
+    "T07_规格冻结与归档.md": 4
+  },
+  "review_method": "Local file/heading resolution; unique goal and state-table matching; DAG parsed from Mermaid; requirement and contract ID coverage; whitespace scan. Manual scope/ownership/branch/gate review. No GPU or runtime validation.",
+  "reviewed_files": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\task\\competitor_water_solver_evidence\\决策记录.md",
+      "sha256": "d9d196ec02485175de59b5c0a0f31846a9fa85692f638362d39d82bffb99a4e3"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\task\\competitor_water_solver_evidence\\契约\\README.md",
+      "sha256": "2cf560688ada6c8477cc4082d1acb911c4e98cfba5c94d4a039ac524b1d5dbbe"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\task\\competitor_water_solver_evidence\\契约\\参考执行与比较.md",
+      "sha256": "8a4dc10c11b45b4ffb5aea6af6381c3ebe5b13dcafd2504cf64e43761335cd24"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\task\\competitor_water_solver_evidence\\契约\\取证接口与来源.md",
+      "sha256": "de613f323fed8db88cd4789439db869a6b567eb928dd2f7637c753ccbbc681ae"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\task\\competitor_water_solver_evidence\\总纲.md",
+      "sha256": "92c2aa4ee24a036549c00371e8ed84e262589e4651479d63316bcae5d4886c09"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\task\\competitor_water_solver_evidence\\执行状态.md",
+      "sha256": "1a2babcf2d53d9caf50180e3f74ea916f64a609e0084ba461014a8652dcb937a"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\task\\competitor_water_solver_evidence\\细则\\README.md",
+      "sha256": "8d4ff08409cbe1c55d45fb9cf026a2baefaa97e2fb25c2e0a308474450afea4e"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\task\\competitor_water_solver_evidence\\细则\\T00_基线与契约.md",
+      "sha256": "fc96e861c5775e9563fd1b3657de690fa3d8f1caa83948388f3d54ebe5057e31"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\task\\competitor_water_solver_evidence\\细则\\T01_API同步与阶段小样本.md",
+      "sha256": "7827fe1540a9e2986196be5ec78f597b586306993960ea54a3be3955f0a42e96"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\task\\competitor_water_solver_evidence\\细则\\T02_快照配对与重复性.md",
+      "sha256": "7258a47dd251bd4a92f8a181a7d7046eb7b4f3805ab595871d3e82d1dd14753f"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\task\\competitor_water_solver_evidence\\细则\\T03_参考路线与条件实现.md",
+      "sha256": "470b6e13d76b64842938cc0e25449b51bbe4250f4803b30765aad88069904fd4"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\task\\competitor_water_solver_evidence\\细则\\T04_多捕帧参数比较.md",
+      "sha256": "55496d2a9d04d7c919846437691b209201a1be954590ab51d6cf81f68a42a508"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\task\\competitor_water_solver_evidence\\细则\\T05_运行参数与时钟观察.md",
+      "sha256": "4f4d21b33d9b570db95ea707f5defa18690ec42fc9b890840c19cb3e83781d94"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\task\\competitor_water_solver_evidence\\细则\\T06_Godot核与短序列对照.md",
+      "sha256": "199caecdeb949ea0808702a2d27d7cb78951c80b9b4200d7a0debc4bb2fd02db"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\task\\competitor_water_solver_evidence\\细则\\T07_规格冻结与归档.md",
+      "sha256": "ec2248a8bcdb48d60c3c222160efca9573891b973747fd85569071e4aee8d101"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\task\\competitor_water_solver_evidence\\需求映射.md",
+      "sha256": "5bb8fc760c545602d98021e26f75381932d2e21cb30345c7b8f76c500adf716e"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\task\\competitor_water_solver_evidence\\验收\\README.md",
+      "sha256": "6606c7c24296aa168d65949c5b531663ba953001c9d4cefbb74d35cb7fdb9703"
+    }
+  ],
+  "planning_sources": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\.codex\\skills\\myplan\\SKILL.md",
+      "sha256": "37e5bee35e55cd1a69ea15ff253975ad8ebf715013df2401d1118fbb96e0280d"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\.codex\\skills\\myplan\\references\\execution-plan-template.md",
+      "sha256": "9690d06caad828c6d5d787fac54db8ab90b6ab081fe24c4f79c1f9bb66877d2e"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\AGENTS.md",
+      "sha256": "8492dd1b27fe812c544f881726c11f5ba52fa167d36c8b2085f0c7f9722467b8"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\独立水求解测试场景可行性.md",
+      "sha256": "1fe612817c68fd1c1c76f6e14360ae409cbe1f75b8ef2cf5348db20f39b41bb8"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\水处理全流程与项目对比.md",
+      "sha256": "db63e7bf58cf01bac9d7bfd0bb0e007cf414b55abacca747cb45995de648c5db"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\water_gap_recovery_20261025_v1\\inventory.json",
+      "sha256": "89983ff918b5f7dce7a25e3405804ffa80058d76d83e2c5df3df00f9494689d8"
+    }
+  ]
+}

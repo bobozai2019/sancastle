@@ -1,0 +1,14 @@
+# Normalize EOL for all files that Git considers text files.
+* text=auto eol=lf
+# Research exports are byte-addressed evidence; preserve their recorded hashes.
+/docs/competitor/evidence/** -text
+task/water_foam_visual/验收/G4/exported_pack_v1/sandcastle.pck filter=lfs diff=lfs merge=lfs -text
+task/water_foam_visual/验收/G4/static_ui_pack_v1/sandcastle.pck filter=lfs diff=lfs merge=lfs -text
+task/water_foam_visual/验收/G4/static_ui_pack_v2/sandcastle.pck filter=lfs diff=lfs merge=lfs -text
+# Preserve baked scene bytes referenced by presentation manifest hashes.
+/scenes/unified_edit/presentation/main.tscn -text
+docs/history/muscl_material_finish_20261025/验收/geometry_inputs_v3_a/states.zip filter=lfs diff=lfs merge=lfs -text
+docs/history/muscl_material_finish_20261025/验收/geometry_inputs_v3_b/states.zip filter=lfs diff=lfs merge=lfs -text
+docs/history/muscl_material_finish_20261025/验收/main_inputs_v1_a/states.zip filter=lfs diff=lfs merge=lfs -text
+docs/history/muscl_material_finish_20261025/验收/main_inputs_v1_b/states.zip filter=lfs diff=lfs merge=lfs -text
+docs/history/muscl_material_finish_20261025/验收/main_inputs_v3_b/states.zip filter=lfs diff=lfs merge=lfs -text

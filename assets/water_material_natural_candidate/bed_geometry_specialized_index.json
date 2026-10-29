@@ -1,0 +1,17 @@
+{
+  "source": "D:\\godot\\project\\sandcastle\\assets\\water_material_natural_candidate\\bed_style.gdshader",
+  "source_sha256": "271b03cfa840795410a7165650de3e6ecff102e137eec910fb9ab9f57b759c11",
+  "generated": "D:\\godot\\project\\sandcastle\\assets\\water_material_natural_candidate\\bed_geometry_specialized.gdshader",
+  "generated_sha256": "77bd0939f5523e1cacb1461f13cc4db647f6941c0f8832ae5940779ce32fdc5f",
+  "constants": {
+    "display_reconstruction": true,
+    "grid_size": 256.0,
+    "domain_size_m": 32.0
+  },
+  "value_sources": {
+    "display_reconstruction": "actual_uniform",
+    "grid_size": "actual_uniform",
+    "domain_size_m": "actual_uniform"
+  },
+  "scope": "Bed fixed grid geometry only; NOT selected. Domain/grid mismatches rejected."
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "frozen_at": "2026-10-25T13:21:42.636402+00:00",
+  "role": "Predeclared full 72-identity candidate before supplementary budget build",
+  "driver": "vulkan",
+  "groups": [
+    16,
+    8,
+    1
+  ],
+  "local_size": [
+    32,
+    32,
+    1
+  ],
+  "repeat_count": 3,
+  "mad": "explicit fma",
+  "dot": "separate precise multiply/add",
+  "resources": "stride16 uint4 water/sand/air; same logical in-place alias; no intra-dispatch barrier",
+  "lowering_manifest": "D:/godot/project/sandcastle/docs/competitor/evidence/water_solver_reconstruction/t06_glsl_lowering_20261025_v4/lowering.json",
+  "candidate_sha256": [
+    "d75273e7cba6146fa1a94e80b5444e48576f8c687058bdb2bbc78f0aa22adf98",
+    "cafe0a48c2dc6cbac53dbaaef007e96c66ff6121c2905f4da6e7f7455bb09c0b",
+    "354d997407fbf2d770be29b5dd5426c0e6d931bfcacaad7c4c4679d0d98c5e3c",
+    "2ed3e29abe2e7fb27221885313a85237d5065ddd2188191f58a7a9e1a32a2d0f",
+    "b502c51f7338304575e05da60c35f8b38bc2c0d26656fbc07b386f2412881eeb",
+    "6b3741d1dc4f174a5bdffde922e4480802466fa23870c17db7501516dc388f0d"
+  ],
+  "identical_to_pre_supplementary_uint4_candidate": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "numerical_rules": "Only independent original-program v2 data, no extra FP/quantization allowance; preserve any failures"
+}

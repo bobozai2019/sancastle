@@ -1,0 +1,15 @@
+config_version=5
+
+[application]
+config/name="Water solver evidence probe"
+run/main_scene="res://probe.tscn"
+
+[display]
+window/size/viewport_width=400
+window/size/viewport_height=140
+window/size/resizable=false
+
+[rendering]
+renderer/rendering_method="mobile"
+renderer/rendering_method.mobile="mobile"
+environment/defaults/default_clear_color=Color(0.06, 0.08, 0.1, 1)

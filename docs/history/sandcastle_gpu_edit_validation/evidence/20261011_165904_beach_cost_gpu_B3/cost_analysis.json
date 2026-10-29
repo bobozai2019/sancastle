@@ -1,0 +1,218 @@
+{
+  "scope": "main-thread process frame intervals, not GPU duration or first-visible latency",
+  "clean_close": true,
+  "configuration": {
+    "adapter": "NVIDIA GeForce GTX 1050",
+    "arguments": [
+      "--output=D:/godot/project/sandcastle/task/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3",
+      "--backend=gpu",
+      "--policy=3",
+      "--warmup=2",
+      "--seconds=22",
+      "--beach-staged-slope",
+      "--compensated-capacity",
+      "--packed-runs",
+      "--cached-capacity",
+      "--prefetch-velocity",
+      "--beach-no-parameter-trace",
+      "--cost-wait-phases",
+      "--native-wait-dump"
+    ],
+    "backend": "gpu",
+    "engine": {
+      "build": "steam",
+      "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+      "hex": 263938,
+      "major": 4,
+      "minor": 7,
+      "patch": 2,
+      "status": "stable",
+      "string": "4.7.2-stable (steam)",
+      "timestamp": 0
+    },
+    "erosion": true,
+    "initial_tick": 60,
+    "policy": 3,
+    "scope": "full beach wall-clock input; no per-frame GPU state capture; original CPU baseline semantics retained",
+    "seconds": 22.0,
+    "start_us": 9777945,
+    "trace_version": 2,
+    "type": "configuration",
+    "utc_start_us": 1791709157649000,
+    "vsync": 0,
+    "warm_ticks": 60,
+    "warmup_s": 2.0,
+    "wave_count": 80,
+    "window_size": "(1920, 1080)"
+  },
+  "functional": {
+    "admitted": 75,
+    "all_admitted_terminal": true,
+    "backend": "gpu",
+    "completed": 257,
+    "completed_hz": 11.6803591987692,
+    "duration_s": 22.002748,
+    "error": "",
+    "pass": true,
+    "pending": 0,
+    "performance_verdict": "pending offline frame quantiles; baseline does not require candidate thresholds",
+    "policy": 3,
+    "rejected": 0,
+    "slots_consumed": 110,
+    "slots_expected": 110,
+    "start_us": 9777945,
+    "stop_us": 31780693
+  },
+  "frames": 1157,
+  "frame_ms": {
+    "p50": 12.855,
+    "p95": 43.385,
+    "p99": 67.973,
+    "p999": 613.565,
+    "maximum": 618.255
+  },
+  "input_kinds": [
+    "place_sand",
+    "remove_sand"
+  ],
+  "input_shapes": [
+    "circle",
+    "swept_segment"
+  ],
+  "acceptance": "user_v1.58",
+  "candidate_performance_pass": false,
+  "formal_window": false,
+  "paused_feedback": "separate probe required; not inferred from this run",
+  "segments": {
+    "idle": {
+      "frames": 483,
+      "p99_ms": 42.927,
+      "maximum_ms": 586.614
+    },
+    "dig": {
+      "frames": 291,
+      "p99_ms": 44.492,
+      "maximum_ms": 613.565
+    },
+    "place": {
+      "frames": 183,
+      "p99_ms": 598.667,
+      "maximum_ms": 608.515
+    },
+    "drag": {
+      "frames": 200,
+      "p99_ms": 594.604,
+      "maximum_ms": 618.255
+    }
+  },
+  "gpu_callback_phase_ms": {
+    "input_to_settle": {
+      "samples": 75,
+      "p99": 1392.409,
+      "maximum": 1392.409
+    },
+    "settle_to_publish": {
+      "samples": 75,
+      "p99": 30.516,
+      "maximum": 30.516
+    },
+    "publish_to_terminal": {
+      "samples": 75,
+      "p99": 718.681,
+      "maximum": 718.681
+    }
+  },
+  "callback_scope": "main-thread timestamps; includes queued waiting, not exclusive GPU pass duration",
+  "wait_phase_ms": {
+    "dispatch_to_receipt_ready": {
+      "samples": 75,
+      "p99": 113.194,
+      "maximum": 113.194
+    },
+    "receipt_ready_to_publication_ready": {
+      "samples": 75,
+      "p99": 23.252,
+      "maximum": 23.252
+    },
+    "publication_ready_to_collision_ready": {
+      "samples": 75,
+      "p99": 637.626,
+      "maximum": 637.626
+    },
+    "collision_ready_to_physics_one": {
+      "samples": 75,
+      "p99": 72.43,
+      "maximum": 72.43
+    },
+    "physics_one_to_physics_two": {
+      "samples": 75,
+      "p99": 604.385,
+      "maximum": 604.385
+    }
+  },
+  "waits_over_100ms": [
+    {
+      "id": 42,
+      "phase": "publication_ready_to_collision_ready",
+      "ms": 637.626,
+      "physics_frame_delta": 10,
+      "last_collision_replace_ms": 4.896
+    },
+    {
+      "id": 96,
+      "phase": "publication_ready_to_collision_ready",
+      "ms": 637.55,
+      "physics_frame_delta": 10,
+      "last_collision_replace_ms": 2.649
+    },
+    {
+      "id": 60,
+      "phase": "publication_ready_to_collision_ready",
+      "ms": 633.009,
+      "physics_frame_delta": 10,
+      "last_collision_replace_ms": 5.235
+    },
+    {
+      "id": 70,
+      "phase": "physics_one_to_physics_two",
+      "ms": 604.385,
+      "physics_frame_delta": 1,
+      "last_collision_replace_ms": 5.302
+    },
+    {
+      "id": 67,
+      "phase": "physics_one_to_physics_two",
+      "ms": 598.43,
+      "physics_frame_delta": 1,
+      "last_collision_replace_ms": 2.819
+    },
+    {
+      "id": 73,
+      "phase": "physics_one_to_physics_two",
+      "ms": 594.367,
+      "physics_frame_delta": 1,
+      "last_collision_replace_ms": 5.596
+    },
+    {
+      "id": 99,
+      "phase": "physics_one_to_physics_two",
+      "ms": 586.353,
+      "physics_frame_delta": 1,
+      "last_collision_replace_ms": 6.782
+    },
+    {
+      "id": 100,
+      "phase": "dispatch_to_receipt_ready",
+      "ms": 113.194,
+      "physics_frame_delta": 14,
+      "last_collision_replace_ms": 6.782
+    },
+    {
+      "id": 68,
+      "phase": "dispatch_to_receipt_ready",
+      "ms": 110.379,
+      "physics_frame_delta": 13,
+      "last_collision_replace_ms": 2.819
+    }
+  ]
+}

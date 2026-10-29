@@ -1,0 +1,173 @@
+{
+  "call_sites": [
+    {
+      "frame": 2,
+      "return_rva": "0x138c64b",
+      "call": {
+        "rva": "0x138c645",
+        "bytes": "ff15e5419f09",
+        "mnemonic": "call",
+        "operands": "qword ptr [rip + 0x99f41e5]",
+        "notes": [
+          {
+            "import": "KERNEL32.dll.WaitForSingleObjectEx",
+            "iat_rva": "0xad80830"
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "frame": 3,
+      "return_rva": "0x32eb4f5",
+      "call": {
+        "rva": "0x32eb4f2",
+        "bytes": "41ffd0",
+        "mnemonic": "call",
+        "operands": "r8",
+        "notes": []
+      },
+      "pass": true
+    },
+    {
+      "frame": 4,
+      "return_rva": "0x32ec0a7",
+      "call": {
+        "rva": "0x32ec0a2",
+        "bytes": "e8b9f3ffff",
+        "mnemonic": "call",
+        "operands": "0x32eb460",
+        "notes": [
+          {
+            "direct_target_rva": "0x32eb460"
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "frame": 5,
+      "return_rva": "0x3384c2e",
+      "call": {
+        "rva": "0x3384c28",
+        "bytes": "ff9080000000",
+        "mnemonic": "call",
+        "operands": "qword ptr [rax + 0x80]",
+        "notes": []
+      },
+      "pass": true
+    },
+    {
+      "frame": 6,
+      "return_rva": "0x5dba2",
+      "call": {
+        "rva": "0x5db9b",
+        "bytes": "41ff9060120000",
+        "mnemonic": "call",
+        "operands": "qword ptr [r8 + 0x1260]",
+        "notes": []
+      },
+      "pass": true
+    },
+    {
+      "frame": 7,
+      "return_rva": "0x2ef1",
+      "call": {
+        "rva": "0x2eec",
+        "bytes": "e8ffa50500",
+        "mnemonic": "call",
+        "operands": "0x5d4f0",
+        "notes": [
+          {
+            "direct_target_rva": "0x5d4f0"
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "frame": 8,
+      "return_rva": "0x52b42",
+      "call": {
+        "rva": "0x52b3d",
+        "bytes": "e86e03fbff",
+        "mnemonic": "call",
+        "operands": "0x2eb0",
+        "notes": [
+          {
+            "direct_target_rva": "0x2eb0"
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "frame": 9,
+      "return_rva": "0x52b7e",
+      "call": {
+        "rva": "0x52b79",
+        "bytes": "e802feffff",
+        "mnemonic": "call",
+        "operands": "0x52980",
+        "notes": [
+          {
+            "direct_target_rva": "0x52980"
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "frame": 10,
+      "return_rva": "0x10c9",
+      "call": {
+        "rva": "0x10c4",
+        "bytes": "e867c75e06",
+        "mnemonic": "call",
+        "operands": "0x65ed830",
+        "notes": [
+          {
+            "direct_target_rva": "0x65ed830"
+          }
+        ]
+      },
+      "pass": false
+    },
+    {
+      "frame": 11,
+      "return_rva": "0x13f6",
+      "call": {
+        "rva": "0x13f1",
+        "bytes": "e81afcffff",
+        "mnemonic": "call",
+        "operands": "0x1010",
+        "notes": [
+          {
+            "direct_target_rva": "0x1010"
+          }
+        ]
+      },
+      "pass": true
+    }
+  ],
+  "negative_cases": [
+    {
+      "case": "identity",
+      "derived_from_sha256": "d72ad007860239e001fbcfeca5272a104875e7e5ef35b96c6984c332e3bf627f",
+      "derived_sha256": "0352e35b495e514bd573313a685fe24e9d94626c6c86e796534335ee63171e8a",
+      "frames": 2,
+      "stop_reason": "unmapped_or_unverified_module",
+      "pass": true
+    },
+    {
+      "case": "truncated_stack",
+      "derived_from_sha256": "d72ad007860239e001fbcfeca5272a104875e7e5ef35b96c6984c332e3bf627f",
+      "derived_sha256": "8ff5472d257ccd0dd6a5a244aca3da26d488f5f7164a6ffd00840b275fd7702e",
+      "frames": 1,
+      "stop_reason": "memory_missing_during_step",
+      "pass": true
+    }
+  ],
+  "pass": false,
+  "scope": "direct/indirect call opcode consistency and fail-closed offline identity/stack coverage; private names are separate source inference"
+}

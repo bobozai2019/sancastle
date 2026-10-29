@@ -1,0 +1,36 @@
+{
+  "foam_schema_version": 3,
+  "optics_profile": "res://assets/water_material_natural_candidate/optics_selected.json",
+  "optics_profile_sha256": "e56df9bc4e907e1ca2be1fc579ec6a7288d12ffdc48073103cf705c9198cc29b",
+  "base_profile": "res://assets/water_material_natural_candidate/base_v8_foam.json",
+  "water_shader": "res://assets/water_material_natural_candidate/water_foam.gdshader",
+  "fine_shader": "res://assets/water_material_natural_candidate/foam_distribution.gdshader",
+  "contact_shader": "res://assets/water_material_natural_candidate/contact_shape.gdshader",
+  "main": {
+    "enabled": true,
+    "gain": 1.0
+  },
+  "fine": {
+    "enabled": true,
+    "size_mode": "legacy",
+    "size_range": [
+      0.65,
+      1.3
+    ],
+    "gain": 1.0,
+    "clustering_strength": 0.0,
+    "clustering_scale_per_m": 1.0,
+    "jitter_m": 0.02,
+    "direct_fraction": 0.5
+  },
+  "contact": {
+    "enabled": true,
+    "gain": 1.0,
+    "surface_offset_m": 0.016,
+    "surface_mode": "shared_water",
+    "separation_m": 0.001,
+    "shape_mode": "legacy",
+    "shape_scale_per_m": 6.0
+  },
+  "geometry_bindings": "res://assets/water_material_natural_candidate/contact_shape_geometry.json"
+}

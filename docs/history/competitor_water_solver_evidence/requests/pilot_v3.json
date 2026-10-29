@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0",
+  "run_id": "t01_pilot_20261025_v3",
+  "mode": "rdc_replay",
+  "operation": "sync_graph",
+  "source": {
+    "source_id": "rdc:761aa980c2426f75a1fa7364bf6d2655ff4dd20ea76566e630ee5b53ea0ec5b2",
+    "source_path": "D:/godot/project/sandcastle/sandcastlegame/test1.rdc",
+    "source_size": 225224034,
+    "source_sha256": "761aa980c2426f75a1fa7364bf6d2655ff4dd20ea76566e630ee5b53ea0ec5b2"
+  },
+  "selector": {
+    "capture_sha256": "761aa980c2426f75a1fa7364bf6d2655ff4dd20ea76566e630ee5b53ea0ec5b2",
+    "event_id": 1495,
+    "stage": "compute",
+    "boundary": "post-dispatch",
+    "shader_sha256": null,
+    "preliminary": true
+  },
+  "fixed_inputs": [],
+  "repeat_index": 0,
+  "replay_instance_id": "t01_pilot_20261025_v3_open0",
+  "variation": null,
+  "output_root": "D:/godot/project/sandcastle/docs/competitor/evidence/water_solver_reconstruction/t01_pilot_20261025_v3",
+  "environment": {
+    "time": "2026-10-25T15:00:58.924384+08:00",
+    "os": "Windows-10-10.0.19045-SP0",
+    "python": "3.13.12 (tags/v3.13.12:1cbe481, Feb  3 2026, 18:22:25) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "C:\\Python313\\python.exe",
+    "system": {
+      "GPU": [
+        {
+          "Name": "NVIDIA GeForce GTX 1050",
+          "DriverVersion": "32.0.15.8183",
+          "PNPDeviceID": "PCI\\VEN_10DE&DEV_1C8D&SUBSYS_860A103C&REV_A1\\4&D26B16E&0&0008"
+        },
+        {
+          "Name": "Intel(R) UHD Graphics 630",
+          "DriverVersion": "27.20.100.8476",
+          "PNPDeviceID": "PCI\\VEN_8086&DEV_3E9B&SUBSYS_860A103C&REV_00\\3&11583659&0&10"
+        }
+      ],
+      "Processes": [
+        {
+          "Id": 7240,
+          "ProcessName": "godot.windows.opt.tools.64",
+          "Path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe"
+        }
+      ],
+      "RenderDocVersion": "1.46.0.0"
+    },
+    "command": [
+      "task/competitor_water_solver_evidence/tools/build_baseline.py",
+      "--output",
+      "D:/godot/project/sandcastle/docs/competitor/evidence/water_solver_reconstruction/t00_baseline_20261025_v2"
+    ],
+    "graphics_backend": null,
+    "godot_version": null,
+    "limitation": "No replay or Godot launched. Process list cannot prove absence of all GPU activity.",
+    "allowed_writes": [
+      "D:/godot/project/sandcastle/task/competitor_water_solver_evidence",
+      "D:/godot/project/sandcastle/docs/competitor/evidence/water_solver_reconstruction"
+    ],
+    "originals": "read-only; no game launch in T00",
+    "evidence_self_contained": false
+  },
+  "tool": {
+    "name": "pilot_replay.py",
+    "version": null,
+    "sha256": null,
+    "command": null
+  },
+  "questions": [
+    "Are all water read dependencies exportable?",
+    "Do complete API records show kernel barriers and queue dependencies?",
+    "Can snapshots be proved to enclose the same dispatch?"
+  ],
+  "hypotheses": [
+    "Post-event snapshots are available but separate replays do not prove pairing",
+    "Missing API/descriptor data requires targeted recovery"
+  ],
+  "numeric_budget": null
+}

@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3]
+[ext_resource type="PackedScene" path="res://tests/shape_brushes/brush_lab.tscn" id="1"]
+[ext_resource type="Script" path="res://tests/shape_brushes/inventory_lab.gd" id="2"]
+[node name="InventoryBrushLab" instance=ExtResource("1")]
+script = ExtResource("2")
+playing = false
+unrestricted_sand_tools = false
+staging_wave_workload = "none"

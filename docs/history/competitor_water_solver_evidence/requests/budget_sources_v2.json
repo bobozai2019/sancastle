@@ -1,0 +1,58 @@
+{
+  "role": "budget_input_selection",
+  "state": "Version2 independent supplementary native selection, before v2 candidate comparison",
+  "sources": [
+    {
+      "manifest": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_solver_reconstruction/t03_six_kernel_20261025_v4/manifest.json",
+        "exists": true,
+        "size_bytes": 225405,
+        "sha256": "14849bd21d51f50933919cca5929004b8fded491b11463c53adbed30e3718d5a"
+      },
+      "role": "original_snapshot_copy_on_off"
+    },
+    {
+      "manifest": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_solver_reconstruction/t03_controlled_references_20261025_v1/manifest.json",
+        "exists": true,
+        "size_bytes": 1009387,
+        "sha256": "ddb7732114f6be26a40aad006e8ac4991bb0217724f4a145077e2b970d15df64"
+      },
+      "role": "Synthetic still/uniform/thin-water/step/boundary/clamp/extremes/B-threshold matrix. Only local fixture wet_dry has the old thin-water naming erratum; see per-fixture local_reference_id."
+    },
+    {
+      "manifest": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_solver_reconstruction/t03_wet_dry_correction_reference_20261025_v1/manifest.json",
+        "exists": true,
+        "size_bytes": 103992,
+        "sha256": "787a791ef18562134b89b1fe1e096d7c2958654d70d926798c16b3e1317327b0"
+      },
+      "role": "synthetic: verified dry/wet interface, 65536 dry and 65536 wet cells"
+    },
+    {
+      "manifest": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_solver_reconstruction/t06_native_matrix_20261025_v1/manifest.json",
+        "exists": true,
+        "size_bytes": 4395422,
+        "sha256": "4c2e56ab82cd54213c564863f535bedd7b13483452b8a14b68410290760258eb"
+      },
+      "role": "Fixed supplementary original-program 16+16 repeat matrix; original fixture semantics retained by complete program/input/constants/SRV identity"
+    }
+  ],
+  "identity_rule": "Use source manifest hash plus reference_id and full input/program/constant/dependency hashes; names alone are not globally unique.",
+  "wet_dry_erratum": "t03_controlled_fixtures_20261025_v1 wet_dry left code83056 decodes A=.05000028908254439, h=2.890825443885303e-7. True dry/wet fixture is t03_wet_dry_correction_fixture_20261025_v1 code83055.",
+  "supersedes": {
+    "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_solver_reconstruction/t03_error_budget_20261025_v1/error_budget.json",
+    "exists": true,
+    "size_bytes": 1584542,
+    "sha256": "745de8de5f19fcbf13276d591cf2ab7d33a50b38910f0ef9cd1b952f2f002298"
+  },
+  "independent_counterexample": {
+    "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_solver_reconstruction/t06_native_holdout_20261025_v1/holdout.json",
+    "exists": true,
+    "size_bytes": 16384,
+    "sha256": "0bfc323850e01a75aff43a999f44acad58d70f9efaa7a925b71c808d5533d6bc"
+  },
+  "revision_reason": "All24 fixed-size independent original DXBC holdouts failed old sampled ranges. Add the predeclared 72 identities x copy on/off x16 unmodified original outputs; same numeric rule, zero added FP/quantization allowance, no candidate output in construction.",
+  "created_at": "2026-10-25T13:22:28.636092+00:00"
+}

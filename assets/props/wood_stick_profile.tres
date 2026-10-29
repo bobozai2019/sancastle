@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/props/floating_prop_profile.gd" id="1"]
+[resource]
+script = ExtResource("1")
+type_id = &"wood_stick"
+version = 2
+max_angular_speed_rad_s = 115.0
+mass_kg = 1.5
+center_of_mass_m = Vector3(0, -0.005, 0)
+point_positions_m = Array[Vector3]([Vector3(-0.32, 0, 0), Vector3(0, 0, 0), Vector3(0.32, 0, 0)])
+point_half_heights_m = PackedFloat32Array(0.035, 0.035, 0.035)
+point_volumes_m3 = PackedFloat32Array(0.001, 0.001, 0.001)
+point_mass_weights = PackedFloat32Array(0.33333334, 0.33333334, 0.33333334)
+drag_time_horizontal_s = 0.5
+drag_time_vertical_s = 0.04
+angular_damping = 1.0

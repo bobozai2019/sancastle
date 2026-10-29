@@ -1,0 +1,30 @@
+{
+  "pass": true,
+  "rows": [
+    {
+      "state": "before",
+      "exit": 1,
+      "risks": [
+        {
+          "rule": "R001",
+          "severity": "risk",
+          "file": "assets/water_splash/instances.tres",
+          "line": 5,
+          "message": "Allocated MultiMesh uses generic scene-local duplication; reproduce construction before changing it."
+        },
+        {
+          "rule": "R001",
+          "severity": "risk",
+          "file": "scenes/main.tscn",
+          "line": 35,
+          "message": "Allocated MultiMesh uses generic scene-local duplication; reproduce construction before changing it."
+        }
+      ]
+    },
+    {
+      "state": "after",
+      "exit": 0,
+      "risks": []
+    }
+  ]
+}

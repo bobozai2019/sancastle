@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/collision/gpu_collision_proxy.gd" id="1_proxy"]
+
+[node name="GpuCollisionProxy" type="Node3D"]
+script = ExtResource("1_proxy")
+
+[node name="GpuTerrainCollision" type="StaticBody3D" parent="."]

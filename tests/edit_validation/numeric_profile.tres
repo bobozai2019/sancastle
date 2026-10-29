@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://tests/edit_validation/lab_profile.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+profile_id = "numeric_v1"
+grid_size = 64
+initial_sand_m = 0.0

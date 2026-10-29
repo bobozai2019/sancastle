@@ -1,0 +1,11 @@
+# ADR v1.31：实际材质 push 数据与捕帧探针
+
+2026-10-11。G4仍未放行。
+
+新增默认关闭的traced_material_coupler子类，保留原shader、参数公式和dispatch序列。它记录传入compute_list_set_push_constant的同一个不可变PackedByteArray，以及对应revision/index/stage，不用另算的float64数值或事后重新编码代替。14子步产生28份32byte包；这证明主机API提交数据，不单独证明GPU实际消费。
+
+初始实现把辅助调用放入原默认材质路径，随后已恢复原直接RD调用，把记录实现移至独立诊断子类；避免把默认路径新增调用的时序效果当成修复。实验material_barriers与push_trace互斥使用，不宣称观察零扰动或正式性能。全部原Shader原样。
+
+失败样本085515中，checkpoint完成态精确，继续后的原四格沙一ULP差异仍出现，而28份真实提交包及31份SPIR-V逐位一致。因此该次失败不能由这些材质常量的主机编码差异或SPIR-V差异解释。GPU资源实际绑定、阶段输入、GPU消费及其他上游常量仍需验证。
+
+本机RenderDoc1.46的独立隐藏工具进程文档探针成功，核对创建进程PID后才允许该助手自行退出；现有实例与原始竞品RDC不参与该探针。记录工具/脚本/产物size与SHA256。仅模块与API文档可用性已证实，实际D3D12注入、捕获、重放和失败窗口覆盖尚未验证。

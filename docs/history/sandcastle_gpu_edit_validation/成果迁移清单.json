@@ -1,0 +1,3062 @@
+{
+  "date": "2026-10-11",
+  "scope": "GPU专项成果归档；用户不保留中间数据。水材质任务未迁移未删除。",
+  "files": [
+    {
+      "source": "task/sandcastle_gpu_edit_validation/主场景整合与临时清理.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/主场景整合与临时清理.md",
+      "bytes": 5065,
+      "source_sha256": "d534fdb71e7598504ccc0b0fc5b2ff12a9e76d997e63fff487d95f5f68e53d86",
+      "destination_sha256": "e3e1e721dec86b8d86e894622a2cbcf636b00f24bb3e55dd4d2983fa5f03dd8e",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/总纲.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/总纲.md",
+      "bytes": 12464,
+      "source_sha256": "ea58f2e949e28f26950fd6d87b7d7cd893826d234409c2a5ec63bc9421b86b68",
+      "destination_sha256": "ea58f2e949e28f26950fd6d87b7d7cd893826d234409c2a5ec63bc9421b86b68",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/执行状态.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/执行状态.md",
+      "bytes": 28621,
+      "source_sha256": "0ff6648ba41fb6628838e7d1a4e74f8b2c4f62dcb121eadc8547166afc280a26",
+      "destination_sha256": "0ff6648ba41fb6628838e7d1a4e74f8b2c4f62dcb121eadc8547166afc280a26",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/收尾记录.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/收尾记录.md",
+      "bytes": 5590,
+      "source_sha256": "2fda24335622e9a20f552e388949a9effe53b126c50c7a0781f4756bbe7b109e",
+      "destination_sha256": "394e5bdd667e9b1dabec7c3e56ae4a924cf66ba32b7e02ed052bbaaf20ea26ab",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/测试场景与验证用例.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/测试场景与验证用例.md",
+      "bytes": 9349,
+      "source_sha256": "b534fc997581929fd3fd84b95d623ac42ac4690c68e960c403119efff256b930",
+      "destination_sha256": "b534fc997581929fd3fd84b95d623ac42ac4690c68e960c403119efff256b930",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/align_cost_dump.py",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/align_cost_dump.py",
+      "bytes": 2000,
+      "source_sha256": "0e16949c899165056b46feffa083344d7b2a08ac13fd8b8aa2bc6c04edb22d33",
+      "destination_sha256": "0e16949c899165056b46feffa083344d7b2a08ac13fd8b8aa2bc6c04edb22d33",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/analyze_beach_cost.py",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/analyze_beach_cost.py",
+      "bytes": 5913,
+      "source_sha256": "0aeee158ed8ea9d95bf544c36b23a4f1357227a9635fee805123e3b9ec90c082",
+      "destination_sha256": "0aeee158ed8ea9d95bf544c36b23a4f1357227a9635fee805123e3b9ec90c082",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/analyze_beach_material_stages.py",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/analyze_beach_material_stages.py",
+      "bytes": 2250,
+      "source_sha256": "9c14bdbfcbce6c7f13b7f2925f4d6f3c40d8f1c2de05badb5666210d42e93daa",
+      "destination_sha256": "9c14bdbfcbce6c7f13b7f2925f4d6f3c40d8f1c2de05badb5666210d42e93daa",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/analyze_beach_native_trace.py",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/analyze_beach_native_trace.py",
+      "bytes": 2130,
+      "source_sha256": "33d1e5c5404c14088d2f9b24c51a53481792189b578dadf8413d44bba4722449",
+      "destination_sha256": "33d1e5c5404c14088d2f9b24c51a53481792189b578dadf8413d44bba4722449",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/analyze_beach_parameter_evidence.py",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/analyze_beach_parameter_evidence.py",
+      "bytes": 1775,
+      "source_sha256": "0e44f5d0d4d131b4e28dd770081232cab7fce0ffbca4d41fc9099156cac816f0",
+      "destination_sha256": "0e44f5d0d4d131b4e28dd770081232cab7fce0ffbca4d41fc9099156cac816f0",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/analyze_beach_replay_difference.py",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/analyze_beach_replay_difference.py",
+      "bytes": 2460,
+      "source_sha256": "dc45a2d9c42183847114b3c22d7d9d19e0715489dda6b5a28f2efec36d0760b5",
+      "destination_sha256": "dc45a2d9c42183847114b3c22d7d9d19e0715489dda6b5a28f2efec36d0760b5",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/analyze_renderdoc_bindings.py",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/analyze_renderdoc_bindings.py",
+      "bytes": 3698,
+      "source_sha256": "b0917cbd8500bb4c369ca1a90819a678d5a5598648e1200b56cc6589b68a68b0",
+      "destination_sha256": "b0917cbd8500bb4c369ca1a90819a678d5a5598648e1200b56cc6589b68a68b0",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/audit_physics_binding_aliases.py",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/audit_physics_binding_aliases.py",
+      "bytes": 2650,
+      "source_sha256": "fb593eb08e7147c7a87bf631018555588e2f807710b982a7f6f4c559e49c6827",
+      "destination_sha256": "fb593eb08e7147c7a87bf631018555588e2f807710b982a7f6f4c559e49c6827",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/compare_beach_cost.py",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/compare_beach_cost.py",
+      "bytes": 2307,
+      "source_sha256": "cc85d8ac675529f9645f3b516c1e9ccf061b01be79205357f438a62cdde95b32",
+      "destination_sha256": "cc85d8ac675529f9645f3b516c1e9ccf061b01be79205357f438a62cdde95b32",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/compare_connected_runs.py",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/compare_connected_runs.py",
+      "bytes": 2646,
+      "source_sha256": "ec2698b9120d83593e847aba6cdbbef9eab34f7e7204b9d05519c7f941dbd136",
+      "destination_sha256": "ec2698b9120d83593e847aba6cdbbef9eab34f7e7204b9d05519c7f941dbd136",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/compare_edit_prepare_inputs.py",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/compare_edit_prepare_inputs.py",
+      "bytes": 3316,
+      "source_sha256": "818b662af773a0f472b4d3517bfc8f5d98502f58fe6aac289a5e5bb29c08a052",
+      "destination_sha256": "818b662af773a0f472b4d3517bfc8f5d98502f58fe6aac289a5e5bb29c08a052",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/compare_owned_replay_bindings.py",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/compare_owned_replay_bindings.py",
+      "bytes": 6077,
+      "source_sha256": "5e147d842a29e94ba5d03e814e0a4632216a89caa4ff30a07b0847a37043b5b9",
+      "destination_sha256": "5e147d842a29e94ba5d03e814e0a4632216a89caa4ff30a07b0847a37043b5b9",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/compare_renderdoc_binding_pair.py",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/compare_renderdoc_binding_pair.py",
+      "bytes": 2880,
+      "source_sha256": "f7754b8e459de495a50822e6f05d790ee38abb9e28e7e3f3277cac14099eefe9",
+      "destination_sha256": "f7754b8e459de495a50822e6f05d790ee38abb9e28e7e3f3277cac14099eefe9",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/disassemble_native_frames.py",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/disassemble_native_frames.py",
+      "bytes": 5188,
+      "source_sha256": "bfa2d192edc878669b203fc54d62ff518a0596f3725099b5eb0532712f9af11d",
+      "destination_sha256": "bfa2d192edc878669b203fc54d62ff518a0596f3725099b5eb0532712f9af11d",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/inspect_native_minidump.py",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/inspect_native_minidump.py",
+      "bytes": 3393,
+      "source_sha256": "0bf62782f5f8485d9e61b19bebcc0df055ce63dedce5dd7ef3f2a5bf50dc756e",
+      "destination_sha256": "0bf62782f5f8485d9e61b19bebcc0df055ce63dedce5dd7ef3f2a5bf50dc756e",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/inspect_wet_components.py",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/inspect_wet_components.py",
+      "bytes": 3194,
+      "source_sha256": "833e3160e84fb444b0faf34de170bcb5aeba3b3c82a1b3ce594b9c26ee5a3908",
+      "destination_sha256": "833e3160e84fb444b0faf34de170bcb5aeba3b3c82a1b3ce594b9c26ee5a3908",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/probe_render_profile_api.gd",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/probe_render_profile_api.gd",
+      "bytes": 182,
+      "source_sha256": "9d6524bf9618810d1f5eb16a0895b31a9e01624e25588212b8ed84912acfedb4",
+      "destination_sha256": "9d6524bf9618810d1f5eb16a0895b31a9e01624e25588212b8ed84912acfedb4",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/probe_render_profile_api.gd.uid",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/probe_render_profile_api.gd.uid",
+      "bytes": 20,
+      "source_sha256": "39224dfb198df1cb4df7b93052a1532fb03bfba4ba370f2d99e2d974403fd9c8",
+      "destination_sha256": "39224dfb198df1cb4df7b93052a1532fb03bfba4ba370f2d99e2d974403fd9c8",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/renderdoc_api_probe.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/renderdoc_api_probe.json",
+      "bytes": 5798,
+      "source_sha256": "d2c7014835f91556dd70715bda36c7d38ee133b5a71202712e4cda31a8cdf740",
+      "destination_sha256": "d2c7014835f91556dd70715bda36c7d38ee133b5a71202712e4cda31a8cdf740",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/renderdoc_api_probe.py",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/renderdoc_api_probe.py",
+      "bytes": 1936,
+      "source_sha256": "ed1d94671f3d65a48012710576adc8f199444f58044d9f064318e48b7298bd76",
+      "destination_sha256": "ed1d94671f3d65a48012710576adc8f199444f58044d9f064318e48b7298bd76",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/renderdoc_api_probe_index.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/renderdoc_api_probe_index.json",
+      "bytes": 1302,
+      "source_sha256": "a5131f457f774fe2f6beb378d54f9eb21e43a7b39b7f5536d5e9eba557f14a56",
+      "destination_sha256": "a5131f457f774fe2f6beb378d54f9eb21e43a7b39b7f5536d5e9eba557f14a56",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/renderdoc_api_probe_owner.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/renderdoc_api_probe_owner.json",
+      "bytes": 22,
+      "source_sha256": "936e91d6f09dcb88ed930a52621a8f36b546a93d843f773d9b9fbe74f23898bc",
+      "destination_sha256": "936e91d6f09dcb88ed930a52621a8f36b546a93d843f773d9b9fbe74f23898bc",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/renderdoc_binding_context.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/renderdoc_binding_context.json",
+      "bytes": 373,
+      "source_sha256": "30a0267221b27d03c1d69bf7ce6191c95c4c17921b7efabc7affab85f02e61bd",
+      "destination_sha256": "30a0267221b27d03c1d69bf7ce6191c95c4c17921b7efabc7affab85f02e61bd",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/renderdoc_binding_probe.py",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/renderdoc_binding_probe.py",
+      "bytes": 6658,
+      "source_sha256": "ce71202d2dc615f2f6e128d98e9a1076fb88f6c7b7cb78af3b461956e698658b",
+      "destination_sha256": "ce71202d2dc615f2f6e128d98e9a1076fb88f6c7b7cb78af3b461956e698658b",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/renderdoc_capture_context.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/renderdoc_capture_context.json",
+      "bytes": 411,
+      "source_sha256": "fcfa29ed41e8ee1ec959c355d8075cf9fc3c5b2db2b683ac125bc289b44ded4c",
+      "destination_sha256": "fcfa29ed41e8ee1ec959c355d8075cf9fc3c5b2db2b683ac125bc289b44ded4c",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/renderdoc_capture_host.py",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/renderdoc_capture_host.py",
+      "bytes": 3928,
+      "source_sha256": "2de62c6da554125903de7e39582a2dde1a2f6f2d56646b7a85ab5c5ae88777c0",
+      "destination_sha256": "2de62c6da554125903de7e39582a2dde1a2f6f2d56646b7a85ab5c5ae88777c0",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/renderdoc_dispatch_inventory.py",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/renderdoc_dispatch_inventory.py",
+      "bytes": 3108,
+      "source_sha256": "da1f2f2131c21f8d7b9df09a6acb671d11deac1fc26955fd8fd1c32dcb106845",
+      "destination_sha256": "da1f2f2131c21f8d7b9df09a6acb671d11deac1fc26955fd8fd1c32dcb106845",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/renderdoc_dispatch_inventory_context.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/renderdoc_dispatch_inventory_context.json",
+      "bytes": 157,
+      "source_sha256": "204b81ba1e6f335a527de13db222691e3d6d8c4f6c0d2b8bd878e62c7f2e34ac",
+      "destination_sha256": "204b81ba1e6f335a527de13db222691e3d6d8c4f6c0d2b8bd878e62c7f2e34ac",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/renderdoc_edit_input_context.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/renderdoc_edit_input_context.json",
+      "bytes": 390,
+      "source_sha256": "a9440bdd6225d9a2d3b4947f68dd6228e76d15417d3a5caabf22c51d7f6c46e5",
+      "destination_sha256": "a9440bdd6225d9a2d3b4947f68dd6228e76d15417d3a5caabf22c51d7f6c46e5",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/renderdoc_edit_input_probe.py",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/renderdoc_edit_input_probe.py",
+      "bytes": 3744,
+      "source_sha256": "1a08ac38c10ce2808027b5a9e20c1ae731a1cc3be729e3d6de38aedb776f35b3",
+      "destination_sha256": "1a08ac38c10ce2808027b5a9e20c1ae731a1cc3be729e3d6de38aedb776f35b3",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/renderdoc_replay_capture_context.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/renderdoc_replay_capture_context.json",
+      "bytes": 324,
+      "source_sha256": "6bd3590a3b5e39f63e43ae3c31fee5f550b514900de11ca004d0a99589e1021b",
+      "destination_sha256": "6bd3590a3b5e39f63e43ae3c31fee5f550b514900de11ca004d0a99589e1021b",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/renderdoc_replay_capture_host.py",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/renderdoc_replay_capture_host.py",
+      "bytes": 3899,
+      "source_sha256": "5adb87b01ec9d0569f05fa0031d100d0a64351a72a2798055140f84e5fdbae4a",
+      "destination_sha256": "5adb87b01ec9d0569f05fa0031d100d0a64351a72a2798055140f84e5fdbae4a",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/renderdoc_replay_context.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/renderdoc_replay_context.json",
+      "bytes": 142,
+      "source_sha256": "0a660b0d6b7f2eff144021d1397580073e08482581f66650b234e4f1ba918a25",
+      "destination_sha256": "0a660b0d6b7f2eff144021d1397580073e08482581f66650b234e4f1ba918a25",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/renderdoc_replay_probe.py",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/renderdoc_replay_probe.py",
+      "bytes": 2603,
+      "source_sha256": "68a8767ab4c525eb712e1baecf947818c43be1f8d1791833e585f97cbcdc999e",
+      "destination_sha256": "68a8767ab4c525eb712e1baecf947818c43be1f8d1791833e585f97cbcdc999e",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/run_beach_cost_probe.ps1",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/run_beach_cost_probe.ps1",
+      "bytes": 4225,
+      "source_sha256": "3618dd3ca21d7dfe65335ca7d885b13c77b52e267515786b83d85aa1e44a1475",
+      "destination_sha256": "3618dd3ca21d7dfe65335ca7d885b13c77b52e267515786b83d85aa1e44a1475",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/run_beach_recovery_probe.ps1",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/run_beach_recovery_probe.ps1",
+      "bytes": 8296,
+      "source_sha256": "f157ea8fbcb26785dee3e9af437a255075a1b7f3cd3c04474b91350f5668aa82",
+      "destination_sha256": "f157ea8fbcb26785dee3e9af437a255075a1b7f3cd3c04474b91350f5668aa82",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/run_renderdoc_capture.ps1",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/run_renderdoc_capture.ps1",
+      "bytes": 2590,
+      "source_sha256": "9b63e0246f0bca7debdc06ae6c5ce14a58be7d45a7d6172f5e59ea5acece8ee7",
+      "destination_sha256": "9b63e0246f0bca7debdc06ae6c5ce14a58be7d45a7d6172f5e59ea5acece8ee7",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/run_renderdoc_replay_capture.ps1",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/run_renderdoc_replay_capture.ps1",
+      "bytes": 3284,
+      "source_sha256": "36c5f67e53355dd9015706a0ff0ba5ae252a781b7d3b7ac1c587afb29fa0381e",
+      "destination_sha256": "36c5f67e53355dd9015706a0ff0ba5ae252a781b7d3b7ac1c587afb29fa0381e",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/sample_process_cpu.py",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/sample_process_cpu.py",
+      "bytes": 6851,
+      "source_sha256": "2db7b3cc54ef1cdb34c1542d7a43842dfc37c0a3392f23133d80d432acd6fd9a",
+      "destination_sha256": "2db7b3cc54ef1cdb34c1542d7a43842dfc37c0a3392f23133d80d432acd6fd9a",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/staged_dispatch_source.txt",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/staged_dispatch_source.txt",
+      "bytes": 1748,
+      "source_sha256": "ec1bec9fb319fe0a610f2744cea75819b59b83a0c8fc92dff760227778efbc52",
+      "destination_sha256": "ec1bec9fb319fe0a610f2744cea75819b59b83a0c8fc92dff760227778efbc52",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/unwind_native_dump.py",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/unwind_native_dump.py",
+      "bytes": 9528,
+      "source_sha256": "117d5d4b6fb75fb9173cacc34be8f7787f9d3cdad7e6ea73153077d90f572296",
+      "destination_sha256": "117d5d4b6fb75fb9173cacc34be8f7787f9d3cdad7e6ea73153077d90f572296",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/verify_native_unwind.py",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/verify_native_unwind.py",
+      "bytes": 4806,
+      "source_sha256": "776bd76f564efc49d7f59ed20c38ae0effe8f7c7edac32240b53313f32443f1b",
+      "destination_sha256": "776bd76f564efc49d7f59ed20c38ae0effe8f7c7edac32240b53313f32443f1b",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_CFL64边界等价计算_v1_8.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_CFL64边界等价计算_v1_8.md",
+      "bytes": 1299,
+      "source_sha256": "2bf88a6fe4993b754bb07f9dc8b4082bf3e91e33b286497212847a677c180587",
+      "destination_sha256": "f9eec8c707e8e7806fded5feb176ffb41e0170ace36cca4d9eb101e6da7efa53",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_GPU撤销前态原始格式_v1_15.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_GPU撤销前态原始格式_v1_15.md",
+      "bytes": 1527,
+      "source_sha256": "d35043b2a185f4ad15c5e126d1a651a443f4984b542521acdfea518e8bf0d002",
+      "destination_sha256": "d6bb474cd4d061da7c7f2ed379809de229d9919c7733dcf73b791d2b3e3c16b9",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_GPU期间积时与物理帧等待_v1_53.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_GPU期间积时与物理帧等待_v1_53.md",
+      "bytes": 2319,
+      "source_sha256": "028e1c8f550fcfd2caa12093e1b7fdaf8439f83915812764aa0125025ae3b347",
+      "destination_sha256": "028e1c8f550fcfd2caa12093e1b7fdaf8439f83915812764aa0125025ae3b347",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_GPU编辑事务与水策略_v1.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_GPU编辑事务与水策略_v1.md",
+      "bytes": 12943,
+      "source_sha256": "1d1c383f8cbe288f865dc375528e86bb2f1bc3809420c426dbfc4c31304a6c16",
+      "destination_sha256": "3b1be3bb2919ee65aa6519e6c91d6852755439173bc8b1e31a21a27ce0025080",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_touched量化预算实现修正_v1_3.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_touched量化预算实现修正_v1_3.md",
+      "bytes": 1766,
+      "source_sha256": "a7f626eefa4bf6aa1b0141642ee86ab5c5021ff65ff2632ddf8390e37b7753e5",
+      "destination_sha256": "b58f7c2520d669783ff764a72abd57a97056095019a0f02015f608f5257f16f3",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_UI队列碰撞所有权与重置_v1_14.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_UI队列碰撞所有权与重置_v1_14.md",
+      "bytes": 1886,
+      "source_sha256": "4ef95db1bd9d9ee67467365effd8e464a212339c26f32484907b97e731019f0a",
+      "destination_sha256": "3795cb9ab5100e975b19761ad35420fa0b6e38623e09fd4915e56418ce4d9b1a",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_临界库存与旧工具回退_v1_1.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_临界库存与旧工具回退_v1_1.md",
+      "bytes": 1874,
+      "source_sha256": "b166622b4ce804de73757a6e29df887ab1269e279089360f7e14eb387e2a90b3",
+      "destination_sha256": "4c4c45ac140e38e4f24c242eabaa2eaa895ec93384d7cc20e1f16cd5fc29c2e4",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_事务写入保护与结算授权_v1_10.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_事务写入保护与结算授权_v1_10.md",
+      "bytes": 1905,
+      "source_sha256": "abb2dddb3f83abeb03cff1520a6b12ed19ff1cdc1af5f67a06faa61d95ab88b8",
+      "destination_sha256": "885829fcf2df7e00f611de5d12d3b6217e8c77bf47f77b6493dac256c789eeb9",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_位移残差逐格有界结算_v1_4.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_位移残差逐格有界结算_v1_4.md",
+      "bytes": 2082,
+      "source_sha256": "0cfb49675b0f7337011f0d1e3a55b9cc3a18ed23d985c087660c019793af8b16",
+      "destination_sha256": "246dc6be5e16b8aed43b35e4411293f09c4eaf82014412962a039d75ba77428d",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_像素观察坐标与异步所有权_v1_48.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_像素观察坐标与异步所有权_v1_48.md",
+      "bytes": 1620,
+      "source_sha256": "d2b0df8a1b3e0d7b8d811c4e2c1e51bb92144b4e7fa675540ec3153156c47f1f",
+      "destination_sha256": "d2b0df8a1b3e0d7b8d811c4e2c1e51bb92144b4e7fa675540ec3153156c47f1f",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_全湿组件协作读取候选_v1_11.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_全湿组件协作读取候选_v1_11.md",
+      "bytes": 2815,
+      "source_sha256": "24a5c323414204db2d144ebfde4d97dd0cb2a9041250ea9f273df008f187596f",
+      "destination_sha256": "fecccb3432e9e708ce0b46952fad6a98f091a51a20fe8af8d28ac970c4374824",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_分量连续索引候选_v1_46.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_分量连续索引候选_v1_46.md",
+      "bytes": 1731,
+      "source_sha256": "8dae22438cad16bbd5409d7de675e3b436681e8a5d9ee439c56dfc74c6bc7ead",
+      "destination_sha256": "8dae22438cad16bbd5409d7de675e3b436681e8a5d9ee439c56dfc74c6bc7ead",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_原始检查点sidecar与保存边界_v1_17.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_原始检查点sidecar与保存边界_v1_17.md",
+      "bytes": 3010,
+      "source_sha256": "0f76a81023ecade728c206fda1f0796e38b6910fcc5fd5c09acfe13a2488a047",
+      "destination_sha256": "16cf009afb84743072d2d18be483f8513ea72d3e153cb6fac94b9aa854888c65",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_原生快照与捕获窗口_v1_57.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_原生快照与捕获窗口_v1_57.md",
+      "bytes": 1991,
+      "source_sha256": "ac0884b9c5fd0eadadce16f7f2df3cb482706560e5921ab90c4514f190ca024c",
+      "destination_sha256": "ac0884b9c5fd0eadadce16f7f2df3cb482706560e5921ab90c4514f190ca024c",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_原生恢复ready与耦合归因_v1_30.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_原生恢复ready与耦合归因_v1_30.md",
+      "bytes": 1553,
+      "source_sha256": "f09f6d631c9f0e063b4c387a3bd8b24c8c57b7e57d303ccdb615fc04936a2c9c",
+      "destination_sha256": "77607c513bc04f07fa0ae25bc88c21875a4aa213fb7b456e0c2c2a4a7ffee80a",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_原生沙水共同事务_v1_5.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_原生沙水共同事务_v1_5.md",
+      "bytes": 2275,
+      "source_sha256": "dc0e7104c2b17a9442401f9ad3d7b976bb5f51a8031a126c739c481d68cb597a",
+      "destination_sha256": "2b97278c48e473b10d8a62638a888708346ff18989cb3e733b8eff5d5f46081d",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_取消撤销重做范围_v1_44.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_取消撤销重做范围_v1_44.md",
+      "bytes": 1634,
+      "source_sha256": "01ae6cb8155cd23757bed6cc04549797648970957f5af2c55ad8322f8f468421",
+      "destination_sha256": "01ae6cb8155cd23757bed6cc04549797648970957f5af2c55ad8322f8f468421",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_同tick撤销重做协调_v1_16.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_同tick撤销重做协调_v1_16.md",
+      "bytes": 2032,
+      "source_sha256": "a691ffaf0e3dd498e793f5c0a6f6b685e2f4c6170bd107fa6720ea336ae2ebc0",
+      "destination_sha256": "a625d674ee8f8c3514f933c7d249b0feae48632981518c9de04b8677bbf83045",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_后端与API验证归因_v1_43.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_后端与API验证归因_v1_43.md",
+      "bytes": 1692,
+      "source_sha256": "9ca624eafdb2ad0e1fbf129f89575fe0add20aece8af444f77ddd5864dc5632b",
+      "destination_sha256": "70b531809f055feb9c08d21efc3f4ae2909c78d6f5040c2b4d49be9a77e29e03",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_失败原分支自有GPU捕获_v1_41.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_失败原分支自有GPU捕获_v1_41.md",
+      "bytes": 2338,
+      "source_sha256": "1b67938324692ce0519c233f7810a9da1c98912bc706d9efb4c91159415a5cef",
+      "destination_sha256": "ac1225f815c8872d45ba7bc38a376df2420c82da57aa828851c72e3dc18dbd6e",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_完成态重演与跨tick撤销重做_v1_19.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_完成态重演与跨tick撤销重做_v1_19.md",
+      "bytes": 2738,
+      "source_sha256": "84e8f2e4d26f7dc9c32f21dd918c8efa01de673166a9b40c2802c5e4e5d5fabc",
+      "destination_sha256": "be5f3f44e13ba65d1d29e2526ac3cb7c0462cdf0caf940c8c9271e325c044391",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_完整GPU沙滩检查点前缀与冷恢复_v1_27.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_完整GPU沙滩检查点前缀与冷恢复_v1_27.md",
+      "bytes": 1810,
+      "source_sha256": "d9fb017ac97a74d5fd050bcf2423023d1e1e2095bd2c85f71f8b2d0e6d2effe7",
+      "destination_sha256": "b04a11f01c6bab7af79c4975ae4cd8e01c0e4660ca17b79b84365af886ac93e2",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_完整redo回退与前态读回关闭_v1_36.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_完整redo回退与前态读回关闭_v1_36.md",
+      "bytes": 1183,
+      "source_sha256": "c4e9ba1334a252fc4572c97bfe7b18e6c8047370ef9d04f78be538c69bd8bec7",
+      "destination_sha256": "fc23df07d80343efe32d431b430b99e1284e7d20116cd97d0f8796084e3bedfb",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_完整初始化锚点与隔离原分支重演_v1_37.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_完整初始化锚点与隔离原分支重演_v1_37.md",
+      "bytes": 1526,
+      "source_sha256": "9053d034c9f2518280c4340d1b0da02da579987d82bf5d437d8958fe890adb8e",
+      "destination_sha256": "595121dd5e158207c96709a9b7340473a1129276705d36cc83dac4805959c28c",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_完整原生输入复制与默认关闭对照_v1_38.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_完整原生输入复制与默认关闭对照_v1_38.md",
+      "bytes": 1132,
+      "source_sha256": "cecca37db125b41d709bf2594cce7cad11d95683fed8223680d6fa362ff168ba",
+      "destination_sha256": "4e9d4636f788ca4fd00f9dd19eb333be68a7f1ac05bb65a6aa44b0934418f6fe",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_完整快照失败隔离与选择状态_v1_29.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_完整快照失败隔离与选择状态_v1_29.md",
+      "bytes": 1474,
+      "source_sha256": "a5a348db20244f1d55f97f21d1c19d7a607c43a145f4bf31c24812fe1bc39bca",
+      "destination_sha256": "f76075dfd130bb2f7e7bfeeff2c81de91e8b120cba530a839cbc6e5a1ad089d7",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_完整检查点读回所有权与关闭_v1_28.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_完整检查点读回所有权与关闭_v1_28.md",
+      "bytes": 1164,
+      "source_sha256": "a8eb28d05d2a3aa0ffccf8f9a3f02ccb4d8e3fee806837f263a141b353ee4a4f",
+      "destination_sha256": "b6d3b1bdece9345c60c9618bcb342d2898cdb64005d14083a96850b54c0d89d1",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_完整沙滩GPU事务入口_v1_25.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_完整沙滩GPU事务入口_v1_25.md",
+      "bytes": 1759,
+      "source_sha256": "a07efaa091b1608861557c47a0659721ad9a3245792bcb939f219b059115311f",
+      "destination_sha256": "567c40234e8f3e614b290851ebf12eaf283a65e51714cbd15c8b2d18b36e62cc",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_完整沙滩双物理槽GPU前态_v1_34.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_完整沙滩双物理槽GPU前态_v1_34.md",
+      "bytes": 1697,
+      "source_sha256": "efcfbe873a936a5e8ada0d32243ce1136ddbe1dfa639dd774ba3442c83e5859a",
+      "destination_sha256": "aea11487ef8c7a99d4bf6cbbee41f8d55a36661a0b0f761fba7efe25999368eb",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_完整沙滩双缓冲与视觉历史_v1_23.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_完整沙滩双缓冲与视觉历史_v1_23.md",
+      "bytes": 1884,
+      "source_sha256": "1583ff40f2899e129e3bcec250f37d0df0734be11c2a0073ed57064e507aa777",
+      "destination_sha256": "76bf5ac6e19420977d25c802cbcd537d8f09b6ec0677f7f7fc268c0869c0d8d4",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_完整沙滩同tick撤销与重做_v1_35.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_完整沙滩同tick撤销与重做_v1_35.md",
+      "bytes": 2181,
+      "source_sha256": "76c851a9601deddb536fbcc291d75ceaa58501f6c7c86dd313dc4623138220b1",
+      "destination_sha256": "25c38e990c8e1bb258da4f909ad6e96ccf7d6af4574c138dba778f9c163e726b",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_完整沙滩真实拾取与预留队列_v1_26.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_完整沙滩真实拾取与预留队列_v1_26.md",
+      "bytes": 1371,
+      "source_sha256": "065199ac15258bd664d64de2aa09ec519ee70f970a706f5df9e97f8694875cf6",
+      "destination_sha256": "372d9dd5bb5d8b1305b264c3b71265a30bb389b67293939d16d0850d4727a5f9",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_完整沙滩隔离资源活动恢复_v1_33.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_完整沙滩隔离资源活动恢复_v1_33.md",
+      "bytes": 2091,
+      "source_sha256": "3d9ee7e844cec2d7cba13053e0fb62a6e1c0ed7d49fde50fd693b4c64d09f85e",
+      "destination_sha256": "3af7a23b17bc0fa9edc09c638c192a99843ae4f9fabb681dd21d74d3a61e670b",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_实际材质push数据与捕帧探针_v1_31.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_实际材质push数据与捕帧探针_v1_31.md",
+      "bytes": 1441,
+      "source_sha256": "ae61e1fcd989e201dea2dd9099599a4375054dfdcbbaa4321d23047f6d2f82bc",
+      "destination_sha256": "a4cfe3e0e1354a69c27413495ac23008e805f1f007928d30a734a1cd91d52124",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_实验完成态初始化_v1.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_实验完成态初始化_v1.md",
+      "bytes": 1630,
+      "source_sha256": "55758fc1ca2dbd304b22c45426c375eff14f8a91b1e449a71a957e4ab9d4b978",
+      "destination_sha256": "c069da674e13ac6456dca6f677f8d648d91d3466cf42f5722abaf16300386edb",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_快速撤销目标与跨时间redo_v1_24.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_快速撤销目标与跨时间redo_v1_24.md",
+      "bytes": 1362,
+      "source_sha256": "2a68750a0018ddbc3d55fbb29f3cd769d121e9e5155b99c46d5db1f07b6b0e49",
+      "destination_sha256": "a56a9c879f21fbb55aa794d5de3449d2b7b71a04291e3ef90fe38f3540583454",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_扫掠速度方向的稳定计算_v1_7.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_扫掠速度方向的稳定计算_v1_7.md",
+      "bytes": 1290,
+      "source_sha256": "a0f4b1a7c5ee7f4fdb1e665d8a55c8748ce1820df72b3721dd27f0cb98b57dff",
+      "destination_sha256": "977d77440c0aafdd587279b51d934a065c36d1dda044fd334da01af7da8a0452",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_旧compact的R16编码验证_v1_2.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_旧compact的R16编码验证_v1_2.md",
+      "bytes": 1246,
+      "source_sha256": "fc6aa94db8c036c7cae17bd6c39da3c7915d134c43c28a4d00590fe8591284cc",
+      "destination_sha256": "18ac29d480becc9f17aff99812a949d3ce13063443589d2343c6b1d2a595e48d",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_旧工具混合执行记录与重演_v1_21.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_旧工具混合执行记录与重演_v1_21.md",
+      "bytes": 1771,
+      "source_sha256": "b5bcad129b2db545773f590ab224e82922696f38fdd335ee27e24b8e97d648d9",
+      "destination_sha256": "21546e3e3130e1d6ec3b175925c0d440f04dd365666b4ea71d3818ff069c6c6d",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_显式斜坡结果存储候选_v1_60.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_显式斜坡结果存储候选_v1_60.md",
+      "bytes": 2024,
+      "source_sha256": "732f6fdfb592d63e2c5543ab929b11ff1c40b6abd381b02f2738757bfebc9558",
+      "destination_sha256": "5ef2cf124547f8856eb014941d27bfa7ab425a56c8c8c01f58e933b2405b595d",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_有序预留队列与退出所有权_v1_13.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_有序预留队列与退出所有权_v1_13.md",
+      "bytes": 2431,
+      "source_sha256": "205e729bb2059d53cd18c8a1fbf449125c30c7a5cb85104e6f0e551edadc29d0",
+      "destination_sha256": "f4a8efbf97659c2042d31ad26067220361750687fd443ebebf202c8fa541686e",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_有限复制同步候选_v1_40.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_有限复制同步候选_v1_40.md",
+      "bytes": 1521,
+      "source_sha256": "26098e9a1443f866efa23986d23928cf3e4c017a6cedc8317cb5b4295d3e588d",
+      "destination_sha256": "ae6c2cf9dda0a107848148e1fc8ccd0301ab2c7b8bb94b67c1ec7e0b31bc31de",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_本项目捕帧目标所有权与重放_v1_32.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_本项目捕帧目标所有权与重放_v1_32.md",
+      "bytes": 1383,
+      "source_sha256": "3c9444e3ab78265d5b4fa79d7a40a1478035f62969be96674b990c4c3bab40cf",
+      "destination_sha256": "8f9d655d5fc1febabeb8ed96c7b7cf448bab61e13ed3a2b48f99c5a71f05d02e",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_材质阶段原生复制诊断_v1_39.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_材质阶段原生复制诊断_v1_39.md",
+      "bytes": 2321,
+      "source_sha256": "5cdedd6d2f5750f0b78f4f49961e56d6c3c91955a6339c1f69c4fd1a14ef1c81",
+      "destination_sha256": "f75845589e0adcc14a038b0091c72340682c6b1d1bb83ddb6b0fd66f41e7ca33",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_水携带比例舍入边界_v1_59.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_水携带比例舍入边界_v1_59.md",
+      "bytes": 1691,
+      "source_sha256": "1f528aa010c81733257bd11e00e6bfbb996a97a6f7253ea3e49af54d5bc5cd50",
+      "destination_sha256": "d85a2de4364a0ba38ed064fc9f9071af83a48778d8ad2f51ad03dce39f8f6497",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_湿段图分量协作候选_v1_45.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_湿段图分量协作候选_v1_45.md",
+      "bytes": 2026,
+      "source_sha256": "34aae658368b89a84912b16c4bf1f520add1db04ecb2ca2f0431e066240e76fe",
+      "destination_sha256": "34aae658368b89a84912b16c4bf1f520add1db04ecb2ca2f0431e066240e76fe",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_用户接受当前性能基线_v1_58.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_用户接受当前性能基线_v1_58.md",
+      "bytes": 2109,
+      "source_sha256": "3bfcce9f9f4d6dd6e4c7ffca48955f07cb1ebf9a5e44e2f1fe9f611391b2d5b3",
+      "destination_sha256": "677c1de9fc80378d59bd2022e4d451402271a313180270820b58b3c4e0655b57",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_碰撞共享边界候选_v1_61.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_碰撞共享边界候选_v1_61.md",
+      "bytes": 1407,
+      "source_sha256": "3aebee7fa1334ba91b208a034692443b594f4c3bfef590aa2b81a466b359c4bb",
+      "destination_sha256": "65753fc0e2d482c9596e2aa71f74f0875c973c91f5a6f9ab90a218ed54627b26",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_碰撞资源复用候选_v1_54.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_碰撞资源复用候选_v1_54.md",
+      "bytes": 1955,
+      "source_sha256": "9db36a9b99671225500e0e70df0eaf6256a4d996d048db20cfd470f9914964eb",
+      "destination_sha256": "9db36a9b99671225500e0e70df0eaf6256a4d996d048db20cfd470f9914964eb",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_磁盘redo前缀池与目标hash_v1_20.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_磁盘redo前缀池与目标hash_v1_20.md",
+      "bytes": 1348,
+      "source_sha256": "4f4ac963331a9be67b2e9e40ec00c98c73b29b0eca4b95672d3fb14327b780f6",
+      "destination_sha256": "33dd9167d6fcd1bfb3e6519d00b6f93b7b24ece56d5be492a7d0c1f7930cde80",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_等待链采样覆盖限制_v1_56.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_等待链采样覆盖限制_v1_56.md",
+      "bytes": 2054,
+      "source_sha256": "493927e8eb11450f4fc2bdc548f9db73d3fc41b27a38f22ce582d04b5e40ff5a",
+      "destination_sha256": "493927e8eb11450f4fc2bdc548f9db73d3fc41b27a38f22ce582d04b5e40ff5a",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_编辑帧分流与初态取数_v1_42.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_编辑帧分流与初态取数_v1_42.md",
+      "bytes": 1735,
+      "source_sha256": "86f1b495139b5d5dcfb0c17c38309b45719ab7bc782b828e055f309a91423eb8",
+      "destination_sha256": "c0c7c77a15802bb183eee762a651bd270154a5f7cdaa5d3dd004b0f5311a1951",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_补偿容量算术候选_v1_49.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_补偿容量算术候选_v1_49.md",
+      "bytes": 2250,
+      "source_sha256": "642c26f82b31d563b7f58ecf9ea206768a60a709991770a9e45f16c190185615",
+      "destination_sha256": "642c26f82b31d563b7f58ecf9ea206768a60a709991770a9e45f16c190185615",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_补偿容量缓存与预取_v1_51.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_补偿容量缓存与预取_v1_51.md",
+      "bytes": 1936,
+      "source_sha256": "bcb8e26e5536e90f964797cdfc92ccd7cf02e6587b8525cfa630ba1a912c149d",
+      "destination_sha256": "bcb8e26e5536e90f964797cdfc92ccd7cf02e6587b8525cfa630ba1a912c149d",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_连续索引补偿容量整合_v1_50.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_连续索引补偿容量整合_v1_50.md",
+      "bytes": 2009,
+      "source_sha256": "7cfbfa3fb3236754917e63d13dddc005eefdd810c5a8eea99e55f3f498a2ffa4",
+      "destination_sha256": "7cfbfa3fb3236754917e63d13dddc005eefdd810c5a8eea99e55f3f498a2ffa4",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_连续输入与tick回调所有权_v1_52.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_连续输入与tick回调所有权_v1_52.md",
+      "bytes": 2451,
+      "source_sha256": "96a49f5324786d3179b9db96f6fbabc13ee992177a1099262f2d3a3137e1127c",
+      "destination_sha256": "96a49f5324786d3179b9db96f6fbabc13ee992177a1099262f2d3a3137e1127c",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_连通行快判与共享归约_v1_12.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_连通行快判与共享归约_v1_12.md",
+      "bytes": 2529,
+      "source_sha256": "cb7750d11d7f12e66ed59d2718938091eff32e911fe3964ae0ba2b17716e38d1",
+      "destination_sha256": "2ffd528b8d4d63346d1c00f805898cd8b080f9e0b4ac7b570818b9e78e4b1067",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_速度模板与积分单位修正_v1_6.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_速度模板与积分单位修正_v1_6.md",
+      "bytes": 3271,
+      "source_sha256": "1698f811499d2e23fd5920a7e892142101422c7bb88f3c69e914350c23b2dfd5",
+      "destination_sha256": "2ceb627c9e678f86169ab99901276d38cc4916ef86f82ce5ce2fa53f5af3dfd2",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_速度账本协作预取_v1_47.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_速度账本协作预取_v1_47.md",
+      "bytes": 1352,
+      "source_sha256": "bee75615125501c94e38b1a1297f58f8fa2aaf3b730c383e0715a6233419a03b",
+      "destination_sha256": "bee75615125501c94e38b1a1297f58f8fa2aaf3b730c383e0715a6233419a03b",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_重演关闭所有权与redo时间推进_v1_22.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_重演关闭所有权与redo时间推进_v1_22.md",
+      "bytes": 1137,
+      "source_sha256": "dc5568e24773f7357f08bb54376460863e03a68101b4bcb0b57e992f297bccaf",
+      "destination_sha256": "9edbb773ec99a3b8cb31f1154c73722c73bd9aa7e416507d797366e0a6cbdc23",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_长帧自有进程CPU采样_v1_55.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_长帧自有进程CPU采样_v1_55.md",
+      "bytes": 1998,
+      "source_sha256": "9d45fa45ed93db4e18a87ca67c95b875b7f8d7b3e292eb57ba897634f46c3101",
+      "destination_sha256": "9d45fa45ed93db4e18a87ca67c95b875b7f8d7b3e292eb57ba897634f46c3101",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_隔离候选原子恢复与配置核对_v1_18.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_隔离候选原子恢复与配置核对_v1_18.md",
+      "bytes": 1794,
+      "source_sha256": "9755ee5dc33fc0f881dada1b3470653b7f349ed1093cc51fa08e815c4e273932",
+      "destination_sha256": "627e39d8355ce5d9af63231df6940e0e3f8c3d21828f9f320623cb732a91e825",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/ADR_零模板动量保位与原子步观测_v1_9.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/ADR_零模板动量保位与原子步观测_v1_9.md",
+      "bytes": 2013,
+      "source_sha256": "2b17392e90a758c1bf8f155a452e65116b8648ed308ca7fa3fc013febbdda441",
+      "destination_sha256": "77b7359dd2cc21d6a32c58cf3a4af4dc06b944ec2a4bc967a87b09449109f737",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/契约/编辑事务与水响应契约.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/契约/编辑事务与水响应契约.md",
+      "bytes": 18022,
+      "source_sha256": "0c44391c93ec1d46fc6a8f7ca995c496c7b59623f9f5c7f53779505c13af1082",
+      "destination_sha256": "0c44391c93ec1d46fc6a8f7ca995c496c7b59623f9f5c7f53779505c13af1082",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T00_基线与观测冻结.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T00_基线与观测冻结.md",
+      "bytes": 6054,
+      "source_sha256": "b4b2fabad117e9b254aad070ef1fab8974de97ad9f3f5b5c850ae3968a74037e",
+      "destination_sha256": "f912267f2d476e5e4541dd641064fe525c642370a9f6066cc8db29b2bc3099a6",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T00_基线追踪_首轮.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T00_基线追踪_首轮.md",
+      "bytes": 2614,
+      "source_sha256": "148ed910e4f01e531092eec2077055cb3874e02bb15d922763afec30a8aa6cc3",
+      "destination_sha256": "7eb2df5b37d0005180cf6d4adbc5bcf0c637d5756b31b25d7c5dd6ef887416a7",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T01_契约冻结与G0.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T01_契约冻结与G0.md",
+      "bytes": 3599,
+      "source_sha256": "390920f23794904e30d2ff857d4d8abdbd3de12b2ad03f5d674daa927016489c",
+      "destination_sha256": "a3f558d8721409ab67a0c925f5a80bcd77b950b2f2348f11df8af1ff4816a053",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T02_三层场景与G1.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T02_三层场景与G1.md",
+      "bytes": 4683,
+      "source_sha256": "9dafd8607ab959a1046e7b2ef8a95c6486867571f41777c4b687bde317786556",
+      "destination_sha256": "70869c89f37316a4a4dc11be403adec56e3f767e91cc37547c9f229d9c3ba699",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T03_G2_沙笔刷等价验收.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T03_G2_沙笔刷等价验收.md",
+      "bytes": 3091,
+      "source_sha256": "9ddfa09203a8995b0a9d4f6e6395eb9e0107a86798426539a8d0fe1b2c62d8f6",
+      "destination_sha256": "c5f30f45a5d6f21899aaa67ee4e516a25dc78e5c2e197cfbfd85cea2ca89e507",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T03_GPU沙笔刷_矩阵与局部派发.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T03_GPU沙笔刷_矩阵与局部派发.md",
+      "bytes": 4819,
+      "source_sha256": "516eac28105293af83fca24036e69feb6f869c7cc805a77564bcf0d9166b3392",
+      "destination_sha256": "cf4e3d226ac3e73a760ab472e995c2649231c82fb44b91f0c8d64a4bfe69da78",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T03_GPU沙笔刷_首轮.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T03_GPU沙笔刷_首轮.md",
+      "bytes": 3921,
+      "source_sha256": "128730424d9713b7495f1cf593a24680efcef0b64fec6d89553cb573446c42c8",
+      "destination_sha256": "39cb7c9f7589dcc1598046fbcb232f147717b4ebc2d2aa6d6f0e836c73ab647a",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T04_G01_特殊状态桥接验收.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T04_G01_特殊状态桥接验收.md",
+      "bytes": 3115,
+      "source_sha256": "6c138ea746d6dc947d662190b772cc78fe9bb54178fb0386b99e03593aaa9eeb",
+      "destination_sha256": "253d808c5488759241a350b1e63fffe1a5ebe1cc7c06ab67923d3a5a02d5228d",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T04_G02_独立速度与损失验收.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T04_G02_独立速度与损失验收.md",
+      "bytes": 2234,
+      "source_sha256": "40e900a69758a763c0d27851ee4db2afae3e675f6e22d42baa2fe3ac1d816fb0",
+      "destination_sha256": "b2c7ced81aeab97225efc9c0ea44f0313292a9ec6e35ebf5da6912b31c19b471",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T04_G03_组合与连续画面验收.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T04_G03_组合与连续画面验收.md",
+      "bytes": 3253,
+      "source_sha256": "dc6e5c2254eb2d91ec4d15286284ad0bc28f12b5d05c0704dcef44d8b82577f7",
+      "destination_sha256": "2e184fc3cf2d3b9945e3591c5b5cf810eac6b89e2b1e13d1365f635ca23552a5",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T04_GPU位移候选_首轮.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T04_GPU位移候选_首轮.md",
+      "bytes": 3626,
+      "source_sha256": "4d3af5bdc505e699afe54a32796780f208f17dc1accbd60509c4e8f6e2fb376d",
+      "destination_sha256": "ee9f21579f040c0c9b4854ba2453b67dbae45108c074b58af954c7ec976b549b",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T04_保守位移参考_首轮.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T04_保守位移参考_首轮.md",
+      "bytes": 2323,
+      "source_sha256": "f45fba644c2a8546f8331f323589195f590b4a0391ed06132a5c4a210959ca27",
+      "destination_sha256": "f3235f3ef801135d2479fb15a7d9fcc4163321d1026ebe4633f5984d6a55a6ce",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T04_原生事务与0到5秒曲线.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T04_原生事务与0到5秒曲线.md",
+      "bytes": 4718,
+      "source_sha256": "fa0d7a2d66a356f787dd305b1cf8402c5a23116c787eeba8995c00322b4ace99",
+      "destination_sha256": "664030bfcc61452f723c9e18aa79808465fa204c5fc03a9fb281d9e7ceb35765",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T04_独立速度_首轮.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T04_独立速度_首轮.md",
+      "bytes": 2949,
+      "source_sha256": "aa7ec563a3b280952c72ae935655e664bc0d9277b83a53a0bca5bc9b6825e423",
+      "destination_sha256": "69a2e61d78af420da46c2396f52ef29bdd9e0f69fb82eb667f8b056d2261acae",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_G4_结果存储候选放行.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_G4_结果存储候选放行.md",
+      "bytes": 3127,
+      "source_sha256": "053f2b688caf67288be27aa1301c796ef70caf8f63a7cd9193fa58c62603038a",
+      "destination_sha256": "f63ed3f0076f0116848b850ac04fb712f9c421451eaf600a06b2ff863776ebe7",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_GPU撤销前态原语.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_GPU撤销前态原语.md",
+      "bytes": 1784,
+      "source_sha256": "9d4ea710651768b52b1d94661f73f457d122fcae16f151a458cc1a144529bf8c",
+      "destination_sha256": "36835604c2d67a3468c85c6b4504e1d2ec7d000e87b9fedeaca4948cc1a75c30",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_GPU积时与物理帧等待定位.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_GPU积时与物理帧等待定位.md",
+      "bytes": 2299,
+      "source_sha256": "da8f6e65cd4d138356ca2d9a3ca0185af129d65e7917d09f4902ff4a991f5fc6",
+      "destination_sha256": "da8f6e65cd4d138356ca2d9a3ca0185af129d65e7917d09f4902ff4a991f5fc6",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_UI碰撞与重置整合.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_UI碰撞与重置整合.md",
+      "bytes": 2931,
+      "source_sha256": "97013c294942392570b7898a94730fa7db83ad7b4aa34b083dcd9bf266e8e38c",
+      "destination_sha256": "1042bddca38e4b799ff3460bd9183e8129ece6908527edf16add9263981ca2c9",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_事务保护_首轮.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_事务保护_首轮.md",
+      "bytes": 2158,
+      "source_sha256": "df1e39efd494471cd1feca56d89f6316c5940f40319cf446d6dd4d31e0833b50",
+      "destination_sha256": "2b1d1b2fae55d5aefb7070e8e3ff1afe3446941f9f8041b56ccf528a43ee86eb",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_交互延迟归因_首轮.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_交互延迟归因_首轮.md",
+      "bytes": 2972,
+      "source_sha256": "6d9d6d8a8b005eb2e4dadcfdb4d49ccab086b14f12e3f5d4a2c6814aee6307ba",
+      "destination_sha256": "5a1a099ea6de4f985ced08a7cc7a121105c46ecb1812b255326f5a6e4be5d07b",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_优化候选普通恢复与继续差异.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_优化候选普通恢复与继续差异.md",
+      "bytes": 4481,
+      "source_sha256": "67a5ab57178895eca4fc84934b79f1c04b211304c313f236fdb55b4c60bc9041",
+      "destination_sha256": "67a5ab57178895eca4fc84934b79f1c04b211304c313f236fdb55b4c60bc9041",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_像素观察限制与优化队列回归.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_像素观察限制与优化队列回归.md",
+      "bytes": 2209,
+      "source_sha256": "509311eaf85c94ca3b49611794c103796812c1f47013cfff480a07fd4d9b2573",
+      "destination_sha256": "509311eaf85c94ca3b49611794c103796812c1f47013cfff480a07fd4d9b2573",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_分量连续索引与上限回退.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_分量连续索引与上限回退.md",
+      "bytes": 2577,
+      "source_sha256": "e50e9d36045c8791fad42bb0f327ba5795b6ae46ceb480f963ae8af4a31f49cb",
+      "destination_sha256": "e50e9d36045c8791fad42bb0f327ba5795b6ae46ceb480f963ae8af4a31f49cb",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_原生快照窗口与误触发排除.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_原生快照窗口与误触发排除.md",
+      "bytes": 1974,
+      "source_sha256": "a1d25edf43e1204cf4a6de5c1ca48bd4d700d36e25af398486db1a4e937b63b5",
+      "destination_sha256": "a1d25edf43e1204cf4a6de5c1ca48bd4d700d36e25af398486db1a4e937b63b5",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_取消撤销后交互复测.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_取消撤销后交互复测.md",
+      "bytes": 1240,
+      "source_sha256": "1045ec1e3945b659ec7bb189a3dea2fc76bfa5237cec72eb9934b578d97037fc",
+      "destination_sha256": "1045ec1e3945b659ec7bb189a3dea2fc76bfa5237cec72eb9934b578d97037fc",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_同tick撤销重做整合.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_同tick撤销重做整合.md",
+      "bytes": 2326,
+      "source_sha256": "13d83e214280a585d7c9e0c5000306dc949b2b9b39ce52d9c4b73d8cfeef1862",
+      "destination_sha256": "feefd2c98cc71b854e13927e518aa81b87f02d10c5252196e9168a79dbde07d2",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_完整GPU沙滩保存与冷恢复.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_完整GPU沙滩保存与冷恢复.md",
+      "bytes": 3945,
+      "source_sha256": "214caedb9566b957008778edd856f9d4dc85e5fec879f426ab56199a293ecfe0",
+      "destination_sha256": "6fc1127f9e1aef25b973b8b124d4bf458079ffe503156b72b697bc8a4f7abb97",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_完整redo回退与撤销读回关闭.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_完整redo回退与撤销读回关闭.md",
+      "bytes": 2020,
+      "source_sha256": "ae7d423dfc8753cb2ba332618603072d7c12956e487175ffc3fb6624cc5fc779",
+      "destination_sha256": "ae7d423dfc8753cb2ba332618603072d7c12956e487175ffc3fb6624cc5fc779",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_完整原分支重演与首差异tick.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_完整原分支重演与首差异tick.md",
+      "bytes": 2494,
+      "source_sha256": "b7cf48a632a4296755cefadb1c0b98618ed624e7f0d1695be16fc2259f8cf616",
+      "destination_sha256": "e3e969544b79a2b72159dab26ea804aa2311098335817df7d29a0a270b252861",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_完整快照失败注入与隔离.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_完整快照失败注入与隔离.md",
+      "bytes": 1931,
+      "source_sha256": "c0ce4f2159c5ef983f5f0fa814ee70fad28a5280a86405d96602246c8b12040e",
+      "destination_sha256": "4d0ee61c3fc02cf09f135cc4c4fc59ae0fd1aac4af717a7c75276065409d585a",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_完整恢复提交后关闭边界.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_完整恢复提交后关闭边界.md",
+      "bytes": 1638,
+      "source_sha256": "157a5d91e42b88a311c40b8a122872a0a9a4c2bc092b6c438f3ce9b3bfad5902",
+      "destination_sha256": "d7154a4f680b7a1ae2ea672c8575898ece25ba0042df0e4a92a41eb4a081f167",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_完整检查点保存边界与实际关闭.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_完整检查点保存边界与实际关闭.md",
+      "bytes": 1874,
+      "source_sha256": "a46b8196f331e668f6d20c29f8f59b78883a1889d9e0b5c80e0e20fc3b3eb216",
+      "destination_sha256": "4e1f61cc36683bdffb43eed29c5cf48c61d09ee6462b3d35d49e41d681a2a61d",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_完整沙滩GPU事务原语.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_完整沙滩GPU事务原语.md",
+      "bytes": 1900,
+      "source_sha256": "83557ab721b94edb3e69f034ab1dac6439b55c0fa407e8fb307fe1ac9ccd8f10",
+      "destination_sha256": "1e40fccc1097bd8bda076b3b3d5eb8e302f47b48dfb090da2d1f791df9a76b84",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_完整沙滩历史恢复原语.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_完整沙滩历史恢复原语.md",
+      "bytes": 1963,
+      "source_sha256": "51ab91a70c6dc3d2fd6e236724030f109664193b442627cbeb0256a3fc4a282a",
+      "destination_sha256": "7906a7d04f136473f37dcda4b5bb27d1bce9f5e9560c3b7ffa8948a813c1de40",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_完整沙滩双物理槽前态原语.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_完整沙滩双物理槽前态原语.md",
+      "bytes": 2008,
+      "source_sha256": "7aa22d78ca75148ce2a89c5357cb2d4fcbf86598ac26ff8cb995bd725314ac88",
+      "destination_sha256": "da3a777d65fb06aa872486d2fa5dcec6ad4f668571869c8281d94667b87d39b7",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_完整沙滩同tick撤销重做.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_完整沙滩同tick撤销重做.md",
+      "bytes": 3722,
+      "source_sha256": "03dbc8f338779d4d2230cf4aebf5fc2159f6625564f49d8044ee84b7a5cec50c",
+      "destination_sha256": "67be1798ded5a7d05e7e9fc775a91d95c3634c6c81194f18e356dade4d8f5913",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_完整沙滩活动原子恢复.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_完整沙滩活动原子恢复.md",
+      "bytes": 3625,
+      "source_sha256": "459d98c9b17b90336ea8636d14a3fa874296fd5564536f3a8c0c3d28af8d95ff",
+      "destination_sha256": "dc3980c2db51c091b4346006997476dadb676856b90e2c584b29f18bdde7a1b6",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_完整沙滩真实UI与队列.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_完整沙滩真实UI与队列.md",
+      "bytes": 2188,
+      "source_sha256": "2580552da44a76e27a21914be96b9e13a7eb21ba5e9e06180155534f150d7147",
+      "destination_sha256": "c3112c1b73f3ca87a947cfae0b7fda1573c6ec40582cf62aaf76070148ddb770",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_完整负载反馈与GPU分段定位.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_完整负载反馈与GPU分段定位.md",
+      "bytes": 2994,
+      "source_sha256": "21c6528bcf7cbae90d150390c4617202f30420101ff0afe0b05ef26c23043d62",
+      "destination_sha256": "21c6528bcf7cbae90d150390c4617202f30420101ff0afe0b05ef26c23043d62",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_完整输入逐位复制与提交浮点对照.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_完整输入逐位复制与提交浮点对照.md",
+      "bytes": 14474,
+      "source_sha256": "d455a54cd8eb0e8f64cc2e078128b040a4f86ff50ba3d444371b703be883e7c4",
+      "destination_sha256": "66ac220fa8c4270df295249e5b5895f040857a184db027ec4f8617527fbc46ee",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_实际push字节与捕帧工具探针.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_实际push字节与捕帧工具探针.md",
+      "bytes": 2410,
+      "source_sha256": "5f976978e36dd79f520080f487d42a6234edc8ea53f631f06f6675b98bc0d2ff",
+      "destination_sha256": "6547a6e18e9418e4a3d48341fbab18892a3fbe5f606a26d92c391f952333796f",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_实际恢复与跨进程严格配对.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_实际恢复与跨进程严格配对.md",
+      "bytes": 2472,
+      "source_sha256": "01e3dd8b4f4b261ff6c48188b60c3436666723d2bc332cd71857b08639b389fd",
+      "destination_sha256": "3aaf0639cb0714129741c084a965a716874a3fef7082cc9c8c0f6112e0116d95",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_快速撤销跨时间redo与磁盘配对.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_快速撤销跨时间redo与磁盘配对.md",
+      "bytes": 1809,
+      "source_sha256": "299786670765cff9ef24ca4e5182d3bcc40864d5bb3eb52581aaba7d0316fa49",
+      "destination_sha256": "14e92a01c19541a042a98635420364d6d9317e929fde635e4a0e9bc8b7334ff0",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_持续拖动与tick回调回归.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_持续拖动与tick回调回归.md",
+      "bytes": 2428,
+      "source_sha256": "b1b13544f163d46c4752b4dde55f936350eb7d8c7a39dd0ae3427959a8dea703",
+      "destination_sha256": "b1b13544f163d46c4752b4dde55f936350eb7d8c7a39dd0ae3427959a8dea703",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_捕帧实际常量与沙字段传递.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_捕帧实际常量与沙字段传递.md",
+      "bytes": 3679,
+      "source_sha256": "fcf738df127751a5b7ed10f45a0296f5cbcfded9a6590d5f29d5a505d9fd2797",
+      "destination_sha256": "ac2f4037d477b3031c39887288c808759563e59061a50aeb270e32cedae5e30e",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_斜坡shader内记录与冷恢复.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_斜坡shader内记录与冷恢复.md",
+      "bytes": 5309,
+      "source_sha256": "32a0822105797743bc61d8405d4a79be36dc3b704acc260bc004ee365d81d699",
+      "destination_sha256": "9bff77bed98ad87d9b54172ed7c7d1e26a06c2ffaa72c23079127998a2c6b74d",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_旧工具混合保存与重演.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_旧工具混合保存与重演.md",
+      "bytes": 2119,
+      "source_sha256": "950d2e49e44eb87b77701330b9d6c6838bbaa490dea044a60e0e9723ce7e6be2",
+      "destination_sha256": "76808135c1eee35a2fa74c874e0cfb0a00b1170cd7d292e1325e38e71c07ee43",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_显式斜坡结果存储与冷恢复.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_显式斜坡结果存储与冷恢复.md",
+      "bytes": 3216,
+      "source_sha256": "a44b5b2325400fa2711831aa9407b7244c2acf37735f8242e536dcb4fb9a1f94",
+      "destination_sha256": "cedb5b28660e7748f736e4500b6b96739757489a0584210b5adf2835a36768fa",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_有序队列与退出_首轮.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_有序队列与退出_首轮.md",
+      "bytes": 2379,
+      "source_sha256": "19132d4c9335f567a3c6995fc2e612035b80c5205bd827cad6f3241257e5e9a6",
+      "destination_sha256": "2750e03d83915e8c3b5666f8f5c5f5d9b89701fffed7f793591022246cc50404",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_本项目RenderDoc捕帧与重放准备.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_本项目RenderDoc捕帧与重放准备.md",
+      "bytes": 2424,
+      "source_sha256": "669d7ed1f61d1ba6f1a2993a72915ae965106567f219a93fdf945ad812fdced8",
+      "destination_sha256": "d00f698427980eaabb77afb42f27c6c16860265de46a7fb0b44d4dcc7566d77f",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_检查点原始层与保存边界.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_检查点原始层与保存边界.md",
+      "bytes": 2549,
+      "source_sha256": "b46c5000f5f7a8c9ea3f0daa6847565d1d1a11c67e91ecacfaec01cbf0b4ba44",
+      "destination_sha256": "b74ead0cf11561b836bad1b5594efaad9efd415070706714b9d55a2b98b7bfdc",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_水携带比例边界修正.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_水携带比例边界修正.md",
+      "bytes": 2824,
+      "source_sha256": "d667ee9d296fd4e740b53a0bc6cf77c3845d1f317d85043029bf6c2b5072a522",
+      "destination_sha256": "0e656b95f36468487768b503aca3975205387010c7f49301facd9c172fee2e86",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_混合CPU编辑与普通活动恢复.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_混合CPU编辑与普通活动恢复.md",
+      "bytes": 6942,
+      "source_sha256": "d9c44ccf0e378caf2c796c0e2a6c979253535788d4b8e46556b1bba8793b356e",
+      "destination_sha256": "e60d46708bd23302001d14c1c0b9a42e82588db405b18d43282e8d6a99d34cb4",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_湿段图候选与真实初态对照.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_湿段图候选与真实初态对照.md",
+      "bytes": 3216,
+      "source_sha256": "81551ad5fd4ae525ced76eb2c5ec604c646e18d4768f27b7c5804f64a68c3408",
+      "destination_sha256": "81551ad5fd4ae525ced76eb2c5ec604c646e18d4768f27b7c5804f64a68c3408",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_碰撞资源复用与长帧反证.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_碰撞资源复用与长帧反证.md",
+      "bytes": 1932,
+      "source_sha256": "fc0af64ce9551cc7094692ba39910d8073c43d9650b87ea5b9efd99715481ae6",
+      "destination_sha256": "fc0af64ce9551cc7094692ba39910d8073c43d9650b87ea5b9efd99715481ae6",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_磁盘redo与独立进程配对.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_磁盘redo与独立进程配对.md",
+      "bytes": 2050,
+      "source_sha256": "652d58fd5dddb7c9a041b64e6f2cc64cc7d045827667fbedca0f1b07dc096061",
+      "destination_sha256": "a34be667d82be9fc4c4c11a37b4210c038259d2dc14e38ff686eec68e29cf4d6",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_等待链与线程名称覆盖.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_等待链与线程名称覆盖.md",
+      "bytes": 2031,
+      "source_sha256": "36f81e825cc0a8d9eabe960272991ffbb42dd24108275f5cbb232ba9d8c1aed3",
+      "destination_sha256": "36f81e825cc0a8d9eabe960272991ffbb42dd24108275f5cbb232ba9d8c1aed3",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_继续差异参数与同步对照.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_继续差异参数与同步对照.md",
+      "bytes": 2947,
+      "source_sha256": "cc77d404e51a5362115048a76e0dfe91953becfd8910ea7312bc50aeca64d613",
+      "destination_sha256": "eb0c5a74ebb7c360b8f9b2136bd12df843b77fa595e986de44d4d7791e53ed03",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_自然64沙审计候选取证.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_自然64沙审计候选取证.md",
+      "bytes": 2582,
+      "source_sha256": "704e413b2f0cad37dc32691671c004a21e994ca7e454a63ff5b996b7c6e1b455",
+      "destination_sha256": "6aeb7ba6afa6d661bbc57fe1351c33eac61c3414705325ead46e6606b1a1a97b",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_补偿容量算术与冻结预算.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_补偿容量算术与冻结预算.md",
+      "bytes": 2452,
+      "source_sha256": "82449e931c9375be431991ac92aa9ea4e003a73a8e1126667500a34b392f273b",
+      "destination_sha256": "82449e931c9375be431991ac92aa9ea4e003a73a8e1126667500a34b392f273b",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_补偿容量缓存与数值成本.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_补偿容量缓存与数值成本.md",
+      "bytes": 2096,
+      "source_sha256": "25f2130b681cd9da6419fa8d13e427f2d514ca9730c49dbd8d19b1fab2632d97",
+      "destination_sha256": "25f2130b681cd9da6419fa8d13e427f2d514ca9730c49dbd8d19b1fab2632d97",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_跨tick重演与恢复关闭.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_跨tick重演与恢复关闭.md",
+      "bytes": 2291,
+      "source_sha256": "a98b9d630133b3615acb85d7d730b5b8e48e0c3abe8b6e7c1b8653d83e2fe090",
+      "destination_sha256": "83df5721cbfda26b4f38ca597d6221891c2fb887fbb62b0a356b1659e0f7279a",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_连续索引补偿整合与成本回归.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_连续索引补偿整合与成本回归.md",
+      "bytes": 2202,
+      "source_sha256": "e9e770918c82190604b8d799682ac452239dc0877686e5470f7b430f291456e8",
+      "destination_sha256": "e9e770918c82190604b8d799682ac452239dc0877686e5470f7b430f291456e8",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_速度账本预取与工作组拒绝边界.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_速度账本预取与工作组拒绝边界.md",
+      "bytes": 2717,
+      "source_sha256": "7aabac98660faee138100131de709a6f70936c953a22edd97939e9067849bd8c",
+      "destination_sha256": "7aabac98660faee138100131de709a6f70936c953a22edd97939e9067849bd8c",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_重演关闭与推进redo.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_重演关闭与推进redo.md",
+      "bytes": 1496,
+      "source_sha256": "3c0dd79046eaab9fff1041aaefa6c3edb6d82be6558040a68a1f1ca5cd35b555",
+      "destination_sha256": "b84d8f0ff9a132e03da75197e530e12bea2b6cb1eff34b1853d3505ef7db7bcd",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T05_长帧CPU采样与等待反证.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T05_长帧CPU采样与等待反证.md",
+      "bytes": 1978,
+      "source_sha256": "e5f77e1a3c550cb0f113197ba8ea0d9f332efc889ea22c36188abf58606f67c6",
+      "destination_sha256": "e5f77e1a3c550cb0f113197ba8ea0d9f332efc889ea22c36188abf58606f67c6",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T06_流式成本入口与首轮筛选.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T06_流式成本入口与首轮筛选.md",
+      "bytes": 6216,
+      "source_sha256": "795df009b12ff3669f36bb8c45c108cfaaea44d14fa9b914df407f714c3aa706",
+      "destination_sha256": "d91c29bf13a61cab6d12ab8c1a43a210006ec8afcad07f1cee648f91051f360f",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T06_真实长帧原生快照.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T06_真实长帧原生快照.md",
+      "bytes": 2819,
+      "source_sha256": "441bf0fb0f365597ac61d61a33fb00eb36ebacadcbc69e0ec4007dff48365826",
+      "destination_sha256": "ae8f0a38438cd4f3ec0acddc2293a8fa0011f61853e12f86f30880e3bfe1d954",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T06_碰撞共享边界候选与等待定位.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T06_碰撞共享边界候选与等待定位.md",
+      "bytes": 3349,
+      "source_sha256": "ea1cc6bf6631e4bae0de198a08f42cba97347a0e3a7947835b3a76897b7ec6fe",
+      "destination_sha256": "57d012d4d8dccc4fd058ad7c3e6817d8431b2246163595c86d065e15a96d5c44",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/T06_离线展开栈与D3D12等待定位.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/T06_离线展开栈与D3D12等待定位.md",
+      "bytes": 5171,
+      "source_sha256": "88bbcb494c3b2e50316a8cb57918a6801b5cc935e75b9dabe4f06ec249d6805f",
+      "destination_sha256": "5545e4e3a9b2a71b3f3a0ba085edb1d404e5eca6ce8ccf57b957b48a2ca5f565",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/临时内容清理索引.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/临时内容清理索引.json",
+      "bytes": 63145,
+      "source_sha256": "b494643ffe1f97f84f78d31f37d4d0b62f03124c419c60a61bdf78673f73757b",
+      "destination_sha256": "b494643ffe1f97f84f78d31f37d4d0b62f03124c419c60a61bdf78673f73757b",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/主场景迁移来源.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/主场景迁移来源.json",
+      "bytes": 1573,
+      "source_sha256": "5a58d9457afceaf0d0ba12d201da04fc3576ac6bebc11ed5dfb3aa804e4df0ef",
+      "destination_sha256": "5a58d9457afceaf0d0ba12d201da04fc3576ac6bebc11ed5dfb3aa804e4df0ef",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/验收/用户性能标准_v1_58_短窗复核.md",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/验收/用户性能标准_v1_58_短窗复核.md",
+      "bytes": 1507,
+      "source_sha256": "149e8636137311d37e1a2eb96488ae338700d0156c27a3c2dc32ab69ab6e74f3",
+      "destination_sha256": "973ba110e67ff68efed9214dd6def3ec669ebf746f9fffc0e7a8425f1cf0f846",
+      "link_rebased": true
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/__pycache__/align_cost_dump.cpython-313.pyc",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/__pycache__/align_cost_dump.cpython-313.pyc",
+      "bytes": 3491,
+      "source_sha256": "13b8a0f700c98671407bbf3d973268f98bc860970942c27099a6211684898225",
+      "destination_sha256": "13b8a0f700c98671407bbf3d973268f98bc860970942c27099a6211684898225",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/__pycache__/analyze_beach_cost.cpython-313.pyc",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/__pycache__/analyze_beach_cost.cpython-313.pyc",
+      "bytes": 8253,
+      "source_sha256": "162fa964f75866dec6319ac1e9311860c1120474ad258185d5145713975b79d5",
+      "destination_sha256": "162fa964f75866dec6319ac1e9311860c1120474ad258185d5145713975b79d5",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/__pycache__/disassemble_native_frames.cpython-313.pyc",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/__pycache__/disassemble_native_frames.cpython-313.pyc",
+      "bytes": 9386,
+      "source_sha256": "8103f8dd17b50014e8644356910374a759ef7dfba5123b600ef8c62f19d4075d",
+      "destination_sha256": "8103f8dd17b50014e8644356910374a759ef7dfba5123b600ef8c62f19d4075d",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/__pycache__/sample_process_cpu.cpython-313.pyc",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/__pycache__/sample_process_cpu.cpython-313.pyc",
+      "bytes": 16191,
+      "source_sha256": "2842d2044023748c07658e4d51f684df1c651ed98bbabd757a75b036323173b5",
+      "destination_sha256": "2842d2044023748c07658e4d51f684df1c651ed98bbabd757a75b036323173b5",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/tools/__pycache__/unwind_native_dump.cpython-313.pyc",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/tools/__pycache__/unwind_native_dump.cpython-313.pyc",
+      "bytes": 17916,
+      "source_sha256": "b202223e91fe4a6ff275aabc2976573bf9ad18b7f40eb068a39302d5de81c9ef",
+      "destination_sha256": "b202223e91fe4a6ff275aabc2976573bf9ad18b7f40eb068a39302d5de81c9ef",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_005334_baseline_trace/analysis.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_005334_baseline_trace/analysis.json",
+      "bytes": 1089,
+      "source_sha256": "dd508d37955b4952cc2ae550c70cfbdc472c7621742f67563a84486714c43ab6",
+      "destination_sha256": "dd508d37955b4952cc2ae550c70cfbdc472c7621742f67563a84486714c43ab6",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_005334_baseline_trace/commands.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_005334_baseline_trace/commands.json",
+      "bytes": 3408,
+      "source_sha256": "75d5cd0f5655bb505192d6d194f3dc0ce5df2f097fb5de21cc0455ab889a3bb2",
+      "destination_sha256": "75d5cd0f5655bb505192d6d194f3dc0ce5df2f097fb5de21cc0455ab889a3bb2",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_005334_baseline_trace/frames.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_005334_baseline_trace/frames.json",
+      "bytes": 86709,
+      "source_sha256": "93cfbb2f72d34e5c0f5398f019a0a585cb2adfbdfde08dbaf086e7081eafa17d",
+      "destination_sha256": "93cfbb2f72d34e5c0f5398f019a0a585cb2adfbdfde08dbaf086e7081eafa17d",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_005334_baseline_trace/manifest.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_005334_baseline_trace/manifest.json",
+      "bytes": 55098,
+      "source_sha256": "ac3fcf5623773bace0c6a6fe744db5418ec9fb7eb2f7dd25e34acee09f646fb0",
+      "destination_sha256": "ac3fcf5623773bace0c6a6fe744db5418ec9fb7eb2f7dd25e34acee09f646fb0",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_005334_baseline_trace/runtime.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_005334_baseline_trace/runtime.json",
+      "bytes": 2113,
+      "source_sha256": "ca3f243100a30182a2cc39a5272964e0ef100a89982b2b97ab9c61aab82db35d",
+      "destination_sha256": "ca3f243100a30182a2cc39a5272964e0ef100a89982b2b97ab9c61aab82db35d",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_005334_baseline_trace/stderr.log",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_005334_baseline_trace/stderr.log",
+      "bytes": 2,
+      "source_sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "destination_sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_005334_baseline_trace/stdout.log",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_005334_baseline_trace/stdout.log",
+      "bytes": 275,
+      "source_sha256": "a05dfca9ac71c30c74a04dc53caf2182fdffee6ad10541d79b3b6911d26d1f1b",
+      "destination_sha256": "a05dfca9ac71c30c74a04dc53caf2182fdffee6ad10541d79b3b6911d26d1f1b",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_005334_baseline_trace/trace.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_005334_baseline_trace/trace.json",
+      "bytes": 120444,
+      "source_sha256": "d9e6d4196a6b76f1f982d5f03e8449616a18dd1604b0ff9078219f659e00676e",
+      "destination_sha256": "d9e6d4196a6b76f1f982d5f03e8449616a18dd1604b0ff9078219f659e00676e",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160202_beach_edit_process_probe/artifact_index.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160202_beach_edit_process_probe/artifact_index.json",
+      "bytes": 6489,
+      "source_sha256": "0b5e17d2e740983c62d3f25e832f862cd3160f27b0756f10ad855eb0e0ab6c01",
+      "destination_sha256": "0b5e17d2e740983c62d3f25e832f862cd3160f27b0756f10ad855eb0e0ab6c01",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160202_beach_edit_process_probe/beach_edit_process_probe.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160202_beach_edit_process_probe/beach_edit_process_probe.json",
+      "bytes": 6701,
+      "source_sha256": "de057d2fc661f7f89ab7a8db8d12cd63616d7ad0ea6bf056cbc862e69a987ee3",
+      "destination_sha256": "de057d2fc661f7f89ab7a8db8d12cd63616d7ad0ea6bf056cbc862e69a987ee3",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160202_beach_edit_process_probe/compile.log",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160202_beach_edit_process_probe/compile.log",
+      "bytes": 70,
+      "source_sha256": "1521e333bb184f816cdbffc18ea8fd077a9e9df48d89a494ee532d515e1dbc75",
+      "destination_sha256": "1521e333bb184f816cdbffc18ea8fd077a9e9df48d89a494ee532d515e1dbc75",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160202_beach_edit_process_probe/compile_owner.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160202_beach_edit_process_probe/compile_owner.json",
+      "bytes": 378,
+      "source_sha256": "30df025c9ad578be16a057b58707393363ab8df3faecb603e7bd1884a33647da",
+      "destination_sha256": "30df025c9ad578be16a057b58707393363ab8df3faecb603e7bd1884a33647da",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160202_beach_edit_process_probe/godot.log",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160202_beach_edit_process_probe/godot.log",
+      "bytes": 193,
+      "source_sha256": "d1df6eba02bfed5fb933e430cc07f96f769538d1f17be6bb5f2b8d7458d159d4",
+      "destination_sha256": "d1df6eba02bfed5fb933e430cc07f96f769538d1f17be6bb5f2b8d7458d159d4",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160202_beach_edit_process_probe/manifest.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160202_beach_edit_process_probe/manifest.json",
+      "bytes": 89408,
+      "source_sha256": "4a49452c375ee593cdd7799eaf9c70b9defb52917af22b5c2823b5714a56ffb6",
+      "destination_sha256": "4a49452c375ee593cdd7799eaf9c70b9defb52917af22b5c2823b5714a56ffb6",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160202_beach_edit_process_probe/original_path_comparison.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160202_beach_edit_process_probe/original_path_comparison.json",
+      "bytes": 600,
+      "source_sha256": "75c6d8f6d3b75d40b2a5463d02b119ae2bd0bbbe5a7a5610a0d499ff07d89961",
+      "destination_sha256": "75c6d8f6d3b75d40b2a5463d02b119ae2bd0bbbe5a7a5610a0d499ff07d89961",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160202_beach_edit_process_probe/owner.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160202_beach_edit_process_probe/owner.json",
+      "bytes": 1030,
+      "source_sha256": "77ae4968e366e007de535d31ba1906261e6ce42530393da4cf2ab730c4ae3094",
+      "destination_sha256": "77ae4968e366e007de535d31ba1906261e6ce42530393da4cf2ab730c4ae3094",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160232_beach_edit_process_probe/artifact_index.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160232_beach_edit_process_probe/artifact_index.json",
+      "bytes": 6331,
+      "source_sha256": "4225a99cb321708e33f3f043cfa06903372a25ac417dfb17231499dfa3d60ef5",
+      "destination_sha256": "4225a99cb321708e33f3f043cfa06903372a25ac417dfb17231499dfa3d60ef5",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160232_beach_edit_process_probe/beach_edit_process_probe.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160232_beach_edit_process_probe/beach_edit_process_probe.json",
+      "bytes": 5473,
+      "source_sha256": "7a0068572fc5c07677fa1178e014d873520ceb14d666790fa15366639e19f92f",
+      "destination_sha256": "7a0068572fc5c07677fa1178e014d873520ceb14d666790fa15366639e19f92f",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160232_beach_edit_process_probe/compile.log",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160232_beach_edit_process_probe/compile.log",
+      "bytes": 70,
+      "source_sha256": "1521e333bb184f816cdbffc18ea8fd077a9e9df48d89a494ee532d515e1dbc75",
+      "destination_sha256": "1521e333bb184f816cdbffc18ea8fd077a9e9df48d89a494ee532d515e1dbc75",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160232_beach_edit_process_probe/compile_owner.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160232_beach_edit_process_probe/compile_owner.json",
+      "bytes": 377,
+      "source_sha256": "935c05774b647cd43f93b3da7903ba892f30203147f9d30eb6fcb2192ac22885",
+      "destination_sha256": "935c05774b647cd43f93b3da7903ba892f30203147f9d30eb6fcb2192ac22885",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160232_beach_edit_process_probe/godot.log",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160232_beach_edit_process_probe/godot.log",
+      "bytes": 192,
+      "source_sha256": "2d1c2620fb1d31ed72a4921b949c898e6949b3ee3b6d448650f36df7c6d4c090",
+      "destination_sha256": "2d1c2620fb1d31ed72a4921b949c898e6949b3ee3b6d448650f36df7c6d4c090",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160232_beach_edit_process_probe/manifest.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160232_beach_edit_process_probe/manifest.json",
+      "bytes": 89408,
+      "source_sha256": "05b062800e741858836eb6b767180f666adbcf5f4ff2a6ca8d826e6a0b5cdddc",
+      "destination_sha256": "05b062800e741858836eb6b767180f666adbcf5f4ff2a6ca8d826e6a0b5cdddc",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160232_beach_edit_process_probe/owner.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160232_beach_edit_process_probe/owner.json",
+      "bytes": 1171,
+      "source_sha256": "984eb3e35941003c72d57684005a625420b93b39c3562ff5857a05d8a587248f",
+      "destination_sha256": "984eb3e35941003c72d57684005a625420b93b39c3562ff5857a05d8a587248f",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160232_beach_edit_process_probe/raw_pair_comparison.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160232_beach_edit_process_probe/raw_pair_comparison.json",
+      "bytes": 95,
+      "source_sha256": "e0af7787dd60e78a6224fdb20521af24d05c4c3e2ec40b9a10c4d5422162010a",
+      "destination_sha256": "e0af7787dd60e78a6224fdb20521af24d05c4c3e2ec40b9a10c4d5422162010a",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160323_beach_edit_process_probe/artifact_index.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160323_beach_edit_process_probe/artifact_index.json",
+      "bytes": 6331,
+      "source_sha256": "dcf649df6cb58c411781f198502fc005bf4b16f190c46662159cea7bf9e1cc28",
+      "destination_sha256": "dcf649df6cb58c411781f198502fc005bf4b16f190c46662159cea7bf9e1cc28",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160323_beach_edit_process_probe/beach_edit_process_probe.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160323_beach_edit_process_probe/beach_edit_process_probe.json",
+      "bytes": 5473,
+      "source_sha256": "7a0068572fc5c07677fa1178e014d873520ceb14d666790fa15366639e19f92f",
+      "destination_sha256": "7a0068572fc5c07677fa1178e014d873520ceb14d666790fa15366639e19f92f",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160323_beach_edit_process_probe/compile.log",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160323_beach_edit_process_probe/compile.log",
+      "bytes": 70,
+      "source_sha256": "1521e333bb184f816cdbffc18ea8fd077a9e9df48d89a494ee532d515e1dbc75",
+      "destination_sha256": "1521e333bb184f816cdbffc18ea8fd077a9e9df48d89a494ee532d515e1dbc75",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160323_beach_edit_process_probe/compile_owner.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160323_beach_edit_process_probe/compile_owner.json",
+      "bytes": 378,
+      "source_sha256": "7469c62d8cda59ac03577d9ea715507067e6b3634725b802d24f9b31f535452d",
+      "destination_sha256": "7469c62d8cda59ac03577d9ea715507067e6b3634725b802d24f9b31f535452d",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160323_beach_edit_process_probe/godot.log",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160323_beach_edit_process_probe/godot.log",
+      "bytes": 192,
+      "source_sha256": "2d1c2620fb1d31ed72a4921b949c898e6949b3ee3b6d448650f36df7c6d4c090",
+      "destination_sha256": "2d1c2620fb1d31ed72a4921b949c898e6949b3ee3b6d448650f36df7c6d4c090",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160323_beach_edit_process_probe/manifest.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160323_beach_edit_process_probe/manifest.json",
+      "bytes": 89408,
+      "source_sha256": "82ddf1064ae3d3c32bdc74a66fc31bbbdbba4d34375bbe6e13b0643c89a2f78a",
+      "destination_sha256": "82ddf1064ae3d3c32bdc74a66fc31bbbdbba4d34375bbe6e13b0643c89a2f78a",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160323_beach_edit_process_probe/owner.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160323_beach_edit_process_probe/owner.json",
+      "bytes": 1171,
+      "source_sha256": "3dae9955ac328385087d9f95dea9e5d2c963a0c274021bd006df00eac4340f0b",
+      "destination_sha256": "3dae9955ac328385087d9f95dea9e5d2c963a0c274021bd006df00eac4340f0b",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160323_beach_edit_process_probe/raw_pair_comparison.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160323_beach_edit_process_probe/raw_pair_comparison.json",
+      "bytes": 95,
+      "source_sha256": "e0af7787dd60e78a6224fdb20521af24d05c4c3e2ec40b9a10c4d5422162010a",
+      "destination_sha256": "e0af7787dd60e78a6224fdb20521af24d05c4c3e2ec40b9a10c4d5422162010a",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160423_beach_edit_process_probe/artifact_index.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160423_beach_edit_process_probe/artifact_index.json",
+      "bytes": 6331,
+      "source_sha256": "7f21fd5d8f7cb51c8f3b09f8b12ab7de438d754d1e67eb4c9daf8c7db1d23d53",
+      "destination_sha256": "7f21fd5d8f7cb51c8f3b09f8b12ab7de438d754d1e67eb4c9daf8c7db1d23d53",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160423_beach_edit_process_probe/beach_edit_process_probe.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160423_beach_edit_process_probe/beach_edit_process_probe.json",
+      "bytes": 5473,
+      "source_sha256": "7a0068572fc5c07677fa1178e014d873520ceb14d666790fa15366639e19f92f",
+      "destination_sha256": "7a0068572fc5c07677fa1178e014d873520ceb14d666790fa15366639e19f92f",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160423_beach_edit_process_probe/compile.log",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160423_beach_edit_process_probe/compile.log",
+      "bytes": 70,
+      "source_sha256": "1521e333bb184f816cdbffc18ea8fd077a9e9df48d89a494ee532d515e1dbc75",
+      "destination_sha256": "1521e333bb184f816cdbffc18ea8fd077a9e9df48d89a494ee532d515e1dbc75",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160423_beach_edit_process_probe/compile_owner.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160423_beach_edit_process_probe/compile_owner.json",
+      "bytes": 378,
+      "source_sha256": "7481d4b26a682380d77e0bff5b1426389ad0b7b4e2fd54d580d5e4ec28e13236",
+      "destination_sha256": "7481d4b26a682380d77e0bff5b1426389ad0b7b4e2fd54d580d5e4ec28e13236",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160423_beach_edit_process_probe/godot.log",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160423_beach_edit_process_probe/godot.log",
+      "bytes": 192,
+      "source_sha256": "2d1c2620fb1d31ed72a4921b949c898e6949b3ee3b6d448650f36df7c6d4c090",
+      "destination_sha256": "2d1c2620fb1d31ed72a4921b949c898e6949b3ee3b6d448650f36df7c6d4c090",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160423_beach_edit_process_probe/manifest.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160423_beach_edit_process_probe/manifest.json",
+      "bytes": 89408,
+      "source_sha256": "d5ef1877657d3ed99c26502cd20a153f0faca4ca39e96b1125cdaefb6cc42c74",
+      "destination_sha256": "d5ef1877657d3ed99c26502cd20a153f0faca4ca39e96b1125cdaefb6cc42c74",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160423_beach_edit_process_probe/owner.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160423_beach_edit_process_probe/owner.json",
+      "bytes": 1170,
+      "source_sha256": "d453b8b5bd860fa56dbe5ca7b3221526fda6ad26312ff2c87451eace898a5288",
+      "destination_sha256": "d453b8b5bd860fa56dbe5ca7b3221526fda6ad26312ff2c87451eace898a5288",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160423_beach_edit_process_probe/raw_pair_comparison.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160423_beach_edit_process_probe/raw_pair_comparison.json",
+      "bytes": 95,
+      "source_sha256": "e0af7787dd60e78a6224fdb20521af24d05c4c3e2ec40b9a10c4d5422162010a",
+      "destination_sha256": "e0af7787dd60e78a6224fdb20521af24d05c4c3e2ec40b9a10c4d5422162010a",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160543_beach_continuous_probe/artifact_index.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160543_beach_continuous_probe/artifact_index.json",
+      "bytes": 3843,
+      "source_sha256": "bd0d8dd1b18e9c129b7e806c66d6d356c8d8efb02764dff51cc4840eb1da6f2f",
+      "destination_sha256": "bd0d8dd1b18e9c129b7e806c66d6d356c8d8efb02764dff51cc4840eb1da6f2f",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160543_beach_continuous_probe/beach_continuous_probe.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160543_beach_continuous_probe/beach_continuous_probe.json",
+      "bytes": 141213,
+      "source_sha256": "f622390a72037bb8566a9c1727aa8ef80c91cbf65b52417d0e5154d382032d1f",
+      "destination_sha256": "f622390a72037bb8566a9c1727aa8ef80c91cbf65b52417d0e5154d382032d1f",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160543_beach_continuous_probe/compile.log",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160543_beach_continuous_probe/compile.log",
+      "bytes": 70,
+      "source_sha256": "1521e333bb184f816cdbffc18ea8fd077a9e9df48d89a494ee532d515e1dbc75",
+      "destination_sha256": "1521e333bb184f816cdbffc18ea8fd077a9e9df48d89a494ee532d515e1dbc75",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160543_beach_continuous_probe/compile_owner.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160543_beach_continuous_probe/compile_owner.json",
+      "bytes": 374,
+      "source_sha256": "52d67e2341493803916013b2b3be7f15986b53f2150dd4cc6244823bf85d34aa",
+      "destination_sha256": "52d67e2341493803916013b2b3be7f15986b53f2150dd4cc6244823bf85d34aa",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160543_beach_continuous_probe/godot.log",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160543_beach_continuous_probe/godot.log",
+      "bytes": 281,
+      "source_sha256": "415b8b71bd45947e2d57d423f31deb423d49e6d8be173f8931f93ec1f687c40b",
+      "destination_sha256": "415b8b71bd45947e2d57d423f31deb423d49e6d8be173f8931f93ec1f687c40b",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160543_beach_continuous_probe/manifest.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160543_beach_continuous_probe/manifest.json",
+      "bytes": 89408,
+      "source_sha256": "0577c15eb4fd9da807c76fbb00f4ea03f390b2e0864232880eabc4e307dd9ba2",
+      "destination_sha256": "0577c15eb4fd9da807c76fbb00f4ea03f390b2e0864232880eabc4e307dd9ba2",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160543_beach_continuous_probe/owner.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160543_beach_continuous_probe/owner.json",
+      "bytes": 990,
+      "source_sha256": "db56941432a3f8a735ff326436e929e87c9da16cc20a0c3a5eddbe83ac2dced8",
+      "destination_sha256": "db56941432a3f8a735ff326436e929e87c9da16cc20a0c3a5eddbe83ac2dced8",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160727_beach_mixed_restore_probe/artifact_index.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160727_beach_mixed_restore_probe/artifact_index.json",
+      "bytes": 15331,
+      "source_sha256": "5093711fb78832a04f90f2879595682d53ddbd2db66431edc3445417ce3dfda9",
+      "destination_sha256": "5093711fb78832a04f90f2879595682d53ddbd2db66431edc3445417ce3dfda9",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160727_beach_mixed_restore_probe/beach_mixed_restore_probe.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160727_beach_mixed_restore_probe/beach_mixed_restore_probe.json",
+      "bytes": 13373,
+      "source_sha256": "e1abc1ff89ad7c8c2f631129f02b3e478b1372135a0e742845a6d4df71969201",
+      "destination_sha256": "e1abc1ff89ad7c8c2f631129f02b3e478b1372135a0e742845a6d4df71969201",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160727_beach_mixed_restore_probe/compile.log",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160727_beach_mixed_restore_probe/compile.log",
+      "bytes": 70,
+      "source_sha256": "1521e333bb184f816cdbffc18ea8fd077a9e9df48d89a494ee532d515e1dbc75",
+      "destination_sha256": "1521e333bb184f816cdbffc18ea8fd077a9e9df48d89a494ee532d515e1dbc75",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160727_beach_mixed_restore_probe/compile_owner.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160727_beach_mixed_restore_probe/compile_owner.json",
+      "bytes": 379,
+      "source_sha256": "a013996db6b55c7bf72b5a314213631b6338c4e8e6f0dfa08cacd925689e8cb6",
+      "destination_sha256": "a013996db6b55c7bf72b5a314213631b6338c4e8e6f0dfa08cacd925689e8cb6",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160727_beach_mixed_restore_probe/godot.log",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160727_beach_mixed_restore_probe/godot.log",
+      "bytes": 183,
+      "source_sha256": "42c562806142c6d9bf674867441bb1d34add35f0d8fafccf90a02b97b563279d",
+      "destination_sha256": "42c562806142c6d9bf674867441bb1d34add35f0d8fafccf90a02b97b563279d",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160727_beach_mixed_restore_probe/manifest.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160727_beach_mixed_restore_probe/manifest.json",
+      "bytes": 89408,
+      "source_sha256": "90102acaf75c8ea703752bd5aebffcd76c109ede114dc7683c1d5d5661c79c21",
+      "destination_sha256": "90102acaf75c8ea703752bd5aebffcd76c109ede114dc7683c1d5d5661c79c21",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160727_beach_mixed_restore_probe/owner.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160727_beach_mixed_restore_probe/owner.json",
+      "bytes": 1002,
+      "source_sha256": "fa36e532e0b68cf5d8256b8529a90b3b80d75380b2b04aad681f1368c7c5d18e",
+      "destination_sha256": "fa36e532e0b68cf5d8256b8529a90b3b80d75380b2b04aad681f1368c7c5d18e",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160951_beach_feedback_probe/artifact_index.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160951_beach_feedback_probe/artifact_index.json",
+      "bytes": 8374,
+      "source_sha256": "bd833faebf2f441a0c87fe445f9b985d5155aa6031b1e4fc58416cab5db9f010",
+      "destination_sha256": "bd833faebf2f441a0c87fe445f9b985d5155aa6031b1e4fc58416cab5db9f010",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160951_beach_feedback_probe/beach_feedback_probe.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160951_beach_feedback_probe/beach_feedback_probe.json",
+      "bytes": 18765,
+      "source_sha256": "3ed1cda374e05dfff9f5fb424c158838e414c3d875781994b5d425a3c1484b67",
+      "destination_sha256": "3ed1cda374e05dfff9f5fb424c158838e414c3d875781994b5d425a3c1484b67",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160951_beach_feedback_probe/compile.log",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160951_beach_feedback_probe/compile.log",
+      "bytes": 70,
+      "source_sha256": "1521e333bb184f816cdbffc18ea8fd077a9e9df48d89a494ee532d515e1dbc75",
+      "destination_sha256": "1521e333bb184f816cdbffc18ea8fd077a9e9df48d89a494ee532d515e1dbc75",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160951_beach_feedback_probe/compile_owner.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160951_beach_feedback_probe/compile_owner.json",
+      "bytes": 370,
+      "source_sha256": "19af7b5e068519c67b540f468093361d02f3fcdccab798d6a8c9527d69c4f250",
+      "destination_sha256": "19af7b5e068519c67b540f468093361d02f3fcdccab798d6a8c9527d69c4f250",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160951_beach_feedback_probe/godot.log",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160951_beach_feedback_probe/godot.log",
+      "bytes": 279,
+      "source_sha256": "aefbfe2be5e30bc6c34ace576e1f151147e6ebefc51b251def7f70aef88f8d2d",
+      "destination_sha256": "aefbfe2be5e30bc6c34ace576e1f151147e6ebefc51b251def7f70aef88f8d2d",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160951_beach_feedback_probe/manifest.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160951_beach_feedback_probe/manifest.json",
+      "bytes": 89634,
+      "source_sha256": "304666cfd23c9353ef065724553b9bd7dda0d46aa32c5e6e6c8a186ff55dd737",
+      "destination_sha256": "304666cfd23c9353ef065724553b9bd7dda0d46aa32c5e6e6c8a186ff55dd737",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_160951_beach_feedback_probe/owner.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_160951_beach_feedback_probe/owner.json",
+      "bytes": 982,
+      "source_sha256": "528f82cdffe92b687605a1be3873a357540f351a1c88a6f75ba0234b250c8119",
+      "destination_sha256": "528f82cdffe92b687605a1be3873a357540f351a1c88a6f75ba0234b250c8119",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_161258_beach_restore_close_probe/artifact_index.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_161258_beach_restore_close_probe/artifact_index.json",
+      "bytes": 1008,
+      "source_sha256": "eb931e6ac12b18466ea7a2b19f378dec88c144c1c4ab799f63ebe4bc931edc4c",
+      "destination_sha256": "eb931e6ac12b18466ea7a2b19f378dec88c144c1c4ab799f63ebe4bc931edc4c",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_161258_beach_restore_close_probe/beach_restore_close_probe.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_161258_beach_restore_close_probe/beach_restore_close_probe.json",
+      "bytes": 1544,
+      "source_sha256": "38ac0a89470f3f855047a3b09bac941bac8bdea75d27b433baf7601fdaf6420a",
+      "destination_sha256": "38ac0a89470f3f855047a3b09bac941bac8bdea75d27b433baf7601fdaf6420a",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_161258_beach_restore_close_probe/compile.log",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_161258_beach_restore_close_probe/compile.log",
+      "bytes": 70,
+      "source_sha256": "1521e333bb184f816cdbffc18ea8fd077a9e9df48d89a494ee532d515e1dbc75",
+      "destination_sha256": "1521e333bb184f816cdbffc18ea8fd077a9e9df48d89a494ee532d515e1dbc75",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_161258_beach_restore_close_probe/compile_owner.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_161258_beach_restore_close_probe/compile_owner.json",
+      "bytes": 380,
+      "source_sha256": "6018eecce2aeb6ade95271d7b4ce9679f641df1301575797f04294a88550e7b4",
+      "destination_sha256": "6018eecce2aeb6ade95271d7b4ce9679f641df1301575797f04294a88550e7b4",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_161258_beach_restore_close_probe/godot.log",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_161258_beach_restore_close_probe/godot.log",
+      "bytes": 183,
+      "source_sha256": "ae377c0f868498c229f8569462977a5a16e106a572645cc2600a8e9f92f4eab2",
+      "destination_sha256": "ae377c0f868498c229f8569462977a5a16e106a572645cc2600a8e9f92f4eab2",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_161258_beach_restore_close_probe/manifest.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_161258_beach_restore_close_probe/manifest.json",
+      "bytes": 89865,
+      "source_sha256": "c29859b511b408ebec845521e38582cc398494719ee3cc33c3ae8e28188852c7",
+      "destination_sha256": "c29859b511b408ebec845521e38582cc398494719ee3cc33c3ae8e28188852c7",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_161258_beach_restore_close_probe/owner.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_161258_beach_restore_close_probe/owner.json",
+      "bytes": 1002,
+      "source_sha256": "b3b882a5da3b8108f82c360b42924770736636709296bff020e20fec51b3e363",
+      "destination_sha256": "b3b882a5da3b8108f82c360b42924770736636709296bff020e20fec51b3e363",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_161429_beach_edit_process_probe/artifact_index.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_161429_beach_edit_process_probe/artifact_index.json",
+      "bytes": 6333,
+      "source_sha256": "022bae4639cd60313e1e7c55403a65aa914c99c29a2fe9472a7921575da86385",
+      "destination_sha256": "022bae4639cd60313e1e7c55403a65aa914c99c29a2fe9472a7921575da86385",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_161429_beach_edit_process_probe/beach_edit_process_probe.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_161429_beach_edit_process_probe/beach_edit_process_probe.json",
+      "bytes": 10378,
+      "source_sha256": "7b05e2a509343a311a51263b2f1f3856e69cc2525857a70ff6b7548d1ba77e1d",
+      "destination_sha256": "7b05e2a509343a311a51263b2f1f3856e69cc2525857a70ff6b7548d1ba77e1d",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_161429_beach_edit_process_probe/compile.log",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_161429_beach_edit_process_probe/compile.log",
+      "bytes": 70,
+      "source_sha256": "1521e333bb184f816cdbffc18ea8fd077a9e9df48d89a494ee532d515e1dbc75",
+      "destination_sha256": "1521e333bb184f816cdbffc18ea8fd077a9e9df48d89a494ee532d515e1dbc75",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_161429_beach_edit_process_probe/compile_owner.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_161429_beach_edit_process_probe/compile_owner.json",
+      "bytes": 378,
+      "source_sha256": "7c18dadcbf2a286b1b63eb14ea0f2cfc3139fe99fa81420ac06dae4f925d4f0b",
+      "destination_sha256": "7c18dadcbf2a286b1b63eb14ea0f2cfc3139fe99fa81420ac06dae4f925d4f0b",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_161429_beach_edit_process_probe/godot.log",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_161429_beach_edit_process_probe/godot.log",
+      "bytes": 193,
+      "source_sha256": "d1df6eba02bfed5fb933e430cc07f96f769538d1f17be6bb5f2b8d7458d159d4",
+      "destination_sha256": "d1df6eba02bfed5fb933e430cc07f96f769538d1f17be6bb5f2b8d7458d159d4",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_161429_beach_edit_process_probe/manifest.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_161429_beach_edit_process_probe/manifest.json",
+      "bytes": 89865,
+      "source_sha256": "1c60a0db996cc08b4c7bca2355a86e4bc5f16630ac929e7b8032589b6cdd1181",
+      "destination_sha256": "1c60a0db996cc08b4c7bca2355a86e4bc5f16630ac929e7b8032589b6cdd1181",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_161429_beach_edit_process_probe/owner.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_161429_beach_edit_process_probe/owner.json",
+      "bytes": 1054,
+      "source_sha256": "c7bf097fce7da47699f0b1eca4403176ee298252820dacc9fd79705d779d087f",
+      "destination_sha256": "c7bf097fce7da47699f0b1eca4403176ee298252820dacc9fd79705d779d087f",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_161548_beach_edit_process_probe/artifact_index.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_161548_beach_edit_process_probe/artifact_index.json",
+      "bytes": 6331,
+      "source_sha256": "2bbc2b54f95a1ab7619b109fe15fff1112d4fab36890309a9fca286f7e351429",
+      "destination_sha256": "2bbc2b54f95a1ab7619b109fe15fff1112d4fab36890309a9fca286f7e351429",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_161548_beach_edit_process_probe/beach_edit_process_probe.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_161548_beach_edit_process_probe/beach_edit_process_probe.json",
+      "bytes": 5472,
+      "source_sha256": "d56bb453b5ec2cc70ea7a6ada241acf1d9dd7af4976e2b05e28e323cd478d13d",
+      "destination_sha256": "d56bb453b5ec2cc70ea7a6ada241acf1d9dd7af4976e2b05e28e323cd478d13d",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_161548_beach_edit_process_probe/compile.log",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_161548_beach_edit_process_probe/compile.log",
+      "bytes": 70,
+      "source_sha256": "1521e333bb184f816cdbffc18ea8fd077a9e9df48d89a494ee532d515e1dbc75",
+      "destination_sha256": "1521e333bb184f816cdbffc18ea8fd077a9e9df48d89a494ee532d515e1dbc75",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_161548_beach_edit_process_probe/compile_owner.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_161548_beach_edit_process_probe/compile_owner.json",
+      "bytes": 377,
+      "source_sha256": "0d3e0acd584ba2421f1455446315742e1a0e4edfacacd94837187467c3fccf9c",
+      "destination_sha256": "0d3e0acd584ba2421f1455446315742e1a0e4edfacacd94837187467c3fccf9c",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_161548_beach_edit_process_probe/godot.log",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_161548_beach_edit_process_probe/godot.log",
+      "bytes": 192,
+      "source_sha256": "2d1c2620fb1d31ed72a4921b949c898e6949b3ee3b6d448650f36df7c6d4c090",
+      "destination_sha256": "2d1c2620fb1d31ed72a4921b949c898e6949b3ee3b6d448650f36df7c6d4c090",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_161548_beach_edit_process_probe/manifest.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_161548_beach_edit_process_probe/manifest.json",
+      "bytes": 89865,
+      "source_sha256": "573f8a4b05fa7219e5138b549bd2bb9de0657af91fc37feb5afdefd3871b862f",
+      "destination_sha256": "573f8a4b05fa7219e5138b549bd2bb9de0657af91fc37feb5afdefd3871b862f",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_161548_beach_edit_process_probe/owner.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_161548_beach_edit_process_probe/owner.json",
+      "bytes": 1197,
+      "source_sha256": "68f08d7812cfd55ed29958307cef8da9add9016f5280b687395f81c5cd0aaa2f",
+      "destination_sha256": "68f08d7812cfd55ed29958307cef8da9add9016f5280b687395f81c5cd0aaa2f",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_161548_beach_edit_process_probe/raw_pair_comparison.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_161548_beach_edit_process_probe/raw_pair_comparison.json",
+      "bytes": 38,
+      "source_sha256": "a60594d4f83bf8990a3674b0d5d9b1df5470c3d1269d79cdb9a7ff5e3265781a",
+      "destination_sha256": "a60594d4f83bf8990a3674b0d5d9b1df5470c3d1269d79cdb9a7ff5e3265781a",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_161849_beach_live_restore_probe/artifact_index.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_161849_beach_live_restore_probe/artifact_index.json",
+      "bytes": 6234,
+      "source_sha256": "daba442e0ba9883569a97dd0ac292429880def5bdec4e4b1eee4c73d6962dc9a",
+      "destination_sha256": "daba442e0ba9883569a97dd0ac292429880def5bdec4e4b1eee4c73d6962dc9a",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_161849_beach_live_restore_probe/beach_live_restore_probe.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_161849_beach_live_restore_probe/beach_live_restore_probe.json",
+      "bytes": 2091,
+      "source_sha256": "0140b248e83def48fd0d8a312998461853a79f603a18f5d5d9f3d6a122afd619",
+      "destination_sha256": "0140b248e83def48fd0d8a312998461853a79f603a18f5d5d9f3d6a122afd619",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_161849_beach_live_restore_probe/compile.log",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_161849_beach_live_restore_probe/compile.log",
+      "bytes": 70,
+      "source_sha256": "1521e333bb184f816cdbffc18ea8fd077a9e9df48d89a494ee532d515e1dbc75",
+      "destination_sha256": "1521e333bb184f816cdbffc18ea8fd077a9e9df48d89a494ee532d515e1dbc75",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_161849_beach_live_restore_probe/compile_owner.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_161849_beach_live_restore_probe/compile_owner.json",
+      "bytes": 378,
+      "source_sha256": "032a63e22b4836d18d114c36d7024a47524b45a69feeeaa340c94ef087eca083",
+      "destination_sha256": "032a63e22b4836d18d114c36d7024a47524b45a69feeeaa340c94ef087eca083",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_161849_beach_live_restore_probe/godot.log",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_161849_beach_live_restore_probe/godot.log",
+      "bytes": 182,
+      "source_sha256": "6bf440627cc1c6afa37d3a5a5cff8da67716ce024666531532e7bf8e06fd0b86",
+      "destination_sha256": "6bf440627cc1c6afa37d3a5a5cff8da67716ce024666531532e7bf8e06fd0b86",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_161849_beach_live_restore_probe/manifest.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_161849_beach_live_restore_probe/manifest.json",
+      "bytes": 89866,
+      "source_sha256": "d350165741c0b8bdd98d0c8d4fc07c0b73cd43fa738db80ed930e9c14f7f1884",
+      "destination_sha256": "d350165741c0b8bdd98d0c8d4fc07c0b73cd43fa738db80ed930e9c14f7f1884",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_161849_beach_live_restore_probe/owner.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_161849_beach_live_restore_probe/owner.json",
+      "bytes": 998,
+      "source_sha256": "107291b2e2e7f236926a301d36abd75841607659c1df40c3b1bf8a8650d9c2c1",
+      "destination_sha256": "107291b2e2e7f236926a301d36abd75841607659c1df40c3b1bf8a8650d9c2c1",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_162627_beach_interaction_probe/artifact_index.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_162627_beach_interaction_probe/artifact_index.json",
+      "bytes": 12441,
+      "source_sha256": "bc2e113dac69df93ee197ce3b72c9bed74a6df16eeec0cebcd2656b2e5059022",
+      "destination_sha256": "bc2e113dac69df93ee197ce3b72c9bed74a6df16eeec0cebcd2656b2e5059022",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_162627_beach_interaction_probe/beach_interaction_probe.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_162627_beach_interaction_probe/beach_interaction_probe.json",
+      "bytes": 121459,
+      "source_sha256": "f5ef3a1119081c94df90c277fd62ef65362a1191a080a4d899515b971870f0f1",
+      "destination_sha256": "f5ef3a1119081c94df90c277fd62ef65362a1191a080a4d899515b971870f0f1",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_162627_beach_interaction_probe/compile.log",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_162627_beach_interaction_probe/compile.log",
+      "bytes": 70,
+      "source_sha256": "1521e333bb184f816cdbffc18ea8fd077a9e9df48d89a494ee532d515e1dbc75",
+      "destination_sha256": "1521e333bb184f816cdbffc18ea8fd077a9e9df48d89a494ee532d515e1dbc75",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_162627_beach_interaction_probe/compile_owner.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_162627_beach_interaction_probe/compile_owner.json",
+      "bytes": 376,
+      "source_sha256": "ba355fc34f3834bb29f5ee3d72b346c89ca49493c3546ac9504867e215426f7b",
+      "destination_sha256": "ba355fc34f3834bb29f5ee3d72b346c89ca49493c3546ac9504867e215426f7b",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_162627_beach_interaction_probe/godot.log",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_162627_beach_interaction_probe/godot.log",
+      "bytes": 282,
+      "source_sha256": "4cb4b7caf599248664fd502af120e66e06eee159cbcac0410328ef09b560692a",
+      "destination_sha256": "4cb4b7caf599248664fd502af120e66e06eee159cbcac0410328ef09b560692a",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_162627_beach_interaction_probe/manifest.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_162627_beach_interaction_probe/manifest.json",
+      "bytes": 90092,
+      "source_sha256": "ee739a90af0d36d15ffd5bebb4c3f0361d9dcc10d87598bc9789f91a036a4b98",
+      "destination_sha256": "ee739a90af0d36d15ffd5bebb4c3f0361d9dcc10d87598bc9789f91a036a4b98",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_162627_beach_interaction_probe/owner.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_162627_beach_interaction_probe/owner.json",
+      "bytes": 994,
+      "source_sha256": "a8332f22932103ac0e5138c0045c1d4eeec3766fdf516e4d81f445e605caa01e",
+      "destination_sha256": "a8332f22932103ac0e5138c0045c1d4eeec3766fdf516e4d81f445e605caa01e",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_164309_beach_cost_gpu_B3/artifact_index.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_164309_beach_cost_gpu_B3/artifact_index.json",
+      "bytes": 4254,
+      "source_sha256": "29853da18c5f9ca8d5784901ab3b71d4cd1b34764d9a1b260ee67f3d9fef260f",
+      "destination_sha256": "29853da18c5f9ca8d5784901ab3b71d4cd1b34764d9a1b260ee67f3d9fef260f",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_164309_beach_cost_gpu_B3/beach_cost_probe.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_164309_beach_cost_gpu_B3/beach_cost_probe.json",
+      "bytes": 424,
+      "source_sha256": "07e7485258eb035bd1f404875dcb9d74a6774683202668e7b4562275cf111dde",
+      "destination_sha256": "07e7485258eb035bd1f404875dcb9d74a6774683202668e7b4562275cf111dde",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_164309_beach_cost_gpu_B3/closed.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_164309_beach_cost_gpu_B3/closed.json",
+      "bytes": 33,
+      "source_sha256": "81f50ce802bf242a22974f6019f27f21784e6e666586f0623b3cbd84afab4729",
+      "destination_sha256": "81f50ce802bf242a22974f6019f27f21784e6e666586f0623b3cbd84afab4729",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_164309_beach_cost_gpu_B3/cost_analysis.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_164309_beach_cost_gpu_B3/cost_analysis.json",
+      "bytes": 3163,
+      "source_sha256": "da08951e9384ccb8f8db57aa9549ec9862e6c3d6e565a89e82d8341b1c16613f",
+      "destination_sha256": "da08951e9384ccb8f8db57aa9549ec9862e6c3d6e565a89e82d8341b1c16613f",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_164309_beach_cost_gpu_B3/cost_trace.jsonl",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_164309_beach_cost_gpu_B3/cost_trace.jsonl",
+      "bytes": 258928,
+      "source_sha256": "d69b2235d7a8a0d795c846db6d5a0a2e235971316d3f27e433214264803b6199",
+      "destination_sha256": "d69b2235d7a8a0d795c846db6d5a0a2e235971316d3f27e433214264803b6199",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_164309_beach_cost_gpu_B3/godot.log",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_164309_beach_cost_gpu_B3/godot.log",
+      "bytes": 641,
+      "source_sha256": "70da5f0377fe18e459320be5ca00859acd3ae54639a52b9fbe4640a5ca5795ed",
+      "destination_sha256": "70da5f0377fe18e459320be5ca00859acd3ae54639a52b9fbe4640a5ca5795ed",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_164309_beach_cost_gpu_B3/hardware.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_164309_beach_cost_gpu_B3/hardware.json",
+      "bytes": 632,
+      "source_sha256": "1817be1ee88dc75eb4611e75f4f3c1c5aa4a8210f427eeaa1c52d8ffd7c9e3cd",
+      "destination_sha256": "1817be1ee88dc75eb4611e75f4f3c1c5aa4a8210f427eeaa1c52d8ffd7c9e3cd",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_164309_beach_cost_gpu_B3/manifest.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_164309_beach_cost_gpu_B3/manifest.json",
+      "bytes": 91162,
+      "source_sha256": "8e7112d98a266ebfec91afa1be294e1c7bd151bffb3aad3eadd082fe882a28f3",
+      "destination_sha256": "8e7112d98a266ebfec91afa1be294e1c7bd151bffb3aad3eadd082fe882a28f3",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_164309_beach_cost_gpu_B3/owner.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_164309_beach_cost_gpu_B3/owner.json",
+      "bytes": 1132,
+      "source_sha256": "dd6e30cb6b08b4af2521e6b5225d2f0f65fe9d30ddd4977d8159c5b635c8d9b3",
+      "destination_sha256": "dd6e30cb6b08b4af2521e6b5225d2f0f65fe9d30ddd4977d8159c5b635c8d9b3",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_164309_beach_cost_gpu_B3/progress.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_164309_beach_cost_gpu_B3/progress.json",
+      "bytes": 78,
+      "source_sha256": "a6157c5e14aed83954a718f297a833aa61cf4665f23ead5f426f660a1400c278",
+      "destination_sha256": "a6157c5e14aed83954a718f297a833aa61cf4665f23ead5f426f660a1400c278",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_164525_beach_cost_cpu_B0/artifact_index.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_164525_beach_cost_cpu_B0/artifact_index.json",
+      "bytes": 4407,
+      "source_sha256": "0aaf401cea3946d096d343b2ca7499424dbc23d617bc2e51c0526296f1e09bb3",
+      "destination_sha256": "0aaf401cea3946d096d343b2ca7499424dbc23d617bc2e51c0526296f1e09bb3",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_164525_beach_cost_cpu_B0/beach_cost_probe.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_164525_beach_cost_cpu_B0/beach_cost_probe.json",
+      "bytes": 423,
+      "source_sha256": "dfb695fb421f54d717f364b2bcee9ec17bb107af842fe622af3a1b6cc4424e90",
+      "destination_sha256": "dfb695fb421f54d717f364b2bcee9ec17bb107af842fe622af3a1b6cc4424e90",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_164525_beach_cost_cpu_B0/closed.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_164525_beach_cost_cpu_B0/closed.json",
+      "bytes": 33,
+      "source_sha256": "74a163c2b15dff711915c36bbeb4a7dd175c2a31b9e312ca6ac57289d6231d82",
+      "destination_sha256": "74a163c2b15dff711915c36bbeb4a7dd175c2a31b9e312ca6ac57289d6231d82",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_164525_beach_cost_cpu_B0/cost_analysis.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_164525_beach_cost_cpu_B0/cost_analysis.json",
+      "bytes": 2694,
+      "source_sha256": "500c94f761b77119431da83e500ad3f1c0a80de02a55cb331101eb8fdf4ab949",
+      "destination_sha256": "500c94f761b77119431da83e500ad3f1c0a80de02a55cb331101eb8fdf4ab949",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_164525_beach_cost_cpu_B0/cost_trace.jsonl",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_164525_beach_cost_cpu_B0/cost_trace.jsonl",
+      "bytes": 266057,
+      "source_sha256": "492e93d434b1ddfa79fbc56b596f5b7d2859b178f0a6437133dd6e220d8f8be4",
+      "destination_sha256": "492e93d434b1ddfa79fbc56b596f5b7d2859b178f0a6437133dd6e220d8f8be4",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_164525_beach_cost_cpu_B0/godot.log",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_164525_beach_cost_cpu_B0/godot.log",
+      "bytes": 640,
+      "source_sha256": "184b14b74a7aa3c21231ced5c43fa5aceba44a75923a2b6a07fcd8c50cdfc66e",
+      "destination_sha256": "184b14b74a7aa3c21231ced5c43fa5aceba44a75923a2b6a07fcd8c50cdfc66e",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_164525_beach_cost_cpu_B0/hardware.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_164525_beach_cost_cpu_B0/hardware.json",
+      "bytes": 632,
+      "source_sha256": "ac8937f84ca37c6f7c7775564e852dd2faf64f9a1471edcefcc404963fa64f3f",
+      "destination_sha256": "ac8937f84ca37c6f7c7775564e852dd2faf64f9a1471edcefcc404963fa64f3f",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_164525_beach_cost_cpu_B0/manifest.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_164525_beach_cost_cpu_B0/manifest.json",
+      "bytes": 91162,
+      "source_sha256": "afc54deeb44ca5f7ab366a893cb298d5733aaa1d1678e4612b221d2823e8534d",
+      "destination_sha256": "afc54deeb44ca5f7ab366a893cb298d5733aaa1d1678e4612b221d2823e8534d",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_164525_beach_cost_cpu_B0/owner.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_164525_beach_cost_cpu_B0/owner.json",
+      "bytes": 1132,
+      "source_sha256": "c7c2cb434811cf59e74c676dc876a794ce0f29254ee9c25488b8259e48600d8b",
+      "destination_sha256": "c7c2cb434811cf59e74c676dc876a794ce0f29254ee9c25488b8259e48600d8b",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_164525_beach_cost_cpu_B0/progress.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_164525_beach_cost_cpu_B0/progress.json",
+      "bytes": 79,
+      "source_sha256": "e720e66d4f7b77b34f612f2ed3c6c1068f6035a0af7deb8927e66bbd13177007",
+      "destination_sha256": "e720e66d4f7b77b34f612f2ed3c6c1068f6035a0af7deb8927e66bbd13177007",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_164525_beach_cost_cpu_B0/warm_pair_comparison.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_164525_beach_cost_cpu_B0/warm_pair_comparison.json",
+      "bytes": 540,
+      "source_sha256": "36d83de5089264a36f551bf0249fb93e00d2a3aea05ece470aa34e484895e214",
+      "destination_sha256": "36d83de5089264a36f551bf0249fb93e00d2a3aea05ece470aa34e484895e214",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_164621_beach_cost_gpu_B0/artifact_index.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_164621_beach_cost_gpu_B0/artifact_index.json",
+      "bytes": 4556,
+      "source_sha256": "7a1a1ec10f27a03da6177b59aebd40ba8e5e568dd714a53b32429e54dc4c3e9f",
+      "destination_sha256": "7a1a1ec10f27a03da6177b59aebd40ba8e5e568dd714a53b32429e54dc4c3e9f",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_164621_beach_cost_gpu_B0/beach_cost_probe.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_164621_beach_cost_gpu_B0/beach_cost_probe.json",
+      "bytes": 424,
+      "source_sha256": "53f777306d667e9bbb3c114c35abc5b6caa0b4bb33eeb6092025121a9d94a7db",
+      "destination_sha256": "53f777306d667e9bbb3c114c35abc5b6caa0b4bb33eeb6092025121a9d94a7db",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_164621_beach_cost_gpu_B0/closed.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_164621_beach_cost_gpu_B0/closed.json",
+      "bytes": 33,
+      "source_sha256": "81f50ce802bf242a22974f6019f27f21784e6e666586f0623b3cbd84afab4729",
+      "destination_sha256": "81f50ce802bf242a22974f6019f27f21784e6e666586f0623b3cbd84afab4729",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_164621_beach_cost_gpu_B0/cost_analysis.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_164621_beach_cost_gpu_B0/cost_analysis.json",
+      "bytes": 3153,
+      "source_sha256": "c06d7ba55df14f11f3032906f5a0369e456a84eea62d4589d5543ea2895fd325",
+      "destination_sha256": "c06d7ba55df14f11f3032906f5a0369e456a84eea62d4589d5543ea2895fd325",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_164621_beach_cost_gpu_B0/cost_pair_comparison.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_164621_beach_cost_gpu_B0/cost_pair_comparison.json",
+      "bytes": 1539,
+      "source_sha256": "8cf4be87c65dd2f2d2e93b3440e0832053667fb43623211db8fbc8acb4d4bcbf",
+      "destination_sha256": "8cf4be87c65dd2f2d2e93b3440e0832053667fb43623211db8fbc8acb4d4bcbf",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_164621_beach_cost_gpu_B0/cost_trace.jsonl",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_164621_beach_cost_gpu_B0/cost_trace.jsonl",
+      "bytes": 303367,
+      "source_sha256": "ad6c01ec979f94c877fdf255e937bd63a4de3e7283b5b7089c03f91b752e33d2",
+      "destination_sha256": "ad6c01ec979f94c877fdf255e937bd63a4de3e7283b5b7089c03f91b752e33d2",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_164621_beach_cost_gpu_B0/godot.log",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_164621_beach_cost_gpu_B0/godot.log",
+      "bytes": 641,
+      "source_sha256": "4f1266e8dd4c75172c64bc6e6bdc0765f24c28e1d76f7d31843c7c0c14e47af3",
+      "destination_sha256": "4f1266e8dd4c75172c64bc6e6bdc0765f24c28e1d76f7d31843c7c0c14e47af3",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_164621_beach_cost_gpu_B0/hardware.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_164621_beach_cost_gpu_B0/hardware.json",
+      "bytes": 632,
+      "source_sha256": "a09673de598e6ec19d4dd4feceb7a6e5dc8f8c34fc0feae29685063e3b076ca3",
+      "destination_sha256": "a09673de598e6ec19d4dd4feceb7a6e5dc8f8c34fc0feae29685063e3b076ca3",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_164621_beach_cost_gpu_B0/manifest.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_164621_beach_cost_gpu_B0/manifest.json",
+      "bytes": 91162,
+      "source_sha256": "097256b093eafd056cd04ba72922b5091de0302fd5bb0f1ecfba17f34d33a903",
+      "destination_sha256": "097256b093eafd056cd04ba72922b5091de0302fd5bb0f1ecfba17f34d33a903",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_164621_beach_cost_gpu_B0/owner.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_164621_beach_cost_gpu_B0/owner.json",
+      "bytes": 1132,
+      "source_sha256": "a3520cd2901d7727c2693afbcb95a85e4a3fc77f5bafd8aab937b289fca4155a",
+      "destination_sha256": "a3520cd2901d7727c2693afbcb95a85e4a3fc77f5bafd8aab937b289fca4155a",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_164621_beach_cost_gpu_B0/progress.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_164621_beach_cost_gpu_B0/progress.json",
+      "bytes": 79,
+      "source_sha256": "2b59ed7ffa418a3ee010f726b789a7a9041828b52512c585750eb931a71b457a",
+      "destination_sha256": "2b59ed7ffa418a3ee010f726b789a7a9041828b52512c585750eb931a71b457a",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_164621_beach_cost_gpu_B0/warm_difference.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_164621_beach_cost_gpu_B0/warm_difference.json",
+      "bytes": 845,
+      "source_sha256": "7be927dc71013c619b0a2cc6cf138e22a3e09e2cfb98ea4e5b9b58ba331d6677",
+      "destination_sha256": "7be927dc71013c619b0a2cc6cf138e22a3e09e2cfb98ea4e5b9b58ba331d6677",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/artifact_index.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/artifact_index.json",
+      "bytes": 6609,
+      "source_sha256": "99f397ebfc236c65df8944e860aae45bc433364e57323c0af745272291eb21cf",
+      "destination_sha256": "99f397ebfc236c65df8944e860aae45bc433364e57323c0af745272291eb21cf",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/beach_cost_probe.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/beach_cost_probe.json",
+      "bytes": 423,
+      "source_sha256": "f3d8c9bafe6ab54196f6065377f569fa5653ce751ad9c8c31a5f26ed2e1a383f",
+      "destination_sha256": "f3d8c9bafe6ab54196f6065377f569fa5653ce751ad9c8c31a5f26ed2e1a383f",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/closed.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/closed.json",
+      "bytes": 33,
+      "source_sha256": "81f50ce802bf242a22974f6019f27f21784e6e666586f0623b3cbd84afab4729",
+      "destination_sha256": "81f50ce802bf242a22974f6019f27f21784e6e666586f0623b3cbd84afab4729",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/cost_analysis.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/cost_analysis.json",
+      "bytes": 5521,
+      "source_sha256": "d289ce5d29723280ea20f7415194b82443ababcc6eec2ea33ca761cff2eb1fbc",
+      "destination_sha256": "d289ce5d29723280ea20f7415194b82443ababcc6eec2ea33ca761cff2eb1fbc",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/cost_trace.jsonl",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/cost_trace.jsonl",
+      "bytes": 315659,
+      "source_sha256": "8350262eddfea9a1a9e04bd35a9d7f877ec364f3aa0612b0a220fa60df403278",
+      "destination_sha256": "8350262eddfea9a1a9e04bd35a9d7f877ec364f3aa0612b0a220fa60df403278",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/dump_window_alignment.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/dump_window_alignment.json",
+      "bytes": 1365,
+      "source_sha256": "4be9616363ab7611681779cd97fc0ed409d766c5e05f8478fde80c30aa417318",
+      "destination_sha256": "4be9616363ab7611681779cd97fc0ed409d766c5e05f8478fde80c30aa417318",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/godot.log",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/godot.log",
+      "bytes": 640,
+      "source_sha256": "70d8f042ea8fbc5fcf7187464c90efaec2c49237782c50a2f396c748f3c3a7fc",
+      "destination_sha256": "70d8f042ea8fbc5fcf7187464c90efaec2c49237782c50a2f396c748f3c3a7fc",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/hardware.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/hardware.json",
+      "bytes": 632,
+      "source_sha256": "2a3fc0aaa231a5c0cfe5535d47b1b07d314cdc28ab6a7c92fe18c8b1a05ebb3e",
+      "destination_sha256": "2a3fc0aaa231a5c0cfe5535d47b1b07d314cdc28ab6a7c92fe18c8b1a05ebb3e",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/manifest.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/manifest.json",
+      "bytes": 92277,
+      "source_sha256": "dcfed6217aeb183cbd01d9e2cf0de40d3d90a7c17c5a6cf7ccfc5eb19ef3cefd",
+      "destination_sha256": "dcfed6217aeb183cbd01d9e2cf0de40d3d90a7c17c5a6cf7ccfc5eb19ef3cefd",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/native_frame_disassembly.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/native_frame_disassembly.json",
+      "bytes": 555642,
+      "source_sha256": "6cd353a26822b011ac125c182b1a8fffdc80122d48b8e3a497b716198ee61012",
+      "destination_sha256": "6cd353a26822b011ac125c182b1a8fffdc80122d48b8e3a497b716198ee61012",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/native_negative_identity_unwind.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/native_negative_identity_unwind.json",
+      "bytes": 2413,
+      "source_sha256": "21166b6e85ea4486b193f435b711209ed39340bb1ebdc6106f88a7dd3b9daf3b",
+      "destination_sha256": "21166b6e85ea4486b193f435b711209ed39340bb1ebdc6106f88a7dd3b9daf3b",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/native_negative_truncated_stack_unwind.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/native_negative_truncated_stack_unwind.json",
+      "bytes": 1844,
+      "source_sha256": "9a5c5347b4177f97471e35e1cd27189dfb2de8fe79c6cfa0d4d246092c4cf0ce",
+      "destination_sha256": "9a5c5347b4177f97471e35e1cd27189dfb2de8fe79c6cfa0d4d246092c4cf0ce",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/native_thread_contexts.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/native_thread_contexts.json",
+      "bytes": 111634,
+      "source_sha256": "17808e0864dc479328c2adadf7af7cfccdc91ec1e2f83f20f55ddbfc433b7ddc",
+      "destination_sha256": "17808e0864dc479328c2adadf7af7cfccdc91ec1e2f83f20f55ddbfc433b7ddc",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/native_unwind_verification.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/native_unwind_verification.json",
+      "bytes": 4099,
+      "source_sha256": "ccc0077bf92b104ca6e07022225b96a365d10877190cb12441ff2046ecd6b90e",
+      "destination_sha256": "ccc0077bf92b104ca6e07022225b96a365d10877190cb12441ff2046ecd6b90e",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/native_unwind_verification_initial.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/native_unwind_verification_initial.json",
+      "bytes": 4101,
+      "source_sha256": "fdce7390455ab61c04e5d2ba01df99ce2a702019e7de645f86842fbb8933aa2d",
+      "destination_sha256": "fdce7390455ab61c04e5d2ba01df99ce2a702019e7de645f86842fbb8933aa2d",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/native_unwound_15016.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/native_unwound_15016.json",
+      "bytes": 6563,
+      "source_sha256": "a6bbc88146b3736d9f1294e8c47b7dec1b597014646ab1d8d181f8f24e6e5def",
+      "destination_sha256": "a6bbc88146b3736d9f1294e8c47b7dec1b597014646ab1d8d181f8f24e6e5def",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/owner.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/owner.json",
+      "bytes": 1186,
+      "source_sha256": "fd3c7906cebc3e553ab206ccc50ad566449ff0e56355451581d3bc9d7f670515",
+      "destination_sha256": "fd3c7906cebc3e553ab206ccc50ad566449ff0e56355451581d3bc9d7f670515",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/process_cpu_samples.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/process_cpu_samples.json",
+      "bytes": 1206580,
+      "source_sha256": "ead4f432498db4f8430cde0870b980082b68ff28b9c9765ad15257a8691c39fa",
+      "destination_sha256": "ead4f432498db4f8430cde0870b980082b68ff28b9c9765ad15257a8691c39fa",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/progress.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/progress.json",
+      "bytes": 79,
+      "source_sha256": "ba93c47a0d1f0ff721d4c41de91b5107fd013ea167d698d96d24c7daa9c09514",
+      "destination_sha256": "ba93c47a0d1f0ff721d4c41de91b5107fd013ea167d698d96d24c7daa9c09514",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/sampler_error.log",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/sampler_error.log",
+      "bytes": 0,
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/sampler_owner.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/sampler_owner.json",
+      "bytes": 733,
+      "source_sha256": "5d79672de3f5bc7a8cc06b55154a2f94c81f278e41cab42fe13580dc5b34f1fd",
+      "destination_sha256": "5d79672de3f5bc7a8cc06b55154a2f94c81f278e41cab42fe13580dc5b34f1fd",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_174751_combined_probe/artifact_index.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_174751_combined_probe/artifact_index.json",
+      "bytes": 529188,
+      "source_sha256": "df1c9ab19771fabe7e407ce2717cf2d8533a98c625fb44ce53b65cc4673743cd",
+      "destination_sha256": "df1c9ab19771fabe7e407ce2717cf2d8533a98c625fb44ce53b65cc4673743cd",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_174751_combined_probe/combined_probe.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_174751_combined_probe/combined_probe.json",
+      "bytes": 83057,
+      "source_sha256": "899b1843095c5c8d170332efe2000eedf04015010dc3f33111635cecda8bfe73",
+      "destination_sha256": "899b1843095c5c8d170332efe2000eedf04015010dc3f33111635cecda8bfe73",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_174751_combined_probe/compile.log",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_174751_combined_probe/compile.log",
+      "bytes": 70,
+      "source_sha256": "1521e333bb184f816cdbffc18ea8fd077a9e9df48d89a494ee532d515e1dbc75",
+      "destination_sha256": "1521e333bb184f816cdbffc18ea8fd077a9e9df48d89a494ee532d515e1dbc75",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_174751_combined_probe/compile_owner.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_174751_combined_probe/compile_owner.json",
+      "bytes": 357,
+      "source_sha256": "78446cd6c3e41193804bc7828b2571166a5fcd042b8fbc46239311e94a5b485f",
+      "destination_sha256": "78446cd6c3e41193804bc7828b2571166a5fcd042b8fbc46239311e94a5b485f",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_174751_combined_probe/godot.log",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_174751_combined_probe/godot.log",
+      "bytes": 281,
+      "source_sha256": "d928a4477ee0a033a982992b8cf25d06fe69cef8d63e3aed93b955e430caaa29",
+      "destination_sha256": "d928a4477ee0a033a982992b8cf25d06fe69cef8d63e3aed93b955e430caaa29",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_174751_combined_probe/idle_candidate_pair.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_174751_combined_probe/idle_candidate_pair.json",
+      "bytes": 271,
+      "source_sha256": "ced3d64c700650c976639cd058afb8b51faf91e3b61caab99ffa6f4d3f6c2611",
+      "destination_sha256": "ced3d64c700650c976639cd058afb8b51faf91e3b61caab99ffa6f4d3f6c2611",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_174751_combined_probe/manifest.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_174751_combined_probe/manifest.json",
+      "bytes": 93178,
+      "source_sha256": "7837c949e140d0652b021e39ab905224d7767a2b4e59f59365e16f3d71f3bba8",
+      "destination_sha256": "7837c949e140d0652b021e39ab905224d7767a2b4e59f59365e16f3d71f3bba8",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_174751_combined_probe/owner.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_174751_combined_probe/owner.json",
+      "bytes": 960,
+      "source_sha256": "7959a2cef85dcbbb7a8de211113f911e3e36146f731da17bb940855b61d7a722",
+      "destination_sha256": "7959a2cef85dcbbb7a8de211113f911e3e36146f731da17bb940855b61d7a722",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_174948_connected_runs_probe/artifact_index.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_174948_connected_runs_probe/artifact_index.json",
+      "bytes": 110592,
+      "source_sha256": "52d5ccd28607fd072d322921647e2f73e7c837a597c389bfaad5419265e84529",
+      "destination_sha256": "52d5ccd28607fd072d322921647e2f73e7c837a597c389bfaad5419265e84529",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_174948_connected_runs_probe/compile.log",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_174948_connected_runs_probe/compile.log",
+      "bytes": 70,
+      "source_sha256": "1521e333bb184f816cdbffc18ea8fd077a9e9df48d89a494ee532d515e1dbc75",
+      "destination_sha256": "1521e333bb184f816cdbffc18ea8fd077a9e9df48d89a494ee532d515e1dbc75",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_174948_connected_runs_probe/compile_owner.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_174948_connected_runs_probe/compile_owner.json",
+      "bytes": 370,
+      "source_sha256": "2cc94d424a08df679a47cced0f413fd721f66a2da64357f40c974e3dd1ec1e0d",
+      "destination_sha256": "2cc94d424a08df679a47cced0f413fd721f66a2da64357f40c974e3dd1ec1e0d",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_174948_connected_runs_probe/connected_runs_probe.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_174948_connected_runs_probe/connected_runs_probe.json",
+      "bytes": 44983,
+      "source_sha256": "a0fb98be0c9a23e230241fe6d38dbe2025c7eca72f9d9c31f8b1d9e0e93f739f",
+      "destination_sha256": "a0fb98be0c9a23e230241fe6d38dbe2025c7eca72f9d9c31f8b1d9e0e93f739f",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_174948_connected_runs_probe/godot.log",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_174948_connected_runs_probe/godot.log",
+      "bytes": 285,
+      "source_sha256": "f3993e26c8a2f05b6afdcb1cef6795bc036d6389d9dfd00d1853d6e768f3ba3b",
+      "destination_sha256": "f3993e26c8a2f05b6afdcb1cef6795bc036d6389d9dfd00d1853d6e768f3ba3b",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_174948_connected_runs_probe/idle_candidate_pair.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_174948_connected_runs_probe/idle_candidate_pair.json",
+      "bytes": 269,
+      "source_sha256": "9c835de6cafaee3553ff3b4ebf5792ef45c7f6884ce9a92fef0634a751cc95b9",
+      "destination_sha256": "9c835de6cafaee3553ff3b4ebf5792ef45c7f6884ce9a92fef0634a751cc95b9",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_174948_connected_runs_probe/manifest.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_174948_connected_runs_probe/manifest.json",
+      "bytes": 93178,
+      "source_sha256": "b7a932c32ccf861c3cc0c85d899db92113602f09ea7b889ede02011322817f90",
+      "destination_sha256": "b7a932c32ccf861c3cc0c85d899db92113602f09ea7b889ede02011322817f90",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_174948_connected_runs_probe/owner.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_174948_connected_runs_probe/owner.json",
+      "bytes": 984,
+      "source_sha256": "bbf16a540f53a5a2b6d7973456e32e2253bc095c7d974c8a816f6eddb7ced4eb",
+      "destination_sha256": "bbf16a540f53a5a2b6d7973456e32e2253bc095c7d974c8a816f6eddb7ced4eb",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_175335_beach_cost_gpu_B3/artifact_index.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_175335_beach_cost_gpu_B3/artifact_index.json",
+      "bytes": 4254,
+      "source_sha256": "8a1efe4f16effc9b9b5621ee8871bbc7333f12d944bc7be90af6fe79459154ad",
+      "destination_sha256": "8a1efe4f16effc9b9b5621ee8871bbc7333f12d944bc7be90af6fe79459154ad",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_175335_beach_cost_gpu_B3/beach_cost_probe.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_175335_beach_cost_gpu_B3/beach_cost_probe.json",
+      "bytes": 424,
+      "source_sha256": "2dc5d876480ff29dd7966062d404678c3a5994342bbf46eafb51d3a2a1f62977",
+      "destination_sha256": "2dc5d876480ff29dd7966062d404678c3a5994342bbf46eafb51d3a2a1f62977",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_175335_beach_cost_gpu_B3/closed.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_175335_beach_cost_gpu_B3/closed.json",
+      "bytes": 33,
+      "source_sha256": "81f50ce802bf242a22974f6019f27f21784e6e666586f0623b3cbd84afab4729",
+      "destination_sha256": "81f50ce802bf242a22974f6019f27f21784e6e666586f0623b3cbd84afab4729",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_175335_beach_cost_gpu_B3/cost_analysis.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_175335_beach_cost_gpu_B3/cost_analysis.json",
+      "bytes": 3365,
+      "source_sha256": "c98f439b8758a55be5db4d38bbe8c5fe62e9ed3d0361381000297f4957a16b10",
+      "destination_sha256": "c98f439b8758a55be5db4d38bbe8c5fe62e9ed3d0361381000297f4957a16b10",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_175335_beach_cost_gpu_B3/cost_trace.jsonl",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_175335_beach_cost_gpu_B3/cost_trace.jsonl",
+      "bytes": 289627,
+      "source_sha256": "ccb002a8167e20e3ed085e9d928fb63c19664c2c1a6905589df69610de9dc7f0",
+      "destination_sha256": "ccb002a8167e20e3ed085e9d928fb63c19664c2c1a6905589df69610de9dc7f0",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_175335_beach_cost_gpu_B3/godot.log",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_175335_beach_cost_gpu_B3/godot.log",
+      "bytes": 641,
+      "source_sha256": "f21f44b0fb7282c78d7fa79aed521b0619f3d20c14b5c9038277784722e3a7ab",
+      "destination_sha256": "f21f44b0fb7282c78d7fa79aed521b0619f3d20c14b5c9038277784722e3a7ab",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_175335_beach_cost_gpu_B3/hardware.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_175335_beach_cost_gpu_B3/hardware.json",
+      "bytes": 632,
+      "source_sha256": "a34f9b5329e1fef733fa1cd1684af2c93c9c711499abdb63f530855fdafc3870",
+      "destination_sha256": "a34f9b5329e1fef733fa1cd1684af2c93c9c711499abdb63f530855fdafc3870",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_175335_beach_cost_gpu_B3/manifest.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_175335_beach_cost_gpu_B3/manifest.json",
+      "bytes": 93406,
+      "source_sha256": "ab468411528e83c9b80d2cec287469275f1e178805682f704e8c12b7c423c489",
+      "destination_sha256": "ab468411528e83c9b80d2cec287469275f1e178805682f704e8c12b7c423c489",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_175335_beach_cost_gpu_B3/owner.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_175335_beach_cost_gpu_B3/owner.json",
+      "bytes": 1191,
+      "source_sha256": "67e4e7fcf9b9c990492baf83834edbb2c1f18dcae00777ba3fa8096c9bdc0810",
+      "destination_sha256": "67e4e7fcf9b9c990492baf83834edbb2c1f18dcae00777ba3fa8096c9bdc0810",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_175335_beach_cost_gpu_B3/progress.json",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_175335_beach_cost_gpu_B3/progress.json",
+      "bytes": 79,
+      "source_sha256": "3928241acd377f5ee95601714e9ed9ab31dc8f8d705d7e962872f33edb0f3aaa",
+      "destination_sha256": "3928241acd377f5ee95601714e9ed9ab31dc8f8d705d7e962872f33edb0f3aaa",
+      "link_rebased": false
+    },
+    {
+      "source": "task/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/native_wait.dmp",
+      "destination": "docs/history/sandcastle_gpu_edit_validation/evidence/20261011_165904_beach_cost_gpu_B3/native_wait.dmp",
+      "bytes": 151782,
+      "source_sha256": "d72ad007860239e001fbcfeca5272a104875e7e5ef35b96c6984c332e3bf627f",
+      "destination_sha256": "d72ad007860239e001fbcfeca5272a104875e7e5ef35b96c6984c332e3bf627f",
+      "link_rebased": false
+    }
+  ],
+  "updated_markdown": [
+    "docs/README.md",
+    "docs/当前项目技术方案.md",
+    "docs/search/underwater_deposit_report.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W07_GPU账本双缓冲试验_20261007.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W07_GPU账本批量采集试验_20261007.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W07_主水面跨向平滑试验_20261007.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W07_主网格局部翻折试验_20261007.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W07_共床高接触试验_20261007.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W07_前缘GPU预计算试验_20261007.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W07_单网格遮挡分层复核_20261007.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W07_卷唇独立表示试验_20261007.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W07_卷浪面试验_20261007.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W07_去逐Tick账本回读试验_20261007.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W07_固定子步无等待试验_20261007.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W07_多孔泡沫试验_20261007.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W07_多尺度沙舌候选_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W07_实体浪唇试验_20261007.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W07_宽浪前试验_20261007.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W07_局部前脸截面复核_20261007.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W07_帧队列试验_20261007.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W07_径向岸线与浪脊渐退试验_20261007.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W07_权威上升带与浪唇试验_20261007.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W07_水面深度写入试验_20261007.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W07_泡沫独立层试验_20261007.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W07_浪体分色与遮挡试验_20261007.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W07_浪前帘面试验_20261007.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W07_浪唇窄行与主面泡沫归因_20261007.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W07_浪脊水深门槛试验_20261007.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W07_浪脊遮挡与着色隔离试验_20261007.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W07_深度写入多相位与卷唇复测_20261007.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W07_离岸浪前相位与着白复核_20261007.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W07_耦合亮纹原型_20261007.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W07_耦合光学同态诊断_20261007.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W07_连续卷唇试验_20261007.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W07_附着浪唇试验_20261007.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W07_雕刻床面候选_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W07_非周期亮纹试验_20261007.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W08_G01_staging湿度前缘消费_20261007.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W08_G01_参考入口能力起点_20261007.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W08_G02_共享波包接线_20261007.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W08_G03_导出包运行_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W08_G03_连续波包长动态接线_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W08_性能轮01_近景长窗复测_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W08_性能轮01_连续负载基线_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W09_G01_同太阳机位高光_20261009.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W09_G01_真实坡度法线与双面朝向_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W09_G02_主网格局部前翻失败对照_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W09_G02_二维分支前脸与行扫描_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W09_G02_二维分支网格_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W09_G02_分支端帽与湿域裁切_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W09_G02_局部主网格变形_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W09_G02_截面参数与宽字段失败对照_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W09_G02_浪唇半透明材质_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W09_G02_自由面前缘床高修复_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W09_G02_自适应行锚点_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W09_G02_行前缘自由面床高修复_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W09_G02_连续波包前缘分支拓扑_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W09_G02_连续负载共享拓扑弱行锚点_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W09_G03_动态岸线完成态_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W09_G04_逐格前脸候选_20261009.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W09_G06_对向前脸与浪冠限域_20261009.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W10_G01_三层透底与光学分解_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W10_G01_反射折射贡献拆分_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W10_G01_浅水保纹候选_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W10_G01_薄水无折射候选_20261009.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W10_G02_反射半分辨率_20261009.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W10_G02_屏幕边界与前景遮挡_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W10_G02_透明交线转镜头采样_20261009.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W10_G02_透明物体多机位_20261009.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W10_G02_静态前景遮挡_20261009.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W10_G03_光学深度平滑失败对照_20261009.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W10_G03_当前三机位光学_20261009.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W10_G04_v5浅水保纹配置_20261009.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W10_G08_v8反射配置_20261009.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W10_G09_v8反射柔化_20261009.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W11_G01_亮纹尺度与浅底可读性_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W11_G01_亮纹强度与浅底形体_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W11_G01_亮纹相位隔离_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W11_G01_俯视投影尺度_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W11_G01_双层深度衰减_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W11_G01_透射保纹失败对照_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W11_G03_10秒1080p恢复亮纹录像_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W11_G06_v8云状亮纹否决_20261009.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W11_性能轮01_恢复亮纹成本_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W12_G01_流动碎裂诊断_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W12_G02_前缘限域泡沫来源_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W12_G02_床降伪浪源GPU复现_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W12_G02_床高历史修复_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W12_G02_无波床降与推进波对照_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W12_G03_20秒1080p连续录像_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W12_G04_离岸白芯候选_20261009.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W12_G05_白芯共享配置_20261009.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W12_性能轮01_床高历史成本_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W13_G01_动态岸线遮罩_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W13_G01_固定耦合床面插值_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W13_G01_屏幕深度交线_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W13_G01_湿域来源着色_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W13_G01_薄水透明度下限失败对照_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W13_G01_薄水透明度归因_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W13_G02_湿痕时序_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W13_G02_窄湿痕候选_20261008.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W13_G03_旧夹具动态岸线原门复验_20261009.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W13_G04_浅水接触色失败对照_20261009.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W13_G08_独立岸脚层否决_20261009.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W14_G02_v5保存恢复回归_20261009.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W14_G02_当前严格捕图与入口负例_20261009.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W14_G06_v8固定模式300秒成本_20261009.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W14_G07_v8耦合30分钟长稳_20261009.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W14_G08_v8白沫墙钟映射_20261009.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W14_G10_v8分块写盘30分钟复测_20261009.md",
+    "docs/history/sandcastle_water_render_alignment/验收/W14_G11_v8逐tick时间收尾_20261010.md",
+    "docs/history/sandcastle_visual_reconstruction_phase2/验收/RDC与当前实现差距_20261005.md"
+  ],
+  "not_preserved": [
+    "大批逐格bin、完整RDC、逐tick临时快照及其余运行目录；删除task后不可本地完整复验"
+  ],
+  "raw_evidence_policy": "保留结果摘要/配置manifest/原始索引和小型native_wait.dmp；索引不代表全部原始数据仍可用。",
+  "runtime_tools": "tools/gpu_edit_validation；新输出test_output/gpu_edit_validation",
+  "source_deleted": false
+}

@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="ArrayMesh" path="res://tests/visual_water_alignment/prototypes/reflection_rock_0.tres" id="1_left"]
+[ext_resource type="ArrayMesh" path="res://tests/visual_water_alignment/prototypes/reflection_rock_1.tres" id="2_middle"]
+[ext_resource type="ArrayMesh" path="res://tests/visual_water_alignment/prototypes/reflection_rock_2.tres" id="3_right"]
+
+[node name="ReflectionRockEnvironment" type="Node3D"]
+
+[node name="LeftRock" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.45, 0, 0, 0, 0.90, 0, 0, 0, 0.95, -6.6, 0.35, -6.1)
+layers = 5
+mesh = ExtResource("1_left")
+
+[node name="MiddleRock" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.90, 0, 0, 0, 1.20, 0, 0, 0, 1.05, -4.6, 0.45, -6.6)
+layers = 5
+mesh = ExtResource("2_middle")
+
+[node name="RightRock" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.25, 0, 0, 0, 0.75, 0, 0, 0, 0.90, -2.9, 0.25, -6.4)
+layers = 5
+mesh = ExtResource("3_right")

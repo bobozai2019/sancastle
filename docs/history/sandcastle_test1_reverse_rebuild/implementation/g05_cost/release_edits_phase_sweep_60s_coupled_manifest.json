@@ -1,0 +1,1043 @@
+{
+	"adapter": "NVIDIA GeForce GTX 1050",
+	"case": "coupled",
+	"caustic_recovery_gain": 0.0,
+	"caustic_recovery_pattern_size": [],
+	"caustic_recovery_scale": 1.0,
+	"cost_bound_met_all_stages": false,
+	"csv": "D:/godot/project/sandcastle/task/sandcastle_test1_reverse_rebuild/implementation/g05_cost/release_edits_phase_sweep_60s_coupled_frames.csv",
+	"dirty_summaries_checked": 2097,
+	"dirty_summaries_missed": 0,
+	"effective_profile": {
+		"caustic_pattern": "res://tests/visual_water_alignment/prototypes/caustic_fold_v1.png",
+		"caustic_pattern_height": 1024,
+		"caustic_pattern_width": 1024,
+		"caustic_softness": 1.0,
+		"caustic_strength": 0.8,
+		"caustic_uv_scale": 2.0,
+		"crest_broken_core": false,
+		"crest_height_m": 0.25,
+		"depth_write": true,
+		"eta_normals": true,
+		"face_normal": true,
+		"fixture_id": "water_render_coupled_v2",
+		"fold_caustics": true,
+		"local_front": true,
+		"main_foam": true,
+		"offshore_core": false,
+		"offshore_core_broken": false,
+		"offshore_core_crown": false,
+		"phase": "staging",
+		"planar_reflection": true,
+		"profile_id": "water_render_staging_v8",
+		"reference_bed": "estuary_branched_v1",
+		"reflection_strength": 1.0,
+		"reflection_texture_height": 540,
+		"reflection_texture_width": 960,
+		"refraction_scale": 0.02,
+		"render_subdivision": 2,
+		"schema_version": 8.0,
+		"screen_abs_fresnel": true,
+		"screen_optics": true,
+		"screen_world_glint": false,
+		"shallow_extinction_m": 0.25,
+		"shallow_preserve": true,
+		"surface_bias_m": 0.003,
+		"terrain_shader": "res://task/sandcastle_test1_reverse_rebuild/implementation/test1_bed_lit_fast.gdshader",
+		"test1_foam_splats": true,
+		"test1_sand_forms": true,
+		"test1_shore_contact": true,
+		"test1_splat_diameter_px": 3.5,
+		"test1_whitewater_gain": 0.32,
+		"visual_time_s": 69.9333333333333,
+		"water_shader": "res://task/sandcastle_test1_reverse_rebuild/implementation/test1_water_front.gdshader"
+	},
+	"effective_profile_sha256": "f08266e2d9089899493e98e3e5a4d72931d107a658f5c58247fce8c2b239a7e6",
+	"effective_water_shader": "res://task/sandcastle_test1_reverse_rebuild/implementation/test1_water_front.gdshader",
+	"engine_max_fps": 0,
+	"fixed_cfl_audit_count": 0,
+	"fixed_cfl_max_required": 0,
+	"fixed_cfl_over_bound": 0,
+	"fixture_id": "water_render_coupled_v2",
+	"frame_queue_size_setting": 2,
+	"invalid_sand_cells": 0,
+	"invalid_water_cells": 0,
+	"main_frame_timing_csv": "",
+	"max_substeps": 3,
+	"nan_events": 0,
+	"negative_sand_cells": 0,
+	"negative_water_cells": 0,
+	"overload_events": 0,
+	"profile_time_matches_tick": true,
+	"rendering_driver": "d3d12",
+	"requested_profile_path": "res://task/sandcastle_test1_reverse_rebuild/implementation/test1_beach_release.json",
+	"requested_profile_sha256": "f07325a9eacbbfba293e2190107e2eb21982c60a638aef67980fad03f61d910a",
+	"role": "test1_beach_cost_probe",
+	"run_id": "release_edits_phase_sweep_60s",
+	"sand_closure_m3": 0.000207495769473098,
+	"sand_only_syncs": 19,
+	"sand_prefetch_hits": 1,
+	"selected_camera": "oblique",
+	"sim_hz": 30,
+	"soak_packets": 80,
+	"stage_target_seconds": 60,
+	"stages": [
+		{
+			"camera": "oblique",
+			"camera_transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 0.862807, -0.505533), Z: (0.0, 0.505533, 0.862807), O: (-1.0, 13.0, 22.0)]",
+			"edit_commands_submitted": 20,
+			"edit_submits": [
+				{
+					"command_id": 1,
+					"kind": "remove_sand",
+					"submit_us": 18379730,
+					"tick": 360
+				},
+				{
+					"command_id": 2,
+					"kind": "place_sand",
+					"submit_us": 21419883,
+					"tick": 451
+				},
+				{
+					"command_id": 3,
+					"kind": "remove_sand",
+					"submit_us": 24452159,
+					"tick": 542
+				},
+				{
+					"command_id": 4,
+					"kind": "place_sand",
+					"submit_us": 27473331,
+					"tick": 633
+				},
+				{
+					"command_id": 5,
+					"kind": "remove_sand",
+					"submit_us": 30513690,
+					"tick": 724
+				},
+				{
+					"command_id": 6,
+					"kind": "place_sand",
+					"submit_us": 33536361,
+					"tick": 815
+				},
+				{
+					"command_id": 7,
+					"kind": "remove_sand",
+					"submit_us": 36588100,
+					"tick": 906
+				},
+				{
+					"command_id": 8,
+					"kind": "place_sand",
+					"submit_us": 39613865,
+					"tick": 997
+				},
+				{
+					"command_id": 9,
+					"kind": "remove_sand",
+					"submit_us": 42642978,
+					"tick": 1088
+				},
+				{
+					"command_id": 10,
+					"kind": "place_sand",
+					"submit_us": 45692887,
+					"tick": 1179
+				},
+				{
+					"command_id": 11,
+					"kind": "remove_sand",
+					"submit_us": 48723184,
+					"tick": 1270
+				},
+				{
+					"command_id": 12,
+					"kind": "place_sand",
+					"submit_us": 51744783,
+					"tick": 1361
+				},
+				{
+					"command_id": 13,
+					"kind": "remove_sand",
+					"submit_us": 54784103,
+					"tick": 1452
+				},
+				{
+					"command_id": 14,
+					"kind": "place_sand",
+					"submit_us": 57826876,
+					"tick": 1543
+				},
+				{
+					"command_id": 15,
+					"kind": "remove_sand",
+					"submit_us": 60851905,
+					"tick": 1634
+				},
+				{
+					"command_id": 16,
+					"kind": "place_sand",
+					"submit_us": 63880956,
+					"tick": 1725
+				},
+				{
+					"command_id": 17,
+					"kind": "remove_sand",
+					"submit_us": 66927035,
+					"tick": 1816
+				},
+				{
+					"command_id": 18,
+					"kind": "place_sand",
+					"submit_us": 69958576,
+					"tick": 1907
+				},
+				{
+					"command_id": 19,
+					"kind": "remove_sand",
+					"submit_us": 72999924,
+					"tick": 1998
+				},
+				{
+					"command_id": 20,
+					"kind": "place_sand",
+					"submit_us": 76046401,
+					"tick": 2089
+				}
+			],
+			"fov_deg": 55.0,
+			"frames": 3977,
+			"meets_cost_bound": false,
+			"render_gpu_p99_ms": 14.1009998321533,
+			"seconds": 60.017898,
+			"source_active_fraction": 1.0,
+			"source_active_frames": 3977,
+			"static_memory_range_bytes": 6293748,
+			"tick_end": 2098,
+			"tick_rate": 29.9577302757254,
+			"tick_start": 300,
+			"video_memory_range_bytes": 393216,
+			"wall_p50_ms": 14.1330003738403,
+			"wall_p95_ms": 26.7749996185303,
+			"wall_p99_ms": 31.7709999084473
+		}
+	],
+	"tick_end": 2098,
+	"tick_timing_csv": "",
+	"tick_timing_summary": {},
+	"viewport_px": [
+		1920,
+		1080
+	],
+	"visual_time_s": 69.9333333333333,
+	"vsync_mode": 0,
+	"warmup_seconds": 10,
+	"wave_clamp_events": 0,
+	"wave_load": "continuous",
+	"wave_requests": [
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 1,
+			"seed": 31,
+			"start_tick": 8
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 2,
+			"seed": 48,
+			"start_tick": 188
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 3,
+			"seed": 65,
+			"start_tick": 368
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 4,
+			"seed": 82,
+			"start_tick": 548
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 5,
+			"seed": 99,
+			"start_tick": 728
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 6,
+			"seed": 116,
+			"start_tick": 908
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 7,
+			"seed": 133,
+			"start_tick": 1088
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 8,
+			"seed": 150,
+			"start_tick": 1268
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 9,
+			"seed": 167,
+			"start_tick": 1448
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 10,
+			"seed": 184,
+			"start_tick": 1628
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 11,
+			"seed": 201,
+			"start_tick": 1808
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 12,
+			"seed": 218,
+			"start_tick": 1988
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 13,
+			"seed": 235,
+			"start_tick": 2168
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 14,
+			"seed": 252,
+			"start_tick": 2348
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 15,
+			"seed": 269,
+			"start_tick": 2528
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 16,
+			"seed": 286,
+			"start_tick": 2708
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 17,
+			"seed": 303,
+			"start_tick": 2888
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 18,
+			"seed": 320,
+			"start_tick": 3068
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 19,
+			"seed": 337,
+			"start_tick": 3248
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 20,
+			"seed": 354,
+			"start_tick": 3428
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 21,
+			"seed": 371,
+			"start_tick": 3608
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 22,
+			"seed": 388,
+			"start_tick": 3788
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 23,
+			"seed": 405,
+			"start_tick": 3968
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 24,
+			"seed": 422,
+			"start_tick": 4148
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 25,
+			"seed": 439,
+			"start_tick": 4328
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 26,
+			"seed": 456,
+			"start_tick": 4508
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 27,
+			"seed": 473,
+			"start_tick": 4688
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 28,
+			"seed": 490,
+			"start_tick": 4868
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 29,
+			"seed": 507,
+			"start_tick": 5048
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 30,
+			"seed": 524,
+			"start_tick": 5228
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 31,
+			"seed": 541,
+			"start_tick": 5408
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 32,
+			"seed": 558,
+			"start_tick": 5588
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 33,
+			"seed": 575,
+			"start_tick": 5768
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 34,
+			"seed": 592,
+			"start_tick": 5948
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 35,
+			"seed": 609,
+			"start_tick": 6128
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 36,
+			"seed": 626,
+			"start_tick": 6308
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 37,
+			"seed": 643,
+			"start_tick": 6488
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 38,
+			"seed": 660,
+			"start_tick": 6668
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 39,
+			"seed": 677,
+			"start_tick": 6848
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 40,
+			"seed": 694,
+			"start_tick": 7028
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 41,
+			"seed": 711,
+			"start_tick": 7208
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 42,
+			"seed": 728,
+			"start_tick": 7388
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 43,
+			"seed": 745,
+			"start_tick": 7568
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 44,
+			"seed": 762,
+			"start_tick": 7748
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 45,
+			"seed": 779,
+			"start_tick": 7928
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 46,
+			"seed": 796,
+			"start_tick": 8108
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 47,
+			"seed": 813,
+			"start_tick": 8288
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 48,
+			"seed": 830,
+			"start_tick": 8468
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 49,
+			"seed": 847,
+			"start_tick": 8648
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 50,
+			"seed": 864,
+			"start_tick": 8828
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 51,
+			"seed": 881,
+			"start_tick": 9008
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 52,
+			"seed": 898,
+			"start_tick": 9188
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 53,
+			"seed": 915,
+			"start_tick": 9368
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 54,
+			"seed": 932,
+			"start_tick": 9548
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 55,
+			"seed": 949,
+			"start_tick": 9728
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 56,
+			"seed": 966,
+			"start_tick": 9908
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 57,
+			"seed": 983,
+			"start_tick": 10088
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 58,
+			"seed": 1000,
+			"start_tick": 10268
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 59,
+			"seed": 1017,
+			"start_tick": 10448
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 60,
+			"seed": 1034,
+			"start_tick": 10628
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 61,
+			"seed": 1051,
+			"start_tick": 10808
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 62,
+			"seed": 1068,
+			"start_tick": 10988
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 63,
+			"seed": 1085,
+			"start_tick": 11168
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 64,
+			"seed": 1102,
+			"start_tick": 11348
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 65,
+			"seed": 1119,
+			"start_tick": 11528
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 66,
+			"seed": 1136,
+			"start_tick": 11708
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 67,
+			"seed": 1153,
+			"start_tick": 11888
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 68,
+			"seed": 1170,
+			"start_tick": 12068
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 69,
+			"seed": 1187,
+			"start_tick": 12248
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 70,
+			"seed": 1204,
+			"start_tick": 12428
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 71,
+			"seed": 1221,
+			"start_tick": 12608
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 72,
+			"seed": 1238,
+			"start_tick": 12788
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 73,
+			"seed": 1255,
+			"start_tick": 12968
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 74,
+			"seed": 1272,
+			"start_tick": 13148
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 75,
+			"seed": 1289,
+			"start_tick": 13328
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 76,
+			"seed": 1306,
+			"start_tick": 13508
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 77,
+			"seed": 1323,
+			"start_tick": 13688
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 78,
+			"seed": 1340,
+			"start_tick": 13868
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 79,
+			"seed": 1357,
+			"start_tick": 14048
+		},
+		{
+			"amplitude_m": 0.18,
+			"domain_id": "main_beach",
+			"duration_s": 6.0,
+			"generation": 1,
+			"profile_id": "test_packet",
+			"request_id": 80,
+			"seed": 1374,
+			"start_tick": 14228
+		}
+	],
+	"wave_workload_id": "continuous_packets_v1"
+}

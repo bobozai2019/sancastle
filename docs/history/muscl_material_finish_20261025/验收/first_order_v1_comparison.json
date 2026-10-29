@@ -1,0 +1,30 @@
+{
+  "pass": true,
+  "difference_members": [],
+  "layout_errors": [],
+  "layouts": {
+    "a": {
+      "first_order/00": "rg32f",
+      "first_order/01": "rg32f",
+      "first_order/02": "rg32f",
+      "first_order/03": "rg32f",
+      "first_order/04": "rg32f"
+    },
+    "b": {
+      "first_order/00": "rg32f",
+      "first_order/01": "rg32f",
+      "first_order/02": "rg32f",
+      "first_order/03": "rg32f",
+      "first_order/04": "rg32f"
+    }
+  },
+  "original_observations_equal": true,
+  "injections_match": true,
+  "runtime_errors": {
+    "D:\\godot\\project\\sandcastle\\docs\\history\\muscl_material_finish_20261025\\\u9a8c\u6536\\first_order_v1_a": [],
+    "D:\\godot\\project\\sandcastle\\docs\\history\\muscl_material_finish_20261025\\\u9a8c\u6536\\first_order_v1_b": []
+  },
+  "invalid_manifests": [],
+  "paired_ticks": 5,
+  "scope": "All decompressed members, path union, both authority slots and explicit view publication. Only declared momentum layout is normalized without Float32 conversion; original ZIPs remain unchanged."
+}

@@ -1,0 +1,257 @@
+{
+  "operation_status": "complete",
+  "verification_status": "passed",
+  "checks": [
+    {
+      "name": "test1_stage_order",
+      "passed": true,
+      "actual": [
+        1484,
+        1490,
+        1495,
+        1500,
+        1505,
+        1510,
+        1515,
+        1520,
+        1525,
+        1530,
+        1537,
+        1543
+      ],
+      "scope": "selected test1 chain, not universal cycle"
+    },
+    {
+      "name": "e1484_cb_hash",
+      "passed": true,
+      "actual": 2496,
+      "scope": "actual selected CB bytes"
+    },
+    {
+      "name": "e1484_program_hash",
+      "passed": true,
+      "actual": "f6f8c17d743aa60c2fa01cf4cd0a9a03ab1bddad297da2a8f729aef6356d6bc3",
+      "scope": "original exact shader identity"
+    },
+    {
+      "name": "e1490_cb_hash",
+      "passed": true,
+      "actual": 2560,
+      "scope": "actual selected CB bytes"
+    },
+    {
+      "name": "velocity_parameters",
+      "passed": true,
+      "actual": {
+        "dx": 0.05859375,
+        "dt": 0.00732421875,
+        "g": 16.0,
+        "maxVelocity": 2.0,
+        "damping": 0.0,
+        "kappa": 1000.0
+      },
+      "scope": "same selected kernel constants"
+    },
+    {
+      "name": "e1490_program_hash",
+      "passed": true,
+      "actual": "9e5c7da8738200d374076a6cc3b48be52fdbad70e8c8dc2bd27eb75431d30523",
+      "scope": "original exact shader identity"
+    },
+    {
+      "name": "e1495_cb_hash",
+      "passed": true,
+      "actual": 2528,
+      "scope": "actual selected CB bytes"
+    },
+    {
+      "name": "deep_correction_threshold",
+      "passed": true,
+      "actual": {
+        "threshold": 1.0,
+        "bounds": [
+          0.0,
+          10.0
+        ]
+      },
+      "scope": "C_i subtracted from donor depths, not directly once from final A"
+    },
+    {
+      "name": "e1495_program_hash",
+      "passed": true,
+      "actual": "549114c23f1921610bacaf1d9ae375814fda1fb1de492cc2a4acfc53a502c64f",
+      "scope": "original exact shader identity"
+    },
+    {
+      "name": "e1500_cb_hash",
+      "passed": true,
+      "actual": 2544,
+      "scope": "actual selected CB bytes"
+    },
+    {
+      "name": "e1500_program_hash",
+      "passed": true,
+      "actual": "b2794ecb18de815ff607fffd734ff4cde859bab1efd7fa3dfe9a24eb5a9f7a3c",
+      "scope": "original exact shader identity"
+    },
+    {
+      "name": "e1537_cb_hash",
+      "passed": true,
+      "actual": 2560,
+      "scope": "actual selected CB bytes"
+    },
+    {
+      "name": "source_parameters",
+      "passed": true,
+      "actual": {
+        "playTime": 284.71783447265625,
+        "dt": 0.02500000037252903,
+        "evaporation": 0.10000000149011612,
+        "waveAmplitude": 0.049701884388923645,
+        "customWave": 1.6163164377212524,
+        "level": 1.0
+      },
+      "scope": "source dt distinct from integration dt"
+    },
+    {
+      "name": "e1537_program_hash",
+      "passed": true,
+      "actual": "a61d34e411e8eee5c795bf233908a9b2a5b85ee272f5d0fbcb1481da27a62b80",
+      "scope": "original exact shader identity"
+    },
+    {
+      "name": "e1543_cb_hash",
+      "passed": true,
+      "actual": 2496,
+      "scope": "actual selected CB bytes"
+    },
+    {
+      "name": "e1543_program_hash",
+      "passed": true,
+      "actual": "38a7f089261c54713b583b0f9a6bdd876d09cdb7859e64a804c06e08d64fa2a6",
+      "scope": "original exact shader identity"
+    },
+    {
+      "name": "B_is_AND",
+      "passed": true,
+      "actual": {
+        "rise_threshold": 0.10000000149011612,
+        "normal_threshold": 0.5,
+        "logic": "AND"
+      },
+      "scope": "input decoded normal; not newly computed output normal"
+    },
+    {
+      "name": "wet_water_raw_hash",
+      "passed": true,
+      "actual": 2097152,
+      "scope": "E5006 buffer only"
+    },
+    {
+      "name": "wet_vs_visible_classification",
+      "passed": true,
+      "actual": {
+        "cells": 131072,
+        "zero_visible_depth": 59248,
+        "A_min": 0.03343185782432556,
+        "A_max": 2.6109602451324463,
+        "all_fully_wet": true
+      },
+      "scope": "native cell classification, not rasterized area"
+    },
+    {
+      "name": "foam_vsout_hash",
+      "passed": true,
+      "actual": 4792000,
+      "scope": "E6196 selected VSOut"
+    },
+    {
+      "name": "foam_geometry_statistics",
+      "passed": true,
+      "actual": {
+        "instances": 29950,
+        "width_p5_p50_p95": [
+          0.021616977453231812,
+          0.040022850036621094,
+          0.07700101137161255
+        ],
+        "flat_y_max": 0.0
+      },
+      "scope": "selected VSOut only; width is world-X extent not universal particle diameter"
+    },
+    {
+      "name": "ground_height_decode_extent",
+      "passed": true,
+      "actual": {
+        "cells": 524288,
+        "height_min_p50_p99_max": [
+          0.0029907706193625927,
+          1.0287248492240906,
+          2.9503027296066286,
+          6.643254280090332
+        ],
+        "source_sha256": "7098f99fa8e1de2f39f1e0f0477a231fcdbed8c679563f7e21152b54ef8d41ff"
+      },
+      "scope": "E5006 wet-sand export, separate replay from old geometry snapshot; not assumed identical"
+    },
+    {
+      "name": "natural_clock_prefix",
+      "passed": true,
+      "actual": {
+        "source_calls": 1466,
+        "clock_samples": 1466,
+        "integration_dt": [
+          0.00732421875
+        ],
+        "source_dt": [
+          0.02500000037252903
+        ],
+        "cumulative_floor_mismatches": 0
+      },
+      "scope": "actual archived CPU dispatch and clock trace; no GPU timestamp or full playTime generation proof"
+    },
+    {
+      "name": "controlled_clock_prefix",
+      "passed": true,
+      "actual": {
+        "source_calls": 1305,
+        "clock_samples": 1305,
+        "integration_dt": [
+          0.00732421875
+        ],
+        "source_dt": [
+          0.02500000037252903
+        ],
+        "cumulative_floor_mismatches": 0
+      },
+      "scope": "actual archived CPU dispatch and clock trace; no GPU timestamp or full playTime generation proof"
+    },
+    {
+      "name": "geometry_bands_and_depth_thresholds",
+      "passed": true,
+      "actual": {
+        "x_cell_center_band_medians": [
+          1.828224778175354,
+          1.4826029539108276,
+          1.129607081413269,
+          0.8697423934936523,
+          0.5329558849334717,
+          0.2121984362602234
+        ],
+        "thresholds": [
+          1e-05,
+          0.005,
+          0.02
+        ],
+        "domain_fraction": [
+          0.4535675048828125,
+          0.4790802001953125,
+          0.49675750732421875
+        ],
+        "units": "scene units, native cells"
+      },
+      "scope": "E5006 selected full ground/water; not raster pixel coverage or original unedited terrain"
+    }
+  ],
+  "scope": "CPU raw-byte/CB/original-instruction checks of selected critical claims. Does not prove continuous behavior, universal schedules or all knowledge algorithms."
+}

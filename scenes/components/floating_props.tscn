@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3]
+[ext_resource type="PackedScene" path="res://scenes/props/bottle.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/props/wood_plank.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/props/wood_stick.tscn" id="3"]
+[ext_resource type="Script" path="res://scripts/props/floating_props_service.gd" id="4"]
+[sub_resource type="StandardMaterial3D" id="PreviewMaterial"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0.25, 0.95, 0.65, 0.65)
+no_depth_test = true
+[sub_resource type="TorusMesh" id="PreviewRing"]
+inner_radius = 0.43
+outer_radius = 0.5
+rings = 32
+ring_segments = 8
+[node name="FloatingProps" type="Node3D"]
+[node name="Bottle" parent="." instance=ExtResource("1")]
+position = Vector3(1.6, 0, -1.5)
+rotation_degrees = Vector3(0, 0, 8)
+[node name="WoodPlank" parent="." instance=ExtResource("2")]
+position = Vector3(1, 0, 0)
+rotation_degrees = Vector3(0, 8, 0)
+[node name="WoodStick" parent="." instance=ExtResource("3")]
+position = Vector3(1.6, 0, 1.5)
+rotation_degrees = Vector3(0, -12, 0)
+[node name="Service" type="Node3D" parent="."]
+script = ExtResource("4")
+body_paths = Array[NodePath]([NodePath("../Bottle"), NodePath("../WoodPlank"), NodePath("../WoodStick")])
+[node name="PlacementPreview" type="MeshInstance3D" parent="."]
+visible = false
+cast_shadow = 0
+mesh = SubResource("PreviewRing")
+material_override = SubResource("PreviewMaterial")

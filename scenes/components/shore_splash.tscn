@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="MultiMesh" path="res://assets/water_splash/instances.tres" id="pool"]
+[ext_resource type="Shader" path="res://shaders/visual/shore_splash.gdshader" id="shader"]
+
+[sub_resource type="ShaderMaterial" id="material"]
+resource_local_to_scene = true
+render_priority = 2
+shader = ExtResource("shader")
+shader_parameter/splash_visible = true
+shader_parameter/splash_size = 1.0
+
+[node name="ShoreSplash" type="MultiMeshInstance3D"]
+layers = 5
+cast_shadow = 0
+material_override = SubResource("material")
+multimesh = ExtResource("pool")

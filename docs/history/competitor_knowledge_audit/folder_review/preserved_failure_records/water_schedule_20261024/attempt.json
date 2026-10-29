@@ -1,0 +1,8 @@
+{
+  "outcome": "no_export",
+  "observed": "Helper process exited; output directory exists but no export/manifest was produced. No original shader conclusion is supported by this attempt.",
+  "suspected_cause": "Use of __file__ in qrenderdoc embedded Python before the try/finally block; not independently confirmed by an exception log.",
+  "retry": "../water_schedule_20261024_v2",
+  "source": "D:/godot/project/sandcastle/rdc/test1.rdc",
+  "process_id": 8688
+}

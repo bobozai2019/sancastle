@@ -1,0 +1,318 @@
+{
+  "schema": "competitor_water_solver_archive_sources_v1",
+  "document_date": "2026-10-27",
+  "scope": "Competitor water-solver knowledge archive only. No implementation changes or new GPU execution. Primary JSONs and six DXBC identities plus original capture rehashed; not all nested raw payloads rehashed again.",
+  "source_capture": {
+    "path": "sandcastlegame/test1.rdc",
+    "path_base": "project_root",
+    "size_bytes": 225224034,
+    "sha256": "761aa980c2426f75a1fa7364bf6d2655ff4dd20ea76566e630ee5b53ea0ec5b2"
+  },
+  "original_programs": [
+    {
+      "event": 1484,
+      "artifact": {
+        "path": "evidence/water_solver_reconstruction/t06_exact_programs_20261025_v1/e1484.dxbc",
+        "path_base": "docs/competitor",
+        "size_bytes": 3376,
+        "sha256": "f6f8c17d743aa60c2fa01cf4cd0a9a03ab1bddad297da2a8f729aef6356d6bc3"
+      }
+    },
+    {
+      "event": 1490,
+      "artifact": {
+        "path": "evidence/water_solver_reconstruction/t06_exact_programs_20261025_v1/e1490.dxbc",
+        "path_base": "docs/competitor",
+        "size_bytes": 5540,
+        "sha256": "9e5c7da8738200d374076a6cc3b48be52fdbad70e8c8dc2bd27eb75431d30523"
+      }
+    },
+    {
+      "event": 1495,
+      "artifact": {
+        "path": "evidence/water_solver_reconstruction/t06_exact_programs_20261025_v1/e1495.dxbc",
+        "path_base": "docs/competitor",
+        "size_bytes": 4204,
+        "sha256": "549114c23f1921610bacaf1d9ae375814fda1fb1de492cc2a4acfc53a502c64f"
+      }
+    },
+    {
+      "event": 1500,
+      "artifact": {
+        "path": "evidence/water_solver_reconstruction/t06_exact_programs_20261025_v1/e1500.dxbc",
+        "path_base": "docs/competitor",
+        "size_bytes": 3560,
+        "sha256": "b2794ecb18de815ff607fffd734ff4cde859bab1efd7fa3dfe9a24eb5a9f7a3c"
+      }
+    },
+    {
+      "event": 1537,
+      "artifact": {
+        "path": "evidence/water_solver_reconstruction/t06_exact_programs_20261025_v1/e1537.dxbc",
+        "path_base": "docs/competitor",
+        "size_bytes": 4416,
+        "sha256": "a61d34e411e8eee5c795bf233908a9b2a5b85ee272f5d0fbcb1481da27a62b80"
+      }
+    },
+    {
+      "event": 1543,
+      "artifact": {
+        "path": "evidence/water_solver_reconstruction/t06_exact_programs_20261025_v1/e1543.dxbc",
+        "path_base": "docs/competitor",
+        "size_bytes": 3256,
+        "sha256": "38a7f089261c54713b583b0f9a6bdd876d09cdb7859e64a804c06e08d64fa2a6"
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "role": "api_stages",
+      "artifact": {
+        "path": "evidence/water_solver_reconstruction/t01_audit_20261025_v1/derived/stage_map.json",
+        "path_base": "docs/competitor",
+        "size_bytes": 381635,
+        "sha256": "fd3266a05c0f111b4588201ae9d25608de62cd5116f0da511c57ad891aa4d5ed"
+      },
+      "operation_status": null,
+      "verification_status": null,
+      "scope": null,
+      "referenced_artifacts_present": 0,
+      "referenced_artifacts_listed": 0
+    },
+    {
+      "role": "api_synchronization",
+      "artifact": {
+        "path": "evidence/water_solver_reconstruction/t01_audit_20261025_v1/derived/sync_graph.json",
+        "path_base": "docs/competitor",
+        "size_bytes": 12640,
+        "sha256": "fac1200138ef7ec512c39827489db29f149af0ac5740a143d31f14dd4b3c2c02"
+      },
+      "operation_status": null,
+      "verification_status": null,
+      "scope": null,
+      "referenced_artifacts_present": 0,
+      "referenced_artifacts_listed": 0
+    },
+    {
+      "role": "native_controlled_reference",
+      "artifact": {
+        "path": "evidence/water_solver_reconstruction/t03_six_kernel_audit_20261025_v2/reference_set.json",
+        "path_base": "docs/competitor",
+        "size_bytes": 197004,
+        "sha256": "7ab48ebe74714fe20b117debe6b0d133c6b4814633c30fb5812f636e4d21c88e"
+      },
+      "operation_status": null,
+      "verification_status": null,
+      "scope": null,
+      "referenced_artifacts_present": 120,
+      "referenced_artifacts_listed": 120
+    },
+    {
+      "role": "six_original_exact_programs",
+      "artifact": {
+        "path": "evidence/water_solver_reconstruction/t06_exact_programs_20261025_v1/manifest.json",
+        "path_base": "docs/competitor",
+        "size_bytes": 4525,
+        "sha256": "6ca7aa7caa1ec805f162a3f677bfb0ba9bf32722621bb76d96a6e9e438183f38"
+      },
+      "operation_status": "complete",
+      "verification_status": "passed",
+      "scope": null,
+      "referenced_artifacts_present": 15,
+      "referenced_artifacts_listed": 15
+    },
+    {
+      "role": "finite_empirical_bounds_counterexample",
+      "artifact": {
+        "path": "evidence/water_solver_reconstruction/t06_error_budget_20261025_v2/manifest.json",
+        "path_base": "docs/competitor",
+        "size_bytes": 24354,
+        "sha256": "2347ed85b8a674bdbdc2020a3e2f67ea0dfb6c3e2c801c164797743da8c1b782"
+      },
+      "operation_status": "complete",
+      "verification_status": "not_evaluated",
+      "scope": "Budget freeze only; checker positives/negatives and G3 review are separate",
+      "referenced_artifacts_present": 77,
+      "referenced_artifacts_listed": 77
+    },
+    {
+      "role": "scoped_clock_mapping",
+      "artifact": {
+        "path": "evidence/water_solver_reconstruction/t05_clock_mapping_20261025_v1/clock_mapping.json",
+        "path_base": "docs/competitor",
+        "size_bytes": 12034,
+        "sha256": "af98f2425e090bce0214bcb200139ee9737cc9669fb8191ce901aa2609348e21"
+      },
+      "operation_status": "complete",
+      "verification_status": "passed",
+      "scope": "T05/G4 selected natural no-edit state and explicit held public-engine 1/.5/1 time input, on current isolated 512x512 runtime. No original UI/paused state, unique playTime formula, observer-free cadence, GPU execution timing or 512x256 numeric-budget extension.",
+      "referenced_artifacts_present": 0,
+      "referenced_artifacts_listed": 0
+    },
+    {
+      "role": "natural_runtime",
+      "artifact": {
+        "path": "evidence/water_solver_reconstruction/t05_formal_natural_20261025_v5/manifest.json",
+        "path_base": "docs/competitor",
+        "size_bytes": 10412,
+        "sha256": "8cc43c5af7ca3cb12ed096e922f52c448b59c3aebd3a70e7bebd44274bc5776a"
+      },
+      "operation_status": "complete",
+      "verification_status": "partial",
+      "scope": "Owned startup only; engine/API/GPU consumption and perturbation not established",
+      "referenced_artifacts_present": 29,
+      "referenced_artifacts_listed": 29
+    },
+    {
+      "role": "controlled_runtime",
+      "artifact": {
+        "path": "evidence/water_solver_reconstruction/t05_control_formal_20261025_v1/manifest.json",
+        "path_base": "docs/competitor",
+        "size_bytes": 11313,
+        "sha256": "7afb2e6f9fdf1a071430e9b0143558e11726cf183c9b606d8775dafd063241d7"
+      },
+      "operation_status": "complete",
+      "verification_status": "partial",
+      "scope": "Owned startup only; engine/API/GPU consumption and perturbation not established",
+      "referenced_artifacts_present": 32,
+      "referenced_artifacts_listed": 32
+    },
+    {
+      "role": "natural_gpu_consumption",
+      "artifact": {
+        "path": "evidence/water_solver_reconstruction/t05_consumption_20261025_v4/consumption.json",
+        "path_base": "docs/competitor",
+        "size_bytes": 60489,
+        "sha256": "04abb1d12e902f9d7ca905aefd6585fa800bc465475817e4b84748b9cc58352c"
+      },
+      "operation_status": "complete",
+      "verification_status": "passed",
+      "scope": "Single captured frame and uniquely matched CPU chain only; not G4 clock or observer perturbation acceptance",
+      "referenced_artifacts_present": 0,
+      "referenced_artifacts_listed": 0
+    },
+    {
+      "role": "controlled_gpu_consumption",
+      "artifact": {
+        "path": "evidence/water_solver_reconstruction/t05_consumption_20261025_v5/consumption.json",
+        "path_base": "docs/competitor",
+        "size_bytes": 48249,
+        "sha256": "5b7c2fad5b959a819d04087fad577ef18fd41fe8d1c2b4e86d431f3d06a7090c"
+      },
+      "operation_status": "complete",
+      "verification_status": "passed",
+      "scope": "Single captured frame and uniquely matched CPU chain only; not G4 clock or observer perturbation acceptance",
+      "referenced_artifacts_present": 0,
+      "referenced_artifacts_listed": 0
+    },
+    {
+      "role": "adapted_snapshot_comparison",
+      "artifact": {
+        "path": "evidence/water_solver_reconstruction/t06_snapshot_godot_full_20261025_v3/snapshot_comparison.json",
+        "path_base": "docs/competitor",
+        "size_bytes": 256739,
+        "sha256": "4b7753ee4442d389fe857a12daa230f5b25792b1407e449f9218039cb4f43c83"
+      },
+      "operation_status": "complete",
+      "verification_status": "passed",
+      "scope": "Explicit snapshot arithmetic diagnostic only. Never original in-place, legal scheduling, lifecycle, sequence or G02/G5 acceptance.",
+      "referenced_artifacts_present": 0,
+      "referenced_artifacts_listed": 0
+    },
+    {
+      "role": "bidirectional_alias_six_kernel_audit",
+      "artifact": {
+        "path": "evidence/water_solver_reconstruction/t06_readstream_six_audit_20261026_v1/audit.json",
+        "path_base": "docs/competitor",
+        "size_bytes": 63980,
+        "sha256": "603479d1fbead7693ea8e3523a85ecadb1d676ab0b5035f2fbc86342fa3f0da9"
+      },
+      "operation_status": "complete",
+      "verification_status": "passed",
+      "scope": "Byte/input/completion/source-instruction audit of instrumented bidirectional alias read-stream pairing only. Initial/completed word classifications are diagnostic, not atomicity or a universal schedule/timestamp proof. No short-sequence/lifecycle acceptance.",
+      "referenced_artifacts_present": 0,
+      "referenced_artifacts_listed": 0
+    },
+    {
+      "role": "completed_prefix_only_audit",
+      "artifact": {
+        "path": "evidence/water_solver_reconstruction/t06_readstream_prefix_audit_20261026_v1/audit.json",
+        "path_base": "docs/competitor",
+        "size_bytes": 384396,
+        "sha256": "52a6b53f5ecf3b233c4ae4e9c3d9a6fb6f62657eed5ea4dda919028ef745b406"
+      },
+      "operation_status": "complete",
+      "verification_status": "passed",
+      "scope": "Byte/input/completion/source-instruction audit of instrumented bidirectional alias read-stream pairing only. Initial/completed word classifications are diagnostic, not atomicity or a universal schedule/timestamp proof. No short-sequence/lifecycle acceptance.",
+      "referenced_artifacts_present": 0,
+      "referenced_artifacts_listed": 0
+    },
+    {
+      "role": "interruption_and_remaining_work",
+      "artifact": {
+        "path": "evidence/water_solver_reconstruction/t06_progress_snapshot_20261026_v1/progress.json",
+        "path_base": "docs/competitor",
+        "size_bytes": 129192,
+        "sha256": "ceabda4be4b44c3e6e753b5c2483eeb0b9c96cc933ba67216664b9a950d264e8"
+      },
+      "operation_status": "interrupted",
+      "verification_status": "partial",
+      "scope": "Progress snapshot and preserved interruption index; no complete 72-fixture acceptance, no G02/G5 closure.",
+      "referenced_artifacts_present": 0,
+      "referenced_artifacts_listed": 0
+    }
+  ],
+  "claims": [
+    {
+      "id": "WATER-SOLVER-ARCH-01",
+      "classifications": [
+        "observed_C3",
+        "interpretation_C2"
+      ],
+      "roles": [
+        "api_stages",
+        "api_synchronization",
+        "six_original_exact_programs",
+        "native_controlled_reference"
+      ]
+    },
+    {
+      "id": "WATER-SOLVER-TIME-01",
+      "classifications": [
+        "observed_C3",
+        "accumulator_model_C2",
+        "unobserved_lifecycle_C0"
+      ],
+      "roles": [
+        "scoped_clock_mapping",
+        "natural_runtime",
+        "controlled_runtime",
+        "natural_gpu_consumption",
+        "controlled_gpu_consumption"
+      ]
+    },
+    {
+      "id": "WATER-SOLVER-VALIDITY-01",
+      "classifications": [
+        "scoped_observed_C3",
+        "adaptation_not_original"
+      ],
+      "roles": [
+        "finite_empirical_bounds_counterexample",
+        "adapted_snapshot_comparison",
+        "bidirectional_alias_six_kernel_audit",
+        "completed_prefix_only_audit",
+        "interruption_and_remaining_work"
+      ]
+    }
+  ],
+  "coverage_limits": {
+    "full_72_bidirectional_matrix_accepted": false,
+    "short_sequence_accepted": false,
+    "complete_lifecycle_accepted": false,
+    "universal_schedule_proven": false,
+    "current_project_implementation_in_scope": false
+  },
+  "raw_policy": "Original data and all old failed/partial records retained in place. Nested raw identities and selectors remain in original manifests; historical missing data is not restored.",
+  "replay_boundary": "New runs require verified project-local temp/user-data/cache/log paths before execution; archived launch commands alone do not establish current write containment."
+}

@@ -1,0 +1,35 @@
+{
+  "rdc_schema_version": 1,
+  "caustic_texture": "res://assets/water_material_natural_candidate/rdc_caustic_1105_mipped.res",
+  "caustic_texture_sha256": "2a80438ddc3a43ab3c335ed4f6412c3f0a6a0340f825030bf00eb537e20c7f25",
+  "parameters": {
+    "rdc_optics_enabled": true,
+    "rdc_normal_enabled": true,
+    "rdc_refracted_path": false,
+    "rdc_caustics_enabled": true,
+    "rdc_absorption_rgb": [
+      6.0,
+      0.856013,
+      0.336771
+    ],
+    "rdc_transmission_tint": [
+      0.75897,
+      0.883854,
+      0.968461
+    ],
+    "rdc_surface_color": [
+      0.49190504085677866,
+      0.7105664902244221,
+      0.8480882574948619
+    ],
+    "rdc_distance_scale": 1.0,
+    "rdc_normal_scale": 0.2,
+    "rdc_normal_gain": 1.0,
+    "rdc_time_scale": 1.0,
+    "rdc_surface_gain": 1.0,
+    "rdc_refraction_scale": 0.0121,
+    "rdc_caustic_scale": 0.25,
+    "rdc_caustic_depth_decay": 1.2,
+    "rdc_caustic_time_scale": 1.0
+  }
+}

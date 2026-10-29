@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3]
+
+[ext_resource type="Shader" path="res://shaders/visual/vegetation.gdshader" id="1"]
+[ext_resource type="Texture2D" path="res://assets/vegetation/competitor/goldenrod_atlas.png" id="2"]
+
+[resource]
+resource_local_to_scene = true
+shader = ExtResource("1")
+shader_parameter/kind = 8
+shader_parameter/seed = 62143
+shader_parameter/atlas = ExtResource("2")
+shader_parameter/atlas_grid = 12.0
+shader_parameter/pivot_offset = Vector4(-0.023372138, 0.405608296, -0.003103063, 1.403264284)

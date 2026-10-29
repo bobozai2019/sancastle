@@ -1,0 +1,22 @@
+{
+  "style_schema_version": 2,
+  "reflection_profile": "res://assets/water_material_natural_candidate/reflection_height.json",
+  "reflection_profile_sha256": "8cd74aa24c91cce940f0111ffd91fc108557d5c33535a286f9b2349bad137954",
+  "base_profile": "res://assets/water_material_natural_candidate/base_v8_height_style.json",
+  "bed_shader": "res://assets/water_material_natural_candidate/bed_style.gdshader",
+  "bed_shader_sha256": "271b03cfa840795410a7165650de3e6ecff102e137eec910fb9ab9f57b759c11",
+  "source_bed_shader": "res://assets/test1_beach/test1_bed_lit_fast.gdshader",
+  "source_bed_shader_sha256": "0e8340b6e20e3d5a8380549995610e5a442b04524ff72e50c996b5cb4f9e7366",
+  "caustics": {
+    "enabled": true,
+    "strength": 0.8,
+    "softness": 0.5,
+    "uv_scale": 3.0
+  },
+  "glint": {
+    "gain": 0.96,
+    "exponent": 42.0
+  },
+  "detail_gain_multiplier": 8.0,
+  "macro_normal_mode": "height_surface"
+}

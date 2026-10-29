@@ -1,0 +1,16 @@
+[gd_resource type="Resource" format=3 uid="uid://losxj1s8yrbw"]
+
+[ext_resource type="Script" uid="uid://dwf14g3w5ar74" path="res://scripts/visual/vegetation_species.gd" id="1_tqfec"]
+
+[resource]
+script = ExtResource("1_tqfec")
+label = "海带"
+depth_min_m = 0.35
+depth_max_m = 3.0
+scale_min = 1.1
+scale_max = 1.85
+density = 0.0575
+flow_response = 0.85
+patch_min = 0.36
+patch_max = 0.9
+response_hz = 4.5

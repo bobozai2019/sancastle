@@ -1,0 +1,11 @@
+# ADR v1.30：原生恢复 ready 与耦合归因
+
+2026-10-11。完整候选，G4未放行。
+
+原完整_render_setup在native restore调用前已排队_mark_ready和发布初始化纹理。候选现在抑制恢复完成前的ready与初次发布，native槽/索引复制提交并绑定后再次排队ready，只宣布一次；无检查点路径保持原初始化。此前主线程是否实际抢先执行尚无时序记录，不能把排队顺序当作已经观察到的竞态结果。该边界修正未解决晚采集shader身份下的继续ULP失败。
+
+新增默认关闭的实际coupled参数观察，记录render线程真实delta、index、revision、cell size和cohesion；收集原solver及GPU编辑使用的31份SPIR-V compute bytecode SHA256。探针可把shader身份采集移到继续完成后，避免用初始化阶段的观察扰动支持正确性结论。SPIR-V相同不等于DXIL/驱动执行或GPU消费的常量数据已完全相同。
+
+默认关闭的material_barriers实验仅在原湿度、坡面、提交阶段之间添加compute_list_add_barrier，原shader/参数保留。原production工厂默认仍创建原MaterialCoupler，实验选择进入检查点configuration。该实验继续配对FAIL，不能启用为默认修复或宣称严格等价；原和实验写分支在继续阶段也有不同，尚需实际push常量字节归因。
+
+后续先在失败窗口记录真正set_push_constant的32-byte包，再定位首个分歧pass；不凭float64参数或通过运行中的hash推断失败运行一致，不放宽ULP标准。

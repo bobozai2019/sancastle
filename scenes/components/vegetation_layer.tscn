@@ -1,0 +1,80 @@
+[gd_scene load_steps=21 format=3]
+
+[ext_resource type="Script" path="res://scripts/visual/vegetation_layer.gd" id="1"]
+[ext_resource type="Resource" path="res://assets/vegetation/default_profile.tres" id="2"]
+[ext_resource type="MultiMesh" path="res://assets/vegetation/seagrass_instances.tres" id="m0"]
+[ext_resource type="Material" path="res://assets/vegetation/seagrass_material.tres" id="s0"]
+[ext_resource type="MultiMesh" path="res://assets/vegetation/kelp_instances.tres" id="m1"]
+[ext_resource type="Material" path="res://assets/vegetation/kelp_material.tres" id="s1"]
+[ext_resource type="MultiMesh" path="res://assets/vegetation/shore_grass_instances.tres" id="m2"]
+[ext_resource type="Material" path="res://assets/vegetation/shore_grass_material.tres" id="s2"]
+[ext_resource type="MultiMesh" path="res://assets/vegetation/dune_grass_instances.tres" id="m3"]
+[ext_resource type="Material" path="res://assets/vegetation/dune_grass_material.tres" id="s3"]
+[ext_resource type="MultiMesh" path="res://assets/vegetation/red_algae_instances.tres" id="m4"]
+[ext_resource type="Material" path="res://assets/vegetation/red_algae_material.tres" id="s4"]
+[ext_resource type="MultiMesh" path="res://assets/vegetation/switch_grass_instances.tres" id="m5"]
+[ext_resource type="Material" path="res://assets/vegetation/switch_grass_material.tres" id="s5"]
+[ext_resource type="MultiMesh" path="res://assets/vegetation/wheat_grass_instances.tres" id="m6"]
+[ext_resource type="Material" path="res://assets/vegetation/wheat_grass_material.tres" id="s6"]
+[ext_resource type="MultiMesh" path="res://assets/vegetation/yarrow_instances.tres" id="m7"]
+[ext_resource type="Material" path="res://assets/vegetation/yarrow_material.tres" id="s7"]
+[ext_resource type="MultiMesh" path="res://assets/vegetation/goldenrod_instances.tres" id="m8"]
+[ext_resource type="Material" path="res://assets/vegetation/goldenrod_material.tres" id="s8"]
+
+[node name="VegetationLayer" type="Node3D"]
+script = ExtResource("1")
+profile = ExtResource("2")
+
+[node name="seagrass" type="MultiMeshInstance3D" parent="."]
+layers = 5
+cast_shadow = 0
+material_override = ExtResource("s0")
+multimesh = ExtResource("m0")
+
+[node name="kelp" type="MultiMeshInstance3D" parent="."]
+layers = 5
+cast_shadow = 1
+material_override = ExtResource("s1")
+multimesh = ExtResource("m1")
+
+[node name="shore_grass" type="MultiMeshInstance3D" parent="."]
+layers = 5
+cast_shadow = 1
+material_override = ExtResource("s2")
+multimesh = ExtResource("m2")
+
+[node name="dune_grass" type="MultiMeshInstance3D" parent="."]
+layers = 5
+cast_shadow = 1
+material_override = ExtResource("s3")
+multimesh = ExtResource("m3")
+
+[node name="red_algae" type="MultiMeshInstance3D" parent="."]
+layers = 5
+cast_shadow = 1
+material_override = ExtResource("s4")
+multimesh = ExtResource("m4")
+
+[node name="switch_grass" type="MultiMeshInstance3D" parent="."]
+layers = 5
+cast_shadow = 1
+material_override = ExtResource("s5")
+multimesh = ExtResource("m5")
+
+[node name="wheat_grass" type="MultiMeshInstance3D" parent="."]
+layers = 5
+cast_shadow = 1
+material_override = ExtResource("s6")
+multimesh = ExtResource("m6")
+
+[node name="yarrow" type="MultiMeshInstance3D" parent="."]
+layers = 5
+cast_shadow = 1
+material_override = ExtResource("s7")
+multimesh = ExtResource("m7")
+
+[node name="goldenrod" type="MultiMeshInstance3D" parent="."]
+layers = 5
+cast_shadow = 1
+material_override = ExtResource("s8")
+multimesh = ExtResource("m8")

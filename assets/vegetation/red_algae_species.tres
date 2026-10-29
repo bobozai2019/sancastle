@@ -1,0 +1,17 @@
+[gd_resource type="Resource" format=3 uid="uid://d1lec5xe0al00"]
+
+[ext_resource type="Script" uid="uid://dwf14g3w5ar74" path="res://scripts/visual/vegetation_species.gd" id="1_48uc6"]
+
+[resource]
+script = ExtResource("1_48uc6")
+label = "红藻"
+depth_min_m = 0.12
+depth_max_m = 2.4
+scale_min = 0.5
+scale_max = 0.9
+density = 0.0375
+flow_response = 0.68
+max_slope = 1.7
+patch_min = 0.52
+patch_max = 0.9
+response_hz = 5.0

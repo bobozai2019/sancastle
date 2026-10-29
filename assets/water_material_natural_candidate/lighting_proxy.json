@@ -1,0 +1,17 @@
+{
+  "lighting_schema_version": 3,
+  "normal_profile": "res://assets/water_material_natural_candidate/texture_layers.json",
+  "normal_profile_sha256": "88b6b3b2f9d9d8459d9bb3d8799e87b22341d1f3232161ecf2b1776c0eef1f14",
+  "route": "engine_light",
+  "base_profile": "res://assets/water_material_natural_candidate/base_v8_engine_light.json",
+  "water_shader": "res://assets/water_material_natural_candidate/water_engine_light.gdshader",
+  "sun_glint_enabled": true,
+  "sun_glint_gain": 0.32,
+  "sun_glint_exponent": 42.0,
+  "shadow_enabled": true,
+  "scatter_direct_fraction": 0.45,
+  "foam_direct_fraction": 0.5,
+  "foam_shader": "res://assets/water_material_natural_candidate/foam_engine_light.gdshader",
+  "shadow_proxy_mesh": "res://assets/water_material_natural_candidate/shadow_grid257.res",
+  "shadow_proxy_enabled": true
+}

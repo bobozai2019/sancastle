@@ -1,0 +1,40 @@
+{
+  "template_id": "four_towers_v1",
+  "size": [
+    65,
+    65
+  ],
+  "spacing_m": 0.0625,
+  "local_bounds_m": [
+    -2,
+    2
+  ],
+  "channels": [
+    "normalized_height",
+    "foundation_mask",
+    "shape_mask",
+    "reserved"
+  ],
+  "interpolation": "height_bilinear_masks_nearest",
+  "heights_m": {
+    "base": 0.08,
+    "wall": 0.4,
+    "tower": 0.55,
+    "merlon": 0.7
+  },
+  "geometry_m": {
+    "tower_centers": [
+      -1.25,
+      1.25
+    ],
+    "tower_width": 1.5,
+    "wall_width": 0.5,
+    "merlon_width": 0.5,
+    "gap_width": 0.5
+  },
+  "default_physical_grid_volume_m3": 7.05,
+  "bytes": 67600,
+  "sha256": "42f4654b2a40688fdfb936a790c1c08f0d2f4efbe6d1aa3bef91f2598089e833",
+  "generator": "tests/shape_brushes/generate_castle_template.py",
+  "generator_sha256": "cea30a452c93506ea66fb38eff5e6b4174574c25d3ca75cc1f42d95c7413ee9f"
+}

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/props/floating_prop_profile.gd" id="1"]
+[resource]
+script = ExtResource("1")
+type_id = &"wood_plank"
+version = 2
+mass_kg = 14.4
+center_of_mass_m = Vector3(0, -0.008, 0)
+point_positions_m = Array[Vector3]([Vector3(-0.45, 0, -0.11), Vector3(-0.45, 0, 0.11), Vector3(0.45, 0, -0.11), Vector3(0.45, 0, 0.11)])
+point_half_heights_m = PackedFloat32Array(0.04, 0.04, 0.04, 0.04)
+point_volumes_m3 = PackedFloat32Array(0.008, 0.008, 0.008, 0.008)
+point_mass_weights = PackedFloat32Array(0.25, 0.25, 0.25, 0.25)
+drag_time_horizontal_s = 0.5
+drag_time_vertical_s = 0.04
+angular_damping = 1.2

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" format=3 uid="uid://n26lws7ifubl"]
+
+[ext_resource type="Script" uid="uid://dwf14g3w5ar74" path="res://scripts/visual/vegetation_species.gd" id="1_j4fjt"]
+
+[resource]
+script = ExtResource("1_j4fjt")
+label = "灰色丛草"
+depth_max_m = 0.012
+scale_min = 0.9
+scale_max = 1.35
+density = 0.06875
+flow_response = 0.6
+max_slope = 1.3
+patch_min = 0.38
+patch_max = 0.85
+response_hz = 5.5

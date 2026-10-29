@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/simulation/unified_edit/tool_profile.gd" id="1"]
+[resource]
+script = ExtResource("1")
+profile_id = &"wall_small_buffer"
+operation = 1
+shape = 1
+destination = 0
+height_reference = 2
+target_rule = 1
+material_policy = 1
+water_policy = 0
+stroke_policy = 1
+max_buffer_points = 2
+defaults = {"bottom_width_m": 1.0, "height_m": 0.3, "speed_m_s": 0.0, "top_width_m": 0.5}
+ranges = {"bottom_width_m": [1.0, 2.0], "height_m": [0.15, 0.6], "speed_m_s": [-1.0, 1.0], "top_width_m": [0.5, 1.5]}
+allowed_water_policies = PackedInt32Array(0)
+allowed_material_policies = PackedInt32Array(0, 1)

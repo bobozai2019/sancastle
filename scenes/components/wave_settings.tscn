@@ -1,0 +1,24 @@
+[gd_scene format=3]
+
+[node name="WaveSettings" type="VBoxContainer"]
+layout_mode = 2
+
+[node name="Row" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Row"]
+layout_mode = 2
+text = "保波程度  "
+
+[node name="WaveRetention" type="SpinBox" parent="Row"]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "提高重构保波程度，减少部分数值耗散；不是衰减时间。应用会短暂停顿，保留沙水并重建浮物。"
+max_value = 1.0
+step = 0.1
+focus_mode = 0
+
+[node name="Hint" type="Label" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "0 默认 · 1 更锐利；浮物会复位"

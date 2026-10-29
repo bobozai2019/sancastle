@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3]
+[ext_resource type="PackedScene" path="res://tests/shape_brushes/brush_lab.tscn" id="1"]
+[node name="BrushCheckpointV4Lab" instance=ExtResource("1")]
+enable_brush_native_material = true
+enable_brush_checkpoint_v4 = true
+playing = false
+staging_wave_workload = "none"

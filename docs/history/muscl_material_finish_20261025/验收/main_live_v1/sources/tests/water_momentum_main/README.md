@@ -1,0 +1,27 @@
+# 主场景动量副本
+
+运行 `res://scenes/experiments/main_water_momentum.tscn`（Godot 打开后 F6）。
+它使用主场景的沙滩、水面、道具、碰撞、工具和常规水流模拟。
+默认不勾选“原连通排水”，使用实验 B。勾选后执行原连通排水和原局部推水公式。
+
+在有水的中央水道填沙或挖沙观察；干沙上不会产生推水。
+力度默认 0.25，可调到 1.0 放大观察；空格暂停/继续。“重置副本”恢复初始沙滩。
+铲子需要按住拖动，才会生成沟槽及两侧接收区。
+
+B 每次仅依据本次实际被接受的床面变化施加动量：
+`Δq = h * normalize(point - closest_segment_point) * speed * Δbed / 0.2`。
+填高向外、挖低向内；无床面变化、障碍和干单元不施加动量。最大流速沿用 4 m/s。
+方向由真实工具当前提交的线段决定；沙面覆盖和守恒事务仍使用主场景原工具实现。
+编辑瞬间不重分配水量和悬沙，后续由原水流求解器演化。
+
+为隔离原场景，本目录复制了入口、runtime、pipeline、executor 和 response；
+只改私有依赖接线、B 分支和副本 UI。其余求解、审计、提交及生命周期代码保持一致。
+原主场景和默认项目入口没有改动。后端副本需要随共享接口变更维护。
+
+验证：`probe.gd` 在实际 D3D12 窗口测试默认 B、力度、填沙、挖沙、铲沟、
+原连通分支、保存/恢复、常规水流 tick、释放与孤立节点，并导出截图和字段。
+`python check_snapshots.py <输出目录>` 对填沙/挖沙的实际 GPU 字段做独立 CPU 公式比对，
+并检查原文件哈希。验证输出位于 `test_output/water_momentum_main/`。
+同步字段回读仅用于验证，不作性能验收。
+
+正式main的水响应规格见`docs/当前技术规格.md`。本目录是独立实验后端；`original_hashes.json`用于检查实验隔离基线，并不表示当前正式文件应与基线一致。正式回归使用`tests/integration/unified_edit_main_momentum_probe.gd`和`check_main_momentum.py`。

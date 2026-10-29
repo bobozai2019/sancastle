@@ -1,0 +1,43 @@
+Godot Engine v4.7.2.stable.steam.ed1daf0bf - https://godotengine.org
+D3D12 12_0 - Forward+ - Using Device #0: NVIDIA - NVIDIA GeForce GTX 1050
+
+================================================================
+CrashHandlerException: Program crashed with signal 11
+Engine version: Godot Engine v4.7.2.stable.steam (ed1daf0bf001b61586d9930840f2f1394092c079)
+Dumping the backtrace. Please include this when reporting the bug on: https://github.com/godotengine/godot/issues
+Load address: 7ff56bc50000
+
+[1] 7ff6afd25561 (main+40d5561) - no debug info in PE/COFF executable
+[2] 7ffc0aabce45 (ntdll.dll+8ce45) - no debug info in PE/COFF executable
+[3] 7ffc0aad296e (ntdll.dll+a296e) - no debug info in PE/COFF executable
+[4] 7ffc0aa82553 (ntdll.dll+52553) - no debug info in PE/COFF executable
+[5] 7ffc0aad147d (ntdll.dll+a147d) - no debug info in PE/COFF executable
+[6] 7ffb6fd68d5a (nvwgf2umx.dll+768d5a) - no debug info in PE/COFF executable
+[7] 7ffb6fd6d826 (nvwgf2umx.dll+76d826) - no debug info in PE/COFF executable
+[8] 7ffb6fd68124 (nvwgf2umx.dll+768124) - no debug info in PE/COFF executable
+[9] 7ffb6fdae821 (nvwgf2umx.dll+7ae821) - no debug info in PE/COFF executable
+[10] 7ffb6fdb4b1e (nvwgf2umx.dll+7b4b1e) - no debug info in PE/COFF executable
+[11] 7ffb6fdb4bd6 (nvwgf2umx.dll+7b4bd6) - no debug info in PE/COFF executable
+[12] 7ffb6fcd3c15 (nvwgf2umx.dll+6d3c15) - no debug info in PE/COFF executable
+[13] 7ffba147a659 (d3d12core.dll+ba659) - no debug info in PE/COFF executable
+[14] 7ffba1475c8d (d3d12core.dll+b5c8d) - no debug info in PE/COFF executable
+[15] 7ffba140cd1b (d3d12core.dll+4cd1b) - no debug info in PE/COFF executable
+[16] 7ffba13f1711 (d3d12core.dll+31711) - no debug info in PE/COFF executable
+[17] 7ffba13d507b (d3d12core.dll+1507b) - no debug info in PE/COFF executable
+[18] 7ffbdf405536 (d3d12.dll+5536) - no debug info in PE/COFF executable
+[19] 7ffba13f439d (d3d12core.dll+3439d) - no debug info in PE/COFF executable
+[20] 7ff6acfdd16d (main+138d16d) - no debug info in PE/COFF executable
+[21] 7ff6aef36834 (main+32e6834) - no debug info in PE/COFF executable
+[22] 7ff6abc8a71f (main+3a71f) - no debug info in PE/COFF executable
+[23] 7ff6abc8bd6c (main+3bd6c) - no debug info in PE/COFF executable
+[24] 7ff6abcb3d11 (main+63d11) - no debug info in PE/COFF executable
+[25] 7ff6abcc5c41 (main+75c41) - no debug info in PE/COFF executable
+[26] 7ff6abca2a15 (main+52a15) - no debug info in PE/COFF executable
+[27] 7ff6abca2b7d (main+52b7d) - no debug info in PE/COFF executable
+[28] 7ff6abc510c8 (main+10c8) - no debug info in PE/COFF executable
+[29] 7ff6abc513f5 (main+13f5) - no debug info in PE/COFF executable
+[30] 7ffc0a867373 (kernel32.dll+17373) - no debug info in PE/COFF executable
+[31] 7ffc0aa7cc90 (ntdll.dll+4cc90) - no debug info in PE/COFF executable
+[32] -1 (main+-7ff6abc50001) - no debug info in PE/COFF executable
+-- END OF C++ BACKTRACE --
+================================================================

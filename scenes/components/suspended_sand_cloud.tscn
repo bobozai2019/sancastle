@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/visual/suspended_sand_cloud.gd" id="1"]
+[ext_resource type="Shader" path="res://shaders/visual/suspended_sand_cloud.gdshader" id="2"]
+
+[sub_resource type="ShaderMaterial" id="Cloud"]
+resource_local_to_scene = true
+render_priority = 2
+shader = ExtResource("2")
+
+[node name="SuspendedSandCloud" type="MeshInstance3D"]
+visible = false
+cast_shadow = 0
+material_override = SubResource("Cloud")
+script = ExtResource("1")

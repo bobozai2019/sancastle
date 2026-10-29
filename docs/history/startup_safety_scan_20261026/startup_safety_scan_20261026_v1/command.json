@@ -1,0 +1,27 @@
+{
+  "command": [
+    "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+    "--path",
+    "D:\\godot\\project\\sandcastle",
+    "--log-file",
+    "D:\\godot\\project\\sandcastle\\test_output\\startup_safety_scan_20261026_v1\\engine.log",
+    "--script",
+    "res://tests/integration/startup_resource_scan.gd",
+    "--rendering-method",
+    "forward_plus",
+    "--rendering-driver",
+    "d3d12",
+    "--resolution",
+    "1280x720",
+    "--",
+    "--scan-output=D:/godot/project/sandcastle/test_output/startup_safety_scan_20261026_v1",
+    "--parameter-config=D:/godot/project/sandcastle/test_output/startup_safety_scan_20261026_v1/parameters/startup.json"
+  ],
+  "environment_overrides": {
+    "TEMP": "D:\\godot\\project\\sandcastle\\test_output\\startup_safety_scan_20261026_v1\\tmp",
+    "TMP": "D:\\godot\\project\\sandcastle\\test_output\\startup_safety_scan_20261026_v1\\tmp",
+    "APPDATA": "D:\\godot\\project\\sandcastle\\test_output\\startup_safety_scan_20261026_v1\\roaming",
+    "LOCALAPPDATA": "D:\\godot\\project\\sandcastle\\test_output\\startup_safety_scan_20261026_v1\\local",
+    "XDG_CACHE_HOME": "D:\\godot\\project\\sandcastle\\test_output\\startup_safety_scan_20261026_v1\\cache"
+  }
+}

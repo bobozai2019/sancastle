@@ -1,0 +1,217 @@
+{
+  "source": {
+    "path": "D:\\godot\\project\\sandcastle\\rdc\\test1.rdc",
+    "bytes": 225224034,
+    "sha256": "761aa980c2426f75a1fa7364bf6d2655ff4dd20ea76566e630ee5b53ea0ec5b2"
+  },
+  "tool": {
+    "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\tools\\export_vegetation_depth.py",
+    "bytes": 3101,
+    "sha256": "ee8d866a42750dbd918f51c3d7e8c01a01bf1a02882e1be42ee541dd5786b6b9"
+  },
+  "command": "D:/other_software/RenderDoc/qrenderdoc.exe --python D:/godot/project/sandcastle/docs/competitor/tools/export_vegetation_depth.py",
+  "events": [
+    {
+      "event": 5000,
+      "action": {
+        "actionId": 1172,
+        "baseVertex": 0,
+        "children": "[]",
+        "copyDestination": "ResourceId::0",
+        "copyDestinationSubresource": "<Swig Object of type 'Subresource *' at 0x000002198E1511F0>",
+        "copySource": "ResourceId::0",
+        "copySourceSubresource": "<Swig Object of type 'Subresource *' at 0x000002198E151230>",
+        "customName": "",
+        "depthOut": "ResourceId::3355",
+        "dispatchBase": "(0, 0, 0)",
+        "dispatchDimension": "(0, 0, 0)",
+        "dispatchThreadsDimension": "(0, 0, 0)",
+        "drawIndex": 0,
+        "eventId": 5000,
+        "events": "[<Swig Object of type 'APIEvent *' at 0x000002198E151330>, <Swig Object of type 'APIEvent *' at 0x000002198E151370>]",
+        "flags": 196610,
+        "indexOffset": 0,
+        "instanceOffset": 0,
+        "markerColor": "<Swig Object of type 'FloatVector *' at 0x000002198E1512B0>",
+        "nextAction": "<Swig Object of type 'ActionDescription *' at 0x000002198E1512B0>",
+        "numIndices": 24576,
+        "numInstances": 1,
+        "outputs": "(ResourceId::3354, ResourceId::0, ResourceId::0, ResourceId::0, ResourceId::0, ResourceId::0, ResourceId::0, ResourceId::0)",
+        "parent": "None",
+        "previousAction": "<Swig Object of type 'ActionDescription *' at 0x000002198E151370>",
+        "vertexOffset": 0
+      },
+      "ps": "ResourceId::3382",
+      "ps_sha256": "b7f1ac50d5312f20e829e8788a7256d4cc84266880fca4fdedc7d39f98148aa2",
+      "vs": "ResourceId::3381",
+      "raw": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_depth_20261023\\e5000.dxbc",
+        "bytes": 5272,
+        "sha256": "b7f1ac50d5312f20e829e8788a7256d4cc84266880fca4fdedc7d39f98148aa2",
+        "selector": "e5000 PS rawBytes"
+      },
+      "asm": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_depth_20261023\\e5000.asm",
+        "bytes": 6793,
+        "sha256": "386b51bfab73d6a7aed96cb095c318dd44f537c895841df184a9108a652a5170",
+        "selector": "e5000 PS"
+      },
+      "inputs": [
+        {
+          "index": 0,
+          "descriptor": {
+            "bufferStructCount": 0,
+            "byteOffset": 0,
+            "byteSize": 0,
+            "counterByteOffset": 0,
+            "elementByteSize": 4,
+            "firstMip": 0,
+            "firstSlice": 0,
+            "flags": 0,
+            "format": "<Swig Object of type 'ResourceFormat *' at 0x000002198E151670>",
+            "minLODClamp": 0.0,
+            "numMips": 1,
+            "numSlices": 1,
+            "resource": "ResourceId::3344",
+            "secondary": "ResourceId::0",
+            "swizzle": "<Swig Object of type 'TextureSwizzle4 *' at 0x000002198E1516F0>",
+            "textureType": 4,
+            "type": 4,
+            "view": "ResourceId::0"
+          }
+        },
+        {
+          "index": 1,
+          "descriptor": {
+            "bufferStructCount": 0,
+            "byteOffset": 0,
+            "byteSize": 8192,
+            "counterByteOffset": 0,
+            "elementByteSize": 16,
+            "firstMip": 0,
+            "firstSlice": 0,
+            "flags": 0,
+            "format": "<Swig Object of type 'ResourceFormat *' at 0x000002198E151770>",
+            "minLODClamp": 0.0,
+            "numMips": 1,
+            "numSlices": 1,
+            "resource": "ResourceId::139590",
+            "secondary": "ResourceId::0",
+            "swizzle": "<Swig Object of type 'TextureSwizzle4 *' at 0x000002198E1517F0>",
+            "textureType": 1,
+            "type": 5,
+            "view": "ResourceId::0"
+          }
+        },
+        {
+          "index": 2,
+          "descriptor": {
+            "bufferStructCount": 0,
+            "byteOffset": 0,
+            "byteSize": 0,
+            "counterByteOffset": 0,
+            "elementByteSize": 8,
+            "firstMip": 0,
+            "firstSlice": 0,
+            "flags": 0,
+            "format": "<Swig Object of type 'ResourceFormat *' at 0x000002198E151830>",
+            "minLODClamp": 0.0,
+            "numMips": 1,
+            "numSlices": 1,
+            "resource": "ResourceId::139723",
+            "secondary": "ResourceId::0",
+            "swizzle": "<Swig Object of type 'TextureSwizzle4 *' at 0x000002198E1518B0>",
+            "textureType": 4,
+            "type": 4,
+            "view": "ResourceId::0"
+          }
+        },
+        {
+          "index": 3,
+          "descriptor": {
+            "bufferStructCount": 0,
+            "byteOffset": 0,
+            "byteSize": 0,
+            "counterByteOffset": 0,
+            "elementByteSize": 4,
+            "firstMip": 0,
+            "firstSlice": 0,
+            "flags": 0,
+            "format": "<Swig Object of type 'ResourceFormat *' at 0x000002198E1518F0>",
+            "minLODClamp": 0.0,
+            "numMips": 11,
+            "numSlices": 1,
+            "resource": "ResourceId::617",
+            "secondary": "ResourceId::0",
+            "swizzle": "<Swig Object of type 'TextureSwizzle4 *' at 0x000002198E1519B0>",
+            "textureType": 4,
+            "type": 4,
+            "view": "ResourceId::0"
+          }
+        },
+        {
+          "index": 4,
+          "descriptor": {
+            "bufferStructCount": 0,
+            "byteOffset": 0,
+            "byteSize": 0,
+            "counterByteOffset": 0,
+            "elementByteSize": 1,
+            "firstMip": 0,
+            "firstSlice": 0,
+            "flags": 0,
+            "format": "<Swig Object of type 'ResourceFormat *' at 0x000002198E151A30>",
+            "minLODClamp": 0.0,
+            "numMips": 9,
+            "numSlices": 1,
+            "resource": "ResourceId::1105",
+            "secondary": "ResourceId::0",
+            "swizzle": "<Swig Object of type 'TextureSwizzle4 *' at 0x000002198E151AB0>",
+            "textureType": 9,
+            "type": 4,
+            "view": "ResourceId::0"
+          }
+        }
+      ],
+      "depth_target": {
+        "bufferStructCount": 0,
+        "byteOffset": 0,
+        "byteSize": 0,
+        "counterByteOffset": 0,
+        "elementByteSize": 8,
+        "firstMip": 0,
+        "firstSlice": 0,
+        "flags": 0,
+        "format": "<Swig Object of type 'ResourceFormat *' at 0x000002198E1513B0>",
+        "minLODClamp": 0.0,
+        "numMips": 1,
+        "numSlices": 1,
+        "resource": "ResourceId::3355",
+        "secondary": "ResourceId::0",
+        "swizzle": "<Swig Object of type 'TextureSwizzle4 *' at 0x000002198E151AF0>",
+        "textureType": 4,
+        "type": 7,
+        "view": "ResourceId::0"
+      }
+    }
+  ],
+  "exports": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_depth_20261023\\e5000.dxbc",
+      "bytes": 5272,
+      "sha256": "b7f1ac50d5312f20e829e8788a7256d4cc84266880fca4fdedc7d39f98148aa2",
+      "selector": "e5000 PS rawBytes"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_depth_20261023\\e5000.asm",
+      "bytes": 6793,
+      "sha256": "386b51bfab73d6a7aed96cb095c318dd44f537c895841df184a9108a652a5170",
+      "selector": "e5000 PS"
+    }
+  ],
+  "success": false,
+  "version": "1.46",
+  "open": "<Result: 'Success'>",
+  "replay": "<Result: 'Success'>",
+  "error": "Traceback (most recent call last):\n  File \"D:/godot/project/sandcastle/docs/competitor/tools/export_vegetation_depth.py\", line 43, in <module>\n    row[\"depth_target\"]=fields(pipe.GetDepthTarget());row[\"depth_state\"]=fields(ctl.GetD3D12PipelineState().depthStencil)\nAttributeError: 'renderdoc.D3D12State' object has no attribute 'depthStencil'\n"
+}

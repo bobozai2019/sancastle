@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3]
+[ext_resource type="Script" path="res://scripts/props/floating_prop.gd" id="1"]
+[ext_resource type="Resource" path="res://assets/props/wood_stick_profile.tres" id="2"]
+[sub_resource type="PhysicsMaterial" id="Physics"]
+friction = 0.6
+[sub_resource type="StandardMaterial3D" id="Wood"]
+albedo_color = Color(0.31, 0.17, 0.065, 1)
+roughness = 0.95
+[sub_resource type="CapsuleMesh" id="Mesh"]
+material = SubResource("Wood")
+radius = 0.035
+height = 0.9
+[sub_resource type="CapsuleShape3D" id="Shape"]
+radius = 0.035
+height = 0.9
+[node name="WoodStick" type="RigidBody3D"]
+mass = 1.5
+physics_material_override = SubResource("Physics")
+collision_layer = 2
+collision_mask = 3
+freeze = true
+can_sleep = true
+contact_monitor = true
+max_contacts_reported = 8
+continuous_cd = true
+center_of_mass_mode = 1
+center_of_mass = Vector3(0, -0.005, 0)
+linear_damp_mode = 1
+linear_damp = 0.0
+angular_damp_mode = 1
+angular_damp = 1.0
+script = ExtResource("1")
+body_id = 3
+profile = ExtResource("2")
+footprint_radius_m = 0.48
+[node name="Mesh" type="MeshInstance3D" parent="."]
+rotation_degrees = Vector3(0, 0, 90)
+mesh = SubResource("Mesh")
+[node name="Collision" type="CollisionShape3D" parent="."]
+rotation_degrees = Vector3(0, 0, 90)
+shape = SubResource("Shape")
+[node name="FloatRear" type="Marker3D" parent="."]
+position = Vector3(-0.32, 0, 0)
+[node name="FloatCenter" type="Marker3D" parent="."]
+[node name="FloatFront" type="Marker3D" parent="."]
+position = Vector3(0.32, 0, 0)

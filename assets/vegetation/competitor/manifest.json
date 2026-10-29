@@ -1,0 +1,613 @@
+{
+  "tool": "tools/vegetation/import_competitor.py",
+  "tool_sha256": "d0ad3ef43b38ec2408d89fb1d7b98b55b25d487aa1c64a575dc1516f8bd3546c",
+  "command": [
+    "C:\\Python313\\python.exe",
+    "-X",
+    "utf8",
+    "D:\\godot\\project\\sandcastle\\tools\\vegetation\\import_competitor.py"
+  ],
+  "python": "3.13.12",
+  "unitypy": "1.25.4",
+  "sources": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets",
+      "bytes": 76135784,
+      "sha256": "6dd7bb6bc7d926fd43c08d22c9c767b7edf531cf11a4a555fcd41830f2f9c721"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets.resS",
+      "bytes": 167798272,
+      "sha256": "5db9857c6c27ad5eef905e10428898c87cfbfaaac7c36f8d014fe77cf595c65c"
+    }
+  ],
+  "scope": "Nine visual Plant atlases and proxy meshes. No gameplay methods.",
+  "license": "Extracted from user-supplied proprietary competitor package; no redistribution license established.",
+  "assets": [
+    {
+      "kind": "seagrass",
+      "source_name": "SeaGrass",
+      "plant_path_id": 496,
+      "default_active": true,
+      "selectors": [
+        {
+          "container": "sharedassets0.assets",
+          "path_id": 461,
+          "offset": 46988320,
+          "bytes": 584,
+          "sha256": "a3cb3aab97c7ae8a3253441439a3a7c83ee46138e73739a36de5468f249fb263",
+          "evidence": "docs/competitor/evidence/vegetation_20261021/package_v2/objects/sharedassets0.assets_461.raw"
+        },
+        {
+          "container": "sharedassets0.assets",
+          "path_id": 296,
+          "offset": 39906608,
+          "bytes": 1398268,
+          "sha256": "8fea6b3ec51bc42887fb22d56a79c2d54ca0be3c7cbf33ee313cbfaee56f5093",
+          "evidence": "docs/competitor/evidence/vegetation_20261021/package_v2/objects/sharedassets0.assets_296.raw"
+        },
+        {
+          "container": "sharedassets0.assets",
+          "path_id": 34,
+          "offset": 348944,
+          "bytes": 1012,
+          "sha256": "d229d4fe6036eb6f34a5de39c895c1753797337c9f48940c1339e5c8035485d3",
+          "evidence": "docs/competitor/evidence/vegetation_20261021/package_v2/objects/sharedassets0.assets_34.raw"
+        }
+      ],
+      "pivot": [
+        0.03536577895283699,
+        0.32605841755867004,
+        -0.0008184053585864604,
+        1.5617109537124634
+      ],
+      "atlas_grid": 12,
+      "texture_color_space": 1,
+      "vertices": 11,
+      "triangles": 18,
+      "external_mesh_payload": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v2\\objects\\sharedassets0.assets_461.payload",
+        "bytes": 396,
+        "sha256": "bfbecb1af216e221624dea10be2cb01897e42bb7615a93366f9e5e998f5e20d5",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets.resS",
+          "offset": 159057936,
+          "bytes": 396,
+          "field": "m_StreamData"
+        }
+      },
+      "outputs": [
+        {
+          "path": "assets/vegetation/competitor/seagrass_proxy.json",
+          "bytes": 2922,
+          "sha256": "aabda295fe90e3ff0950817f568b1b09b1abf0c602e32363d3583237688f505f"
+        },
+        {
+          "path": "assets/vegetation/competitor/seagrass_atlas.png",
+          "bytes": 1363613,
+          "sha256": "08d916368e093c223af3e8d7f05a684c37bf578613ae33fd67b1e394fb8a5fdb"
+        }
+      ]
+    },
+    {
+      "kind": "kelp",
+      "source_name": "Kelp",
+      "plant_path_id": 480,
+      "default_active": true,
+      "selectors": [
+        {
+          "container": "sharedassets0.assets",
+          "path_id": 422,
+          "offset": 46175376,
+          "bytes": 592,
+          "sha256": "d18138acfdccf77f4518c9f87f4c10e0c2fedcdd068441d776fc2b39424fceba",
+          "evidence": "docs/competitor/evidence/vegetation_20261021/package_v2/objects/sharedassets0.assets_422.raw"
+        },
+        {
+          "container": "sharedassets0.assets",
+          "path_id": 172,
+          "offset": 28002240,
+          "bytes": 5592568,
+          "sha256": "c6996316d8b880fd6941b0d0a76a6d059c310ea9f2990d9efa1d2a431210de28",
+          "evidence": "docs/competitor/evidence/vegetation_20261021/package_v2/objects/sharedassets0.assets_172.raw"
+        },
+        {
+          "container": "sharedassets0.assets",
+          "path_id": 31,
+          "offset": 345888,
+          "bytes": 1008,
+          "sha256": "acd51f41230f2365efa282e3a8d533d40c04c120bebcf53f86ef8bc986dd022a",
+          "evidence": "docs/competitor/evidence/vegetation_20261021/package_v2/objects/sharedassets0.assets_31.raw"
+        }
+      ],
+      "pivot": [
+        0.02563636563718319,
+        0.3772459328174591,
+        0.021817674860358238,
+        1.2266144752502441
+      ],
+      "atlas_grid": 16,
+      "texture_color_space": 1,
+      "vertices": 40,
+      "triangles": 20,
+      "external_mesh_payload": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v2\\objects\\sharedassets0.assets_422.payload",
+        "bytes": 1440,
+        "sha256": "f5a25a9ada350f145b28c8dac90961ddb087846a256f869b8a17cffae1b51939",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets.resS",
+          "offset": 158637904,
+          "bytes": 1440,
+          "field": "m_StreamData"
+        }
+      },
+      "outputs": [
+        {
+          "path": "assets/vegetation/competitor/kelp_proxy.json",
+          "bytes": 8265,
+          "sha256": "85e1c2470bb2ac695a740b405372b65415e3e4a7a165cf557dd052bace01a5c8"
+        },
+        {
+          "path": "assets/vegetation/competitor/kelp_atlas.png",
+          "bytes": 4686250,
+          "sha256": "e22ca46baa9c44bf616996e0bbb34a21fb9fa63ba8064f759be2a5e27c5ded23"
+        }
+      ]
+    },
+    {
+      "kind": "shore_grass",
+      "source_name": "BuffaloGrass",
+      "plant_path_id": 539,
+      "default_active": true,
+      "selectors": [
+        {
+          "container": "sharedassets0.assets",
+          "path_id": 379,
+          "offset": 45694768,
+          "bytes": 612,
+          "sha256": "0db41abea17b559606f80bb4f7cba734dda9434e92e889d9bbf51631240e296e",
+          "evidence": "docs/competitor/evidence/vegetation_20261021/package_v2/objects/sharedassets0.assets_379.raw"
+        },
+        {
+          "container": "sharedassets0.assets",
+          "path_id": 199,
+          "offset": 37094352,
+          "bytes": 1398272,
+          "sha256": "b0a5ae287253caa60adc147dc20aa575f66671a56acfa9b112fd2b0f16deb91c",
+          "evidence": "docs/competitor/evidence/vegetation_20261021/package_v2/objects/sharedassets0.assets_199.raw"
+        },
+        {
+          "container": "sharedassets0.assets",
+          "path_id": 25,
+          "offset": 339744,
+          "bytes": 1016,
+          "sha256": "e78d2c0498f783a8bded3312f7c8a02feea871a9d29886827a6e4eb2407b6a9a",
+          "evidence": "docs/competitor/evidence/vegetation_20261021/package_v2/objects/sharedassets0.assets_25.raw"
+        }
+      ],
+      "pivot": [
+        -0.05520138144493103,
+        0.1326884627342224,
+        0.06704574078321457,
+        1.2939854860305786
+      ],
+      "atlas_grid": 14,
+      "texture_color_space": 1,
+      "vertices": 13,
+      "triangles": 22,
+      "external_mesh_payload": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v2\\objects\\sharedassets0.assets_379.payload",
+        "bytes": 468,
+        "sha256": "3e16073b5e11a432d9d1f6eb5c59517c8731df3ca9d8159013edf655275be0c6",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets.resS",
+          "offset": 158155408,
+          "bytes": 468,
+          "field": "m_StreamData"
+        }
+      },
+      "outputs": [
+        {
+          "path": "assets/vegetation/competitor/shore_grass_proxy.json",
+          "bytes": 3428,
+          "sha256": "ba19992c666922fbfe035a039a7ec8f5291837002ddedcbfe0d89327174f67dc"
+        },
+        {
+          "path": "assets/vegetation/competitor/shore_grass_atlas.png",
+          "bytes": 893292,
+          "sha256": "7e40afd16ab29d467372c61631a6d1474b194a48d315291261e60134fce1d402"
+        }
+      ]
+    },
+    {
+      "kind": "dune_grass",
+      "source_name": "GreyTussock",
+      "plant_path_id": 492,
+      "default_active": true,
+      "selectors": [
+        {
+          "container": "sharedassets0.assets",
+          "path_id": 419,
+          "offset": 46170688,
+          "bytes": 612,
+          "sha256": "51c12766ef14b5b463872e0f7ca59ffb5dda8d205c8c28f2e392a0a09aad02b7",
+          "evidence": "docs/competitor/evidence/vegetation_20261021/package_v2/objects/sharedassets0.assets_419.raw"
+        },
+        {
+          "container": "sharedassets0.assets",
+          "path_id": 99,
+          "offset": 5970096,
+          "bytes": 5592572,
+          "sha256": "19a1a04e017765281762307ad679d2c939b57567d8ae331b38020fe3f36fc0ff",
+          "evidence": "docs/competitor/evidence/vegetation_20261021/package_v2/objects/sharedassets0.assets_99.raw"
+        },
+        {
+          "container": "sharedassets0.assets",
+          "path_id": 29,
+          "offset": 343840,
+          "bytes": 1016,
+          "sha256": "52ac5ebecd4002593618c04200392cf2f9665cee5ac41d342a9cccac44a1663a",
+          "evidence": "docs/competitor/evidence/vegetation_20261021/package_v2/objects/sharedassets0.assets_29.raw"
+        }
+      ],
+      "pivot": [
+        -0.007513666525483131,
+        0.19552810490131378,
+        -0.015452184714376926,
+        1.3550368547439575
+      ],
+      "atlas_grid": 14,
+      "texture_color_space": 1,
+      "vertices": 13,
+      "triangles": 22,
+      "external_mesh_payload": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v2\\objects\\sharedassets0.assets_419.payload",
+        "bytes": 468,
+        "sha256": "f347f924297d1a527648ed25beb975415a42dd9a12c043117ca1bd0dd3941981",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets.resS",
+          "offset": 158629968,
+          "bytes": 468,
+          "field": "m_StreamData"
+        }
+      },
+      "outputs": [
+        {
+          "path": "assets/vegetation/competitor/dune_grass_proxy.json",
+          "bytes": 3461,
+          "sha256": "83ff9d86a30c3e77907b4bf7d006b602dd5f19838807ca4e66eaea346760bb08"
+        },
+        {
+          "path": "assets/vegetation/competitor/dune_grass_atlas.png",
+          "bytes": 2476758,
+          "sha256": "7ec90f5b04f2e4bdaf2bcf01807fd4d965e25d2caba8b35ed7f7cee2f864213c"
+        }
+      ]
+    },
+    {
+      "kind": "red_algae",
+      "source_name": "RedAlgae",
+      "plant_path_id": 525,
+      "default_active": false,
+      "selectors": [
+        {
+          "container": "sharedassets0.assets",
+          "path_id": 428,
+          "offset": 46275808,
+          "bytes": 632,
+          "sha256": "55f6d0b053872c068ba5e6d9da72314f068e0623f97e71f12b352018d05819b5",
+          "evidence": "docs/competitor/evidence/vegetation_20261021/package_v2/objects/sharedassets0.assets_428.raw"
+        },
+        {
+          "container": "sharedassets0.assets",
+          "path_id": 169,
+          "offset": 21011232,
+          "bytes": 5592572,
+          "sha256": "65cb9c46f069fb07b6972b1f06f488924b99f274e6ec5c633597348f36a18701",
+          "evidence": "docs/competitor/evidence/vegetation_20261021/package_v2/objects/sharedassets0.assets_169.raw"
+        },
+        {
+          "container": "sharedassets0.assets",
+          "path_id": 33,
+          "offset": 347920,
+          "bytes": 1012,
+          "sha256": "70f188ea26c7dc66d990e436b6f393fccc129a770dd25842aedca7883b239b75",
+          "evidence": "docs/competitor/evidence/vegetation_20261021/package_v2/objects/sharedassets0.assets_33.raw"
+        }
+      ],
+      "pivot": [
+        0.025401698425412178,
+        0.41553857922554016,
+        -0.012095913290977478,
+        1.1751447916030884
+      ],
+      "atlas_grid": 14,
+      "texture_color_space": 1,
+      "vertices": 15,
+      "triangles": 26,
+      "external_mesh_payload": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v2\\objects\\sharedassets0.assets_428.payload",
+        "bytes": 540,
+        "sha256": "e4efa6db96fb0c1028a01b9c8363e49e4485eb45f8053e544651ddc71948ba27",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets.resS",
+          "offset": 158749328,
+          "bytes": 540,
+          "field": "m_StreamData"
+        }
+      },
+      "outputs": [
+        {
+          "path": "assets/vegetation/competitor/red_algae_proxy.json",
+          "bytes": 4004,
+          "sha256": "a11804b662fab85a4258e1e4cfa5bf4b0ca3fc56a41205ed9f1da37711a67da0"
+        },
+        {
+          "path": "assets/vegetation/competitor/red_algae_atlas.png",
+          "bytes": 4417263,
+          "sha256": "20a4498566dff49af2aceb8f3371a61fe4eecdf45ed1c71f42606b207cdbd85b"
+        }
+      ]
+    },
+    {
+      "kind": "switch_grass",
+      "source_name": "SwitchGrass",
+      "plant_path_id": 510,
+      "default_active": true,
+      "selectors": [
+        {
+          "container": "sharedassets0.assets",
+          "path_id": 358,
+          "offset": 45492064,
+          "bytes": 588,
+          "sha256": "32e2784a87bc3df90012d267a08701a7a47687b5f795850bcfbe2ab8697dbd2d",
+          "evidence": "docs/competitor/evidence/vegetation_20261021/package_v2/objects/sharedassets0.assets_358.raw"
+        },
+        {
+          "container": "sharedassets0.assets",
+          "path_id": 106,
+          "offset": 13660816,
+          "bytes": 1398268,
+          "sha256": "e9d71e9a5c8e4fb757b5893d411fe9c8b663b32221d584c3c8d98bca3115e59b",
+          "evidence": "docs/competitor/evidence/vegetation_20261021/package_v2/objects/sharedassets0.assets_106.raw"
+        },
+        {
+          "container": "sharedassets0.assets",
+          "path_id": 35,
+          "offset": 349968,
+          "bytes": 1016,
+          "sha256": "c4ae5ceb0a4f0e2bec518691a9aca62bd786bc0bd7c3291dfa9c64a10417e02a",
+          "evidence": "docs/competitor/evidence/vegetation_20261021/package_v2/objects/sharedassets0.assets_35.raw"
+        }
+      ],
+      "pivot": [
+        0.09519492089748383,
+        0.3575485348701477,
+        0.02511654794216156,
+        1.4287906885147095
+      ],
+      "atlas_grid": 12,
+      "texture_color_space": 1,
+      "vertices": 11,
+      "triangles": 18,
+      "external_mesh_payload": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v2\\objects\\sharedassets0.assets_358.payload",
+        "bytes": 396,
+        "sha256": "04e858873192a3c73459aa1b3f9bbcbcb39eb28e20f04f944d078e5375e4d0d0",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets.resS",
+          "offset": 157822432,
+          "bytes": 396,
+          "field": "m_StreamData"
+        }
+      },
+      "outputs": [
+        {
+          "path": "assets/vegetation/competitor/switch_grass_proxy.json",
+          "bytes": 2976,
+          "sha256": "d8eac4c316a1beefee1bcd1d2bfb8e8310deddc553532c1abdce6dee3daf766b"
+        },
+        {
+          "path": "assets/vegetation/competitor/switch_grass_atlas.png",
+          "bytes": 1383069,
+          "sha256": "1c0dd9842064c71af76a7916bf6d87729080542da8494e7f04ae17c56a09e955"
+        }
+      ]
+    },
+    {
+      "kind": "wheat_grass",
+      "source_name": "WheatGrass",
+      "plant_path_id": 542,
+      "default_active": true,
+      "selectors": [
+        {
+          "container": "sharedassets0.assets",
+          "path_id": 479,
+          "offset": 47279552,
+          "bytes": 624,
+          "sha256": "bf7bac5da44833b475dff449b4d8e4516ec1690c7d9ed52591365b9dba3df342",
+          "evidence": "docs/competitor/evidence/vegetation_20261021/package_v2/objects/sharedassets0.assets_479.raw"
+        },
+        {
+          "container": "sharedassets0.assets",
+          "path_id": 137,
+          "offset": 15064032,
+          "bytes": 5592572,
+          "sha256": "66c62f7727e22b128d65c62c2f37ca55953fcb22118c499ee9007c3961bfc7cc",
+          "evidence": "docs/competitor/evidence/vegetation_20261021/package_v2/objects/sharedassets0.assets_137.raw"
+        },
+        {
+          "container": "sharedassets0.assets",
+          "path_id": 36,
+          "offset": 350992,
+          "bytes": 1016,
+          "sha256": "5f09bd8a0e5523cda4a8486a167674ae3a5d145f11b326dc0266a76fa1beb2eb",
+          "evidence": "docs/competitor/evidence/vegetation_20261021/package_v2/objects/sharedassets0.assets_36.raw"
+        }
+      ],
+      "pivot": [
+        0.005794580094516277,
+        0.3581392467021942,
+        0.013071791268885136,
+        1.1770280599594116
+      ],
+      "atlas_grid": 14,
+      "texture_color_space": 1,
+      "vertices": 14,
+      "triangles": 24,
+      "external_mesh_payload": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v2\\objects\\sharedassets0.assets_479.payload",
+        "bytes": 504,
+        "sha256": "f9bfd8ae1ab69760ce6702b265a24772aa0b3b5b20d4269f21bb1bb9d71fa9a9",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets.resS",
+          "offset": 159446592,
+          "bytes": 504,
+          "field": "m_StreamData"
+        }
+      },
+      "outputs": [
+        {
+          "path": "assets/vegetation/competitor/wheat_grass_proxy.json",
+          "bytes": 3750,
+          "sha256": "35ae221ff66744dc0dd5b5f94ef6fde00ef48d2f00f8c2f763cc8f5e7dded25c"
+        },
+        {
+          "path": "assets/vegetation/competitor/wheat_grass_atlas.png",
+          "bytes": 3835003,
+          "sha256": "49a8f8bd560af3a37d4e03b1bf7046cdcf9f3dd2b528639a2ccd6c214fad21ec"
+        }
+      ]
+    },
+    {
+      "kind": "yarrow",
+      "source_name": "Yarrow",
+      "plant_path_id": 493,
+      "default_active": true,
+      "selectors": [
+        {
+          "container": "sharedassets0.assets",
+          "path_id": 498,
+          "offset": 47762000,
+          "bytes": 608,
+          "sha256": "97dc06e657443938ab14710bf1141e93b34d473ec2133890c9603d8901bea170",
+          "evidence": "docs/competitor/evidence/vegetation_20261021/package_v2/objects/sharedassets0.assets_498.raw"
+        },
+        {
+          "container": "sharedassets0.assets",
+          "path_id": 293,
+          "offset": 38508016,
+          "bytes": 1398264,
+          "sha256": "4d998e1981d4627ed52a7e1e0b18e2fa54824c8421cd69de78b64606ad07f3c1",
+          "evidence": "docs/competitor/evidence/vegetation_20261021/package_v2/objects/sharedassets0.assets_293.raw"
+        },
+        {
+          "container": "sharedassets0.assets",
+          "path_id": 37,
+          "offset": 352016,
+          "bytes": 1012,
+          "sha256": "dff2aa530173bc49a6e21d22cfcfc7fca4d0b753eb6485ef1b7041d2806ff5b6",
+          "evidence": "docs/competitor/evidence/vegetation_20261021/package_v2/objects/sharedassets0.assets_37.raw"
+        }
+      ],
+      "pivot": [
+        0.005418246146291494,
+        0.23779866099357605,
+        0.004857066553086042,
+        1.361390233039856
+      ],
+      "atlas_grid": 12,
+      "texture_color_space": 1,
+      "vertices": 13,
+      "triangles": 22,
+      "external_mesh_payload": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v2\\objects\\sharedassets0.assets_498.payload",
+        "bytes": 468,
+        "sha256": "cad385b3290ecf251c9167fbdd15c112b91d80eccffe968200abc73562ff8cbb",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets.resS",
+          "offset": 159964064,
+          "bytes": 468,
+          "field": "m_StreamData"
+        }
+      },
+      "outputs": [
+        {
+          "path": "assets/vegetation/competitor/yarrow_proxy.json",
+          "bytes": 3453,
+          "sha256": "bce373e1b32f5dc7a63cad8c78bb16bb9d601e1a5b3d2bc651a47fb4852b2ef0"
+        },
+        {
+          "path": "assets/vegetation/competitor/yarrow_atlas.png",
+          "bytes": 521997,
+          "sha256": "9133c2b04a114dda3d0a473a2677c8ada8d32dae6cef1c669f5ea8d0f31de11d"
+        }
+      ]
+    },
+    {
+      "kind": "goldenrod",
+      "source_name": "Goldenrod",
+      "plant_path_id": 515,
+      "default_active": true,
+      "selectors": [
+        {
+          "container": "sharedassets0.assets",
+          "path_id": 471,
+          "offset": 47078176,
+          "bytes": 648,
+          "sha256": "d7bd7c24220ff7c0aca52d8c70d7c5afcb140f9a0467274d919cdc2c8cc71b58",
+          "evidence": "docs/competitor/evidence/vegetation_20261021/package_v2/objects/sharedassets0.assets_471.raw"
+        },
+        {
+          "container": "sharedassets0.assets",
+          "path_id": 171,
+          "offset": 26603968,
+          "bytes": 1398268,
+          "sha256": "0422720918f28386edb1ae54d2e28ac8b28c5dc33bba99e941344d0668b2b14f",
+          "evidence": "docs/competitor/evidence/vegetation_20261021/package_v2/objects/sharedassets0.assets_171.raw"
+        },
+        {
+          "container": "sharedassets0.assets",
+          "path_id": 28,
+          "offset": 342816,
+          "bytes": 1016,
+          "sha256": "48ddcc7464a3fd6758f1e04baa8e6758d4f8b96b9168d4a663202d7f12495567",
+          "evidence": "docs/competitor/evidence/vegetation_20261021/package_v2/objects/sharedassets0.assets_28.raw"
+        }
+      ],
+      "pivot": [
+        -0.023372137919068336,
+        0.40560829639434814,
+        -0.003103062743321061,
+        1.4032642841339111
+      ],
+      "atlas_grid": 12,
+      "texture_color_space": 1,
+      "vertices": 16,
+      "triangles": 28,
+      "external_mesh_payload": {
+        "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\evidence\\vegetation_20261021\\package_v2\\objects\\sharedassets0.assets_471.payload",
+        "bytes": 576,
+        "sha256": "fa8d1b6f0a458be878ca00c569e153b614d2b691d098e9bdccad3433aa536800",
+        "selector": {
+          "source": "D:\\godot\\project\\sandcastle\\sandcastlegame\\Sandcastle_Data\\sharedassets0.assets.resS",
+          "offset": 159279408,
+          "bytes": 576,
+          "field": "m_StreamData"
+        }
+      },
+      "outputs": [
+        {
+          "path": "assets/vegetation/competitor/goldenrod_proxy.json",
+          "bytes": 4259,
+          "sha256": "02d1ead19f58516e7a24dc1020abd83ec85c089241b8855cb6843cf991b6edea"
+        },
+        {
+          "path": "assets/vegetation/competitor/goldenrod_atlas.png",
+          "bytes": 1202498,
+          "sha256": "3f1af7daafb5a3e69511ded692d6db17ca3eff4f2935826a4e59ac9960caf92f"
+        }
+      ]
+    }
+  ]
+}

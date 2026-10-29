@@ -1,0 +1,32 @@
+{
+  "scope": "owned documentation probe only; actual D3D12 injection and replay not verified",
+  "command": "qrenderdoc.exe --python renderdoc_api_probe.py",
+  "files": [
+    {
+      "size": 578704,
+      "sha256": "400cb013ea52b9baa818d69dc0a6341776d2a9560edad5bcc6e200fe8c03806d",
+      "path": "D:\\other_software\\RenderDoc\\renderdoccmd.exe"
+    },
+    {
+      "size": 13629080,
+      "sha256": "c5e9d3f254d80a7649fbd9eae1c67618cb19278c603710370c220de469397277",
+      "path": "D:\\other_software\\RenderDoc\\qrenderdoc.exe"
+    },
+    {
+      "size": 1936,
+      "sha256": "ed1d94671f3d65a48012710576adc8f199444f58044d9f064318e48b7298bd76",
+      "path": "D:\\godot\\project\\sandcastle\\task\\sandcastle_gpu_edit_validation\\tools\\renderdoc_api_probe.py"
+    },
+    {
+      "size": 5798,
+      "sha256": "d2c7014835f91556dd70715bda36c7d38ee133b5a71202712e4cda31a8cdf740",
+      "path": "D:\\godot\\project\\sandcastle\\task\\sandcastle_gpu_edit_validation\\tools\\renderdoc_api_probe.json"
+    },
+    {
+      "size": 22,
+      "sha256": "936e91d6f09dcb88ed930a52621a8f36b546a93d843f773d9b9fbe74f23898bc",
+      "path": "D:\\godot\\project\\sandcastle\\task\\sandcastle_gpu_edit_validation\\tools\\renderdoc_api_probe_owner.json"
+    }
+  ],
+  "version": "1.46"
+}

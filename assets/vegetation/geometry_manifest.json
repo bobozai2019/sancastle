@@ -1,0 +1,199 @@
+{
+  "generator_sha256": "403f20bffd16e417874eb4b33267a2fb0af5c411e807ce2635efd2091d9b2c2b",
+  "geometry": [
+    {
+      "kind": "seagrass",
+      "sha256": "3f0db56905d7cbd107fb10b3b0737270f9824e0f10a05334b7bc967b7fc442e7",
+      "vertices": 54
+    },
+    {
+      "kind": "kelp",
+      "sha256": "4fa6c939144033f90443bf3b9a2d73f9336134edf758d2c3d95f6f5dbe02638f",
+      "vertices": 60
+    },
+    {
+      "kind": "shore_grass",
+      "sha256": "798834f55d91f14e04a8319d317acea1c5c585798d46d532f68c9d2c236d2425",
+      "vertices": 66
+    },
+    {
+      "kind": "dune_grass",
+      "sha256": "5760097aebf9fc6372ae1cc6eb7fd9d35c5e357c8c8e0a94ec1ae45a548ce448",
+      "vertices": 66
+    },
+    {
+      "kind": "red_algae",
+      "sha256": "31fd0393abb8561d4d9ff9c171a9c89d07b5a79f59915d50235e6623dd8fbdb1",
+      "vertices": 78
+    },
+    {
+      "kind": "switch_grass",
+      "sha256": "efa1b18695e7b71354bd15470ce7d62ccdad691ca022263bec5c98684fd668e5",
+      "vertices": 54
+    },
+    {
+      "kind": "wheat_grass",
+      "sha256": "4663e3e8344c9bfff2b727ef9502776e9b4de1737b0dd2704995881da967905d",
+      "vertices": 72
+    },
+    {
+      "kind": "yarrow",
+      "sha256": "c145189141527d91e6f2dfb36f82935e82f52610ad414e7afe013535ccd59802",
+      "vertices": 66
+    },
+    {
+      "kind": "goldenrod",
+      "sha256": "159ffae6d04618a658406292440ff14fb9eb686a7d24e4f152bef60d9af0feb0",
+      "vertices": 84
+    }
+  ],
+  "profile": {
+    "bounds_xz": [
+      -14.8,
+      -14.8,
+      14.8,
+      14.8
+    ],
+    "candidates_per_kind": 2048,
+    "enabled": true,
+    "seed": 62143,
+    "species": [
+      {
+        "bed_max_m": 10.0,
+        "bed_min_m": -8.0,
+        "density": 0.1225,
+        "depth_max_m": 1.8,
+        "depth_min_m": 0.015,
+        "flow_response": 0.58,
+        "label": "海草",
+        "max_slope": 1.7,
+        "patch_max": 1.0,
+        "patch_min": 0.24,
+        "response_hz": 6.0,
+        "scale_max": 1.55,
+        "scale_min": 0.9
+      },
+      {
+        "bed_max_m": 10.0,
+        "bed_min_m": -8.0,
+        "density": 0.0575,
+        "depth_max_m": 3.0,
+        "depth_min_m": 0.35,
+        "flow_response": 0.85,
+        "label": "海带",
+        "max_slope": 1.5,
+        "patch_max": 0.9,
+        "patch_min": 0.36,
+        "response_hz": 4.5,
+        "scale_max": 1.85,
+        "scale_min": 1.1
+      },
+      {
+        "bed_max_m": 10.0,
+        "bed_min_m": -8.0,
+        "density": 0.115,
+        "depth_max_m": 0.018,
+        "depth_min_m": 0.0,
+        "flow_response": 0.45,
+        "label": "水牛草",
+        "max_slope": 1.2,
+        "patch_max": 1.0,
+        "patch_min": 0.28,
+        "response_hz": 7.0,
+        "scale_max": 1.45,
+        "scale_min": 0.85
+      },
+      {
+        "bed_max_m": 10.0,
+        "bed_min_m": -8.0,
+        "density": 0.06875,
+        "depth_max_m": 0.012,
+        "depth_min_m": 0.0,
+        "flow_response": 0.6,
+        "label": "灰色丛草",
+        "max_slope": 1.3,
+        "patch_max": 0.85,
+        "patch_min": 0.38,
+        "response_hz": 5.5,
+        "scale_max": 1.35,
+        "scale_min": 0.9
+      },
+      {
+        "bed_max_m": 10.0,
+        "bed_min_m": -8.0,
+        "density": 0.0375,
+        "depth_max_m": 2.4,
+        "depth_min_m": 0.12,
+        "flow_response": 0.68,
+        "label": "红藻",
+        "max_slope": 1.7,
+        "patch_max": 0.9,
+        "patch_min": 0.52,
+        "response_hz": 5.0,
+        "scale_max": 0.9,
+        "scale_min": 0.5
+      },
+      {
+        "bed_max_m": 10.0,
+        "bed_min_m": -8.0,
+        "density": 0.07,
+        "depth_max_m": 0.015,
+        "depth_min_m": 0.0,
+        "flow_response": 0.5,
+        "label": "柳枝稷",
+        "max_slope": 1.2,
+        "patch_max": 1.0,
+        "patch_min": 0.48,
+        "response_hz": 6.0,
+        "scale_max": 1.3,
+        "scale_min": 0.85
+      },
+      {
+        "bed_max_m": 10.0,
+        "bed_min_m": -8.0,
+        "density": 0.0275,
+        "depth_max_m": 0.012,
+        "depth_min_m": 0.0,
+        "flow_response": 0.5,
+        "label": "麦草",
+        "max_slope": 1.1,
+        "patch_max": 1.0,
+        "patch_min": 0.65,
+        "response_hz": 6.0,
+        "scale_max": 1.05,
+        "scale_min": 0.7
+      },
+      {
+        "bed_max_m": 10.0,
+        "bed_min_m": -8.0,
+        "density": 0.015,
+        "depth_max_m": 0.008,
+        "depth_min_m": 0.0,
+        "flow_response": 0.45,
+        "label": "西洋蓍草",
+        "max_slope": 1.1,
+        "patch_max": 1.0,
+        "patch_min": 0.68,
+        "response_hz": 7.0,
+        "scale_max": 1.2,
+        "scale_min": 0.85
+      },
+      {
+        "bed_max_m": 10.0,
+        "bed_min_m": -8.0,
+        "density": 0.0125,
+        "depth_max_m": 0.008,
+        "depth_min_m": 0.0,
+        "flow_response": 0.45,
+        "label": "一枝黄花",
+        "max_slope": 1.1,
+        "patch_max": 0.9,
+        "patch_min": 0.62,
+        "response_hz": 7.0,
+        "scale_max": 1.15,
+        "scale_min": 0.75
+      }
+    ],
+    "version": 2
+  }
+}

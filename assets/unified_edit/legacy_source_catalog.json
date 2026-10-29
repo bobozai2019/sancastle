@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "role": "offline validated legacy source configuration allowlist; not a checkpoint or runtime implementation",
+  "catalog": {
+    "path": "res://assets/unified_edit/legacy_source_catalog.variant",
+    "sha256": "cbac0b2c091c09f3506d0a15723d0ff7cd962104918b8eb3827a44a7b57942ff"
+  },
+  "builder": {
+    "path": "res://tools/unified_edit_pipeline/bake_legacy_catalog.gd",
+    "sha256": "f2dd200c0e35a6917308ce50162b741a850911ff37bc826f748eb4a833443245"
+  },
+  "engine": "Godot 4.7.2 stable steam ed1daf0bf",
+  "sources": [
+    {
+      "format": "edit5_native3",
+      "fixture": {
+        "path": "res://test_output/unified_edit_pipeline/g0_function_baseline01/regression_all_tools_1.sandgp",
+        "sha256": "6db2a49437b15f5b9f9cdc8a0a19577feea33cea9311aa52105aa9609e786aef"
+      },
+      "configuration_digest_policy": "exact Godot Variant data; no JSON roundtrip"
+    },
+    {
+      "format": "edit4_native2",
+      "fixture": {
+        "path": "res://test_output/gpu_pipeline/g7_20261017_03/migration.sandcp",
+        "sha256": "165b3f1acf57db09314dfb6d6c9ad2cb5faaef8d371c9b6a6f0319e8e0a0f0cf"
+      },
+      "configuration_digest_policy": "exact Godot Variant data; no JSON roundtrip"
+    }
+  ],
+  "availability": "Runtime requires this catalog only; legacy fixtures remain development evidence. Opening a save still validates its full container, data and exact known source configuration."
+}

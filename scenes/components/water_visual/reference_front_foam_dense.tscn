@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Shader" path="res://tests/visual_water_alignment/prototypes/reference_foam_splats.gdshader" id="1_shader"]
+[ext_resource type="ArrayMesh" path="res://tests/visual_water_alignment/prototypes/reference_front_foam_dense_mesh.tres" id="2_mesh"]
+
+[sub_resource type="ShaderMaterial" id="Material_front_foam"]
+resource_local_to_scene = true
+render_priority = 2
+shader = ExtResource("1_shader")
+shader_parameter/front_local_dense = true
+shader_parameter/raised_local_front = true
+shader_parameter/splat_jitter_m = 0.02
+shader_parameter/splat_half_width_m = 0.018
+shader_parameter/target_diameter_px = 3.5
+
+[node name="PrototypeFrontFoamDense" type="MeshInstance3D"]
+visible = false
+mesh = ExtResource("2_mesh")
+material_override = SubResource("Material_front_foam")
+custom_aabb = AABB(-16.5, -2, -16.5, 33, 6, 33)

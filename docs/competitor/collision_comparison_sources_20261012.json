@@ -1,0 +1,327 @@
+{
+  "date": "2026-10-12",
+  "scope": "read-only current main source inspection and reuse of archived competitor evidence; no runtime test or new replay",
+  "current_sources": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scenes\\main.tscn",
+      "bytes": 9974,
+      "sha256": "91f763d569a433299bfa22531816f1e4843e67cd32a9c38603459d5754e3394c",
+      "snapshot": "D:\\godot\\project\\sandcastle\\test_output\\competitor_collision_comparison_20261012\\source_snapshot\\scenes\\main.tscn",
+      "selectors": [
+        {
+          "line": 93,
+          "text": "min_value = 0.001"
+        },
+        {
+          "line": 95,
+          "text": "step = 0.001"
+        },
+        {
+          "line": 105,
+          "text": "min_value = 0.001"
+        },
+        {
+          "line": 107,
+          "text": "step = 0.001"
+        }
+      ]
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scenes\\sandcastle_test1_beach_coupled.tscn",
+      "bytes": 234,
+      "sha256": "10ac73d870d95d6ffea251c8016acf525fe9b229fce40f5422f0f22916687592",
+      "snapshot": "D:\\godot\\project\\sandcastle\\test_output\\competitor_collision_comparison_20261012\\source_snapshot\\scenes\\sandcastle_test1_beach_coupled.tscn",
+      "selectors": []
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scenes\\water_material_natural_candidate\\rdc_v1_coupled.tscn",
+      "bytes": 499,
+      "sha256": "8680f07b3d38afecb45103cc7389195689217e9605122d79040ee221a02c7ba7",
+      "snapshot": "D:\\godot\\project\\sandcastle\\test_output\\competitor_collision_comparison_20261012\\source_snapshot\\scenes\\water_material_natural_candidate\\rdc_v1_coupled.tscn",
+      "selectors": []
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\beach\\beach_recovery_entry.gd",
+      "bytes": 23937,
+      "sha256": "e9ab007aa6c951c2056dcb8162c3985547e6b8d3a78395b4560a51e5d2d0f9d1",
+      "snapshot": "D:\\godot\\project\\sandcastle\\test_output\\competitor_collision_comparison_20261012\\source_snapshot\\scripts\\beach\\beach_recovery_entry.gd",
+      "selectors": [
+        {
+          "line": 186,
+          "text": "await get_tree().physics_frame;await get_tree().physics_frame"
+        },
+        {
+          "line": 277,
+          "text": "await get_tree().physics_frame;await get_tree().physics_frame"
+        }
+      ]
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\beach\\beach_interaction_entry.gd",
+      "bytes": 10525,
+      "sha256": "e96969e9186c5f6349464f22dd32165bc3cbdb4a21c21d0072ed31eff7ed77c5",
+      "snapshot": "D:\\godot\\project\\sandcastle\\test_output\\competitor_collision_comparison_20261012\\source_snapshot\\scripts\\beach\\beach_interaction_entry.gd",
+      "selectors": [
+        {
+          "line": 21,
+          "text": "@export_range(0.001, 1.0, 0.001) var dig_amount_m3 := 0.015"
+        },
+        {
+          "line": 22,
+          "text": "@export_range(0.001, 1.0, 0.001) var fill_amount_m3 := 0.015"
+        },
+        {
+          "line": 163,
+          "text": "func _pick_current(hit: Dictionary) -> bool:"
+        },
+        {
+          "line": 190,
+          "text": "func execute_admitted_gpu_command(command: Dictionary, available_m3: float) -> Dictionary:"
+        }
+      ]
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\beach\\beach_gpu_entry.gd",
+      "bytes": 13728,
+      "sha256": "61c64d18e3dfe9188fbb2afd3492dc752c188c06407f562522e98012bc4ad0cb",
+      "snapshot": "D:\\godot\\project\\sandcastle\\test_output\\competitor_collision_comparison_20261012\\source_snapshot\\scripts\\beach\\beach_gpu_entry.gd",
+      "selectors": [
+        {
+          "line": 36,
+          "text": "collision_proxy.reuse_chunk_shapes=false"
+        },
+        {
+          "line": 126,
+          "text": "func execute_admitted_gpu_command(command: Dictionary, available_m3: float) -> Dictionary:"
+        },
+        {
+          "line": 150,
+          "text": "await get_tree().physics_frame"
+        },
+        {
+          "line": 152,
+          "text": "await get_tree().physics_frame"
+        },
+        {
+          "line": 177,
+          "text": "func _gpu_chunks(receipt: Dictionary) -> PackedInt32Array:"
+        },
+        {
+          "line": 189,
+          "text": "func _render_gpu_publish(token: int) -> void:"
+        }
+      ]
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\beach\\beach_checkpoint_entry.gd",
+      "bytes": 5830,
+      "sha256": "a24062ecef85cf0d1eddee2516082e3533da4c87f41345b02a3524b8574046f3",
+      "snapshot": "D:\\godot\\project\\sandcastle\\test_output\\competitor_collision_comparison_20261012\\source_snapshot\\scripts\\beach\\beach_checkpoint_entry.gd",
+      "selectors": [
+        {
+          "line": 32,
+          "text": "return solver.rd.texture_get_data_async(texture,0,callback)"
+        }
+      ]
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\beach\\beach_lab_entry.gd",
+      "bytes": 219,
+      "sha256": "e092c3626e29d88ae87733c85304922c6bde7d3b43d25bddcf30c216ed577c4c",
+      "snapshot": "D:\\godot\\project\\sandcastle\\test_output\\competitor_collision_comparison_20261012\\source_snapshot\\scripts\\beach\\beach_lab_entry.gd",
+      "selectors": []
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\beach\\release_config.gd",
+      "bytes": 448,
+      "sha256": "006e91856bd21ad9b002ac35ba3d4a3db43395c042e68c2ba6b4910acefd757e",
+      "snapshot": "D:\\godot\\project\\sandcastle\\test_output\\competitor_collision_comparison_20261012\\source_snapshot\\scripts\\beach\\release_config.gd",
+      "selectors": []
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\collision\\gpu_collision_proxy.gd",
+      "bytes": 10565,
+      "sha256": "47e0d057a3288c717aabe0b7bb88811e75d920b34db6b96239a030b56a305ada",
+      "snapshot": "D:\\godot\\project\\sandcastle\\test_output\\competitor_collision_comparison_20261012\\source_snapshot\\scripts\\collision\\gpu_collision_proxy.gd",
+      "selectors": [
+        {
+          "line": 105,
+          "text": "func _dispatch_pending_render() -> void:"
+        },
+        {
+          "line": 165,
+          "text": "var error := rd.texture_get_data_async(staging_texture, 0, _on_data_render)"
+        },
+        {
+          "line": 200,
+          "text": "func _apply_data(data: PackedByteArray, chunks: PackedInt32Array,"
+        },
+        {
+          "line": 233,
+          "text": "func _replace_chunk_shape(chunk_id: int, revision: int,"
+        }
+      ]
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\simulation\\edit_validation\\collision_proxy.gd",
+      "bytes": 2184,
+      "sha256": "62f5248f3e9df598138f61188d2fd44e791b6fb32155156d5ad90f70015c7be4",
+      "snapshot": "D:\\godot\\project\\sandcastle\\test_output\\competitor_collision_comparison_20261012\\source_snapshot\\scripts\\simulation\\edit_validation\\collision_proxy.gd",
+      "selectors": [
+        {
+          "line": 14,
+          "text": "func _dispatch_pending_render() -> void:"
+        },
+        {
+          "line": 26,
+          "text": "active_revision=captured_revision"
+        },
+        {
+          "line": 44,
+          "text": "func _replace_chunk_shape(chunk_id: int, revision: int, values: PackedFloat32Array) -> void:"
+        }
+      ]
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\simulation\\edit_validation\\collision_chunk_selection.gd",
+      "bytes": 1225,
+      "sha256": "81ad1db63c6baf3ef876a8050ebe9550bd6130669cba810698049ddf70570892",
+      "snapshot": "D:\\godot\\project\\sandcastle\\test_output\\competitor_collision_comparison_20261012\\source_snapshot\\scripts\\simulation\\edit_validation\\collision_chunk_selection.gd",
+      "selectors": []
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\simulation\\edit_validation\\edit_protocol.gd",
+      "bytes": 6152,
+      "sha256": "fbc1d838fd58d04693a05e3032cc3ecca6b0863247cccbde162467ede14e5ce5",
+      "snapshot": "D:\\godot\\project\\sandcastle\\test_output\\competitor_collision_comparison_20261012\\source_snapshot\\scripts\\simulation\\edit_validation\\edit_protocol.gd",
+      "selectors": [
+        {
+          "line": 4,
+          "text": "const STRIDE := 128"
+        },
+        {
+          "line": 7,
+          "text": "const DRY_DEPTH := 0.001"
+        }
+      ]
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\simulation\\edit_validation\\gpu_sand_editor.gd",
+      "bytes": 9737,
+      "sha256": "42f46da585486752e942809e833356c3edc1b5194391ded18ce4a609be80c98f",
+      "snapshot": "D:\\godot\\project\\sandcastle\\test_output\\competitor_collision_comparison_20261012\\source_snapshot\\scripts\\simulation\\edit_validation\\gpu_sand_editor.gd",
+      "selectors": []
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\scripts\\simulation\\erosion\\gpu_sediment_coupler.gd",
+      "bytes": 6853,
+      "sha256": "786ccc46719dfc38fb028e1dc7888bda2a1b768a4df498fdc1e32e1a29b080b6",
+      "snapshot": "D:\\godot\\project\\sandcastle\\test_output\\competitor_collision_comparison_20261012\\source_snapshot\\scripts\\simulation\\erosion\\gpu_sediment_coupler.gd",
+      "selectors": [
+        {
+          "line": 11,
+          "text": "const DRY_DEPTH_M := 0.001"
+        },
+        {
+          "line": 120,
+          "text": "var error := rd.texture_get_data_async(dirty_max_texture, 0,"
+        }
+      ]
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\shaders\\simulation\\shallow_collision_pack.glsl",
+      "bytes": 1113,
+      "sha256": "21e58b4e4bd906e98c0b0e894c514332a9a1b2ca9251c539275a209749ca9b9d",
+      "snapshot": "D:\\godot\\project\\sandcastle\\test_output\\competitor_collision_comparison_20261012\\source_snapshot\\shaders\\simulation\\shallow_collision_pack.glsl",
+      "selectors": [
+        {
+          "line": 30,
+          "text": "float bed = imageLoad(rock_state, cell).r + imageLoad(sand_state, cell).r;"
+        }
+      ]
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\tests\\visual_water_alignment\\prototypes\\reference_preview.gd",
+      "bytes": 125940,
+      "sha256": "ee3773cb57aa9a93d7e7cbd1b2884c95b3c5d80788833e8de358ee65ae148dd3",
+      "snapshot": "D:\\godot\\project\\sandcastle\\test_output\\competitor_collision_comparison_20261012\\source_snapshot\\tests\\visual_water_alignment\\prototypes\\reference_preview.gd",
+      "selectors": [
+        {
+          "line": 1790,
+          "text": "func _erosion_collision_chunks(dirty_max_um: PackedInt32Array,"
+        },
+        {
+          "line": 1796,
+          "text": "if collision_change_upper_bound_m[chunk_id] < 0.001:"
+        },
+        {
+          "line": 2820,
+          "text": "if closure > maxf(0.001, initial_sand_total_m3 * 0.005):"
+        }
+      ]
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\project.godot",
+      "bytes": 2016,
+      "sha256": "673965691c63546745e3e79f70b73589ede19865afbe55b177925f2e68ff11bf",
+      "snapshot": "D:\\godot\\project\\sandcastle\\test_output\\competitor_collision_comparison_20261012\\source_snapshot\\project.godot",
+      "selectors": [
+        {
+          "line": 53,
+          "text": "3d/physics_engine=\"Jolt Physics\""
+        }
+      ]
+    }
+  ],
+  "competitor_evidence_references": [
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\笔刷命中检测_代码补证.md",
+      "exists": true,
+      "bytes": 11939,
+      "sha256": "73030f69eb68773c970283d2791f5b2036d8beb291552640aff5873dc8d13126"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\运行时碰撞网格取证.md",
+      "exists": true,
+      "bytes": 13857,
+      "sha256": "dbd19d9bfd728c5fde7075214e57cf791203517d84e7beaae99c10e321f99b05"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\碎石输运与道具浮力.md",
+      "exists": true,
+      "bytes": 22468,
+      "sha256": "cc892a8a2d111e9ff2ef6593f5654b69935b80c8620d9fcf9c0045477f015a30"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\docs\\competitor\\transport_evidence_inventory.json",
+      "exists": true,
+      "bytes": 8484,
+      "sha256": "7dac94b662e65bedf14869998cf6841de5da1ef240ed99b79b82ecb2c3ee4be6"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\brush_hit_competitor\\hit_disassembly_20261011_v3\\functions.json",
+      "exists": true,
+      "bytes": 492338,
+      "sha256": "0ca419665af729863e7fee736ac4b26056b108eabc36a5c2dc394fb7cf051741"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\replay_v2\\manifest.json",
+      "exists": true,
+      "bytes": 8817,
+      "sha256": "ab16019d08aa2b7bf9bf43d58004daa9852597c823c32b5f2ce67230cd27b4a1"
+    },
+    {
+      "path": "D:\\godot\\project\\sandcastle\\test_output\\competitor_transport_20261012\\verification.json",
+      "exists": true,
+      "bytes": 1006,
+      "sha256": "f4c6406deeb679caf85f6af38ce896eb0885bf17a399a4e2db7a7878fa201efd"
+    }
+  ],
+  "source_snapshots": "D:\\godot\\project\\sandcastle\\test_output\\competitor_collision_comparison_20261012\\source_snapshot",
+  "entries": {
+    "COLLISION-COMPARE-01": "scope/entry identity",
+    "COLLISION-COMPARE-02": "packing/readback/CPU shape calculation/scheduling",
+    "COLLISION-COMPARE-03": "readback versus physical impulse feedback",
+    "COLLISION-COMPARE-04": "feature boundaries and unmeasured performance implications"
+  }
+}

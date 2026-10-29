@@ -1,0 +1,240 @@
+{
+  "dump": "D:\\godot\\project\\sandcastle\\task\\sandcastle_gpu_edit_validation\\evidence\\20261011_165904_beach_cost_gpu_B3\\native_wait.dmp",
+  "dump_sha256": "d72ad007860239e001fbcfeca5272a104875e7e5ef35b96c6984c332e3bf627f",
+  "tid": 15016,
+  "method": "AMD64 DbgHelp StackWalk64; captured stack and matched local PE code/unwind metadata callbacks",
+  "frames": [
+    {
+      "pc": "0x7fffac02d624",
+      "sp": "0xd8e19feed8",
+      "return": "0x7fffa978b6ae",
+      "module": "ntdll.dll",
+      "rva": "0x9d624",
+      "runtime_function": [
+        "0x9d610",
+        "0x9d628",
+        "0x14d938"
+      ],
+      "memory_read_failures_this_step": []
+    },
+    {
+      "pc": "0x7fffa978b6ae",
+      "sp": "0xd8e19feee0",
+      "return": "0x7ff6ea2ec64b",
+      "module": "KERNELBASE.dll",
+      "rva": "0x1b6ae",
+      "runtime_function": [
+        "0x1b620",
+        "0x1b779",
+        "0x28d918"
+      ],
+      "memory_read_failures_this_step": []
+    },
+    {
+      "pc": "0x7ff6ea2ec64b",
+      "sp": "0xd8e19fef80",
+      "return": "0x7ff6ec24b4f5",
+      "module": "godot.windows.opt.tools.64.exe",
+      "rva": "0x138c64b",
+      "runtime_function": [
+        "0x138c620",
+        "0x138c65a",
+        "0xa9b5e80"
+      ],
+      "memory_read_failures_this_step": []
+    },
+    {
+      "pc": "0x7ff6ec24b4f5",
+      "sp": "0xd8e19fefb0",
+      "return": "0x7ff6ec24c0a7",
+      "module": "godot.windows.opt.tools.64.exe",
+      "rva": "0x32eb4f5",
+      "runtime_function": [
+        "0x32eb460",
+        "0x32ec041",
+        "0xaabb364"
+      ],
+      "memory_read_failures_this_step": []
+    },
+    {
+      "pc": "0x7ff6ec24c0a7",
+      "sp": "0xd8e19ff100",
+      "return": "0x7ff6ec2e4c2e",
+      "module": "godot.windows.opt.tools.64.exe",
+      "rva": "0x32ec0a7",
+      "runtime_function": [
+        "0x32ec090",
+        "0x32ec619",
+        "0xaabb388"
+      ],
+      "memory_read_failures_this_step": []
+    },
+    {
+      "pc": "0x7ff6ec2e4c2e",
+      "sp": "0xd8e19ff180",
+      "return": "0x7ff6e8fbdba2",
+      "module": "godot.windows.opt.tools.64.exe",
+      "rva": "0x3384c2e",
+      "runtime_function": [
+        "0x3384b10",
+        "0x3385907",
+        "0xaac4a50"
+      ],
+      "memory_read_failures_this_step": []
+    },
+    {
+      "pc": "0x7ff6e8fbdba2",
+      "sp": "0xd8e19ff2c0",
+      "return": "0x7ff6e8f62ef1",
+      "module": "godot.windows.opt.tools.64.exe",
+      "rva": "0x5dba2",
+      "runtime_function": [
+        "0x5d4f0",
+        "0x5e373",
+        "0xa91c81c"
+      ],
+      "memory_read_failures_this_step": []
+    },
+    {
+      "pc": "0x7ff6e8f62ef1",
+      "sp": "0xd8e19ff450",
+      "return": "0x7ff6e8fb2b42",
+      "module": "godot.windows.opt.tools.64.exe",
+      "rva": "0x2ef1",
+      "runtime_function": [
+        "0x2eb0",
+        "0x2f17",
+        "0xa9181cc"
+      ],
+      "memory_read_failures_this_step": []
+    },
+    {
+      "pc": "0x7ff6e8fb2b42",
+      "sp": "0xd8e19ff490",
+      "return": "0x7ff6e8fb2b7e",
+      "module": "godot.windows.opt.tools.64.exe",
+      "rva": "0x52b42",
+      "runtime_function": [
+        "0x52980",
+        "0x52b44",
+        "0xa91a834"
+      ],
+      "memory_read_failures_this_step": []
+    },
+    {
+      "pc": "0x7ff6e8fb2b7e",
+      "sp": "0xd8e19ff870",
+      "return": "0x7ff6e8f610c9",
+      "module": "godot.windows.opt.tools.64.exe",
+      "rva": "0x52b7e",
+      "runtime_function": [
+        "0x52b50",
+        "0x52baf",
+        "0xa91a84c"
+      ],
+      "memory_read_failures_this_step": []
+    },
+    {
+      "pc": "0x7ff6e8f610c9",
+      "sp": "0xd8e19ff8c0",
+      "return": "0x7ff6e8f613f6",
+      "module": "godot.windows.opt.tools.64.exe",
+      "rva": "0x10c9",
+      "runtime_function": [
+        "0x1010",
+        "0x13da",
+        "0xa918004"
+      ],
+      "memory_read_failures_this_step": []
+    },
+    {
+      "pc": "0x7ff6e8f613f6",
+      "sp": "0xd8e19ff960",
+      "return": "0x7fffaa7a7374",
+      "module": "godot.windows.opt.tools.64.exe",
+      "rva": "0x13f6",
+      "runtime_function": [
+        "0x13e0",
+        "0x13fd",
+        "0xa91801c"
+      ],
+      "memory_read_failures_this_step": []
+    },
+    {
+      "pc": "0x7fffaa7a7374",
+      "sp": "0xd8e19ff990",
+      "return": "0x7fffabfdcc91",
+      "module": "kernel32.dll",
+      "rva": "0x17374",
+      "runtime_function": [
+        "0x17360",
+        "0x173a4",
+        "0x96ad0"
+      ],
+      "memory_read_failures_this_step": []
+    },
+    {
+      "pc": "0x7fffabfdcc91",
+      "sp": "0xd8e19ff9c0",
+      "return": "0x0",
+      "module": "ntdll.dll",
+      "rva": "0x4cc91",
+      "runtime_function": [
+        "0x4cc70",
+        "0x4ccb9",
+        "0x146ea0"
+      ],
+      "memory_read_failures_this_step": []
+    }
+  ],
+  "stop_reason": "StackWalk64 returned false",
+  "read_failures": [],
+  "modules": [
+    {
+      "path": "C:\\Windows\\System32\\ntdll.dll",
+      "verified": true,
+      "checks": {
+        "timestamp": true,
+        "image_size": true,
+        "checksum": true
+      },
+      "sha256": "36b1a62e4bf6bf7d68458fff6e8a33b39f6527ec6a46e55ecdd12cde83894c8d"
+    },
+    {
+      "path": "C:\\Windows\\System32\\KERNELBASE.dll",
+      "verified": true,
+      "checks": {
+        "timestamp": true,
+        "image_size": true,
+        "checksum": true
+      },
+      "sha256": "b4ad8c8e3632104f4d2132ecb8979b8df279f0046dc42e79bed5acb744751871"
+    },
+    {
+      "path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+      "verified": true,
+      "checks": {
+        "timestamp": true,
+        "image_size": true,
+        "checksum": true,
+        "recorded_file_sha256": true
+      },
+      "sha256": "12310c74bdda7dcd43f28e971f33047dcecadd436b68169d61ce41009006df38"
+    },
+    {
+      "path": "C:\\Windows\\System32\\kernel32.dll",
+      "verified": true,
+      "checks": {
+        "timestamp": true,
+        "image_size": true,
+        "checksum": true
+      },
+      "sha256": "4636f65d449b1353100578c6cb139933cf2b134f5e246119d18968873a058bed"
+    }
+  ],
+  "dbghelp": {
+    "path": "C:\\Program Files (x86)\\Windows Kits\\10\\Debuggers\\x64\\dbghelp.dll",
+    "sha256": "23d33e01020b6d1de7dd29cd737287042476a6e0a8deafdab68f01e61a801fcf"
+  },
+  "scope": "unwind frames, no private symbol names; inline calls and uncaptured memory are not reconstructed"
+}

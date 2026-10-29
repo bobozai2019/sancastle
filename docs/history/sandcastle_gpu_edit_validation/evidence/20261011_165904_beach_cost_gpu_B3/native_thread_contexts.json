@@ -1,0 +1,3453 @@
+{
+  "source": "task\\sandcastle_gpu_edit_validation\\evidence\\20261011_165904_beach_cost_gpu_B3\\native_wait.dmp",
+  "sha256": "d72ad007860239e001fbcfeca5272a104875e7e5ef35b96c6984c332e3bf627f",
+  "streams": {
+    "3": [
+      1636,
+      1608
+    ],
+    "17": [
+      2188,
+      3244
+    ],
+    "4": [
+      9724,
+      5432
+    ],
+    "5": [
+      644,
+      69666
+    ],
+    "7": [
+      56,
+      188
+    ],
+    "15": [
+      1364,
+      244
+    ],
+    "21": [
+      524,
+      15156
+    ],
+    "22": [
+      152,
+      15680
+    ],
+    "24": [
+      136,
+      15832
+    ],
+    "0": [
+      0,
+      0
+    ]
+  },
+  "scope": "AMD64 context instruction pointers are direct evidence; raw stack mapped values are candidates, not unwound call stacks; nearest exports are labels, not private symbols",
+  "modules": [
+    {
+      "base": 140698447118336,
+      "size": 182820864,
+      "path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe"
+    },
+    {
+      "base": 140736078610432,
+      "size": 2064384,
+      "path": "C:\\Windows\\System32\\ntdll.dll"
+    },
+    {
+      "base": 140736053444608,
+      "size": 794624,
+      "path": "C:\\Windows\\System32\\kernel32.dll"
+    },
+    {
+      "base": 140736036536320,
+      "size": 3104768,
+      "path": "C:\\Windows\\System32\\KERNELBASE.dll"
+    },
+    {
+      "base": 140736051740672,
+      "size": 839680,
+      "path": "C:\\Windows\\System32\\oleaut32.dll"
+    },
+    {
+      "base": 140736035356672,
+      "size": 643072,
+      "path": "C:\\Windows\\System32\\msvcp_win.dll"
+    },
+    {
+      "base": 140736039682048,
+      "size": 1048576,
+      "path": "C:\\Windows\\System32\\ucrtbase.dll"
+    },
+    {
+      "base": 140736072646656,
+      "size": 3489792,
+      "path": "C:\\Windows\\System32\\combase.dll"
+    },
+    {
+      "base": 140736055214080,
+      "size": 1179648,
+      "path": "C:\\Windows\\System32\\rpcrt4.dll"
+    },
+    {
+      "base": 140736049905664,
+      "size": 1708032,
+      "path": "C:\\Windows\\System32\\user32.dll"
+    },
+    {
+      "base": 140736036012032,
+      "size": 139264,
+      "path": "C:\\Windows\\System32\\win32u.dll"
+    },
+    {
+      "base": 140736066682880,
+      "size": 176128,
+      "path": "C:\\Windows\\System32\\gdi32.dll"
+    },
+    {
+      "base": 140734979244032,
+      "size": 3096576,
+      "path": "C:\\Windows\\System32\\uiautomationcore.dll"
+    },
+    {
+      "base": 140736042041344,
+      "size": 1150976,
+      "path": "C:\\Windows\\System32\\gdi32full.dll"
+    },
+    {
+      "base": 140736065896448,
+      "size": 724992,
+      "path": "C:\\Windows\\System32\\advapi32.dll"
+    },
+    {
+      "base": 140735984762880,
+      "size": 999424,
+      "path": "C:\\Windows\\System32\\propsys.dll"
+    },
+    {
+      "base": 140736052789248,
+      "size": 647168,
+      "path": "C:\\Windows\\System32\\msvcrt.dll"
+    },
+    {
+      "base": 140736056393728,
+      "size": 651264,
+      "path": "C:\\Windows\\System32\\sechost.dll"
+    },
+    {
+      "base": 140736035160064,
+      "size": 159744,
+      "path": "C:\\Windows\\System32\\bcrypt.dll"
+    },
+    {
+      "base": 140736043220992,
+      "size": 1429504,
+      "path": "C:\\Windows\\System32\\crypt32.dll"
+    },
+    {
+      "base": 140735955009536,
+      "size": 40960,
+      "path": "C:\\Windows\\System32\\avrt.dll"
+    },
+    {
+      "base": 140736052592640,
+      "size": 192512,
+      "path": "C:\\Windows\\System32\\imm32.dll"
+    },
+    {
+      "base": 140735997149184,
+      "size": 2101248,
+      "path": "C:\\Windows\\System32\\dbghelp.dll"
+    },
+    {
+      "base": 140735209144320,
+      "size": 2617344,
+      "path": "C:\\Windows\\System32\\DWrite.dll"
+    },
+    {
+      "base": 140735992889344,
+      "size": 188416,
+      "path": "C:\\Windows\\System32\\dwmapi.dll"
+    },
+    {
+      "base": 140736076185600,
+      "size": 1224704,
+      "path": "C:\\Windows\\System32\\ole32.dll"
+    },
+    {
+      "base": 140736010518528,
+      "size": 1007616,
+      "path": "C:\\Windows\\System32\\dxgi.dll"
+    },
+    {
+      "base": 140736066879488,
+      "size": 708608,
+      "path": "C:\\Windows\\System32\\SHCore.dll"
+    },
+    {
+      "base": 140736009994240,
+      "size": 53248,
+      "path": "C:\\Windows\\System32\\hid.dll"
+    },
+    {
+      "base": 140736022708224,
+      "size": 241664,
+      "path": "C:\\Windows\\System32\\IPHLPAPI.DLL"
+    },
+    {
+      "base": 140736057049088,
+      "size": 7798784,
+      "path": "C:\\Windows\\System32\\shell32.dll"
+    },
+    {
+      "base": 140736048857088,
+      "size": 372736,
+      "path": "C:\\Windows\\System32\\shlwapi.dll"
+    },
+    {
+      "base": 140736054362112,
+      "size": 438272,
+      "path": "C:\\Windows\\System32\\ws2_32.dll"
+    },
+    {
+      "base": 140735750012928,
+      "size": 159744,
+      "path": "C:\\Windows\\System32\\winmm.dll"
+    },
+    {
+      "base": 140735572475904,
+      "size": 36864,
+      "path": "C:\\Windows\\System32\\wsock32.dll"
+    },
+    {
+      "base": 140736041451520,
+      "size": 532480,
+      "path": "C:\\Windows\\System32\\bcryptPrimitives.dll"
+    },
+    {
+      "base": 140735377309696,
+      "size": 282624,
+      "path": "C:\\Windows\\System32\\dinput8.dll"
+    },
+    {
+      "base": 140735255543808,
+      "size": 1384448,
+      "path": "C:\\Windows\\System32\\inputhost.dll"
+    },
+    {
+      "base": 140735976374272,
+      "size": 1404928,
+      "path": "C:\\Windows\\System32\\WinTypes.dll"
+    },
+    {
+      "base": 140735953960960,
+      "size": 991232,
+      "path": "C:\\Windows\\System32\\CoreMessaging.dll"
+    },
+    {
+      "base": 140735943737344,
+      "size": 3518464,
+      "path": "C:\\Windows\\System32\\CoreUIComponents.dll"
+    },
+    {
+      "base": 140736021069824,
+      "size": 208896,
+      "path": "C:\\Windows\\System32\\ntmarta.dll"
+    },
+    {
+      "base": 140736010059776,
+      "size": 73728,
+      "path": "C:\\Windows\\System32\\kernel.appcore.dll"
+    },
+    {
+      "base": 140735990595584,
+      "size": 647168,
+      "path": "C:\\Windows\\System32\\uxtheme.dll"
+    },
+    {
+      "base": 140734384832512,
+      "size": 151552,
+      "path": "C:\\Windows\\System32\\D3D12.dll"
+    },
+    {
+      "base": 140735941246976,
+      "size": 1982464,
+      "path": "C:\\Windows\\System32\\dcomp.dll"
+    },
+    {
+      "base": 140736001933312,
+      "size": 8015872,
+      "path": "C:\\Windows\\System32\\windows.storage.dll"
+    },
+    {
+      "base": 140736029065216,
+      "size": 176128,
+      "path": "C:\\Windows\\System32\\wldp.dll"
+    },
+    {
+      "base": 140736046956544,
+      "size": 692224,
+      "path": "C:\\Windows\\System32\\clbcatq.dll"
+    },
+    {
+      "base": 140736033062912,
+      "size": 663552,
+      "path": "C:\\Windows\\System32\\sxs.dll"
+    },
+    {
+      "base": 140736047677440,
+      "size": 1134592,
+      "path": "C:\\Windows\\System32\\msctf.dll"
+    },
+    {
+      "base": 140735964643328,
+      "size": 577536,
+      "path": "C:\\Windows\\System32\\Windows.Graphics.dll"
+    },
+    {
+      "base": 140736036208640,
+      "size": 319488,
+      "path": "C:\\Windows\\System32\\cfgmgr32.dll"
+    },
+    {
+      "base": 140734050009088,
+      "size": 1888256,
+      "path": "C:\\Windows\\System32\\D3D12Core.dll"
+    },
+    {
+      "base": 140735859261440,
+      "size": 241664,
+      "path": "C:\\Windows\\System32\\DXCore.dll"
+    },
+    {
+      "base": 140733972873216,
+      "size": 802816,
+      "path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\nvhm.inf_amd64_3cb6b4743249e01c\\nvldumdx.dll"
+    },
+    {
+      "base": 140735903301632,
+      "size": 40960,
+      "path": "C:\\Windows\\System32\\version.dll"
+    },
+    {
+      "base": 140736030703616,
+      "size": 73728,
+      "path": "C:\\Windows\\System32\\msasn1.dll"
+    },
+    {
+      "base": 140735878135808,
+      "size": 200704,
+      "path": "C:\\Windows\\System32\\cryptnet.dll"
+    },
+    {
+      "base": 140736028344320,
+      "size": 49152,
+      "path": "C:\\Windows\\System32\\cryptbase.dll"
+    },
+    {
+      "base": 140735879839744,
+      "size": 1339392,
+      "path": "C:\\Windows\\System32\\drvstore.dll"
+    },
+    {
+      "base": 140736032604160,
+      "size": 208896,
+      "path": "C:\\Windows\\System32\\devobj.dll"
+    },
+    {
+      "base": 140736044662784,
+      "size": 471040,
+      "path": "C:\\Windows\\System32\\wintrust.dll"
+    },
+    {
+      "base": 140736064847872,
+      "size": 118784,
+      "path": "C:\\Windows\\System32\\imagehlp.dll"
+    },
+    {
+      "base": 140736028409856,
+      "size": 98304,
+      "path": "C:\\Windows\\System32\\cryptsp.dll"
+    },
+    {
+      "base": 140736018644992,
+      "size": 229376,
+      "path": "C:\\Windows\\System32\\rsaenh.dll"
+    },
+    {
+      "base": 140733234151424,
+      "size": 64569344,
+      "path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\nvhm.inf_amd64_3cb6b4743249e01c\\nvgpucomp64.dll"
+    },
+    {
+      "base": 140733881581568,
+      "size": 909312,
+      "path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\nvhm.inf_amd64_3cb6b4743249e01c\\NvMemMapStoragex.dll"
+    },
+    {
+      "base": 140736023887872,
+      "size": 307200,
+      "path": "C:\\Windows\\System32\\powrprof.dll"
+    },
+    {
+      "base": 140736022577152,
+      "size": 73728,
+      "path": "C:\\Windows\\System32\\umpdc.dll"
+    },
+    {
+      "base": 140733357948928,
+      "size": 92491776,
+      "path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\nvhm.inf_amd64_3cb6b4743249e01c\\nvwgf2umx.dll"
+    },
+    {
+      "base": 140733298769920,
+      "size": 1798144,
+      "path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\nvhm.inf_amd64_3cb6b4743249e01c\\nvppex.dll"
+    },
+    {
+      "base": 140734384635904,
+      "size": 176128,
+      "path": "C:\\Windows\\System32\\D3DSCache.dll"
+    },
+    {
+      "base": 140736033783808,
+      "size": 188416,
+      "path": "C:\\Windows\\System32\\userenv.dll"
+    },
+    {
+      "base": 140735691227136,
+      "size": 69632,
+      "path": "C:\\Windows\\System32\\XInput1_4.dll"
+    },
+    {
+      "base": 140736067600384,
+      "size": 4653056,
+      "path": "C:\\Windows\\System32\\setupapi.dll"
+    },
+    {
+      "base": 140735256985600,
+      "size": 1019904,
+      "path": "C:\\Windows\\System32\\textinputframework.dll"
+    },
+    {
+      "base": 140735940657152,
+      "size": 544768,
+      "path": "C:\\Windows\\System32\\MMDevAPI.dll"
+    },
+    {
+      "base": 140735947276288,
+      "size": 1576960,
+      "path": "C:\\Windows\\System32\\AudioSes.dll"
+    },
+    {
+      "base": 140735991840768,
+      "size": 81920,
+      "path": "C:\\Windows\\System32\\resourcepolicyclient.dll"
+    },
+    {
+      "base": 140735925452800,
+      "size": 2506752,
+      "path": "C:\\Windows\\System32\\d3d11.dll"
+    },
+    {
+      "base": 140735960776704,
+      "size": 606208,
+      "path": "C:\\Windows\\System32\\apphelp.dll"
+    },
+    {
+      "base": 140735362564096,
+      "size": 253952,
+      "path": "C:\\Windows\\System32\\dataexchange.dll"
+    },
+    {
+      "base": 140735907823616,
+      "size": 2109440,
+      "path": "C:\\Windows\\System32\\twinapi.appcore.dll"
+    },
+    {
+      "base": 140735820136448,
+      "size": 23293952,
+      "path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\iigd_dch.inf_amd64_0242412938e9b6b3\\igd10iumd64.dll"
+    },
+    {
+      "base": 140736029523968,
+      "size": 159744,
+      "path": "C:\\Windows\\System32\\ncrypt.dll"
+    },
+    {
+      "base": 140736029261824,
+      "size": 241664,
+      "path": "C:\\Windows\\System32\\ntasn1.dll"
+    },
+    {
+      "base": 140735809716224,
+      "size": 1732608,
+      "path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\iigd_dch.inf_amd64_0242412938e9b6b3\\igdgmm64.dll"
+    },
+    {
+      "base": 140735764889600,
+      "size": 42901504,
+      "path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\iigd_dch.inf_amd64_0242412938e9b6b3\\igc64.dll"
+    },
+    {
+      "base": 140733467918336,
+      "size": 4132864,
+      "path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\iigd_dch.inf_amd64_0242412938e9b6b3\\igdml64.dll"
+    }
+  ],
+  "threads": [
+    {
+      "tid": 15016,
+      "rip": "0x7fffac02d624",
+      "rsp": "0xd8e19feed8",
+      "instruction_location": {
+        "module": "ntdll.dll",
+        "module_path": "C:\\Windows\\System32\\ntdll.dll",
+        "rva": "0x9d624",
+        "nearest_export": "ZwWaitForSingleObject",
+        "export_offset": 20
+      },
+      "raw_stack_address_candidates": [
+        {
+          "rsp_offset": 0,
+          "address": "0x7fffa978b6ae",
+          "location": {
+            "module": "KERNELBASE.dll",
+            "module_path": "C:\\Windows\\System32\\KERNELBASE.dll",
+            "rva": "0x1b6ae",
+            "nearest_export": "WaitForSingleObjectEx",
+            "export_offset": 142
+          }
+        },
+        {
+          "rsp_offset": 160,
+          "address": "0x7ff6ea2ec64b",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x138c64b",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 20486683
+          }
+        },
+        {
+          "rsp_offset": 208,
+          "address": "0x7ff6ec24b4f5",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x32eb4f5",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 53381317
+          }
+        },
+        {
+          "rsp_offset": 272,
+          "address": "0x7ff6f3bc6b98",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0xac66b98",
+            "nearest_export": "NvOptimusEnablement",
+            "export_offset": 73296788
+          }
+        },
+        {
+          "rsp_offset": 288,
+          "address": "0x7ff6ec1f3a83",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x3293a83",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 53022291
+          }
+        },
+        {
+          "rsp_offset": 384,
+          "address": "0x7ff6ec1f2f54",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x3292f54",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 53019428
+          }
+        }
+      ],
+      "stack_size": 4392
+    },
+    {
+      "tid": 7404,
+      "rip": "0x7fffac031034",
+      "rsp": "0xd8e21ffa18",
+      "instruction_location": {
+        "module": "ntdll.dll",
+        "module_path": "C:\\Windows\\System32\\ntdll.dll",
+        "rva": "0xa1034",
+        "nearest_export": "ZwWaitForWorkViaWorkerFactory",
+        "export_offset": 20
+      },
+      "raw_stack_address_candidates": [
+        {
+          "rsp_offset": 0,
+          "address": "0x7fffabfdd407",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x4d407",
+            "nearest_export": "TpReleaseCleanupGroupMembers",
+            "export_offset": 1863
+          }
+        }
+      ],
+      "stack_size": 1512
+    },
+    {
+      "tid": 18352,
+      "rip": "0x7fffac031034",
+      "rsp": "0xd8e29ff478",
+      "instruction_location": {
+        "module": "ntdll.dll",
+        "module_path": "C:\\Windows\\System32\\ntdll.dll",
+        "rva": "0xa1034",
+        "nearest_export": "ZwWaitForWorkViaWorkerFactory",
+        "export_offset": 20
+      },
+      "raw_stack_address_candidates": [
+        {
+          "rsp_offset": 0,
+          "address": "0x7fffabfdd407",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x4d407",
+            "nearest_export": "TpReleaseCleanupGroupMembers",
+            "export_offset": 1863
+          }
+        }
+      ],
+      "stack_size": 2952
+    },
+    {
+      "tid": 14492,
+      "rip": "0x7fffac031034",
+      "rsp": "0xd8e31ff7e8",
+      "instruction_location": {
+        "module": "ntdll.dll",
+        "module_path": "C:\\Windows\\System32\\ntdll.dll",
+        "rva": "0xa1034",
+        "nearest_export": "ZwWaitForWorkViaWorkerFactory",
+        "export_offset": 20
+      },
+      "raw_stack_address_candidates": [
+        {
+          "rsp_offset": 0,
+          "address": "0x7fffabfdd407",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x4d407",
+            "nearest_export": "TpReleaseCleanupGroupMembers",
+            "export_offset": 1863
+          }
+        }
+      ],
+      "stack_size": 2072
+    },
+    {
+      "tid": 19652,
+      "rip": "0x7fffac031034",
+      "rsp": "0xd8e39ff968",
+      "instruction_location": {
+        "module": "ntdll.dll",
+        "module_path": "C:\\Windows\\System32\\ntdll.dll",
+        "rva": "0xa1034",
+        "nearest_export": "ZwWaitForWorkViaWorkerFactory",
+        "export_offset": 20
+      },
+      "raw_stack_address_candidates": [
+        {
+          "rsp_offset": 0,
+          "address": "0x7fffabfdd407",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x4d407",
+            "nearest_export": "TpReleaseCleanupGroupMembers",
+            "export_offset": 1863
+          }
+        }
+      ],
+      "stack_size": 1688
+    },
+    {
+      "tid": 20540,
+      "rip": "0x7fffac02e0f4",
+      "rsp": "0xd8e41ff048",
+      "instruction_location": {
+        "module": "ntdll.dll",
+        "module_path": "C:\\Windows\\System32\\ntdll.dll",
+        "rva": "0x9e0f4",
+        "nearest_export": "ZwWaitForMultipleObjects",
+        "export_offset": 20
+      },
+      "raw_stack_address_candidates": [
+        {
+          "rsp_offset": 0,
+          "address": "0x7fffa97c0d00",
+          "location": {
+            "module": "KERNELBASE.dll",
+            "module_path": "C:\\Windows\\System32\\KERNELBASE.dll",
+            "rva": "0x50d00",
+            "nearest_export": "WaitForMultipleObjectsEx",
+            "export_offset": 240
+          }
+        },
+        {
+          "rsp_offset": 16,
+          "address": "0x7fff7aeabd58",
+          "location": {
+            "module": "inputhost.dll",
+            "module_path": "C:\\Windows\\System32\\inputhost.dll",
+            "rva": "0xbd58",
+            "nearest_export": null,
+            "export_offset": null
+          }
+        },
+        {
+          "rsp_offset": 56,
+          "address": "0x7fffa49523a1",
+          "location": {
+            "module": "CoreMessaging.dll",
+            "module_path": "C:\\Windows\\System32\\CoreMessaging.dll",
+            "rva": "0xa23a1",
+            "nearest_export": "DllGetClassObject",
+            "export_offset": 53697
+          }
+        },
+        {
+          "rsp_offset": 208,
+          "address": "0x7fff7aeabb20",
+          "location": {
+            "module": "inputhost.dll",
+            "module_path": "C:\\Windows\\System32\\inputhost.dll",
+            "rva": "0xbb20",
+            "nearest_export": null,
+            "export_offset": null
+          }
+        },
+        {
+          "rsp_offset": 224,
+          "address": "0x7fff7aeab3eb",
+          "location": {
+            "module": "inputhost.dll",
+            "module_path": "C:\\Windows\\System32\\inputhost.dll",
+            "rva": "0xb3eb",
+            "nearest_export": null,
+            "export_offset": null
+          }
+        },
+        {
+          "rsp_offset": 240,
+          "address": "0x7fffa49523ad",
+          "location": {
+            "module": "CoreMessaging.dll",
+            "module_path": "C:\\Windows\\System32\\CoreMessaging.dll",
+            "rva": "0xa23ad",
+            "nearest_export": "DllGetClassObject",
+            "export_offset": 53709
+          }
+        },
+        {
+          "rsp_offset": 256,
+          "address": "0x7fffa48c8928",
+          "location": {
+            "module": "CoreMessaging.dll",
+            "module_path": "C:\\Windows\\System32\\CoreMessaging.dll",
+            "rva": "0x18928",
+            "nearest_export": "CreateDispatcherQueueController",
+            "export_offset": 77096
+          }
+        },
+        {
+          "rsp_offset": 304,
+          "address": "0x7fffa48c5f54",
+          "location": {
+            "module": "CoreMessaging.dll",
+            "module_path": "C:\\Windows\\System32\\CoreMessaging.dll",
+            "rva": "0x15f54",
+            "nearest_export": "CreateDispatcherQueueController",
+            "export_offset": 66388
+          }
+        },
+        {
+          "rsp_offset": 376,
+          "address": "0x7fffa49580a0",
+          "location": {
+            "module": "CoreMessaging.dll",
+            "module_path": "C:\\Windows\\System32\\CoreMessaging.dll",
+            "rva": "0xa80a0",
+            "nearest_export": "DllGetClassObject",
+            "export_offset": 77504
+          }
+        },
+        {
+          "rsp_offset": 384,
+          "address": "0x7fffa4958100",
+          "location": {
+            "module": "CoreMessaging.dll",
+            "module_path": "C:\\Windows\\System32\\CoreMessaging.dll",
+            "rva": "0xa8100",
+            "nearest_export": "DllGetClassObject",
+            "export_offset": 77600
+          }
+        },
+        {
+          "rsp_offset": 424,
+          "address": "0x7fff7aeb2ae0",
+          "location": {
+            "module": "inputhost.dll",
+            "module_path": "C:\\Windows\\System32\\inputhost.dll",
+            "rva": "0x12ae0",
+            "nearest_export": "DllGetActivationFactory",
+            "export_offset": 960
+          }
+        },
+        {
+          "rsp_offset": 496,
+          "address": "0x7fffa48ec8a3",
+          "location": {
+            "module": "CoreMessaging.dll",
+            "module_path": "C:\\Windows\\System32\\CoreMessaging.dll",
+            "rva": "0x3c8a3",
+            "nearest_export": "CoreUICallReceive",
+            "export_offset": 4147
+          }
+        }
+      ],
+      "stack_size": 4024
+    },
+    {
+      "tid": 19184,
+      "rip": "0x7fffac030fd4",
+      "rsp": "0xd8e49ffa48",
+      "instruction_location": {
+        "module": "ntdll.dll",
+        "module_path": "C:\\Windows\\System32\\ntdll.dll",
+        "rva": "0xa0fd4",
+        "nearest_export": "ZwWaitForAlertByThreadId",
+        "export_offset": 20
+      },
+      "raw_stack_address_candidates": [
+        {
+          "rsp_offset": 0,
+          "address": "0x7fffabff55f1",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x655f1",
+            "nearest_export": "RtlSleepConditionVariableSRW",
+            "export_offset": 305
+          }
+        },
+        {
+          "rsp_offset": 32,
+          "address": "0x7ff6ef6018e0",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x66a18e0",
+            "nearest_export": "NvOptimusEnablement",
+            "export_offset": 137436
+          }
+        },
+        {
+          "rsp_offset": 128,
+          "address": "0x7fffa97dee79",
+          "location": {
+            "module": "KERNELBASE.dll",
+            "module_path": "C:\\Windows\\System32\\KERNELBASE.dll",
+            "rva": "0x6ee79",
+            "nearest_export": "SleepConditionVariableSRW",
+            "export_offset": 41
+          }
+        },
+        {
+          "rsp_offset": 152,
+          "address": "0x7fffa97dee50",
+          "location": {
+            "module": "KERNELBASE.dll",
+            "module_path": "C:\\Windows\\System32\\KERNELBASE.dll",
+            "rva": "0x6ee50",
+            "nearest_export": "SleepConditionVariableSRW",
+            "export_offset": 0
+          }
+        },
+        {
+          "rsp_offset": 192,
+          "address": "0x7ff6edcf9515",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x4d99515",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 81357029
+          }
+        },
+        {
+          "rsp_offset": 240,
+          "address": "0x7ff6edcf94a0",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x4d994a0",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 81356912
+          }
+        },
+        {
+          "rsp_offset": 272,
+          "address": "0x7ff6ec8892bd",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x39292bd",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 59926157
+          }
+        },
+        {
+          "rsp_offset": 296,
+          "address": "0x7ff6edcf94a0",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x4d994a0",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 81356912
+          }
+        },
+        {
+          "rsp_offset": 368,
+          "address": "0x7ff6edc5531a",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x4cf531a",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 80684778
+          }
+        },
+        {
+          "rsp_offset": 416,
+          "address": "0x7fffaa72af5a",
+          "location": {
+            "module": "msvcrt.dll",
+            "module_path": "C:\\Windows\\System32\\msvcrt.dll",
+            "rva": "0x3af5a",
+            "nearest_export": "_beginthreadex",
+            "export_offset": 298
+          }
+        },
+        {
+          "rsp_offset": 464,
+          "address": "0x7fffaa72b02c",
+          "location": {
+            "module": "msvcrt.dll",
+            "module_path": "C:\\Windows\\System32\\msvcrt.dll",
+            "rva": "0x3b02c",
+            "nearest_export": "_endthreadex",
+            "export_offset": 172
+          }
+        },
+        {
+          "rsp_offset": 472,
+          "address": "0x7fffaa7806d0",
+          "location": {
+            "module": "msvcrt.dll",
+            "module_path": "C:\\Windows\\System32\\msvcrt.dll",
+            "rva": "0x906d0",
+            "nearest_export": "_mbcasemap",
+            "export_offset": 256
+          }
+        }
+      ],
+      "stack_size": 1464
+    },
+    {
+      "tid": 2632,
+      "rip": "0x7fffac030fd4",
+      "rsp": "0xd8e51ff518",
+      "instruction_location": {
+        "module": "ntdll.dll",
+        "module_path": "C:\\Windows\\System32\\ntdll.dll",
+        "rva": "0xa0fd4",
+        "nearest_export": "ZwWaitForAlertByThreadId",
+        "export_offset": 20
+      },
+      "raw_stack_address_candidates": [
+        {
+          "rsp_offset": 0,
+          "address": "0x7fffabff55f1",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x655f1",
+            "nearest_export": "RtlSleepConditionVariableSRW",
+            "export_offset": 305
+          }
+        },
+        {
+          "rsp_offset": 16,
+          "address": "0x7ff6ef6018c0",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x66a18c0",
+            "nearest_export": "NvOptimusEnablement",
+            "export_offset": 137404
+          }
+        },
+        {
+          "rsp_offset": 128,
+          "address": "0x7fffa97dee79",
+          "location": {
+            "module": "KERNELBASE.dll",
+            "module_path": "C:\\Windows\\System32\\KERNELBASE.dll",
+            "rva": "0x6ee79",
+            "nearest_export": "SleepConditionVariableSRW",
+            "export_offset": 41
+          }
+        },
+        {
+          "rsp_offset": 192,
+          "address": "0x7ff6ecdb7db0",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x3e57db0",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 65360256
+          }
+        },
+        {
+          "rsp_offset": 240,
+          "address": "0x7ff6ecdb7c40",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x3e57c40",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 65359888
+          }
+        },
+        {
+          "rsp_offset": 304,
+          "address": "0x7ff6ecdb7c40",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x3e57c40",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 65359888
+          }
+        },
+        {
+          "rsp_offset": 336,
+          "address": "0x7ff6ec8892bd",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x39292bd",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 59926157
+          }
+        },
+        {
+          "rsp_offset": 360,
+          "address": "0x7ff6ecdb7c40",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x3e57c40",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 65359888
+          }
+        },
+        {
+          "rsp_offset": 432,
+          "address": "0x7ff6edc5531a",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x4cf531a",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 80684778
+          }
+        },
+        {
+          "rsp_offset": 480,
+          "address": "0x7fffaa72af5a",
+          "location": {
+            "module": "msvcrt.dll",
+            "module_path": "C:\\Windows\\System32\\msvcrt.dll",
+            "rva": "0x3af5a",
+            "nearest_export": "_beginthreadex",
+            "export_offset": 298
+          }
+        }
+      ],
+      "stack_size": 2792
+    },
+    {
+      "tid": 17596,
+      "rip": "0x7fffac030fd4",
+      "rsp": "0xd8e59ff7d8",
+      "instruction_location": {
+        "module": "ntdll.dll",
+        "module_path": "C:\\Windows\\System32\\ntdll.dll",
+        "rva": "0xa0fd4",
+        "nearest_export": "ZwWaitForAlertByThreadId",
+        "export_offset": 20
+      },
+      "raw_stack_address_candidates": [
+        {
+          "rsp_offset": 0,
+          "address": "0x7fffabff55f1",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x655f1",
+            "nearest_export": "RtlSleepConditionVariableSRW",
+            "export_offset": 305
+          }
+        },
+        {
+          "rsp_offset": 16,
+          "address": "0x7ff6ef6018c0",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x66a18c0",
+            "nearest_export": "NvOptimusEnablement",
+            "export_offset": 137404
+          }
+        },
+        {
+          "rsp_offset": 128,
+          "address": "0x7fffa97dee79",
+          "location": {
+            "module": "KERNELBASE.dll",
+            "module_path": "C:\\Windows\\System32\\KERNELBASE.dll",
+            "rva": "0x6ee79",
+            "nearest_export": "SleepConditionVariableSRW",
+            "export_offset": 41
+          }
+        },
+        {
+          "rsp_offset": 192,
+          "address": "0x7ff6ecdb7db0",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x3e57db0",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 65360256
+          }
+        },
+        {
+          "rsp_offset": 240,
+          "address": "0x7ff6ecdb7c40",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x3e57c40",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 65359888
+          }
+        },
+        {
+          "rsp_offset": 304,
+          "address": "0x7ff6ecdb7c40",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x3e57c40",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 65359888
+          }
+        },
+        {
+          "rsp_offset": 336,
+          "address": "0x7ff6ec8892bd",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x39292bd",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 59926157
+          }
+        },
+        {
+          "rsp_offset": 360,
+          "address": "0x7ff6ecdb7c40",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x3e57c40",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 65359888
+          }
+        },
+        {
+          "rsp_offset": 432,
+          "address": "0x7ff6edc5531a",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x4cf531a",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 80684778
+          }
+        },
+        {
+          "rsp_offset": 480,
+          "address": "0x7fffaa72af5a",
+          "location": {
+            "module": "msvcrt.dll",
+            "module_path": "C:\\Windows\\System32\\msvcrt.dll",
+            "rva": "0x3af5a",
+            "nearest_export": "_beginthreadex",
+            "export_offset": 298
+          }
+        }
+      ],
+      "stack_size": 2088
+    },
+    {
+      "tid": 4848,
+      "rip": "0x7fffac030fd4",
+      "rsp": "0xd8e61ff5e8",
+      "instruction_location": {
+        "module": "ntdll.dll",
+        "module_path": "C:\\Windows\\System32\\ntdll.dll",
+        "rva": "0xa0fd4",
+        "nearest_export": "ZwWaitForAlertByThreadId",
+        "export_offset": 20
+      },
+      "raw_stack_address_candidates": [
+        {
+          "rsp_offset": 0,
+          "address": "0x7fffabff55f1",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x655f1",
+            "nearest_export": "RtlSleepConditionVariableSRW",
+            "export_offset": 305
+          }
+        },
+        {
+          "rsp_offset": 16,
+          "address": "0x7ff6ef6018c0",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x66a18c0",
+            "nearest_export": "NvOptimusEnablement",
+            "export_offset": 137404
+          }
+        },
+        {
+          "rsp_offset": 128,
+          "address": "0x7fffa97dee79",
+          "location": {
+            "module": "KERNELBASE.dll",
+            "module_path": "C:\\Windows\\System32\\KERNELBASE.dll",
+            "rva": "0x6ee79",
+            "nearest_export": "SleepConditionVariableSRW",
+            "export_offset": 41
+          }
+        },
+        {
+          "rsp_offset": 192,
+          "address": "0x7ff6ecdb7db0",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x3e57db0",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 65360256
+          }
+        },
+        {
+          "rsp_offset": 240,
+          "address": "0x7ff6ecdb7c40",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x3e57c40",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 65359888
+          }
+        },
+        {
+          "rsp_offset": 304,
+          "address": "0x7ff6ecdb7c40",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x3e57c40",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 65359888
+          }
+        },
+        {
+          "rsp_offset": 336,
+          "address": "0x7ff6ec8892bd",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x39292bd",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 59926157
+          }
+        },
+        {
+          "rsp_offset": 360,
+          "address": "0x7ff6ecdb7c40",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x3e57c40",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 65359888
+          }
+        },
+        {
+          "rsp_offset": 432,
+          "address": "0x7ff6edc5531a",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x4cf531a",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 80684778
+          }
+        },
+        {
+          "rsp_offset": 480,
+          "address": "0x7fffaa72af5a",
+          "location": {
+            "module": "msvcrt.dll",
+            "module_path": "C:\\Windows\\System32\\msvcrt.dll",
+            "rva": "0x3af5a",
+            "nearest_export": "_beginthreadex",
+            "export_offset": 298
+          }
+        }
+      ],
+      "stack_size": 2584
+    },
+    {
+      "tid": 18544,
+      "rip": "0x7fffac030fd4",
+      "rsp": "0xd8e69ff628",
+      "instruction_location": {
+        "module": "ntdll.dll",
+        "module_path": "C:\\Windows\\System32\\ntdll.dll",
+        "rva": "0xa0fd4",
+        "nearest_export": "ZwWaitForAlertByThreadId",
+        "export_offset": 20
+      },
+      "raw_stack_address_candidates": [
+        {
+          "rsp_offset": 0,
+          "address": "0x7fffabff55f1",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x655f1",
+            "nearest_export": "RtlSleepConditionVariableSRW",
+            "export_offset": 305
+          }
+        },
+        {
+          "rsp_offset": 16,
+          "address": "0x7ff6ef6018c0",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x66a18c0",
+            "nearest_export": "NvOptimusEnablement",
+            "export_offset": 137404
+          }
+        },
+        {
+          "rsp_offset": 128,
+          "address": "0x7fffa97dee79",
+          "location": {
+            "module": "KERNELBASE.dll",
+            "module_path": "C:\\Windows\\System32\\KERNELBASE.dll",
+            "rva": "0x6ee79",
+            "nearest_export": "SleepConditionVariableSRW",
+            "export_offset": 41
+          }
+        },
+        {
+          "rsp_offset": 192,
+          "address": "0x7ff6ecdb7db0",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x3e57db0",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 65360256
+          }
+        },
+        {
+          "rsp_offset": 240,
+          "address": "0x7ff6ecdb7c40",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x3e57c40",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 65359888
+          }
+        },
+        {
+          "rsp_offset": 304,
+          "address": "0x7ff6ecdb7c40",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x3e57c40",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 65359888
+          }
+        },
+        {
+          "rsp_offset": 336,
+          "address": "0x7ff6ec8892bd",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x39292bd",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 59926157
+          }
+        },
+        {
+          "rsp_offset": 360,
+          "address": "0x7ff6ecdb7c40",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x3e57c40",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 65359888
+          }
+        },
+        {
+          "rsp_offset": 432,
+          "address": "0x7ff6edc5531a",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x4cf531a",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 80684778
+          }
+        },
+        {
+          "rsp_offset": 480,
+          "address": "0x7fffaa72af5a",
+          "location": {
+            "module": "msvcrt.dll",
+            "module_path": "C:\\Windows\\System32\\msvcrt.dll",
+            "rva": "0x3af5a",
+            "nearest_export": "_beginthreadex",
+            "export_offset": 298
+          }
+        }
+      ],
+      "stack_size": 2520
+    },
+    {
+      "tid": 16436,
+      "rip": "0x7fffac030fd4",
+      "rsp": "0xd8e71ff658",
+      "instruction_location": {
+        "module": "ntdll.dll",
+        "module_path": "C:\\Windows\\System32\\ntdll.dll",
+        "rva": "0xa0fd4",
+        "nearest_export": "ZwWaitForAlertByThreadId",
+        "export_offset": 20
+      },
+      "raw_stack_address_candidates": [
+        {
+          "rsp_offset": 0,
+          "address": "0x7fffabff55f1",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x655f1",
+            "nearest_export": "RtlSleepConditionVariableSRW",
+            "export_offset": 305
+          }
+        },
+        {
+          "rsp_offset": 16,
+          "address": "0x7ff6ef6018c0",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x66a18c0",
+            "nearest_export": "NvOptimusEnablement",
+            "export_offset": 137404
+          }
+        },
+        {
+          "rsp_offset": 128,
+          "address": "0x7fffa97dee79",
+          "location": {
+            "module": "KERNELBASE.dll",
+            "module_path": "C:\\Windows\\System32\\KERNELBASE.dll",
+            "rva": "0x6ee79",
+            "nearest_export": "SleepConditionVariableSRW",
+            "export_offset": 41
+          }
+        },
+        {
+          "rsp_offset": 192,
+          "address": "0x7ff6ecdb7db0",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x3e57db0",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 65360256
+          }
+        },
+        {
+          "rsp_offset": 240,
+          "address": "0x7ff6ecdb7c40",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x3e57c40",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 65359888
+          }
+        },
+        {
+          "rsp_offset": 304,
+          "address": "0x7ff6ecdb7c40",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x3e57c40",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 65359888
+          }
+        },
+        {
+          "rsp_offset": 336,
+          "address": "0x7ff6ec8892bd",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x39292bd",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 59926157
+          }
+        },
+        {
+          "rsp_offset": 360,
+          "address": "0x7ff6ecdb7c40",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x3e57c40",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 65359888
+          }
+        },
+        {
+          "rsp_offset": 432,
+          "address": "0x7ff6edc5531a",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x4cf531a",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 80684778
+          }
+        },
+        {
+          "rsp_offset": 480,
+          "address": "0x7fffaa72af5a",
+          "location": {
+            "module": "msvcrt.dll",
+            "module_path": "C:\\Windows\\System32\\msvcrt.dll",
+            "rva": "0x3af5a",
+            "nearest_export": "_beginthreadex",
+            "export_offset": 298
+          }
+        }
+      ],
+      "stack_size": 2472
+    },
+    {
+      "tid": 12700,
+      "rip": "0x7fffac030fd4",
+      "rsp": "0xd8e79ffbd8",
+      "instruction_location": {
+        "module": "ntdll.dll",
+        "module_path": "C:\\Windows\\System32\\ntdll.dll",
+        "rva": "0xa0fd4",
+        "nearest_export": "ZwWaitForAlertByThreadId",
+        "export_offset": 20
+      },
+      "raw_stack_address_candidates": [
+        {
+          "rsp_offset": 0,
+          "address": "0x7fffabff55f1",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x655f1",
+            "nearest_export": "RtlSleepConditionVariableSRW",
+            "export_offset": 305
+          }
+        },
+        {
+          "rsp_offset": 16,
+          "address": "0x7ff6ef6018c0",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x66a18c0",
+            "nearest_export": "NvOptimusEnablement",
+            "export_offset": 137404
+          }
+        },
+        {
+          "rsp_offset": 128,
+          "address": "0x7fffa97dee79",
+          "location": {
+            "module": "KERNELBASE.dll",
+            "module_path": "C:\\Windows\\System32\\KERNELBASE.dll",
+            "rva": "0x6ee79",
+            "nearest_export": "SleepConditionVariableSRW",
+            "export_offset": 41
+          }
+        },
+        {
+          "rsp_offset": 192,
+          "address": "0x7ff6ecdb7db0",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x3e57db0",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 65360256
+          }
+        },
+        {
+          "rsp_offset": 240,
+          "address": "0x7ff6ecdb7c40",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x3e57c40",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 65359888
+          }
+        },
+        {
+          "rsp_offset": 304,
+          "address": "0x7ff6ecdb7c40",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x3e57c40",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 65359888
+          }
+        },
+        {
+          "rsp_offset": 336,
+          "address": "0x7ff6ec8892bd",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x39292bd",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 59926157
+          }
+        },
+        {
+          "rsp_offset": 360,
+          "address": "0x7ff6ecdb7c40",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x3e57c40",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 65359888
+          }
+        },
+        {
+          "rsp_offset": 432,
+          "address": "0x7ff6edc5531a",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x4cf531a",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 80684778
+          }
+        },
+        {
+          "rsp_offset": 480,
+          "address": "0x7fffaa72af5a",
+          "location": {
+            "module": "msvcrt.dll",
+            "module_path": "C:\\Windows\\System32\\msvcrt.dll",
+            "rva": "0x3af5a",
+            "nearest_export": "_beginthreadex",
+            "export_offset": 298
+          }
+        }
+      ],
+      "stack_size": 1064
+    },
+    {
+      "tid": 4452,
+      "rip": "0x7fffac030fd4",
+      "rsp": "0xd8e81ffc58",
+      "instruction_location": {
+        "module": "ntdll.dll",
+        "module_path": "C:\\Windows\\System32\\ntdll.dll",
+        "rva": "0xa0fd4",
+        "nearest_export": "ZwWaitForAlertByThreadId",
+        "export_offset": 20
+      },
+      "raw_stack_address_candidates": [
+        {
+          "rsp_offset": 0,
+          "address": "0x7fffabff55f1",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x655f1",
+            "nearest_export": "RtlSleepConditionVariableSRW",
+            "export_offset": 305
+          }
+        },
+        {
+          "rsp_offset": 16,
+          "address": "0x7ff6ef6018c0",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x66a18c0",
+            "nearest_export": "NvOptimusEnablement",
+            "export_offset": 137404
+          }
+        },
+        {
+          "rsp_offset": 128,
+          "address": "0x7fffa97dee79",
+          "location": {
+            "module": "KERNELBASE.dll",
+            "module_path": "C:\\Windows\\System32\\KERNELBASE.dll",
+            "rva": "0x6ee79",
+            "nearest_export": "SleepConditionVariableSRW",
+            "export_offset": 41
+          }
+        },
+        {
+          "rsp_offset": 192,
+          "address": "0x7ff6ecdb7db0",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x3e57db0",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 65360256
+          }
+        },
+        {
+          "rsp_offset": 240,
+          "address": "0x7ff6ecdb7c40",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x3e57c40",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 65359888
+          }
+        },
+        {
+          "rsp_offset": 304,
+          "address": "0x7ff6ecdb7c40",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x3e57c40",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 65359888
+          }
+        },
+        {
+          "rsp_offset": 336,
+          "address": "0x7ff6ec8892bd",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x39292bd",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 59926157
+          }
+        },
+        {
+          "rsp_offset": 360,
+          "address": "0x7ff6ecdb7c40",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x3e57c40",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 65359888
+          }
+        },
+        {
+          "rsp_offset": 432,
+          "address": "0x7ff6edc5531a",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x4cf531a",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 80684778
+          }
+        },
+        {
+          "rsp_offset": 480,
+          "address": "0x7fffaa72af5a",
+          "location": {
+            "module": "msvcrt.dll",
+            "module_path": "C:\\Windows\\System32\\msvcrt.dll",
+            "rva": "0x3af5a",
+            "nearest_export": "_beginthreadex",
+            "export_offset": 298
+          }
+        }
+      ],
+      "stack_size": 936
+    },
+    {
+      "tid": 14192,
+      "rip": "0x7fffac030fd4",
+      "rsp": "0xd8e89ff558",
+      "instruction_location": {
+        "module": "ntdll.dll",
+        "module_path": "C:\\Windows\\System32\\ntdll.dll",
+        "rva": "0xa0fd4",
+        "nearest_export": "ZwWaitForAlertByThreadId",
+        "export_offset": 20
+      },
+      "raw_stack_address_candidates": [
+        {
+          "rsp_offset": 0,
+          "address": "0x7fffabff55f1",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x655f1",
+            "nearest_export": "RtlSleepConditionVariableSRW",
+            "export_offset": 305
+          }
+        },
+        {
+          "rsp_offset": 16,
+          "address": "0x7ff6ef6018c0",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x66a18c0",
+            "nearest_export": "NvOptimusEnablement",
+            "export_offset": 137404
+          }
+        },
+        {
+          "rsp_offset": 128,
+          "address": "0x7fffa97dee79",
+          "location": {
+            "module": "KERNELBASE.dll",
+            "module_path": "C:\\Windows\\System32\\KERNELBASE.dll",
+            "rva": "0x6ee79",
+            "nearest_export": "SleepConditionVariableSRW",
+            "export_offset": 41
+          }
+        },
+        {
+          "rsp_offset": 192,
+          "address": "0x7ff6ecdb7db0",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x3e57db0",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 65360256
+          }
+        },
+        {
+          "rsp_offset": 240,
+          "address": "0x7ff6ecdb7c40",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x3e57c40",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 65359888
+          }
+        },
+        {
+          "rsp_offset": 304,
+          "address": "0x7ff6ecdb7c40",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x3e57c40",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 65359888
+          }
+        },
+        {
+          "rsp_offset": 336,
+          "address": "0x7ff6ec8892bd",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x39292bd",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 59926157
+          }
+        },
+        {
+          "rsp_offset": 360,
+          "address": "0x7ff6ecdb7c40",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x3e57c40",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 65359888
+          }
+        },
+        {
+          "rsp_offset": 432,
+          "address": "0x7ff6edc5531a",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x4cf531a",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 80684778
+          }
+        },
+        {
+          "rsp_offset": 480,
+          "address": "0x7fffaa72af5a",
+          "location": {
+            "module": "msvcrt.dll",
+            "module_path": "C:\\Windows\\System32\\msvcrt.dll",
+            "rva": "0x3af5a",
+            "nearest_export": "_beginthreadex",
+            "export_offset": 298
+          }
+        }
+      ],
+      "stack_size": 2728
+    },
+    {
+      "tid": 17436,
+      "rip": "0x7fffac02e0f4",
+      "rsp": "0xd8e91ff638",
+      "instruction_location": {
+        "module": "ntdll.dll",
+        "module_path": "C:\\Windows\\System32\\ntdll.dll",
+        "rva": "0x9e0f4",
+        "nearest_export": "ZwWaitForMultipleObjects",
+        "export_offset": 20
+      },
+      "raw_stack_address_candidates": [
+        {
+          "rsp_offset": 0,
+          "address": "0x7fffa97c0d00",
+          "location": {
+            "module": "KERNELBASE.dll",
+            "module_path": "C:\\Windows\\System32\\KERNELBASE.dll",
+            "rva": "0x50d00",
+            "nearest_export": "WaitForMultipleObjectsEx",
+            "export_offset": 240
+          }
+        },
+        {
+          "rsp_offset": 8,
+          "address": "0x7fffa9052b80",
+          "location": {
+            "module": "wldp.dll",
+            "module_path": "C:\\Windows\\System32\\wldp.dll",
+            "rva": "0x2b80",
+            "nearest_export": "WldpCheckRetailConfiguration",
+            "export_offset": 1136
+          }
+        },
+        {
+          "rsp_offset": 16,
+          "address": "0x7fffabfa7955",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x17955",
+            "nearest_export": "LdrShutdownThread",
+            "export_offset": 1285
+          }
+        },
+        {
+          "rsp_offset": 24,
+          "address": "0x7fffac0fc4d0",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x16c4d0",
+            "nearest_export": "NlsAnsiCodePage",
+            "export_offset": 11524
+          }
+        },
+        {
+          "rsp_offset": 48,
+          "address": "0x7fffa9052b80",
+          "location": {
+            "module": "wldp.dll",
+            "module_path": "C:\\Windows\\System32\\wldp.dll",
+            "rva": "0x2b80",
+            "nearest_export": "WldpCheckRetailConfiguration",
+            "export_offset": 1136
+          }
+        },
+        {
+          "rsp_offset": 208,
+          "address": "0x7fffabfa791d",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x1791d",
+            "nearest_export": "LdrShutdownThread",
+            "export_offset": 1229
+          }
+        },
+        {
+          "rsp_offset": 216,
+          "address": "0x7fffabfa793d",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x1793d",
+            "nearest_export": "LdrShutdownThread",
+            "export_offset": 1261
+          }
+        },
+        {
+          "rsp_offset": 240,
+          "address": "0x7fffac0060ad",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x760ad",
+            "nearest_export": "LdrInitializeThunk",
+            "export_offset": 1181
+          }
+        },
+        {
+          "rsp_offset": 392,
+          "address": "0x7fffabf90000",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x0",
+            "nearest_export": null,
+            "export_offset": null
+          }
+        },
+        {
+          "rsp_offset": 400,
+          "address": "0x7fffac005c73",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x75c73",
+            "nearest_export": "LdrInitializeThunk",
+            "export_offset": 99
+          }
+        },
+        {
+          "rsp_offset": 416,
+          "address": "0x7fffabf90000",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x0",
+            "nearest_export": null,
+            "export_offset": null
+          }
+        },
+        {
+          "rsp_offset": 448,
+          "address": "0x7fffac005c28",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x75c28",
+            "nearest_export": "LdrInitializeThunk",
+            "export_offset": 24
+          }
+        }
+      ],
+      "stack_size": 2504
+    },
+    {
+      "tid": 9224,
+      "rip": "0x7fffac031034",
+      "rsp": "0xd8e99ff908",
+      "instruction_location": {
+        "module": "ntdll.dll",
+        "module_path": "C:\\Windows\\System32\\ntdll.dll",
+        "rva": "0xa1034",
+        "nearest_export": "ZwWaitForWorkViaWorkerFactory",
+        "export_offset": 20
+      },
+      "raw_stack_address_candidates": [
+        {
+          "rsp_offset": 0,
+          "address": "0x7fffabfdd407",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x4d407",
+            "nearest_export": "TpReleaseCleanupGroupMembers",
+            "export_offset": 1863
+          }
+        }
+      ],
+      "stack_size": 1784
+    },
+    {
+      "tid": 20040,
+      "rip": "0x7fffac031034",
+      "rsp": "0xd8ea1ffb78",
+      "instruction_location": {
+        "module": "ntdll.dll",
+        "module_path": "C:\\Windows\\System32\\ntdll.dll",
+        "rva": "0xa1034",
+        "nearest_export": "ZwWaitForWorkViaWorkerFactory",
+        "export_offset": 20
+      },
+      "raw_stack_address_candidates": [
+        {
+          "rsp_offset": 0,
+          "address": "0x7fffabfdd407",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x4d407",
+            "nearest_export": "TpReleaseCleanupGroupMembers",
+            "export_offset": 1863
+          }
+        }
+      ],
+      "stack_size": 1160
+    },
+    {
+      "tid": 12444,
+      "rip": "0x7fffac02e0f4",
+      "rsp": "0xd8ea9ff588",
+      "instruction_location": {
+        "module": "ntdll.dll",
+        "module_path": "C:\\Windows\\System32\\ntdll.dll",
+        "rva": "0x9e0f4",
+        "nearest_export": "ZwWaitForMultipleObjects",
+        "export_offset": 20
+      },
+      "raw_stack_address_candidates": [
+        {
+          "rsp_offset": 0,
+          "address": "0x7fffa97c0d00",
+          "location": {
+            "module": "KERNELBASE.dll",
+            "module_path": "C:\\Windows\\System32\\KERNELBASE.dll",
+            "rva": "0x50d00",
+            "nearest_export": "WaitForMultipleObjectsEx",
+            "export_offset": 240
+          }
+        },
+        {
+          "rsp_offset": 96,
+          "address": "0x7fffabfb47b1",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x247b1",
+            "nearest_export": "RtlFreeHeap",
+            "export_offset": 81
+          }
+        },
+        {
+          "rsp_offset": 160,
+          "address": "0x7fffa97c0dec",
+          "location": {
+            "module": "KERNELBASE.dll",
+            "module_path": "C:\\Windows\\System32\\KERNELBASE.dll",
+            "rva": "0x50dec",
+            "nearest_export": "WaitForMultipleObjectsEx",
+            "export_offset": 476
+          }
+        }
+      ],
+      "stack_size": 2680
+    },
+    {
+      "tid": 18376,
+      "rip": "0x7fffac02e0f4",
+      "rsp": "0xd8eb1ff558",
+      "instruction_location": {
+        "module": "ntdll.dll",
+        "module_path": "C:\\Windows\\System32\\ntdll.dll",
+        "rva": "0x9e0f4",
+        "nearest_export": "ZwWaitForMultipleObjects",
+        "export_offset": 20
+      },
+      "raw_stack_address_candidates": [
+        {
+          "rsp_offset": 0,
+          "address": "0x7fffa97c0d00",
+          "location": {
+            "module": "KERNELBASE.dll",
+            "module_path": "C:\\Windows\\System32\\KERNELBASE.dll",
+            "rva": "0x50d00",
+            "nearest_export": "WaitForMultipleObjectsEx",
+            "export_offset": 240
+          }
+        }
+      ],
+      "stack_size": 2728
+    },
+    {
+      "tid": 5412,
+      "rip": "0x7fffac02d624",
+      "rsp": "0xd8eb9ff9e8",
+      "instruction_location": {
+        "module": "ntdll.dll",
+        "module_path": "C:\\Windows\\System32\\ntdll.dll",
+        "rva": "0x9d624",
+        "nearest_export": "ZwWaitForSingleObject",
+        "export_offset": 20
+      },
+      "raw_stack_address_candidates": [
+        {
+          "rsp_offset": 0,
+          "address": "0x7fffa978b6ae",
+          "location": {
+            "module": "KERNELBASE.dll",
+            "module_path": "C:\\Windows\\System32\\KERNELBASE.dll",
+            "rva": "0x1b6ae",
+            "nearest_export": "WaitForSingleObjectEx",
+            "export_offset": 142
+          }
+        },
+        {
+          "rsp_offset": 128,
+          "address": "0x7fffa97e8045",
+          "location": {
+            "module": "KERNELBASE.dll",
+            "module_path": "C:\\Windows\\System32\\KERNELBASE.dll",
+            "rva": "0x78045",
+            "nearest_export": "AppPolicyGetThreadInitializationType",
+            "export_offset": 37
+          }
+        },
+        {
+          "rsp_offset": 160,
+          "address": "0x7fff0a607846",
+          "location": {
+            "module": "nvwgf2umx.dll",
+            "module_path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\nvhm.inf_amd64_3cb6b4743249e01c\\nvwgf2umx.dll",
+            "rva": "0x917846",
+            "nearest_export": "NVDEV_Thunk",
+            "export_offset": 144406
+          }
+        },
+        {
+          "rsp_offset": 176,
+          "address": "0x7fff0ac0692a",
+          "location": {
+            "module": "nvwgf2umx.dll",
+            "module_path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\nvhm.inf_amd64_3cb6b4743249e01c\\nvwgf2umx.dll",
+            "rva": "0xf1692a",
+            "nearest_export": "NVDEV_Thunk",
+            "export_offset": 6431994
+          }
+        },
+        {
+          "rsp_offset": 224,
+          "address": "0x7fff0abe7316",
+          "location": {
+            "module": "nvwgf2umx.dll",
+            "module_path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\nvhm.inf_amd64_3cb6b4743249e01c\\nvwgf2umx.dll",
+            "rva": "0xef7316",
+            "nearest_export": "NVDEV_Thunk",
+            "export_offset": 6303462
+          }
+        },
+        {
+          "rsp_offset": 272,
+          "address": "0x7fffaa7a7374",
+          "location": {
+            "module": "kernel32.dll",
+            "module_path": "C:\\Windows\\System32\\kernel32.dll",
+            "rva": "0x17374",
+            "nearest_export": "BaseThreadInitThunk",
+            "export_offset": 20
+          }
+        },
+        {
+          "rsp_offset": 320,
+          "address": "0x7fffabfdcc91",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x4cc91",
+            "nearest_export": "RtlUserThreadStart",
+            "export_offset": 33
+          }
+        }
+      ],
+      "stack_size": 1560
+    },
+    {
+      "tid": 9568,
+      "rip": "0x7fffac02e0f4",
+      "rsp": "0xd8ec1ff728",
+      "instruction_location": {
+        "module": "ntdll.dll",
+        "module_path": "C:\\Windows\\System32\\ntdll.dll",
+        "rva": "0x9e0f4",
+        "nearest_export": "ZwWaitForMultipleObjects",
+        "export_offset": 20
+      },
+      "raw_stack_address_candidates": [
+        {
+          "rsp_offset": 0,
+          "address": "0x7fffa97c0d00",
+          "location": {
+            "module": "KERNELBASE.dll",
+            "module_path": "C:\\Windows\\System32\\KERNELBASE.dll",
+            "rva": "0x50d00",
+            "nearest_export": "WaitForMultipleObjectsEx",
+            "export_offset": 240
+          }
+        }
+      ],
+      "stack_size": 2264
+    },
+    {
+      "tid": 15700,
+      "rip": "0x7fffac02d624",
+      "rsp": "0xd8ec9ff588",
+      "instruction_location": {
+        "module": "ntdll.dll",
+        "module_path": "C:\\Windows\\System32\\ntdll.dll",
+        "rva": "0x9d624",
+        "nearest_export": "ZwWaitForSingleObject",
+        "export_offset": 20
+      },
+      "raw_stack_address_candidates": [
+        {
+          "rsp_offset": 0,
+          "address": "0x7fffa978b6ae",
+          "location": {
+            "module": "KERNELBASE.dll",
+            "module_path": "C:\\Windows\\System32\\KERNELBASE.dll",
+            "rva": "0x1b6ae",
+            "nearest_export": "WaitForSingleObjectEx",
+            "export_offset": 142
+          }
+        },
+        {
+          "rsp_offset": 16,
+          "address": "0x7fffac031424",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0xa1424",
+            "nearest_export": "KiUserCallbackDispatcher",
+            "export_offset": 36
+          }
+        },
+        {
+          "rsp_offset": 160,
+          "address": "0x7fff0a66b6ef",
+          "location": {
+            "module": "nvwgf2umx.dll",
+            "module_path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\nvhm.inf_amd64_3cb6b4743249e01c\\nvwgf2umx.dll",
+            "rva": "0x97b6ef",
+            "nearest_export": "NVDEV_Thunk",
+            "export_offset": 553663
+          }
+        },
+        {
+          "rsp_offset": 384,
+          "address": "0x7fffabfe1910",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x51910",
+            "nearest_export": "RtlSetLastWin32Error",
+            "export_offset": 64
+          }
+        },
+        {
+          "rsp_offset": 416,
+          "address": "0x7fffa97c07cb",
+          "location": {
+            "module": "KERNELBASE.dll",
+            "module_path": "C:\\Windows\\System32\\KERNELBASE.dll",
+            "rva": "0x507cb",
+            "nearest_export": "FlsGetValue",
+            "export_offset": 27
+          }
+        },
+        {
+          "rsp_offset": 464,
+          "address": "0x7fff0ac03d55",
+          "location": {
+            "module": "nvwgf2umx.dll",
+            "module_path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\nvhm.inf_amd64_3cb6b4743249e01c\\nvwgf2umx.dll",
+            "rva": "0xf13d55",
+            "nearest_export": "NVDEV_Thunk",
+            "export_offset": 6420773
+          }
+        }
+      ],
+      "stack_size": 2680
+    },
+    {
+      "tid": 17168,
+      "rip": "0x7fffac030fd4",
+      "rsp": "0xd8ed1ff858",
+      "instruction_location": {
+        "module": "ntdll.dll",
+        "module_path": "C:\\Windows\\System32\\ntdll.dll",
+        "rva": "0xa0fd4",
+        "nearest_export": "ZwWaitForAlertByThreadId",
+        "export_offset": 20
+      },
+      "raw_stack_address_candidates": [
+        {
+          "rsp_offset": 0,
+          "address": "0x7fffabff55f1",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x655f1",
+            "nearest_export": "RtlSleepConditionVariableSRW",
+            "export_offset": 305
+          }
+        },
+        {
+          "rsp_offset": 32,
+          "address": "0x7fffabfbb3c7",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x2b3c7",
+            "nearest_export": "RtlAllocateHeap",
+            "export_offset": 2599
+          }
+        },
+        {
+          "rsp_offset": 128,
+          "address": "0x7fffa97dee79",
+          "location": {
+            "module": "KERNELBASE.dll",
+            "module_path": "C:\\Windows\\System32\\KERNELBASE.dll",
+            "rva": "0x6ee79",
+            "nearest_export": "SleepConditionVariableSRW",
+            "export_offset": 41
+          }
+        },
+        {
+          "rsp_offset": 176,
+          "address": "0x7fff0a69ba85",
+          "location": {
+            "module": "nvwgf2umx.dll",
+            "module_path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\nvhm.inf_amd64_3cb6b4743249e01c\\nvwgf2umx.dll",
+            "rva": "0x9aba85",
+            "nearest_export": "NVDEV_Thunk",
+            "export_offset": 751189
+          }
+        },
+        {
+          "rsp_offset": 192,
+          "address": "0x7fffa965ff45",
+          "location": {
+            "module": "msvcp_win.dll",
+            "module_path": "C:\\Windows\\System32\\msvcp_win.dll",
+            "rva": "0xff45",
+            "nearest_export": "??1_Init_locks@std@@QEAA@XZ",
+            "export_offset": 261
+          }
+        },
+        {
+          "rsp_offset": 216,
+          "address": "0x7fff33266398",
+          "location": {
+            "module": "D3D12Core.dll",
+            "module_path": "C:\\Windows\\System32\\D3D12Core.dll",
+            "rva": "0x176398",
+            "nearest_export": "D3D12SDKVersion",
+            "export_offset": 146760
+          }
+        },
+        {
+          "rsp_offset": 224,
+          "address": "0x7fffa965f7e2",
+          "location": {
+            "module": "msvcp_win.dll",
+            "module_path": "C:\\Windows\\System32\\msvcp_win.dll",
+            "rva": "0xf7e2",
+            "nearest_export": "_Mtx_unlock",
+            "export_offset": 34
+          }
+        },
+        {
+          "rsp_offset": 240,
+          "address": "0x7fffa965ff0d",
+          "location": {
+            "module": "msvcp_win.dll",
+            "module_path": "C:\\Windows\\System32\\msvcp_win.dll",
+            "rva": "0xff0d",
+            "nearest_export": "??1_Init_locks@std@@QEAA@XZ",
+            "export_offset": 205
+          }
+        },
+        {
+          "rsp_offset": 288,
+          "address": "0x7fffa966080a",
+          "location": {
+            "module": "msvcp_win.dll",
+            "module_path": "C:\\Windows\\System32\\msvcp_win.dll",
+            "rva": "0x1080a",
+            "nearest_export": "_Cnd_wait",
+            "export_offset": 90
+          }
+        },
+        {
+          "rsp_offset": 304,
+          "address": "0x7fffa965f737",
+          "location": {
+            "module": "msvcp_win.dll",
+            "module_path": "C:\\Windows\\System32\\msvcp_win.dll",
+            "rva": "0xf737",
+            "nearest_export": "_Mtx_lock",
+            "export_offset": 151
+          }
+        },
+        {
+          "rsp_offset": 352,
+          "address": "0x7fff0a7a16f6",
+          "location": {
+            "module": "nvwgf2umx.dll",
+            "module_path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\nvhm.inf_amd64_3cb6b4743249e01c\\nvwgf2umx.dll",
+            "rva": "0xab16f6",
+            "nearest_export": "NVDEV_Thunk",
+            "export_offset": 1823430
+          }
+        },
+        {
+          "rsp_offset": 400,
+          "address": "0x7fff331da1c8",
+          "location": {
+            "module": "D3D12Core.dll",
+            "module_path": "C:\\Windows\\System32\\D3D12Core.dll",
+            "rva": "0xea1c8",
+            "nearest_export": "D3D12GetInterface",
+            "export_offset": 875208
+          }
+        },
+        {
+          "rsp_offset": 456,
+          "address": "0x7fff0a7a1640",
+          "location": {
+            "module": "nvwgf2umx.dll",
+            "module_path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\nvhm.inf_amd64_3cb6b4743249e01c\\nvwgf2umx.dll",
+            "rva": "0xab1640",
+            "nearest_export": "NVDEV_Thunk",
+            "export_offset": 1823248
+          }
+        },
+        {
+          "rsp_offset": 464,
+          "address": "0x7fff0a7a1710",
+          "location": {
+            "module": "nvwgf2umx.dll",
+            "module_path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\nvhm.inf_amd64_3cb6b4743249e01c\\nvwgf2umx.dll",
+            "rva": "0xab1710",
+            "nearest_export": "NVDEV_Thunk",
+            "export_offset": 1823456
+          }
+        }
+      ],
+      "stack_size": 1960
+    },
+    {
+      "tid": 7184,
+      "rip": "0x7fffac030fd4",
+      "rsp": "0xd8ed9ff708",
+      "instruction_location": {
+        "module": "ntdll.dll",
+        "module_path": "C:\\Windows\\System32\\ntdll.dll",
+        "rva": "0xa0fd4",
+        "nearest_export": "ZwWaitForAlertByThreadId",
+        "export_offset": 20
+      },
+      "raw_stack_address_candidates": [
+        {
+          "rsp_offset": 0,
+          "address": "0x7fffabff55f1",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x655f1",
+            "nearest_export": "RtlSleepConditionVariableSRW",
+            "export_offset": 305
+          }
+        },
+        {
+          "rsp_offset": 32,
+          "address": "0x7fffabfbb3c7",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x2b3c7",
+            "nearest_export": "RtlAllocateHeap",
+            "export_offset": 2599
+          }
+        },
+        {
+          "rsp_offset": 128,
+          "address": "0x7fffa97dee79",
+          "location": {
+            "module": "KERNELBASE.dll",
+            "module_path": "C:\\Windows\\System32\\KERNELBASE.dll",
+            "rva": "0x6ee79",
+            "nearest_export": "SleepConditionVariableSRW",
+            "export_offset": 41
+          }
+        },
+        {
+          "rsp_offset": 176,
+          "address": "0x7fff0a69ba85",
+          "location": {
+            "module": "nvwgf2umx.dll",
+            "module_path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\nvhm.inf_amd64_3cb6b4743249e01c\\nvwgf2umx.dll",
+            "rva": "0x9aba85",
+            "nearest_export": "NVDEV_Thunk",
+            "export_offset": 751189
+          }
+        },
+        {
+          "rsp_offset": 192,
+          "address": "0x7fffa965ff45",
+          "location": {
+            "module": "msvcp_win.dll",
+            "module_path": "C:\\Windows\\System32\\msvcp_win.dll",
+            "rva": "0xff45",
+            "nearest_export": "??1_Init_locks@std@@QEAA@XZ",
+            "export_offset": 261
+          }
+        },
+        {
+          "rsp_offset": 216,
+          "address": "0x7fff33266398",
+          "location": {
+            "module": "D3D12Core.dll",
+            "module_path": "C:\\Windows\\System32\\D3D12Core.dll",
+            "rva": "0x176398",
+            "nearest_export": "D3D12SDKVersion",
+            "export_offset": 146760
+          }
+        },
+        {
+          "rsp_offset": 224,
+          "address": "0x7fffa965f7e2",
+          "location": {
+            "module": "msvcp_win.dll",
+            "module_path": "C:\\Windows\\System32\\msvcp_win.dll",
+            "rva": "0xf7e2",
+            "nearest_export": "_Mtx_unlock",
+            "export_offset": 34
+          }
+        },
+        {
+          "rsp_offset": 240,
+          "address": "0x7fffa965ff0d",
+          "location": {
+            "module": "msvcp_win.dll",
+            "module_path": "C:\\Windows\\System32\\msvcp_win.dll",
+            "rva": "0xff0d",
+            "nearest_export": "??1_Init_locks@std@@QEAA@XZ",
+            "export_offset": 205
+          }
+        },
+        {
+          "rsp_offset": 288,
+          "address": "0x7fffa966080a",
+          "location": {
+            "module": "msvcp_win.dll",
+            "module_path": "C:\\Windows\\System32\\msvcp_win.dll",
+            "rva": "0x1080a",
+            "nearest_export": "_Cnd_wait",
+            "export_offset": 90
+          }
+        },
+        {
+          "rsp_offset": 304,
+          "address": "0x7fffa965f737",
+          "location": {
+            "module": "msvcp_win.dll",
+            "module_path": "C:\\Windows\\System32\\msvcp_win.dll",
+            "rva": "0xf737",
+            "nearest_export": "_Mtx_lock",
+            "export_offset": 151
+          }
+        },
+        {
+          "rsp_offset": 352,
+          "address": "0x7fff0a7a16f6",
+          "location": {
+            "module": "nvwgf2umx.dll",
+            "module_path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\nvhm.inf_amd64_3cb6b4743249e01c\\nvwgf2umx.dll",
+            "rva": "0xab16f6",
+            "nearest_export": "NVDEV_Thunk",
+            "export_offset": 1823430
+          }
+        },
+        {
+          "rsp_offset": 400,
+          "address": "0x7fff331da1c8",
+          "location": {
+            "module": "D3D12Core.dll",
+            "module_path": "C:\\Windows\\System32\\D3D12Core.dll",
+            "rva": "0xea1c8",
+            "nearest_export": "D3D12GetInterface",
+            "export_offset": 875208
+          }
+        },
+        {
+          "rsp_offset": 456,
+          "address": "0x7fff0a7a1640",
+          "location": {
+            "module": "nvwgf2umx.dll",
+            "module_path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\nvhm.inf_amd64_3cb6b4743249e01c\\nvwgf2umx.dll",
+            "rva": "0xab1640",
+            "nearest_export": "NVDEV_Thunk",
+            "export_offset": 1823248
+          }
+        },
+        {
+          "rsp_offset": 464,
+          "address": "0x7fff0a7a1710",
+          "location": {
+            "module": "nvwgf2umx.dll",
+            "module_path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\nvhm.inf_amd64_3cb6b4743249e01c\\nvwgf2umx.dll",
+            "rva": "0xab1710",
+            "nearest_export": "NVDEV_Thunk",
+            "export_offset": 1823456
+          }
+        },
+        {
+          "rsp_offset": 496,
+          "address": "0x7fffa97e580e",
+          "location": {
+            "module": "KERNELBASE.dll",
+            "module_path": "C:\\Windows\\System32\\KERNELBASE.dll",
+            "rva": "0x7580e",
+            "nearest_export": "CheckTokenMembershipEx",
+            "export_offset": 158
+          }
+        }
+      ],
+      "stack_size": 2296
+    },
+    {
+      "tid": 19312,
+      "rip": "0x7fffac02e0f4",
+      "rsp": "0xd8ee1ff3b8",
+      "instruction_location": {
+        "module": "ntdll.dll",
+        "module_path": "C:\\Windows\\System32\\ntdll.dll",
+        "rva": "0x9e0f4",
+        "nearest_export": "ZwWaitForMultipleObjects",
+        "export_offset": 20
+      },
+      "raw_stack_address_candidates": [
+        {
+          "rsp_offset": 0,
+          "address": "0x7fffa97c0d00",
+          "location": {
+            "module": "KERNELBASE.dll",
+            "module_path": "C:\\Windows\\System32\\KERNELBASE.dll",
+            "rva": "0x50d00",
+            "nearest_export": "WaitForMultipleObjectsEx",
+            "export_offset": 240
+          }
+        }
+      ],
+      "stack_size": 3144
+    },
+    {
+      "tid": 19116,
+      "rip": "0x7fffac02e0f4",
+      "rsp": "0xd8ee9ff458",
+      "instruction_location": {
+        "module": "ntdll.dll",
+        "module_path": "C:\\Windows\\System32\\ntdll.dll",
+        "rva": "0x9e0f4",
+        "nearest_export": "ZwWaitForMultipleObjects",
+        "export_offset": 20
+      },
+      "raw_stack_address_candidates": [
+        {
+          "rsp_offset": 0,
+          "address": "0x7fffa97c0d00",
+          "location": {
+            "module": "KERNELBASE.dll",
+            "module_path": "C:\\Windows\\System32\\KERNELBASE.dll",
+            "rva": "0x50d00",
+            "nearest_export": "WaitForMultipleObjectsEx",
+            "export_offset": 240
+          }
+        }
+      ],
+      "stack_size": 2984
+    },
+    {
+      "tid": 7464,
+      "rip": "0x7fffa96f1104",
+      "rsp": "0xd8ef1ffb58",
+      "instruction_location": {
+        "module": "win32u.dll",
+        "module_path": "C:\\Windows\\System32\\win32u.dll",
+        "rva": "0x1104",
+        "nearest_export": "NtUserGetMessage",
+        "export_offset": 20
+      },
+      "raw_stack_address_candidates": [
+        {
+          "rsp_offset": 0,
+          "address": "0x7fffaa45212e",
+          "location": {
+            "module": "user32.dll",
+            "module_path": "C:\\Windows\\System32\\user32.dll",
+            "rva": "0x2212e",
+            "nearest_export": "GetMessageW",
+            "export_offset": 46
+          }
+        },
+        {
+          "rsp_offset": 16,
+          "address": "0x7ff6ea40b880",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x14ab880",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 21662800
+          }
+        },
+        {
+          "rsp_offset": 32,
+          "address": "0x7ff6ea40d382",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x14ad382",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 21669714
+          }
+        },
+        {
+          "rsp_offset": 72,
+          "address": "0x7fffac111000",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x181000",
+            "nearest_export": "NlsMbCodePageTag",
+            "export_offset": 80088
+          }
+        },
+        {
+          "rsp_offset": 96,
+          "address": "0x7ff6ea40b917",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x14ab917",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 21662951
+          }
+        },
+        {
+          "rsp_offset": 104,
+          "address": "0x7fffaa43e1e0",
+          "location": {
+            "module": "user32.dll",
+            "module_path": "C:\\Windows\\System32\\user32.dll",
+            "rva": "0xe1e0",
+            "nearest_export": "DispatchMessageW",
+            "export_offset": 0
+          }
+        },
+        {
+          "rsp_offset": 184,
+          "address": "0x7fffaa7ad470",
+          "location": {
+            "module": "kernel32.dll",
+            "module_path": "C:\\Windows\\System32\\kernel32.dll",
+            "rva": "0x1d470",
+            "nearest_export": "GetModuleHandleW",
+            "export_offset": 0
+          }
+        },
+        {
+          "rsp_offset": 208,
+          "address": "0x7fffa97deed0",
+          "location": {
+            "module": "KERNELBASE.dll",
+            "module_path": "C:\\Windows\\System32\\KERNELBASE.dll",
+            "rva": "0x6eed0",
+            "nearest_export": "SetThreadDescription",
+            "export_offset": 0
+          }
+        },
+        {
+          "rsp_offset": 232,
+          "address": "0x7ff6ea40b880",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x14ab880",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 21662800
+          }
+        },
+        {
+          "rsp_offset": 272,
+          "address": "0x7ff6ea4c86f8",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x15686f8",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 22436552
+          }
+        },
+        {
+          "rsp_offset": 288,
+          "address": "0x7fffaa72aa7a",
+          "location": {
+            "module": "msvcrt.dll",
+            "module_path": "C:\\Windows\\System32\\msvcrt.dll",
+            "rva": "0x3aa7a",
+            "nearest_export": "__threadid",
+            "export_offset": 634
+          }
+        },
+        {
+          "rsp_offset": 312,
+          "address": "0x7fffaa72af80",
+          "location": {
+            "module": "msvcrt.dll",
+            "module_path": "C:\\Windows\\System32\\msvcrt.dll",
+            "rva": "0x3af80",
+            "nearest_export": "_endthreadex",
+            "export_offset": 0
+          }
+        },
+        {
+          "rsp_offset": 336,
+          "address": "0x7ff6ea4e8dde",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x1588dde",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 22569390
+          }
+        },
+        {
+          "rsp_offset": 384,
+          "address": "0x7fffaa72af5a",
+          "location": {
+            "module": "msvcrt.dll",
+            "module_path": "C:\\Windows\\System32\\msvcrt.dll",
+            "rva": "0x3af5a",
+            "nearest_export": "_beginthreadex",
+            "export_offset": 298
+          }
+        },
+        {
+          "rsp_offset": 432,
+          "address": "0x7fffaa72b02c",
+          "location": {
+            "module": "msvcrt.dll",
+            "module_path": "C:\\Windows\\System32\\msvcrt.dll",
+            "rva": "0x3b02c",
+            "nearest_export": "_endthreadex",
+            "export_offset": 172
+          }
+        },
+        {
+          "rsp_offset": 440,
+          "address": "0x7fffaa7806d0",
+          "location": {
+            "module": "msvcrt.dll",
+            "module_path": "C:\\Windows\\System32\\msvcrt.dll",
+            "rva": "0x906d0",
+            "nearest_export": "_mbcasemap",
+            "export_offset": 256
+          }
+        },
+        {
+          "rsp_offset": 480,
+          "address": "0x7fffaa7a7374",
+          "location": {
+            "module": "kernel32.dll",
+            "module_path": "C:\\Windows\\System32\\kernel32.dll",
+            "rva": "0x17374",
+            "nearest_export": "BaseThreadInitThunk",
+            "export_offset": 20
+          }
+        }
+      ],
+      "stack_size": 1192
+    },
+    {
+      "tid": 6268,
+      "rip": "0x7fffac031034",
+      "rsp": "0xd8ef9ff958",
+      "instruction_location": {
+        "module": "ntdll.dll",
+        "module_path": "C:\\Windows\\System32\\ntdll.dll",
+        "rva": "0xa1034",
+        "nearest_export": "ZwWaitForWorkViaWorkerFactory",
+        "export_offset": 20
+      },
+      "raw_stack_address_candidates": [
+        {
+          "rsp_offset": 0,
+          "address": "0x7fffabfdd407",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x4d407",
+            "nearest_export": "TpReleaseCleanupGroupMembers",
+            "export_offset": 1863
+          }
+        }
+      ],
+      "stack_size": 1704
+    },
+    {
+      "tid": 21088,
+      "rip": "0x7fffac02dc24",
+      "rsp": "0xd8f01ff8d8",
+      "instruction_location": {
+        "module": "ntdll.dll",
+        "module_path": "C:\\Windows\\System32\\ntdll.dll",
+        "rva": "0x9dc24",
+        "nearest_export": "ZwDelayExecution",
+        "export_offset": 20
+      },
+      "raw_stack_address_candidates": [
+        {
+          "rsp_offset": 0,
+          "address": "0x7fffa97b62ce",
+          "location": {
+            "module": "KERNELBASE.dll",
+            "module_path": "C:\\Windows\\System32\\KERNELBASE.dll",
+            "rva": "0x462ce",
+            "nearest_export": "SleepEx",
+            "export_offset": 158
+          }
+        },
+        {
+          "rsp_offset": 16,
+          "address": "0x7ff6e8f615c3",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x15c3",
+            "nearest_export": null,
+            "export_offset": null
+          }
+        },
+        {
+          "rsp_offset": 24,
+          "address": "0x7fffa43a87f0",
+          "location": {
+            "module": "AudioSes.dll",
+            "module_path": "C:\\Windows\\System32\\AudioSes.dll",
+            "rva": "0x1587f0",
+            "nearest_export": "DllUnregisterServer",
+            "export_offset": 1108944
+          }
+        },
+        {
+          "rsp_offset": 48,
+          "address": "0x7ff6e8f615c3",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x15c3",
+            "nearest_export": null,
+            "export_offset": null
+          }
+        },
+        {
+          "rsp_offset": 160,
+          "address": "0x7ff6ea2b4f4d",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x1354f4d",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 20259613
+          }
+        },
+        {
+          "rsp_offset": 240,
+          "address": "0x7ff6ed85a935",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x48fa935",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 76512517
+          }
+        },
+        {
+          "rsp_offset": 264,
+          "address": "0x7fffabfbfaa0",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x2faa0",
+            "nearest_export": "RtlEnterCriticalSection",
+            "export_offset": 0
+          }
+        },
+        {
+          "rsp_offset": 272,
+          "address": "0x7fffabfbf230",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x2f230",
+            "nearest_export": "RtlLeaveCriticalSection",
+            "export_offset": 0
+          }
+        },
+        {
+          "rsp_offset": 352,
+          "address": "0x7ff6ea2b4ac0",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x1354ac0",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 20258448
+          }
+        },
+        {
+          "rsp_offset": 416,
+          "address": "0x7ff6ec8892bd",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x39292bd",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 59926157
+          }
+        },
+        {
+          "rsp_offset": 440,
+          "address": "0x7ff6ea2b4ac0",
+          "location": {
+            "module": "godot.windows.opt.tools.64.exe",
+            "module_path": "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+            "rva": "0x1354ac0",
+            "nearest_export": "NoHotPatch",
+            "export_offset": 20258448
+          }
+        }
+      ],
+      "stack_size": 1832
+    },
+    {
+      "tid": 20068,
+      "rip": "0x7fffac02d624",
+      "rsp": "0xd8f11ff928",
+      "instruction_location": {
+        "module": "ntdll.dll",
+        "module_path": "C:\\Windows\\System32\\ntdll.dll",
+        "rva": "0x9d624",
+        "nearest_export": "ZwWaitForSingleObject",
+        "export_offset": 20
+      },
+      "raw_stack_address_candidates": [
+        {
+          "rsp_offset": 0,
+          "address": "0x7fffa978b6ae",
+          "location": {
+            "module": "KERNELBASE.dll",
+            "module_path": "C:\\Windows\\System32\\KERNELBASE.dll",
+            "rva": "0x1b6ae",
+            "nearest_export": "WaitForSingleObjectEx",
+            "export_offset": 142
+          }
+        },
+        {
+          "rsp_offset": 160,
+          "address": "0x7fff0a429f12",
+          "location": {
+            "module": "nvwgf2umx.dll",
+            "module_path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\nvhm.inf_amd64_3cb6b4743249e01c\\nvwgf2umx.dll",
+            "rva": "0x739f12",
+            "nearest_export": "OpenAdapter10",
+            "export_offset": 1318562
+          }
+        },
+        {
+          "rsp_offset": 208,
+          "address": "0x7fff0abe7316",
+          "location": {
+            "module": "nvwgf2umx.dll",
+            "module_path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\nvhm.inf_amd64_3cb6b4743249e01c\\nvwgf2umx.dll",
+            "rva": "0xef7316",
+            "nearest_export": "NVDEV_Thunk",
+            "export_offset": 6303462
+          }
+        },
+        {
+          "rsp_offset": 256,
+          "address": "0x7fffaa7a7374",
+          "location": {
+            "module": "kernel32.dll",
+            "module_path": "C:\\Windows\\System32\\kernel32.dll",
+            "rva": "0x17374",
+            "nearest_export": "BaseThreadInitThunk",
+            "export_offset": 20
+          }
+        },
+        {
+          "rsp_offset": 304,
+          "address": "0x7fffabfdcc91",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x4cc91",
+            "nearest_export": "RtlUserThreadStart",
+            "export_offset": 33
+          }
+        }
+      ],
+      "stack_size": 1752
+    },
+    {
+      "tid": 7068,
+      "rip": "0x7fffac02e0f4",
+      "rsp": "0xd8f19ff588",
+      "instruction_location": {
+        "module": "ntdll.dll",
+        "module_path": "C:\\Windows\\System32\\ntdll.dll",
+        "rva": "0x9e0f4",
+        "nearest_export": "ZwWaitForMultipleObjects",
+        "export_offset": 20
+      },
+      "raw_stack_address_candidates": [
+        {
+          "rsp_offset": 0,
+          "address": "0x7fffa97c0d00",
+          "location": {
+            "module": "KERNELBASE.dll",
+            "module_path": "C:\\Windows\\System32\\KERNELBASE.dll",
+            "rva": "0x50d00",
+            "nearest_export": "WaitForMultipleObjectsEx",
+            "export_offset": 240
+          }
+        },
+        {
+          "rsp_offset": 16,
+          "address": "0x7fff108efaf0",
+          "location": {
+            "module": "igdml64.dll",
+            "module_path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\iigd_dch.inf_amd64_0242412938e9b6b3\\igdml64.dll",
+            "rva": "0x31faf0",
+            "nearest_export": "ContextDelete_1_0",
+            "export_offset": 161520
+          }
+        },
+        {
+          "rsp_offset": 80,
+          "address": "0x7fffabfa7877",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x17877",
+            "nearest_export": "LdrShutdownThread",
+            "export_offset": 1063
+          }
+        },
+        {
+          "rsp_offset": 88,
+          "address": "0x7fffabfa78aa",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x178aa",
+            "nearest_export": "LdrShutdownThread",
+            "export_offset": 1114
+          }
+        },
+        {
+          "rsp_offset": 192,
+          "address": "0x7fffac0060ad",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x760ad",
+            "nearest_export": "LdrInitializeThunk",
+            "export_offset": 1181
+          }
+        },
+        {
+          "rsp_offset": 344,
+          "address": "0x7fffabf90000",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x0",
+            "nearest_export": null,
+            "export_offset": null
+          }
+        },
+        {
+          "rsp_offset": 352,
+          "address": "0x7fffac005c73",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x75c73",
+            "nearest_export": "LdrInitializeThunk",
+            "export_offset": 99
+          }
+        },
+        {
+          "rsp_offset": 368,
+          "address": "0x7fffabf90000",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x0",
+            "nearest_export": null,
+            "export_offset": null
+          }
+        },
+        {
+          "rsp_offset": 384,
+          "address": "0x7fffabfbb90b",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x2b90b",
+            "nearest_export": "RtlAllocateHeap",
+            "export_offset": 3947
+          }
+        }
+      ],
+      "stack_size": 2680
+    },
+    {
+      "tid": 11988,
+      "rip": "0x7fffac031034",
+      "rsp": "0xd8f21ff678",
+      "instruction_location": {
+        "module": "ntdll.dll",
+        "module_path": "C:\\Windows\\System32\\ntdll.dll",
+        "rva": "0xa1034",
+        "nearest_export": "ZwWaitForWorkViaWorkerFactory",
+        "export_offset": 20
+      },
+      "raw_stack_address_candidates": [
+        {
+          "rsp_offset": 0,
+          "address": "0x7fffabfdd407",
+          "location": {
+            "module": "ntdll.dll",
+            "module_path": "C:\\Windows\\System32\\ntdll.dll",
+            "rva": "0x4d407",
+            "nearest_export": "TpReleaseCleanupGroupMembers",
+            "export_offset": 1863
+          }
+        }
+      ],
+      "stack_size": 2440
+    },
+    {
+      "tid": 17232,
+      "rip": "0x7fffac02e0f4",
+      "rsp": "0xd8f09ff528",
+      "instruction_location": {
+        "module": "ntdll.dll",
+        "module_path": "C:\\Windows\\System32\\ntdll.dll",
+        "rva": "0x9e0f4",
+        "nearest_export": "ZwWaitForMultipleObjects",
+        "export_offset": 20
+      },
+      "raw_stack_address_candidates": [
+        {
+          "rsp_offset": 0,
+          "address": "0x7fffa97c0d00",
+          "location": {
+            "module": "KERNELBASE.dll",
+            "module_path": "C:\\Windows\\System32\\KERNELBASE.dll",
+            "rva": "0x50d00",
+            "nearest_export": "WaitForMultipleObjectsEx",
+            "export_offset": 240
+          }
+        }
+      ],
+      "stack_size": 2776
+    }
+  ]
+}

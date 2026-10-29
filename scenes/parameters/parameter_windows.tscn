@@ -1,0 +1,3950 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/parameters/parameter_service.gd" id="1"]
+
+[ext_resource type="Script" path="res://scripts/parameters/parameter_row.gd" id="2"]
+
+[node name="Parameters" type="Node"]
+script = ExtResource("1")
+
+[node name="tools" type="Window" parent="."]
+title = "工具参数"
+size = Vector2i(780, 660)
+min_size = Vector2i(640, 360)
+visible = false
+force_native = true
+transient = false
+
+[node name="Margin" type="MarginContainer" parent="tools"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = -12.0
+offset_bottom = -12.0
+
+[node name="Rows" type="VBoxContainer" parent="tools/Margin"]
+layout_mode = 2
+
+[node name="Scene" type="Label" parent="tools/Margin/Rows"]
+layout_mode = 2
+text = "等待场景"
+
+[node name="Actions" type="HBoxContainer" parent="tools/Margin/Rows"]
+layout_mode = 2
+
+[node name="Save" type="Button" parent="tools/Margin/Rows/Actions"]
+layout_mode = 2
+text = "保存参数（下次启动沿用）"
+focus_mode = 0
+
+[node name="Load" type="Button" parent="tools/Margin/Rows/Actions"]
+layout_mode = 2
+text = "加载已保存参数"
+focus_mode = 0
+
+[node name="Reset" type="Button" parent="tools/Margin/Rows/Actions"]
+layout_mode = 2
+text = "恢复默认"
+focus_mode = 0
+
+[node name="Message" type="Label" parent="tools/Margin/Rows"]
+layout_mode = 2
+autowrap_mode = 3
+text = "修改仅用于本次运行；需要沿用时请保存。"
+
+[node name="Scroll" type="ScrollContainer" parent="tools/Margin/Rows"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Fields" type="VBoxContainer" parent="tools/Margin/Rows/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="dig_amount_m3" type="VBoxContainer" parent="tools/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "dig_amount_m3"
+
+[node name="Line" type="HBoxContainer" parent="tools/Margin/Rows/Scroll/Fields/dig_amount_m3"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="tools/Margin/Rows/Scroll/Fields/dig_amount_m3/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "挖沙量 m³"
+
+[node name="Value" type="SpinBox" parent="tools/Margin/Rows/Scroll/Fields/dig_amount_m3/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.01
+max_value = 1
+step = 0.01
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="tools/Margin/Rows/Scroll/Fields/dig_amount_m3"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="fill_amount_m3" type="VBoxContainer" parent="tools/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "fill_amount_m3"
+
+[node name="Line" type="HBoxContainer" parent="tools/Margin/Rows/Scroll/Fields/fill_amount_m3"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="tools/Margin/Rows/Scroll/Fields/fill_amount_m3/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "填沙／流沙量 m³"
+
+[node name="Value" type="SpinBox" parent="tools/Margin/Rows/Scroll/Fields/fill_amount_m3/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.01
+max_value = 1
+step = 0.01
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="tools/Margin/Rows/Scroll/Fields/fill_amount_m3"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="radius_m" type="VBoxContainer" parent="tools/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "radius_m"
+
+[node name="Line" type="HBoxContainer" parent="tools/Margin/Rows/Scroll/Fields/radius_m"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="tools/Margin/Rows/Scroll/Fields/radius_m/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "普通刷半径 m"
+
+[node name="Value" type="SpinBox" parent="tools/Margin/Rows/Scroll/Fields/radius_m/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.125
+max_value = 4
+step = 0.125
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="tools/Margin/Rows/Scroll/Fields/radius_m"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="strength" type="VBoxContainer" parent="tools/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "strength"
+
+[node name="Line" type="HBoxContainer" parent="tools/Margin/Rows/Scroll/Fields/strength"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="tools/Margin/Rows/Scroll/Fields/strength/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "普通刷力度"
+
+[node name="Value" type="SpinBox" parent="tools/Margin/Rows/Scroll/Fields/strength/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 1
+step = 0.05
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="tools/Margin/Rows/Scroll/Fields/strength"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="castle_height" type="VBoxContainer" parent="tools/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "castle_height"
+
+[node name="Line" type="HBoxContainer" parent="tools/Margin/Rows/Scroll/Fields/castle_height"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="tools/Margin/Rows/Scroll/Fields/castle_height/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "城堡高度 m"
+
+[node name="Value" type="SpinBox" parent="tools/Margin/Rows/Scroll/Fields/castle_height/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.5
+max_value = 1
+step = 0.05
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="tools/Margin/Rows/Scroll/Fields/castle_height"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="castle_scale" type="VBoxContainer" parent="tools/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "castle_scale"
+
+[node name="Line" type="HBoxContainer" parent="tools/Margin/Rows/Scroll/Fields/castle_scale"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="tools/Margin/Rows/Scroll/Fields/castle_scale/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "城堡缩放"
+
+[node name="Value" type="SpinBox" parent="tools/Margin/Rows/Scroll/Fields/castle_scale/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 1
+max_value = 1.5
+step = 0.05
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="tools/Margin/Rows/Scroll/Fields/castle_scale"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="castle_yaw" type="VBoxContainer" parent="tools/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "castle_yaw"
+
+[node name="Line" type="HBoxContainer" parent="tools/Margin/Rows/Scroll/Fields/castle_yaw"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="tools/Margin/Rows/Scroll/Fields/castle_yaw/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "城堡朝向 °"
+
+[node name="Value" type="SpinBox" parent="tools/Margin/Rows/Scroll/Fields/castle_yaw/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = -180
+max_value = 180
+step = 15
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="tools/Margin/Rows/Scroll/Fields/castle_yaw"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="wall_height" type="VBoxContainer" parent="tools/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "wall_height"
+
+[node name="Line" type="HBoxContainer" parent="tools/Margin/Rows/Scroll/Fields/wall_height"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="tools/Margin/Rows/Scroll/Fields/wall_height/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "墙高 m"
+
+[node name="Value" type="SpinBox" parent="tools/Margin/Rows/Scroll/Fields/wall_height/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.15
+max_value = 0.6
+step = 0.05
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="tools/Margin/Rows/Scroll/Fields/wall_height"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="wall_bottom" type="VBoxContainer" parent="tools/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "wall_bottom"
+
+[node name="Line" type="HBoxContainer" parent="tools/Margin/Rows/Scroll/Fields/wall_bottom"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="tools/Margin/Rows/Scroll/Fields/wall_bottom/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "墙底宽 m"
+
+[node name="Value" type="SpinBox" parent="tools/Margin/Rows/Scroll/Fields/wall_bottom/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 1
+max_value = 2
+step = 0.125
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="tools/Margin/Rows/Scroll/Fields/wall_bottom"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="wall_top" type="VBoxContainer" parent="tools/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "wall_top"
+
+[node name="Line" type="HBoxContainer" parent="tools/Margin/Rows/Scroll/Fields/wall_top"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="tools/Margin/Rows/Scroll/Fields/wall_top/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "墙顶宽 m"
+
+[node name="Value" type="SpinBox" parent="tools/Margin/Rows/Scroll/Fields/wall_top/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.5
+max_value = 1.5
+step = 0.125
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="tools/Margin/Rows/Scroll/Fields/wall_top"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="shovel_depth" type="VBoxContainer" parent="tools/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "shovel_depth"
+
+[node name="Line" type="HBoxContainer" parent="tools/Margin/Rows/Scroll/Fields/shovel_depth"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="tools/Margin/Rows/Scroll/Fields/shovel_depth/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "铲沟深 m"
+
+[node name="Value" type="SpinBox" parent="tools/Margin/Rows/Scroll/Fields/shovel_depth/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.05
+max_value = 0.3
+step = 0.05
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="tools/Margin/Rows/Scroll/Fields/shovel_depth"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="shovel_width" type="VBoxContainer" parent="tools/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "shovel_width"
+
+[node name="Line" type="HBoxContainer" parent="tools/Margin/Rows/Scroll/Fields/shovel_width"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="tools/Margin/Rows/Scroll/Fields/shovel_width/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "铲沟宽 m"
+
+[node name="Value" type="SpinBox" parent="tools/Margin/Rows/Scroll/Fields/shovel_width/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.5
+max_value = 1
+step = 0.125
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="tools/Margin/Rows/Scroll/Fields/shovel_width"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="shovel_shoulder" type="VBoxContainer" parent="tools/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "shovel_shoulder"
+
+[node name="Line" type="HBoxContainer" parent="tools/Margin/Rows/Scroll/Fields/shovel_shoulder"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="tools/Margin/Rows/Scroll/Fields/shovel_shoulder/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "单侧堆沙宽 m"
+
+[node name="Value" type="SpinBox" parent="tools/Margin/Rows/Scroll/Fields/shovel_shoulder/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.5
+max_value = 1
+step = 0.125
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="tools/Margin/Rows/Scroll/Fields/shovel_shoulder"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="adjust_radius" type="VBoxContainer" parent="tools/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "adjust_radius"
+
+[node name="Line" type="HBoxContainer" parent="tools/Margin/Rows/Scroll/Fields/adjust_radius"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="tools/Margin/Rows/Scroll/Fields/adjust_radius/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "平滑／压实半径 m"
+
+[node name="Value" type="SpinBox" parent="tools/Margin/Rows/Scroll/Fields/adjust_radius/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.125
+max_value = 4
+step = 0.125
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="tools/Margin/Rows/Scroll/Fields/adjust_radius"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="adjust_strength" type="VBoxContainer" parent="tools/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "adjust_strength"
+
+[node name="Line" type="HBoxContainer" parent="tools/Margin/Rows/Scroll/Fields/adjust_strength"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="tools/Margin/Rows/Scroll/Fields/adjust_strength/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "平滑／压实力度"
+
+[node name="Value" type="SpinBox" parent="tools/Margin/Rows/Scroll/Fields/adjust_strength/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 1
+step = 0.05
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="tools/Margin/Rows/Scroll/Fields/adjust_strength"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="signed_speed_m_s" type="VBoxContainer" parent="tools/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "signed_speed_m_s"
+
+[node name="Line" type="HBoxContainer" parent="tools/Margin/Rows/Scroll/Fields/signed_speed_m_s"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="tools/Margin/Rows/Scroll/Fields/signed_speed_m_s/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "推拉水力度 m/s"
+
+[node name="Value" type="SpinBox" parent="tools/Margin/Rows/Scroll/Fields/signed_speed_m_s/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = -1
+max_value = 1
+step = 0.05
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="tools/Margin/Rows/Scroll/Fields/signed_speed_m_s"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="water_policy" type="VBoxContainer" parent="tools/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "water_policy"
+
+[node name="Line" type="HBoxContainer" parent="tools/Margin/Rows/Scroll/Fields/water_policy"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="tools/Margin/Rows/Scroll/Fields/water_policy/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "水响应策略"
+
+[node name="Value" type="OptionButton" parent="tools/Margin/Rows/Scroll/Fields/water_policy/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+item_count = 4
+popup/item_0/text = "保持水深"
+popup/item_0/id = 0
+popup/item_1/text = "位移"
+popup/item_1/id = 1
+popup/item_2/text = "动量 B"
+popup/item_2/id = 2
+popup/item_3/text = "连通排水＋速度"
+popup/item_3/id = 3
+
+[node name="Status" type="Label" parent="tools/Margin/Rows/Scroll/Fields/water_policy"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="water" type="Window" parent="."]
+title = "水参数"
+size = Vector2i(780, 660)
+min_size = Vector2i(640, 360)
+visible = false
+force_native = true
+transient = false
+
+[node name="Margin" type="MarginContainer" parent="water"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = -12.0
+offset_bottom = -12.0
+
+[node name="Rows" type="VBoxContainer" parent="water/Margin"]
+layout_mode = 2
+
+[node name="Scene" type="Label" parent="water/Margin/Rows"]
+layout_mode = 2
+text = "等待场景"
+
+[node name="Actions" type="HBoxContainer" parent="water/Margin/Rows"]
+layout_mode = 2
+
+[node name="Save" type="Button" parent="water/Margin/Rows/Actions"]
+layout_mode = 2
+text = "保存参数（下次启动沿用）"
+focus_mode = 0
+
+[node name="Load" type="Button" parent="water/Margin/Rows/Actions"]
+layout_mode = 2
+text = "加载已保存参数"
+focus_mode = 0
+
+[node name="Reset" type="Button" parent="water/Margin/Rows/Actions"]
+layout_mode = 2
+text = "恢复默认"
+focus_mode = 0
+
+[node name="Message" type="Label" parent="water/Margin/Rows"]
+layout_mode = 2
+autowrap_mode = 3
+text = "修改仅用于本次运行；需要沿用时请保存。"
+
+[node name="Scroll" type="ScrollContainer" parent="water/Margin/Rows"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Fields" type="VBoxContainer" parent="water/Margin/Rows/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="manual_wave_amplitude_m" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "manual_wave_amplitude_m"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/manual_wave_amplitude_m"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/manual_wave_amplitude_m/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "下次造浪幅度 m"
+
+[node name="Value" type="SpinBox" parent="water/Margin/Rows/Scroll/Fields/manual_wave_amplitude_m/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 0.2
+step = 0.01
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/manual_wave_amplitude_m"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="manual_wave_duration_s" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "manual_wave_duration_s"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/manual_wave_duration_s"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/manual_wave_duration_s/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "下次造浪持续 s"
+
+[node name="Value" type="SpinBox" parent="water/Margin/Rows/Scroll/Fields/manual_wave_duration_s/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.5
+max_value = 6
+step = 0.1
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/manual_wave_duration_s"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="wave_retention" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "wave_retention"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/wave_retention"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/wave_retention/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "保波程度"
+
+[node name="Value" type="SpinBox" parent="water/Margin/Rows/Scroll/Fields/wave_retention/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 1
+step = 0.1
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/wave_retention"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="solver" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "solver"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/solver"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/solver/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "水求解器"
+
+[node name="Value" type="OptionButton" parent="water/Margin/Rows/Scroll/Fields/solver/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+item_count = 2
+popup/item_0/text = "一阶 Rusanov"
+popup/item_0/id = 0
+popup/item_1/text = "二阶 MUSCL"
+popup/item_1/id = 1
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/solver"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="muscl_cfl" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "muscl_cfl"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/muscl_cfl"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/muscl_cfl/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "MUSCL CFL 系数"
+
+[node name="Value" type="SpinBox" parent="water/Margin/Rows/Scroll/Fields/muscl_cfl/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.05
+max_value = 0.5
+step = 0.01
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/muscl_cfl"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="muscl_max_attempts" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "muscl_max_attempts"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/muscl_max_attempts"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/muscl_max_attempts/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "MUSCL 每 tick 最大尝试次数"
+
+[node name="Value" type="SpinBox" parent="water/Margin/Rows/Scroll/Fields/muscl_max_attempts/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 1
+max_value = 64
+step = 1
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/muscl_max_attempts"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="boundary_mean_level_m" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "boundary_mean_level_m"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/boundary_mean_level_m"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/boundary_mean_level_m/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "边界平均水位 m"
+
+[node name="Value" type="SpinBox" parent="water/Margin/Rows/Scroll/Fields/boundary_mean_level_m/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = -2
+max_value = 2
+step = 0.01
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/boundary_mean_level_m"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="boundary_amplitude_m" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "boundary_amplitude_m"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/boundary_amplitude_m"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/boundary_amplitude_m/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "边界水位振幅 m"
+
+[node name="Value" type="SpinBox" parent="water/Margin/Rows/Scroll/Fields/boundary_amplitude_m/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 0.6
+step = 0.01
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/boundary_amplitude_m"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="boundary_omega_rad_s" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "boundary_omega_rad_s"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/boundary_omega_rad_s"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/boundary_omega_rad_s/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "边界角频率 rad/s"
+
+[node name="Value" type="SpinBox" parent="water/Margin/Rows/Scroll/Fields/boundary_omega_rad_s/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = -10
+max_value = 10
+step = 0.01
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/boundary_omega_rad_s"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="boundary_phase_rad" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "boundary_phase_rad"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/boundary_phase_rad"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/boundary_phase_rad/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "边界相位 rad"
+
+[node name="Value" type="SpinBox" parent="water/Margin/Rows/Scroll/Fields/boundary_phase_rad/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = -1000
+max_value = 1000
+step = 0.1
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/boundary_phase_rad"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="boundary_period_s" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "boundary_period_s"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/boundary_period_s"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/boundary_period_s/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "边界周期 s"
+
+[node name="Value" type="SpinBox" parent="water/Margin/Rows/Scroll/Fields/boundary_period_s/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.1
+max_value = 3600
+step = 0.1
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/boundary_period_s"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_rdc_normal_gain" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_rdc_normal_gain"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/visual_rdc_normal_gain"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_rdc_normal_gain/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "水面法线强度"
+
+[node name="Value" type="SpinBox" parent="water/Margin/Rows/Scroll/Fields/visual_rdc_normal_gain/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 3
+step = 0.05
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_rdc_normal_gain"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_rdc_normal_scale" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_rdc_normal_scale"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/visual_rdc_normal_scale"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_rdc_normal_scale/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "水面法线尺度"
+
+[node name="Value" type="SpinBox" parent="water/Margin/Rows/Scroll/Fields/visual_rdc_normal_scale/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 2
+step = 0.01
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_rdc_normal_scale"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_rdc_time_scale" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_rdc_time_scale"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/visual_rdc_time_scale"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_rdc_time_scale/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "水纹运动倍率"
+
+[node name="Value" type="SpinBox" parent="water/Margin/Rows/Scroll/Fields/visual_rdc_time_scale/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 4
+step = 0.05
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_rdc_time_scale"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_rdc_refraction_scale" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_rdc_refraction_scale"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/visual_rdc_refraction_scale"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_rdc_refraction_scale/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "折射强度"
+
+[node name="Value" type="SpinBox" parent="water/Margin/Rows/Scroll/Fields/visual_rdc_refraction_scale/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 0.05
+step = 0.001
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_rdc_refraction_scale"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_rdc_distance_scale" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_rdc_distance_scale"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/visual_rdc_distance_scale"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_rdc_distance_scale/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "吸收距离倍率"
+
+[node name="Value" type="SpinBox" parent="water/Margin/Rows/Scroll/Fields/visual_rdc_distance_scale/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 4
+step = 0.05
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_rdc_distance_scale"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_rdc_surface_gain" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_rdc_surface_gain"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/visual_rdc_surface_gain"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_rdc_surface_gain/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "表面颜色强度"
+
+[node name="Value" type="SpinBox" parent="water/Margin/Rows/Scroll/Fields/visual_rdc_surface_gain/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 3
+step = 0.05
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_rdc_surface_gain"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_natural_reflection_gain" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_natural_reflection_gain"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/visual_natural_reflection_gain"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_natural_reflection_gain/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "反射强度"
+
+[node name="Value" type="SpinBox" parent="water/Margin/Rows/Scroll/Fields/visual_natural_reflection_gain/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 3
+step = 0.05
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_natural_reflection_gain"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_natural_glint_gain" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_natural_glint_gain"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/visual_natural_glint_gain"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_natural_glint_gain/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "碎闪强度"
+
+[node name="Value" type="SpinBox" parent="water/Margin/Rows/Scroll/Fields/visual_natural_glint_gain/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 2
+step = 0.01
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_natural_glint_gain"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_natural_glint_exponent" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_natural_glint_exponent"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/visual_natural_glint_exponent"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_natural_glint_exponent/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "碎闪锐度"
+
+[node name="Value" type="SpinBox" parent="water/Margin/Rows/Scroll/Fields/visual_natural_glint_exponent/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 4096
+step = 1
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_natural_glint_exponent"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_natural_scatter_gain" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_natural_scatter_gain"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/visual_natural_scatter_gain"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_natural_scatter_gain/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "散射强度"
+
+[node name="Value" type="SpinBox" parent="water/Margin/Rows/Scroll/Fields/visual_natural_scatter_gain/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 3
+step = 0.05
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_natural_scatter_gain"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_natural_main_foam_gain" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_natural_main_foam_gain"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/visual_natural_main_foam_gain"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_natural_main_foam_gain/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "水面白沫强度"
+
+[node name="Value" type="SpinBox" parent="water/Margin/Rows/Scroll/Fields/visual_natural_main_foam_gain/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 3
+step = 0.05
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_natural_main_foam_gain"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_natural_contact_enabled" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_natural_contact_enabled"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/visual_natural_contact_enabled"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_natural_contact_enabled/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "水沙接触白边"
+
+[node name="Value" type="CheckBox" parent="water/Margin/Rows/Scroll/Fields/visual_natural_contact_enabled/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_natural_contact_enabled"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_natural_fine_gain" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_natural_fine_gain"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/visual_natural_fine_gain"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_natural_fine_gain/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "细碎白沫强度"
+
+[node name="Value" type="SpinBox" parent="water/Margin/Rows/Scroll/Fields/visual_natural_fine_gain/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 3
+step = 0.05
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_natural_fine_gain"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_target_diameter_px" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_target_diameter_px"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/visual_target_diameter_px"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_target_diameter_px/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "白沫像素直径"
+
+[node name="Value" type="SpinBox" parent="water/Margin/Rows/Scroll/Fields/visual_target_diameter_px/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 8
+step = 0.25
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_target_diameter_px"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_splat_half_width_m" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_splat_half_width_m"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/visual_splat_half_width_m"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_splat_half_width_m/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "白沫半宽 m"
+
+[node name="Value" type="SpinBox" parent="water/Margin/Rows/Scroll/Fields/visual_splat_half_width_m/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.001
+max_value = 0.2
+step = 0.001
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_splat_half_width_m"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_natural_cluster_strength" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_natural_cluster_strength"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/visual_natural_cluster_strength"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_natural_cluster_strength/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "白沫聚簇强度"
+
+[node name="Value" type="SpinBox" parent="water/Margin/Rows/Scroll/Fields/visual_natural_cluster_strength/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 1
+step = 0.05
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_natural_cluster_strength"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_natural_contact_gain" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_natural_contact_gain"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/visual_natural_contact_gain"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_natural_contact_gain/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "水沙接触强度"
+
+[node name="Value" type="SpinBox" parent="water/Margin/Rows/Scroll/Fields/visual_natural_contact_gain/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 3
+step = 0.05
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_natural_contact_gain"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_natural_contact_shape_scale_per_m" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_natural_contact_shape_scale_per_m"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/visual_natural_contact_shape_scale_per_m"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_natural_contact_shape_scale_per_m/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "接触纹理密度 /m"
+
+[node name="Value" type="SpinBox" parent="water/Margin/Rows/Scroll/Fields/visual_natural_contact_shape_scale_per_m/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.1
+max_value = 20
+step = 0.1
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_natural_contact_shape_scale_per_m"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_natural_contact_separation_m" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_natural_contact_separation_m"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/visual_natural_contact_separation_m"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_natural_contact_separation_m/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "接触间隙 m"
+
+[node name="Value" type="SpinBox" parent="water/Margin/Rows/Scroll/Fields/visual_natural_contact_separation_m/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 0.01
+step = 0.0005
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_natural_contact_separation_m"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="foam_lifetime_s" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "foam_lifetime_s"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/foam_lifetime_s"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/foam_lifetime_s/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "白沫消散时间 s"
+
+[node name="Value" type="SpinBox" parent="water/Margin/Rows/Scroll/Fields/foam_lifetime_s/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.1
+max_value = 10
+step = 0.1
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/foam_lifetime_s"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="foam_source_gain" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "foam_source_gain"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/foam_source_gain"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/foam_source_gain/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "白沫生成增益"
+
+[node name="Value" type="SpinBox" parent="water/Margin/Rows/Scroll/Fields/foam_source_gain/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 100
+step = 0.1
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/foam_source_gain"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_absorption_0" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_absorption_0"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/visual_absorption_0"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_absorption_0/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "水体 RGB 吸收R"
+
+[node name="Value" type="SpinBox" parent="water/Margin/Rows/Scroll/Fields/visual_absorption_0/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 20
+step = 0.05
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_absorption_0"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_absorption_1" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_absorption_1"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/visual_absorption_1"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_absorption_1/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "水体 RGB 吸收G"
+
+[node name="Value" type="SpinBox" parent="water/Margin/Rows/Scroll/Fields/visual_absorption_1/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 20
+step = 0.05
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_absorption_1"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_absorption_2" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_absorption_2"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/visual_absorption_2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_absorption_2/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "水体 RGB 吸收B"
+
+[node name="Value" type="SpinBox" parent="water/Margin/Rows/Scroll/Fields/visual_absorption_2/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 20
+step = 0.05
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_absorption_2"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_rdc_transmission_tint" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_rdc_transmission_tint"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/visual_rdc_transmission_tint"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_rdc_transmission_tint/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "水体透射色"
+
+[node name="Value" type="ColorPickerButton" parent="water/Margin/Rows/Scroll/Fields/visual_rdc_transmission_tint/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+edit_alpha = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_rdc_transmission_tint"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_rdc_surface_color" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_rdc_surface_color"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/visual_rdc_surface_color"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_rdc_surface_color/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "水面基色"
+
+[node name="Value" type="ColorPickerButton" parent="water/Margin/Rows/Scroll/Fields/visual_rdc_surface_color/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+edit_alpha = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_rdc_surface_color"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_foam_detail_scale_per_m" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_foam_detail_scale_per_m"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/visual_foam_detail_scale_per_m"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_foam_detail_scale_per_m/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "泡沫纹样密度"
+
+[node name="Value" type="SpinBox" parent="water/Margin/Rows/Scroll/Fields/visual_foam_detail_scale_per_m/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.5
+max_value = 12.0
+step = 0.1
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_foam_detail_scale_per_m"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_foam_hole_strength" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_foam_hole_strength"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/visual_foam_hole_strength"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_foam_hole_strength/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "泡沫破碎程度"
+
+[node name="Value" type="SpinBox" parent="water/Margin/Rows/Scroll/Fields/visual_foam_hole_strength/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.0
+max_value = 1.0
+step = 0.05
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_foam_hole_strength"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_foam_flow_cycle_s" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_foam_flow_cycle_s"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/visual_foam_flow_cycle_s"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_foam_flow_cycle_s/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "泡沫流动周期"
+
+[node name="Value" type="SpinBox" parent="water/Margin/Rows/Scroll/Fields/visual_foam_flow_cycle_s/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.5
+max_value = 8.0
+step = 0.5
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_foam_flow_cycle_s"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_shore_splash_enabled" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_shore_splash_enabled"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/visual_shore_splash_enabled"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_shore_splash_enabled/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "冲岸水花显示"
+
+[node name="Value" type="CheckBox" parent="water/Margin/Rows/Scroll/Fields/visual_shore_splash_enabled/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_shore_splash_enabled"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_shore_splash_size" type="VBoxContainer" parent="water/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_shore_splash_size"
+
+[node name="Line" type="HBoxContainer" parent="water/Margin/Rows/Scroll/Fields/visual_shore_splash_size"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_shore_splash_size/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "水花尺寸"
+
+[node name="Value" type="SpinBox" parent="water/Margin/Rows/Scroll/Fields/visual_shore_splash_size/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.5
+max_value = 2.0
+step = 0.1
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="water/Margin/Rows/Scroll/Fields/visual_shore_splash_size"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="sand" type="Window" parent="."]
+title = "沙参数"
+size = Vector2i(780, 660)
+min_size = Vector2i(640, 360)
+visible = false
+force_native = true
+transient = false
+
+[node name="Margin" type="MarginContainer" parent="sand"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = -12.0
+offset_bottom = -12.0
+
+[node name="Rows" type="VBoxContainer" parent="sand/Margin"]
+layout_mode = 2
+
+[node name="Scene" type="Label" parent="sand/Margin/Rows"]
+layout_mode = 2
+text = "等待场景"
+
+[node name="Actions" type="HBoxContainer" parent="sand/Margin/Rows"]
+layout_mode = 2
+
+[node name="Save" type="Button" parent="sand/Margin/Rows/Actions"]
+layout_mode = 2
+text = "保存参数（下次启动沿用）"
+focus_mode = 0
+
+[node name="Load" type="Button" parent="sand/Margin/Rows/Actions"]
+layout_mode = 2
+text = "加载已保存参数"
+focus_mode = 0
+
+[node name="Reset" type="Button" parent="sand/Margin/Rows/Actions"]
+layout_mode = 2
+text = "恢复默认"
+focus_mode = 0
+
+[node name="Message" type="Label" parent="sand/Margin/Rows"]
+layout_mode = 2
+autowrap_mode = 3
+text = "修改仅用于本次运行；需要沿用时请保存。"
+
+[node name="Scroll" type="ScrollContainer" parent="sand/Margin/Rows"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Fields" type="VBoxContainer" parent="sand/Margin/Rows/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="capacity_per_speed_s" type="VBoxContainer" parent="sand/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "capacity_per_speed_s"
+
+[node name="Line" type="HBoxContainer" parent="sand/Margin/Rows/Scroll/Fields/capacity_per_speed_s"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="sand/Margin/Rows/Scroll/Fields/capacity_per_speed_s/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "携沙容量系数"
+
+[node name="Value" type="SpinBox" parent="sand/Margin/Rows/Scroll/Fields/capacity_per_speed_s/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 0.03
+step = 0.0001
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="sand/Margin/Rows/Scroll/Fields/capacity_per_speed_s"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="erosion_rate_per_s" type="VBoxContainer" parent="sand/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "erosion_rate_per_s"
+
+[node name="Line" type="HBoxContainer" parent="sand/Margin/Rows/Scroll/Fields/erosion_rate_per_s"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="sand/Margin/Rows/Scroll/Fields/erosion_rate_per_s/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "侵蚀速率 /s"
+
+[node name="Value" type="SpinBox" parent="sand/Margin/Rows/Scroll/Fields/erosion_rate_per_s/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 3
+step = 0.01
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="sand/Margin/Rows/Scroll/Fields/erosion_rate_per_s"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="deposition_rate_per_s" type="VBoxContainer" parent="sand/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "deposition_rate_per_s"
+
+[node name="Line" type="HBoxContainer" parent="sand/Margin/Rows/Scroll/Fields/deposition_rate_per_s"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="sand/Margin/Rows/Scroll/Fields/deposition_rate_per_s/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "沉积速率 /s"
+
+[node name="Value" type="SpinBox" parent="sand/Margin/Rows/Scroll/Fields/deposition_rate_per_s/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 3
+step = 0.01
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="sand/Margin/Rows/Scroll/Fields/deposition_rate_per_s"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="wet_rate_per_s" type="VBoxContainer" parent="sand/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "wet_rate_per_s"
+
+[node name="Line" type="HBoxContainer" parent="sand/Margin/Rows/Scroll/Fields/wet_rate_per_s"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="sand/Margin/Rows/Scroll/Fields/wet_rate_per_s/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "湿润速率 /s"
+
+[node name="Value" type="SpinBox" parent="sand/Margin/Rows/Scroll/Fields/wet_rate_per_s/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 5
+step = 0.05
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="sand/Margin/Rows/Scroll/Fields/wet_rate_per_s"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="dry_rate_per_s" type="VBoxContainer" parent="sand/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "dry_rate_per_s"
+
+[node name="Line" type="HBoxContainer" parent="sand/Margin/Rows/Scroll/Fields/dry_rate_per_s"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="sand/Margin/Rows/Scroll/Fields/dry_rate_per_s/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "干燥速率 /s"
+
+[node name="Value" type="SpinBox" parent="sand/Margin/Rows/Scroll/Fields/dry_rate_per_s/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 1
+step = 0.01
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="sand/Margin/Rows/Scroll/Fields/dry_rate_per_s"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="diffusion_per_s" type="VBoxContainer" parent="sand/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "diffusion_per_s"
+
+[node name="Line" type="HBoxContainer" parent="sand/Margin/Rows/Scroll/Fields/diffusion_per_s"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="sand/Margin/Rows/Scroll/Fields/diffusion_per_s/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "湿度扩散 /s"
+
+[node name="Value" type="SpinBox" parent="sand/Margin/Rows/Scroll/Fields/diffusion_per_s/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 8
+step = 0.1
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="sand/Margin/Rows/Scroll/Fields/diffusion_per_s"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="residual_wetness" type="VBoxContainer" parent="sand/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "residual_wetness"
+
+[node name="Line" type="HBoxContainer" parent="sand/Margin/Rows/Scroll/Fields/residual_wetness"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="sand/Margin/Rows/Scroll/Fields/residual_wetness/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "残余湿度"
+
+[node name="Value" type="SpinBox" parent="sand/Margin/Rows/Scroll/Fields/residual_wetness/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 1
+step = 0.01
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="sand/Margin/Rows/Scroll/Fields/residual_wetness"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="soak_depth_m" type="VBoxContainer" parent="sand/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "soak_depth_m"
+
+[node name="Line" type="HBoxContainer" parent="sand/Margin/Rows/Scroll/Fields/soak_depth_m"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="sand/Margin/Rows/Scroll/Fields/soak_depth_m/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "饱和水深 m"
+
+[node name="Value" type="SpinBox" parent="sand/Margin/Rows/Scroll/Fields/soak_depth_m/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.001
+max_value = 0.5
+step = 0.001
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="sand/Margin/Rows/Scroll/Fields/soak_depth_m"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="dry_depth_m" type="VBoxContainer" parent="sand/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "dry_depth_m"
+
+[node name="Line" type="HBoxContainer" parent="sand/Margin/Rows/Scroll/Fields/dry_depth_m"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="sand/Margin/Rows/Scroll/Fields/dry_depth_m/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "干湿水深阈值 m"
+
+[node name="Value" type="SpinBox" parent="sand/Margin/Rows/Scroll/Fields/dry_depth_m/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.0001
+max_value = 0.02
+step = 0.0001
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="sand/Margin/Rows/Scroll/Fields/dry_depth_m"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="compact_rate_per_s" type="VBoxContainer" parent="sand/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "compact_rate_per_s"
+
+[node name="Line" type="HBoxContainer" parent="sand/Margin/Rows/Scroll/Fields/compact_rate_per_s"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="sand/Margin/Rows/Scroll/Fields/compact_rate_per_s/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "自然压实速率 /s"
+
+[node name="Value" type="SpinBox" parent="sand/Margin/Rows/Scroll/Fields/compact_rate_per_s/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 1
+step = 0.01
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="sand/Margin/Rows/Scroll/Fields/compact_rate_per_s"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="relax_rate_per_s" type="VBoxContainer" parent="sand/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "relax_rate_per_s"
+
+[node name="Line" type="HBoxContainer" parent="sand/Margin/Rows/Scroll/Fields/relax_rate_per_s"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="sand/Margin/Rows/Scroll/Fields/relax_rate_per_s/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "塌落松弛速率 /s"
+
+[node name="Value" type="SpinBox" parent="sand/Margin/Rows/Scroll/Fields/relax_rate_per_s/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 30
+step = 0.5
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="sand/Margin/Rows/Scroll/Fields/relax_rate_per_s"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="dry_repose_tan" type="VBoxContainer" parent="sand/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "dry_repose_tan"
+
+[node name="Line" type="HBoxContainer" parent="sand/Margin/Rows/Scroll/Fields/dry_repose_tan"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="sand/Margin/Rows/Scroll/Fields/dry_repose_tan/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "干沙安息坡度 tan"
+
+[node name="Value" type="SpinBox" parent="sand/Margin/Rows/Scroll/Fields/dry_repose_tan/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.1
+max_value = 2
+step = 0.01
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="sand/Margin/Rows/Scroll/Fields/dry_repose_tan"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="wet_repose_tan" type="VBoxContainer" parent="sand/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "wet_repose_tan"
+
+[node name="Line" type="HBoxContainer" parent="sand/Margin/Rows/Scroll/Fields/wet_repose_tan"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="sand/Margin/Rows/Scroll/Fields/wet_repose_tan/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "湿沙安息坡度 tan"
+
+[node name="Value" type="SpinBox" parent="sand/Margin/Rows/Scroll/Fields/wet_repose_tan/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.1
+max_value = 2
+step = 0.01
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="sand/Margin/Rows/Scroll/Fields/wet_repose_tan"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="compaction_repose_gain" type="VBoxContainer" parent="sand/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "compaction_repose_gain"
+
+[node name="Line" type="HBoxContainer" parent="sand/Margin/Rows/Scroll/Fields/compaction_repose_gain"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="sand/Margin/Rows/Scroll/Fields/compaction_repose_gain/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "压实坡度增益"
+
+[node name="Value" type="SpinBox" parent="sand/Margin/Rows/Scroll/Fields/compaction_repose_gain/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 1
+step = 0.01
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="sand/Margin/Rows/Scroll/Fields/compaction_repose_gain"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="min_drop_m" type="VBoxContainer" parent="sand/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "min_drop_m"
+
+[node name="Line" type="HBoxContainer" parent="sand/Margin/Rows/Scroll/Fields/min_drop_m"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="sand/Margin/Rows/Scroll/Fields/min_drop_m/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "塌落最小落差 m"
+
+[node name="Value" type="SpinBox" parent="sand/Margin/Rows/Scroll/Fields/min_drop_m/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.0001
+max_value = 0.01
+step = 0.0001
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="sand/Margin/Rows/Scroll/Fields/min_drop_m"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="surface_wetness_hold_time_s" type="VBoxContainer" parent="sand/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "surface_wetness_hold_time_s"
+
+[node name="Line" type="HBoxContainer" parent="sand/Margin/Rows/Scroll/Fields/surface_wetness_hold_time_s"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="sand/Margin/Rows/Scroll/Fields/surface_wetness_hold_time_s/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "湿色保持时间（模拟秒）"
+
+[node name="Value" type="SpinBox" parent="sand/Margin/Rows/Scroll/Fields/surface_wetness_hold_time_s/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 300
+step = 0.1
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="sand/Margin/Rows/Scroll/Fields/surface_wetness_hold_time_s"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="surface_wetness_fade_time_s" type="VBoxContainer" parent="sand/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "surface_wetness_fade_time_s"
+
+[node name="Line" type="HBoxContainer" parent="sand/Margin/Rows/Scroll/Fields/surface_wetness_fade_time_s"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="sand/Margin/Rows/Scroll/Fields/surface_wetness_fade_time_s/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "湿色褪色时间（模拟秒）"
+
+[node name="Value" type="SpinBox" parent="sand/Margin/Rows/Scroll/Fields/surface_wetness_fade_time_s/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.1
+max_value = 300
+step = 0.1
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="sand/Margin/Rows/Scroll/Fields/surface_wetness_fade_time_s"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="ordinary_cohesion_yield_height_m" type="VBoxContainer" parent="sand/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "ordinary_cohesion_yield_height_m"
+
+[node name="Line" type="HBoxContainer" parent="sand/Margin/Rows/Scroll/Fields/ordinary_cohesion_yield_height_m"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="sand/Margin/Rows/Scroll/Fields/ordinary_cohesion_yield_height_m/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "普通沙内聚高度 m"
+
+[node name="Value" type="SpinBox" parent="sand/Margin/Rows/Scroll/Fields/ordinary_cohesion_yield_height_m/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 2
+step = 0.05
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="sand/Margin/Rows/Scroll/Fields/ordinary_cohesion_yield_height_m"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="enable_erosion" type="VBoxContainer" parent="sand/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "enable_erosion"
+
+[node name="Line" type="HBoxContainer" parent="sand/Margin/Rows/Scroll/Fields/enable_erosion"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="sand/Margin/Rows/Scroll/Fields/enable_erosion/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "水沙侵蚀与材料演化"
+
+[node name="Value" type="CheckBox" parent="sand/Margin/Rows/Scroll/Fields/enable_erosion/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Status" type="Label" parent="sand/Margin/Rows/Scroll/Fields/enable_erosion"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="enable_brush_water" type="VBoxContainer" parent="sand/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "enable_brush_water"
+
+[node name="Line" type="HBoxContainer" parent="sand/Margin/Rows/Scroll/Fields/enable_brush_water"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="sand/Margin/Rows/Scroll/Fields/enable_brush_water/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "编辑水响应能力"
+
+[node name="Value" type="CheckBox" parent="sand/Margin/Rows/Scroll/Fields/enable_brush_water/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Status" type="Label" parent="sand/Margin/Rows/Scroll/Fields/enable_brush_water"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_natural_caustic_strength" type="VBoxContainer" parent="sand/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_natural_caustic_strength"
+
+[node name="Line" type="HBoxContainer" parent="sand/Margin/Rows/Scroll/Fields/visual_natural_caustic_strength"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="sand/Margin/Rows/Scroll/Fields/visual_natural_caustic_strength/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "沙底亮纹强度"
+
+[node name="Value" type="SpinBox" parent="sand/Margin/Rows/Scroll/Fields/visual_natural_caustic_strength/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 2
+step = 0.05
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="sand/Margin/Rows/Scroll/Fields/visual_natural_caustic_strength"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_natural_caustic_softness" type="VBoxContainer" parent="sand/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_natural_caustic_softness"
+
+[node name="Line" type="HBoxContainer" parent="sand/Margin/Rows/Scroll/Fields/visual_natural_caustic_softness"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="sand/Margin/Rows/Scroll/Fields/visual_natural_caustic_softness/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "亮纹柔和度"
+
+[node name="Value" type="SpinBox" parent="sand/Margin/Rows/Scroll/Fields/visual_natural_caustic_softness/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 1
+step = 0.05
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="sand/Margin/Rows/Scroll/Fields/visual_natural_caustic_softness"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_natural_caustic_uv_scale" type="VBoxContainer" parent="sand/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_natural_caustic_uv_scale"
+
+[node name="Line" type="HBoxContainer" parent="sand/Margin/Rows/Scroll/Fields/visual_natural_caustic_uv_scale"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="sand/Margin/Rows/Scroll/Fields/visual_natural_caustic_uv_scale/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "亮纹尺度"
+
+[node name="Value" type="SpinBox" parent="sand/Margin/Rows/Scroll/Fields/visual_natural_caustic_uv_scale/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.25
+max_value = 4
+step = 0.05
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="sand/Margin/Rows/Scroll/Fields/visual_natural_caustic_uv_scale"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_rdc_caustic_scale" type="VBoxContainer" parent="sand/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_rdc_caustic_scale"
+
+[node name="Line" type="HBoxContainer" parent="sand/Margin/Rows/Scroll/Fields/visual_rdc_caustic_scale"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="sand/Margin/Rows/Scroll/Fields/visual_rdc_caustic_scale/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "当前亮纹纹理密度 /m"
+
+[node name="Value" type="SpinBox" parent="sand/Margin/Rows/Scroll/Fields/visual_rdc_caustic_scale/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.01
+max_value = 4
+step = 0.01
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="sand/Margin/Rows/Scroll/Fields/visual_rdc_caustic_scale"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_rdc_caustic_depth_decay" type="VBoxContainer" parent="sand/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_rdc_caustic_depth_decay"
+
+[node name="Line" type="HBoxContainer" parent="sand/Margin/Rows/Scroll/Fields/visual_rdc_caustic_depth_decay"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="sand/Margin/Rows/Scroll/Fields/visual_rdc_caustic_depth_decay/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "亮纹深度衰减"
+
+[node name="Value" type="SpinBox" parent="sand/Margin/Rows/Scroll/Fields/visual_rdc_caustic_depth_decay/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 5
+step = 0.05
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="sand/Margin/Rows/Scroll/Fields/visual_rdc_caustic_depth_decay"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_rdc_caustic_time_scale" type="VBoxContainer" parent="sand/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_rdc_caustic_time_scale"
+
+[node name="Line" type="HBoxContainer" parent="sand/Margin/Rows/Scroll/Fields/visual_rdc_caustic_time_scale"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="sand/Margin/Rows/Scroll/Fields/visual_rdc_caustic_time_scale/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "亮纹运动倍率"
+
+[node name="Value" type="SpinBox" parent="sand/Margin/Rows/Scroll/Fields/visual_rdc_caustic_time_scale/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 4
+step = 0.05
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="sand/Margin/Rows/Scroll/Fields/visual_rdc_caustic_time_scale"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_sand_dry_color" type="VBoxContainer" parent="sand/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_sand_dry_color"
+
+[node name="Line" type="HBoxContainer" parent="sand/Margin/Rows/Scroll/Fields/visual_sand_dry_color"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="sand/Margin/Rows/Scroll/Fields/visual_sand_dry_color/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "干沙色"
+
+[node name="Value" type="ColorPickerButton" parent="sand/Margin/Rows/Scroll/Fields/visual_sand_dry_color/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+edit_alpha = false
+
+[node name="Status" type="Label" parent="sand/Margin/Rows/Scroll/Fields/visual_sand_dry_color"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_sand_wet_color" type="VBoxContainer" parent="sand/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_sand_wet_color"
+
+[node name="Line" type="HBoxContainer" parent="sand/Margin/Rows/Scroll/Fields/visual_sand_wet_color"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="sand/Margin/Rows/Scroll/Fields/visual_sand_wet_color/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "湿沙色"
+
+[node name="Value" type="ColorPickerButton" parent="sand/Margin/Rows/Scroll/Fields/visual_sand_wet_color/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+edit_alpha = false
+
+[node name="Status" type="Label" parent="sand/Margin/Rows/Scroll/Fields/visual_sand_wet_color"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_sand_grain_scale" type="VBoxContainer" parent="sand/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_sand_grain_scale"
+
+[node name="Line" type="HBoxContainer" parent="sand/Margin/Rows/Scroll/Fields/visual_sand_grain_scale"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="sand/Margin/Rows/Scroll/Fields/visual_sand_grain_scale/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "沙粒密度 /m"
+
+[node name="Value" type="SpinBox" parent="sand/Margin/Rows/Scroll/Fields/visual_sand_grain_scale/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 1
+max_value = 100
+step = 1
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="sand/Margin/Rows/Scroll/Fields/visual_sand_grain_scale"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_sand_grain_gain" type="VBoxContainer" parent="sand/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_sand_grain_gain"
+
+[node name="Line" type="HBoxContainer" parent="sand/Margin/Rows/Scroll/Fields/visual_sand_grain_gain"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="sand/Margin/Rows/Scroll/Fields/visual_sand_grain_gain/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "沙粒颜色起伏"
+
+[node name="Value" type="SpinBox" parent="sand/Margin/Rows/Scroll/Fields/visual_sand_grain_gain/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 0.5
+step = 0.01
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="sand/Margin/Rows/Scroll/Fields/visual_sand_grain_gain"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_sand_grain_normal" type="VBoxContainer" parent="sand/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_sand_grain_normal"
+
+[node name="Line" type="HBoxContainer" parent="sand/Margin/Rows/Scroll/Fields/visual_sand_grain_normal"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="sand/Margin/Rows/Scroll/Fields/visual_sand_grain_normal/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "沙粒法线强度"
+
+[node name="Value" type="SpinBox" parent="sand/Margin/Rows/Scroll/Fields/visual_sand_grain_normal/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 1
+step = 0.01
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="sand/Margin/Rows/Scroll/Fields/visual_sand_grain_normal"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_sand_dry_roughness" type="VBoxContainer" parent="sand/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_sand_dry_roughness"
+
+[node name="Line" type="HBoxContainer" parent="sand/Margin/Rows/Scroll/Fields/visual_sand_dry_roughness"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="sand/Margin/Rows/Scroll/Fields/visual_sand_dry_roughness/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "干沙粗糙度"
+
+[node name="Value" type="SpinBox" parent="sand/Margin/Rows/Scroll/Fields/visual_sand_dry_roughness/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 1
+step = 0.01
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="sand/Margin/Rows/Scroll/Fields/visual_sand_dry_roughness"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_sand_wet_roughness" type="VBoxContainer" parent="sand/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_sand_wet_roughness"
+
+[node name="Line" type="HBoxContainer" parent="sand/Margin/Rows/Scroll/Fields/visual_sand_wet_roughness"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="sand/Margin/Rows/Scroll/Fields/visual_sand_wet_roughness/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "湿沙粗糙度"
+
+[node name="Value" type="SpinBox" parent="sand/Margin/Rows/Scroll/Fields/visual_sand_wet_roughness/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 1
+step = 0.01
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="sand/Margin/Rows/Scroll/Fields/visual_sand_wet_roughness"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_sand_dry_specular" type="VBoxContainer" parent="sand/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_sand_dry_specular"
+
+[node name="Line" type="HBoxContainer" parent="sand/Margin/Rows/Scroll/Fields/visual_sand_dry_specular"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="sand/Margin/Rows/Scroll/Fields/visual_sand_dry_specular/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "干沙高光"
+
+[node name="Value" type="SpinBox" parent="sand/Margin/Rows/Scroll/Fields/visual_sand_dry_specular/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 1
+step = 0.01
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="sand/Margin/Rows/Scroll/Fields/visual_sand_dry_specular"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_sand_wet_specular" type="VBoxContainer" parent="sand/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_sand_wet_specular"
+
+[node name="Line" type="HBoxContainer" parent="sand/Margin/Rows/Scroll/Fields/visual_sand_wet_specular"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="sand/Margin/Rows/Scroll/Fields/visual_sand_wet_specular/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "湿沙高光"
+
+[node name="Value" type="SpinBox" parent="sand/Margin/Rows/Scroll/Fields/visual_sand_wet_specular/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 1
+step = 0.01
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="sand/Margin/Rows/Scroll/Fields/visual_sand_wet_specular"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_use_grain" type="VBoxContainer" parent="sand/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_use_grain"
+
+[node name="Line" type="HBoxContainer" parent="sand/Margin/Rows/Scroll/Fields/visual_use_grain"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="sand/Margin/Rows/Scroll/Fields/visual_use_grain/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "沙粒细节"
+
+[node name="Value" type="CheckBox" parent="sand/Margin/Rows/Scroll/Fields/visual_use_grain/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Status" type="Label" parent="sand/Margin/Rows/Scroll/Fields/visual_use_grain"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_use_grain_normal" type="VBoxContainer" parent="sand/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_use_grain_normal"
+
+[node name="Line" type="HBoxContainer" parent="sand/Margin/Rows/Scroll/Fields/visual_use_grain_normal"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="sand/Margin/Rows/Scroll/Fields/visual_use_grain_normal/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "沙粒法线"
+
+[node name="Value" type="CheckBox" parent="sand/Margin/Rows/Scroll/Fields/visual_use_grain_normal/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Status" type="Label" parent="sand/Margin/Rows/Scroll/Fields/visual_use_grain_normal"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_use_wet_finish" type="VBoxContainer" parent="sand/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_use_wet_finish"
+
+[node name="Line" type="HBoxContainer" parent="sand/Margin/Rows/Scroll/Fields/visual_use_wet_finish"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="sand/Margin/Rows/Scroll/Fields/visual_use_wet_finish/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "湿沙表面"
+
+[node name="Value" type="CheckBox" parent="sand/Margin/Rows/Scroll/Fields/visual_use_wet_finish/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Status" type="Label" parent="sand/Margin/Rows/Scroll/Fields/visual_use_wet_finish"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="visual_use_compaction_tint" type="VBoxContainer" parent="sand/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "visual_use_compaction_tint"
+
+[node name="Line" type="HBoxContainer" parent="sand/Margin/Rows/Scroll/Fields/visual_use_compaction_tint"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="sand/Margin/Rows/Scroll/Fields/visual_use_compaction_tint/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "压实色差"
+
+[node name="Value" type="CheckBox" parent="sand/Margin/Rows/Scroll/Fields/visual_use_compaction_tint/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Status" type="Label" parent="sand/Margin/Rows/Scroll/Fields/visual_use_compaction_tint"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="props" type="Window" parent="."]
+title = "道具参数"
+size = Vector2i(780, 660)
+min_size = Vector2i(640, 360)
+visible = false
+force_native = true
+transient = false
+
+[node name="Margin" type="MarginContainer" parent="props"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = -12.0
+offset_bottom = -12.0
+
+[node name="Rows" type="VBoxContainer" parent="props/Margin"]
+layout_mode = 2
+
+[node name="Scene" type="Label" parent="props/Margin/Rows"]
+layout_mode = 2
+text = "等待场景"
+
+[node name="Actions" type="HBoxContainer" parent="props/Margin/Rows"]
+layout_mode = 2
+
+[node name="Save" type="Button" parent="props/Margin/Rows/Actions"]
+layout_mode = 2
+text = "保存参数（下次启动沿用）"
+focus_mode = 0
+
+[node name="Load" type="Button" parent="props/Margin/Rows/Actions"]
+layout_mode = 2
+text = "加载已保存参数"
+focus_mode = 0
+
+[node name="Reset" type="Button" parent="props/Margin/Rows/Actions"]
+layout_mode = 2
+text = "恢复默认"
+focus_mode = 0
+
+[node name="Message" type="Label" parent="props/Margin/Rows"]
+layout_mode = 2
+autowrap_mode = 3
+text = "修改仅用于本次运行；需要沿用时请保存。"
+
+[node name="Scroll" type="ScrollContainer" parent="props/Margin/Rows"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Fields" type="VBoxContainer" parent="props/Margin/Rows/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="gravel_count" type="VBoxContainer" parent="props/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "gravel_count"
+
+[node name="Line" type="HBoxContainer" parent="props/Margin/Rows/Scroll/Fields/gravel_count"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="props/Margin/Rows/Scroll/Fields/gravel_count/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "单次碎石数量"
+
+[node name="Value" type="SpinBox" parent="props/Margin/Rows/Scroll/Fields/gravel_count/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 1
+max_value = 128
+step = 1
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="props/Margin/Rows/Scroll/Fields/gravel_count"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="bottle_mass_kg" type="VBoxContainer" parent="props/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "bottle_mass_kg"
+
+[node name="Line" type="HBoxContainer" parent="props/Margin/Rows/Scroll/Fields/bottle_mass_kg"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="props/Margin/Rows/Scroll/Fields/bottle_mass_kg/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "水瓶质量 kg"
+
+[node name="Value" type="SpinBox" parent="props/Margin/Rows/Scroll/Fields/bottle_mass_kg/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.01
+max_value = 100
+step = 0.01
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="props/Margin/Rows/Scroll/Fields/bottle_mass_kg"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="bottle_friction" type="VBoxContainer" parent="props/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "bottle_friction"
+
+[node name="Line" type="HBoxContainer" parent="props/Margin/Rows/Scroll/Fields/bottle_friction"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="props/Margin/Rows/Scroll/Fields/bottle_friction/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "水瓶摩擦"
+
+[node name="Value" type="SpinBox" parent="props/Margin/Rows/Scroll/Fields/bottle_friction/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 1
+step = 0.05
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="props/Margin/Rows/Scroll/Fields/bottle_friction"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="bottle_angular_damping" type="VBoxContainer" parent="props/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "bottle_angular_damping"
+
+[node name="Line" type="HBoxContainer" parent="props/Margin/Rows/Scroll/Fields/bottle_angular_damping"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="props/Margin/Rows/Scroll/Fields/bottle_angular_damping/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "水瓶角阻尼"
+
+[node name="Value" type="SpinBox" parent="props/Margin/Rows/Scroll/Fields/bottle_angular_damping/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 5
+step = 0.05
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="props/Margin/Rows/Scroll/Fields/bottle_angular_damping"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="bottle_drag_time_horizontal_s" type="VBoxContainer" parent="props/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "bottle_drag_time_horizontal_s"
+
+[node name="Line" type="HBoxContainer" parent="props/Margin/Rows/Scroll/Fields/bottle_drag_time_horizontal_s"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="props/Margin/Rows/Scroll/Fields/bottle_drag_time_horizontal_s/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "水瓶水平随流时间 s"
+
+[node name="Value" type="SpinBox" parent="props/Margin/Rows/Scroll/Fields/bottle_drag_time_horizontal_s/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.001
+max_value = 5
+step = 0.01
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="props/Margin/Rows/Scroll/Fields/bottle_drag_time_horizontal_s"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="bottle_drag_time_vertical_s" type="VBoxContainer" parent="props/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "bottle_drag_time_vertical_s"
+
+[node name="Line" type="HBoxContainer" parent="props/Margin/Rows/Scroll/Fields/bottle_drag_time_vertical_s"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="props/Margin/Rows/Scroll/Fields/bottle_drag_time_vertical_s/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "水瓶垂直阻力时间 s"
+
+[node name="Value" type="SpinBox" parent="props/Margin/Rows/Scroll/Fields/bottle_drag_time_vertical_s/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.001
+max_value = 5
+step = 0.01
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="props/Margin/Rows/Scroll/Fields/bottle_drag_time_vertical_s"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="wood_plank_mass_kg" type="VBoxContainer" parent="props/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "wood_plank_mass_kg"
+
+[node name="Line" type="HBoxContainer" parent="props/Margin/Rows/Scroll/Fields/wood_plank_mass_kg"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="props/Margin/Rows/Scroll/Fields/wood_plank_mass_kg/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "木板质量 kg"
+
+[node name="Value" type="SpinBox" parent="props/Margin/Rows/Scroll/Fields/wood_plank_mass_kg/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.01
+max_value = 100
+step = 0.01
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="props/Margin/Rows/Scroll/Fields/wood_plank_mass_kg"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="wood_plank_friction" type="VBoxContainer" parent="props/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "wood_plank_friction"
+
+[node name="Line" type="HBoxContainer" parent="props/Margin/Rows/Scroll/Fields/wood_plank_friction"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="props/Margin/Rows/Scroll/Fields/wood_plank_friction/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "木板摩擦"
+
+[node name="Value" type="SpinBox" parent="props/Margin/Rows/Scroll/Fields/wood_plank_friction/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 1
+step = 0.05
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="props/Margin/Rows/Scroll/Fields/wood_plank_friction"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="wood_plank_angular_damping" type="VBoxContainer" parent="props/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "wood_plank_angular_damping"
+
+[node name="Line" type="HBoxContainer" parent="props/Margin/Rows/Scroll/Fields/wood_plank_angular_damping"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="props/Margin/Rows/Scroll/Fields/wood_plank_angular_damping/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "木板角阻尼"
+
+[node name="Value" type="SpinBox" parent="props/Margin/Rows/Scroll/Fields/wood_plank_angular_damping/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 5
+step = 0.05
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="props/Margin/Rows/Scroll/Fields/wood_plank_angular_damping"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="wood_plank_drag_time_horizontal_s" type="VBoxContainer" parent="props/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "wood_plank_drag_time_horizontal_s"
+
+[node name="Line" type="HBoxContainer" parent="props/Margin/Rows/Scroll/Fields/wood_plank_drag_time_horizontal_s"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="props/Margin/Rows/Scroll/Fields/wood_plank_drag_time_horizontal_s/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "木板水平随流时间 s"
+
+[node name="Value" type="SpinBox" parent="props/Margin/Rows/Scroll/Fields/wood_plank_drag_time_horizontal_s/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.001
+max_value = 5
+step = 0.01
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="props/Margin/Rows/Scroll/Fields/wood_plank_drag_time_horizontal_s"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="wood_plank_drag_time_vertical_s" type="VBoxContainer" parent="props/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "wood_plank_drag_time_vertical_s"
+
+[node name="Line" type="HBoxContainer" parent="props/Margin/Rows/Scroll/Fields/wood_plank_drag_time_vertical_s"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="props/Margin/Rows/Scroll/Fields/wood_plank_drag_time_vertical_s/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "木板垂直阻力时间 s"
+
+[node name="Value" type="SpinBox" parent="props/Margin/Rows/Scroll/Fields/wood_plank_drag_time_vertical_s/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.001
+max_value = 5
+step = 0.01
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="props/Margin/Rows/Scroll/Fields/wood_plank_drag_time_vertical_s"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="wood_stick_mass_kg" type="VBoxContainer" parent="props/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "wood_stick_mass_kg"
+
+[node name="Line" type="HBoxContainer" parent="props/Margin/Rows/Scroll/Fields/wood_stick_mass_kg"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="props/Margin/Rows/Scroll/Fields/wood_stick_mass_kg/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "木棍质量 kg"
+
+[node name="Value" type="SpinBox" parent="props/Margin/Rows/Scroll/Fields/wood_stick_mass_kg/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.01
+max_value = 100
+step = 0.01
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="props/Margin/Rows/Scroll/Fields/wood_stick_mass_kg"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="wood_stick_friction" type="VBoxContainer" parent="props/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "wood_stick_friction"
+
+[node name="Line" type="HBoxContainer" parent="props/Margin/Rows/Scroll/Fields/wood_stick_friction"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="props/Margin/Rows/Scroll/Fields/wood_stick_friction/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "木棍摩擦"
+
+[node name="Value" type="SpinBox" parent="props/Margin/Rows/Scroll/Fields/wood_stick_friction/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 1
+step = 0.05
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="props/Margin/Rows/Scroll/Fields/wood_stick_friction"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="wood_stick_angular_damping" type="VBoxContainer" parent="props/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "wood_stick_angular_damping"
+
+[node name="Line" type="HBoxContainer" parent="props/Margin/Rows/Scroll/Fields/wood_stick_angular_damping"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="props/Margin/Rows/Scroll/Fields/wood_stick_angular_damping/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "木棍角阻尼"
+
+[node name="Value" type="SpinBox" parent="props/Margin/Rows/Scroll/Fields/wood_stick_angular_damping/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 5
+step = 0.05
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="props/Margin/Rows/Scroll/Fields/wood_stick_angular_damping"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="wood_stick_drag_time_horizontal_s" type="VBoxContainer" parent="props/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "wood_stick_drag_time_horizontal_s"
+
+[node name="Line" type="HBoxContainer" parent="props/Margin/Rows/Scroll/Fields/wood_stick_drag_time_horizontal_s"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="props/Margin/Rows/Scroll/Fields/wood_stick_drag_time_horizontal_s/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "木棍水平随流时间 s"
+
+[node name="Value" type="SpinBox" parent="props/Margin/Rows/Scroll/Fields/wood_stick_drag_time_horizontal_s/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.001
+max_value = 5
+step = 0.01
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="props/Margin/Rows/Scroll/Fields/wood_stick_drag_time_horizontal_s"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="wood_stick_drag_time_vertical_s" type="VBoxContainer" parent="props/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "wood_stick_drag_time_vertical_s"
+
+[node name="Line" type="HBoxContainer" parent="props/Margin/Rows/Scroll/Fields/wood_stick_drag_time_vertical_s"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="props/Margin/Rows/Scroll/Fields/wood_stick_drag_time_vertical_s/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "木棍垂直阻力时间 s"
+
+[node name="Value" type="SpinBox" parent="props/Margin/Rows/Scroll/Fields/wood_stick_drag_time_vertical_s/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.001
+max_value = 5
+step = 0.01
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="props/Margin/Rows/Scroll/Fields/wood_stick_drag_time_vertical_s"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="environment" type="Window" parent="."]
+title = "环境与显示"
+size = Vector2i(780, 660)
+min_size = Vector2i(640, 360)
+visible = false
+force_native = true
+transient = false
+
+[node name="Margin" type="MarginContainer" parent="environment"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = -12.0
+offset_bottom = -12.0
+
+[node name="Rows" type="VBoxContainer" parent="environment/Margin"]
+layout_mode = 2
+
+[node name="Scene" type="Label" parent="environment/Margin/Rows"]
+layout_mode = 2
+text = "等待场景"
+
+[node name="Actions" type="HBoxContainer" parent="environment/Margin/Rows"]
+layout_mode = 2
+
+[node name="Save" type="Button" parent="environment/Margin/Rows/Actions"]
+layout_mode = 2
+text = "保存参数（下次启动沿用）"
+focus_mode = 0
+
+[node name="Load" type="Button" parent="environment/Margin/Rows/Actions"]
+layout_mode = 2
+text = "加载已保存参数"
+focus_mode = 0
+
+[node name="Reset" type="Button" parent="environment/Margin/Rows/Actions"]
+layout_mode = 2
+text = "恢复默认"
+focus_mode = 0
+
+[node name="Message" type="Label" parent="environment/Margin/Rows"]
+layout_mode = 2
+autowrap_mode = 3
+text = "修改仅用于本次运行；需要沿用时请保存。"
+
+[node name="Scroll" type="ScrollContainer" parent="environment/Margin/Rows"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Fields" type="VBoxContainer" parent="environment/Margin/Rows/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="camera_move_speed_m_s" type="VBoxContainer" parent="environment/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "camera_move_speed_m_s"
+
+[node name="Line" type="HBoxContainer" parent="environment/Margin/Rows/Scroll/Fields/camera_move_speed_m_s"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="environment/Margin/Rows/Scroll/Fields/camera_move_speed_m_s/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "相机移动 m/s"
+
+[node name="Value" type="SpinBox" parent="environment/Margin/Rows/Scroll/Fields/camera_move_speed_m_s/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.1
+max_value = 30
+step = 0.1
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="environment/Margin/Rows/Scroll/Fields/camera_move_speed_m_s"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="camera_fast_multiplier" type="VBoxContainer" parent="environment/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "camera_fast_multiplier"
+
+[node name="Line" type="HBoxContainer" parent="environment/Margin/Rows/Scroll/Fields/camera_fast_multiplier"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="environment/Margin/Rows/Scroll/Fields/camera_fast_multiplier/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "相机加速倍率"
+
+[node name="Value" type="SpinBox" parent="environment/Margin/Rows/Scroll/Fields/camera_fast_multiplier/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 1
+max_value = 10
+step = 0.1
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="environment/Margin/Rows/Scroll/Fields/camera_fast_multiplier"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="camera_mouse_sensitivity" type="VBoxContainer" parent="environment/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "camera_mouse_sensitivity"
+
+[node name="Line" type="HBoxContainer" parent="environment/Margin/Rows/Scroll/Fields/camera_mouse_sensitivity"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="environment/Margin/Rows/Scroll/Fields/camera_mouse_sensitivity/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "转向灵敏度"
+
+[node name="Value" type="SpinBox" parent="environment/Margin/Rows/Scroll/Fields/camera_mouse_sensitivity/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.0005
+max_value = 0.02
+step = 0.0005
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="environment/Margin/Rows/Scroll/Fields/camera_mouse_sensitivity"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="camera_fov" type="VBoxContainer" parent="environment/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "camera_fov"
+
+[node name="Line" type="HBoxContainer" parent="environment/Margin/Rows/Scroll/Fields/camera_fov"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="environment/Margin/Rows/Scroll/Fields/camera_fov/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "视场角 °"
+
+[node name="Value" type="SpinBox" parent="environment/Margin/Rows/Scroll/Fields/camera_fov/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 30
+max_value = 110
+step = 1
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="environment/Margin/Rows/Scroll/Fields/camera_fov"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="sun_energy" type="VBoxContainer" parent="environment/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "sun_energy"
+
+[node name="Line" type="HBoxContainer" parent="environment/Margin/Rows/Scroll/Fields/sun_energy"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="environment/Margin/Rows/Scroll/Fields/sun_energy/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "太阳能量"
+
+[node name="Value" type="SpinBox" parent="environment/Margin/Rows/Scroll/Fields/sun_energy/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 4
+step = 0.05
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="environment/Margin/Rows/Scroll/Fields/sun_energy"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="sun_color" type="VBoxContainer" parent="environment/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "sun_color"
+
+[node name="Line" type="HBoxContainer" parent="environment/Margin/Rows/Scroll/Fields/sun_color"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="environment/Margin/Rows/Scroll/Fields/sun_color/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "太阳颜色"
+
+[node name="Value" type="ColorPickerButton" parent="environment/Margin/Rows/Scroll/Fields/sun_color/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+edit_alpha = false
+
+[node name="Status" type="Label" parent="environment/Margin/Rows/Scroll/Fields/sun_color"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="ambient_energy" type="VBoxContainer" parent="environment/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "ambient_energy"
+
+[node name="Line" type="HBoxContainer" parent="environment/Margin/Rows/Scroll/Fields/ambient_energy"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="environment/Margin/Rows/Scroll/Fields/ambient_energy/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "环境光能量"
+
+[node name="Value" type="SpinBox" parent="environment/Margin/Rows/Scroll/Fields/ambient_energy/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0
+max_value = 2
+step = 0.05
+allow_greater = false
+allow_lesser = false
+
+[node name="Status" type="Label" parent="environment/Margin/Rows/Scroll/Fields/ambient_energy"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="ambient_color" type="VBoxContainer" parent="environment/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "ambient_color"
+
+[node name="Line" type="HBoxContainer" parent="environment/Margin/Rows/Scroll/Fields/ambient_color"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="environment/Margin/Rows/Scroll/Fields/ambient_color/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "环境光颜色"
+
+[node name="Value" type="ColorPickerButton" parent="environment/Margin/Rows/Scroll/Fields/ambient_color/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+edit_alpha = false
+
+[node name="Status" type="Label" parent="environment/Margin/Rows/Scroll/Fields/ambient_color"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="diagnostics" type="Window" parent="."]
+title = "性能与诊断"
+size = Vector2i(780, 660)
+min_size = Vector2i(640, 360)
+visible = false
+force_native = true
+transient = false
+
+[node name="Margin" type="MarginContainer" parent="diagnostics"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = -12.0
+offset_bottom = -12.0
+
+[node name="Rows" type="VBoxContainer" parent="diagnostics/Margin"]
+layout_mode = 2
+
+[node name="Scene" type="Label" parent="diagnostics/Margin/Rows"]
+layout_mode = 2
+text = "等待场景"
+
+[node name="Actions" type="HBoxContainer" parent="diagnostics/Margin/Rows"]
+layout_mode = 2
+
+[node name="Save" type="Button" parent="diagnostics/Margin/Rows/Actions"]
+layout_mode = 2
+text = "保存参数（下次启动沿用）"
+focus_mode = 0
+
+[node name="Load" type="Button" parent="diagnostics/Margin/Rows/Actions"]
+layout_mode = 2
+text = "加载已保存参数"
+focus_mode = 0
+
+[node name="Reset" type="Button" parent="diagnostics/Margin/Rows/Actions"]
+layout_mode = 2
+text = "恢复默认"
+focus_mode = 0
+
+[node name="Message" type="Label" parent="diagnostics/Margin/Rows"]
+layout_mode = 2
+autowrap_mode = 3
+text = "修改仅用于本次运行；需要沿用时请保存。"
+
+[node name="Scroll" type="ScrollContainer" parent="diagnostics/Margin/Rows"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Fields" type="VBoxContainer" parent="diagnostics/Margin/Rows/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="sand_debug" type="VBoxContainer" parent="diagnostics/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "sand_debug"
+
+[node name="Line" type="HBoxContainer" parent="diagnostics/Margin/Rows/Scroll/Fields/sand_debug"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="diagnostics/Margin/Rows/Scroll/Fields/sand_debug/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "沙字段显示"
+
+[node name="Value" type="OptionButton" parent="diagnostics/Margin/Rows/Scroll/Fields/sand_debug/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+item_count = 6
+popup/item_0/text = "正常"
+popup/item_0/id = 0
+popup/item_1/text = "诊断 1"
+popup/item_1/id = 1
+popup/item_2/text = "诊断 2"
+popup/item_2/id = 2
+popup/item_3/text = "诊断 3"
+popup/item_3/id = 3
+popup/item_4/text = "诊断 4"
+popup/item_4/id = 4
+popup/item_5/text = "压实"
+popup/item_5/id = 5
+
+[node name="Status" type="Label" parent="diagnostics/Margin/Rows/Scroll/Fields/sand_debug"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="sampling" type="VBoxContainer" parent="diagnostics/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+script = ExtResource("2")
+parameter_id = "sampling"
+
+[node name="Line" type="HBoxContainer" parent="diagnostics/Margin/Rows/Scroll/Fields/sampling"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="diagnostics/Margin/Rows/Scroll/Fields/sampling/Line"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+text = "采集进程帧统计"
+
+[node name="Value" type="CheckBox" parent="diagnostics/Margin/Rows/Scroll/Fields/sampling/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Status" type="Label" parent="diagnostics/Margin/Rows/Scroll/Fields/sampling"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+
+[node name="Statistics" type="Label" parent="diagnostics/Margin/Rows/Scroll/Fields"]
+layout_mode = 2
+autowrap_mode = 3
+text = "等待统计"
+
+[connection signal="changed" from="." to="." method="_refresh_headers"]
+
+[connection signal="close_requested" from="tools" to="." method="_close_group" binds=["tools"]]
+
+[connection signal="size_changed" from="tools" to="." method="_layout_changed"]
+
+[connection signal="pressed" from="tools/Margin/Rows/Actions/Save" to="." method="save_parameters"]
+
+[connection signal="pressed" from="tools/Margin/Rows/Actions/Load" to="." method="load_parameters"]
+
+[connection signal="pressed" from="tools/Margin/Rows/Actions/Reset" to="." method="reset_defaults" binds=["tools"]]
+
+[connection signal="value_changed" from="tools/Margin/Rows/Scroll/Fields/dig_amount_m3/Line/Value" to="tools/Margin/Rows/Scroll/Fields/dig_amount_m3" method="_changed"]
+
+[connection signal="value_changed" from="tools/Margin/Rows/Scroll/Fields/fill_amount_m3/Line/Value" to="tools/Margin/Rows/Scroll/Fields/fill_amount_m3" method="_changed"]
+
+[connection signal="value_changed" from="tools/Margin/Rows/Scroll/Fields/radius_m/Line/Value" to="tools/Margin/Rows/Scroll/Fields/radius_m" method="_changed"]
+
+[connection signal="value_changed" from="tools/Margin/Rows/Scroll/Fields/strength/Line/Value" to="tools/Margin/Rows/Scroll/Fields/strength" method="_changed"]
+
+[connection signal="value_changed" from="tools/Margin/Rows/Scroll/Fields/castle_height/Line/Value" to="tools/Margin/Rows/Scroll/Fields/castle_height" method="_changed"]
+
+[connection signal="value_changed" from="tools/Margin/Rows/Scroll/Fields/castle_scale/Line/Value" to="tools/Margin/Rows/Scroll/Fields/castle_scale" method="_changed"]
+
+[connection signal="value_changed" from="tools/Margin/Rows/Scroll/Fields/castle_yaw/Line/Value" to="tools/Margin/Rows/Scroll/Fields/castle_yaw" method="_changed"]
+
+[connection signal="value_changed" from="tools/Margin/Rows/Scroll/Fields/wall_height/Line/Value" to="tools/Margin/Rows/Scroll/Fields/wall_height" method="_changed"]
+
+[connection signal="value_changed" from="tools/Margin/Rows/Scroll/Fields/wall_bottom/Line/Value" to="tools/Margin/Rows/Scroll/Fields/wall_bottom" method="_changed"]
+
+[connection signal="value_changed" from="tools/Margin/Rows/Scroll/Fields/wall_top/Line/Value" to="tools/Margin/Rows/Scroll/Fields/wall_top" method="_changed"]
+
+[connection signal="value_changed" from="tools/Margin/Rows/Scroll/Fields/shovel_depth/Line/Value" to="tools/Margin/Rows/Scroll/Fields/shovel_depth" method="_changed"]
+
+[connection signal="value_changed" from="tools/Margin/Rows/Scroll/Fields/shovel_width/Line/Value" to="tools/Margin/Rows/Scroll/Fields/shovel_width" method="_changed"]
+
+[connection signal="value_changed" from="tools/Margin/Rows/Scroll/Fields/shovel_shoulder/Line/Value" to="tools/Margin/Rows/Scroll/Fields/shovel_shoulder" method="_changed"]
+
+[connection signal="value_changed" from="tools/Margin/Rows/Scroll/Fields/adjust_radius/Line/Value" to="tools/Margin/Rows/Scroll/Fields/adjust_radius" method="_changed"]
+
+[connection signal="value_changed" from="tools/Margin/Rows/Scroll/Fields/adjust_strength/Line/Value" to="tools/Margin/Rows/Scroll/Fields/adjust_strength" method="_changed"]
+
+[connection signal="value_changed" from="tools/Margin/Rows/Scroll/Fields/signed_speed_m_s/Line/Value" to="tools/Margin/Rows/Scroll/Fields/signed_speed_m_s" method="_changed"]
+
+[connection signal="item_selected" from="tools/Margin/Rows/Scroll/Fields/water_policy/Line/Value" to="tools/Margin/Rows/Scroll/Fields/water_policy" method="_changed"]
+
+[connection signal="close_requested" from="water" to="." method="_close_group" binds=["water"]]
+
+[connection signal="size_changed" from="water" to="." method="_layout_changed"]
+
+[connection signal="pressed" from="water/Margin/Rows/Actions/Save" to="." method="save_parameters"]
+
+[connection signal="pressed" from="water/Margin/Rows/Actions/Load" to="." method="load_parameters"]
+
+[connection signal="pressed" from="water/Margin/Rows/Actions/Reset" to="." method="reset_defaults" binds=["water"]]
+
+[connection signal="value_changed" from="water/Margin/Rows/Scroll/Fields/manual_wave_amplitude_m/Line/Value" to="water/Margin/Rows/Scroll/Fields/manual_wave_amplitude_m" method="_changed"]
+
+[connection signal="value_changed" from="water/Margin/Rows/Scroll/Fields/manual_wave_duration_s/Line/Value" to="water/Margin/Rows/Scroll/Fields/manual_wave_duration_s" method="_changed"]
+
+[connection signal="value_changed" from="water/Margin/Rows/Scroll/Fields/wave_retention/Line/Value" to="water/Margin/Rows/Scroll/Fields/wave_retention" method="_changed"]
+
+[connection signal="item_selected" from="water/Margin/Rows/Scroll/Fields/solver/Line/Value" to="water/Margin/Rows/Scroll/Fields/solver" method="_changed"]
+
+[connection signal="value_changed" from="water/Margin/Rows/Scroll/Fields/muscl_cfl/Line/Value" to="water/Margin/Rows/Scroll/Fields/muscl_cfl" method="_changed"]
+
+[connection signal="value_changed" from="water/Margin/Rows/Scroll/Fields/muscl_max_attempts/Line/Value" to="water/Margin/Rows/Scroll/Fields/muscl_max_attempts" method="_changed"]
+
+[connection signal="value_changed" from="water/Margin/Rows/Scroll/Fields/boundary_mean_level_m/Line/Value" to="water/Margin/Rows/Scroll/Fields/boundary_mean_level_m" method="_changed"]
+
+[connection signal="value_changed" from="water/Margin/Rows/Scroll/Fields/boundary_amplitude_m/Line/Value" to="water/Margin/Rows/Scroll/Fields/boundary_amplitude_m" method="_changed"]
+
+[connection signal="value_changed" from="water/Margin/Rows/Scroll/Fields/boundary_omega_rad_s/Line/Value" to="water/Margin/Rows/Scroll/Fields/boundary_omega_rad_s" method="_changed"]
+
+[connection signal="value_changed" from="water/Margin/Rows/Scroll/Fields/boundary_phase_rad/Line/Value" to="water/Margin/Rows/Scroll/Fields/boundary_phase_rad" method="_changed"]
+
+[connection signal="value_changed" from="water/Margin/Rows/Scroll/Fields/boundary_period_s/Line/Value" to="water/Margin/Rows/Scroll/Fields/boundary_period_s" method="_changed"]
+
+[connection signal="value_changed" from="water/Margin/Rows/Scroll/Fields/visual_rdc_normal_gain/Line/Value" to="water/Margin/Rows/Scroll/Fields/visual_rdc_normal_gain" method="_changed"]
+
+[connection signal="value_changed" from="water/Margin/Rows/Scroll/Fields/visual_rdc_normal_scale/Line/Value" to="water/Margin/Rows/Scroll/Fields/visual_rdc_normal_scale" method="_changed"]
+
+[connection signal="value_changed" from="water/Margin/Rows/Scroll/Fields/visual_rdc_time_scale/Line/Value" to="water/Margin/Rows/Scroll/Fields/visual_rdc_time_scale" method="_changed"]
+
+[connection signal="value_changed" from="water/Margin/Rows/Scroll/Fields/visual_rdc_refraction_scale/Line/Value" to="water/Margin/Rows/Scroll/Fields/visual_rdc_refraction_scale" method="_changed"]
+
+[connection signal="value_changed" from="water/Margin/Rows/Scroll/Fields/visual_rdc_distance_scale/Line/Value" to="water/Margin/Rows/Scroll/Fields/visual_rdc_distance_scale" method="_changed"]
+
+[connection signal="value_changed" from="water/Margin/Rows/Scroll/Fields/visual_rdc_surface_gain/Line/Value" to="water/Margin/Rows/Scroll/Fields/visual_rdc_surface_gain" method="_changed"]
+
+[connection signal="value_changed" from="water/Margin/Rows/Scroll/Fields/visual_natural_reflection_gain/Line/Value" to="water/Margin/Rows/Scroll/Fields/visual_natural_reflection_gain" method="_changed"]
+
+[connection signal="value_changed" from="water/Margin/Rows/Scroll/Fields/visual_natural_glint_gain/Line/Value" to="water/Margin/Rows/Scroll/Fields/visual_natural_glint_gain" method="_changed"]
+
+[connection signal="value_changed" from="water/Margin/Rows/Scroll/Fields/visual_natural_glint_exponent/Line/Value" to="water/Margin/Rows/Scroll/Fields/visual_natural_glint_exponent" method="_changed"]
+
+[connection signal="value_changed" from="water/Margin/Rows/Scroll/Fields/visual_natural_scatter_gain/Line/Value" to="water/Margin/Rows/Scroll/Fields/visual_natural_scatter_gain" method="_changed"]
+
+[connection signal="value_changed" from="water/Margin/Rows/Scroll/Fields/visual_natural_main_foam_gain/Line/Value" to="water/Margin/Rows/Scroll/Fields/visual_natural_main_foam_gain" method="_changed"]
+
+[connection signal="toggled" from="water/Margin/Rows/Scroll/Fields/visual_natural_contact_enabled/Line/Value" to="water/Margin/Rows/Scroll/Fields/visual_natural_contact_enabled" method="_changed"]
+
+[connection signal="value_changed" from="water/Margin/Rows/Scroll/Fields/visual_natural_fine_gain/Line/Value" to="water/Margin/Rows/Scroll/Fields/visual_natural_fine_gain" method="_changed"]
+
+[connection signal="value_changed" from="water/Margin/Rows/Scroll/Fields/visual_target_diameter_px/Line/Value" to="water/Margin/Rows/Scroll/Fields/visual_target_diameter_px" method="_changed"]
+
+[connection signal="value_changed" from="water/Margin/Rows/Scroll/Fields/visual_splat_half_width_m/Line/Value" to="water/Margin/Rows/Scroll/Fields/visual_splat_half_width_m" method="_changed"]
+
+[connection signal="value_changed" from="water/Margin/Rows/Scroll/Fields/visual_natural_cluster_strength/Line/Value" to="water/Margin/Rows/Scroll/Fields/visual_natural_cluster_strength" method="_changed"]
+
+[connection signal="value_changed" from="water/Margin/Rows/Scroll/Fields/visual_natural_contact_gain/Line/Value" to="water/Margin/Rows/Scroll/Fields/visual_natural_contact_gain" method="_changed"]
+
+[connection signal="value_changed" from="water/Margin/Rows/Scroll/Fields/visual_natural_contact_shape_scale_per_m/Line/Value" to="water/Margin/Rows/Scroll/Fields/visual_natural_contact_shape_scale_per_m" method="_changed"]
+
+[connection signal="value_changed" from="water/Margin/Rows/Scroll/Fields/visual_natural_contact_separation_m/Line/Value" to="water/Margin/Rows/Scroll/Fields/visual_natural_contact_separation_m" method="_changed"]
+
+[connection signal="value_changed" from="water/Margin/Rows/Scroll/Fields/foam_lifetime_s/Line/Value" to="water/Margin/Rows/Scroll/Fields/foam_lifetime_s" method="_changed"]
+
+[connection signal="value_changed" from="water/Margin/Rows/Scroll/Fields/foam_source_gain/Line/Value" to="water/Margin/Rows/Scroll/Fields/foam_source_gain" method="_changed"]
+
+[connection signal="value_changed" from="water/Margin/Rows/Scroll/Fields/visual_absorption_0/Line/Value" to="water/Margin/Rows/Scroll/Fields/visual_absorption_0" method="_changed"]
+
+[connection signal="value_changed" from="water/Margin/Rows/Scroll/Fields/visual_absorption_1/Line/Value" to="water/Margin/Rows/Scroll/Fields/visual_absorption_1" method="_changed"]
+
+[connection signal="value_changed" from="water/Margin/Rows/Scroll/Fields/visual_absorption_2/Line/Value" to="water/Margin/Rows/Scroll/Fields/visual_absorption_2" method="_changed"]
+
+[connection signal="color_changed" from="water/Margin/Rows/Scroll/Fields/visual_rdc_transmission_tint/Line/Value" to="water/Margin/Rows/Scroll/Fields/visual_rdc_transmission_tint" method="_color_changed"]
+
+[connection signal="color_changed" from="water/Margin/Rows/Scroll/Fields/visual_rdc_surface_color/Line/Value" to="water/Margin/Rows/Scroll/Fields/visual_rdc_surface_color" method="_color_changed"]
+
+[connection signal="value_changed" from="water/Margin/Rows/Scroll/Fields/visual_foam_detail_scale_per_m/Line/Value" to="water/Margin/Rows/Scroll/Fields/visual_foam_detail_scale_per_m" method="_changed"]
+
+[connection signal="value_changed" from="water/Margin/Rows/Scroll/Fields/visual_foam_hole_strength/Line/Value" to="water/Margin/Rows/Scroll/Fields/visual_foam_hole_strength" method="_changed"]
+
+[connection signal="value_changed" from="water/Margin/Rows/Scroll/Fields/visual_foam_flow_cycle_s/Line/Value" to="water/Margin/Rows/Scroll/Fields/visual_foam_flow_cycle_s" method="_changed"]
+
+[connection signal="toggled" from="water/Margin/Rows/Scroll/Fields/visual_shore_splash_enabled/Line/Value" to="water/Margin/Rows/Scroll/Fields/visual_shore_splash_enabled" method="_changed"]
+
+[connection signal="value_changed" from="water/Margin/Rows/Scroll/Fields/visual_shore_splash_size/Line/Value" to="water/Margin/Rows/Scroll/Fields/visual_shore_splash_size" method="_changed"]
+
+[connection signal="close_requested" from="sand" to="." method="_close_group" binds=["sand"]]
+
+[connection signal="size_changed" from="sand" to="." method="_layout_changed"]
+
+[connection signal="pressed" from="sand/Margin/Rows/Actions/Save" to="." method="save_parameters"]
+
+[connection signal="pressed" from="sand/Margin/Rows/Actions/Load" to="." method="load_parameters"]
+
+[connection signal="pressed" from="sand/Margin/Rows/Actions/Reset" to="." method="reset_defaults" binds=["sand"]]
+
+[connection signal="value_changed" from="sand/Margin/Rows/Scroll/Fields/capacity_per_speed_s/Line/Value" to="sand/Margin/Rows/Scroll/Fields/capacity_per_speed_s" method="_changed"]
+
+[connection signal="value_changed" from="sand/Margin/Rows/Scroll/Fields/erosion_rate_per_s/Line/Value" to="sand/Margin/Rows/Scroll/Fields/erosion_rate_per_s" method="_changed"]
+
+[connection signal="value_changed" from="sand/Margin/Rows/Scroll/Fields/deposition_rate_per_s/Line/Value" to="sand/Margin/Rows/Scroll/Fields/deposition_rate_per_s" method="_changed"]
+
+[connection signal="value_changed" from="sand/Margin/Rows/Scroll/Fields/wet_rate_per_s/Line/Value" to="sand/Margin/Rows/Scroll/Fields/wet_rate_per_s" method="_changed"]
+
+[connection signal="value_changed" from="sand/Margin/Rows/Scroll/Fields/dry_rate_per_s/Line/Value" to="sand/Margin/Rows/Scroll/Fields/dry_rate_per_s" method="_changed"]
+
+[connection signal="value_changed" from="sand/Margin/Rows/Scroll/Fields/diffusion_per_s/Line/Value" to="sand/Margin/Rows/Scroll/Fields/diffusion_per_s" method="_changed"]
+
+[connection signal="value_changed" from="sand/Margin/Rows/Scroll/Fields/residual_wetness/Line/Value" to="sand/Margin/Rows/Scroll/Fields/residual_wetness" method="_changed"]
+
+[connection signal="value_changed" from="sand/Margin/Rows/Scroll/Fields/soak_depth_m/Line/Value" to="sand/Margin/Rows/Scroll/Fields/soak_depth_m" method="_changed"]
+
+[connection signal="value_changed" from="sand/Margin/Rows/Scroll/Fields/dry_depth_m/Line/Value" to="sand/Margin/Rows/Scroll/Fields/dry_depth_m" method="_changed"]
+
+[connection signal="value_changed" from="sand/Margin/Rows/Scroll/Fields/compact_rate_per_s/Line/Value" to="sand/Margin/Rows/Scroll/Fields/compact_rate_per_s" method="_changed"]
+
+[connection signal="value_changed" from="sand/Margin/Rows/Scroll/Fields/relax_rate_per_s/Line/Value" to="sand/Margin/Rows/Scroll/Fields/relax_rate_per_s" method="_changed"]
+
+[connection signal="value_changed" from="sand/Margin/Rows/Scroll/Fields/dry_repose_tan/Line/Value" to="sand/Margin/Rows/Scroll/Fields/dry_repose_tan" method="_changed"]
+
+[connection signal="value_changed" from="sand/Margin/Rows/Scroll/Fields/wet_repose_tan/Line/Value" to="sand/Margin/Rows/Scroll/Fields/wet_repose_tan" method="_changed"]
+
+[connection signal="value_changed" from="sand/Margin/Rows/Scroll/Fields/compaction_repose_gain/Line/Value" to="sand/Margin/Rows/Scroll/Fields/compaction_repose_gain" method="_changed"]
+
+[connection signal="value_changed" from="sand/Margin/Rows/Scroll/Fields/min_drop_m/Line/Value" to="sand/Margin/Rows/Scroll/Fields/min_drop_m" method="_changed"]
+
+[connection signal="value_changed" from="sand/Margin/Rows/Scroll/Fields/surface_wetness_hold_time_s/Line/Value" to="sand/Margin/Rows/Scroll/Fields/surface_wetness_hold_time_s" method="_changed"]
+
+[connection signal="value_changed" from="sand/Margin/Rows/Scroll/Fields/surface_wetness_fade_time_s/Line/Value" to="sand/Margin/Rows/Scroll/Fields/surface_wetness_fade_time_s" method="_changed"]
+
+[connection signal="value_changed" from="sand/Margin/Rows/Scroll/Fields/ordinary_cohesion_yield_height_m/Line/Value" to="sand/Margin/Rows/Scroll/Fields/ordinary_cohesion_yield_height_m" method="_changed"]
+
+[connection signal="toggled" from="sand/Margin/Rows/Scroll/Fields/enable_erosion/Line/Value" to="sand/Margin/Rows/Scroll/Fields/enable_erosion" method="_changed"]
+
+[connection signal="toggled" from="sand/Margin/Rows/Scroll/Fields/enable_brush_water/Line/Value" to="sand/Margin/Rows/Scroll/Fields/enable_brush_water" method="_changed"]
+
+[connection signal="value_changed" from="sand/Margin/Rows/Scroll/Fields/visual_natural_caustic_strength/Line/Value" to="sand/Margin/Rows/Scroll/Fields/visual_natural_caustic_strength" method="_changed"]
+
+[connection signal="value_changed" from="sand/Margin/Rows/Scroll/Fields/visual_natural_caustic_softness/Line/Value" to="sand/Margin/Rows/Scroll/Fields/visual_natural_caustic_softness" method="_changed"]
+
+[connection signal="value_changed" from="sand/Margin/Rows/Scroll/Fields/visual_natural_caustic_uv_scale/Line/Value" to="sand/Margin/Rows/Scroll/Fields/visual_natural_caustic_uv_scale" method="_changed"]
+
+[connection signal="value_changed" from="sand/Margin/Rows/Scroll/Fields/visual_rdc_caustic_scale/Line/Value" to="sand/Margin/Rows/Scroll/Fields/visual_rdc_caustic_scale" method="_changed"]
+
+[connection signal="value_changed" from="sand/Margin/Rows/Scroll/Fields/visual_rdc_caustic_depth_decay/Line/Value" to="sand/Margin/Rows/Scroll/Fields/visual_rdc_caustic_depth_decay" method="_changed"]
+
+[connection signal="value_changed" from="sand/Margin/Rows/Scroll/Fields/visual_rdc_caustic_time_scale/Line/Value" to="sand/Margin/Rows/Scroll/Fields/visual_rdc_caustic_time_scale" method="_changed"]
+
+[connection signal="color_changed" from="sand/Margin/Rows/Scroll/Fields/visual_sand_dry_color/Line/Value" to="sand/Margin/Rows/Scroll/Fields/visual_sand_dry_color" method="_color_changed"]
+
+[connection signal="color_changed" from="sand/Margin/Rows/Scroll/Fields/visual_sand_wet_color/Line/Value" to="sand/Margin/Rows/Scroll/Fields/visual_sand_wet_color" method="_color_changed"]
+
+[connection signal="value_changed" from="sand/Margin/Rows/Scroll/Fields/visual_sand_grain_scale/Line/Value" to="sand/Margin/Rows/Scroll/Fields/visual_sand_grain_scale" method="_changed"]
+
+[connection signal="value_changed" from="sand/Margin/Rows/Scroll/Fields/visual_sand_grain_gain/Line/Value" to="sand/Margin/Rows/Scroll/Fields/visual_sand_grain_gain" method="_changed"]
+
+[connection signal="value_changed" from="sand/Margin/Rows/Scroll/Fields/visual_sand_grain_normal/Line/Value" to="sand/Margin/Rows/Scroll/Fields/visual_sand_grain_normal" method="_changed"]
+
+[connection signal="value_changed" from="sand/Margin/Rows/Scroll/Fields/visual_sand_dry_roughness/Line/Value" to="sand/Margin/Rows/Scroll/Fields/visual_sand_dry_roughness" method="_changed"]
+
+[connection signal="value_changed" from="sand/Margin/Rows/Scroll/Fields/visual_sand_wet_roughness/Line/Value" to="sand/Margin/Rows/Scroll/Fields/visual_sand_wet_roughness" method="_changed"]
+
+[connection signal="value_changed" from="sand/Margin/Rows/Scroll/Fields/visual_sand_dry_specular/Line/Value" to="sand/Margin/Rows/Scroll/Fields/visual_sand_dry_specular" method="_changed"]
+
+[connection signal="value_changed" from="sand/Margin/Rows/Scroll/Fields/visual_sand_wet_specular/Line/Value" to="sand/Margin/Rows/Scroll/Fields/visual_sand_wet_specular" method="_changed"]
+
+[connection signal="toggled" from="sand/Margin/Rows/Scroll/Fields/visual_use_grain/Line/Value" to="sand/Margin/Rows/Scroll/Fields/visual_use_grain" method="_changed"]
+
+[connection signal="toggled" from="sand/Margin/Rows/Scroll/Fields/visual_use_grain_normal/Line/Value" to="sand/Margin/Rows/Scroll/Fields/visual_use_grain_normal" method="_changed"]
+
+[connection signal="toggled" from="sand/Margin/Rows/Scroll/Fields/visual_use_wet_finish/Line/Value" to="sand/Margin/Rows/Scroll/Fields/visual_use_wet_finish" method="_changed"]
+
+[connection signal="toggled" from="sand/Margin/Rows/Scroll/Fields/visual_use_compaction_tint/Line/Value" to="sand/Margin/Rows/Scroll/Fields/visual_use_compaction_tint" method="_changed"]
+
+[connection signal="close_requested" from="props" to="." method="_close_group" binds=["props"]]
+
+[connection signal="size_changed" from="props" to="." method="_layout_changed"]
+
+[connection signal="pressed" from="props/Margin/Rows/Actions/Save" to="." method="save_parameters"]
+
+[connection signal="pressed" from="props/Margin/Rows/Actions/Load" to="." method="load_parameters"]
+
+[connection signal="pressed" from="props/Margin/Rows/Actions/Reset" to="." method="reset_defaults" binds=["props"]]
+
+[connection signal="value_changed" from="props/Margin/Rows/Scroll/Fields/gravel_count/Line/Value" to="props/Margin/Rows/Scroll/Fields/gravel_count" method="_changed"]
+
+[connection signal="value_changed" from="props/Margin/Rows/Scroll/Fields/bottle_mass_kg/Line/Value" to="props/Margin/Rows/Scroll/Fields/bottle_mass_kg" method="_changed"]
+
+[connection signal="value_changed" from="props/Margin/Rows/Scroll/Fields/bottle_friction/Line/Value" to="props/Margin/Rows/Scroll/Fields/bottle_friction" method="_changed"]
+
+[connection signal="value_changed" from="props/Margin/Rows/Scroll/Fields/bottle_angular_damping/Line/Value" to="props/Margin/Rows/Scroll/Fields/bottle_angular_damping" method="_changed"]
+
+[connection signal="value_changed" from="props/Margin/Rows/Scroll/Fields/bottle_drag_time_horizontal_s/Line/Value" to="props/Margin/Rows/Scroll/Fields/bottle_drag_time_horizontal_s" method="_changed"]
+
+[connection signal="value_changed" from="props/Margin/Rows/Scroll/Fields/bottle_drag_time_vertical_s/Line/Value" to="props/Margin/Rows/Scroll/Fields/bottle_drag_time_vertical_s" method="_changed"]
+
+[connection signal="value_changed" from="props/Margin/Rows/Scroll/Fields/wood_plank_mass_kg/Line/Value" to="props/Margin/Rows/Scroll/Fields/wood_plank_mass_kg" method="_changed"]
+
+[connection signal="value_changed" from="props/Margin/Rows/Scroll/Fields/wood_plank_friction/Line/Value" to="props/Margin/Rows/Scroll/Fields/wood_plank_friction" method="_changed"]
+
+[connection signal="value_changed" from="props/Margin/Rows/Scroll/Fields/wood_plank_angular_damping/Line/Value" to="props/Margin/Rows/Scroll/Fields/wood_plank_angular_damping" method="_changed"]
+
+[connection signal="value_changed" from="props/Margin/Rows/Scroll/Fields/wood_plank_drag_time_horizontal_s/Line/Value" to="props/Margin/Rows/Scroll/Fields/wood_plank_drag_time_horizontal_s" method="_changed"]
+
+[connection signal="value_changed" from="props/Margin/Rows/Scroll/Fields/wood_plank_drag_time_vertical_s/Line/Value" to="props/Margin/Rows/Scroll/Fields/wood_plank_drag_time_vertical_s" method="_changed"]
+
+[connection signal="value_changed" from="props/Margin/Rows/Scroll/Fields/wood_stick_mass_kg/Line/Value" to="props/Margin/Rows/Scroll/Fields/wood_stick_mass_kg" method="_changed"]
+
+[connection signal="value_changed" from="props/Margin/Rows/Scroll/Fields/wood_stick_friction/Line/Value" to="props/Margin/Rows/Scroll/Fields/wood_stick_friction" method="_changed"]
+
+[connection signal="value_changed" from="props/Margin/Rows/Scroll/Fields/wood_stick_angular_damping/Line/Value" to="props/Margin/Rows/Scroll/Fields/wood_stick_angular_damping" method="_changed"]
+
+[connection signal="value_changed" from="props/Margin/Rows/Scroll/Fields/wood_stick_drag_time_horizontal_s/Line/Value" to="props/Margin/Rows/Scroll/Fields/wood_stick_drag_time_horizontal_s" method="_changed"]
+
+[connection signal="value_changed" from="props/Margin/Rows/Scroll/Fields/wood_stick_drag_time_vertical_s/Line/Value" to="props/Margin/Rows/Scroll/Fields/wood_stick_drag_time_vertical_s" method="_changed"]
+
+[connection signal="close_requested" from="environment" to="." method="_close_group" binds=["environment"]]
+
+[connection signal="size_changed" from="environment" to="." method="_layout_changed"]
+
+[connection signal="pressed" from="environment/Margin/Rows/Actions/Save" to="." method="save_parameters"]
+
+[connection signal="pressed" from="environment/Margin/Rows/Actions/Load" to="." method="load_parameters"]
+
+[connection signal="pressed" from="environment/Margin/Rows/Actions/Reset" to="." method="reset_defaults" binds=["environment"]]
+
+[connection signal="value_changed" from="environment/Margin/Rows/Scroll/Fields/camera_move_speed_m_s/Line/Value" to="environment/Margin/Rows/Scroll/Fields/camera_move_speed_m_s" method="_changed"]
+
+[connection signal="value_changed" from="environment/Margin/Rows/Scroll/Fields/camera_fast_multiplier/Line/Value" to="environment/Margin/Rows/Scroll/Fields/camera_fast_multiplier" method="_changed"]
+
+[connection signal="value_changed" from="environment/Margin/Rows/Scroll/Fields/camera_mouse_sensitivity/Line/Value" to="environment/Margin/Rows/Scroll/Fields/camera_mouse_sensitivity" method="_changed"]
+
+[connection signal="value_changed" from="environment/Margin/Rows/Scroll/Fields/camera_fov/Line/Value" to="environment/Margin/Rows/Scroll/Fields/camera_fov" method="_changed"]
+
+[connection signal="value_changed" from="environment/Margin/Rows/Scroll/Fields/sun_energy/Line/Value" to="environment/Margin/Rows/Scroll/Fields/sun_energy" method="_changed"]
+
+[connection signal="color_changed" from="environment/Margin/Rows/Scroll/Fields/sun_color/Line/Value" to="environment/Margin/Rows/Scroll/Fields/sun_color" method="_color_changed"]
+
+[connection signal="value_changed" from="environment/Margin/Rows/Scroll/Fields/ambient_energy/Line/Value" to="environment/Margin/Rows/Scroll/Fields/ambient_energy" method="_changed"]
+
+[connection signal="color_changed" from="environment/Margin/Rows/Scroll/Fields/ambient_color/Line/Value" to="environment/Margin/Rows/Scroll/Fields/ambient_color" method="_color_changed"]
+
+[connection signal="close_requested" from="diagnostics" to="." method="_close_group" binds=["diagnostics"]]
+
+[connection signal="size_changed" from="diagnostics" to="." method="_layout_changed"]
+
+[connection signal="pressed" from="diagnostics/Margin/Rows/Actions/Save" to="." method="save_parameters"]
+
+[connection signal="pressed" from="diagnostics/Margin/Rows/Actions/Load" to="." method="load_parameters"]
+
+[connection signal="pressed" from="diagnostics/Margin/Rows/Actions/Reset" to="." method="reset_defaults" binds=["diagnostics"]]
+
+[connection signal="item_selected" from="diagnostics/Margin/Rows/Scroll/Fields/sand_debug/Line/Value" to="diagnostics/Margin/Rows/Scroll/Fields/sand_debug" method="_changed"]
+
+[connection signal="toggled" from="diagnostics/Margin/Rows/Scroll/Fields/sampling/Line/Value" to="diagnostics/Margin/Rows/Scroll/Fields/sampling" method="_changed"]

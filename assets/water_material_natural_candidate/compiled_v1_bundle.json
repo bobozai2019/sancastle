@@ -1,0 +1,23 @@
+{
+  "bundle_schema_version": 1,
+  "style_profile": "res://assets/water_material_natural_candidate/style_compiled_v1.json",
+  "style_profile_sha256": "a072e614ef2b5c349f4580819150af1eab2191d5842dbf2364d07d75bc74480e",
+  "source_style_profile": "res://assets/water_material_natural_candidate/style_height.json",
+  "source_style_profile_sha256": "369ac5a9657c0f9a0d818b0f3ac4932c74dc5f3698e9595686d0d6b5fc464eb6",
+  "components": [
+    {
+      "material": "water",
+      "shader": "res://assets/water_material_natural_candidate/water_route_specialized.gdshader",
+      "shader_sha256": "7a225ea82c286b8d8be53f116a96e701b2773a7da25b6a8579ba6a7359789b2d",
+      "index": "res://assets/water_material_natural_candidate/water_route_full_index.json",
+      "index_sha256": "eddf1c27d11579817b320cab44b589c503dd4b835ac2d4a723e0fb610dc44186"
+    },
+    {
+      "material": "bed",
+      "shader": "res://assets/water_material_natural_candidate/bed_geometry_specialized.gdshader",
+      "shader_sha256": "77bd0939f5523e1cacb1461f13cc4db647f6941c0f8832ae5940779ce32fdc5f",
+      "index": "res://assets/water_material_natural_candidate/bed_geometry_specialized_index.json",
+      "index_sha256": "3e86183671d6e17f9bce8d72beabe7e713219bff32c44e69acde3013682cdf44"
+    }
+  ]
+}

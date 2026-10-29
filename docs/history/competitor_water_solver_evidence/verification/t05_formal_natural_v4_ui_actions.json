@@ -1,0 +1,12 @@
+{
+  "scope": "Sky window activation only; no mouse/keyboard water input",
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "[\n  {\n    action: 'activate_owned_window',\n    window: {\n      app: 'process:D:\\\\godot\\\\project\\\\sandcastle\\\\task\\\\competitor_water_solver_evidence\\\\work\\\\runtime_game_v1\\\\Sandcastle.exe',\n      id: 4655160,\n      title: 'Sandcastle'\n    },\n    begin_utc: '2026-10-25T12:00:51.863Z',\n    end_utc: '2026-10-25T12:00:54.777Z'\n  },\n  {\n    action: 'activate_owned_window',\n    window: {\n      app: 'process:D:\\\\godot\\\\project\\\\sandcastle\\\\task\\\\competitor_water_solver_evidence\\\\work\\\\runtime_game_v1\\\\Sandcastle.exe',\n      id: 4655160,\n      title: 'Sandcastle'\n    },\n    begin_utc: '2026-10-25T12:01:02.849Z',\n    end_utc: '2026-10-25T12:01:02.925Z'\n  },\n  {\n    action: 'activate_owned_window',\n    window: {\n      app: 'process:D:\\\\godot\\\\project\\\\sandcastle\\\\task\\\\competitor_water_solver_evidence\\\\work\\\\runtime_game_v1\\\\Sandcastle.exe',\n      id: 4655160,\n      title: 'Sandcastle'\n    },\n    begin_utc: '2026-10-25T12:01:11.002Z',\n    end_utc: '2026-10-25T12:01:11.074Z'\n  },\n  {\n    action: 'activate_owned_window',\n    window: {\n      app: 'process:D:\\\\godot\\\\project\\\\sandcastle\\\\task\\\\competitor_water_solver_evidence\\\\work\\\\runtime_game_v1\\\\Sandcastle.exe',\n      id: 4655160,\n      title: 'Sandcastle'\n    },\n    begin_utc: '2026-10-25T12:01:19.151Z',\n    end_utc: '2026-10-25T12:01:19.203Z'\n  },\n  {\n    action: 'owned_window_absent',\n    utc: '2026-10-25T12:01:27.252Z',\n    count: 0\n  }\n]"
+      }
+    ],
+    "isError": false
+  }
+}

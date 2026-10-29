@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3]
+
+[sub_resource type="StandardMaterial3D" id="Material_sand"]
+resource_local_to_scene = true
+shading_mode = 0
+albedo_color = Color(0.72, 0.53, 0.28, 1)
+roughness = 0.92
+
+[sub_resource type="PlaneMesh" id="Mesh_terrain"]
+resource_local_to_scene = true
+material = SubResource("Material_sand")
+size = Vector2(32, 32)
+subdivide_width = 31
+subdivide_depth = 31
+
+[sub_resource type="StandardMaterial3D" id="Material_dune"]
+resource_local_to_scene = true
+shading_mode = 0
+albedo_color = Color(0.72, 0.53, 0.28, 1)
+roughness = 0.92
+
+[sub_resource type="SphereMesh" id="Mesh_dune"]
+resource_local_to_scene = true
+material = SubResource("Material_dune")
+radius = 1.0
+height = 2.0
+radial_segments = 32
+rings = 12
+
+[node name="TerrainPreviewMesh" type="MeshInstance3D"]
+position = Vector3(0, -0.03, 0)
+mesh = SubResource("Mesh_terrain")
+
+[node name="DunePreview" type="MeshInstance3D" parent="."]
+position = Vector3(3.5, 0.41, 0.5)
+scale = Vector3(4.8, 0.55, 3.7)
+mesh = SubResource("Mesh_dune")

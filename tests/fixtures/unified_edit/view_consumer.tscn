@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Shader" path="res://tests/fixtures/unified_edit/view_consumer.gdshader" id="1"]
+
+[sub_resource type="ShaderMaterial" id="bed"]
+shader = ExtResource("1")
+shader_parameter/mode = 0
+
+[sub_resource type="ShaderMaterial" id="water"]
+shader = ExtResource("1")
+shader_parameter/mode = 1
+
+[sub_resource type="ShaderMaterial" id="preview"]
+shader = ExtResource("1")
+shader_parameter/mode = 2
+
+[node name="CompleteViewProbe" type="SubViewport"]
+disable_3d = true
+size = Vector2i(48, 16)
+render_target_update_mode = 4
+
+[node name="Bed" type="ColorRect" parent="."]
+material = SubResource("bed")
+offset_right = 16.0
+offset_bottom = 16.0
+
+[node name="Water" type="ColorRect" parent="."]
+material = SubResource("water")
+offset_left = 16.0
+offset_right = 32.0
+offset_bottom = 16.0
+
+[node name="Preview" type="ColorRect" parent="."]
+material = SubResource("preview")
+offset_left = 32.0
+offset_right = 48.0
+offset_bottom = 16.0

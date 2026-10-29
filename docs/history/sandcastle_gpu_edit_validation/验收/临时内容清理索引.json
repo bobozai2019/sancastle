@@ -1,0 +1,1553 @@
+{
+  "scope": "GPU专项代码与shader；静态res引用+显式运行时shader入口。原始证据和其他任务不删除。",
+  "runtime_dependencies": [
+    "assets/test1_beach/test1_beach_release.json",
+    "assets/test1_beach/test1_bed_lit_fast.gdshader",
+    "assets/test1_beach/test1_front_foam_sparse_mesh.tres",
+    "assets/test1_beach/test1_front_foam_splats.gdshader",
+    "assets/test1_beach/test1_water_front.gdshader",
+    "scenes/brush_indicator.tscn",
+    "scenes/editor_scene_preview.tscn",
+    "scenes/gpu_collision_proxy.tscn",
+    "scenes/gpu_water_preview.tscn",
+    "scenes/main.tscn",
+    "scenes/sandcastle_test1_beach_coupled.tscn",
+    "scenes/terrain_preview_mesh.tscn",
+    "scenes/water_preview_mesh.tscn",
+    "scenes/water_render_coupled.tscn",
+    "scenes/water_render_coupled_continuous.tscn",
+    "scenes/water_render_coupled_rock_reflection_candidate.tscn",
+    "scenes/water_render_coupled_v7_preview.tscn",
+    "scenes/water_render_coupled_v8_preview.tscn",
+    "scripts/beach/beach_checkpoint_entry.gd",
+    "scripts/beach/beach_gpu_entry.gd",
+    "scripts/beach/beach_interaction_entry.gd",
+    "scripts/beach/beach_lab_entry.gd",
+    "scripts/beach/beach_recovery_entry.gd",
+    "scripts/beach/release_config.gd",
+    "scripts/collision/gpu_collision_proxy.gd",
+    "scripts/demo/gpu_water_preview.gd",
+    "scripts/sand/tool_command_queue.gd",
+    "scripts/scenarios/sand_visual_fixture.gd",
+    "scripts/scenarios/standard_scenarios.gd",
+    "scripts/scenarios/water_visual_fixture.gd",
+    "scripts/simulation/checkpoint_store.gd",
+    "scripts/simulation/edit_validation/beach_native_codec.gd",
+    "scripts/simulation/edit_validation/beach_restore_bundle.gd",
+    "scripts/simulation/edit_validation/checkpoint_foam_field.gd",
+    "scripts/simulation/edit_validation/collision_chunk_selection.gd",
+    "scripts/simulation/edit_validation/collision_proxy.gd",
+    "scripts/simulation/edit_validation/edit_protocol.gd",
+    "scripts/simulation/edit_validation/gpu_checkpoint_codec.gd",
+    "scripts/simulation/edit_validation/gpu_edit_scheduler.gd",
+    "scripts/simulation/edit_validation/gpu_sand_editor.gd",
+    "scripts/simulation/edit_validation/gpu_water_editor.gd",
+    "scripts/simulation/edit_validation/lab_solver.gd",
+    "scripts/simulation/edit_validation/staged_slope_coupler.gd",
+    "scripts/simulation/erosion/gpu_sediment_coupler.gd",
+    "scripts/simulation/gpu_sand_audit.gd",
+    "scripts/simulation/gpu_shallow_solver.gd",
+    "scripts/simulation/material/gpu_material_coupler.gd",
+    "scripts/simulation/sand_water_domain.gd",
+    "scripts/structures/gpu_obstacle_remap.gd",
+    "scripts/structures/structure_field.gd",
+    "scripts/structures/structure_state.gd",
+    "scripts/visual/brush_indicator.gd",
+    "scripts/visual/gpu_foam_field.gd",
+    "scripts/visual/scene_preview_controller.gd",
+    "scripts/visual/test1_beach_edit_worker_entry.gd",
+    "scripts/visual/test1_beach_fixed_entry.gd",
+    "scripts/visual/water_render_profile.gd",
+    "scripts/visual/water_render_staging_entry.gd",
+    "scripts/visual/water_render_wave_workload.gd",
+    "shaders/simulation/edit_validation/sand_apply.glsl",
+    "shaders/simulation/edit_validation/sand_commit.glsl",
+    "shaders/simulation/edit_validation/sand_prepare.glsl",
+    "shaders/simulation/edit_validation/sand_publish.glsl",
+    "shaders/simulation/edit_validation/sand_reduce.glsl",
+    "shaders/simulation/edit_validation/staged_slope.glsl",
+    "shaders/simulation/edit_validation/staged_slope_consume.glsl",
+    "shaders/simulation/edit_validation/water_commit.glsl",
+    "shaders/simulation/edit_validation/water_displace_compensated.glsl",
+    "shaders/simulation/edit_validation/water_merge_receipt.glsl",
+    "shaders/simulation/edit_validation/water_packed_cached.glsl",
+    "shaders/simulation/edit_validation/water_prepare.glsl",
+    "shaders/simulation/edit_validation/water_publish.glsl",
+    "shaders/simulation/edit_validation/water_velocity_apply.glsl",
+    "shaders/simulation/edit_validation/water_velocity_prefetch.glsl",
+    "shaders/simulation/erosion/copy_after_boundary.glsl",
+    "shaders/simulation/erosion/sediment_step.glsl",
+    "shaders/simulation/material/material_commit.glsl",
+    "shaders/simulation/material/material_step.glsl",
+    "shaders/simulation/material/slope_relax.glsl",
+    "shaders/simulation/shallow_audit_tiles.glsl",
+    "shaders/simulation/shallow_cfl_tiles.glsl",
+    "shaders/simulation/shallow_collision_pack.glsl",
+    "shaders/simulation/shallow_drain_scale.glsl",
+    "shaders/simulation/shallow_edge_flux.glsl",
+    "shaders/simulation/shallow_gauge_depth.glsl",
+    "shaders/simulation/shallow_sand_audit_tiles.glsl",
+    "shaders/simulation/shallow_tide_boundary.glsl",
+    "shaders/simulation/shallow_tool_patch.glsl",
+    "shaders/simulation/shallow_update_state.glsl",
+    "shaders/simulation/structures/obstacle_commit.glsl",
+    "shaders/simulation/structures/obstacle_remap.glsl",
+    "shaders/simulation/visual_foam_step.glsl",
+    "shaders/visual/editor_water_preview.gdshader",
+    "shaders/visual/gpu_sand_coupled_fast.gdshader",
+    "shaders/visual/gpu_sand_phase2.gdshader",
+    "shaders/visual/gpu_terrain.gdshader",
+    "shaders/visual/gpu_water.gdshader",
+    "tests/visual_water_alignment/prototypes/caustic_cells_v1.png",
+    "tests/visual_water_alignment/prototypes/caustic_fold_v1.png",
+    "tests/visual_water_alignment/prototypes/reference_batched_ledger_solver.gd",
+    "tests/visual_water_alignment/prototypes/reference_bed.gd",
+    "tests/visual_water_alignment/prototypes/reference_contact_history_field.gd",
+    "tests/visual_water_alignment/prototypes/reference_contact_history_step.glsl",
+    "tests/visual_water_alignment/prototypes/reference_coupled.tscn",
+    "tests/visual_water_alignment/prototypes/reference_coupled_bed.gdshader",
+    "tests/visual_water_alignment/prototypes/reference_crest_continuous_lip.gdshader",
+    "tests/visual_water_alignment/prototypes/reference_crest_curtain.gdshader",
+    "tests/visual_water_alignment/prototypes/reference_crest_forward_toe.gdshader",
+    "tests/visual_water_alignment/prototypes/reference_crest_local_segments.gdshader",
+    "tests/visual_water_alignment/prototypes/reference_crest_local_volume.gdshader",
+    "tests/visual_water_alignment/prototypes/reference_crest_ribbon.gdshader",
+    "tests/visual_water_alignment/prototypes/reference_crest_rise_ribbon.gdshader",
+    "tests/visual_water_alignment/prototypes/reference_crest_rise_ribbon_depthwrite.gdshader",
+    "tests/visual_water_alignment/prototypes/reference_crest_shared_front_lip.gdshader",
+    "tests/visual_water_alignment/prototypes/reference_crest_smoothed_lip.gdshader",
+    "tests/visual_water_alignment/prototypes/reference_crest_volume.gdshader",
+    "tests/visual_water_alignment/prototypes/reference_fixed_substep_solver.gd",
+    "tests/visual_water_alignment/prototypes/reference_foam_splats.gdshader",
+    "tests/visual_water_alignment/prototypes/reference_foreground_occluders.tscn",
+    "tests/visual_water_alignment/prototypes/reference_front_foam_dense.tscn",
+    "tests/visual_water_alignment/prototypes/reference_front_foam_dense_mesh.tres",
+    "tests/visual_water_alignment/prototypes/reference_front_lip_branch_mesh.tres",
+    "tests/visual_water_alignment/prototypes/reference_front_lip_patch_mesh.tres",
+    "tests/visual_water_alignment/prototypes/reference_front_lip_row_mesh.tres",
+    "tests/visual_water_alignment/prototypes/reference_front_lips.tscn",
+    "tests/visual_water_alignment/prototypes/reference_local_front_field.gd",
+    "tests/visual_water_alignment/prototypes/reference_local_front_x.glsl",
+    "tests/visual_water_alignment/prototypes/reference_local_front_x_wide.glsl",
+    "tests/visual_water_alignment/prototypes/reference_local_front_z.glsl",
+    "tests/visual_water_alignment/prototypes/reference_preview.gd",
+    "tests/visual_water_alignment/prototypes/reference_rise_front_anchor.glsl",
+    "tests/visual_water_alignment/prototypes/reference_rise_front_field.gd",
+    "tests/visual_water_alignment/prototypes/reference_rise_front_field.glsl",
+    "tests/visual_water_alignment/prototypes/reference_shore_contact_overlay.gdshader",
+    "tests/visual_water_alignment/prototypes/reference_sync_readback_solver.gd",
+    "tests/visual_water_alignment/prototypes/reference_terrain.gdshader",
+    "tests/visual_water_alignment/prototypes/reference_tide_ledger_batches.gd",
+    "tests/visual_water_alignment/prototypes/reference_tide_ledger_ring.gd",
+    "tests/visual_water_alignment/prototypes/reference_tide_ledger_ring.glsl",
+    "tests/visual_water_alignment/prototypes/reference_visual_foam_front_band.glsl",
+    "tests/visual_water_alignment/prototypes/reference_visual_foam_offshore.glsl",
+    "tests/visual_water_alignment/prototypes/reference_water.gdshader",
+    "tests/visual_water_alignment/prototypes/reference_water_local_front.gdshader",
+    "tests/visual_water_alignment/prototypes/reflection_rock_0.tres",
+    "tests/visual_water_alignment/prototypes/reflection_rock_1.tres",
+    "tests/visual_water_alignment/prototypes/reflection_rock_2.tres",
+    "tests/visual_water_alignment/prototypes/reflection_rock_environment.tscn",
+    "tests/visual_water_alignment/prototypes/rock_reflection_candidate_entry.gd",
+    "tests/visual_water_alignment/prototypes/water_render_staging_v1.json",
+    "tests/visual_water_alignment/prototypes/water_render_staging_v7.json",
+    "tests/visual_water_alignment/prototypes/water_render_staging_v8.json"
+  ],
+  "missing": [],
+  "entries": [
+    {
+      "path": "tests/edit_validation/advanced_redo_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 5769,
+      "sha256": "3a99419637dbb2d97b85f1a8fafe5559f4fd7c47cb47d9d427a3830f65275c3a",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/analyze_baseline.ps1",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 4091,
+      "sha256": "76ef9f027e8722e0cc3706bc3f50285e70180ff60414c31129ac01de756453aa",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/baseline_trace_entry.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 3801,
+      "sha256": "6c3a0d79a7787e5b89ebbf0a7ee48160b2bb10e98efcdb2080ac38b7a24d6bf4",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/baseline_trace_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 4944,
+      "sha256": "fe94058425269b5c2e1874231383a5ba97df9bf35079849697cc9cab7b1c4280",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/baseline_trace_solver.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 1402,
+      "sha256": "6e9fc43b6e4e8732db30abe502ab5d0e4299ef80c73eec5abb85fa940887e84f",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/baseline_visibility_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 4051,
+      "sha256": "66b70bf0c36dfb20a8ec1862a9701fea870da196e5f4d7aa941deaf4bbcb1c34",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/beach_capture_entry_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 992,
+      "sha256": "76a6771fe90ad71721034cdb65dc6e98fdbdb3d730fac36c0b25c6ccf3d4ee92",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/beach_capture_fault_entry.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 1109,
+      "sha256": "9f2d7542c716b5530354f4ff83663b7d37408e4281ae25b5eec917b4f2b90bf9",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/beach_capture_fault_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 2767,
+      "sha256": "d6a08514b4a4f51d4ce5534d5779ad501b6649081992ddd6002025ee89772c70",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/beach_checkpoint_diff_export.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 1785,
+      "sha256": "1ebecd44c08d5f0d0ffa36bfae81abf4668fdfa3c35f421741f024708cef4f46",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/beach_checkpoint_entry.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 5738,
+      "sha256": "e0723850caeb90af215a706159f445763d13502ffae3d68fdb2fec13459b32e2",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/beach_collision_bounds_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 3980,
+      "sha256": "70cc0f125d1116d8c8cfd5ea2cea55106943b20bb0ce2a5511be76219698e05e",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/beach_continuous_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 8332,
+      "sha256": "f2a67620c4036425eb45f3552bf3fe1fa7337eb218a626be7e1516ad14d5a9ae",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/beach_cost_cpu_entry.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 643,
+      "sha256": "403f021834d3c6ad096482216a5cbed12fd53fbcec5c68df44ed765f4827e78e",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/beach_cost_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 12191,
+      "sha256": "92befd997d10e0df28018bcfe99badb33c4aaacf89ecd1432edceafafce197cc",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/beach_edit_process_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 12944,
+      "sha256": "f135f968a4945f83553fe17c24b90bcb747511005b58c32f08e0311cd26a4ce8",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/beach_feedback_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 7561,
+      "sha256": "9959d23c6b56b87afcc746262d38fb67012ec2fa4d41d7389378ab9389f5551e",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/beach_gpu_entry.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 16009,
+      "sha256": "c10f7b69d97028a27338eb8c30b7a363470d7e354e17b065080f475bdaf2d4bf",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/beach_gpu_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 7912,
+      "sha256": "669f358f68f9835e69b29ddc6a62a3fcbacb1c7fa13f2967ed7c684520d0fde1",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/beach_history_process_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 5665,
+      "sha256": "95f79e2f956c650fed54ed5f0340d418598e065c53a2aeb473d638606807c610",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/beach_history_storage_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 5930,
+      "sha256": "a089e46825577b2c625dc2c73593e341c41ca03bcdd3ab6bd055b9a177cfc2f3",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/beach_interaction_entry.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 6568,
+      "sha256": "3a30fdb7c840360185bbdc45e27f865ee92dc5ebbc4cd78ed966ff5921c64308",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/beach_interaction_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 6967,
+      "sha256": "9bbfc721f57d6a1121291e39365a8e8788b75174a5a8a01ca55efc06179fc427",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/beach_lab_entry.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 198,
+      "sha256": "8ac218e570ffe093a0161b668e625c8b3174234ccf909d894885e0d09efe04da",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/beach_live_restore_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 10926,
+      "sha256": "afc2469c560d8a07c66d464552a4e6310fb5162594a75f36ebb52e51c6ee284c",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/beach_mixed_close_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 3570,
+      "sha256": "e05b5803c9da9568c443cbe98a11fdc93194bba396ca8f96929d44c1f9b1b004",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/beach_mixed_failure_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 4070,
+      "sha256": "fe05635a9d13960a819755165c8b0ec51715c58802eb74fc8a5eab51b77928dd",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/beach_mixed_restore_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 7327,
+      "sha256": "ee26ebbba7aea7944e24f915dceb838d3e3d488d779bebaf4bd4b756dc6164b1",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/beach_pixel_feedback_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 10828,
+      "sha256": "fb1266ae01041e747ad3320b8bd9e1914b550068b89917d33b75956a09563c42",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/beach_recovery_entry.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 23920,
+      "sha256": "16f03ce7d1841e2082ae8c9de8aed7b769dd161cd6c90520eba3a1399dba0761",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/beach_replay_entry.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 8681,
+      "sha256": "85b38493d7cc6fe59a2b2cd8bcb4567218b964c5b00f99347591793a48a0e92a",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/beach_replay_original_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 5910,
+      "sha256": "bcd88ea3c1a9155dfe194d816ae8c6f7e7379587444d8e2f7c51762cdcd82d41",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/beach_replay_worker.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 3549,
+      "sha256": "89f8eb2b120822e4b09d911a8180ca950def11d2b3d21c5dfc76f06db317d8c6",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/beach_restore_close_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 4884,
+      "sha256": "0d9824d5bd578600de9a159219efa0f4fac9e9d433add0dc3480701dfeeaed74",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/beach_same_tick_undo_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 6151,
+      "sha256": "7fbdb12dfa3838281b6d398d396c9f9e312b26d30282026a30037712034b33c7",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/beach_save_boundary_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 4821,
+      "sha256": "1de9b60d36c0017ec00db17d1979321dda8621f79adea28b883333368ef03fea",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/beach_scene_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 4559,
+      "sha256": "7db111869cf05f3d081e018490b606ddd4940edb0d9469feeff76a768ba6c6ba",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/beach_undo_boundary_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 4591,
+      "sha256": "17c26bd7fbaecbe2bd3335242a5f1523b3a9e1870b58428ad3bacfc28fbccfea",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/beach_undo_entry.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 11464,
+      "sha256": "be95bc3223f7af796bd525810f936acda91bd819a9f9f96e1ceecda3e6f373a7",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/beach_undo_failure_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 4409,
+      "sha256": "40a4be42305dac8dd228240706690b21b82519cf738b1dc8712f4560931af73f",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/beach_undo_fault_entry.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 538,
+      "sha256": "dbbac516f507c442ad2526e61e062dbb5f88e03f65f35b3da34594c496e53eb4",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/brush_profile.tres",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 238,
+      "sha256": "fe41275862e79a901acacce68a4001c6258b41469cd2755b5571be3551b0cd82",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/checkpoint_boundary_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 6535,
+      "sha256": "11314cfb95fbc036295646c756f6e725ee2eee636b1da4b98ae8e1bd7ae622cb",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/checkpoint_codec_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 7492,
+      "sha256": "66c110e8a74dd9ffda1b9b9f7ab74fe0a2e2a27e4337cc3bbc13b167a51fff75",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/checkpoint_lab_entry.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 33179,
+      "sha256": "ef8fd6907cc76607abe2a245154705b6e81f4160a755e969056104314a44147a",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/checkpoint_process_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 4620,
+      "sha256": "13071dd2fba23bf4336087ac8ec58b91a51e560e450f252ca41c0288151504b1",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/checkpoint_restore_exit_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 2874,
+      "sha256": "affa1c0693ef470a810a812d0b3e67fae2ec2f9d97b87f4b4202741f2d7493d6",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/checkpoint_restore_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 6539,
+      "sha256": "029b9c1bb2994ace9cf33acecf4a0313b39b6b654b55e9010ea8fe2ae741e318",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/collision_batch_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 2634,
+      "sha256": "f081148ac244ea54e3c31809eb0890af5f495c69f74a929cc232c51f6d1ea2d9",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/collision_exit_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 2295,
+      "sha256": "fa73e9a816c9fc174b97aee41e66ecbebf9e699a324af737b1e95a9ac7d5b574",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/collision_selection_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 1826,
+      "sha256": "0345d62cb012d0643f379f5f2f1de0210b6e8ad382a95844ac32de9448c7c306",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/combined_curve_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 118,
+      "sha256": "24b1b79046625e98c25008e763fa16e3b32f3f08f695fdf17ff4312e29af1e21",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/combined_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 1602,
+      "sha256": "1b76fd7413c2164dc518a55ba9d8d97d765e58b9af55bac5642590d9ac245169",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/connected_runs_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 3086,
+      "sha256": "ace7e7b0c074df3074c342090b7d56f710b991133cba7f496af32a18410f957c",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/contract_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 6235,
+      "sha256": "3cee9c2aa2396e8b5a5e742e7a312b4bf84aefefffa9038ee9a4522fc6b01203",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/cross_tick_undo_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 6395,
+      "sha256": "6b8a0f50fd024c6ac84428d25abbc3f9eeab54dc895a88c554b8c1ab3ee16dc0",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/edit_baseline_trace.tscn",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 311,
+      "sha256": "c44bc4d5f3cfd4c20473c299e1074950232260fe30b7ccf932086018d362ff15",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/edit_beach_capture_fault_lab.tscn",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 329,
+      "sha256": "205c3be0206b21c646d06b90537527a81f7cfc9e515145b936a080e50f8b310c",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/edit_beach_checkpoint_lab.tscn",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 315,
+      "sha256": "967b749156c06559e757b8cb9184229012f6f24baf27283af38fb6ac6ac738be",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/edit_beach_cost_cpu.tscn",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 303,
+      "sha256": "ddfb495cd2646a6de7cb27633093995d8349bf2e68aa813c41a3178325480c4b",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/edit_beach_gpu_lab.tscn",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 494,
+      "sha256": "765d185ad03f5dd67c73b94e247a0aabcce67ec91f3438e8fdf97f93461951d7",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/edit_beach_interaction_lab.tscn",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 321,
+      "sha256": "ab66c10f65667dce05ae89d9c45bc4c7501fd1f5311156420b3ed9437ccf8577",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/edit_beach_lab.tscn",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 349,
+      "sha256": "7183e672752918442c822f5be6aba4d45eb15cda5ec0d7dfcaa1daf2346f812c",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/edit_beach_recovery_lab.tscn",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 323,
+      "sha256": "cc13c3d9283ecbd079967d7d398761470fee1a21074cfde97424d2a8f11b79b4",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/edit_beach_replay_lab.tscn",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 447,
+      "sha256": "a2d07cc78bd8c84703a84ad0357a86b3199784465aa2cc6a4701b1c9363cb618",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/edit_beach_replay_worker.tscn",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 320,
+      "sha256": "c7b0febc2b590f85a25c23a04814108eb968309cf7c7b497e9ca601a981eaa9f",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/edit_beach_undo_fault_lab.tscn",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 319,
+      "sha256": "2e258af52bf869868425039af47b57f1bad4d6d426db380d16ccd1d98450db40",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/edit_beach_undo_lab.tscn",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 312,
+      "sha256": "f6b36c78a7acaf047bb2a5abbc9e380a5b4ec07c03119b6c34b29e6eadf3e732",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/edit_brush_lab.tscn",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 727,
+      "sha256": "332c4c5caec49820718cebf31ba127295bf28480b5b493287c9e4c5cbb80255c",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/edit_checkpoint_lab.tscn",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 311,
+      "sha256": "da41d476be97ffa018e4fe0071b5b309b2d6844d9ed617faab5f0f7a2fd7823f",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/edit_feedback_lab.tscn",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 762,
+      "sha256": "b61c4663246c08931f175adb64e31e53c44094f37eb11c58893fdde6fa021d81",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/edit_gpu_brush_lab.tscn",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 305,
+      "sha256": "2a87c7097f5543c05cf6a154bd39632eb496858caa8d6bdc7388dbef2dbc33fd",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/edit_gpu_numeric_lab.tscn",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 309,
+      "sha256": "c8cf119864251f1548e3b9e9c203e863817a233cebcba5e45f91119cf684339a",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/edit_gpu_receipt_failure.tscn",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 321,
+      "sha256": "1dbd16f9845c70d1789ce929a0494a76a156403d3f7f278641ad20ca6d3ac249",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/edit_gpu_water_brush_lab.tscn",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 310,
+      "sha256": "b97a6029e0ab01284317f3871385815c008611ff32e192fa5b9cc66c81951efd",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/edit_gpu_water_diagnostic_brush_lab.tscn",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 331,
+      "sha256": "e2bc3b12fe9654b0c331b4d63a07ad958c7c22f72b1a634df8d99d6f13994bae",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/edit_gpu_water_diagnostic_numeric_lab.tscn",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 335,
+      "sha256": "33ae979dd025f727142b9f8c4d8bf9b8146504d34e98f7eda72e37cbd85d68a4",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/edit_gpu_water_numeric_lab.tscn",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 314,
+      "sha256": "4c5eba92c8abac510d3491d48b5bf47fc6576d8ea5c2b4c70810cdc4b9d534cc",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/edit_interaction_lab.tscn",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 780,
+      "sha256": "eaafc54e7d54a97b9c6680cd09b2153d310e9bb7a42ffddb7854aee993e0f935",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/edit_interaction_wide_lab.tscn",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 276,
+      "sha256": "f8e19abceeef5d506490dab5304c70805b708874ddb1cc69aa918e177f9841a0",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/edit_lab.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 11648,
+      "sha256": "c4921acb6a4baba1ac87729ab7f6297c01208dc9867c6f5a824c57b6b305e80f",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/edit_numeric_lab.tscn",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 1874,
+      "sha256": "eb4864c3fbcfad0fd5d39ef3aab985f46a0ac1ff64c3cae7692e82994cb3122c",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/edit_recovery_lab.tscn",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 310,
+      "sha256": "aa02bcce0dca4f73637e3e24cce05cdc00d7b4468a7e1ba7c8b319ac07835bce",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/edit_scheduler_exit_lab.tscn",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 305,
+      "sha256": "4f375652204bd3f723c4119c9e4618e5917d8721d768af332ad8463cdc16839c",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/encode_feedback_avi.py",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 2446,
+      "sha256": "c4f69d514b138254a9799791118c8aef46645a9eb79efbbf06651a8256ee3468",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/fast_redo_process_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 4422,
+      "sha256": "4c28de4b99cf7749ee997350e29f2c7699b8e28fa314a6ae783215bba584ccf7",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/feedback_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 3500,
+      "sha256": "ed58088c884df9bb87bc5f59863ee5187af77b74c92c0da29c9c960d35a0d025",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/gpu_brush_lab_entry.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 9083,
+      "sha256": "bab82f41052b927f800b6a2a7b96d9dbd6e8a249c6201e27ba0f4eadab5910ad",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/gpu_brush_matrix.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 18657,
+      "sha256": "ee646559b2b649758183d8c2e56821582510a9bf0ebbf89c5769a626c10742e7",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/gpu_brush_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 6509,
+      "sha256": "362a5da00e06645402b4e6c2cc6dbcd0ce2efeb3f867a14ee9103a31229bba3d",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/gpu_history_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 4465,
+      "sha256": "778ece49a5108268c3d0f1c7ec7c2eee948feed7cb361c9ad35d8ad6aee225df",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/gpu_water_diagnostic_lab_entry.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 1235,
+      "sha256": "3b4899b7e880fbbc9e62db4b4c3addc9085969d8b536c4e7af9554c2a6e64a0c",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/gpu_water_lab_entry.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 5903,
+      "sha256": "33ef9e23d9ae83b00e0c3cc3c164d9c15e74f0d2884ff07556221e86df8570f0",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/import_edit_shaders.ps1",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 1835,
+      "sha256": "d64c0f44efde2dc533d7dd3f64c567813599b814405620238d1f6e4da7218a30",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/import_stderr.log",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/import_stdout.log",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 2647,
+      "sha256": "10de758de5fe241a195a855f5a106a3e7275e20765c9de8f12e1f527fe634cd9",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/inspect_combined_curves.py",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 2323,
+      "sha256": "4052c8ea8a66333085f63bc58d08c9bfee42f8d9d9e180b48ba6ccc319250bf0",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/inspect_compact_encoding.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 1360,
+      "sha256": "c52e6f3ae66b3d51df74e41f0b861d661b528a553b552ebecacad1e5d4bf70df",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/inspect_edit_passes.py",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 2478,
+      "sha256": "5c9fa2ca675e5bf4a75aa92518c7bf6f0a5c4bef041251718e637e706993d644",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/inspect_fast_equivalence.py",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 1672,
+      "sha256": "af115fe32e28b88b0b9e81b042567146861cbc3db3bd50634cceebadf9de6c1d",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/inspect_feedback.py",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 3492,
+      "sha256": "80cd520ec7fad1d552b1cf65e9bdd0755180b95e3aa1898f16f1db19bedd7a9d",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/inspect_run_equivalence.py",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 1370,
+      "sha256": "22357652f3559a88fa43bd262836a63a6e5b79a908978207eb68e7d4152f4a43",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/inspect_step_loss.py",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 3154,
+      "sha256": "86ba4f6e5840d8261253ffbfdfc961f66d98aea6754391ef3f361e05c16a2218",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/inspect_velocity_swept.py",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 1646,
+      "sha256": "9dc9a22bcf77515ccc6beab64fb9f67bc8d4fcf56fe9ba13766a279748de345a",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/interaction_edges_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 4594,
+      "sha256": "3d20d71fff049a51089fbff289cef391d73d0e6e80bdcd7b1494afc90688de5b",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/interaction_lab_entry.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 7721,
+      "sha256": "1a1b63b058e4fc2d6a52df285c762b68a2cb343d0a29be16fc4de4fc84ef7b6e",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/interaction_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 4862,
+      "sha256": "d22a3aaece91bcd16918c077940103fbe328e4923f34d47563c889212f7513b8",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/interaction_queue_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 3185,
+      "sha256": "27114cb826d52343d7fca228ef592e87301aa2edb549a1e124c8f8e2210c0f71",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/interaction_reset_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 3062,
+      "sha256": "86f1b53942fd4cf7cdcad6999b7c586ce34862493515f04adb21c7f66d07a1d5",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/lab_profile.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 269,
+      "sha256": "906ca607fd916814a2ca1ef9587c593e2c960c58b21475511e414b6e49072a19",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/lab_surface.gdshader",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 832,
+      "sha256": "688159938fd90c1b16eacb2ca7059f86803585b51713262547fa0b02b86635be",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/latest_contract.txt",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 99,
+      "sha256": "b7be153ed533c31e893cbf34355f29efea353a11781ecc246eb46a4804af3c1e",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/latest_run.txt",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 105,
+      "sha256": "d0c7f3e47ea8af606a5fdf6316ec2e5610bacfb743a395953d01d1188ef5af1a",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/legacy_guard_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 2916,
+      "sha256": "c6bfb001b984e4d1c64fa02e5f3df9f08adbd78be62b2be7a45ea95676d53900",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/mixed_process_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 4301,
+      "sha256": "1dd371442a92b561f0b816a74418589acb3aea067ef96ad1ca88b9268746f01d",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/numeric_profile.tres",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 239,
+      "sha256": "2e88ad5c338028767430ab1462263c9a00f1dc35d2f4519494352f404685958d",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/packed_bounds_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 1889,
+      "sha256": "63fa8fb860919fd26befe23aa5bf1b79ecfa81bc4d65c6252e3b9e38a661ba4a",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/receipt_failure_lab_entry.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 271,
+      "sha256": "d0e6fd5c8db5f8c31390feffeefed392609b0e99be04a85a50796c5bc68f7973",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/receipt_failure_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 3935,
+      "sha256": "23d15314c7acdf38d244789698bac0dd9cac50c539e0d23b60b032c39a8a9762",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/recovery_lab_entry.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 8993,
+      "sha256": "4bff37497e9b8fcca663f9f5181980ec8966d9bb69d35bfea0a1a9925d854896",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/redo_process_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 5485,
+      "sha256": "47c9c1f0a582dd4e5485c07a92f186ac12b6427cfaae25370bb258dff6abffa1",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/replay_exit_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 4429,
+      "sha256": "21548c3a3c33c78b8a814dbcbffeb30daab0ba8b6eff03cfdd749bc695e3405c",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/run_baseline_trace.ps1",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 3086,
+      "sha256": "db639104cc5ad084efd247e00f4de974bdf2d1267d641cefeef5af9b7cd410df",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/run_contract_probe.ps1",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 2266,
+      "sha256": "3bcab87d5e3b1e0b2a3b2f0e18ca52df05e58f457a35c256f435919096e94a58",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/run_edit_numeric.ps1",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 254,
+      "sha256": "82b46fa11d43edf810baca8b1644d3ef588a072426adf0b003eb3012a9731ea6",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/run_scene_probe.ps1",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 9933,
+      "sha256": "ca8e4f894e3551bba0e00187714e34aff099b30a843c72e5763a59bd9e4295ef",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/sand_audit_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 1057,
+      "sha256": "76c6419d0dc12f514fedaf0a9507ed65c0c4cd683de45f060f31f16a49ef975f",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/scene_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 7659,
+      "sha256": "922df441f77607f06e3b0b3a7e1598075638589904314378e51988935e7cc27b",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/scheduler_admission_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 6112,
+      "sha256": "3e74a89de7a16140af41bb342b37a35829269bbbb16c52480efc6f89f99af5dd",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/scheduler_exit_lab.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 600,
+      "sha256": "7860fc92f05daab5a03b5953c9fe2dabcfb05bf7fd41a8b19e87622af6dc969d",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/scheduler_exit_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 2909,
+      "sha256": "2066aa0f25716bace2d7035ae0d963b139b4827230e1fc555e98e89a4d33817d",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/scheduler_failure_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 2038,
+      "sha256": "2e3978928156dd35cdae86954b59b5db26437874395087d2bcf459a51ef0cd6e",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/scheduler_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 4362,
+      "sha256": "37e497471c20975039cb46cf8a2bceedc5f41d31366ee6772ec026981d512d0c",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/step_loss_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 5160,
+      "sha256": "04c11e2242806839cd21e4b498b6bd97de4b1d238adbfe4b241b0193bc7bd45d",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/transaction_lock_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 5693,
+      "sha256": "fbd0d1ce811be5e4df63d9720e3a327f95d05c69fbb940eb15eacba667d67364",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/undo_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 8445,
+      "sha256": "07e36072cf3f0d3055ce9a7e52cd94fe200548685998fdf80962a57ea386c234",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/velocity_curve_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 5033,
+      "sha256": "65b36a8d52a8c860a06bdeffeddfbe93aae903a7decff15f47becfe27790dfee",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/velocity_negative_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 6178,
+      "sha256": "6649bd8b0b66b93dedbdb5a4eab5f060cb4ec4e65b6ba29e4bde83c47955a95e",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/velocity_prefetch_fault_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 4193,
+      "sha256": "b73f23efcc9e1461789cea71f057ba84191fbcc62a441e96e1b1b7b65299660d",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/velocity_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 9737,
+      "sha256": "d0a13f696708c74a7b10ff98746a45959e9d617ae2ee30f548273761e1d0d3fc",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/water_bridge_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 10633,
+      "sha256": "26523f9a1591587edd90f773158f241a5c275ccef43541d3fd43ab225b2674fc",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/water_curve_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 6499,
+      "sha256": "4809267d403a8e42d2204e755f02709353004ecfb7258d9f238946e6f609dbd2",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/water_gpu_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 12187,
+      "sha256": "64208e23f58c5f9325734f5ef2e20646f62aaed65595b12a723470a5b2d817b6",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/water_reference_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 5282,
+      "sha256": "63b0647052a84b592f915d1a5a49a961c7776fb3d70f67f09207725672463e3c",
+      "delete_now": false
+    },
+    {
+      "path": "tests/edit_validation/water_transaction_probe.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 9509,
+      "sha256": "b8cc70b7f0e6e93bc6ce27b4fdcb6bb3f87390f90b5ac8e6553d753d8acc51a8",
+      "delete_now": false
+    },
+    {
+      "path": "scripts/simulation/edit_validation/beach_gpu_edit_history.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 3313,
+      "sha256": "8878f88edb82d7e34be94577e5014691fb71aaefa00be9525e0eed1b223e5779",
+      "delete_now": false
+    },
+    {
+      "path": "scripts/simulation/edit_validation/beach_native_codec.gd",
+      "status": "保留_主场景依赖",
+      "bytes": 2451,
+      "sha256": "d032cd7d8e728bf355959dda0b282aa39c719da9edf5a8458118f27fd52219e9",
+      "delete_now": false
+    },
+    {
+      "path": "scripts/simulation/edit_validation/beach_restore_bundle.gd",
+      "status": "保留_主场景依赖",
+      "bytes": 5189,
+      "sha256": "5a578a1d592990d4f82a9ffa2e183c43e028105edabe75a889d4d6c1d7f6d9e5",
+      "delete_now": false
+    },
+    {
+      "path": "scripts/simulation/edit_validation/beach_sand_copy_trace.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 2607,
+      "sha256": "80b5627ca6f9d2576524da89619d0a9e14362ac3a824cceae82a716c89312a48",
+      "delete_now": false
+    },
+    {
+      "path": "scripts/simulation/edit_validation/checkpoint_foam_field.gd",
+      "status": "保留_主场景依赖",
+      "bytes": 351,
+      "sha256": "1cfaa95ec19bde30c6769a26746275994cb634efad4f760c4925f13945de74ce",
+      "delete_now": false
+    },
+    {
+      "path": "scripts/simulation/edit_validation/collision_chunk_selection.gd",
+      "status": "保留_主场景依赖",
+      "bytes": 1225,
+      "sha256": "81ad1db63c6baf3ef876a8050ebe9550bd6130669cba810698049ddf70570892",
+      "delete_now": false
+    },
+    {
+      "path": "scripts/simulation/edit_validation/collision_proxy.gd",
+      "status": "保留_主场景依赖",
+      "bytes": 2184,
+      "sha256": "62f5248f3e9df598138f61188d2fd44e791b6fb32155156d5ad90f70015c7be4",
+      "delete_now": false
+    },
+    {
+      "path": "scripts/simulation/edit_validation/edit_protocol.gd",
+      "status": "保留_主场景依赖",
+      "bytes": 6152,
+      "sha256": "fbc1d838fd58d04693a05e3032cc3ecca6b0863247cccbde162467ede14e5ce5",
+      "delete_now": false
+    },
+    {
+      "path": "scripts/simulation/edit_validation/gpu_checkpoint_codec.gd",
+      "status": "保留_主场景依赖",
+      "bytes": 8816,
+      "sha256": "1b3cdaadb30cd69ed8b7f49e676409816fe5caa31858be053d980dbf52cac425",
+      "delete_now": false
+    },
+    {
+      "path": "scripts/simulation/edit_validation/gpu_edit_history.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 3176,
+      "sha256": "37cd8136f38498a7931119ebc99d42396765620a802c55671423d4fd8e2e3163",
+      "delete_now": false
+    },
+    {
+      "path": "scripts/simulation/edit_validation/gpu_edit_scheduler.gd",
+      "status": "保留_主场景依赖",
+      "bytes": 4517,
+      "sha256": "7348ce4014588637b36b89630b0c5e7fe99d72e564773387cb3ec1d786f3553e",
+      "delete_now": false
+    },
+    {
+      "path": "scripts/simulation/edit_validation/gpu_redo_codec.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 4923,
+      "sha256": "d3b7c2481fa2df5be712f143dbaa6a99c44bae3c9c0cb2b63410241d240663b9",
+      "delete_now": false
+    },
+    {
+      "path": "scripts/simulation/edit_validation/gpu_sand_editor.gd",
+      "status": "保留_主场景依赖",
+      "bytes": 9737,
+      "sha256": "42f46da585486752e942809e833356c3edc1b5194391ded18ce4a609be80c98f",
+      "delete_now": false
+    },
+    {
+      "path": "scripts/simulation/edit_validation/gpu_water_diagnostic_editor.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 1811,
+      "sha256": "db60c7d733f31ed04b197d31002d81b3b9da07b457eb8148debee0416682f808",
+      "delete_now": false
+    },
+    {
+      "path": "scripts/simulation/edit_validation/gpu_water_editor.gd",
+      "status": "保留_主场景依赖",
+      "bytes": 6638,
+      "sha256": "1296412876a9080dbe4dae06a77431a2423dafa294539c9d2b1e1d36e6e77d6f",
+      "delete_now": false
+    },
+    {
+      "path": "scripts/simulation/edit_validation/lab_solver.gd",
+      "status": "保留_主场景依赖",
+      "bytes": 4235,
+      "sha256": "4bc319179b9699229f69bb6ba7e8b56e2255a65b39757090ffa221b6e9e8d8dc",
+      "delete_now": false
+    },
+    {
+      "path": "scripts/simulation/edit_validation/material_copy_fence.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 1742,
+      "sha256": "75af8340b0fbf6543356359d75e31bac1e58225b6805943561597c7c1e7bd827",
+      "delete_now": false
+    },
+    {
+      "path": "scripts/simulation/edit_validation/material_stage_trace.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 1801,
+      "sha256": "938f16fcdebb217869ec16acd04861a2b257ff8ff198034e6ca472596ceda124",
+      "delete_now": false
+    },
+    {
+      "path": "scripts/simulation/edit_validation/ordered_material_coupler.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 1636,
+      "sha256": "457da25beca5220c2fe3ed0e6efc5b6e5d564e99b1b718b8fb3545e445b9a712",
+      "delete_now": false
+    },
+    {
+      "path": "scripts/simulation/edit_validation/precise_material_coupler.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 659,
+      "sha256": "cd8d7cdb8266401b75393c17153fed064ed3d3a3caea91bedebd90de391fcc5e",
+      "delete_now": false
+    },
+    {
+      "path": "scripts/simulation/edit_validation/slope_record_coupler.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 2305,
+      "sha256": "ce43fb94b5aedcbabee84dd008c6e25def8716ee28ad785713316c59f2bda8da",
+      "delete_now": false
+    },
+    {
+      "path": "scripts/simulation/edit_validation/split_material_coupler.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 1884,
+      "sha256": "cd87f350c76226f4c6e9128f374e994ebbc16bf62699834f21a2c9c45a52f7f5",
+      "delete_now": false
+    },
+    {
+      "path": "scripts/simulation/edit_validation/staged_slope_coupler.gd",
+      "status": "保留_主场景依赖",
+      "bytes": 4737,
+      "sha256": "060081bb6e34da41235f0d472b969cf254fb92300f3fc41b582bb39c68ef8d20",
+      "delete_now": false
+    },
+    {
+      "path": "scripts/simulation/edit_validation/traced_material_coupler.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 1935,
+      "sha256": "c1e2c4fe9f2572444d4f63c0e14e7429ca82d26229deb9a69ca1a290b80eac7e",
+      "delete_now": false
+    },
+    {
+      "path": "scripts/simulation/edit_validation/water_displacement_reference.gd",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 4072,
+      "sha256": "9a159190c93113482c7880cd45cb06fb0448269fbf9c316b6203d30a1655b361",
+      "delete_now": false
+    },
+    {
+      "path": "shaders/simulation/edit_validation/precise_slope_relax.glsl",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 4882,
+      "sha256": "bba97470ac846db8185ecbd476987a880c9a06ff438c47b6174b04e142a66b6c",
+      "delete_now": false
+    },
+    {
+      "path": "shaders/simulation/edit_validation/sand_apply.glsl",
+      "status": "保留_主场景依赖",
+      "bytes": 1282,
+      "sha256": "ed863879d0a83f150b7932a1575ebea2f3677486c572660fab6ed2bc2d259d3d",
+      "delete_now": false
+    },
+    {
+      "path": "shaders/simulation/edit_validation/sand_commit.glsl",
+      "status": "保留_主场景依赖",
+      "bytes": 1105,
+      "sha256": "02f1b912b03d69d28ddf7cf238c28d25ec884f1a20c8c06ba305c73353795a1e",
+      "delete_now": false
+    },
+    {
+      "path": "shaders/simulation/edit_validation/sand_prepare.glsl",
+      "status": "保留_主场景依赖",
+      "bytes": 1154,
+      "sha256": "2372d60157eb0538cba3ce4d1d0141a6f2b12d217a4468722b314f8954a4ddb8",
+      "delete_now": false
+    },
+    {
+      "path": "shaders/simulation/edit_validation/sand_publish.glsl",
+      "status": "保留_主场景依赖",
+      "bytes": 364,
+      "sha256": "d94074c81e66ad2a0060034c5b95951e472f3ac9903eeef5167a1ec31b17d0fd",
+      "delete_now": false
+    },
+    {
+      "path": "shaders/simulation/edit_validation/sand_reduce.glsl",
+      "status": "保留_主场景依赖",
+      "bytes": 5288,
+      "sha256": "15535fbd6912084846e3ec7f76ae3f6b5f97449cdf0550077ff9d927ab9f136d",
+      "delete_now": false
+    },
+    {
+      "path": "shaders/simulation/edit_validation/sand_reduce_audit.glsl",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 5593,
+      "sha256": "0d1b03b8c8117d49329a64ab5c737923439706aa4e1e2ce4c6ee4e2bf06743d5",
+      "delete_now": false
+    },
+    {
+      "path": "shaders/simulation/edit_validation/shallow_update_diagnostic.glsl",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 7570,
+      "sha256": "afa5061db9efe652cb0908e8d1ac23c01b3304f23e3970c4c47136e7ba2c0464",
+      "delete_now": false
+    },
+    {
+      "path": "shaders/simulation/edit_validation/slope_counter.glsl",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 5061,
+      "sha256": "1d9ca25f0b42f8869d4fff2fab60f562a9592470bd9c4eb3b78eca2f639ccefd",
+      "delete_now": false
+    },
+    {
+      "path": "shaders/simulation/edit_validation/slope_output_record.glsl",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 5319,
+      "sha256": "52375b43f0dd48863ccb1ed5af2b025e8d571091dc0fe4af1760767076eb2f12",
+      "delete_now": false
+    },
+    {
+      "path": "shaders/simulation/edit_validation/slope_record.glsl",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 6628,
+      "sha256": "989b016872974340db663d54b99d1a35559a63c8fe5f141de7d3173e0cda8602",
+      "delete_now": false
+    },
+    {
+      "path": "shaders/simulation/edit_validation/staged_slope.glsl",
+      "status": "保留_主场景依赖",
+      "bytes": 4955,
+      "sha256": "8777b5baa680a9fb4d1eb66176a92b058972b2cb1fe713b49c07ae8d2d39bf00",
+      "delete_now": false
+    },
+    {
+      "path": "shaders/simulation/edit_validation/staged_slope_consume.glsl",
+      "status": "保留_主场景依赖",
+      "bytes": 482,
+      "sha256": "da10584e13400f2c9e957ba32aa6dfecdc4cd08cf1bd07c74877028773ef83ba",
+      "delete_now": false
+    },
+    {
+      "path": "shaders/simulation/edit_validation/water_commit.glsl",
+      "status": "保留_主场景依赖",
+      "bytes": 1446,
+      "sha256": "3c66875f4c2b2e193a95ab53bfe0072887fffaac9638249381b70cad3484e669",
+      "delete_now": false
+    },
+    {
+      "path": "shaders/simulation/edit_validation/water_connected_runs.glsl",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 11227,
+      "sha256": "374496b6b992e31c0844fa3bbf0c1c2cf89c4dc72f7b7b253c1fc422ba27fe0e",
+      "delete_now": false
+    },
+    {
+      "path": "shaders/simulation/edit_validation/water_displace.glsl",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 8727,
+      "sha256": "2cc36d4082d4dfb8234edb8599853278446c59701a5874acafdc87dc41506f5d",
+      "delete_now": false
+    },
+    {
+      "path": "shaders/simulation/edit_validation/water_displace_compensated.glsl",
+      "status": "保留_主场景依赖",
+      "bytes": 9790,
+      "sha256": "5ec2d3b2f7295e72948760f86d0fac3cc1c9a1f88c563e9f34206d7533b45e66",
+      "delete_now": false
+    },
+    {
+      "path": "shaders/simulation/edit_validation/water_displace_compensated_audit.glsl",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 9824,
+      "sha256": "5225c8c2b23dddec7c14a6580e544b49c689556a3022e060eaff4847af7e557a",
+      "delete_now": false
+    },
+    {
+      "path": "shaders/simulation/edit_validation/water_full_wet.glsl",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 7749,
+      "sha256": "a7f1786415760e7b9399c11baa2f3d46e4c7d821e7bfb71a983ea1f306fae336",
+      "delete_now": false
+    },
+    {
+      "path": "shaders/simulation/edit_validation/water_merge_receipt.glsl",
+      "status": "保留_主场景依赖",
+      "bytes": 731,
+      "sha256": "28d6d32fb7c87404f7c8d4057104def45ed2998b5dff4561563907cce48d0c65",
+      "delete_now": false
+    },
+    {
+      "path": "shaders/simulation/edit_validation/water_packed_cached.glsl",
+      "status": "保留_主场景依赖",
+      "bytes": 14583,
+      "sha256": "4b39cee87fcebcadaa0680652a0081524107bf17d1545b4d299b9559e38d7d5c",
+      "delete_now": false
+    },
+    {
+      "path": "shaders/simulation/edit_validation/water_packed_cached_idle.glsl",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 14762,
+      "sha256": "40888083334a7b4bd1b09a6e4f48f9283f3b278d2b0fc56fea2f8e0c5bd9944f",
+      "delete_now": false
+    },
+    {
+      "path": "shaders/simulation/edit_validation/water_packed_compensated.glsl",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 14042,
+      "sha256": "398f720005d05580a73489bb93a79af2aeb3bbac2965dad9244db015d34e3422",
+      "delete_now": false
+    },
+    {
+      "path": "shaders/simulation/edit_validation/water_packed_runs.glsl",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 13186,
+      "sha256": "a56fc8c05babcf9c82abb1707b324639dc28b4b794a3751d97f62c1bbefcfd98",
+      "delete_now": false
+    },
+    {
+      "path": "shaders/simulation/edit_validation/water_prepare.glsl",
+      "status": "保留_主场景依赖",
+      "bytes": 1538,
+      "sha256": "c22dd62287e8a4fa3fa202cf5af89ecd37882cb5d762f914a231064848bef64a",
+      "delete_now": false
+    },
+    {
+      "path": "shaders/simulation/edit_validation/water_publish.glsl",
+      "status": "保留_主场景依赖",
+      "bytes": 367,
+      "sha256": "92ea11794ce0c1b4dab367dd50a8f4f7887afd3d3485671b7157d18c2606f7f7",
+      "delete_now": false
+    },
+    {
+      "path": "shaders/simulation/edit_validation/water_velocity_apply.glsl",
+      "status": "保留_主场景依赖",
+      "bytes": 2367,
+      "sha256": "596f7218795638eb4f780671eed62f2cffecf3ad9ebaf2177fe460927a55f0b7",
+      "delete_now": false
+    },
+    {
+      "path": "shaders/simulation/edit_validation/water_velocity_prefetch.glsl",
+      "status": "保留_主场景依赖",
+      "bytes": 2926,
+      "sha256": "da8cc83ddc3f4a36a88b1a4eefead37a08e014a11d6ea7f6c09f1cf060c0b6c7",
+      "delete_now": false
+    },
+    {
+      "path": "shaders/simulation/edit_validation/water_velocity_reduce.glsl",
+      "status": "标记清理_非主场景依赖",
+      "bytes": 2307,
+      "sha256": "d73f86bfc1d13604c50171fa119eea6ed21c6165d79a85f1f477bca163f5d759",
+      "delete_now": false
+    }
+  ],
+  "policy": "标记清理只表示退出主场景依赖；原探针与回归仍可能引用，删除前复核反向引用和检查点配置签名。"
+}

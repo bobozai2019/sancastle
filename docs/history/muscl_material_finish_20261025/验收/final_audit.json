@@ -1,0 +1,359 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "name": "production_and_tested_source:scripts/simulation/unified_edit/coupled.gd",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "production_and_tested_source:scripts/simulation/unified_edit/water_muscl.gd",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "production_and_tested_source:shaders/simulation/erosion/sediment_exchange.glsl",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "production_and_tested_source:shaders/simulation/material/material_finish.glsl",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "variant_v1_comparison.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "first_order_v1_comparison.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "main_inputs_v3_comparison.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "geometry_inputs_v3_comparison.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "cold_ordinary",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "cold_ordinary_v1_reader1:exact_restart",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "cold_ordinary_v1_reader2:exact_restart",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "cold_ordinary_v1_reader3:exact_restart",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "cold_molded",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "cold_molded_v1_reader1:exact_restart",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "cold_molded_v1_reader2:exact_restart",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "cold_molded_v1_reader3:exact_restart",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "variant_v1_a:run_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "variant_v1_b:run_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "first_order_v1_a:run_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "first_order_v1_b:run_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "negative_v1_a:run_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "negative_v1_b:run_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "nonfinite_v1_a:run_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "nonfinite_v1_b:run_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "init_compile_v1:run_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "footprint_v1_a:run_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "footprint_v1_b:run_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "main_inputs_v1_a:run_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "main_inputs_v3_b:run_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "geometry_inputs_v3_a:run_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "geometry_inputs_v3_b:run_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "main_live_v1:run_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "continuous_v1:run_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "cold_ordinary_v1_writer:run_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "cold_ordinary_v1_reader1:run_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "cold_ordinary_v1_reader2:run_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "cold_ordinary_v1_reader3:run_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "cold_molded_v1_writer:run_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "cold_molded_v1_reader1:run_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "cold_molded_v1_reader2:run_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "cold_molded_v1_reader3:run_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "partial_init_and_release",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "footprint_a",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "footprint_b",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "observed_structure",
+      "pass": true,
+      "detail": {
+        "a": {
+          "solver_coupled_texture_objects": 48,
+          "logical_texture_payload": 22630660,
+          "dispatch_descriptors": 1541,
+          "texture_bytes": 30851072,
+          "buffer_bytes": 17582452
+        },
+        "b": {
+          "solver_coupled_texture_objects": 47,
+          "logical_texture_payload": 22368516,
+          "dispatch_descriptors": 1285,
+          "texture_bytes": 30588928,
+          "buffer_bytes": 17582452
+        },
+        "delta": {
+          "solver_coupled_texture_objects": 1,
+          "logical_texture_payload": 262144,
+          "dispatch_descriptors": 256,
+          "texture_bytes": 262144,
+          "buffer_bytes": 0
+        }
+      }
+    },
+    {
+      "name": "actual_root_main_consumers",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "user_data_inside_project",
+      "pass": true,
+      "detail": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/scratch/roaming/Godot/app_userdata/sandcastle"
+    },
+    {
+      "name": "120s_pause_resume_release",
+      "pass": true,
+      "detail": {
+        "start_us": 18213540,
+        "end_us": 138760447,
+        "start_tick": 211,
+        "end_tick": 3677,
+        "pause_ok": true,
+        "resume_ok": true,
+        "released": true
+      }
+    },
+    {
+      "name": "document_render_review",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed_integration_boundary",
+      "pass": true,
+      "detail": {
+        "remaining_preexisting_failures": 38,
+        "scope": "Only integration source changes and closure delta reviewed; preexisting unrelated architecture-policy drift not silently accepted."
+      }
+    },
+    {
+      "name": "policy_applied",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "retained": [
+    "P1",
+    "P2",
+    "P3",
+    "P4"
+  ],
+  "runtime_files": {
+    "scripts/simulation/unified_edit/coupled.gd": "810428560d2209d2aac4686e9dabf5608bf80344caa93db5a61a25b98f579944",
+    "scripts/simulation/unified_edit/water_muscl.gd": "dc25859b0bebf723a37f2961d4e2366a9749395f4072528e2a172486f9f7ed53",
+    "shaders/simulation/erosion/sediment_exchange.glsl": "7864a80220f2b98c2dd9a089cbdb3933d42fb4b6bc4bfce3abf10a722c481199",
+    "shaders/simulation/material/material_finish.glsl": "185c391a9c32c0c3ae8013dc789b14596a769c6a4ab75b00ae7a37a647e8b5e2"
+  },
+  "supporting_files": {
+    "tools/wave_propagation/coupling_gpu_probe.gd": "6891ff78e29d90e041e29b9c022c265661c65735b79c18116d7b6a23f3d2a661",
+    "tools/wave_propagation/soak_probe.gd": "cccc11586fe15f15279281c2291f0c89757fa12cf63630fe1ca2db2fea289dfd",
+    "tools/unified_edit_pipeline/architecture_policy.json": "949e035e3d0b864796edcbb957b116d410600fea0fdb48bb50f6ed6ffe4ebb2b",
+    "tools/docs/technical_panorama_content.py": "94f0697368fe4e4f1bd0473d13076f5d25f620769a13af80a7ff2226d3f4b429",
+    "tools/docs/build_unified_execution_guide.py": "9afc6344b14e7b2c91866d947e6f3cdae4bccebd9e91b7e24141e8298335d939",
+    "docs/当前项目技术方案.md": "e2a9cd8d0493934e51ab5bad6ccf7f87608a6af83d03fc46e0ffbb815a61a07f",
+    "docs/当前技术规格.md": "f3c516d63d4d16010dd31a55aa8438d38bb36bf83aaba2f30e6b2aaeccf7dbba",
+    "docs/project-execution-guide.sources.json": "2989bdec9f10b20e056da2a7245cbf3c7fb6ffd175f08f151a8d29155a6ad4f1",
+    "docs/technical-panorama.sources.json": "678e9b5373f5e5aca342270b299669ef81df55164d54d773e85d97c492f33969"
+  },
+  "accepted_runs": [
+    "variant_v1_a",
+    "variant_v1_b",
+    "first_order_v1_a",
+    "first_order_v1_b",
+    "negative_v1_a",
+    "negative_v1_b",
+    "nonfinite_v1_a",
+    "nonfinite_v1_b",
+    "init_compile_v1",
+    "footprint_v1_a",
+    "footprint_v1_b",
+    "main_inputs_v1_a",
+    "main_inputs_v3_b",
+    "geometry_inputs_v3_a",
+    "geometry_inputs_v3_b",
+    "main_live_v1",
+    "continuous_v1",
+    "cold_ordinary_v1_writer",
+    "cold_ordinary_v1_reader1",
+    "cold_ordinary_v1_reader2",
+    "cold_ordinary_v1_reader3",
+    "cold_molded_v1_writer",
+    "cold_molded_v1_reader1",
+    "cold_molded_v1_reader2",
+    "cold_molded_v1_reader3"
+  ],
+  "performance_remeasured": false,
+  "limitations": [
+    "No new ABBA performance claim.",
+    "Existing unrelated architecture-policy source drift remains explicitly unresolved.",
+    "Strict source identity applies to checkpoint restore; no new migration bypass."
+  ],
+  "invalid_or_partial_artifacts": [
+    "main_inputs_v1_b ZIP corrupted during disk exhaustion",
+    "main_inputs_v2_b archival copy failed during disk exhaustion",
+    "formal_v3 wrapper stopped after engine exit; bounded-memory raw comparison completed separately"
+  ],
+  "c_old_archive_files_remaining": [
+    "C:\\Users\\18205\\Documents\\sandcastle_validation\\material_finish_20261025\\验收\\baseline\\identity.json",
+    "C:\\Users\\18205\\Documents\\sandcastle_validation\\material_finish_20261025\\验收\\baseline\\startup.json",
+    "C:\\Users\\18205\\Documents\\sandcastle_validation\\material_finish_20261025\\验收\\baseline\\windows.cfg"
+  ]
+}

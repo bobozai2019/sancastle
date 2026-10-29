@@ -1,0 +1,10 @@
+[gd_resource type="SphereMesh" load_steps=2 format=3]
+
+[ext_resource type="Material" path="res://assets/gravel/stone_material.tres" id="1"]
+
+[resource]
+material = ExtResource("1")
+radius = 1.0
+height = 2.0
+radial_segments = 8
+rings = 4

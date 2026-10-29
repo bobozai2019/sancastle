@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3]
+[ext_resource type="PackedScene" path="res://tests/shape_brushes/local_retention_lab.tscn" id="1"]
+[node name="NativeMaterialLab" instance=ExtResource("1")]
+enable_brush_native_material = true
+use_local_support = true
+playing = false
+staging_wave_workload = "none"
+hide_hud = true

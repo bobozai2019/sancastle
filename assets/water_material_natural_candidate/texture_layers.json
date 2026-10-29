@@ -1,0 +1,49 @@
+{
+  "candidate_schema_version": 1,
+  "profile_id": "water_material_natural_v1",
+  "base_profile": "res://assets/test1_beach/test1_beach_release.json",
+  "base_profile_sha256": "4d9b2304154dc3d23344ce670c9d7fa1e1265f6738314a98fdde5e1043ff6dad",
+  "normal_detail": {
+    "mode": "texture_layers",
+    "texture": "res://assets/water_material_natural_candidate/water_normal_681.png",
+    "texture_sha256": "09060fd043521aecffa7013184a7c8a9b3556df9148469a03cc88e8bbd84b548",
+    "channels": "raw_rg_signed_xz",
+    "sampler": "linear_mipmap_repeat_no_srgb",
+    "layers": [
+      {
+        "scale_per_m": 0.18,
+        "direction_xz": [
+          1.0,
+          0.0
+        ],
+        "speed_m_s": 0.035,
+        "gain": 0.06
+      },
+      {
+        "scale_per_m": 0.47,
+        "direction_xz": [
+          0.6,
+          0.8
+        ],
+        "speed_m_s": -0.022,
+        "gain": 0.025
+      }
+    ]
+  },
+  "cost_budget": {
+    "median_frame_relative_max": 1.1,
+    "p95_frame_relative_max": 1.15,
+    "window_s": 60,
+    "viewport_px": [
+      1920,
+      1080
+    ]
+  },
+  "deferred_interfaces": [
+    "lighting",
+    "optics",
+    "foam",
+    "reflection",
+    "caustics"
+  ]
+}

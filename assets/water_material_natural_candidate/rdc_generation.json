@@ -1,0 +1,17 @@
+{
+  "generator": "D:\\godot\\project\\sandcastle\\tests\\water_material_natural\\build_rdc_material.py",
+  "generator_sha256": "589dc7a235f3f4938965180afbcea812d20e84db093516c6b752c7c841ae9f0f",
+  "source_water_sha256": "7a225ea82c286b8d8be53f116a96e701b2773a7da25b6a8579ba6a7359789b2d",
+  "source_bed_sha256": "77bd0939f5523e1cacb1461f13cc4db647f6941c0f8832ae5940779ce32fdc5f",
+  "water_geometry_prefix_unchanged": true,
+  "bed_geometry_prefix_unchanged": true,
+  "water_shader_sha256": "16a93e3d6942429073cbcbcba73b59bbe42e80c61bf776e9f15170ca69fd8b89",
+  "bed_shader_sha256": "e36bf7c1d44dbc38f50c46b7405cf439a48fd6f427df6f95a3d5e3e50d650abf",
+  "adaptations": [
+    "Godot meters and complete-state momentum; original unit conversion unknown.",
+    "Unrefracted depth determines path; refraction color query remains independent.",
+    "Normal B replaces original Sand.G for caustic local phase.",
+    "Existing engine sun/shadows retained; Fresnel target uses captured constant without original shadow multiplier.",
+    "Existing shore coverage and foam composition retained."
+  ]
+}

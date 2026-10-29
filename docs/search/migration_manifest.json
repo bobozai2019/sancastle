@@ -1,0 +1,230 @@
+{
+  "migration_date": "2026-10-11",
+  "scope": "Investigation reports from the underwater deposit and edit performance conversation",
+  "evidence_root": "task/sandcastle_test1_reverse_rebuild",
+  "reports": [
+    {
+      "from": "docs/history/sandcastle_test1_reverse_rebuild/analysis/underwater_deposit_report.md",
+      "original_task_path": "task/sandcastle_test1_reverse_rebuild/analysis/underwater_deposit_report.md",
+      "to": "docs/search/underwater_deposit_report.md",
+      "source_bytes": 13948,
+      "source_sha256": "7680331fc531066b3132d762436bb6ef885c1559c82bd116ada3a6a266251b17",
+      "link_replacements": [
+        {
+          "from": "../evidence/deposit_inquiry_20261010/",
+          "to": "../../task/sandcastle_test1_reverse_rebuild/evidence/deposit_inquiry_20261010/",
+          "occurrences": 1
+        },
+        {
+          "from": "../evidence/deposit_inquiry_20261010/artifact_index.jsonl",
+          "to": "../../task/sandcastle_test1_reverse_rebuild/evidence/deposit_inquiry_20261010/artifact_index.jsonl",
+          "occurrences": 1
+        },
+        {
+          "from": "../evidence/deposit_inquiry_20261010/analysis_summary.json",
+          "to": "../../task/sandcastle_test1_reverse_rebuild/evidence/deposit_inquiry_20261010/analysis_summary.json",
+          "occurrences": 3
+        },
+        {
+          "from": "../evidence/deposit_inquiry_20261010/runtime_kernel_manifest.json",
+          "to": "../../task/sandcastle_test1_reverse_rebuild/evidence/deposit_inquiry_20261010/runtime_kernel_manifest.json",
+          "occurrences": 1
+        },
+        {
+          "from": "../evidence/deposit_inquiry_20261010/snapshot_manifest.json",
+          "to": "../../task/sandcastle_test1_reverse_rebuild/evidence/deposit_inquiry_20261010/snapshot_manifest.json",
+          "occurrences": 1
+        },
+        {
+          "from": "../evidence/deposit_inquiry_20261010/renderer_2_VelocityIntegration_variant_0.asm.txt",
+          "to": "../../task/sandcastle_test1_reverse_rebuild/evidence/deposit_inquiry_20261010/renderer_2_VelocityIntegration_variant_0.asm.txt",
+          "occurrences": 1
+        },
+        {
+          "from": "../data/readable/rdc/test1/event_6083_vertex_disassembly.txt",
+          "to": "../../task/sandcastle_test1_reverse_rebuild/data/readable/rdc/test1/event_6083_vertex_disassembly.txt",
+          "occurrences": 1
+        },
+        {
+          "from": "water_report.md",
+          "to": "../history/sandcastle_test1_reverse_rebuild/analysis/water_report.md",
+          "occurrences": 1
+        },
+        {
+          "from": "../../../../shaders/simulation/shallow_tool_patch.glsl",
+          "to": "../../shaders/simulation/shallow_tool_patch.glsl",
+          "occurrences": 1
+        },
+        {
+          "from": "../../sandcastle_water_sand_coupling/验收/T04_GPU_NUM08水下编辑与水量闭合_20260928.md",
+          "to": "../history/sandcastle_water_sand_coupling/验收/T04_GPU_NUM08水下编辑与水量闭合_20260928.md",
+          "occurrences": 1
+        },
+        {
+          "from": "../../../../shaders/simulation/shallow_edge_flux.glsl",
+          "to": "../../shaders/simulation/shallow_edge_flux.glsl",
+          "occurrences": 1
+        },
+        {
+          "from": "../evidence/deposit_inquiry_20261010/godot_deposit_probe.json",
+          "to": "../../task/sandcastle_test1_reverse_rebuild/evidence/deposit_inquiry_20261010/godot_deposit_probe.json",
+          "occurrences": 1
+        },
+        {
+          "from": "../evidence/deposit_inquiry_20261010/height_saturation_check/godot_deposit_probe.json",
+          "to": "../../task/sandcastle_test1_reverse_rebuild/evidence/deposit_inquiry_20261010/height_saturation_check/godot_deposit_probe.json",
+          "occurrences": 1
+        },
+        {
+          "from": "../evidence/deposit_inquiry_20261010/provenance_validation.json",
+          "to": "../../task/sandcastle_test1_reverse_rebuild/evidence/deposit_inquiry_20261010/provenance_validation.json",
+          "occurrences": 1
+        },
+        {
+          "from": "../evidence/deposit_inquiry_20261010/full_index_validation.json",
+          "to": "../../task/sandcastle_test1_reverse_rebuild/evidence/deposit_inquiry_20261010/full_index_validation.json",
+          "occurrences": 1
+        }
+      ],
+      "bytes": 14527,
+      "sha256": "781af555963c15e7fb04d3af5c72c81da52d5a8c08f9d14ae96599a149cbc4ae"
+    },
+    {
+      "from": "docs/history/sandcastle_test1_reverse_rebuild/analysis/edit_performance_report.md",
+      "original_task_path": "task/sandcastle_test1_reverse_rebuild/analysis/edit_performance_report.md",
+      "to": "docs/search/edit_performance_report.md",
+      "source_bytes": 11708,
+      "source_sha256": "fc8331248660f3ba8e61efc68322fd01aeb461c1583107b12b07dcc07c37ad52",
+      "link_replacements": [
+        {
+          "from": "../evidence/edit_performance_inquiry_20261010/analysis_summary.json",
+          "to": "../../task/sandcastle_test1_reverse_rebuild/evidence/edit_performance_inquiry_20261010/analysis_summary.json",
+          "occurrences": 2
+        },
+        {
+          "from": "../evidence/edit_performance_inquiry_20261010/provenance_validation.json",
+          "to": "../../task/sandcastle_test1_reverse_rebuild/evidence/edit_performance_inquiry_20261010/provenance_validation.json",
+          "occurrences": 1
+        },
+        {
+          "from": "../evidence/edit_performance_inquiry_20261010/kernel_manifest.json",
+          "to": "../../task/sandcastle_test1_reverse_rebuild/evidence/edit_performance_inquiry_20261010/kernel_manifest.json",
+          "occurrences": 1
+        }
+      ],
+      "bytes": 11872,
+      "sha256": "dffa730e768597adad965ebe7882710b2ec5eb816dbe226ab3acc68aff63f922"
+    },
+    {
+      "from": "docs/history/sandcastle_test1_reverse_rebuild/analysis/edit_performance_test41_test42.md",
+      "original_task_path": "task/sandcastle_test1_reverse_rebuild/analysis/edit_performance_test41_test42.md",
+      "to": "docs/search/edit_performance_test41_test42.md",
+      "source_bytes": 8759,
+      "source_sha256": "55754602cc3e83054337faac52edf725a2fa7682781e3e8acaea63d455749929",
+      "link_replacements": [
+        {
+          "from": "../evidence/edit_performance_test41_test42_20261010/analysis_complete_summary.json",
+          "to": "../../task/sandcastle_test1_reverse_rebuild/evidence/edit_performance_test41_test42_20261010/analysis_complete_summary.json",
+          "occurrences": 1
+        },
+        {
+          "from": "../evidence/edit_performance_test41_test42_20261010/provenance_validation.json",
+          "to": "../../task/sandcastle_test1_reverse_rebuild/evidence/edit_performance_test41_test42_20261010/provenance_validation.json",
+          "occurrences": 1
+        }
+      ],
+      "bytes": 8841,
+      "sha256": "1ac9749458d8c0d61da9011224ef9e90ede587ab8dda3ba47ae94e38f471c3dd"
+    },
+    {
+      "from": "docs/history/sandcastle_test1_reverse_rebuild/analysis/edit_performance_test41_test42_v2.md",
+      "original_task_path": "task/sandcastle_test1_reverse_rebuild/analysis/edit_performance_test41_test42_v2.md",
+      "to": "docs/search/edit_performance_test41_test42_v2.md",
+      "source_bytes": 8964,
+      "source_sha256": "a2e535f1f027745a46bd0936a288cad40e9b3dacdb8236ba22f58b00da08b976",
+      "link_replacements": [
+        {
+          "from": "../evidence/edit_performance_test41_test42_20261010/analysis_complete_summary.json",
+          "to": "../../task/sandcastle_test1_reverse_rebuild/evidence/edit_performance_test41_test42_20261010/analysis_complete_summary.json",
+          "occurrences": 1
+        },
+        {
+          "from": "../evidence/edit_performance_test41_test42_20261010/provenance_validation.json",
+          "to": "../../task/sandcastle_test1_reverse_rebuild/evidence/edit_performance_test41_test42_20261010/provenance_validation.json",
+          "occurrences": 1
+        }
+      ],
+      "bytes": 9046,
+      "sha256": "b3dc82014cd0ac716f84373d3369b409ab2bea35783cd55031f4aac536f4ece5"
+    }
+  ],
+  "updated_inbound_documents": [
+    {
+      "path": "docs/README.md",
+      "link_replacements": [
+        {
+          "from": "history/sandcastle_test1_reverse_rebuild/analysis/underwater_deposit_report.md",
+          "to": "search/underwater_deposit_report.md",
+          "occurrences": 1
+        },
+        {
+          "from": "history/sandcastle_test1_reverse_rebuild/analysis/edit_performance_test41_test42_v2.md",
+          "to": "search/edit_performance_test41_test42_v2.md",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "docs/history/sandcastle_test1_reverse_rebuild/执行状态.md",
+      "link_replacements": [
+        {
+          "from": "analysis/underwater_deposit_report.md",
+          "to": "../../search/underwater_deposit_report.md",
+          "occurrences": 2
+        },
+        {
+          "from": "analysis/edit_performance_report.md",
+          "to": "../../search/edit_performance_report.md",
+          "occurrences": 1
+        },
+        {
+          "from": "analysis/edit_performance_test41_test42_v2.md",
+          "to": "../../search/edit_performance_test41_test42_v2.md",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "docs/history/sandcastle_test1_reverse_rebuild/收尾记录.md",
+      "link_replacements": [
+        {
+          "from": "analysis/underwater_deposit_report.md",
+          "to": "../../search/underwater_deposit_report.md",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "docs/history/sandcastle_test1_reverse_rebuild/analysis/water_report.md",
+      "link_replacements": [
+        {
+          "from": "underwater_deposit_report.md",
+          "to": "../../../search/underwater_deposit_report.md",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "docs/history/sandcastle_test1_reverse_rebuild/验收/RG4_实时沙滩与联合验收.md",
+      "link_replacements": [
+        {
+          "from": "../analysis/underwater_deposit_report.md",
+          "to": "../../../search/underwater_deposit_report.md",
+          "occurrences": 1
+        }
+      ]
+    }
+  ],
+  "changes": "Only Markdown link targets were changed in the reports. Conclusions, confidence levels, measurements and acceptance status are unchanged.",
+  "historical_index_policy": "Existing evidence JSON/JSONL and tool scripts retain their original paths and hashes. Resolve report locations with original_task_path/from/to in this manifest; source_sha256 is the pre-move report hash and sha256 is the current report hash."
+}

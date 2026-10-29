@@ -1,0 +1,212 @@
+{
+	"checks": [
+		{
+			"label": "read:seed",
+			"pass": true
+		},
+		{
+			"label": "validate:seed",
+			"pass": true
+		},
+		{
+			"label": "read:restored",
+			"pass": true
+		},
+		{
+			"label": "validate:restored",
+			"pass": true
+		},
+		{
+			"label": "read:reference",
+			"pass": true
+		},
+		{
+			"label": "validate:reference",
+			"pass": true
+		},
+		{
+			"label": "read:resumed",
+			"pass": true
+		},
+		{
+			"label": "validate:resumed",
+			"pass": true
+		},
+		{
+			"label": "cold_initial/native/fields",
+			"pass": true
+		},
+		{
+			"label": "cold_initial/native/spare",
+			"pass": true
+		},
+		{
+			"label": "cold_initial/native/material",
+			"pass": true
+		},
+		{
+			"label": "cold_initial/native/foam",
+			"pass": true
+		},
+		{
+			"label": "cold_initial/native/histories",
+			"pass": true
+		},
+		{
+			"label": "cold_initial/control_only_generation_changed",
+			"pass": true
+		},
+		{
+			"label": "cold_initial/advanced_time_s",
+			"pass": true
+		},
+		{
+			"label": "cold_initial/state_seq",
+			"pass": true
+		},
+		{
+			"label": "cold_initial/sim_tick",
+			"pass": true
+		},
+		{
+			"label": "cold_initial/revision",
+			"pass": true
+		},
+		{
+			"label": "cold_initial/ledger",
+			"pass": true
+		},
+		{
+			"label": "cold_initial/initial_sand_total_m3",
+			"pass": true
+		},
+		{
+			"label": "cold_initial/nominal_upper_supply",
+			"pass": true
+		},
+		{
+			"label": "cold_initial/wave_requests",
+			"pass": true
+		},
+		{
+			"label": "cold_initial/wave_start_times",
+			"pass": true
+		},
+		{
+			"label": "cold_initial/configuration",
+			"pass": true
+		},
+		{
+			"label": "cold_initial/source_provenance",
+			"pass": true
+		},
+		{
+			"label": "cold_initial/gravel_only_generation_changed",
+			"pass": true
+		},
+		{
+			"label": "cold_continued/native/fields",
+			"pass": true
+		},
+		{
+			"label": "cold_continued/native/spare",
+			"pass": true
+		},
+		{
+			"label": "cold_continued/native/material",
+			"pass": true
+		},
+		{
+			"label": "cold_continued/native/foam",
+			"pass": true
+		},
+		{
+			"label": "cold_continued/native/histories",
+			"pass": true
+		},
+		{
+			"label": "cold_continued/control_only_generation_changed",
+			"pass": true
+		},
+		{
+			"label": "cold_continued/advanced_time_s",
+			"pass": true
+		},
+		{
+			"label": "cold_continued/state_seq",
+			"pass": true
+		},
+		{
+			"label": "cold_continued/sim_tick",
+			"pass": true
+		},
+		{
+			"label": "cold_continued/revision",
+			"pass": true
+		},
+		{
+			"label": "cold_continued/ledger",
+			"pass": true
+		},
+		{
+			"label": "cold_continued/initial_sand_total_m3",
+			"pass": true
+		},
+		{
+			"label": "cold_continued/nominal_upper_supply",
+			"pass": true
+		},
+		{
+			"label": "cold_continued/wave_requests",
+			"pass": true
+		},
+		{
+			"label": "cold_continued/wave_start_times",
+			"pass": true
+		},
+		{
+			"label": "cold_continued/configuration",
+			"pass": true
+		},
+		{
+			"label": "cold_continued/source_provenance",
+			"pass": true
+		},
+		{
+			"label": "cold_continued/gravel_only_generation_changed",
+			"pass": true
+		},
+		{
+			"label": "advanced_live_wave",
+			"pass": true
+		},
+		{
+			"label": "visuals_enabled",
+			"pass": true
+		},
+		{
+			"label": "new_generation",
+			"pass": true
+		}
+	],
+	"inputs": {
+		"reference": {
+			"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/cold_ordinary_v1_reader2_comparison/seed/data/continuation.sandue",
+			"sha256": "7df7fd508f391581ff0931366d6adeb38e2315bc311fe5e35a1f087cf7db3819"
+		},
+		"restored": {
+			"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/cold_ordinary_v1_reader2_comparison/resume/data/restored.sandue",
+			"sha256": "75e7777a84bc4e0ce0335ca2b58c634224323ccd3b0080898e519bd611bd78e3"
+		},
+		"resumed": {
+			"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/cold_ordinary_v1_reader2_comparison/resume/data/continuation.sandue",
+			"sha256": "b1bbd6f2146d57112cf48a05acbbcc96daf5331c54abf50a24ae26bdaa09a5ea"
+		},
+		"seed": {
+			"path": "D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/cold_ordinary_v1_reader2_comparison/seed/data/seed.sandue",
+			"sha256": "c5dc43e3aa319f0bfe0e58c04ac8ba4f9d84bfbe25c4c0b6cebfbd9a0cd2484c"
+		}
+	},
+	"outcome": "pass",
+	"scope": "Separate engine processes; native fields/spare/material/foam/gravel exact, control and gravel metadata change only generation. All files validate with same actual source configuration."
+}

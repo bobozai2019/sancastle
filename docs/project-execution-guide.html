@@ -1,0 +1,358 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sandcastle · 统一沙水执行指南</title>
+<style>:root{font-family:system-ui,"Microsoft YaHei",sans-serif;color:#e9f1f4;background:#101d24;line-height:1.7}body{max-width:1040px;margin:auto;padding:40px 24px}a{color:#8bd6f7}h1{font-size:34px}h2{margin-top:38px;color:#f4d29b}h3{font-size:18px}.tag,.phase{display:inline-block;padding:7px 13px;margin:4px;border:1px solid #506879;border-radius:6px}.phase{background:#18333c}.commit{border-color:#edbc68;color:#ffe0a5}.muted{color:#adc0c8}.panel,details{background:#172a34;border:1px solid #304854;padding:18px;border-radius:10px;margin:14px 0}select{background:#243e48;color:white;padding:8px;border:1px solid #68828e;border-radius:5px;margin-right:12px}pre{overflow:auto;white-space:pre;font:13px/1.7 Consolas,monospace;background:#101b22;padding:16px}.hash{font:12px Consolas,monospace;overflow-wrap:anywhere}table{width:100%;border-collapse:collapse}td,th{text-align:left;padding:12px;border-bottom:1px solid #40525e}button{font:inherit}.flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px}.arrow{color:#87bec8}summary{cursor:pointer}code{color:#b7e6e5}@media(max-width:700px){body{padding:20px 14px}h1{font-size:26px}table{font-size:13px}}</style>
+<p class="muted">本地源码生成 · 可离线查看 · 没有网络脚本或运行时写入</p><h1>同一个域，同一条沙水执行流程</h1><div class="panel">两个正式入口默认MUSCL MC与SSPRK2二阶水传播，可启动前显式选择一阶。面板保波程度0–1混合MC/Superbee重构，默认0；独立水参数窗保存后由用户重启生效，窗口不调用热重建，存档记录当前有效值。main默认动量B；test1_geometry默认连通排水。编辑、水tick与显示共用统一Pipeline。</div>
+<p>两个正式场景由直接继承Node3D的统一入口加载。玩家工具只产生声明；域Runtime协调生命周期，Pipeline决定录制顺序，公共数值阶段完成候选、校验、条件提交与发布。</p>
+<p>MUSCL在同一未接受初态的连续CFL重试中复用第一阶段与dt无关的边通量、压力修正、床源项和速度上界，drain、Euler及第二阶段仍按新dt计算。GPU在新tick、接受和故障时集中使缓存失效；自定义／包装耦合完整重算。三份私有纹理增加1,581,056 B有效载荷，另有16 B状态缓冲，均随Water释放，不进入检查点。尝试上限默认64，水窗口允许1–64；CFL默认0.2，允许0.05–0.5，大于0.2属实验调节。两项保存重启生效并纳入配置与恢复校验。CPU按上限录制候选链，底层64槽容量及清零保持；预算耗尽只推进已接受时间。原双槽、审计、完成时钟及账本保持原语义。详情见<a href="当前技术规格.md">数值规格</a>。</p>
+<p>水面内白沫与岸脚读取共享泡沫历史；两个正式入口的独立细沫节点PrototypeFrontFoamDense均隐藏，不提交该层绘制，对应细沫参数禁用。</p>
+<p>水面泡沫使用共享历史R控制覆盖，并以线性mip孔洞纹样破边；两个正式场景静态绑定foam_detail.png。完成态时钟和限速流速驱动双相位局部流动，默认周期4秒、密度1/m、破碎程度1；岸脚增益0.55。覆盖统一参与颜色、透明度、直射和高光抑制。水参数窗口的纹样密度、破碎程度和流动周期实时生效；模式0保留原路径。三项参数可用性以bind_scene时模式判断，模式0禁用；正式窗口不提供模式开关，诊断修改模式后重新bind_scene同步可用性。该表现不改变权威水沙和历史演化。</p>
+<div class="flow"><span class="tag">场景 / 输入声明</span><span class="arrow">→</span><span class="tag">Runtime</span><span class="arrow">→</span><span class="tag">Pipeline 队列 / 3工作槽</span><span class="arrow">→</span><span class="tag">编辑 / 水tick / 显示</span><span class="arrow">→</span><span class="tag">同代完成态 / 2高度槽</span></div>
+<h2>声明如何选择公共阶段</h2><p>下面只演示既有执行轨迹。选择操作和水策略会改变可见阶段标签，不执行Godot模拟。</p><div class="panel"><label>操作 <select id="operation"><option value="volume">体积增沙</option><option value="target">目标高度</option><option value="transfer">守恒搬运</option></select></label><label>水响应 <select id="water"><option value="0">0 · 关闭</option><option value="1">1 · 容量/位移</option><option value="2" selected>2 · 动量 B（main默认）</option><option value="3">3 · 原连通排水</option></select></label><p id="stroke"></p><div id="phases" class="flow"></div><p id="response"></p><p class="muted">阶段12为公共材料候选，5/6为校验，7为条件提交，8为结果；原语内部迭代不构成第二个事务。</p></div>
+<h2>权威状态与读者边界</h2><table><tr><th>边界</th><th>实际职责</th></tr><tr><td>编辑执行器</td><td>只在公共决定允许时提交沙/材料等字段；拒绝保留原场。</td></tr><tr><td>水响应 / 水tick</td><td>前者共享编辑事务决定，后者拥有明确的水/侵蚀/材料子步；实际时钟由GPU完成态推进。</td></tr><tr><td>预览 / 表现 / 碰撞</td><td>读取同generation完整完成态。编辑无需等待CPU通知或碰撞收敛；消费者各自保留资源租约。</td></tr><tr><td>native保存 / 恢复</td><td>SANDUE06/SANDUE07容器保留有效配置和原始资源字节。候选还是同一种Pipeline；完整64块新代物理槽准备后才切换。</td></tr><tr><td>关闭 / unknown</td><td>先关闭接纳，等待真实终结与最后读者证明。unknown不重放，不伪造GPU结果，不强制free未知所有权。</td></tr></table>
+<h2>配置新增玩法</h2><p>新增ToolProfile资源，使用既有operation、shape、材料/水策略、数值范围和受限模板。注册表校验精确script类型并复制冻结数据；profile不得携带执行Callable、自选shader或调度器。</p><p>配置扩展方法见<a href="unified-edit-extension-guide.md">扩展指南</a>。</p>
+<p>水参数窗口的“水沙接触白边”（visual_natural_contact_enabled）默认开启，实时控制 ShoreContactOverlay.natural_contact_enabled，随当前场景参数保存、加载和恢复默认。关闭仅隐藏岸脚接触覆盖层，保留其强度设置，水面泡沫、冲岸水花和白沫历史继续按原配置工作。</p>
+<h2>冲岸水花</h2><p>冲岸水花是独立的只读GPU表现层：固定ShoreSplash批量节点从1024槽纹理池绘制小水滴，按朝向干岸的流速分量与浅水条件发射，重力与阻力驱动弹道，触床、落水或越界时终止。统一成功发布阶段使用实际接受dt推进，暂停冻结；不回写水沙、动量、源汇或账本。水参数窗口可实时开关显示并调整尺寸；恢复或重进清空瞬态水花，不保存粒子轨迹。</p><p>水花四张64×16 RGBA32F图像共65,536原始字节；每成功完成工作追加一次小dispatch，control[1]失败不写，control[9]接受dt推进；dt为零的编辑仅裁掉新床埋入的水滴。发射须有0.004–0.18 m浅水、沙厚大于0.02 m、床面坡度大于0.04、朝岸速度超过0.28 m/s与前方0.25 m干岸或近水位床面；速度q/max(h,0.02)限长3 m/s。每空槽每工作最多尝试8个候选点，概率按实际dt缩放。水滴寿命0.25–0.60模拟秒、重力9.8 m/s²、水平阻力系数0.65/s，落地使用原三角床面及已有水深。水滴材质render_priority=2，在水面0及岸脚1后透明合成；保留正常深度测试及depth_draw_never，不穿透实际遮挡物。单槽独立更新并写published，未引入邻槽写入、逐滴刚体、碰撞高度图或运行时CPU粒子读回。上述参数属于项目适配。</p><p>UI显示开关仅隐藏绘制，池仍继续更新；尺寸默认1、范围0.5–2。入口shore_splash_enabled为启动前冻结开关，false停止该阶段计算。瞬态不写检查点，恢复新generation时清空；原生ABI未扩展，新增源码与配置仍参与原有严格来源校验，旧档不自动兼容。图像字节数不等于驱动显存或帧成本，完整负载成本需独立实测。</p>
+<h2>动量资源与存取</h2><p>GPU权威动量使用两张256² RG32F ping-pong纹理，R/G分别保存qx/qz（hu/hv），每分量仍为Float32；Views另持有一张RG32F完成态动量，供材质、查询、白沫、碎石、植被及溅水读取。三张动量纹理合计原始载荷1,572,864 B，数量减少不代表像素载荷或物理显存减半，也不保证帧率提升。</p><p>CPU与磁盘保留momentum_x、momentum_z逻辑字段及现有native3、SANDUE06/07版本。初始化和恢复分别将current/spare两个分量按uint32位型交错打包；捕获每份RG一次，长度及全部异步回执完整后再无损拆分。公开查询仍返回原逻辑分量。每tick不做拆分，不增加pack/unpack dispatch；发布、完成态身份、源汇和动量账本不变。严格配置与来源校验仍生效，字段格式未变不代表所有旧档自动兼容。</p><h2>确定性与完整负载限制</h2><p>检查点恢复原始字段与恢复后继续演算的逐位确定性是不同保证。已有固定检查点对照中，同机同后端使用精确旧水面与水侧shader原件，继续填沙、挖沙后仍出现约1e-7量级的水沙及动量字段差异，具体根因未知；这不证明新表现对演算无影响，也不能据此放宽逐点比较。恢复继续遵守既有原始字节、配置、账本和时钟校验；体积账本容差不适用于逐格字段，当前不承诺恢复后任意演算序列逐位一致。</p><p>新泡沫路径沿用既有水面绘制与历史场，增加两次细节纹理采样，没有新增水面表现节点、历史RT或compute阶段；这些结构信息不能换算为固定帧率或零额外成本。现有D3D12、GTX1050完整负载对照的旧路径自身时序仍不稳定，部分整帧尾部和模拟吞吐超出原成本边界，尚不能确认新路径完整负载性能达标。视口GPU区间不包含全部异步compute；需分别观察整帧分位数、实际完成模拟时间/墙钟时间及覆盖明确的GPU区间，暂停画面的GPU改善不能替代实时负载结论。</p>
+<h2>当前方案与规格</h2><p><a href="Sandcastle项目技术全景.docx">项目技术全景 Word</a>完整说明架构、数值、数据协议、消费者和生命周期，并提供从当前源码提取的附录。</p><p><a href="当前项目技术方案.md">技术方案</a>说明模块协作、模拟、表现和生命周期；<a href="当前技术规格.md">技术规格</a>列出域、字段、ABI、容量、账本、兼容与验证边界。<a href="主场景操作.md">操作说明</a>和<a href="场景切换与功能复用.md">场景说明</a>对应当前两个正式入口。</p>
+<h2>两场景漂浮道具</h2><p>两个正式场景各预存水瓶、木板、木棍各一件，右下角三槽UI选择后左键摆放/移动；拾取模式将实例收入槽位，[ / ]旋转，右键/Esc取消。固定容量3件，全部拾取后不提交空探针。交互在公共读者真实终结后换owner，重新采样目标位置并建立新观察起点，未操作物体保留运动状态。公共只读Probe → 完成态水/床/流速 → 类型化Profile逐点浮力和相对流阻 → 原生Jolt。实际state.step消耗完成水时间余额；局部保持不阻塞生产。Height ABI3用完整共享顶点上界证明5mm总床面差，未知或超限时保持道具。暂停/保存保持，成功恢复或重进重置，检查点不保存道具姿态。test1_geometry投放限制在30×15m可见范围内。</p><p><a href="漂浮道具.md">道具机制与扩展</a>。</p>
+<h2>两场景湿沙</h2><p>main与test1_geometry默认启用单张256²表面湿痕，合并到成功发布；快速变湿、退水留痕、按模拟时间干燥。“沙子参数”可分别设置湿色保持与褪色时间，默认18/12秒，保存后重启生效。两场景以SANDUE07保存并恢复历史，关闭湿痕的配置使用原湿度颜色和SANDUE06。未登记旧档不会自动迁移。<a href="沙面湿痕.md">公式、资源与兼容限制</a>。</p><h2>水草与岸草</h2><p>两个正式场景预存海草、海带、红藻与六种岸上草本，各2048候选。初态床水与分布场筛选位置；公共Visuals读取水沙驱动根部下移和临界阻尼摆动，填沙可遮埋草叶。原包多视角图集与代理网格批量绘制，裁剪轮廓并重建场景深度，接受光照并参与水下遮挡。暂停保持姿态，恢复或重进根据完整床水重新分布。配置、纹理布局及持久化限制见<a href="植被.md">水草与岸草</a>。</p>
+<h2>当前源码锚点</h2><p class="muted">以下摘录、行号与SHA256直接来自生成时文件，可用build_execution_guide.py --check核对。</p><details><summary>参数服务 · scripts/parameters/parameter_service.gd:192</summary><p class="hash">SHA256 32909aff0c4f3c5b87fd2ecfff9e29e8053ab57ce56c9c98cc839414efb46baa</p><pre> 192 func set_value(id: String, value: Variant) -&gt; StringName:
+ 193 	if _busy():return &amp;&quot;scene_busy&quot;
+ 194 	if not _enabled(id):return &amp;&quot;parameter_unavailable&quot;
+ 195 	if not Schema.valid(id,value):return &amp;&quot;invalid_parameter&quot;
+ 196 	var candidate: Dictionary={}
+ 197 	for key in editing:
+ 198 		if available.get(key,false):candidate[key]=editing[key]
+ 199 	candidate[id]=value
+ 200 	var error:=Schema.validate_values(candidate)
+ 201 	if not error.is_empty():return error</pre></details>
+<details><summary>启动参数 · scripts/parameters/parameter_service.gd:70</summary><p class="hash">SHA256 32909aff0c4f3c5b87fd2ecfff9e29e8053ab57ce56c9c98cc839414efb46baa</p><pre>  70 func prepare_boot(beach, settings: Dictionary, environment: Dictionary, simulation: Dictionary) -&gt; StringName:
+  71 	var values:=boot_values(beach.scene_key)
+  72 	if beach.has_meta(&quot;parameter_boot_values&quot;):values=beach.get_meta(&quot;parameter_boot_values&quot;).duplicate(true)
+  73 	var error:=Schema.validate_values(values)
+  74 	if not error.is_empty():return error
+  75 	var coupling: Dictionary={}
+  76 	for id in values:
+  77 		var row: Dictionary=Schema.rows()[id]
+  78 		match row.target:
+  79 			&quot;coupling&quot;:coupling[id]=float(values[id])</pre></details>
+<details><summary>入口 · scripts/beach/unified_playable_entry.gd:86</summary><p class="hash">SHA256 9289642903f539de2c38736c7caa002240566ba314b05cf42dcb8a72198a1b81</p><pre>  86 func _ready() -&gt; void:
+  87 	get_tree().auto_accept_quit=false
+  88 	get_window().focus_exited.connect(_world_focus_lost)
+  89 	$Interface/EditPanel/Margin/Controls/ParameterWindows.get_popup().id_pressed.connect(open_parameters)
+  90 	$GravelLayer.visible=false
+  91 	if vegetation_layer!=null:vegetation_layer.visible=false
+  92 	var read:=Presentation.read(presentation_manifest)
+  93 	if not read.error.is_empty():_fail(read.error);return
+  94 	var data: Dictionary=read.metadata
+  95 	if data.settings.scene_key!=scene_key:_fail(&amp;&quot;presentation_scene_mismatch&quot;);return</pre></details>
+<details><summary>声明 · scripts/simulation/unified_edit/player_input.gd:25</summary><p class="hash">SHA256 c0d9105c3a0d20afbf55808de2f5643a7f9f4f7bf8ebe23f4d0e628627e969ac</p><pre>  25 func begin(tool: StringName, point: Vector2, parameters: Dictionary, amount: float, policy: int, speed: float) -&gt; Dictionary:
+  26 	if not gesture.is_empty():return {&quot;accepted&quot;:false,&quot;error&quot;:&amp;&quot;stroke_busy&quot;}
+  27 	if tool==&amp;&quot;gravel_drop&quot;:
+  28 		gesture={&quot;tool&quot;:tool,&quot;last&quot;:point,&quot;parameters&quot;:parameters.duplicate(true),&quot;stroke_id&quot;:0,&quot;sample&quot;:0,&quot;generation&quot;:runtime.generation()}
+  29 		return _sample(point,false)
+  30 	var profile_id:=_profile_id(tool,false)
+  31 	var profile: Dictionary=registry.profile(profile_id)
+  32 	if profile.is_empty():return {&quot;accepted&quot;:false,&quot;error&quot;:&amp;&quot;invalid_profile&quot;}
+  33 	var stroke_id:=0
+  34 	if profile.stroke_policy!=0:</pre></details>
+<details><summary>注册表 · scripts/simulation/unified_edit/profile_registry.gd:49</summary><p class="hash">SHA256 f1911785ae05e56816c63641fbd98ece60a9de323bd365962df9331246ba558b</p><pre>  49 func resolve(id: Variant, version: Variant, hash: Variant, overrides: Dictionary={}, features: Dictionary={}) -&gt; Dictionary:
+  50 	if typeof(id) not in [TYPE_STRING,TYPE_STRING_NAME] or typeof(version)!=TYPE_INT or typeof(hash)!=TYPE_STRING:return {&quot;error&quot;:&amp;&quot;invalid_profile&quot;}
+  51 	var frozen:=profile(id)
+  52 	if frozen.is_empty():return {&quot;error&quot;:&amp;&quot;invalid_profile&quot;}
+  53 	if frozen.version!=version or frozen.profile_hash!=hash:return {&quot;error&quot;:&amp;&quot;profile_identity_mismatch&quot;}
+  54 	for key in features:
+  55 		if typeof(key) not in [TYPE_STRING,TYPE_STRING_NAME] or not frozen.allowed_features.has(String(key)) or typeof(features[key])!=TYPE_INT or features[key] not in frozen.allowed_features[String(key)]:return {&quot;error&quot;:&amp;&quot;unsupported_combination&quot;}
+  56 		frozen[String(key)]=features[key]
+  57 	frozen.selected_features={&quot;water_policy&quot;:frozen.water_policy,&quot;material_policy&quot;:frozen.material_policy}
+  58 	frozen.derived_fields=Profile.fields_for(frozen.operation,frozen.destination,frozen.water_policy,frozen.stroke_policy)</pre></details>
+<details><summary>冻结配置 · scripts/simulation/unified_edit/configuration.gd:74</summary><p class="hash">SHA256 25d0e019a20bc8851595942a049c46e6441abb2a208bbe2eb6aa1517eaf265bc</p><pre>  74 static func freeze(registry, domain: Variant, simulation: Dictionary, effects: Dictionary={}, diagnostics: Dictionary={}, environment: Dictionary={}, extra_sources: PackedStringArray=PackedStringArray()) -&gt; Dictionary:
+  75 	if typeof(domain) not in [TYPE_STRING,TYPE_STRING_NAME] or String(domain).is_empty() or String(domain).length()&gt;128:return {&quot;error&quot;:&amp;&quot;invalid_configuration_domain&quot;}
+  76 	if not exact(simulation,SIMULATION_KEYS):return {&quot;error&quot;:&amp;&quot;invalid_simulation_flags&quot;}
+  77 	for value in simulation.values():
+  78 		if typeof(value)!=TYPE_BOOL:return {&quot;error&quot;:&amp;&quot;invalid_simulation_flags&quot;}
+  79 	if not simulation.unrestricted_sand_tools:return {&quot;error&quot;:&amp;&quot;unsupported_inventory_accounting&quot;}
+  80 	for key in [&quot;enable_structures&quot;,&quot;rise_front_history&quot;,&quot;contact_history&quot;]:
+  81 		if simulation[key]:return {&quot;error&quot;:&amp;&quot;unsupported_history_capability&quot;}
+  82 	var effect:=_flags(effects,EFFECT_DEFAULTS);var diagnostic:=_flags(diagnostics,DIAGNOSTIC_DEFAULTS)
+  83 	if not effect.error.is_empty():return effect</pre></details>
+<details><summary>主调度 · scripts/simulation/unified_edit/pipeline.gd:322</summary><p class="hash">SHA256 0a4bcd68888619a2bcbe5dc1ba96a6b56ec91122b343f52f4bd048e0e25f9a7f</p><pre> 322 func pump() -&gt; void:
+ 323 	if not _ready or not _fault.is_empty():
+ 324 		_checkpoint_progress();return
+ 325 	if diagnostics!=null:diagnostics.mark(&amp;&quot;pump_begin&quot;,0,{&quot;pending&quot;:_pending.size(),&quot;active&quot;:active_count()})
+ 326 	_poll()
+ 327 	if not _fault.is_empty():
+ 328 		_checkpoint_progress();return
+ 329 	heights.pump()
+ 330 	_checkpoint_progress()
+ 331 	# All ready work may record ahead; no per-command CPU completion gate.</pre></details>
+<details><summary>唯一录制 · scripts/simulation/unified_edit/pipeline.gd:363</summary><p class="hash">SHA256 0a4bcd68888619a2bcbe5dc1ba96a6b56ec91122b343f52f4bd048e0e25f9a7f</p><pre> 363 func _submit_render(id: Dictionary, packet: PackedByteArray, kind: int, dt: float, wave_packets: Array=[]) -&gt; void:
+ 364 	if diagnostics!=null:diagnostics.mark(&amp;&quot;submit_begin&quot;,id.batch_seq)
+ 365 	if kind==L.WorkKind.WATER_TICK and boundary.enabled and not water.configure_boundary(water.tide,wave_packets):
+ 366 		call_deferred(&quot;_submission_failed&quot;,id,{&quot;recorded&quot;:false,&quot;error&quot;:&amp;&quot;boundary_wave_upload&quot;});return
+ 367 	var decoded:=W.decode_batch(packet,id)
+ 368 	var recorder: Callable=_record_work.bind(kind,dt,decoded.commands)
+ 369 	if diagnostics!=null and state.profile_passes:state.rd.capture_timestamp(&quot;ue_batch_&quot;+str(id.batch_seq)+&quot;_start&quot;)
+ 370 	var submitted:=transport.submit(id,packet,recorder,_arrived_render,_finish_work)
+ 371 	if diagnostics!=null and state.profile_passes:state.rd.capture_timestamp(&quot;ue_batch_&quot;+str(id.batch_seq)+&quot;_end&quot;)
+ 372 	if diagnostics!=null:diagnostics.mark(&amp;&quot;submit_end&quot;,id.batch_seq,{&quot;recorded&quot;:submitted.recorded,&quot;error&quot;:submitted.error})</pre></details>
+<details><summary>编辑骨架 · scripts/simulation/unified_edit/executor.gd:46</summary><p class="hash">SHA256 f57c4bf157df609b9e922e038c7546914a9ae0d0cc76c7d23b9b92d270001751</p><pre>  46 func record(input: RID, _control: RID, _output: RID, count: int, commands: Array) -&gt; void:
+  47 	var slot_index:=-1
+  48 	for index in transport.resources.size():
+  49 		if transport.resources[index].input==input:slot_index=index;break
+  50 	assert(slot_index&gt;=0 and commands.size()==count)
+  51 	for index in count:
+  52 		var command: Dictionary=commands[index]
+  53 		var groups:=ceili(float(command.rect_w*command.rect_h)/256.0)
+  54 		if command.operation==L.Profile.Operation.TARGET_HEIGHT or command.control_kind==L.ControlKind.BEGIN:groups=256
+  55 		groups=maxi(1,groups)</pre></details>
+<details><summary>公共水响应 · scripts/simulation/unified_edit/water_response.gd:87</summary><p class="hash">SHA256 1406e62896876d1e57214accf590b94032e6cde315e452e433e1789cdc6e1dc2</p><pre>  87 func record(policy: int) -&gt; Array:
+  88 	var inject:=inject_water_loss_once;inject_water_loss_once=false
+  89 	dispatch(&quot;response&quot;,sets.response,Vector3i(256,1,1),PackedInt32Array([0,0,0,0]).to_byte_array())
+  90 	var push:=PackedFloat32Array([0,0.125,0,0]).to_byte_array();push.encode_u32(0,256)
+  91 	if policy==2:_velocity_only()
+  92 	else:
+  93 		if not inject:_legacy_dispatch(&quot;packed&quot;,push)
+  94 		push.encode_u32(8,1 if inject else 0);push.encode_u32(12,0 if inject else 2);_legacy_dispatch(&quot;displace&quot;,push)
+  95 	dispatch(&quot;response&quot;,sets.response,Vector3i(256,1,1),PackedInt32Array([1,0,0,0]).to_byte_array())
+  96 	_legacy_dispatch(&quot;velocity_reduce&quot;,PackedByteArray())</pre></details>
+<details><summary>水条件提交 · scripts/simulation/unified_edit/water_response.gd:101</summary><p class="hash">SHA256 1406e62896876d1e57214accf590b94032e6cde315e452e433e1789cdc6e1dc2</p><pre> 101 func commit() -&gt; void:
+ 102 	dispatch(&quot;response&quot;,sets.response,Vector3i(256,1,1),PackedInt32Array([4,0,0,0]).to_byte_array())
+ 103
+ 104 func release() -&gt; void:
+ 105 	sets.clear();buffers.clear();state=null;owner=null;super.release()</pre></details>
+<details><summary>排水分阶段录制 · scripts/simulation/unified_edit/water_response.gd:52</summary><p class="hash">SHA256 1406e62896876d1e57214accf590b94032e6cde315e452e433e1789cdc6e1dc2</p><pre>  52 func _packed_math(push: PackedByteArray) -&gt; void:
+  53 	# GPU-only phase boundaries. Per-cell math spans all SMs; component reductions
+  54 	# retain the reference&#x27;s row-major compensated order and bounded repair.
+  55 	var phase_push:=push.duplicate()
+  56 	for mode in 11:
+  57 		phase_push.encode_u32(8,mode)
+  58 		_packed_phase(mode,phase_push)
+  59
+  60 func _packed_phase(mode: int, push: PackedByteArray) -&gt; void:
+  61 	var groups:=1024 if mode in [1,3,5,8] else (1 if mode==10 else 32)</pre></details>
+<details><summary>排水特化阶段 · scripts/simulation/unified_edit/water_response.gd:60</summary><p class="hash">SHA256 1406e62896876d1e57214accf590b94032e6cde315e452e433e1789cdc6e1dc2</p><pre>  60 func _packed_phase(mode: int, push: PackedByteArray) -&gt; void:
+  61 	var groups:=1024 if mode in [1,3,5,8] else (1 if mode==10 else 32)
+  62 	var list:=rd.compute_list_begin()
+  63 	rd.compute_list_bind_compute_pipeline(list,kernels.packed_math.phases[mode])
+  64 	rd.compute_list_bind_uniform_set(list,sets.packed_math,0)
+  65 	rd.compute_list_set_push_constant(list,push,push.size())
+  66 	rd.compute_list_dispatch(list,groups,1,1);rd.compute_list_end()
+  67
+  68 func _initialize_velocity_prepare_phases() -&gt; bool:
+  69 	kernels.velocity_prepare.phases=[]</pre></details>
+<details><summary>水tick · scripts/simulation/unified_edit/water.gd:159</summary><p class="hash">SHA256 2e8c0431d10eba02ec74fcd0b7f83e99fcca45313cffcaf84465520f0f073c34</p><pre> 159 func record_tick(_input: RID, _control: RID, _output: RID, _count: int, requested_dt: float) -&gt; void:
+ 160 	if muscl!=null:
+ 161 		muscl.record_tick(requested_dt);return
+ 162 	var record_start:=Time.get_ticks_usec() if solver.profile_passes else 0
+ 163 	if solver.profile_passes:rd.capture_timestamp(&quot;sandcastle_async_water_tick_start&quot;)
+ 164 	_dispatch(&quot;cfl_tiles&quot;,kernels.cfl_tiles.binding,PackedByteArray())
+ 165 	var push:=PackedFloat32Array([requested_dt,solver.cell_size_m,solver.COURANT,0.0]).to_byte_array()
+ 166 	push.encode_u32(12,solver.grid_size)
+ 167 	_dispatch(&quot;cfl_decide&quot;,kernels.cfl_decide.binding,push)
+ 168 	if boundary_enabled:</pre></details>
+<details><summary>MUSCL阶段录制 · scripts/simulation/unified_edit/water_muscl.gd:174</summary><p class="hash">SHA256 dc25859b0bebf723a37f2961d4e2366a9749395f4072528e2a172486f9f7ed53</p><pre> 174 func record_tick(requested_dt: float) -&gt; void:
+ 175 	var began:=Time.get_ticks_usec() if water.solver.profile_passes else 0
+ 176 	var cpu_began:=Time.get_ticks_usec() if diagnostic!=null and diagnostic.enabled else 0
+ 177 	if water.solver.profile_passes:rd.capture_timestamp(&quot;sandcastle_async_water_tick_start&quot;)
+ 178 	_prepare_recording(requested_dt)
+ 179 	var sampled: bool=diagnostic.begin_tick(_standard_coupling,requested_dt) if diagnostic!=null else false
+ 180 	for stage: RecordingPass in _recording:
+ 181 		if sampled:diagnostic.pass_begin(stage.diagnostic_label,stage.diagnostic_slot,stage.diagnostic_phase)
+ 182 		if stage.callback_kind==1:
+ 183 			water._dispatch(&quot;boundary&quot;,water.kernels.boundary.binding,water.boundary_push_constants())</pre></details>
+<details><summary>数值来源精确投影 · scripts/simulation/unified_edit/numerics_checkpoint_sources.gd:38</summary><p class="hash">SHA256 5ed58fbb7426a3a207258514053a32cfe13ead525d6286b776ff04c907260032</p><pre>  38 static func project(value: Dictionary, target: Dictionary, path: String) -&gt; Dictionary:
+  39 	var error:=Config.validate(target,true)
+  40 	if not error.is_empty():return {&quot;error&quot;:error}
+  41 	if not value.get(&quot;configuration&quot;) is Dictionary:return {&quot;error&quot;:&amp;&quot;invalid_configuration&quot;}
+  42 	var source: Dictionary=value.configuration
+  43 	if not source.get(&quot;environment&quot;) is Dictionary:return {&quot;error&quot;:&amp;&quot;invalid_configuration&quot;}
+  44 	error=Config.Numerics.configuration_error(source.environment)
+  45 	if not error.is_empty():return {&quot;error&quot;:error}
+  46 	# Existing solver/retention migration does not authorize changing the new
+  47 	# timestep policy or attempt budget while restoring a saved simulation.</pre></details>
+<details><summary>初始化与native资源 · scripts/simulation/unified_edit/state.gd:42</summary><p class="hash">SHA256 19893496aa852c9cf6e2dabe9e91f6a670fb5ab8fd12b9a05bdf2e133c519c36</p><pre>  42 func initialize(device: RenderingDevice, domain, transport, native: Dictionary={}) -&gt; bool:
+  43 	if rd!=null or device==null or domain==null or domain.grid_size!=256 or domain.cell_size_m!=0.125:return false
+  44 	if not is_finite(cohesion_yield_height_m) or cohesion_yield_height_m&lt;0.0 or cohesion_yield_height_m&gt;2.0:last_error=&quot;initial_cohesion_value&quot;;return false
+  45 	rd=device;async_transport=transport
+  46 	for field in [&quot;rock&quot;,&quot;sand&quot;,&quot;water&quot;,&quot;sediment&quot;,&quot;wetness&quot;,&quot;compaction&quot;,&quot;obstacle&quot;]:
+  47 		var values: PackedFloat32Array=domain.get(field)
+  48 		if values.size()!=65536:last_error=&quot;initial_field_size&quot;;return false
+  49 		for value in values:
+  50 			if not is_finite(value) or (field!=&quot;rock&quot; and value&lt;0.0) or (field in [&quot;wetness&quot;,&quot;compaction&quot;,&quot;obstacle&quot;] and value&gt;1.0):last_error=&quot;initial_field_value&quot;;return false
+  51 		var format_id: int=RenderingDevice.DATA_FORMAT_R32_SFLOAT</pre></details>
+<details><summary>碰撞消费 · scripts/simulation/unified_edit/height.gd:173</summary><p class="hash">SHA256 2675c1caf640099c600e4f9245132013c8a9a3057788418b4dabdce15b96f969</p><pre> 173 func physics_consume(order: PackedInt32Array=PackedInt32Array()) -&gt; int:
+ 174 	if hold_physics:return 0
+ 175 	var frame:=Engine.get_process_frames()
+ 176 	if _apply_frame!=frame:
+ 177 		_apply_frame=frame;_apply_usec=0;_apply_count=0
+ 178 	if order.is_empty():order=PackedInt32Array([_next_apply_slot,1-_next_apply_slot])
+ 179 	var count:=0
+ 180 	for index in order:
+ 181 		if index&lt;0 or index&gt;=slots.size():continue
+ 182 		var slot: Dictionary=slots[index]</pre></details>
+<details><summary>换代提交 · scripts/simulation/unified_edit/domain_runtime.gd:193</summary><p class="hash">SHA256 4a2020e166e20e71ea1ef734ee860fd17d9f3e732b414df80d33bec512bcefc5</p><pre> 193 func _physics_process(_delta: float) -&gt; void:
+ 194 	if closing:
+ 195 		for surface in surfaces:surface.set_collision_enabled(false)
+ 196 		return
+ 197 	if phase!=&amp;&quot;commit_ready&quot; or candidate==null or _discarding:return
+ 198 	if current!=null and (current.active_count()!=0 or current.pending_count()!=0 or current.checkpoint_capture!=null):return
+ 199 	var error:=_validate_bindings(candidate)
+ 200 	if inject_commit_validation_failure:error=&amp;&quot;injected_commit_preflight&quot;
+ 201 	if not error.is_empty():_reject_candidate(error);return
+ 202 	var previous=current;var previous_index:=current_index</pre></details>
+<details><summary>恢复工厂 · scripts/simulation/unified_edit/domain_runtime.gd:51</summary><p class="hash">SHA256 4a2020e166e20e71ea1ef734ee860fd17d9f3e732b414df80d33bec512bcefc5</p><pre>  51 func restore_checkpoint(checkpoint: Dictionary, callback: Callable, target_configuration: Dictionary={}) -&gt; StringName:
+  52 	if closing or current==null:return &amp;&quot;runtime_unavailable&quot;
+  53 	if candidate!=null or not retired.is_empty() or current.checkpoint_capture!=null:return &amp;&quot;transition_busy&quot;
+  54 	if not callback.is_valid():return &amp;&quot;invalid_transition_callback&quot;
+  55 	var target: Dictionary=configuration if target_configuration.is_empty() else target_configuration
+  56 	# The only live reconfiguration is this scalar, on a replacement generation.
+  57 	# Disk identity, domain, solver and every other physical parameter stay fixed.
+  58 	var error:=Codec.Config.validate(target,true)
+  59 	if not error.is_empty():return error
+  60 	if target.sources!=configuration.sources or NumericsSources.parameters(target)!=NumericsSources.parameters(configuration) or Codec.Config.Numerics.solver_id(target.environment)!=Codec.Config.Numerics.solver_id(configuration.environment):return &amp;&quot;unsupported_runtime_reconfiguration&quot;</pre></details>
+<details><summary>原生校验 · scripts/simulation/unified_edit/checkpoint_codec.gd:24</summary><p class="hash">SHA256 80ccbfd6826722b354b412777dec5e6d9a85d4406008b8de2f55d066bd0f104f</p><pre>  24 static func validate(value: Dictionary, configuration: Dictionary, verify_configuration_disk: bool=true) -&gt; StringName:
+  25 	return _validate(value,configuration,verify_configuration_disk,Config.LEDGER_POLICY)
+  26
+  27 static func validate_pinned_source(value: Dictionary, pinned: Dictionary) -&gt; StringName:
+  28 	if value.get(&quot;configuration&quot;)!=pinned:return &amp;&quot;unknown_numerics_source_configuration&quot;
+  29 	var validation:=value.duplicate(true)
+  30 	# Normalize only the historical mixed-key derived hash, after full identity
+  31 	# equality. Fields and past ledger values are never projected for validation.
+  32 	validation.configuration.configuration_hash=Config.stable_hash(validation.configuration)
+  33 	return _validate(validation,validation.configuration,false,pinned.ledger_policy)</pre></details>
+<details><summary>存档路由 · scripts/simulation/unified_edit/checkpoint_router.gd:13</summary><p class="hash">SHA256 33816d3d292347a1d666668e5897f221712b34c03ef1014ba4e6d3524c89214e</p><pre>  13 static func load_file(path: String, configuration: Dictionary, preserve_water_retention: bool=false) -&gt; Dictionary:
+  14 	var file:=FileAccess.open(path,FileAccess.READ)
+  15 	if file==null:return {&quot;error&quot;:&amp;&quot;open_failed&quot;}
+  16 	if file.get_length()&lt;48:return {&quot;error&quot;:&amp;&quot;invalid_file_size&quot;}
+  17 	var magic:=file.get_buffer(8).get_string_from_ascii();file.close()
+  18 	if magic in [Codec.MAGIC,Codec.WET_MAGIC]:
+  19 		var loaded:=Codec.read_container(path)
+  20 		if not loaded.error.is_empty():return loaded
+  21 		if preserve_water_retention:
+  22 			if not loaded.checkpoint.get(&quot;configuration&quot;) is Dictionary or not loaded.checkpoint.configuration.get(&quot;environment&quot;) is Dictionary:return {&quot;error&quot;:&amp;&quot;invalid_configuration&quot;}</pre></details>
+<details><summary>正式切换 · scripts/beach/beach_scene_service.gd:130</summary><p class="hash">SHA256 47b808e6e256709cd92af337cfc5f38fef7751d4c3e13801af557397601be016</p><pre> 130 func _switch(key: String) -&gt; void:
+ 131 	var old = active_scene
+ 132 	var target_path: String=old.playable_scene_path(key)
+ 133 	var rollback_path: String=old.playable_scene_path(old.scene_key)
+ 134 	var packed: PackedScene = load(target_path)
+ 135 	if packed == null:
+ 136 		_finish(&quot;场景资源加载失败&quot;)
+ 137 		return
+ 138 	var old_key: String = old.scene_key
+ 139 	var old_settings := _settings(old)</pre></details>
+<details><summary>公共道具采样 · scripts/simulation/unified_edit/probe_codec.gd:73</summary><p class="hash">SHA256 577de99be1b546a29908df5392c10a0d7138e2e0aeda13e71deb58c3012c7441</p><pre>  73 static func decode(bytes: PackedByteArray, request: Dictionary, serial: int) -&gt; Dictionary:
+  74 	var result:={&quot;error&quot;:&amp;&quot;readback_failed&quot;,&quot;raw&quot;:bytes.duplicate()}
+  75 	if bytes.size()!=OUTPUT_BYTES or bytes.decode_u32(0)!=VERSION or bytes.decode_s64(88)!=serial:return result
+  76 	result.schema=VERSION
+  77 	for key in I64_FIELDS:
+  78 		result[key]=bytes.decode_s64(I64_FIELDS[key])
+  79 		if result[key]!=request[key]:return result
+  80 	result.domain_id=request.domain_id
+  81 	if bytes.slice(96,128)!=String(request.domain_id).sha256_text().hex_decode():return result
+  82 	if bytes.decode_u32(68)!=request.points.size() or bytes.decode_u32(80)!=0 or bytes.decode_u32(84)!=0:return result</pre></details>
+<details><summary>碰撞差异证明 · scripts/simulation/unified_edit/height.gd:261</summary><p class="hash">SHA256 2675c1caf640099c600e4f9245132013c8a9a3057788418b4dabdce15b96f969</p><pre> 261 func footprint_compatible(required: Dictionary, bounds: Dictionary, epoch: int, tolerance_m: float) -&gt; Dictionary:
+ 262 	var strict:=footprint_ready(required,epoch)
+ 263 	if not strict.error.is_empty() or tolerance_m&lt;0.0 or not is_finite(tolerance_m):return {&quot;ready&quot;:false,&quot;error&quot;:strict.error}
+ 264 	var maximum:=0.0;var differences:={}
+ 265 	for chunk in required:
+ 266 		var applied: int=applied_state_seq.get(chunk,-1)
+ 267 		if applied&lt;0 or int(applied_physics_frame.get(chunk,-1))&lt;0:return {&quot;ready&quot;:false,&quot;error&quot;:&amp;&quot;support_not_ready&quot;}
+ 268 		if applied&gt;=required[chunk]:continue
+ 269 		var upper: float=applied_change_bounds.get(chunk,-1.0);var lower:=Codec.lower_change_bound(upper);var newer: float=bounds.get(chunk,-1.0)
+ 270 		if lower&lt;0.0 or newer&lt;0.0 or newer&lt;lower or newer-lower&gt;tolerance_m:return {&quot;ready&quot;:false,&quot;error&quot;:&amp;&quot;support_change_bound&quot;}</pre></details>
+<details><summary>道具接入 · scripts/props/floating_props_service.gd:203</summary><p class="hash">SHA256 7f4a9b93e795477b3938102c1c9d92a7126076c6c92f8af0169e3cae8204418e</p><pre> 203 func attach(owner, rows: Array, positions: Dictionary) -&gt; Dictionary:
+ 204 	if closing:return _result(0,&amp;&quot;closing&quot;)
+ 205 	if busy or active:return _result(0,&amp;&quot;busy&quot;)
+ 206 	var error:=_validate(rows,positions)
+ 207 	if not error.is_empty():return _result(0,error)
+ 208 	if owner==null or not owner.ready_for_input():return _result(0,&amp;&quot;backend_failed&quot;)
+ 209 	var id:=_next_operation()
+ 210 	if id==0:return _result(0,&amp;&quot;identity_exhausted&quot;)
+ 211 	busy=true
+ 212 	runtime=owner;registry=rows.duplicate();layout=positions.duplicate(true)</pre></details>
+<details><summary>样本准入 · scripts/props/floating_props_service.gd:393</summary><p class="hash">SHA256 7f4a9b93e795477b3938102c1c9d92a7126076c6c92f8af0169e3cae8204418e</p><pre> 393 func _candidate_usable(value: Dictionary, poses: Dictionary) -&gt; bool:
+ 394 	if value.is_empty() or not _initialized_pose:return false
+ 395 	for row in world_registry():
+ 396 		if not poses.has(row.body_id):return false
+ 397 		var data: Dictionary=profiles[row.body_id];var body: RigidBody3D=row.body
+ 398 		if maxf(runtime.current.advanced_time_s,last_sample_time_s)-value.captured_time_s&gt;data.max_sample_age_s:return _reject_sample(&amp;&quot;age&quot;,value,{&quot;body_id&quot;:row.body_id})
+ 399 		var pose: Transform3D=poses[row.body_id]
+ 400 		if body.global_position.distance_to(pose.origin)&gt;data.max_pose_distance_m:return _reject_sample(&amp;&quot;root_distance&quot;,value,{&quot;body_id&quot;:row.body_id})
+ 401 		if _orientation_error(data,body.global_basis,pose.basis)&gt;data.max_pose_angle_rad:return _reject_sample(&amp;&quot;cloud_angle&quot;,value,{&quot;body_id&quot;:row.body_id})
+ 402 		# Query data observes the sampling cloud, not invisible axial twist of a</pre></details>
+<details><summary>通用浮力与流阻 · scripts/props/floating_props_service.gd:509</summary><p class="hash">SHA256 7f4a9b93e795477b3938102c1c9d92a7126076c6c92f8af0169e3cae8204418e</p><pre> 509 func _apply_forces(body: RigidBody3D, data: Dictionary) -&gt; void:
+ 510 	var gravity: float=ProjectSettings.get_setting(&quot;physics/3d/default_gravity&quot;,9.8)
+ 511 	var center: Vector3=body.to_global(data.center_of_mass_m)
+ 512 	for point in sample.points:
+ 513 		if point.body_id!=body.body_id:continue
+ 514 		var config: Dictionary=data.points[point.point_id-1];var position:=body.to_global(config.local_position_m)
+ 515 		var half: float=config.half_height_m
+ 516 		var wet: bool=point.h&gt;ProbeCodec.DRY_DEPTH_M
+ 517 		var fraction:=clampf((minf(position.y+half,point.eta)-maxf(position.y-half,point.bed))/(2.0*half),0,1) if wet else 0.0
+ 518 		var velocity:=body.linear_velocity+body.angular_velocity.cross(position-center)</pre></details>
+<details><summary>恢复重置 · scripts/props/floating_props_service.gd:587</summary><p class="hash">SHA256 7f4a9b93e795477b3938102c1c9d92a7126076c6c92f8af0169e3cae8204418e</p><pre> 587 func reset(positions: Dictionary, domain: StringName, epoch: int) -&gt; Dictionary:
+ 588 	if closing:return _result(0,&amp;&quot;closing&quot;)
+ 589 	if busy or pending:return _result(0,&amp;&quot;busy&quot;)
+ 590 	if runtime.current==null or runtime.generation()!=epoch or String(runtime.configuration.domain_id)!=String(domain):return _result(0,&amp;&quot;stale_generation&quot;)
+ 591 	_finalize_resting_steps()
+ 592 	if not expected_steps.is_empty():return _result(0,&amp;&quot;busy&quot;)
+ 593 	var error:=_validate(registry,positions)
+ 594 	if not error.is_empty():return _result(0,error)
+ 595 	if owner_token==9223372036854775807:return _result(0,&amp;&quot;identity_exhausted&quot;)
+ 596 	var id:=_next_operation()</pre></details>
+<details><summary>道具安全关闭 · scripts/props/floating_props_service.gd:607</summary><p class="hash">SHA256 7f4a9b93e795477b3938102c1c9d92a7126076c6c92f8af0169e3cae8204418e</p><pre> 607 func shutdown() -&gt; Dictionary:
+ 608 	if closed:return _result(operation_id,&amp;&quot;&quot;)
+ 609 	if closing:
+ 610 		while not closed:await get_tree().physics_frame
+ 611 		return _result(operation_id,&amp;&quot;&quot;)
+ 612 	# Shutdown must still retire leases when the diagnostic operation counter is
+ 613 	# exhausted. Reuse its final identity instead of overflowing signed int64.
+ 614 	closing=true;var id:=_next_operation(true)
+ 615 	if id==0:id=operation_id
+ 616 	if not _has_current_grant():_hold_all()</pre></details>
+<details><summary>UI投放与拾取 · scripts/beach/floating_props_panel.gd:143</summary><p class="hash">SHA256 7f5050a43cedef853af9740269f9fbb1ffdab72887895bbc72c72e6362e639e7</p><pre> 143 func perform_action(id: int, point: Vector2, pickup: bool) -&gt; Dictionary:
+ 144 	if working:return {&quot;error&quot;:&amp;&quot;busy&quot;}
+ 145 	if not beach.ready_for_ticks or beach.closing or beach._saving or beach._restoring or beach._booting:return {&quot;error&quot;:&amp;&quot;transition_busy&quot;}
+ 146 	working=true;marker.hide()
+ 147 	last_result=await beach.floating_props.manipulate_body(id,point,yaw_rad,pickup)
+ 148 	working=false
+ 149 	if last_result.error.is_empty():
+ 150 		message=&quot;%s已拾取，可从槽位重新投放&quot;%NAMES[id] if pickup else &quot;%s已摆放，可继续选择位置移动&quot;%NAMES[id]
+ 151 	else:_show_error(last_result.error)
+ 152 	return last_result</pre></details>
+<details><summary>操作物理边界 · scripts/props/floating_props_service.gd:84</summary><p class="hash">SHA256 7f4a9b93e795477b3938102c1c9d92a7126076c6c92f8af0169e3cae8204418e</p><pre>  84 func manipulate_body(id: int, point: Vector2, yaw_rad: float=0.0, pickup: bool=false) -&gt; Dictionary:
+  85 	if closing:return _result(0,&amp;&quot;closing&quot;)
+  86 	if not active or runtime.current==null:return _result(0,&amp;&quot;backend_failed&quot;)
+  87 	if runtime.generation()!=generation:return _result(0,&amp;&quot;stale_generation&quot;)
+  88 	if busy or holds.has(&amp;&quot;save&quot;) or holds.has(&amp;&quot;restore&quot;):return _result(0,&amp;&quot;busy&quot;)
+  89 	var body=body_for_id(id)
+  90 	if body==null:return _result(0,&amp;&quot;invalid_body&quot;)
+  91 	if not last_error.is_empty():return _result(0,last_error)
+  92 	if pickup and body.in_inventory:return _result(0,&amp;&quot;already_picked_up&quot;)
+  93 	var error: StringName=&amp;&quot;&quot; if pickup else placement_error(id,point)</pre></details>
+<details><summary>精确旧来源投影 · scripts/simulation/unified_edit/consumer_checkpoint_sources.gd:22</summary><p class="hash">SHA256 8360687b6ade3e4b29903b36b3462c32f83805d69bd7e069ca97a437d102fc91</p><pre>  22 static func project(value: Dictionary, target: Dictionary, path: String) -&gt; Dictionary:
+  23 	if not FileAccess.file_exists(CATALOG) or FileAccess.get_sha256(CATALOG)!=CATALOG_SHA256:return {&quot;error&quot;:&amp;&quot;consumer_source_catalog_identity_mismatch&quot;}
+  24 	var bytes:=FileAccess.get_file_as_bytes(CATALOG)
+  25 	if bytes.is_empty() or bytes.size()&gt;1048576:return {&quot;error&quot;:&amp;&quot;invalid_consumer_source_catalog&quot;}
+  26 	var catalog: Variant=bytes_to_var(bytes)
+  27 	if not Config.exact(catalog,[&quot;schema&quot;,&quot;id&quot;,&quot;source_configuration&quot;,&quot;fixture&quot;,&quot;additional_sources&quot;,&quot;target_sources&quot;,&quot;target_parameters&quot;,&quot;review&quot;]) or catalog.schema!=3 or catalog.id!=&quot;floating_props_consumer_v3&quot; or not catalog.source_configuration is Dictionary or not catalog.target_sources is Dictionary or not catalog.additional_sources is Array or catalog.additional_sources.size()&gt;4:return {&quot;error&quot;:&amp;&quot;invalid_consumer_source_catalog&quot;}
+  28 	var trusted_fixture: Dictionary={}
+  29 	var known: Array=[{&quot;configuration&quot;:catalog.source_configuration,&quot;fixture&quot;:catalog.fixture}]+catalog.additional_sources
+  30 	for source in known:
+  31 		if not source is Dictionary or not Config.exact(source,[&quot;configuration&quot;,&quot;fixture&quot;]) or not source.configuration is Dictionary or not source.fixture is Dictionary:return {&quot;error&quot;:&amp;&quot;invalid_consumer_source_catalog&quot;}</pre></details>
+<details><summary>植被只读更新 · scripts/simulation/unified_edit/vegetation.gd:77</summary><p class="hash">SHA256 3e1549c9be22ed2b1ee9aa211314237ab237b4a5501bf297f88e4d0af771e3ed</p><pre>  77 func record_tick() -&gt; void:
+  78 	if enabled:_dispatch(&quot;vegetation_tick&quot;)
+  79
+  80 func record_edit() -&gt; void:
+  81 	if enabled:_dispatch(&quot;vegetation_edit&quot;)
+  82
+  83 func publish() -&gt; void:
+  84 	if enabled:_dispatch(&quot;vegetation_publish&quot;)
+  85
+  86 func detach() -&gt; void:</pre></details>
+<details><summary>植被发布 · scripts/simulation/unified_edit/vegetation.gd:83</summary><p class="hash">SHA256 3e1549c9be22ed2b1ee9aa211314237ab237b4a5501bf297f88e4d0af771e3ed</p><pre>  83 func publish() -&gt; void:
+  84 	if enabled:_dispatch(&quot;vegetation_publish&quot;)
+  85
+  86 func detach() -&gt; void:
+  87 	water = null;images.clear();published.clear();sets.clear();enabled = false</pre></details>
+<script>const op=document.getElementById('operation'),water=document.getElementById('water');function draw(){const base=[0,1,2,3];let v=op.value==='transfer'?base.concat([9,4,2,3,10,4,11,4]):base.concat([4]);v=v.concat([12,5,6,7,8]);document.getElementById('phases').replaceChildren(...v.map(n=>{let e=document.createElement('span');e.className='phase'+(n===7?' commit':'');e.textContent=String(n)+(n===7?' · 条件提交':'');return e}));document.getElementById('stroke').textContent=op.value==='volume'?'无固定笔画基准；按体积候选处理。':'公共BEGIN → sample序列 → END；固定基准与累计coverage由域持有。';document.getElementById('response').textContent=water.value==='0'?'水响应关闭，水/悬沙/动量不因该编辑被改写。':'公共水阶段：prepare → '+(water.value==='2'?'velocity_only → velocity_prepare_parallel → momentum_B':'packed → displace → velocity')+' → velocity_reduce → audit_blocks → audit_merge；与同一决定提交。'}op.addEventListener('change',draw);water.addEventListener('change',draw);draw();</script></html>

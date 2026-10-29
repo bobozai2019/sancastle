@@ -1,0 +1,11 @@
+# ADR v1.32：本项目捕帧目标所有权与重放
+
+2026-10-11。仅本项目Godot诊断，不恢复竞品母任务，G4仍未放行。
+
+测试入口在原完整负载完成tick17检查点后停止显式步进，记录OS PID、process_frame、revision；由独立且PID核对的RenderDoc Python助手ExecuteAndInject创建测试Godot。仅连接该调用返回的ident，forceConnection=false，TargetControl.GetPID必须与测试marker一致。TriggerCapture八个连续呈现帧后释放测试步进，记录释放时tick/frame。所有机器路径完整英文，RDC记录实际文件size/SHA256。
+
+capture PASS只证明已产生非空RDC、目标正常断开且运行报告存在；不证明数值通过、失败窗口复现、tick映射或成本。八个RDC的D3D12本机重放另验，枚举compute dispatch时SetFrameEvent读取当前pipeline。ResourceId/event仅在对应捕帧有效，不跨捕帧复用。
+
+原始RDC重放前后hash核对，派生JSON及工具脚本单列索引。重放报告改成独立PID文件加latest指针，避免覆盖失败结果。本轮首次失败报告曾被覆盖，其错误只从工具输出补录，明确标为重建，不冒称原始字节。
+
+尚未验证捕帧覆盖具体CPL子步及原四格ULP失败，下一步核对compute shader实际绑定和输入、root常量及首分歧pass。单帧不得证明因果或真实性能。

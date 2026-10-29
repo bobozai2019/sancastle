@@ -1,0 +1,11 @@
+# 水花 MultiMesh 启动报错修复
+
+截图的三条红色错误在实际Godot 4.7.2中复现：场景实例化会对开启resource_local_to_scene的MultiMesh作通用复制，恢复实例数后再次设置transform_format、use_colors、use_custom_data，引发“Instance count must be 0”错误。
+
+定位到main内覆盖的ShoreSplash MultiMesh，以及共用的assets/water_splash/instances.tres。两者均为固定1024实例、由shader按INSTANCE_ID读取粒子池的静态绘制资源，运行时不修改MultiMesh布局或实例数据。取消两处resource_local_to_scene，保留每个节点的独立ShaderMaterial、网格、变换、AABB、实例数和水花参数。没有动态重建场景，没有改模拟或P1～P4计算链。
+
+验证：修复前重复实例化main复现三类错误；修复后main和test1_geometry各实例化两次无ERROR，格式仍为3D、实例数1024。D3D12 Forward+实际启动main、等待就绪并推进至少10tick、正常shutdown，全程无ERROR。日志和复验脚本保存在本目录。全部输出、Godot用户目录、日志及缓存都位于项目内。
+
+截图中的黄色信息属于GDScript变量/参数重名警告，未导致上述红色错误。本次不为消除警告修改注册表函数签名或数值来源身份。
+
+文档正文无需改变：在项目临时目录生成预期Word后，逐一确认所有word XML及媒体内容与现有Word完全相同，保留既有DOCX和布局，只同步来源身份。HTML已重新生成，两生成器--check通过。架构策略仅同步这两个资源的定向审查身份，未刷新其他已有漂移。

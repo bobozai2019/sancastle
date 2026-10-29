@@ -1,0 +1,35 @@
+{
+  "role": "budget_input_selection",
+  "state": "numeric budgets not yet frozen",
+  "sources": [
+    {
+      "manifest": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_solver_reconstruction/t03_six_kernel_20261025_v4/manifest.json",
+        "exists": true,
+        "size_bytes": 225405,
+        "sha256": "14849bd21d51f50933919cca5929004b8fded491b11463c53adbed30e3718d5a"
+      },
+      "role": "original_snapshot_copy_on_off"
+    },
+    {
+      "manifest": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_solver_reconstruction/t03_controlled_references_20261025_v1/manifest.json",
+        "exists": true,
+        "size_bytes": 1009387,
+        "sha256": "ddb7732114f6be26a40aad006e8ac4991bb0217724f4a145077e2b970d15df64"
+      },
+      "role": "synthetic: old wet_dry actually thin-water interface, retain under that interpretation"
+    },
+    {
+      "manifest": {
+        "path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_solver_reconstruction/t03_wet_dry_correction_reference_20261025_v1/manifest.json",
+        "exists": true,
+        "size_bytes": 103992,
+        "sha256": "787a791ef18562134b89b1fe1e096d7c2958654d70d926798c16b3e1317327b0"
+      },
+      "role": "synthetic: verified dry/wet interface, 65536 dry and 65536 wet cells"
+    }
+  ],
+  "identity_rule": "Use source manifest hash plus reference_id and full input/program/constant/dependency hashes; names alone are not globally unique.",
+  "wet_dry_erratum": "t03_controlled_fixtures_20261025_v1 wet_dry left code83056 decodes A=.05000028908254439, h=2.890825443885303e-7. True dry/wet fixture is t03_wet_dry_correction_fixture_20261025_v1 code83055."
+}

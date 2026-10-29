@@ -1,0 +1,22 @@
+{
+  "pass": true,
+  "case": "molded",
+  "writer": "cold_molded_v1_writer",
+  "readers": [
+    {
+      "reader": "cold_molded_v1_reader1",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "reader": "cold_molded_v1_reader2",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "reader": "cold_molded_v1_reader3",
+      "pass": true,
+      "errors": []
+    }
+  ]
+}

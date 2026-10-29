@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "run_id": "t05_capture_replay_20261025_v4",
+  "mode": "rdc_replay",
+  "operation": "audit",
+  "source": {
+    "source_id": "rdc:2a7e56a76a08e960ee91097b560d8b18732166050a70792c825a25e59139a925",
+    "source_path": "D:/godot/project/sandcastle/docs/competitor/evidence/water_solver_reconstruction/t05_native_scalar_capture_20261025_v1/rdc/water_frame208.rdc",
+    "source_size": 204266070,
+    "source_sha256": "2a7e56a76a08e960ee91097b560d8b18732166050a70792c825a25e59139a925"
+  },
+  "selector": {
+    "capture_sha256": "2a7e56a76a08e960ee91097b560d8b18732166050a70792c825a25e59139a925",
+    "event_id": null,
+    "stage": "compute",
+    "boundary": "post-event",
+    "discovery": "Independently match six frozen original program hashes"
+  },
+  "fixed_inputs": [],
+  "repeat_index": 0,
+  "replay_instance_id": "t05_capture_replay_20261025_v4_open0",
+  "variation": null,
+  "output_root": "D:/godot/project/sandcastle/docs/competitor/evidence/water_solver_reconstruction/t05_capture_replay_20261025_v4",
+  "environment": {
+    "time": "2026-10-25T11:50:08.182168+00:00",
+    "os": "Windows-10-10.0.19045-SP0",
+    "python": "3.13.12 (tags/v3.13.12:1cbe481, Feb  3 2026, 18:22:25) [MSC v.1944 64 bit (AMD64)]",
+    "graphics_backend": "D3D12",
+    "scope": "Replay after owned capture process exit; no other process stopped"
+  },
+  "tool": {
+    "name": "multicapture_replay.py",
+    "script": {
+      "path": "D:/godot/project/sandcastle/task/competitor_water_solver_evidence/tools/multicapture_replay.py",
+      "exists": true,
+      "size_bytes": 10824,
+      "sha256": "c1fb02fd1587f9a34e5506911ed06f55748e0ced5c24300d6827677dff135d62"
+    }
+  },
+  "questions": [
+    "Do original six programs match?",
+    "Which GPU constants correspond to CPU trace?"
+  ],
+  "numeric_budget": null
+}

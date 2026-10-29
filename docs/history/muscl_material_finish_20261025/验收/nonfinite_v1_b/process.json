@@ -1,0 +1,22 @@
+{
+  "pid": 12096,
+  "started_unix": 1792941659.9286177,
+  "command": [
+    "D:\\game\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+    "--path",
+    "D:\\godot\\project\\sandcastle\\test_output\\muscl_material_finish_20261025\\projects\\combined",
+    "--rendering-method",
+    "forward_plus",
+    "--rendering-driver",
+    "d3d12",
+    "--resolution",
+    "1280x720",
+    "--script",
+    "res://tools/wave_propagation/special_gpu_probe.gd",
+    "--",
+    "--output=D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/nonfinite_v1_b",
+    "--parameter-config=D:/godot/project/sandcastle/test_output/muscl_material_finish_20261025/nonfinite_v1_b/parameters/startup.json",
+    "--case=nonfinite"
+  ],
+  "telemetry": null
+}

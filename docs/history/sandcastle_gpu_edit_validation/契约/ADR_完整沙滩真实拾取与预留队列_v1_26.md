@@ -1,0 +1,11 @@
+# ADR v1.26：完整沙滩真实拾取与预留队列
+
+2026-10-11。完整原负载候选，G4尚未放行。
+
+新增静态继承edit_beach_interaction_lab，复用既有64pending预留调度器。domain/busy/closed代理到实际shadow_domain及原tick/shadow/checkpoint/GPU事务状态，不建立第二份库存。API执行拆出consume-admitted前端，不重复submit已接收ID；available扣除其他预留，记录实际消费的policy/speed、available/stock与execution_tick。策略在每次接受时捕获，prefix使用执行开始时的选择，避免在途变更污染记录。
+
+鼠标堆挖与拖动使用Godot事件和真实PhysicsRay。只接受当前碰撞主体、域内且达到所需完成revision的chunk；未接受的拖动不推进last-hit。忙碌期间仍可排队，库存和容量限制来自同一调度器。物理当前tick完成后先drain_due，再继续原完整沙滩tick；GPU命令不进入原CPU apply_due/patch路径，也不触发为CPU笔刷准备的全图shadow同步。
+
+view/pause按键保留，GPU恢复键等完整prefix恢复控制器完成后接入。关闭先停止接受、取消等待项，再等实际活动事务和input driver退出。默认生产入口未替换。
+
+该阶段尚无完整GPU前缀磁盘保存、恢复/撤销重演、混合旧工具整合和100ms完整场景反馈通过证据。T05仍进行中。

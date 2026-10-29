@@ -1,0 +1,46 @@
+{
+  "role": "frozen_shape_brush_contract_specification",
+  "contract_version": 1,
+  "binding_revision": 2,
+  "schema_version": 2,
+  "command_magic": 844321346,
+  "receipt_magic": 844321362,
+  "stride": 256,
+  "endianness": "little",
+  "grid_size": 256,
+  "cell_size_m": 0.125,
+  "operation_codes": {"stamp_target": 1, "wall_target": 2, "shovel_transfer": 3},
+  "status_codes": {"applied": 1, "no_change": 2, "rejected": 3},
+  "error_codes": {"none": 0, "invalid_command": 1, "inactive_generation": 2, "out_of_domain": 3, "backend_unavailable": 4, "unsupported_brush_version": 5, "unknown_brush": 6, "template_mismatch": 7, "invalid_placement": 8, "budget_exceeded": 9, "receiver_capacity": 10, "stroke_buffer_full": 11, "collision_pending": 12, "stale_tick": 13, "invalid_baseline": 14, "invalid_receipt": 15, "candidate_invalid": 16, "water_candidate_invalid": 17, "material_candidate_invalid": 18},
+  "command_layout": [
+    ["magic",0,"u32"],["schema_version",4,"u32"],["stride",8,"u32"],["operation",12,"u32"],
+    ["ticket_id",16,"i64"],["command_id",24,"i64"],["stroke_id",32,"i64"],["generation",40,"i64"],["sim_tick",48,"i64"],["input_revision",56,"i64"],["baseline_token",64,"i64"],["seed",72,"i64"],
+    ["sample_index",80,"u32"],["grid_size",84,"u32"],["water_policy",88,"u32"],["material_profile",92,"u32"],
+    ["start_x",96,"f32"],["start_z",100,"f32"],["end_x",104,"f32"],["end_z",108,"f32"],["yaw_rad",112,"f32"],["scale_x",116,"f32"],["scale_z",120,"f32"],["height_m",124,"f32"],
+    ["bottom_width_m",128,"f32"],["top_width_m",132,"f32"],["trench_width_m",136,"f32"],["depth_m",140,"f32"],["shoulder_width_m",144,"f32"],["ridge_height_m",148,"f32"],["add_budget_m3",152,"f32"],["transfer_budget_m3",156,"f32"],["cell_size_m",160,"f32"],["speed_m_s",164,"f32"],["placement_relief_m",168,"f32"],["template_width",172,"u32"],["template_height",176,"u32"],["template_spacing_m",180,"f32"],
+    ["definition_sha256",184,"sha256"],["template_sha256",216,"sha256"],["flags",248,"u32"],["reserved",252,"u32"]
+  ],
+  "receipt_layout": [
+    ["magic",0,"u32"],["schema_version",4,"u32"],["stride",8,"u32"],["status",12,"u32"],
+    ["ticket_id",16,"i64"],["command_id",24,"i64"],["stroke_id",32,"i64"],["generation",40,"i64"],["input_revision",48,"i64"],["output_revision",56,"i64"],["applied_tick",64,"i64"],["baseline_token",72,"i64"],
+    ["error_code",80,"u32"],["sample_index",84,"u32"],["edited_cells",88,"u32"],["clamp_count",92,"u32"],["dirty_x",96,"i32"],["dirty_z",100,"i32"],["dirty_width",104,"i32"],["dirty_height",108,"i32"],["dirty_mask_low",112,"u32"],["dirty_mask_high",116,"u32"],["capacity_status",120,"u32"],["invalid_flags",124,"u32"],
+    ["added_m3",128,"f32"],["removed_m3",132,"f32"],["transferred_m3",136,"f32"],["left_received_m3",140,"f32"],["right_received_m3",144,"f32"],["external_source_delta_m3",148,"f32"],["external_sink_delta_m3",152,"f32"],["requested_budget_m3",156,"f32"],["displaced_water_m3",160,"f32"],["retained_water_m3",164,"f32"],["water_error_m3",168,"f32"],["impulse_x_m4_s",172,"f32"],["impulse_z_m4_s",176,"f32"],["sand_error_m3",180,"f32"],["eps_sand_m3",184,"f32"],["eps_water_m3",188,"f32"],["eps_transfer_m3",192,"f32"],["nominal_added_m3",196,"f32"],["nominal_cut_m3",200,"f32"],["max_cell_delta_m",204,"f32"],["reserved",208,"bytes48"]
+  ],
+  "path": {"sample_spacing_m": 0.125, "max_segment_m": 2.0, "max_buffer_points": 256, "max_pending": 64, "max_submissions_per_frame": 8, "corner_angle_rad": 0.017453292519943295, "min_move_m": 0.000001, "normal_end": "drain", "cancel": "discard_unsubmitted_then_drain_admitted", "max_active_strokes": 1},
+  "brushes": {
+    "castle_v1": {"operation": "stamp_target", "default": {"scale_xz": 1.0, "height_m": 0.7, "yaw_rad": 0.0}, "ranges": {"scale_xz": [1.0,1.5], "height_m": [0.5,1.0], "yaw_rad": [-3.141592653589793,3.141592653589793]}, "footprint_m": 4.0, "max_add_m3": 48.0, "max_transfer_m3": 0.0, "placement_relief_m": 0.0, "placement_policy": "fixed_world_target_max_existing_v1", "placement_datum_y_m": 0.0, "template_id": "four_towers_v1", "template_size": [65,65], "template_spacing_m": 0.0625, "template_channels": ["normalized_height","foundation_mask","shape_mask","reserved"], "template_interpolation": "height_bilinear_masks_nearest", "water_policy": 3, "speed_m_s": 0.0},
+    "wall_v1": {"operation": "wall_target", "default": {"height_m": 0.3, "bottom_width_m": 1.0, "top_width_m": 0.5}, "ranges": {"height_m": [0.15,0.6], "bottom_width_m": [1.0,2.0], "top_width_m": [0.5,1.5]}, "max_add_m3": 8.0, "max_transfer_m3": 0.0, "baseline_repair_allowance_m": 0.25, "cross_section": "linear_trapezoid_capsule", "water_policy": 3, "speed_m_s": 0.0},
+    "shovel_v1": {"operation": "shovel_transfer", "default": {"trench_width_m": 0.5, "depth_m": 0.15, "shoulder_width_m": 0.5}, "ranges": {"trench_width_m": [0.5,1.0], "depth_m": [0.05,0.3], "shoulder_width_m": [0.5,1.0]}, "max_add_m3": 0.0, "max_transfer_m3": 1.0, "ridge_height_m": 0.5, "trench_profile": "parabolic_capsule", "receiver_weight": "sine_ring", "residual_repair_passes": 2, "water_policy": 3, "speed_m_s": 0.0}
+  },
+  "numeric": {"unit_roundoff": 5.960464477539063e-8, "min_cell_budget_m": 2e-7, "cell_ulp_factor": 16, "cell_delta_factor": 16, "min_volume_budget_m3": 1e-7, "min_reduction_budget_m3": 1e-8, "volume_ulp_factor": 2, "reduce_cells_per_block": 256, "two_level_reduction_factor": 8, "transfer_budget_multiplier": 2, "water_budget_multiplier": 1},
+  "gates": {"input_roi_max_height_difference_m": 0.02, "input_volume_relative_difference": 0.01, "retention_sim_seconds": 30.0, "retention_peak_ratio_min": 0.8, "retention_iou_min": 0.8, "retention_roi_height_fraction": 0.1, "retention_roi_margin_m": 1.0, "soak_wall_seconds": 300, "short_switch_count": 10, "scene_roundtrips": 2},
+  "checkpoint": {"gpu_beach_edit_version": 4, "brush_schema": 2, "accounting": "external_v1", "native_version": "G4_if_new_material", "baseline_persisted": false, "restore_stroke_state": "idle", "new_signature_roots": ["res://scripts/sand/brushes","res://scripts/simulation/brushes","res://assets/brushes","res://shaders/simulation/brushes"], "new_raw_extensions": ["f32","rgba32f","bin"]},
+  "cpu_reference": {"scope": "independent_analytic_geometry_and_high_precision_allocation", "wall_volume_formula": "h*((wb+wt)*L/2+pi*(wb*wb+wb*wt+wt*wt)/12)", "shovel_cut_formula": "depth*(2*w*L/3+pi*w*w/8)", "allocation": "capacity_weighted_water_filling_with_exact_half_per_side", "rounding": "binary32_nearest_even_then_global_row_major_residual_repair"},
+  "budget_formulas": {"castle_v1": "48 (actual deficit audited including below-datum fill)", "wall_v1": "min(8,(L*bottom_width_m+pi*bottom_width_m^2/4)*(height_m+0.25))", "shovel_v1": "min(1,depth_m*(2*trench_width_m*L/3+pi*trench_width_m^2/8))"},
+  "bindings": {
+    "set0": [[0,"command","ssbo256"],[1,"receipt","ssbo256"],[2,"cells","ssbo64_per_cell"],[3,"reduction","ssbo64_per_block"],[4,"baseline","r32f"],[5,"coverage","rg32f"],[6,"candidate_coverage","rg32f"],[7,"template","rgba32f"]],
+    "set1": [[0,"rock","r32f"],[1,"sand0","r32f"],[2,"sand1","r32f"],[3,"water0","r32f"],[4,"water1","r32f"],[5,"sediment0","r32f"],[6,"sediment1","r32f"],[7,"qx0","r32f"],[8,"qx1","r32f"],[9,"qz0","r32f"],[10,"qz1","r32f"],[11,"wetness0","r16f"],[12,"wetness1","r16f"],[13,"compaction0","r16f"],[14,"compaction1","r16f"],[15,"obstacle","r8"]],
+    "reserved_G4": [[16,"support0"],[17,"support1"]],
+    "push_constant_u32": ["grid_size","rect_x","rect_z","rect_width","rect_height","current_index","phase","reserved0"]
+  }
+}
